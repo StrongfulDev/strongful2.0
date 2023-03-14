@@ -51,6 +51,9 @@
             "label": "Standard"
           },
           "options__2": {
+            "label": "Standard Overlay"
+          },
+          "options__3": {
             "label": "Card"
           },
           "label": "Style"
@@ -65,6 +68,9 @@
             "label": "Standard"
           },
           "options__2": {
+            "label": "Standard Overlay"
+          },
+          "options__3": {
             "label": "Card"
           },
           "label": "Style"
@@ -79,6 +85,9 @@
             "label": "Standard"
           },
           "options__2": {
+            "label": "Standard Overlay"
+          },
+          "options__3": {
             "label": "Card"
           },
           "label": "Style"
@@ -607,6 +616,64 @@
       },
       "presets": {
         "name": "Collection list"
+      }
+    },
+    "our-collection-list": {
+      "name": "Our Collection list",
+      "settings": {
+        "title": {
+          "label": "Heading"
+        },
+        "image_ratio": {
+          "label": "Image ratio",
+          "options__1": {
+            "label": "Adapt to image"
+          },
+          "options__2": {
+            "label": "Portrait"
+          },
+          "options__3": {
+            "label": "Square"
+          },
+          "info": "Add images by editing your collections. [Learn more](https:\/\/help.shopify.com\/manual\/products\/collections)"
+        },
+        "columns_desktop": {
+          "label": "Number of columns on desktop"
+        },
+        "show_view_all": {
+          "label": "Enable \"View all\" button if list includes more collections than shown"
+        },
+        "header_mobile": {
+          "content": "Mobile Layout"
+        },
+        "columns_mobile": {
+          "label": "Number of columns on mobile",
+          "options__1": {
+            "label": "1 column"
+          },
+          "options__2": {
+            "label": "2 columns"
+          }
+        },
+        "is_heading_overlay": {
+          "label": "Header on photo"
+        },
+        "swipe_on_mobile": {
+          "label": "Enable swipe on mobile"
+        }
+      },
+      "blocks": {
+        "featured_collection": {
+          "name": "Collection",
+          "settings": {
+            "collection": {
+              "label": "Collection"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Our Collection list"
       }
     },
     "contact-form": {

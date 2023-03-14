@@ -1,9 +1,9 @@
 {
   "sections": {
-    "fcf285a3-8f6b-43d8-990b-92acbc7c8c19": {
+    "slideshow": {
       "type": "slideshow",
       "blocks": {
-        "template--15905651261580__fcf285a3-8f6b-43d8-990b-92acbc7c8c19-167839925190636ee5-0": {
+        "slideshow-block-0": {
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/2002-copy_410f60be-4eb7-46af-89dd-bfdfa3df7713.jpg",
@@ -21,7 +21,7 @@
             "text_alignment_mobile": "center"
           }
         },
-        "template--15905651261580__fcf285a3-8f6b-43d8-990b-92acbc7c8c19-167839925190636ee5-1": {
+        "slideshow-block-1": {
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_a34a6125-02ab-4568-9ce8-2ebe9f4cbfdf.jpg",
@@ -41,8 +41,8 @@
         }
       },
       "block_order": [
-        "template--15905651261580__fcf285a3-8f6b-43d8-990b-92acbc7c8c19-167839925190636ee5-0",
-        "template--15905651261580__fcf285a3-8f6b-43d8-990b-92acbc7c8c19-167839925190636ee5-1"
+        "slideshow-block-0",
+        "slideshow-block-1"
       ],
       "settings": {
         "layout": "full_bleed",
@@ -80,10 +80,52 @@
         "padding_top": 28,
         "padding_bottom": 36
       }
+    },
+    "our_collection_list": {
+      "type": "our-collection-list",
+      "blocks": {
+        "our_collection_list-block-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "abouttooutlet"
+          }
+        },
+        "our_collection_list-block-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "10"
+          }
+        },
+        "our_collection_list-block-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "25"
+          }
+        }
+      },
+      "block_order": [
+        "our_collection_list-block-0",
+        "our_collection_list-block-1",
+        "our_collection_list-block-2"
+      ],
+      "settings": {
+        "title": "Collections",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "background-1",
+        "is_heading_overlay": true,
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "fcf285a3-8f6b-43d8-990b-92acbc7c8c19",
-    "featured_collection"
+    "slideshow",
+    "featured_collection",
+    "our_collection_list"
   ]
 }

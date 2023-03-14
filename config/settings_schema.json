@@ -634,8 +634,12 @@
             "label": "t:settings_schema.collection_cards.settings.style.options__1.label"
           },
           {
+            "value": "standard_overlay",
+            "label": "t:settings_schema.cards.settings.style.options__2.label"
+          },
+          {
             "value": "card",
-            "label": "t:settings_schema.collection_cards.settings.style.options__2.label"
+            "label": "t:settings_schema.collection_cards.settings.style.options__3.label"
           }
         ],
         "default": "standard",
