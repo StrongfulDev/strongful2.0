@@ -39,22 +39,33 @@
 
     assign columns_mobile_int = section.settings.columns_mobile | plus: 0
     assign show_mobile_slider = false
-    if section.settings.swipe_on_mobile and products_to_display > columns_mobile_int
+    if section.settings.swipe_on_mobile and products_to_display > columns_mobile_int and section.settings.pagination_type != "none"
         assign show_mobile_slider = true
     endif
 
     assign show_desktop_slider = false
-    if section.settings.enable_desktop_slider and products_to_display > section.settings.columns_desktop
+    if section.settings.enable_desktop_slider and products_to_display > section.settings.columns_desktop and section.settings.pagination_type != "none"
         assign show_desktop_slider = true
     endif
 -%}
 
 <div class="color-{{ section.settings.color_scheme }} isolate gradient">
-    <div class="collection section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}">
+    <div class="collection section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %} pagination_type_{{ section.settings.pagination_type }}">
         <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
-            {%- if section.settings.title != blank -%}
-                <h2 class="title {{ section.settings.heading_size }}">{{ section.settings.title | escape }}</h2>
-            {%- endif -%}
+            <div class="collection__title_heading">
+                {%- if section.settings.title != blank -%}
+                    <h2 class="title {{ section.settings.heading_size }}">{{ section.settings.title | escape }}</h2>
+                {%- endif -%}
+
+                {%- if section.settings.show_view_all and more_in_collection and section.settings.view_all_location == "top" -%}
+                    {% render 'collection-view-all',
+                            collection_url: section.settings.collection.url,
+                            collection_title: section.settings.collection.title,
+                            style: section.settings.view_all_style
+                    %}
+                {%- endif -%}
+            </div>
+
             {%- if section.settings.description != blank
             or section.settings.show_description
             and section.settings.collection.description != empty
@@ -71,6 +82,17 @@
 
         <slider-component
                 class="slider-mobile-gutter{% if section.settings.full_width %} slider-component-full-width{% endif %}{% if show_mobile_slider == false %} page-width{% endif %}{% if show_desktop_slider == false and section.settings.full_width == false %} page-width-desktop{% endif %}{% if show_desktop_slider %} slider-component-desktop{% endif %}">
+            {%- if section.settings.pagination_type == "sides" and show_desktop_slider -%}
+                <button
+                        type="button"
+                        class="slider-button slider-button--prev"
+                        name="previous"
+                        aria-label="{{ 'general.slider.previous_slide' | t }}"
+                        aria-controls="Slider-{{ section.id }}"
+                >
+                    {% render 'icon-caret' %}
+                </button>
+            {% endif %}
             <ul
                     id="Slider-{{ section.id }}"
                     class="grid product-grid contains-card contains-card--product{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid--{{ section.settings.columns_desktop }}-col-desktop{% if section.settings.collection == blank %} grid--2-col-tablet-down{% else %} grid--{{ section.settings.columns_mobile }}-col-tablet-down{% endif %}{% if show_mobile_slider or show_desktop_slider %} slider{% if show_desktop_slider %} slider--desktop{% endif %}{% if show_mobile_slider %} slider--tablet grid--peek{% endif %}{% endif %}"
@@ -100,7 +122,18 @@
                     {%- endfor -%}
                 {%- endfor -%}
             </ul>
-            {%- if show_mobile_slider or show_desktop_slider -%}
+            {%- if section.settings.pagination_type == "sides" and show_desktop_slider -%}
+                <button
+                        type="button"
+                        class="slider-button slider-button--next"
+                        name="next"
+                        aria-label="{{ 'general.slider.next_slide' | t }}"
+                        aria-controls="Slider-{{ section.id }}"
+                >
+                    {% render 'icon-caret' %}
+                </button>
+            {% endif %}
+            {%- if section.settings.pagination_type == "bottom" and show_mobile_slider or show_desktop_slider -%}
                 <div class="slider-buttons no-js-hidden">
                     <button
                             type="button"
@@ -130,16 +163,12 @@
             {%- endif -%}
         </slider-component>
 
-        {%- if section.settings.show_view_all and more_in_collection -%}
-            <div class="center collection__view-all">
-                <a
-                        href="{{ section.settings.collection.url }}"
-                        class="{% if section.settings.view_all_style == 'link' %}link underlined-link{% elsif section.settings.view_all_style == 'solid' %}button{% else %}button button--secondary{% endif %}"
-                        aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: section.settings.collection.title }}"
-                >
-                    {{ 'sections.featured_collection.view_all' | t }}
-                </a>
-            </div>
+        {%- if section.settings.show_view_all and more_in_collection and section.settings.view_all_location == "bottom" -%}
+            {% render 'collection-view-all',
+                    collection_url: section.settings.collection.url,
+                    collection_title: section.settings.collection.title,
+                    style: section.settings.view_all_style
+            %}
         {%- endif -%}
     </div>
 </div>
@@ -269,10 +298,46 @@
       "default": "solid"
     },
     {
+      "type": "select",
+      "id": "view_all_location",
+      "label": "t:sections.featured-collection.settings.view_all_location.label",
+      "options": [
+        {
+          "value": "bottom",
+          "label": "t:sections.featured-collection.settings.view_all_location.options__1.label"
+        },
+        {
+          "value": "top",
+          "label": "t:sections.featured-collection.settings.view_all_location.options__2.label"
+        }
+      ],
+      "default": "bottom"
+    },
+    {
       "type": "checkbox",
       "id": "enable_desktop_slider",
       "label": "t:sections.featured-collection.settings.enable_desktop_slider.label",
       "default": false
+    },
+    {
+      "type": "select",
+      "id": "pagination_type",
+      "label": "t:sections.featured-collection.settings.pagination_type.label",
+      "default": "sides",
+      "options": [
+        {
+          "value": "bottom",
+          "label": "t:sections.featured-collection.settings.pagination_type.options__1.label"
+        },
+        {
+          "value": "sides",
+          "label": "t:sections.featured-collection.settings.pagination_type.options__2.label"
+        },
+        {
+          "value": "none",
+          "label": "t:sections.featured-collection.settings.pagination_type.options__3.label"
+        }
+      ]
     },
     {
       "type": "select",

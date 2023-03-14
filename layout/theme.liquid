@@ -36,7 +36,7 @@
 
     {{ content_for_header }}
 
-    {% include 'theme-global-styles' %}
+    {% render 'theme-global-styles' %}
 
     {%- unless settings.type_body_font.system? -%}
         <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}"
@@ -47,7 +47,7 @@
               type="font/woff2" crossorigin>
     {%- endunless -%}
 
-    {% include 'theme-style-imports' %}
+    {% render 'theme-style-imports' %}
 
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
         if (Shopify.designMode) {
@@ -55,7 +55,7 @@
         }
     </script>
 
-    {% include 'theme-script-imports-priority' %}
+    {% render 'theme-script-imports-priority' %}
 </head>
 
 <body class="gradient">
@@ -80,7 +80,7 @@
     <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</li>
 </ul>
 
-{% include 'theme-global-scripts' %}
-{% include 'theme-script-imports' %}
+{% render 'theme-global-scripts' %}
+{% render 'theme-script-imports' %}
 </body>
 </html>
