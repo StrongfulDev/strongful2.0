@@ -47,12 +47,17 @@
     if section.settings.enable_desktop_slider and products_to_display > section.settings.columns_desktop and section.settings.pagination_type != "none"
         assign show_desktop_slider = true
     endif
+
+    assign show_side_arrows = false
+    if section.settings.pagination_type == "sides" and show_desktop_slider
+        assign show_side_arrows = true
+    endif
 -%}
 
 <div class="color-{{ section.settings.color_scheme }} isolate gradient">
     <div class="collection section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %} pagination_type_{{ section.settings.pagination_type }}">
         <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
-            <div class="collection__title_heading">
+            <div class="collection__title_heading{% if show_side_arrows %} with_arrows{% endif %}">
                 {%- if section.settings.title != blank -%}
                     <h2 class="title {{ section.settings.heading_size }}">{{ section.settings.title | escape }}</h2>
                 {%- endif -%}
@@ -82,7 +87,7 @@
 
         <slider-component
                 class="slider-mobile-gutter{% if section.settings.full_width %} slider-component-full-width{% endif %}{% if show_mobile_slider == false %} page-width{% endif %}{% if show_desktop_slider == false and section.settings.full_width == false %} page-width-desktop{% endif %}{% if show_desktop_slider %} slider-component-desktop{% endif %}">
-            {%- if section.settings.pagination_type == "sides" and show_desktop_slider -%}
+            {%- if show_side_arrows -%}
                 <button
                         type="button"
                         class="slider-button slider-button--prev"
@@ -95,7 +100,7 @@
             {% endif %}
             <ul
                     id="Slider-{{ section.id }}"
-                    class="grid product-grid contains-card contains-card--product{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid--{{ section.settings.columns_desktop }}-col-desktop{% if section.settings.collection == blank %} grid--2-col-tablet-down{% else %} grid--{{ section.settings.columns_mobile }}-col-tablet-down{% endif %}{% if show_mobile_slider or show_desktop_slider %} slider{% if show_desktop_slider %} slider--desktop{% endif %}{% if show_mobile_slider %} slider--tablet grid--peek{% endif %}{% endif %}"
+                    class="grid product-grid contains-card contains-card--product{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid--{{ section.settings.columns_desktop }}-col-desktop{% if section.settings.collection == blank %} grid--2-col-tablet-down{% else %} grid--{{ section.settings.columns_mobile }}-col-tablet-down{% endif %}{% if show_mobile_slider or show_desktop_slider %} slider{% if show_desktop_slider %} slider--desktop{% endif %}{% if show_mobile_slider %} slider--tablet {% endif %}{% if section.settings.show_peak %}grid--peek{% endif %}{% endif %}"
                     role="list"
                     aria-label="{{ 'general.slider.name' | t }}"
             >
@@ -111,7 +116,9 @@
                                 show_vendor: section.settings.show_vendor,
                                 show_rating: section.settings.show_rating,
                                 show_quick_add: section.settings.enable_quick_add,
-                                section_id: section.id
+                                section_id: section.id,
+                                show_sale_badge: section.settings.show_sale_badge
+
                         %}
                     </li>
                 {%- else -%}
@@ -122,7 +129,7 @@
                     {%- endfor -%}
                 {%- endfor -%}
             </ul>
-            {%- if section.settings.pagination_type == "sides" and show_desktop_slider -%}
+            {%- if show_side_arrows -%}
                 <button
                         type="button"
                         class="slider-button slider-button--next"
@@ -163,12 +170,12 @@
             {%- endif -%}
         </slider-component>
 
-        {%- if section.settings.show_view_all and more_in_collection and section.settings.view_all_location == "bottom" -%}
-            {% render 'collection-view-all',
-                    collection_url: section.settings.collection.url,
-                    collection_title: section.settings.collection.title,
-                    style: section.settings.view_all_style
-            %}
+        {% render 'collection-view-all',
+                collection_url: section.settings.collection.url,
+                collection_title: section.settings.collection.title,
+                style: section.settings.view_all_style
+        %}
+        {%- if section.settings.show_view_all and more_in_collection and section.settings.view_all_location == "bottom" or section.settings.view_all_location == "desktop_top_tablet_bottom" -%}
         {%- endif -%}
     </div>
 </div>
@@ -309,6 +316,10 @@
         {
           "value": "top",
           "label": "t:sections.featured-collection.settings.view_all_location.options__2.label"
+        },
+        {
+          "value": "desktop_top_tablet_bottom",
+          "label": "t:sections.featured-collection.settings.view_all_location.options__3.label"
         }
       ],
       "default": "bottom"
@@ -317,6 +328,12 @@
       "type": "checkbox",
       "id": "enable_desktop_slider",
       "label": "t:sections.featured-collection.settings.enable_desktop_slider.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_peak",
+      "label": "t:sections.featured-collection.settings.show_peak.label",
       "default": false
     },
     {
@@ -410,6 +427,12 @@
       "default": false,
       "label": "t:sections.featured-collection.settings.show_rating.label",
       "info": "t:sections.featured-collection.settings.show_rating.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_sale_badge",
+      "default": false,
+      "label": "t:sections.featured-collection.settings.show_sale_badge.label"
     },
     {
       "type": "checkbox",

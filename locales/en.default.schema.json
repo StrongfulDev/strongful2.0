@@ -787,6 +787,9 @@
         "enable_desktop_slider": {
           "label": "Enable carousel on desktop"
         },
+        "show_peak": {
+          "label": "Show peak"
+        },
         "pagination_type": {
           "label": "Pagination type",
           "options__1": {
@@ -826,6 +829,9 @@
         "show_rating": {
           "label": "Show product rating",
           "info": "To display a rating, add a product rating app. [Learn more](https://help.shopify.com/manual/online-store/themes/theme-structure/theme-features#featured-collection-show-product-rating)"
+        },
+        "show_sale_badge": {
+          "label": "Show card sale badge"
         },
         "enable_quick_buy": {
           "label": "Enable quick add button",
