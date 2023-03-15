@@ -170,12 +170,12 @@
             {%- endif -%}
         </slider-component>
 
-        {% render 'collection-view-all',
-                collection_url: section.settings.collection.url,
-                collection_title: section.settings.collection.title,
-                style: section.settings.view_all_style
-        %}
-        {%- if section.settings.show_view_all and more_in_collection and section.settings.view_all_location == "bottom" or section.settings.view_all_location == "desktop_top_tablet_bottom" -%}
+        {%- if section.settings.show_view_all and more_in_collection and section.settings.view_all_location == "bottom" -%}
+          {% render 'collection-view-all',
+                  collection_url: section.settings.collection.url,
+                  collection_title: section.settings.collection.title,
+                  style: section.settings.view_all_style
+          %}
         {%- endif -%}
     </div>
 </div>
