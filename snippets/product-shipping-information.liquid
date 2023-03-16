@@ -1,0 +1,37 @@
+{% comment %}
+  Renders a table with product specific sizing
+  Accepts:
+  - product: {Object} product object.
+  - block: {Object} block object.
+  -
+
+  Usage:
+  {% render 'product-sizing-table',
+    product: product,
+    block: block
+  %}
+{% endcomment %}
+
+{% comment %} TODO: Extract the following assignments to dashboard {% endcomment %}
+{% assign freeShipping = 21000 %}
+{% assign shippingStepOne = 10000 %}
+
+<div class="product-meta-content none">
+    <div class="product-shipping-dropdown">
+        <p class="paragraph-21">הסבר על משלוחים והחזרות</p>
+        <ul class="ship-list">
+            <li style="color: firebrick;">הזמנות הכוללות פריטים ברכישה מוקדמת יקלטו במערכת לאחר השקת הקולקציה ב19.3</li>
+            <li>משלוח אקספרס חינם בהזמנה מעל <span class="priceFont">{{ freeShipping | money_without_trailing_zeros }}</span></li>
+            <li>משלוחי אקספרס בעלות <span class="priceFont">10</span> ש"ח בהזמנה עד <span class="priceFont">{{ freeShipping | money_without_trailing_zeros }}</span></li>
+            <li>משלוחי אקספרס בעלות <span class="priceFont">25</span> ש"ח בהזמנה עד <span class="priceFont">{{ shippingStepOne | money_without_trailing_zeros }}</span></li>
+            <li>משלוח אקספרס הינו עד הבית תוך 1-3 ימי עסקים, לא כולל את יום קליטת ההזמנה, לכל חלקי הארץ <br/>מלבד <span class="open-remote-location">ישובים מרוחקים</span> תוך 1-5 ימי עסקים</li>
+            <li><a href="/blogs/policies/מדיניות-המשלוחים-שלנו" target="_blank" class="a-block">למידע נוסף על זמני המשלוח</a></li>
+            {% unless product.tags contains 'kit' %}
+                <li>החלפות חינם עד הבית (עם שליח) - <a href="/blogs/policies/החזרות-והחלפות" target="_blank" id="strongShip">למידע נוסף</a></li>
+            {% endunless %}
+        </ul>
+        {% unless product.tags contains "אקססוריז" or product.tags contains 'kit' %}
+            <p style="color: firebrick;">מומלץ להסתכל במדריך מידות</p>
+        {% endunless %}
+    </div>
+</div>

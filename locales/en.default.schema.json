@@ -2085,6 +2085,18 @@
             }
           }
         },
+        "swiper": {
+          "name": "Swiper",
+          "settings": {
+            "swiper_preset": {
+              "label": "Specific swiper",
+              "options__1": {
+                "label": "Shipping returns"
+              },
+              "info": "Choose the swiper preset to use"
+            }
+          }
+        },
         "collapsible_tab": {
           "name": "Collapsible row",
           "settings": {
@@ -2105,6 +2117,12 @@
               },
               "options__2": {
                 "label": "Description"
+              },
+              "options__3": {
+                "label": "Sizing table"
+              },
+              "options__4": {
+                "label": "Shipping information"
               }
             },
             "icon": {

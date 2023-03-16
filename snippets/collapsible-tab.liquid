@@ -10,11 +10,7 @@
     block: block,
   %}
 {% endcomment %}
-{%- liquid
-    if block.settings.product_content == "description"
-        assign additional_content = product.content
-    endif
-%}
+
 <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
     <details id="Details-{{ block.id }}-{{ section.id }}">
         <summary>
@@ -31,6 +27,19 @@
             {{ block.settings.content }}
             {{ additional_content }}
             {{ block.settings.page.content }}
+            {% case block.settings.product_content %}
+                {% when "description" %}
+                {% when "sizing_table" %}
+                    {% render 'product-sizing-table',
+                            product: product,
+                            block: block
+                    %}
+                {% when "shipping_information" %}
+                    {% render 'product-shipping-information',
+                            product: product,
+                            block: block
+                    %}
+            {% endcase %}
         </div>
     </details>
 </div>

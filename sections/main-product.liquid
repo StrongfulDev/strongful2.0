@@ -196,6 +196,8 @@
                             {{ block.settings.custom_liquid }}
                         {%- when 'collapsible_tab' -%}
                             {% render 'collapsible-tab', block: block, product: product %}
+                        {%- when 'swiper' -%}
+                            {% render 'swiper', preset: block.settings.swiper_preset %}
                         {%- when 'quantity_selector' -%}
                             <div
                                     id="Quantity-Form-{{ section.id }}"
@@ -513,6 +515,7 @@
 
 
 
+
         </script>
         <script src="{{ 'product-model.js' | asset_url }}" defer></script>
     {%- endif -%}
@@ -595,6 +598,7 @@
         {%- endfor -%}
       ]
     }
+
 
 
 
@@ -807,6 +811,25 @@
       ]
     },
     {
+      "type": "swiper",
+      "name": "t:sections.main-product.blocks.swiper.name",
+      "settings": [
+        {
+          "type": "select",
+          "id": "swiper_preset",
+          "options": [
+            {
+              "value": "shipping_returns",
+              "label": "t:sections.main-product.blocks.swiper.settings.swiper_preset.options__1.label"
+            }
+          ],
+          "default": "shipping_returns",
+          "label": "t:sections.main-product.blocks.swiper.settings.swiper_preset.label",
+          "info": "t:sections.main-product.blocks.swiper.settings.swiper_preset.info"
+        }
+      ]
+    },
+    {
       "type": "collapsible_tab",
       "name": "t:sections.main-product.blocks.collapsible_tab.name",
       "settings": [
@@ -828,6 +851,14 @@
             {
               "value": "description",
               "label": "t:sections.main-product.blocks.collapsible_tab.settings.product_content.options__2.label"
+            },
+            {
+              "value": "sizing_table",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.product_content.options__3.label"
+            },
+            {
+              "value": "shipping_information",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.product_content.options__4.label"
             }
           ],
           "default": "none",
@@ -843,7 +874,6 @@
           "id": "page",
           "label": "t:sections.main-product.blocks.collapsible_tab.settings.page.label"
         },
-
         {
           "type": "select",
           "id": "icon",
