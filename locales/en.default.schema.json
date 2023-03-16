@@ -1962,12 +1962,29 @@
               },
               "options__3": {
                 "label": "Uppercase"
+              },
+              "options__4": {
+                "label": "Title"
               }
             }
           }
         },
         "title": {
-          "name": "Title"
+          "name": "Title",
+          "settings": {
+            "direction": {
+              "label": "Title direction",
+              "options__1": {
+                "label": "Left"
+              },
+              "options__2": {
+                "label": "Center"
+              },
+              "options__3": {
+                "label": "Right"
+              }
+            }
+          }
         },
         "price": {
           "name": "Price"
@@ -2010,6 +2027,29 @@
               "options__2": {
                 "label": "Pills"
               }
+            }
+          }
+        },
+        "color_variant_picker": {
+          "name": "Color Variant picker",
+          "settings": {
+            "variants_style": {
+              "label": "Variant item style",
+              "options__1": {
+                "label": "Picture"
+              },
+              "options__2": {
+                "label": "Color"
+              }
+            },
+            "show_variants_name": {
+              "label": "Show variants name"
+            },
+            "desktop_color_variant_number": {
+              "label": "Desktop color variants row items"
+            },
+            "mobile_color_variant_number": {
+              "label": "Mobile color variants row items"
             }
           }
         },
@@ -2418,6 +2458,20 @@
         },
         "enable_video_looping": {
           "label": "Enable video looping"
+        },
+        "section_details_heading": {
+          "label": "Product details section"
+        },
+        "details_section": {
+          "elements_direction": {
+            "label": "Elements direction",
+            "options__1": {
+              "label": "Left"
+            },
+            "options__2": {
+              "label": "Right"
+            }
+          }
         }
       }
     },

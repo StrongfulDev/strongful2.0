@@ -32,6 +32,13 @@
             "picker_type": "button"
           }
         },
+        "color_variant_picker": {
+          "type": "color_variant_picker",
+          "settings": {
+            "show_variants_name": false,
+            "variants_style": "color"
+          }
+        },
         "e25b4e21-4067-4595-b9cd-adb52f5f14bf": {
           "type": "shopify:\/\/apps\/back-in-stock-restock-alerts\/blocks\/app-block\/839cbcb7-0406-4c2b-8e74-a54d987b90ab",
           "settings": {
@@ -59,6 +66,24 @@
           "settings": {
             "product": "{{product}}"
           }
+        },
+        "679aaa7e-cf01-48c6-85e3-b35a4a905d19": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "content": "<p>﻿emd flmf dflds f<\/p>",
+            "page": ""
+          }
+        },
+        "ef2147de-71f3-41a2-ac7d-bf55352b85a5": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "content": "",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -67,11 +92,14 @@
         "86b25a4c-0e37-4f72-9c3f-ccd1f4f78f35",
         "price",
         "variant_picker",
+        "color_variant_picker",
         "e25b4e21-4067-4595-b9cd-adb52f5f14bf",
         "quantity_selector",
         "buy_buttons",
         "description",
-        "4fb3a048-173b-4072-b188-0de34396e5f0"
+        "4fb3a048-173b-4072-b188-0de34396e5f0",
+        "679aaa7e-cf01-48c6-85e3-b35a4a905d19",
+        "ef2147de-71f3-41a2-ac7d-bf55352b85a5"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -84,6 +112,7 @@
         "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": true,
+        "details_section_direction": "right",
         "padding_top": 36,
         "padding_bottom": 12
       }

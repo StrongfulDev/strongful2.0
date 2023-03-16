@@ -1,0 +1,111 @@
+{% comment %}
+  Renders product color variant-picker
+
+  Accepts:
+  - product: {Object} product object.
+  - block: {Object} passing the block information.
+  - product_form_id: {String} Id of the product form to which the variant picker is associated.
+  - update_url: {Boolean} whether or not to update url when changing variants. If false, the url isn't updated. Default: true (optional).
+  - desktop_variant_count: {Number} the amount of variants to display on desktop
+  - mobile_variant_count: {Number} the amount of variants to display on mobile
+  Usage:
+  {% render 'product-color-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+{% endcomment %}
+{%- liquid
+    assign parent_collection_title = product.metafields.global.collectionTitle
+    assign desktop_columns = desktop_variant_count | default: 4
+    assign mobile_columns = mobile_variant_count | default: 2
+-%}
+{% style %}
+    .color-variants-container {
+    position: relative;
+    }
+    .color-variants-container img {
+    width: 100%;
+    }
+    .color-variants-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0
+    }
+    .color-variants-list li {
+    padding: 5px;
+    }
+    {% if block.settings.variants_style == "picture" %}
+        .color-variants-list li {
+        width: {{ 100 | divided_by: desktop_columns }}%;
+        }
+        @media screen and (max-width: 749px) {
+        .color-variants-list li {
+        width: {{ 100 | divided_by: mobile_columns }}%;
+        }
+        }
+    {% endif %}
+    .variant-color-display {
+    height: 30px;
+    width: 30px;
+    border-radius: 100px;
+    display: block;
+    }
+
+{% endstyle %}
+<div class="color-variants-container"
+     id="variant-radios-{{ section.id }}"
+     class="no-js-hidden"
+     data-section="{{ section.id }}"
+     data-url="{{ product.url }}"
+        {% if update_url == false %}
+            data-update-url="false"
+        {% endif %}
+        {{ block.shopify_attributes }}
+>
+    <ul class="color-variants-list">
+        {% for collection in collections %}
+            {% if collection.title == parent_collection_title or collection.title == parent_collection_title.value %}
+                {% for color_variant_product in collection.products %}
+                    {% if color_variant_product.id != product.id %}
+                        <li class="color-variant {{ color_variant_product.tags | join: " " }}">
+                            {% if block.settings.variants_style == "picture" %}
+                                {% assign media = color_variant_product.featured_media %}
+                                <div class="color-variant-product__media-item"
+                                     data-media-id="{{ section.id }}-{{ media.id }}">
+                                    <a href="{{ color_variant_product.url }}" class="similar-a">
+                                        <img src="{{ color_variant_product.featured_image | product_img_url: 'master' }}"
+                                             srcset="{{ color_variant_product.featured_image | product_img_url: '200x' }} 200w,
+                    {{ color_variant_product.featured_image | product_img_url: '300x' }} 300w,
+                    {{ color_variant_product.featured_image | product_img_url: '400x' }} 400w,
+                    {{ color_variant_product.featured_image | product_img_url: '600x' }} 600w"
+                                             alt="{{ color_variant_product.title | escape }}"
+                                             class="color-variant-img"
+                                             loading="lazy"/>
+                                    </a>
+                                    {% comment %} TODO: Change this from vendor to metadata: use color_variant_product.metafields.variant.color {% endcomment %}
+                                    {% if block.settings.show_variants_name %}
+                                        <span class="color-variant-text">
+                                        {% echo color_variant_product.vendor | default: color_variant_product.metafields.variant.color %}
+                                    </span>
+                                    {% endif %}
+                                </div>
+                            {% endif %}
+                            {% if block.settings.variants_style == "color" %}
+                                <div class="variant-color-display-container">
+                                {% assign color = color_variant_product.metafields.variant.color %}
+                                {% if block.settings.show_variants_name %}
+                                    <span class="color-variant-text">
+                                        {% echo color_variant_product.vendor | default: color_variant_product.metafields.variant.color %}
+                                    </span>
+                                {% endif %}
+                                <span class="variant-color-display"
+                                      style="background-color: {{ color }}">&nbsp;</span>
+                            {% endif %}
+                                </div>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+    </ul>
+</div>
