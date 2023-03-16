@@ -60,7 +60,7 @@
                 {% endif %}
         >
         {% if option.name == "Color" %}
-            <label class="no-background color-variant-tile"
+            <label class="no-background color-variant-tile{% if option_disabled %} disabled{% endif %}"
                    for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
                 <span style="background-color: {{ value }}">&nbsp;</span>
             </label>

@@ -1474,24 +1474,41 @@ a.product__text {
 }
 
 .product-form__input input[type='radio'] + label.color-variant-tile.no-background {
-    border: none;
     background-color: unset;
     padding: 0;
     transition: all .4s ease;
-}
-.product-form__input input[type='radio']:checked + label.color-variant-tile.no-background {
-    border: 2px solid rgb(var(--color-foreground));
     border-radius: 100px;
-    transform: scale(1.1);
+    border: 1px solid silver;
 }
 
+.product-form__input input[type='radio']:checked + label.color-variant-tile.no-background {
+    border: 2px solid rgb(var(--color-foreground));
+    transform: scale(1.1);
+}
 
 .color-variant-tile span {
     display: block;
     height: 30px;
     width: 30px;
     border-radius: 100px;
-    border: 1px solid silver;
+}
+
+.color-variant-tile.disabled {
+    border-color: firebrick !important;
+}
+.color-variant-tile.disabled span {
+    background: linear-gradient(to top left,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) calc(50% - 0.8px),
+    rgba(0, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 0) calc(50% + 0.8px),
+    rgba(0, 0, 0, 0) 100%),
+    linear-gradient(to top right,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0) calc(50% - 0.8px),
+            rgba(0, 0, 0, 1) 50%,
+            rgba(0, 0, 0, 0) calc(50% + 0.8px),
+            rgba(0, 0, 0, 0) 100%);
 }
 
 .color-variant-container {

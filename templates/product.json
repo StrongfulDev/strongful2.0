@@ -82,7 +82,8 @@
             "heading": "Collapsible row",
             "icon": "check_mark",
             "content": "",
-            "page": ""
+            "page": "",
+            "product_content": "description"
           }
         }
       },

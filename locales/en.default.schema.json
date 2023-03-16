@@ -2030,29 +2030,6 @@
             }
           }
         },
-        "color_variant_picker": {
-          "name": "Color Variant picker",
-          "settings": {
-            "variants_style": {
-              "label": "Variant item style",
-              "options__1": {
-                "label": "Picture"
-              },
-              "options__2": {
-                "label": "Color"
-              }
-            },
-            "show_variants_name": {
-              "label": "Show variants name"
-            },
-            "desktop_color_variant_number": {
-              "label": "Desktop color variants row items"
-            },
-            "mobile_color_variant_number": {
-              "label": "Mobile color variants row items"
-            }
-          }
-        },
         "buy_buttons": {
           "name": "Buy buttons",
           "settings": {
@@ -2120,6 +2097,15 @@
             },
             "page": {
               "label": "Row content from page"
+            },
+            "product_content": {
+              "label": "Content from product",
+              "options__1": {
+                "label": "None"
+              },
+              "options__2": {
+                "label": "Description"
+              }
             },
             "icon": {
               "label": "Icon",
