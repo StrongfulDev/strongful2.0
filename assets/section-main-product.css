@@ -1472,3 +1472,28 @@ a.product__text {
     text-align: right;
     direction: rtl;
 }
+
+.product-form__input input[type='radio'] + label.color-variant-tile.no-background {
+    border: none;
+    background-color: unset;
+    padding: 0;
+    transition: all .4s ease;
+}
+.product-form__input input[type='radio']:checked + label.color-variant-tile.no-background {
+    border: 2px solid rgb(var(--color-foreground));
+    border-radius: 100px;
+    transform: scale(1.1);
+}
+
+
+.color-variant-tile span {
+    display: block;
+    height: 30px;
+    width: 30px;
+    border-radius: 100px;
+    border: 1px solid silver;
+}
+
+.color-variant-container {
+    display: inline;
+}
