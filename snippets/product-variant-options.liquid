@@ -5,6 +5,7 @@
   - product: {Object} product object.
   - option: {Object} current product_option object.
   - block: {Object} block object.
+  - picker_type: {String} Type of picker
 
 
   Usage:
@@ -45,7 +46,7 @@
         endfor
     -%}
 
-    {%- if block.settings.picker_type == 'button' -%}
+    {%- if block.settings.picker_type == 'button' or picker_type == "button" -%}
         <input
                 type="radio"
                 id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
@@ -56,7 +57,8 @@
                     checked
                 {% endif %}
                 {% if option_disabled %}
-                    class="disabled"
+                    disabled="disabled"
+                    class="disabled disabled-variant-button"
                 {% endif %}
         >
         {% if option.name == "Color" %}
@@ -66,7 +68,8 @@
                 <span style="background-color: {{ value }}">&nbsp;</span>
             </label>
         {% else %}
-            <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+            <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                   class="{% if option_disabled %}disabled-variant-button{% endif %}">
                 {{ value -}}
                 <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
             </label>

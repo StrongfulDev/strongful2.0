@@ -30,10 +30,6 @@
 
     {% render 'meta-tags' %}
 
-    <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
-
     {{ content_for_header }}
 
     {% render 'theme-global-styles' %}
@@ -48,12 +44,6 @@
     {%- endunless -%}
 
     {% render 'theme-style-imports' %}
-
-    <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
-        if (Shopify.designMode) {
-            document.documentElement.classList.add('shopify-design-mode');
-        }
-    </script>
 
     {% render 'theme-script-imports-priority' %}
 </head>

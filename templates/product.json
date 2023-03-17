@@ -44,11 +44,6 @@
             "show_dynamic_checkout": true
           }
         },
-        "description": {
-          "type": "description",
-          "settings": {
-          }
-        },
         "4fb3a048-173b-4072-b188-0de34396e5f0": {
           "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
@@ -100,7 +95,6 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "description",
         "4fb3a048-173b-4072-b188-0de34396e5f0",
         "679aaa7e-cf01-48c6-85e3-b35a4a905d19",
         "ef2147de-71f3-41a2-ac7d-bf55352b85a5",
@@ -123,6 +117,13 @@
         "padding_bottom": 12
       }
     },
+    "complete-look-products": {
+      "type": "complete-look-products",
+      "settings": {
+        "heading": "SHOP THE LOOK",
+        "heading_size": "h2"
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -143,6 +144,7 @@
   },
   "order": [
     "main",
+    "complete-look-products",
     "related-products"
   ]
 }

@@ -1,4 +1,3 @@
-
 <script>
     window.shopUrl = '{{ request.origin }}';
     window.routes = {
@@ -28,3 +27,16 @@
         playSlideshow: `{{ 'sections.slideshow.play_slideshow' | t }}`,
     }
 </script>
+
+
+<script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    if (Shopify.designMode) {
+        document.documentElement.classList.add('shopify-design-mode');
+    }
+</script>
+
+<script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
+
+<script src="{{ 'jquery-3.6.4.min.js' | asset_url }}" defer="defer"></script>

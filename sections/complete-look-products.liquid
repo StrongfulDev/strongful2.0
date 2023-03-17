@@ -1,0 +1,99 @@
+{% assign setParent = product.metafields.global.setParent %}
+
+{{ 'component-complete-look.css' | asset_url | stylesheet_tag }}
+{{ 'component-complete-look.js' | asset_url | script_tag }}
+
+<div class="complete_look__slider page-width" {{ section.shopify_attributes }}>
+    <div class="complete_look__columns">
+        <div class="featured_photo">
+            {% for collection in collections %}
+                {% if setParent == collection.title or setParent.value == collection.title %}
+                    {% for product in collection.products limit: 1 %}
+                        {% if product.tags contains 'לייב' %}
+                            <a href="{{ product.url }}" class="rtl desktop mono-link">
+                                <img src="{{ product.featured_image | product_img_url: 'master' }}"
+                                     loading="lazy">
+                            </a>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div style="width: 30px; display: block">&nbsp;</div>
+        <ul class="complete_look__list">
+            <li>
+                <h4 class="title title-wrapper--no-top-margin complete_look__title {{ section.settings.heading_size }}">{{ section.settings.heading }}</h4>
+            </li>
+            {% for collection in collections %}
+                {% if setParent == collection.title or setParent.value == collection.title %}
+                    {% for product in collection.products %}
+                        {% unless product.id == productId %}
+                            {% if product.tags contains 'לייב' %}
+                                <li class="complete_look__list_item">
+                                    <div class="complete_look__item {% if product.tags contains 'fakeOutOfStock' %}fake-out-of-stock{% endif %}">
+                                        <div class="item_picture">
+                                            <a href="{{ product.url }}">
+                                                <img src="{{ product.images[0] | product_img_url: '400x' }}"
+                                                     alt="{{ product.title | escape }}"
+                                                     class="new-stl--image" loading="lazy"/>
+                                            </a>
+                                        </div>
+                                        <div class="item_details">
+                                            <p class="item_title">{{ product.title }}</p>
+                                            {% render 'price', product: product, price_class: "complete_look_variant_price" %}
+                                        </div>
+                                        <div class="variant_selector">
+                                            {% render 'product-size-picker', product: product, block: block %}
+                                        </div>
+                                    </div>
+                                </li>
+                            {% endif %}
+                        {% endunless %}
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.complete-look-products.name",
+  "class": "section complete-look-products-section",
+  "tag": "section",
+  "disabled_on": {
+    "groups": [
+      "header",
+      "footer"
+    ]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Shop the look",
+      "label": "t:sections.complete-look-products.settings.heading.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    }
+  ]
+}
+{% endschema %}

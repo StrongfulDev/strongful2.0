@@ -1,0 +1,62 @@
+{% comment %}
+  Renders product variant-picker
+
+  Accepts:
+  - product: {Object} product object.
+  - block: {Object} passing the block information.
+
+  Usage:
+  {% render 'product-size-picker', product: product, block: block %}
+{% endcomment %}
+
+{%- unless product.has_only_default_variant -%}
+    <div class="variant_selector">
+        {% form 'product', product, class: 'item__form shopify-product-form' %}
+            <div class="product_variants {% if product.has_only_default_variant %}none{% endif %}">
+                <ul>
+                    {% for variant in product.variants %}
+                        {% unless variant.title == '39' %}
+                            {%- liquid
+                                assign product_disabled = false
+                                if variant.available == false
+                                    assign product_disabled = true
+                                endif
+                                if product.title contains 'Chummy' and variant.title != "L"
+                                    assign product_disabled = true
+                                elsif variant.title == '39'
+                                    assign product_disabled = true
+                                endif
+                            %}
+
+                            <li class="size_variant_button{% if product_disabled %} disabled-variant-button{% endif %}">
+                                <input type="radio"
+                                       data-variant-id="{{ variant.id }}"
+                                       name="id"
+                                       value="{{ variant.id }}"
+                                       id="radio_{{ variant.id }}"
+                                        {% if product_disabled %} disabled{% endif %}
+                                {% if product.has_only_default_variant %}class="default-swatch-input"
+                                    checked{% else %}class="new-swatch-input shoppable"{% endif %}>
+                                <label for="radio_{{ variant.id }}"
+                                       class="new-swatch-label {% if product.selected_variant == variant %}selected{% endif %}">
+                                    {{ variant.title | escape }}
+                                    <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
+                                </label>
+                            </li>
+                        {% endunless %}
+                    {% endfor %}
+                </ul>
+            </div>
+            {% if product.tags contains 'fakeOutOfStock' %}
+                <button class="addtocartdesk stl-addtocartdesk soldout-variant fakeOutOfStock">
+                    אזל המלאי
+                </button>
+            {% else %}
+                <button type="submit"
+                        class="add_to_cart addtocartdesk stl-addtocartdesk">
+                    הוספה
+                </button>
+            {% endif %}
+        {% endform %}
+    </div>
+{%- endunless -%}

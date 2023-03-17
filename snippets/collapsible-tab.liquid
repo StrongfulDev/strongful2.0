@@ -29,6 +29,7 @@
             {{ block.settings.page.content }}
             {% case block.settings.product_content %}
                 {% when "description" %}
+                    {{ product.content }}
                 {% when "sizing_table" %}
                     {% render 'product-sizing-table',
                             product: product,
