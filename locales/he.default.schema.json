@@ -1860,6 +1860,18 @@
           "options__2": {
             "label": "2 columns"
           }
+        },
+        "quick_add_type": {
+          "label": "Quick add type",
+          "options__1": {
+            "label": "Button under the card"
+          },
+          "options__2": {
+            "label": "Options on hover"
+          }
+        },
+        "quick_add_text": {
+          "label": "Quick add text"
         }
       }
     },

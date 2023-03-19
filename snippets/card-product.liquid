@@ -10,6 +10,7 @@
   - extend_height: {Boolean} Card height extends to available container space. Default: true (optional)
   - lazy_load: {Boolean} Image should be lazy loaded. Default: true (optional)
   - show_quick_add: {Boolean} Show the quick add button.
+  - quick_add_type: {String} Type of quick add button to show.
   - section_id: {String} The ID of the section that contains this card.
   - horizontal_class: {Boolean} Add a card--horizontal class if set to true. Default: false (optional)
   - horizontal_quick_add: {Boolean} Changes the quick add button styles when set to true. Default: false (optional)
@@ -20,6 +21,7 @@
 {% endcomment %}
 
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
+{{ 'component-card-product.css' | asset_url | stylesheet_tag }}
 
 {%- if card_product and card_product != empty -%}
     {%- liquid
@@ -136,6 +138,16 @@
                             {%- endif -%}
                         </div>
                     {% endif %}
+                    {%- if show_quick_add and quick_add_type == "hover" -%}
+                        <div class="quick-add hover no-js-hidden">
+                            <div class="product-size-picker-container">
+                                <span class="product_size_picker__heading">{{ section.settings.quick_add_text }}</span>
+                                <div class="product-size-picker">
+                                    {% render 'product-size-picker', product: card_product, wrapper_class: "hover", submit_on_click: true %}
+                                </div>
+                            </div>
+                        </div>
+                    {%- endif -%}
                 </div>
             </div>
             <div class="card__content">
@@ -202,7 +214,7 @@
                         {% render 'price', product: card_product, price_class: '' %}
                     </div>
                 </div>
-                {%- if show_quick_add -%}
+                {%- if show_quick_add and quick_add_type == "button" -%}
                     <div class="quick-add no-js-hidden">
                         {%- liquid
                             assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id
@@ -234,7 +246,8 @@
                                                 viewBox="0 0 66 66"
                                                 xmlns="http://www.w3.org/2000/svg"
                                         >
-                                            <circle class="path" fill="none" stroke-width="6"
+                                            <circle class="path" fill="none"
+                                                    stroke-width="6"
                                                     cx="33" cy="33" r="30"></circle>
                                         </svg>
                                     </div>
@@ -310,7 +323,8 @@
                                                     viewBox="0 0 66 66"
                                                     xmlns="http://www.w3.org/2000/svg"
                                             >
-                                                <circle class="path" fill="none" stroke-width="6"
+                                                <circle class="path" fill="none"
+                                                        stroke-width="6"
                                                         cx="33" cy="33" r="30"></circle>
                                             </svg>
                                         </div>

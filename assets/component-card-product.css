@@ -1,0 +1,52 @@
+.quick-add.hover {
+    display: none;
+}
+
+.card:hover .quick-add.hover {
+    display: block;
+}
+
+.quick-add.hover {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.product-size-picker-container {
+    background-color: rgba(var(--color-background), 0.8);
+    padding: 20px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.product_size_picker__heading {
+    font-weight: 700;
+}
+
+.product-size-picker {
+    width: 100%;
+}
+
+.variant_selector {
+    width: 100%;
+}
+
+.size-variant-product-form {
+    width: 100%;
+}
+
+.product_variants .size_variant_button {
+    max-width: 50px;
+}
+
+.product_variants ul {
+    justify-content: center;
+}
+
+.card__heading a:after {
+    z-index: 0;
+}

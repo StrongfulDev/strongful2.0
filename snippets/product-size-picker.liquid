@@ -3,14 +3,15 @@
 
   Accepts:
   - product: {Object} product object.
-  - block: {Object} passing the block information.
+  - wrapper_class: {String} additional class for the wrapper
+  - submit_on_click: {Boolean} should clicking an option add to cart or show a seperate button for adding to cart.
 
   Usage:
-  {% render 'product-size-picker', product: product, block: block %}
+  {% render 'product-size-picker', product: product %}
 {% endcomment %}
 
 {%- unless product.has_only_default_variant -%}
-    <div class="variant_selector">
+    <div class="variant_selector{% if submit_on_click %} submit_on_click{% endif %} {{ wrapper_class }}">
         <product-form class="size-variant-product-form">
             {%- form 'product', product, class: 'product_size_picker__form form', data-type: 'add-to-cart-form' -%}
                 <div class="product_variants {% if product.has_only_default_variant %}none{% endif %}">
@@ -50,20 +51,22 @@
                         {% endfor %}
                     </ul>
                 </div>
-                {% comment %} TODO: Make adding to cart ajax {% endcomment %}
-                <div class="add_to_cart_container product-form__buttons">
-                    {% if product.tags contains 'fakeOutOfStock' %}
-                        <button class="soldout-variant fakeOutOfStock">
-                            אזל המלאי
-                        </button>
-                    {% else %}
-                        <button type="submit"
-                                name="add"
-                                class="add_to_cart product-form__submit button button--full-width button--secondary">
-                            הוספה
-                        </button>
-                    {% endif %}
-                </div>
+                {% unless submit_on_click %}
+                    {% comment %} TODO: Make ajax add to cart open cart widget {% endcomment %}
+                    <div class="add_to_cart_container product-form__buttons">
+                        {% if product.tags contains 'fakeOutOfStock' %}
+                            <button class="soldout-variant fakeOutOfStock">
+                                אזל המלאי
+                            </button>
+                        {% else %}
+                            <button type="submit"
+                                    name="add"
+                                    class="add_to_cart product-form__submit button button--full-width button--secondary">
+                                הוספה
+                            </button>
+                        {% endif %}
+                    </div>
+                {% endunless %}
             {%- endform -%}
         </product-form>
     </div>

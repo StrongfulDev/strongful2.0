@@ -8,10 +8,16 @@ window.onload = () => {
         }
     })
 
-    $('.variant_selector input[type="radio"]').on("change", function (elem) {
+    $('.variant_selector input[type="radio"]').on("change", function (e) {
         const element = $(this);
         element.parents('.variant_selector').find('.add_to_cart').removeAttr("disabled");
     })
+
+    $('.variant_selector.submit_on_click .product_size_picker__button__label').on("click", function (e) {
+            const element = $(this);
+            element.parents("form").submit()
+        }
+    )
 
 // $('.product_size_picker__form').submit((e) => {
 //     e.preventDefault();

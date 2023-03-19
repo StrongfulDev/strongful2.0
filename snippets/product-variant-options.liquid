@@ -45,35 +45,35 @@
             endcase
         endfor
     -%}
-
     {%- if block.settings.picker_type == 'button' or picker_type == "button" -%}
-        <input
-                type="radio"
-                id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
-                name="{{ option.name }}"
-                value="{{ value | escape }}"
-                form="{{ product_form_id }}"
-                {% if option.selected_value == value %}
-                    checked
-                {% endif %}
-                {% if option_disabled %}
-                    disabled="disabled"
-                    class="disabled disabled-variant-button"
-                {% endif %}
-        >
-        {% if option.name == "Color" %}
-            {% comment %} TODO: Inducate the option is disbled by taking into account all variant selections. add: {% if option_disabled %} disabled{% endif %} to classes{% endcomment %}
-            <label class="no-background color-variant-tile"
-                   for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
-                <span style="background-color: {{ value }}">&nbsp;</span>
-            </label>
-        {% else %}
-            <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
-                   class="{% if option_disabled %}disabled-variant-button{% endif %}">
-                {{ value -}}
-                <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
-            </label>
-        {% endif %}
+        <span class="{% if option_disabled %}disabled-variant-button{% endif %}">
+            <input
+                    type="radio"
+                    id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                    name="{{ option.name }}"
+                    value="{{ value | escape }}"
+                    form="{{ product_form_id }}"
+                    {% if option.selected_value == value %}
+                        checked
+                    {% endif %}
+                    {% if option_disabled %}
+                        disabled="disabled"
+                        class="disabled disabled-variant-button"
+                    {% endif %}
+            >
+            {% if option.name == "Color" %}
+                {% comment %} TODO: Inducate the option is disbled by taking into account all variant selections. add: {% if option_disabled %} disabled{% endif %} to classes{% endcomment %}
+                <label class="no-background color-variant-tile"
+                       for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+                    <span style="background-color: {{ value }}">&nbsp;</span>
+                </label>
+            {% else %}
+                <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+                    {{ value -}}
+                    <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
+                </label>
+            {% endif %}
+        </span>
     {%- elsif block.settings.picker_type == 'dropdown' -%}
         <option
                 value="{{ value | escape }}"
