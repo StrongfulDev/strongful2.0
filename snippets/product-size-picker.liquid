@@ -11,56 +11,60 @@
 
 {%- unless product.has_only_default_variant -%}
     <div class="variant_selector">
-        {% form 'product', product, class: 'item__form shopify-product-form' %}
-            <div class="product_variants {% if product.has_only_default_variant %}none{% endif %}">
-                <ul>
-                    {% for variant in product.variants %}
-                        {% unless variant.title == '39' %}
-                            {%- liquid
-                                assign product_disabled = false
-                                if variant.available == false
-                                    assign product_disabled = true
-                                endif
-                                if product.title contains 'Chummy' and variant.title != "L"
-                                    assign product_disabled = true
-                                elsif variant.title == '39'
-                                    assign product_disabled = true
-                                endif
-                            %}
+        <product-form class="size-variant-product-form">
+            {%- form 'product', product, class: 'product_size_picker__form form', data-type: 'add-to-cart-form' -%}
+                <div class="product_variants {% if product.has_only_default_variant %}none{% endif %}">
+                    <ul>
+                        {% for variant in product.variants %}
+                            {% unless variant.title == '39' %}
+                                {%- liquid
+                                    assign product_disabled = false
+                                    if variant.available == false
+                                        assign product_disabled = true
+                                    endif
+                                    if product.title contains 'Chummy' and variant.title != "L"
+                                        assign product_disabled = true
+                                    elsif variant.title == '39'
+                                        assign product_disabled = true
+                                    endif
+                                %}
 
-                            <li class="size_variant_button{% if product_disabled %} disabled-variant-button{% endif %}">
-                                <div class="size_variant_button_container">
-                                    <input type="radio"
-                                           data-variant-id="{{ variant.id }}"
-                                           name="id"
-                                           value="{{ variant.id }}"
-                                           id="radio_{{ variant.id }}"
-                                            {% if product_disabled %} disabled{% endif %}
-                                    {% if product.has_only_default_variant %}class="default-swatch-input"
-                                        checked{% else %}class="new-swatch-input shoppable"{% endif %}>
-                                    <label for="radio_{{ variant.id }}"
-                                           class="new-swatch-label {% if product.selected_variant == variant %}selected{% endif %}">
-                                        {{ variant.title | escape }}
-                                        <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
-                                    </label>
-                                </div>
-                            </li>
-                        {% endunless %}
-                    {% endfor %}
-                </ul>
-            </div>
-            <div class="add_to_cart_container">
-                {% if product.tags contains 'fakeOutOfStock' %}
-                    <button class="addtocartdesk stl-addtocartdesk soldout-variant fakeOutOfStock">
-                        אזל המלאי
-                    </button>
-                {% else %}
-                    <button type="submit"
-                            class="add_to_cart addtocartdesk stl-addtocartdesk">
-                        הוספה
-                    </button>
-                {% endif %}
-            </div>
-        {% endform %}
+                                <li class="size_variant_button{% if product_disabled %} disabled-variant-button{% endif %}">
+                                    <div class="size_variant_button_container">
+                                        <input type="radio"
+                                               data-variant-id="{{ variant.id }}"
+                                               name="id"
+                                               value="{{ variant.id }}"
+                                               id="radio_{{ variant.id }}"
+                                                {% if product_disabled %} disabled{% endif %}
+                                        {% if product.has_only_default_variant %}class="product_size_picker__button default_input"
+                                            checked{% else %}class="product_size_picker__button new_input shoppable"{% endif %}>
+                                        <label for="radio_{{ variant.id }}"
+                                               class="product_size_picker__button__label {% if product.selected_variant == variant %}selected{% endif %}">
+                                            {{ variant.title | escape }}
+                                            <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
+                                        </label>
+                                    </div>
+                                </li>
+                            {% endunless %}
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% comment %} TODO: Make adding to cart ajax {% endcomment %}
+                <div class="add_to_cart_container product-form__buttons">
+                    {% if product.tags contains 'fakeOutOfStock' %}
+                        <button class="soldout-variant fakeOutOfStock">
+                            אזל המלאי
+                        </button>
+                    {% else %}
+                        <button type="submit"
+                                name="add"
+                                class="add_to_cart product-form__submit button button--full-width button--secondary">
+                            הוספה
+                        </button>
+                    {% endif %}
+                </div>
+            {%- endform -%}
+        </product-form>
     </div>
 {%- endunless -%}

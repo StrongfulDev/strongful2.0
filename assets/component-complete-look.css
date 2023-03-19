@@ -100,7 +100,9 @@
     width: 100%;
     background-color: rgb(var(--color-foreground));
     color: rgb(var(--color-background));
-    border-radius: 4px;
+}
+.add_to_cart.loading {
+    color: rgb(var(--color-background));
 }
 
 .add_to_cart_container {

@@ -12,4 +12,15 @@ window.onload = () => {
         const element = $(this);
         element.parents('.variant_selector').find('.add_to_cart').removeAttr("disabled");
     })
+
+// $('.product_size_picker__form').submit((e) => {
+//     e.preventDefault();
+//     const checkedInput = $(e.currentTarget).find('input.product_size_picker__button:checked');
+//     const variationId = checkedInput.val();
+//     console.log(variationId)
+//     // console.log(checkedInput, "VALALLAL", checkedInput.val(), e)
+//     addProductToCart(variationId, 1).then((res) => {
+//         alert("SUCCESS")
+//     })
+// })
 }
