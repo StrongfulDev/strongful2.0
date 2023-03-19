@@ -50,3 +50,16 @@
 .card__heading a:after {
     z-index: 0;
 }
+
+.card .slideshow__controls.slider-buttons {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    height: 100%;
+}
+
+.card .card__inner .card__media {
+    z-index: 1;
+}

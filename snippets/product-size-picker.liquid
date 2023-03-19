@@ -51,22 +51,20 @@
                         {% endfor %}
                     </ul>
                 </div>
-                {% unless submit_on_click %}
-                    {% comment %} TODO: Make ajax add to cart open cart widget {% endcomment %}
-                    <div class="add_to_cart_container product-form__buttons">
-                        {% if product.tags contains 'fakeOutOfStock' %}
-                            <button class="soldout-variant fakeOutOfStock">
-                                אזל המלאי
-                            </button>
-                        {% else %}
-                            <button type="submit"
-                                    name="add"
-                                    class="add_to_cart product-form__submit button button--full-width button--secondary">
-                                הוספה
-                            </button>
-                        {% endif %}
-                    </div>
-                {% endunless %}
+                {% comment %} TODO: Make ajax add to cart open cart widget {% endcomment %}
+                <div class="add_to_cart_container product-form__buttons">
+                    {% if product.tags contains 'fakeOutOfStock' %}
+                        <button class="soldout-variant fakeOutOfStock">
+                            אזל המלאי
+                        </button>
+                    {% else %}
+                        <button type="submit"
+                                name="add"
+                                class="add_to_cart product-form__submit button button--full-width button--secondary">
+                            הוספה
+                        </button>
+                    {% endif %}
+                </div>
             {%- endform -%}
         </product-form>
     </div>
