@@ -29,34 +29,38 @@
                             %}
 
                             <li class="size_variant_button{% if product_disabled %} disabled-variant-button{% endif %}">
-                                <input type="radio"
-                                       data-variant-id="{{ variant.id }}"
-                                       name="id"
-                                       value="{{ variant.id }}"
-                                       id="radio_{{ variant.id }}"
-                                        {% if product_disabled %} disabled{% endif %}
-                                {% if product.has_only_default_variant %}class="default-swatch-input"
-                                    checked{% else %}class="new-swatch-input shoppable"{% endif %}>
-                                <label for="radio_{{ variant.id }}"
-                                       class="new-swatch-label {% if product.selected_variant == variant %}selected{% endif %}">
-                                    {{ variant.title | escape }}
-                                    <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
-                                </label>
+                                <div class="size_variant_button_container">
+                                    <input type="radio"
+                                           data-variant-id="{{ variant.id }}"
+                                           name="id"
+                                           value="{{ variant.id }}"
+                                           id="radio_{{ variant.id }}"
+                                            {% if product_disabled %} disabled{% endif %}
+                                    {% if product.has_only_default_variant %}class="default-swatch-input"
+                                        checked{% else %}class="new-swatch-input shoppable"{% endif %}>
+                                    <label for="radio_{{ variant.id }}"
+                                           class="new-swatch-label {% if product.selected_variant == variant %}selected{% endif %}">
+                                        {{ variant.title | escape }}
+                                        <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
+                                    </label>
+                                </div>
                             </li>
                         {% endunless %}
                     {% endfor %}
                 </ul>
             </div>
-            {% if product.tags contains 'fakeOutOfStock' %}
-                <button class="addtocartdesk stl-addtocartdesk soldout-variant fakeOutOfStock">
-                    אזל המלאי
-                </button>
-            {% else %}
-                <button type="submit"
-                        class="add_to_cart addtocartdesk stl-addtocartdesk">
-                    הוספה
-                </button>
-            {% endif %}
+            <div class="add_to_cart_container">
+                {% if product.tags contains 'fakeOutOfStock' %}
+                    <button class="addtocartdesk stl-addtocartdesk soldout-variant fakeOutOfStock">
+                        אזל המלאי
+                    </button>
+                {% else %}
+                    <button type="submit"
+                            class="add_to_cart addtocartdesk stl-addtocartdesk">
+                        הוספה
+                    </button>
+                {% endif %}
+            </div>
         {% endform %}
     </div>
 {%- endunless -%}

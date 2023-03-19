@@ -25,6 +25,7 @@
 .complete_look__item {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
+    padding: 5px 0;
 }
 
 .complete_look__item .item_details {
@@ -33,6 +34,13 @@
 
 .complete_look__item .item_picture {
     padding-left: 10px;
+}
+
+.complete_look__item .item_picture a {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .complete_look__item .product_variants {
@@ -57,28 +65,33 @@
     padding: 0;
 }
 
-.product_variants ul > li {
+.product_variants .size_variant_button {
     height: 100%;
     text-align: center;
-    width: 45%;
-    margin: 2%;
-    display: flex;
-    border: 1px solid rgb(var(--color-foreground));
-    border-radius: 4px;
+    width: 50%;
+    padding: 2px;
     position: relative;
 }
 
-.product_variants ul > li label {
+.product_variants .size_variant_button_container {
+    border: 1px solid rgb(var(--color-foreground));
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
+}
+
+.product_variants .size_variant_button_container label {
     width: 100%;
     height: 100%;
     text-align: center;
+    display: block;
 }
 
-.product_variants ul > li input {
+.product_variants .size_variant_button_container input {
     display: none;
 }
 
-.product_variants ul > li input:checked + label {
+.product_variants .size_variant_button_container input:checked + label {
     background-color: rgb(var(--color-foreground));
     color: rgb(var(--color-background));
 }
@@ -87,6 +100,11 @@
     width: 100%;
     background-color: rgb(var(--color-foreground));
     color: rgb(var(--color-background));
+    border-radius: 4px;
+}
+
+.add_to_cart_container {
+    padding: 0 2px;
 }
 
 .item_details {
@@ -102,4 +120,19 @@
 .complete_look_variant_price .price__sale .price-item.price-item--sale {
     display: block;
     color: firebrick;
+}
+
+@media screen and (max-width: 949px) {
+    .complete_look__columns {
+        flex-direction: column;
+    }
+
+    .featured_photo, .column_spacer {
+        display: none !important;
+    }
+
+    .featured_photo, .complete_look__list {
+        width: 100%;
+        padding: 0;
+    }
 }
