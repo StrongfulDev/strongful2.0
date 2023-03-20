@@ -1,0 +1,27 @@
+{% comment %}
+  Renders a product card
+
+  Accepts:
+  - product: {Object} Product Liquid object (optional)
+
+
+  Usage:
+  {% render 'product-card-badge', product: card_product %}
+{% endcomment %}
+
+{%- if product.available == false -%}
+    <span
+            id="Badge-{{ section.id }}-{{ product.id }}"
+            class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}"
+    >
+                          {{- 'products.product.sold_out' | t -}}
+                        </span>
+{%- elsif product.compare_at_price > product.price and product.available -%}
+    <span
+            id="Badge-{{ section.id }}-{{ product.id }}"
+            class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
+    >
+                          {% comment %}{{- 'products.product.on_sale' | t -}}{% endcomment %}
+        {{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | ceil }}%
+    </span>
+{%- endif -%}

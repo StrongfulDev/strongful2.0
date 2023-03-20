@@ -1318,6 +1318,10 @@
           {
             "value": "background-2",
             "label": "t:sections.all.colors.background_2.label"
+          },
+          {
+            "value": "custom-red",
+            "label": "t:sections.all.colors.custom_red.label"
           }
         ],
         "default": "accent-2",

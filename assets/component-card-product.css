@@ -50,3 +50,25 @@
 .card__heading a:after {
     z-index: 0;
 }
+
+.card--standard:not(.card--horizontal) > .card__content .card__badge {
+    display: block;
+    position: absolute;
+    top: 0;
+}
+.card--standard:not(.card--horizontal) > .card__content .card__badge:has(> .badge.color-custom-red)  {
+    margin: 0;
+}
+.badge.color-custom-red {
+    color: firebrick;
+    padding: 0.6em;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    border: 0;
+    margin-top: 10px;
+    border-radius: 0 1em 1em 0;
+}
+

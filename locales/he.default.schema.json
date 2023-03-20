@@ -414,6 +414,9 @@
         "background_2": {
           "label": "Background 2"
         },
+        "custom_red": {
+          "label": "Custom Red"
+        },
         "inverse": {
           "label": "Inverse"
         },
