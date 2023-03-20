@@ -1864,6 +1864,9 @@
             "label": "2 columns"
           }
         },
+        "show_card_collection_announcement": {
+          "label": "Show collection announcement"
+        },
         "quick_add_type": {
           "label": "Quick add type on desktop",
           "options__1": {

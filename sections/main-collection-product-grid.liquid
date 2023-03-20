@@ -165,6 +165,12 @@
                                     {%- assign lazy_load = true -%}
                                 {%- endif -%}
                                 <li class="grid__item">
+                                    {%- liquid
+                                        assign card_announcement = ""
+                                        if section.settings.show_card_collection_announcement
+                                            assign card_announcement = collection.metafields.announcement.text
+                                        endif
+                                    -%}
                                     {% render 'card-product',
                                             card_product: product,
                                             media_aspect_ratio: section.settings.image_ratio,
@@ -176,7 +182,8 @@
                                             quick_add_type: section.settings.quick_add_type,
                                             quick_add_type_mobile: section.settings.quick_add_type_mobile,
                                             section_id: section.id,
-                                            image_count: section.settings.image_count
+                                            image_count: section.settings.image_count,
+                                            card_banner_text: card_announcement
                                     %}
                                 </li>
                             {%- endfor -%}
@@ -257,6 +264,12 @@
       "default": false,
       "label": "t:sections.main-collection-product-grid.settings.show_rating.label",
       "info": "t:sections.main-collection-product-grid.settings.show_rating.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_card_collection_announcement",
+      "default": false,
+      "label": "t:sections.main-collection-product-grid.settings.show_card_collection_announcement.label"
     },
     {
       "type": "checkbox",

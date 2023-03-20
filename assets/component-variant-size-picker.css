@@ -160,10 +160,10 @@
 .variant_modal__toggle_button {
     width: 40px;
     height: 40px;
-    background-color: rgb(var(--color-background));
+    background-color: rgb(var(--color-badge-background));
     color: rgb(var(--color-foreground));
     border: none;
-    border-radius: 100px;
+    border-radius: var(--badge-corner-radius);
     font-size: 16px;
     line-height: 56px;
     padding: 0;
