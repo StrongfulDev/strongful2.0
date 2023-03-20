@@ -15,7 +15,9 @@ window.onload = () => {
 
     $('.variant_selector.submit_on_click .product_size_picker__button__label').on("click", function (e) {
             const element = $(this);
-            element.parents("form").submit()
+            setTimeout(() => {
+                element.parents("form").submit()
+            }, 1)
         }
     )
 

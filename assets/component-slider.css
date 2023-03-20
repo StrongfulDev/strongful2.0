@@ -465,9 +465,7 @@ slider-component.slider-component-full-width {
 }
 
 .collection .price__sale {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-end;
+    direction: rtl;
 }
 
 .collection .price__sale .price-item.price-item--regular {
