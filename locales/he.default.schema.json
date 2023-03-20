@@ -1862,12 +1862,18 @@
           }
         },
         "quick_add_type": {
-          "label": "Quick add type",
+          "label": "Quick add type on desktop",
           "options__1": {
             "label": "Button under the card"
           },
           "options__2": {
             "label": "Options on hover"
+          }
+        },
+        "quick_add_type_mobile": {
+          "label": "Quick add type on mobile",
+          "options__1": {
+            "label": "Modal from bottom"
           }
         },
         "quick_add_text": {

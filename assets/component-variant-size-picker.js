@@ -13,13 +13,33 @@ window.onload = () => {
         element.parents('.variant_selector').find('.add_to_cart').removeAttr("disabled");
     })
 
-    $('.variant_selector.submit_on_click .product_size_picker__button__label').on("click", function (e) {
+    $('.variant_selector.submit_on_click .size_variant_button').on("click", function (e) {
             const element = $(this);
             setTimeout(() => {
                 element.parents("form").submit()
             }, 1)
         }
     )
+
+    $('.variant_modal__toggle_button').on("click", function (e) {
+            const element = $(this);
+            const modalId = element.data("modal-id");
+            const modal = $(".variant_modal#" + modalId);
+            const modalOverlay = $(".variant_modal_overlay#" + modalId + "-overlay");
+
+            modal.show();
+            modalOverlay.show()
+            modalOverlay.on("click", () => {
+                modal.hide()
+                modalOverlay.hide()
+            })
+            modal.find('.quick_add_modal__close').on("click", () => {
+                modal.hide()
+                modalOverlay.hide()
+            })
+        }
+    )
+
 
 // $('.product_size_picker__form').submit((e) => {
 //     e.preventDefault();

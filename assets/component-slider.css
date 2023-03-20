@@ -464,22 +464,6 @@ slider-component.slider-component-full-width {
     padding-right: 0;
 }
 
-.collection .price__sale {
-    direction: rtl;
-}
-
-.collection .price__sale .price-item.price-item--regular {
-    margin-right: 0;
-    font-size: 16px;
-    color: grey;
-}
-
-.collection .price__sale .price-item.price-item--sale {
-    color: firebrick;
-    font-weight: 600;
-    margin-right: 5px;
-}
-
 .card__heading {
     font-size: 16px;
     font-weight: 500;

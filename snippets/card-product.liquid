@@ -10,7 +10,8 @@
   - extend_height: {Boolean} Card height extends to available container space. Default: true (optional)
   - lazy_load: {Boolean} Image should be lazy loaded. Default: true (optional)
   - show_quick_add: {Boolean} Show the quick add button.
-  - quick_add_type: {String} Type of quick add button to show.
+  - quick_add_type: {String} Type of quick add button to show on desktop.
+  - quick_add_type_mobile: {String} Type of quick add button to show on mobile.
   - section_id: {String} The ID of the section that contains this card.
   - horizontal_class: {Boolean} Add a card--horizontal class if set to true. Default: false (optional)
   - horizontal_quick_add: {Boolean} Changes the quick add button styles when set to true. Default: false (optional)
@@ -154,6 +155,14 @@
                             </div>
                         </div>
                     {%- endif -%}
+                    {%- if show_quick_add and quick_add_type_mobile == "modal" -%}
+                        {% assign quick_add_modal_id = "quick_add_modal-" | append: section.id | append: "-" | append: card_product.id %}
+
+                        <button class="variant_modal__toggle_button"
+                                data-modal-id="{{ quick_add_modal_id }}">
+                            {% render 'icon-cart' %}
+                        </button>
+                    {% endif %}
                 </div>
             </div>
             <div class="card__content">
@@ -360,6 +369,10 @@
             </div>
         </div>
     </div>
+
+    {%- if show_quick_add and quick_add_type_mobile == "modal" -%}
+        {% render 'product-size-picker', product: card_product, submit_on_click: true, is_modal: true, id: quick_add_modal_id %}
+    {%- endif -%}
 {%- else -%}
     <div class="product-card-wrapper card-wrapper underline-links-hover">
         <div
