@@ -27,7 +27,7 @@
         "color_scheme": "background-1",
         "logo_position": "middle-left",
         "menu": "dawn-mega-menu",
-        "menu_type_desktop": "mega",
+        "menu_type_desktop": "customizable",
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
         "mobile_logo_position": "center",

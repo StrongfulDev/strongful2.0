@@ -95,10 +95,6 @@
   color: rgba(var(--color-foreground), 0.7);
 }
 
-.price__sale {
-  direction: rtl;
-}
-
 .price__sale .price-item.price-item--regular {
   margin-right: 0;
   font-size: 16px;

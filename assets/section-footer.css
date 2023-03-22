@@ -645,3 +645,8 @@ noscript .localization-selector.link {
     }
   }
 }
+
+
+.footer-block--menu .footer-block__details-content > li:not(:last-child) {
+  margin: 0
+}

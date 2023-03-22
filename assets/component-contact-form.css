@@ -1,0 +1,25 @@
+.contact_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.contact_form__title {
+    margin: 0 0 5px 0;
+}
+
+.contact_form__subtext {
+    text-align: center;
+}
+.contact_form__subtext > p {
+    margin: 5px 0 0 0;
+}
+
+.klaviyo-form-U29btr>div>form>div>div {
+    flex-direction: row-reverse!important;
+}
+
+.klaviyo-form-U29btr>div>form>div>div input {
+    text-align: right!important;
+    padding: 0 16px!important;
+}

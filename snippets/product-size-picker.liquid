@@ -20,7 +20,7 @@
             <div class="quick-add-variant-modal mobile no-js-hidden"
                  id="quick_add_modal-{{ section.id }}-{{ card_product.id }}">
                 <div class="product-size-picker-container">
-                    <div class="product_details">
+                    <div class="product_details fix-direction">
                         {%- assign height = product.featured_media.width | divided_by: product.featured_media.aspect_ratio | round -%}
 
                         {{ product.featured_media | image_url: width: 375 | image_tag:
@@ -38,7 +38,7 @@
                             {% render 'icon-close' %}
                         </div>
                     </div>
-                    <span class="product_size_picker__heading">{{ section.settings.quick_add_text }} sss</span>
+                    <span class="product_size_picker__heading fix-direction">{{ section.settings.quick_add_text }} sss</span>
                     <div class="product-size-picker">
                         <product-form class="size-variant-product-form">
                             {%- form 'product', product, class: 'product_size_picker__form form', data-type: 'add-to-cart-form' -%}
@@ -58,7 +58,7 @@
                                                     endif
                                                 %}
 
-                                                <li class="size_variant_button{% if product_disabled %} disabled-variant-button{% endif %}">
+                                                <li class="size_variant_button fix-direction{% if product_disabled %} disabled-variant-button{% endif %}">
                                                     <div class="size_variant_button_container">
                                                         <input type="radio"
                                                                data-variant-id="{{ variant.id }}"
@@ -82,6 +82,7 @@
                                         {% endfor %}
                                     </ul>
                                 </div>
+                                <input type="submit" hidden="hidden" />
                             {%- endform -%}
                         </product-form>
                     </div>
@@ -143,6 +144,7 @@
                                 הוספה
                             </button>
                         {% endif %}
+                        <input type="submit" hidden="hidden" />
                     </div>
                 {%- endform -%}
             </product-form>

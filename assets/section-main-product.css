@@ -1463,16 +1463,6 @@ a.product__text {
 
 
 /* Custom Style */
-.left {
-    text-align: left;
-    direction: ltr;
-}
-
-.right {
-    text-align: right;
-    direction: rtl;
-}
-
 .product-form__input input[type='radio'] + label.color-variant-tile.no-background {
     background-color: unset;
     padding: 0;

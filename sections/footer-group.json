@@ -4,23 +4,81 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "f852fb59-e3cc-430c-9ae3-ec8fdc0b4ae0": {
+          "type": "contact_form",
+          "settings": {
+            "form_heading": "Heading",
+            "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+          }
+        },
+        "71e59b81-3983-445f-bfa5-e786fff901bf": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "subtext": ""
+          }
+        },
+        "27c444bf-afc9-41a3-8476-b6cb155a0010": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "footer"
+          }
+        },
+        "e4b42b14-e340-4149-832d-ab58d53d94b3": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "footer"
+          }
+        },
+        "a9419717-a674-44cb-a84f-430ad3fe645f": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "footer"
+          }
+        }
+      },
+      "block_order": [
+        "f852fb59-e3cc-430c-9ae3-ec8fdc0b4ae0",
+        "71e59b81-3983-445f-bfa5-e786fff901bf",
+        "27c444bf-afc9-41a3-8476-b6cb155a0010",
+        "e4b42b14-e340-4149-832d-ab58d53d94b3",
+        "a9419717-a674-44cb-a84f-430ad3fe645f"
+      ],
       "settings": {
         "color_scheme": "background-1",
-        "newsletter_enable": true,
+        "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": false,
-        "show_social": true,
-        "enable_country_selector": true,
-        "enable_language_selector": true,
+        "show_social": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
         "payment_enable": true,
         "show_policy": false,
         "margin_top": 48,
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 0
+      }
+    },
+    "2773d804-d49b-4c66-9299-f6beec948934": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".mobile-terms {text-align: center;}",
+        ".mediniut {font-size: 10px; color: gray; display: inline; text-decoration: none;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"mobile-terms hebrewFont\">\n      <a href=\"\/blogs\/תקנונים\/תקנון-האתר\" class=\"mediniut\">תקנון האתר<\/a>\n      <a href=\"\/blogs\/תקנונים\/מדיניות-הפרטיות\" class=\"mediniut\">מדיניות הפרטיות<\/a>\n      <a class=\"mediniut\" href=\"\/blogs\/%D7%AA%D7%A7%D7%A0%D7%95%D7%A0%D7%99%D7%9D\/%D7%94%D7%A6%D7%94%D7%A8%D7%AA-%D7%A0%D7%92%D7%99%D7%A9%D7%95%D7%AA\">הצהרת נגישות<\/a>\n    <\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
   "order": [
-    "footer"
+    "footer",
+    "2773d804-d49b-4c66-9299-f6beec948934"
   ]
 }

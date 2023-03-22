@@ -95,7 +95,6 @@
 
 .variant_modal .product_details {
     display: flex;
-    direction: rtl;
     justify-content: flex-start;
     width: 100%;
 }
@@ -116,7 +115,6 @@
 .variant_modal .product_size_picker__heading {
     width: 100%;
     border-bottom: 1px solid grey;
-    direction: rtl;
     text-align: right;
     padding: 10px;
     font-size: 18px;
@@ -130,7 +128,6 @@
 .variant_modal .product_variants li {
     display: flex;
     width: 100%;
-    direction: rtl;
     justify-content: space-between;
     align-items: center;
     max-width: none;

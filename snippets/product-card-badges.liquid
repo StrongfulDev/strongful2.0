@@ -25,5 +25,12 @@
                               {% comment %}{{- 'products.product.on_sale' | t -}}{% endcomment %}
             {{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | ceil }}%
         </span>
+    {% elsif product.tags contains 'new' %}
+        <span
+                id="Badge-{{ section.id }}-{{ product.id }}"
+                class="badge badge--bottom-left new-tag color-{{ settings.sale_badge_color_scheme }}"
+        >
+            {{- 'products.product.new' | t -}}
+        </span>
     {% endif %}
 {%- endif -%}
