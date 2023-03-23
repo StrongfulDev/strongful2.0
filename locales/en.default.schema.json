@@ -1184,6 +1184,23 @@
           "options__2": {
             "label": "Left"
           }
+        },
+        "mobile_top_section": {
+          "label": "Mobile top section",
+          "image__1": {
+            "label": "Mobile image 1",
+            "info": "Image to show on the mobile drawer top section",
+            "link": {
+              "label": "Mobile image 1 link"
+            }
+          },
+          "image__2": {
+            "label": "Mobile image 2",
+            "info": "Another image to show on the mobile drawer top section",
+            "link": {
+              "label": "Mobile image 2 link"
+            }
+          }
         }
       },
       "blocks": {
@@ -1201,23 +1218,33 @@
             "menu": {
               "label": "Menu links"
             },
-            "mobile_cover_image": {
-              "label": "Mobile cover image",
-              "info": "Image to show on mobile as the background for the item"
+            "desktop": {
+              "label": "Desktop",
+              "info": "The links to show on desktop",
+              "links": {
+                "label": "",
+                "image__1": {
+                  "label": "Desktop image 1",
+                  "info": "Image to show on desktop along the links (optional)",
+                  "link": {
+                    "label": "Desktop image 1 link"
+                  }
+                },
+                "image__2": {
+                  "label": "Desktop image 2",
+                  "info": "Image to show on desktop along the links (optional)",
+                  "link": {
+                    "label": "Desktop image 2 link"
+                  }
+                }
+              }
             },
-            "desktop_links_image_1": {
-              "label": "Desktop image 1",
-              "info": "Image to show on desktop along the links (optional)"
-            },
-            "desktop_links_image_1_link": {
-              "label": "Desktop image 1 link"
-            },
-            "desktop_links_image_2": {
-              "label": "Desktop image 2",
-              "info": "Image to show on desktop along the links (optional)"
-            },
-            "desktop_links_image_2_link": {
-              "label": "Desktop image 2 link"
+            "mobile": {
+              "label": "Mobile",
+              "cover_image": {
+                "label": "Cover image",
+                "info": "Image to show under link text"
+              }
             }
           }
         }
