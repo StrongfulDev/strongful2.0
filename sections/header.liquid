@@ -564,7 +564,7 @@
                                                 {% render 'icon-caret' %}
                                             </summary>
                                             <div id="MegaMenu-Content-{{ forloop.index }}"
-                                                 class="mega-menu__content gradient motion-reduce global-settings-popup"
+                                                 class="mega-menu__content customizable fix-direction gradient motion-reduce global-settings-popup"
                                                  tabindex="-1">
                                                 <ul class="mega-menu__list page-width{% if link_levels == 1 %} mega-menu__list--condensed{% endif %}"
                                                     role="list">
@@ -590,15 +590,32 @@
                                                         </li>
                                                     {%- endfor -%}
                                                 </ul>
-                                                {% if block.settings.desktop_links_image_1 %}
-                                                    {%- assign height = block.settings.desktop_links_image_1.width | divided_by: block.settings.desktop_links_image_1.aspect_ratio | round -%}
-                                                    {{ block.settings.desktop_links_image_1 | image_url: width: 750 | image_tag:
-                                                    loading: 'lazy',
-                                                    height: height,
-                                                    sizes: "100vw",
-                                                    widths: '375, 550, 750'
-                                                    }}
-                                                {% endif %}
+                                                <div class="desktop_links_images">
+                                                    {% if block.settings.desktop_links_image_1 != nil %}
+                                                    <{% if block.settings.desktop_links_image_1_link != "" %}a href="{{ block.settings.desktop_links_image_1_link }}" {% else %}div class="desktop_links_image_1_container"{% endif %}>
+                                                        {%- assign height = block.settings.desktop_links_image_1.width | divided_by: block.settings.desktop_links_image_1.aspect_ratio | round -%}
+                                                        {{ block.settings.desktop_links_image_1 | image_url: width: 375 | image_tag:
+                                                        loading: 'lazy',
+                                                        height: height,
+                                                        class: "desktop_links_image_1",
+                                                        sizes: "100vw",
+                                                        widths: '375'
+                                                        }}
+                                                        </{% if block.settings.desktop_links_image_1_link != "" %}a{% else %}div{% endif %}>
+
+                                                        {% endif %}
+                                                        {% if block.settings.desktop_links_image_2 != nil %}
+                                                        <{% if block.settings.desktop_links_image_2_link != "" %}a href="{{ block.settings.desktop_links_image_2_link }}" {% else %}div class="desktop_links_image_2_container"{% endif %}>
+                                                            {%- assign height = block.settings.desktop_links_image_2.width | divided_by: block.settings.desktop_links_image_2.aspect_ratio | round -%}
+                                                            {{ block.settings.desktop_links_image_2 | image_url: width: 375 | image_tag:
+                                                            loading: 'lazy',
+                                                            height: height,
+                                                            sizes: "100vw",
+                                                            widths: '375'
+                                                            }}
+                                                            </{% if block.settings.desktop_links_image_2_link != "" %}a{% else %}div{% endif %}>
+                                                            {% endif %}
+                                                </div>
                                             </div>
                                         </details>
                                     </header-menu>
@@ -1002,6 +1019,23 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </script>
 
     {%- if request.page_type == 'index' -%}
@@ -1018,6 +1052,23 @@
       },
       "url": {{ request.origin | append: page.url | json }}
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1247,10 +1298,20 @@
     "info": "t:sections.header.blocks.menu_item.settings.desktop_links_image_1.info"
     },
     {
+    "type": "text",
+    "id": "desktop_links_image_1_link",
+    "label": "t:sections.header.blocks.menu_item.settings.desktop_links_image_1_link.label"
+    },
+    {
     "type": "image_picker",
     "id": "desktop_links_image_2",
     "label": "t:sections.header.blocks.menu_item.settings.desktop_links_image_2.label",
     "info": "t:sections.header.blocks.menu_item.settings.desktop_links_image_2.info"
+    },
+    {
+    "type": "text",
+    "id": "desktop_links_image_2_link",
+    "label": "t:sections.header.blocks.menu_item.settings.desktop_links_image_2_link.label"
     }
     ]
     }

@@ -1209,9 +1209,15 @@
               "label": "Desktop image 1",
               "info": "Image to show on desktop along the links (optional)"
             },
+            "desktop_links_image_1_link": {
+              "label": "Desktop image 1 link"
+            },
             "desktop_links_image_2": {
               "label": "Desktop image 2",
               "info": "Image to show on desktop along the links (optional)"
+            },
+            "desktop_links_image_2_link": {
+              "label": "Desktop image 2 link"
             }
           }
         }

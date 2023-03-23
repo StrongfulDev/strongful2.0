@@ -105,7 +105,7 @@
 }
 
 .variant_modal .product_details__info {
-    text-align: right;
+    text-align: var(--text-alignment);
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -115,7 +115,7 @@
 .variant_modal .product_size_picker__heading {
     width: 100%;
     border-bottom: 1px solid grey;
-    text-align: right;
+    text-align: var(--text-alignment);
     padding: 10px;
     font-size: 18px;
 }
@@ -141,7 +141,7 @@
 }
 
 .variant_modal .product_variants .size_variant_button_container label {
-    text-align: right;
+    text-align: var(--text-alignment);
 }
 
 .variant_modal .size_variant_button_add {
