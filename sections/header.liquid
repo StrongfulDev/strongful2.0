@@ -404,88 +404,89 @@
                                             role="list">
                                             {%- for block in section.blocks -%}
                                                 <li>
-                                                    <header-menu>
-                                                        <details
-                                                                id="Details-menu-drawer-menu-item-{{ forloop.index }}">
-                                                            <summary
-                                                                    class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.child_active %} menu-drawer__menu-item--active{% endif %}">
-                                                                <div class="mobile-link-cover"
-                                                                     style="background-image: url('{{ block.settings.mobile_cover_image.src | image_url: width: 300 }}')">
-                                                                    {{ block.settings.title | escape }}
-                                                                    {% render 'icon-arrow' %}
-                                                                    {% render 'icon-caret' %}
-                                                                </div>
-                                                            </summary>
-                                                            <div id="link-{{ block.settings.title | escape }}"
-                                                                 class="menu-drawer__submenu has-submenu gradient motion-reduce"
-                                                                 tabindex="-1">
-                                                                <div class="menu-drawer__inner-submenu">
-
-                                                                    <button class="menu-drawer__close-button link link--text focus-inset"
-                                                                            aria-expanded="true"
-                                                                            style="background-image: url('{{ block.settings.mobile_cover_image.src | image_url: width: 300 }}')">
+                                                    <details
+                                                            id="Details-menu-drawer-menu-item-{{ forloop.index }}">
+                                                        <summary
+                                                                class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.child_active %} menu-drawer__menu-item--active{% endif %}">
+                                                            <div class="mobile-link-cover"
+                                                                 style="background-image: url('{{ block.settings.mobile_cover_image.src | image_url: width: 300 }}')">
+                                                                {% if block.settings.mobile_title %}
+                                                                    <span>
+                                                                            {{ block.settings.mobile_title | escape }}
                                                                         {% render 'icon-arrow' %}
-                                                                        {{ block.settings.title | escape }}
-                                                                    </button>
-                                                                    <ul class="menu-drawer__menu list-menu"
-                                                                        role="list" tabindex="-1">
-                                                                        {%- for childlink in block.settings.menu.links -%}
-                                                                            <li>
-                                                                                {%- if childlink.links == blank -%}
-                                                                                    <a href="{{ childlink.url }}"
-                                                                                       class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if childlink.current %} menu-drawer__menu-item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
-                                                                                        {{ childlink.title | escape }}
-                                                                                        {% for collection in collections %}
-                                                                                            {% if collection.handle == childlink.handle and collection.image != nil %}
-                                                                                                {%- assign height = collection.image.width | divided_by: collection.image.aspect_ratio | round -%}
-                                                                                                {{ collection.image | image_url: width: 375 | image_tag:
-                                                                                                loading: 'lazy',
-                                                                                                height: height,
-                                                                                                class: "mobile_link_collection_image",
-                                                                                                sizes: "100vw",
-                                                                                                widths: '375'
-                                                                                                }}
-                                                                                            {% endif %}
-                                                                                        {% endfor %}
-                                                                                    </a>
-                                                                                {%- else -%}
-                                                                                    <details
-                                                                                            id="Details-menu-drawer-submenu-{{ forloop.index }}">
-                                                                                        <summary
-                                                                                                class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
-                                                                                            {{ childlink.title | escape }}
-                                                                                            {% render 'icon-arrow' %}
-                                                                                            {% render 'icon-caret' %}
-                                                                                        </summary>
-                                                                                        <div id="childlink-{{ childlink.handle | escape }}"
-                                                                                             class="menu-drawer__submenu has-submenu gradient motion-reduce">
-                                                                                            <button class="menu-drawer__close-button link link--text focus-inset"
-                                                                                                    aria-expanded="true">
-                                                                                                {% render 'icon-arrow' %}
-                                                                                                {{ childlink.title | escape }}
-                                                                                            </button>
-                                                                                            <ul class="menu-drawer__menu list-menu"
-                                                                                                role="list"
-                                                                                                tabindex="-1">
-                                                                                                {%- for grandchildlink in childlink.links -%}
-                                                                                                    <li>
-                                                                                                        <a href="{{ grandchildlink.url }}"
-                                                                                                           class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if grandchildlink.current %} menu-drawer__menu-item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
-                                                                                                            {{ grandchildlink.title | escape }}
-                                                                                                        </a>
-                                                                                                    </li>
-                                                                                                {%- endfor -%}
-                                                                                            </ul>
-                                                                                        </div>
-                                                                                    </details>
-                                                                                {%- endif -%}
-                                                                            </li>
-                                                                        {%- endfor -%}
-                                                                    </ul>
-                                                                </div>
+                                                                        {% render 'icon-caret' %}
+                                                                        </span>
+                                                                {% endif %}
                                                             </div>
-                                                        </details>
-                                                    </header-menu>
+                                                        </summary>
+                                                        <div id="link-{{ block.id | escape }}"
+                                                             class="menu-drawer__submenu has-submenu gradient motion-reduce"
+                                                             tabindex="-1">
+                                                            <div class="menu-drawer__inner-submenu">
+                                                                <button class="menu-drawer__close-button link link--text focus-inset"
+                                                                        aria-expanded="true"
+                                                                        style="background-image: url('{{ block.settings.mobile_cover_image.src | image_url: width: 300 }}')">
+                                                                    {% render 'icon-arrow' %}
+                                                                    {{ block.settings.mobile_title | escape }}
+                                                                </button>
+                                                                <ul class="menu-drawer__menu list-menu"
+                                                                    role="list" tabindex="-1">
+                                                                    {%- for childlink in block.settings.menu.links -%}
+                                                                        <li>
+                                                                            {%- if childlink.links == blank -%}
+                                                                                <a href="{{ childlink.url }}"
+                                                                                   class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if childlink.current %} menu-drawer__menu-item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                                                                                    {{ childlink.title | escape }}
+                                                                                    {% for collection in collections %}
+                                                                                        {% if collection.handle == childlink.handle and collection.image != nil %}
+                                                                                            {%- assign height = collection.image.width | divided_by: collection.image.aspect_ratio | round -%}
+                                                                                            {{ collection.image | image_url: width: 375 | image_tag:
+                                                                                            loading: 'lazy',
+                                                                                            height: height,
+                                                                                            class: "mobile_link_collection_image",
+                                                                                            sizes: "100vw",
+                                                                                            widths: '375'
+                                                                                            }}
+                                                                                        {% endif %}
+                                                                                    {% endfor %}
+                                                                                </a>
+                                                                            {%- else -%}
+                                                                                <details
+                                                                                        id="Details-menu-drawer-submenu-{{ forloop.index }}">
+                                                                                    <summary
+                                                                                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
+                                                                                        {{ childlink.title | escape }}
+                                                                                        {% render 'icon-arrow' %}
+                                                                                        {% render 'icon-caret' %}
+                                                                                    </summary>
+                                                                                    <div id="childlink-{{ childlink.handle | escape }}"
+                                                                                         class="menu-drawer__submenu has-submenu gradient motion-reduce">
+                                                                                        <button class="menu-drawer__close-button link link--text focus-inset"
+                                                                                                aria-expanded="true">
+                                                                                            {% render 'icon-arrow' %}
+                                                                                            {{ childlink.title | escape }}
+                                                                                        </button>
+                                                                                        <ul class="menu-drawer__menu list-menu"
+                                                                                            role="list"
+                                                                                            tabindex="-1">
+                                                                                            {%- for grandchildlink in childlink.links -%}
+                                                                                                <li>
+                                                                                                    <a href="{{ grandchildlink.url }}"
+                                                                                                       class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if grandchildlink.current %} menu-drawer__menu-item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
+                                                                                                        {{ grandchildlink.title | escape }}
+                                                                                                    </a>
+                                                                                                </li>
+                                                                                            {%- endfor -%}
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </details>
+                                                                            {%- endif -%}
+                                                                        </li>
+                                                                    {%- endfor -%}
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </details>
                                                 </li>
                                             {%- endfor -%}
                                         </ul>
@@ -493,7 +494,7 @@
                                     <div class="menu-drawer__utility-links">
                                         {%- if shop.customer_accounts_enabled -%}
                                             <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
-                                               class="menu-drawer__account link focus-inset h5">
+                                               class=   "menu-drawer__account link focus-inset h5">
                                                 {% render 'icon-account' %}
                                                 {%- liquid
                                                     if customer
@@ -1239,65 +1240,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </script>
 
     {%- if request.page_type == 'index' -%}
@@ -1314,49 +1256,6 @@
       },
       "url": {{ request.origin | append: page.url | json }}
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1625,6 +1524,12 @@
     "id": "mobile_cover_image",
     "label": "t:sections.header.blocks.menu_item.settings.mobile.cover_image.label",
     "info": "t:sections.header.blocks.menu_item.settings.mobile.cover_image.info"
+    },
+    {
+    "type": "text",
+    "id": "mobile_title",
+    "label": "t:sections.header.blocks.menu_item.settings.mobile.title.label",
+    "info": "t:sections.header.blocks.menu_item.settings.mobile.title.info"
     }
     ]
     }
