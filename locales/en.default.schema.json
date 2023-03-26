@@ -445,8 +445,14 @@
         "announcement": {
           "name": "Announcement",
           "settings": {
+            "show_mobile": {
+              "label": "Show on mobile"
+            },
             "text": {
               "label": "Text"
+            },
+            "mobile_text": {
+              "label": "Mobile text"
             },
             "text_alignment": {
               "label": "Text alignment",
@@ -461,8 +467,23 @@
               }
             },
             "link": {
-              "label": "Link"
+              "label": "Link",
+              "info": "Link for the entire section"
+            },
+            "colors": {
+              "info": "Color scheme for the block when the blocks type is \"row\"."
             }
+          }
+        }
+      },
+      "settings": {
+        "blocks_type": {
+          "label": "Blocks type",
+          "options__1": {
+            "label": "Row"
+          },
+          "options__2": {
+            "label": "Column"
           }
         }
       }

@@ -37,6 +37,7 @@
 <noscript>{{ 'component-menu-drawer.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-cart-notification.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-cart-items.css' | asset_url | stylesheet_tag }}</noscript>
+{{ 'component-announcement-bar.css' | asset_url | stylesheet_tag }}
 
 <style>
     header-drawer {
@@ -1296,6 +1297,7 @@
 
 
 
+
     </script>
 
     {%- if request.page_type == 'index' -%}
@@ -1312,6 +1314,7 @@
       },
       "url": {{ request.origin | append: page.url | json }}
     }
+
 
 
 
