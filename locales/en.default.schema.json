@@ -211,6 +211,16 @@
           "label": "Font",
           "info": "Selecting a different font can affect the speed of your store. [Learn more about system fonts.](https:\/\/help.shopify.com\/manual\/online-store\/os\/store-speed\/improving-speed#fonts)"
         },
+        "type_header_font_custom": {
+          "label": "Custom Font",
+          "info": "Selecting a custom font to use instead of the default font.",
+          "options__1": {
+            "label": "None"
+          },
+          "options__2": {
+            "label": "Spartan"
+          }
+        },
         "heading_scale": {
           "label": "Font size scale"
         },
@@ -223,6 +233,16 @@
         "type_body_font": {
           "label": "Font",
           "info": "Selecting a different font can affect the speed of your store. [Learn more about system fonts.](https:\/\/help.shopify.com\/manual\/online-store\/os\/store-speed\/improving-speed#fonts)"
+        },
+        "type_body_font_custom": {
+          "label": "Custom Font",
+          "info": "Selecting a custom font to use instead of the default font.",
+          "options__1": {
+            "label": "None"
+          },
+          "options__2": {
+            "label": "Spartan"
+          }
         },
         "body_scale": {
           "label": "Font size scale"
@@ -787,6 +807,9 @@
         "show_view_all": {
           "label": "Enable \"View all\" if collection has more products than shown"
         },
+        "view_all_text": {
+          "label": "\"View all\" text"
+        },
         "view_all_style": {
           "label": "\"View all\" style",
           "options__1": {
@@ -806,6 +829,9 @@
           },
           "options__2": {
             "label": "Top"
+          },
+          "options__3": {
+            "label": "Desktop top, Mobile bottom (button)"
           }
         },
         "enable_desktop_slider": {
@@ -1278,6 +1304,9 @@
           }
         }
       }
+    },
+    "slideshow": {
+
     }
   },
   "image-banner": {

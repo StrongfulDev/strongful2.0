@@ -14,6 +14,7 @@
     "colors_background_2": "#f3f3f3",
     "gradient_background_2": "",
     "type_header_font": "arimo_n4",
+    "type_header_font_custom": "spartan",
     "heading_scale": 100,
     "type_body_font": "arimo_n4",
     "body_scale": 100,

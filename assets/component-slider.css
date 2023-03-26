@@ -468,3 +468,21 @@ slider-component.slider-component-full-width {
     font-size: 16px;
     font-weight: 500;
 }
+
+.collection__view-all.show-desktop {
+    display: block;
+}
+
+.collection__view-all:not(.show-desktop) {
+    display: none;
+}
+
+@media screen and (max-width: 749px) {
+    .collection__view-all.show-mobile {
+        display: block;
+    }
+
+    .collection__view-all:not(.show-mobile) {
+        display: none;
+    }
+}

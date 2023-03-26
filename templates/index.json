@@ -56,9 +56,12 @@
     },
     "featured_collection": {
       "type": "featured-collection",
+      "custom_css": [
+        ".button {width: 100%;}"
+      ],
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
+        "title": "OUTLET - UP TO 70% OFF",
+        "heading_size": "h1",
         "description": "",
         "show_description": false,
         "description_style": "body",
@@ -67,16 +70,19 @@
         "columns_desktop": 4,
         "full_width": true,
         "show_view_all": true,
+        "view_all_text": "SHOP ALL",
         "view_all_style": "link",
-        "view_all_location": "top",
+        "view_all_location": "desktop_top_tablet_bottom",
         "enable_desktop_slider": true,
+        "show_peak": true,
         "pagination_type": "sides",
         "color_scheme": "background-1",
         "image_ratio": "adapt",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
-        "enable_quick_add": false,
+        "show_sale_badge": false,
+        "enable_quick_add": true,
         "columns_mobile": "2",
         "swipe_on_mobile": true,
         "padding_top": 28,
@@ -101,33 +107,86 @@
         "our_collection_list-block-2": {
           "type": "featured_collection",
           "settings": {
-            "collection": "25"
+            "collection": "17"
+          }
+        },
+        "643e8402-6f44-4d7c-a595-f1d83eef5c39": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "30"
           }
         }
       },
       "block_order": [
         "our_collection_list-block-0",
         "our_collection_list-block-1",
-        "our_collection_list-block-2"
+        "our_collection_list-block-2",
+        "643e8402-6f44-4d7c-a595-f1d83eef5c39"
       ],
       "settings": {
-        "title": "Collections",
+        "title": "OUR COLLECTIONS",
         "heading_size": "h1",
-        "image_ratio": "square",
-        "columns_desktop": 3,
+        "image_ratio": "portrait",
+        "columns_desktop": 4,
         "color_scheme": "background-1",
         "is_heading_overlay": true,
         "show_view_all": false,
-        "columns_mobile": "1",
+        "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "be6ecc53-5aae-427c-a7d9-720609cb0cb5": {
+      "type": "rich-text",
+      "blocks": {
+        "template--15920573251724__be6ecc53-5aae-427c-a7d9-720609cb0cb5-167984729387b191a1-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>GET THE NEWS<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "template--15920573251724__be6ecc53-5aae-427c-a7d9-720609cb0cb5-167984729387b191a1-1": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>כל מה שחדש אצלך במייל - <strong>מבצעים, הנחות<\/strong> ומוצרים <strong>חדשים<\/strong><\/h3>"
+          }
+        },
+        "template--15920573251724__be6ecc53-5aae-427c-a7d9-720609cb0cb5-167984729387b191a1-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "הרשמי עכשיו",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--15920573251724__be6ecc53-5aae-427c-a7d9-720609cb0cb5-167984729387b191a1-0",
+        "template--15920573251724__be6ecc53-5aae-427c-a7d9-720609cb0cb5-167984729387b191a1-1",
+        "template--15920573251724__be6ecc53-5aae-427c-a7d9-720609cb0cb5-167984729387b191a1-2"
+      ],
+      "custom_css": [
+        ".rich-text__blocks * {margin: 5px;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
   "order": [
     "slideshow",
     "featured_collection",
-    "our_collection_list"
+    "our_collection_list",
+    "be6ecc53-5aae-427c-a7d9-720609cb0cb5"
   ]
 }

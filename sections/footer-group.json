@@ -8,8 +8,8 @@
         "f852fb59-e3cc-430c-9ae3-ec8fdc0b4ae0": {
           "type": "contact_form",
           "settings": {
-            "form_heading": "Heading",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+            "form_heading": "תשארי מעודכנת",
+            "subtext": "<p>בהרשמה לאתר את\\ה מאשרת את <a href=\"https:\/\/strongful.co.il\/blogs\/policies\/%D7%AA%D7%A7%D7%A0%D7%95%D7%9F-%D7%94%D7%90%D7%AA%D7%A8\">תקנון האתר ומדיניות הפרטיות,<\/a>וקבלת חומרים שיווקיים<\/p>"
           }
         },
         "71e59b81-3983-445f-bfa5-e786fff901bf": {
@@ -22,21 +22,21 @@
         "27c444bf-afc9-41a3-8476-b6cb155a0010": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
+            "heading": "תקנונים",
             "menu": "footer"
           }
         },
         "e4b42b14-e340-4149-832d-ab58d53d94b3": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
+            "heading": "אודות",
             "menu": "footer"
           }
         },
         "a9419717-a674-44cb-a84f-430ad3fe645f": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
+            "heading": "מידע כללי",
             "menu": "footer"
           }
         }
