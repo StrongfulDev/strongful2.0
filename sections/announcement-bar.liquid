@@ -1,6 +1,6 @@
 <div class="announcement-bar-container container-{{ section.settings.blocks_type }} color-{{ section.settings.color_scheme }} gradient"
      role="region"
-     aria-label="{{ 'sections.header.announcement' | t }}" {{ block.shopify_attributes }}>
+     aria-label="{{ 'sections.header.announcement' | t }}" {{ section.shopify_attributes }}>
     {%- for block in section.blocks -%}
         {%- case block.type -%}
             {%- when 'announcement' -%}

@@ -456,7 +456,7 @@ slider-component.slider-component-full-width {
 
 .collection--full-width .collection__title {
     margin: 0;
-    /*max-width: unset;*/
+    max-width: unset;
 }
 
 .collection--full-width .title-wrapper--self-padded-tablet-down {

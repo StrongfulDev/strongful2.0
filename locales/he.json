@@ -119,6 +119,7 @@
       "sku": "SKU",
       "on_sale": "Sale",
       "outlet": "OUTLET",
+      "new": "NEW",
       "product_variants": "Product variants",
       "media": {
         "gallery_viewer": "Gallery Viewer",
