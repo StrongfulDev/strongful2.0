@@ -45,6 +45,14 @@
     %}
 
     {% style %}
+
+        @font-face {
+        font-family: 'spartan';
+        src: url('{{ 'spartan.ttf' | asset_url }}') format('truetype');
+        font-weight: --font-body-weight;
+        font-style: --font-body-style;
+        }
+
         {% if settings.type_body_font_custom != blank and settings.type_body_font_custom != "none" %}
             {% assign body_font_family = settings.type_body_font_custom %}
             @font-face {

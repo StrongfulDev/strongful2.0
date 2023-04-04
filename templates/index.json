@@ -47,7 +47,7 @@
       "settings": {
         "layout": "full_bleed",
         "slide_height": "medium",
-        "slider_visual": "counter",
+        "slider_visual": "sides",
         "auto_rotate": false,
         "change_slides_speed": 5,
         "show_text_below": true,
@@ -62,6 +62,7 @@
       "settings": {
         "title": "OUTLET - UP TO 70% OFF",
         "heading_size": "h1",
+        "heading_type": "heading_type_1",
         "description": "",
         "show_description": false,
         "description_style": "body",
@@ -126,6 +127,7 @@
       "settings": {
         "title": "OUR COLLECTIONS",
         "heading_size": "h1",
+        "heading_type": "heading_type_1",
         "image_ratio": "portrait",
         "columns_desktop": 4,
         "color_scheme": "background-1",

@@ -59,7 +59,7 @@
         <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
             <div class="collection__title_heading{% if show_side_arrows %} with_arrows{% endif %}">
                 {%- if section.settings.title != blank -%}
-                    <h2 class="title {{ section.settings.heading_size }}">{{ section.settings.title | escape }}</h2>
+                    <h2 class="title {{ section.settings.heading_size }} {{ section.settings.heading_type }}">{{ section.settings.title | escape }}</h2>
                 {%- endif -%}
 
                 {%- if section.settings.show_view_all and more_in_collection and section.settings.view_all_location == "top" or section.settings.view_all_location == "desktop_top_tablet_bottom" -%}
@@ -238,6 +238,30 @@
       ],
       "default": "h1",
       "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_type",
+      "options": [
+        {
+          "value": "heading_type_default",
+          "label": "t:sections.all.heading_type.options__default.label"
+        },
+        {
+          "value": "heading_type_1",
+          "label": "t:sections.all.heading_type.options__1.label"
+        },
+        {
+          "value": "heading_type_2",
+          "label": "t:sections.all.heading_type.options__2.label"
+        },
+        {
+          "value": "heading_type_3",
+          "label": "t:sections.all.heading_type.options__3.label"
+        }
+      ],
+      "default": "heading_type_default",
+      "label": "t:sections.all.heading_type.label"
     },
     {
       "type": "richtext",

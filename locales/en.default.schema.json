@@ -457,6 +457,35 @@
         "options__4": {
           "label": "Extra large"
         }
+      },
+      "heading_type": {
+        "label": "Custom heading type",
+        "options__default": {
+          "label": "Header default"
+        },
+        "options__1": {
+          "label": "Heading 1"
+        },
+        "options__2": {
+          "label": "Heading 2"
+        },
+        "options__3": {
+          "label": "Heading 3"
+        }
+      },
+      "body_types": {
+        "options__default": {
+          "label": "Body default"
+        },
+        "options__1": {
+          "label": "Body 1"
+        },
+        "options__2": {
+          "label": "Body 2"
+        },
+        "options__3": {
+          "label": "Body 3"
+        }
       }
     },
     "announcement-bar": {
