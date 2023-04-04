@@ -416,8 +416,8 @@ slider-component.slider-component-full-width {
     }
 
     .collection__title_heading.with_arrows {
-        margin-left: 3em;
-        margin-right: 3em;
+        margin-left: var(--full-width-padding);
+        margin-right: var(--full-width-padding);
     }
 }
 

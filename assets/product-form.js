@@ -2,13 +2,15 @@ if (!customElements.get('product-form')) {
     customElements.define('product-form', class ProductForm extends HTMLElement {
         constructor() {
             super();
+
             this.form = this.querySelector('form');
             this.form.querySelector('[name=id]').disabled = false;
             this.form.addEventListener('submit', this.onSubmitHandler.bind(this));
             this.cart = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
             this.submitButton = this.querySelector('[type="submit"]');
-            this.loadingSpinner = this.querySelector('.loading-overlay__spinner');
             if (document.querySelector('cart-drawer')) this.submitButton.setAttribute('aria-haspopup', 'dialog');
+
+            this.hideErrors = this.dataset.hideErrors === 'true';
         }
 
         onSubmitHandler(evt) {
@@ -19,11 +21,9 @@ if (!customElements.get('product-form')) {
 
             this.submitButton.setAttribute('aria-disabled', true);
             this.submitButton.classList.add('loading');
+            this.querySelector('.loading-overlay__spinner').classList.remove('hidden');
 
-            if (this.loadingSpinner)
-                this.loadingSpinner.classList.remove('hidden');
-
-            const config = fetchConfig('scripts');
+            const config = fetchConfig('javascript');
             config.headers['X-Requested-With'] = 'XMLHttpRequest';
             delete config.headers['Content-Type'];
 
@@ -39,6 +39,7 @@ if (!customElements.get('product-form')) {
                 .then((response) => response.json())
                 .then((response) => {
                     if (response.status) {
+                        publish(PUB_SUB_EVENTS.cartError, {source: 'product-form', productVariantId: formData.get('id'), errors: response.description, message: response.message});
                         this.handleErrorMessage(response.description);
 
                         const soldOutMessage = this.submitButton.querySelector('.sold-out-message');
@@ -53,15 +54,13 @@ if (!customElements.get('product-form')) {
                         return;
                     }
 
-                    if (!this.error) publish(PUB_SUB_EVENTS.cartUpdate, {source: 'product-form'});
+                    if (!this.error) publish(PUB_SUB_EVENTS.cartUpdate, {source: 'product-form', productVariantId: formData.get('id')});
                     this.error = false;
                     const quickAddModal = this.closest('quick-add-modal');
                     if (quickAddModal) {
                         document.body.addEventListener('modalClosed', () => {
-                            setTimeout(() => {
-                                this.cart.renderContents(response)
-                            });
-                        }, {once: true});
+                            setTimeout(() => { this.cart.renderContents(response) });
+                        }, { once: true });
                         quickAddModal.hide(true);
                     } else {
                         this.cart.renderContents(response);
@@ -74,12 +73,13 @@ if (!customElements.get('product-form')) {
                     this.submitButton.classList.remove('loading');
                     if (this.cart && this.cart.classList.contains('is-empty')) this.cart.classList.remove('is-empty');
                     if (!this.error) this.submitButton.removeAttribute('aria-disabled');
-                    if (this.loadingSpinner)
-                        this.loadingSpinner.classList.add('hidden');
+                    this.querySelector('.loading-overlay__spinner').classList.add('hidden');
                 });
         }
 
         handleErrorMessage(errorMessage = false) {
+            if (this.hideErrors) return;
+
             this.errorMessageWrapper = this.errorMessageWrapper || this.querySelector('.product-form__error-message-wrapper');
             if (!this.errorMessageWrapper) return;
             this.errorMessage = this.errorMessage || this.errorMessageWrapper.querySelector('.product-form__error-message');

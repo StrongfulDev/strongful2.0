@@ -55,6 +55,7 @@
 
 .add_to_cart_container {
     padding: 0 2px;
+    position: relative;
 }
 
 .submit_on_click .add_to_cart_container {
@@ -135,13 +136,15 @@
 
 .variant_modal .product_variants .size_variant_button_container {
     border: none;
-    padding: 10px;
     border-bottom: 1px solid rgba(var(--color-foreground), 0.3);
     border-radius: unset;
 }
 
 .variant_modal .product_variants .size_variant_button_container label {
     text-align: var(--text-alignment);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .variant_modal .size_variant_button_add {
@@ -174,4 +177,15 @@
     .variant_modal.mobile, .variant_modal__toggle_button.mobile {
         display: none;
     }
+}
+
+.add_to_cart_container .loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 20px;
+    height: 20px;
 }

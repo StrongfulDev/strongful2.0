@@ -6,6 +6,12 @@
     display: block;
 }
 
+@media screen and (max-width: 749px) {
+    .card:hover .quick-add.hover {
+        display: none
+    }
+}
+
 .quick-add.hover {
     position: absolute;
     bottom: 0;
@@ -39,7 +45,7 @@
     width: 100%;
 }
 
-.product_variants .size_variant_button {
+.card .product_variants .size_variant_button {
     max-width: 50px;
 }
 
@@ -56,7 +62,8 @@
     position: absolute;
     top: 0;
 }
-.card--standard:not(.card--horizontal) > .card__content .card__badge:has(> .badge.color-custom-red)  {
+
+.card--standard:not(.card--horizontal) > .card__content .card__badge:has(> .badge.color-custom-red) {
     margin: 0;
 }
 

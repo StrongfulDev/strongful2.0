@@ -43,46 +43,52 @@
                         <product-form class="size-variant-product-form">
                             {%- form 'product', product, class: 'product_size_picker__form form', data-type: 'add-to-cart-form' -%}
                                 <div class="product_variants {% if product.has_only_default_variant %}none{% endif %}">
-                                    <ul>
-                                        {% for variant in product.variants %}
-                                            {% unless variant.title == '39' %}
-                                                {%- liquid
-                                                    assign product_disabled = false
-                                                    if variant.available == false
-                                                        assign product_disabled = true
-                                                    endif
-                                                    if product.title contains 'Chummy' and variant.title != "L"
-                                                        assign product_disabled = true
-                                                    elsif variant.title == '39'
-                                                        assign product_disabled = true
-                                                    endif
-                                                %}
+                                    <fieldset name="line_items" class="js">
+                                        <ul>
+                                            {% for variant in product.variants %}
+                                                {% unless variant.title == '39' %}
+                                                    {%- liquid
+                                                        assign product_disabled = false
+                                                        if variant.available == false
+                                                            assign product_disabled = true
+                                                        endif
+                                                        if product.title contains 'Chummy' and variant.title != "L"
+                                                            assign product_disabled = true
+                                                        elsif variant.title == '39'
+                                                            assign product_disabled = true
+                                                        endif
+                                                    %}
 
-                                                <li class="size_variant_button fix-direction{% if product_disabled %} disabled-variant-button{% endif %}">
-                                                    <div class="size_variant_button_container">
-                                                        <input type="radio"
-                                                               data-variant-id="{{ variant.id }}"
-                                                               name="id"
-                                                               value="{{ variant.id }}"
-                                                               id="radio_{{ variant.id }}"
-                                                                {% if product_disabled %} disabled{% endif %}
-                                                        {% if product.has_only_default_variant %}class="product_size_picker__button default_input"
-                                                            checked{% else %}class="product_size_picker__button new_input shoppable"{% endif %}>
-                                                        <label for="radio_{{ variant.id }}"
-                                                               class="product_size_picker__button__label {% if product.selected_variant == variant %}selected{% endif %}">
-                                                            {{ variant.title | escape }}
-                                                            <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="size_variant_button_add">
-                                                        {% render 'icon-plus' %}
-                                                    </div>
-                                                </li>
-                                            {% endunless %}
-                                        {% endfor %}
-                                    </ul>
+                                                    <li class="size_variant_button fix-direction{% if product_disabled %} disabled-variant-button{% endif %}">
+                                                        <div class="size_variant_button_container">
+                                                            <input type="radio"
+                                                                   data-variant-id="{{ variant.id }}"
+                                                                   name="id"
+                                                                   value="{{ variant.id }}"
+                                                                   id="radio_{{ variant.id }}"
+                                                                    {% if product_disabled %} disabled{% endif %}
+                                                            {% if product.has_only_default_variant %}class="product_size_picker__button default_input"
+                                                                checked{% else %}class="product_size_picker__button new_input shoppable"{% endif %}>
+                                                            <label for="radio_{{ variant.id }}"
+                                                                   class="product_size_picker__button__label {% if product.selected_variant == variant %}selected{% endif %}">
+                                                                <span>
+                                                                    {{ variant.title | escape }}
+                                                                    <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
+                                                                </span>
+
+                                                                <div class="size_variant_button_add">
+                                                                    {% render 'icon-plus' %}
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                {% endunless %}
+                                            {% endfor %}
+                                        </ul>
+                                    </fieldset>
                                 </div>
-                                <input type="submit" hidden="hidden" />
+                                <input type="submit" hidden="hidden"/>
+                                {% render 'loading-spinner' %}
                             {%- endform -%}
                         </product-form>
                     </div>
@@ -95,41 +101,43 @@
             <product-form class="size-variant-product-form">
                 {%- form 'product', product, class: 'product_size_picker__form form', data-type: 'add-to-cart-form' -%}
                     <div class="product_variants {% if product.has_only_default_variant %}none{% endif %}">
-                        <ul>
-                            {% for variant in product.variants %}
-                                {% unless variant.title == '39' %}
-                                    {%- liquid
-                                        assign product_disabled = false
-                                        if variant.available == false
-                                            assign product_disabled = true
-                                        endif
-                                        if product.title contains 'Chummy' and variant.title != "L"
-                                            assign product_disabled = true
-                                        elsif variant.title == '39'
-                                            assign product_disabled = true
-                                        endif
-                                    %}
+                        <fieldset name="line_items" class="js">
+                            <ul>
+                                {% for variant in product.variants %}
+                                    {% unless variant.title == '39' %}
+                                        {%- liquid
+                                            assign product_disabled = false
+                                            if variant.available == false
+                                                assign product_disabled = true
+                                            endif
+                                            if product.title contains 'Chummy' and variant.title != "L"
+                                                assign product_disabled = true
+                                            elsif variant.title == '39'
+                                                assign product_disabled = true
+                                            endif
+                                        %}
 
-                                    <li class="size_variant_button{% if product_disabled %} disabled-variant-button{% endif %}">
-                                        <div class="size_variant_button_container">
-                                            <input type="radio"
-                                                   data-variant-id="{{ variant.id }}"
-                                                   name="id"
-                                                   value="{{ variant.id }}"
-                                                   id="radio_{{ variant.id }}"
-                                                    {% if product_disabled %} disabled{% endif %}
-                                            {% if product.has_only_default_variant %}class="product_size_picker__button default_input"
-                                                checked{% else %}class="product_size_picker__button new_input shoppable"{% endif %}>
-                                            <label for="radio_{{ variant.id }}"
-                                                   class="product_size_picker__button__label {% if product.selected_variant == variant %}selected{% endif %}">
-                                                {{ variant.title | escape }}
-                                                <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
-                                            </label>
-                                        </div>
-                                    </li>
-                                {% endunless %}
-                            {% endfor %}
-                        </ul>
+                                        <li class="size_variant_button{% if product_disabled %} disabled-variant-button{% endif %}">
+                                            <div class="size_variant_button_container">
+                                                <input type="radio"
+                                                       data-variant-id="{{ variant.id }}"
+                                                       name="id"
+                                                       value="{{ variant.id }}"
+                                                       id="radio_{{ variant.id }}"
+                                                        {% if product_disabled %} disabled{% endif %}
+                                                {% if product.has_only_default_variant %}class="product_size_picker__button default_input"
+                                                    checked{% else %}class="product_size_picker__button new_input shoppable"{% endif %}>
+                                                <label for="radio_{{ variant.id }}"
+                                                       class="product_size_picker__button__label {% if product.selected_variant == variant %}selected{% endif %}">
+                                                    {{ variant.title | escape }}
+                                                    <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
+                                                </label>
+                                            </div>
+                                        </li>
+                                    {% endunless %}
+                                {% endfor %}
+                            </ul>
+                        </fieldset>
                     </div>
                     {% comment %} TODO: Make ajax add to cart open cart widget {% endcomment %}
                     <div class="add_to_cart_container product-form__buttons">
@@ -144,7 +152,8 @@
                                 הוספה
                             </button>
                         {% endif %}
-                        <input type="submit" hidden="hidden" />
+                        {% render 'loading-spinner' %}
+                        <input type="submit" hidden="hidden"/>
                     </div>
                 {%- endform -%}
             </product-form>

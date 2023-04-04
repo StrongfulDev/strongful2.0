@@ -728,6 +728,9 @@
             "label": "2 columns"
           }
         },
+        "is_full_width": {
+          "label": "Full width"
+        },
         "is_heading_overlay": {
           "label": "Header on photo"
         },

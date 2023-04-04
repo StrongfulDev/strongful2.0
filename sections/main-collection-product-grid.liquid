@@ -167,7 +167,7 @@
                                 <li class="grid__item">
                                     {%- liquid
                                         assign card_announcement = ""
-                                        if section.settings.show_card_collection_announcement
+                                        if section.settings.show_card_collection_announcement and collection.metafields.announcement.text != blank
                                             assign card_announcement = collection.metafields.announcement.text
                                         endif
                                     -%}

@@ -2974,3 +2974,18 @@ details-disclosure > details {
 .heading_type_1 {
     font-family: spartan, sans-serif;
 }
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --full-width-padding: 3em;
+}
+
+.full-width-padding {
+    padding-left: var(--full-width-padding);
+    padding-right: var(--full-width-padding);
+}

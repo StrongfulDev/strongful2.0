@@ -72,3 +72,11 @@
         padding: 0;
     }
 }
+
+.complete_look__slider .size_variant_button_container {
+    border: none;
+}
+
+.complete_look__slider .product-form__input input[type='radio'] + label {
+    margin: 0;
+}
