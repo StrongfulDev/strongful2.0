@@ -8,3 +8,13 @@ It contains the sections from the previous theme
 ## Requirements
 
 - [Shopify CLI](https://github.com/Shopify/cli)
+
+
+## Getting started 
+
+clone the repository from GitHub
+
+```bash
+git clone https://github.com/StrongfulDev/strongful2.0
+```
+
