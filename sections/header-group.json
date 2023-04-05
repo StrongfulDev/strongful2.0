@@ -58,18 +58,47 @@
         "8878d4cf-d83f-42a2-90b9-ddebceb7501c": {
           "type": "menu_item",
           "settings": {
-            "menu": "main-menu",
-            "title": "test",
+            "menu": "first-sets",
+            "title": "סטים",
             "title_link": "",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/2002-copy_d4498eca-58ec-48c7-baf5-489ff448df1b.jpg",
             "desktop_links_image_1_link": "",
             "desktop_links_image_2_link": "",
             "mobile_cover_image": "shopify:\/\/shop_images\/2002-copy_8a51793b-4936-4859-a295-763e386d1a4a.jpg",
             "mobile_title": ""
           }
+        },
+        "fc929aa6-aab6-4c25-be13-8267425330c3": {
+          "type": "menu_item",
+          "settings": {
+            "menu": "main-menu",
+            "title": "טופים",
+            "title_link": "",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/2002-copy_c2210285-2e35-4183-a2f8-402656120900.jpg",
+            "desktop_links_image_1_link": "",
+            "desktop_links_image_2_link": "",
+            "mobile_cover_image": "shopify:\/\/shop_images\/2002-copy_1_80604bc1-c0f1-424b-86c1-4e425a03e053.jpg",
+            "mobile_title": ""
+          }
+        },
+        "03fa03f7-aac1-443b-acba-9a19fb5aa148": {
+          "type": "menu_item",
+          "settings": {
+            "menu": "bottom-menu",
+            "title": "טייצים",
+            "title_link": "",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/2002-copy_410f60be-4eb7-46af-89dd-bfdfa3df7713.jpg",
+            "desktop_links_image_1_link": "",
+            "desktop_links_image_2_link": "",
+            "mobile_cover_image": "shopify:\/\/shop_images\/2002-copy_410f60be-4eb7-46af-89dd-bfdfa3df7713.jpg",
+            "mobile_title": ""
+          }
         }
       },
       "block_order": [
-        "8878d4cf-d83f-42a2-90b9-ddebceb7501c"
+        "8878d4cf-d83f-42a2-90b9-ddebceb7501c",
+        "fc929aa6-aab6-4c25-be13-8267425330c3",
+        "03fa03f7-aac1-443b-acba-9a19fb5aa148"
       ],
       "settings": {
         "color_scheme": "background-1",
