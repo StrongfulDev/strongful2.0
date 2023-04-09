@@ -1,0 +1,95 @@
+.quick-add.hover {
+    display: none;
+}
+
+.card:hover .quick-add.hover {
+    display: block;
+}
+
+@media screen and (max-width: 749px) {
+    .card:hover .quick-add.hover {
+        display: none
+    }
+}
+
+.quick-add.hover {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.product-size-picker-container {
+    background-color: rgba(var(--color-background), 0.8);
+    padding: 20px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.product_size_picker__heading {
+    font-weight: 700;
+}
+
+.product-size-picker {
+    width: 100%;
+}
+
+.variant_selector {
+    width: 100%;
+}
+
+.size-variant-product-form {
+    width: 100%;
+}
+
+.card .product_variants .size_variant_button {
+    max-width: 50px;
+}
+
+.product_variants ul {
+    justify-content: center;
+}
+
+.card__heading a:after {
+    z-index: 0;
+}
+
+.card--standard:not(.card--horizontal) > .card__content .card__badge {
+    display: block;
+    position: absolute;
+    top: 0;
+}
+
+.card--standard:not(.card--horizontal) > .card__content .card__badge:has(> .badge.color-custom-red) {
+    margin: 0;
+}
+
+.badge.color-custom-red {
+    color: firebrick;
+    padding: 0.6em;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.8);
+    margin: 10px 0 0 0;
+    border: 0;
+    border-radius: 0 1em 1em 0;
+}
+
+.card_banner_text {
+    margin-top: -10px;
+    width: 100%;
+    display: block;
+    padding: 5px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.outlet-collection-tag {
+    font-weight: 700;
+    display: inline-block;
+    margin: 5px 0 0;
+}

@@ -1,0 +1,57 @@
+{% comment %}
+  Renders a table with product specific sizing
+  Accepts:
+  - product: {Object} product object.
+  - block: {Object} block object.
+
+  Usage:
+  {% render 'product-sizing-table',
+    product: product,
+    block: block
+  %}
+{% endcomment %}
+
+
+{% style %}
+    .div-block-460 {
+    display: grid;
+    margin: 10px 5px;
+    gap: 0;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    border: 1px solid rgba(var(--color-foreground));
+    width: 96%;
+    margin: 1em auto;
+    font-size: 16px;
+    }
+{% endstyle %}
+
+{% unless product.tags contains "אקססוריז" or product.tags contains 'kit' %}
+    <div class="model-size-table-diff">
+        <div class="product-meta-content none">
+            <div class="modelsizedropdown">
+                <div class="div-block-460">
+                    <div class="text-block-174 text-center">שם</div>
+                    <div class="text-block-175 text-center">גובה</div>
+                    <div class="text-block-176 text-center">חזה</div>
+                    <div class="text-block-177 text-center">מותן</div>
+                    <div class="text-block-178 text-center">אגן</div>
+                    {% if product.tags contains "plusSizeProduct" %}
+                        <div class="text-block-179 text-center">{{ product.metafields.global.model }}</div>
+                        <div class="text-block-180 priceFont text-center">{{ product.metafields.global.height }}</div>
+                        <div class="text-block-181 priceFont text-center">{{ product.metafields.global.chest }}</div>
+                        <div class="text-block-181 priceFont text-center">{{ product.metafields.global.waist }}</div>
+                        <div class="text-block-183 priceFont text-center">{{ product.metafields.global.butt }}</div>
+                    {% else %}
+                        <div class="text-block-179 text-center">{{ product.metafields.global.plusmodel }}</div>
+                        <div class="text-block-180 priceFont text-center">{{ product.metafields.global.plusheight }}</div>
+                        <div class="text-block-181 priceFont text-center">{{ product.metafields.global.pluschest }}</div>
+                        <div class="text-block-181 priceFont text-center">{{ product.metafields.global.pluswaist }}</div>
+                        <div class="text-block-183 priceFont text-center">{{ product.metafields.global.plusbutt }}</div>
+                    {% endif %}
+                </div>
+                <div class="text-block-184">{{ 'products.product.shipping_sizes' | t }}</div>
+            </div>
+        </div>
+    </div>
+{% endunless %}

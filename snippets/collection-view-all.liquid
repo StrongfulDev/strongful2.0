@@ -4,6 +4,8 @@
   - collection_url: {String} the collection url to redirect on click.
   - collection_title: {String} the collection title to display.
   - style: {String} the button style
+  - class_wrapper: {String} class string to add to the wrapper div
+  - view_all_text: {String} the text to display on the button
 
   Usage:
   {% render 'collection-view-all',
@@ -13,12 +15,16 @@
   %}
 {% endcomment %}
 
-<div class="center collection__view-all">
+<div class="center collection__view-all {{ class_wrapper }}">
     <a
             href="{{ collection_url }}"
             class="{% if style == 'link' %}link underlined-link{% elsif style == 'solid' %}button{% else %}button button--secondary{% endif %}"
             aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: collection.title }}"
     >
-        {{ 'sections.featured_collection.view_all' | t }}
+        {% if view_all_text %}
+            {{ view_all_text }}
+        {% else %}
+            {{ 'sections.featured_collection.view_all' | t }}
+        {% endif %}
     </a>
 </div>

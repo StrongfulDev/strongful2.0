@@ -1,0 +1,52 @@
+.announcement-bar {
+    border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
+    color: rgb(var(--color-foreground));
+}
+
+.announcement-bar__link {
+    display: block;
+    width: 100%;
+    padding: 1rem 0;
+    text-decoration: none;
+}
+
+.announcement-bar__link:hover {
+    color: rgb(var(--color-foreground));
+    background-color: rgba(var(--color-card-hover), 0.06);
+}
+
+.announcement-bar__link .icon-arrow {
+    display: inline-block;
+    pointer-events: none;
+    margin-left: 0.8rem;
+    vertical-align: middle;
+    margin-bottom: 0.2rem;
+}
+
+.announcement-bar__link .announcement-bar__message {
+    padding: 0;
+}
+
+.announcement-bar__message {
+    padding: 1rem 0;
+    margin: 0;
+    letter-spacing: 0.1rem;
+}
+
+.announcement-bar__message * {
+    margin: 0;
+}
+
+.announcement-bar-container.container-columns {
+    display: flex;
+}
+
+.announcement-bar-container.container-columns > * {
+    flex: 1;
+}
+
+@media screen and (max-width: 749px) {
+    .announcement-bar:not(.show-mobile) {
+        display: none;
+    }
+}

@@ -1,0 +1,21 @@
+{% comment %}
+  Renders a contact form
+
+  Accepts:
+  - heading: {String} Header text
+  - subtext: {String} Text below the form
+
+  Usage:
+  {% render 'contact-form' heading: block.settings.heading, subtext: block.settings.subtext %}
+{% endcomment %}
+
+<div class="contact_form">
+    <h4 class="contact_form__title h3">{{ heading }}</h4>
+    <div class="form_container">
+        <div class="klaviyo-form-U29btr"></div>
+    </div>
+    <div class="contact_form__subtext">{{ subtext }}</div>
+    <div class="contact_form__socials">
+        {%- render 'social-icons' -%}
+    </div>
+</div>

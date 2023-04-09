@@ -1,0 +1,106 @@
+{% comment %}
+  Renders a slideshow for product card
+
+  Accepts:
+  - card_product: {Object} Product Liquid object
+  Usage:
+  {% render 'card-collection' %}
+{% endcomment %}
+{% comment %} TODO: Complete Slideshow {% endcomment %}
+
+{% if false %}
+    <slideshow-component
+            class="slider-mobile-gutter"
+            role="region"
+            aria-label="{{ section.settings.accessibility_info | escape }}">
+        <div class="slideshow slider banner  grid grid--1-col slider  slider--everywhere"
+             id="Slider-{{ section.id }}"
+             aria-live="polite"
+             aria-atomic="true"
+        >
+            {% for media in card_product.media limit: image_count %}
+                <div class="slideshow__slide grid__item grid--1-col slider__slide"
+                     id="Slide-{{ section.id }}-{{ forloop.index }}"
+                     role="group"
+                     aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+                >
+                    <div class="slideshow__media banner__media media">
+                        {%- assign height = media.width | divided_by: media.aspect_ratio | round -%}
+                        {{ media | image_url: width: 750 | image_tag:
+                        loading: 'lazy',
+                        height: height,
+                        sizes: "100vw",
+                        widths: '375, 550, 750'
+                        }}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="slideshow__controls slider-buttons no-js-hidden">
+            <button type="button"
+                    class="slider-button slider-button--next"
+                    name="next"
+                    aria-label="{{ 'sections.slideshow.next_slideshow' | t }}"
+                    aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}
+                next
+            </button>
+            <button type="button"
+                    class="slider-button slider-button--prev"
+                    name="previous"
+                    aria-label="{{ 'sections.slideshow.previous_slideshow' | t }}"
+                    aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}
+                back
+            </button>
+        </div>
+    </slideshow-component>
+{% else %}
+    <slider-component class="slider-mobile-gutter">
+        <ul
+                class="collection-list contains-card contains-card--collection{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid grid--1-col-desktop grid--1-col-tablet-down slider slider--tablet grid--peek collection-list--1-items"
+                id="Slider-{{ section.id }}"
+                role="list"
+        >
+            {% for media in card_product.media limit: image_count %}
+                <li
+                        id="Slide-{{ section.id }}-{{ forloop.index }}"
+                        class="collection-list__item grid__item slider__slide"
+                        {{ block.shopify_attributes }}
+                >
+                    <div class="slider__media media">
+                        {%- assign height = media.width | divided_by: media.aspect_ratio | round -%}
+                        {{ media | image_url: width: 750 | image_tag:
+                        loading: 'lazy',
+                        height: height,
+                        sizes: "100vw",
+                        widths: '375, 550, 750'
+                        }}
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+        <div class="slider-buttons no-js-hidden" style="position:absolute; z-index: 2">
+            <button
+                    type="button"
+                    class="slider-button slider-button--prev"
+                    name="previous"
+                    aria-label="{{ 'general.slider.previous_slide' | t }}"
+            >
+                {% render 'icon-caret' %}
+            </button>
+            <div class="slider-counter caption">
+                <span class="slider-counter--current">1</span>
+                <span aria-hidden="true"> / </span>
+                <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+                <span class="slider-counter--total">{{ section.blocks.size }}</span>
+            </div>
+            <button
+                    type="button"
+                    class="slider-button slider-button--next"
+                    name="next"
+                    aria-label="{{ 'general.slider.next_slide' | t }}"
+            >
+                {% render 'icon-caret' %}
+            </button>
+        </div>
+    </slider-component>
+{% endif %}
