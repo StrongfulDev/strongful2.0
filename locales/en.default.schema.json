@@ -1231,6 +1231,18 @@
             "label": "Customizable menu"
           }
         },
+        "menu_position": {
+          "label": "Desktop menu position",
+          "options__1": {
+            "label": "Left"
+          },
+          "options__2": {
+            "label": "Center"
+          },
+          "options__3": {
+            "label": "Right"
+          }
+        },
         "show_line_separator": {
           "label": "Show separator line"
         },
