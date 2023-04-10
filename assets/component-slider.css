@@ -254,7 +254,7 @@ slider-component.slider-component-full-width {
 }
 
 .slider-counter {
-    display: flex;
+    display: none;
     justify-content: center;
     min-width: 4.4rem;
 }
@@ -326,7 +326,7 @@ slider-component.slider-component-full-width {
 .slider-buttons {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 @media screen and (min-width: 990px) {
