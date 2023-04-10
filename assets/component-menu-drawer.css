@@ -120,7 +120,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .js .menu-drawer__menu li {
-  margin-bottom: 0.2rem;
+  margin-bottom: 1rem 0;
 }
 
 .menu-drawer__menu-item {
