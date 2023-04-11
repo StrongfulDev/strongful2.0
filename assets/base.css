@@ -2410,14 +2410,13 @@ product-info .loading-overlay:not(.hidden) ~ *,
 
 .header__icon,
 .header__icon--cart .icon {
-    height: 4.4rem;
-    width: 4.4rem;
+    height: 3.5rem;
+    width: 3.5rem;
     padding: 0;
 }
 
 .header__icon--cart {
     position: relative;
-    margin-right: -1.2rem;
 }
 
 @media screen and (max-width: 989px) {
