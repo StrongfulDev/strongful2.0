@@ -50,3 +50,11 @@
         display: none;
     }
 }
+
+.announcement-bar {
+    display: none;
+}
+
+.announcement-bar.active {
+    display: block;
+}

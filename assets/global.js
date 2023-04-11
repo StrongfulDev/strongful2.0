@@ -1051,3 +1051,33 @@ class ProductRecommendations extends HTMLElement {
 }
 
 customElements.define('product-recommendations', ProductRecommendations);
+
+// script for animating the header announcement bar
+// the first slide needs to wait 4 seconds, - firstWait param
+// then it should fade out for 1 second - fadeOut param
+// then it should wait 10 seconds for the other two slides - firstDelay param
+// then it should fade in 1 second - fadeIn param
+// then it should repeat
+
+//  function animateAnn(firstWait, fadeOut, firstDelay, fadeIn, element) {
+//    $(element).delay(firstWait).fadeToggle(fadeOut).delay(firstDelay).fadeToggle(fadeIn);
+//    console.log("function ran");
+//  }
+
+//  setInterval(animateAnn, 10000, 0, 1000, 5000, 1000, document.querySelector('.announcement-bar-0'));
+ // setInterval(animateAnn, 5000, 5000, 1000, 5000, 1000, document.querySelector('.announcement-bar-1'));
+ // setInterval(animateAnn, 10000, 10000, 1000, 5000, 1000, document.querySelector('.announcement-bar-1'));
+
+ $(document).ready(function() {
+  var elements = $('.announcement-bar');
+  var index = 0;
+  setInterval(function() {
+    elements.eq(index).fadeOut(1000, function() {
+      $(this).removeClass('active');
+      index = (index + 1) % elements.length;
+      elements.eq(index).fadeIn(1000).addClass('active');
+    });
+  }, 6000);
+});
+
+
