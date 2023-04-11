@@ -1075,6 +1075,7 @@ customElements.define('product-recommendations', ProductRecommendations);
     elements.eq(index).fadeOut(1000, function() {
       $(this).removeClass('active');
       index = (index + 1) % elements.length;
+      console.log(index);
       elements.eq(index).fadeIn(1000).addClass('active');
     });
   }, 6000);
