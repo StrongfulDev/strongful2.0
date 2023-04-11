@@ -30,11 +30,18 @@
 .announcement-bar__message {
     padding: 1rem 0;
     margin: 0;
-    letter-spacing: 0.1rem;
 }
 
 .announcement-bar__message * {
     margin: 0;
+}
+
+.announcement-bar__message strong {
+    text-decoration: underline;
+}
+
+.announcement-bar__message p:last-child {
+    font-size: .9em;
 }
 
 .announcement-bar-container.container-columns {

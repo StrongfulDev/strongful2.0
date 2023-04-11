@@ -13,11 +13,13 @@
                             <a href="{{ block.settings.link }}" class="announcement-bar__link link link--text focus-inset animate-arrow">
                         {%- endif -%}
                         <div class="page-width">
-                            <div class="announcement-bar__message {{ block.settings.text_alignment }}">
+                            <div class="announcement-bar__message {{ block.settings.text_alignment }} rtl">
                                 {{ block.settings.text }}
+                                {% comment %}
                                 {%- if block.settings.link != blank -%}
                                     {% render 'icon-arrow' %}
                                 {%- endif -%}
+                              {% endcomment %}
                             </div>
                         </div>
                         {%- if block.settings.link != blank -%}
@@ -93,7 +95,7 @@
       "id": "animation-duration",
       "label": "Animation Duration",
       "min": 1,
-      "max": 10,
+      "max": 50,
       "step": 1,
       "default": 1
     }

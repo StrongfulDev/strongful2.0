@@ -1059,7 +1059,7 @@ customElements.define('product-recommendations', ProductRecommendations);
 
   // get values of the sliders settings of the announcement bar
   // and multiply them by 1000 to integrate them properly in the animation function
-  let announcementDuration = announcement.dataset.duration * 1000;
+  let announcementDuration = announcement.dataset.duration * 100;
   let announcementDelay = announcement.dataset.delay * 1000;
 
   // run animation only for mobile / tablet
