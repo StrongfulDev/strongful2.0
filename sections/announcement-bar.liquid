@@ -1,6 +1,7 @@
 <div class="announcement-bar-container container-{{ section.settings.blocks_type }} color-{{ section.settings.color_scheme }} gradient"
      role="region"
-     aria-label="{{ 'sections.header.announcement' | t }}" {{ section.shopify_attributes }}>
+     aria-label="{{ 'sections.header.announcement' | t }}" {{ section.shopify_attributes }}
+     data-delay="{{ section.settings.animation-delay }}" data-duration="{{ section.settings.animation-duration }}">
     {%- for block in section.blocks -%}
         {%- case block.type -%}
             {%- when 'announcement' -%}
@@ -77,6 +78,24 @@
       ],
       "default": "accent-1",
       "label": "t:sections.all.colors.label"
+    },
+    {
+      "type": "range",
+      "id": "animation-delay",
+      "label": "Animation Delay",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 6
+    },
+    {
+      "type": "range",
+      "id": "animation-duration",
+      "label": "Animation Duration",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 1
     }
   ],
   "blocks": [
