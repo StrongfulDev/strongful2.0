@@ -334,7 +334,7 @@ class MenuDrawer extends HTMLElement {
 
   bindEvents() {
     this.querySelectorAll('summary').forEach(summary => summary.addEventListener('click', this.onSummaryClick.bind(this)));
-    this.querySelectorAll('button').forEach(button => button.addEventListener('click', this.onCloseButtonClick.bind(this)));
+    this.querySelectorAll('button:not(.localization-selector)').forEach(button => button.addEventListener('click', this.onCloseButtonClick.bind(this)));
   }
 
   onKeyUp(event) {
@@ -400,7 +400,7 @@ class MenuDrawer extends HTMLElement {
     this.closeAnimation(this.mainDetailsToggle);
   }
 
-  onFocusOut(event) {
+  onFocusOut() {
     setTimeout(() => {
       if (this.mainDetailsToggle.hasAttribute('open') && !this.mainDetailsToggle.contains(document.activeElement)) this.closeMenuDrawer();
     });
@@ -462,14 +462,22 @@ class HeaderDrawer extends MenuDrawer {
     });
 
     summaryElement.setAttribute('aria-expanded', true);
+    window.addEventListener('resize', this.onResize);
     trapFocus(this.mainDetailsToggle, summaryElement);
     document.body.classList.add(`overflow-hidden-${this.dataset.breakpoint}`);
   }
 
   closeMenuDrawer(event, elementToFocus) {
+    if (!elementToFocus) return;
     super.closeMenuDrawer(event, elementToFocus);
     this.header.classList.remove('menu-open');
+    window.removeEventListener('resize', this.onResize);
   }
+
+  onResize = () => {
+    this.header && document.documentElement.style.setProperty('--header-bottom-position', `${parseInt(this.header.getBoundingClientRect().bottom - this.borderOffset)}px`);
+    document.documentElement.style.setProperty('--viewport-height', `${window.innerHeight}px`);
+  };
 }
 
 customElements.define('header-drawer', HeaderDrawer);
@@ -553,6 +561,10 @@ class DeferredMedia extends HTMLElement {
       this.setAttribute('loaded', true);
       const deferredElement = this.appendChild(content.querySelector('video, model-viewer, iframe'));
       if (focus) deferredElement.focus();
+      if (deferredElement.nodeName == 'VIDEO' && deferredElement.getAttribute('autoplay')) {
+        // force autoplay for safari
+        deferredElement.play();
+      }
     }
   }
 }
@@ -1051,36 +1063,3 @@ class ProductRecommendations extends HTMLElement {
 }
 
 customElements.define('product-recommendations', ProductRecommendations);
-
- $(document).ready(function() {
-
-  // get the announcement bar with the data from the customizer
-  let announcement = document.querySelector('.announcement-bar-container');
-
-  // get values of the sliders settings of the announcement bar
-  // and multiply them by 1000 to integrate them properly in the animation function
-  let announcementDuration = announcement.dataset.duration * 100;
-  let announcementDelay = announcement.dataset.delay * 1000;
-
-  // run animation only for mobile / tablet
-
-  /* This code will initially hide all the elements except for the first one, 
-     which will have the active class. It then sets an interval to run every 4 seconds, 
-     which will fade out the currently active element, remove its active class, 
-     and fade in the next element in the list, adding the active class to it. 
-     The index variable keeps track of which element is currently active, 
-     and it wraps around to the beginning of the list when it reaches the end. */
-  if ($(window).width() < 990) {
-    let elements = $('.announcement-bar');
-    let index = 0;
-    setInterval(function() {
-      elements.eq(index).fadeOut(announcementDuration, function() {
-        $(this).removeClass('active');
-        index = (index + 1) % elements.length;
-        elements.eq(index).fadeIn(announcementDuration).addClass('active');
-      });
-    }, announcementDelay);
-  }
-});
-
-
