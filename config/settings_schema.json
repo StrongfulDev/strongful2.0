@@ -2,10 +2,10 @@
   {
     "name": "theme_info",
     "theme_name": "Dawn",
-    "theme_version": "8.0.1",
+    "theme_version": "9.0.0",
     "theme_author": "Shopify",
-    "theme_documentation_url": "https:\/\/help.shopify.com\/manual\/online-store\/themes",
-    "theme_support_url": "https:\/\/support.shopify.com\/"
+    "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
+    "theme_support_url": "https://support.shopify.com/"
   },
   {
     "name": "t:settings_schema.logo.name",
@@ -127,23 +127,6 @@
         "info": "t:settings_schema.typography.settings.type_header_font.info"
       },
       {
-        "type": "select",
-        "id": "type_header_font_custom",
-        "options": [
-          {
-            "value": "none",
-            "label": "t:settings_schema.typography.settings.type_header_font_custom.options__1.label"
-          },
-          {
-            "value": "spartan",
-            "label": "t:settings_schema.typography.settings.type_header_font_custom.options__2.label"
-          }
-        ],
-        "default": "none",
-        "label": "t:settings_schema.typography.settings.type_header_font_custom.label",
-        "info": "t:settings_schema.typography.settings.type_header_font_custom.info"
-      },
-      {
         "type": "range",
         "id": "heading_scale",
         "min": 100,
@@ -156,23 +139,6 @@
       {
         "type": "header",
         "content": "t:settings_schema.typography.settings.header__2.content"
-      },
-      {
-        "type": "select",
-        "id": "type_body_font_custom",
-        "options": [
-          {
-            "value": "none",
-            "label": "t:settings_schema.typography.settings.type_body_font_custom.options__1.label"
-          },
-          {
-            "value": "spartan",
-            "label": "t:settings_schema.typography.settings.type_body_font_custom.options__2.label"
-          }
-        ],
-        "default": "none",
-        "label": "t:settings_schema.typography.settings.type_body_font_custom.label",
-        "info": "t:settings_schema.typography.settings.type_body_font_custom.info"
       },
       {
         "type": "font_picker",
@@ -668,12 +634,8 @@
             "label": "t:settings_schema.collection_cards.settings.style.options__1.label"
           },
           {
-            "value": "standard_overlay",
-            "label": "t:settings_schema.cards.settings.style.options__2.label"
-          },
-          {
             "value": "card",
-            "label": "t:settings_schema.collection_cards.settings.style.options__3.label"
+            "label": "t:settings_schema.collection_cards.settings.style.options__2.label"
           }
         ],
         "default": "standard",
@@ -1352,10 +1314,6 @@
           {
             "value": "background-2",
             "label": "t:sections.all.colors.background_2.label"
-          },
-          {
-            "value": "custom-red",
-            "label": "t:sections.all.colors.custom_red.label"
           }
         ],
         "default": "accent-2",
