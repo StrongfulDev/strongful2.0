@@ -94,3 +94,19 @@
   text-transform: uppercase;
   color: rgba(var(--color-foreground), 0.7);
 }
+
+.price__sale .price-item.price-item--regular {
+    margin-right: 0;
+    font-size: 16px;
+    color: grey;
+}
+
+.price__sale .price-item.price-item--sale {
+    color: firebrick;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.price {
+    font-family: 'Roboto', sans-serif;
+}

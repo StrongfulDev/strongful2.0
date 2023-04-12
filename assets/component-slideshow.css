@@ -204,3 +204,19 @@ slideshow-component:not(.page-width) .slider-buttons {
   opacity: 0;
   transform: scale(.8)
 }
+
+
+.sides_navigation .slideshow__controls {
+    position: absolute;
+    transform: translate(0, -50%);
+    z-index: 2;
+    top: 50%;
+    width: 100%;
+    border: none;
+}
+
+.sides_navigation .slideshow__controls .slider-button svg {
+    color: white;
+    height: 16px;
+}
+
