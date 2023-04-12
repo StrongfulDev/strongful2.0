@@ -205,6 +205,7 @@ slideshow-component:not(.page-width) .slider-buttons {
     transform: scale(.8)
 }
 
+/* Custom Styles */
 
 .sides_navigation .slideshow__controls {
     position: absolute;
@@ -218,5 +219,13 @@ slideshow-component:not(.page-width) .slider-buttons {
 .sides_navigation .slideshow__controls .slider-button svg {
     color: white;
     height: 16px;
+}
+
+.slideshow__text.banner__box {
+    max-width: none;
+    padding: 2rem 1.5rem;
+    width: fit-content;
+    position: absolute;
+    bottom: 1em;
 }
 

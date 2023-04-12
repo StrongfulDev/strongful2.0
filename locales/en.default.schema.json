@@ -3264,6 +3264,9 @@
         "mobile": {
           "content": "Mobile layout"
         },
+        "show_on_mobile": {
+          "label": "Show on mobile"
+        },
         "show_text_below": {
           "label": "Show content below images on mobile"
         },
