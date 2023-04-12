@@ -8,13 +8,13 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "show_mobile": false,
-            "text": "<p>Welcome to our store<\/p>",
+            "show_mobile": true,
+            "text": "<p><strong>20% הנחה בהרשמה למועדון הלקוחות<\/strong><\/p><p>הירשמי עכשיו בחינם<\/p>",
             "text_alignment": "center",
-            "mobile_text": "<p>Welcome to our store<\/p>",
+            "mobile_text": "<p><strong>20% הנחה בהרשמה למועדון הלקוחות<\/strong><\/p><p>הירשמי עכשיו בחינם<\/p>",
             "mobile_text_alignment": "center",
-            "link": "",
-            "color_scheme": "background-1"
+            "link": "shopify:\/\/pages\/a-list",
+            "color_scheme": "accent-1"
           }
         },
         "7c37c998-83a9-46d6-91fd-3ceaaab10008": {
@@ -50,8 +50,8 @@
       "settings": {
         "blocks_type": "columns",
         "color_scheme": "inverse",
-        "animation-duration": 5,
-        "animation-delay": 6
+        "animation-delay": 6,
+        "animation-duration": 5
       }
     },
     "header": {
