@@ -111,6 +111,8 @@
         "menu_position": "center",
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
+        "enable_country_selector": true,
+        "enable_language_selector": true,
         "mobile_logo_position": "center",
         "mobile_top_image_1_link": "",
         "mobile_top_image_2_link": "",

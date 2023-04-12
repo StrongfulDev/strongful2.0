@@ -1,11 +1,6 @@
-<link rel="stylesheet" href="{{ 'component-card.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
-<link
-  rel="stylesheet"
-  href="{{ 'section-related-products.css' | asset_url }}"
-  media="print"
-  onload="this.media='all'"
->
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'section-related-products.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -28,7 +23,7 @@
   >
     {% if recommendations.performed and recommendations.products_count > 0 %}
       <h2 class="related-products__heading {{ section.settings.heading_size }}">
-        {{ section.settings.heading | escape }}
+        {{ section.settings.heading }}
       </h2>
       <ul
         class="grid product-grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down"
@@ -61,7 +56,7 @@
       "content": "t:sections.related-products.settings.paragraph__1.content"
     },
     {
-      "type": "text",
+      "type": "inline_richtext",
       "id": "heading",
       "default": "You may also like",
       "label": "t:sections.related-products.settings.heading.label"

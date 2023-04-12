@@ -11,8 +11,13 @@
           }
         },
         "title": {
-          "type": "title",
+          "type": "title"
+        },
+        "caption": {
+          "type": "text",
           "settings": {
+            "text": "{{ product.metafields.descriptors.subtitle.value }}",
+            "text_style": "subtitle"
           }
         },
         "price": {
@@ -78,6 +83,7 @@
       "block_order": [
         "vendor",
         "title",
+        "caption",
         "price",
         "variant_picker",
         "quantity_selector",
@@ -89,6 +95,7 @@
       ],
       "settings": {
         "enable_sticky_info": true,
+        "gallery_layout": "stacked",
         "media_size": "large",
         "constrain_to_viewport": true,
         "media_fit": "contain",
@@ -97,8 +104,7 @@
         "image_zoom": "lightbox",
         "mobile_thumbnails": "hide",
         "hide_variants": true,
-        "enable_video_looping": true,
-        "details_section_direction": "right",
+        "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 12
       }
