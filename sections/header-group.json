@@ -49,7 +49,9 @@
       ],
       "settings": {
         "blocks_type": "columns",
-        "color_scheme": "inverse"
+        "color_scheme": "inverse",
+        "animation-duration": 5,
+        "animation-delay": 6
       }
     },
     "header": {
