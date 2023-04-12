@@ -101,7 +101,7 @@
   }
 
   .banner__content.banner__content--middle-center {
-    align-items: self-end;
+    align-items: center;
     justify-content: center;
   }
 

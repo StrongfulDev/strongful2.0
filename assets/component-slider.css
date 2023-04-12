@@ -386,6 +386,7 @@ slider-component.slider-component-full-width {
 
 .slider-button--prev:not([disabled]):hover .icon {
   transform: rotate(90deg) scale(1.1);
+<<<<<<< HEAD
 }
 
 /* CUSTOM STYLE */
@@ -485,4 +486,6 @@ slider-component.slider-component-full-width {
     .collection__view-all:not(.show-mobile) {
         display: none;
     }
+=======
+>>>>>>> 10bba3c0ec5f0d9564349b5e5b43ca14cd6ce3ec
 }

@@ -2,11 +2,14 @@
 {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
+<<<<<<< HEAD
 {{ 'component-variant-size-picker.css' | asset_url | stylesheet_tag }}
 {{ 'component-variant-size-picker.js' | asset_url | script_tag }}
 
 {% comment %}{{ 'component-slider.css' | asset_url | stylesheet_tag }}{% endcomment %}
 {% comment %}{{ 'component-slideshow.css' | asset_url | stylesheet_tag }}{% endcomment %}
+=======
+>>>>>>> 10bba3c0ec5f0d9564349b5e5b43ca14cd6ce3ec
 
 {%- if section.settings.enable_quick_add -%}
   {{ 'quick-add.css' | asset_url | stylesheet_tag }}
@@ -148,6 +151,7 @@
                 grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down
                 grid--{{ section.settings.columns_desktop }}-col-desktop
               "
+<<<<<<< HEAD
                         >
                             {%- for product in collection.products -%}
                                 {% assign lazy_load = false %}
@@ -178,6 +182,28 @@
                                 </li>
                             {%- endfor -%}
                         </ul>
+=======
+            >
+              {%- for product in collection.products -%}
+                {% assign lazy_load = false %}
+                {%- if forloop.index > 2 -%}
+                  {%- assign lazy_load = true -%}
+                {%- endif -%}
+                <li class="grid__item">
+                  {% render 'card-product',
+                    card_product: product,
+                    media_aspect_ratio: section.settings.image_ratio,
+                    show_secondary_image: section.settings.show_secondary_image,
+                    show_vendor: section.settings.show_vendor,
+                    show_rating: section.settings.show_rating,
+                    lazy_load: lazy_load,
+                    show_quick_add: section.settings.enable_quick_add,
+                    section_id: section.id
+                  %}
+                </li>
+              {%- endfor -%}
+            </ul>
+>>>>>>> 10bba3c0ec5f0d9564349b5e5b43ca14cd6ce3ec
 
             {%- if paginate.pages > 1 -%}
               {% render 'pagination', paginate: paginate, anchor: '' %}
@@ -257,58 +283,9 @@
     },
     {
       "type": "checkbox",
-      "id": "show_card_collection_announcement",
-      "default": false,
-      "label": "t:sections.main-collection-product-grid.settings.show_card_collection_announcement.label"
-    },
-    {
-      "type": "checkbox",
       "id": "enable_quick_add",
       "default": false,
       "label": "t:sections.main-collection-product-grid.settings.enable_quick_buy.label"
-    },
-    {
-      "type": "select",
-      "id": "quick_add_type",
-      "options": [
-        {
-          "value": "button",
-          "label": "t:sections.main-collection-product-grid.settings.quick_add_type.options__1.label"
-        },
-        {
-          "value": "hover",
-          "label": "t:sections.main-collection-product-grid.settings.quick_add_type.options__2.label"
-        }
-      ],
-      "default": "hover",
-      "label": "t:sections.main-collection-product-grid.settings.quick_add_type.label"
-    },
-    {
-      "type": "select",
-      "id": "quick_add_type_mobile",
-      "options": [
-        {
-          "value": "modal",
-          "label": "t:sections.main-collection-product-grid.settings.quick_add_type_mobile.options__1.label"
-        }
-      ],
-      "default": "modal",
-      "label": "t:sections.main-collection-product-grid.settings.quick_add_type_mobile.label"
-    },
-    {
-      "type": "text",
-      "id": "quick_add_text",
-      "default": "Pick size",
-      "label": "t:sections.main-collection-product-grid.settings.quick_add_text.label"
-    },
-    {
-      "type": "range",
-      "id": "image_count",
-      "min": 1,
-      "max": 5,
-      "step": 1,
-      "default": 1,
-      "label": "t:sections.main-collection-product-grid.settings.image_count.label"
     },
     {
       "type": "header",

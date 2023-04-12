@@ -8,114 +8,29 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "show_mobile": false,
-            "text": "<p>Welcome to our store<\/p>",
+            "text": "Welcome to our store",
             "text_alignment": "center",
-            "mobile_text": "<p>Welcome to our store<\/p>",
-            "mobile_text_alignment": "center",
-            "link": "",
-            "color_scheme": "background-1"
-          }
-        },
-        "7c37c998-83a9-46d6-91fd-3ceaaab10008": {
-          "type": "announcement",
-          "settings": {
-            "show_mobile": true,
-            "text": "<h3>Welcome to our store<\/h3><p><a href=\"\/blogs\/תקנונים\" title=\"תקנונים\">test<\/a> <\/p>",
-            "text_alignment": "center",
-            "mobile_text": "<p>Welcome to our store<\/p>",
-            "mobile_text_alignment": "center",
-            "link": "",
-            "color_scheme": "accent-1"
-          }
-        },
-        "8a66318a-92fb-4fe3-8af2-41e36854cfdb": {
-          "type": "announcement",
-          "settings": {
-            "show_mobile": true,
-            "text": "<p>Welcome to our store<\/p>",
-            "text_alignment": "center",
-            "mobile_text": "<p>Welcome to our store<\/p>",
-            "mobile_text_alignment": "center",
-            "link": "",
-            "color_scheme": "accent-2"
+            "color_scheme": "background-1",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "announcement-bar-0",
-        "7c37c998-83a9-46d6-91fd-3ceaaab10008",
-        "8a66318a-92fb-4fe3-8af2-41e36854cfdb"
-      ],
-      "settings": {
-        "blocks_type": "columns",
-        "color_scheme": "inverse",
-        "animation-duration": 5,
-        "animation-delay": 6
-      }
+        "announcement-bar-0"
+      ]
     },
     "header": {
       "type": "header",
-      "blocks": {
-        "8878d4cf-d83f-42a2-90b9-ddebceb7501c": {
-          "type": "menu_item",
-          "settings": {
-            "menu": "first-sets",
-            "title": "סטים",
-            "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/01_38caaf9f-e9f7-4344-8cb2-a6c1b10f4a0c.jpg",
-            "desktop_links_image_1_link": "",
-            "desktop_links_image_2": "shopify:\/\/shop_images\/02_55663bf9-839e-4fc1-90f8-3c660f2805e4.jpg",
-            "desktop_links_image_2_link": "",
-            "mobile_cover_image": "shopify:\/\/shop_images\/2002-copy_8a51793b-4936-4859-a295-763e386d1a4a.jpg",
-            "mobile_title": ""
-          }
-        },
-        "fc929aa6-aab6-4c25-be13-8267425330c3": {
-          "type": "menu_item",
-          "settings": {
-            "menu": "main-menu",
-            "title": "טופים",
-            "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/2002-copy_c2210285-2e35-4183-a2f8-402656120900.jpg",
-            "desktop_links_image_1_link": "",
-            "desktop_links_image_2_link": "",
-            "mobile_cover_image": "shopify:\/\/shop_images\/2002-copy_1_80604bc1-c0f1-424b-86c1-4e425a03e053.jpg",
-            "mobile_title": ""
-          }
-        },
-        "03fa03f7-aac1-443b-acba-9a19fb5aa148": {
-          "type": "menu_item",
-          "settings": {
-            "menu": "bottom-menu",
-            "title": "טייצים",
-            "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/2002-copy_410f60be-4eb7-46af-89dd-bfdfa3df7713.jpg",
-            "desktop_links_image_1_link": "",
-            "desktop_links_image_2_link": "",
-            "mobile_cover_image": "shopify:\/\/shop_images\/2002-copy_410f60be-4eb7-46af-89dd-bfdfa3df7713.jpg",
-            "mobile_title": ""
-          }
-        }
-      },
-      "block_order": [
-        "8878d4cf-d83f-42a2-90b9-ddebceb7501c",
-        "fc929aa6-aab6-4c25-be13-8267425330c3",
-        "03fa03f7-aac1-443b-acba-9a19fb5aa148"
-      ],
       "settings": {
         "color_scheme": "background-1",
         "logo_position": "middle-left",
-        "menu": "dawn-mega-menu",
-        "menu_type_desktop": "customizable",
-        "menu_position": "center",
+        "menu": "main-menu",
+        "menu_type_desktop": "dropdown",
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
         "enable_country_selector": true,
         "enable_language_selector": true,
         "mobile_logo_position": "center",
-        "mobile_top_image_1_link": "",
-        "mobile_top_image_2_link": "",
         "margin_bottom": 0,
         "padding_top": 20,
         "padding_bottom": 20

@@ -514,29 +514,3 @@
     }
   }
 }
-
-
-.footer-block--menu .footer-block__details-content > li:not(:last-child) {
-    margin: 0
-}
-
-.footer-block__heading, .contact_form__title {
-    font-family: var(--font-family-body);
-    font-weight: bold;
-}
-
-.footer-block__details-content .list-menu__item--link {
-    color: grey;
-    padding: 0;
-}
-
-.copyright__content {
-    font-size: var(--font-size);
-    margin-bottom: 0;
-    padding-bottom: 9px;
-    font-weight: 600;
-}
-
-.contact_form__subtext {
-
-}
