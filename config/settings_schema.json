@@ -32,7 +32,7 @@
         "info": "t:settings_schema.logo.settings.favicon.info"
       }
     ]
-  },  
+  },
   {
     "name": "t:settings_schema.colors.name",
     "settings": [
