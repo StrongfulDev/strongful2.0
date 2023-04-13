@@ -11,6 +11,14 @@
 
 .contact_form__subtext {
     text-align: center;
+    font-size: .8em;
+    color: gray;
+}
+
+.contact_form__subtext a {
+    color: gray;
+    text-decoration: underline;
+    display: inline;
 }
 
 .contact_form__subtext > p {

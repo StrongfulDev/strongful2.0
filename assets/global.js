@@ -1054,6 +1054,8 @@ customElements.define('product-recommendations', ProductRecommendations);
 
  $(document).ready(function() {
 
+  // CUSTOM SCRIPTS (by Yahav mainly)
+
   // get the announcement bar with the data from the customizer
   let announcement = document.querySelector('.announcement-bar-container');
 

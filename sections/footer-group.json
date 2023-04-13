@@ -9,7 +9,7 @@
           "type": "contact_form",
           "settings": {
             "form_heading": "תשארי מעודכנת",
-            "subtext": "<p>בהרשמה לאתר את\\ה מאשרת את <a href=\"https:\/\/strongful.co.il\/blogs\/policies\/%D7%AA%D7%A7%D7%A0%D7%95%D7%9F-%D7%94%D7%90%D7%AA%D7%A8\">תקנון האתר ומדיניות הפרטיות,<\/a>וקבלת חומרים שיווקיים<\/p>"
+            "subtext": "<p>בהרשמה לאתר את\\ה מאשרת את <a href=\"https:\/\/strongful.co.il\/blogs\/policies\/%D7%AA%D7%A7%D7%A0%D7%95%D7%9F-%D7%94%D7%90%D7%AA%D7%A8\">תקנון האתר ומדיניות הפרטיות,<\/a> וקבלת חומרים שיווקיים<\/p>"
           }
         },
         "71e59b81-3983-445f-bfa5-e786fff901bf": {
@@ -58,7 +58,7 @@
         "enable_language_selector": false,
         "payment_enable": true,
         "show_policy": false,
-        "margin_top": 48,
+        "margin_top": 40,
         "padding_top": 36,
         "padding_bottom": 0
       }

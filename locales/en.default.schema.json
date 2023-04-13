@@ -1218,6 +1218,9 @@
         "menu": {
           "label": "Menu"
         },
+        "mobile_menu": {
+          "label": "Mobile top menu"
+        },
         "menu_type_desktop": {
           "label": "Desktop menu type",
           "info": "Menu type is automatically optimized for mobile.",
@@ -1357,6 +1360,12 @@
         },
         "image_2": {
           "label": "Second image"
+        },
+        "mobile_image": {
+          "label": "First mobile image"
+        },
+        "mobile_image_2": {
+          "label": "Second mobile image"
         },
         "image_overlay_opacity": {
           "label": "Image overlay opacity"
@@ -2042,6 +2051,9 @@
         },
         "show_card_collection_announcement": {
           "label": "Show collection announcement"
+        },
+        "custom_collection_announcement": {
+          "label": "Text for collection announcement"
         },
         "quick_add_type": {
           "label": "Quick add type on desktop",
@@ -3264,6 +3276,9 @@
         "mobile": {
           "content": "Mobile layout"
         },
+        "show_on_mobile": {
+          "label": "Show on mobile"
+        },
         "show_text_below": {
           "label": "Show content below images on mobile"
         },
@@ -3279,6 +3294,9 @@
           "settings": {
             "image": {
               "label": "Image"
+            },
+            "mobile_image": {
+              "label": "Mobile image"
             },
             "heading": {
               "label": "Heading"
