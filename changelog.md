@@ -13,6 +13,10 @@
 
 - Add image for mobile
 
+### slideshow
+
+- Add slideshow image for mobile
+
 ### footer
 
 - Add collapsible menu for mobile

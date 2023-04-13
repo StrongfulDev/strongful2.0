@@ -220,3 +220,23 @@ slideshow-component:not(.page-width) .slider-buttons {
     height: 16px;
 }
 
+
+@media screen and (max-width: 749px) {
+    .slideshow__media img:not(.mobile_version) + .mobile_version {
+        display: block !important
+    }
+
+    .slideshow__media img.mobile_version {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    .slideshow__media img:not(.mobile_version) + .mobile_version {
+        display: none !important;
+    }
+
+    .slideshow__media img.mobile_version {
+        display: block !important;
+    }
+}
