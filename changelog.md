@@ -4,6 +4,9 @@
 
 - Add mobile menu - menu items
 
+### Collection
+
+- Hide announcement for products with no_announcement tag
 
 ## 2.0
 

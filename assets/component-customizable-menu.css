@@ -143,7 +143,7 @@
     border-bottom: 1px solid silver;
 }
 
-.menu-drawer-container.customizable .mobile-link-cover, .menu-drawer-container.customizable .menu-drawer__close-button {
+.menu-drawer-container.customizable .mobile-link-cover {
     width: 100%;
     height: 150px;
     background-repeat: no-repeat;
@@ -191,6 +191,21 @@
 .menu-drawer-container.customizable .nav_top img {
     width: 100%;
     height: auto;
+}
+
+.menu-drawer__item-image {
+    width: 100%;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.hamburger-logo {
+    width: 40px;
+    height: 44px;
+    margin: 20px auto 16px;
+    display: block;
 }
 
 /* yahav */

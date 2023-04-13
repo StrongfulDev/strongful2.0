@@ -169,10 +169,14 @@
             <div class="card__content">
                 <div class="card__information">
                     {% if card_banner_text and card_banner_text != blank %}
-                        <span class="card_banner_text color-background-2">{{ card_banner_text }}</span>
+                        {% unless card_product.tags contains "no_announcement" %}
+                            <span class="card_banner_text color-background-2">{{ card_banner_text }}</span>
+                        {% endunless %}
                     {% endif %}
                     {% if card_product.tags contains 'OUTLET' or card_product.tags contains 'outlet' %}
-                        <p class="outlet-collection-tag upper h5"><span>{{- 'products.product.outlet' | t -}}</span> <i>{% render 'icon-discount-tag' %}</i></p>
+                        <p class="outlet-collection-tag upper h5">
+                            <span>{{- 'products.product.outlet' | t -}}</span>
+                            <i>{% render 'icon-discount-tag' %}</i></p>
                     {% endif %}
                     <h3
                             class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h4{% endif %}"

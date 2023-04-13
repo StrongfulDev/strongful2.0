@@ -236,12 +236,19 @@
                                                              class="menu-drawer__submenu has-submenu gradient motion-reduce"
                                                              tabindex="-1">
                                                             <div class="menu-drawer__inner-submenu">
+                                                                <img loading="lazy"
+                                                                     class="hamburger-logo"
+                                                                     src="https://cdn.shopify.com/s/files/1/0574/2995/0671/files/facebook_profile.png?v=1631624674"
+                                                                     alt="Strongful's logo - The Black Lightning"/>
                                                                 <button class="menu-drawer__close-button link link--text focus-inset"
-                                                                        aria-expanded="true"
-                                                                        style="background-image: url('{{ block.settings.mobile_cover_image.src | image_url: width: 300 }}')">
+                                                                        aria-expanded="true">
                                                                     {% render 'icon-arrow' %}
                                                                     {{ block.settings.mobile_title | escape }}
                                                                 </button>
+                                                                <div class="menu-drawer__item-image"
+                                                                     style="background-image: url('{{ block.settings.mobile_cover_image.src | image_url: width: 300 }}')">
+                                                                    &nbsp;
+                                                                </div>
                                                                 <ul class="menu-drawer__menu list-menu"
                                                                     role="list" tabindex="-1">
                                                                     {%- for childlink in block.settings.menu.links -%}
@@ -1194,6 +1201,12 @@
 
 
 
+
+
+
+
+
+
     </script>
 
     {%- if request.page_type == 'index' -%}
@@ -1210,6 +1223,12 @@
       },
       "url": {{ request.origin | append: page.url | json }}
     }
+
+
+
+
+
+
 
 
 
