@@ -670,3 +670,40 @@ noscript .localization-selector.link {
 .contact_form__subtext {
 
 }
+
+@media screen and (max-width: 749px) {
+
+    .link_list .mobile_version {
+        display: block;
+    }
+
+    .link_list .desktop_version {
+        display: none;
+    }
+
+    .link_list .summary__title {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        border-bottom: 1px solid rgba(var(--color-foreground), 0.2);
+        margin-bottom: 10px;
+    }
+
+    .link_list .summary__title svg {
+        position: relative;
+        margin-right: auto;
+        margin-left: 2rem;
+    }
+}
+
+@media screen and (min-width: 750px) {
+
+    .link_list .mobile_version {
+        display: none;
+    }
+
+    .link_list .desktop_version {
+        display: block;
+    }
+
+}
