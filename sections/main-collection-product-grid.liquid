@@ -8,18 +8,6 @@
 {% comment %}{{ 'component-slider.css' | asset_url | stylesheet_tag }}{% endcomment %}
 {% comment %}{{ 'component-slideshow.css' | asset_url | stylesheet_tag }}{% endcomment %}
 
-
-{%- liquid
-    assign card_announcement = ""
-    if section.settings.show_card_collection_announcement
-        if collection.metafields.announcement.text != blank
-            assign card_announcement = collection.metafields.announcement.text
-        elsif section.settings.custom_collection_announcement != blank
-            assign card_announcement = section.settings.custom_collection_announcement
-        endif
-    endif
--%}
-
 <link
         rel="preload"
         href="{{ 'component-rte.css' | asset_url }}"
@@ -178,8 +166,18 @@
                                         assign lazy_load = true
                                     endif
 
-                                    if section.settings.show_card_collection_announcement and product.metafields.announcement.text != blank
-                                        assign card_announcement = product.metafields.announcement.text
+
+                                    assign card_announcement = ""
+                                    if section.settings.show_card_collection_announcement
+                                        if section.settings.announcement_customizer_override and section.settings.custom_collection_announcement != blank
+                                            assign card_announcement = section.settings.custom_collection_announcement
+                                        elsif product.metafields.announcement.text != blank
+                                            assign card_announcement = product.metafields.announcement.text
+                                        elsif collection.metafields.announcement.text != blank
+                                            assign card_announcement = collection.metafields.announcement.text
+                                        elsif section.settings.custom_collection_announcement != blank
+                                            assign card_announcement = section.settings.custom_collection_announcement
+                                        endif
                                     endif
                                 -%}
                                 <li class="grid__item">
@@ -287,6 +285,12 @@
       "type": "text",
       "id": "custom_collection_announcement",
       "label": "t:sections.main-collection-product-grid.settings.custom_collection_announcement.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "announcement_customizer_override",
+      "default": false,
+      "label": "t:sections.main-collection-product-grid.settings.announcement_customizer_override.label"
     },
     {
       "type": "checkbox",

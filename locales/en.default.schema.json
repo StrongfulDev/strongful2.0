@@ -2055,6 +2055,9 @@
         "custom_collection_announcement": {
           "label": "Text for collection announcement"
         },
+        "announcement_customizer_override": {
+          "label": "Override announcement text from customizer"
+        },
         "quick_add_type": {
           "label": "Quick add type on desktop",
           "options__1": {
