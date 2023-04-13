@@ -428,6 +428,7 @@
       "success": "We've sent you an email with a link to update your password."
     },
     "register": {
+      "link_text": "Create an account",
       "title": "Create account",
       "first_name": "First name",
       "last_name": "Last name",
