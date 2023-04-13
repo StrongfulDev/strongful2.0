@@ -9,6 +9,10 @@
 - Hide announcement for products with no_announcement tag
 - Add customizer option to set a custom announcement for the collection for entire template
 
+### Image banner
+
+- Add image for mobile
+
 ## 2.0
 
 ### header

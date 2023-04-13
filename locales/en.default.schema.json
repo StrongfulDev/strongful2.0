@@ -1361,6 +1361,12 @@
         "image_2": {
           "label": "Second image"
         },
+        "mobile_image": {
+          "label": "First mobile image"
+        },
+        "mobile_image_2": {
+          "label": "Second mobile image"
+        },
         "image_overlay_opacity": {
           "label": "Image overlay opacity"
         },
