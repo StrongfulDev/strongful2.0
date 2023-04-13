@@ -113,13 +113,15 @@
                         sizes: "100vw",
                         widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
                         }}
-                        {{ block.settings.mobile_image | image_url: width: 750 | image_tag:
-                        loading: 'lazy',
-                        height: mobile_height,
-                        sizes: "100vw",
-                        class: "mobile_version",
-                        widths: '375, 550, 750'
-                        }}
+                        {% if block.settings.mobile_image != blank %}
+                            {{ block.settings.mobile_image | image_url: width: 750 | image_tag:
+                            loading: 'lazy',
+                            height: mobile_height,
+                            sizes: "100vw",
+                            class: "mobile_version",
+                            widths: '375, 550, 750'
+                            }}
+                        {%- endif -%}
                     {%- else -%}
                         {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
                     {%- endif -%}
@@ -327,6 +329,16 @@
           "type": "image_picker",
           "id": "image",
           "label": "t:sections.slideshow.blocks.slide.settings.image.label"
+        },
+        {
+          "type": "range",
+          "id": "top_pos",
+          "label": "t:sections.slideshow.blocks.slide.settings.top_position.label",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "default": 0
         },
         {
           "type": "image_picker",

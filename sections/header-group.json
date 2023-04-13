@@ -8,24 +8,24 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "show_mobile": false,
-            "text": "<p>Welcome to our store<\/p>",
+            "show_mobile": true,
+            "text": "<p><strong>20% הנחה בהרשמה למועדון הלקוחות<\/strong><\/p><p>הירשמי עכשיו בחינם<\/p>",
             "text_alignment": "center",
-            "mobile_text": "<p>Welcome to our store<\/p>",
+            "mobile_text": "<p><strong>20% הנחה בהרשמה למועדון הלקוחות<\/strong><\/p><p>הירשמי עכשיו בחינם<\/p>",
             "mobile_text_alignment": "center",
-            "link": "",
-            "color_scheme": "background-1"
+            "link": "shopify:\/\/pages\/a-list",
+            "color_scheme": "accent-1"
           }
         },
         "7c37c998-83a9-46d6-91fd-3ceaaab10008": {
           "type": "announcement",
           "settings": {
             "show_mobile": true,
-            "text": "<h3>Welcome to our store<\/h3><p><a href=\"\/blogs\/תקנונים\" title=\"תקנונים\">test<\/a> <\/p>",
+            "text": "<p><strong>NEW - LIMITED EDITION<\/strong><\/p><p>GRAY AURA<\/p>",
             "text_alignment": "center",
-            "mobile_text": "<p>Welcome to our store<\/p>",
+            "mobile_text": "<p><strong>NEW - LIMITED EDITION<\/strong><\/p><p>GRAY AURA<\/p>",
             "mobile_text_alignment": "center",
-            "link": "",
+            "link": "shopify:\/\/collections\/aura",
             "color_scheme": "accent-1"
           }
         },
@@ -33,12 +33,12 @@
           "type": "announcement",
           "settings": {
             "show_mobile": true,
-            "text": "<p>Welcome to our store<\/p>",
+            "text": "<p><strong>החלפות חינם<\/strong><\/p><p>עם שליח עד הבית בכל הזמנה<\/p>",
             "text_alignment": "center",
-            "mobile_text": "<p>Welcome to our store<\/p>",
+            "mobile_text": "<p><strong>החלפות חינם<\/strong><\/p><p>עם שליח עד הבית בכל הזמנה<\/p>",
             "mobile_text_alignment": "center",
             "link": "",
-            "color_scheme": "accent-2"
+            "color_scheme": "accent-1"
           }
         }
       },
@@ -112,7 +112,9 @@
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
         "mobile_logo_position": "center",
+        "mobile_top_image_1": "shopify:\/\/shop_images\/001_3f6d2cda-476a-41f8-bac7-85f151bd9920.jpg",
         "mobile_top_image_1_link": "",
+        "mobile_top_image_2": "shopify:\/\/shop_images\/02_1_1fb57bb5-1e63-4459-bee9-a133a0a2b54c.jpg",
         "mobile_top_image_2_link": "",
         "margin_bottom": 0,
         "padding_top": 20,

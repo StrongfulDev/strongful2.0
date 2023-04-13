@@ -220,6 +220,14 @@ slideshow-component:not(.page-width) .slider-buttons {
     height: 16px;
 }
 
+.slideshow__text.banner__box {
+    max-width: none;
+    padding: 2rem 1.5rem;
+    width: fit-content;
+    position: absolute;
+    bottom: 1em;
+}
+
 
 @media screen and (max-width: 749px) {
     .slideshow__media img:not(.mobile_version) + .mobile_version {
