@@ -51,12 +51,13 @@ let announcementDelay = announcement.dataset.delay * 1000;
 if ($(window).width() < 990) {
   let elements = $('.announcement-bar');
   let index = 0;
-  setInterval(function() {
+  setInterval(function(e) {
     elements.eq(index).fadeOut(announcementDuration, function() {
       $(this).removeClass('active');
       index = (index + 1) % elements.length;
       elements.eq(index).fadeIn(announcementDuration).addClass('active');
     });
+    console.log(e);
   }, announcementDelay);
 }
 });
