@@ -47,7 +47,6 @@
         "slideshow-block-1"
       ],
       "settings": {
-        "show_on_mobile": true,
         "layout": "full_bleed",
         "slide_height": "adapt_image",
         "slider_visual": "sides",
