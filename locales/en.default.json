@@ -292,7 +292,8 @@
       }
     },
     "footer": {
-      "payment": "Payment methods"
+      "payment": "Payment methods",
+      "subtitle": "More about Strongful"
     },
     "featured_blog": {
       "view_all": "View all",

@@ -760,3 +760,22 @@ noscript .localization-selector.link {
     border: none;
 }
 
+.blog_and_newsletter-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: .5em;
+}
+
+.blog_and_newsletter_image {
+    width: 100%;
+    height: 100%;
+}
+
+.blog_and_newsletter_text {
+    font-weight: var(--font-body-weight-bold);
+    margin: 0;
+    padding: .5em;
+    background: rgb(var(--color-base-background-2));
+    font-size: var(--font-body-size-small);
+}
+

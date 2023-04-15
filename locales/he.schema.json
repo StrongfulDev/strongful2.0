@@ -204,6 +204,14 @@
         }
       }
     },
+    "blog_and_newsletter": {
+      "name": "Blog And Newsletter Block",
+      "settings": {
+        "paragraph": {
+          "content": "Add a title"
+        }
+      }
+    },
     "typography": {
       "name": "Typography",
       "settings": {
@@ -1069,6 +1077,14 @@
             }
           }
         },
+        "blog_and_newsletter": {
+          "name": "Blog And Newsletter Block",
+          "settings": {
+            "paragraph": {
+              "content": "Add a title"
+            }
+          }
+        },
         "text": {
           "name": "Text",
           "settings": {
@@ -1081,7 +1097,7 @@
           }
         },
         "contact_form": {
-          "name": "Contact fxorm",
+          "name": "Contact form",
           "settings": {
             "form_heading": {
               "label": "Heading"
