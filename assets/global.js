@@ -369,7 +369,6 @@ class MenuDrawer extends HTMLElement {
       setTimeout(() => {
         detailsElement.classList.add('menu-opening');
         summaryElement.setAttribute('aria-expanded', true);
-        summaryElement.firstElementChild.classList.toggle('no-after');
         parentMenuElement && parentMenuElement.classList.add('submenu-open');
         !reducedMotion || reducedMotion.matches ? addTrapFocus() : summaryElement.nextElementSibling.addEventListener('transitionend', addTrapFocus);
       }, 100);
