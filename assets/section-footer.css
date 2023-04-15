@@ -779,3 +779,13 @@ noscript .localization-selector.link {
     font-size: var(--font-body-size-small);
 }
 
+.footer-block__brand-info .footer__list-social.list-social {
+    justify-content: space-between;
+    width: 50%;
+    margin: 1em auto;
+}
+
+.footer .grid {
+    margin: 0;
+}
+
