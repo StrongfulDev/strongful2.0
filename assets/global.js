@@ -369,6 +369,7 @@ class MenuDrawer extends HTMLElement {
       setTimeout(() => {
         detailsElement.classList.add('menu-opening');
         summaryElement.setAttribute('aria-expanded', true);
+        summaryElement.firstElementChild.classList.toggle('no-after');
         parentMenuElement && parentMenuElement.classList.add('submenu-open');
         !reducedMotion || reducedMotion.matches ? addTrapFocus() : summaryElement.nextElementSibling.addEventListener('transitionend', addTrapFocus);
       }, 100);
@@ -1051,38 +1052,5 @@ class ProductRecommendations extends HTMLElement {
 }
 
 customElements.define('product-recommendations', ProductRecommendations);
-
- $(document).ready(function() {
-
-  // CUSTOM SCRIPTS (by Yahav mainly)
-
-  // get the announcement bar with the data from the customizer
-  let announcement = document.querySelector('.announcement-bar-container');
-
-  // get values of the sliders settings of the announcement bar
-  // and multiply them by 1000 to integrate them properly in the animation function
-  let announcementDuration = announcement.dataset.duration * 100;
-  let announcementDelay = announcement.dataset.delay * 1000;
-
-  // run animation only for mobile / tablet
-
-  /* This code will initially hide all the elements except for the first one, 
-     which will have the active class. It then sets an interval to run every 4 seconds, 
-     which will fade out the currently active element, remove its active class, 
-     and fade in the next element in the list, adding the active class to it. 
-     The index variable keeps track of which element is currently active, 
-     and it wraps around to the beginning of the list when it reaches the end. */
-  if ($(window).width() < 990) {
-    let elements = $('.announcement-bar');
-    let index = 0;
-    setInterval(function() {
-      elements.eq(index).fadeOut(announcementDuration, function() {
-        $(this).removeClass('active');
-        index = (index + 1) % elements.length;
-        elements.eq(index).fadeIn(announcementDuration).addClass('active');
-      });
-    }, announcementDelay);
-  }
-});
 
 
