@@ -16,6 +16,7 @@ document.querySelectorAll('[id^="Details-"] summary').forEach((summary) => {
 
   summary.addEventListener('click', (event) => {
     event.currentTarget.setAttribute('aria-expanded', !event.currentTarget.closest('details').hasAttribute('open'));
+    event.currentTarget.firstElementChild.firstElementChild.classList.toggle('no-after');
   });
 
   if (summary.closest('header-drawer')) return;
@@ -369,7 +370,6 @@ class MenuDrawer extends HTMLElement {
       setTimeout(() => {
         detailsElement.classList.add('menu-opening');
         summaryElement.setAttribute('aria-expanded', true);
-        summaryElement.firstElementChild.classList.toggle('no-after');
         parentMenuElement && parentMenuElement.classList.add('submenu-open');
         !reducedMotion || reducedMotion.matches ? addTrapFocus() : summaryElement.nextElementSibling.addEventListener('transitionend', addTrapFocus);
       }, 100);

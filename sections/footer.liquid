@@ -195,6 +195,32 @@
                                                 {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
                                             {%- endif -%}
                                         </div>
+                                        {%- when 'blog_and_newsletter' -%}
+                                          <div class="blog_and_newsletter-ctn">
+                                            <h2 class="blog_and_newsletter-subtitle">
+                                              {{ block.settings.blog_and_newsletter_subtitle }}
+                                            </h2>
+                                            <div class="blog_and_newsletter-grid">
+                                              <a href="{{ block.settings.blog_url }}" class="blog-link">
+                                                <img
+                                                  srcset="{{ block.settings.blog_image | image_url: width: block.settings.image_width }}, {{ block.settings.blog_image | image_url: width: image_size_2x }} 2x"
+                                                  src="{{ block.settings.blog_image | image_url: width: 760 }}"
+                                                  alt="{{ block.settings.blog_image.alt | escape }}"
+                                                  loading="lazy" width="100" height="100"
+                                                  class="blog_and_newsletter_image"
+                                                />
+                                              </a>
+                                              <img
+                                                            srcset="{{ block.settings.newsletter_image | image_url: width: block.settings.image_width }}, {{ block.settings.newsletter_image | image_url: width: image_size_2x }} 2x"
+                                                            src="{{ block.settings.newsletter_image | image_url: width: 760 }}"
+                                                            alt="{{ block.settings.newsletter_image.alt | escape }}"
+                                                            loading="lazy" width="100" height="100"
+                                                            class="blog_and_newsletter_image"
+                                                    >
+                                              <p class="blog_and_newsletter_text blog_text">{{ block.settings.blog_text }}</p>
+                                              <p class="blog_and_newsletter_text newsletter_text">{{ block.settings.newsletter_text }}</p>
+                                            </div>
+                                          </div>
                                 {%- endcase -%}
                             </div>
                         {%- endfor -%}
@@ -272,6 +298,16 @@
             </div>
         {%- endunless -%}
     {%- endif -%}
+
+    {%- if section.settings.middle_section_enable -%}
+    <div class="footer__content-middle">
+      <div class="footer__content-midle-wrapper page-width">
+        <p class="footer__content-middle-subtitle">
+          {{ "templates.sections.footer.more-info-subtitle" | t }}
+        </p>
+      </div>
+    </div>
+  {%- endif -%}
 
     <div class="footer__content-bottom">
         <div class="footer__content-bottom-wrapper page-width">
@@ -528,6 +564,45 @@ customElements.define('localization-form', LocalizationForm);
       ]
     },
     {
+      "type": "blog_and_newsletter",
+      "name": "t:sections.footer.blocks.blog_and_newsletter.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "blog_and_newsletter_subtitle",
+          "label": "Add subtitle",
+          "default": "More about Strongful"
+        },
+        {
+          "type": "image_picker",
+          "id": "blog_image",
+          "label": "t:sections.footer.blocks.blog_and_newsletter.settings.blog_image.content"
+        },
+        {
+          "type": "url",
+          "id": "blog_url",
+          "label": "t:sections.footer.blocks.blog_and_newsletter.settings.blog_url.content"
+        },
+        {
+          "type": "image_picker",
+          "id": "newsletter_image",
+          "label": "t:sections.footer.blocks.blog_and_newsletter.settings.newsletter_image.content"
+        },
+        {
+          "type": "text",
+          "id": "blog_text",
+          "label": "First image description",
+          "default": "Blog"
+        },
+        {
+          "type": "text",
+          "id": "newsletter_text",
+          "label": "Second image description",
+          "default": "Email sign up"
+        }
+      ]
+    },
+    {
       "type": "brand_information",
       "name": "t:sections.footer.blocks.brand_information.name",
       "settings": [
@@ -665,6 +740,12 @@ customElements.define('localization-form', LocalizationForm);
       "id": "newsletter_enable",
       "default": true,
       "label": "t:sections.footer.settings.newsletter_enable.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "middle_section_enable",
+      "default": true,
+      "label": "t:sections.footer.settings.middle_section_enable.label"
     },
     {
       "type": "text",

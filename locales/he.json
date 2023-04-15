@@ -292,7 +292,8 @@
       }
     },
     "footer": {
-      "payment": "Payment methods"
+      "payment": "Payment methods",
+      "more-info-subtitle": "עוד על סטרונגפול"
     },
     "featured_blog": {
       "view_all": "View all",

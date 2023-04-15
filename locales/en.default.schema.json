@@ -204,6 +204,14 @@
         }
       }
     },
+    "blog_and_newsletter": {
+      "name": "Blog And Newsletter Block",
+      "settings": {
+        "paragraph": {
+          "content": "Add a title"
+        }
+      }
+    },
     "typography": {
       "name": "Typography",
       "settings": {
@@ -1104,6 +1112,14 @@
             "show_social": {
               "label": "Show social media icons",
               "info": "To display your social media accounts, link them in your [theme settings](\/editor?context=theme&category=social%20media)."
+            }
+          }
+        },
+        "blog_and_newsletter": {
+          "name": "Blog And Newsletter Block",
+          "settings": {
+            "paragraph": {
+              "content": "Add a title"
             }
           }
         },
