@@ -273,6 +273,16 @@
         {%- endunless -%}
     {%- endif -%}
 
+    {%- if section.settings.middle_section_enable -%}
+    <div class="footer__content-middle">
+      <div class="footer__content-midle-wrapper page-width">
+        <p class="footer__content-middle-subtitle">
+          {{ "templates.sections.footer.more-info-subtitle" | t }}
+        </p>
+      </div>
+    </div>
+  {%- endif -%}
+
     <div class="footer__content-bottom">
         <div class="footer__content-bottom-wrapper page-width">
             <div class="footer__column footer__localization isolate">
@@ -528,6 +538,38 @@ customElements.define('localization-form', LocalizationForm);
       ]
     },
     {
+      "type": "blog_and_newsletter",
+      "name": "t:sections.footer.blocks.blog_and_newsletter.name",
+      "settings": [
+        {
+          "type":"header",
+          "content": "t:sections.footer.blocks.blog_and_newsletter.settings.header.content"
+        },
+        {
+          "type": "image_picker",
+          "id": "blog_image",
+          "label": "t:sections.footer.blocks.blog_and_newsletter.settings.blog_image.content"
+        },
+        {
+          "type": "image_picker",
+          "id": "newsletter_image",
+          "label": "t:sections.footer.blocks.blog_and_newsletter.settings.newsletter_image.content"
+        },
+        {
+          "type": "text",
+          "id": "blog_text",
+          "label": "First image description",
+          "default": "t:sections.footer.blocks.blog_and_newsletter.settings.blog_text.content"
+        },
+        {
+          "type": "text",
+          "id": "newsletter_text",
+          "label": "Second image description",
+          "default": "t:sections.footer.blocks.blog_and_newsletter.settings.newsletter_text.content"
+        }
+      ]
+    },
+    {
       "type": "brand_information",
       "name": "t:sections.footer.blocks.brand_information.name",
       "settings": [
@@ -665,6 +707,12 @@ customElements.define('localization-form', LocalizationForm);
       "id": "newsletter_enable",
       "default": true,
       "label": "t:sections.footer.settings.newsletter_enable.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "middle_section_enable",
+      "default": true,
+      "label": "t:sections.footer.settings.middle_section_enable.label"
     },
     {
       "type": "text",
