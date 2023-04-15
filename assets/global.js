@@ -16,6 +16,7 @@ document.querySelectorAll('[id^="Details-"] summary').forEach((summary) => {
 
   summary.addEventListener('click', (event) => {
     event.currentTarget.setAttribute('aria-expanded', !event.currentTarget.closest('details').hasAttribute('open'));
+    event.currentTarget.firstElementChild.firstElementChild.classList.toggle('no-after');
   });
 
   if (summary.closest('header-drawer')) return;
