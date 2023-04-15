@@ -105,11 +105,13 @@
       ],
       "settings": {
         "color_scheme": "background-1",
+        "toggle_socials": false,
         "logo_position": "middle-left",
         "menu": "dawn-mega-menu",
         "menu_type_desktop": "customizable",
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
+        "mobile_menu": "",
         "mobile_logo_position": "center",
         "mobile_top_image_1": "shopify:\/\/shop_images\/001_3f6d2cda-476a-41f8-bac7-85f151bd9920.jpg",
         "mobile_top_image_1_link": "",

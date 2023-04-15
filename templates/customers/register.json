@@ -1,7 +1,57 @@
 {
   "sections": {
+    "467c16ce-d0cd-4866-873e-5b9a9bd5484f": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--15928318099596__467c16ce-d0cd-4866-873e-5b9a9bd5484f-1681581730f23935bd-0": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--15928318099596__467c16ce-d0cd-4866-873e-5b9a9bd5484f-1681581730f23935bd-1": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15928318099596__467c16ce-d0cd-4866-873e-5b9a9bd5484f-1681581730f23935bd-0",
+        "template--15928318099596__467c16ce-d0cd-4866-873e-5b9a9bd5484f-1681581730f23935bd-1"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "half",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "main": {
       "type": "main-register",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "sub": {
+      "type": "main-login",
       "settings": {
         "padding_top": 36,
         "padding_bottom": 36
@@ -9,6 +59,8 @@
     }
   },
   "order": [
-    "main"
+    "467c16ce-d0cd-4866-873e-5b9a9bd5484f",
+    "main",
+    "sub"
   ]
 }
