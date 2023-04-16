@@ -1136,6 +1136,9 @@
             "subtitle": {
               "label": "More about Strongful"
             },
+            "blog_url": {
+              "label": "Block Link"
+            },
             "image_picker_label": {
               "label": "Upload Image"
             },
