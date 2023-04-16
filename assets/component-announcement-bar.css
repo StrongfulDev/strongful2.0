@@ -65,3 +65,13 @@
 .announcement-bar.active {
     display: block;
 }
+
+@media screen and (min-width: 990px) {
+    .announcement-bar {
+        display: block;
+    }
+
+    .announcement-bar-container.container-columns {
+        font-size: var(--font-size);
+    }
+}

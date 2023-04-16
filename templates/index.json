@@ -6,8 +6,9 @@
         "slideshow-block-0": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/06_13e798d0-83ff-4151-b106-1558f5136adf.jpg",
+            "image": "shopify:\/\/shop_images\/copy-4_21babd86-39fe-4de8-ad8b-ad6680b57ba3.jpg",
             "top_pos": 2,
+            "mobile_image": "shopify:\/\/shop_images\/06_13e798d0-83ff-4151-b106-1558f5136adf.jpg",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",

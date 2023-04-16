@@ -87,6 +87,7 @@
         --font-body-style: {{ settings.type_body_font.style }};
         --font-body-weight: {{ settings.type_body_font.weight }};
         --font-body-weight-bold: {{ settings.type_body_font.weight | plus: 300 | at_most: 1000 }};
+        --font-body-size-small: 0.9em;
 
         --font-heading-family: {{ header_font_family }}, {{ settings.type_header_font.fallback_families }};
         --font-heading-style: {{ settings.type_header_font.style }};
@@ -283,7 +284,6 @@
             document.documentElement.classList.add('shopify-design-mode');
         }
     </script>
-  <script src="https://cdn-widgetsrepository.yotpo.com/v1/loader/qGZpUcqW7-E2nBL0lvSZUA" async></script>
 </head>
 
 <body class="gradient">
@@ -339,4 +339,4 @@
     <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
 </body>
-</html>z
+</html>

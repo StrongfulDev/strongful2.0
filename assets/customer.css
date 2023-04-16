@@ -753,3 +753,33 @@ li[data-address] > h2 {
 .addresses form > div:nth-of-type(7) + div[id] {
   margin-top: 1.5rem;
 }
+
+.multicolumn {
+  padding: 1rem 1.5rem;
+  max-width: 33.4rem;
+  margin: 0 auto;
+  direction: rtl;
+}
+
+ul.multicolumn-list {
+  display: flex;
+  padding: 0;
+}
+
+.multicolumn-card__info {
+  padding: 0;
+}
+
+/* TODO: remove important rule */
+li.multicolumn-list__item {
+  width: auto !important;
+  flex-grow: initial;
+}
+
+.slider-mobile-gutter::after {
+  content: '';
+  display: block;
+  visibility: visible;
+  height: .2rem;
+  background-color: var(--gradient-base-background-2);
+}
