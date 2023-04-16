@@ -72,7 +72,6 @@
     }
 
     .announcement-bar-container.container-columns {
-        direction: rtl;
-        font-size: .9em;
+        font-size: var(--font-size);
     }
 }

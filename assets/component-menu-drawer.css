@@ -267,13 +267,14 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .menu-drawer__utility-links {
-    background-color: #fff;
+    background-color: rgb(var(--color-background));
 }
 
 .menu-drawer__account-title {
     text-align: right;
 }
 
+/* TODO: Check margins and make responsive */
 .menu-drawer__account-login {
     margin-bottom: 19px;
 }

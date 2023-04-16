@@ -761,15 +761,16 @@ li[data-address] > h2 {
   direction: rtl;
 }
 
-.multicolumn-list {
+ul.multicolumn-list {
   display: flex;
-  padding: 0 !important;
+  padding: 0;
 }
 
 .multicolumn-card__info {
   padding: 0;
 }
 
+/* TODO: remove important rule */
 li.multicolumn-list__item {
   width: auto !important;
   flex-grow: initial;

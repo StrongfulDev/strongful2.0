@@ -78,9 +78,9 @@
                             assign footer_grid_class = 'grid--3-col-tablet'
                         endif
                     -%}
-                    <div class="footer__blocks-wrapper grid {{ footer_grid_class }}">
+                    <div class="footer__blocks-wrapper grid {{ footer_grid_class }} fix-direction">
                         {%- for block in section.blocks -%}
-                            <div class="footer-block {%- section.settings.equal_grid -%}grid__item{%- else -%}grid__item--custom{%- endif -%}{% if block.type == 'link_list' %} footer-block--menu fix-direction{% endif %}" {{ block.shopify_attributes }}>
+                            <div class="footer-block {%- if section.settings.equal_grid -%}grid__item{%- else -%}grid__item--custom{%- endif -%}{% if block.type == 'link_list' %} footer-block--menu fix-direction{% endif %}" {{ block.shopify_attributes }}>
                                 {%- case block.type -%}
                                     {%- when '@app' -%}
                                         {%- if block.settings.heading != blank -%}
