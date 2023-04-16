@@ -65,3 +65,9 @@
 .announcement-bar.active {
     display: block;
 }
+
+@media  and (min-width: 990px) {
+    .announcement-bar {
+        display: block;
+    }
+}
