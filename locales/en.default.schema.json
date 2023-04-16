@@ -1132,6 +1132,12 @@
           "settings": {
             "paragraph": {
               "content": "Add a title"
+            },
+            "subtitle": {
+              "label": "More about Strongful"
+            },
+            "image_picker_label": {
+              "label": "Upload Image"
             }
           }
         },
