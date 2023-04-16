@@ -79,33 +79,76 @@
                     <div class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}">
                         {%- for block in section.blocks -%}
                             <div class="footer-block grid__item{% if block.type == 'link_list' %} footer-block--menu fix-direction{% endif %}" {{ block.shopify_attributes }}>
-                                {%- if block.settings.heading != blank -%}
-                                    <h2 class="footer-block__heading">{{- block.settings.heading | escape -}}</h2>
-                                {%- endif -%}
-
                                 {%- case block.type -%}
                                     {%- when '@app' -%}
+                                        {%- if block.settings.heading != blank -%}
+                                            <h2 class="footer-block__heading">{{- block.settings.heading | escape -}}</h2>
+                                        {%- endif -%}
                                         {% render block %}
                                     {%- when 'contact_form' -%}
+                                        {%- if block.settings.heading != blank -%}
+                                            <h2 class="footer-block__heading">{{- block.settings.heading | escape -}}</h2>
+                                        {%- endif -%}
                                         {% render 'contact-form', heading: block.settings.form_heading, subtext: block.settings.subtext %}
                                     {%- when 'text' -%}
+                                        {%- if block.settings.heading != blank -%}
+                                            <h2 class="footer-block__heading">{{- block.settings.heading | escape -}}</h2>
+                                        {%- endif -%}
                                         <div class="footer-block__details-content rte">
                                             {{ block.settings.subtext }}
                                         </div>
                                     {%- when 'link_list' -%}
                                         {%- if block.settings.menu != blank -%}
-                                            <ul class="footer-block__details-content list-unstyled">
-                                                {%- for link in block.settings.menu.links -%}
-                                                    <li>
-                                                        <a href="{{ link.url }}"
-                                                           class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}">
-                                                            {{ link.title }}
-                                                        </a>
-                                                    </li>
-                                                {%- endfor -%}
-                                            </ul>
+                                            <div class="link_list">
+                                                <div class="mobile_version">
+                                                    <details
+                                                            id="Details-{{ block.id }}-{{ section.id }}">
+                                                        <summary>
+                                                            <div class="summary__title">
+                                                                {% comment %}{% render 'icon-accordion', icon: block.settings.icon %}{% endcomment %}
+                                                                {%- if block.settings.heading != blank -%}
+                                                                    <h2 class="footer-block__heading">{{- block.settings.heading | escape -}}</h2>
+                                                                {%- endif -%}
+                                                            {% render 'icon-caret' %}
+                                                            </div>
+                                                        </summary>
+                                                        <div class="accordion__content rte"
+                                                             id="MenuAccordion-{{ block.id }}-{{ section.id }}">
+                                                            <ul class="footer-block__details-content list-unstyled">
+                                                                {%- for link in block.settings.menu.links -%}
+                                                                    <li>
+                                                                        <a href="{{ link.url }}"
+                                                                           class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}">
+                                                                            {{ link.title }}
+                                                                        </a>
+                                                                    </li>
+                                                                {%- endfor -%}
+                                                            </ul>
+                                                        </div>
+                                                    </details>
+                                                </div>
+                                                <div class="desktop_version">
+                                                    {%- if block.settings.heading != blank -%}
+                                                        <h2 class="footer-block__heading">{{- block.settings.heading | escape -}}</h2>
+                                                    {%- endif -%}
+                                                    <ul class="footer-block__details-content list-unstyled">
+                                                        {%- for link in block.settings.menu.links -%}
+                                                            <li>
+                                                                <a href="{{ link.url }}"
+                                                                   class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}">
+                                                                    {{ link.title }}
+                                                                </a>
+                                                            </li>
+                                                        {%- endfor -%}
+                                                    </ul>
+                                                </div>
+                                            </div>
                                         {%- endif -%}
                                     {%- when 'brand_information' -%}
+
+                                        {%- if block.settings.heading != blank -%}
+                                            <h2 class="footer-block__heading">{{- block.settings.heading | escape -}}</h2>
+                                        {%- endif -%}
                                         <div class="footer-block__brand-info">
                                             {%- if settings.brand_image != blank -%}
                                                 {%- assign brand_image_height = settings.brand_image_width | divided_by: settings.brand_image.aspect_ratio -%}
@@ -130,6 +173,10 @@
                                             {%- endif -%}
                                         </div>
                                     {%- when 'image' -%}
+
+                                        {%- if block.settings.heading != blank -%}
+                                            <h2 class="footer-block__heading">{{- block.settings.heading | escape -}}</h2>
+                                        {%- endif -%}
                                         <div class="footer-block__details-content footer-block-image {{ block.settings.alignment }}">
                                             {%- if block.settings.image != blank -%}
                                                 {%- assign image_size_2x = block.settings.image_width | times: 2 | at_most: 5760 -%}
@@ -364,7 +411,6 @@
             <div class="footer__copyright caption">
                 <small class="copyright__content">&copy; {{ 'now' | date: "%Y" }}
                     , {{ shop.name | link_to: routes.root_url }}</small>
-                <small class="copyright__content">{{ powered_by_link }}</small>
                 {%- if section.settings.show_policy -%}
                     <ul class="policies list-unstyled">
                         {%- for policy in shop.policies -%}

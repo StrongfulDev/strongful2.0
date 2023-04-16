@@ -2270,7 +2270,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
 
     .header--middle-left {
         grid-template-areas: 'heading navigation icons';
-        grid-template-columns: auto auto 1fr;
+        grid-template-columns: auto 3fr auto;
         column-gap: 2rem;
     }
 
@@ -2410,14 +2410,13 @@ product-info .loading-overlay:not(.hidden) ~ *,
 
 .header__icon,
 .header__icon--cart .icon {
-    height: 4.4rem;
-    width: 4.4rem;
+    height: 3.5rem;
+    width: 3.5rem;
     padding: 0;
 }
 
 .header__icon--cart {
     position: relative;
-    margin-right: -1.2rem;
 }
 
 @media screen and (max-width: 989px) {
@@ -2988,4 +2987,29 @@ fieldset {
 .full-width-padding {
     padding-left: var(--full-width-padding);
     padding-right: var(--full-width-padding);
+}
+
+/* Custom Styles starting 12.4.23 */
+
+.desktop {
+    display: none;
+}
+
+.button--primary {
+    font-weight: 600;
+    color: #fff;
+    background: #000;
+    border: 1px #000 solid;
+    outline: 0;
+    --border-offset: 0;
+}
+
+@media screen and (min-width: 990px) {
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: block;
+    }
 }

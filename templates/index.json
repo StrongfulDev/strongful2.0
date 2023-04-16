@@ -6,7 +6,27 @@
         "slideshow-block-0": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/2002-copy_410f60be-4eb7-46af-89dd-bfdfa3df7713.jpg",
+            "image": "shopify:\/\/shop_images\/06_13e798d0-83ff-4151-b106-1558f5136adf.jpg",
+            "top_pos": 2,
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "SHOP NOW",
+            "link": "shopify:\/\/collections\/aura",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "accent-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slideshow-block-1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ddbb18ae3c208ede0003540736665759.jpg",
+            "top_pos": 0,
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -20,24 +40,6 @@
             "color_scheme": "background-1",
             "text_alignment_mobile": "center"
           }
-        },
-        "slideshow-block-1": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_a34a6125-02ab-4568-9ce8-2ebe9f4cbfdf.jpg",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/סטים",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-1",
-            "text_alignment_mobile": "center"
-          }
         }
       },
       "block_order": [
@@ -46,11 +48,11 @@
       ],
       "settings": {
         "layout": "full_bleed",
-        "slide_height": "medium",
+        "slide_height": "adapt_image",
         "slider_visual": "sides",
         "auto_rotate": false,
         "change_slides_speed": 5,
-        "show_text_below": true,
+        "show_text_below": false,
         "accessibility_info": "Slideshow about our brand"
       }
     },

@@ -1,3 +1,26 @@
+## 2.1
+
+### mobile menu
+
+- Add mobile menu - menu items
+
+### collection
+
+- Hide announcement for products with no_announcement tag
+- Add customizer option to set a custom announcement for the collection for entire template
+
+### image banner
+
+- Add image for mobile
+
+### slideshow
+
+- Add slideshow image for mobile
+
+### footer
+
+- Add collapsible menu for mobile
+
 ## 2.0
 
 ### header

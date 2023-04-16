@@ -30,11 +30,11 @@
 
     {% render 'meta-tags' %}
 
+    <script src="{{ 'jquery-3.6.4.min.js' | asset_url }}" defer="defer"></script>
+
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
-
-    <script src="{{ 'jquery-3.6.4.min.js' | asset_url }}" defer="defer"></script>
 
     {{ content_for_header }}
 
@@ -251,6 +251,15 @@
         font-size: 1.6rem;
         }
         }
+
+        .needsclick {
+        z-index: 2 !important;
+        }
+
+
+        .swell-tab {
+        display: none !important;
+        }
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
@@ -274,6 +283,7 @@
             document.documentElement.classList.add('shopify-design-mode');
         }
     </script>
+  <script src="https://cdn-widgetsrepository.yotpo.com/v1/loader/qGZpUcqW7-E2nBL0lvSZUA" async></script>
 </head>
 
 <body class="gradient">
