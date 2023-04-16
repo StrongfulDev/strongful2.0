@@ -258,6 +258,7 @@
     "header": {
       "announcement": "Announcement",
       "menu": "Menu",
+      "account_title": "My Account",
       "cart_count": {
         "one": "{{ count }} item",
         "other": "{{ count }} items"

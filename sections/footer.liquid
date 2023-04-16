@@ -72,13 +72,15 @@
                             assign footer_grid_class = 'grid--4-col-desktop'
                         elsif section.blocks.size > 4
                             assign footer_grid_class = 'grid--5-col-tablet'
+                        elsif section.blocks.size == 4
+                            assign footer_grid_class = 'grid--4-col-desktop--custom'
                         elsif section.blocks.size >= 3
                             assign footer_grid_class = 'grid--3-col-tablet'
                         endif
                     -%}
-                    <div class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}">
+                    <div class="footer__blocks-wrapper grid {{ footer_grid_class }}">
                         {%- for block in section.blocks -%}
-                            <div class="footer-block grid__item{% if block.type == 'link_list' %} footer-block--menu fix-direction{% endif %}" {{ block.shopify_attributes }}>
+                            <div class="footer-block {%- section.settings.equal_grid -%}grid__item{%- else -%}grid__item--custom{%- endif -%}{% if block.type == 'link_list' %} footer-block--menu fix-direction{% endif %}" {{ block.shopify_attributes }}>
                                 {%- case block.type -%}
                                     {%- when '@app' -%}
                                         {%- if block.settings.heading != blank -%}
@@ -740,6 +742,12 @@ customElements.define('localization-form', LocalizationForm);
       "id": "newsletter_enable",
       "default": true,
       "label": "t:sections.footer.settings.newsletter_enable.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "equal_grid",
+      "default": true,
+      "label": "t:sections.footer.settings.equal_grid.label"
     },
     {
       "type": "checkbox",

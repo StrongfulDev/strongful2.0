@@ -709,6 +709,10 @@ noscript .localization-selector.link {
 /* Global footer menu alignment classes */
 .footer-block__heading--right { text-align: right; } .footer-block__heading--center { text-align: center; } .footer-block__heading--left { text-align: left; }
 
+.footer__blocks-wrapper {
+    direction: rtl;
+}
+
 .footer-details {
     border-bottom: 1px solid rgba(var(--color-foreground), 0.2);
 }

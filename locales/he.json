@@ -258,6 +258,7 @@
     "header": {
       "announcement": "Announcement",
       "menu": "Menu",
+      "account_title": "המשתמש שלי",
       "cart_count": {
         "one": "{{ count }} item",
         "other": "{{ count }} items"
@@ -373,8 +374,8 @@
       "delete": "Delete",
       "delete_confirm": "Are you sure you wish to delete this address?"
     },
-    "log_in": "Log in",
-    "log_out": "Log out",
+    "log_in": "כניסה",
+    "log_out": "יציאה",
     "login_page": {
       "cancel": "Cancel",
       "create_account": "Create account",
@@ -429,7 +430,7 @@
       "success": "We've sent you an email with a link to update your password."
     },
     "register": {
-      "link_text": "Create an account",
+      "link_text": "הרשמה",
       "title": "Create account",
       "first_name": "First name",
       "last_name": "Last name",

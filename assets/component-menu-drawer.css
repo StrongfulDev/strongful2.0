@@ -265,3 +265,21 @@ details[open].menu-opening > .menu-drawer__submenu {
 .menu-drawer .menu-drawer__account-social_icons .list-social {
     margin: 0;
 }
+
+.menu-drawer__utility-links {
+    background-color: #fff;
+}
+
+.menu-drawer__account-title {
+    text-align: right;
+}
+
+.menu-drawer__account-login {
+    margin-bottom: 19px;
+}
+
+.menu-drawer__navigation {
+    padding-bottom: 0;
+}
+
+
