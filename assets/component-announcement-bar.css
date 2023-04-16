@@ -66,8 +66,13 @@
     display: block;
 }
 
-@media  and (min-width: 990px) {
+@media screen and (min-width: 990px) {
     .announcement-bar {
         display: block;
+    }
+
+    .announcement-bar-container.container-columns {
+        direction: rtl;
+        font-size: .9em;
     }
 }
