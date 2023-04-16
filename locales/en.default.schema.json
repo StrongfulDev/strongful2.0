@@ -1138,6 +1138,12 @@
             },
             "image_picker_label": {
               "label": "Upload Image"
+            },
+            "blog_text": {
+              "label": "First Block Caption"
+            },
+            "newsletter_text": {
+              "label": "Second Block Caption"
             }
           }
         },
