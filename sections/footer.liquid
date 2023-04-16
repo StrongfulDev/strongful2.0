@@ -223,6 +223,18 @@
                                               <p class="blog_and_newsletter_text newsletter_text">{{ block.settings.newsletter_text }}</p>
                                             </div>
                                           </div>
+                                    {%- when 'policies_link_list' -%}
+                                      {%- if block.settings.menu != blank -%}
+                                        <ul class="footer_policies_list">
+                                          {%- for link in block.settings.menu.links -%}
+                                            <li class="footer_policies_list-item footer_policy_item {{ block.settings.policies_text_align }}">
+                                              <a href="{{ link.url }}" class="footer_policy_link">
+                                                {{ link.title }}
+                                              </a>
+                                            </li>
+                                          {%- endfor -%}
+                                        </ul>
+                                      {%- endif -%}
                                 {%- endcase -%}
                             </div>
                         {%- endfor -%}
@@ -551,6 +563,38 @@ customElements.define('localization-form', LocalizationForm);
           "default": "footer",
           "label": "t:sections.footer.blocks.link_list.settings.menu.label",
           "info": "t:sections.footer.blocks.link_list.settings.menu.info"
+        }
+      ]
+    },
+    {
+      "type": "policies_link_list",
+      "name": "t:sections.footer.blocks.policies_link_list.name",
+      "settings": [
+        {
+          "type":"select",
+          "id": "policies_text_align",
+          "label": "t:sections.footer.blocks.policies_link_list.settings.label",
+          "default": "center",
+          "options": [
+            {
+              "value": "left",
+              "label": "t:sections.footer.blocks.link_list.settings.policies_text_align.options__1.label"
+            },
+            {
+              "value": "center",
+              "label": "t:sections.footer.blocks.link_list.settings.policies_text_align.options__2.label"
+            },
+            {
+              "value": "right",
+              "label": "t:sections.footer.blocks.link_list.settings.policies_text_align.options__3.label"
+            }
+          ]
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "t:sections.footer.blocks.policies_link_list.settings.menu.label",
+          "info": "t:sections.footer.blocks.policies_link_list.settings.menu.info"
         }
       ]
     },
