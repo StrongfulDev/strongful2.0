@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Free Shipping",
+    "rule": {
+      "condition": {
+        "type": "CartAmount",
+        "operator": ">=",
+        "value": 210
+      },
+      "rewards": {
+        "action": "set_shipping",
+        "active_class": "free_shipping",
+        "amount": 0
+      }
+    }
+  }
+]

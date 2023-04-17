@@ -74,7 +74,7 @@
           assign free_shipping_text = 'sections.cart.rewards.free_shipping' | t 
           assign upsell_text = 'sections.cart.rewards.upsell_text' | t
            %}
-          {% render 'reward-item', icon: "lock", title: free_shipping_text, active: true %}
+          {% render 'reward-item', icon: "lock", class: "free_shipping", title: free_shipping_text, active: true %}
           {% render 'reward-item', icon: "lock", title: upsell_text, active: true %}
         </div>
         <div class="track-progress"></div>
