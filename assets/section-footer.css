@@ -41,7 +41,7 @@
 }
 
 .footer__content-bottom {
-    border-bottom: solid 0.1rem rgba(var(--color-foreground), 0.08);
+    border-top: solid 0.1rem rgba(var(--color-foreground), 0.08);
     padding-top: 3rem;
 }
 
@@ -803,6 +803,18 @@ noscript .localization-selector.link {
 
 .footer-blockgrid__item {
     margin: var(--text-spacing) auto;
+}
+
+.list-payment, div.footer__column--info, .footer__content-bottom-wrapper {
+    padding: 0;
+}
+
+.footer__copyright.caption {
+    margin: 0;
+}
+
+.footer__content-bottom {
+    padding: 1em 4em 2em;
 }
 
 @media screen and (min-width: 990px) {
