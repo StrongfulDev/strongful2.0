@@ -290,6 +290,11 @@
       "login": {
         "title": "Have an account?",
         "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Log in<\/a> to check out faster."
+      },
+      "rewards": {
+        "title": "Earn rewards",
+        "free_shipping": "Free shipping",
+        "upsell_text": "בקבוק מתנה"
       }
     },
     "footer": {
