@@ -2991,7 +2991,7 @@ fieldset {
 
 /* Custom Styles starting 12.4.23 */
 
-.desktop {
+.desktop--hidden {
     display: none;
 }
 
@@ -3005,11 +3005,11 @@ fieldset {
 }
 
 @media screen and (min-width: 990px) {
-    .mobile {
+    .mobile--only {
         display: none;
     }
 
-    .desktop {
+    .desktop--hidden {
         display: block;
     }
 }
