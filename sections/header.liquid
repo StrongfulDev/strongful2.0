@@ -749,7 +749,7 @@
                                             <summary
                                                     class="header__menu-item list-menu__item link focus-inset">
                                                 <span {%- if link_child_active %} class="header__active-menu-item"{% endif %}>{{ block.settings.title | escape }}</span>
-                                                {% render 'icon-caret' %}
+                                                {% comment %}{% render 'icon-caret' %}{% endcomment %}
                                             </summary>
                                             <div id="MegaMenu-Content-{{ forloop.index }}"
                                                  class="mega-menu__content customizable fix-direction gradient motion-reduce global-settings-popup"
