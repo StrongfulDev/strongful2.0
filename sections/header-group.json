@@ -109,6 +109,7 @@
         "logo_position": "middle-left",
         "menu": "dawn-mega-menu",
         "menu_type_desktop": "customizable",
+        "menu_position": "center",
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
         "mobile_menu": "mobile-menu",
