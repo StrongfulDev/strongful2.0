@@ -55,7 +55,7 @@
 -%}
 
 <div class="color-{{ section.settings.color_scheme }} isolate gradient">
-    <div class="collection section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width page-width{% endif %} pagination_type_{{ section.settings.pagination_type }}">
+    <div class="collection section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width  full-width-padding{% endif %} pagination_type_{{ section.settings.pagination_type }}">
         <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
             <div class="collection__title_heading">
                 {%- if section.settings.title != blank -%}
@@ -94,7 +94,7 @@
         </div>
 
         <slider-component
-                class="slider-mobile-gutter{% if section.settings.full_width %} slider-component-full-width {% endif %}{% if show_mobile_slider == false %} page-width{% endif %}{% if show_desktop_slider == false and section.settings.full_width == false %} page-width-desktop{% endif %}{% if show_desktop_slider %} slider-component-desktop{% endif %}">
+                class="slider-mobile-gutter{% if section.settings.full_width %} slider-component-full-width {% endif %}{% if show_mobile_slider == false %} page-width{% endif %}{% if show_desktop_slider == false and section.settings.full_width == false %} page-width-desktop{% endif %}{% if show_desktop_slider %} slider-component-desktop{% endif %} pagination--{{ section.settings.pagination_type }}">
             {%- if show_side_arrows -%}
                 <button
                         type="button"

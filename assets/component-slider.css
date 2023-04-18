@@ -405,6 +405,14 @@ slider-component.slider-component-full-width {
     scroll-padding-left: 0.5rem;
 }
 
+.slider-component-full-width.pagination--sides .slider-button--prev {
+    margin-left: calc(var(--full-width-padding) * -1);
+}
+
+.slider-component-full-width.pagination--sides .slider-button--next {
+    margin-right: calc(var(--full-width-padding) * -1);
+}
+
 
 @media screen and (min-width: 990px) {
     .collection .slider--desktop.product-grid {
