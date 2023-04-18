@@ -309,12 +309,12 @@
                                                 </li>
                                             {%- endfor -%}
                                         </ul>
-                                    </nav> 
+                                    </nav>
                                     <div class="menu-drawer__utility-links">
                                         {%- if section.settings.toggle_socials -%}
-                                        <div class="menu-drawer__account-social_icons">
-                                            {% render "social-icons" %}
-                                        </div>
+                                            <div class="menu-drawer__account-social_icons">
+                                                {% render "social-icons" %}
+                                            </div>
                                         {%- endif -%}
                                         {%- if shop.customer_accounts_enabled -%}
                                             <div class="menu-drawer__account-container">
@@ -754,55 +754,64 @@
                                             <div id="MegaMenu-Content-{{ forloop.index }}"
                                                  class="mega-menu__content customizable fix-direction gradient motion-reduce global-settings-popup"
                                                  tabindex="-1">
-                                                <ul class="mega-menu__list page-width{% if link_levels == 1 %} mega-menu__list--condensed{% endif %}"
-                                                    role="list">
-                                                    {%- for childlink in block.settings.menu.links -%}
-                                                        <li>
-                                                            <a href="{{ childlink.url }}"
-                                                               class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
-                                                                {{ childlink.title | escape }}
-                                                            </a>
-                                                            {%- if childlink.links != blank -%}
-                                                                <ul class="list-unstyled"
-                                                                    role="list">
-                                                                    {%- for grandchildlink in childlink.links -%}
-                                                                        <li>
-                                                                            <a href="{{ grandchildlink.url }}"
-                                                                               class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
-                                                                                {{ grandchildlink.title | escape }}
-                                                                            </a>
-                                                                        </li>
-                                                                    {%- endfor -%}
-                                                                </ul>
-                                                            {%- endif -%}
-                                                        </li>
-                                                    {%- endfor -%}
-                                                </ul>
-                                                <div class="desktop_links_images">
-                                                    {% if block.settings.desktop_links_image_1 != nil %}
-                                                    <{% if block.settings.desktop_links_image_1_link != "" %}a href="{{ block.settings.desktop_links_image_1_link }}" {% else %}div class="desktop_links_image_1_container"{% endif %}>
-                                                        {%- assign height = block.settings.desktop_links_image_1.width | divided_by: block.settings.desktop_links_image_1.aspect_ratio | round -%}
-                                                        {{ block.settings.desktop_links_image_1 | image_url: width: 375 | image_tag:
-                                                        loading: 'lazy',
-                                                        height: height,
-                                                        class: "desktop_links_image_1",
-                                                        sizes: "100vw",
-                                                        widths: '375'
-                                                        }}
-                                                        </{% if block.settings.desktop_links_image_1_link != "" %}a{% else %}div{% endif %}>
-
-                                                        {% endif %}
-                                                        {% if block.settings.desktop_links_image_2 != nil %}
-                                                        <{% if block.settings.desktop_links_image_2_link != "" %}a href="{{ block.settings.desktop_links_image_2_link }}" {% else %}div class="desktop_links_image_2_container"{% endif %}>
-                                                            {%- assign height = block.settings.desktop_links_image_2.width | divided_by: block.settings.desktop_links_image_2.aspect_ratio | round -%}
-                                                            {{ block.settings.desktop_links_image_2 | image_url: width: 375 | image_tag:
+                                                <div class="item_body">
+                                                    <div class="item_list">
+                                                        <div class="item_header right">
+                                                            <span class="h3">
+                                                                {{ block.settings.title | escape }}
+                                                            </span>
+                                                        </div>
+                                                        <ul class="mega-menu__list{% if link_levels == 1 %} mega-menu__list--condensed{% endif %}"
+                                                            role="list">
+                                                            {%- for childlink in block.settings.menu.links -%}
+                                                                <li>
+                                                                    <a href="{{ childlink.url }}"
+                                                                       class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                                                                        {{ childlink.title | escape }}
+                                                                    </a>
+                                                                    {%- if childlink.links != blank -%}
+                                                                        <ul class="list-unstyled"
+                                                                            role="list">
+                                                                            {%- for grandchildlink in childlink.links -%}
+                                                                                <li>
+                                                                                    <a href="{{ grandchildlink.url }}"
+                                                                                       class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
+                                                                                        {{ grandchildlink.title | escape }}
+                                                                                    </a>
+                                                                                </li>
+                                                                            {%- endfor -%}
+                                                                        </ul>
+                                                                    {%- endif -%}
+                                                                </li>
+                                                            {%- endfor -%}
+                                                        </ul>
+                                                    </div>
+                                                    <div class="desktop_links_images">
+                                                        {% if block.settings.desktop_links_image_1 != nil %}
+                                                        <{% if block.settings.desktop_links_image_1_link != "" %}a href="{{ block.settings.desktop_links_image_1_link }}" {% else %}div class="desktop_links_image_1_container"{% endif %}>
+                                                            {%- assign height = block.settings.desktop_links_image_1.width | divided_by: block.settings.desktop_links_image_1.aspect_ratio | round -%}
+                                                            {{ block.settings.desktop_links_image_1 | image_url: width: 375 | image_tag:
                                                             loading: 'lazy',
                                                             height: height,
+                                                            class: "desktop_links_image_1",
                                                             sizes: "100vw",
                                                             widths: '375'
                                                             }}
-                                                            </{% if block.settings.desktop_links_image_2_link != "" %}a{% else %}div{% endif %}>
+                                                            </{% if block.settings.desktop_links_image_1_link != "" %}a{% else %}div{% endif %}>
+
                                                             {% endif %}
+                                                            {% if block.settings.desktop_links_image_2 != nil %}
+                                                            <{% if block.settings.desktop_links_image_2_link != "" %}a href="{{ block.settings.desktop_links_image_2_link }}" {% else %}div class="desktop_links_image_2_container"{% endif %}>
+                                                                {%- assign height = block.settings.desktop_links_image_2.width | divided_by: block.settings.desktop_links_image_2.aspect_ratio | round -%}
+                                                                {{ block.settings.desktop_links_image_2 | image_url: width: 375 | image_tag:
+                                                                loading: 'lazy',
+                                                                height: height,
+                                                                sizes: "100vw",
+                                                                widths: '375'
+                                                                }}
+                                                                </{% if block.settings.desktop_links_image_2_link != "" %}a{% else %}div{% endif %}>
+                                                                {% endif %}
+                                                    </div>
                                                 </div>
                                             </div>
                                         </details>
@@ -1050,65 +1059,65 @@
     {% javascript %}
 
     class StickyHeader extends HTMLElement {
-        constructor() {
-        super();
+    constructor() {
+    super();
     }
 
     connectedCallback() {
-        this.header = document.querySelector('.section-header');
-        this.headerIsAlwaysSticky = this.getAttribute('data-sticky-type') === 'always' ||
-        this.getAttribute('data-sticky-type') === 'reduce-logo-size';
-        this.headerBounds = {};
+    this.header = document.querySelector('.section-header');
+    this.headerIsAlwaysSticky = this.getAttribute('data-sticky-type') === 'always' ||
+    this.getAttribute('data-sticky-type') === 'reduce-logo-size';
+    this.headerBounds = {};
 
-        this.setHeaderHeight();
+    this.setHeaderHeight();
 
-        window.matchMedia('(max-width: 990px)').addEventListener('change',
-        this.setHeaderHeight.bind(this));
+    window.matchMedia('(max-width: 990px)').addEventListener('change',
+    this.setHeaderHeight.bind(this));
 
-        if (this.headerIsAlwaysSticky) {
-            this.header.classList.add('shopify-section-header-sticky');
-        };
+    if (this.headerIsAlwaysSticky) {
+    this.header.classList.add('shopify-section-header-sticky');
+    };
 
-        this.currentScrollTop = 0;
-        this.preventReveal = false;
-        this.predictiveSearch = this.querySelector('predictive-search');
+    this.currentScrollTop = 0;
+    this.preventReveal = false;
+    this.predictiveSearch = this.querySelector('predictive-search');
 
-        this.onScrollHandler = this.onScroll.bind(this);
-        this.hideHeaderOnScrollUp = () => this.preventReveal = true;
+    this.onScrollHandler = this.onScroll.bind(this);
+    this.hideHeaderOnScrollUp = () => this.preventReveal = true;
 
-        this.addEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
-        window.addEventListener('scroll', this.onScrollHandler, false);
+    this.addEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
+    window.addEventListener('scroll', this.onScrollHandler, false);
 
-        this.createObserver();
+    this.createObserver();
     }
 
     setHeaderHeight() {
-        document.documentElement.style.setProperty('--header-height', `${this.header.offsetHeight}px`);
+    document.documentElement.style.setProperty('--header-height', `${this.header.offsetHeight}px`);
     }
 
     disconnectedCallback() {
-        this.removeEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
-        window.removeEventListener('scroll', this.onScrollHandler);
+    this.removeEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
+    window.removeEventListener('scroll', this.onScrollHandler);
     }
 
     createObserver() {
-        let observer = new IntersectionObserver((entries, observer) => {
-        this.headerBounds = entries[0].intersectionRect;
-        observer.disconnect();
+    let observer = new IntersectionObserver((entries, observer) => {
+    this.headerBounds = entries[0].intersectionRect;
+    observer.disconnect();
     });
 
-        observer.observe(this.header);
+    observer.observe(this.header);
     }
 
     onScroll() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
     if (this.predictiveSearch && this.predictiveSearch.isOpen) return;
 
     if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
-        this.header.classList.add('scrolled-past-header');
-            if (this.preventHide) return;
-                requestAnimationFrame(this.hide.bind(this));
+    this.header.classList.add('scrolled-past-header');
+    if (this.preventHide) return;
+    requestAnimationFrame(this.hide.bind(this));
     } else if (scrollTop < this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
     this.header.classList.add('scrolled-past-header');
     if (!this.preventReveal) {
@@ -1184,7 +1193,13 @@
     ],
     "url": {{ request.origin | append: page.url | json }}
   }
-</script>
+
+
+
+
+
+
+    </script>
 
     {%- if request.page_type == 'index' -%}
         {% assign potential_action_target = request.origin | append: routes.search_url | append: "?q={search_term_string}" %}
@@ -1199,7 +1214,13 @@
         "query-input": "required name=search_term_string"
       },
       "url": {{ request.origin | append: page.url | json }}
-    }</script>
+    }
+
+
+
+
+
+        </script>
     {%- endif -%}
 
     {% schema %}
