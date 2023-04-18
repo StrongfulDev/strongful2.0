@@ -1,0 +1,15 @@
+{% comment %}
+    Renders a form for out of stock products to leave details for when the product is back in stock.
+
+    Accepts:
+    - product: the product object
+
+    Usage:
+    {% render 'missing-size-form' %}
+{% endcomment %}
+
+{% unless product.tags contains 'noEmail' %}
+    <p class="out-of-stock" id="outOfStock">המידה חסרה? לחצי כאן</p>
+    <p class="out-of-stock out-of-stock-explain {% unless product.tags contains 'fakeOutOfStock' %}none{% endunless %}">
+        לחצי על המידה החסרה, השאירי מייל ואנחנו נעדכן אותך ברגע שהמידה תחזור למלאי</p>
+{% endunless %}
