@@ -97,6 +97,11 @@
     --color-button-text: var(--color-foreground);
 }
 
+.color-inverse .button--primary {
+    background-color: rgb(var(--color-foreground));
+    color: rgb(var(--color-background));
+}
+
 .button--tertiary {
     --color-button: var(--color-base-outline-button-labels);
     --color-button-text: var(--color-base-outline-button-labels);
