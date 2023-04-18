@@ -9,7 +9,7 @@
         #Slider-{{ section.id }}::before,
         #Slider-{{ section.id }} .media::before,
         #Slider-{{ section.id }}:not(.banner--mobile-bottom) .banner__content::before {
-        padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.image.aspect_ratio | times: 100 }}%;
+        padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.mobile_image.aspect_ratio | times: 100 }}%;
         content: '';
         display: block;
         }
@@ -120,6 +120,7 @@
                             sizes: "100vw",
                             class: "mobile_version",
                             widths: '375, 550, 750'
+
                             }}
                         {%- endif -%}
                     {%- else -%}

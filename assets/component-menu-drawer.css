@@ -265,3 +265,22 @@ details[open].menu-opening > .menu-drawer__submenu {
 .menu-drawer .menu-drawer__account-social_icons .list-social {
     margin: 0;
 }
+
+.menu-drawer__utility-links {
+    background-color: rgb(var(--color-background));
+}
+
+.menu-drawer__account-title {
+    text-align: right;
+}
+
+/* TODO: Check margins and make responsive */
+.menu-drawer__account-login {
+    margin-bottom: 19px;
+}
+
+.menu-drawer__navigation {
+    padding-bottom: 0;
+}
+
+

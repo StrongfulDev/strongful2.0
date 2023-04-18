@@ -204,6 +204,14 @@
         }
       }
     },
+    "blog_and_newsletter": {
+      "name": "Blog And Newsletter Block",
+      "settings": {
+        "paragraph": {
+          "content": "Add a title"
+        }
+      }
+    },
     "typography": {
       "name": "Typography",
       "settings": {
@@ -1086,6 +1094,18 @@
             "heading": {
               "label": "Heading"
             },
+            "heading_align": {
+              "label": "Heading align",
+              "options__1": {
+                "label": "Left"
+              },
+              "options__2": {
+                "label": "Center"
+              },
+              "options__3": {
+                "label": "Right"
+              }
+            },
             "menu": {
               "label": "Menu",
               "info": "Displays only top-level menu items."
@@ -1104,6 +1124,29 @@
             "show_social": {
               "label": "Show social media icons",
               "info": "To display your social media accounts, link them in your [theme settings](\/editor?context=theme&category=social%20media)."
+            }
+          }
+        },
+        "blog_and_newsletter": {
+          "name": "Blog And Newsletter Block",
+          "settings": {
+            "paragraph": {
+              "content": "Add a title"
+            },
+            "subtitle": {
+              "label": "More about Strongful"
+            },
+            "blog_url": {
+              "label": "Block Link"
+            },
+            "image_picker_label": {
+              "label": "Upload Image"
+            },
+            "blog_text": {
+              "label": "First Block Caption"
+            },
+            "newsletter_text": {
+              "label": "Second Block Caption"
             }
           }
         },

@@ -258,6 +258,7 @@
     "header": {
       "announcement": "Announcement",
       "menu": "Menu",
+      "account_title": "My Account",
       "cart_count": {
         "one": "{{ count }} item",
         "other": "{{ count }} items"
@@ -292,7 +293,8 @@
       }
     },
     "footer": {
-      "payment": "Payment methods"
+      "payment": "Payment methods",
+      "subtitle": "More about Strongful"
     },
     "featured_blog": {
       "view_all": "View all",

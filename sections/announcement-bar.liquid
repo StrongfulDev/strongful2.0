@@ -1,4 +1,6 @@
-<div class="announcement-bar-container container-{{ section.settings.blocks_type }} color-{{ section.settings.color_scheme }} gradient"
+{{ 'component-announcement-bar.js' | asset_url | script_tag }}
+
+<div class="announcement-bar-container fix-direction container-{{ section.settings.blocks_type }} color-{{ section.settings.color_scheme }} gradient"
      role="region"
      aria-label="{{ 'sections.header.announcement' | t }}" {{ section.shopify_attributes }}
      data-delay="{{ section.settings.animation-delay }}" data-duration="{{ section.settings.animation-duration }}">
@@ -15,11 +17,6 @@
                         <div class="page-width">
                             <div class="announcement-bar__message {{ block.settings.text_alignment }} rtl">
                                 {{ block.settings.text }}
-                                {% comment %}
-                                {%- if block.settings.link != blank -%}
-                                    {% render 'icon-arrow' %}
-                                {%- endif -%}
-                              {% endcomment %}
                             </div>
                         </div>
                         {%- if block.settings.link != blank -%}
