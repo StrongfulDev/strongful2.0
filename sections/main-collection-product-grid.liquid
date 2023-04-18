@@ -193,7 +193,8 @@
                                             quick_add_type_mobile: section.settings.quick_add_type_mobile,
                                             section_id: section.id,
                                             image_count: section.settings.image_count,
-                                            card_banner_text: card_announcement
+                                            card_banner_text: card_announcement,
+                                            card_header_size: section.settings.card_header_size
                                     %}
                                 </li>
                             {%- endfor -%}
@@ -255,6 +256,30 @@
       ],
       "default": "adapt",
       "label": "t:sections.main-collection-product-grid.settings.image_ratio.label"
+    },
+    {
+      "type": "select",
+      "id": "card_header_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.main-collection-product-grid.settings.card_header_size.options__1.label"
+        },
+        {
+          "value": "h3",
+          "label": "t:sections.main-collection-product-grid.settings.card_header_size.options__2.label"
+        },
+        {
+          "value": "h4",
+          "label": "t:sections.main-collection-product-grid.settings.card_header_size.options__3.label"
+        },
+        {
+          "value": "h5",
+          "label": "t:sections.main-collection-product-grid.settings.card_header_size.options__4.label"
+        }
+      ],
+      "default": "h3",
+      "label": "t:sections.main-collection-product-grid.settings.card_header_size.label"
     },
     {
       "type": "checkbox",
