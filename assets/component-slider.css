@@ -448,14 +448,15 @@ slider-component.slider-component-full-width {
     margin-bottom: 0;
 }
 
+.collection__title_heading .title, .collection__title_heading .title:not(:only-child) {
+    margin: 0 0 0 0;
+    line-height: normal;
+}
+
 .collection__title_heading {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-}
-
-.collection__title_heading h2 {
-    margin: 0;
+    align-items: flex-end;
 }
 
 .collection .slider-button[disabled="disabled"] {

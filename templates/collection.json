@@ -30,6 +30,7 @@
         "products_per_page": 16,
         "columns_desktop": 4,
         "image_ratio": "adapt",
+        "card_header_size": "h2",
         "show_secondary_image": true,
         "show_vendor": true,
         "show_rating": false,

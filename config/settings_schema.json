@@ -146,7 +146,7 @@
       {
         "type": "range",
         "id": "heading_scale",
-        "min": 100,
+        "min": 50,
         "max": 150,
         "step": 5,
         "unit": "%",
@@ -184,7 +184,7 @@
       {
         "type": "range",
         "id": "body_scale",
-        "min": 100,
+        "min": 50,
         "max": 130,
         "step": 5,
         "unit": "%",
