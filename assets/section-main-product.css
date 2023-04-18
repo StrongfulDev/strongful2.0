@@ -1538,5 +1538,8 @@ a.product__text {
     .product__details_image .mobile_version {
         display: none;
     }
+}
 
+variant-radios fieldset {
+    margin-left: auto;
 }

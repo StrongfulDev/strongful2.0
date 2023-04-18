@@ -27,7 +27,7 @@
     data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ section.settings.products_to_show }}"
   >
     {% if recommendations.performed and recommendations.products_count > 0 %}
-      <h2 class="related-products__heading {{ section.settings.heading_size }}">
+      <h2 class="related-products__heading {{ section.settings.heading_alignment }} {{ section.settings.heading_size }}">
         {{ section.settings.heading | escape }}
       </h2>
       <ul
@@ -65,6 +65,26 @@
       "id": "heading",
       "default": "You may also like",
       "label": "t:sections.related-products.settings.heading.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.all.heading_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.all.heading_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.all.heading_alignment.options__3.label"
+        }
+      ],
+      "default": "right",
+      "label": "t:sections.all.heading_alignment.label"
     },
     {
       "type": "select",

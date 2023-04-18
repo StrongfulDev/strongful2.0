@@ -45,6 +45,13 @@
     width: 100%;
 }
 
+.size-variant-product-form .button.add_to_cart {
+    height: 30px;
+    min-height: unset;
+    margin-top: 2px;
+    margin-bottom: 0;
+}
+
 .card .product_variants .size_variant_button {
     max-width: 50px;
 }
