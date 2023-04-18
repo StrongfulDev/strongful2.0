@@ -3,7 +3,7 @@
     "745dda66-63ce-4705-8d8d-eff54d17367f": {
       "type": "image-banner",
       "settings": {
-        "image": "shopify:\/\/shop_images\/01_38caaf9f-e9f7-4344-8cb2-a6c1b10f4a0c.jpg",
+        "image": "shopify:\/\/shop_images\/desktop_1.png",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
@@ -17,6 +17,7 @@
     },
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
         "show_collection_description": false,
         "show_collection_image": true,
@@ -33,6 +34,8 @@
         "show_vendor": true,
         "show_rating": false,
         "show_card_collection_announcement": true,
+        "custom_collection_announcement": "",
+        "announcement_customizer_override": false,
         "enable_quick_add": true,
         "quick_add_type": "hover",
         "quick_add_type_mobile": "modal",
