@@ -2250,6 +2250,20 @@
         "price": {
           "name": "Price"
         },
+        "image": {
+          "name": "Image",
+          "settings": {
+            "image_picker": {
+              "label": "Image"
+            },
+            "image_link": {
+              "label": "Link to"
+            },
+            "mobile_section": {
+              "label": "Mobile section"
+            }
+          }
+        },
         "inventory": {
           "name": "Inventory status",
           "settings": {
