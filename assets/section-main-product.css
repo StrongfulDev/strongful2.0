@@ -1549,3 +1549,12 @@ variant-radios fieldset {
 .product__tax {
     display: none;
 }
+
+@media screen and (max-width: 749px) {
+    .slider-buttons {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+    }
+}
