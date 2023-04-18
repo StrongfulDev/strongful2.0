@@ -366,6 +366,7 @@ a.product__text {
 
 .product .price .badge {
     margin-bottom: 0.5rem;
+    margin-right: 1rem;
 }
 
 .product .price__container {
@@ -1542,4 +1543,8 @@ a.product__text {
 
 variant-radios fieldset {
     margin-left: auto;
+}
+
+.product__tax {
+    display: none;
 }
