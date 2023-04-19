@@ -219,3 +219,8 @@ quick-add-modal .product-media-container.constrain-height {
     --constrained-min-height: 400px;
   }
 }
+
+
+.product_size_picker__button[disabled] {
+    opacity: 0.5;
+}

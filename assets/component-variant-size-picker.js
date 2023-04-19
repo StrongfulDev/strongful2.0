@@ -13,7 +13,7 @@ window.onload = () => {
         element.parents('.variant_selector').find('.add_to_cart').removeAttr("disabled");
     })
 
-    $('.variant_selector.submit_on_click .size_variant_button').on("click", function (e) {
+    $('.variant_selector.submit_on_click .size_variant_button:not(.disabled-variant-button)').on("click", function (e) {
             const element = $(this);
             setTimeout(() => {
                 element.parents("form").find('[type="submit"]').click()

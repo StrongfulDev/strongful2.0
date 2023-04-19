@@ -52,6 +52,7 @@
                                                         if variant.available == false
                                                             assign product_disabled = true
                                                         endif
+
                                                         if product.title contains 'Chummy' and variant.title != "L"
                                                             assign product_disabled = true
                                                         elsif variant.title == '39'
@@ -66,10 +67,12 @@
                                                                    name="id"
                                                                    value="{{ variant.id }}"
                                                                    id="radio_{{ variant.id }}"
-                                                                    {% if product_disabled %} disabled{% endif %}
+                                                                    {% if product_disabled %} disabled="disabled"{% endif %}
                                                             {% if product.has_only_default_variant %}class="product_size_picker__button default_input"
                                                                 checked{% else %}class="product_size_picker__button new_input shoppable"{% endif %}>
                                                             <label for="radio_{{ variant.id }}"
+                                                                    {% if product_disabled %} disabled="disabled"{% endif %}
+
                                                                    class="product_size_picker__button__label {% if product.selected_variant == variant %}selected{% endif %}">
                                                                 <span>
                                                                     {{ variant.title | escape }}
