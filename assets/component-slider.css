@@ -395,6 +395,11 @@ slider-component.slider-component-full-width {
     margin: 10px;
 }
 
+.pagination_type_sides .slider-button:hover {
+    background-color: rgb(var(--color-foreground));
+    color: #fff;
+}
+
 .pagination_type_sides .slider-component-desktop {
     display: flex;
     justify-content: center;

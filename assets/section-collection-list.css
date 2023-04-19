@@ -65,3 +65,27 @@
   height: fit-content;
   object-fit: cover;
 }
+
+.our-collections-list-link {
+  position: relative;
+}
+
+.our-collections-list-title {
+  position: absolute;
+  top: 84%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  background: #fff;
+  width: 80%;
+}
+
+@media screen and (min-width: 990px) {
+  .our-collections-list-title {
+    width: 55%;
+  }
+}
