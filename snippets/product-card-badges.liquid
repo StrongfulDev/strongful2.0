@@ -14,10 +14,10 @@
             id="Badge-{{ section.id }}-{{ product.id }}"
             class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}"
     >
-                          {{- 'products.product.sold_out' | t -}}
-                        </span>
+      {{- 'products.product.sold_out' | t -}}
+    </span>
 {% else %}
-    {%- if product.compare_at_price > product.price and product.available -%}
+    {%- if product.compare_at_price > product.price -%}
         <span
                 id="Badge-{{ section.id }}-{{ product.id }}"
                 class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
