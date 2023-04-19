@@ -10,8 +10,7 @@
       "reward": {
         "action": "set_shipping",
         "active_class": "free_shipping",
-        "amount": 0,
-        "weight": 1
+        "amount": 0
       }
     }
   },
@@ -26,8 +25,7 @@
       "reward": {
         "action": "give_free_bottle",
         "active_class": "free_bottle",
-        "amount": 0,
-        "weight": 2
+        "amount": 0
       }
     }
   }

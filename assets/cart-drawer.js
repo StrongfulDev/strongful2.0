@@ -150,7 +150,7 @@ class CartDrawer extends HTMLElement {
     }
 
     async checkAndApplyRule(rule_item) {
-        let appliedRewards = 0;
+        let isActive = false;
 
         switch (rule_item.rule.condition.type) {
             case "CartAmount":
@@ -160,15 +160,20 @@ class CartDrawer extends HTMLElement {
                     rule_item.rule.condition.operator === ">=" &&
                     cartTotal >= rule_item.rule.condition.value
                 ) {
-                    this.activateReward(rule_item.rule.reward);
-                    appliedRewards++;
+                    isActive = true;
                 }
                 break;
             case "CartItems":
                 break;
         }
 
-        return appliedRewards;
+        this.addProgress(rule_item.rule.reward, isActive);
+
+        if (isActive) {
+            this.activateReward(rule_item.rule.reward);
+        }
+
+        return isActive;
     }
 
     // TODO: make this more efficient by caching the response
@@ -189,6 +194,12 @@ class CartDrawer extends HTMLElement {
         const progressItem = $(`<span class="${reward.active_class}-progress progress-item" style="flex: ${reward.weight}">&nbsp;</span>`)
         $(`.reward-item.${reward.active_class}`).addClass("active-reward");
         $('.rewards-section').find(".reward-text").append(rewardMessage);
+    }
+
+    addProgress(reward, isActive) {
+        const progressItemsCount = $(".progress-item").length;
+        const order = isActive ? "" : `order: ${progressItemsCount};`
+        const progressItem = $(`<span class="${reward.active_class}-progress progress-item ${isActive ? "active" : ""}" style="flex: ${reward.weight}; ${order}">&nbsp;</span>`)
         $('.track-progress').append(progressItem);
     }
 }

@@ -414,8 +414,11 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 }
 
 .track-progress .progress-item {
-    background-color: #0D3EE7;
     height: 100%;
+}
+
+.track-progress .progress-item.active {
+    background-color: #0D3EE7;
 }
 
 .track-progress .progress-item:first-child {
