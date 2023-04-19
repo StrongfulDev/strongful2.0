@@ -166,7 +166,7 @@
 }
 
 .menu-drawer-container.customizable a.list-menu__item {
-    margin: 0 30px;
+    padding: 0 30px;
 }
 
 .menu-drawer-container.customizable li:not(:last-child) a.list-menu__item {
@@ -212,9 +212,17 @@
     margin-left: auto;
 }
 
+.menu-drawer-container.customizable .mobile_menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
 
 .menu-drawer-container.customizable .nav_top .menu_images {
     display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
 }
 
 .menu-drawer-container.customizable .nav_top img {
@@ -230,9 +238,27 @@
     background-size: cover;
 }
 
-.hamburger-logo {
+.hamburger-logo, .menu-drawer-container.customizable .nav_top .hamburger-logo {
     width: 40px;
     height: 44px;
     margin: 20px auto 16px;
     display: block;
+}
+
+.menu-drawer-container.customizable .menu-drawer__navigation {
+    padding: 20px;
+}
+
+.menu-drawer-container.customizable .menu-drawer__menu li + li {
+    margin-top: 20px;
+}
+.menu-drawer-container.customizable  .menu-drawer__navigation:has(.menu-drawer__menu.submenu-open) {
+    padding: 0;
+}
+.menu-drawer-container.customizable .menu-drawer__submenu li + li {
+    margin-top: 0;
+}
+
+.menu-drawer-container .js .menu-drawer__menu li {
+    margin-bottom: 0;
 }

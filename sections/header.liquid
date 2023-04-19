@@ -177,6 +177,9 @@
                                 <div class="menu-drawer__navigation-container">
                                     <nav class="menu-drawer__navigation">
                                         <div class="nav_top">
+                                            <img loading="lazy" class="hamburger-logo"
+                                                 src="https://cdn.shopify.com/s/files/1/0574/2995/0671/files/facebook_profile.png?v=1631624674"
+                                                 alt="Strongful's logo - The Black Lightning"/>
                                             <div class="mobile_menu">
                                                 {% for menu_item in section.settings.mobile_menu.links %}
                                                     <a href="{{ menu_item.url }}"
@@ -1199,6 +1202,8 @@
 
 
 
+
+
     </script>
 
     {%- if request.page_type == 'index' -%}
@@ -1215,6 +1220,8 @@
       },
       "url": {{ request.origin | append: page.url | json }}
     }
+
+
 
 
 
