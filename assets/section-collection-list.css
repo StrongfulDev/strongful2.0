@@ -59,3 +59,9 @@
 .collection-list-view-all {
   margin-top: 2rem;
 }
+
+.our-collections-list-image__img {
+  width: 100%;
+  height: fit-content;
+  object-fit: cover;
+}

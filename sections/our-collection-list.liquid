@@ -43,7 +43,7 @@
                             class="link underlined-link large-up-hide"
                             aria-labelledby="ViewAll-{{ section.id }} SectionHeading-{{ section.id }}"
                     >
-                        {{- 'sections.collection_list.view_all' | t -}}
+                        {{ 'sections.collection_list.view_all' | t }}
                     </a>
                 {%- endif -%}
             </div>
@@ -71,9 +71,8 @@
                     <li
                             id="Slide-{{ section.id }}-{{ forloop.index }}"
                             class="collection-list__item grid__item{% if show_mobile_slider %} slider__slide{% endif %}{% if block.settings.collection.featured_image == nil %} collection-list__item--no-media{% endif %}"
-                            {{ block.shopify_attributes }}
                     >
-
+                        {%comment%}
                         {% render 'card-collection',
                                 card_collection: block.settings.collection,
                                 media_aspect_ratio: section.settings.image_ratio,
@@ -81,6 +80,24 @@
                                 wrapper_class: wrapper_class,
                                 custom_card_style: custom_card_style
                         %}
+                          {%endcomment%}
+                        <a href="{{ block.settings.url }}" class="our-collections-list-link">
+                            <div class="our-collections-list-image">
+                              {%- if block.settings.image -%}
+                              {{ block.settings.image | image_url: width: 3840 | image_tag:
+                              loading: 'lazy',
+                              sizes: "100vw",
+                              widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                              class: 'our-collections-list-image__img'
+                              }}
+                          {%- else -%}
+                              {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+                          {%- endif -%}
+                            </div>
+                            <span class="our-collections-list-title">
+                                {{ block.settings.title }}
+                            </span>
+                        </a>
                     </li>
                 {%- endfor -%}
             </ul>
@@ -327,6 +344,32 @@
           "type": "collection",
           "id": "collection",
           "label": "t:sections.our-collection-list.blocks.featured_collection.settings.collection.label"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.our-collection-list.blocks.image.settings.image.label"
+        },
+        {
+          "type": "text",
+          "id": "alt",
+          "label": "t:sections.our-collection-list.blocks.image.settings.alt.label"
+        },
+        {
+          "type": "text",
+          "id": "link",
+          "label": "t:sections.our-collection-list.blocks.image.settings.link.label"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "t:sections.our-collection-list.blocks.image.settings.url.label"
         }
       ]
     }

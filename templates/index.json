@@ -132,36 +132,48 @@
     "our_collection_list": {
       "type": "our-collection-list",
       "blocks": {
-        "our_collection_list-block-0": {
-          "type": "featured_collection",
+        "43290a01-878a-47e8-9106-aeadc5b5899d": {
+          "type": "image",
           "settings": {
-            "collection": "abouttooutlet"
+            "image": "shopify:\/\/shop_images\/2G6A6596_1_1.jpg",
+            "alt": "collection title",
+            "link": "TOPS",
+            "url": "shopify:\/\/collections\/all-tops"
           }
         },
-        "our_collection_list-block-1": {
-          "type": "featured_collection",
+        "3d1d89ad-67e7-42e0-9928-b9ef37feb214": {
+          "type": "image",
           "settings": {
-            "collection": "10"
+            "image": "shopify:\/\/shop_images\/f3a11fd37b5fc77d0729d87fc4423674.jpg",
+            "alt": "",
+            "link": "BOTTOMS",
+            "url": "shopify:\/\/collections\/allbottoms"
           }
         },
-        "our_collection_list-block-2": {
-          "type": "featured_collection",
+        "6f871e6a-f587-4ba8-b14c-6970d28b07a0": {
+          "type": "image",
           "settings": {
-            "collection": "17"
+            "image": "shopify:\/\/shop_images\/76d89d3582cfa04436c752f4a801a041.jpg",
+            "alt": "קולקציית כל הסטים במסך בית",
+            "link": "SETS",
+            "url": "shopify:\/\/collections\/סטים"
           }
         },
-        "643e8402-6f44-4d7c-a595-f1d83eef5c39": {
-          "type": "featured_collection",
+        "1e86693b-4596-478d-b282-73bc19787a71": {
+          "type": "image",
           "settings": {
-            "collection": "30"
+            "image": "shopify:\/\/shop_images\/6bc2de0268346daf920ba4af2927e455.jpg",
+            "alt": "אקססוריז לדף בית",
+            "link": "ACCESSORIES",
+            "url": "shopify:\/\/collections\/accessories"
           }
         }
       },
       "block_order": [
-        "our_collection_list-block-0",
-        "our_collection_list-block-1",
-        "our_collection_list-block-2",
-        "643e8402-6f44-4d7c-a595-f1d83eef5c39"
+        "43290a01-878a-47e8-9106-aeadc5b5899d",
+        "3d1d89ad-67e7-42e0-9928-b9ef37feb214",
+        "6f871e6a-f587-4ba8-b14c-6970d28b07a0",
+        "1e86693b-4596-478d-b282-73bc19787a71"
       ],
       "settings": {
         "title": "OUR COLLECTIONS",

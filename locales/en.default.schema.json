@@ -766,6 +766,23 @@
               "label": "Collection"
             }
           }
+        },
+        "image": {
+          "name": "Image",
+          "settings": {
+            "image": {
+              "label": "Image"
+            },
+            "alt": {
+              "label": "alt"
+            },
+            "link": {
+              "label": "link"
+            },
+            "url": {
+              "label": "url"
+            }
+          }
         }
       },
       "presets": {
