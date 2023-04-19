@@ -5,6 +5,17 @@
   {% render 'cart-drawer' %}
 {% endcomment %}
 
+<script type="application/javascript">
+    window.rewards_translation = {
+        set_shipping: {
+            message: '{{ 'rewards.free_shipping.message' | t }}',
+        },
+        give_free_bottle: {
+            message: '{{ 'rewards.free_bottle.message' | t }}',
+        }
+    };
+</script>
+
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
 
 <style>
@@ -77,9 +88,8 @@
                         {% render 'reward-item', icon: "lock", class: "free_shipping", title: free_shipping_text, active: false %}
                         {% render 'reward-item', icon: "lock", class: "free_bottle", title: upsell_text, active: false %}
                     </div>
-                    <div class="track-progress">&nbsp;</div>
+                    <div class="track-progress"></div>
                     <div class="reward-text">
-                        <span>asdsadsa</span>
                     </div>
                 </div>
             </div>

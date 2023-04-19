@@ -11,6 +11,8 @@ class CartDrawer extends HTMLElement {
             this.close.bind(this)
         );
         this.setHeaderCartIconAccessibility();
+
+        this.checkRewards();
     }
 
     setHeaderCartIconAccessibility() {
@@ -137,40 +139,39 @@ class CartDrawer extends HTMLElement {
     }
 
     async checkRewards() {
-        const rule_item = {
-            title: "Free Shipping",
-            rule: {
-                condition: {
-                    type: "CartAmount",
-                    operator: ">=",
-                    value: 210,
-                },
-                reward: {
-                    action: "set_shipping",
-                    active_class: "free_shipping",
-                    amount: 0,
-                },
-            },
-        };
+        jQuery.getJSON("/assets/cart-rewards-rules.json", (rule_items) => {
+            if (rule_items?.length > 0) {
+                for (let i = 0; i < rule_items.length; i++) {
+                    const rule_item = rule_items[i];
+                    this.checkAndApplyRule(rule_item);
+                }
+            }
+        });
+    }
 
-        console.log("rule_item", rule_item)
+    async checkAndApplyRule(rule_item) {
+        let appliedRewards = 0;
 
         switch (rule_item.rule.condition.type) {
             case "CartAmount":
                 const cartTotal = await this.cartTotal();
-                console.log("cartTotalcartTotal", cartTotal)
                 if (
                     !this.cartHasReward(rule_item.rule.reward) &&
                     rule_item.rule.condition.operator === ">=" &&
                     cartTotal >= rule_item.rule.condition.value
                 ) {
                     this.activateReward(rule_item.rule.reward);
+                    appliedRewards++;
                 }
                 break;
             case "CartItems":
+                break;
         }
+
+        return appliedRewards;
     }
 
+    // TODO: make this more efficient by caching the response
     cartTotal() {
         return new Promise((resolve, reject) => {
             jQuery.getJSON("/cart.js", function (cart) {
@@ -184,7 +185,11 @@ class CartDrawer extends HTMLElement {
     }
 
     activateReward(reward) {
+        const rewardMessage = $(`<span class="${reward.active_class}-message">${window.rewards_translation[reward.action]?.message}</span>`)
+        const progressItem = $(`<span class="${reward.active_class}-progress progress-item" style="flex: ${reward.weight}">&nbsp;</span>`)
         $(`.reward-item.${reward.active_class}`).addClass("active-reward");
+        $('.rewards-section').find(".reward-text").append(rewardMessage);
+        $('.track-progress').append(progressItem);
     }
 }
 

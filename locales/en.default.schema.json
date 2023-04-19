@@ -2041,7 +2041,7 @@
           },
           "info": "Drawer is the default mobile layout."
         },
-        "enable_sorting": {
+      "enable_sorting": {
           "label": "Enable sorting"
         },
         "image_ratio": {

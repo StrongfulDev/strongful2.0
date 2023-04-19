@@ -405,4 +405,23 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
     border: 1px solid rgba(var(--color-foreground), 0.1);
     border-radius: 25px;
     margin: 1rem 0;
+    display: flex;
+}
+
+.rewards-section .reward-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.track-progress .progress-item {
+    background-color: #0D3EE7;
+    height: 100%;
+}
+
+.track-progress .progress-item:first-child {
+    border-radius: 0 25px 25px 0;
+}
+
+.track-progress .progress-item:last-child {
+    border-radius: 25px 0 0 25px;
 }

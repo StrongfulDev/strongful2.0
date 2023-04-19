@@ -465,5 +465,13 @@
       "copy_code_success": "Code copied successfully",
       "print_gift_card": "Print"
     }
+  },
+  "rewards": {
+    "free_shipping": {
+      "message": "FREE SHIPPING!"
+    },
+    "free_bottle": {
+      "message": "קיבלת בקבוק חינם"
+    }
   }
 }
