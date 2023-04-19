@@ -2986,7 +2986,7 @@ fieldset {
 }
 
 :root {
-    --full-width-padding: 3em;
+    --full-width-padding: 5%;
 }
 
 .full-width-padding {
@@ -3007,6 +3007,12 @@ fieldset {
     border: 1px #000 solid;
     outline: 0;
     --border-offset: 0;
+}
+
+.title-wrapper--self-padded-tablet-down, .title-wrapper--self-padded-mobile {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 1em;
 }
 
 @media screen and (min-width: 990px) {

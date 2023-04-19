@@ -313,6 +313,8 @@
 .card--standard > .card__content .card__information {
     padding-left: 0;
     padding-right: 0;
+    padding-bottom: 0;
+    grid-row-start: auto;
 }
 
 .card--card.card--media .card__inner .card__information,
@@ -385,4 +387,12 @@
 
 .card-article-info {
     margin-top: 1rem;
+}
+
+
+/* Yahav styles and design */
+
+div.collection--full-width {
+    padding-left: 5%;
+    padding-right: 5%;
 }

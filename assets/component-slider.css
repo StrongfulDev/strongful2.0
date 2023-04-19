@@ -388,7 +388,7 @@ slider-component.slider-component-full-width {
     transform: rotate(90deg) scale(1.1);
 }
 
-/* CUSTOM STYLE */
+/* CUSTOM STYLE AND DESIGN */
 .pagination_type_sides .slider-button {
     border: 1px solid rgb(var(--color-foreground));
     padding: 5px;
@@ -411,6 +411,15 @@ slider-component.slider-component-full-width {
 
 .slider-component-full-width.pagination--sides .slider-button--next {
     margin-right: calc(var(--full-width-padding) * -1);
+}
+
+.slider.slider--tablet.contains-card--standard .slider__slide:not(.collection-list__item--no-media) {
+    margin-right: 1rem;
+    margin-left: 0;
+}
+
+.full-unstyled-link {
+    font-size: var(--font-body-size-small);
 }
 
 
