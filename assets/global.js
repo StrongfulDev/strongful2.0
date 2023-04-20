@@ -1054,4 +1054,21 @@ class ProductRecommendations extends HTMLElement {
 
 customElements.define('product-recommendations', ProductRecommendations);
 
+// Custom Scripts by Yahav
 
+// get the element with the id of 'Filter-filter.v.availability-mobile-1' and set it to checked
+document.getElementById('Filter-filter.v.availability-mobile-1').checked = true;
+
+// also add the query parameters 'filter.v.availability' and set it to 1 to the url
+let url = new URL(window.location.href);
+url.searchParams.set('filter.v.availability', '1');
+window.history.pushState({}, '', url);
+
+let activeFilter = document.querySelectorAll('.active-facets__button-inner.button.button--tertiary');
+for (let i = 0; i < activeFilter.length; i++) {
+  let filterText = activeFilter[i].innerText;
+  console.log(filterText);
+  if (filterText.includes('Availability: In stock')) {
+    $(activeFilter[i]).closest('facet-remove').hide();
+  }
+}
