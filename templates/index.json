@@ -60,54 +60,18 @@
     "featured_collection": {
       "type": "featured-collection",
       "custom_css": [
-        ".button {width: 100%; margin-top: 0; min-height: calc(3.5rem + var(--buttons-border-width) * 2); font-size: var(--font-body-size-small);}"
+        ".button {width: 100%;}"
       ],
       "settings": {
-        "title": "JUST LANDED",
+        "title": "OUTLET - UP TO 70% OFF",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "just-landed",
-        "products_to_show": 13,
-        "columns_desktop": 5,
-        "full_width": true,
-        "show_view_all": true,
-        "view_all_text": "SHOP ALL",
-        "view_all_style": "link",
-        "view_all_location": "desktop_top_tablet_bottom",
-        "enable_desktop_slider": true,
-        "show_peak": true,
-        "pagination_type": "sides",
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "show_sale_badge": false,
-        "enable_quick_add": true,
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 0
-      }
-    },
-    "c49715ae-c7b2-4a37-abfb-5035e7a03838": {
-      "type": "featured-collection",
-      "custom_css": [
-        ".button {width: 100%; margin-top: 0; min-height: calc(3.5rem + var(--buttons-border-width) * 2); font-size: var(--font-body-size-small);}"
-      ],
-      "settings": {
-        "title": "SELLING FAST",
-        "heading_size": "h1",
-        "heading_type": "heading_type_2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "selling-fast",
+        "collection": "all",
         "products_to_show": 14,
-        "columns_desktop": 5,
+        "columns_desktop": 4,
         "full_width": true,
         "show_view_all": true,
         "view_all_text": "SHOP ALL",
@@ -125,55 +89,43 @@
         "enable_quick_add": true,
         "columns_mobile": "2",
         "swipe_on_mobile": true,
-        "padding_top": 36,
+        "padding_top": 56,
         "padding_bottom": 36
       }
     },
     "our_collection_list": {
       "type": "our-collection-list",
       "blocks": {
-        "43290a01-878a-47e8-9106-aeadc5b5899d": {
-          "type": "image",
+        "our_collection_list-block-0": {
+          "type": "featured_collection",
           "settings": {
-            "image": "shopify:\/\/shop_images\/2G6A6596_1_1.jpg",
-            "alt": "collection title",
-            "link": "TOPS",
-            "url": "shopify:\/\/collections\/all-tops"
+            "collection": "abouttooutlet"
           }
         },
-        "3d1d89ad-67e7-42e0-9928-b9ef37feb214": {
-          "type": "image",
+        "our_collection_list-block-1": {
+          "type": "featured_collection",
           "settings": {
-            "image": "shopify:\/\/shop_images\/f3a11fd37b5fc77d0729d87fc4423674.jpg",
-            "alt": "",
-            "link": "BOTTOMS",
-            "url": "shopify:\/\/collections\/allbottoms"
+            "collection": "10"
           }
         },
-        "6f871e6a-f587-4ba8-b14c-6970d28b07a0": {
-          "type": "image",
+        "our_collection_list-block-2": {
+          "type": "featured_collection",
           "settings": {
-            "image": "shopify:\/\/shop_images\/76d89d3582cfa04436c752f4a801a041.jpg",
-            "alt": "קולקציית כל הסטים במסך בית",
-            "link": "SETS",
-            "url": "shopify:\/\/collections\/סטים"
+            "collection": "17"
           }
         },
-        "1e86693b-4596-478d-b282-73bc19787a71": {
-          "type": "image",
+        "643e8402-6f44-4d7c-a595-f1d83eef5c39": {
+          "type": "featured_collection",
           "settings": {
-            "image": "shopify:\/\/shop_images\/6bc2de0268346daf920ba4af2927e455.jpg",
-            "alt": "אקססוריז לדף בית",
-            "link": "ACCESSORIES",
-            "url": "shopify:\/\/collections\/accessories"
+            "collection": "30"
           }
         }
       },
       "block_order": [
-        "43290a01-878a-47e8-9106-aeadc5b5899d",
-        "3d1d89ad-67e7-42e0-9928-b9ef37feb214",
-        "6f871e6a-f587-4ba8-b14c-6970d28b07a0",
-        "1e86693b-4596-478d-b282-73bc19787a71"
+        "our_collection_list-block-0",
+        "our_collection_list-block-1",
+        "our_collection_list-block-2",
+        "643e8402-6f44-4d7c-a595-f1d83eef5c39"
       ],
       "settings": {
         "title": "OUR COLLECTIONS",
@@ -190,12 +142,57 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "be6ecc53-5aae-427c-a7d9-720609cb0cb5": {
+      "type": "rich-text",
+      "blocks": {
+        "template--15920573251724__be6ecc53-5aae-427c-a7d9-720609cb0cb5-167984729387b191a1-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>GET THE NEWS<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "template--15920573251724__be6ecc53-5aae-427c-a7d9-720609cb0cb5-167984729387b191a1-1": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>כל מה שחדש אצלך במייל - <strong>מבצעים, הנחות<\/strong> ומוצרים <strong>חדשים<\/strong><\/h3>"
+          }
+        },
+        "template--15920573251724__be6ecc53-5aae-427c-a7d9-720609cb0cb5-167984729387b191a1-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "הרשמי עכשיו",
+            "button_link": "shopify:\/\/pages\/a-list",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--15920573251724__be6ecc53-5aae-427c-a7d9-720609cb0cb5-167984729387b191a1-0",
+        "template--15920573251724__be6ecc53-5aae-427c-a7d9-720609cb0cb5-167984729387b191a1-1",
+        "template--15920573251724__be6ecc53-5aae-427c-a7d9-720609cb0cb5-167984729387b191a1-2"
+      ],
+      "custom_css": [
+        ".rich-text__blocks * {margin: 5px;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "slideshow",
     "featured_collection",
-    "c49715ae-c7b2-4a37-abfb-5035e7a03838",
-    "our_collection_list"
+    "our_collection_list",
+    "be6ecc53-5aae-427c-a7d9-720609cb0cb5"
   ]
 }
