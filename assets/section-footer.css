@@ -819,6 +819,20 @@ noscript .localization-selector.link {
 
 @media screen and (min-width: 990px) {
 
+    .footer {
+        border-top: 1px rgb(var(--color-base-background-2)) solid;
+    }
+
+    .footer .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 3fr auto;
+    }
+
+    .footer__content-top {
+        max-width: max-content;
+        padding: 0 5% 5rem;
+    }
+
     .grid--4-col-desktop--custom {
         grid-template-columns: 1fr 1fr 1fr 3fr;
         display: grid;
@@ -831,6 +845,18 @@ noscript .localization-selector.link {
 
     .blog_and_newsletter-subtitle {
         margin-top: 0;
+    }
+
+    .global-media-settings {
+        border: 0;
+    }
+
+    .global-media-settings:after {
+        content: none;
+    }
+
+    .footer__blocks-wrapper.grid.grid--5-col-tablet .footer-blockgrid__item:first-child {
+        grid-column: 1 / 7;
     }
 }
 
