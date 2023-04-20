@@ -95,38 +95,6 @@
     },
     "our_collection_list": {
       "type": "our-collection-list",
-      "blocks": {
-        "our_collection_list-block-0": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "abouttooutlet"
-          }
-        },
-        "our_collection_list-block-1": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "10"
-          }
-        },
-        "our_collection_list-block-2": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "17"
-          }
-        },
-        "643e8402-6f44-4d7c-a595-f1d83eef5c39": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "30"
-          }
-        }
-      },
-      "block_order": [
-        "our_collection_list-block-0",
-        "our_collection_list-block-1",
-        "our_collection_list-block-2",
-        "643e8402-6f44-4d7c-a595-f1d83eef5c39"
-      ],
       "settings": {
         "title": "OUR COLLECTIONS",
         "heading_size": "h1",
