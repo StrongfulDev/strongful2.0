@@ -95,6 +95,50 @@
     },
     "our_collection_list": {
       "type": "our-collection-list",
+      "blocks": {
+        "8841f1b9-7431-4cb7-b1cf-7d73d6f6a31f": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2G6A6596_1_081ac1c6-644b-429c-a247-80dc49606fd5.jpg",
+            "alt": "",
+            "link": "TOPS",
+            "url": "shopify:\/\/collections\/all-tops"
+          }
+        },
+        "c77dc652-23f9-44fb-b4e4-509c68b86eb3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/f3a11fd37b5fc77d0729d87fc4423674.jpg",
+            "alt": "",
+            "link": "BOTTOMS",
+            "url": "shopify:\/\/collections\/allbottoms"
+          }
+        },
+        "69db081d-630f-4cb1-aa28-f28fd4783527": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/76d89d3582cfa04436c752f4a801a041.jpg",
+            "alt": "",
+            "link": "SETS",
+            "url": "shopify:\/\/collections\/סטים"
+          }
+        },
+        "a29b1065-2893-4374-9033-4bbdb106761c": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/6bc2de0268346daf920ba4af2927e455.jpg",
+            "alt": "",
+            "link": "ACCESSORIES",
+            "url": "shopify:\/\/collections\/accessories"
+          }
+        }
+      },
+      "block_order": [
+        "8841f1b9-7431-4cb7-b1cf-7d73d6f6a31f",
+        "c77dc652-23f9-44fb-b4e4-509c68b86eb3",
+        "69db081d-630f-4cb1-aa28-f28fd4783527",
+        "a29b1065-2893-4374-9033-4bbdb106761c"
+      ],
       "settings": {
         "title": "OUR COLLECTIONS",
         "heading_size": "h1",
