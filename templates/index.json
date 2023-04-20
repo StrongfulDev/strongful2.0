@@ -71,7 +71,7 @@
         "description_style": "body",
         "collection": "just-landed",
         "products_to_show": 13,
-        "columns_desktop": 4,
+        "columns_desktop": 5,
         "full_width": true,
         "show_view_all": true,
         "view_all_text": "SHOP ALL",
@@ -107,7 +107,7 @@
         "description_style": "body",
         "collection": "selling-fast",
         "products_to_show": 14,
-        "columns_desktop": 4,
+        "columns_desktop": 5,
         "full_width": true,
         "show_view_all": true,
         "view_all_text": "SHOP ALL",
@@ -190,58 +190,12 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "be6ecc53-5aae-427c-a7d9-720609cb0cb5": {
-      "type": "rich-text",
-      "blocks": {
-        "template--15920573251724__be6ecc53-5aae-427c-a7d9-720609cb0cb5-167984729387b191a1-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "<p>GET THE NEWS<\/p>",
-            "heading_size": "h1"
-          }
-        },
-        "template--15920573251724__be6ecc53-5aae-427c-a7d9-720609cb0cb5-167984729387b191a1-1": {
-          "type": "text",
-          "settings": {
-            "text": "<h3>כל מה שחדש אצלך במייל - <strong>מבצעים, הנחות<\/strong> ומוצרים <strong>חדשים<\/strong><\/h3>"
-          }
-        },
-        "template--15920573251724__be6ecc53-5aae-427c-a7d9-720609cb0cb5-167984729387b191a1-2": {
-          "type": "button",
-          "settings": {
-            "button_label": "הרשמי עכשיו",
-            "button_link": "shopify:\/\/pages\/a-list",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "template--15920573251724__be6ecc53-5aae-427c-a7d9-720609cb0cb5-167984729387b191a1-0",
-        "template--15920573251724__be6ecc53-5aae-427c-a7d9-720609cb0cb5-167984729387b191a1-1",
-        "template--15920573251724__be6ecc53-5aae-427c-a7d9-720609cb0cb5-167984729387b191a1-2"
-      ],
-      "custom_css": [
-        ".rich-text__blocks * {margin: 5px;}"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "inverse",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
     "slideshow",
     "featured_collection",
     "c49715ae-c7b2-4a37-abfb-5035e7a03838",
-    "our_collection_list",
-    "be6ecc53-5aae-427c-a7d9-720609cb0cb5"
+    "our_collection_list"
   ]
 }

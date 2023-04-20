@@ -87,5 +87,15 @@
 @media screen and (min-width: 990px) {
   .our-collections-list-title {
     width: 55%;
+    padding: .3rem 0;
+  }
+
+  .our-collections-list-image__img {
+    pointer-events: none;
+  }
+
+  .our-collections-list-image:hover + .our-collections-list-title {
+    background-color: #000;
+    color: #fff;
   }
 }

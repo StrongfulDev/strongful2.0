@@ -431,6 +431,7 @@ slider-component.slider-component-full-width {
 @media screen and (min-width: 990px) {
     .collection .slider--desktop.product-grid {
         scroll-padding-left: 0rem;
+        width: 100%;
     }
 
     .slider-component-full-width .slider--desktop .slider__slide:first-child {
