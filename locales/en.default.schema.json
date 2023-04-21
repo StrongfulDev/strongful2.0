@@ -1168,8 +1168,14 @@
             "blog_url": {
               "label": "Block Link"
             },
+            "alist_url": {
+              "label": "Loyalty Block Link"
+            },
             "image_picker_label": {
               "label": "Upload Image"
+            },
+            "blog_text": {
+              "label": "Loyalty Block Caption"
             },
             "blog_text": {
               "label": "First Block Caption"

@@ -797,7 +797,7 @@ noscript .localization-selector.link {
 
 .footer_policy_link {
     color: var(--color-base-background-2);
-    font-size: var(--font-body-size-small);
+    font-size: var(--font-body-size-smallest);
     text-decoration: none;
 }
 
@@ -815,6 +815,10 @@ noscript .localization-selector.link {
 
 .footer__content-bottom {
     padding: 1em 4em 2em;
+}
+
+.policies_link_list {
+    padding-top: 1.5rem;
 }
 
 @media screen and (min-width: 990px) {

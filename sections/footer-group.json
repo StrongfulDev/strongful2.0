@@ -41,9 +41,12 @@
           "type": "blog_and_newsletter",
           "settings": {
             "blog_and_newsletter_subtitle": "More about Strongful",
+            "alist_image": "shopify:\/\/shop_images\/2G6A2988_1.jpg",
             "blog_image": "shopify:\/\/shop_images\/venture.jpg",
+            "alist_url": "shopify:\/\/pages\/a-list",
             "blog_url": "shopify:\/\/blogs\/blog",
             "newsletter_image": "shopify:\/\/shop_images\/2G6A2988_1.jpg",
+            "alist_text": "ALIST CLUB",
             "blog_text": "BLOG",
             "newsletter_text": "EMAIL SIGN UP"
           }
@@ -79,23 +82,9 @@
         "padding_top": 36,
         "padding_bottom": 0
       }
-    },
-    "2773d804-d49b-4c66-9299-f6beec948934": {
-      "type": "custom-liquid",
-      "custom_css": [
-        ".mobile-terms {text-align: center;}",
-        ".mediniut {font-size: 10px; color: gray; display: inline; text-decoration: none;}"
-      ],
-      "settings": {
-        "custom_liquid": "<div class=\"mobile-terms hebrewFont\">\n      <a href=\"\/blogs\/תקנונים\/תקנון-האתר\" class=\"mediniut\">תקנון האתר<\/a>\n      <a href=\"\/blogs\/תקנונים\/מדיניות-הפרטיות\" class=\"mediniut\">מדיניות הפרטיות<\/a>\n      <a class=\"mediniut\" href=\"\/blogs\/%D7%AA%D7%A7%D7%A0%D7%95%D7%A0%D7%99%D7%9D\/%D7%94%D7%A6%D7%94%D7%A8%D7%AA-%D7%A0%D7%92%D7%99%D7%A9%D7%95%D7%AA\">הצהרת נגישות<\/a>\n    <\/div>",
-        "color_scheme": "background-1",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
     }
   },
   "order": [
-    "footer",
-    "2773d804-d49b-4c66-9299-f6beec948934"
+    "footer"
   ]
 }

@@ -1,5 +1,6 @@
 {% comment %}theme-check-disable UndefinedObject{% endcomment %}
 {{ 'section-footer.css' | asset_url | stylesheet_tag }}
+{{ 'section-footer.js' | asset_url | script_tag }}
 <link rel="stylesheet" href="{{ 'component-newsletter.css' | asset_url }}" media="print"
       onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="print"
@@ -80,7 +81,7 @@
                     -%}
                     <div class="footer__blocks-wrapper grid {{ footer_grid_class }} fix-direction">
                         {%- for block in section.blocks -%}
-                            <div class="footer-block {%- if section.settings.equal_grid -%}grid__item{%- else -%}grid__item--custom{%- endif -%}{% if block.type == 'link_list' %} footer-block--menu fix-direction{% endif %}" {{ block.shopify_attributes }}>
+                            <div class="footer-block {%- if section.settings.equal_grid -%}grid__item{%- else -%}grid__item--custom{%- endif -%}{% if block.type == 'link_list' %} footer-block--menu fix-direction{% endif %} {{ block.type }}" {{ block.shopify_attributes }}>
                                 {%- case block.type -%}
                                     {%- when '@app' -%}
                                         {%- if block.settings.heading != blank -%}
@@ -203,11 +204,11 @@
                                               {{ block.settings.blog_and_newsletter_subtitle }}
                                             </h2>
                                             <div class="blog_and_newsletter-grid">
-                                              <a href="{{ block.settings.blog_url }}" class="blog-link">
+                                              <a href="{{ block.settings.alist_url }}" class="blog-link">
                                                 <img
-                                                  srcset="{{ block.settings.blog_image | image_url: width: block.settings.image_width }}, {{ block.settings.blog_image | image_url: width: image_size_2x }} 2x"
-                                                  src="{{ block.settings.blog_image | image_url: width: 760 }}"
-                                                  alt="{{ block.settings.blog_image.alt | escape }}"
+                                                  srcset="{{ block.settings.alist_image | image_url: width: block.settings.image_width }}, {{ block.settings.alist_image | image_url: width: image_size_2x }} 2x"
+                                                  src="{{ block.settings.alist_image | image_url: width: 760 }}"
+                                                  alt="{{ block.settings.alist_image.alt | escape }}"
                                                   loading="lazy" width="100" height="100"
                                                   class="blog_and_newsletter_image"
                                                 />
@@ -217,10 +218,20 @@
                                                             src="{{ block.settings.newsletter_image | image_url: width: 760 }}"
                                                             alt="{{ block.settings.newsletter_image.alt | escape }}"
                                                             loading="lazy" width="100" height="100"
-                                                            class="blog_and_newsletter_image"
+                                                            class="blog_and_newsletter_image newsletter-image"
                                                     >
-                                              <p class="blog_and_newsletter_text blog_text">{{ block.settings.blog_text }}</p>
+                                              <a href="{{ block.settings.blog_url }}" class="blog-link desktop--only">
+                                                <img
+                                                  srcset="{{ block.settings.blog_image | image_url: width: block.settings.image_width }}, {{ block.settings.blog_image | image_url: width: image_size_2x }} 2x"
+                                                  src="{{ block.settings.blog_image | image_url: width: 760 }}"
+                                                  alt="{{ block.settings.blog_image.alt | escape }}"
+                                                  loading="lazy" width="100" height="100"
+                                                  class="blog_and_newsletter_image desktop--only"
+                                                />
+                                              </a>
+                                              <p class="blog_and_newsletter_text alist_text">{{ block.settings.alist_text }}</p>
                                               <p class="blog_and_newsletter_text newsletter_text">{{ block.settings.newsletter_text }}</p>
+                                              <p class="blog_and_newsletter_text blog_text desktop--only">{{ block.settings.blog_text }}</p>
                                             </div>
                                           </div>
                                     {%- when 'policies_link_list' -%}
@@ -609,8 +620,18 @@ customElements.define('localization-form', LocalizationForm);
         },
         {
           "type": "image_picker",
+          "id": "alist_image",
+          "label": "t:sections.footer.blocks.blog_and_newsletter.settings.image_picker_label.label"
+        },
+        {
+          "type": "image_picker",
           "id": "blog_image",
           "label": "t:sections.footer.blocks.blog_and_newsletter.settings.image_picker_label.label"
+        },
+        {
+          "type": "url",
+          "id": "alist_url",
+          "label": "t:sections.footer.blocks.blog_and_newsletter.settings.alist_url.label"
         },
         {
           "type": "url",
@@ -621,6 +642,12 @@ customElements.define('localization-form', LocalizationForm);
           "type": "image_picker",
           "id": "newsletter_image",
           "label": "t:sections.footer.blocks.blog_and_newsletter.settings.image_picker_label.label"
+        },
+        {
+          "type": "text",
+          "id": "alist_text",
+          "label": "t:sections.footer.blocks.blog_and_newsletter.settings.alist_text.label",
+          "default": "Loaylty program"
         },
         {
           "type": "text",

@@ -2996,7 +2996,7 @@ fieldset {
 
 /* Custom Styles starting 12.4.23 */
 
-.desktop--hidden {
+.desktop--only {
     display: none;
 }
 
@@ -3020,7 +3020,7 @@ fieldset {
         display: none;
     }
 
-    .desktop--hidden {
+    .desktop--only {
         display: block;
     }
 }
