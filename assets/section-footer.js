@@ -11,4 +11,4 @@
     }
   }
   
-  document.querySelector('.blog_and_newsletter_image.newsletter-image').addEventListener('click', openNews);
+  document.querySelector('.newsletter-image').addEventListener('click', openNews);
