@@ -1200,6 +1200,26 @@
               "label": "Subtext"
             }
           }
+        },
+        "policies_link_list": {
+          "name": "Policies",
+          "settings": {
+            "policies_text_align": {
+              "label": "Heading align",
+              "options__1": {
+                "label": "Left"
+              },
+              "options__2": {
+                "label": "Center"
+              },
+              "options__3": {
+                "label": "Right"
+              }
+            },
+            "menu": {
+              "label": "Menu"
+            }
+          }
         }
       },
       "settings": {
