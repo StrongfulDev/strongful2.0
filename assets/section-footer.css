@@ -817,10 +817,6 @@ noscript .localization-selector.link {
     padding: 1em 4em 2em;
 }
 
-.policies_link_list {
-    padding-top: 1.5rem;
-}
-
 @media screen and (min-width: 990px) {
 
     .footer {
@@ -829,12 +825,14 @@ noscript .localization-selector.link {
 
     .footer .grid {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 3fr auto;
+        grid-template-columns: 1fr 1fr 1fr 3fr;
+        grid-template-rows: auto 1fr 1fr;
     }
 
     .footer__content-top {
-        max-width: max-content;
+        max-width: inherit;
         padding: 0 5% 5rem;
+        width: 100%;
     }
 
     .grid--4-col-desktop--custom {
@@ -860,7 +858,11 @@ noscript .localization-selector.link {
     }
 
     .footer__blocks-wrapper.grid.grid--5-col-tablet .footer-blockgrid__item:first-child {
-        grid-column: 1 / 7;
+        grid-column: 1 / -1;
+    }
+
+    .blog_and_newsletter-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 

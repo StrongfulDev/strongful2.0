@@ -1056,6 +1056,7 @@ customElements.define('product-recommendations', ProductRecommendations);
 
 // Custom Scripts by Yahav
 
+// check if collection page and hide the availability filters because they are default true
 if (document.querySelector('.facets') != null) {
   document.getElementById('Filter-filter.v.availability-mobile-1').checked = true;
 
