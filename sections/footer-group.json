@@ -41,12 +41,9 @@
           "type": "blog_and_newsletter",
           "settings": {
             "blog_and_newsletter_subtitle": "More about Strongful",
-            "alist_image": "shopify:\/\/shop_images\/2G6A2988_1.jpg",
             "blog_image": "shopify:\/\/shop_images\/venture.jpg",
-            "alist_url": "shopify:\/\/pages\/a-list",
             "blog_url": "shopify:\/\/blogs\/blog",
             "newsletter_image": "shopify:\/\/shop_images\/2G6A2988_1.jpg",
-            "alist_text": "ALIST CLUB",
             "blog_text": "BLOG",
             "newsletter_text": "EMAIL SIGN UP"
           }
