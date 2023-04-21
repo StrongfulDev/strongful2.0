@@ -18,7 +18,7 @@
           "settings": {
             "heading_align": "right",
             "heading": "תקנונים",
-            "menu": "footer"
+            "menu": "dawn-footer-menu-one"
           }
         },
         "e4b42b14-e340-4149-832d-ab58d53d94b3": {
@@ -26,7 +26,7 @@
           "settings": {
             "heading_align": "right",
             "heading": "אודות",
-            "menu": "footer"
+            "menu": "dawn-footer-menu-two"
           }
         },
         "a9419717-a674-44cb-a84f-430ad3fe645f": {
@@ -34,7 +34,7 @@
           "settings": {
             "heading_align": "right",
             "heading": "מידע כללי",
-            "menu": "footer"
+            "menu": "dawn-footer-menu-three"
           }
         },
         "e15dee1c-4bdd-418a-9693-c1ab21ffc12a": {
