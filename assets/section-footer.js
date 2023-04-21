@@ -1,7 +1,7 @@
 
-// Load newsletter form
+window.addEventListener("load", function(event) {
+  // Load newsletter form
   function openNews() {
-    console.log("click");
     if (window.screen.width < 990) { // mobile
       window._klOnsite = window._klOnsite || [];
       window._klOnsite.push(['openForm', 'S3pQAq']);
@@ -12,3 +12,4 @@
   }
   
   document.querySelector('.newsletter-image').addEventListener('click', openNews);
+});
