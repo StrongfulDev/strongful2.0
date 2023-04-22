@@ -194,14 +194,15 @@
         "other": "{{ product_count }} of {{ count }} products"
       },
       "product_count_simple": {
-        "one": "{{ count }} product",
-        "other": "{{ count }} products"
+        "one": "מוצר {{ count }}",
+        "other": "{{ count }} מוצרים"
       },
-      "reset": "Reset",
+      "reset": "איפוס",
       "sort_button": "Sort",
-      "sort_by_label": "Sort by:",
+      "sort_by_label": "סידור לפי:",
       "to": "To",
-      "clear_filter": "Remove filter"
+      "clear_filter": "Remove filter",
+      "product_type": "סוג מוצר"
     }
   },
   "templates": {

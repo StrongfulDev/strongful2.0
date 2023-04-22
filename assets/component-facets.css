@@ -1140,7 +1140,8 @@ input.mobile-facets__checkbox {
   visibility: visible;
 }
 
-.mobile-facets__close-button {
+.mobile-facets__close-button,
+.mobile-facets__submenu .mobile-facets__footer {
   display: none;
 }
 
@@ -1151,6 +1152,7 @@ input.mobile-facets__checkbox {
 .mobile-facets__label > svg {
   margin-right: 0;
   margin-left: 1.2rem;
+  align-items: center;
 }
 
 .mobile-facets__arrow, .mobile-facets__summary .icon-caret {
@@ -1175,6 +1177,11 @@ input.mobile-facets__checkbox {
   background-color: initial;
   border-radius: 50%;
   padding: 0;
-  margin-right: 12px;
+  margin-left: 12px;
   border: 1px solid #fff;
+}
+
+.mobile-facets__list {
+  display: flex;
+  flex-direction: column;
 }

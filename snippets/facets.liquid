@@ -649,7 +649,13 @@
                       >
                         <summary class="mobile-facets__summary focus-inset">
                           <div>
-                            <span>{{ filter.label | escape }}</span>
+                            <span>
+                              {%- if filter.label == "Product type" -%}
+                              {{ 'products.facets.product_type' | t }}
+                              {%- else -%}
+                              {{ filter.label | escape }}
+                              {%- endif -%}
+                            </span>
                             <span class="mobile-facets__arrow no-js-hidden">{% render 'icon-caret' %}</span>
                             <noscript>{% render 'icon-caret' %}</noscript>
                           </div>
@@ -715,9 +721,17 @@
                                   <span aria-hidden="true">{{ value.label | escape }} ({{ value.count }})</span>
                                   {%endcomment%}
                                   {% if filter.param_name contains "color" %}
-                                    <span class="color-round"></span>
+                                    <span class="color-round"></span>  
                                   {% endif %}
-                                <span aria-hidden="true" {% if filter.param_name contains "color" %}class="color-label"{%endif%}>{{ value.label | escape }}</span>
+                                <span aria-hidden="true" class="
+                                  {%- if filter.param_name contains "color" -%}
+                                    color-label 
+                                  {%- elsif filter.param_name contains 'מידה' -%}
+                                    size-label
+                                  {%- endif -%}"
+                                  >
+                                    {{- value.label | escape -}}
+                                  </span>
                                   <span class="visually-hidden">
                                     {{- value.label | escape }} (
                                     {%- if value.count == '1' -%}

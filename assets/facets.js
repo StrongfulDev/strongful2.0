@@ -284,16 +284,13 @@ customElements.define('facet-remove', FacetRemove);
     }
   }
 
-  // let colorLabels = document.querySelectorAll(".mobile-facets__label");
-  // let colorLabelsArray = Array.from(colorLabels).filter(label => label.htmlFor.includes("color"));
-
   let colorLabels = document.querySelectorAll(".color-label");
   let colorRounds = document.querySelectorAll(".color-round");
 
   for (let i = 0; i < colorLabels.length; i++) {
       let colorLabel = colorLabels[i];
       let colorRound = colorRounds[i];
-      switch (colorLabel.innerText) {
+      switch (colorLabel.innerHTML) {
           case "שחור":
               colorRound.style.backgroundColor = "#000000";
               break;
@@ -330,5 +327,36 @@ customElements.define('facet-remove', FacetRemove);
               default:
                 console.log("no color");
                 break;
+      }
+  }
+
+  let sizeLabels = document.querySelectorAll(".size-label");
+  for (let i = 0; i < sizeLabels.length; i++) {
+      let sizeLabel = sizeLabels[i];
+      switch (sizeLabel.innerHTML) {
+          case "XXS":
+              $(sizeLabel).closest(".mobile-facets__item").css("order", 1);
+              break;
+          case "XS":
+              $(sizeLabel).closest(".mobile-facets__item").css("order", 2);
+              break;
+          case "S":
+              $(sizeLabel).closest(".mobile-facets__item").css("order", 3);
+              break;
+          case "M":
+              $(sizeLabel).closest(".mobile-facets__item").css("order", 4);
+              break;
+          case "L":
+              $(sizeLabel).closest(".mobile-facets__item").css("order", 5);
+              break;
+          case "XL":
+              $(sizeLabel).closest(".mobile-facets__item").css("order", 6);
+              break;
+          case "XXL":
+              $(sizeLabel).closest(".mobile-facets__item").css("order", 7);
+              break;
+          case "XXXL":
+              $(sizeLabel).closest(".mobile-facets__item").css("order", 8);
+              break;
       }
   }
