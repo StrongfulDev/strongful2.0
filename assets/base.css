@@ -3038,3 +3038,11 @@ fieldset {
     text-decoration: none !important;
     cursor: not-allowed !important;
 }
+
+svg.icon.icon-cart {
+    fill: #000;
+}
+
+.header__icon, .header__icon--cart .icon {
+    width: 2.5rem;
+}

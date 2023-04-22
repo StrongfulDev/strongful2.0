@@ -903,7 +903,10 @@
                                 selected="selected"
                               {% endif %}
                             >
+                            {%comment%}
                               {{ option.name | escape }}
+                            {%endcomment%}
+                            {{ option.value | t }}
                             </option>
                           {%- endfor -%}
                         </select>
