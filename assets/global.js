@@ -1057,19 +1057,19 @@ customElements.define('product-recommendations', ProductRecommendations);
 // Custom Scripts by Yahav
 
 // check if collection page and hide the availability filters because they are default true
-if (document.querySelector('.facets') != null) {
-  document.getElementById('Filter-filter.v.availability-mobile-1').checked = true;
+// if (document.querySelector('.facets') != null) {
+//   document.getElementById('Filter-filter.v.availability-mobile-1').checked = true;
 
-  let url = new URL(window.location.href);
-  url.searchParams.set('filter.v.availability', '1');
-  window.history.pushState({}, '', url);
+//   let url = new URL(window.location.href);
+//   url.searchParams.set('filter.v.availability', '1');
+//   window.history.pushState({}, '', url);
 
-  let activeFilter = document.querySelectorAll('.active-facets__button-inner.button.button--tertiary');
-  for (let i = 0; i < activeFilter.length; i++) {
-    let filterText = activeFilter[i].innerText;
-    console.log(filterText);
-    if (filterText.includes('Availability: In stock')) {
-      $(activeFilter[i]).closest('facet-remove').hide();
-    }
-  }
-}
+//   let activeFilter = document.querySelectorAll('.active-facets__button-inner.button.button--tertiary');
+//   for (let i = 0; i < activeFilter.length; i++) {
+//     let filterText = activeFilter[i].innerText;
+//     console.log(filterText);
+//     if (filterText.includes('Availability: In stock')) {
+//       $(activeFilter[i]).closest('facet-remove').hide();
+//     }
+//   }
+// }
