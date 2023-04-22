@@ -1130,57 +1130,51 @@ input.mobile-facets__checkbox {
   align-items: center;
 }
 
-.mobile-facets__sort select {
-  display: none; /*hide original SELECT element: */
+.js .mobile-facets__submenu {
+  position: static;
+  transform: translate(0);
+  visibility: visible;
 }
 
-.select-selected {
-  background-color: #fff;
+.js .mobile-facets .submenu-open {
+  visibility: visible;
 }
 
-/* Style the arrow inside the select element: */
-.select-selected:after {
-  position: absolute;
-  content: "";
-  top: 14px;
-  right: 10px;
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  border-color: #fff transparent transparent transparent;
-}
-
-/* Point the arrow upwards when the select box is open (active): */
-.select-selected.select-arrow-active:after {
-  border-color: transparent transparent #fff transparent;
-  top: 7px;
-}
-
-/* style the items (options), including the selected item: */
-.select-items div,.select-selected {
-  color: #000;
-  padding: 8px 16px;
-  border: 1px solid transparent;
-  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-  cursor: pointer;
-}
-
-/* Style items (options): */
-.select-items {
-  position: absolute;
-  background-color: #fff;
-  top: 100%;
-  left: 0;
-  right: 0;
-  z-index: 99;
-}
-
-/* Hide the items when the select box is closed: */
-.select-hide {
+.mobile-facets__close-button {
   display: none;
 }
 
-.select-items div:hover, .same-as-selected {
-  background-color: rgba(0, 0, 0, 0.1);
+.mobile-facets__label {
+  padding: 1.5rem 2rem;
 }
 
+.mobile-facets__label > svg {
+  margin-right: 0;
+  margin-left: 1.2rem;
+}
+
+.mobile-facets__arrow, .mobile-facets__summary .icon-caret {
+  right: auto;
+  left: 1.5rem;
+}
+
+.mobile-facets__label > input[type='checkbox']:checked ~ .icon-checkmark {
+  right: 2.2rem;
+  left: auto;
+}
+
+input.mobile-facets__checkbox {
+  right: 2.1rem;
+  left: auto;
+}
+
+.color-round {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  background-color: initial;
+  border-radius: 50%;
+  padding: 0;
+  margin-right: 12px;
+  border: 1px solid #fff;
+}

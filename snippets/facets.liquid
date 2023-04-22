@@ -606,7 +606,7 @@
       </summary>
       <facet-filters-form>
         <form id="FacetFiltersFormMobile" class="mobile-facets">
-          <div class="mobile-facets__inner gradient">
+          <div class="mobile-facets__inner gradient fix-direction">
             <div class="mobile-facets__header">
               <div class="mobile-facets__header-inner">
                 <h2 class="mobile-facets__heading medium-hide large-up-hide">
@@ -650,7 +650,7 @@
                         <summary class="mobile-facets__summary focus-inset">
                           <div>
                             <span>{{ filter.label | escape }}</span>
-                            <span class="mobile-facets__arrow no-js-hidden">{% render 'icon-arrow' %}</span>
+                            <span class="mobile-facets__arrow no-js-hidden">{% render 'icon-caret' %}</span>
                             <noscript>{% render 'icon-caret' %}</noscript>
                           </div>
                         </summary>
@@ -711,7 +711,13 @@
                                     <path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
                                   </svg>
 
+                                  {%comment%}
                                   <span aria-hidden="true">{{ value.label | escape }} ({{ value.count }})</span>
+                                  {%endcomment%}
+                                  {% if filter.param_name contains "color" %}
+                                    <span class="color-round"></span>
+                                  {% endif %}
+                                <span aria-hidden="true" {% if filter.param_name contains "color" %}class="color-label"{%endif%}>{{ value.label | escape }}</span>
                                   <span class="visually-hidden">
                                     {{- value.label | escape }} (
                                     {%- if value.count == '1' -%}
@@ -756,7 +762,7 @@
                         <summary class="mobile-facets__summary focus-inset">
                           <div>
                             <span>{{ filter.label | escape }}</span>
-                            <span class="mobile-facets__arrow no-js-hidden">{% render 'icon-arrow' %}</span>
+                            <span class="mobile-facets__arrow no-js-hidden">{% render 'icon-caret' %}</span>
                             <noscript>{% render 'icon-caret' %}</noscript>
                           </div>
                         </summary>
