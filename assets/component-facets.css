@@ -1185,3 +1185,8 @@ input.mobile-facets__checkbox {
   display: flex;
   flex-direction: column;
 }
+
+.mobile-facets__sort .select .icon-caret {
+  right: auto;
+  left: 0;
+}
