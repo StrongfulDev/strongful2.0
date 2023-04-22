@@ -266,3 +266,22 @@ class FacetRemove extends HTMLElement {
 }
 
 customElements.define('facet-remove', FacetRemove);
+
+ document.getElementById('Filter-filter.v.availability-mobile-1').checked = true;
+
+  let customUrl = new URL(window.location.href);
+  customUrl.searchParams.set('filter.v.availability', '1');
+  window.history.pushState({}, '', customUrl);
+
+  if (customUrl.search === '?filter.v.availability=1') {
+   $("facet-remove").hide();
+   }
+
+  let activeFilter = document.querySelectorAll('.active-facets__button-inner.button.button--tertiary');
+  for (let i = 0; i < activeFilter.length; i++) {
+    let filterText = activeFilter[i].innerText;
+    console.log(filterText);
+    if (filterText.includes('Availability: In stock')) {
+      $(activeFilter[i]).closest('facet-remove').hide();
+    }
+  }

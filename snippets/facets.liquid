@@ -925,6 +925,28 @@
         </form>
       </facet-filters-form>
     </details>
+
+    <div class="select">
+                        <select
+                          name="sort_by"
+                          class="select__select"
+                          id="SortBy-mobile"
+                          aria-describedby="a11y-refresh-page-message"
+                        >
+                          {%- for option in results.sort_options -%}
+                            <option
+                              value="{{ option.value | escape }}"
+                              {% if option.value == sort_by %}
+                                selected="selected"
+                              {% endif %}
+                            >
+                              {{ option.name | escape }}
+                            </option>
+                          {%- endfor -%}
+                        </select>
+                        {% render 'icon-caret' %}
+                      </div>
+
   </menu-drawer>
 
   <div class="active-facets active-facets-mobile medium-hide large-up-hide">
