@@ -43,7 +43,9 @@
 
     <script src="{{ 'jquery-3.6.4.min.js' | asset_url }}" defer="defer"></script>
 
-    <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
+    <script
+      src="{{ 'constants.js' | asset_url }}"
+      defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
 
@@ -155,17 +157,25 @@
         ;
 
         --gradient-base-background-1: {% if settings.gradient_background_1 != blank %}
-          {{ settings.gradient_background_1 }}{% else %}
-          {{ settings.colors_background_1 }}{% endif %};
+          {{ settings.gradient_background_1 }}
+        {% else %}
+          {{ settings.colors_background_1 }}
+        {% endif %};
         --gradient-base-background-2: {% if settings.gradient_background_2 != blank %}
-          {{ settings.gradient_background_2 }}{% else %}
-          {{ settings.colors_background_2 }}{% endif %};
+          {{ settings.gradient_background_2 }}
+        {% else %}
+          {{ settings.colors_background_2 }}
+        {% endif %};
         --gradient-base-accent-1: {% if settings.gradient_accent_1 != blank %}
-          {{ settings.gradient_accent_1 }}{% else %}
-          {{ settings.colors_accent_1 }}{% endif %};
+          {{ settings.gradient_accent_1 }}
+        {% else %}
+          {{ settings.colors_accent_1 }}
+        {% endif %};
         --gradient-base-accent-2: {% if settings.gradient_accent_2 != blank %}
-          {{ settings.gradient_accent_2 }}{% else %}
-          {{ settings.colors_accent_2 }}{% endif %};
+          {{ settings.gradient_accent_2 }}
+        {% else %}
+          {{ settings.colors_accent_2 }}
+        {% endif %};
 
         --media-padding: {{ settings.media_padding }}
         px;
@@ -293,8 +303,10 @@
         --spacing-sections-desktop: {{ settings.spacing_sections }}
         px;
         --spacing-sections-mobile: {% if settings.spacing_sections < 24 %}
-          {{ settings.spacing_sections }}{% else %}
-          {{ settings.spacing_sections | times: 0.7 | round | at_least: 20 }}{% endif %}px;
+          {{ settings.spacing_sections }}
+        {% else %}
+          {{ settings.spacing_sections | times: 0.7 | round | at_least: 20 }}
+        {% endif %}px;
         --index-section-spacing: 3.5em;
 
         --grid-desktop-vertical-spacing: {{ settings.spacing_grid_vertical }}
@@ -327,10 +339,12 @@
         --buttons-radius: {{ settings.buttons_radius }}
         px;
         --buttons-radius-outset: {% if settings.buttons_radius > 0 %}
-          {{ settings.buttons_radius | plus: settings.buttons_border_thickness }}{% else %}
+          {{ settings.buttons_radius | plus: settings.buttons_border_thickness }}
+        {% else %}
           0{% endif %}px;
         --buttons-border-width: {% if settings.buttons_border_opacity > 0 %}
-          {{ settings.buttons_border_thickness }}{% else %}
+          {{ settings.buttons_border_thickness }}
+        {% else %}
           0{% endif %}px;
         --buttons-border-opacity: {{ settings.buttons_border_opacity | divided_by: 100.0 }}
         ;
@@ -360,14 +374,16 @@
         --inputs-shadow-horizontal-offset: {{ settings.inputs_shadow_horizontal_offset }}
         px;
         --inputs-margin-offset: {% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_opacity > 0 %}
-          {{ settings.inputs_shadow_vertical_offset | abs }}{% else %}
+          {{ settings.inputs_shadow_vertical_offset | abs }}
+        {% else %}
           0{% endif %}px;
         --inputs-shadow-vertical-offset: {{ settings.inputs_shadow_vertical_offset }}
         px;
         --inputs-shadow-blur-radius: {{ settings.inputs_shadow_blur }}
         px;
         --inputs-radius-outset: {% if settings.inputs_radius > 0 %}
-          {{ settings.inputs_radius | plus: settings.inputs_border_thickness }}{% else %}
+          {{ settings.inputs_radius | plus: settings.inputs_border_thickness }}
+        {% else %}
           0{% endif %}px;
 
         --variant-pills-radius: {{ settings.variant_pills_radius }}
@@ -387,6 +403,7 @@
 
         --font-size-menu-item: {{ settings.font_size_menu_item | default: "16" }}
         px;
+        --grid-spacing: 1rem;
       }
 
 

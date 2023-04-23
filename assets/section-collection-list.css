@@ -63,7 +63,6 @@
 .our-collections-list-image__img {
   width: 100%;
   height: fit-content;
-  object-fit: cover;
 }
 
 .our-collections-list-link {
@@ -82,6 +81,12 @@
   text-transform: uppercase;
   background: #fff;
   width: 80%;
+}
+
+.section-collection-list .collection-list:not(.slider) {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: var(--grid-spacing);
 }
 
 @media screen and (min-width: 990px) {

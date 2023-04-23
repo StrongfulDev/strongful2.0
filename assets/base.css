@@ -3060,3 +3060,12 @@ section.featured-collection {
     margin-top: var(--index-section-spacing) !important;
     margin-bottom: var(--index-section-spacing);
   }
+
+  .card .card__inner .card__media {
+    width: 100%;
+  }
+
+
+  .grid--peek .grid__item {
+    min-width: 42%;
+  }
