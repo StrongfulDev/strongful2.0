@@ -1,32 +1,30 @@
 [
   {
     "title": "Free Shipping",
-    "rule": {
-      "condition": {
-        "type": "CartAmount",
-        "operator": ">=",
-        "value": 210
-      },
-      "reward": {
-        "action": "set_shipping",
-        "active_class": "free_shipping",
-        "amount": 0
-      }
+    "condition": {
+      "type": "CartAmount",
+      "operator": ">=",
+      "value": 210
+    },
+    "reward": {
+      "action": "set_shipping",
+      "active_class": "free_shipping",
+      "amount": 0,
+      "value": 210
     }
   },
   {
     "title": "Give Free Bottle",
-    "rule": {
-      "condition": {
-        "type": "CartAmount",
-        "operator": ">=",
-        "value": 600
-      },
-      "reward": {
-        "action": "give_free_bottle",
-        "active_class": "free_bottle",
-        "amount": 0
-      }
+    "condition": {
+      "type": "CartAmount",
+      "operator": ">=",
+      "value": 600
+    },
+    "reward": {
+      "action": "give_free_bottle",
+      "active_class": "free_bottle",
+      "amount": 0,
+      "value": 600
     }
   }
 ]

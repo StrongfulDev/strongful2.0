@@ -6,12 +6,15 @@
 {% endcomment %}
 
 <script type="application/javascript">
+    function applyTranslation(key) {
+        return
+    }
     window.rewards_translation = {
         set_shipping: {
-            message: '{{ 'rewards.free_shipping.message' | t }}',
+            message: '{{ 'rewards.free_shipping.message_html' | t }}',
         },
         give_free_bottle: {
-            message: '{{ 'rewards.free_bottle.message' | t }}',
+            message: '{{ 'rewards.free_bottle.message_html' | t }}',
         }
     };
 </script>
@@ -80,16 +83,20 @@
                 </div>
 
                 <div class="rewards-section">
-                    <div class="reward-items">
-                        {% liquid
-                            assign free_shipping_text = 'sections.cart.rewards.free_shipping' | t
-                            assign upsell_text = 'sections.cart.rewards.upsell_text' | t
-                        %}
-                        {% render 'reward-item', icon: "lock", class: "free_shipping", title: free_shipping_text, active: false %}
-                        {% render 'reward-item', icon: "lock", class: "free_bottle", title: upsell_text, active: false %}
-                    </div>
-                    <div class="track-progress"></div>
-                    <div class="reward-text"></div>
+                    {% comment %}<cart-rewards>{% endcomment %}
+                        <div class="reward-items">
+                            {% liquid
+                                assign free_shipping_text = 'sections.cart.rewards.free_shipping' | t
+                                assign upsell_text = 'sections.cart.rewards.upsell_text' | t
+                            %}
+                            {% render 'reward-item', icon: "lock", class: "free_shipping", title: free_shipping_text, active: false %}
+                            {% render 'reward-item', icon: "lock", class: "free_bottle", title: upsell_text, active: false %}
+                        </div>
+                        <div class="track-progress">
+                            <span class="progress-value"></span>
+                        </div>
+                        <div class="reward-text"></div>
+                    {% comment %}</cart-rewards>{% endcomment %}
                 </div>
             </div>
 

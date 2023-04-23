@@ -413,18 +413,12 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
     flex-direction: column;
 }
 
-.track-progress .progress-item {
+.track-progress .progress-value {
     height: 100%;
-}
-
-.track-progress .progress-item.active {
     background-color: #0D3EE7;
+    border-radius: 25px;
 }
 
-.track-progress .progress-item:first-child {
-    border-radius: 0 25px 25px 0;
-}
-
-.track-progress .progress-item:last-child {
-    border-radius: 25px 0 0 25px;
+cart-drawer.loading .rewards-section {
+    visibility: hidden;
 }

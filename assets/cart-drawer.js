@@ -12,7 +12,13 @@ class CartDrawer extends HTMLElement {
         );
         this.setHeaderCartIconAccessibility();
 
-        this.checkRewards();
+        this.initRewards();
+    }
+
+    async initRewards() {
+        this.rewards = new CartRewards($(this));
+
+        await this.rewards.init();
     }
 
     setHeaderCartIconAccessibility() {
@@ -100,8 +106,6 @@ class CartDrawer extends HTMLElement {
         });
 
         setTimeout(() => {
-            this.checkRewards();
-
             this.querySelector("#CartDrawer-Overlay").addEventListener(
                 "click",
                 this.close.bind(this)
@@ -111,6 +115,7 @@ class CartDrawer extends HTMLElement {
     }
 
     getSectionInnerHTML(html, selector = ".shopify-section") {
+
         return new DOMParser()
             .parseFromString(html, "text/html")
             .querySelector(selector).innerHTML;
@@ -136,71 +141,6 @@ class CartDrawer extends HTMLElement {
 
     setActiveElement(element) {
         this.activeElement = element;
-    }
-
-    async checkRewards() {
-        jQuery.getJSON("/assets/cart-rewards-rules.json", (rule_items) => {
-            if (rule_items?.length > 0) {
-                for (let i = 0; i < rule_items.length; i++) {
-                    const rule_item = rule_items[i];
-                    this.checkAndApplyRule(rule_item);
-                }
-            }
-        });
-    }
-
-    async checkAndApplyRule(rule_item) {
-        let isActive = false;
-
-        switch (rule_item.rule.condition.type) {
-            case "CartAmount":
-                const cartTotal = await this.cartTotal();
-                if (
-                    !this.cartHasReward(rule_item.rule.reward) &&
-                    rule_item.rule.condition.operator === ">=" &&
-                    cartTotal >= rule_item.rule.condition.value
-                ) {
-                    isActive = true;
-                }
-                break;
-            case "CartItems":
-                break;
-        }
-
-        this.addProgress(rule_item.rule.reward, isActive);
-
-        if (isActive) {
-            this.activateReward(rule_item.rule.reward);
-        }
-
-        return isActive;
-    }
-
-    // TODO: make this more efficient by caching the response
-    cartTotal() {
-        return new Promise((resolve, reject) => {
-            jQuery.getJSON("/cart.js", function (cart) {
-                resolve(parseInt(cart.total_price / 100));
-            });
-        });
-    }
-
-    cartHasReward(reward) {
-        return $(`.reward-item.${reward.active_class}.active-reward`).length > 0;
-    }
-
-    activateReward(reward) {
-        const rewardMessage = $(`<span class="${reward.active_class}-message">${window.rewards_translation[reward.action]?.message}</span>`)
-        const progressItem = $(`<span class="${reward.active_class}-progress progress-item" style="flex: ${reward.weight}">&nbsp;</span>`)
-        $(`.reward-item.${reward.active_class}`).addClass("active-reward");
-        $('.rewards-section').find(".reward-text").append(rewardMessage);
-    }
-
-    addProgress(reward, isActive) {
-        const progressItemsCount = $(".progress-item").length;
-        const order = isActive ? "" : `order: ${progressItemsCount};`
-        const progressItem = $(`<span class="${reward.active_class}-progress progress-item ${isActive ? "active" : ""}" style="flex: ${reward.weight}; ${order}">&nbsp;</span>`)
-        $('.track-progress').append(progressItem);
     }
 }
 
