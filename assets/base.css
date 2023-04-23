@@ -3043,6 +3043,29 @@ svg.icon.icon-cart {
     fill: #000;
 }
 
+.header__icons {
+    column-gap: .8rem;
+}
+
 .header__icon, .header__icon--cart .icon {
     width: 2.5rem;
 }
+
+.cart-count-bubble {
+    bottom: 0;
+    left: 1.2em;
+}
+
+section.featured-collection {
+    margin-top: var(--index-section-spacing) !important;
+    margin-bottom: var(--index-section-spacing);
+  }
+
+  .card .card__inner .card__media {
+    width: 100%;
+  }
+
+
+  .grid--peek .grid__item {
+    min-width: 42%;
+  }
