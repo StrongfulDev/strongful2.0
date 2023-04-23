@@ -177,9 +177,6 @@
                                 <div class="menu-drawer__navigation-container">
                                     <nav class="menu-drawer__navigation">
                                         <div class="nav_top">
-                                            <img loading="lazy" class="hamburger-logo"
-                                                 src="https://cdn.shopify.com/s/files/1/0574/2995/0671/files/facebook_profile.png?v=1631624674"
-                                                 alt="Strongful's logo - The Black Lightning"/>
                                             <div class="mobile_menu">
                                                 {% for menu_item in section.settings.mobile_menu.links %}
                                                     <a href="{{ menu_item.url }}"
@@ -312,12 +309,12 @@
                                                 </li>
                                             {%- endfor -%}
                                         </ul>
-                                    </nav>
+                                    </nav> 
                                     <div class="menu-drawer__utility-links">
                                         {%- if section.settings.toggle_socials -%}
-                                            <div class="menu-drawer__account-social_icons">
-                                                {% render "social-icons" %}
-                                            </div>
+                                        <div class="menu-drawer__account-social_icons">
+                                            {% render "social-icons" %}
+                                        </div>
                                         {%- endif -%}
                                         {%- if shop.customer_accounts_enabled -%}
                                             <div class="menu-drawer__account-container">
@@ -678,7 +675,7 @@
 
         {%- if section.settings.menu != blank -%}
             {%- if section.settings.menu_type_desktop == 'dropdown' -%}
-                <nav class="header__inline-menu {{ section.settings.menu_position }}">
+                <nav class="header__inline-menu  {{ section.settings.menu_position }}">
                     <ul class="list-menu list-menu--inline" role="list">
                         {%- for link in section.settings.menu.links -%}
                             <li>
@@ -752,69 +749,60 @@
                                             <summary
                                                     class="header__menu-item list-menu__item link focus-inset">
                                                 <span {%- if link_child_active %} class="header__active-menu-item"{% endif %}>{{ block.settings.title | escape }}</span>
-                                                {% comment %}{% render 'icon-caret' %}{% endcomment %}
+                                                {% render 'icon-caret' %}
                                             </summary>
                                             <div id="MegaMenu-Content-{{ forloop.index }}"
                                                  class="mega-menu__content customizable fix-direction gradient motion-reduce global-settings-popup"
                                                  tabindex="-1">
-                                                <div class="item_body">
-                                                    <div class="item_list">
-                                                        <div class="item_header right">
-                                                            <span class="h3">
-                                                                {{ block.settings.title | escape }}
-                                                            </span>
-                                                        </div>
-                                                        <ul class="mega-menu__list{% if link_levels == 1 %} mega-menu__list--condensed{% endif %}"
-                                                            role="list">
-                                                            {%- for childlink in block.settings.menu.links -%}
-                                                                <li>
-                                                                    <a href="{{ childlink.url }}"
-                                                                       class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
-                                                                        {{ childlink.title | escape }}
-                                                                    </a>
-                                                                    {%- if childlink.links != blank -%}
-                                                                        <ul class="list-unstyled"
-                                                                            role="list">
-                                                                            {%- for grandchildlink in childlink.links -%}
-                                                                                <li>
-                                                                                    <a href="{{ grandchildlink.url }}"
-                                                                                       class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
-                                                                                        {{ grandchildlink.title | escape }}
-                                                                                    </a>
-                                                                                </li>
-                                                                            {%- endfor -%}
-                                                                        </ul>
-                                                                    {%- endif -%}
-                                                                </li>
-                                                            {%- endfor -%}
-                                                        </ul>
-                                                    </div>
-                                                    <div class="desktop_links_images">
-                                                        {% if block.settings.desktop_links_image_1 != nil %}
-                                                        <{% if block.settings.desktop_links_image_1_link != "" %}a href="{{ block.settings.desktop_links_image_1_link }}" {% else %}div class="desktop_links_image_1_container"{% endif %}>
-                                                            {%- assign height = block.settings.desktop_links_image_1.width | divided_by: block.settings.desktop_links_image_1.aspect_ratio | round -%}
-                                                            {{ block.settings.desktop_links_image_1 | image_url: width: 375 | image_tag:
+                                                <ul class="mega-menu__list page-width{% if link_levels == 1 %} mega-menu__list--condensed{% endif %}"
+                                                    role="list">
+                                                    {%- for childlink in block.settings.menu.links -%}
+                                                        <li>
+                                                            <a href="{{ childlink.url }}"
+                                                               class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                                                                {{ childlink.title | escape }}
+                                                            </a>
+                                                            {%- if childlink.links != blank -%}
+                                                                <ul class="list-unstyled"
+                                                                    role="list">
+                                                                    {%- for grandchildlink in childlink.links -%}
+                                                                        <li>
+                                                                            <a href="{{ grandchildlink.url }}"
+                                                                               class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
+                                                                                {{ grandchildlink.title | escape }}
+                                                                            </a>
+                                                                        </li>
+                                                                    {%- endfor -%}
+                                                                </ul>
+                                                            {%- endif -%}
+                                                        </li>
+                                                    {%- endfor -%}
+                                                </ul>
+                                                <div class="desktop_links_images">
+                                                    {% if block.settings.desktop_links_image_1 != nil %}
+                                                    <{% if block.settings.desktop_links_image_1_link != "" %}a href="{{ block.settings.desktop_links_image_1_link }}" {% else %}div class="desktop_links_image_1_container"{% endif %}>
+                                                        {%- assign height = block.settings.desktop_links_image_1.width | divided_by: block.settings.desktop_links_image_1.aspect_ratio | round -%}
+                                                        {{ block.settings.desktop_links_image_1 | image_url: width: 375 | image_tag:
+                                                        loading: 'lazy',
+                                                        height: height,
+                                                        class: "desktop_links_image_1",
+                                                        sizes: "100vw",
+                                                        widths: '375'
+                                                        }}
+                                                        </{% if block.settings.desktop_links_image_1_link != "" %}a{% else %}div{% endif %}>
+
+                                                        {% endif %}
+                                                        {% if block.settings.desktop_links_image_2 != nil %}
+                                                        <{% if block.settings.desktop_links_image_2_link != "" %}a href="{{ block.settings.desktop_links_image_2_link }}" {% else %}div class="desktop_links_image_2_container"{% endif %}>
+                                                            {%- assign height = block.settings.desktop_links_image_2.width | divided_by: block.settings.desktop_links_image_2.aspect_ratio | round -%}
+                                                            {{ block.settings.desktop_links_image_2 | image_url: width: 375 | image_tag:
                                                             loading: 'lazy',
                                                             height: height,
-                                                            class: "desktop_links_image_1",
                                                             sizes: "100vw",
                                                             widths: '375'
                                                             }}
-                                                            </{% if block.settings.desktop_links_image_1_link != "" %}a{% else %}div{% endif %}>
-
+                                                            </{% if block.settings.desktop_links_image_2_link != "" %}a{% else %}div{% endif %}>
                                                             {% endif %}
-                                                            {% if block.settings.desktop_links_image_2 != nil %}
-                                                            <{% if block.settings.desktop_links_image_2_link != "" %}a href="{{ block.settings.desktop_links_image_2_link }}" {% else %}div class="desktop_links_image_2_container"{% endif %}>
-                                                                {%- assign height = block.settings.desktop_links_image_2.width | divided_by: block.settings.desktop_links_image_2.aspect_ratio | round -%}
-                                                                {{ block.settings.desktop_links_image_2 | image_url: width: 375 | image_tag:
-                                                                loading: 'lazy',
-                                                                height: height,
-                                                                sizes: "100vw",
-                                                                widths: '375'
-                                                                }}
-                                                                </{% if block.settings.desktop_links_image_2_link != "" %}a{% else %}div{% endif %}>
-                                                                {% endif %}
-                                                    </div>
                                                 </div>
                                             </div>
                                         </details>
@@ -1062,65 +1050,65 @@
     {% javascript %}
 
     class StickyHeader extends HTMLElement {
-    constructor() {
-    super();
+        constructor() {
+        super();
     }
 
     connectedCallback() {
-    this.header = document.querySelector('.section-header');
-    this.headerIsAlwaysSticky = this.getAttribute('data-sticky-type') === 'always' ||
-    this.getAttribute('data-sticky-type') === 'reduce-logo-size';
-    this.headerBounds = {};
+        this.header = document.querySelector('.section-header');
+        this.headerIsAlwaysSticky = this.getAttribute('data-sticky-type') === 'always' ||
+        this.getAttribute('data-sticky-type') === 'reduce-logo-size';
+        this.headerBounds = {};
 
-    this.setHeaderHeight();
+        this.setHeaderHeight();
 
-    window.matchMedia('(max-width: 990px)').addEventListener('change',
-    this.setHeaderHeight.bind(this));
+        window.matchMedia('(max-width: 990px)').addEventListener('change',
+        this.setHeaderHeight.bind(this));
 
-    if (this.headerIsAlwaysSticky) {
-    this.header.classList.add('shopify-section-header-sticky');
-    };
+        if (this.headerIsAlwaysSticky) {
+            this.header.classList.add('shopify-section-header-sticky');
+        };
 
-    this.currentScrollTop = 0;
-    this.preventReveal = false;
-    this.predictiveSearch = this.querySelector('predictive-search');
+        this.currentScrollTop = 0;
+        this.preventReveal = false;
+        this.predictiveSearch = this.querySelector('predictive-search');
 
-    this.onScrollHandler = this.onScroll.bind(this);
-    this.hideHeaderOnScrollUp = () => this.preventReveal = true;
+        this.onScrollHandler = this.onScroll.bind(this);
+        this.hideHeaderOnScrollUp = () => this.preventReveal = true;
 
-    this.addEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
-    window.addEventListener('scroll', this.onScrollHandler, false);
+        this.addEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
+        window.addEventListener('scroll', this.onScrollHandler, false);
 
-    this.createObserver();
+        this.createObserver();
     }
 
     setHeaderHeight() {
-    document.documentElement.style.setProperty('--header-height', `${this.header.offsetHeight}px`);
+        document.documentElement.style.setProperty('--header-height', `${this.header.offsetHeight}px`);
     }
 
     disconnectedCallback() {
-    this.removeEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
-    window.removeEventListener('scroll', this.onScrollHandler);
+        this.removeEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
+        window.removeEventListener('scroll', this.onScrollHandler);
     }
 
     createObserver() {
-    let observer = new IntersectionObserver((entries, observer) => {
-    this.headerBounds = entries[0].intersectionRect;
-    observer.disconnect();
+        let observer = new IntersectionObserver((entries, observer) => {
+        this.headerBounds = entries[0].intersectionRect;
+        observer.disconnect();
     });
 
-    observer.observe(this.header);
+        observer.observe(this.header);
     }
 
     onScroll() {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
     if (this.predictiveSearch && this.predictiveSearch.isOpen) return;
 
     if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
-    this.header.classList.add('scrolled-past-header');
-    if (this.preventHide) return;
-    requestAnimationFrame(this.hide.bind(this));
+        this.header.classList.add('scrolled-past-header');
+            if (this.preventHide) return;
+                requestAnimationFrame(this.hide.bind(this));
     } else if (scrollTop < this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
     this.header.classList.add('scrolled-past-header');
     if (!this.preventReveal) {
@@ -1204,6 +1192,25 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </script>
 
     {%- if request.page_type == 'index' -%}
@@ -1227,312 +1234,312 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </script>
     {%- endif -%}
 
     {% schema %}
     {
-    "name":"t:sections.header.name",
-    "class":"section-header",
-    "settings":[
+  "name":"t:sections.header.name",
+  "class":"section-header",
+  "settings":[
     {
-    "type":"select",
-    "id":"color_scheme",
-    "options":[
-    {
-    "value":"accent-1",
-    "label":"t:sections.all.colors.accent_1.label"
+      "type":"select",
+      "id":"color_scheme",
+      "options":[
+        {
+          "value":"accent-1",
+          "label":"t:sections.all.colors.accent_1.label"
+        },
+        {
+          "value":"accent-2",
+          "label":"t:sections.all.colors.accent_2.label"
+        },
+        {
+          "value":"background-1",
+          "label":"t:sections.all.colors.background_1.label"
+        },
+        {
+          "value":"background-2",
+          "label":"t:sections.all.colors.background_2.label"
+        },
+        {
+          "value":"inverse",
+          "label":"t:sections.all.colors.inverse.label"
+        }
+      ],
+      "default":"background-1",
+      "label":"t:sections.all.colors.label"
     },
     {
-    "value":"accent-2",
-    "label":"t:sections.all.colors.accent_2.label"
+        "type": "checkbox",
+        "id": "toggle_socials",
+        "default": true,
+        "label": "Show social icons"
     },
     {
-    "value":"background-1",
-    "label":"t:sections.all.colors.background_1.label"
+      "type":"header",
+      "content":"t:sections.header.settings.logo_header.content"
     },
     {
-    "value":"background-2",
-    "label":"t:sections.all.colors.background_2.label"
+      "type":"paragraph",
+      "content":"t:sections.header.settings.logo_help.content"
     },
     {
-    "value":"inverse",
-    "label":"t:sections.all.colors.inverse.label"
+      "type":"select",
+      "id":"logo_position",
+      "options":[
+        {
+          "value":"top-left",
+          "label":"t:sections.header.settings.logo_position.options__2.label"
+        },
+        {
+          "value":"top-center",
+          "label":"t:sections.header.settings.logo_position.options__3.label"
+        },
+        {
+          "value":"middle-left",
+          "label":"t:sections.header.settings.logo_position.options__1.label"
+        },
+        {
+          "value":"middle-center",
+          "label":"t:sections.header.settings.logo_position.options__4.label"
+        }
+      ],
+      "default":"middle-left",
+      "label":"t:sections.header.settings.logo_position.label"
+    },
+    {
+      "type":"link_list",
+      "id":"menu",
+      "default":"main-menu",
+      "label":"t:sections.header.settings.menu.label"
+    },
+    {
+      "type":"select",
+      "id":"menu_type_desktop",
+      "options":[
+        {
+          "value":"dropdown",
+          "label":"t:sections.header.settings.menu_type_desktop.options__1.label"
+        },
+        {
+          "value":"mega",
+          "label":"t:sections.header.settings.menu_type_desktop.options__2.label"
+        },
+        {
+          "value":"customizable",
+          "label":"t:sections.header.settings.menu_type_desktop.options__3.label"
+        }
+      ],
+      "default":"dropdown",
+      "label":"t:sections.header.settings.menu_type_desktop.label",
+      "info":"t:sections.header.settings.menu_type_desktop.info"
+    },
+    {
+      "type":"select",
+      "id":"sticky_header_type",
+      "options":[
+        {
+          "value":"none",
+          "label":"t:sections.header.settings.sticky_header_type.options__1.label"
+        },
+        {
+          "value":"on-scroll-up",
+          "label":"t:sections.header.settings.sticky_header_type.options__2.label"
+        },
+        {
+          "value":"always",
+          "label":"t:sections.header.settings.sticky_header_type.options__3.label"
+        },
+        {
+          "value":"reduce-logo-size",
+          "label":"t:sections.header.settings.sticky_header_type.options__4.label"
+        }
+      ],
+      "default":"on-scroll-up",
+      "label":"t:sections.header.settings.sticky_header_type.label"
+    },
+    {
+      "type":"checkbox",
+      "id":"show_line_separator",
+      "default":true,
+      "label":"t:sections.header.settings.show_line_separator.label"
+    },
+    {
+      "type":"header",
+      "content":"t:sections.header.settings.mobile_layout.content"
+    },
+    {
+      "type":"link_list",
+      "id":"mobile_menu",
+      "label":"t:sections.header.settings.mobile_menu.label"
+    },
+    {
+      "type":"select",
+      "id":"mobile_logo_position",
+      "options":[
+        {
+          "value":"center",
+          "label":"t:sections.header.settings.mobile_logo_position.options__1.label"
+        },
+        {
+          "value":"left",
+          "label":"t:sections.header.settings.mobile_logo_position.options__2.label"
+        }
+      ],
+      "default":"center",
+      "label":"t:sections.header.settings.mobile_logo_position.label"
+    },
+    {
+      "type":"image_picker",
+      "id":"mobile_top_image_1",
+      "label":"t:sections.header.settings.mobile_top_section.image__1.label",
+      "info":"t:sections.header.settings.mobile_top_section.image__1.info"
+    },
+    {
+      "type":"text",
+      "id":"mobile_top_image_1_link",
+      "label":"t:sections.header.settings.mobile_top_section.image__1.link.label"
+    },
+    {
+      "type":"image_picker",
+      "id":"mobile_top_image_2",
+      "label":"t:sections.header.settings.mobile_top_section.image__2.label",
+      "info":"t:sections.header.settings.mobile_top_section.image__2.info"
+    },
+    {
+      "type":"text",
+      "id":"mobile_top_image_2_link",
+      "label":"t:sections.header.settings.mobile_top_section.image__2.link.label"
+    },
+    {
+      "type":"header",
+      "content":"t:sections.all.spacing"
+    },
+    {
+      "type":"range",
+      "id":"margin_bottom",
+      "min":0,
+      "max":100,
+      "step":4,
+      "unit":"px",
+      "label":"t:sections.header.settings.margin_bottom.label",
+      "default":0
+    },
+    {
+      "type":"header",
+      "content":"t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type":"range",
+      "id":"padding_top",
+      "min":0,
+      "max":36,
+      "step":4,
+      "unit":"px",
+      "label":"t:sections.all.padding.padding_top",
+      "default":20
+    },
+    {
+      "type":"range",
+      "id":"padding_bottom",
+      "min":0,
+      "max":36,
+      "step":4,
+      "unit":"px",
+      "label":"t:sections.all.padding.padding_bottom",
+      "default":20
     }
-    ],
-    "default":"background-1",
-    "label":"t:sections.all.colors.label"
-    },
+  ],
+  "blocks":[
     {
-    "type": "checkbox",
-    "id": "toggle_socials",
-    "default": true,
-    "label": "Show social icons"
-    },
-    {
-    "type":"header",
-    "content":"t:sections.header.settings.logo_header.content"
-    },
-    {
-    "type":"paragraph",
-    "content":"t:sections.header.settings.logo_help.content"
-    },
-    {
-    "type":"select",
-    "id":"logo_position",
-    "options":[
-    {
-    "value":"top-left",
-    "label":"t:sections.header.settings.logo_position.options__2.label"
-    },
-    {
-    "value":"top-center",
-    "label":"t:sections.header.settings.logo_position.options__3.label"
-    },
-    {
-    "value":"middle-left",
-    "label":"t:sections.header.settings.logo_position.options__1.label"
-    },
-    {
-    "value":"middle-center",
-    "label":"t:sections.header.settings.logo_position.options__4.label"
+      "type":"menu_item",
+      "name":"t:sections.header.blocks.menu_item.name",
+      "limit":20,
+      "settings":[
+        {
+          "type":"link_list",
+          "id":"menu",
+          "default":"main-menu",
+          "label":"t:sections.header.blocks.menu_item.settings.menu.label"
+        },
+        {
+          "type":"text",
+          "id":"title",
+          "label":"t:sections.header.blocks.menu_item.settings.title.label",
+          "info":"t:sections.header.blocks.menu_item.settings.title.info"
+        },
+        {
+          "type":"text",
+          "id":"title_link",
+          "label":"t:sections.header.blocks.menu_item.settings.title_link.label",
+          "info":"t:sections.header.blocks.menu_item.settings.title_link.info"
+        },
+        {
+          "type":"header",
+          "content":"t:sections.header.blocks.menu_item.settings.desktop.label"
+        },
+        {
+          "type":"image_picker",
+          "id":"desktop_links_image_1",
+          "label":"t:sections.header.blocks.menu_item.settings.desktop.links.image__1.label",
+          "info":"t:sections.header.blocks.menu_item.settings.desktop.links.image__1.info"
+        },
+        {
+          "type":"text",
+          "id":"desktop_links_image_1_link",
+          "label":"t:sections.header.blocks.menu_item.settings.desktop.links.image__1.link.label"
+        },
+        {
+          "type":"image_picker",
+          "id":"desktop_links_image_2",
+          "label":"t:sections.header.blocks.menu_item.settings.desktop.links.image__2.label",
+          "info":"t:sections.header.blocks.menu_item.settings.desktop.links.image__2.info"
+        },
+        {
+          "type":"text",
+          "id":"desktop_links_image_2_link",
+          "label":"t:sections.header.blocks.menu_item.settings.desktop.links.image__2.link.label"
+        },
+        {
+          "type":"header",
+          "content":"t:sections.header.blocks.menu_item.settings.mobile.label"
+        },
+        {
+          "type":"image_picker",
+          "id":"mobile_cover_image",
+          "label":"t:sections.header.blocks.menu_item.settings.mobile.cover_image.label",
+          "info":"t:sections.header.blocks.menu_item.settings.mobile.cover_image.info"
+        },
+        {
+          "type":"text",
+          "id":"mobile_title",
+          "label":"t:sections.header.blocks.menu_item.settings.mobile.title.label",
+          "info":"t:sections.header.blocks.menu_item.settings.mobile.title.info"
+        }
+      ]
     }
-    ],
-    "default":"middle-left",
-    "label":"t:sections.header.settings.logo_position.label"
-    },
-    {
-    "type":"link_list",
-    "id":"menu",
-    "default":"main-menu",
-    "label":"t:sections.header.settings.menu.label"
-    },
-    {
-    "type":"select",
-    "id":"menu_type_desktop",
-    "options":[
-    {
-    "value":"dropdown",
-    "label":"t:sections.header.settings.menu_type_desktop.options__1.label"
-    },
-    {
-    "value":"mega",
-    "label":"t:sections.header.settings.menu_type_desktop.options__2.label"
-    },
-    {
-    "value":"customizable",
-    "label":"t:sections.header.settings.menu_type_desktop.options__3.label"
-    }
-    ],
-    "default":"dropdown",
-    "label":"t:sections.header.settings.menu_type_desktop.label",
-    "info":"t:sections.header.settings.menu_type_desktop.info"
-    },
-    {
-    "type":"select",
-    "id":"menu_position",
-    "options":[
-    {
-    "value":"left",
-    "label":"t:sections.header.settings.menu_position.options__1.label"
-    },
-    {
-    "value":"center",
-    "label":"t:sections.header.settings.menu_position.options__2.label"
-    },
-    {
-    "value":"right",
-    "label":"t:sections.header.settings.menu_position.options__3.label"
-    }
-    ],
-    "default":"center",
-    "label":"t:sections.header.settings.menu_position.label"
-    },
-    {
-    "type":"select",
-    "id":"sticky_header_type",
-    "options":[
-    {
-    "value":"none",
-    "label":"t:sections.header.settings.sticky_header_type.options__1.label"
-    },
-    {
-    "value":"on-scroll-up",
-    "label":"t:sections.header.settings.sticky_header_type.options__2.label"
-    },
-    {
-    "value":"always",
-    "label":"t:sections.header.settings.sticky_header_type.options__3.label"
-    },
-    {
-    "value":"reduce-logo-size",
-    "label":"t:sections.header.settings.sticky_header_type.options__4.label"
-    }
-    ],
-    "default":"on-scroll-up",
-    "label":"t:sections.header.settings.sticky_header_type.label"
-    },
-    {
-    "type":"checkbox",
-    "id":"show_line_separator",
-    "default":true,
-    "label":"t:sections.header.settings.show_line_separator.label"
-    },
-    {
-    "type":"header",
-    "content":"t:sections.header.settings.mobile_layout.content"
-    },
-    {
-    "type":"link_list",
-    "id":"mobile_menu",
-    "label":"t:sections.header.settings.mobile_menu.label"
-    },
-    {
-    "type":"select",
-    "id":"mobile_logo_position",
-    "options":[
-    {
-    "value":"center",
-    "label":"t:sections.header.settings.mobile_logo_position.options__1.label"
-    },
-    {
-    "value":"left",
-    "label":"t:sections.header.settings.mobile_logo_position.options__2.label"
-    }
-    ],
-    "default":"center",
-    "label":"t:sections.header.settings.mobile_logo_position.label"
-    },
-    {
-    "type":"image_picker",
-    "id":"mobile_top_image_1",
-    "label":"t:sections.header.settings.mobile_top_section.image__1.label",
-    "info":"t:sections.header.settings.mobile_top_section.image__1.info"
-    },
-    {
-    "type":"text",
-    "id":"mobile_top_image_1_link",
-    "label":"t:sections.header.settings.mobile_top_section.image__1.link.label"
-    },
-    {
-    "type":"image_picker",
-    "id":"mobile_top_image_2",
-    "label":"t:sections.header.settings.mobile_top_section.image__2.label",
-    "info":"t:sections.header.settings.mobile_top_section.image__2.info"
-    },
-    {
-    "type":"text",
-    "id":"mobile_top_image_2_link",
-    "label":"t:sections.header.settings.mobile_top_section.image__2.link.label"
-    },
-    {
-    "type":"header",
-    "content":"t:sections.all.spacing"
-    },
-    {
-    "type":"range",
-    "id":"margin_bottom",
-    "min":0,
-    "max":100,
-    "step":4,
-    "unit":"px",
-    "label":"t:sections.header.settings.margin_bottom.label",
-    "default":0
-    },
-    {
-    "type":"header",
-    "content":"t:sections.all.padding.section_padding_heading"
-    },
-    {
-    "type":"range",
-    "id":"padding_top",
-    "min":0,
-    "max":36,
-    "step":4,
-    "unit":"px",
-    "label":"t:sections.all.padding.padding_top",
-    "default":20
-    },
-    {
-    "type":"range",
-    "id":"padding_bottom",
-    "min":0,
-    "max":36,
-    "step":4,
-    "unit":"px",
-    "label":"t:sections.all.padding.padding_bottom",
-    "default":20
-    }
-    ],
-    "blocks":[
-    {
-    "type":"menu_item",
-    "name":"t:sections.header.blocks.menu_item.name",
-    "limit":20,
-    "settings":[
-    {
-    "type":"link_list",
-    "id":"menu",
-    "default":"main-menu",
-    "label":"t:sections.header.blocks.menu_item.settings.menu.label"
-    },
-    {
-    "type":"text",
-    "id":"title",
-    "label":"t:sections.header.blocks.menu_item.settings.title.label",
-    "info":"t:sections.header.blocks.menu_item.settings.title.info"
-    },
-    {
-    "type":"text",
-    "id":"title_link",
-    "label":"t:sections.header.blocks.menu_item.settings.title_link.label",
-    "info":"t:sections.header.blocks.menu_item.settings.title_link.info"
-    },
-    {
-    "type":"header",
-    "content":"t:sections.header.blocks.menu_item.settings.desktop.label"
-    },
-    {
-    "type":"image_picker",
-    "id":"desktop_links_image_1",
-    "label":"t:sections.header.blocks.menu_item.settings.desktop.links.image__1.label",
-    "info":"t:sections.header.blocks.menu_item.settings.desktop.links.image__1.info"
-    },
-    {
-    "type":"text",
-    "id":"desktop_links_image_1_link",
-    "label":"t:sections.header.blocks.menu_item.settings.desktop.links.image__1.link.label"
-    },
-    {
-    "type":"image_picker",
-    "id":"desktop_links_image_2",
-    "label":"t:sections.header.blocks.menu_item.settings.desktop.links.image__2.label",
-    "info":"t:sections.header.blocks.menu_item.settings.desktop.links.image__2.info"
-    },
-    {
-    "type":"text",
-    "id":"desktop_links_image_2_link",
-    "label":"t:sections.header.blocks.menu_item.settings.desktop.links.image__2.link.label"
-    },
-    {
-    "type":"header",
-    "content":"t:sections.header.blocks.menu_item.settings.mobile.label"
-    },
-    {
-    "type":"image_picker",
-    "id":"mobile_cover_image",
-    "label":"t:sections.header.blocks.menu_item.settings.mobile.cover_image.label",
-    "info":"t:sections.header.blocks.menu_item.settings.mobile.cover_image.info"
-    },
-    {
-    "type":"text",
-    "id":"mobile_title",
-    "label":"t:sections.header.blocks.menu_item.settings.mobile.title.label",
-    "info":"t:sections.header.blocks.menu_item.settings.mobile.title.info"
-    }
-    ]
-    }
-    ]
-    }
+  ]
+}
 
 {% endschema %}

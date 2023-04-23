@@ -766,23 +766,6 @@
               "label": "Collection"
             }
           }
-        },
-        "image": {
-          "name": "Image",
-          "settings": {
-            "image": {
-              "label": "Image"
-            },
-            "alt": {
-              "label": "alt"
-            },
-            "link": {
-              "label": "link"
-            },
-            "url": {
-              "label": "url"
-            }
-          }
         }
       },
       "presets": {
@@ -1168,14 +1151,8 @@
             "blog_url": {
               "label": "Block Link"
             },
-            "alist_url": {
-              "label": "Loyalty Block Link"
-            },
             "image_picker_label": {
               "label": "Upload Image"
-            },
-            "blog_text": {
-              "label": "Loyalty Block Caption"
             },
             "blog_text": {
               "label": "First Block Caption"
@@ -1204,26 +1181,6 @@
             },
             "subtext": {
               "label": "Subtext"
-            }
-          }
-        },
-        "policies_link_list": {
-          "name": "Policies",
-          "settings": {
-            "policies_text_align": {
-              "label": "Heading align",
-              "options__1": {
-                "label": "Left"
-              },
-              "options__2": {
-                "label": "Center"
-              },
-              "options__3": {
-                "label": "Right"
-              }
-            },
-            "menu": {
-              "label": "Menu"
             }
           }
         }
@@ -2096,21 +2053,6 @@
           },
           "info": "Drawer is the default mobile layout."
         },
-        "card_header_size": {
-          "label": "Card header size",
-          "options__1": {
-            "label": "h2"
-          },
-          "options__2": {
-            "label": "h3"
-          },
-          "options__3": {
-            "label": "h4"
-          },
-          "options__4": {
-            "label": "h5"
-          }
-        },
         "enable_sorting": {
           "label": "Enable sorting"
         },
@@ -2319,20 +2261,6 @@
         },
         "price": {
           "name": "Price"
-        },
-        "image": {
-          "name": "Image",
-          "settings": {
-            "image_picker": {
-              "label": "Image"
-            },
-            "image_link": {
-              "label": "Link to"
-            },
-            "mobile_section": {
-              "label": "Mobile section"
-            }
-          }
         },
         "inventory": {
           "name": "Inventory status",

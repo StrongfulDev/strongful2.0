@@ -1,0 +1,29 @@
+{% comment %}
+  Presents a reward item.
+  Which indicates what rewards the customer receives for the purchase.
+
+  Accepts:
+  - icon: the icon to be displayed
+  - title: the title of the reward
+  - active: whether the reward is active or not
+  - class (optional): additional classes to be added to the reward item
+
+  Usage:
+  {% render 'reward-item',
+    icon: 'icon',
+    title: 'title',
+    active: true,
+    class: 'additional-class'
+  %}
+{% endcomment %}
+
+<span class="reward-item {{ class }} {% if active %}active-reward{% endif %}">
+  {%comment%} render a snippet with the icon parameter {%endcomment%}
+  {% case icon %}
+  {% when 'lock' %}
+    {% render 'icon-lock' %}
+  {% when 'reward' %}
+    {% render 'icon-reward' %}
+  {% endcase %}
+  <span class="reward-item__title">{{ title }}</span>
+</span>
