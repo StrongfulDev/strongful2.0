@@ -9,7 +9,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/9ed861fba4dae099b0b04754bbc299cc.png",
-            "image_width": 55,
+            "image_width": 50,
             "alignment": "center"
           }
         },
@@ -86,7 +86,7 @@
         "payment_enable": true,
         "show_policy": false,
         "margin_top": 40,
-        "padding_top": 36,
+        "padding_top": 0,
         "padding_bottom": 0
       }
     }

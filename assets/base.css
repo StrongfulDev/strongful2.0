@@ -3065,7 +3065,12 @@ section.featured-collection {
     width: 100%;
   }
 
-
   .grid--peek .grid__item {
     min-width: 42%;
   }
+
+  .section + .section {
+    margin-top: var(--index-section-spacing);
+    margin-bottom: var(--index-section-spacing);
+  }
+

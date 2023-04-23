@@ -409,7 +409,6 @@
 
           {{ settings.spacing_sections | times: 0.7 | round | at_least: 20 }}
         {% endif %}px;
-        --spacing-sections-mobile-custom: 3.5rem;
         --index-section-spacing: 3.5em;
 
         --grid-desktop-vertical-spacing: {{ settings.spacing_grid_vertical }}
@@ -552,6 +551,7 @@
         --font-size-menu-item: {{ settings.font_size_menu_item | default: "16" }}
         px;
         --grid-spacing: 1rem;
+        --heading-margin: 1rem;
       }
 
 
