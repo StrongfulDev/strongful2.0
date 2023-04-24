@@ -74,6 +74,11 @@
     flex-wrap: wrap;
 }
 
+.product-size-picker-container .price--on-sale .price__sale {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
 .price--center {
     display: initial;
     justify-content: center;

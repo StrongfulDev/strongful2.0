@@ -80,7 +80,7 @@ if (!customElements.get('quick-add-modal')) {
 
     preventDuplicatedIDs() {
       const sectionId = this.productElement.dataset.section;
-      this.productElement.innerHTML = this.productElement.innerHTML.replaceAll(sectionId, `quickadd-${ sectionId }`);
+      this.productElement.innerHTML = this.productElement.innerHTML.replaceAll(sectionId, `quickadd-${sectionId}`);
       this.productElement.querySelectorAll('variant-selects, variant-radios, product-info').forEach((element) => {
         element.dataset.originalSection = sectionId;
       });
@@ -103,7 +103,7 @@ if (!customElements.get('quick-add-modal')) {
       if (!mediaImages.length) return;
 
       let mediaImageSizes = '(min-width: 1000px) 715px, (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw - 4rem)';
-      
+
       if (product.classList.contains('product--medium')) {
         mediaImageSizes = mediaImageSizes.replace('715px', '605px');
       } else if (product.classList.contains('product--small')) {

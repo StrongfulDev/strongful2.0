@@ -517,11 +517,17 @@
             "show_mobile": {
               "label": "Show on mobile"
             },
-            "text": {
-              "label": "Text"
+            "toggle_main_font": {
+              "label": "Toggle main font from Hebrew to English"
             },
-            "mobile_text": {
-              "label": "Mobile text"
+            "toggle_sub_font": {
+              "label": "Toggle sub font from Hebrew to English"
+            },
+            "main_text": {
+              "label": "Main text"
+            },
+            "sub_text": {
+              "label": "Sub text"
             },
             "text_alignment": {
               "label": "Text alignment",
@@ -533,6 +539,15 @@
               },
               "options__3": {
                 "label": "Right"
+              }
+            },
+            "text_direction": {
+              "label": "Text direction",
+              "options__1": {
+                "label": "Left To Right"
+              },
+              "options__2": {
+                "label": "Right To Left"
               }
             },
             "link": {

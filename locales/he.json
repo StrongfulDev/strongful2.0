@@ -174,13 +174,13 @@
       "label": "Media gallery"
     },
     "facets": {
-      "apply": "Apply",
-      "clear": "Clear",
+      "apply": "מימוש",
+      "clear": "איפוס",
       "clear_all": "Remove all",
       "from": "From",
-      "filter_and_sort": "Filter and sort",
-      "filter_by_label": "Filter:",
-      "filter_button": "Filter",
+      "filter_and_sort": "פילטר",
+      "filter_by_label": "פילטר:",
+      "filter_button": "פילטר",
       "filters_selected": {
         "one": "{{ count }} selected",
         "other": "{{ count }} selected"
@@ -194,14 +194,25 @@
         "other": "{{ product_count }} of {{ count }} products"
       },
       "product_count_simple": {
-        "one": "{{ count }} product",
-        "other": "{{ count }} products"
+        "one": "מוצר {{ count }}",
+        "other": "{{ count }} מוצרים"
       },
-      "reset": "Reset",
+      "reset": "איפוס",
       "sort_button": "Sort",
-      "sort_by_label": "Sort by:",
+      "sort_by_label": "סידור לפי:",
       "to": "To",
-      "clear_filter": "Remove filter"
+      "clear_filter": "Remove filter",
+      "product_type": "סוג מוצר",
+      "filters": {
+        "manual": "מומלץ",
+        "best-selling": "הנמכרים ביותר",
+        "title-ascending": "מא׳ עד ת׳",
+        "title-descending": "מת׳ עד א׳",
+        "price-ascending": "מחיר, מהנמוך לגבוה",
+        "price-descending": "מחיר, מהגבוה לנמוך",
+        "created-ascending": "תאריך, מהחדש לישן",
+        "created-descending": "תאריך, מהישן לחדש"
+      }
     }
   },
   "templates": {
@@ -290,11 +301,6 @@
       "login": {
         "title": "Have an account?",
         "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Log in<\/a> to check out faster."
-      },
-      "rewards": {
-        "title": "Earn rewards",
-        "free_shipping": "Free shipping",
-        "upsell_text": "בקבוק מתנה"
       }
     },
     "footer": {

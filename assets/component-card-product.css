@@ -21,8 +21,7 @@
 .product-size-picker-container {
     background-color: rgba(var(--color-background), 0.8);
     padding: 20px;
-    width: 90%;
-    margin: 0 auto;
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -99,4 +98,8 @@
     font-weight: 700;
     display: inline-block;
     margin: 5px 0 0;
+}
+
+.product-size-picker {
+    padding: 0 20px;
 }

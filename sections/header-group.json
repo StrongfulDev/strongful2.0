@@ -8,11 +8,13 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "show_mobile": true,
-            "text": "<p><strong>20% הנחה בהרשמה למועדון הלקוחות<\/strong><\/p><p>הירשמי עכשיו בחינם<\/p>",
+            "toggle_main_font": false,
+            "toggle_sub_font": false,
+            "main_text": "20% הנחה בהרשמה למועדון הלקוחות",
+            "sub_text": "הירשמי עכשיו בחינם",
             "text_alignment": "center",
-            "mobile_text": "<p><strong>20% הנחה בהרשמה למועדון הלקוחות<\/strong><\/p><p>הירשמי עכשיו בחינם<\/p>",
-            "mobile_text_alignment": "center",
+            "main_text_direction": "rtl",
+            "sub_text_direction": "rtl",
             "link": "shopify:\/\/pages\/a-list",
             "color_scheme": "accent-1"
           }
@@ -20,23 +22,27 @@
         "7c37c998-83a9-46d6-91fd-3ceaaab10008": {
           "type": "announcement",
           "settings": {
-            "show_mobile": true,
-            "text": "<p><strong>NEW - LIMITED EDITION<\/strong><\/p><p>GRAY AURA<\/p>",
+            "toggle_main_font": true,
+            "toggle_sub_font": true,
+            "main_text": "UP TO 30% OFF",
+            "sub_text": "ON SELECTED ITEMS",
             "text_alignment": "center",
-            "mobile_text": "<p><strong>NEW - LIMITED EDITION<\/strong><\/p><p>GRAY AURA<\/p>",
-            "mobile_text_alignment": "center",
-            "link": "shopify:\/\/collections\/aura",
+            "main_text_direction": "ltr",
+            "sub_text_direction": "ltr",
+            "link": "shopify:\/\/collections\/upto30",
             "color_scheme": "accent-1"
           }
         },
         "8a66318a-92fb-4fe3-8af2-41e36854cfdb": {
           "type": "announcement",
           "settings": {
-            "show_mobile": true,
-            "text": "<p><strong>החלפות חינם<\/strong><\/p><p>עם שליח עד הבית בכל הזמנה<\/p>",
+            "toggle_main_font": false,
+            "toggle_sub_font": false,
+            "main_text": "החלפות חינם",
+            "sub_text": "עם שליח עד הבית חינם בכל הזמנה",
             "text_alignment": "center",
-            "mobile_text": "<p><strong>החלפות חינם<\/strong><\/p><p>עם שליח עד הבית בכל הזמנה<\/p>",
-            "mobile_text_alignment": "center",
+            "main_text_direction": "rtl",
+            "sub_text_direction": "rtl",
             "link": "shopify:\/\/blogs\/policies\/החזרות-והחלפות",
             "color_scheme": "accent-1"
           }

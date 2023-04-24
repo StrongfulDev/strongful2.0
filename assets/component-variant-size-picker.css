@@ -14,7 +14,6 @@
     height: 100%;
     text-align: center;
     width: 50%;
-    padding: 2px;
     position: relative;
     cursor: pointer;
 }
@@ -92,12 +91,14 @@
 
 .variant_modal .product-size-picker-container {
     position: relative;
+    padding: 0;
 }
 
 .variant_modal .product_details {
     display: flex;
     justify-content: flex-start;
     width: 100%;
+    padding: 20px;
 }
 
 .variant_modal .product_details__image {
@@ -117,8 +118,7 @@
     width: 100%;
     border-bottom: 1px solid grey;
     text-align: var(--text-alignment);
-    padding: 10px;
-    font-size: 18px;
+    padding: 0 20px 10px;
 }
 
 .variant_modal .product_variants ul {
@@ -150,6 +150,18 @@
 .variant_modal .size_variant_button_add {
     height: 20px;
     width: 20px;
+    border: 2px #000 solid;
+    border-radius: 50%;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.variant_modal .size_variant_button_add .icon {
+    width: 10px;
+    height: 10px;
+    stroke: #000;
 }
 
 .variant_modal .quick_add_modal__close {
@@ -171,6 +183,9 @@
     right: 10px;
     position: absolute;
     box-shadow: #00000026 0 0.2rem 0.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media screen and (min-width: 750px) {
@@ -188,4 +203,28 @@
     margin: auto;
     width: 20px;
     height: 20px;
+}
+
+.variant_modal__toggle_button .icon {
+    position: relative;
+}
+
+.product_details-titles {
+    margin: 0;
+}
+
+.variant_modal .product_variants li:last-child .size_variant_button_container {
+    border-bottom: none;
+}
+
+.disabled-variant-button label {
+    background: none;
+}
+
+.variant_modal__toggle_button .icon-plus {
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    top: 18px;
+    stroke: #000;
 }

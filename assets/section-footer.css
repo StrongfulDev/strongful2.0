@@ -713,6 +713,10 @@ noscript .localization-selector.link {
     border-bottom: 1px solid rgba(var(--color-foreground), 0.2);
 }
 
+.footer-block__details-content {
+    margin-bottom: var(--heading-margin);
+}
+
 .footer-block--menu:first-child .footer-details {
     border-top: 1px solid rgba(var(--color-foreground), 0.2);
 }

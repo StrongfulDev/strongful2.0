@@ -1,6 +1,7 @@
 /* Text alignment */
 :root {
     --text-alignment: right;
+    --english-font: 'Spartan', sans-serif;
 }
 
 /* Color custom properties */
@@ -2974,9 +2975,16 @@ details-disclosure > details {
     direction: rtl;
 }
 
+.ltr, .english-direction {
+    direction: ltr;
+}
+
+.english-font {
+    font-family: var(--english-font);
+}
 
 .heading_type_1 {
-    font-family: spartan, sans-serif;
+    font-family: var(--english-font);
 }
 
 fieldset {
@@ -3006,7 +3014,7 @@ fieldset {
     background: #000;
     border: 1px #000 solid;
     outline: 0;
-    --border-offset: 0;
+    padding: 1rem 3rem;
 }
 
 .title-wrapper--self-padded-tablet-down, .title-wrapper--self-padded-mobile {
@@ -3037,4 +3045,21 @@ fieldset {
     color: rgba(var(--color-foreground), 0.5) !important;
     text-decoration: none !important;
     cursor: not-allowed !important;
+}
+
+.header__icons {
+    column-gap: .8rem;
+}
+
+.header__icon, .header__icon--cart .icon {
+    width: 2.5rem;
+}
+
+.header__icon--cart .icon {
+    fill: #000;
+}
+
+.cart-count-bubble {
+    bottom: 0;
+    left: 1.2em;
 }

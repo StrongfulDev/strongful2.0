@@ -698,7 +698,8 @@ a.active-facets__button.focused .active-facets__button-inner,
 }
 
 .mobile-facets__close svg {
-  width: 2.2rem;
+  width: 1.5rem;
+  stroke: #000;
 }
 
 details.menu-opening .mobile-facets__close {
@@ -1113,6 +1114,96 @@ input.mobile-facets__checkbox {
 
 /* Custom Styles And Designs By Yahav */
 
+.mobile-facets__header {
+  padding: 5rem 2.5rem 1rem;
+  text-align: right;
+}
+
+.mobile-facets__main {
+  padding: 1.5rem 0 0;
+}
+
+.mobile-facets__close {
+  left: 5rem;
+  right: auto;
+}
+
 .mobile-facets__details.js-filter:first-child {
   display: none;
+}
+
+.active-facets {
+  margin: 0;
+}
+
+.product-count {
+  margin: 1rem 0 0;
+  text-align: center;
+}
+
+.mobile-facets__wrapper {
+  align-items: center;
+}
+
+.js .mobile-facets__submenu {
+  position: static;
+  transform: translate(0);
+  visibility: visible;
+}
+
+.js .mobile-facets .submenu-open {
+  visibility: visible;
+}
+
+.mobile-facets__close-button,
+.mobile-facets__submenu .mobile-facets__footer {
+  display: none;
+}
+
+.mobile-facets__label {
+  padding: 1.5rem 2rem;
+}
+
+.mobile-facets__label > svg {
+  margin-right: 0;
+  margin-left: 1.2rem;
+  align-items: center;
+}
+
+.mobile-facets__arrow, .mobile-facets__summary .icon-caret {
+  right: auto;
+  left: 1.5rem;
+  height: 0.7rem;
+  stroke: #000;
+}
+
+.mobile-facets__label > input[type='checkbox']:checked ~ .icon-checkmark {
+  right: 2.2rem;
+  left: auto;
+}
+
+input.mobile-facets__checkbox {
+  right: 2.1rem;
+  left: auto;
+}
+
+.color-round {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  background-color: initial;
+  border-radius: 50%;
+  padding: 0;
+  margin-left: 12px;
+  border: 1px solid #fff;
+}
+
+.mobile-facets__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-facets__sort .select .icon-caret {
+  right: auto;
+  left: 0;
 }

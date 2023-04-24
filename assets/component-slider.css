@@ -504,9 +504,14 @@ slider-component.slider-component-full-width {
 @media screen and (max-width: 749px) {
     .collection__view-all.show-mobile {
         display: block;
+        border: 1px var(--gradient-base-accent-1) solid;
     }
 
     .collection__view-all:not(.show-mobile) {
         display: none;
     }
+}
+
+.collection__title_heading .title, .collection__title_heading .title:not(:only-child) {
+    margin: 0 0 var(--heading-margin) 0;
 }

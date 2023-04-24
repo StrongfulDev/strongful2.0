@@ -31,14 +31,15 @@
                         widths: '375'
                         }}
                         <div class="product_details__info">
-                            {{ product.title }}
+                            <p class="product_details-titles product-title">{{ product.title }}</p>
+                            <p class="product_details-titles product-color">{{ product.vendor }}</p>
                             {% render "price", product: product %}
                         </div>
                         <div class="quick_add_modal__close">
                             {% render 'icon-close' %}
                         </div>
                     </div>
-                    <span class="product_size_picker__heading fix-direction">{{ section.settings.quick_add_text }} sss</span>
+                    <span class="product_size_picker__heading fix-direction">{{ section.settings.quick_add_text }}</span>
                     <div class="product-size-picker">
                         <product-form class="size-variant-product-form">
                             {%- form 'product', product, class: 'product_size_picker__form form', data-type: 'add-to-cart-form' -%}
@@ -82,6 +83,7 @@
                                                                 <div class="size_variant_button_add">
                                                                     {% render 'icon-plus' %}
                                                                 </div>
+                                                                {% render "loading-spinner" %}
                                                             </label>
                                                         </div>
                                                     </li>

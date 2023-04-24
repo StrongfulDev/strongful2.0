@@ -35,10 +35,10 @@ class FacetFiltersForm extends HTMLElement {
     const countContainer = document.getElementById('ProductCount');
     const countContainerDesktop = document.getElementById('ProductCountDesktop');
     document.getElementById('ProductGridContainer').querySelector('.collection').classList.add('loading');
-    if (countContainer){
+    if (countContainer) {
       countContainer.classList.add('loading');
     }
-    if (countContainerDesktop){
+    if (countContainerDesktop) {
       countContainerDesktop.classList.add('loading');
     }
 
@@ -59,7 +59,7 @@ class FacetFiltersForm extends HTMLElement {
       .then(response => response.text())
       .then((responseText) => {
         const html = responseText;
-        FacetFiltersForm.filterData = [...FacetFiltersForm.filterData, { html, url }];
+        FacetFiltersForm.filterData = [...FacetFiltersForm.filterData, {html, url}];
         FacetFiltersForm.renderFilters(html, event);
         FacetFiltersForm.renderProductGridContainer(html);
         FacetFiltersForm.renderProductCount(html);
@@ -151,7 +151,7 @@ class FacetFiltersForm extends HTMLElement {
   }
 
   static updateURLHash(searchParams) {
-    history.pushState({ searchParams }, '', `${window.location.pathname}${searchParams && '?'.concat(searchParams)}`);
+    history.pushState({searchParams}, '', `${window.location.pathname}${searchParams && '?'.concat(searchParams)}`);
   }
 
   static getSections() {
@@ -265,3 +265,103 @@ class FacetRemove extends HTMLElement {
 }
 
 customElements.define('facet-remove', FacetRemove);
+
+// TODO: Insert to class
+document.getElementById('Filter-filter.v.availability-mobile-1').checked = true;
+
+let customUrl = new URL(window.location.href);
+customUrl.searchParams.set('filter.v.availability', '1');
+window.history.pushState({}, '', customUrl);
+
+if (customUrl.search === '?filter.v.availability=1') {
+  $("facet-remove").hide();
+}
+
+let activeFilter = document.querySelectorAll('.active-facets__button-inner.button.button--tertiary');
+for (let i = 0; i < activeFilter.length; i++) {
+  let filterText = activeFilter[i].innerText;
+  if (filterText.includes('Availability: In stock')) {
+    $(activeFilter[i]).closest('facet-remove').hide();
+  }
+}
+
+let colorLabels = document.querySelectorAll(".color-label");
+let colorRounds = document.querySelectorAll(".color-round");
+
+for (let i = 0; i < colorLabels.length; i++) {
+  let colorLabel = colorLabels[i];
+  let colorRound = colorRounds[i];
+  switch (colorLabel.innerHTML) {
+    case "שחור":
+      colorRound.style.backgroundColor = "#000000";
+      break;
+    case "לבן":
+      colorRound.style.backgroundColor = "#ffffff";
+      colorRound.style.border = "1px solid #000000";
+      break;
+    case "אדום":
+      colorRound.style.backgroundColor = "#ff0000";
+      break;
+    case "כחול":
+      colorRound.style.backgroundColor = "rgb(34, 29, 193)";
+      break;
+    case "ירוק":
+      colorRound.style.backgroundColor = "rgb(0, 106, 78)";
+      break;
+    case "ניוד":
+      colorRound.style.backgroundColor = "rgb(225, 205, 180)";
+      break;
+    case "צהוב":
+      colorRound.style.backgroundColor = "rgb(253, 226, 0)";
+      break;
+    case "כתום":
+      colorRound.style.backgroundColor = "rgb(231, 155, 46)";
+      break;
+    case "סגול":
+      colorRound.style.backgroundColor = "rgb(126, 11, 128)";
+      break;
+    case "ורוד":
+      colorRound.style.backgroundColor = "rgb(252, 172, 173)";
+      break;
+    case "חום":
+      colorRound.style.backgroundColor = "rgb(123, 79, 44)";
+      break;
+    case "אפור":
+      colorRound.style.backgroundColor = "rgb(217, 217, 217)";
+      break;
+    default:
+      console.log("no color");
+      break;
+  }
+}
+
+let sizeLabels = document.querySelectorAll(".size-label");
+for (let i = 0; i < sizeLabels.length; i++) {
+  let sizeLabel = sizeLabels[i];
+  switch (sizeLabel.innerHTML) {
+    case "XXS":
+      $(sizeLabel).closest(".mobile-facets__item").css("order", 1);
+      break;
+    case "XS":
+      $(sizeLabel).closest(".mobile-facets__item").css("order", 2);
+      break;
+    case "S":
+      $(sizeLabel).closest(".mobile-facets__item").css("order", 3);
+      break;
+    case "M":
+      $(sizeLabel).closest(".mobile-facets__item").css("order", 4);
+      break;
+    case "L":
+      $(sizeLabel).closest(".mobile-facets__item").css("order", 5);
+      break;
+    case "XL":
+      $(sizeLabel).closest(".mobile-facets__item").css("order", 6);
+      break;
+    case "XXL":
+      $(sizeLabel).closest(".mobile-facets__item").css("order", 7);
+      break;
+    case "XXXL":
+      $(sizeLabel).closest(".mobile-facets__item").css("order", 8);
+      break;
+  }
+}

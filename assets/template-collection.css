@@ -76,5 +76,17 @@
 }
 
 .collection__view-all a:not(.link) {
-  margin-top: 1rem;
+  margin: var(--heading-margin) 0;
+}
+
+/*.product-grid#product-grid {*/
+/*  display: grid;*/
+/*  grid-template-columns: repeat(2, 1fr);*/
+/*  grid-gap: var(--grid-spacing);*/
+/*}*/
+
+.collection div.size-picker-loading {
+  position: static;
+  width: auto;
+  padding: 0;
 }

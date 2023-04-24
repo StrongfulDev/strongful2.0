@@ -458,4 +458,9 @@
     }
 }
 
+.banner--auto {
+    height: 16rem;
+    min-height: 16rem;
+}
+
 

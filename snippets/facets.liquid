@@ -129,7 +129,8 @@
                         <span>
                           {{- filter.label | escape }}
                           {%- if filter_type == 'vertical' -%}
-                            <span class="facets__selected no-js-hidden{% if filter.active_values.size == 0 %} hidden{% endif %}">
+                            <span
+                              class="facets__selected no-js-hidden{% if filter.active_values.size == 0 %} hidden{% endif %}">
                               ({{ filter.active_values.size }})</span
                             >
                           {%- endif -%}
@@ -153,14 +154,16 @@
                           </facet-remove>
                         </div>
                       {%- endif -%}
-                      <fieldset class="facets-wrap parent-wrap {% if filter_type == 'vertical' %} facets-wrap-vertical{% endif %}">
+                      <fieldset
+                        class="facets-wrap parent-wrap {% if filter_type == 'vertical' %} facets-wrap-vertical{% endif %}">
                         <legend class="visually-hidden">{{ filter.label | escape }}</legend>
                         <ul
                           class="{% if filter_type != 'vertical' %} facets__list{% endif %} list-unstyled no-js-hidden"
                           role="list"
                         >
                           {%- for value in filter.values -%}
-                            <li class="list-menu__item facets__item{% if forloop.index > 10 and filter_type == 'vertical' %} show-more-item hidden{% endif %}">
+                            <li
+                              class="list-menu__item facets__item{% if forloop.index > 10 and filter_type == 'vertical' %} show-more-item hidden{% endif %}">
                               <label
                                 for="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}"
                                 class="facet-checkbox{% if value.count == 0 and value.active == false %} facet-checkbox--disabled{% endif %}"
@@ -185,7 +188,8 @@
                                   aria-hidden="true"
                                   focusable="false"
                                 >
-                                  <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>
+                                  <rect width="16" height="16" stroke="currentColor" fill="none"
+                                        stroke-width="1"></rect>
                                 </svg>
 
                                 <svg
@@ -198,10 +202,10 @@
                                   xmlns="http://www.w3.org/2000/svg"
                                 >
                                   <path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1"
-                                    stroke="currentColor"
-                                    stroke-width="1.75"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round" />
+                                        stroke="currentColor"
+                                        stroke-width="1.75"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"/>
                                 </svg>
 
                                 <span aria-hidden="true">{{ value.label | escape }} ({{ value.count }})</span>
@@ -249,7 +253,8 @@
                                   aria-hidden="true"
                                   focusable="false"
                                 >
-                                  <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>
+                                  <rect width="16" height="16" stroke="currentColor" fill="none"
+                                        stroke-width="1"></rect>
                                 </svg>
 
                                 <svg
@@ -262,10 +267,10 @@
                                   xmlns="http://www.w3.org/2000/svg"
                                 >
                                   <path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1"
-                                    stroke="currentColor"
-                                    stroke-width="1.75"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round" />
+                                        stroke="currentColor"
+                                        stroke-width="1.75"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"/>
                                 </svg>
 
                                 <span aria-hidden="true">{{ value.label | escape }} ({{ value.count }})</span>
@@ -291,10 +296,10 @@
                             type="button"
                           >
                             <span class="label-show-more label-text"
-                              ><span aria-hidden="true">+ </span>{{ 'products.facets.show_more' | t -}}
+                            ><span aria-hidden="true">+ </span>{{ 'products.facets.show_more' | t -}}
                             </span>
                             <span class="label-show-less label-text hidden"
-                              ><span aria-hidden="true">- </span>{{ 'products.facets.show_less' | t -}}
+                            ><span aria-hidden="true">- </span>{{ 'products.facets.show_less' | t -}}
                             </span>
                           </button>
                         </show-more-button>
@@ -327,7 +332,8 @@
                       id="Facet-{{ forloop.index }}-{{ section.id }}"
                       class="{% if filter_type == 'horizontal' %}facets__display{% else %}facets__display-vertical{% endif %}"
                     >
-                      <div class="{% if filter_type == 'horizontal' %}facets__header{% else %}facets__header-vertical{% endif %}">
+                      <div
+                        class="{% if filter_type == 'horizontal' %}facets__header{% else %}facets__header-vertical{% endif %}">
                         {%- assign max_price_amount = filter.range_max | money | strip_html | escape -%}
                         <span class="facets__selected">
                           {{- 'products.facets.max_price' | t: price: max_price_amount -}}
@@ -506,8 +512,8 @@
                   {{ 'products.facets.product_count_simple' | t: count: results.products_count }}
                 {%- else -%}
                   {{
-                    'products.facets.product_count'
-                    | t: product_count: results.products_count, count: results.all_products_count
+                  'products.facets.product_count'
+                  | t: product_count: results.products_count, count: results.all_products_count
                   }}
                 {%- endif -%}
               </span>
@@ -585,7 +591,8 @@
   >
     <details class="mobile-facets__disclosure disclosure-has-popup">
       <summary class="mobile-facets__open-wrapper focus-offset">
-        <span class="mobile-facets__open{% if filter_type == 'drawer' and enable_filtering == false %} medium-hide large-up-hide{% endif %}">
+        <span
+          class="mobile-facets__open{% if filter_type == 'drawer' and enable_filtering == false %} medium-hide large-up-hide{% endif %}">
           {% render 'icon-filter' %}
           <span class="mobile-facets__open-label button-label medium-hide large-up-hide">
             {%- if enable_filtering and enable_sorting -%}
@@ -606,7 +613,7 @@
       </summary>
       <facet-filters-form>
         <form id="FacetFiltersFormMobile" class="mobile-facets">
-          <div class="mobile-facets__inner gradient">
+          <div class="mobile-facets__inner gradient fix-direction">
             <div class="mobile-facets__header">
               <div class="mobile-facets__header-inner">
                 <h2 class="mobile-facets__heading medium-hide large-up-hide">
@@ -630,8 +637,8 @@
                     {{ 'products.facets.product_count_simple' | t: count: results.products_count }}
                   {%- else -%}
                     {{
-                      'products.facets.product_count'
-                      | t: product_count: results.products_count, count: results.all_products_count
+                    'products.facets.product_count'
+                    | t: product_count: results.products_count, count: results.all_products_count
                     }}
                   {%- endif -%}
                 </p>
@@ -696,7 +703,8 @@
                                     aria-hidden="true"
                                     focusable="false"
                                   >
-                                    <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>
+                                    <rect width="16" height="16" stroke="currentColor" fill="none"
+                                          stroke-width="1"></rect>
                                   </svg>
 
                                   <svg
@@ -708,7 +716,8 @@
                                     fill="none"
                                     xmlns="http://www.w3.org/2000/svg"
                                   >
-                                    <path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1" stroke="currentColor"
+                                          stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
                                   </svg>
 
                                   <span aria-hidden="true">{{ value.label | escape }} ({{ value.count }})</span>
@@ -739,11 +748,11 @@
                             >
                               {{ 'products.facets.apply' | t }}
                             </button>
-                            <noscript
-                              ><button class="button button--primary">
+                            <noscript>
+                              <button class="button button--primary">
                                 {{ 'products.facets.apply' | t }}
-                              </button></noscript
-                            >
+                              </button>
+                            </noscript>
                           </div>
                         </div>
                       </details>
@@ -756,7 +765,7 @@
                         <summary class="mobile-facets__summary focus-inset">
                           <div>
                             <span>{{ filter.label | escape }}</span>
-                            <span class="mobile-facets__arrow no-js-hidden">{% render 'icon-arrow' %}</span>
+                            <span class="mobile-facets__arrow no-js-hidden">{% render 'icon-caret' %}</span>
                             <noscript>{% render 'icon-caret' %}</noscript>
                           </div>
                         </summary>
@@ -849,11 +858,11 @@
                             >
                               {{ 'products.facets.apply' | t }}
                             </button>
-                            <noscript
-                              ><button class="button button--primary">
+                            <noscript>
+                              <button class="button button--primary">
                                 {{ 'products.facets.apply' | t }}
-                              </button></noscript
-                            >
+                              </button>
+                            </noscript>
                           </div>
                         </div>
                       </details>
@@ -883,7 +892,7 @@
                                 selected="selected"
                               {% endif %}
                             >
-                              {{ option.name | escape }}
+                              {{ "products.facets.filters." | append: option.value | t }}
                             </option>
                           {%- endfor -%}
                         </select>
@@ -907,9 +916,9 @@
                 >
                   {{ 'products.facets.apply' | t }}
                 </button>
-                <noscript
-                  ><button class="button button--primary">{{ 'products.facets.apply' | t }}</button></noscript
-                >
+                <noscript>
+                  <button class="button button--primary">{{ 'products.facets.apply' | t }}</button>
+                </noscript>
               </div>
             </div>
 
