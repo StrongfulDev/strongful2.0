@@ -25,7 +25,7 @@ function quickAdd() {
       $(myElement).find(".size_variant_button_add").show();
       $(myElement).find(".size-picker-loading").removeClass("block");
     }, 500);
-  }
+  });
 
   $('.variant_modal__toggle_button').on("click", function (e) {
       const element = $(this);
