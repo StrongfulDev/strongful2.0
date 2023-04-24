@@ -1,4 +1,4 @@
-window.onload = () => {
+function quickAdd() {
   let $ = jQuery;
 
   $('.variant_selector').each(function (index, element) {
@@ -14,14 +14,20 @@ window.onload = () => {
   })
 
   $('.variant_selector.submit_on_click .size_variant_button:not(.disabled-variant-button)').on("click", function (e) {
-      const element = $(this);
-      setTimeout(() => {
-        element.parents("form").find('[type="submit"]').click()
-      }, 100)
-    }
-  )
+    const element = $(this);
+    let myElement = this;
+    $(myElement).find(".size_variant_button_add").hide();
+    $(myElement).find(".size-picker-loading").addClass("block");
+    setTimeout(() => {
+      element.parents("form").find('[type="submit"]').click()
+    }, 100);
+    setTimeout(() => {
+      $(myElement).find(".size_variant_button_add").show();
+      $(myElement).find(".size-picker-loading").removeClass("block");
+    }, 500);
+  }
 
-  $('#MainContent').on("click", '.variant_modal__toggle_button, .variant_modal__toggle_button svg', function (e) {
+  $('.variant_modal__toggle_button').on("click", function (e) {
       const element = $(this);
       const modalId = element.data("modal-id");
       const modal = $(".variant_modal#" + modalId);
@@ -39,16 +45,8 @@ window.onload = () => {
       })
     }
   )
+}
 
-
-// $('.product_size_picker__form').submit((e) => {
-//     e.preventDefault();
-//     const checkedInput = $(e.currentTarget).find('input.product_size_picker__button:checked');
-//     const variationId = checkedInput.val();
-//     console.log(variationId)
-//     // console.log(checkedInput, "VALALLAL", checkedInput.val(), e)
-//     addProductToCart(variationId, 1).then((res) => {
-//         alert("SUCCESS")
-//     })
-// })
+window.onload = () => {
+  quickAdd();
 }

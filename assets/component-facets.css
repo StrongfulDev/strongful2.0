@@ -698,7 +698,8 @@ a.active-facets__button.focused .active-facets__button-inner,
 }
 
 .mobile-facets__close svg {
-  width: 2.2rem;
+  width: 1.5rem;
+  stroke: #000;
 }
 
 details.menu-opening .mobile-facets__close {
@@ -1113,6 +1114,20 @@ input.mobile-facets__checkbox {
 
 /* Custom Styles And Designs By Yahav */
 
+.mobile-facets__header {
+  padding: 5rem 2.5rem 1rem;
+  text-align: right;
+}
+
+.mobile-facets__main {
+  padding: 1.5rem 0 0;
+}
+
+.mobile-facets__close {
+  left: 5rem;
+  right: auto;
+}
+
 .mobile-facets__details.js-filter:first-child {
   display: none;
 }
@@ -1158,6 +1173,8 @@ input.mobile-facets__checkbox {
 .mobile-facets__arrow, .mobile-facets__summary .icon-caret {
   right: auto;
   left: 1.5rem;
+  height: 0.7rem;
+  stroke: #000;
 }
 
 .mobile-facets__label > input[type='checkbox']:checked ~ .icon-checkmark {

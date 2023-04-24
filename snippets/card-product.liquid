@@ -61,6 +61,7 @@
                         <a href="{{ card_product.url }}">
                             <div class="media media--transparent media--hover-effect">
                                 {% if image_count <= 2 or true -%}
+                                {%comment%}
                                     <img
                                             srcset="
                   {%- if card_product.featured_media.width >= 165 -%}{{ card_product.featured_media | image_url: width: 165 }} 165w,{%- endif -%}
@@ -81,27 +82,38 @@
                                             width="{{ card_product.featured_media.width }}"
                                             height="{{ card_product.featured_media.height }}"
                                     >
+                                {% endcomment %}
+                                    <picture>
+                                        <source
+                                             media="(max-width: 800px)"
+                                             srcset="
+                                                {{ card_product.featured_media | image_url: width: 300 }} 1x,
+                                                {{ card_product.featured_media | image_url: width: 600 }} 2x,
+                                                "
+                                                >
+                                            {{ card_product.featured_media | 
+                                            image_url: width: 2000 | 
+                                            image_tag: widths: '1000, 2000',
+                                            sizes: '(min-width: 1000px) 760px, (min-width: 800px) calc(100vw - 380px), (min-width: 400px) 298px, 78.75vw',
+                                            class: 'motion-reduce' }}
+                                    </picture>
                                     {% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
 
                                     {%- if card_product.media[1] != null and show_secondary_image -%}
-                                        <img
-                                                srcset="
-                    {%- if card_product.media[1].width >= 165 -%}{{ card_product.media[1] | image_url: width: 165 }} 165w,{%- endif -%}
-                    {%- if card_product.media[1].width >= 360 -%}{{ card_product.media[1] | image_url: width: 360 }} 360w,{%- endif -%}
-                    {%- if card_product.media[1].width >= 533 -%}{{ card_product.media[1] | image_url: width: 533 }} 533w,{%- endif -%}
-                    {%- if card_product.media[1].width >= 720 -%}{{ card_product.media[1] | image_url: width: 720 }} 720w,{%- endif -%}
-                    {%- if card_product.media[1].width >= 940 -%}{{ card_product.media[1] | image_url: width: 940 }} 940w,{%- endif -%}
-                    {%- if card_product.media[1].width >= 1066 -%}{{ card_product.media[1] | image_url: width: 1066 }} 1066w,{%- endif -%}
-                    {{ card_product.media[1] | image_url }} {{ card_product.media[1].width }}w
-                  "
-                                                src="{{ card_product.media[1] | image_url: width: 533 }}"
-                                                sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-                                                alt=""
-                                                class="motion-reduce"
-                                                loading="lazy"
-                                                width="{{ card_product.media[1].width }}"
-                                                height="{{ card_product.media[1].height }}"
-                                        >
+                                    <picture>
+                                        <source
+                                             media="(max-width: 800px)"
+                                             srcset="
+                                                {{ card_product.media[1] | image_url: width: 300 }} 1x,
+                                                {{ card_product.media[1] | image_url: width: 600 }} 2x,
+                                                "
+                                                >
+                                            {{ card_product.media[1] | 
+                                            image_url: width: 2000 | 
+                                            image_tag: widths: '1000, 2000',
+                                            sizes: '(min-width: 1000px) 760px, (min-width: 800px) calc(100vw - 380px), (min-width: 400px) 298px, 78.75vw',
+                                            class: 'motion-reduce' }}
+                                    </picture>
                                     {%- endif -%}
                                 {% else %}
                                     {% render "card-product-slideshow", card_product: card_product %}
@@ -163,6 +175,7 @@
                         <button class="variant_modal__toggle_button mobile"
                                 data-modal-id="{{ quick_add_modal_id }}">
                             {% render 'icon-cart' %}
+                            {% render 'icon-plus' %}
                         </button>
                     {% endif %}
                 </div>

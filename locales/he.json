@@ -174,13 +174,13 @@
       "label": "Media gallery"
     },
     "facets": {
-      "apply": "Apply",
-      "clear": "Clear",
+      "apply": "מימוש",
+      "clear": "איפוס",
       "clear_all": "Remove all",
       "from": "From",
-      "filter_and_sort": "Filter and sort",
-      "filter_by_label": "Filter:",
-      "filter_button": "Filter",
+      "filter_and_sort": "פילטר",
+      "filter_by_label": "פילטר:",
+      "filter_button": "פילטר",
       "filters_selected": {
         "one": "{{ count }} selected",
         "other": "{{ count }} selected"
