@@ -515,3 +515,11 @@ slider-component.slider-component-full-width {
 .collection__title_heading .title, .collection__title_heading .title:not(:only-child) {
     margin: 0 0 var(--heading-margin) 0;
 }
+
+.product__media-list + .slider-buttons .slider-button {
+    padding: 10px;
+}
+
+.product__media-list + .slider-buttons .slider-button .icon {
+    height: 1.5rem;
+}
