@@ -1,6 +1,7 @@
 /* Text alignment */
 :root {
     --text-alignment: right;
+    --english-font: 'Spartan', sans-serif;
 }
 
 /* Color custom properties */
@@ -2978,8 +2979,12 @@ details-disclosure > details {
     direction: ltr;
 }
 
+.english-font {
+    font-family: var(--english-font);
+}
+
 .heading_type_1 {
-    font-family: spartan, sans-serif;
+    font-family: var(--english-font);
 }
 
 fieldset {
