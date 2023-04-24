@@ -14,7 +14,7 @@
 {%- endif -%}
 <noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'template-collection.css' | asset_url | stylesheet_tag }}</noscript>
-{
+
 {%- style -%}
     .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -31,8 +31,8 @@
 
 {%- liquid
 
-        assign products_to_display = section.settings.products_to_show
-        assign more_in_collection = true
+    assign products_to_display = section.settings.products_to_show
+    assign more_in_collection = true
 
     assign columns_mobile_int = section.settings.columns_mobile | plus: 0
     assign show_mobile_slider = false
@@ -99,7 +99,6 @@
                         name="previous"
                         aria-label="{{ 'general.slider.previous_slide' | t }}"
                         aria-controls="Slider-{{ section.id }}"
-                        {% comment %}style="margin-right: -50px; margin-left: 20px;"{% endcomment %}
                 >
                     {% render 'icon-caret' %}
                 </button>
@@ -142,7 +141,6 @@
                         name="next"
                         aria-label="{{ 'general.slider.next_slide' | t }}"
                         aria-controls="Slider-{{ section.id }}"
-                        {% comment %}style="margin-left: -50px; margin-right: 20px;"{% endcomment %}
                 >
                     {% render 'icon-caret' %}
                 </button>
@@ -204,7 +202,7 @@
 {
   "name": "t:sections.featured-collection.name",
   "tag": "section",
-  "class": "section",
+  "class": "section featured-collection index-section",
   "disabled_on": {
     "groups": [
       "header",
