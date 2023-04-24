@@ -41,7 +41,7 @@
         "enable_quick_add": true,
         "quick_add_type": "hover",
         "quick_add_type_mobile": "modal",
-        "quick_add_text": "הוספה מהירה",
+        "quick_add_text": "בחירת מידה",
         "image_count": 1,
         "enable_filtering": true,
         "filter_type": "vertical",

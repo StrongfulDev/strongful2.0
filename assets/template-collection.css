@@ -75,6 +75,20 @@
   }
 }
 
+/* Custom styling */
+
 .collection__view-all a:not(.link) {
-  margin: 1rem 0;
+  margin: var(--heading-margin) 0;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: var(--grid-spacing);
+}
+
+.collection div.size-picker-loading {
+  position: static;
+  width: auto;
+  padding: 0;
 }

@@ -15,9 +15,16 @@ window.onload = () => {
 
     $('.variant_selector.submit_on_click .size_variant_button:not(.disabled-variant-button)').on("click", function (e) {
             const element = $(this);
+            let myElement = this;
+            $(myElement).find(".size_variant_button_add").hide();
+            $(myElement).find(".size-picker-loading").addClass("block");
             setTimeout(() => {
                 element.parents("form").find('[type="submit"]').click()
-            }, 100)
+            }, 100);
+            setTimeout(() => {
+                $(myElement).find(".size_variant_button_add").show();
+                $(myElement).find(".size-picker-loading").removeClass("block");
+            }, 500);
         }
     )
 
@@ -39,16 +46,4 @@ window.onload = () => {
             })
         }
     )
-
-
-// $('.product_size_picker__form').submit((e) => {
-//     e.preventDefault();
-//     const checkedInput = $(e.currentTarget).find('input.product_size_picker__button:checked');
-//     const variationId = checkedInput.val();
-//     console.log(variationId)
-//     // console.log(checkedInput, "VALALLAL", checkedInput.val(), e)
-//     addProductToCart(variationId, 1).then((res) => {
-//         alert("SUCCESS")
-//     })
-// })
 }
