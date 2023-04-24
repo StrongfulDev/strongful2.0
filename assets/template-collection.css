@@ -81,7 +81,7 @@
   margin: var(--heading-margin) 0;
 }
 
-.product-grid {
+.product-grid#product-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: var(--grid-spacing);
