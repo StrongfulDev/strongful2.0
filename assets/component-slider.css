@@ -516,6 +516,10 @@ slider-component.slider-component-full-width {
     margin: 0 0 var(--heading-margin) 0;
 }
 
+li.product__media-item.grid__item.slider__slide {
+    margin-left: 1.5rem;
+}
+
 .product__media-list + .slider-buttons .slider-button {
     padding: 10px;
 }

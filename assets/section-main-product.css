@@ -1545,3 +1545,18 @@ variant-radios fieldset {
         width: 100%;
     }
 }
+
+.product-form__input {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product .price .badge {
+    display: none;
+}
+
+.product-form__input input[type='radio'] + label {
+    width: 100%;
+    display: block;
+    padding: 1rem;
+}

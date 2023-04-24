@@ -115,3 +115,9 @@
 .price {
     font-family: 'Roboto', sans-serif;
 }
+
+
+.complete_look_variant_price .price__sale {
+    display: flex;
+    flex-direction: row-reverse;
+}
