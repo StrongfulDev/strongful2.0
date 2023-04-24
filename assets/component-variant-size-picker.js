@@ -1,4 +1,4 @@
-window.onload = () => {
+function quickAdd() {
     let $ = jQuery;
 
     $('.variant_selector').each(function (index, element) {
@@ -46,4 +46,14 @@ window.onload = () => {
             })
         }
     )
+
+    console.log("quick add loaded");
 }
+
+// listen for every change in the url search params
+// listen for every change in the url search params
+window.addEventListener('popstate', function (event) {
+    console.log("popstate");
+    quickAdd();
+}
+);

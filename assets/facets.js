@@ -296,33 +296,37 @@ customElements.define('facet-remove', FacetRemove);
               break;
           case "לבן":
               colorRound.style.backgroundColor = "#ffffff";
+              colorRound.style.border = "1px solid #000000";
               break;
           case "אדום":
               colorRound.style.backgroundColor = "#ff0000";
               break;
           case "כחול":
-              colorRound.style.backgroundColor = "#0000ff";
+              colorRound.style.backgroundColor = "rgb(34, 29, 193)";
               break;
           case "ירוק":
-              colorRound.style.backgroundColor = "#00ff00";
+              colorRound.style.backgroundColor = "rgb(0, 106, 78)";
+              break;
+          case "ניוד":
+              colorRound.style.backgroundColor = "rgb(225, 205, 180)";
               break;
           case "צהוב":
-              colorRound.style.backgroundColor = "#ffff00";
+              colorRound.style.backgroundColor = "rgb(253, 226, 0)";
               break;
           case "כתום":
-              colorRound.style.backgroundColor = "#ffa500";
+              colorRound.style.backgroundColor = "rgb(231, 155, 46)";
               break;
           case "סגול":
-              colorRound.style.backgroundColor = "#800080";
+              colorRound.style.backgroundColor = "rgb(126, 11, 128)";
               break;
           case "ורוד":
-              colorRound.style.backgroundColor = "#ffc0cb";
+              colorRound.style.backgroundColor = "rgb(252, 172, 173)";
               break;
           case "חום":
-              colorRound.style.backgroundColor = "#a52a2a";
+              colorRound.style.backgroundColor = "rgb(123, 79, 44)";
               break;
           case "אפור":
-              colorRound.style.backgroundColor = "#808080";
+              colorRound.style.backgroundColor = "rgb(217, 217, 217)";
               break;
               default:
                 console.log("no color");
