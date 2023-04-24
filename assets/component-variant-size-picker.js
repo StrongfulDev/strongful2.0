@@ -27,7 +27,7 @@ function quickAdd() {
     }, 500);
   });
 
-  $('.variant_modal__toggle_button').on("click", function (e) {
+  $('#MainContent').on("click", ".variant_modal__toggle_button, .variant_modal__toggle_button svg", function (e) {
       const element = $(this);
       const modalId = element.data("modal-id");
       const modal = $(".variant_modal#" + modalId);
