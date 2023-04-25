@@ -21,8 +21,10 @@
     assign price = target.price | default: 1999
     assign available = target.available | default: false
     assign money_price = price | money
+    assign money_compare_price = compare_at_price | money
     if settings.currency_code_enabled
         assign money_price = price | money_with_currency
+        assign money_compare_price = compare_at_price | money_with_currency
     endif
 
     if target == product and product.price_varies
@@ -33,8 +35,8 @@
 <div class="
     price
     {%- if price_class %} {{ price_class }}{% endif -%}
-    {%- if available == false %} price--sold-out {% endif -%}
-    {%- if compare_at_price %} price--on-sale {% endif -%}
+    {%- unless available %} price--sold-out {% endunless -%}
+    {%- if compare_at_price > price %} price--on-sale {% endif -%}
     {%- if product.price_varies == false and product.compare_at_price_varies %} price--no-compare{% endif -%}
     {%- if show_badges %} price--show-badge{% endif -%}
 
@@ -45,14 +47,12 @@
             - div.price__regular: Displayed when there are no variants on sale
             - div.price__sale: Displayed when a variant is a sale
         {%- endcomment -%}
-      {% if product.compare_at_price %}
-        <div class="price__regular">
-            <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
+        <div class="price__regular {% if money_compare_price == '' %}hidden{% endif %}">
+            <span class="visually-hidden visually-hidden--inline hidden">{{ 'products.product.price.regular_price' | t }}</span>
             <span class="price-item price-item--regular">
-        {{ money_price }}
+        {{ money_compare_price }}
       </span>
         </div>
-      {% endif %}
         <div class="price__sale">
             <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
             <span class="price-item
@@ -63,9 +63,9 @@
         {{ money_price }}
       </span>
             {%- unless product.price_varies == false and product.compare_at_price_varies %}
-                <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
+                <span class="visually-hidden visually-hidden--inline hidden">{{ 'products.product.price.regular_price' | t }}</span>
                 <span>
-          <s class="price-item price-item--regular">
+          <s class="price-item price-item--regular hidden">
             {% if settings.currency_code_enabled %}
                 {{ compare_at_price | money_with_currency }}
             {% else %}
