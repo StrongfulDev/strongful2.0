@@ -1624,6 +1624,7 @@ variant-radios fieldset {
     align-items: center;
     flex-direction: column;
     padding: .5rem;
+    text-decoration: none;
 }
 
 .product-logged-in-text--main p {
