@@ -233,6 +233,7 @@
 
 .complete_look__item .product_variants .size_variant_button_container label {
     font-size: var(--font-body-size-small);
+    padding: .3rem 0;
 }
 
 .complete_look__item .product_variants .size_variant_button {

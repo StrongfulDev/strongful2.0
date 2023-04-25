@@ -2,6 +2,10 @@
     list-style: none;
 }
 
+.complete_look__slider {
+    padding: 0 1rem;
+}
+
 .complete_look__title {
     text-align: center;
 }
@@ -17,7 +21,7 @@
 .featured_photo img, .complete_look__list_item img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .complete_look__list_item:not(:last-child) {
@@ -93,5 +97,5 @@
     padding: 0 1.5rem;
     width: fit-content;
     min-width: calc(8rem + var(--buttons-border-width) * 2);
-    min-height: calc(3.5rem + var(--buttons-border-width) * 2)
+    min-height: calc(2.5rem + var(--buttons-border-width) * 2)
 }
