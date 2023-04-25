@@ -16,6 +16,8 @@
 
 .featured_photo img, .complete_look__list_item img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .complete_look__list_item:not(:last-child) {
@@ -85,4 +87,11 @@
 
 .complete_look__slider .product-form__input input[type='radio'] + label {
     margin: 0;
+}
+
+.add_to_cart {
+    padding: 0 1.5rem;
+    width: fit-content;
+    min-width: calc(8rem + var(--buttons-border-width) * 2);
+    min-height: calc(3.5rem + var(--buttons-border-width) * 2)
 }

@@ -1546,9 +1546,12 @@ variant-radios fieldset {
     }
 }
 
+/* Custom styles */
+
 .product-form__input {
     display: flex;
     justify-content: space-between;
+    column-gap: 1rem;
 }
 
 .product .price .badge {
@@ -1559,4 +1562,30 @@ variant-radios fieldset {
     width: 100%;
     display: block;
     padding: 1rem;
+}
+
+.variant-button {
+    width: 90%;
+}
+
+.accordion__title:after, .accordion__title:before {
+    position: absolute;
+    content: "";
+    display: block;
+    visibility: visible;
+    background-color: rgb(var(--color-foreground));
+    top: 45%;
+}
+
+.accordion__title:after {
+    height: 1.2rem;
+    width: 0.2rem;
+    left: 0.5rem;
+    transform: translateY(-0.5rem);
+}
+
+.accordion__title:before {
+    width: 1.2rem;
+    height: 0.2rem;
+    left: 0;
 }

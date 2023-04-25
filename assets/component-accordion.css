@@ -67,3 +67,14 @@
     margin-left: calc(var(--font-heading-scale) * 1rem);
     margin-right: 0;
 }
+
+/* Custom styles */
+product__accordion .accordion__title {
+    position: relative;
+    width: 100%;
+    max-width: none;
+}
+
+.no-after:after {
+    display: none;
+}

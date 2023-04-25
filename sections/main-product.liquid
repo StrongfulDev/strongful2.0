@@ -403,7 +403,8 @@
                                                         {%- endif -%}
                                                     </div>
                                                     {%- if block.settings.make_collapsible_row -%}
-                                                    {% render 'icon-caret' %}
+                                                    {% comment %}{% render 'icon-caret' %}{% endcomment %}
+                                                    {% render 'icon-plus' %}
                                                 </summary>
                                                 {%- endif -%}
                                                 <slideshow-component class="slider-mobile-gutter">
@@ -622,35 +623,6 @@
         {%- endfor -%}
       ]
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </script>
 </section>
 

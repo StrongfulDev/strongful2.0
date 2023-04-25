@@ -228,3 +228,21 @@
     top: 18px;
     stroke: #000;
 }
+
+/* Custom style */
+
+.complete_look__item .product_variants .size_variant_button_container label {
+    font-size: var(--font-body-size-small);
+}
+
+.complete_look__item .product_variants .size_variant_button {
+    width: 100%;
+}
+
+.complete_look__item .product_variants ul {
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 0 0.5rem;
+}

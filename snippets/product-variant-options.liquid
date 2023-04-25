@@ -46,7 +46,7 @@
         endfor
     -%}
     {%- if block.settings.picker_type == 'button' or picker_type == "button" -%}
-        <span class="{% if option_disabled %}disabled-variant-button{% endif %}">
+        <span class="variant-button {% if option_disabled %}disabled-variant-button{% endif %}">
             <input
                     type="radio"
                     id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"

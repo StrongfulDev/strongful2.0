@@ -747,10 +747,6 @@ noscript .localization-selector.link {
     display: block;
 }
 
-.footer-block__heading.no-after::after {
-    display: none;
-}
-
 .footer-block__heading::before, .footer-block__heading::after {
     position: absolute;
     content: "";
@@ -758,6 +754,10 @@ noscript .localization-selector.link {
     visibility: visible;
     background-color: rgb(var(--color-foreground));
     top: 2.8rem;
+}
+
+.no-after:after {
+    display: none;
 }
 
 .footer {
