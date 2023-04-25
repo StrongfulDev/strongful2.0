@@ -142,7 +142,7 @@
                                                 {{- 'products.product.inventory_low_stock' | t -}}
                                             {%- endif -%}
                                         {%- else -%}
-                                            <svg width="15" height="15" aria-hidden="true">
+                                            <svg width="15" height="15" aria-hidden="true" class="high-inventory-icon">
                                                 <circle cx="7.5" cy="7.5" r="7.5"
                                                         fill="rgb(62,214,96, 0.3)"/>
                                                 <circle cx="7.5" cy="7.5" r="5"
@@ -185,32 +185,18 @@
                                 </div>
                             {%- endif -%}
                         {%- when 'image' -%}
-                            {%- if block.settings.image != blank -%}
-                                <div class="product__details_image" {{ block.shopify_attributes }}>
-                                    {% if block.settings.image != blank %}
-                                        <div class="desktop_version">
-                                            {% if section.settings.image_link != blank %}
-                                                <a href="{{ section.settings.image_link }}">
-                                                    {{ block.settings.image | image_url: width: 350 | image_tag }}
-                                                </a>
-                                            {% else %}
-                                                {{ block.settings.image | image_url: width: 350 | image_tag }}
-                                            {% endif %}
-                                        </div>
-                                    {% endif %}
-                                    {% if block.settings.mobile_image != blank %}
-                                        <div class="mobile_version">
-                                            {% if section.settings.mobile_image_link != blank %}
-                                                <a href="{{ section.settings.mobile_image_link }}">
-                                                    {{ block.settings.mobile_image | image_url: width: 350 | image_tag }}
-                                                </a>
-                                            {% else %}
-                                                {{ block.settings.mobile_image | image_url: width: 350 | image_tag }}
-                                            {% endif %}
-                                        </div>
-                                    {% endif %}
-                                </div>
-                            {%- endif -%}
+                          {% if block.settings.mobile_image != blank %}
+                            <div class="mobile_version">
+                              <a href="{{ section.settings.image_link }}">
+                                {% if customer %}
+                                  <span class="loyalty-image-cta">בקניית מוצר זה ניתן לצבור {{ product.price | money_without_trailing_zeros }} נקודות</span>
+                                {% else %}
+                                  {{ block.settings.mobile_image | image_url: width: 350 | image_tag }}
+                                  <span class="loyalty-image-cta">{{ section.settings.logged_out_text }}</span>
+                                {% endif %}
+                              </a>
+                            </div>
+                          {% endif %}
                         {%- when 'sku' -%}
                             <p
                                     class="product__sku no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
@@ -682,16 +668,6 @@
       "limit": 10,
       "settings": [
         {
-          "type": "image_picker",
-          "label": "t:sections.main-product.blocks.image.settings.image_picker.label",
-          "id": "image"
-        },
-        {
-          "type": "url",
-          "label": "t:sections.main-product.blocks.image.settings.image_link.label",
-          "id": "image_link"
-        },
-        {
           "type": "header",
           "content": "t:sections.main-product.blocks.image.settings.mobile_section.label"
         },
@@ -703,7 +679,12 @@
         {
           "type": "url",
           "label": "t:sections.main-product.blocks.image.settings.image_link.label",
-          "id": "mobile_image_link"
+          "id": "image_link"
+        },
+        {
+          "type": "text",
+          "label": "t:sections.main-product.blocks.image.settings.logged_out_text.label",
+          "id": "logged_out_text"
         }
       ]
     },

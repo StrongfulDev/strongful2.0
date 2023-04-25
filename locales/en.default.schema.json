@@ -2301,6 +2301,22 @@
             }
           }
         },
+        "image": {
+          "name": "Image",
+          "settings": {
+            "logged_out_text": {
+              "label": "Logged out text"
+            },
+            "image_picker": {
+              "label": "Image",
+              "info": "Select an image from your library, or upload a new one."
+            },
+            "image_link": {
+              "label": "Image link",
+              "info": "Select a page or enter a URL to link this image to."
+            }
+          }
+        },
         "quantity_selector": {
           "name": "Quantity selector"
         },

@@ -1543,6 +1543,7 @@ variant-radios fieldset {
         top: 0;
         bottom: 0;
         width: 100%;
+        z-index: 2;
     }
 }
 
@@ -1561,7 +1562,7 @@ variant-radios fieldset {
 .product-form__input input[type='radio'] + label {
     width: 100%;
     display: block;
-    padding: 1rem;
+    padding: .8rem;
 }
 
 .variant-button {
