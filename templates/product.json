@@ -41,10 +41,11 @@
         "5ae0b953-0e37-48c5-b5cc-e50d6004b25c": {
           "type": "image",
           "settings": {
-            "mobile_image": "shopify:\/\/shop_images\/Screenshot_2023-04-25_at_14.54.14.png",
-            "mobile_image_link": "shopify:\/\/pages\/a-list",
-            "logged_out_text": "הרשמי עכישו למועדון הלקוחות וקבלי 20% הנחה",
-            "logged_in_text": ""
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-25_at_14.54.14.png",
+            "logged_out_text": "הרשמי עכשיו למועדון הלקוחות וקבלי 20% הנחה",
+            "logged_in_text": "<p><strong>ALIST<\/strong> - חברת מועדון<\/p>",
+            "loyalty_link": "shopify:\/\/pages\/a-list",
+            "alt_text": "Image block"
           }
         },
         "679aaa7e-cf01-48c6-85e3-b35a4a905d19": {

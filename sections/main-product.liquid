@@ -1,3 +1,5 @@
+{% assign loyaltyPoints = product.price | divided_by: 100 %}
+
 <section
         id="MainProduct-{{ section.id }}"
         class="page-width section-{{ section.id }}-padding"
@@ -185,15 +187,17 @@
                                 </div>
                             {%- endif -%}
                         {%- when 'image' -%}
-                          {% if block.settings.mobile_image != blank %}
-                            <div class="mobile_version">
-                              <a href="{{ section.settings.image_link }}">
-                                {% if customer %}
-                                  <span class="loyalty-image-cta">בקניית מוצר זה ניתן לצבור {{ product.price | money_without_trailing_zeros }} נקודות</span>
+                          {% if block.settings.image != blank %}
+                            <div class="product-loyalty-container fix-direction">
+                              <a href="{{ block.settings.loyalty_link }}" target="_blank" class="product-loyalty-link {% if customer %}logged-in{% endif %}">
+                                {% unless customer %}
+                                <img src="{{ block.settings.image | img_url: '400x' }}"
+                                     alt="{{ block.settings.alt_text }}" class="product-loyalty-image">
+                                <span class="logged-out-text">{{ block.settings.logged_out_text }}</span>
                                 {% else %}
-                                  {{ block.settings.mobile_image | image_url: width: 350 | image_tag }}
-                                  <span class="loyalty-image-cta">{{ section.settings.logged_out_text }}</span>
-                                {% endif %}
+                                  <span class="product-logged-in-text product-logged-in-text--main">{{ block.settings.logged_in_text }}</span>
+                                <span class="product-logged-in-text product-logged-in-text--sub">{{ 'products.product.loyalty.earn' | t: points: loyaltyPoints }}</span>
+                                {% endunless %}
                               </a>
                             </div>
                           {% endif %}
@@ -622,6 +626,39 @@
       "type": "@app"
     },
     {
+      "type": "image",
+      "name": "t:sections.main-product.blocks.image.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.main-product.blocks.image.settings.image.label"
+        },
+        {
+          "type": "text",
+          "id": "logged_out_text",
+          "label": "t:sections.main-product.blocks.image.settings.logged_out_text.label",
+          "default": "Text block"
+        },
+        {
+          "type": "richtext",
+          "id": "logged_in_text",
+          "label": "t:sections.main-product.blocks.image.settings.logged_in_text.label"
+        },
+        {
+          "type": "url",
+          "id": "loyalty_link",
+          "label": "t:sections.main-product.blocks.image.settings.loyalty_link.label"
+        },
+        {
+          "type": "text",
+          "id": "alt_text",
+          "label": "t:sections.main-product.blocks.image.settings.alt_text.label",
+          "default": "Image block"
+        }
+      ]
+    },
+    {
       "type": "text",
       "name": "t:sections.main-product.blocks.text.name",
       "settings": [
@@ -661,32 +698,6 @@
       "type": "title",
       "name": "t:sections.main-product.blocks.title.name",
       "limit": 1
-    },
-    {
-      "type": "image",
-      "name": "t:sections.main-product.blocks.image.name",
-      "limit": 10,
-      "settings": [
-        {
-          "type": "header",
-          "content": "t:sections.main-product.blocks.image.settings.mobile_section.label"
-        },
-        {
-          "type": "image_picker",
-          "label": "t:sections.main-product.blocks.image.settings.image_picker.label",
-          "id": "mobile_image"
-        },
-        {
-          "type": "url",
-          "label": "t:sections.main-product.blocks.image.settings.image_link.label",
-          "id": "image_link"
-        },
-        {
-          "type": "text",
-          "label": "t:sections.main-product.blocks.image.settings.logged_out_text.label",
-          "id": "logged_out_text"
-        }
-      ]
     },
     {
       "type": "price",

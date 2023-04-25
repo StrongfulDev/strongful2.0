@@ -2302,10 +2302,13 @@
           }
         },
         "image": {
-          "name": "Image",
+          "name": "image",
           "settings": {
             "logged_out_text": {
               "label": "Logged out text"
+            },
+            "logged_in_text": {
+              "label": "Logged in text"
             },
             "image_picker": {
               "label": "Image",

@@ -131,6 +131,9 @@
         "play_model": "Play 3D Viewer",
         "play_video": "Play video"
       },
+      "loyalty": {
+        "earn": "Earn {{ points }} points"
+      },
       "quantity": {
         "label": "Quantity",
         "input_label": "Quantity for {{ product }}",
