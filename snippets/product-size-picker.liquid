@@ -43,7 +43,7 @@
                     <div class="product-size-picker">
                         <product-form class="size-variant-product-form">
                             {%- form 'product', product, class: 'product_size_picker__form form', data-type: 'add-to-cart-form' -%}
-                                <div class="product_variants {% if product.has_only_default_variant %}none{% endif %}">
+                                <div class="product_variants {% if product.has_only_default_variant %}hidden{% endif %}">
                                     <fieldset name="line_items" class="js">
                                         <ul>
                                             {% for variant in product.variants %}
@@ -105,7 +105,7 @@
              class="variant_selector{% if submit_on_click %} submit_on_click{% endif %} {{ wrapper_class }}">
             <product-form class="size-variant-product-form">
                 {%- form 'product', product, class: 'product_size_picker__form form', data-type: 'add-to-cart-form' -%}
-                    <div class="product_variants {% if product.has_only_default_variant %}none{% endif %}">
+                    <div class="product_variants {% if product.has_only_default_variant %}hidden{% endif %}">
                         <fieldset name="line_items" class="js">
                             <ul>
                                 {% for variant in product.variants %}
@@ -169,7 +169,7 @@
        class="variant_selector{% if submit_on_click %} submit_on_click{% endif %} {{ wrapper_class }}">
     <product-form class="size-variant-product-form">
       {%- form 'product', product, class: 'product_size_picker__form form', data-type: 'add-to-cart-form' -%}
-        <div class="product_variants {% if product.has_only_default_variant %}none{% endif %}">
+        <div class="product_variants {% if product.has_only_default_variant %}hidden{% endif %}">
           <fieldset name="line_items" class="js">
             <ul>
               {% for variant in product.variants %}

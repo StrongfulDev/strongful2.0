@@ -4,10 +4,12 @@
 {{ 'component-variant-size-picker.css' | asset_url | stylesheet_tag }}
 {{ 'component-variant-size-picker.js' | asset_url | script_tag }}
 
-<div class="complete_look__slider fix-direction page-width" {{ section.shopify_attributes }}>
+<div class="complete_look__slider {{ setParent }} {{ setParentValue }} fix-direction page-width" {{ section.shopify_attributes }}>
     <div class="complete_look__columns">
         <div class="featured_photo">
-                    {% for product in collections[setParent].products limit: 1 %}
+          {% for collection in collections %}
+            {% if collection.title == setParent %}
+                    {% for product in collection.products limit: 1 %}
                         {% if product.tags contains 'לייב' %}
                             <a href="{{ product.url }}" class="rtl desktop mono-link">
                               <img
@@ -33,13 +35,17 @@
                             </a>
                         {% endif %}
                     {% endfor %}
+            {% endif %}
+          {% endfor %}
         </div>
         <div class="column_spacer" style="width: 30px; display: block">&nbsp;</div>
         <ul class="complete_look__list">
             <li>
                 <h4 class="title title-wrapper--no-top-margin complete_look__title {{ section.settings.heading_size }}">{{ section.settings.heading }}</h4>
             </li>
-                    {% for product in collections[setParent].products %}
+            {% for collection in collections %}
+                {% if collection.title == setParent %}
+                    {% for product in collection.products %}
                         {% unless product.id == productId %}
                             {% if product.tags contains 'לייב' %}
                                 <li class="complete_look__list_item">
@@ -80,6 +86,8 @@
                             {% endif %}
                         {% endunless %}
                     {% endfor %}
+                {% endif %}
+            {% endfor %}
         </ul>
     </div>
 </div>

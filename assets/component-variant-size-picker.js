@@ -8,6 +8,8 @@ function quickAdd() {
     }
   })
 
+  $('.product_size_picker__button.default_input').parents('.variant_selector').find('.add_to_cart').removeAttr("disabled");
+
   $('.variant_selector input[type="radio"]').on("change", function (e) {
     const element = $(this);
     element.parents('.variant_selector').find('.add_to_cart').removeAttr("disabled");
