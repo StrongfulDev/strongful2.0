@@ -103,6 +103,7 @@ class FacetFiltersForm extends HTMLElement {
 
     facetsToRender.forEach((element) => {
       document.querySelector(`.js-filter[data-index="${element.dataset.index}"]`).innerHTML = element.innerHTML;
+      console.log(element)
     });
 
     FacetFiltersForm.renderActiveFacets(parsedHTML);
