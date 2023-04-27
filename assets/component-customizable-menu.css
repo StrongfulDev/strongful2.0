@@ -262,3 +262,17 @@
 .menu-drawer-container .js .menu-drawer__menu li {
     margin-bottom: 0;
 }
+
+.menu-drawer-container.customizable .mobile_menu {
+    justify-content: space-between;
+}
+
+.header__menu-item {
+    padding: 0;
+}
+
+.nav_top--mobile-logo {
+    margin: auto;
+    display: block;
+    text-align: center;
+}

@@ -73,7 +73,7 @@
             "desktop_links_image_1_link": "",
             "desktop_links_image_2": "shopify:\/\/shop_images\/02_55663bf9-839e-4fc1-90f8-3c660f2805e4.jpg",
             "desktop_links_image_2_link": "",
-            "mobile_cover_image": "shopify:\/\/shop_images\/2002-copy_8a51793b-4936-4859-a295-763e386d1a4a.jpg",
+            "mobile_cover_image": "shopify:\/\/shop_images\/20e5c3f719da92dc7bfd0c70c57f7186.jpg",
             "mobile_title": ""
           }
         },
@@ -83,10 +83,10 @@
             "menu": "main-menu",
             "title": "טופים",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/2002-copy_c2210285-2e35-4183-a2f8-402656120900.jpg",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/bra_hamburger.jpg",
             "desktop_links_image_1_link": "",
             "desktop_links_image_2_link": "",
-            "mobile_cover_image": "shopify:\/\/shop_images\/2002-copy_1_80604bc1-c0f1-424b-86c1-4e425a03e053.jpg",
+            "mobile_cover_image": "shopify:\/\/shop_images\/bra_hamburger.jpg",
             "mobile_title": ""
           }
         },
@@ -96,10 +96,10 @@
             "menu": "bottom-menu",
             "title": "טייצים",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/2002-copy_410f60be-4eb7-46af-89dd-bfdfa3df7713.jpg",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/leggings_hamburger.jpg",
             "desktop_links_image_1_link": "",
             "desktop_links_image_2_link": "",
-            "mobile_cover_image": "shopify:\/\/shop_images\/2002-copy_410f60be-4eb7-46af-89dd-bfdfa3df7713.jpg",
+            "mobile_cover_image": "shopify:\/\/shop_images\/leggings_hamburger.jpg",
             "mobile_title": ""
           }
         }
@@ -124,8 +124,11 @@
         "mobile_top_image_2": "shopify:\/\/shop_images\/02_1_1fb57bb5-1e63-4459-bee9-a133a0a2b54c.jpg",
         "mobile_top_image_2_link": "",
         "margin_bottom": 0,
+        "mobile_logo_width": 50,
         "padding_top": 20,
-        "padding_bottom": 20
+        "padding_bottom": 20,
+        "mobile_logo": "shopify:\/\/shop_images\/9ed861fba4dae099b0b04754bbc299cc.png",
+        "mobile_logo_link": "\/"
       }
     }
   },

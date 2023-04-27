@@ -177,7 +177,15 @@
                                 <div class="menu-drawer__navigation-container">
                                     <nav class="menu-drawer__navigation">
                                         <div class="nav_top">
-                                            <div class="mobile_menu">
+                                          {% if section.settings.mobile_logo_link != '' %}
+                                            <a href="{{ section.settings.mobile_logo_link }}" class="nav_top--mobile-logo">
+                                              {% if section.settings.mobile_logo %}
+                                                <img src="{{ section.settings.mobile_logo | img_url: 'master' }}" alt="{{ shop.name }}"
+                                                     class="logo menu-drawer__logo" style="width: {{ section.settings.mobile_logo_width }}px">
+                                              {% endif %}
+                                            </a>
+                                          {% endif %}
+                                            <div class="mobile_menu fix-direction">
                                                 {% for menu_item in section.settings.mobile_menu.links %}
                                                     <a href="{{ menu_item.url }}"
                                                        class="mobile_menu_link header__menu-item">
@@ -1184,33 +1192,6 @@
     ],
     "url": {{ request.origin | append: page.url | json }}
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </script>
 
     {%- if request.page_type == 'index' -%}
@@ -1227,32 +1208,6 @@
       },
       "url": {{ request.origin | append: page.url | json }}
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         </script>
     {%- endif -%}
@@ -1447,6 +1402,16 @@
       "default":0
     },
     {
+      "type": "range",
+      "id": "mobile_logo_width",
+      "min": 40,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "t:sections.header.settings.mobile_logo_size.label",
+      "default": 60
+    },
+    {
       "type":"header",
       "content":"t:sections.all.padding.section_padding_heading"
     },
@@ -1469,6 +1434,16 @@
       "unit":"px",
       "label":"t:sections.all.padding.padding_bottom",
       "default":20
+    },
+    {
+    "type": "image_picker",
+    "id": "mobile_logo",
+    "label": "t:sections.header.settings.mobile_logo.label"
+    },
+    {
+    "type": "url",
+    "id": "mobile_logo_link",
+    "label": "t:sections.header.settings.mobile_logo_link.label"
     }
   ],
   "blocks":[

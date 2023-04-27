@@ -3023,6 +3023,15 @@ fieldset {
     margin-bottom: 1em;
 }
 
+.button--primary:after, .button--primary:before {
+    display: none;
+    content: none;
+}
+
+.global-media-settings {
+    border: 0;
+}
+
 @media screen and (min-width: 990px) {
     .mobile--only {
         display: none;
