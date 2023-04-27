@@ -844,6 +844,9 @@
         "title": {
           "label": "Heading"
         },
+        "steps": {
+          "label": "Amount of slides to slide per click"
+        },
         "description": {
           "label": "Description"
         },
