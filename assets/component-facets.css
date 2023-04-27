@@ -1208,12 +1208,11 @@ input.mobile-facets__checkbox {
   left: 0;
 }
 
-/* The container must be positioned relative: */
 .select {
   position: relative;
 }
 
-.select select {
+.select__select {
   display: none; /*hide original SELECT element: */
 }
 
@@ -1266,3 +1265,4 @@ input.mobile-facets__checkbox {
 .select-items div:hover, .same-as-selected {
   background-color: rgba(0, 0, 0, 0.1);
 }
+
