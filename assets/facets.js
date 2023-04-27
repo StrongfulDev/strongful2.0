@@ -362,34 +362,27 @@ function hideInStockFacet() {
 }
 
 function designSort() {
-  let selectContainer, selectElement, a, b, c;
-  /* Look for any elements with the class "custom-select": */
+  let selectContainer, selectElement, fakeDropDown, b, c;
   selectContainer = document.querySelectorAll(".select");
   for (let i = 0; i < selectContainer.length; i++) {
     selectElement = selectContainer[i].querySelector("select");
-    /* For each element, create a new DIV that will act as the selected item: */
-    a = document.createElement("DIV");
-    a.setAttribute("class", "select-selected");
-    a.innerHTML = selectElement.options[selectElement.selectedIndex].innerHTML;
-    selectContainer[i].appendChild(a);
-    /* For each element, create a new DIV that will contain the option list: */
+    fakeDropDown = document.createElement("DIV");
+    fakeDropDown.setAttribute("class", "select-selected");
+    fakeDropDown.innerHTML = selectElement.options[selectElement.selectedIndex].innerHTML;
+    selectContainer[i].appendChild(fakeDropDown);
     b = document.createElement("DIV");
     b.setAttribute("class", "select-items select-hide");
     for (let j = 1; j < selectElement.length; j++) {
-      /* For each option in the original select element,
-			create a new DIV that will act as an option item: */
       c = document.createElement("DIV");
       c.innerHTML = selectElement.options[j].innerHTML;
       c.addEventListener("click", function(e) {
-        /* When an item is clicked, update the original select box,
-        and the selected item: */
         let y, i, k, s, h, sl, yl;
+        console.log(this)
         s = this.parentNode.parentNode.getElementsByTagName("select")[0];
         sl = s.length;
         h = this.parentNode.previousSibling;
-        console.log(h);
-        for (i = 0; i < sl; i++) {
-          if (s.options[i].innerHTML == this.innerHTML) {
+        for (let i = 0; i < sl; i++) {
+          if (s.options[i].innerHTML === this.innerHTML) {
             s.selectedIndex = i;
             h.innerHTML = this.innerHTML;
             y = this.parentNode.getElementsByClassName("same-as-selected");
@@ -406,9 +399,7 @@ function designSort() {
       b.appendChild(c);
     }
     selectContainer[i].appendChild(b);
-    a.addEventListener("click", function(e) {
-      /* When the select box is clicked, close any other select boxes,
-			and open/close the current select box: */
+    fakeDropDown.addEventListener("click", function(e) {
       e.stopPropagation();
       closeAllSelect(this);
       this.nextSibling.classList.toggle("select-hide");
@@ -417,8 +408,6 @@ function designSort() {
   }
 
   function closeAllSelect(elmnt) {
-    /* A function that will close all select boxes in the document,
-		except the current select box: */
     let fakeSelectContainer, y, i, fakeSelectContainerLength, yl, arrNo = [];
     fakeSelectContainer = document.getElementsByClassName("select-items");
     y = document.getElementsByClassName("select-selected");
@@ -438,8 +427,6 @@ function designSort() {
     }
   }
 
-  /* If the user clicks anywhere outside the select box,
-	then close all select boxes: */
   document.addEventListener("click", closeAllSelect);
 }
 
