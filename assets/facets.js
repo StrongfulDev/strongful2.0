@@ -120,12 +120,7 @@ class FacetFiltersForm extends HTMLElement {
       const activeFacetsElement = html.querySelector(selector);
       if (!activeFacetsElement) return;
       document.querySelector(selector).innerHTML = activeFacetsElement.innerHTML;
-      let spans = document.querySelectorAll('.active-facets__button-inner');
-      spans.forEach(function(span) {
-        if (span.innerText.includes('Availability')) {
-          $(span).parents('facet-remove').addClass('hidden');
-        }
-      })
+      hideInStockFacet();
     })
 
     FacetFiltersForm.toggleActiveFacets(false);
@@ -357,24 +352,34 @@ function sizeRounds(dom) {
   }
 }
 
+function hideInStockFacet() {
+  let spans = document.querySelectorAll('.active-facets__button-inner');
+  spans.forEach(function(span) {
+    if (span.innerText.includes('Availability')) {
+      $(span).parents('facet-remove').addClass('hidden');
+    }
+  });
+}
+
 colorRounds(document);
 sizeRounds(document);
+hideInStockFacet();
 
 // TODO: Insert to class
 document.getElementById('Filter-filter.v.availability-mobile-1').checked = true;
 
-let customUrl = new URL(window.location.href);
-customUrl.searchParams.set('filter.v.availability', '1');
-window.history.pushState({}, '', customUrl);
+// let customUrl = new URL(window.location.href);
+// customUrl.searchParams.set('filter.v.availability', '1');
+// window.history.pushState({}, '', customUrl);
+//
+// if (customUrl.search === '?filter.v.availability=1') {
+//   $("facet-remove").hide();
+// }
 
-if (customUrl.search === '?filter.v.availability=1') {
-  $("facet-remove").hide();
-}
-
-let activeFilter = document.querySelectorAll('.active-facets__button-inner.button.button--tertiary');
-for (let i = 0; i < activeFilter.length; i++) {
-  let filterText = activeFilter[i].innerText;
-  if (filterText.includes('Availability: In stock')) {
-    $(activeFilter[i]).closest('facet-remove').hide();
-  }
-}
+// let activeFilter = document.querySelectorAll('.active-facets__button-inner.button.button--tertiary');
+// for (let i = 0; i < activeFilter.length; i++) {
+//   let filterText = activeFilter[i].innerText;
+//   if (filterText.includes('Availability: In stock')) {
+//     $(activeFilter[i]).closest('facet-remove').hide();
+//   }
+// }
