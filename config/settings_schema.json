@@ -137,6 +137,10 @@
           {
             "value": "spartan",
             "label": "t:settings_schema.typography.settings.type_header_font_custom.options__2.label"
+          },
+          {
+            "value": "noto-sans",
+            "label": "t:settings_schema.typography.settings.type_header_font_custom.options__3.label"
           }
         ],
         "default": "none",
@@ -168,6 +172,10 @@
           {
             "value": "spartan",
             "label": "t:settings_schema.typography.settings.type_body_font_custom.options__2.label"
+          },
+          {
+            "value": "noto-sans",
+            "label": "t:settings_schema.typography.settings.type_body_font_custom.options__3.label"
           }
         ],
         "default": "none",

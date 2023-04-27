@@ -16,6 +16,7 @@
     "type_header_font": "arimo_n4",
     "type_header_font_custom": "none",
     "heading_scale": 90,
+    "type_body_font_custom": "none",
     "type_body_font": "arimo_n4",
     "body_scale": 100,
     "page_width": 1200,

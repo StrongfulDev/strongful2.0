@@ -707,6 +707,11 @@ noscript .localization-selector.link {
 /* Custom Styles - Yahav */
 
 /* Global footer menu alignment classes */
+
+.footer {
+    border-top: 1px var(--gradient-base-background-2) solid;
+}
+
 .footer-block__heading--right { text-align: right; } .footer-block__heading--center { text-align: center; } .footer-block__heading--left { text-align: left; }
 
 .footer-details {
@@ -719,6 +724,16 @@ noscript .localization-selector.link {
 
 .footer-block--menu:first-child .footer-details {
     border-top: 1px solid rgba(var(--color-foreground), 0.2);
+}
+
+.footer__content-top {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.footer-blockgrid__item {
+    padding-left: calc(4rem / var(--font-body-scale));
+    padding-right: calc(4rem / var(--font-body-scale));
 }
 
 .link_list .summary__title {
@@ -758,10 +773,6 @@ noscript .localization-selector.link {
 
 .no-after:after {
     display: none;
-}
-
-.footer {
-    border: none;
 }
 
 .blog_and_newsletter-grid {
@@ -818,7 +829,7 @@ noscript .localization-selector.link {
 }
 
 .footer__content-bottom {
-    padding: 1em 2em 2em;
+    padding: 1em 0 2em;
     direction: ltr;
     margin: 2rem 0 0;
 }
