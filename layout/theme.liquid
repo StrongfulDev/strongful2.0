@@ -67,8 +67,22 @@
       }
 
       @font-face {
-      font-family: 'noto-sans';
-      src: url('{{ 'NotoSansHebrew-Black.ttf' | asset_url }}') format('truetype');
+      font-family: 'Noto Sans Hebrew', sans-serif;
+      src: url('{{ 'NotoSansHebrew-VariableFont_wdth,wght.ttf' | file_url }}') format('truetype');
+      font-weight: --font-body-weight;
+      font-style: --font-body-style;
+      }
+
+      @font-face {
+      font-family: 'Noto Sans Hebrew', sans-serif;
+      src: url('{{ 'NotoSansHebrew-Black.ttf' | file_url }}') format('truetype');
+      font-weight: --font-body-weight;
+      font-style: --font-body-style;
+      }
+
+      @font-face {
+      font-family: 'Open Sans', sans-serif;
+      src: url('{{ 'OpenSans-VariableFont_wdth,wght.ttf' | file_url }}') format('truetype');
       font-weight: --font-body-weight;
       font-style: --font-body-style;
       }
