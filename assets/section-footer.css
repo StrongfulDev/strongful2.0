@@ -796,8 +796,9 @@ noscript .localization-selector.link {
 
 .footer-block__brand-info .footer__list-social.list-social {
     justify-content: space-between;
-    width: 50%;
+    width: 75%;
     margin: auto;
+    direction: ltr;
 }
 
 .footer .grid {
