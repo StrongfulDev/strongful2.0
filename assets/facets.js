@@ -103,9 +103,10 @@ class FacetFiltersForm extends HTMLElement {
 
     facetsToRender.forEach((element) => {
       document.querySelector(`.js-filter[data-index="${element.dataset.index}"]`).innerHTML = element.innerHTML;
-      console.log(element)
     });
 
+    colorRounds(document);
+    sizeRounds(document);
     FacetFiltersForm.renderActiveFacets(parsedHTML);
     FacetFiltersForm.renderAdditionalElements(parsedHTML);
 
@@ -119,6 +120,12 @@ class FacetFiltersForm extends HTMLElement {
       const activeFacetsElement = html.querySelector(selector);
       if (!activeFacetsElement) return;
       document.querySelector(selector).innerHTML = activeFacetsElement.innerHTML;
+      let spans = document.querySelectorAll('.active-facets__button-inner');
+      spans.forEach(function(span) {
+        if (span.innerText.includes('Availability')) {
+          $(span).parents('facet-remove').addClass('hidden');
+        }
+      })
     })
 
     FacetFiltersForm.toggleActiveFacets(false);
@@ -267,6 +274,92 @@ class FacetRemove extends HTMLElement {
 
 customElements.define('facet-remove', FacetRemove);
 
+function colorRounds(html) {
+  const colorLabels = html.querySelectorAll(".color-label");
+  const colorRounds = html.querySelectorAll(".color-round");
+
+  for (let i = 0; i < colorLabels.length; i++) {
+    switch (colorLabels[i].innerHTML) {
+      case "שחור":
+        colorRounds[i].style.backgroundColor = "#000000";
+        break;
+      case "לבן":
+        colorRounds[i].style.backgroundColor = "#ffffff";
+        colorRounds[i].style.border = "1px solid #000000";
+        break;
+      case "אדום":
+        colorRounds[i].style.backgroundColor = "#ff0000";
+        break;
+      case "כחול":
+        colorRounds[i].style.backgroundColor = "rgb(34, 29, 193)";
+        break;
+      case "ירוק":
+        colorRounds[i].style.backgroundColor = "rgb(0, 106, 78)";
+        break;
+      case "ניוד":
+        colorRounds[i].style.backgroundColor = "rgb(225, 205, 180)";
+        break;
+      case "צהוב":
+        colorRounds[i].style.backgroundColor = "rgb(253, 226, 0)";
+        break;
+      case "כתום":
+        colorRounds[i].style.backgroundColor = "rgb(231, 155, 46)";
+        break;
+      case "סגול":
+        colorRounds[i].style.backgroundColor = "rgb(126, 11, 128)";
+        break;
+      case "ורוד":
+        colorRounds[i].style.backgroundColor = "rgb(252, 172, 173)";
+        break;
+      case "חום":
+        colorRounds[i].style.backgroundColor = "rgb(123, 79, 44)";
+        break;
+      case "אפור":
+        colorRounds[i].style.backgroundColor = "rgb(217, 217, 217)";
+        break;
+      default:
+        console.log("no color");
+        break;
+    }
+  }
+}
+
+function sizeRounds(dom) {
+  let sizeLabels = dom.querySelectorAll(".size-label");
+  for (let i = 0; i < sizeLabels.length; i++) {
+    let sizeLabel = sizeLabels[i];
+    switch (sizeLabel.innerHTML) {
+      case "XXS":
+        $(sizeLabel).closest(".mobile-facets__item").css("order", 1);
+        break;
+      case "XS":
+        $(sizeLabel).closest(".mobile-facets__item").css("order", 2);
+        break;
+      case "S":
+        $(sizeLabel).closest(".mobile-facets__item").css("order", 3);
+        break;
+      case "M":
+        $(sizeLabel).closest(".mobile-facets__item").css("order", 4);
+        break;
+      case "L":
+        $(sizeLabel).closest(".mobile-facets__item").css("order", 5);
+        break;
+      case "XL":
+        $(sizeLabel).closest(".mobile-facets__item").css("order", 6);
+        break;
+      case "XXL":
+        $(sizeLabel).closest(".mobile-facets__item").css("order", 7);
+        break;
+      case "XXXL":
+        $(sizeLabel).closest(".mobile-facets__item").css("order", 8);
+        break;
+    }
+  }
+}
+
+colorRounds(document);
+sizeRounds(document);
+
 // TODO: Insert to class
 document.getElementById('Filter-filter.v.availability-mobile-1').checked = true;
 
@@ -283,86 +376,5 @@ for (let i = 0; i < activeFilter.length; i++) {
   let filterText = activeFilter[i].innerText;
   if (filterText.includes('Availability: In stock')) {
     $(activeFilter[i]).closest('facet-remove').hide();
-  }
-}
-
-let colorLabels = document.querySelectorAll(".color-label");
-let colorRounds = document.querySelectorAll(".color-round");
-
-for (let i = 0; i < colorLabels.length; i++) {
-  let colorLabel = colorLabels[i];
-  let colorRound = colorRounds[i];
-  switch (colorLabel.innerHTML) {
-    case "שחור":
-      colorRound.style.backgroundColor = "#000000";
-      break;
-    case "לבן":
-      colorRound.style.backgroundColor = "#ffffff";
-      colorRound.style.border = "1px solid #000000";
-      break;
-    case "אדום":
-      colorRound.style.backgroundColor = "#ff0000";
-      break;
-    case "כחול":
-      colorRound.style.backgroundColor = "rgb(34, 29, 193)";
-      break;
-    case "ירוק":
-      colorRound.style.backgroundColor = "rgb(0, 106, 78)";
-      break;
-    case "ניוד":
-      colorRound.style.backgroundColor = "rgb(225, 205, 180)";
-      break;
-    case "צהוב":
-      colorRound.style.backgroundColor = "rgb(253, 226, 0)";
-      break;
-    case "כתום":
-      colorRound.style.backgroundColor = "rgb(231, 155, 46)";
-      break;
-    case "סגול":
-      colorRound.style.backgroundColor = "rgb(126, 11, 128)";
-      break;
-    case "ורוד":
-      colorRound.style.backgroundColor = "rgb(252, 172, 173)";
-      break;
-    case "חום":
-      colorRound.style.backgroundColor = "rgb(123, 79, 44)";
-      break;
-    case "אפור":
-      colorRound.style.backgroundColor = "rgb(217, 217, 217)";
-      break;
-    default:
-      console.log("no color");
-      break;
-  }
-}
-
-let sizeLabels = document.querySelectorAll(".size-label");
-for (let i = 0; i < sizeLabels.length; i++) {
-  let sizeLabel = sizeLabels[i];
-  switch (sizeLabel.innerHTML) {
-    case "XXS":
-      $(sizeLabel).closest(".mobile-facets__item").css("order", 1);
-      break;
-    case "XS":
-      $(sizeLabel).closest(".mobile-facets__item").css("order", 2);
-      break;
-    case "S":
-      $(sizeLabel).closest(".mobile-facets__item").css("order", 3);
-      break;
-    case "M":
-      $(sizeLabel).closest(".mobile-facets__item").css("order", 4);
-      break;
-    case "L":
-      $(sizeLabel).closest(".mobile-facets__item").css("order", 5);
-      break;
-    case "XL":
-      $(sizeLabel).closest(".mobile-facets__item").css("order", 6);
-      break;
-    case "XXL":
-      $(sizeLabel).closest(".mobile-facets__item").css("order", 7);
-      break;
-    case "XXXL":
-      $(sizeLabel).closest(".mobile-facets__item").css("order", 8);
-      break;
   }
 }
