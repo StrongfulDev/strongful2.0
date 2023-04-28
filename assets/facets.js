@@ -362,35 +362,61 @@ function hideInStockFacet() {
 }
 
 function designSort() {
+
+  // get all the parent divs of the real select elements
   let realSelectContainer = document.querySelectorAll(".select");
+
+  // loop through all the parent divs
   for (let i = 0; i < realSelectContainer.length; i++) {
+
+    // get the real select element of each parent div
     let realSelectElement = realSelectContainer[i].querySelector("select");
+
+    // create a fake select element container
     let fakeDropDown = document.createElement("DIV");
     fakeDropDown.setAttribute("class", "select-selected");
     fakeDropDown.innerHTML = realSelectElement.options[realSelectElement.selectedIndex].innerHTML;
+
+    // add the fake dropdown to the real select element
     realSelectContainer[i].appendChild(fakeDropDown);
+
+    // create a fake select element (div) that will contain all the fake options
     let fakeSelectElement = document.createElement("DIV");
     fakeSelectElement.setAttribute("class", "select-items select-hide");
+
+    // loop through all the options of the real select element
     for (let j = 1; j < realSelectElement.length; j++) {
+
+      // create a fake option (div) for each option of the real select element
       let fakeOption = document.createElement("DIV");
       fakeOption.innerHTML = realSelectElement.options[j].innerHTML;
+
+      // when the fake option is clicked, update the fake dropdown text and the real select element
       fakeOption.addEventListener("click", function(e) {
-        let y;
-        let fakeOptionRealSelect = this.parentNode.parentNode.getElementsByTagName("select")[0];
-        let h = this.parentNode.previousSibling;
+
+        // get the real select element of the fake option that was clicked
+        let fakeOptionRealSelect = this.parentNode.parentNode.querySelector(".select__select");
+
+        // get the fake dropdown of the fake option that was clicked
+        let fakeDropdownOption = this.parentNode.previousSibling;
+
         for (let i = 0; i < fakeOptionRealSelect.length; i++) {
           if (fakeOptionRealSelect.options[i].innerHTML === this.innerHTML) {
             fakeOptionRealSelect.selectedIndex = i;
-            h.innerHTML = this.innerHTML;
-            y = this.parentNode.getElementsByClassName("same-as-selected");
-            for (let k = 0; k < y.length; k++) {
-              y[k].removeAttribute("class");
+            fakeDropdownOption.innerHTML = this.innerHTML;
+            let fakeSelectedOption = this.parentNode.getElementsByClassName("same-as-selected");
+            fakeOptionRealSelect.options[i].setAttribute("selected", "selected");
+            //submit the parent form of the select element when the fake option is clicked using jquery
+            $(fakeOptionRealSelect).closest('form').submit();
+
+            for (let k = 0; k < fakeSelectedOption.length; k++) {
+              fakeSelectedOption[k].removeAttribute("class");
             }
             this.setAttribute("class", "same-as-selected");
             break;
           }
         }
-        h.click();
+        fakeDropdownOption.click();
       });
       fakeSelectElement.appendChild(fakeOption);
     }
@@ -404,19 +430,17 @@ function designSort() {
   }
 
   function closeAllSelect(elmnt) {
-    let fakeSelectContainer, y, i, fakeSelectContainerLength, yl, arrNo = [];
-    fakeSelectContainer = document.getElementsByClassName("select-items");
-    y = document.getElementsByClassName("select-selected");
-    fakeSelectContainerLength = fakeSelectContainer.length;
-    yl = y.length;
-    for (i = 0; i < yl; i++) {
+    let arrNo = [];
+    let fakeSelectContainer = document.getElementsByClassName("select-items");
+    let y = document.getElementsByClassName("select-selected");
+    for (let i = 0; i < y.length; i++) {
       if (elmnt == y[i]) {
         arrNo.push(i)
       } else {
         y[i].classList.remove("select-arrow-active");
       }
     }
-    for (i = 0; i < fakeSelectContainerLength; i++) {
+    for (let i = 0; i < fakeSelectContainer.length; i++) {
       if (arrNo.indexOf(i)) {
         fakeSelectContainer[i].classList.add("select-hide");
       }
