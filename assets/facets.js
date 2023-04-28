@@ -425,6 +425,7 @@ function designSort() {
       e.stopPropagation();
       closeAllSelect(this);
       this.nextSibling.classList.toggle("select-hide");
+      this.parentElement.firstElementChild.nextElementSibling.classList.toggle("rotate-arrow");
       this.classList.toggle("select-arrow-active");
     });
   }
@@ -436,6 +437,7 @@ function designSort() {
     for (let i = 0; i < y.length; i++) {
       if (elmnt == y[i]) {
         arrNo.push(i)
+
       } else {
         y[i].classList.remove("select-arrow-active");
       }
