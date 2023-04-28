@@ -362,32 +362,28 @@ function hideInStockFacet() {
 }
 
 function designSort() {
-  let selectContainer, selectElement, fakeDropDown, b, c;
-  selectContainer = document.querySelectorAll(".select");
-  for (let i = 0; i < selectContainer.length; i++) {
-    selectElement = selectContainer[i].querySelector("select");
-    fakeDropDown = document.createElement("DIV");
+  let realSelectContainer = document.querySelectorAll(".select");
+  for (let i = 0; i < realSelectContainer.length; i++) {
+    let realSelectElement = realSelectContainer[i].querySelector("select");
+    let fakeDropDown = document.createElement("DIV");
     fakeDropDown.setAttribute("class", "select-selected");
-    fakeDropDown.innerHTML = selectElement.options[selectElement.selectedIndex].innerHTML;
-    selectContainer[i].appendChild(fakeDropDown);
-    b = document.createElement("DIV");
-    b.setAttribute("class", "select-items select-hide");
-    for (let j = 1; j < selectElement.length; j++) {
-      c = document.createElement("DIV");
-      c.innerHTML = selectElement.options[j].innerHTML;
-      c.addEventListener("click", function(e) {
-        let y, i, k, s, h, sl, yl;
-        console.log(this)
-        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-        sl = s.length;
-        h = this.parentNode.previousSibling;
-        for (let i = 0; i < sl; i++) {
-          if (s.options[i].innerHTML === this.innerHTML) {
-            s.selectedIndex = i;
+    fakeDropDown.innerHTML = realSelectElement.options[realSelectElement.selectedIndex].innerHTML;
+    realSelectContainer[i].appendChild(fakeDropDown);
+    let fakeSelectElement = document.createElement("DIV");
+    fakeSelectElement.setAttribute("class", "select-items select-hide");
+    for (let j = 1; j < realSelectElement.length; j++) {
+      let fakeOption = document.createElement("DIV");
+      fakeOption.innerHTML = realSelectElement.options[j].innerHTML;
+      fakeOption.addEventListener("click", function(e) {
+        let y;
+        let fakeOptionRealSelect = this.parentNode.parentNode.getElementsByTagName("select")[0];
+        let h = this.parentNode.previousSibling;
+        for (let i = 0; i < fakeOptionRealSelect.length; i++) {
+          if (fakeOptionRealSelect.options[i].innerHTML === this.innerHTML) {
+            fakeOptionRealSelect.selectedIndex = i;
             h.innerHTML = this.innerHTML;
             y = this.parentNode.getElementsByClassName("same-as-selected");
-            yl = y.length;
-            for (k = 0; k < yl; k++) {
+            for (let k = 0; k < y.length; k++) {
               y[k].removeAttribute("class");
             }
             this.setAttribute("class", "same-as-selected");
@@ -396,9 +392,9 @@ function designSort() {
         }
         h.click();
       });
-      b.appendChild(c);
+      fakeSelectElement.appendChild(fakeOption);
     }
-    selectContainer[i].appendChild(b);
+    realSelectContainer[i].appendChild(fakeSelectElement);
     fakeDropDown.addEventListener("click", function(e) {
       e.stopPropagation();
       closeAllSelect(this);
