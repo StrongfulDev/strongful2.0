@@ -20,6 +20,7 @@ class FacetFiltersForm extends HTMLElement {
       if (searchParams === FacetFiltersForm.searchParamsPrev) return;
       FacetFiltersForm.renderPage(searchParams, null, false);
     }
+    FacetFiltersForm.activeFilterCount();
     window.addEventListener('popstate', onHistoryChange);
   }
 
@@ -153,6 +154,11 @@ class FacetFiltersForm extends HTMLElement {
     }
   }
 
+  static activeFilterCount() {
+    let activeFilters = document.querySelectorAll('.mobile-facets__checkbox:checked');
+    document.querySelector(".mobile-facets__active-filter-count").innerHTML = "(" + activeFilters.length + ")";
+  }
+
   static updateURLHash(searchParams) {
     history.pushState({searchParams}, '', `${window.location.pathname}${searchParams && '?'.concat(searchParams)}`);
   }
@@ -171,6 +177,7 @@ class FacetFiltersForm extends HTMLElement {
   }
 
   onSubmitForm(searchParams, event) {
+    FacetFiltersForm.activeFilterCount();
     FacetFiltersForm.renderPage(searchParams, event);
   }
 
