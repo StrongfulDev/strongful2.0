@@ -375,7 +375,8 @@ function designSort() {
     // create a fake select element container
     let fakeDropDown = document.createElement("DIV");
     fakeDropDown.setAttribute("class", "select-selected");
-    fakeDropDown.innerHTML = realSelectElement.options[realSelectElement.selectedIndex].innerHTML;
+    // fakeDropDown.innerHTML = realSelectElement.options[realSelectElement.selectedIndex].innerHTML;
+    fakeDropDown.innerHTML = 'סינון לפי';
 
     // add the fake dropdown to the real select element
     realSelectContainer[i].appendChild(fakeDropDown);
@@ -389,7 +390,19 @@ function designSort() {
 
       // create a fake option (div) for each option of the real select element
       let fakeOption = document.createElement("DIV");
-      fakeOption.innerHTML = realSelectElement.options[j].innerHTML;
+      fakeOption.setAttribute("class", "mobile-facets__label");
+      let fakeOptionSquare = document.createElement("span");
+      fakeOptionSquare.setAttribute("class", "mobile-facets__label-square");
+      fakeOption.prepend(fakeOptionSquare);
+      let fakeOptionLabel = document.createElement("span");
+      fakeOptionLabel.setAttribute("class", "mobile-facets__label-text");
+      fakeOptionLabel.innerHTML = realSelectElement.options[j].innerHTML;
+      fakeOption.append(fakeOptionLabel);
+      let fakeOptionCheckmark = document.createElement("span");
+      fakeOptionCheckmark.setAttribute("class", "mobile-facets__label-checkmark");
+      let fakeOptionCheckmarkHTML = '<svg aria-hidden="true" class="icon icon-checkmark" width="1.1rem" height="0.7rem" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"></path></svg>'
+      fakeOptionCheckmark.innerHTML = fakeOptionCheckmarkHTML;
+      fakeOption.append(fakeOptionCheckmark);
 
       // when the fake option is clicked, update the fake dropdown text and the real select element
       fakeOption.addEventListener("click", function(e) {
@@ -400,10 +413,14 @@ function designSort() {
         // get the fake dropdown of the fake option that was clicked
         let fakeDropdownOption = this.parentNode.previousSibling;
 
+        // toggle the checkmark
+        this.lastElementChild.firstElementChild.classList.toggle("visible-checkmark");
+        this.lastElementChild.classList.toggle("checked");
+
         for (let i = 0; i < fakeOptionRealSelect.length; i++) {
-          if (fakeOptionRealSelect.options[i].innerHTML === this.innerHTML) {
+          if (fakeOptionRealSelect.options[i].innerHTML === this.firstElementChild.nextElementSibling.innerHTML) {
             fakeOptionRealSelect.selectedIndex = i;
-            fakeDropdownOption.innerHTML = this.innerHTML;
+            fakeDropdownOption.innerHTML = this.firstElementChild.nextElementSibling.innerHTML;
             let fakeSelectedOption = this.parentNode.getElementsByClassName("same-as-selected");
             fakeOptionRealSelect.options[i].setAttribute("selected", "selected");
             //submit the parent form of the select element when the fake option is clicked using jquery
@@ -412,11 +429,13 @@ function designSort() {
             for (let k = 0; k < fakeSelectedOption.length; k++) {
               fakeSelectedOption[k].removeAttribute("class");
             }
-            this.setAttribute("class", "same-as-selected");
+            this.classList.add("same-as-selected");
             break;
+          } else {
+            this.classList.remove("same-as-selected");
           }
         }
-        fakeDropdownOption.click();
+        // fakeDropdownOption.click();
       });
       fakeSelectElement.appendChild(fakeOption);
     }
@@ -431,9 +450,17 @@ function designSort() {
   }
 
   function closeAllSelect(elmnt) {
+
+    // a function that will close all select boxes in the document, except the current select box
     let arrNo = [];
+
+    // get all the fake select elements
     let fakeSelectContainer = document.getElementsByClassName("select-items");
+
+    // get all the fake dropdowns
     let y = document.getElementsByClassName("select-selected");
+
+    // loop through all the fake dropdowns
     for (let i = 0; i < y.length; i++) {
       if (elmnt == y[i]) {
         arrNo.push(i)
@@ -441,11 +468,11 @@ function designSort() {
         y[i].classList.remove("select-arrow-active");
       }
     }
-    for (let i = 0; i < fakeSelectContainer.length; i++) {
-      if (arrNo.indexOf(i)) {
-        fakeSelectContainer[i].classList.add("select-hide");
-      }
-    }
+    // for (let i = 0; i < fakeSelectContainer.length; i++) {
+    //   if (arrNo.indexOf(i)) {
+    //     fakeSelectContainer[i].classList.add("select-hide");
+    //   }
+    // }
   }
 }
 

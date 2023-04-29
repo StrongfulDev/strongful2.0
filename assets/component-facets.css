@@ -1161,6 +1161,11 @@ input.mobile-facets__checkbox {
 
 .mobile-facets__label {
   padding: 1.5rem 2rem;
+  align-items: center;
+}
+
+div.mobile-facets__label {
+  position: relative;
 }
 
 .mobile-facets__label > svg {
@@ -1236,8 +1241,8 @@ input.mobile-facets__checkbox {
   display: none;
 }
 
-.select-items div:hover, .same-as-selected {
-  background-color: rgba(0, 0, 0, 0.1);
+.mobile-facets__label:active .mobile-facets__label-square {
+  background-color: #000;
 }
 
 .mobile-facets__details div.mobile-facets__sort {
@@ -1262,7 +1267,7 @@ input.mobile-facets__checkbox {
   padding: 0 1.5rem;
 }
 
-.mobile-facets__details {
+details.mobile-facets__details {
   border-bottom: 1px solid var(--border-global-color);
 }
 
@@ -1272,4 +1277,39 @@ input.mobile-facets__checkbox {
 
 .mobile-facets__summary {
   padding: 1.5rem 0;
+}
+
+.mobile-facets__label-square {
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-left: 1.2rem;
+  border: 1px solid #c1c1c1;
+}
+
+.mobile-facets__label-checkmark {
+  position: absolute;
+  top: 35%;
+  right: 2rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-left: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-facets__label-checkmark.checked {
+  background: #000;
+}
+
+.mobile-facets__label-checkmark .icon-checkmark {
+  position: relative;
+  margin: 0;
+  top: 0;
+  left: 0;
+  color: #fff;
+}
+
+.mobile-facets__label-checkmark .icon-checkmark.visible-checkmark {
+  visibility: visible;
 }
