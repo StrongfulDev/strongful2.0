@@ -437,7 +437,6 @@ function designSort() {
     for (let i = 0; i < y.length; i++) {
       if (elmnt == y[i]) {
         arrNo.push(i)
-
       } else {
         y[i].classList.remove("select-arrow-active");
       }
@@ -448,8 +447,6 @@ function designSort() {
       }
     }
   }
-
-  document.addEventListener("click", closeAllSelect);
 }
 
 colorRounds(document);

@@ -608,7 +608,6 @@ a.active-facets__button.focused .active-facets__button-inner,
 }
 
 .mobile-facets__header {
-  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
   padding: 1rem 2.5rem;
   text-align: center;
   display: flex;
@@ -1180,6 +1179,12 @@ input.mobile-facets__checkbox {
 .mobile-facets__label > input[type='checkbox']:checked ~ .icon-checkmark {
   right: 2.2rem;
   left: auto;
+  background: #000;
+  color: #fff;
+}
+
+.mobile-facets__checkbox:checked + .mobile-facets__highlight + svg {
+  background: #000;
 }
 
 input.mobile-facets__checkbox {
@@ -1205,7 +1210,6 @@ input.mobile-facets__checkbox {
 
 .mobile-facets__sort .select .icon-caret {
   right: auto;
-  left: -10px;
 }
 
 .select {
@@ -1254,3 +1258,18 @@ input.mobile-facets__checkbox {
   transform: rotate(180deg);
 }
 
+.mobile-facets__inner {
+  padding: 0 1.5rem;
+}
+
+.mobile-facets__details {
+  border-bottom: 1px solid var(--border-global-color);
+}
+
+.mobile-facets__details:nth-child(2) {
+  border-top: 1px solid var(--border-global-color);
+}
+
+.mobile-facets__summary {
+  padding: 1.5rem 0;
+}
