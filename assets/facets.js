@@ -108,6 +108,7 @@ class FacetFiltersForm extends HTMLElement {
 
     colorRounds(document);
     sizeRounds(document);
+    designSort();
     FacetFiltersForm.renderActiveFacets(parsedHTML);
     FacetFiltersForm.renderAdditionalElements(parsedHTML);
 
@@ -156,7 +157,10 @@ class FacetFiltersForm extends HTMLElement {
 
   static activeFilterCount() {
     let activeFilters = document.querySelectorAll('.mobile-facets__checkbox:checked');
-    document.querySelector(".mobile-facets__active-filter-count").innerHTML = "(" + activeFilters.length + ")";
+    let activeFiltersDOMElements = document.querySelectorAll(".mobile-facets__active-filter-count");
+    activeFiltersDOMElements.forEach(function(element) {
+      element.innerHTML = "(" + activeFilters.length + ")";
+    });
   }
 
   static updateURLHash(searchParams) {

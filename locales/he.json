@@ -193,8 +193,8 @@
       "show_less": "Show less",
       "max_price": "The highest price is {{ price }}",
       "product_count": {
-        "one": "{{ product_count }} of {{ count }} product",
-        "other": "{{ product_count }} of {{ count }} products"
+        "one": "{{ product_count }} מתוך {{ count }} מוצרים",
+        "other": "{{ product_count }} מתוך {{ count }} מוצרים"
       },
       "product_count_simple": {
         "one": "מוצר {{ count }}",
@@ -236,12 +236,12 @@
         "other": "{{ count }} products"
       },
       "results_with_count": {
-        "one": "{{ count }} result",
-        "other": "{{ count }} results"
+        "one": "תוצאה {{ count }}",
+        "other": "{{ count }} תוצאות"
       },
       "results_with_count_and_term": {
-        "one": "{{ count }} result found for “{{ terms }}”",
-        "other": "{{ count }} results found for “{{ terms }}”"
+        "one": "תוצאה {{ count }} נמצאה עבור “{{ terms }}”",
+        "other": "{{ count }} תוצאות נמצאו עבור “{{ terms }}”"
       },
       "title": "Search results",
       "search_for": "Search for “{{ terms }}”",

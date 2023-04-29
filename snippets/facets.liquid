@@ -24,7 +24,7 @@
   endif
 -%}
 
-<div class="facets-container{% if filter_type == 'drawer' %} facets-container-drawer{% endif %}">
+<div class="facets-container fix-direction{% if filter_type == 'drawer' %} facets-container-drawer{% endif %}">
   {%- if filter_type == 'vertical' or filter_type == 'horizontal' -%}
     <facet-filters-form class="facets small-hide">
       <form
@@ -596,6 +596,7 @@
               {{ 'products.facets.sort_button' | t }}
             {%- endif -%}
           </span>
+          <span class="mobile-facets__active-filter-count"></span>
           <span class="mobile-facets__open-label button-label small-hide">
             {%- if enable_filtering -%}
               {{ 'products.facets.filter_button' | t }}
