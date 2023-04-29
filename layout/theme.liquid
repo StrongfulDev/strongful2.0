@@ -66,16 +66,55 @@
         font-style: --font-body-style;
       }
 
+      {% comment %}
       @font-face {
-      font-family: 'Noto Sans Hebrew', sans-serif;
+      font-family: 'Noto Sans Hebrew';
       src: url('{{ 'NotoSansHebrew-VariableFont_wdth,wght.ttf' | file_url }}') format('truetype');
       font-weight: --font-body-weight;
       font-style: --font-body-style;
       }
+      {% endcomment %}
 
       @font-face {
-      font-family: 'Noto Sans Hebrew', sans-serif;
-      src: url('{{ 'NotoSansHebrew-Black.ttf' | file_url }}') format('truetype');
+      font-family: 'Noto Sans Hebrew';
+      src: url('{{ 'NotoSansHebrew-Black.ttf' | asset_url }}') format('truetype'),
+      url('{{ 'NotoSansHebrew-BlackItalic.ttf' | asset_url }}') format('truetype'),
+      url('{{ 'NotoSansHebrew-Bold.ttf' | asset_url }}') format('truetype'),
+      url('{{ 'NotoSansHebrew-BoldItalic.ttf' | asset_url }}') format('truetype'),
+      url('{{ 'NotoSansHebrew-Condensed.ttf' | asset_url }}') format('truetype'),
+      url('{{ 'NotoSansHebrew-CondensedBlack.ttf' | asset_url }}') format('truetype'),
+      url('{{ 'NotoSansHebrew-CondensedBlackItalic.ttf' | asset_url }}') format('truetype'),
+      url('{{ 'NotoSansHebrew-CondensedBold.ttf' | asset_url }}') format('truetype'),
+      url('{{ 'NotoSansHebrew-CondensedBoldItalic.ttf' | asset_url }}') format('truetype'),
+      url('{{ 'NotoSansHebrew-CondensedExtraBold.ttf' | asset_url }}') format('truetype'),
+      url('{{ 'NotoSansHebrew-CondensedExtraBoldItalic.ttf' | asset_url }}') format('truetype'),
+      url('{{ 'NotoSansHebrew-CondensedExtraLight.ttf' | asset_url }}') format('truetype'),
+      url('{{ 'NotoSansHebrew-CondensedExtraLightItalic.ttf' | asset_url }}') format('truetype'),
+      url('{{ 'NotoSansHebrew-CondensedItalic.ttf' | asset_url }}') format('truetype'),
+      url('{{ 'NotoSansHebrew-CondensedLight.ttf' | asset_url }}') format('truetype'),
+      url('{{ 'NotoSansHebrew-CondensedLightItalic.ttf' | asset_url }}') format('truetype'),
+      url('{{ 'NotoSansHebrew-CondensedMedium.ttf' | asset_url }}') format('truetype'),
+      url('{{ 'NotoSansHebrew-CondensedMediumItalic.ttf' | asset_url }}') format('truetype'),
+      url('{{ 'NotoSansHebrew-CondensedSemiBold.ttf' | asset_url }}') format('truetype'),
+      url('{{ 'NotoSansHebrew-CondensedSemiBoldItalic.ttf' | asset_url }}') format('truetype'),
+      url('{{ 'NotoSansHebrew-CondensedThin.ttf' | asset_url }}') format('truetype'),
+      url('{{ 'NotoSansHebrew-CondensedThinItalic.ttf' | asset_url }}') format('truetype'),
+      url('{{ 'NotoSansHebrew-ExtraBold.ttf' | asset_url }}') format('truetype'),
+      url('{{ 'NotoSansHebrew-ExtraBoldItalic.ttf' | asset_url }}') format('truetype'),
+      url('{{ 'NotoSansHebrew-ExtraCondensed.ttf' | asset_url }}') format('truetype'),
+      url('{{ 'NotoSansHebrew-ExtraCondensedBlack.ttf' | asset_url }}') format('truetype'),
+      url('{{ 'NotoSansHebrew-ExtraCondensedBlackItalic.ttf' | asset_url }}') format('truetype'),
+      url('{{ 'NotoSansHebrew-ExtraCondensedBold.ttf' | asset_url }}') format('truetype'),
+      url('{{ 'NotoSansHebrew-ExtraCondensedBoldItalic.ttf' | asset_url }}') format('truetype'),
+      url('{{ 'NotoSansHebrew-ExtraCondensedExtraBold.ttf' | asset_url }}') format('truetype'),
+      url('{{ 'NotoSansHebrew-ExtraCondensedExtraBoldItalic.ttf' | asset_url }}') format('truetype'),
+      url('{{ 'NotoSansHebrew-ExtraCondensedExtraLight.ttf' | asset_url }}') format('truetype'),
+      url('{{ 'NotoSansHebrew-ExtraCondensedExtraLightItalic.ttf' | asset_url }}') format('truetype'),
+      url('{{ 'NotoSansHebrew-ExtraCondensedItalic.ttf' | asset_url }}') format('truetype'),
+      url('{{ 'NotoSansHebrew-ExtraCondensedLight.ttf' | asset_url }}') format('truetype'),
+      url('{{ 'NotoSansHebrew-ExtraCondensedLightItalic.ttf' | asset_url }}') format('truetype'),
+      url('{{ 'NotoSansHebrew-ExtraCondensedMedium.ttf' | asset_url }}') format('truetype'),
+      url('{{ 'NotoSansHebrew-ExtraCondensedMediumItalic.ttf' | asset_url }}') format('truetype');
       font-weight: --font-body-weight;
       font-style: --font-body-style;
       }
@@ -117,13 +156,15 @@
       {{ body_font_bold_italic | font_face: font_display: 'swap' }}
 
       :root  {
-      --font-body-family: {{ body_font_family }}, {{ settings.type_body_font.fallback_families }};
+      {% comment %}--font-body-family: {{ body_font_family }}, {{ settings.type_body_font.fallback_families }};{% endcomment %}
+      --font-body-family: 'Noto Sans Hebrew', sans-serif;
       --font-body-style: {{ settings.type_body_font.style }};
       --font-body-weight: {{ settings.type_body_font.weight }};
       --font-body-weight-bold: {{ settings.type_body_font.weight | plus: 300 | at_most: 1000 }};
       --font-body-size-small: 0.9em;
       --font-body-size-smallest: 0.8em;
-      --font-heading-family: {{ header_font_family }}, {{ settings.type_header_font.fallback_families }};
+      {% comment %}--font-heading-family: {{ header_font_family }}, {{ settings.type_header_font.fallback_families }};{% endcomment %}
+      --font-heading-family: 'Noto Sans Hebrew', sans-serif;
       --font-heading-style: {{ settings.type_header_font.style }};
       --font-heading-weight: {{ settings.type_header_font.weight }};
       --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
