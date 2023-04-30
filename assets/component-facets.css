@@ -1342,3 +1342,46 @@ details.mobile-facets__details {
 .mobile-facets__open-label {
   margin-left: 0;
 }
+
+@media screen and (min-width: 990px) {
+  .facets-vertical {
+    max-width: 1600px;
+  }
+
+  .facets-vertical .facets-wrapper {
+    padding-right: 0;
+    padding-left: 3rem;
+  }
+
+  .facets__disclosure-vertical[data-index='1'] {
+    display: none;
+  }
+
+  .facets-vertical .facets__summary {
+    padding-right: 0;
+    padding-left: 1.75rem;
+  }
+
+  .facets__summary .icon-caret {
+    right: auto;
+    left: 1.5rem;
+  }
+
+  .facet-checkbox input[type='checkbox'] {
+    right: -0.4rem;
+    left: auto;
+  }
+
+  .facet-checkbox > svg {
+    margin-right: 0;
+    margin-left: 1.2rem;
+  }
+
+  .facet-checkbox {
+    padding: 1rem 0 1rem 2rem;
+  }
+
+  .card--standard:not(.card--horizontal) > .card__content .card__badge {
+    left: 0;
+  }
+}

@@ -127,7 +127,11 @@
                     >
                       <div>
                         <span>
-                          {{- filter.label | escape }}
+                          {% if filter.label contains 'type' %}
+                            {{ 'products.facets.product_type' | t }}
+                          {% else %}
+                            {{ filter.label | escape }}
+                          {% endif %}
                           {%- if filter_type == 'vertical' -%}
                             <span class="facets__selected no-js-hidden{% if filter.active_values.size == 0 %} hidden{% endif %}">
                               ({{ filter.active_values.size }})</span
@@ -203,7 +207,16 @@
                                         stroke-linecap="round"
                                         stroke-linejoin="round" />
                                 </svg>
-
+                                {% if filter.param_name contains "color" %}
+                                  <span class="color-round"></span>
+                                {% endif %}
+                                <span aria-hidden="true" class="
+                                  {%- if filter.param_name contains "color" -%}
+                                    color-label
+                                  {%- elsif filter.param_name contains 'מידה' -%}
+                                    size-label
+                                  {%- endif -%}"
+                                >
                                 <span aria-hidden="true">{{ value.label | escape }} ({{ value.count }})</span>
                                 <span class="visually-hidden">
                                   {{- value.label | escape }} (
@@ -267,7 +280,16 @@
                                         stroke-linecap="round"
                                         stroke-linejoin="round" />
                                 </svg>
-
+                                {% if filter.param_name contains "color" %}
+                                  <span class="color-round"></span>
+                                {% endif %}
+                                <span aria-hidden="true" class="
+                                  {%- if filter.param_name contains "color" -%}
+                                    color-label
+                                  {%- elsif filter.param_name contains 'מידה' -%}
+                                    size-label
+                                  {%- endif -%}"
+                                >
                                 <span aria-hidden="true">{{ value.label | escape }} ({{ value.count }})</span>
                                 <span class="visually-hidden">
                                   {{- value.label | escape }} (
@@ -319,7 +341,11 @@
                   >
                     <summary class="facets__summary caption-large focus-offset">
                       <div>
+                        {% if filter.label contains 'type' %}
+                        <span>{{ 'products.facets.product_type' | t }}</span>
+                        {% else %}
                         <span>{{ filter.label | escape }}</span>
+                        {% endif %}
                         {% render 'icon-caret' %}
                       </div>
                     </summary>
@@ -718,10 +744,6 @@
                                   >
                                     <path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
                                   </svg>
-
-                                  {%comment%}
-                                  <span aria-hidden="true">{{ value.label | escape }} ({{ value.count }})</span>
-                                  {%endcomment%}
                                   {% if filter.param_name contains "color" %}
                                     <span class="color-round"></span>
                                   {% endif %}
@@ -777,7 +799,11 @@
                       >
                         <summary class="mobile-facets__summary focus-inset">
                           <div>
-                            <span>{{ filter.label | escape }}</span>
+                            {% if filter.label contains 'type' %}
+                              <span>{{ 'products.facets.product_type' | t }}</span>
+                            {% else %}
+                              <span>{{ filter.label | escape }}</span>
+                            {% endif %}
                             <span class="mobile-facets__arrow no-js-hidden">{% render 'icon-caret' %}</span>
                             <noscript>{% render 'icon-caret' %}</noscript>
                           </div>
@@ -905,9 +931,6 @@
                                   selected="selected"
                                 {% endif %}
                             >
-                              {%comment%}
-																{{ option.name | escape }}
-															{%endcomment%}
                               {{ 'products.facets.filters.' | append: option.value | t }}
                             </option>
                           {%- endfor -%}
