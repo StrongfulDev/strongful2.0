@@ -216,6 +216,9 @@
         "created-ascending": "תאריך, מהחדש לישן",
         "created-descending": "תאריך, מהישן לחדש"
       }
+    },
+    "colors": {
+      "אפרסק": "rgb(255, 204, 204)"
     }
   },
   "templates": {

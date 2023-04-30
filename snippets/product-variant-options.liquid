@@ -61,11 +61,11 @@
                         class="disabled disabled-variant-button"
                     {% endif %}
             >
-            {% if option.name == "Color" %}
+            {% if option.name == "Color" or option.name == "צבע" %}
                 {% comment %} TODO: Inducate the option is disbled by taking into account all variant selections. add: {% if option_disabled %} disabled{% endif %} to classes{% endcomment %}
                 <label class="no-background color-variant-tile"
                        for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
-                    <span style="background-color: {{ value }}">&nbsp;</span>
+                    <span style="background-color: {{  value }}">&nbsp;</span>
                 </label>
             {% else %}
                 <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
