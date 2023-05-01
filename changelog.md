@@ -1,3 +1,9 @@
+## 2.2
+
+### product page
+
+- Add model switcher
+
 ## 2.1
 
 ### mobile menu
