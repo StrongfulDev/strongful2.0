@@ -11,7 +11,9 @@
     {{ 'component-rating.css' | asset_url | stylesheet_tag }}
     {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
     {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
+    {{ 'component-model-switcher.css' | asset_url | stylesheet_tag }}
     <script src="{{ 'component-swiper.js' | asset_url }}" defer="defer" async="async"></script>
+    <script src="{{ 'component-model-switcher.js' | asset_url }}" defer="defer" async="async"></script>
 
     {%- style -%}
         .section-{{ section.id }}-padding {
@@ -503,7 +505,7 @@
         {%- endif -%}
     </div>
 
-    {% render 'product-media-modal' variant_images: variant_images %}
+    {% render 'product-media-modal', variant_images: variant_images %}
 
     {% assign popups = section.blocks | where: 'type', 'popup' %}
     {%- for block in popups -%}
@@ -565,35 +567,37 @@
 
 
 
+
+
         </script>
         <script src="{{ 'product-model.js' | asset_url }}" defer></script>
     {%- endif -%}
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            function isIE() {
-                const ua = window.navigator.userAgent;
-                const msie = ua.indexOf('MSIE ');
-                const trident = ua.indexOf('Trident/');
+      document.addEventListener('DOMContentLoaded', function () {
+        function isIE() {
+          const ua = window.navigator.userAgent;
+          const msie = ua.indexOf('MSIE ');
+          const trident = ua.indexOf('Trident/');
 
-                return msie > 0 || trident > 0;
-            }
+          return msie > 0 || trident > 0;
+        }
 
-            if (!isIE()) return;
-            const hiddenInput = document.querySelector('#{{ product_form_id }} input[name="id"]');
-            const noScriptInputWrapper = document.createElement('div');
-            const variantSwitcher =
-                document.querySelector('variant-radios[data-section="{{ section.id }}"]') ||
-                document.querySelector('variant-selects[data-section="{{ section.id }}"]');
-            noScriptInputWrapper.innerHTML = document.querySelector(
-                '.product-form__noscript-wrapper-{{ section.id }}'
-            ).textContent;
-            variantSwitcher.outerHTML = noScriptInputWrapper.outerHTML;
+        if (!isIE()) return;
+        const hiddenInput = document.querySelector('#{{ product_form_id }} input[name="id"]');
+        const noScriptInputWrapper = document.createElement('div');
+        const variantSwitcher =
+          document.querySelector('variant-radios[data-section="{{ section.id }}"]') ||
+          document.querySelector('variant-selects[data-section="{{ section.id }}"]');
+        noScriptInputWrapper.innerHTML = document.querySelector(
+          '.product-form__noscript-wrapper-{{ section.id }}'
+        ).textContent;
+        variantSwitcher.outerHTML = noScriptInputWrapper.outerHTML;
 
-            document.querySelector('#Variants-{{ section.id }}').addEventListener('change', function (event) {
-                hiddenInput.value = event.currentTarget.value;
-            });
+        document.querySelector('#Variants-{{ section.id }}').addEventListener('change', function (event) {
+          hiddenInput.value = event.currentTarget.value;
         });
+      });
     </script>
 
     {%- liquid
@@ -647,6 +651,8 @@
         {%- endfor -%}
       ]
     }
+
+
 
 
 

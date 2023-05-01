@@ -1,0 +1,18 @@
+{% comment %}
+  Renders dropdown that switches the selected model
+
+  Accepts:
+
+  Usage:
+  {% render 'model-switcher' %}
+{% endcomment %}
+
+<div class="model-switcher">
+    <select class="model-switch">
+        <option value="">Model Switcher</option>
+        {% for model in shop.metaobjects.model.values %}
+            <option value="{{ model.size_letter.value }}">{{ model.name.value }}
+                - {{ model.size_letter.value }}</option>
+        {% endfor %}
+    </select>
+</div>

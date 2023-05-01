@@ -1,0 +1,22 @@
+.product-media-gallery-container {
+    position: relative;
+}
+
+.product-media-gallery-container .model-switcher {
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+    z-index: 1;
+}
+
+.product-media-gallery-container .model-switcher select {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background: #fff;
+    font-size: 14px;
+    font-family: inherit;
+    color: #333;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}

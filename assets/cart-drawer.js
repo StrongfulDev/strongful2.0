@@ -16,9 +16,9 @@ class CartDrawer extends HTMLElement {
     }
 
     async initRewards() {
-        this.rewards = new CartRewards($(this));
-
-        await this.rewards.init();
+        // this.rewards = new CartRewards($(this));
+        //
+        // await this.rewards.init();
     }
 
     setHeaderCartIconAccessibility() {
