@@ -26,15 +26,16 @@ class CartRewards {
 
     this.lastCartTotalValue = this.cartTotalValue;
     this.cartTotalValue = await this.getCartTotal();
+    this.activeRewards = 0
 
-    await Promise.all(this.rules.map(async (rule, index) => {
-      await this.checkAndApplyRule(rule, index);
-    }));
+    this.rules.forEach((rule, index) => {
+      this.checkAndApplyRule(rule, index);
+    });
 
     this.loading(false);
   }
 
-  async checkAndApplyRule(rule, ruleIndex = 0) {
+  checkAndApplyRule(rule, ruleIndex = 0) {
     let isActive = false;
 
     switch (rule.condition.type) {
@@ -48,20 +49,18 @@ class CartRewards {
         break;
     }
 
+    if (isActive)
+      this.activeRewards += 1;
+
     this.handleRewards(rule, isActive, ruleIndex);
 
     return isActive;
   }
 
   handleRewards(rule, isActive, ruleIndex) {
-    if (isActive)
-      this.activeRewards += 1;
-    else
-      this.activeRewards -= 1;
-
-    this.toggleMessage(isActive, rule, ruleIndex);
-    this.toggleRewardItem(isActive, rule, ruleIndex);
     this.trackProgress();
+    this.toggleRewardItem(isActive, rule);
+    this.toggleMessage(isActive, rule, ruleIndex);
   }
 
   toggleRewardItem(isActive, rule) {
@@ -79,7 +78,6 @@ class CartRewards {
     $('.progress-value').animate({
       width: `${progressPrecentage}%`
     })
-    // $('.progress-value').css('width', `${progressPrecentage}%`);
   }
 
   toggleMessage(isActive, rule, ruleIndex) {
