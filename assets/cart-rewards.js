@@ -34,20 +34,8 @@ class CartRewards {
         this.loading(false);
     }
 
-    loading(isLoading) {
-        if (isLoading) {
-            this.container.addClass("loading").find('.rewards-section').animate({
-                opacity: 0
-            }, 500);
-        } else {
-            this.container.removeClass("loading").find('.rewards-section').animate({
-                opacity: 1
-            }, 300);
-        }
-    }
-
-    async checkAndApplyRule(rule, ruleIndex = 0) {
-        let isActive = false;
+  async checkAndApplyRule(rule, ruleIndex = 0) {
+    let isActive = false;
 
     switch (rule.condition.type) {
       case "CartAmount":
@@ -109,22 +97,33 @@ class CartRewards {
         });
     }
 
-    // TODO: make this more efficient by caching the response
-    getCartTotal() {
-        return new Promise((resolve, reject) => {
-            jQuery.getJSON("/cart.js", function (cart) {
-                resolve(parseInt(cart.total_price / 100));
-            });
-        });
-    }
+  getCartTotal() {
+    return new Promise((resolve, reject) => {
+      jQuery.getJSON("/cart.js", function (cart) {
+        resolve(parseInt(cart.total_price / 100));
+      });
+    });
+  }
 
     getRewardItemByRule(rule) {
         return $(`.reward-item.${rule.reward.active_class}`)
     }
 
-    cartHasReward(reward) {
-        return $(`.reward-item.${reward.active_class}.active-reward`).length > 0;
-    }
+  cartHasReward(reward) {
+    return $(`.reward-item.${reward.active_class}.active-reward`).length > 0;
+  }
+
+  loading(isLoading) {
+    // if (isLoading) {
+    //     this.container.addClass("loading").find('.rewards-section').animate({
+    //         opacity: 0
+    //     }, 500);
+    // } else {
+    //     this.container.removeClass("loading").find('.rewards-section').animate({
+    //         opacity: 1
+    //     }, 300);
+    // }
+  }
 }
 
 // customElements.define("cart-rewards", CartRewards);
