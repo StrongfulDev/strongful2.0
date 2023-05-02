@@ -126,8 +126,8 @@ class CartRewards {
     return $(`.reward-item.${rule.reward.active_class}`)
   }
 
-  cartHasReward(reward) {
-    return $(`.reward-item.${reward.active_class}.active-reward`).length > 0;
+  cartHasReward(reward, ruleIndex) {
+    return ruleIndex <= this.activeRewards
   }
 
   loading(isLoading) {
