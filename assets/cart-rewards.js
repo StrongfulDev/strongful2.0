@@ -83,17 +83,20 @@ class CartRewards {
   toggleMessage(isActive, rule, ruleIndex) {
     const reward = rule.reward;
     const rewardText = $(".reward-text");
-    const messageClass = `.${reward.active_class}-message`;
-    const currentMessage = $(messageClass);
+    const messageClass = `${reward.active_class}-message`;
+    const currentMessage = $(`.${messageClass}`);
 
-    console.log("NININTINTNTINTN", isActive, ruleIndex, this.activeRewards)
+    if (ruleIndex === this.activeRewards) {
+      if (currentMessage.length <= 0) {
+        if (isActive) {
+          currentMessage.remove();
+        } else {
+          const rewardMessage = $(`<span class="${messageClass}" data-index="${ruleIndex}">${window.rewards_translation[reward.action]?.message}</span>`);
+          rewardText.html(rewardMessage);
+        }
+      }
 
-    if (isActive) {
-      currentMessage.remove();
-    } else if (ruleIndex < this.activeRewards && currentMessage.length <= 0) {
-      const rewardMessage = $(`<span class="${messageClass}" data-index="${ruleIndex}">${window.rewards_translation[reward.action]?.message}</span>`)
-      rewardText.append(rewardMessage);
-      rewardText.find('.rewards__free-shipping-amount').text(reward.value - this.cartTotalValue);
+      rewardText.find('.rewards__missing_amount').text(reward.value - this.cartTotalValue);
     }
   }
 
