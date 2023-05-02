@@ -14,12 +14,12 @@ class CartRewards {
             await this.getRewards();
         }
 
-        this.checkRules();
+    subscribe(PUB_SUB_EVENTS.cartUpdate, (event) => {
+      this.checkRules();
+    });
 
-        subscribe(PUB_SUB_EVENTS.cartUpdate, (event) => {
-            this.checkRules();
-        });
-    }
+    await this.checkRules();
+  }
 
     async checkRules() {
         this.loading(true);
@@ -49,19 +49,16 @@ class CartRewards {
     async checkAndApplyRule(rule, ruleIndex = 0) {
         let isActive = false;
 
-        switch (rule.condition.type) {
-            case "CartAmount":
-                if (
-                    !this.cartHasReward(rule.reward) &&
-                    rule.condition.operator === ">=" &&
-                    this.cartTotalValue >= rule.condition.value
-                ) {
-                    isActive = true;
-                }
-                break;
-            case "CartItems":
-                break;
-        }
+    switch (rule.condition.type) {
+      case "CartAmount":
+        const isRewardActive = this.cartHasReward(rule.reward);
+        const isAmountGreaterThan = rule.condition.operator === ">=" && this.cartTotalValue >= rule.condition.value;
+        const isAmountLessThan = rule.condition.operator === "<=" && this.cartTotalValue <= rule.condition.value;
+        isActive = !isRewardActive && (isAmountGreaterThan || isAmountLessThan);
+        break;
+      case "CartItems":
+        break;
+    }
 
         this.toggleReward(rule, isActive, ruleIndex);
 
