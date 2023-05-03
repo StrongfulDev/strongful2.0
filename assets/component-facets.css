@@ -1384,4 +1384,51 @@ details.mobile-facets__details {
   .card--standard:not(.card--horizontal) > .card__content .card__badge {
     left: 0;
   }
+
+  .facet-filters__label, #FacetSortForm .facet-filters.sorting {
+    display: none;
+  }
+
+  .facet-filters {
+    padding-left: 0;
+    border-top: 0.1rem solid rgba(var(--color-foreground), 0.1);
+  }
+
+  .facet-filters__field {
+    display: block;
+    width: 100%;
+  }
+
+  .facet-filters__sort + .icon-caret {
+    right: auto;
+    left: 1.5rem;
+    top: 2rem;
+  }
+
+  .facet-filters__field .select {
+    display: block;
+  }
+
+  .select-items div, .select-selected {
+    font-size: 1.4rem;
+    padding: 1.5rem 0;
+  }
+
+  .facet-filters__field .select:hover {
+    cursor: pointer;
+  }
+
+  .mobile-facets__label-checkmark {
+    right: 0;
+  }
+
+  .facet-checkbox .icon-checkmark {
+    right: 0.3rem;
+    left: auto;
+  }
+
+  #FacetSortForm {
+    direction: rtl;
+    justify-content: flex-start;
+  }
 }
