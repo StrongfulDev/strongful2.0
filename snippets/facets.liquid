@@ -217,7 +217,9 @@
                                     size-label
                                   {%- endif -%}"
                                 >
-                                <span aria-hidden="true">{{ value.label | escape }} ({{ value.count }})</span>
+                                {% comment %}<span aria-hidden="true">{{ value.label | escape }} ({{ value.count }})</span>{% endcomment %}
+                                  <span aria-hidden="true">{{ value.label | escape }}</span>
+                                  {% comment %}
                                 <span class="visually-hidden">
                                   {{- value.label | escape }} (
                                   {%- if value.count == 1 -%}
@@ -227,6 +229,8 @@
                                   {%- endif -%}
                                   )</span
                                 >
+                                {% endcomment %}
+                                  <span class="visually-hidden">{{- value.label | escape }}</span>
                               </label>
                             </li>
                           {%- endfor -%}
@@ -290,7 +294,9 @@
                                     size-label
                                   {%- endif -%}"
                                 >
-                                <span aria-hidden="true">{{ value.label | escape }} ({{ value.count }})</span>
+                                {% comment %}<span aria-hidden="true">{{ value.label | escape }} ({{ value.count }})</span>{% endcomment %}
+                                  <span aria-hidden="true">{{ value.label | escape }}</span>
+                                  {% comment %}
                                 <span class="visually-hidden">
                                   {{- value.label | escape }} (
                                   {%- if value.count == 1 -%}
@@ -300,6 +306,8 @@
                                   {%- endif -%}
                                   )</span
                                 >
+                                {% endcomment %}
+                                  <span class="visually-hidden">{{- value.label | escape }}</span>
                               </label>
                             </li>
                           {%- endfor -%}
@@ -756,6 +764,7 @@
                                   >
                                     {{- value.label | escape -}}
                                   </span>
+                                  {% comment %}
                                   <span class="visually-hidden">
                                     {{- value.label | escape }} (
                                     {%- if value.count == '1' -%}
@@ -765,6 +774,8 @@
                                     {%- endif -%}
                                     )</span
                                   >
+                                  {% endcomment %}
+                                  <span class="visibility-hidden">{{ value.label | escape }}</span>
                                 </label>
                               </li>
                             {%- endfor -%}

@@ -280,85 +280,68 @@ class FacetRemove extends HTMLElement {
 
 customElements.define('facet-remove', FacetRemove);
 
-function colorRounds(html) {
-  const colorLabels = html.querySelectorAll(".color-label");
-  const colorRounds = html.querySelectorAll(".color-round");
-
-  for (let i = 0; i < colorLabels.length; i++) {
-    switch (colorLabels[i].innerHTML) {
-      case "שחור":
-        colorRounds[i].style.backgroundColor = "#000000";
-        break;
-      case "לבן":
-        colorRounds[i].style.backgroundColor = "#ffffff";
-        colorRounds[i].style.border = "1px solid #000000";
-        break;
-      case "אדום":
-        colorRounds[i].style.backgroundColor = "#ff0000";
-        break;
-      case "כחול":
-        colorRounds[i].style.backgroundColor = "rgb(34, 29, 193)";
-        break;
-      case "ירוק":
-        colorRounds[i].style.backgroundColor = "rgb(0, 106, 78)";
-        break;
-      case "ניוד":
-        colorRounds[i].style.backgroundColor = "rgb(225, 205, 180)";
-        break;
-      case "צהוב":
-        colorRounds[i].style.backgroundColor = "rgb(253, 226, 0)";
-        break;
-      case "כתום":
-        colorRounds[i].style.backgroundColor = "rgb(231, 155, 46)";
-        break;
-      case "סגול":
-        colorRounds[i].style.backgroundColor = "rgb(126, 11, 128)";
-        break;
-      case "ורוד":
-        colorRounds[i].style.backgroundColor = "rgb(252, 172, 173)";
-        break;
-      case "חום":
-        colorRounds[i].style.backgroundColor = "rgb(123, 79, 44)";
-        break;
-      case "אפור":
-        colorRounds[i].style.backgroundColor = "rgb(217, 217, 217)";
-        break;
-      default:
-        console.log("no color");
-        break;
-    }
-  }
-}
+    function colorRounds(html) {
+      let colorLabels = html.querySelectorAll(".color-label");
+      for (let i = 0; i < colorLabels.length; i++) {
+        let siblingRound = colorLabels[i].previousElementSibling;
+        if (colorLabels[i].innerHTML.includes("שחור")) {
+          siblingRound.style.backgroundColor = "#000000";
+        } else if (colorLabels[i].innerHTML.includes("לבן")) {
+          siblingRound.style.backgroundColor = "#ffffff";
+          siblingRound.style.border = "1px solid #000000";
+        } else if (colorLabels[i].innerHTML.includes("אדום")) {
+          siblingRound.style.backgroundColor = "#ff0000";
+        } else if (colorLabels[i].innerHTML.includes("כחול")) {
+          siblingRound.style.backgroundColor = "rgb(34, 29, 193)";
+        } else if (colorLabels[i].innerHTML.includes("ירוק")) {
+          siblingRound.style.backgroundColor = "rgb(0, 106, 78)";
+        } else if (colorLabels[i].innerHTML.includes("ניוד")) {
+          siblingRound.style.backgroundColor = "rgb(225, 205, 180)";
+        } else if (colorLabels[i].innerHTML.includes("צהוב")) {
+          siblingRound.style.backgroundColor = "rgb(253, 226, 0)";
+        } else if (colorLabels[i].innerHTML.includes("כתום")) {
+          siblingRound.style.backgroundColor = "rgb(231, 155, 46)";
+        } else if (colorLabels[i].innerHTML.includes("סגול")) {
+          siblingRound.style.backgroundColor = "rgb(126, 11, 128)";
+        } else if (colorLabels[i].innerHTML.includes("ורוד")) {
+          siblingRound.style.backgroundColor = "rgb(252, 172, 173)";
+        } else if (colorLabels[i].innerHTML.includes("חום")) {
+          siblingRound.style.backgroundColor = "rgb(123, 79, 44)";
+        } else if (colorLabels[i].innerHTML.includes("אפור")) {
+          siblingRound.style.backgroundColor = "rgb(217, 217, 217)";
+        } else {
+          console.log("no color");
+        }
+      }
+ }
 
 function sizeRounds(dom) {
   let sizeLabels = dom.querySelectorAll(".size-label");
   for (let i = 0; i < sizeLabels.length; i++) {
     let sizeLabel = sizeLabels[i];
-    switch (sizeLabel.innerHTML) {
-      case "XXS":
-        $(sizeLabel).closest(".mobile-facets__item").css("order", 1);
-        break;
-      case "XS":
-        $(sizeLabel).closest(".mobile-facets__item").css("order", 2);
-        break;
-      case "S":
-        $(sizeLabel).closest(".mobile-facets__item").css("order", 3);
-        break;
-      case "M":
-        $(sizeLabel).closest(".mobile-facets__item").css("order", 4);
-        break;
-      case "L":
-        $(sizeLabel).closest(".mobile-facets__item").css("order", 5);
-        break;
-      case "XL":
-        $(sizeLabel).closest(".mobile-facets__item").css("order", 6);
-        break;
-      case "XXL":
-        $(sizeLabel).closest(".mobile-facets__item").css("order", 7);
-        break;
-      case "XXXL":
-        $(sizeLabel).closest(".mobile-facets__item").css("order", 8);
-        break;
+    $(sizeLabel).closest("ul").css("display", "flex")
+    $(sizeLabel).closest("ul").css("flex-direction", "column")
+    if (sizeLabel.innerHTML.includes("XXS")) {
+      $(sizeLabel).closest(".mobile-facets__item").css("order", 1);
+      $(sizeLabel).closest(".list-menu__item").css("order", 1);
+    } else if (sizeLabel.innerHTML.includes("XS")) {
+      $(sizeLabel).closest(".mobile-facets__item").css("order", 2);
+      $(sizeLabel).closest(".list-menu__item").css("order", 2);
+    } else if (sizeLabel.innerHTML.includes("S")) {
+      $(sizeLabel).closest(".mobile-facets__item").css("order", 3);
+      $(sizeLabel).closest(".list-menu__item").css("order", 3);
+    } else if (sizeLabel.innerHTML.includes("M")) {
+      $(sizeLabel).closest(".mobile-facets__item").css("order", 4);
+      $(sizeLabel).closest(".list-menu__item").css("order", 4);
+    } else if (sizeLabel.innerHTML.includes("L")) {
+      $(sizeLabel).closest(".mobile-facets__item").css("order", 5);
+      $(sizeLabel).closest(".list-menu__item").css("order", 5);
+    } else if (sizeLabel.innerHTML.includes("XL")) {
+      $(sizeLabel).closest(".mobile-facets__item").css("order", 6);
+      $(sizeLabel).closest(".list-menu__item").css("order", 6);
+    } else if (sizeLabel.innerHTML.includes("XXL")) {
+      $(sizeLabel).closest(".mobile-facets__item").css("order", 7);
+      $(sizeLabel).closest(".list-menu__item").css("order", 7);
     }
   }
 }
