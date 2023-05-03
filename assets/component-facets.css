@@ -1379,6 +1379,7 @@ details.mobile-facets__details {
 
   .facet-checkbox {
     padding: 1rem 0 1rem 2rem;
+    align-items: center;
   }
 
   .card--standard:not(.card--horizontal) > .card__content .card__badge {
@@ -1425,10 +1426,18 @@ details.mobile-facets__details {
   .facet-checkbox .icon-checkmark {
     right: 0.3rem;
     left: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    background: #000;
   }
 
   #FacetSortForm {
     direction: rtl;
     justify-content: flex-start;
+  }
+
+  .facet-checkbox > input[type='checkbox']:checked ~ svg {
+    background: #000;
   }
 }
