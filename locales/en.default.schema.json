@@ -165,6 +165,12 @@
         },
         "gradient_background_2": {
           "label": "Background 2 gradient"
+        },
+        "colors_background_3": {
+          "label": "Background 3"
+        },
+        "gradient_background_3": {
+          "label": "Background 3 gradient"
         }
       }
     },

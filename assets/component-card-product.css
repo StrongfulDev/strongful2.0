@@ -118,3 +118,7 @@
     right: 50%;
     transform: translateX(50%);
 }
+
+.disabled-variant-button {
+    background-color: var(--gradient-base-background-3);
+}
