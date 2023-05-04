@@ -119,6 +119,6 @@
     transform: translateX(50%);
 }
 
-.disabled-variant-button {
+.disabled-variant-button .product_size_picker__button__label {
     background-color: var(--gradient-base-background-3);
 }
