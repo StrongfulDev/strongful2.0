@@ -20,7 +20,7 @@
 
 .product-size-picker-container {
     background-color: rgba(var(--color-background), 0.8);
-    padding: 20px;
+    padding: 20px 10px;
     margin: 0;
     display: flex;
     align-items: center;
@@ -75,6 +75,7 @@
 
 .card--standard:not(.card--horizontal) > .card__content .card__badge:has(> .badge.color-custom-red) {
     margin: 0;
+    left: 0;
 }
 
 .badge.color-custom-red {
@@ -108,7 +109,7 @@
     width: 100%;
 }
 
-.product_variants .size_variant_button_container label:hover {
+.size_variant_button:not(.disabled-variant-button) .size_variant_button_container label:hover {
     background: #000;
     color: #fff;
 }
@@ -117,8 +118,4 @@
     width: 95%;
     right: 50%;
     transform: translateX(50%);
-}
-
-.disabled-variant-button .product_size_picker__button__label {
-    background-color: var(--gradient-base-background-3);
 }
