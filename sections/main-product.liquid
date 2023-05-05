@@ -62,7 +62,8 @@
 
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
         <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
-            {% render 'product-media-gallery', variant_images: variant_images %}
+            {% comment %}{% render 'product-media-gallery', variant_images: variant_images %}{% endcomment %}
+          {% render 'product-media-gallery' %}
         </div>
         <div class="product__info-wrapper {{ section.settings.details_section_direction }} grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}">
             <product-info
@@ -393,7 +394,6 @@
                                                         {%- endif -%}
                                                     </div>
                                                     {%- if block.settings.make_collapsible_row -%}
-                                                    {% comment %}{% render 'icon-caret' %}{% endcomment %}
                                                     {% render 'icon-plus' %}
                                                 </summary>
                                                 {%- endif -%}

@@ -23,6 +23,13 @@
     width: 96%;
     margin: 1em auto;
     font-size: 16px;
+    place-items: center;
+    }
+
+    .model-size-text {
+        width: 100%;
+    border: 0.5px var(--gradient-base-accent-1) solid;
+    text-align: center;
     }
 {% endstyle %}
 
@@ -31,26 +38,26 @@
         <div class="product-meta-content none">
             <div class="modelsizedropdown">
                 <div class="div-block-460">
-                    <div class="text-block-174 text-center">שם</div>
-                    <div class="text-block-175 text-center">גובה</div>
-                    <div class="text-block-176 text-center">חזה</div>
-                    <div class="text-block-177 text-center">מותן</div>
-                    <div class="text-block-178 text-center">אגן</div>
+                    <div class="model-size-text text-center">שם</div>
+                    <div class="model-size-text text-center">גובה</div>
+                    <div class="model-size-text text-center">חזה</div>
+                    <div class="model-size-text text-center">מותן</div>
+                    <div class="model-size-text text-center">אגן</div>
                     {% if product.tags contains "plusSizeProduct" %}
-                        <div class="text-block-179 text-center">{{ product.metafields.global.model }}</div>
-                        <div class="text-block-180 priceFont text-center">{{ product.metafields.global.height }}</div>
-                        <div class="text-block-181 priceFont text-center">{{ product.metafields.global.chest }}</div>
-                        <div class="text-block-181 priceFont text-center">{{ product.metafields.global.waist }}</div>
-                        <div class="text-block-183 priceFont text-center">{{ product.metafields.global.butt }}</div>
+                        <div class="model-size-text text-center">{{ product.metafields.global.model }}</div>
+                        <div class="model-size-text text-center">{{ product.metafields.global.height }}</div>
+                        <div class="model-size-text text-center">{{ product.metafields.global.chest }}</div>
+                        <div class="model-size-text text-center">{{ product.metafields.global.waist }}</div>
+                        <div class="model-size-text text-center">{{ product.metafields.global.butt }}</div>
                     {% else %}
-                        <div class="text-block-179 text-center">{{ product.metafields.global.plusmodel }}</div>
-                        <div class="text-block-180 priceFont text-center">{{ product.metafields.global.plusheight }}</div>
-                        <div class="text-block-181 priceFont text-center">{{ product.metafields.global.pluschest }}</div>
-                        <div class="text-block-181 priceFont text-center">{{ product.metafields.global.pluswaist }}</div>
-                        <div class="text-block-183 priceFont text-center">{{ product.metafields.global.plusbutt }}</div>
+                        <div class="model-size-text text-center">{{ product.metafields.global.plusmodel }}</div>
+                        <div class="model-size-text text-center">{{ product.metafields.global.plusheight }}</div>
+                        <div class="model-size-text text-center">{{ product.metafields.global.pluschest }}</div>
+                        <div class="model-size-text text-center">{{ product.metafields.global.pluswaist }}</div>
+                        <div class="model-size-text text-center">{{ product.metafields.global.plusbutt }}</div>
                     {% endif %}
                 </div>
-                <div class="text-block-184">{{ 'products.product.shipping_sizes' | t }}</div>
+                <div class="all-sizes-are-in">{{ 'products.product.shipping_sizes' | t }}</div>
             </div>
         </div>
     </div>

@@ -161,7 +161,6 @@
     flex: 0 0 100%;
     padding: 0;
     margin: 0 0 1.2rem auto;
-    max-width: 37rem;
     min-width: fit-content;
     border: none;
 
@@ -243,13 +242,6 @@ fieldset.product-form__input .form__label {
 
 .product-form__input input[type='radio']:checked + label::selection {
     background-color: rgba(var(--color-background), 0.3);
-}
-
-.product-form__input input[type='radio']:disabled + label,
-.product-form__input input[type='radio'].disabled + label {
-    border-color: rgba(var(--color-foreground), 0.1);
-    color: rgba(var(--color-foreground), 0.6);
-    text-decoration: line-through;
 }
 
 .product-form__input input[type='radio'].disabled:checked + label,
@@ -1465,6 +1457,14 @@ a.product__text {
 
 
 /* Custom Style */
+
+.product-form__input input[type='radio']:disabled + label,
+.product-form__input input[type='radio'].disabled + label {
+    background-color: var(--gradient-base-background-3);
+    color: rgba(var(--color-foreground), 0.6);
+    text-decoration: line-through;
+}
+
 .product-form__input input[type='radio'] + label.color-variant-tile.no-background {
     background-color: unset;
     padding: 0;
