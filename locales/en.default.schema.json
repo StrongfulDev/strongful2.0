@@ -1380,6 +1380,9 @@
         "menu_item": {
           "name": "Menu Item",
           "settings": {
+            "show_on_mobile": {
+              "label": "Show on mobile"
+            },
             "title": {
               "label": "Item title",
               "info": "Title to show at the top most level"

@@ -63,16 +63,25 @@
     "header": {
       "type": "header",
       "blocks": {
+        "b3598a84-e3e7-4790-a124-330f65ab27da": {
+          "type": "url",
+          "settings": {
+            "show_on_mobile": false,
+            "title": "SALE",
+            "title_link": "shopify:\/\/collections\/upto30"
+          }
+        },
         "8878d4cf-d83f-42a2-90b9-ddebceb7501c": {
           "type": "menu_item",
           "settings": {
+            "show_on_mobile": false,
             "menu": "first-sets",
             "title": "סטים",
             "title_link": "",
             "desktop_links_image_1": "shopify:\/\/shop_images\/01_38caaf9f-e9f7-4344-8cb2-a6c1b10f4a0c.jpg",
-            "desktop_links_image_1_link": "",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/aura",
             "desktop_links_image_2": "shopify:\/\/shop_images\/02_55663bf9-839e-4fc1-90f8-3c660f2805e4.jpg",
-            "desktop_links_image_2_link": "",
+            "desktop_links_image_2_link": "shopify:\/\/collections\/aura",
             "mobile_cover_image": "shopify:\/\/shop_images\/20e5c3f719da92dc7bfd0c70c57f7186.jpg",
             "mobile_title": ""
           }
@@ -80,9 +89,11 @@
         "70af0289-2846-42bd-93c5-5598239a8ddc": {
           "type": "menu_item",
           "settings": {
+            "show_on_mobile": false,
             "menu": "dawn-outlet-menu",
-            "title": "",
+            "title": "OUTLET",
             "title_link": "",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/70.jpg",
             "desktop_links_image_1_link": "",
             "desktop_links_image_2_link": "",
             "mobile_cover_image": "shopify:\/\/shop_images\/70.jpg",
@@ -92,6 +103,7 @@
         "fc929aa6-aab6-4c25-be13-8267425330c3": {
           "type": "menu_item",
           "settings": {
+            "show_on_mobile": false,
             "menu": "main-menu",
             "title": "טופים",
             "title_link": "",
@@ -105,6 +117,7 @@
         "03fa03f7-aac1-443b-acba-9a19fb5aa148": {
           "type": "menu_item",
           "settings": {
+            "show_on_mobile": false,
             "menu": "bottom-menu",
             "title": "טייצים",
             "title_link": "",
@@ -118,9 +131,11 @@
         "4d0d7344-0f17-4600-86d8-3481f2a1c4a1": {
           "type": "menu_item",
           "settings": {
-            "menu": "accessories",
+            "show_on_mobile": false,
+            "menu": "dawn-accessories",
             "title": "אקססוריז",
             "title_link": "קולקציית אקססוריז",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/70.jpg",
             "desktop_links_image_1_link": "",
             "desktop_links_image_2_link": "",
             "mobile_cover_image": "shopify:\/\/shop_images\/accessories_hamburger.jpg",
@@ -130,22 +145,34 @@
         "93921bbc-631f-46c2-a66b-9df086c3f7a0": {
           "type": "url",
           "settings": {
+            "show_on_mobile": false,
             "title": "GIFT CARD",
             "title_link": "shopify:\/\/products\/strongful-gift-card",
             "menu_link_image": "shopify:\/\/shop_images\/gift_card_hamburger_2.jpg"
           }
+        },
+        "69313e8a-8818-485d-9c44-529f1b10ccdd": {
+          "type": "url",
+          "settings": {
+            "show_on_mobile": false,
+            "title": "מועדון לקוחות",
+            "title_link": "shopify:\/\/pages\/a-list"
+          }
         }
       },
       "block_order": [
+        "b3598a84-e3e7-4790-a124-330f65ab27da",
         "8878d4cf-d83f-42a2-90b9-ddebceb7501c",
         "70af0289-2846-42bd-93c5-5598239a8ddc",
         "fc929aa6-aab6-4c25-be13-8267425330c3",
         "03fa03f7-aac1-443b-acba-9a19fb5aa148",
         "4d0d7344-0f17-4600-86d8-3481f2a1c4a1",
-        "93921bbc-631f-46c2-a66b-9df086c3f7a0"
+        "93921bbc-631f-46c2-a66b-9df086c3f7a0",
+        "69313e8a-8818-485d-9c44-529f1b10ccdd"
       ],
       "settings": {
         "color_scheme": "background-1",
+        "menu_position": "center",
         "toggle_socials": false,
         "logo_position": "middle-left",
         "menu": "dawn-mega-menu",

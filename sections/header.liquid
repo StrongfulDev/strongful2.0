@@ -38,6 +38,8 @@
 <noscript>{{ 'component-cart-notification.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-cart-items.css' | asset_url | stylesheet_tag }}</noscript>
 
+{{ 'header.js' | asset_url | script_tag }}
+
 <style>
     header-drawer {
         justify-self: start;
@@ -76,10 +78,6 @@
         flex-wrap: wrap;
     }
 
-    summary.list-menu__item {
-        padding-right: 2.7rem;
-    }
-
     .list-menu__item {
         display: flex;
         align-items: center;
@@ -103,8 +101,7 @@
 
 {%- style -%}
     .header {
-    padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+    padding: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     }
 
     .section-header {
@@ -157,7 +154,7 @@
 </svg>
 <{% if section.settings.sticky_header_type != 'none' %}sticky-header data-sticky-type="{{ section.settings.sticky_header_type }}" {% else %}div{% endif %}
         class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
-    <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu != blank %} header--has-menu{% endif %}">
+    <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} {% if section.settings.menu != blank %}header--has-menu{% endif %}">
         {%- if section.settings.menu != blank -%}
             {% if section.settings.menu_type_desktop == 'customizable' %}
                 <header-drawer class="customizable" data-breakpoint="tablet">
@@ -316,7 +313,7 @@
                                                       </details>
                                                   </li>
                                                 {% else %}
-                                                <li>
+                                                <li class="{% if block.settings.show_on_mobile == false %}desktop-only{% endif %}">
                                                   <a href="{{ block.settings.title_link }}" class="mobile_link_header">
                                                     {{ block.settings.menu_link_image | image_url: width: 320 | image_tag:
                                                     loading: 'lazy',
@@ -704,7 +701,6 @@
                                             <summary
                                                     class="header__menu-item list-menu__item link focus-inset">
                                                 <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
-                                                {% render 'icon-caret' %}
                                             </summary>
                                             <ul id="HeaderMenu-MenuList-{{ forloop.index }}"
                                                 class="header__submenu list-menu list-menu--disclosure gradient caption-large motion-reduce global-settings-popup"
@@ -753,8 +749,8 @@
                     </ul>
                 </nav>
             {%- elsif section.settings.menu_type_desktop == 'customizable' -%}
-                <nav class="header__inline-menu  {{ section.settings.menu_position }}">
-                    <ul class="list-menu list-menu--inline" role="list">
+                <nav class="header__inline-menu {{ section.settings.menu_position }}">
+                    <ul class="list-menu list-menu--inline fix-direction" role="list">
                         {%- for block in section.blocks -%}
                             <li>
                                 {%- if block.settings.menu != blank -%}
@@ -768,7 +764,6 @@
                                             <summary
                                                     class="header__menu-item list-menu__item link focus-inset">
                                                 <span {%- if link_child_active %} class="header__active-menu-item"{% endif %}>{{ block.settings.title | escape }}</span>
-                                                {% render 'icon-caret' %}
                                             </summary>
                                             <div id="MegaMenu-Content-{{ forloop.index }}"
                                                  class="mega-menu__content customizable fix-direction gradient motion-reduce global-settings-popup"
@@ -1066,122 +1061,6 @@
         {%- render 'cart-notification', color_scheme: section.settings.color_scheme -%}
     {%- endif -%}
 
-    {% javascript %}
-
-    class StickyHeader extends HTMLElement {
-        constructor() {
-        super();
-    }
-
-    connectedCallback() {
-        this.header = document.querySelector('.section-header');
-        this.headerIsAlwaysSticky = this.getAttribute('data-sticky-type') === 'always' ||
-        this.getAttribute('data-sticky-type') === 'reduce-logo-size';
-        this.headerBounds = {};
-
-        this.setHeaderHeight();
-
-        window.matchMedia('(max-width: 990px)').addEventListener('change',
-        this.setHeaderHeight.bind(this));
-
-        if (this.headerIsAlwaysSticky) {
-            this.header.classList.add('shopify-section-header-sticky');
-        };
-
-        this.currentScrollTop = 0;
-        this.preventReveal = false;
-        this.predictiveSearch = this.querySelector('predictive-search');
-
-        this.onScrollHandler = this.onScroll.bind(this);
-        this.hideHeaderOnScrollUp = () => this.preventReveal = true;
-
-        this.addEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
-        window.addEventListener('scroll', this.onScrollHandler, false);
-
-        this.createObserver();
-    }
-
-    setHeaderHeight() {
-        document.documentElement.style.setProperty('--header-height', `${this.header.offsetHeight}px`);
-    }
-
-    disconnectedCallback() {
-        this.removeEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
-        window.removeEventListener('scroll', this.onScrollHandler);
-    }
-
-    createObserver() {
-        let observer = new IntersectionObserver((entries, observer) => {
-        this.headerBounds = entries[0].intersectionRect;
-        observer.disconnect();
-    });
-
-        observer.observe(this.header);
-    }
-
-    onScroll() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (this.predictiveSearch && this.predictiveSearch.isOpen) return;
-
-    if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
-        this.header.classList.add('scrolled-past-header');
-            if (this.preventHide) return;
-                requestAnimationFrame(this.hide.bind(this));
-    } else if (scrollTop < this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
-    this.header.classList.add('scrolled-past-header');
-    if (!this.preventReveal) {
-    requestAnimationFrame(this.reveal.bind(this));
-    } else {
-    window.clearTimeout(this.isScrolling);
-
-    this.isScrolling = setTimeout(() => {
-    this.preventReveal = false;
-    }, 66);
-
-    requestAnimationFrame(this.hide.bind(this));
-    }
-    } else if (scrollTop <= this.headerBounds.top) {
-    this.header.classList.remove('scrolled-past-header');
-    requestAnimationFrame(this.reset.bind(this));
-    }
-
-    this.currentScrollTop = scrollTop;
-    }
-
-    hide() {
-    if (this.headerIsAlwaysSticky) return;
-    this.header.classList.add('shopify-section-header-hidden', 'shopify-section-header-sticky');
-    this.closeMenuDisclosure();
-    this.closeSearchModal();
-    }
-
-    reveal() {
-    if (this.headerIsAlwaysSticky) return;
-    this.header.classList.add('shopify-section-header-sticky', 'animate');
-    this.header.classList.remove('shopify-section-header-hidden');
-    }
-
-    reset() {
-    if (this.headerIsAlwaysSticky) return;
-    this.header.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky',
-    'animate');
-    }
-
-    closeMenuDisclosure() {
-    this.disclosures = this.disclosures || this.header.querySelectorAll('header-menu');
-    this.disclosures.forEach(disclosure => disclosure.close());
-    }
-
-    closeSearchModal() {
-    this.searchModal = this.searchModal || this.header.querySelector('details-modal');
-    this.searchModal.close(false);
-    }
-    }
-
-    customElements.define('sticky-header', StickyHeader);
-    {% endjavascript %}
-
     <script type="application/ld+json">
   {
     "@context": "http://schema.org",
@@ -1255,6 +1134,26 @@
       ],
       "default":"background-1",
       "label":"t:sections.all.colors.label"
+    },
+    {
+      "type":"select",
+      "id":"menu_position",
+      "options":[
+        {
+        "value":"left",
+        "label":"t:sections.header.settings.menu_position.option__1.label"
+        },
+        {
+        "value":"center",
+        "label":"t:sections.header.settings.menu_position.option__2.label"
+        },
+        {
+        "value":"right",
+        "label":"t:sections.header.settings.menu_position.option__3.label"
+        }
+      ],
+    "default":"center",
+    "label":"t:sections.header.settings.menu_position.label"
     },
     {
         "type": "checkbox",
@@ -1464,6 +1363,12 @@
       "limit":20,
       "settings":[
         {
+          "type": "checkbox",
+          "id": "show_on_mobile",
+          "default": false,
+          "label": "t:sections.header.blocks.menu_item.settings.show_on_mobile.label"
+        },
+        {
           "type":"link_list",
           "id":"menu",
           "default":"main-menu",
@@ -1492,7 +1397,7 @@
           "info":"t:sections.header.blocks.menu_item.settings.desktop.links.image__1.info"
         },
         {
-          "type":"text",
+          "type":"url",
           "id":"desktop_links_image_1_link",
           "label":"t:sections.header.blocks.menu_item.settings.desktop.links.image__1.link.label"
         },
@@ -1503,7 +1408,7 @@
           "info":"t:sections.header.blocks.menu_item.settings.desktop.links.image__2.info"
         },
         {
-          "type":"text",
+          "type":"url",
           "id":"desktop_links_image_2_link",
           "label":"t:sections.header.blocks.menu_item.settings.desktop.links.image__2.link.label"
         },
@@ -1529,6 +1434,12 @@
       "type": "url",
       "name": "t:sections.header.blocks.url.name",
       "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_on_mobile",
+          "default": false,
+          "label": "t:sections.header.blocks.menu_item.settings.show_on_mobile.label"
+        },
         {
           "type": "text",
           "id": "title",
