@@ -232,7 +232,7 @@
 
 .menu-drawer__item-image {
     width: 100%;
-    height: 200px;
+    height: 175px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -288,4 +288,15 @@
 .menu-drawer__close-button .icon-caret {
     transform: rotate(90deg);
     width: 1em;
+}
+
+.mobile_link_header {
+    height: 150px;
+    display: block;
+}
+
+.mobile_link_header_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

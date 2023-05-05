@@ -1428,6 +1428,23 @@
               }
             }
           }
+        },
+        "url": {
+          "name": "URL",
+          "settings": {
+            "title": {
+              "label": "Title",
+              "info": "Title to show at the top most level"
+            },
+            "title_link": {
+              "label": "Title link",
+              "info": "The link for the title"
+            },
+            "menu_link_image": {
+              "label": "Image",
+              "info": "Image to show under link text"
+            }
+          }
         }
       }
     },

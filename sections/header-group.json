@@ -77,6 +77,18 @@
             "mobile_title": ""
           }
         },
+        "70af0289-2846-42bd-93c5-5598239a8ddc": {
+          "type": "menu_item",
+          "settings": {
+            "menu": "dawn-outlet-menu",
+            "title": "",
+            "title_link": "",
+            "desktop_links_image_1_link": "",
+            "desktop_links_image_2_link": "",
+            "mobile_cover_image": "shopify:\/\/shop_images\/70.jpg",
+            "mobile_title": ""
+          }
+        },
         "fc929aa6-aab6-4c25-be13-8267425330c3": {
           "type": "menu_item",
           "settings": {
@@ -114,13 +126,23 @@
             "mobile_cover_image": "shopify:\/\/shop_images\/accessories_hamburger.jpg",
             "mobile_title": ""
           }
+        },
+        "93921bbc-631f-46c2-a66b-9df086c3f7a0": {
+          "type": "url",
+          "settings": {
+            "title": "GIFT CARD",
+            "title_link": "shopify:\/\/products\/strongful-gift-card",
+            "menu_link_image": "shopify:\/\/shop_images\/gift_card_hamburger_2.jpg"
+          }
         }
       },
       "block_order": [
         "8878d4cf-d83f-42a2-90b9-ddebceb7501c",
+        "70af0289-2846-42bd-93c5-5598239a8ddc",
         "fc929aa6-aab6-4c25-be13-8267425330c3",
         "03fa03f7-aac1-443b-acba-9a19fb5aa148",
-        "4d0d7344-0f17-4600-86d8-3481f2a1c4a1"
+        "4d0d7344-0f17-4600-86d8-3481f2a1c4a1",
+        "93921bbc-631f-46c2-a66b-9df086c3f7a0"
       ],
       "settings": {
         "color_scheme": "background-1",
