@@ -2,7 +2,7 @@
 
 <section
         id="MainProduct-{{ section.id }}"
-        class="page-width section-{{ section.id }}-padding"
+        class="custom-page-width section-{{ section.id }}-padding"
         data-section="{{ section.id }}"
 >
     {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
@@ -16,10 +16,12 @@
     <script src="{{ 'component-swiper.js' | asset_url }}" defer="defer" async="async"></script>
 
     {%- style -%}
+      {% comment %}
         .section-{{ section.id }}-padding {
         padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
         padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
         }
+      {% endcomment %}
 
         @media screen and (min-width: 750px) {
         .section-{{ section.id }}-padding {
@@ -86,7 +88,7 @@
                                 {{- block.settings.text -}}
                             </p>
                         {%- when 'title' -%}
-                            <div class="product__title {{ block.settings.direction }}" {{ block.shopify_attributes }}>
+                            <div class="product__title fix-direction" {{ block.shopify_attributes }}>
                                 <h1>{{ product.title | escape }}</h1>
                                 <a href="{{ product.url }}" class="product__title">
                                     <h2 class="h1">

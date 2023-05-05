@@ -37,6 +37,7 @@
           "settings": {
             "text_style": "body",
             "inventory_threshold": 20,
+            "minimum_inventory_to_show": 20,
             "show_inventory_quantity": true
           }
         },
@@ -127,8 +128,8 @@
         "hide_variants": true,
         "enable_video_looping": true,
         "details_section_direction": "right",
-        "padding_top": 0,
-        "padding_bottom": 80
+        "padding_top": 36,
+        "padding_bottom": 52
       }
     },
     "complete-look-products": {

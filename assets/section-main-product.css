@@ -345,9 +345,9 @@ a.product__text {
     display: none;
 }
 
-.product__title + .product__text.caption-with-letter-spacing {
-    margin-top: -1.5rem;
-}
+/*.product__title + .product__text.caption-with-letter-spacing {*/
+/*    margin-top: -1.5rem;*/
+/*}*/
 
 .product__text.caption-with-letter-spacing + .product__title {
     margin-top: 0;
@@ -1537,16 +1537,6 @@ variant-radios fieldset {
     display: none;
 }
 
-@media screen and (max-width: 749px) {
-    .slider-buttons {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 100%;
-        z-index: 2;
-    }
-}
-
 /* Custom styles */
 
 .product-form__input {
@@ -1629,4 +1619,34 @@ variant-radios fieldset {
 
 .product-logged-in-text--main p {
     margin: 0;
+}
+
+@media screen and (min-width: 990px) {
+
+    .product.grid {
+        margin-top: 3rem;
+    }
+
+    .slider-buttons {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: 2;
+    }
+
+    .product__media-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product--columns .product__media-item:not(.product__media-item--single):not(:only-child) {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .product-form__input .variant-button:not(.disabled-variant-button) input[type='radio'] + label:hover {
+        background: black;
+        color: white;
+    }
 }
