@@ -249,7 +249,7 @@
                                                                      alt="Strongful's logo - The Black Lightning"/>
                                                                 <button class="menu-drawer__close-button link link--text focus-inset"
                                                                         aria-expanded="true">
-                                                                    {% render 'icon-arrow' %}
+                                                                    {% render 'icon-caret' %}
                                                                     {{ block.settings.mobile_title | escape }}
                                                                 </button>
                                                                 <div class="menu-drawer__item-image"
@@ -265,14 +265,13 @@
                                                                                    class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if childlink.current %} menu-drawer__menu-item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
                                                                                     {{ childlink.title | escape }}
                                                                                     {% for collection in collections %}
-                                                                                        {% if collection.handle == childlink.handle and collection.image != nil %}
-                                                                                            {%- assign height = collection.image.width | divided_by: collection.image.aspect_ratio | round -%}
-                                                                                            {{ collection.image | image_url: width: 375 | image_tag:
+                                                                                        {% if collection.url == childlink.url and collection.image != null %}
+                                                                                            {{ collection.image | image_url: width: 600 | image_tag:
                                                                                             loading: 'lazy',
-                                                                                            height: height,
                                                                                             class: "mobile_link_collection_image",
                                                                                             sizes: "100vw",
-                                                                                            widths: '375'
+                                                                                            widths: '600',
+                                                                                            height: '600'
                                                                                             }}
                                                                                         {% endif %}
                                                                                     {% endfor %}
@@ -290,7 +289,7 @@
                                                                                          class="menu-drawer__submenu has-submenu gradient motion-reduce">
                                                                                         <button class="menu-drawer__close-button link link--text focus-inset"
                                                                                                 aria-expanded="true">
-                                                                                            {% render 'icon-arrow' %}
+                                                                                            {% render 'icon-caret' %}
                                                                                             {{ childlink.title | escape }}
                                                                                         </button>
                                                                                         <ul class="menu-drawer__menu list-menu"
@@ -386,7 +385,7 @@
                                                                 <div class="menu-drawer__inner-submenu">
                                                                     <button class="menu-drawer__close-button link link--text focus-inset"
                                                                             aria-expanded="true">
-                                                                        {% render 'icon-arrow' %}
+                                                                        {% render 'icon-caret' %}
                                                                         {{ link.title | escape }}
                                                                     </button>
                                                                     <ul class="menu-drawer__menu list-menu"
@@ -411,7 +410,7 @@
                                                                                              class="menu-drawer__submenu has-submenu gradient motion-reduce">
                                                                                             <button class="menu-drawer__close-button link link--text focus-inset"
                                                                                                     aria-expanded="true">
-                                                                                                {% render 'icon-arrow' %}
+                                                                                                {% render 'icon-caret' %}
                                                                                                 {{ childlink.title | escape }}
                                                                                             </button>
                                                                                             <ul class="menu-drawer__menu list-menu"

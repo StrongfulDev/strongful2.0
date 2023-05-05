@@ -276,3 +276,16 @@
     display: block;
     text-align: center;
 }
+
+.mobile-link-cover > span {
+    display: none;
+}
+
+.menu-drawer__close-button {
+    background-color: none;
+}
+
+.menu-drawer__close-button .icon-caret {
+    transform: rotate(90deg);
+    width: 1em;
+}

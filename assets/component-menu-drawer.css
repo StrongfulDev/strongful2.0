@@ -152,7 +152,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 .menu-drawer__menu-item:hover,
 .menu-drawer__close-button:hover {
     color: rgb(var(--color-foreground));
-    background-color: rgba(var(--color-foreground), 0.04);
+    background-color: none;
 }
 
 .menu-drawer__menu-item--active:hover {
@@ -196,7 +196,7 @@ details[open].menu-opening > .menu-drawer__submenu {
     align-items: center;
     font-size: 1.4rem;
     width: 100%;
-    background-color: transparent;
+    background-color: none;
     font-family: var(--font-body-family);
     font-style: var(--font-body-style);
     text-align: left;
