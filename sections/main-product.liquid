@@ -124,13 +124,13 @@
                             </div>
                         {%- when 'inventory' -%}
                             <p
-                                    class="product__inventory no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"
+                                    class="product__inventory no-js-hidden fix-direction{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"
                                     {{ block.shopify_attributes }}
                                     id="Inventory-{{ section.id }}"
                                     role="status"
                             >
                                 {%- if product.selected_or_first_available_variant.inventory_management == 'shopify' -%}
-                                    {%- if product.selected_or_first_available_variant.inventory_quantity > 0 -%}
+                                    {%- if product.selected_or_first_available_variant.inventory_quantity < block.settings.minimum_inventory_to_show -%}
                                         {%- if product.selected_or_first_available_variant.inventory_quantity <= block.settings.inventory_threshold -%}
                                             <svg width="15" height="15" aria-hidden="true">
                                                 <circle cx="7.5" cy="7.5" r="7.5"
@@ -168,7 +168,7 @@
                                                         fill="rgb(62,214,96)"/>
                                             </svg>
                                             {{- 'products.product.inventory_out_of_stock_continue_selling' | t -}}
-                                        {%- else -%}
+                                        {%- elsif product.selected_or_first_available_variant.inventory_quantity < 1 -%}
                                             <svg width="15" height="15" aria-hidden="true">
                                                 <circle cx="7.5" cy="7.5" r="7.5"
                                                         fill="rgb(200,200,200, 0.3)"/>
@@ -765,6 +765,16 @@
           "step": 1,
           "info": "t:sections.main-product.blocks.inventory.settings.inventory_threshold.info",
           "default": 10
+        },
+        {
+          "type": "range",
+          "id": "minimum_inventory_to_show",
+          "label": "t:sections.main-product.blocks.inventory.settings.minimum_inventory_to_show.label",
+          "min": 0,
+          "max": 50,
+          "step": 1,
+          "info": "t:sections.main-product.blocks.inventory.settings.minimum_inventory_to_show.info",
+          "default": 20
         },
         {
           "type": "checkbox",

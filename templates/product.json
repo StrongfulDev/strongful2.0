@@ -20,10 +20,24 @@
           "settings": {
           }
         },
+        "ca878b02-e0a8-49d7-8f9e-937cb05298df": {
+          "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
             "picker_type": "button"
+          }
+        },
+        "88b94c52-a8ec-40c4-91b8-c6f3d566da1e": {
+          "type": "inventory",
+          "settings": {
+            "text_style": "body",
+            "inventory_threshold": 20,
+            "show_inventory_quantity": true
           }
         },
         "quantity_selector": {
@@ -90,7 +104,9 @@
         "title",
         "vendor",
         "price",
+        "ca878b02-e0a8-49d7-8f9e-937cb05298df",
         "variant_picker",
+        "88b94c52-a8ec-40c4-91b8-c6f3d566da1e",
         "quantity_selector",
         "buy_buttons",
         "5ae0b953-0e37-48c5-b5cc-e50d6004b25c",

@@ -2289,6 +2289,10 @@
         "inventory": {
           "name": "Inventory status",
           "settings": {
+            "minimum_inventory_to_show": {
+              "label": "Minimum inventory to show",
+              "info": "Choose the minimum inventory quantity to show to the customers"
+            },
             "text_style": {
               "label": "Text style",
               "options__1": {
