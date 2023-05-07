@@ -2211,7 +2211,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
 
 /* section-header */
 .section-header.shopify-section-group-header-group {
-    z-index: 3;
+    z-index: 4;
 }
 
 .shopify-section-header-sticky {
@@ -2231,12 +2231,16 @@ product-info .loading-overlay:not(.hidden) ~ *,
     transition: top 0.15s ease-out;
 }
 
-.shopify-section-group-header-group {
+/*.shopify-section-group-header-group {*/
+/*    z-index: 4;*/
+/*}*/
+
+.section-header, .announcement-bar-section {
     z-index: 4;
 }
 
 .section-header ~ .shopify-section-group-header-group {
-    z-index: initial;
+    /*z-index: initial;*/
 }
 
 /* Main Header Layout */
