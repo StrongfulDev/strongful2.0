@@ -18,6 +18,7 @@ document.querySelectorAll('[id^="Details-"] summary').forEach((summary) => {
     summary.addEventListener("mouseenter", (event) => {
        event.currentTarget.setAttribute('aria-expanded', true);
        event.currentTarget.closest('details').setAttribute('open', true);
+       $(".header-overlay").removeClass("hidden");
        // get all the details elements
         const details = document.querySelectorAll('[id^="Details-"]');
         // loop through each details element
