@@ -53,6 +53,7 @@ class StickyHeader extends HTMLElement {
 		const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
 		if (this.predictiveSearch && this.predictiveSearch.isOpen) return;
+		$(".header-overlay").addClass("hidden");
 
 		if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
 			this.header.classList.add('scrolled-past-header');
