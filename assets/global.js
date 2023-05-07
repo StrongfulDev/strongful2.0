@@ -1118,10 +1118,6 @@ class ProductRecommendations extends HTMLElement {
 customElements.define('product-recommendations', ProductRecommendations);
 
 let headerOverlay = document.querySelector('.header-overlay');
-let announcementHeight = $(".announcement-bar-section").outerHeight();
-let headerHeight = $(".section-header").outerHeight();
-let totalHeight = announcementHeight + headerHeight;
-$(headerOverlay).css('top', totalHeight + 'px').css('height', 'calc(100vh - ' + totalHeight + 'px)');
 $(headerOverlay).on('mouseenter', function() {
   $(this).addClass('hidden');
   $('.header__menu-item').attr('aria-expanded', false);

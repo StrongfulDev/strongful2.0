@@ -32,11 +32,17 @@
             "picker_type": "button"
           }
         },
+        "728193c8-6d92-4943-a33a-e64ada11e0d4": {
+          "type": "shopify:\/\/apps\/back-in-stock-restock-alerts\/blocks\/app-block\/839cbcb7-0406-4c2b-8e74-a54d987b90ab",
+          "settings": {
+          }
+        },
         "88b94c52-a8ec-40c4-91b8-c6f3d566da1e": {
           "type": "inventory",
           "settings": {
             "text_style": "body",
             "inventory_threshold": 20,
+            "minimum_inventory_to_show": 20,
             "show_inventory_quantity": true
           }
         },
@@ -106,6 +112,7 @@
         "price",
         "ca878b02-e0a8-49d7-8f9e-937cb05298df",
         "variant_picker",
+        "728193c8-6d92-4943-a33a-e64ada11e0d4",
         "88b94c52-a8ec-40c4-91b8-c6f3d566da1e",
         "quantity_selector",
         "buy_buttons",
