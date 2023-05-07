@@ -14,10 +14,29 @@ document.querySelectorAll('[id^="Details-"] summary').forEach((summary) => {
     summary.setAttribute('aria-controls', summary.nextElementSibling.id);
   }
 
-  summary.addEventListener('click', (event) => {
+  if ($(summary).hasClass("header__menu-item")) {
+    summary.addEventListener("mouseenter", (event) => {
+       event.currentTarget.setAttribute('aria-expanded', true);
+       event.currentTarget.closest('details').setAttribute('open', true);
+       // get all the details elements
+        const details = document.querySelectorAll('[id^="Details-"]');
+        // loop through each details element
+        details.forEach((detail) => {
+          // if the details element is not the one being hovered
+          if (detail !== event.currentTarget.closest('details')) {
+            // close it
+            detail.removeAttribute('open');
+            detail.querySelector('summary').setAttribute('aria-expanded', false);
+          }
+        });
+    });
+
+  }else {
+    summary.addEventListener('click', (event) => {
       event.currentTarget.setAttribute('aria-expanded', !event.currentTarget.closest('details').hasAttribute('open'));
       $(event.currentTarget).find(".footer-block__heading").toggleClass("no-after");
-  });
+    });
+  }
 
   if (summary.closest('header-drawer')) return;
   summary.parentElement.addEventListener('keyup', onKeyUpEscape);
@@ -346,6 +365,7 @@ class MenuDrawer extends HTMLElement {
 
   bindEvents() {
     this.querySelectorAll('summary').forEach(summary => summary.addEventListener('click', this.onSummaryClick.bind(this)));
+    this.querySelectorAll('summary').forEach(summary => summary.addEventListener('mouseenter', this.onSummaryHover.bind(this)));
     this.querySelectorAll('button').forEach(button => button.addEventListener('click', this.onCloseButtonClick.bind(this)));
   }
 
@@ -359,11 +379,11 @@ class MenuDrawer extends HTMLElement {
   }
 
   onSummaryClick(event) {
-    const summaryElement = event.currentTarget;
-    const detailsElement = summaryElement.parentNode;
-    const parentMenuElement = detailsElement.closest('.has-submenu');
-    const isOpen = detailsElement.hasAttribute('open');
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let summaryElement = event.currentTarget;
+    let detailsElement = summaryElement.parentNode;
+    let parentMenuElement = detailsElement.closest('.has-submenu');
+    let isOpen = detailsElement.hasAttribute('open');
+    let reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
     function addTrapFocus() {
       trapFocus(summaryElement.nextElementSibling, detailsElement.querySelector('button'));
@@ -383,6 +403,36 @@ class MenuDrawer extends HTMLElement {
         summaryElement.setAttribute('aria-expanded', true);
         parentMenuElement && parentMenuElement.classList.add('submenu-open');
         !reducedMotion || reducedMotion.matches ? addTrapFocus() : summaryElement.nextElementSibling.addEventListener('transitionend', addTrapFocus);
+      }, 100);
+    }
+  }
+
+  onSummaryHover(event) {
+    let summaryElementHover = event.target;
+    console.log(summaryElementHover);
+    let detailsElementHover = summaryElementHover.parentNode;
+    let parentMenuElementHover = detailsElementHover.closest('.has-submenu');
+    let isOpenHover = detailsElementHover.hasAttribute('open');
+    let reducedMotionHover = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    function addTrapFocus() {
+      trapFocus(summaryElementHover.nextElementSibling, detailsElementHover.querySelector('button'));
+      summaryElementHover.nextElementSibling.removeEventListener('transitionend', addTrapFocus);
+    }
+
+    if (detailsElementHover === this.mainDetailsToggle) {
+      if(isOpenHover) event.preventDefault();
+      isOpenHover ? this.closeMenuDrawer(event, summaryElementHover) : this.openMenuDrawer(summaryElementHover);
+
+      if (window.matchMedia('(max-width: 990px)')) {
+        document.documentElement.style.setProperty('--viewport-height', `${window.innerHeight}px`);
+      }
+    } else {
+      setTimeout(() => {
+        detailsElementHover.classList.add('menu-opening');
+        summaryElementHover.setAttribute('aria-expanded', true);
+        parentMenuElementHover && parentMenuElementHover.classList.add('submenu-open');
+        !reducedMotionHover || reducedMotionHover.matches ? addTrapFocus() : summaryElementHover.nextElementSibling.addEventListener('transitionend', addTrapFocus);
       }, 100);
     }
   }

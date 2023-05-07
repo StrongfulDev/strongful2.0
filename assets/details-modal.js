@@ -1,59 +1,90 @@
-class DetailsModal extends HTMLElement {
-  constructor() {
-    super();
-    this.detailsContainer = this.querySelector('details');
-    this.summaryToggle = this.querySelector('summary');
+ class DetailsModal extends HTMLElement {
+   constructor() {
+     super();
+     this.detailsContainer = this.querySelector('details');
+     this.summaryToggle = this.querySelector('summary');
 
-    this.detailsContainer.addEventListener(
-      'keyup',
-      (event) => event.code.toUpperCase() === 'ESCAPE' && this.close()
-    );
-    this.summaryToggle.addEventListener(
-      'click',
-      this.onSummaryClick.bind(this)
-    );
-    this.querySelector('button[type="button"]').addEventListener(
-      'click',
-      this.close.bind(this)
-    );
+     this.detailsContainer.addEventListener(
+       'keyup',
+       (event) => event.code.toUpperCase() === 'ESCAPE' && this.close()
+     );
+     this.summaryToggle.addEventListener(
+       'click',
+       this.onSummaryClick.bind(this)
+     );
+     this.summaryToggle.addEventListener(
+       'mouseenter',
+       this.onSummaryHover.bind(this)
+     );
+     this.querySelector('button[type="button"]').addEventListener(
+       'click',
+       this.close.bind(this)
+     );
 
-    this.summaryToggle.setAttribute('role', 'button');
-  }
+     this.summaryToggle.setAttribute('role', 'button');
+   }
 
-  isOpen() {
-    return this.detailsContainer.hasAttribute('open');
-  }
+   isOpen() {
+     return this.detailsContainer.hasAttribute('open');
+   }
 
-  onSummaryClick(event) {
-    event.preventDefault();
-    event.target.closest('details').hasAttribute('open')
-      ? this.close()
-      : this.open(event);
-  }
+   isOpenHover() {
+      return this.detailsContainer.hasAttribute('open');
+   }
 
-  onBodyClick(event) {
-    if (!this.contains(event.target) || event.target.classList.contains('modal-overlay')) this.close(false);
-  }
+   onSummaryClick(event) {
+     event.preventDefault();
+     event.target.closest('details').hasAttribute('open')
+       ? this.close()
+       : this.open(event);
+   }
 
-  open(event) {
-    this.onBodyClickEvent =
-      this.onBodyClickEvent || this.onBodyClick.bind(this);
-    event.target.closest('details').setAttribute('open', true);
-    document.body.addEventListener('click', this.onBodyClickEvent);
-    document.body.classList.add('overflow-hidden');
+   onSummaryHover(event) {
+     event.preventDefault();
+     event.target.closest('details').hasAttribute('open')
+       ? this.close()
+       : this.openHover(event);
+   }
 
-    trapFocus(
-      this.detailsContainer.querySelector('[tabindex="-1"]'),
-      this.detailsContainer.querySelector('input:not([type="hidden"])')
-    );
-  }
+   onBodyClick(event) {
+     if (!this.contains(event.target) || event.target.classList.contains('modal-overlay')) this.close(false);
+   }
 
-  close(focusToggle = true) {
-    removeTrapFocus(focusToggle ? this.summaryToggle : null);
-    this.detailsContainer.removeAttribute('open');
-    document.body.removeEventListener('click', this.onBodyClickEvent);
-    document.body.classList.remove('overflow-hidden');
-  }
-}
+   onBodyHover(event) {
+      if (!this.contains(event.target) || event.target.classList.contains('modal-overlay')) this.close(false);
+   }
 
-customElements.define('details-modal', DetailsModal);
+   open(event) {
+     this.onBodyClickEvent =
+       this.onBodyClickEvent || this.onBodyClick.bind(this);
+     event.target.closest('details').setAttribute('open', true);
+     document.body.addEventListener('click', this.onBodyClickEvent);
+     document.body.classList.add('overflow-hidden');
+
+     trapFocus(
+       this.detailsContainer.querySelector('[tabindex="-1"]'),
+       this.detailsContainer.querySelector('input:not([type="hidden"])')
+     );
+   }
+
+   openHover(event) {
+     this.onBodyMouseEnterEvent = this.onBodyMouseEnterEvent || this.onBodyHover.bind(this);
+     event.target.closest('details').setAttribute('open', true);
+     document.body.addEventListener('mouseenter', this.onBodyMouseEnterEvent);
+     document.body.classList.add('overflow-hidden');
+
+     trapFocus(
+       this.detailsContainer.querySelector('[tabindex="-1"]'),
+       this.detailsContainer.querySelector('input:not([type="hidden"])')
+     );
+   }
+
+   close(focusToggle = true) {
+     removeTrapFocus(focusToggle ? this.summaryToggle : null);
+     this.detailsContainer.removeAttribute('open');
+     document.body.removeEventListener('click', this.onBodyClickEvent);
+     document.body.classList.remove('overflow-hidden');
+   }
+ }
+
+ customElements.define('details-modal', DetailsModal);

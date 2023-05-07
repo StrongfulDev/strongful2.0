@@ -2647,6 +2647,7 @@ details[open] > .header__submenu {
 
 .header__menu-item span {
     transition: text-decoration var(--duration-short) ease;
+    pointer-events: none;
 }
 
 .header__menu-item:hover span {
