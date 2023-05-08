@@ -477,10 +477,10 @@
   },
   "rewards": {
     "free_shipping": {
-      "message_html": "Add <span class=\"rewards__free-shipping-amount\"><\/span> more and get free shipping</span>"
+      "message_html": "Add <span class=\"rewards__missing_amount\"><\/span> more and get free shipping</span>"
     },
     "free_bottle": {
-      "message_html": "תוסיפי <span class=\"rewards__free-shipping-amount\"></span> שח ותקבלי בקבוק חינם"
+      "message_html": "תוסיפי <span class=\"rewards__missing_amount\"></span> שח ותקבלי בקבוק חינם"
     }
   }
 }
