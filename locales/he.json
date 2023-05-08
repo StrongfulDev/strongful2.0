@@ -279,14 +279,14 @@
       }
     },
     "cart": {
-      "title": "Your cart",
+      "title": "סל קניות",
       "caption": "Cart items",
       "remove_title": "Remove {{ title }}",
-      "subtotal": "Subtotal",
+      "subtotal": "סה״כ",
       "new_subtotal": "New subtotal",
       "note": "Order special instructions",
-      "checkout": "Check out",
-      "empty": "Your cart is empty",
+      "checkout": "מעבר לתשלום",
+      "empty": "הסל שלך ריק",
       "cart_error": "There was an error while updating your cart. Please try again.",
       "cart_quantity_error_html": "You can only add {{ quantity }} of this item to your cart.",
       "taxes_and_shipping_policy_at_checkout_html": "Taxes and <a href=\"{{ link }}\">shipping<\/a> calculated at checkout",
@@ -294,11 +294,11 @@
       "taxes_included_and_shipping_policy_html": "Tax included. <a href=\"{{ link }}\">Shipping<\/a> calculated at checkout.",
       "taxes_and_shipping_at_checkout": "Taxes and shipping calculated at checkout",
       "headings": {
-        "product": "Product",
-        "price": "Price",
-        "total": "Total",
-        "quantity": "Quantity",
-        "image": "Product image"
+        "product": "מוצר",
+        "price": "מחיר",
+        "total": "סה״כ",
+        "quantity": "כמות",
+        "image": "תמונת מוצר"
       },
       "update": "Update",
       "login": {

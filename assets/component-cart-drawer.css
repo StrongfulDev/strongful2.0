@@ -200,6 +200,10 @@ cart-drawer-items {
 	display: block;
 }
 
+cart-drawer-items::-webkit-scrollbar {
+		display: none;
+}
+
 @media screen and (max-height: 650px) {
     cart-drawer-items {
         overflow: visible;
@@ -259,7 +263,7 @@ cart-drawer-items {
 }
 
 .cart-drawer .cart-item .loading-overlay {
-    right: 5px;
+    left: 5px;
     padding-top: 2.5rem;
 }
 
@@ -337,6 +341,7 @@ cart-drawer-items {
 
 .cart-drawer .cart__checkout-button {
     max-width: none;
+	font-weight: bold;
 }
 
 .drawer__footer .cart__dynamic-checkout-buttons {
@@ -437,4 +442,11 @@ cart-drawer.loading .rewards-section {
 
 .cart-drawer__footer {
 	margin-bottom: 1.5rem;
+}
+
+.cart-item__details .caption-with-letter-spacing {
+	display: inline-block;
+	border-left: 1px var(--gradient-base-background-4) solid;
+	padding-left: .5rem;
+	margin-left: .5rem;
 }

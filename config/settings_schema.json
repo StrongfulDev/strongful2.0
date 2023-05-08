@@ -120,6 +120,17 @@
         "id": "gradient_background_3",
         "type": "color_background",
         "label": "t:settings_schema.colors.settings.gradient_background_3.label"
+      },
+      {
+        "type": "color",
+        "id": "colors_background_4",
+        "default": "#bebebe",
+        "label": "t:settings_schema.colors.settings.colors_background_4.label"
+      },
+      {
+        "id": "gradient_background_4",
+        "type": "color_background",
+        "label": "t:settings_schema.colors.settings.gradient_background_4.label"
       }
     ]
   },
