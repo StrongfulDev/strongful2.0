@@ -172,6 +172,10 @@
     .banner__media {
         height: 100%;
     }
+
+    .banner__media img {
+        object-fit: contain;
+    }
 }
 
 .banner--adapt,

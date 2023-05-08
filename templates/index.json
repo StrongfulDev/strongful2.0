@@ -6,9 +6,9 @@
         "slideshow-block-0": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/copy-4_21babd86-39fe-4de8-ad8b-ad6680b57ba3.jpg",
+            "image": "shopify:\/\/shop_images\/Banner_Desktop_59036ce8-d53e-4d2e-acbb-d3be708f40c1.jpg",
             "top_pos": 2,
-            "mobile_image": "shopify:\/\/shop_images\/06_13e798d0-83ff-4151-b106-1558f5136adf.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Banner_Mobile_ae34d2e5-eddf-41c3-a5e6-80b193506dab.jpg",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -22,30 +22,10 @@
             "color_scheme": "accent-1",
             "text_alignment_mobile": "center"
           }
-        },
-        "slideshow-block-1": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/ddbb18ae3c208ede0003540736665759.jpg",
-            "top_pos": 0,
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/סטים",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-1",
-            "text_alignment_mobile": "center"
-          }
         }
       },
       "block_order": [
-        "slideshow-block-0",
-        "slideshow-block-1"
+        "slideshow-block-0"
       ],
       "settings": {
         "layout": "full_bleed",

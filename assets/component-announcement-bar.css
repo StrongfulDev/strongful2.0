@@ -25,6 +25,7 @@
 
 .announcement-bar__link .announcement-bar__message {
     padding: 0;
+    font-size: var(--font-body-size-medium);
 }
 
 .announcement-bar__message {

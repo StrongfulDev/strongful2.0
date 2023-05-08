@@ -194,24 +194,24 @@
                                                 {% if section.settings.mobile_top_image_1 != nil %}
                                                 <{% if section.settings.mobile_top_image_1_link != "" %}a href="{{ section.settings.mobile_top_image_1_link }}" {% else %}div class="desktop_links_image_1_container"{% endif %}>
                                                     {%- assign height = section.settings.mobile_top_image_1.width | divided_by: section.settings.mobile_top_image_1.aspect_ratio | round -%}
-                                                    {{ section.settings.mobile_top_image_1 | image_url: width: 375 | image_tag:
+                                                    {{ section.settings.mobile_top_image_1 | image_url: width: 600 | image_tag:
                                                     loading: 'lazy',
                                                     height: height,
                                                     class: "desktop_links_image_1",
                                                     sizes: "100vw",
-                                                    widths: '375'
+                                                    widths: '600'
                                                     }}
                                                     </{% if section.settings.mobile_top_image_1_link != "" %}a{% else %}div{% endif %}>
                                                     {% endif %}
                                                     {% if section.settings.mobile_top_image_2 != nil %}
                                                     <{% if section.settings.mobile_top_image_2_link != "" %}a href="{{ section.settings.mobile_top_image_2_link }}" {% else %}div class="desktop_links_image_1_container"{% endif %}>
                                                         {%- assign height = section.settings.mobile_top_image_2.width | divided_by: section.settings.mobile_top_image_2.aspect_ratio | round -%}
-                                                        {{ section.settings.mobile_top_image_2 | image_url: width: 375 | image_tag:
+                                                        {{ section.settings.mobile_top_image_2 | image_url: width: 600 | image_tag:
                                                         loading: 'lazy',
                                                         height: height,
                                                         class: "desktop_links_image_1",
                                                         sizes: "100vw",
-                                                        widths: '375'
+                                                        widths: '600'
                                                         }}
                                                         </{% if section.settings.mobile_top_image_2_link != "" %}a{% else %}div{% endif %}>
                                                         {% endif %}
@@ -796,12 +796,12 @@
                                                     {% if block.settings.desktop_links_image_1 != nil %}
                                                     <{% if block.settings.desktop_links_image_1_link != "" %}a href="{{ block.settings.desktop_links_image_1_link }}" {% else %}div class="desktop_links_image_1_container"{% endif %}>
                                                         {%- assign height = block.settings.desktop_links_image_1.width | divided_by: block.settings.desktop_links_image_1.aspect_ratio | round -%}
-                                                        {{ block.settings.desktop_links_image_1 | image_url: width: 375 | image_tag:
+                                                        {{ block.settings.desktop_links_image_1 | image_url: width: 600 | image_tag:
                                                         loading: 'lazy',
                                                         height: height,
                                                         class: "desktop_links_image_1",
                                                         sizes: "100vw",
-                                                        widths: '375'
+                                                        widths: '600'
                                                         }}
                                                         </{% if block.settings.desktop_links_image_1_link != "" %}a{% else %}div{% endif %}>
 
@@ -809,11 +809,11 @@
                                                         {% if block.settings.desktop_links_image_2 != nil %}
                                                         <{% if block.settings.desktop_links_image_2_link != "" %}a href="{{ block.settings.desktop_links_image_2_link }}" {% else %}div class="desktop_links_image_2_container"{% endif %}>
                                                             {%- assign height = block.settings.desktop_links_image_2.width | divided_by: block.settings.desktop_links_image_2.aspect_ratio | round -%}
-                                                            {{ block.settings.desktop_links_image_2 | image_url: width: 375 | image_tag:
+                                                            {{ block.settings.desktop_links_image_2 | image_url: width: 600 | image_tag:
                                                             loading: 'lazy',
                                                             height: height,
                                                             sizes: "100vw",
-                                                            widths: '375'
+                                                            widths: '600'
                                                             }}
                                                             </{% if block.settings.desktop_links_image_2_link != "" %}a{% else %}div{% endif %}>
                                                             {% endif %}
