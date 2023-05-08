@@ -329,6 +329,14 @@ slider-component.slider-component-full-width {
     justify-content: space-between;
 }
 
+.product__media-wrapper .slider-buttons {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 2;
+	width: 100%;
+}
+
 @media screen and (min-width: 990px) {
     .slider:not(.slider--everywhere):not(.slider--desktop) + .slider-buttons {
         display: none;
@@ -522,6 +530,7 @@ li.product__media-item.grid__item.slider__slide {
 
 .product__media-list + .slider-buttons .slider-button {
     padding: 10px;
+	z-index: 2;
 }
 
 .product__media-list + .slider-buttons .slider-button .icon {
