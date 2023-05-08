@@ -29,7 +29,7 @@
 </style>
 
 <cart-drawer class="drawer{% if cart == empty %} is-empty{% endif %}">
-    <div id="CartDrawer" class="cart-drawer">
+    <div id="CartDrawer" class="cart-drawer fix-direction">
         <div id="CartDrawer-Overlay" class="cart-drawer__overlay"></div>
         <div
                 class="drawer__inner"
@@ -154,13 +154,14 @@
 
                                                 <td class="cart-item__details" role="cell"
                                                     headers="CartDrawer-ColumnProduct">
-                                                    {%- if settings.show_vendor -%}
-                                                        <p class="caption-with-letter-spacing light">{{ item.product.vendor }}</p>
-                                                    {%- endif -%}
 
                                                     <a href="{{ item.url }}" class="cart-item__name h4 break">
                                                         {{- item.product.title | escape -}}
                                                     </a>
+
+                                                    {%- if settings.show_vendor -%}
+                                                        <p class="caption-with-letter-spacing light">{{ item.product.vendor }}</p>
+                                                    {%- endif -%}
 
                                                     {%- if item.original_price != item.final_price -%}
                                                         <div class="cart-item__discounted-prices">
@@ -301,6 +302,19 @@
                                                 <td class="cart-item__quantity" role="cell"
                                                     headers="CartDrawer-ColumnQuantity">
                                                     <div class="cart-item__quantity-wrapper">
+
+                                                        <cart-remove-button
+                                                                id="CartDrawer-Remove-{{ item.index | plus: 1 }}"
+                                                                data-index="{{ item.index | plus: 1 }}"
+                                                        >
+                                                            <button
+                                                                    type="button"
+                                                                    class="button button--tertiary"
+                                                                    aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}"
+                                                            >
+                                                                {% render 'icon-remove' %}
+                                                            </button>
+                                                        </cart-remove-button>
                                                         <quantity-input class="quantity cart-quantity">
                                                             <button class="quantity__button no-js-hidden" name="minus"
                                                                     type="button">
@@ -335,19 +349,6 @@
                                                                 {% render 'icon-plus' %}
                                                             </button>
                                                         </quantity-input>
-
-                                                        <cart-remove-button
-                                                                id="CartDrawer-Remove-{{ item.index | plus: 1 }}"
-                                                                data-index="{{ item.index | plus: 1 }}"
-                                                        >
-                                                            <button
-                                                                    type="button"
-                                                                    class="button button--tertiary"
-                                                                    aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}"
-                                                            >
-                                                                {% render 'icon-remove' %}
-                                                            </button>
-                                                        </cart-remove-button>
                                                     </div>
 
                                                     <div
