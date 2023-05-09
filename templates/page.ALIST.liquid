@@ -1,0 +1,552 @@
+{% layout 'theme' %}
+
+{{ 'section-main-page.css' | asset_url | stylesheet_tag }}
+
+{% assign plusStart = 200000 %}
+{% assign premiumStart = 350000 %}
+{% assign legendStart = 700000 %}
+
+<!-- Banner Section -->
+
+<!-- Old Banner -->
+{% comment %}
+<div class="yotpo-widget-instance" data-yotpo-instance-id="265039"></div>
+{% endcomment %}
+
+<!-- New Banner -->
+<div class="yotpo-widget-instance" data-yotpo-instance-id="334302"></div>
+
+<!-- My Activity Section -->
+<div class="yotpo-widget-instance" data-yotpo-instance-id="265040"></div>
+
+<!-- Earning Points Section -->
+<div class="grid image-and-earning-container">
+    <div class="image-near-earning-container desktop">
+        <img src="https://cdn.shopify.com/s/files/1/0340/7986/7020/files/Mask_group.png?v=1666785813" alt="" class="image-near-earning" loading="lazy">
+    </div>
+    <div class="yotpo-widget-instance" data-yotpo-instance-id="265041"></div>
+</div>
+
+<!-- VIP Tiers Section -->
+<div class="yotpo-widget-instance" data-yotpo-instance-id="265042"></div>
+<div class="our-vip-tiers">
+    <div class="custom-vip-tier-titles text-center">
+        {% if customer %}
+            <h4 class="vip-tiers-pumpup-title">תעלי שלב!</h4>
+        {% else %}
+            <h4 class="vip-tiers-pumpup-title">חברות מועדון מרוויחות יותר</h4>
+        {% endif %}
+        <p class="vip-tiers-pumpup">תעלי במדרגות המועדון בשביל ליהנות מעוד הטבות!</p>
+        <p class="vip-tiers-pumpup">צברי נקודות כדי לעלות דרגות וליהנות מ - CashBack והטבות בלעדיות <span class="on-each-order">בכל הזמנה</span></p>
+    </div>
+    <div class="vip-benefits-table">
+        <!--   Desktop Tiers   -->
+        <div class="vip-benefits-row vip-benefits-row-1 vip-benefits-rows-tiers desktop">
+            <ul class="vip-benefits-list">
+                <li class="vip-benefits-list-th" style="opacity: 0;">
+                    <div class="internal">
+                        <h4 class="vip-benefits-th-text englishFont upper">BASIC</h4>
+                        <div class="from-to">החל מרכישה ראשונה</div>
+                    </div>
+                </li>
+                <!--     נקודה על כל שקל     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        נקודה על כל שקל (CashBack)
+                    </div>
+                </li>
+                <!--     מתנת הצטרפות     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        מתנת הצטרפות 20%
+                    </div>
+                </li>
+                <!--     מתנת יום הולדת     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        מתנת יום הולדת
+                    </div>
+                </li>
+                <!--     עדכונים על סיילים     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        עדכונים על סיילים
+                    </div>
+                </li>
+                <!--     אקסטרה הטבות בלעדיות     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        אקסטרה הטבות בלעדיות
+                    </div>
+                </li>
+                <!--     pre-sale     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain englishFont upper">
+                        pre-sale
+                    </div>
+                </li>
+                <!--     אקססורי מתנה     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        אקססורי מתנה
+                    </div>
+                </li>
+                <!--     משלוח חינם בכל הזמנה     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        משלוח חינם בכל הזמנה
+                    </div>
+                </li>
+                <!--     פריטים בלעדיים     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        פריטים בלעדיים
+                    </div>
+                </li>
+                <!--     תקופת החזרות     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        תקופת החזרות
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--   Basic   -->
+        <div class="vip-benefits-row vip-benefits-row-2 vip-benefits-row-basic">
+            <ul class="vip-benefits-list">
+                <li class="vip-benefits-list-th {% if customer.total_spent < plusStart %}active{% endif %}">
+                    <div class="internal">
+                        <h4 class="vip-benefits-th-text englishFont upper">BASIC</h4>
+                        <div class="from-to">החל מרכישה ראשונה</div>
+                    </div>
+                </li>
+                <!--     נקודה על כל שקל     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        נקודה על כל שקל (CashBack)
+                    </div>
+                    <p class="vip-benefit-get priceFont">1</p>
+                </li>
+                <!--     מתנת הצטרפות     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        מתנת הצטרפות 20%
+                    </div>
+                    <p class="vip-benefit-get priceFont">{% render 'vector' %}</p>
+                </li>
+                <!--     מתנת יום הולדת     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        מתנת יום הולדת
+                    </div>
+                    <p class="vip-benefit-get priceFont">{% render 'vector' %}</p>
+                </li>
+                <!--     עדכונים על סיילים     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        עדכונים על סיילים
+                    </div>
+                    <p class="vip-benefit-get priceFont">{% render 'vector' %}</p>
+                </li>
+                <!--     אקסטרה הטבות בלעדיות     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        אקסטרה הטבות בלעדיות
+                    </div>
+                    <p class="vip-benefit-get priceFont">{% render 'vector' %}</p>
+                </li>
+                <!--     pre-sale     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain englishFont upper">
+                        pre-sale
+                    </div>
+                    <p class="vip-benefit-get priceFont">{% render 'vector' %}</p>
+                </li>
+                <!--     אקססורי מתנה     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        אקססורי מתנה
+                    </div>
+                    <p class="vip-benefit-get priceFont">{% render 'vector-not-get' %}</p>
+                </li>
+                <!--     משלוח חינם בכל הזמנה     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        משלוח חינם בכל הזמנה
+                    </div>
+                    <p class="vip-benefit-get priceFont">{% render 'vector-not-get' %}</p>
+                </li>
+                <!--     פריטים בלעדיים     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        פריטים בלעדיים
+                    </div>
+                    <p class="vip-benefit-get priceFont">{% render 'vector-not-get' %}</p>
+                </li>
+                <!--     תקופת החזרות     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        תקופת החזרות
+                    </div>
+                    <p class="vip-benefit-get">30 ימים</p>
+                </li>
+            </ul>
+        </div>
+
+        <!--   Plus   -->
+        <div class="vip-benefits-row vip-benefits-row-3 vip-benefits-row-plus">
+            <ul class="vip-benefits-list">
+                <li class="vip-benefits-list-th {% if customer.total_spent > plusStart and customer.total_spent < premiumStart %}active{% endif %}">
+                    <div class="internal">
+                        <h4 class="vip-benefits-th-text englishFont upper">PLUS</h4>
+                        <div class="from-to">לאחר {{ plusStart | money_without_trailing_zeros }}</div>
+                    </div>
+                </li>
+                <!--     נקודה על כל שקל     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        נקודה על כל שקל (CashBack)
+                    </div>
+                    <p class="vip-benefit-get priceFont">1.25</p>
+                </li>
+                <!--     מתנת הצטרפות     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        מתנת הצטרפות 20%
+                    </div>
+                    <p class="vip-benefit-get priceFont">{% render 'vector' %}</p>
+                </li>
+                <!--     מתנת יום הולדת     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        מתנת יום הולדת
+                    </div>
+                    <p class="vip-benefit-get priceFont">{% render 'vector' %}</p>
+                </li>
+                <!--     עדכונים על סיילים     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        עדכונים על סיילים
+                    </div>
+                    <p class="vip-benefit-get priceFont">{% render 'vector' %}</p>
+                </li>
+                <!--     אקסטרה הטבות בלעדיות     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        אקסטרה הטבות בלעדיות
+                    </div>
+                    <p class="vip-benefit-get priceFont">{% render 'vector' %}</p>
+                </li>
+                <!--     pre-sale     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain englishFont upper">
+                        pre-sale
+                    </div>
+                    <p class="vip-benefit-get priceFont">{% render 'vector' %}</p>
+                </li>
+                <!--     אקססורי מתנה     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        אקססורי מתנה
+                    </div>
+                    <p class="vip-benefit-get priceFont">{% render 'vector' %}</p>
+                </li>
+                <!--     משלוח חינם בכל הזמנה     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        משלוח חינם בכל הזמנה
+                    </div>
+                    <p class="vip-benefit-get priceFont">{% render 'vector-not-get' %}</p>
+                </li>
+                <!--     פריטים בלעדיים     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        פריטים בלעדיים
+                    </div>
+                    <p class="vip-benefit-get priceFont">{% render 'vector-not-get' %}</p>
+                </li>
+                <!--     תקופת החזרות     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        תקופת החזרות
+                    </div>
+                    <p class="vip-benefit-get">30 ימים</p>
+                </li>
+            </ul>
+        </div>
+
+        <!--   Premium   -->
+        <div class="vip-benefits-row vip-benefits-row-4 vip-benefits-row-premium">
+            <ul class="vip-benefits-list">
+                <li class="vip-benefits-list-th {% if customer.total_spent > plusStart and customer.total_spent < premiumStart %}active{% endif %}">
+                    <div class="internal">
+                        <h4 class="vip-benefits-th-text englishFont upper">Premium</h4>
+                        <div class="from-to">לאחר {{ premiumStart | money_without_trailing_zeros }}</div>
+                    </div>
+                </li>
+                <!--     נקודה על כל שקל     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        נקודה על כל שקל (CashBack)
+                    </div>
+                    <p class="vip-benefit-get priceFont">1.5</p>
+                </li>
+                <!--     מתנת הצטרפות     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        מתנת הצטרפות 20%
+                    </div>
+                    <p class="vip-benefit-get priceFont">{% render 'vector' %}</p>
+                </li>
+                <!--     מתנת יום הולדת     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        מתנת יום הולדת
+                    </div>
+                    <p class="vip-benefit-get priceFont">{% render 'vector' %}</p>
+                </li>
+                <!--     עדכונים על סיילים     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        עדכונים על סיילים
+                    </div>
+                    <p class="vip-benefit-get priceFont">{% render 'vector' %}</p>
+                </li>
+                <!--     אקסטרה הטבות בלעדיות     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        אקסטרה הטבות בלעדיות
+                    </div>
+                    <p class="vip-benefit-get priceFont">{% render 'vector' %}</p>
+                </li>
+                <!--     pre-sale     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain englishFont upper">
+                        pre-sale
+                    </div>
+                    <p class="vip-benefit-get priceFont">{% render 'vector' %}</p>
+                </li>
+                <!--     אקססורי מתנה     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        אקססורי מתנה
+                    </div>
+                    <p class="vip-benefit-get priceFont">{% render 'vector' %}</p>
+                </li>
+                <!--     משלוח חינם בכל הזמנה     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        משלוח חינם בכל הזמנה
+                    </div>
+                    <p class="vip-benefit-get priceFont">{% render 'vector-not-get' %}</p>
+                </li>
+                <!--     פריטים בלעדיים     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        פריטים בלעדיים
+                    </div>
+                    <p class="vip-benefit-get priceFont">{% render 'vector-not-get' %}</p>
+                </li>
+                <!--     תקופת החזרות     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        תקופת החזרות
+                    </div>
+                    <p class="vip-benefit-get">60 ימים</p>
+                </li>
+            </ul>
+        </div>
+
+        <!--   Legend (?)   -->
+        <div class="vip-benefits-row vip-benefits-row-4 vip-benefits-row-premium">
+            <ul class="vip-benefits-list">
+                <li class="vip-benefits-list-th {% if customer.total_spent > plusStart and customer.total_spent < premiumStart %}active{% endif %}">
+                    <div class="internal">
+                        <h4 class="vip-benefits-th-text englishFont upper legendary">legend</h4>
+                        <div class="from-to">לאחר {{ legendStart | money_without_trailing_zeros }}</div>
+                    </div>
+                </li>
+                <!--     נקודה על כל שקל     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        נקודה על כל שקל (CashBack)
+                    </div>
+                    <p class="vip-benefit-get priceFont">1.75</p>
+                </li>
+                <!--     מתנת הצטרפות     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        מתנת הצטרפות 20%
+                    </div>
+                    <p class="vip-benefit-get priceFont">{% render 'vector' %}</p>
+                </li>
+                <!--     מתנת יום הולדת     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        מתנת יום הולדת
+                    </div>
+                    <p class="vip-benefit-get priceFont">{% render 'vector' %}</p>
+                </li>
+                <!--     עדכונים על סיילים     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        עדכונים על סיילים
+                    </div>
+                    <p class="vip-benefit-get priceFont">{% render 'vector' %}</p>
+                </li>
+                <!--     אקסטרה הטבות בלעדיות     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        אקסטרה הטבות בלעדיות
+                    </div>
+                    <p class="vip-benefit-get priceFont">{% render 'vector' %}</p>
+                </li>
+                <!--     pre-sale     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain englishFont upper">
+                        pre-sale
+                    </div>
+                    <p class="vip-benefit-get priceFont">{% render 'vector' %}</p>
+                </li>
+                <!--     אקססורי מתנה     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        אקססורי מתנה
+                    </div>
+                    <p class="vip-benefit-get priceFont">{% render 'vector' %}</p>
+                </li>
+                <!--     משלוח חינם בכל הזמנה     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        משלוח חינם בכל הזמנה
+                    </div>
+                    <p class="vip-benefit-get priceFont">{% render 'vector' %}</p>
+                </li>
+                <!--     פריטים בלעדיים     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        פריטים בלעדיים
+                    </div>
+                    <p class="vip-benefit-get priceFont">{% render 'vector' %}</p>
+                </li>
+                <!--     תקופת החזרות     -->
+                <li class="vip-benefits-list-td flex">
+                    <div class="vip-benefit-explain">
+                        תקופת החזרות
+                    </div>
+                    <p class="vip-benefit-get">60 ימים</p>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<!-- Redeem Points (read only) Section -->
+<div class="yotpo-widget-instance" data-yotpo-instance-id="265043"></div>
+
+<!-- A-List Login / Signup Section -->
+
+<div class="loyalty-form-container">
+    <img class="loyalty-img" src="" alt="" loading="lazy">
+    <div class="loyalty-form"></div>
+</div>
+
+<div class="a-list__faq-ctn">
+    <h4 class="a-list__faq-title text-center">שאלות נפוצות</h4>
+    <div class="a-list__faqs">
+        <div class="a-list__q-and-a-single-ctn alistOne">
+            <div class="a-list__question-and-icon flex flex-between">
+                <p class="a-list__question">איך אני מצטרפת ל A-LIST?</p>
+                {% render 'plus' %}
+            </div>
+            <div class="a-list__answer-ctn none">
+                <p class="a-list__answer-para">בהרשמה לאתר את מצטרפת אוטומטית ל A-LIST CLUB.</p>
+                <p class="a-list__answer-para">את יכולה להירשם למועדון בראש העמוד או ללחוץ <a href="/account/login">כאן</a></p>
+            </div>
+        </div>
+
+        <div class="a-list__q-and-a-single-ctn alistTwo">
+            <div class="a-list__question-and-icon flex flex-between">
+                <p class="a-list__question">איך אני צוברת נקודות?</p>
+                {% render 'plus' %}
+            </div>
+            <div class="a-list__answer-ctn none">
+                <p class="a-list__answer-para">אצלינו את צוברת נקודה על כל שקל שהזמנת באתר.</p>
+                <p class="a-list__answer-para">אפשר גם לצבור נקודות על הוספת עוקב באינסטגרם ובטיקטוק, שיתוף בפייסבוק, חגיגת יום הולדת, הוספת תגובה באתר ואפילו על הבאת חברה חדשה.</p>
+                <p class="a-list__answer-para">פשוט לוחצים על אחד מהריבועים השחורים בראש הדף ומתחילים להרוויח!</p>
+            </div>
+        </div>
+
+        <div class="a-list__q-and-a-single-ctn alistThree">
+            <div class="a-list__question-and-icon flex flex-between">
+                <p class="a-list__question">איך אני משתמשת בנקודות שצברתי?</p>
+                {% render 'plus' %}
+            </div>
+            <div class="a-list__answer-ctn none">
+                <p class="a-list__answer-para">כבר בעמוד הראשון של שלב הצ'ק אאוט תוכלי לבחור כמה נקודות את רוצה לממש.</p>
+                <p class="a-list__answer-para">יש כפל מבצעים!</p>
+                <p class="a-list__answer-para">מימוש הנקודות נסכם ביחד עם קוד קופון וגיפט קארד, ואינו מתנגש \ מבטל קוד קופון ו\או גיפט קארד.</p>
+                <p class="a-list__answer-para">ניתן לממש עד 1,000 נקודות בכל הזמנה.</p>
+            </div>
+        </div>
+
+        <div class="a-list__q-and-a-single-ctn alistFour">
+            <div class="a-list__question-and-icon flex flex-between">
+                <p class="a-list__question">איך אני משתפת את הבסטי?</p>
+                {% render 'plus' %}
+            </div>
+            <div class="a-list__answer-ctn none">
+                <p class="a-list__answer-para">בתחתית העמוד כתבי את כתובת האימייל שלך - כדי שנוכל לתת לך את הנקודות במעמד ההזמנה של הבסטי.</p>
+                <p class="a-list__answer-para">בשלב השני יופיע קישור להעתקה שיפנק את הבסטי שלך ב 15% הנחה לקנייה הראשונה שלה!</p>
+                <p class="a-list__answer-para">לוחצים על הכפתור להעתקת הקישור ושולחים לבסטי.</p>
+                <p class="a-list__answer-para">ברגע שהיא תיכנס דרך הקישור ששלחת לה - ההנחה שלה תעבוד באופן אוטומטי במעמד הצ'ק אאוט.</p>
+                <p class="a-list__answer-para">אחרי שהיא תבצע את ההזמנה שלה, את תקבלי נקודות בשווי 10% מההזמנה הראשונה שלה ❤️</p>
+            </div>
+        </div>
+
+        <div class="a-list__q-and-a-single-ctn alistFive">
+            <div class="a-list__question-and-icon flex flex-between">
+                <p class="a-list__question">עדכנתי תאריך יום הולדת - מתי אקבל את הנקודות?</p>
+                {% render 'plus' %}
+            </div>
+            <div class="a-list__answer-ctn none">
+                <p class="a-list__answer-para">במידה ויום ההולדת שלך חל בעוד 30 ימים או יותר, תקבלי את 200 הנקודות בתאריך יום ההולדת שלך.</p>
+                <p class="a-list__answer-para">במידה ותאריך יום ההולדת שלך חל תוך 30 ימים או פחות, תקבלי את 200 הנקודות שלך לאחר 30 יום.</p>
+            </div>
+        </div>
+
+        <div class="a-list__q-and-a-single-ctn alistSix">
+            <div class="a-list__question-and-icon flex flex-between">
+                <p class="a-list__question">הוספתי עוקב באינסטגרם אבל לא קיבלתי נקודות</p>
+                {% render 'plus' %}
+            </div>
+            <div class="a-list__answer-ctn none">
+                <p class="a-list__answer-para">אפליקציות טיקטוק, אינסטגרם ופייסבוק לא נותנות לעקוב אחרי המשתמשות שלהם.</p>
+                <p class="a-list__answer-para">בשביל לקבל את הנקודות יש ללחוץ על הריבוע השחור של הנקודות שתרצי להרוויח (הוספת עוקב באינסטגרם \ טיקטוק).</p>
+            </div>
+        </div>
+
+        <div class="a-list__q-and-a-single-ctn alistSeven">
+            <div class="a-list__question-and-icon flex flex-between">
+                <p class="a-list__question">הנקודות שלי נשמרות אם אני מחזירה מוצרים?</p>
+                {% render 'plus' %}
+            </div>
+            <div class="a-list__answer-ctn none">
+                <p class="a-list__answer-para">כאשר מתבצע זיכוי כספי על מוצרים שהזמנת באתר, הנקודות שצברת על אותם המוצרים ימחקו מהחשבון שלך.</p>
+                <p class="a-list__answer-para">לדוגמא - אם קיבלת זיכוי כספי בשווי 150 שקלים, בחשבון שלך יימחקו הנקודות שצברת בסכום הזה - 150 נקודות.</p>
+            </div>
+        </div>
+
+        <div class="a-list__q-and-a-single-ctn alistEight">
+            <div class="a-list__question-and-icon flex flex-between">
+                <p class="a-list__question">ביצעתי הזמנה ולא קיבלתי את הנקודות שלי</p>
+                {% render 'plus' %}
+            </div>
+            <div class="a-list__answer-ctn none">
+                <p class="a-list__answer-para">בכל הזמנה באתר מקבלים נקודה על כל שקל ששילמת - ואפילו יותר ככל שמתקדמים במדרגות ה - VIP שלנו!</p>
+                <p class="a-list__answer-para">נקודות נצברות רק על כסף בפועל - סכום ששולם באמצעות גיפט קארד לא צובר נקודות</p>
+            </div>
+        </div>
+    </div>
+</div>

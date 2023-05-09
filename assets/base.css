@@ -260,6 +260,14 @@ html.no-js .no-js-hidden {
     padding: 0 1.5rem;
 }
 
+.text-center {
+	text-align: center;
+}
+
+.flex {
+	display: flex;
+}
+
 .custom-page-width {
     max-width: var(--custom-page-width);
     margin: 0 auto;

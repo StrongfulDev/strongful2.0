@@ -21,3 +21,417 @@
   width: 52.5rem;
   height: 52.5rem;
 }
+
+.page-width {
+	padding: 0;
+}
+
+/* Yotpo alist page */
+
+.yotpo-loyalty-popup-overlay {
+	top: 114px !important;
+}
+
+.yotpo-description, .yotpo-inner-text, .yotpo-header-text {
+	font-family: 'Arimo', sans-serif !important;
+}
+
+.flexified-wrapper.flexified-mobile {
+	display: grid !important;
+	flex-wrap: nowrap !important;
+	place-items: center;
+	grid-gap: 30px;
+	grid-template-columns: 1fr 1fr;
+}
+
+.yotpo-overlay-tile.yotpo-is-mobile {
+	height: 100% !important;
+	width: 100% !important;
+	background: rgba(0, 0, 0, 0.8) !important;
+	top: 0 !important;
+	left: 0 !important;
+	position: absolute !important;
+}
+
+.flexified-wrapper.flexified-mobile .flexified-child {
+	width: 100% !important;
+}
+
+.new-dynamics {
+	margin: 0 0 1em;
+	text-align: center;
+	font-size: 1.2em;
+}
+
+.a-list__faq-ctn {
+	margin: 3em auto 2em;
+	width: 90%;
+	background: #fff;
+	direction: rtl;
+	position: relative;
+}
+
+.t-and-c-link, .accept-marketing-notice {
+	font-size: .8em !important;
+}
+
+.a-list__q-and-a-single-ctn {
+	border-top: 1px var(--gradient-base-background-3) solid;
+	border-bottom: 1px var(--gradient-base-background-3) solid;
+	padding: .4em;
+}
+
+.a-list__q-and-a-single-ctn:not(:first-child) {
+	border-top: none;
+}
+
+.a-list__faq-title {
+	font-size: 2.5em;
+}
+
+.a-list__question-and-icon {
+	align-items: center;
+}
+
+.a-list__question {
+	pointer-events: none;
+}
+
+.plus {
+	width: 10px !important;
+	height: 10px !important;
+	transition: .2s;
+	pointer-events: none;
+}
+
+.plus.Rotated {
+	transform: rotate(45deg);
+	transition: .2s;
+}
+
+.a-list__answer-para {
+	font-size: .85em;
+	color: #605e5c;
+}
+
+.a-list__answer-para a {
+	display: inline;
+	text-decoration: underline;
+	color: darkblue;
+}
+
+.our-vip-tiers {
+	direction: rtl;
+	padding: 3em 2em;
+}
+
+.vip-tiers-pumpup-title {
+	margin-top: 0;
+}
+
+.vip-benefits-table {
+	border: 1px #ebebeb solid;
+	width: 100%;
+	margin: 1em 0 0;
+}
+
+.vip-benefits-list-th {
+	background: #E8DBC9;
+	padding: 1em;
+	color: #000;
+}
+
+.on-each-order {
+	border-bottom: 2px #e8d8c9 solid;
+}
+
+.legendary {
+	position: relative;
+}
+
+.legendary::before {
+	position: absolute;
+	content: '';
+	display: block;
+	background: #e8d8c9;
+}
+
+.vip-benefits-list-th.active {
+	background: #000;
+	color: #fff;
+}
+
+.vip-benefits-th-text {
+	font-size: 1.5em;
+	margin: 0 0 10px;
+}
+
+.vip-benefits-list-td {
+	align-items: center;
+	gap: 10%;
+	line-height: 24px;
+	padding: 20px 16px 20px 0;
+	height: 58px;
+	position: relative;
+}
+
+.vip-benefits-list-td::before {
+	position: absolute;
+	content: "";
+	width: 1px;
+	height: 100%;
+	background: #dedeea;
+	right: 60%;
+}
+
+.vip-benefit-explain {
+	width: 56%;
+}
+
+.vip-benefit-get {
+	width: 40%;
+	display: flex;
+	margin: 0;
+}
+
+.vip-benefits-list li:not(:first-child):nth-child(odd) {
+	background: #f8f8fa;
+}
+
+.from-to {
+	direction: ltr;
+}
+
+.vip-benefit-get svg {
+	width: 20px !important;
+	height: 20px !important;
+}
+
+.vip-tiers-pumpup {
+	font-weight: 600;
+	font-size: .9em;
+	margin: 1px 0;
+}
+
+.yotpo-logged-out-refer-block {
+	direction: rtl;
+}
+
+.yotpo-logged-out-text {
+	padding: 3em;
+	background: #e8d8c9;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	row-gap: 14px;
+}
+
+.refer-title {
+	width: fit-content;
+	font-size: 2em;
+	margin: 0;
+	border-top: 2px #000 solid;
+	border-bottom: 2px #000 solid;
+	padding: 0.2em 0;
+}
+
+.i-wanna-join {
+	height: 48px;
+	background: #000;
+	color: #fff;
+	align-items: center;
+	justify-content: center;
+	width: fit-content;
+	padding: 0 1em;
+	margin: 0;
+}
+
+.referral__join-or-login {
+	width: fit-content;
+}
+
+.already-has-account-uno {
+	margin: 10px 0;
+}
+
+.i-wanna-join:hover, .already-has-account-uno:hover {
+	cursor: pointer;
+}
+
+.oxi_social_wrapper {
+	display: none;
+}
+
+.image-and-earning-container {
+	direction: rtl;
+	width: 100%;
+	padding: 10% 3%;
+	background: #f9f9f9;
+	height: 100vh;
+}
+
+.section-confirm-subscription .inputs-group .legal-text {
+	text-align: right;
+	display: none;
+}
+
+.mailbox.mb-7 {
+	width: auto;
+}
+
+.section-confirm-subscription {
+	padding: 1em;
+	direction: rtl;
+	margin: auto;
+	max-width: 500px;
+}
+
+.select-country-wrapper {
+	direction: ltr;
+	width: 100%;
+}
+
+.for-desktop-background {
+	padding: 1em 1.5em;
+}
+
+.birthday-input, .birthday {
+	margin: .6em 0;
+	width: 100%;
+	padding: .5em;
+	background: #fff;
+}
+
+.vip-benefits-list {
+	padding: 0;
+	list-style: none;
+}
+
+@media screen and (min-width: 990px) {
+	.lottery-content-padding {
+		padding: 1em 35em;
+	}
+
+	.yotpo-logged-out-refer-block {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	#subscriber-country-select, #subscriber-phone-input {
+		margin: 0 !important;
+		width: 100% !important;
+	}
+
+	.select-country-wrapper {
+		column-gap: 1em;
+		width: 100%;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
+
+
+	.vip-tiers-pumpup {
+		font-size: 1em;
+	}
+
+	.vip-benefit-explain {
+		width: auto;
+	}
+
+	.our-vip-tiers {
+		padding: 4em 15%;
+	}
+
+	.vip-benefits-list-th, .vip-benefits-list-th.active {
+		background: #fff;
+		text-align: center;
+		color: #000;
+	}
+
+	.vip-benefits-list li:not(:first-child):nth-child(odd) {
+		background: #fff;
+	}
+
+	.vip-benefits-table {
+		display: flex;
+		border: none;
+	}
+
+	.vip-benefits-list-td {
+		width: 100%;
+		border-top: 3px #EADECD solid;
+	}
+
+	.vip-benefits-list-td:before {
+		display: none;
+	}
+
+	.vip-benefits-row:not(:first-child) .vip-benefit-explain {
+		display: none;
+	}
+
+	.vip-benefits-row-1 .vip-benefits-list-th {
+		opacity: 0;
+	}
+
+	.vip-benefits-row {
+		width: 100%;
+	}
+
+	.vip-benefits-row:not(:first-child) .vip-benefits-list-td {
+		align-items: center;
+		justify-content: center;
+	}
+
+	.vip-benefits-row:not(:first-child) .vip-benefit-get {
+		width: auto;
+	}
+
+	.for-desktop-background {
+		padding: 0;
+	}
+
+	.image-and-earning-container {
+		padding: 4% 15%;
+		grid-template-columns: 1fr 2fr;
+		height: fit-content;
+		display: grid;
+	}
+
+	.main-register {
+		display: grid;
+		grid-template-columns: 1fr 1.4fr;
+		column-gap: 5em;
+		margin: 5em auto;
+		width: 81%;
+	}
+
+	.site__logo-with-word {
+		margin: 1em auto 3em;
+		width: 160px;
+	}
+
+	.flexified-wrapper.flexified-items-even.flexified-item-count-8:not(.yotpo-is-mobile) {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	.new-dynamic-button {
+		font-size: .85em!important;
+		transform: translate(-50%, 0)!important;
+		top: 80% !important;
+	}
+
+	.a-list__faq-ctn {
+		width: 70%;
+		margin: 7em auto 2em;
+	}
+
+	.a-list__question-and-icon:hover {
+		cursor: pointer;
+	}
+
+	.image-near-earning {
+		max-width: 100%;
+		display: block;
+	}
+}
