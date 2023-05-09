@@ -32,10 +32,10 @@ document.querySelectorAll('[id^="Details-"] summary').forEach((summary) => {
         });
     });
 
-  }else {
+  } else {
     summary.addEventListener('click', (event) => {
       event.currentTarget.setAttribute('aria-expanded', !event.currentTarget.closest('details').hasAttribute('open'));
-      $(event.currentTarget).find(".footer-block__heading").toggleClass("no-after");
+      $(event.currentTarget).find("h2").toggleClass("no-after");
     });
   }
 

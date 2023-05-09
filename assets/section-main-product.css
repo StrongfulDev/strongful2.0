@@ -1290,9 +1290,9 @@ a.product__text {
 }
 
 /* This keeps the container from getting display: none; applied to it and to make sure we're not introducing some layout shift when switching to an unavailable variant */
-.product__inventory.visibility-hidden:empty {
-    display: block;
-}
+/*.product__inventory.visibility-hidden:empty {*/
+/*    display: block;*/
+/*}*/
 
 .product__inventory.visibility-hidden:empty::after {
     content: "#";
