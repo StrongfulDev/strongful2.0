@@ -64,7 +64,7 @@
 }
 
 .a-list__faq-ctn {
-	margin: 3em auto 2em;
+	margin: 1em auto;
 	width: 90%;
 	background: #fff;
 	direction: rtl;
@@ -86,7 +86,8 @@
 }
 
 .a-list__faq-title {
-	font-size: 2.5em;
+	font-size: 2em;
+	margin: 0 0 1em;
 }
 
 .a-list__question-and-icon {
@@ -126,9 +127,9 @@
 }
 
 .vip-tiers-pumpup-title {
-	margin-top: 0;
+	margin: 0 0 1rem;
 	font-weight: 600;
-	font-size: var(--font-body-size-medium);
+	font-size: var(--font-body-size-large);
 }
 
 .vip-benefits-table {
@@ -166,6 +167,7 @@
 .vip-benefits-th-text {
 	font-size: 1.5em;
 	margin: 0 0 10px;
+	font-weight: 700;
 }
 
 .vip-benefits-list-td {
@@ -260,10 +262,6 @@
 	cursor: pointer;
 }
 
-.oxi_social_wrapper {
-	display: none;
-}
-
 .image-and-earning-container {
 	direction: rtl;
 	width: 100%;
@@ -323,6 +321,22 @@
 .field__label, .customer .field label {
 	left: auto;
 	right: calc(var(--inputs-border-width) + 2rem);
+}
+
+.customer button {
+	width: 100%;
+}
+
+.inline {
+	display: inline!important;
+}
+
+.accept-marketing-notice a {
+	font-size: inherit;
+}
+
+.inputRegister {
+	margin: 2rem 0 0;
 }
 
 @media screen and (min-width: 990px) {

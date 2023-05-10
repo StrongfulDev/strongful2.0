@@ -15,6 +15,7 @@
 .customer > h1,
 .customer__title {
   margin-top: 0;
+	margin-bottom: 1rem;
 }
 
 .customer form {
@@ -22,7 +23,7 @@
 }
 
 .customer button {
-  margin: 4rem 0 1.5rem;
+  margin: 2rem 0 1.5rem;
 }
 
 .customer ul {

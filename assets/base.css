@@ -264,6 +264,10 @@ html.no-js .no-js-hidden {
 	text-align: center;
 }
 
+.upper {
+	text-transform: uppercase;
+}
+
 .flex {
 	display: flex;
 }

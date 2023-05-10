@@ -451,11 +451,12 @@
     "register": {
       "link_text": "הרשמה",
       "title": "הרשמה",
+      "text": "הרשמי עכשיו וקבלי את כל ההטבות",
       "first_name": "שם פרטי",
       "last_name": "שם משפחה",
       "email": "אימייל",
       "password": "סיסמה",
-      "submit": "שליחה"
+      "submit": "הרשמה>>"
     },
     "reset_password": {
       "title": "Reset account password",

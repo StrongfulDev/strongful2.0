@@ -30,6 +30,9 @@
   <h1>
     {{ 'customer.register.title' | t }}
   </h1>
+    <p>
+        {{ 'customer.register.text' | t }}
+    </p>
   {%- form 'create_customer', novalidate: 'novalidate' -%}
     {%- if form.errors -%}
       <h2 class="form__message" tabindex="-1" autofocus>
@@ -142,7 +145,15 @@
     <button>
       {{ 'customer.register.submit' | t }}
     </button>
+      <div class="inputRegister" id="accepts_marketing_checkbox">
+          <input type="checkbox" name="customer[accepts_marketing]" checked="checked" hidden="hidden" id="marketing" value="true" class="hidden" />
+          <div class="text-center accept-marketing-notice">בהרשמה לאתר את\ה מאשרת את <a href="/blogs/policies/תקנון-האתר" class="inline">תקנון האתר ומדיניות הפרטיות,</a> וקבלת מיילים שיווקיים</div>
+      </div>
   {%- endform -%}
+    <div class="login">
+        <a href="{{ routes.customer_login_url }}">
+        {{ 'customer.register.login_link' | t }}
+        </a>
 </div>
 
 {% schema %}
