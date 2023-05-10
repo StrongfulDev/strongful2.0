@@ -92,4 +92,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
 			$(answer).toggleClass( 'hidden' );
 		});
 	});
+
+	$('.form-toggler').click((e) => {
+		$('.loyalty-form').toggleClass('hidden');
+	});
+
 });

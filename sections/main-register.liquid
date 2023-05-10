@@ -150,10 +150,9 @@
           <div class="text-center accept-marketing-notice">בהרשמה לאתר את\ה מאשרת את <a href="/blogs/policies/תקנון-האתר" class="inline">תקנון האתר ומדיניות הפרטיות,</a> וקבלת מיילים שיווקיים</div>
       </div>
   {%- endform -%}
-    <div class="login">
-        <a href="{{ routes.customer_login_url }}">
-        {{ 'customer.register.login_link' | t }}
-        </a>
+    <div class="form-toggler">
+        {{ 'customer.register.login_toggler' | t }}
+    </div>
 </div>
 
 {% schema %}
