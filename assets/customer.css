@@ -757,9 +757,25 @@ li[data-address] > h2 {
 
 .multicolumn {
   padding: 1rem 1.5rem;
-  max-width: 33.4rem;
+  max-width: 39rem;
   margin: 0 auto;
   direction: rtl;
+}
+
+.multicolumn-list:not(.slider) {
+	padding: 0;
+}
+
+.multicolumn-list h3, .multicolumn-list p {
+	font-size: var(--font-body-size-medium);
+}
+
+.multicolumn-list {
+	column-gap: 0;
+}
+
+li.multicolumn-list__item:first-child {
+	padding-left: 1em;
 }
 
 ul.multicolumn-list {
@@ -777,10 +793,4 @@ li.multicolumn-list__item {
   flex-grow: initial;
 }
 
-.slider-mobile-gutter::after {
-  content: '';
-  display: block;
-  visibility: visible;
-  height: .2rem;
-  background-color: var(--gradient-base-background-2);
-}
+
