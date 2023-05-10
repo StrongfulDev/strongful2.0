@@ -24,6 +24,7 @@
 
 .customer button {
   margin: 2rem 0 1.5rem;
+	width: 100%;
 }
 
 .customer ul {
@@ -400,6 +401,10 @@
   }
 }
 
+.accept-marketing-notice a {
+	font-size: inherit;
+}
+
 /* Account/Order */
 :is(.account, .order) {
   margin: 0 auto;
@@ -719,6 +724,10 @@ li[data-address] > h2 {
   margin-bottom: 0;
 }
 
+.inline {
+	display: inline!important;
+}
+
 @media only screen and (min-width: 750px) {
   li[data-address] > h2 {
     font-size: calc(var(--font-heading-scale) * 2.2rem);
@@ -774,7 +783,7 @@ li[data-address] > h2 {
 	column-gap: 0;
 }
 
-li.multicolumn-list__item:first-child {
+li.multicolumn-list__item:first-child > div {
 	padding-left: 1em;
 }
 
@@ -791,6 +800,27 @@ ul.multicolumn-list {
 li.multicolumn-list__item {
   width: auto !important;
   flex-grow: initial;
+}
+
+.js-border-container {
+	height: 2px;
+	width: 100%;
+	background: var(--gradient-base-background-3);
+	position: relative;
+}
+
+#js-border-position {
+	position: absolute;
+	height: 100%;
+	background: #000;
+	z-index: 1;
+	display: block;
+	top: 0;
+	transition: .3s;
+}
+
+.multicolumn-list__item.active * {
+	font-weight: var(--font-body-weight-bold);
 }
 
 

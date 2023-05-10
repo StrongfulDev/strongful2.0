@@ -315,20 +315,8 @@
 	list-style: none;
 }
 
-.customer button {
-	width: 100%;
-}
-
 .login a:last-child {
 	display: none;
-}
-
-.inline {
-	display: inline!important;
-}
-
-.accept-marketing-notice a {
-	font-size: inherit;
 }
 
 .inputRegister {
