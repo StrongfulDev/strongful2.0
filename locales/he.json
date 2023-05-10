@@ -356,19 +356,19 @@
   },
   "customer": {
     "account": {
-      "title": "Account",
-      "details": "Account details",
-      "view_addresses": "View addresses",
-      "return": "Return to Account details"
+      "title": "איזור אישי",
+      "details": "פרטי משתמש",
+      "view_addresses": "הכתובות שלי",
+      "return": "חזרה"
     },
-    "account_fallback": "Account",
+    "account_fallback": "משתמש",
     "activate_account": {
-      "title": "Activate account",
-      "subtext": "Create your password to activate your account.",
-      "password": "Password",
-      "password_confirm": "Confirm password",
-      "submit": "Activate account",
-      "cancel": "Decline invitation"
+      "title": "הפעלת משתמש",
+      "subtext": "יש ליצור סיסמה על מנת להפעיל את המשתמש שלך",
+      "password": "סיסמה",
+      "password_confirm": "אישור סיסמה",
+      "submit": "הפעלת משתמש",
+      "cancel": "ביטול"
     },
     "addresses": {
       "title": "Addresses",
@@ -396,16 +396,16 @@
     "log_in": "כניסה",
     "log_out": "יציאה",
     "login_page": {
-      "cancel": "Cancel",
-      "create_account": "Create account",
-      "email": "Email",
-      "forgot_password": "Forgot your password?",
-      "guest_continue": "Continue",
-      "guest_title": "Continue as a guest",
-      "password": "Password",
-      "title": "Login",
-      "sign_in": "Sign in",
-      "submit": "Submit"
+      "cancel": "ביטול",
+      "create_account": "הרשמה",
+      "email": "אימייל",
+      "forgot_password": "שכחתי סיסמה",
+      "guest_continue": "המשך כאורחת",
+      "guest_title": "המשיכי ללא משתמש",
+      "password": "סיסמה",
+      "title": "כניסה",
+      "sign_in": "הרשמה",
+      "submit": "שליחה"
     },
     "order": {
       "title": "Order {{ name }}",
@@ -450,12 +450,12 @@
     },
     "register": {
       "link_text": "הרשמה",
-      "title": "Create account",
-      "first_name": "First name",
-      "last_name": "Last name",
-      "email": "Email",
-      "password": "Password",
-      "submit": "Create"
+      "title": "הרשמה למועדון הלקוחות",
+      "first_name": "שם פרטי",
+      "last_name": "שם משפחה",
+      "email": "אימייל",
+      "password": "סיסמה",
+      "submit": "שליחה"
     },
     "reset_password": {
       "title": "Reset account password",

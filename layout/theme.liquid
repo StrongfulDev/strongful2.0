@@ -383,6 +383,8 @@
         pauseSlideshow: `{{ 'sections.slideshow.pause_slideshow' | t }}`,
         playSlideshow: `{{ 'sections.slideshow.play_slideshow' | t }}`,
       }
+
+      let customerTags = {{ customer.tags | json }};
     </script>
 
     {%- if settings.predictive_search_enabled -%}

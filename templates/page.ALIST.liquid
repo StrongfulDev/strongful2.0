@@ -1,6 +1,7 @@
 {% layout 'theme' %}
 
 {{ 'section-main-page.css' | asset_url | stylesheet_tag }}
+{{ 'loyalty-page.js' | asset_url | script_tag }}
 
 {% assign plusStart = 200000 %}
 {% assign premiumStart = 350000 %}
@@ -447,9 +448,15 @@
 
 <!-- A-List Login / Signup Section -->
 
-<div class="loyalty-form-container">
-    <img class="loyalty-img" src="" alt="" loading="lazy">
-    <div class="loyalty-form"></div>
+<div class="loyalty-form-container fix-direction" id="registerHere">
+    <div class="loyalty-form loyalty-form-register">
+        {% section 'main-register.liquid' %}
+    </div>
+    <div class="loyalty-form loyalty-form-login hidden">
+        {% section 'main-login.liquid' %}
+    </div>
+    <img class="loyalty-img" src="https://cdn.shopify.com/s/files/1/0340/7986/7020/files/near_sign_in_picture.jpg?v=1666800495"
+         alt="דוגמנית סטרונגפול" loading="lazy">
 </div>
 
 <div class="a-list__faq-ctn">
@@ -460,7 +467,7 @@
                 <p class="a-list__question">איך אני מצטרפת ל A-LIST?</p>
                 {% render 'plus' %}
             </div>
-            <div class="a-list__answer-ctn none">
+            <div class="a-list__answer-ctn hidden">
                 <p class="a-list__answer-para">בהרשמה לאתר את מצטרפת אוטומטית ל A-LIST CLUB.</p>
                 <p class="a-list__answer-para">את יכולה להירשם למועדון בראש העמוד או ללחוץ <a href="/account/login">כאן</a></p>
             </div>
@@ -471,7 +478,7 @@
                 <p class="a-list__question">איך אני צוברת נקודות?</p>
                 {% render 'plus' %}
             </div>
-            <div class="a-list__answer-ctn none">
+            <div class="a-list__answer-ctn hidden">
                 <p class="a-list__answer-para">אצלינו את צוברת נקודה על כל שקל שהזמנת באתר.</p>
                 <p class="a-list__answer-para">אפשר גם לצבור נקודות על הוספת עוקב באינסטגרם ובטיקטוק, שיתוף בפייסבוק, חגיגת יום הולדת, הוספת תגובה באתר ואפילו על הבאת חברה חדשה.</p>
                 <p class="a-list__answer-para">פשוט לוחצים על אחד מהריבועים השחורים בראש הדף ומתחילים להרוויח!</p>
@@ -483,7 +490,7 @@
                 <p class="a-list__question">איך אני משתמשת בנקודות שצברתי?</p>
                 {% render 'plus' %}
             </div>
-            <div class="a-list__answer-ctn none">
+            <div class="a-list__answer-ctn hidden">
                 <p class="a-list__answer-para">כבר בעמוד הראשון של שלב הצ'ק אאוט תוכלי לבחור כמה נקודות את רוצה לממש.</p>
                 <p class="a-list__answer-para">יש כפל מבצעים!</p>
                 <p class="a-list__answer-para">מימוש הנקודות נסכם ביחד עם קוד קופון וגיפט קארד, ואינו מתנגש \ מבטל קוד קופון ו\או גיפט קארד.</p>
@@ -496,7 +503,7 @@
                 <p class="a-list__question">איך אני משתפת את הבסטי?</p>
                 {% render 'plus' %}
             </div>
-            <div class="a-list__answer-ctn none">
+            <div class="a-list__answer-ctn hidden">
                 <p class="a-list__answer-para">בתחתית העמוד כתבי את כתובת האימייל שלך - כדי שנוכל לתת לך את הנקודות במעמד ההזמנה של הבסטי.</p>
                 <p class="a-list__answer-para">בשלב השני יופיע קישור להעתקה שיפנק את הבסטי שלך ב 15% הנחה לקנייה הראשונה שלה!</p>
                 <p class="a-list__answer-para">לוחצים על הכפתור להעתקת הקישור ושולחים לבסטי.</p>
@@ -510,7 +517,7 @@
                 <p class="a-list__question">עדכנתי תאריך יום הולדת - מתי אקבל את הנקודות?</p>
                 {% render 'plus' %}
             </div>
-            <div class="a-list__answer-ctn none">
+            <div class="a-list__answer-ctn hidden">
                 <p class="a-list__answer-para">במידה ויום ההולדת שלך חל בעוד 30 ימים או יותר, תקבלי את 200 הנקודות בתאריך יום ההולדת שלך.</p>
                 <p class="a-list__answer-para">במידה ותאריך יום ההולדת שלך חל תוך 30 ימים או פחות, תקבלי את 200 הנקודות שלך לאחר 30 יום.</p>
             </div>
@@ -521,7 +528,7 @@
                 <p class="a-list__question">הוספתי עוקב באינסטגרם אבל לא קיבלתי נקודות</p>
                 {% render 'plus' %}
             </div>
-            <div class="a-list__answer-ctn none">
+            <div class="a-list__answer-ctn hidden">
                 <p class="a-list__answer-para">אפליקציות טיקטוק, אינסטגרם ופייסבוק לא נותנות לעקוב אחרי המשתמשות שלהם.</p>
                 <p class="a-list__answer-para">בשביל לקבל את הנקודות יש ללחוץ על הריבוע השחור של הנקודות שתרצי להרוויח (הוספת עוקב באינסטגרם \ טיקטוק).</p>
             </div>
@@ -532,7 +539,7 @@
                 <p class="a-list__question">הנקודות שלי נשמרות אם אני מחזירה מוצרים?</p>
                 {% render 'plus' %}
             </div>
-            <div class="a-list__answer-ctn none">
+            <div class="a-list__answer-ctn hidden">
                 <p class="a-list__answer-para">כאשר מתבצע זיכוי כספי על מוצרים שהזמנת באתר, הנקודות שצברת על אותם המוצרים ימחקו מהחשבון שלך.</p>
                 <p class="a-list__answer-para">לדוגמא - אם קיבלת זיכוי כספי בשווי 150 שקלים, בחשבון שלך יימחקו הנקודות שצברת בסכום הזה - 150 נקודות.</p>
             </div>
@@ -543,7 +550,7 @@
                 <p class="a-list__question">ביצעתי הזמנה ולא קיבלתי את הנקודות שלי</p>
                 {% render 'plus' %}
             </div>
-            <div class="a-list__answer-ctn none">
+            <div class="a-list__answer-ctn hidden">
                 <p class="a-list__answer-para">בכל הזמנה באתר מקבלים נקודה על כל שקל ששילמת - ואפילו יותר ככל שמתקדמים במדרגות ה - VIP שלנו!</p>
                 <p class="a-list__answer-para">נקודות נצברות רק על כסף בפועל - סכום ששולם באמצעות גיפט קארד לא צובר נקודות</p>
             </div>

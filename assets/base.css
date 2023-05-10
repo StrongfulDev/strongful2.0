@@ -268,6 +268,10 @@ html.no-js .no-js-hidden {
 	display: flex;
 }
 
+.flex-between {
+	justify-content: space-between;
+}
+
 .custom-page-width {
     max-width: var(--custom-page-width);
     margin: 0 auto;
