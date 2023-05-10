@@ -4,9 +4,9 @@
 
 .product-media-gallery-container .model-switcher {
     position: absolute;
-    bottom: 1em;
+    top: 1em;
     right: 1em;
-    z-index: 1;
+    z-index: 3;
 }
 
 .product-media-gallery-container .model-switcher select {
