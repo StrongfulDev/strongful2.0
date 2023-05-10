@@ -270,13 +270,6 @@
   margin-bottom: 7rem;
 }
 
-@media screen and (min-width: 990px) {
-  .customer .pagination {
-    margin-top: 7rem;
-    margin-bottom: 10rem;
-  }
-}
-
 .customer .pagination ul {
   display: flex;
   justify-content: center;
@@ -803,7 +796,7 @@ li.multicolumn-list__item {
 }
 
 .js-border-container {
-	height: 2px;
+	height: 3px;
 	width: 100%;
 	background: var(--gradient-base-background-3);
 	position: relative;
@@ -823,4 +816,21 @@ li.multicolumn-list__item {
 	font-weight: var(--font-body-weight-bold);
 }
 
+@media screen and (min-width: 990px) {
+	.customer .pagination {
+		margin-top: 7rem;
+		margin-bottom: 10rem;
+	}
 
+	.multicolumn {
+		max-width: 47rem;
+	}
+
+	.multicolumn .page-width {
+		padding: 0;
+	}
+
+	li.multicolumn-list__item:hover {
+		cursor: pointer;
+	}
+}

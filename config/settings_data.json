@@ -147,12 +147,6 @@
 
     ],
     "blocks": {
-      "16548475241908962911": {
-        "type": "shopify:\/\/apps\/oxi-social-login\/blocks\/social-login-embed\/24ad60bc-8f09-42fa-807e-e5eda0fdae17",
-        "disabled": false,
-        "settings": {
-        }
-      },
       "855628211100114053": {
         "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
@@ -175,6 +169,12 @@
       },
       "10570433277407501837": {
         "type": "shopify:\/\/apps\/simprosys-google-shopping-feed\/blocks\/gsf-gcr\/1f0b859e-9fa6-4007-97e8-4513aff5ff3b",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "16548475241908962911": {
+        "type": "shopify:\/\/apps\/oxi-social-login\/blocks\/social-login-embed\/24ad60bc-8f09-42fa-807e-e5eda0fdae17",
         "disabled": false,
         "settings": {
         }

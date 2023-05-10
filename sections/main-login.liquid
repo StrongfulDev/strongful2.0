@@ -14,7 +14,7 @@
   }
 {%- endstyle -%}
 
-<div class="customer login section-{{ section.id }}-padding fix-direction">
+<div class="customer login section-{{ section.id }}-padding fix-direction {% unless template.name == 'login' %}hidden{% endunless %}">
   <h1 id="recover" tabindex="-1">
     {{ 'customer.recover_password.title' | t }}
   </h1>
@@ -140,8 +140,6 @@
       <button>
         {{ 'customer.login_page.sign_in' | t }}
       </button>
-
-        <div class='oxi-social-login'></div>
 
 
         {% comment %}

@@ -422,31 +422,31 @@
       "product": "Product",
       "sku": "SKU",
       "price": "Price",
-      "quantity": "Quantity",
-      "total": "Total",
-      "total_refunded": "Refunded",
-      "fulfilled_at_html": "Fulfilled {{ date }}",
+      "quantity": "כמות",
+      "total": "סה״כ",
+      "total_refunded": "סה״כ זיכויים",
+      "fulfilled_at_html": "נארז בתאריך {{ date }}",
       "track_shipment": "Track shipment",
       "tracking_url": "Tracking link",
-      "tracking_company": "Carrier",
-      "tracking_number": "Tracking number",
-      "subtotal": "Subtotal",
+      "tracking_company": "חברת משלוח",
+      "tracking_number": "מספר מעקב",
+      "subtotal": "סיכום ביניים",
       "total_duties": "Duties"
     },
     "orders": {
-      "title": "Order history",
-      "order_number": "Order",
-      "order_number_link": "Order number {{ number }}",
-      "date": "Date",
-      "payment_status": "Payment status",
-      "fulfillment_status": "Fulfillment status",
-      "total": "Total",
+      "title": "ההזמנות שלי",
+      "order_number": "הזמנה",
+      "order_number_link": "הזמנה מספר {{ number }}",
+      "date": "תאריך",
+      "payment_status": "סטטוס תשלום",
+      "fulfillment_status": "סטטוס אריזה",
+      "total": "סה״כ",
       "none": "You haven't placed any orders yet."
     },
     "recover_password": {
-      "title": "Reset your password",
-      "subtext": "We will send you an email to reset your password",
-      "success": "We've sent you an email with a link to update your password."
+      "title": "איפוס סיסמה",
+      "subtext": "הקלידי את כתובת המייל שלך למטה ואנחנו נשלח לך מייל עם הוראות כיצד ליצור סיסמה חדשה",
+      "success": "ברגעים אלו נשלח אליך מייל עם קישור לאיפוס הסיסמה שלך."
     },
     "register": {
       "link_text": "הרשמה",
@@ -460,11 +460,11 @@
       "login_toggler": "כבר חברת מועדון? התחברי"
     },
     "reset_password": {
-      "title": "Reset account password",
-      "subtext": "Enter a new password",
-      "password": "Password",
-      "password_confirm": "Confirm password",
-      "submit": "Reset password"
+      "title": "איפוס סיסמה",
+      "subtext": "הכניסי סיסמה חדשה",
+      "password": "סיסמה",
+      "password_confirm": "אישור סיסמה",
+      "submit": "איפוס סיסמה"
     }
   },
   "gift_cards": {

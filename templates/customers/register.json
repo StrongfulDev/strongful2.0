@@ -15,7 +15,7 @@
         "template--15928318099596__829ce617-c05d-4a9e-8dbd-913daef14a64-1681581730f23935bd-1": {
           "type": "column",
           "settings": {
-            "title": "אני חדשה פה",
+            "title": "הרשמה",
             "text": "",
             "link_label": "",
             "link": ""
@@ -31,7 +31,7 @@
         "heading_size": "h2",
         "image_width": "full",
         "image_ratio": "adapt",
-        "columns_desktop": 3,
+        "columns_desktop": 2,
         "column_alignment": "left",
         "background_style": "none",
         "button_label": "",

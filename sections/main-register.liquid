@@ -14,21 +14,12 @@
     }
   }
 
-    #js-border-position {
-    width: 96px;
-    left: 177px;
-    }
-
-  .customer.login {
-    display: none;
-  }
-
     .form-toggler {
     display: none;
     }
 {%- endstyle -%}
 
-<div class="customer register section-{{ section.id }}-padding fix-direction">
+<div class="customer register section-{{ section.id }}-padding fix-direction {% unless template.name == 'register' %}hidden{% endunless %}">
   <svg style="display: none">
     <symbol id="icon-error" viewBox="0 0 13 13">
       <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
