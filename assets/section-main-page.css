@@ -127,6 +127,8 @@
 
 .vip-tiers-pumpup-title {
 	margin-top: 0;
+	font-weight: 600;
+	font-size: var(--font-body-size-medium);
 }
 
 .vip-benefits-table {
@@ -304,6 +306,7 @@
 
 .vip-benefits-list {
 	padding: 0;
+	margin: 0;
 	list-style: none;
 }
 
