@@ -34,11 +34,7 @@
             reward: {
                 action: "{{ reward.reward_action.value }}",
                 amount: parseInt("{{ reward.reward_amount.value }}"),
-                products: [
-                    {% for product in reward.reward_product %}
-                    "{{ product.id }}",
-                    {% endfor %}
-                ],
+                products: eval(`{{ reward.reward_products }}`),
                 product_method: "{{ reward.product_rewards_method.value }}",
                 message: `{{ reward.reward_message.value }}`,
             }

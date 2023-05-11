@@ -3,6 +3,7 @@ class CartRewards {
 		this.container = $(parentContainer);
 	}
 
+	cart;
 	rules = []
 	allRewardsAmount = 0;
 	activeRewards = 0;
@@ -11,6 +12,8 @@ class CartRewards {
 
 	async init() {
 		this.rules = window.rewards_rules;
+
+		console.log("Reward rules", this.rules);
 
 		this.allRewardsAmount = Math.max.apply(Math, this.rules.map(function (o) {
 			return o.condition.value;
@@ -27,7 +30,8 @@ class CartRewards {
 		this.loading(true);
 
 		this.lastCartTotalValue = this.cartTotalValue;
-		this.cartTotalValue = await this.getCartTotal();
+		this.cart = await this.getCart();
+		this.cartTotalValue = parseInt(this.cart.total_price / 100)
 		this.activeRewards = 0
 
 		this.rules.forEach((rule, index) => {
@@ -43,7 +47,7 @@ class CartRewards {
 
 		switch (rule.condition.type) {
 			case "CartAmount":
-				const isRewardActive = this.cartHasReward(rule.reward);
+				const isRewardActive = this.cartHasReward(rule);
 				const isAmountGreaterThan = rule.condition.operator === "Greater than or equal" && this.cartTotalValue >= rule.condition.value;
 				const isAmountLessThan = rule.condition.operator === "Less than or equal" && this.cartTotalValue <= rule.condition.value;
 				isActive = !isRewardActive && (isAmountGreaterThan || isAmountLessThan);
@@ -63,30 +67,77 @@ class CartRewards {
 		this.toggleMessage(isActive, rule, ruleIndex);
 	}
 
-	toggleRewardItem(isActive, rule) {
+	async toggleRewardItem(isActive, rule) {
 		const rewardItem = this.getRewardItemByRule(rule);
-
-		switch (rule.reward.action) {
-			case "gift_product":
-				const productId = rule.reward.product_id;
-				this.giftProduct(productId)
-				break;
-		}
 
 		if (isActive) {
 			rewardItem.addClass("active-reward");
 		} else {
 			rewardItem.removeClass("active-reward");
 		}
+
+		switch (rule.reward.action) {
+			case "gift_product":
+				this.handleGiftReward(rule, isActive);
+				break;
+		}
 	}
 
-	async giftProduct(productId) {
-		jQuery.post("/cart/add.js", {
-			quantity: 1,
-			id: productId
-		}, (response) => {
-			console.log(response);
+	async removeProduct(productId) {
+		const config = fetchConfig('javascript');
+
+		config.body = JSON.stringify({
+			id: productId,
+			quantity: 0
 		});
+
+		const res = await fetch(`${routes.cart_change_url}`, config);
+		return res.json();
+	}
+
+	async handleGiftReward(rule, isActive) {
+		if (!isActive) {
+			for (const productGid of rule.reward.products) {
+				const productId = productGid.split("/").pop();
+				if (this.productsExistInCart([productId])) {
+					this.removeProduct(productId)
+				}
+			}
+
+			return;
+		}
+
+		for (const productGid of rule.reward.products) {
+			const productId = productGid.split("/").pop();
+
+			if (this.productsExistInCart([productId]))
+				return;
+
+			if (rule.reward.product_method === "Add all products to cart") {
+				this.addProduct(productId)
+			} else {
+				const res = await this.addProduct(productId)
+
+				if (res.items.length > 0) {
+					return;
+				}
+			}
+		}
+
+	}
+
+	async addProduct(productId) {
+		const config = fetchConfig('javascript');
+
+		config.body = JSON.stringify({
+			items: [{
+				quantity: 1,
+				id: productId
+			}]
+		});
+
+		const res = await fetch(`${routes.cart_add_url}`, config);
+		return res.json();
 	}
 
 	trackProgress() {
@@ -118,10 +169,10 @@ class CartRewards {
 		}
 	}
 
-	getCartTotal() {
+	getCart() {
 		return new Promise((resolve, reject) => {
 			jQuery.getJSON("/cart.js", function (cart) {
-				resolve(parseInt(cart.total_price / 100));
+				resolve(cart);
 			});
 		});
 	}
@@ -130,8 +181,33 @@ class CartRewards {
 		return $(`.reward-item.${rule.element_class}`)
 	}
 
-	cartHasReward(reward, ruleIndex) {
+	cartHasReward(rule, ruleIndex) {
+		if (rule.reward.action === "gift_product") {
+			let productsExist = this.productsExistInCart(rule.reward.products);
+
+			if (rule.reward.product_method === "Add all products to cart") {
+				return productsExist === rule.reward.products.length;
+			} else {
+				return !!productsExist;
+			}
+		}
+
 		return ruleIndex <= this.activeRewards
+	}
+
+	productsExistInCart(productGids) {
+		let productsExist = 0;
+
+		for (const productGid of productGids) {
+			const productId = parseInt(productGid.split("/").pop());
+			const isProductExists = this.cart.items.some(item => item.id === productId);
+
+			if (isProductExists) {
+				productsExist += 1;
+			}
+		}
+
+		return productsExist;
 	}
 
 	loading(isLoading) {
