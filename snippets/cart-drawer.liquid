@@ -6,26 +6,53 @@
 {% endcomment %}
 
 <script type="application/javascript">
-	function applyTranslation(key) {
-		return
-	}
+    function applyTranslation(key) {
+        return
+    }
+</script>
 
-	window.rewards_translation = {
-		set_shipping: {
-			message: '{{ 'rewards.free_shipping.message_html' | t }}',
-		},
-		give_free_bottle: {
-			message: '{{ 'rewards.free_bottle.message_html' | t }}',
-		}
-	};
+<script type="application/javascript">
+    window.rewards_translation = {
+        set_shipping: {
+            message: '{{ 'rewards.free_shipping.message_html' | t }}',
+        },
+        give_free_bottle: {
+            message: '{{ 'rewards.free_bottle.message_html' | t }}',
+        }
+    };
+    window.rewards_rules = [
+        {% for reward in shop.metaobjects.reward.values %}
+        {
+            title: "{{ reward.title.value }}",
+            element_class: "{{ reward.element_class.value }}",
+            condition: {
+                type: "{{ reward.condition_type.value }}",
+                operator: "{{ reward.condition_operator.value }}",
+                value: parseInt("{{ reward.condition_value.value }}"),
+                message: `{{ reward.condition_message.value }}`,
+            },
+            reward: {
+                action: "{{ reward.reward_action.value }}",
+                amount: parseInt("{{ reward.reward_amount.value }}"),
+                products: [
+                    {% for product in reward.reward_product %}
+                    "{{ product.id }}",
+                    {% endfor %}
+                ],
+                product_method: "{{ reward.product_rewards_method.value }}",
+                message: `{{ reward.reward_message.value }}`,
+            }
+        },
+        {% endfor %}
+    ]
 </script>
 
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
 
 <style>
-	.drawer {
-		visibility: hidden;
-	}
+    .drawer {
+        visibility: hidden;
+    }
 </style>
 
 <cart-drawer class="drawer{% if cart == empty %} is-empty{% endif %}">
@@ -476,22 +503,22 @@
 </cart-drawer>
 
 <script>
-	document.addEventListener('DOMContentLoaded', function () {
-		function isIE() {
-			const ua = window.navigator.userAgent;
-			const msie = ua.indexOf('MSIE ');
-			const trident = ua.indexOf('Trident/');
+    document.addEventListener('DOMContentLoaded', function () {
+        function isIE() {
+            const ua = window.navigator.userAgent;
+            const msie = ua.indexOf('MSIE ');
+            const trident = ua.indexOf('Trident/');
 
-			return msie > 0 || trident > 0;
-		}
+            return msie > 0 || trident > 0;
+        }
 
-		if (!isIE()) return;
-		const cartSubmitInput = document.createElement('input');
-		cartSubmitInput.setAttribute('name', 'checkout');
-		cartSubmitInput.setAttribute('type', 'hidden');
-		document.querySelector('#cart').appendChild(cartSubmitInput);
-		document.querySelector('#checkout').addEventListener('click', function (event) {
-			document.querySelector('#cart').submit();
-		});
-	});
+        if (!isIE()) return;
+        const cartSubmitInput = document.createElement('input');
+        cartSubmitInput.setAttribute('name', 'checkout');
+        cartSubmitInput.setAttribute('type', 'hidden');
+        document.querySelector('#cart').appendChild(cartSubmitInput);
+        document.querySelector('#checkout').addEventListener('click', function (event) {
+            document.querySelector('#cart').submit();
+        });
+    });
 </script>

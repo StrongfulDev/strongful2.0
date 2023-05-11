@@ -10,9 +10,11 @@ class CartRewards {
 	lastCartTotalValue = 0;
 
 	async init() {
-		if (this.rules.length === 0) {
-			await this.getRewards();
-		}
+		this.rules = window.rewards_rules;
+
+		this.allRewardsAmount = Math.max.apply(Math, this.rules.map(function (o) {
+			return o.condition.value;
+		}));
 
 		subscribe(PUB_SUB_EVENTS.cartUpdate, (event) => {
 			this.checkRules();
@@ -29,35 +31,33 @@ class CartRewards {
 		this.activeRewards = 0
 
 		this.rules.forEach((rule, index) => {
-			this.checkAndApplyRule(rule, index);
+			const isActive = this.handleCondition(rule);
+			this.handleReward(rule, isActive, index);
 		});
 
 		this.loading(false);
 	}
 
-	checkAndApplyRule(rule, ruleIndex = 0) {
+	handleCondition(rule) {
 		let isActive = false;
 
 		switch (rule.condition.type) {
 			case "CartAmount":
 				const isRewardActive = this.cartHasReward(rule.reward);
-				const isAmountGreaterThan = rule.condition.operator === ">=" && this.cartTotalValue >= rule.condition.value;
-				const isAmountLessThan = rule.condition.operator === "<=" && this.cartTotalValue <= rule.condition.value;
+				const isAmountGreaterThan = rule.condition.operator === "Greater than or equal" && this.cartTotalValue >= rule.condition.value;
+				const isAmountLessThan = rule.condition.operator === "Less than or equal" && this.cartTotalValue <= rule.condition.value;
 				isActive = !isRewardActive && (isAmountGreaterThan || isAmountLessThan);
-				break;
-			case "CartItems":
+
 				break;
 		}
-
-		if (isActive)
-			this.activeRewards += 1;
-
-		this.handleRewards(rule, isActive, ruleIndex);
 
 		return isActive;
 	}
 
-	handleRewards(rule, isActive, ruleIndex) {
+	handleReward(rule, isActive, ruleIndex) {
+		if (isActive)
+			this.activeRewards += 1;
+
 		this.trackProgress();
 		this.toggleRewardItem(isActive, rule);
 		this.toggleMessage(isActive, rule, ruleIndex);
@@ -66,11 +66,27 @@ class CartRewards {
 	toggleRewardItem(isActive, rule) {
 		const rewardItem = this.getRewardItemByRule(rule);
 
+		switch (rule.reward.action) {
+			case "gift_product":
+				const productId = rule.reward.product_id;
+				this.giftProduct(productId)
+				break;
+		}
+
 		if (isActive) {
 			rewardItem.addClass("active-reward");
 		} else {
 			rewardItem.removeClass("active-reward");
 		}
+	}
+
+	async giftProduct(productId) {
+		jQuery.post("/cart/add.js", {
+			quantity: 1,
+			id: productId
+		}, (response) => {
+			console.log(response);
+		});
 	}
 
 	trackProgress() {
@@ -83,7 +99,7 @@ class CartRewards {
 	toggleMessage(isActive, rule, ruleIndex) {
 		const reward = rule.reward;
 		const rewardText = $(".reward-text");
-		const messageClass = `${reward.active_class}-message`;
+		const messageClass = `${reward.element_class}-message`;
 		const currentMessage = $(`.${messageClass}`);
 
 		if (ruleIndex === this.activeRewards) {
@@ -91,29 +107,15 @@ class CartRewards {
 				if (isActive) {
 					currentMessage.remove();
 				} else {
-					const rewardMessage = $(`<span class="${messageClass}" data-index="${ruleIndex}">${window.rewards_translation[reward.action]?.message}</span>`);
+					const rewardMessage = $(`<span class="${messageClass}" data-index="${ruleIndex}">${rule.condition.message}</span>`);
 					rewardText.html(rewardMessage);
 				}
 			}
 
-			rewardText.find('.rewards__missing_amount').text(reward.value - this.cartTotalValue);
+			rewardText.find('.rewards__missing_amount').text(rule.condition.value - this.cartTotalValue);
 		} else if (ruleIndex === this.rules.length - 1 && isActive) {
-			rewardText.text("");
+			rewardText.text(rule.reward.message);
 		}
-	}
-
-	async getRewards() {
-		return new Promise((resolve, reject) => {
-			jQuery.getJSON("/assets/cart-rewards-rules.json", (rules) => {
-				this.rules = rules;
-
-				this.allRewardsAmount = Math.max.apply(Math, rules.map(function (o) {
-					return o.reward.value;
-				}));
-
-				resolve(rules);
-			});
-		});
 	}
 
 	getCartTotal() {
@@ -125,7 +127,7 @@ class CartRewards {
 	}
 
 	getRewardItemByRule(rule) {
-		return $(`.reward-item.${rule.reward.active_class}`)
+		return $(`.reward-item.${rule.element_class}`)
 	}
 
 	cartHasReward(reward, ruleIndex) {
