@@ -15,11 +15,11 @@
 <noscript>{{ 'component-pagination.css' | asset_url | stylesheet_tag }}</noscript>
 
 {%- if paginate.parts.size > 0 -%}
-  <div class="pagination-wrapper">
+  <div class="pagination-wrapper" id="AjaxinatePagination">
     <nav class="pagination" role="navigation" aria-label="{{ 'general.pagination.label' | t }}">
       <ul class="pagination__list list-unstyled" role="list">
         {%- if paginate.previous -%}
-          <li>
+          <li class="hidden">
             <a
               href="{{ paginate.previous.url }}{{ anchor }}"
               class="pagination__item pagination__item--next pagination__item-arrow link motion-reduce"
@@ -31,7 +31,7 @@
         {%- endif -%}
 
         {%- for part in paginate.parts -%}
-          <li>
+          <li class="hidden">
             {%- if part.is_link -%}
               <a
                 href="{{ part.url }}{{ anchor }}"
@@ -59,14 +59,14 @@
         {%- endfor -%}
 
         {%- if paginate.next -%}
-          <li>
+          <li class="infinite_next">
             <a
               href="{{ paginate.next.url }}{{ anchor }}"
-              class="pagination__item pagination__item--prev pagination__item-arrow link motion-reduce"
+              class="pagination__item pagination__item--prev pagination__item-arrow link motion-reduce hidden"
               aria-label="{{ 'general.pagination.next' | t }}"
             >
-              {%- render 'icon-caret' -%}
             </a>
+            {% render 'loading-spinner' %}
           </li>
         {%- endif -%}
       </ul>

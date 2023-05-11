@@ -4,6 +4,7 @@
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 {{ 'component-variant-size-picker.css' | asset_url | stylesheet_tag }}
 {{ 'component-variant-size-picker.js' | asset_url | script_tag }}
+{{ 'ajaxinate.js' | asset_url | script_tag }}
 
 {% comment %}{{ 'component-slider.css' | asset_url | stylesheet_tag }}{% endcomment %}
 {% comment %}{{ 'component-slideshow.css' | asset_url | stylesheet_tag }}{% endcomment %}
@@ -209,6 +210,13 @@
         </div>
     </div>
 </div>
+
+<script>
+    const endlessCollection = new Ajaxinate({
+        container: '#product-grid',
+        pagination: '.infinite_next',
+    });
+</script>
 
 {% schema %}
 {
