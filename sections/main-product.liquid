@@ -1,4 +1,7 @@
 {% assign loyaltyPoints = product.price | divided_by: 100 %}
+{% assign loyaltyPointsPlus = loyaltyPoints | times: 1.25 %}
+{% assign loyaltyPointsPremium = loyaltyPoints | times: 1.5 %}
+{% assign loyaltyPointsLegend = loyaltyPoints | times: 1.75 %}
 
 <section
         id="MainProduct-{{ section.id }}"

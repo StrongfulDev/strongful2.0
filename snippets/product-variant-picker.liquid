@@ -9,6 +9,40 @@
   Usage:
   {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
 {% endcomment %}
+
+{% assign similarParent = product.metafields.global.collectionTitle %}
+
+<ul class="similiar
+      {% if product.tags contains 'noSimilar' %}
+        none
+        {% elsif product.tags contains 'special-edition-sibling' %}
+        {% unless product.title contains 'Lerato' %}
+        special-edition-product-list
+          {% endunless %}
+        {% elsif product.tags contains 'special-edition' %}
+        {% unless product.title contains 'Lerato' %}
+        special-edition-product
+          {% endunless %}
+        {% endif %}" id="scrollNoSize">
+    {% for collection in collections %}
+        {% if collection.title == similarParent or collection.title == similarParent.value %}
+            {% for product in collection.products %}
+                <li class="relative-discount similiar-child {% if product.tags contains 'special-edition' %}special-edition{% elsif product.tags contains 'special-edition-family' %}special-edition-sibling{% endif %} {{ forloop.index0 }}">
+                    <a href="{{ product.url }}" class="similar-a">
+                        <img src="{{ product.featured_image | product_img_url: 'master' }}"
+                             srcset="{{ product.featured_image | product_img_url: '200x' }} 200w,
+                    {{ product.featured_image | product_img_url: '300x' }} 300w,
+                    {{ product.featured_image | product_img_url: '400x' }} 400w,
+                    {{ product.featured_image | product_img_url: '600x' }} 600w"
+                             alt="{{ product.title | escape }}" class="similar-child-img" loading="lazy"/>
+                    </a>
+                    <p class="productVendor">{{ product.vendor }}</p>
+                </li>
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+</ul>
+
 {%- unless product.has_only_default_variant -%}
   {%- if block.settings.picker_type == 'button' -%}
     <variant-radios

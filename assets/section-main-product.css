@@ -1621,6 +1621,48 @@ variant-radios fieldset {
     margin: 0;
 }
 
+.product-sale-announcement {
+	background: var(--gradient-base-background-3);
+	margin: 0.5em auto;
+	padding: .5em 0;
+	text-align: center;
+}
+
+.product-sale-text {
+	margin: 0;
+}
+
+.product-sale-text.tiny {
+	font-size: var(--font-body-size-small);
+}
+
+.similiar {
+	display: grid;
+	justify-content: flex-start;
+	direction: rtl;
+	grid-gap: 1%;
+	padding: 10px 5px;
+	border-bottom: 1px var(--gradient-base-background-3) solid;
+	border-top: 1px var(--gradient-base-background-3) solid;
+	position: relative;
+	grid-template-columns: repeat(6,1fr);
+	margin: 1.2em 0 auto;
+	list-style: none;
+}
+
+.similiar li {
+	position: relative;
+}
+
+.similar-a, .similar-a img {
+	display: block;
+	width: 100%;
+}
+
+.productVendor {
+	font-size: var(--font-body-size-small);
+}
+
 @media screen and (min-width: 990px) {
 
     .product.grid {

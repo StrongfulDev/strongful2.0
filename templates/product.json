@@ -3,6 +3,12 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "541e5241-b778-47c7-bac5-f037a6a85960": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"product-sale-announcement\">\n        {% if product.tags contains 'OUTLET' %}\n        <strong class=\"product-sale-text englishFont\">OUTLET<\/strong>\n        <p class=\"product-sale-text bold englishFont ltr upper\">up to 70% off<\/p>\n          {% else %}\n          <div>\n          <strong class=\"product-sale-text\">עד 30% הנחה על דגמים נבחרים<\/strong>\n          <p class=\"product-sale-text small smaller tiny\">לזמן מוגבל<\/p>\n          <\/div>\n        {% endif %}\n      <\/div>"
+          }
+        },
         "title": {
           "type": "title",
           "settings": {
@@ -20,7 +26,7 @@
           "settings": {
           }
         },
-        "ca878b02-e0a8-49d7-8f9e-937cb05298df": {
+        "9493a3bf-e6d5-4ed1-b362-dd702bbdc37b": {
           "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
             "product": "{{product}}"
@@ -107,10 +113,11 @@
         }
       },
       "block_order": [
+        "541e5241-b778-47c7-bac5-f037a6a85960",
         "title",
         "vendor",
         "price",
-        "ca878b02-e0a8-49d7-8f9e-937cb05298df",
+        "9493a3bf-e6d5-4ed1-b362-dd702bbdc37b",
         "variant_picker",
         "728193c8-6d92-4943-a33a-e64ada11e0d4",
         "88b94c52-a8ec-40c4-91b8-c6f3d566da1e",
