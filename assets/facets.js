@@ -285,6 +285,8 @@ class FacetRemove extends HTMLElement {
 
 customElements.define('facet-remove', FacetRemove);
 
+$(".pagination__list .loading-overlay__spinner").removeClass("hidden");
+
     function colorRounds(html) {
       let colorLabels = html.querySelectorAll(".color-label");
       for (let i = 0; i < colorLabels.length; i++) {
