@@ -164,7 +164,7 @@
                             role="list"
                         >
                           {%- for value in filter.values -%}
-                            <li class="list-menu__item facets__item{% if forloop.index > 10 and filter_type == 'vertical' %} show-more-item hidden{% endif %}">
+                            <li class="list-menu__item facets__item{% if forloop.index > 20 and filter_type == 'vertical' %} show-more-item hidden{% endif %}">
                               <label
                                   for="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}"
                                   class="facet-checkbox{% if value.count == 0 and value.active == false %} facet-checkbox--disabled{% endif %}"
@@ -313,7 +313,7 @@
                           {%- endfor -%}
                         </ul>
                       </fieldset>
-                      {%- if filter.values.size > 10 and filter_type == 'vertical' -%}
+                      {%- if filter.values.size > 20 and filter_type == 'vertical' -%}
                         <show-more-button>
                           <button
                               class="button-show-more link underlined-link no-js-hidden"

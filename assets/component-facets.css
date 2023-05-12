@@ -1353,6 +1353,10 @@ details.mobile-facets__details {
     padding-left: 3rem;
   }
 
+	.facets-vertical .facets-wrapper::-webkit-scrollbar {
+		display: none;
+	}
+
   .facets__disclosure-vertical[data-index='1'] {
     display: none;
   }
@@ -1440,4 +1444,19 @@ details.mobile-facets__details {
   .facet-checkbox > input[type='checkbox']:checked ~ svg {
     background: #000;
   }
+
+	.facets__disclosure-vertical[data-index='2'] {
+		border-top: 0;
+	}
+
+	.facets-container {
+		position: -webkit-sticky;
+		position: sticky;
+		top: 7em;
+		max-width: 240px;
+		min-width: 200px;
+		max-height: 85vh;
+		overflow: hidden;
+		overflow-y: auto;
+	}
 }
