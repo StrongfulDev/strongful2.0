@@ -1,0 +1,136 @@
+{{ 'size-table.css' | asset_url | stylesheet_tag }}
+{{ 'size-table.js' | asset_url | script_tag }}
+
+{% assign allSizesAreCm = '*כל המידות בטבלה הן בס"מ' %}
+
+{% if product.type == "טופ" or product.type == 'חולצה' or product.type == 'בגד גוף' %}
+    <div class="size-guide-modal size-pop-tops hidden fix-direction">
+        <p class="StrongfulX">{% render 'icon-close' %}</p>
+        <table class="size-table">
+            <thead>
+            <tr class="size-table-main-row three-grid">
+                <th>מידה</th>
+                <th>היקף בית חזה</th>
+                <th>מידת חזייה</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for variant in product.variants %}
+                <tr class="size-table-rows three-grid">
+                    <td>{{ variant.title }}</td>
+                    <td>{{ variant.metafields.my_fields.size_modal_bust }}</td>
+                    <td>{{ variant.metafields.my_fields.bra_size }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <h6 class="cent-exp text-right rtl">{{ allSizesAreCm }}</h6>
+    </div>
+{% elsif product.type == 'שורטס' or product.type == 'טייץ' or product.type == 'בייקר' or product.type == 'מכנס' %}
+    <div class="size-guide-modal size-pop-bikers hidden fix-direction">
+        <p class="StrongfulX">{% render 'icon-close' %}</p>
+        <table class="size-table">
+            <thead>
+            <tr class="size-table-main-row five-grid">
+                <th>מידה</th>
+                <th>מידת מכנסיים</th>
+                <th>היקף מתניים</th>
+                <th>היקף ירכיים</th>
+                <th>אורך</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for variant in product.variants %}
+                <tr class="size-table-rows five-grid">
+                    <td>{{ variant.title }}</td>
+                    <td>{{ variant.metafields.my_fields.pants_size }}</td>
+                    <td>{{ variant.metafields.my_fields.waist }}</td>
+                    <td>{{ variant.metafields.my_fields.hips }}</td>
+                    <td>{{ variant.metafields.my_fields.bottom_length }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <h6 class="cent-exp text-right rtl">{{ allSizesAreCm }}</h6>
+    </div>
+{% elsif product.type == "קרופ טופ" %}
+    {% unless product.title contains 'Juicy' or product.title contains 'Claire' %}
+        <div class="size-guide-modal size-pop-tops hidden fix-direction">
+            <p class="StrongfulX">{% render 'icon-close' %}</p>
+            <table class="size-table">
+                <thead>
+                <tr class="size-table-main-row three-grid">
+                    <th>מידה</th>
+                    <th>היקף בית חזה</th>
+                    <th>מידת חזייה</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for variant in product.variants %}
+                    <tr class="size-table-rows three-grid">
+                        <td>{{ variant.title }}</td>
+                        <td>{{ variant.metafields.my_fields.size_modal_bust }}</td>
+                        <td>{{ variant.metafields.my_fields.bra_size }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            <h6 class="cent-exp text-right rtl">{{ allSizesAreCm }}</h6>
+        </div>
+    {% else %}
+        <div class="size-guide-modal size-pop-tops hidden fix-direction">
+            <p class="StrongfulX">{% render 'icon-close' %}</p>
+            <table class="size-table">
+                <thead>
+                <tr class="size-table-main-row four-grid">
+                    <th>מידה</th>
+                    <th>היקף בית חזה</th>
+                    <th>מידת חזייה</th>
+                    <th>מידה</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for variant in product.variants %}
+                    <tr class="size-table-rows four-grid">
+                        <td>{{ variant.title }}</td>
+                        <td>{{ variant.metafields.my_fields.size_modal_bust }}</td>
+                        <td>{{ variant.metafields.my_fields.bra_size }}</td>
+                        <td>{{ variant.metafields.my_fields.bra_size_universal }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            <h6 class="cent-exp text-right rtl">{{ allSizesAreCm }}</h6>
+        </div>
+    {% endunless %}
+{% elsif product.type == "סווטשירט" %}
+    <!--   Amber   -->
+    <div class="size-guide-modal size-pop-tops hidden fix-direction">
+        <p class="StrongfulX">{% render 'icon-close' %}</p>
+        <table class="size-table">
+            <thead>
+            <tr class="size-table-main-row five-grid">
+                <th>{{ 'product.size_modal.site_size' | t }}</th>
+                <th>{{ 'product.size_modal.shoulder_width' | t }}</th>
+                <th>{{ 'product.size_modal.bust' | t }}</th>
+                <th>{{ 'product.size_modal.sleeve_length' | t }}</th>
+                <th>{{ 'product.size_modal.shirt_length' | t }}</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for variant in product.variants %}
+                <tr class="size-table-rows five-grid">
+                    <td>{{ variant.title }}</td>
+                    <td>{{ variant.metafields.my_fields.shoulder_width }}</td>
+                    <td>{{ variant.metafields.my_fields.bust }}</td>
+                    <td>{{ variant.metafields.my_fields.sleeve_length }}</td>
+                    <td>{{ variant.metafields.my_fields.shirt_length }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <h6 class="cent-exp text-right rtl">{{ allSizesAreCm }}</h6>
+    </div>
+{% endif %}
+
+<div class="size-table-overlay hidden"></div>

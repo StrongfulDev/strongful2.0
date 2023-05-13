@@ -180,7 +180,7 @@ variant-selects {
 }
 
 fieldset.product-form__input .form__label {
-    margin-bottom: 0.2rem;
+    margin-bottom: 1.2rem;
 }
 
 .product-form__input input[type='radio'] {
@@ -1689,6 +1689,8 @@ variant-radios {
 	position: absolute;
 	top: 0;
 	left: 0;
+	font-size: var(--font-body-size-small);
+	z-index: 2;
 }
 
 @media screen and (min-width: 990px) {

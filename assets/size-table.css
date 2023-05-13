@@ -1,0 +1,92 @@
+.three-grid {
+	grid-template-columns: repeat(3,1fr);
+}
+
+.four-grid {
+	grid-template-columns: repeat(4,1fr);
+}
+
+.five-grid {
+	grid-template-columns: repeat(5,1fr);
+}
+
+.size-pop, .size-pop-tops, .size-pop-bikers {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 20;
+	padding: 8% 2%;
+	width: 100%;
+	background: #fff;
+}
+
+.StrongfulX {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0.6em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	z-index: 9;
+	border-radius: 50%;
+	line-height: 1em;
+	height: 35px;
+	width: 35px;
+}
+
+.new-x {
+	width: 14px;
+	height: 14px;
+}
+
+.size-table {
+	width: 100%;
+	text-align: center;
+	font-size: .9em;
+}
+
+.size-table-main-row, .size-table-rows {
+	display: grid;
+	width: 100%;
+}
+
+.size-table tbody tr td {
+	background: rgba(211,211,211,.17);
+	padding: 0.4em 0.25em;
+}
+
+.size-table tbody tr td:nth-child(even) {
+	background: rgba(211,211,211,.27);
+}
+
+div.size-table-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.5);
+	display: block;
+}
+
+@media screen and (min-width: 990px) {
+	.size-table-toggler:hover, .StrongfulX:hover {
+		cursor: pointer;
+	}
+
+	.size-pop, .size-pop-tops, .size-pop-bikers {
+		width: max-content;
+		padding: 2em;
+		bottom: 50%;
+		left: 50%;
+		transform: translate(-50%,50%);
+	}
+
+	.size-table tbody tr td, .size-table thead th {
+		padding: 1em 3em;
+		font-size: 1.1em;
+	}
+}
