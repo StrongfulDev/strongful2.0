@@ -17,6 +17,7 @@
     {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
     {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
     <script src="{{ 'component-swiper.js' | asset_url }}" defer="defer" async="async"></script>
+    {{ 'component-similar-items.js' | asset_url | script_tag }}
 
     {%- style -%}
       {% comment %}
@@ -85,7 +86,7 @@
                             {% render block %}
                         {%- when 'text' -%}
                             <p
-                                    class="product__text{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
+                                    class="product__text {% if block.settings.is_vendor %}product-vendor{% endif %}{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
                                     {{ block.shopify_attributes }}
                             >
                                 {{- block.settings.text -}}
@@ -673,6 +674,12 @@
           "default": "Text block",
           "label": "t:sections.main-product.blocks.text.settings.text.label"
         },
+          {
+            "type": "checkbox",
+            "id": "is_vendor",
+            "label": "t:sections.main-product.blocks.text.settings.is_vendor.label",
+            "default": false
+          },
         {
           "type": "select",
           "id": "text_style",

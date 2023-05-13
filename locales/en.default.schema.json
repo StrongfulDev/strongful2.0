@@ -2269,6 +2269,9 @@
             "text": {
               "label": "Text"
             },
+            "is_vendor": {
+              "label": "Is vendor"
+            },
             "text_style": {
               "label": "Text style",
               "options__1": {

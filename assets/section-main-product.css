@@ -1657,10 +1657,28 @@ variant-radios fieldset {
 .similar-a, .similar-a img {
 	display: block;
 	width: 100%;
+	position: relative;
 }
 
 .productVendor {
 	font-size: var(--font-body-size-small);
+}
+
+.first-similar-item {
+	order: 1;
+	grid-column: 1/2;
+	grid-row: 1/2;
+}
+
+.first-similar-item a:after {
+	position: absolute;
+	bottom: 0;
+	height: 3px;
+	background: #000;
+	width: 100%;
+	display: block;
+	content: "";
+	left: 0;
 }
 
 @media screen and (min-width: 990px) {
