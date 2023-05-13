@@ -171,7 +171,8 @@
       "xr_button_label": "View in your space, loads item in augmented reality window",
       "include_taxes": "Tax included.",
       "shipping_policy_html": "<a href=\"{{ link }}\">Shipping<\/a> calculated at checkout.",
-      "shipping_sizes": "*כל המידות בס״מ"
+      "shipping_sizes": "*כל המידות בס״מ",
+      "size_table": "טבלת מידות"
     },
     "modal": {
       "label": "Media gallery"

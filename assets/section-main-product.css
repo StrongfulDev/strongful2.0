@@ -1681,6 +1681,16 @@ variant-radios fieldset {
 	left: 0;
 }
 
+variant-radios {
+	position: relative;
+}
+
+.size-table-toggler {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
 @media screen and (min-width: 990px) {
 
     .product.grid {
