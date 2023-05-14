@@ -11,7 +11,7 @@ class CartRewards {
 	lastCartTotalValue = 0;
 
 	async init() {
-		this.rules = window.rewards_rules;
+		this.rules = window.rewardsRules;
 
 		console.log("Reward rules", this.rules);
 

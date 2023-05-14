@@ -11,38 +11,6 @@
     }
 </script>
 
-<script type="application/javascript">
-    window.rewards_translation = {
-        set_shipping: {
-            message: '{{ 'rewards.free_shipping.message_html' | t }}',
-        },
-        give_free_bottle: {
-            message: '{{ 'rewards.free_bottle.message_html' | t }}',
-        }
-    };
-    window.rewards_rules = [
-        {% for reward in shop.metaobjects.reward.values %}
-        {
-            title: "{{ reward.title.value }}",
-            element_class: "{{ reward.element_class.value }}",
-            condition: {
-                type: "{{ reward.condition_type.value }}",
-                operator: "{{ reward.condition_operator.value }}",
-                value: parseInt("{{ reward.condition_value.value }}"),
-                message: `{{ reward.condition_message.value }}`,
-            },
-            reward: {
-                action: "{{ reward.reward_action.value }}",
-                amount: parseInt("{{ reward.reward_amount.value }}"),
-                products: eval(`{{ reward.reward_products }}`),
-                product_method: "{{ reward.product_rewards_method.value }}",
-                message: `{{ reward.reward_message.value }}`,
-            }
-        },
-        {% endfor %}
-    ]
-</script>
-
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
 
 <style>
