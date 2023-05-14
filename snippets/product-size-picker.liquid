@@ -40,7 +40,7 @@
                         </div>
                     </div>
                     <span class="product_size_picker__heading fix-direction">{{ section.settings.quick_add_text }}</span>
-                    <div class="product-size-picker">
+                    <div class="product-size-picker {% if template.name == 'product' %}products-product-size-picker{% endif %}">
                         <product-form class="size-variant-product-form">
                             {%- form 'product', product, class: 'product_size_picker__form form', data-type: 'add-to-cart-form' -%}
                                 <div class="product_variants {% if product.has_only_default_variant %}hidden{% endif %}">
@@ -74,7 +74,7 @@
                                                             <label for="radio_{{ variant.id }}"
                                                                     {% if product_disabled %} disabled="disabled"{% endif %}
 
-                                                                   class="product_size_picker__button__label {% if product.selected_variant == variant %}selected{% endif %}">
+                                                                   class="product_size_picker__button__label">
                                                                 <span>
                                                                     {{ variant.title | escape }}
                                                                     <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
@@ -133,7 +133,7 @@
                                                 {% if product.has_only_default_variant %}class="product_size_picker__button default_input"
                                                     checked{% else %}class="product_size_picker__button new_input shoppable"{% endif %}>
                                                 <label for="radio_{{ variant.id }}"
-                                                       class="product_size_picker__button__label {% if product.selected_variant == variant %}selected{% endif %}">
+                                                       class="product_size_picker__button__label">
                                                     {{ variant.title | escape }}
                                                     <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
                                                 </label>
@@ -197,7 +197,7 @@
                       {% if product.has_only_default_variant %}class="product_size_picker__button default_input"
                         checked{% else %}class="product_size_picker__button new_input shoppable"{% endif %}>
                       <label for="radio_{{ variant.id }}"
-                             class="product_size_picker__button__label {% if product.selected_variant == variant %}selected{% endif %}">
+                             class="product_size_picker__button__label">
                         {{ variant.title | escape }}
                         <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
                       </label>

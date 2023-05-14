@@ -120,6 +120,7 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
+	z-index: 2;
 }
 
 cart-drawer-items.is-empty + .drawer__footer {

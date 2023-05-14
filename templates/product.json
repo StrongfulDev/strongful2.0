@@ -170,11 +170,18 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "main-product-quick-add": {
+      "type": "main-product-quick-add",
+      "settings": {
+        "quick_add_type_mobile": "modal"
+      }
     }
   },
   "order": [
     "main",
     "complete-look-products",
-    "related-products"
+    "related-products",
+    "main-product-quick-add"
   ]
 }

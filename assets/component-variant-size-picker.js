@@ -18,15 +18,33 @@ function quickAdd() {
   $('#MainContent')
     .on("click", '.variant_selector.submit_on_click .size_variant_button:not(.disabled-variant-button)', function (e) {
       const element = $(this);
-      element.find(".size_variant_button_add").hide();
-      element.find(".size-picker-loading").addClass("block");
-      setTimeout(() => {
-        element.parents("form").find('[type="submit"]').click()
-      }, 100);
-      setTimeout(() => {
-        element.find(".size_variant_button_add").show();
-        element.find(".size-picker-loading").removeClass("block");
-      }, 500);
+	    if (element.parents(".products-product-size-picker") !== undefined) {
+		    const elementFormGrandParent = element.parents(".products-product-size-picker");
+				const variantButtons = document.querySelectorAll("variant-radios .product-form__input input[type='radio']");
+		    const elementText = element.find("span").first().text().replace(/\s/g,'').slice(0, -27);
+		    console.log(elementText);
+				for (let i = 0; i < variantButtons.length; i++) {
+					if (variantButtons[i].value === elementText) {
+						variantButtons[i].click();
+							setTimeout(() => {
+								$(".sticky-cart-cta .variant_selector").toggle();
+								$(".sticky-cart-cta-overlay").toggle();
+								$("variant-radios").siblings("div").find("button.product-form__submit.button.button--full-width.button--primary span").click();
+							}, 2000);
+						break;
+					}
+				}
+	    } else {
+		    element.find(".size_variant_button_add").hide();
+		    element.find(".size-picker-loading").addClass("block");
+		    setTimeout(() => {
+			    element.parents("form").find('[type="submit"]').click();
+		    }, 500);
+		    setTimeout(() => {
+			    element.find(".size_variant_button_add").show();
+			    element.find(".size-picker-loading").removeClass("block");
+		    }, 500);
+	    }
     })
     .on("click", ".variant_modal__toggle_button, .variant_modal__toggle_button svg", function (e) {
         const element = $(this);
