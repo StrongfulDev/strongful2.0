@@ -124,7 +124,7 @@
 
                                         <tbody role="rowgroup">
                                         {%- for item in cart.items -%}
-                                            <tr id="CartDrawer-Item-{{ item.index | plus: 1 }}" class="cart-item"
+                                            <tr id="CartDrawer-Item-{{ item.index | plus: 1 }}" data-index="{{ item.index | plus: 1 }}" data-id="{{ item.id }}" class="cart-item"
                                                 role="row">
                                                 <td class="cart-item__media" role="cell"
                                                     headers="CartDrawer-ColumnProductImage">

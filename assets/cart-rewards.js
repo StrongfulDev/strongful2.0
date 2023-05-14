@@ -1,18 +1,18 @@
 class CartRewards {
 	constructor(parentContainer) {
 		this.container = $(parentContainer);
+		this.cartElement = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
 	}
 
 	cart;
-	rules = []
+	error;
+	rules = window.rewardsRules
 	allRewardsAmount = 0;
 	activeRewards = 0;
 	cartTotalValue = 0;
 	lastCartTotalValue = 0;
 
 	async init() {
-		this.rules = window.rewardsRules;
-
 		console.log("Reward rules", this.rules);
 
 		this.allRewardsAmount = Math.max.apply(Math, this.rules.map(function (o) {
@@ -20,6 +20,8 @@ class CartRewards {
 		}));
 
 		subscribe(PUB_SUB_EVENTS.cartUpdate, (event) => {
+			if (event.source === 'cart-rewards') return;
+
 			this.checkRules();
 		});
 
@@ -68,6 +70,7 @@ class CartRewards {
 	}
 
 	async toggleRewardItem(isActive, rule) {
+
 		const rewardItem = this.getRewardItemByRule(rule);
 
 		if (isActive) {
@@ -78,66 +81,105 @@ class CartRewards {
 
 		switch (rule.reward.action) {
 			case "gift_product":
-				this.handleGiftReward(rule, isActive);
+				await this.handleGiftReward(rule, isActive);
 				break;
 		}
 	}
 
-	async removeProduct(productId) {
-		const config = fetchConfig('javascript');
-
-		config.body = JSON.stringify({
-			id: productId,
-			quantity: 0
-		});
-
-		const res = await fetch(`${routes.cart_change_url}`, config);
-		return res.json();
-	}
-
 	async handleGiftReward(rule, isActive) {
-		if (!isActive) {
-			for (const productGid of rule.reward.products) {
-				const productId = productGid.split("/").pop();
-				if (this.productsExistInCart([productId])) {
-					this.removeProduct(productId)
-				}
+		const productIds = rule.reward.products.map(productGid => productGid.split("/").pop()).filter((id) => !!id);
+
+		const isJustOne = rule.reward.product_method === "Just one that's available";
+
+		for (const productId of productIds) {
+			const productInCart = this.productsExistInCart([productId]);
+
+			if (productInCart && !isActive) {
+				await this.removeProduct(productId)
+				continue;
 			}
 
-			return;
-		}
-
-		for (const productGid of rule.reward.products) {
-			const productId = productGid.split("/").pop();
-
-			if (this.productsExistInCart([productId]))
-				return;
-
-			if (rule.reward.product_method === "Add all products to cart") {
-				this.addProduct(productId)
-			} else {
+			if (!productInCart && isActive) {
 				const res = await this.addProduct(productId)
-
-				if (res.items.length > 0) {
+				if (isJustOne && res?.items?.length > 0) {
 					return;
 				}
 			}
 		}
+	}
 
+	async removeProduct(productId) {
+		const drawerItems = document.querySelector('cart-drawer-items');
+
+		const cartItem = this.cart.items.find(item => item.id === parseInt(productId));
+		const cartItemIndex = $(`.cart-item[data-id="${productId}"]`).data('index')
+
+		if (cartItem)
+			drawerItems.updateQuantity(cartItemIndex, 0);
 	}
 
 	async addProduct(productId) {
 		const config = fetchConfig('javascript');
 
-		config.body = JSON.stringify({
+		let data = {
 			items: [{
 				quantity: 1,
 				id: productId
 			}]
-		});
+		}
 
-		const res = await fetch(`${routes.cart_add_url}`, config);
-		return res.json();
+		if (this.cartElement) {
+			data.sections = this.cartElement.getSectionsToRender().map((section) => section.id);
+			data.sections_url = window.location.pathname;
+			this.cartElement.setActiveElement(document.activeElement);
+		}
+
+		config.body = JSON.stringify(data);
+
+		try {
+			const res = await fetch(`${routes.cart_add_url}`, config);
+			const response = await res.json();
+
+			if (false && response.status) {
+				console.log("Error adding product to cart", response);
+
+				publish(PUB_SUB_EVENTS.cartError, {
+					source: 'cart-rewards',
+					productVariantId: productId,
+					errors: response.description,
+					message: response.message
+				});
+
+				this.handleErrorMessage(response.description);
+
+				return;
+			}
+
+			publish(PUB_SUB_EVENTS.cartUpdate, {
+				source: 'cart-rewards',
+				productVariantId: productId
+			});
+
+			this.cartElement.renderContents(response);
+
+			// if (quickAddModal) {
+			// 	document.body.addEventListener('modalClosed', () => {
+			// 		setTimeout(() => {
+			// 			this.cartElement.renderContents(response)
+			// 		});
+			// 	}, {once: true});
+			// 	quickAddModal.hide(true);
+			// } else {
+			// 	this.cartElement.renderContents(response);
+			// }
+
+			return response
+		} catch (e) {
+			console.error(e);
+		} finally {
+			this.loading(false)
+			if (this.cartElement && this.cartElement.classList.contains('is-empty')) this.cartElement.classList.remove('is-empty');
+		}
 	}
 
 	trackProgress() {
@@ -152,8 +194,10 @@ class CartRewards {
 		const rewardText = $(".reward-text");
 		const messageClass = `${reward.element_class}-message`;
 		const currentMessage = $(`.${messageClass}`);
+		const isLastRule = ruleIndex === this.rules.length - 1;
+		const isLatestActiveRule = ruleIndex === this.activeRewards;
 
-		if (ruleIndex === this.activeRewards) {
+		if (isLatestActiveRule) {
 			if (currentMessage.length <= 0) {
 				if (isActive) {
 					currentMessage.remove();
@@ -164,7 +208,7 @@ class CartRewards {
 			}
 
 			rewardText.find('.rewards__missing_amount').text(rule.condition.value - this.cartTotalValue);
-		} else if (ruleIndex === this.rules.length - 1 && isActive) {
+		} else if (isLastRule && isActive) {
 			rewardText.text(rule.reward.message);
 		}
 	}
@@ -183,7 +227,8 @@ class CartRewards {
 
 	cartHasReward(rule, ruleIndex) {
 		if (rule.reward.action === "gift_product") {
-			let productsExist = this.productsExistInCart(rule.reward.products);
+			const productIds = rule.reward.products.map(productGid => productGid.split("/").pop()).filter((id) => !!id);
+			let productsExist = this.productsExistInCart(productIds);
 
 			if (rule.reward.product_method === "Add all products to cart") {
 				return productsExist === rule.reward.products.length;
@@ -195,19 +240,18 @@ class CartRewards {
 		return ruleIndex <= this.activeRewards
 	}
 
-	productsExistInCart(productGids) {
-		let productsExist = 0;
+	productsExistInCart(productIds) {
+		let productsExist = [];
 
-		for (const productGid of productGids) {
-			const productId = parseInt(productGid.split("/").pop());
-			const isProductExists = this.cart.items.some(item => item.id === productId);
+		for (const productId of productIds) {
+			const isProductExists = this.cart.items.some(item => item.id === parseInt(productId));
 
 			if (isProductExists) {
-				productsExist += 1;
+				productsExist.push(productId);
 			}
 		}
 
-		return productsExist;
+		return productsExist.length > 0 ? productsExist : false;
 	}
 
 	loading(isLoading) {
@@ -220,6 +264,20 @@ class CartRewards {
 		//         opacity: 1
 		//     }, 300);
 		// }
+	}
+
+	handleErrorMessage(errorMessage = false) {
+		if (this.hideErrors) return;
+
+		this.errorMessageWrapper = this.errorMessageWrapper || this.querySelector('.cart-rewards__error-message-wrapper');
+		if (!this.errorMessageWrapper) return;
+		this.errorMessage = this.errorMessage || this.errorMessageWrapper.querySelector('.cart-rewards__error-message');
+
+		this.errorMessageWrapper.toggleAttribute('hidden', !errorMessage);
+
+		if (errorMessage) {
+			this.errorMessage.textContent = errorMessage;
+		}
 	}
 }
 
