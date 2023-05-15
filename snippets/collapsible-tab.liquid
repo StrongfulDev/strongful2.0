@@ -42,6 +42,11 @@
                             product: product,
                             block: block
                     %}
+                {% when "gift_card_usage" %}
+                    {% render 'product-gift-card-usage',
+                            product: product,
+                            block: block
+                    %}
             {% endcase %}
         </div>
     </details>

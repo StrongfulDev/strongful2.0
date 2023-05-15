@@ -2466,6 +2466,9 @@
               },
               "options__4": {
                 "label": "Shipping information"
+              },
+              "options__5": {
+                "label": "Gift Card Usage"
               }
             },
             "icon": {

@@ -1,0 +1,40 @@
+{% comment %}
+  Renders a table with product specific sizing
+  Accepts:
+  - product: {Object} product object.
+  - block: {Object} block object.
+  -
+
+  Usage:
+  {% render 'product-gift-card-usage',
+    product: product,
+    block: block
+  %}
+{% endcomment %}
+
+{% comment %} TODO: Extract the following assignments to dashboard {% endcomment %}
+
+<div class="product-meta-content">
+    <div class="product-shipping-dropdown">
+        <ul class="gift-card-list">
+            <li class="gift-card-li">
+                - קונים באתר לפי הסכום שתרצו להעניק.
+            </li>
+            <li class="gift-card-li">
+                - מקבלים למייל גיפט קארד דיגיטלי עם קוד.
+            </li>
+            <li class="gift-card-li">
+                - מזינים את הקוד שקיבלתן במעמד התשלום ונהנים מהמתנה!
+            </li>
+            <li class="gift-card-li">
+                * בקניית גיפט קארד ניתן להזין את המייל אליו תרצו לשלוח את המתנה.
+            </li>
+            <li class="gift-card-li">
+                * לא ניתן לקנות גיפט קארד עם קוד קופון.
+            </li>
+            <li class="gift-card-li">
+                * הגיפט קארד תקף לשנתיים.
+            </li>
+        </ul>
+    </div>
+</div>

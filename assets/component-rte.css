@@ -34,8 +34,9 @@
 
 .rte ul,
 .rte ol {
-  list-style-position: inside;
+  list-style: none;
   padding-left: 2rem;
+	padding-right: 2rem;
 }
 
 .rte li {
