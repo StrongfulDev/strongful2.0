@@ -180,7 +180,6 @@ class CartRewards {
 		} catch (e) {
 			console.error(e);
 		} finally {
-			this.loading(false)
 			if (this.cartElement && this.cartElement.classList.contains('is-empty')) this.cartElement.classList.remove('is-empty');
 		}
 	}
