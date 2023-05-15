@@ -451,3 +451,7 @@ cart-drawer.loading .rewards-section {
 	padding-left: .5rem;
 	margin-left: .5rem;
 }
+
+cart-drawer-items {
+	height: calc(100vh - 273px);
+}
