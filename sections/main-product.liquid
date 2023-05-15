@@ -20,6 +20,7 @@
     {% unless product.tags contains 'noSimilar' %}
         {{ 'component-similar-items.js' | asset_url | script_tag }}
     {% endunless %}
+    {{ 'product-collapsible.js' | asset_url | script_tag }}
 
     {%- style -%}
       {% comment %}

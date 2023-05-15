@@ -33,10 +33,12 @@
                 {% when "description" %}
                     {{ product.content }}
                 {% when "sizing_table" %}
+                {% unless product.tags contains 'אקססוריז' %}
                     {% render 'product-sizing-table',
                             product: product,
                             block: block
                     %}
+                {% endunless %}
                 {% when "shipping_information" %}
                     {% render 'product-shipping-information',
                             product: product,
