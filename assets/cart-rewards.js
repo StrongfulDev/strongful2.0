@@ -1,20 +1,27 @@
 class CartRewards {
 	constructor(parentContainer) {
 		this.container = $(parentContainer);
+		this.cartElement = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
 	}
 
-	rules = []
+	cart;
+	error;
+	rules = window.rewardsRules
 	allRewardsAmount = 0;
 	activeRewards = 0;
 	cartTotalValue = 0;
 	lastCartTotalValue = 0;
 
 	async init() {
-		if (this.rules.length === 0) {
-			await this.getRewards();
-		}
+		console.log("Reward rules", this.rules);
+
+		this.allRewardsAmount = Math.max.apply(Math, this.rules.map(function (o) {
+			return o.condition.value;
+		}));
 
 		subscribe(PUB_SUB_EVENTS.cartUpdate, (event) => {
+			if (event.source === 'cart-rewards') return;
+
 			this.checkRules();
 		});
 
@@ -25,51 +32,155 @@ class CartRewards {
 		this.loading(true);
 
 		this.lastCartTotalValue = this.cartTotalValue;
-		this.cartTotalValue = await this.getCartTotal();
+		this.cart = await this.getCart();
+		this.cartTotalValue = parseInt(this.cart.total_price / 100)
 		this.activeRewards = 0
 
 		this.rules.forEach((rule, index) => {
-			this.checkAndApplyRule(rule, index);
+			const isConditionMet = this.checkCondition(rule);
+			const isRewardInCart = this.cartHasReward(rule);
+			const rewardItem = this.getRewardItemByRule(rule);
+
+			// If the state changed
+			if (isRewardInCart !== isConditionMet) {
+				this.toggleReward(isConditionMet, rule);
+			}
+
+			this.trackProgress();
+			this.toggleMessage(isConditionMet, rule, index);
+
+			if (isConditionMet) {
+				rewardItem.addClass("active-reward");
+			} else {
+				rewardItem.removeClass("active-reward");
+			}
 		});
 
 		this.loading(false);
 	}
 
-	checkAndApplyRule(rule, ruleIndex = 0) {
-		let isActive = false;
+	checkCondition(rule) {
+		let isConditionMet = false;
 
 		switch (rule.condition.type) {
 			case "CartAmount":
-				const isRewardActive = this.cartHasReward(rule.reward);
-				const isAmountGreaterThan = rule.condition.operator === ">=" && this.cartTotalValue >= rule.condition.value;
-				const isAmountLessThan = rule.condition.operator === "<=" && this.cartTotalValue <= rule.condition.value;
-				isActive = !isRewardActive && (isAmountGreaterThan || isAmountLessThan);
-				break;
-			case "CartItems":
+				const isRightQuantity = this.checkProductQuantity(rule);
+				const isAmountGreaterThan = rule.condition.operator === "Greater than or equal" && this.cartTotalValue >= rule.condition.value;
+				const isAmountLessThan = rule.condition.operator === "Less than or equal" && this.cartTotalValue <= rule.condition.value;
+				isConditionMet = (isRightQuantity || isRightQuantity === null) && (isAmountGreaterThan || isAmountLessThan)
+
 				break;
 		}
 
-		if (isActive)
+		return isConditionMet;
+	}
+
+	async toggleReward(isConditionMet, rule) {
+		switch (rule.reward.action) {
+			case "gift_product":
+				await this.handleGiftReward(rule, isConditionMet);
+				break;
+		}
+
+		if (isConditionMet) {
 			this.activeRewards += 1;
-
-		this.handleRewards(rule, isActive, ruleIndex);
-
-		return isActive;
-	}
-
-	handleRewards(rule, isActive, ruleIndex) {
-		this.trackProgress();
-		this.toggleRewardItem(isActive, rule);
-		this.toggleMessage(isActive, rule, ruleIndex);
-	}
-
-	toggleRewardItem(isActive, rule) {
-		const rewardItem = this.getRewardItemByRule(rule);
-
-		if (isActive) {
-			rewardItem.addClass("active-reward");
 		} else {
-			rewardItem.removeClass("active-reward");
+			this.activeRewards -= 1;
+		}
+	}
+
+	async handleGiftReward(rule, isConditionMet) {
+		const productIds = this.getProductIdsFromRule(rule)
+		const isJustOne = rule.reward.product_method === "Just one that's available";
+
+		for (const productId of productIds) {
+			const productInCart = this.productsExistInCart([productId]);
+			const isRightQuantity = this.checkProductQuantity(rule, productId);
+
+			if (productInCart && (!isConditionMet || !isRightQuantity)) {
+				await this.removeProduct(productId)
+				continue;
+			}
+
+			if (!productInCart && isConditionMet) {
+				const res = await this.addProduct(productId)
+				if (isJustOne && res?.items?.length > 0) {
+					return;
+				}
+			}
+		}
+	}
+
+	async removeProduct(productId) {
+		const drawerItems = document.querySelector('cart-drawer-items');
+
+		const cartItem = this.cart.items.find(item => item.id === parseInt(productId));
+		const cartItemIndex = $(`.cart-item[data-id="${productId}"]`).data('index')
+
+		if (cartItem)
+			drawerItems.updateQuantity(cartItemIndex, 0);
+	}
+
+	async addProduct(productId) {
+		const config = fetchConfig('javascript');
+
+		let data = {
+			items: [{
+				quantity: 1,
+				id: productId
+			}]
+		}
+
+		if (this.cartElement) {
+			data.sections = this.cartElement.getSectionsToRender().map((section) => section.id);
+			data.sections_url = window.location.pathname;
+			this.cartElement.setActiveElement(document.activeElement);
+		}
+
+		config.body = JSON.stringify(data);
+
+		try {
+			const res = await fetch(`${routes.cart_add_url}`, config);
+			const response = await res.json();
+
+			if (false && response.status) {
+				console.log("Error adding product to cart", response);
+
+				publish(PUB_SUB_EVENTS.cartError, {
+					source: 'cart-rewards',
+					productVariantId: productId,
+					errors: response.description,
+					message: response.message
+				});
+
+				this.handleErrorMessage(response.description);
+
+				return;
+			}
+
+			publish(PUB_SUB_EVENTS.cartUpdate, {
+				source: 'cart-rewards',
+				productVariantId: productId
+			});
+
+			this.cartElement.renderContents(response);
+
+			// if (quickAddModal) {
+			// 	document.body.addEventListener('modalClosed', () => {
+			// 		setTimeout(() => {
+			// 			this.cartElement.renderContents(response)
+			// 		});
+			// 	}, {once: true});
+			// 	quickAddModal.hide(true);
+			// } else {
+			// 	this.cartElement.renderContents(response);
+			// }
+
+			return response
+		} catch (e) {
+			console.error(e);
+		} finally {
+			if (this.cartElement && this.cartElement.classList.contains('is-empty')) this.cartElement.classList.remove('is-empty');
 		}
 	}
 
@@ -80,56 +191,87 @@ class CartRewards {
 		})
 	}
 
-	toggleMessage(isActive, rule, ruleIndex) {
-		const reward = rule.reward;
+	toggleMessage(isConditionMet, rule, ruleIndex) {
 		const rewardText = $(".reward-text");
-		const messageClass = `${reward.active_class}-message`;
-		const currentMessage = $(`.${messageClass}`);
+		const isLatestActiveRule = ruleIndex >= this.activeRewards && isConditionMet;
+		const isLatestDeactivatedRule = ruleIndex === this.activeRewards && !isConditionMet;
+		const missingAmount = rule.condition.value - this.cartTotalValue;
 
-		if (ruleIndex === this.activeRewards) {
-			if (currentMessage.length <= 0) {
-				if (isActive) {
-					currentMessage.remove();
-				} else {
-					const rewardMessage = $(`<span class="${messageClass}" data-index="${ruleIndex}">${window.rewards_translation[reward.action]?.message}</span>`);
-					rewardText.html(rewardMessage);
-				}
-			}
-
-			rewardText.find('.rewards__missing_amount').text(reward.value - this.cartTotalValue);
-		} else if (ruleIndex === this.rules.length - 1 && isActive) {
-			rewardText.text("");
+		// Apply reward message.
+		if (isLatestActiveRule) {
+			rewardText.html(rule.reward.message);
+		}
+		// Apply condition message.
+		else if (isLatestDeactivatedRule && missingAmount > 0) {
+			const rewardMessage = $(`<span class="${rule.element_class}-message" data-index="${ruleIndex}">${rule.condition.message}</span>`);
+			rewardMessage.find('.rewards__missing_amount').text(missingAmount);
+			rewardText.html(rewardMessage);
 		}
 	}
 
-	async getRewards() {
-		return new Promise((resolve, reject) => {
-			jQuery.getJSON("/assets/cart-rewards-rules.json", (rules) => {
-				this.rules = rules;
-
-				this.allRewardsAmount = Math.max.apply(Math, rules.map(function (o) {
-					return o.reward.value;
-				}));
-
-				resolve(rules);
-			});
-		});
-	}
-
-	getCartTotal() {
+	getCart() {
 		return new Promise((resolve, reject) => {
 			jQuery.getJSON("/cart.js", function (cart) {
-				resolve(parseInt(cart.total_price / 100));
+				resolve(cart);
 			});
 		});
 	}
 
 	getRewardItemByRule(rule) {
-		return $(`.reward-item.${rule.reward.active_class}`)
+		return $(`.reward-item.${rule.element_class}`)
 	}
 
-	cartHasReward(reward, ruleIndex) {
+	cartHasReward(rule, ruleIndex) {
+		if (rule.reward.action === "gift_product") {
+			const productIds = rule.reward.products.map(productGid => productGid.split("/").pop()).filter((id) => !!id);
+			let productsExist = this.productsExistInCart(productIds);
+
+			if (rule.reward.product_method === "Add all products to cart") {
+				// UNTESTED
+				return productsExist === rule.reward.products.length;
+			} else {
+				return productsExist?.length >= 1;
+			}
+		}
+
 		return ruleIndex <= this.activeRewards
+	}
+
+	checkProductQuantity(rule) {
+		if (rule.reward.action !== "gift_product") return true;
+
+		const acceptableQuantity = 1;
+		const productIds = this.getProductIdsFromRule(rule)
+		const productIdsInCart = this.productsExistInCart(productIds);
+
+		if (!productIdsInCart) return null;
+
+		if (rule.reward.product_method === "Add all products to cart") {
+			for (const productId of productIdsInCart) {
+				const product = this.cart.items.find(item => item.id === parseInt(productId));
+				if (product.quantity !== acceptableQuantity)
+					return false
+			}
+
+			return true;
+		}
+
+		const product = this.cart.items.find(item => item.id === parseInt(productIdsInCart[0]));
+		return product.quantity === acceptableQuantity;
+	}
+
+	productsExistInCart(productIds) {
+		let productsExist = [];
+
+		for (const productId of productIds) {
+			const isProductExists = this.cart.items.some(item => item.id === parseInt(productId));
+
+			if (isProductExists) {
+				productsExist.push(productId);
+			}
+		}
+
+		return productsExist.length > 0 ? productsExist : false;
 	}
 
 	loading(isLoading) {
@@ -142,6 +284,24 @@ class CartRewards {
 		//         opacity: 1
 		//     }, 300);
 		// }
+	}
+
+	getProductIdsFromRule(rule) {
+		return rule.reward.products.map(productGid => productGid.split("/").pop()).filter((id) => !!id);
+	}
+
+	handleErrorMessage(errorMessage = false) {
+		if (this.hideErrors) return;
+
+		this.errorMessageWrapper = this.errorMessageWrapper || this.querySelector('.cart-rewards__error-message-wrapper');
+		if (!this.errorMessageWrapper) return;
+		this.errorMessage = this.errorMessage || this.errorMessageWrapper.querySelector('.cart-rewards__error-message');
+
+		this.errorMessageWrapper.toggleAttribute('hidden', !errorMessage);
+
+		if (errorMessage) {
+			this.errorMessage.textContent = errorMessage;
+		}
 	}
 }
 
