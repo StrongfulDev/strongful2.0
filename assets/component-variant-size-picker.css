@@ -37,7 +37,7 @@
     display: none;
 }
 
-.product_variants .size_variant_button_container input:checked + label {
+.product_variants .variant-button .size_variant_button_container input:checked + label {
     background-color: rgb(var(--color-foreground));
     color: rgb(var(--color-background));
 }
@@ -225,6 +225,10 @@
     .variant_modal.mobile, .variant_modal__toggle_button.mobile {
         display: none;
     }
+
+	.variant_modal .product_variants .size_variant_button_container:hover {
+		border-bottom: black 1px solid;
+	}
 }
 
 .add_to_cart_container .loading-overlay {

@@ -8,6 +8,7 @@ window.addEventListener("DOMContentLoaded", function() {
 	}
 
 	$(".variant_modal .quick_add_modal__close").click(toggleQuickAdd);
+	$(".sticky-cart-cta-overlay").click(toggleQuickAdd);
 	stickyButton.addEventListener('click', toggleQuickAdd);
 
 	const el = document.querySelector(".product-loyalty-container");
