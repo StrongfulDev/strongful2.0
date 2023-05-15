@@ -1,37 +1,52 @@
 $(document).ready(function () {
-  $('.model-switch').change(function () {
-    const modelSize = $(this).val();
-    if (modelSize) {
-      changeModel(modelSize);
-      updateVariantRadios(modelSize);
-    }
-  });
+    $('.model-switcher__item input').change(function () {
+        const modelSize = $(this).val();
+        if (modelSize) {
+            changeModel(modelSize);
+            updateVariantRadios(modelSize);
+        }
+    });
 
-  $('variant-radios input[name="Size"]').on('change', function () {
-    const modelSize = $(this).val();
-    changeModel(modelSize);
-    updateModelSwitch(modelSize);
-  });
+    $('variant-radios input[name="Size"], variant-radios input[name="מידה"]').on('change', function () {
+        const modelSize = $(this).val();
+        changeModel(modelSize);
+        updateModelSwitch(modelSize);
+    });
+
+    const modelSize = localStorage.getItem('modelSize');
+    if (modelSize) {
+        changeModel(modelSize);
+    }
 });
 
 
 function changeModel(modelSize) {
-  const list = $('.product__media-list');
+    const list = $('.product__media-list');
 
-  const imagesToHide = list.find(`.product__media-item:not([data-model-size="${modelSize}"])`);
-  const imagesToShow = list.find(`.product__media-item[data-model-size="${modelSize}"]`);
+    const imagesToHide = list.find(`.product__media-item:not([data-model-size="${modelSize}"])`);
+    const imagesToShow = list.find(`.product__media-item[data-model-size="${modelSize}"]`);
 
-  imagesToHide.hide();
-  imagesToShow.show();
+    if (imagesToShow.length > 0) {
+        imagesToHide.hide();
+        imagesToShow.show();
+    }
+
+    localStorage.setItem('modelSize', modelSize);
+
+    const model = window.models[modelSize];
+
+    $('.model-switch-button span').text(model ? `${model.name} (${modelSize})` : `${modelSize}`);
 }
 
 function updateVariantRadios(modelSize) {
-  $(`variant-radios input[name="Size"][value="${modelSize}"]`).prop('checked', true);
+    const button = $(`variant-radios input[name="Size"][value="${modelSize}"], variant-radios input[name="מידה"][value="${modelSize}"]`)
+    button.prop('checked', true);
 }
 
 function updateModelSwitch(modelSize) {
-  $('select.model-switch option')
-    .removeAttr('selected')
-    .filter(`[value="${modelSize}"]`)
-    .attr('selected', true);
+    const inputs = $('.model-switcher__item input')
+    inputs
+        .removeAttr('checked')
+        .filter(`[value="${modelSize}"]`)
+        .attr('checked', true).prop('checked', true);
 }
