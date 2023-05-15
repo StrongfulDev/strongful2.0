@@ -37,43 +37,48 @@ class CartRewards {
 		this.activeRewards = 0
 
 		this.rules.forEach((rule, index) => {
-			const isActive = this.handleCondition(rule);
-			this.handleReward(rule, isActive, index);
+			const isConditionMet = this.handleCondition(rule);
+			const isRewardActive = this.cartHasReward(rule);
+
+			this.trackProgress();
+			this.toggleMessage(isConditionMet, rule, index);
+
+			if (isRewardActive === isConditionMet) {
+				console.log(rule.title, `is already active of ${this.activeRewards} active rewards`);
+				return;
+			} else {
+				this.toggleReward(isConditionMet, rule);
+			}
+
+			if (isConditionMet)
+				this.activeRewards += 1;
+			else
+				this.activeRewards -= 1;
 		});
 
 		this.loading(false);
 	}
 
 	handleCondition(rule) {
-		let isActive = false;
+		let isConditionMet = false;
 
 		switch (rule.condition.type) {
 			case "CartAmount":
-				const isRewardActive = this.cartHasReward(rule);
 				const isAmountGreaterThan = rule.condition.operator === "Greater than or equal" && this.cartTotalValue >= rule.condition.value;
 				const isAmountLessThan = rule.condition.operator === "Less than or equal" && this.cartTotalValue <= rule.condition.value;
-				isActive = !isRewardActive && (isAmountGreaterThan || isAmountLessThan);
+				isConditionMet = isAmountGreaterThan || isAmountLessThan
 
 				break;
 		}
 
-		return isActive;
+		return isConditionMet;
 	}
 
-	handleReward(rule, isActive, ruleIndex) {
-		if (isActive)
-			this.activeRewards += 1;
-
-		this.trackProgress();
-		this.toggleRewardItem(isActive, rule);
-		this.toggleMessage(isActive, rule, ruleIndex);
-	}
-
-	async toggleRewardItem(isActive, rule) {
+	async toggleReward(isConditionMet, rule) {
 
 		const rewardItem = this.getRewardItemByRule(rule);
 
-		if (isActive) {
+		if (isConditionMet) {
 			rewardItem.addClass("active-reward");
 		} else {
 			rewardItem.removeClass("active-reward");
@@ -81,12 +86,12 @@ class CartRewards {
 
 		switch (rule.reward.action) {
 			case "gift_product":
-				await this.handleGiftReward(rule, isActive);
+				await this.handleGiftReward(rule, isConditionMet);
 				break;
 		}
 	}
 
-	async handleGiftReward(rule, isActive) {
+	async handleGiftReward(rule, isConditionMet) {
 		const productIds = rule.reward.products.map(productGid => productGid.split("/").pop()).filter((id) => !!id);
 
 		const isJustOne = rule.reward.product_method === "Just one that's available";
@@ -94,12 +99,12 @@ class CartRewards {
 		for (const productId of productIds) {
 			const productInCart = this.productsExistInCart([productId]);
 
-			if (productInCart && !isActive) {
+			if (productInCart && !isConditionMet) {
 				await this.removeProduct(productId)
 				continue;
 			}
 
-			if (!productInCart && isActive) {
+			if (!productInCart && isConditionMet) {
 				const res = await this.addProduct(productId)
 				if (isJustOne && res?.items?.length > 0) {
 					return;
@@ -189,7 +194,7 @@ class CartRewards {
 		})
 	}
 
-	toggleMessage(isActive, rule, ruleIndex) {
+	toggleMessage(isConditionMet, rule, ruleIndex) {
 		const reward = rule.reward;
 		const rewardText = $(".reward-text");
 		const messageClass = `${reward.element_class}-message`;
@@ -199,7 +204,7 @@ class CartRewards {
 
 		if (isLatestActiveRule) {
 			if (currentMessage.length <= 0) {
-				if (isActive) {
+				if (isConditionMet) {
 					currentMessage.remove();
 				} else {
 					const rewardMessage = $(`<span class="${messageClass}" data-index="${ruleIndex}">${rule.condition.message}</span>`);
@@ -208,7 +213,7 @@ class CartRewards {
 			}
 
 			rewardText.find('.rewards__missing_amount').text(rule.condition.value - this.cartTotalValue);
-		} else if (isLastRule && isActive) {
+		} else if (isLastRule && isConditionMet) {
 			rewardText.text(rule.reward.message);
 		}
 	}
