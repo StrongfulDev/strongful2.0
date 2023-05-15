@@ -91,6 +91,8 @@
                     {%- case block.type -%}
                         {%- when '@app' -%}
                             {% render block %}
+                        {% when 'breadcrumb' %}
+                            {% render 'breadcrumbs' %}
                         {%- when 'text' -%}
                             <p
                                     class="product__text {% if block.settings.is_vendor %}product-vendor{% endif %}{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
@@ -640,6 +642,18 @@
     {
       "type": "@app"
     },
+      {
+        "type": "breadcrumb",
+        "name": "t:sections.main-product.blocks.breadcrumb.name",
+        "settings": [
+          {
+            "type": "checkbox",
+            "id": "show_mobile",
+            "label": "t:sections.main-product.blocks.breadcrumb.settings.show_mobile.label",
+            "default": false
+          }
+        ]
+      },
     {
       "type": "image",
       "name": "t:sections.main-product.blocks.image.name",

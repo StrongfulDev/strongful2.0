@@ -1,5 +1,8 @@
 {
   "general": {
+    "breadcrumbs": {
+      "homepage": "דף בית"
+    },
     "password_page": {
       "login_form_heading": "Enter store using password:",
       "login_password_button": "Enter using password",

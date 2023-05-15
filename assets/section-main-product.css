@@ -1704,6 +1704,44 @@ variant-radios {
 
 @media screen and (min-width: 990px) {
 
+	.breadcrumbs {
+		margin: 1.2em auto 5px;
+		width: 100%;
+		direction: rtl;
+		position: absolute;
+		top: -4rem;
+	}
+
+	.breadcrumbs__list {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.breadcrumbs__item {
+		display: inline-block;
+		margin: 0 0.2em;
+	}
+
+	.breadcrumbs__item a {
+		text-decoration: underline;
+		display: inline-block;
+		color: rgb(var(--color-base-text));
+	}
+
+	.breadcrumbs__item:not(:last-child):after {
+		border-style: solid;
+		border-width: 0.1em 0.1em 0 0;
+		content: "";
+		display: inline-block;
+		height: 0.2em;
+		margin: 0 0.2em;
+		position: relative;
+		transform: rotate(225deg);
+		vertical-align: middle;
+		width: 0.2em;
+	}
+
     .product.grid {
         margin-top: 3rem;
     }

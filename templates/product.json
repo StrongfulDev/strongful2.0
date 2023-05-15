@@ -3,6 +3,12 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "7c99b889-3ad8-4802-a5c7-9802ab40f12c": {
+          "type": "breadcrumb",
+          "settings": {
+            "show_mobile": false
+          }
+        },
         "541e5241-b778-47c7-bac5-f037a6a85960": {
           "type": "custom_liquid",
           "settings": {
@@ -114,6 +120,7 @@
         }
       },
       "block_order": [
+        "7c99b889-3ad8-4802-a5c7-9802ab40f12c",
         "541e5241-b778-47c7-bac5-f037a6a85960",
         "title",
         "vendor",
