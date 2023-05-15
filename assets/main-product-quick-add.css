@@ -69,3 +69,7 @@
 	z-index: 10;
 	display: none;
 }
+
+.sticky-add-to-cart-color + .price .price__regular .price-item.price-item--last {
+	color: #fff;
+}
