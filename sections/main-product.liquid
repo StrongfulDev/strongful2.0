@@ -17,7 +17,9 @@
     {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
     {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
     <script src="{{ 'component-swiper.js' | asset_url }}" defer="defer" async="async"></script>
-    {{ 'component-similar-items.js' | asset_url | script_tag }}
+    {% unless product.tags contains 'noSimilar' %}
+        {{ 'component-similar-items.js' | asset_url | script_tag }}
+    {% endunless %}
 
     {%- style -%}
       {% comment %}
@@ -64,7 +66,9 @@
         >
     {%- endif -%}
 
-    {% render 'main-product-size-table' %}
+    {% unless product.tags contains 'noSizeTable' %}
+        {% render 'main-product-size-table' %}
+    {% endunless %}
 
     {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
 

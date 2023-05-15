@@ -145,9 +145,9 @@
         "93921bbc-631f-46c2-a66b-9df086c3f7a0": {
           "type": "url",
           "settings": {
-            "show_on_mobile": false,
+            "show_on_mobile": true,
             "title": "GIFT CARD",
-            "title_link": "shopify:\/\/products\/strongful-gift-card",
+            "title_link": "shopify:\/\/products\/גיפט-קארד",
             "menu_link_image": "shopify:\/\/shop_images\/gift_card_hamburger_2.jpg"
           }
         },

@@ -12,10 +12,9 @@
 
 {% assign similarParent = product.metafields.global.collectionTitle %}
 
+{% unless product.tags contains 'noSimilar' %}
 <ul class="similiar
-      {% if product.tags contains 'noSimilar' %}
-        none
-        {% elsif product.tags contains 'special-edition-sibling' %}
+        {% if product.tags contains 'special-edition-sibling' %}
         {% unless product.title contains 'Lerato' %}
         special-edition-product-list
           {% endunless %}
@@ -42,6 +41,7 @@
         {% endif %}
     {% endfor %}
 </ul>
+{% endunless %}
 
 {%- unless product.has_only_default_variant -%}
   {%- if block.settings.picker_type == 'button' -%}
@@ -55,9 +55,11 @@
       {% endif %}
       {{ block.shopify_attributes }}
     >
-        <span class="size-table-toggler">{{ 'products.product.size_table' | t }}</span>
+        {% unless product.tags contains 'noSizeTable' %}
+            <span class="size-table-toggler">{{ 'products.product.size_table' | t }}</span>
+        {% endunless %}
       {%- for option in product.options_with_values -%}
-        <fieldset class="js product-form__input">
+        <fieldset class="js product-form__input {% if product.title == 'גיפט קארד' %}gift-card-product-form__input{% endif %}">
           <legend class="form__label">{{ option.name }}</legend>
           {% render 'product-variant-options', product: product, option: option, block: block %}
         </fieldset>

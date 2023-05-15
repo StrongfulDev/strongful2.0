@@ -1,5 +1,7 @@
 
 window.addEventListener('DOMContentLoaded', () => {
+
+
 	const similarVendors = document.querySelectorAll('.productVendor');
 	const productVendorText = document.querySelector('.product-vendor').innerText;
 	similarVendors.forEach((vendor) => {

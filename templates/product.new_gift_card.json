@@ -1,0 +1,130 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "541e5241-b778-47c7-bac5-f037a6a85960": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"product-sale-announcement\">\n        {% if product.tags contains 'OUTLET' %}\n        <strong class=\"product-sale-text englishFont\">OUTLET<\/strong>\n        <p class=\"product-sale-text bold englishFont ltr upper\">up to 70% off<\/p>\n          {% else %}\n          <div>\n          <strong class=\"product-sale-text\">עד 30% הנחה על דגמים נבחרים<\/strong>\n          <p class=\"product-sale-text small smaller tiny\">לזמן מוגבל<\/p>\n          <\/div>\n        {% endif %}\n      <\/div>"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        },
+        "5ae0b953-0e37-48c5-b5cc-e50d6004b25c": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-25_at_14.54.14.png",
+            "logged_out_text": "הרשמי עכשיו למועדון הלקוחות וקבלי 20% הנחה",
+            "logged_in_text": "<p><strong>ALIST<\/strong> - חברת מועדון<\/p>",
+            "loyalty_link": "shopify:\/\/pages\/a-list",
+            "alt_text": "Image block"
+          }
+        },
+        "679aaa7e-cf01-48c6-85e3-b35a4a905d19": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "תיאור מוצר",
+            "product_content": "description",
+            "content": "",
+            "page": "",
+            "icon": "none"
+          }
+        },
+        "6bb9c7f3-70b8-4986-9a85-148874103e99": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "משלוחים",
+            "product_content": "shipping_information",
+            "content": "",
+            "page": "",
+            "icon": "none"
+          }
+        },
+        "1b30499f-a9b2-4f41-bbad-151626bae3d0": {
+          "type": "swiper",
+          "settings": {
+            "swiper_preset": "shipping_returns",
+            "swiper_delay": 3
+          }
+        }
+      },
+      "block_order": [
+        "541e5241-b778-47c7-bac5-f037a6a85960",
+        "title",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "5ae0b953-0e37-48c5-b5cc-e50d6004b25c",
+        "679aaa7e-cf01-48c6-85e3-b35a4a905d19",
+        "6bb9c7f3-70b8-4986-9a85-148874103e99",
+        "1b30499f-a9b2-4f41-bbad-151626bae3d0"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "media_size": "large",
+        "constrain_to_viewport": false,
+        "media_fit": "contain",
+        "gallery_layout": "columns",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": true,
+        "details_section_direction": "right",
+        "padding_top": 36,
+        "padding_bottom": 52
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "אולי תאהבי גם",
+        "heading_alignment": "center",
+        "heading_size": "h1",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "main-product-quick-add": {
+      "type": "main-product-quick-add",
+      "settings": {
+        "quick_add_type_mobile": "modal"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "related-products",
+    "main-product-quick-add"
+  ]
+}

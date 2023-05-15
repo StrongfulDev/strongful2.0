@@ -1693,6 +1693,15 @@ variant-radios {
 	z-index: 2;
 }
 
+.gift-card-product-form__input {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+}
+
+.gift-card-product-form__input .variant-button {
+	width: 100%;
+}
+
 @media screen and (min-width: 990px) {
 
     .product.grid {
