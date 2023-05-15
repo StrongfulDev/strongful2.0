@@ -159,6 +159,9 @@
         "sale_price": "Sale price",
         "unit_price": "Unit price"
       },
+      "variant": {
+        "default_title": "Add To Cart"
+      },
       "share": "Share this product",
       "sold_out": "Sold out",
       "unavailable": "Unavailable",

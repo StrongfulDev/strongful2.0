@@ -33,6 +33,13 @@
     background: var(--gradient-base-background-1);
 }
 
+.product_size_picker__button.default_input + label {
+	background: black;
+	color: white;
+	width: 100%;
+	padding: 1rem;
+}
+
 .product_variants .size_variant_button_container input {
     display: none;
 }
@@ -72,7 +79,7 @@
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-.variant_modal {
+.variant_modal, .variant_selector {
     display: none;
     position: fixed;
     bottom: 0;
@@ -82,6 +89,10 @@
     width: 100%;
     height: 60vh;
     z-index: 100;
+}
+
+.variant_selector {
+	height: fit-content;
 }
 
 .variant_modal__toggle_button {
@@ -219,6 +230,14 @@
     background-color: rgb(var(--color-badge-background));
     z-index: -1;
     /*animation: borderOpacity 4s infinite;*/
+}
+
+.default_variant_list, .default_variant_list .size_variant_button.default_size_variant_button {
+	width: 100%;
+}
+
+ul.default_variant_list {
+	padding: 1.4em;
 }
 
 @media screen and (min-width: 750px) {

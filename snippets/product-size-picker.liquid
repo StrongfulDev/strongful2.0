@@ -43,9 +43,9 @@
                     <div class="product-size-picker {% if template.name == 'product' %}products-product-size-picker{% endif %}">
                         <product-form class="size-variant-product-form">
                             {%- form 'product', product, class: 'product_size_picker__form form', data-type: 'add-to-cart-form' -%}
-                                <div class="product_variants {% if product.has_only_default_variant %}hidden{% endif %}">
+                                <div class="product_variants">
                                     <fieldset name="line_items" class="js">
-                                        <ul>
+                                        <ul {% if product.has_only_default_variant %}class="default_variant_list"{% endif %}>
                                             {% for variant in product.variants %}
                                                 {% unless variant.title == '39' %}
                                                     {%- liquid
@@ -61,7 +61,7 @@
                                                         endif
                                                     %}
 
-                                                    <li class="size_variant_button fix-direction{% if product_disabled %} disabled-variant-button{% endif %}">
+                                                    <li class="size_variant_button fix-direction{% if product.has_only_default_variant %} default_size_variant_button{% endif %}{% if product_disabled %} disabled-variant-button{% endif %}">
                                                         <div class="size_variant_button_container">
                                                             <input type="radio"
                                                                    data-variant-id="{{ variant.id }}"
@@ -76,8 +76,12 @@
 
                                                                    class="product_size_picker__button__label">
                                                                 <span>
-                                                                    {{ variant.title | escape }}
-                                                                    <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
+                                                                    {% if product.has_only_default_variant %}
+                                                                    {{ 'products.product.variant.default_title' | t }}
+                                                                    {% else %}
+                                                                        {{ variant.title | escape }}
+                                                                        <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
+                                                                    {% endif %}
                                                                 </span>
 
                                                                 <div class="size_variant_button_add">
@@ -105,9 +109,9 @@
              class="variant_selector{% if submit_on_click %} submit_on_click{% endif %} {{ wrapper_class }}">
             <product-form class="size-variant-product-form">
                 {%- form 'product', product, class: 'product_size_picker__form form', data-type: 'add-to-cart-form' -%}
-                    <div class="product_variants {% if product.has_only_default_variant %}hidden{% endif %}">
+                    <div class="product_variants">
                         <fieldset name="line_items" class="js">
-                            <ul>
+                            <ul {% if product.has_only_default_variant %}class="default_variant_list"{% endif %}>
                                 {% for variant in product.variants %}
                                     {% unless variant.title == '39' %}
                                         {%- liquid
@@ -122,7 +126,7 @@
                                             endif
                                         %}
 
-                                        <li class="size_variant_button{% if product_disabled %} disabled-variant-button{% endif %}">
+                                        <li class="size_variant_button{% if product.has_only_default_variant %} default_size_variant_button{% endif %}{% if product_disabled %} disabled-variant-button{% endif %}">
                                             <div class="size_variant_button_container">
                                                 <input type="radio"
                                                        data-variant-id="{{ variant.id }}"
@@ -134,8 +138,12 @@
                                                     checked{% else %}class="product_size_picker__button new_input shoppable"{% endif %}>
                                                 <label for="radio_{{ variant.id }}"
                                                        class="product_size_picker__button__label">
-                                                    {{ variant.title | escape }}
-                                                    <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
+                                                    {% if product.has_only_default_variant %}
+                                                        {{ 'products.product.variant.default_title' | t }}
+                                                    {% else %}
+                                                        {{ variant.title | escape }}
+                                                        <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
+                                                    {% endif %}
                                                 </label>
                                             </div>
                                         </li>
@@ -169,9 +177,9 @@
        class="variant_selector{% if submit_on_click %} submit_on_click{% endif %} {{ wrapper_class }}">
     <product-form class="size-variant-product-form">
       {%- form 'product', product, class: 'product_size_picker__form form', data-type: 'add-to-cart-form' -%}
-        <div class="product_variants {% if product.has_only_default_variant %}hidden{% endif %}">
+        <div class="product_variants">
           <fieldset name="line_items" class="js">
-            <ul>
+            <ul {% if product.has_only_default_variant %}class="default_variant_list"{% endif %}>
               {% for variant in product.variants %}
                 {% unless variant.title == '39' %}
                   {%- liquid
@@ -186,7 +194,7 @@
                     endif
                   %}
 
-                  <li class="size_variant_button{% if product_disabled %} disabled-variant-button{% endif %}">
+                  <li class="size_variant_button{% if product.has_only_default_variant %} default_size_variant_button{% endif %}{% if product_disabled %} disabled-variant-button{% endif %}">
                     <div class="size_variant_button_container">
                       <input type="radio"
                              data-variant-id="{{ variant.id }}"
@@ -198,8 +206,12 @@
                         checked{% else %}class="product_size_picker__button new_input shoppable"{% endif %}>
                       <label for="radio_{{ variant.id }}"
                              class="product_size_picker__button__label">
-                        {{ variant.title | escape }}
-                        <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
+                          {% if product.has_only_default_variant %}
+                              {{ 'products.product.variant.default_title' | t }}
+                          {% else %}
+                              {{ variant.title | escape }}
+                              <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
+                          {% endif %}
                       </label>
                     </div>
                   </li>

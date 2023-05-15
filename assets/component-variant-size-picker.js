@@ -21,20 +21,28 @@ function quickAdd() {
 	    if (element.parents(".products-product-size-picker") !== undefined) {
 		    const elementFormGrandParent = element.parents(".products-product-size-picker");
 				const variantButtons = document.querySelectorAll("variant-radios .product-form__input input[type='radio']");
-		    const elementText = element.find("span").first().text().replace(/\s/g,'').slice(0, -27);
-		    console.log(elementText);
-				for (let i = 0; i < variantButtons.length; i++) {
-					if (variantButtons[i].value === elementText) {
-						variantButtons[i].click();
+				if (variantButtons.length === 0) {
+					setTimeout(() => {
+						$(".sticky-cart-cta .variant_selector").toggle();
+						$(".sticky-cart-cta-overlay").toggle();
+						$(".similiar").siblings("div").find("button.product-form__submit.button.button--full-width.button--primary span").click();
+					}, 2000);
+				} else {
+					const elementText = element.find("span").first().text().replace(/\s/g,'').slice(0, -27);
+					for (let i = 0; i < variantButtons.length; i++) {
+						if (variantButtons[i].value === elementText) {
+							variantButtons[i].click();
 							setTimeout(() => {
 								$(".sticky-cart-cta .variant_selector").toggle();
 								$(".sticky-cart-cta-overlay").toggle();
 								$("variant-radios").siblings("div").find("button.product-form__submit.button.button--full-width.button--primary span").click();
 							}, 2000);
-						break;
+							break;
+						}
 					}
 				}
 	    } else {
+		    console.log("not in products-product-size-picker")
 		    element.find(".size_variant_button_add").hide();
 		    element.find(".size-picker-loading").addClass("block");
 		    setTimeout(() => {

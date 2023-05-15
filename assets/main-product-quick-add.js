@@ -21,7 +21,6 @@ window.addEventListener("DOMContentLoaded", function() {
 
 	const observer = new IntersectionObserver((entries, observer) => {
 		entries.forEach((entry) => {
-			console.log(entry)
 			let topPos = entry.boundingClientRect.top;
 			let stickyATC = document.querySelector('.sticky-cart-cta');
 			if (topPos < 100 && entry.isIntersecting === false) {

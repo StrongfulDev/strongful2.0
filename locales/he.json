@@ -172,7 +172,10 @@
       "include_taxes": "Tax included.",
       "shipping_policy_html": "<a href=\"{{ link }}\">Shipping<\/a> calculated at checkout.",
       "shipping_sizes": "*כל המידות בס״מ",
-      "size_table": "טבלת מידות"
+      "size_table": "טבלת מידות",
+      "variant": {
+        "default_title": "הוספה לסל"
+      }
     },
     "modal": {
       "label": "Media gallery"
