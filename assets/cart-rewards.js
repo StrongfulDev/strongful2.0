@@ -37,11 +37,12 @@ class CartRewards {
 		this.activeRewards = 0
 
 		this.rules.forEach((rule, index) => {
-			const isConditionMet = this.handleCondition(rule);
-			const isRewardActive = this.cartHasReward(rule);
+			const isConditionMet = this.checkCondition(rule);
+			const isRewardInCart = this.cartHasReward(rule);
 			const rewardItem = this.getRewardItemByRule(rule);
 
-			if (isRewardActive !== isConditionMet) {
+			// If the state changed
+			if (isRewardInCart !== isConditionMet) {
 				this.toggleReward(isConditionMet, rule);
 			}
 
@@ -58,14 +59,16 @@ class CartRewards {
 		this.loading(false);
 	}
 
-	handleCondition(rule) {
+	checkCondition(rule) {
 		let isConditionMet = false;
 
 		switch (rule.condition.type) {
 			case "CartAmount":
+				const isRightQuantity = this.checkProductQuantity(rule);
+				console.log("isRightQuantity", isRightQuantity)
 				const isAmountGreaterThan = rule.condition.operator === "Greater than or equal" && this.cartTotalValue >= rule.condition.value;
 				const isAmountLessThan = rule.condition.operator === "Less than or equal" && this.cartTotalValue <= rule.condition.value;
-				isConditionMet = isAmountGreaterThan || isAmountLessThan
+				isConditionMet = (isRightQuantity || isRightQuantity === null) && (isAmountGreaterThan || isAmountLessThan)
 
 				break;
 		}
@@ -88,14 +91,14 @@ class CartRewards {
 	}
 
 	async handleGiftReward(rule, isConditionMet) {
-		const productIds = rule.reward.products.map(productGid => productGid.split("/").pop()).filter((id) => !!id);
+		const productIds = this.getProductIdsFromRule(rule)
 		const isJustOne = rule.reward.product_method === "Just one that's available";
 
 		for (const productId of productIds) {
 			const productInCart = this.productsExistInCart([productId]);
-			const product = this.cart.items.filter(item => item.id === parseInt(productId))?.[0];
+			const isRightQuantity = this.checkProductQuantity(rule, productId);
 
-			if (productInCart && (!isConditionMet || product.quantity > 1)) {
+			if (productInCart && (!isConditionMet || !isRightQuantity)) {
 				await this.removeProduct(productId)
 				continue;
 			}
@@ -224,14 +227,37 @@ class CartRewards {
 			let productsExist = this.productsExistInCart(productIds);
 
 			if (rule.reward.product_method === "Add all products to cart") {
+				// UNTESTED
 				return productsExist === rule.reward.products.length;
 			} else {
-				const product = this.cart.items.filter(item => item.id === parseInt(productsExist[0]))?.[0];
-				return productsExist?.length >= 1 && product.quantity >= 1;
+				return productsExist?.length >= 1;
 			}
 		}
 
 		return ruleIndex <= this.activeRewards
+	}
+
+	checkProductQuantity(rule) {
+		if (rule.reward.action !== "gift_product") return true;
+
+		const acceptableQuantity = 1;
+		const productIds = this.getProductIdsFromRule(rule)
+		const productIdsInCart = this.productsExistInCart(productIds);
+
+		if (!productIdsInCart) return null;
+
+		if (rule.reward.product_method === "Add all products to cart") {
+			for (const productId of productIdsInCart) {
+				const product = this.cart.items.find(item => item.id === parseInt(productId));
+				if (product.quantity !== acceptableQuantity)
+					return false
+			}
+
+			return true;
+		}
+
+		const product = this.cart.items.find(item => item.id === parseInt(productIdsInCart[0]));
+		return product.quantity === acceptableQuantity;
 	}
 
 	productsExistInCart(productIds) {
@@ -258,6 +284,10 @@ class CartRewards {
 		//         opacity: 1
 		//     }, 300);
 		// }
+	}
+
+	getProductIdsFromRule(rule) {
+		return rule.reward.products.map(productGid => productGid.split("/").pop()).filter((id) => !!id);
 	}
 
 	handleErrorMessage(errorMessage = false) {
