@@ -65,7 +65,6 @@ class CartRewards {
 		switch (rule.condition.type) {
 			case "CartAmount":
 				const isRightQuantity = this.checkProductQuantity(rule);
-				console.log("isRightQuantity", isRightQuantity)
 				const isAmountGreaterThan = rule.condition.operator === "Greater than or equal" && this.cartTotalValue >= rule.condition.value;
 				const isAmountLessThan = rule.condition.operator === "Less than or equal" && this.cartTotalValue <= rule.condition.value;
 				isConditionMet = (isRightQuantity || isRightQuantity === null) && (isAmountGreaterThan || isAmountLessThan)
@@ -196,15 +195,16 @@ class CartRewards {
 		const rewardText = $(".reward-text");
 		const isLatestActiveRule = ruleIndex >= this.activeRewards && isConditionMet;
 		const isLatestDeactivatedRule = ruleIndex === this.activeRewards && !isConditionMet;
+		const missingAmount = rule.condition.value - this.cartTotalValue;
 
 		// Apply reward message.
 		if (isLatestActiveRule) {
 			rewardText.html(rule.reward.message);
 		}
 		// Apply condition message.
-		else if (isLatestDeactivatedRule) {
+		else if (isLatestDeactivatedRule && missingAmount > 0) {
 			const rewardMessage = $(`<span class="${rule.element_class}-message" data-index="${ruleIndex}">${rule.condition.message}</span>`);
-			rewardMessage.find('.rewards__missing_amount').text(rule.condition.value - this.cartTotalValue);
+			rewardMessage.find('.rewards__missing_amount').text(missingAmount);
 			rewardText.html(rewardMessage);
 		}
 	}
