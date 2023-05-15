@@ -12,7 +12,6 @@
   {% render 'product-size-picker', product: product %}
 {% endcomment %}
 
-{%- unless product.has_only_default_variant -%}
     {% if is_modal %}
         <div class="variant_modal_overlay" id="{{ id | append: "-overlay" }}">&nbsp;</div>
         <div class="variant_modal variant_selector submit_on_click"
@@ -40,7 +39,7 @@
                         </div>
                     </div>
                     <span class="product_size_picker__heading fix-direction">{{ section.settings.quick_add_text }}</span>
-                    <div class="product-size-picker {% if template.name == 'product' %}products-product-size-picker{% endif %}">
+                    <div class="product-size-picker">
                         <product-form class="size-variant-product-form">
                             {%- form 'product', product, class: 'product_size_picker__form form', data-type: 'add-to-cart-form' -%}
                                 <div class="product_variants">
@@ -172,71 +171,3 @@
             </product-form>
         </div>
     {% endif %}
-  {% else %}
-  <div id="{{ id }}"
-       class="variant_selector{% if submit_on_click %} submit_on_click{% endif %} {{ wrapper_class }}">
-    <product-form class="size-variant-product-form">
-      {%- form 'product', product, class: 'product_size_picker__form form', data-type: 'add-to-cart-form' -%}
-        <div class="product_variants">
-          <fieldset name="line_items" class="js">
-            <ul {% if product.has_only_default_variant %}class="default_variant_list"{% endif %}>
-              {% for variant in product.variants %}
-                {% unless variant.title == '39' %}
-                  {%- liquid
-                    assign product_disabled = false
-                    if variant.available == false
-                      assign product_disabled = true
-                    endif
-                    if product.title contains 'Chummy' and variant.title != "L"
-                      assign product_disabled = true
-                    elsif variant.title == '39'
-                      assign product_disabled = true
-                    endif
-                  %}
-
-                  <li class="size_variant_button{% if product.has_only_default_variant %} default_size_variant_button{% endif %}{% if product_disabled %} disabled-variant-button{% endif %}">
-                    <div class="size_variant_button_container">
-                      <input type="radio"
-                             data-variant-id="{{ variant.id }}"
-                             name="id"
-                             value="{{ variant.id }}"
-                             id="radio_{{ variant.id }}"
-                          {% if product_disabled %} disabled{% endif %}
-                      {% if product.has_only_default_variant %}class="product_size_picker__button default_input"
-                        checked{% else %}class="product_size_picker__button new_input shoppable"{% endif %}>
-                      <label for="radio_{{ variant.id }}"
-                             class="product_size_picker__button__label">
-                          {% if product.has_only_default_variant %}
-                              {{ 'products.product.variant.default_title' | t }}
-                          {% else %}
-                              {{ variant.title | escape }}
-                              <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
-                          {% endif %}
-                      </label>
-                    </div>
-                  </li>
-                {% endunless %}
-              {% endfor %}
-            </ul>
-          </fieldset>
-        </div>
-        {% comment %} TODO: Make ajax add to cart open cart widget {% endcomment %}
-        <div class="add_to_cart_container product-form__buttons">
-          {% if product.tags contains 'fakeOutOfStock' %}
-            <button class="soldout-variant fakeOutOfStock">
-              אזל המלאי
-            </button>
-          {% else %}
-            <button type="submit"
-                    name="add"
-                    class="add_to_cart product-form__submit button button--full-width button--secondary">
-              הוספה
-            </button>
-          {% endif %}
-          {% render 'loading-spinner' %}
-          <input type="submit" hidden="hidden"/>
-        </div>
-      {%- endform -%}
-    </product-form>
-  </div>
-{%- endunless -%}

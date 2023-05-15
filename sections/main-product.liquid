@@ -127,7 +127,7 @@
                                     {%- endif -%}
                                 </div>
                             {%- endif -%}
-                            <div {{ block.shopify_attributes }}>
+                            <div {{ block.shopify_attributes }} class="products-product-size-picker">
                                 {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
                                 {%- form 'product', product, id: product_form_installment_id, class: 'installment caption-large' -%}
                                     <input type="hidden" name="id"

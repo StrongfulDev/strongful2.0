@@ -240,6 +240,10 @@ ul.default_variant_list {
 	padding: 1.4em;
 }
 
+.variant_modal__toggle_button svg {
+	pointer-events: none;
+}
+
 @media screen and (min-width: 750px) {
     .variant_modal.mobile, .variant_modal__toggle_button.mobile {
         display: none;

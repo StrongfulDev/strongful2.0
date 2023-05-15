@@ -18,7 +18,8 @@ function quickAdd() {
   $('#MainContent')
     .on("click", '.variant_selector.submit_on_click .size_variant_button:not(.disabled-variant-button)', function (e) {
       const element = $(this);
-	    if (element.parents(".products-product-size-picker") !== undefined) {
+			let productPageIdentifier = document.querySelector(".products-product-size-picker");
+	    if (productPageIdentifier !== null || true) {
 		    const elementFormGrandParent = element.parents(".products-product-size-picker");
 				const variantButtons = document.querySelectorAll("variant-radios .product-form__input input[type='radio']");
 				if (variantButtons.length === 0) {
@@ -57,7 +58,7 @@ function quickAdd() {
     .on("click", ".variant_modal__toggle_button, .variant_modal__toggle_button svg", function (e) {
         const element = $(this);
         const modalId = element.data("modal-id");
-        const modal = $(".variant_modal#" + modalId);
+        const modal = $(".variant_modal#" + modalId) || $(".variant_selector#" + modalId);
         const modalOverlay = $(".variant_modal_overlay#" + modalId + "-overlay");
 
         modal.show();
