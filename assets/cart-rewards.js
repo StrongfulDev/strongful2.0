@@ -41,10 +41,8 @@ class CartRewards {
 			const isRewardActive = this.cartHasReward(rule);
 			const rewardItem = this.getRewardItemByRule(rule);
 
-			if (isRewardActive === isConditionMet) {
-			} else {
+			if (isRewardActive !== isConditionMet) {
 				this.toggleReward(isConditionMet, rule);
-
 			}
 
 			this.trackProgress();
