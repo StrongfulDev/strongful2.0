@@ -39,21 +39,22 @@ class CartRewards {
 		this.rules.forEach((rule, index) => {
 			const isConditionMet = this.handleCondition(rule);
 			const isRewardActive = this.cartHasReward(rule);
+			const rewardItem = this.getRewardItemByRule(rule);
+
+			if (isRewardActive === isConditionMet) {
+			} else {
+				this.toggleReward(isConditionMet, rule);
+
+			}
 
 			this.trackProgress();
 			this.toggleMessage(isConditionMet, rule, index);
 
-			if (isRewardActive === isConditionMet) {
-				console.log(rule.title, `is already active of ${this.activeRewards} active rewards`);
-				return;
+			if (isConditionMet) {
+				rewardItem.addClass("active-reward");
 			} else {
-				this.toggleReward(isConditionMet, rule);
+				rewardItem.removeClass("active-reward");
 			}
-
-			if (isConditionMet)
-				this.activeRewards += 1;
-			else
-				this.activeRewards -= 1;
 		});
 
 		this.loading(false);
@@ -75,31 +76,28 @@ class CartRewards {
 	}
 
 	async toggleReward(isConditionMet, rule) {
-
-		const rewardItem = this.getRewardItemByRule(rule);
-
-		if (isConditionMet) {
-			rewardItem.addClass("active-reward");
-		} else {
-			rewardItem.removeClass("active-reward");
-		}
-
 		switch (rule.reward.action) {
 			case "gift_product":
 				await this.handleGiftReward(rule, isConditionMet);
 				break;
 		}
+
+		if (isConditionMet) {
+			this.activeRewards += 1;
+		} else {
+			this.activeRewards -= 1;
+		}
 	}
 
 	async handleGiftReward(rule, isConditionMet) {
 		const productIds = rule.reward.products.map(productGid => productGid.split("/").pop()).filter((id) => !!id);
-
 		const isJustOne = rule.reward.product_method === "Just one that's available";
 
 		for (const productId of productIds) {
 			const productInCart = this.productsExistInCart([productId]);
+			const product = this.cart.items.filter(item => item.id === parseInt(productId))?.[0];
 
-			if (productInCart && !isConditionMet) {
+			if (productInCart && (!isConditionMet || product.quantity > 1)) {
 				await this.removeProduct(productId)
 				continue;
 			}
@@ -195,26 +193,19 @@ class CartRewards {
 	}
 
 	toggleMessage(isConditionMet, rule, ruleIndex) {
-		const reward = rule.reward;
 		const rewardText = $(".reward-text");
-		const messageClass = `${reward.element_class}-message`;
-		const currentMessage = $(`.${messageClass}`);
-		const isLastRule = ruleIndex === this.rules.length - 1;
-		const isLatestActiveRule = ruleIndex === this.activeRewards;
+		const isLatestActiveRule = ruleIndex >= this.activeRewards && isConditionMet;
+		const isLatestDeactivatedRule = ruleIndex === this.activeRewards && !isConditionMet;
 
+		// Apply reward message.
 		if (isLatestActiveRule) {
-			if (currentMessage.length <= 0) {
-				if (isConditionMet) {
-					currentMessage.remove();
-				} else {
-					const rewardMessage = $(`<span class="${messageClass}" data-index="${ruleIndex}">${rule.condition.message}</span>`);
-					rewardText.html(rewardMessage);
-				}
-			}
-
-			rewardText.find('.rewards__missing_amount').text(rule.condition.value - this.cartTotalValue);
-		} else if (isLastRule && isConditionMet) {
-			rewardText.text(rule.reward.message);
+			rewardText.html(rule.reward.message);
+		}
+		// Apply condition message.
+		else if (isLatestDeactivatedRule) {
+			const rewardMessage = $(`<span class="${rule.element_class}-message" data-index="${ruleIndex}">${rule.condition.message}</span>`);
+			rewardMessage.find('.rewards__missing_amount').text(rule.condition.value - this.cartTotalValue);
+			rewardText.html(rewardMessage);
 		}
 	}
 
@@ -238,7 +229,8 @@ class CartRewards {
 			if (rule.reward.product_method === "Add all products to cart") {
 				return productsExist === rule.reward.products.length;
 			} else {
-				return !!productsExist;
+				const product = this.cart.items.filter(item => item.id === parseInt(productsExist[0]))?.[0];
+				return productsExist?.length >= 1 && product.quantity >= 1;
 			}
 		}
 
