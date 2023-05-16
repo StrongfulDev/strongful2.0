@@ -3066,7 +3066,7 @@ fieldset {
     border: none !important;
     color: rgba(var(--color-foreground), 0.5) !important;
     text-decoration: none !important;
-    cursor: not-allowed !important;
+    cursor: not-allowed;
 }
 
 .header__icons {

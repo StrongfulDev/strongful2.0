@@ -1,0 +1,25 @@
+<script data-app="esc-out-of-stock" type="text/json">
+	[{% for variant in product.variants %}{"id":{{ variant.id }},
+	"title":"{{ variant.title | escape }}",
+	"option1":{% if variant.option1 %}"{{ variant.option1 | escape }}"{% else %}null{% endif %},
+	"option2":{% if variant.option2 %}"{{ variant.option2 | escape }}"{% else %}null{% endif %},
+	"option3":{% if variant.option3 %}"{{ variant.option3 | escape }}"{% else %}null{% endif %},
+	"sku":{% if variant.sku %}"{{ variant.sku | escape }}"{% else %}null{% endif %},
+	"requires_shipping":{{ variant.requires_shipping }},"taxable":{{ variant.taxable }},
+	"featured_image":{% if variant.featured_image %}"{{ variant.featured_image }}"{% else %}null{% endif %},
+	"available":{{ variant.available }},"name":"{{ variant.name }} | escape",
+	"public_title":"{{ variant.public_title }} | escape","options":{{ variant.options | json }},
+	"price":{{ variant.price }},
+	"weight":{% if variant.weight %}{{ variant.weight }}{% else %}0{% endif %},
+	"compare_at_price":{% if variant.compare_at_price %}{{ variant.compare_at_price }}{% else %}null{% endif %},
+	"inventory_quantity":{{ variant.inventory_quantity }},
+	"inventory_management":{% if variant.inventory_management %}"{{ variant.inventory_management }}"
+{% else %}null{% endif %},
+	"inventory_policy":
+{% if variant.inventory_policy %}"{{ variant.inventory_policy }}"{% else %}null{% endif %},
+	"barcode":{% if variant.barcode %}"{{ variant.barcode }}"
+{% else %}null{% endif %}}{% unless forloop.last %},
+	{% endunless %}{% endfor %}]
+</script>
+
+<div id="esc-oos-form"></div>

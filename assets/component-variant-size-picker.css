@@ -79,7 +79,7 @@
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-.variant_modal, .variant_selector {
+.sticky-cart-cta .variant_modal, .sticky-cart-cta .variant_selector {
     display: none;
     position: fixed;
     bottom: 0;
@@ -87,7 +87,6 @@
     background-color: rgb(var(--color-background));
     color: rgb(var(--color-foreground));
     width: 100%;
-    height: 60vh;
     z-index: 100;
 }
 
@@ -245,6 +244,11 @@ ul.default_variant_list {
 }
 
 @media screen and (min-width: 750px) {
+
+	input.disabled-variant-button label:hover, input.disabled-variant-button label {
+		cursor: pointer !important;
+	}
+
     .variant_modal.mobile, .variant_modal__toggle_button.mobile {
         display: none;
     }

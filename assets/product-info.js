@@ -102,6 +102,3 @@ for (let i = 0; i < productImages.length; i++) {
 			$(productImages[i]).parents("li").addClass("hidden");
 		}
 }
-
-
-

@@ -1702,6 +1702,24 @@ variant-radios {
 	width: 100%;
 }
 
+#esc-out-of-stock-inputs {
+	direction: rtl;
+	border: 0;
+}
+
+.esc-email-input.esc-input {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+#esc-out-of-stock-inputs p, #esc-out-of-stock-inputs div {
+	text-align: right !important;
+}
+
+.esc-email-input esc-input, .esc-btn {
+	border-radius: 0 !important;
+}
+
 @media screen and (min-width: 990px) {
 
 	.breadcrumbs {
