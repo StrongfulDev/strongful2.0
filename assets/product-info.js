@@ -95,5 +95,13 @@ if (!customElements.get('product-info')) {
   }
 )};
 
+let productImages = document.querySelectorAll(".image-magnify-lightbox");
+for (let i = 0; i < productImages.length; i++) {
+		let alt = productImages[i].getAttribute("alt");
+		if (alt == 'instagram') {
+			$(productImages[i]).parents("li").addClass("hidden");
+		}
+}
+
 
 
