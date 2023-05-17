@@ -1722,6 +1722,10 @@ variant-radios {
 
 @media screen and (min-width: 990px) {
 
+	.product-sale-announcement {
+		margin: 0;
+	}
+
 	.breadcrumbs {
 		margin: 1.2em auto 5px;
 		width: 100%;
