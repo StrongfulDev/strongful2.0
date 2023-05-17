@@ -55,7 +55,6 @@
 
 .article-template header {
   margin-top: 4.4rem;
-  margin-bottom: 2rem;
   line-height: calc(0.8 / var(--font-body-scale));
 }
 
@@ -162,6 +161,28 @@
 
 .article-template__comment-warning {
   margin: 2rem 0 2.5rem;
+}
+
+.blog-title-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	gap: 1em;
+	padding: 1.5em 0;
+}
+
+.title--primary {
+	margin: 0 0 1rem;
+	font-weight: var(--font-body-weight-bold);
+}
+
+.blog-black-line {
+	background: black;
+	padding: 2px 0;
+}
+
+article .footer__list-social.list-social {
+	justify-content: flex-start;
 }
 
 @media screen and (min-width: 990px) {

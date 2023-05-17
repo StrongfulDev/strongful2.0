@@ -3,12 +3,6 @@
     "main": {
       "type": "main-article",
       "blocks": {
-        "featured_image": {
-          "type": "featured_image",
-          "settings": {
-            "image_height": "adapt"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {
@@ -16,22 +10,25 @@
             "blog_show_author": false
           }
         },
-        "share": {
-          "type": "share",
+        "ceb0924a-2010-49ab-b545-e08e85c71ce0": {
+          "type": "brand_information",
           "settings": {
-            "share_label": "Share"
+            "show_social": true
           }
         },
         "content": {
-          "type": "content"
+          "type": "content",
+          "settings": {
+          }
         }
       },
       "block_order": [
-        "featured_image",
         "title",
-        "share",
+        "ceb0924a-2010-49ab-b545-e08e85c71ce0",
         "content"
-      ]
+      ],
+      "settings": {
+      }
     }
   },
   "order": [

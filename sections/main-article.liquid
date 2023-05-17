@@ -1,6 +1,6 @@
 {{ 'section-blog-post.css' | asset_url | stylesheet_tag }}
 
-<article class="article-template" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="article-template fix-direction" itemscope itemtype="http://schema.org/BlogPosting">
   {%- for block in section.blocks -%}
     {%- case block.type -%}
       {%- when '@app' -%}
@@ -41,10 +41,15 @@
 
       {%- when 'title' -%}
         <header class="page-width page-width--narrow" {{ block.shopify_attributes }}>
+            <div class="blog-title-container">
+                <h1 class="title--primary">{{ 'blogs.title' | t }}</h1>
+                <span class="blog-black-line"></span>
+            </div>
           <h1 class="article-template__title" itemprop="headline">{{ article.title | escape }}</h1>
           {%- if block.settings.blog_show_date -%}
+              {% render 'black-block' %}
             <span class="circle-divider caption-with-letter-spacing" itemprop="dateCreated pubdate datePublished">
-              {{- article.published_at | time_tag: format: 'date' -}}
+              {{ article.published_at | date: "%Y/%m/%d" }}
             </span>
           {%- endif -%}
           {%- if block.settings.blog_show_author -%}
@@ -68,13 +73,15 @@
           {% assign share_url = request.origin | append: article.url %}
           {% render 'share-button', block: block, share_link: share_url %}
         </div>
+        {% when 'brand_information' %}
+        {% render 'social-icons' %}
     {%- endcase -%}
   {%- endfor -%}
 
   <div class="article-template__back element-margin-top center">
     <a href="{{ blog.url }}" class="article-template__link link animate-arrow">
-      <span class="icon-wrap">{% render 'icon-arrow' %}</span>
-      {{ 'blogs.article.back_to_blog' | t: title: blog.title }}
+      {% comment %}{{ 'blogs.article.back_to_blog' | t: title: blog.title }}{% endcomment %}
+        {{ 'blogs.article.back' | t }}
     </a>
   </div>
   {%- if blog.comments_enabled? -%}
@@ -300,6 +307,27 @@
     {
       "type": "@app"
     },
+      {
+          "type": "brand_information",
+          "name": "t:sections.footer.blocks.brand_information.name",
+          "settings": [
+              {
+                  "type": "paragraph",
+                  "content": "t:sections.footer.blocks.brand_information.settings.paragraph.content"
+              },
+              {
+                  "type": "header",
+                  "content": "t:sections.footer.blocks.brand_information.settings.header__1.content"
+              },
+              {
+                  "type": "checkbox",
+                  "id": "show_social",
+                  "default": true,
+                  "label": "t:sections.footer.blocks.brand_information.settings.show_social.label",
+                  "info": "t:sections.footer.blocks.brand_information.settings.show_social.info"
+              }
+          ]
+      },
     {
       "type": "featured_image",
       "name": "t:sections.main-article.blocks.featured_image.name",
