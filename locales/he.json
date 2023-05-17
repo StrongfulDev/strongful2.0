@@ -84,6 +84,7 @@
     "complementary_products": "Complementary products"
   },
   "blogs": {
+    "title": "StrongBlog",
     "article": {
       "blog": "Blog",
       "read_more_title": "Read more: {{ title }}",

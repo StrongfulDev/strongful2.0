@@ -18,11 +18,14 @@
 
 {%- paginate blog.articles by 6 -%}
   <div class="main-blog page-width section-{{ section.id }}-padding">
-    <h1 class="title--primary">{{ blog.title | escape }}</h1>
+    <div class="blog-title-container">
+        <span class="blog-black-line"></span>
+        <h1 class="title--primary">{{ 'blogs.title' | t }}</h1>
+    </div>
 
-    <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
+    <div class="blog-articles fix-direction {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
       {%- for article in blog.articles -%}
-        <div class="blog-articles__article article">
+        <div class="blog-articles__article article {% if forloop.first %}first-blog-articles__article{% endif %}">
           {%- render 'article-card',
             article: article,
             media_height: section.settings.image_height,
