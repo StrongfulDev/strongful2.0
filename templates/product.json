@@ -39,7 +39,7 @@
           }
         },
         "5ae0b953-0e37-48c5-b5cc-e50d6004b25c": {
-          "type": "image",
+          "type": "loyalty",
           "settings": {
             "image": "shopify:\/\/shop_images\/Screenshot_2023-04-25_at_14.54.14.png",
             "logged_out_text": "הרשמי עכשיו למועדון הלקוחות וקבלי 20% הנחה",
