@@ -1,7 +1,7 @@
 {%- unless template == 'index' or template == 'cart' or template == 'list-collections' or template == '404' -%}
     {%- assign t = template | split: '.' | first -%}
 
-    <nav class="breadcrumbs desktop-only" role="navigation" aria-label="breadcrumbs">
+    <nav class="breadcrumbs desktop" role="navigation" aria-label="breadcrumbs">
         <ol class="breadcrumbs__list">
             <li class="breadcrumbs__item">
                 <a class="breadcrumbs__link" href="/">{{ 'general.breadcrumbs.homepage' | t }}</a>

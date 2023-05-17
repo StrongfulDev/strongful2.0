@@ -3,6 +3,18 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "7c99b889-3ad8-4802-a5c7-9802ab40f12c": {
+          "type": "breadcrumb",
+          "settings": {
+            "show_mobile": false
+          }
+        },
+        "541e5241-b778-47c7-bac5-f037a6a85960": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"product-sale-announcement\">\n        {% if product.tags contains 'OUTLET' %}\n        <strong class=\"product-sale-text englishFont\">OUTLET<\/strong>\n        <p class=\"product-sale-text bold englishFont ltr upper\">up to 70% off<\/p>\n          {% else %}\n          <div>\n          <strong class=\"product-sale-text\">עד 30% הנחה על דגמים נבחרים<\/strong>\n          <p class=\"product-sale-text small smaller tiny\">לזמן מוגבל<\/p>\n          <\/div>\n        {% endif %}\n      <\/div>"
+          }
+        },
         "title": {
           "type": "title",
           "settings": {
