@@ -1,0 +1,34 @@
+{% comment %}
+  Renders dropdown that switches the selected model
+
+  Accepts:
+
+  Usage:
+  {% render 'model-switcher' %}
+{% endcomment %}
+
+<div class="model-switcher">
+    <details id="model-switch">
+        <summary class="model-switch-button">
+            <span>
+            Select Model
+            </span>
+            {% render 'icon-caret' %}
+        </summary>
+        <div class="model-switcher__list">
+            {% for model in shop.metaobjects.model.values %}
+                <div class="model-switcher__item">
+                    <input type="radio" name="model" id="model-{{ model.size_letter.value }}"
+                           value="{{ model.size_letter.value }}">
+                    <label for="model-{{ model.size_letter.value }}">
+                        {{ model.image.value
+                        | image_url: width: 100
+                        | image_tag: loading: 'lazy', sizes: "100x100", widths: '100' }}
+                        <span>{{ model.name.value }}
+                        ({{ model.size_letter.value }})</span>
+                    </label>
+                </div>
+            {% endfor %}
+        </div>
+    </details>
+</div>
