@@ -78,8 +78,8 @@
 
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
         <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
-            {% comment %}{% render 'product-media-gallery', variant_images: variant_images %}{% endcomment %}
-          {% render 'product-media-gallery' %}
+            {% render 'product-media-gallery', variant_images: variant_images %}
+          {% comment %}{% render 'product-media-gallery' %}{% endcomment %}
         </div>
         <div class="product__info-wrapper {{ section.settings.details_section_direction }} grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}">
             <product-info
@@ -535,14 +535,14 @@
         {%- if section.settings.media_position == 'right' -%}
             {% comment %} Duplicate gallery to display after product content on tablet/desktop breakpoint {% endcomment %}
             <div class="grid__item product__media-wrapper small-hide">
-                {% comment %}{% render 'product-media-gallery', variant_images: variant_images, is_duplicate: true %}{% endcomment %}
-                {% render 'product-media-gallery', is_duplicate: true %}
+                {% render 'product-media-gallery', variant_images: variant_images, is_duplicate: true %}
+                {% comment %}{% render 'product-media-gallery', is_duplicate: true %}{% endcomment %}
             </div>
         {%- endif -%}
     </div>
 
-    {% comment %}{% render 'product-media-modal', variant_images: variant_images %}{% endcomment %}
-    {% render 'product-media-modal' %}
+    {% render 'product-media-modal', variant_images: variant_images %}
+    {% comment %}{% render 'product-media-modal' %}{% endcomment %}
 
     {% assign popups = section.blocks | where: 'type', 'popup' %}
     {%- for block in popups -%}

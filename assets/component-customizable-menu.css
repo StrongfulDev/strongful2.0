@@ -297,7 +297,7 @@
 }
 
 .desktop-only {
-    display: none;
+    display: none !important;
 }
 
 @media screen and (min-width: 990px) {

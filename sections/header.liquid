@@ -192,7 +192,7 @@
                                                     </a>
                                                 {% endfor %}
                                             </div>
-                                            <div class="menu_images">
+                                            <div class="menu_images desktop-only">
                                                 {% if section.settings.mobile_top_image_1 != nil %}
                                                 <{% if section.settings.mobile_top_image_1_link != "" %}a href="{{ section.settings.mobile_top_image_1_link }}" {% else %}div class="desktop_links_image_1_container"{% endif %}>
                                                     {%- assign height = section.settings.mobile_top_image_1.width | divided_by: section.settings.mobile_top_image_1.aspect_ratio | round -%}
