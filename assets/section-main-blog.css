@@ -76,4 +76,8 @@
   .blog-articles--collage > *:nth-child(3n + 2):last-child .article-card__image--large .ratio::before {
     padding-bottom: 82.5rem;
   }
+
+	.title--primary {
+		font-size: 6em;
+	}
 }
