@@ -335,6 +335,21 @@
 
 @media screen and (min-width: 990px) {
 
+	.our-promise-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: calc(var(--grid-desktop-vertical-spacing) * 2);
+		direction: ltr;
+	}
+
+	.our-promise-content {
+		direction: rtl;
+	}
+
+	.our-promise-content p {
+		margin: 0;
+	}
+
 	.section-main-register-padding {
 		padding-top: 0 !important;
 		padding-bottom: 0 !important;
