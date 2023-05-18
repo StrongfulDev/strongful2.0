@@ -266,13 +266,13 @@
     "contact": {
       "form": {
         "title": "Contact form",
-        "name": "Name",
-        "email": "Email",
-        "phone": "Phone number",
-        "comment": "Comment",
-        "send": "Send",
-        "post_success": "Thanks for contacting us. We'll get back to you as soon as possible.",
-        "error_heading": "Please adjust the following:"
+        "name": "שם",
+        "email": "מייל",
+        "phone": "מספר פלאפון",
+        "comment": "תוכן ההודעה",
+        "send": "שליחה",
+        "post_success": "תודה על פנייתך! נחזור אליך בהקדם האפשרי.",
+        "error_heading": "הייתה בעיה בשליחת ההודעה"
       }
     },
     "404": {
