@@ -24,6 +24,10 @@ $(document).ready(function () {
 function hideUnAvailableModels() {
 	const availableSizes = getAvailableSizes();
 
+	if (availableSizes.length === 0) {
+		$('.model-switcher').hide();
+	}
+
 	$(".model-switcher__item").filter((function () {
 		const size = $(this).data('model-size');
 		return !availableSizes.includes(size);
