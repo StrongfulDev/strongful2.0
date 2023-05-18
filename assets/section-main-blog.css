@@ -89,7 +89,7 @@
 
 	.most-viewed-posts .blog-title-container {
 		direction: ltr;
-		padding-top: 0;
+		padding: 0;
 	}
 
 	.most-viewed-posts {
@@ -100,5 +100,28 @@
 	.blog-title-container h2 {
 		font-size: var(--font-body-size-large);
 		font-weight: var(--font-body-weight-bold);
+	}
+
+	.featured-post-link {
+		color: var(--color-base-text);
+		text-decoration: none;
+		column-gap: 1em;
+		margin: 1em 0;
+	}
+
+	.most-view-article-excerpt {
+		margin: 0;
+	}
+
+	.article-round {
+		color: #fff;
+		background: #000;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		font-size: 30px;
+		height: 45px;
+		justify-content: center;
+		width: 50px;
 	}
 }
