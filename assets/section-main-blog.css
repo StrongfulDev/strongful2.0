@@ -45,7 +45,7 @@
 
 .blog-title-container {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr auto;
 	align-items: center;
 	gap: 1em;
 	padding: 1.5em 0;
@@ -79,5 +79,26 @@
 
 	.title--primary {
 		font-size: 6em;
+	}
+
+	.blog-container-for-desktop {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+	grid-gap: var(--grid-desktop-vertical-spacing);
+	}
+
+	.most-viewed-posts .blog-title-container {
+		direction: ltr;
+		padding-top: 0;
+	}
+
+	.most-viewed-posts {
+		border: 1px var(--gradient-base-background-4) solid;
+		padding: var(--font-body-size-medium);
+	}
+
+	.blog-title-container h2 {
+		font-size: var(--font-body-size-large);
+		font-weight: var(--font-body-weight-bold);
 	}
 }

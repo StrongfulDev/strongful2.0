@@ -85,6 +85,9 @@
   },
   "blogs": {
     "title": "StrongBlog",
+    "most-viewed-posts": {
+      "title": "הכי נצפים"
+      },
     "article": {
       "blog": "Blog",
       "read_more_title": "Read more: {{ title }}",
