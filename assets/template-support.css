@@ -121,3 +121,32 @@ ul, ol {
 	border: none;
 }
 
+@media screen and (min-width: 990px) {
+
+	.supportful__grid-for-desk {
+		display: grid;
+		grid-template-columns: 1fr 3fr;
+		direction: rtl;
+		width: 85%;
+		margin: auto;
+	}
+
+	.supportful__articles-select-ctn {
+		width: calc(100% - 2em);
+		grid-column: 1 / 3;
+	}
+
+	.supportful__flex-blog .icon-caret {
+		display: none;
+	}
+
+	.article-ctn {
+		height: auto;
+	}
+
+	.article-ctn .supportful__article-ul {
+		display: block;
+	}
+
+}
+
