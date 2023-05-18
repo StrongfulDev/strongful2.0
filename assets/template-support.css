@@ -142,10 +142,15 @@ ul, ol {
 
 	.article-ctn {
 		height: auto;
+		margin-right: 0;
 	}
 
 	.article-ctn .supportful__article-ul {
-		display: block;
+		display: block !important;
+	}
+
+	.supportful__open-articles:hover {
+		cursor: pointer;
 	}
 
 }
