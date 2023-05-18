@@ -1,10 +1,12 @@
 {{ 'section-blog-post.css' | asset_url | stylesheet_tag }}
+{{ 'section-blog-post.js' | asset_url | script_tag }}
 
-<article class="article-template fix-direction" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="blog-container-for-desktop fix-direction page-width">
+    <article class="article-template fix-direction" itemscope itemtype="http://schema.org/BlogPosting">
   {%- for block in section.blocks -%}
     {%- case block.type -%}
       {%- when '@app' -%}
-        <div class="page-width page-width--narrow">
+        <div class="page-width">
           {% render block %}
         </div>
       {%- when 'featured_image' -%}
@@ -40,7 +42,7 @@
         {%- endif -%}
 
       {%- when 'title' -%}
-        <header class="page-width page-width--narrow" {{ block.shopify_attributes }}>
+        <header class="article-title-container" {{ block.shopify_attributes }}>
             <div class="blog-title-container">
                 <h1 class="title--primary">{{ 'blogs.title' | t }}</h1>
                 <span class="blog-black-line"></span>
@@ -61,7 +63,7 @@
 
       {%- when 'content' -%}
         <div
-          class="article-template__content page-width page-width--narrow rte"
+          class="article-template__content rte"
           itemprop="articleBody"
           {{ block.shopify_attributes }}
         >
@@ -78,12 +80,14 @@
     {%- endcase -%}
   {%- endfor -%}
 
+        {% comment %}
   <div class="article-template__back element-margin-top center">
     <a href="{{ blog.url }}" class="article-template__link link animate-arrow">
       {% comment %}{{ 'blogs.article.back_to_blog' | t: title: blog.title }}{% endcomment %}
         {{ 'blogs.article.back' | t }}
     </a>
   </div>
+  {% endcomment %}
   {%- if blog.comments_enabled? -%}
     <div class="article-template__comment-wrapper background-secondary">
       <div id="comments" class="page-width page-width--narrow">
@@ -266,6 +270,56 @@
     </div>
   {%- endif -%}
 </article>
+    <div class="blog-extras desktop-only">
+        <div class="most-viewed-posts">
+            <div class="blog-title-container">
+                <span class="blog-black-line"></span>
+                <h2>{{ 'blogs.most-viewed-posts.title' | t }}</h2>
+            </div>
+            <div class="featured-posts">
+                {% for article in blog.articles limit: 5 %}
+                    <a href="{{ article.url }}" class="featured-post-link flex">
+                        <span class="article-round">{{ forloop.index }}</span>
+                        <div>
+                            <strong class="most-view-article-title">{{ article.title | slice: 0, 35 }} ...</strong>
+                            <p class="most-view-article-excerpt">{{ article.excerpt | strip_html | slice: 0,40 }}...</p>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+        <a href="/collections/backinstockmay{{ utm }}" class="blog-featured-ad-link">
+            <img class="blog-featured-ad-image" alt="תמונת פרסומת לקולקציה חדשה של סטרונגפול בדף הבלוג" loading="lazy"
+                 src="https://cdn.shopify.com/s/files/1/0340/7986/7020/files/2000x2500.jpg?v=1684324993&width=800">
+        </a>
+        <a href="/collections/aura{{ utm }}" class="blog-featured-ad-link">
+            <img class="blog-featured-ad-image" alt="תמונת פרסומת לקולקציה חדשה של סטרונגפול בדף הבלוג" loading="lazy"
+                 src="https://cdn.shopify.com/s/files/1/0340/7986/7020/files/06_13e798d0-83ff-4151-b106-1558f5136adf.jpg?v=1680676506">
+        </a>
+        <div class="article__articles">
+            <h2 class="extra-articles">כתבות נוספות שבטוח תאהבי</h2>
+            {% for article in blog.articles offset:2 limit:4 %}
+                {% unless articleTitle == article.title %}
+                    <a href="{{ article.url }}" class="article extra-article-card">
+                        <img srcset="{{ article.image | img_url: '300x' }} 300w,
+                   {{ article.image | img_url: '400x' }} 400w,
+                   {{ article.image | img_url: '500x' }} 500w,
+                   {{ article.image | img_url: '600x' }} 600w,"
+                             src="{{ article.image | img_url: 'medium' }}" alt="{{ article.title | escape }}" class="article-blog-img" />
+                        <div class="blog__article--excerpt-ctn">
+                            <div class="flex blog__article-date-ctn">
+                                {% render 'black-block' %}
+                                <p class="blog__article--created-at">{{ article.created_at | date: "%d/%m/%Y" }}</p>
+                            </div>
+                            <strong class="art-title">{{ article.title }}</strong>
+                            <p class="art-paragraph">{{ article.excerpt | strip_html | truncatewords: 10 }}</p>
+                        </div>
+                    </a>
+                {% endunless %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
 
 <script type="application/ld+json">
   {

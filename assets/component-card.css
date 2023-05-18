@@ -160,6 +160,10 @@
         padding-bottom: 1.7rem;
         padding-top: 1.7rem;
     }
+
+	.blog-articles .article-card .card__information, .blog__posts .article-card .card__information {
+		padding-bottom: 0;
+	}
 }
 
 .card__badge {

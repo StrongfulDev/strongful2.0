@@ -2,6 +2,8 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
 
+{% assign utm = '?utm_source=blog&utm_medium=main&utm_campaign=main_blog_organic' %}
+
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -16,7 +18,7 @@
   }
 {%- endstyle -%}
 
-{%- paginate blog.articles by 6 -%}
+{%- paginate blog.articles by 15 -%}
   <div class="main-blog page-width section-{{ section.id }}-padding">
     <div class="blog-title-container">
         <span class="blog-black-line"></span>
@@ -57,6 +59,14 @@
                       {% endfor %}
                   </div>
               </div>
+                  <a href="/collections/backinstockmay{{ utm }}" class="blog-featured-ad-link">
+                      <img class="blog-featured-ad-image" alt="תמונת פרסומת לקולקציה חדשה של סטרונגפול בדף הבלוג" loading="lazy"
+                           src="https://cdn.shopify.com/s/files/1/0340/7986/7020/files/2000x2500.jpg?v=1684324993&width=800">
+                  </a>
+                  <a href="/collections/aura{{ utm }}" class="blog-featured-ad-link">
+                      <img class="blog-featured-ad-image" alt="תמונת פרסומת לקולקציה חדשה של סטרונגפול בדף הבלוג" loading="lazy"
+                           src="https://cdn.shopify.com/s/files/1/0340/7986/7020/files/06_13e798d0-83ff-4151-b106-1558f5136adf.jpg?v=1680676506">
+                  </a>
           </div>
       </div>
 

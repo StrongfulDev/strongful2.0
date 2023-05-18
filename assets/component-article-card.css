@@ -80,6 +80,9 @@
 
 .article-card__info {
   padding-top: 0.4rem;
+	align-items: center;
+	display: flex;
+	column-gap: var(--grid-desktop-vertical-spacing);
 }
 
 .article-card__footer {
@@ -161,5 +164,9 @@
     .articles-wrapper.grid {
       margin-bottom: 7rem;
     }
+
+	  .card__information {
+		  padding-bottom: 0;
+	  }
   }
 }

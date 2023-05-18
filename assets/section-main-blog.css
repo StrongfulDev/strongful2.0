@@ -11,7 +11,7 @@
 
 @media screen and (min-width: 750px) {
   .blog-articles {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     column-gap: var(--grid-desktop-horizontal-spacing);
     row-gap: var(--grid-desktop-vertical-spacing);
   }
@@ -123,5 +123,17 @@
 		height: 45px;
 		justify-content: center;
 		width: 50px;
+	}
+
+	.blog-featured-ad-image {
+		width: 100%;
+		display: block;
+		max-width: 500px;
+	}
+
+	.blog-extras.desktop-only {
+		display: flex !important;
+		row-gap: calc(var(--grid-desktop-vertical-spacing) * 2);
+		flex-direction: column;
 	}
 }
