@@ -923,4 +923,25 @@ p.container-extra-info {
 	transform: rotate(270deg);
 }
 
+.main-account-info-container--contact, .container-menu-item--logout {
+	text-align: center;
+}
+
+.contact-icons-container {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	border-top: 1px var(--gradient-base-background-3) solid;
+	border-bottom: 1px var(--gradient-base-background-3) solid;
+}
+
+.contact-icon-child:first-child {
+	border-left: 1px var(--gradient-base-background-3) solid;
+}
+
+a.logout-link {
+	border: 1px var(--gradient-base-background-4) solid;
+	padding: 1em 3em;
+}
+
 /* Custom Styles */

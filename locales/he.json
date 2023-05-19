@@ -371,7 +371,19 @@
       "title": "איזור אישי",
       "details": "פרטי משתמש",
       "view_addresses": "הכתובות שלי",
-      "return": "חזרה"
+      "return": "חזרה",
+      "support": {
+        "title": "תמיכה",
+        "our-promise": "על סטרונגפול",
+        "terms": "תנאי השימוש",
+        "privacy-policy": "מדיניות פרטיות"
+      },
+      "contact": {
+        "title": "צרי קשר",
+        "phone": "טלפון",
+        "email": "מייל",
+        "business-hours": "ימים ראשון עד חמישי בין השעות 09:00 עד 16:00"
+      }
     },
     "account_fallback": "משתמש",
     "activate_account": {
