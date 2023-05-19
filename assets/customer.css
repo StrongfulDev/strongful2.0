@@ -1,3 +1,16 @@
+#returnGoAccountWidget {
+	display: none;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+a {
+	text-decoration: none !important;
+	display: block;
+}
+
 .customer:not(.account):not(.order) {
   margin: 0 auto;
   max-width: 39rem;
@@ -834,3 +847,29 @@ li.multicolumn-list__item {
 		cursor: pointer;
 	}
 }
+
+/* Custom Styles */
+
+.container-title {
+	font-size: var(--font-body-size-large);
+	margin-bottom: var(--grid-desktop-horizontal-spacing);
+}
+
+a.container-menu-item {
+	font-size: var(--font-body-size-large);
+	margin-bottom: var(--grid-desktop-horizontal-spacing);
+	border-bottom: 1px var(--gradient-base-background-4) solid;
+	display: block;
+}
+
+a.container-menu-item span {
+	font-size: var(--font-body-size-smallest);
+}
+
+p.container-extra-info {
+	margin: 0;
+	font-size: var(--font-body-size-small);
+	color: var(--rtg-text-color);
+}
+
+/* Custom Styles */

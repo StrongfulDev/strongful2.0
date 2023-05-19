@@ -1,4 +1,20 @@
 {{ 'customer.css' | asset_url | stylesheet_tag }}
+{{ 'customer.js' | asset_url | script_tag }}
+
+{% assign orderPagination = section.settings.order_pagination %}
+{%- liquid
+    if customer.tags contains 'swell_vip_basic'
+        assign vipTier = 'Basic'
+    elsif customer.tags contains 'swell_vip_plus'
+        assign vipTier = 'Plus'
+    elsif customer.tags contains 'swell_vip_premium'
+        assign vipTier = 'Premium'
+    elsif customer.tags contains 'swell_vip_legend'
+        assign vipTier = 'Legend'
+    else
+        assign vipTier = 'None'
+    endif
+    -%}
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -14,24 +30,24 @@
   }
 {%- endstyle -%}
 
-<div class="customer account section-{{ section.id }}-padding">
+<div class="customer account fix-direction section-{{ section.id }}-padding">
   <div>
-    <h1 class="customer__title">{{ 'customer.account.title' | t }}</h1>
-    <a href="{{ routes.account_logout_url }}">
-      <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" fill="none" viewBox="0 0 18 19">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M6 4.5a3 3 0 116 0 3 3 0 01-6 0zm3-4a4 4 0 100 8 4 4 0 000-8zm5.58 12.15c1.12.82 1.83 2.24 1.91 4.85H1.51c.08-2.6.79-4.03 1.9-4.85C4.66 11.75 6.5 11.5 9 11.5s4.35.26 5.58 1.15zM9 10.5c-2.5 0-4.65.24-6.17 1.35C1.27 12.98.5 14.93.5 18v.5h17V18c0-3.07-.77-5.02-2.33-6.15-1.52-1.1-3.67-1.35-6.17-1.35z" fill="currentColor">
-      </svg>
-      {{ 'customer.log_out' | t }}
-    </a>
+    {% comment %}<h1 class="customer__title">{{ 'customer.account.title' | t }}</h1>{% endcomment %}
+    <h1 class="customer__title">{{ customer.first_name }}</h1>
   </div>
 
   <div>
+      <div class="main-account-info-container main-account-info-container--loyalty">
+          <h4 class="container-title bold">מועדון הלקוחות שלי</h4>
+          <a href="/pages/a-list" class="container-menu-item">ALIST <span>{{ vipTier }}</span></a>
+          <p class="container-extra-info">קופי על מועדון לקוחות שווה</p>
+      </div>
     <div>
       <h2>{{ 'customer.orders.title' | t }}</h2>
 
-      {% paginate customer.orders by 20 %}
+      {% paginate customer.orders by orderPagination %}
         {%- if customer.orders.size > 0 -%}
-          <table role="table" class="order-history">
+          <table role="table" class="order-history hidden">
             <caption class="visually-hidden">
               {{ 'customer.orders.title' | t }}
             </caption>
@@ -92,7 +108,7 @@
 
         {%- if paginate.pages > 1 -%}
           {%- if paginate.parts.size > 0 -%}
-            <nav class="pagination" role="navigation" aria-label="{{ 'general.pagination.label' | t }}">
+            <nav class="pagination hidden" role="navigation" aria-label="{{ 'general.pagination.label' | t }}">
               <ul role="list">
                 {%- if paginate.previous -%}
                   <li>
@@ -148,6 +164,13 @@
       </a>
     </div>
   </div>
+
+    <a href="{{ routes.account_logout_url }}">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" fill="none" viewBox="0 0 18 19">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M6 4.5a3 3 0 116 0 3 3 0 01-6 0zm3-4a4 4 0 100 8 4 4 0 000-8zm5.58 12.15c1.12.82 1.83 2.24 1.91 4.85H1.51c.08-2.6.79-4.03 1.9-4.85C4.66 11.75 6.5 11.5 9 11.5s4.35.26 5.58 1.15zM9 10.5c-2.5 0-4.65.24-6.17 1.35C1.27 12.98.5 14.93.5 18v.5h17V18c0-3.07-.77-5.02-2.33-6.15-1.52-1.1-3.67-1.35-6.17-1.35z" fill="currentColor">
+        </svg>
+        {{ 'customer.log_out' | t }}
+    </a>
 </div>
 
 {% schema %}
@@ -177,7 +200,57 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    },
+    {
+      "type": "range",
+      "id": "order_pagination",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": "t:sections.main-account.order-pagination",
+      "default": 6
     }
-  ]
+  ],
+    "blocks": [
+        {
+            "type":"link_list",
+            "name":"t:sections.main-account.menu.name",
+            "settings": [
+                {
+                    "type":"select",
+                    "id": "heading_align",
+                    "label": "t:sections.footer.blocks.link_list.settings.heading.label",
+                    "default": "right",
+                    "options": [
+                        {
+                            "value": "left",
+                            "label": "t:sections.footer.blocks.link_list.settings.heading_align.options__1.label"
+                        },
+                        {
+                            "value": "center",
+                            "label": "t:sections.footer.blocks.link_list.settings.heading_align.options__2.label"
+                        },
+                        {
+                            "value": "right",
+                            "label": "t:sections.footer.blocks.link_list.settings.heading_align.options__3.label"
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "id": "heading",
+                    "default": "Quick links",
+                    "label": "t:sections.footer.blocks.link_list.settings.heading.label"
+                },
+                {
+                    "type": "link_list",
+                    "id": "menu",
+                    "default": "footer",
+                    "label": "t:sections.footer.blocks.link_list.settings.menu.label",
+                    "info": "t:sections.footer.blocks.link_list.settings.menu.info"
+                }
+            ]
+        }
+    ]
 }
 {% endschema %}
