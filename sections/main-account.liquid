@@ -196,12 +196,16 @@
         <p>{{ 'customer.account.contact.title' | t }}</p>
         <div class="contact-icons-container">
             <div class="contact-icon-child">
-
-                <p>{{ 'customer.account.contact.email' | t }}</p>
+                <a href="mailto:{{ shop.email }}">
+                    {% render 'envelope' %}
+                </a>
+                <p class="contact-text">{{ 'customer.account.contact.email' | t }}</p>
             </div>
             <div class="contact-icon-child">
-
-                <p>{{ 'customer.account.contact.phone' | t }}</p>
+                <a href="tel:{{ shop.phone }}">
+                    {% render 'telephone' %}
+                </a>
+                <p class="contact-text">{{ 'customer.account.contact.phone' | t }}</p>
             </div>
         </div>
         <p class="business-hours">{{ 'customer.account.contact.business-hours' | t }}</p>

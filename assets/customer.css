@@ -861,7 +861,7 @@ li.multicolumn-list__item {
 }
 
 a.container-menu-item {
-	font-size: var(--font-body-size-large);
+	font-size: var(--font-body-size-medium);
 	margin-bottom: var(--grid-desktop-horizontal-spacing);
 	border-bottom: 1px var(--gradient-base-background-4) solid;
 	display: block;
@@ -935,6 +935,10 @@ p.container-extra-info {
 	border-bottom: 1px var(--gradient-base-background-3) solid;
 }
 
+.main-account-info-container--contact {
+	margin: 3em 0;
+}
+
 .contact-icon-child:first-child {
 	border-left: 1px var(--gradient-base-background-3) solid;
 }
@@ -942,6 +946,24 @@ p.container-extra-info {
 a.logout-link {
 	border: 1px var(--gradient-base-background-4) solid;
 	padding: 1em 3em;
+}
+
+.contact-icon-child {
+	padding: 1em 0;
+}
+
+p.contact-text {
+	margin: 0;
+}
+
+p.business-hours {
+	margin: 2rem 0;
+}
+
+div.contact-icon-child a svg {
+	width: 1.5em !important;
+	height: 1.5em !important;
+	margin: 0;
 }
 
 /* Custom Styles */
