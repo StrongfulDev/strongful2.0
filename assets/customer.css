@@ -13,7 +13,7 @@ a {
 
 .customer:not(.account):not(.order) {
   margin: 0 auto;
-  max-width: 39rem;
+  max-width: 44rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   text-align: center;
@@ -967,3 +967,25 @@ div.contact-icon-child a svg {
 }
 
 /* Custom Styles */
+
+/* Addresses */
+
+.address-main-title {
+	position: relative;
+}
+
+a.address-back-link {
+	display: block;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%) rotate(90deg);
+	padding: 1rem 1rem 0;
+}
+
+a.address-back-link svg {
+	width: 1em;
+	height: 1em;
+	display: block;
+}
+
+/* End Addresses */
