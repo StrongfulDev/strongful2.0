@@ -88,3 +88,9 @@ class CustomerAddresses {
     }
   }
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+	$(".toggle-orders").click(function() {
+		$(".custom-orders-container").toggleClass("active");
+	});
+});

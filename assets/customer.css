@@ -80,7 +80,8 @@ a {
   border-collapse: collapse;
   border-bottom: 0.01rem solid rgba(var(--color-foreground), 0.08);
   box-shadow: none;
-  width: 100%;
+  width: calc(100% - 2em);
+	margin: auto;
   font-size: 1.6rem;
   position: relative;
 }
@@ -132,10 +133,6 @@ a {
   text-transform: uppercase;
 }
 
-.customer tbody td:first-of-type {
-  padding-top: 4rem;
-}
-
 @media screen and (min-width: 750px) {
   .customer th,
   .customer td:first-of-type {
@@ -164,6 +161,10 @@ a {
   }
 }
 
+.customer tbody td:first-of-type {
+	padding-top: 4rem;
+}
+
 .customer tbody td:last-of-type {
   padding-bottom: 4rem;
 }
@@ -175,7 +176,12 @@ a {
 }
 
 .customer tbody tr {
-  border-top: 0.01rem solid rgba(var(--color-foreground), 0.08);
+  border-top: none;
+	border-bottom: 1px var(--gradient-base-background-4) solid;
+}
+
+.customer tbody tr:last-child {
+	border-bottom: none;
 }
 
 @media screen and (min-width: 750px) {
@@ -258,10 +264,9 @@ a {
     color: rgba(var(--color-foreground), 0.75);
     content: attr(data-label);
     font-size: 1.4rem;
-    padding-right: 2rem;
     text-transform: uppercase;
     flex-grow: 1;
-    text-align: left;
+    text-align: right;
   }
 
   .customer td:first-of-type {
@@ -860,6 +865,18 @@ a.container-menu-item {
 	margin-bottom: var(--grid-desktop-horizontal-spacing);
 	border-bottom: 1px var(--gradient-base-background-4) solid;
 	display: block;
+	position: relative;
+}
+
+.container-menu-item .icon-caret {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%) rotate(90deg);
+}
+
+.container-menu-item .icon-caret.rotate {
+	transform: translateY(-50%) rotate(0deg);
 }
 
 a.container-menu-item span {
@@ -870,6 +887,40 @@ p.container-extra-info {
 	margin: 0;
 	font-size: var(--font-body-size-small);
 	color: var(--rtg-text-color);
+}
+
+.custom-orders-container {
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+	background: #fff;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	overflow-y: auto;
+	transition: .3s ease-in-out;
+	transform: translateX(100%);
+}
+
+.custom-orders-container.active {
+	transform: translateX(0);
+}
+
+.toggle-orders-button {
+	position: sticky;
+	top: 0;
+	background: var(--gradient-base-background-1);
+	z-index: 11;
+	padding: 1em;
+	width: 100%;
+	display: block;
+}
+
+.toggle-orders-button .icon {
+	width: 1em;
+	transform: rotate(270deg);
 }
 
 /* Custom Styles */
