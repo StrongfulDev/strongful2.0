@@ -92,11 +92,11 @@ class CustomerAddresses {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-	$(".toggle-orders").click(function() {
-		$(".custom-orders-container").toggleClass("active");
-	});
-
 	if ($(window).width() < 990) {
+		$(".toggle-orders").click(function() {
+			$(".custom-orders-container").toggleClass("active");
+		});
+
 		let mainTitle = document.querySelector(".customer__title");
 		let mainTitleLength = mainTitle.innerHTML.length;
 		let slicedLength = parseInt(mainTitleLength - 3);
