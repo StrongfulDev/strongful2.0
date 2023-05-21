@@ -368,7 +368,8 @@
   },
   "customer": {
     "account": {
-      "title": "איזור אישי",
+      "title": "ברוכה הבאה למשתמש שלך {{ name }}",
+      "sub-title": "האיזור האישי שלי",
       "details": "פרטי משתמש",
       "view_addresses": "הכתובות שלי",
       "return": "חזרה",

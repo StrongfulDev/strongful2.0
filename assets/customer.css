@@ -1049,4 +1049,22 @@ button.add-address-button:after {
 	box-shadow: none;
 }
 
+.mobile-only {
+	display: block;
+}
+
+.desktop-only {
+	display: none;
+}
+
+@media screen and (min-width: 990px) {
+	.mobile-only {
+		display: none;
+	}
+
+	.desktop-only {
+		display: block;
+	}
+}
+
 /* End Addresses */

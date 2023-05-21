@@ -33,7 +33,8 @@
 <div class="customer account fix-direction section-{{ section.id }}-padding">
   <div>
     {% comment %}<h1 class="customer__title">{{ 'customer.account.title' | t }}</h1>{% endcomment %}
-    <h1 class="customer__title">{{ customer.first_name }}</h1>
+    {% comment %}<h1 class="customer__title">{{ customer.first_name }}</h1>{% endcomment %}
+      <h1 class="customer__title">{{ 'customer.account.title' | t: name: customer.first_name }}</h1>
   </div>
 
   <div>
@@ -47,7 +48,7 @@
     <div>
 
         <div class="main-account-info-container main-account-info-container--my-account">
-            <h2 class="container-title bold">{{ 'customer.account.title' | t }}</h2>
+            <h2 class="container-title bold">{{ 'customer.account.sub-title' | t }}</h2>
             <a href="#" class="container-menu-item container-menu-item-orders-toggler toggle-orders">{{ 'customer.orders.title' | t }}
                 {% render 'icon-caret' %}
             </a>
