@@ -686,10 +686,6 @@ a {
   }
 }
 
-.addresses form button:first-of-type {
-  margin-right: 1rem;
-}
-
 label[for='AddressCountryNew'],
 label[for='AddressProvinceNew'] {
   display: block;
@@ -704,13 +700,12 @@ label[for='AddressProvinceNew'] {
 
 .addresses form > div {
   width: 100%;
-  text-align: left;
 }
 
 .addresses ul {
   list-style: none;
   padding-left: 0;
-  text-align: center;
+  text-align: right;
 }
 
 li[data-address] {
@@ -725,14 +720,11 @@ li[data-address] {
   display: block;
 }
 
-.addresses h2 {
-  text-align: left;
-}
-
 li[data-address] > h2 {
-  text-align: center;
-  font-size: calc(var(--font-heading-scale) * 1.8rem);
-  margin-bottom: 0;
+	text-align: right;
+	font-size: var(--font-heading-scale);
+	margin: 0;
+	color: var(--gradient-base-background-4);
 }
 
 .inline {
@@ -986,6 +978,75 @@ a.address-back-link svg {
 	width: 1em;
 	height: 1em;
 	display: block;
+}
+
+button.add-address-button {
+	color: var(--gradient-base-accent-1);
+	background: var(--gradient-background);
+	border: 1px var(--gradient-base-background-3) solid;
+	padding: 0;
+	position: relative;
+	display: block;
+}
+
+button.add-address-button:before, button.add-address-button:after {
+	content: none;
+	bottom: auto;
+	right: auto;
+	z-index: 1;
+}
+
+button.add-address-button:before, button.add-address-button:after {
+	position: absolute;
+	content: "";
+	display: block;
+	visibility: visible;
+	background-color: rgb(var(--color-foreground));
+	top: 2.8rem;
+}
+
+button.add-address-button:before {
+	width: 1.2rem;
+	height: 0.2rem;
+	left: 1rem;
+	top: 50%;
+}
+
+button.add-address-button.active:after {
+	visibility: hidden;
+}
+
+button.add-address-button:after {
+	height: 1.2rem;
+	width: 0.2rem;
+	left: 1.5rem;
+	transform: translateY(-0.5rem);
+	box-shadow: none;
+	top: 50%;
+}
+
+.addresses li > button {
+	width: fit-content;
+	color: var(--gradient-base-accent-1);
+	background: var(--gradient-background);
+	border: 1px var(--gradient-base-background-3) solid;
+	padding: 0;
+	display: block;
+	margin-left: auto;
+	margin-right: 0;
+}
+
+.addresses li > button:after, .addresses li > button:before {
+	content: none;
+}
+
+.addresses form {
+	direction: rtl;
+	text-align: right;
+}
+
+.button:not([disabled]):hover::after, .shopify-challenge__button:hover::after, .customer button:hover::after, .shopify-payment-button__button--unbranded:hover::after {
+	box-shadow: none;
 }
 
 /* End Addresses */

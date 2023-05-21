@@ -69,6 +69,7 @@ class CustomerAddresses {
 
   _handleAddEditButtonClick = ({ currentTarget }) => {
     this._toggleExpanded(currentTarget);
+		currentTarget.classList.toggle('active');
   }
 
   _handleCancelButtonClick = ({ currentTarget }) => {
@@ -77,6 +78,7 @@ class CustomerAddresses {
         .closest(selectors.addressContainer)
         .querySelector(`[${attributes.expanded}]`)
     )
+	  document.querySelector('.add-address-button').classList.toggle('active');
   }
 
   _handleDeleteButtonClick = ({ currentTarget }) => {

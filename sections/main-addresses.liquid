@@ -45,7 +45,7 @@
         {{ 'customer.addresses.add_new' | t }}
       </button>
       <div id="AddAddress">
-        <h2 id="AddressNewHeading">{{ 'customer.addresses.add_new' | t }}</h2>
+        {% comment %}<h2 id="AddressNewHeading">{{ 'customer.addresses.add_new' | t }}</h2>{% endcomment %}
         {%- form 'customer_address', customer.new_address, aria-labelledBy: 'AddressNewHeading' -%}
           <div class="field">
             <input
@@ -181,9 +181,6 @@
     <ul role="list">
       {%- for address in customer.addresses -%}
         <li data-address>
-          {%- if address == customer.default_address -%}
-            <h2>{{ 'customer.addresses.default' | t }}</h2>
-          {%- endif -%}
           {{ address | format_address }}
           <button
             type="button"
@@ -195,6 +192,7 @@
           >
             {{ 'customer.addresses.edit' | t }}
           </button>
+            {%- unless address == customer.default_address -%}
           <button
             type="button"
             aria-label="{{ 'customer.addresses.delete' | t }} {{ forloop.index }}"
@@ -203,8 +201,12 @@
           >
             {{ 'customer.addresses.delete' | t }}
           </button>
+          {% endunless %}
+            {%- if address == customer.default_address -%}
+                <h2>{{ 'customer.addresses.default' | t }}</h2>
+            {%- endif -%}
           <div id="EditAddress_{{ address.id }}">
-            <h2>{{ 'customer.addresses.edit_address' | t }}</h2>
+            <h2 class="edit-address-title">{{ 'customer.addresses.edit_address' | t }}</h2>
             {%- form 'customer_address', address -%}
               <div class="field">
                 <input
