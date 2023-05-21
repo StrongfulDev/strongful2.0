@@ -61,7 +61,7 @@
                       {% render 'icon-caret' %}
                   </a>
 
-                  <div class="custom-orders-container">
+                  <div class="custom-orders-container mobile">
                 <span class="toggle-orders-button toggle-orders">
                     {% render 'icon-caret' %}
                 </span>
@@ -85,28 +85,34 @@
                                   <tbody role="rowgroup">
                                   {%- for order in customer.orders -%}
                                       <tr role="row">
-                                          <td
-                                                  id="RowOrder"
-                                                  role="cell"
-                                                  headers="ColumnOrder"
-                                                  data-label="{{ 'customer.orders.order_number' | t }}"
-                                          >
-                                              <a
-                                                      href="{{ order.customer_url }}"
-                                                      aria-label="{{ 'customer.orders.order_number_link' | t: number: order.name }}"
-                                              >
-                                                  {{ order.name }}
-                                              </a>
-                                          </td>
                                           <td headers="RowOrder ColumnDate" role="cell" data-label="{{ 'customer.orders.date' | t }}">
                                               {{ order.created_at | time_tag: format: 'date' }}
                                           </td>
+                                          {% comment %}
                                           <td
                                                   headers="RowOrder ColumnPayment"
                                                   role="cell"
                                                   data-label="{{ 'customer.orders.payment_status' | t }}"
                                           >
                                               {{ order.financial_status_label }}
+                                          </td>
+                                          {% endcomment %}
+                                          <td
+                                                  headers="RowOrder ColumnImages"
+                                                  role="cell"
+                                                  data-label="{{ 'customer.orders.images' | t }}"
+                                                  class="table-data-images"
+                                          >
+                                              {% for line_item in order.line_items %}
+                                                  <div class="div-for-appending {% if forloop.index0 > 5 %}hidden{% endif %}">
+                                                      <img src="{{ line_item.image | img_url: '160x' }}" alt="{{ product.title | escape }}" class="order-line-image" />
+                                                      {% if order.line_items.size > 6 %}
+                                                          {% if forloop.index0 == 5 %}
+                                                              <p class="appended-p">+{{ order.line_items.size | minus:6 }}</p>
+                                                          {% endif %}
+                                                      {% endif %}
+                                                  </div>
+                                              {% endfor %}
                                           </td>
                                           <td
                                                   headers="RowOrder ColumnFulfillment"
@@ -117,6 +123,19 @@
                                           </td>
                                           <td headers="RowOrder ColumnTotal" role="cell" data-label="{{ 'customer.orders.total' | t }}">
                                               {{ order.total_net_amount | money_with_currency }}
+                                          </td>
+                                          <td
+                                                  id="RowOrder"
+                                                  role="cell"
+                                                  headers="ColumnOrder"
+                                                  data-label="{{ 'customer.orders.order_number' | t }}"
+                                          >
+                                              <a
+                                                      href="{{ order.customer_url }}"
+                                                      aria-label="{{ 'customer.orders.order_number_link' | t: number: order.name }}"
+                                              >
+                                                  {{ 'customer.order.title' | t: number: order.name }}
+                                              </a>
                                           </td>
                                       </tr>
                                   {%- endfor -%}

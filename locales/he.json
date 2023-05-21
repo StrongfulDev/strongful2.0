@@ -433,7 +433,7 @@
       "submit": "שליחה"
     },
     "order": {
-      "title": "הזמנה מספר {{ name }}",
+      "title": "הזמנה מספר {{ number }}",
       "date_html": "בוצעה בתאריך {{ date }}",
       "cancelled_html": "בוטלה בתאריך {{ date }}",
       "cancelled_reason": "סיבת ביטול: {{ reason }}",

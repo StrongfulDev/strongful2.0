@@ -94,7 +94,7 @@ class CustomerAddresses {
 window.addEventListener('DOMContentLoaded', () => {
 	if ($(window).width() < 990) {
 		$(".toggle-orders").click(function() {
-			$(".custom-orders-container").toggleClass("active");
+			$(".custom-orders-container.mobile").toggleClass("active");
 		});
 
 		let mainTitle = document.querySelector(".customer__title");
