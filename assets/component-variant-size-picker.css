@@ -1,6 +1,6 @@
 .variant_selector {
     align-items: center;
-    display: flex;
+    display: none;
 }
 
 .product_variants ul {
@@ -79,7 +79,7 @@
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-.sticky-cart-cta .variant_modal, .sticky-cart-cta .variant_selector {
+.sticky-cart-cta .variant_modal, .sticky-cart-cta .variant_selector, .variant_modal {
     display: none;
     position: fixed;
     bottom: 0;

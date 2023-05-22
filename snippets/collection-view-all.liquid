@@ -18,7 +18,7 @@
 <div class="center collection__view-all {{ class_wrapper }}">
     <a
             href="{{ collection_url }}"
-            class="{% if style == 'link' %}link underlined-link{% elsif style == 'solid' %}button{% else %}button button--secondary{% endif %}"
+            class="{% if style == 'link' %}link underlined-link{% elsif style == 'solid' %}button{% else %}button button--secondary{% endif %} view-all-link"
             aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: collection.title }}"
     >
         {% if view_all_text %}

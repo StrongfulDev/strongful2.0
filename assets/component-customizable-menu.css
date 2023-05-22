@@ -266,6 +266,10 @@
     padding: 0;
 }
 
+.menu-drawer-container.customizable .mobile_menu .header__menu-item:first-child {
+	color: #bc0b0b;
+}
+
 .nav_top--mobile-logo {
     margin: auto;
     display: block;

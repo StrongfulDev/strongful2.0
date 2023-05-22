@@ -174,11 +174,19 @@
                             <span class="card_banner_text color-background-2">{{ card_banner_text }}</span>
                         {% endunless %}
                     {% endif %}
-                    {% if card_product.tags contains 'OUTLET' or card_product.tags contains 'outlet' %}
-                        <p class="outlet-collection-tag upper h4">
-                            <span>{{- 'products.product.outlet' | t -}}</span>
-                            <i>{% render 'icon-discount-tag' %}</i></p>
-                    {% endif %}
+                    <div class="discount-price-container">
+                        {% if card_product.compare_at_price > card_product.price %}
+                            <p class="rect-discount-tag">
+                                {{ card_product.compare_at_price | minus: card_product.price | times: 100.0 | divided_by: card_product.compare_at_price | ceil }}% OFF
+                            </p>
+                        {% if card_product.tags contains 'OUTLET' or card_product.tags contains 'outlet' %}
+                            <p class="outlet-collection-tag upper h4">
+                                <span>{{- 'products.product.outlet' | t -}}</span>
+                                <i>{% render 'icon-discount-tag' %}</i>
+                            </p>
+                        {% endif %}
+                            {% endif %}
+                    </div>
                     <h3
                             class="card__heading {{ card_header_size }}"
                             {% if card_product.featured_media or settings.card_style == 'card' %}

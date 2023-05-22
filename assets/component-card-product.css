@@ -100,9 +100,9 @@
 }
 
 .outlet-collection-tag {
-    font-weight: 700;
-    display: inline-block;
-    margin: 5px 0 0;
+    font-weight: var(--font-body-weight-bold);
+    display: block;
+    margin: 0;
 }
 
 .product-size-picker {
@@ -118,4 +118,24 @@
     width: 95%;
     right: 50%;
     transform: translateX(50%);
+}
+
+.discount-price-container {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	margin: 0 0 6px;
+}
+
+.rect-discount-tag {
+	margin: 0;
+	direction: ltr;
+	font-size: .75em;
+	color: #b22222;
+	border: 1px firebrick solid;
+	padding: 0 7px;
+}
+
+.card--standard:not(.card--horizontal) > .card__content .card__badge:has(> .badge.color-custom-red) {
+	display: none;
 }
