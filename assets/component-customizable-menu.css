@@ -302,6 +302,11 @@
 
 @media screen and (min-width: 990px) {
 
+	.header__menu-item {
+		font-weight: var(--font-body-weight-bold);
+		font-size: var(--font-body-size-medium);
+	}
+
     .desktop-only {
         display: block !important;
     }

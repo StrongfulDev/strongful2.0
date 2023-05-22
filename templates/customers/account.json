@@ -6,8 +6,6 @@
         "a1409791-72c1-4d15-b03d-c4dd6c0f3fc2": {
           "type": "link_list",
           "settings": {
-            "menu_title": "t:sections.header.settings.menu.menu_title_default",
-            "menu_url": "shopify:\/\/collections\/10"
           }
         }
       },

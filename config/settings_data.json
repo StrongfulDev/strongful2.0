@@ -8,8 +8,8 @@
     "gradient_accent_1": "",
     "colors_accent_2": "#334fb4",
     "gradient_accent_2": "",
-    "colors_text": "#121212",
-    "colors_outline_button_labels": "#121212",
+    "colors_text": "#000000",
+    "colors_outline_button_labels": "#000000",
     "colors_background_1": "#ffffff",
     "gradient_background_1": "",
     "colors_background_2": "#f3f3f3",
@@ -20,7 +20,7 @@
     "type_body_font_custom": "noto-sans",
     "type_body_font": "arimo_n4",
     "body_scale": 90,
-    "page_width": 1600,
+    "page_width": 1500,
     "spacing_sections": 0,
     "spacing_grid_horizontal": 8,
     "spacing_grid_vertical": 8,
@@ -130,6 +130,8 @@
     "show_vendor": true,
     "show_cart_note": false,
     "cart_drawer_collection": "just-landed",
+    "checkout_accent_color": "#000000",
+    "checkout_button_color": "#000000",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
