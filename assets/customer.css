@@ -157,7 +157,7 @@ a.no-decoration {
   }
 
   .customer tbody td {
-    vertical-align: top;
+    vertical-align: middle;
   }
 
   .customer tbody td:first-of-type {
@@ -167,16 +167,6 @@ a.no-decoration {
 
 .customer tbody td:first-of-type {
 	padding-top: 4rem;
-}
-
-.customer tbody td:last-of-type {
-  padding-bottom: 4rem;
-}
-
-@media screen and (min-width: 750px) {
-  .customer tbody td:last-of-type {
-    padding-bottom: 0;
-  }
 }
 
 .customer tbody tr {
@@ -204,10 +194,6 @@ a.no-decoration {
 .customer tfoot td {
   padding-top: 0.6rem;
   padding-bottom: 0.6rem;
-}
-
-.customer tfoot td:first-of-type {
-  text-align: left;
 }
 
 .customer tfoot tr:first-of-type td {
@@ -567,7 +553,7 @@ a.no-decoration {
   padding: 1rem;
   margin-top: 1rem;
   font-size: 1.4rem;
-  text-align: left;
+  text-align: right;
 }
 
 .order .fulfillment a {
@@ -598,12 +584,6 @@ a.no-decoration {
   padding: 0;
   margin-top: 1rem;
   margin-bottom: 0;
-}
-
-@media screen and (min-width: 750px) {
-  .order tbody ul {
-    text-align: left;
-  }
 }
 
 .order table a {
@@ -1115,6 +1095,14 @@ a.order-date-link .icon {
 
 	.customer table {
 		box-shadow: none;
+	}
+
+	.order-details-container {
+		margin-right: calc(var(--grid-desktop-vertical-spacing) * 3);
+	}
+
+	tfoot tr:nth-child(3) td:last-child, tfoot tr:nth-child(4) td:last-child {
+		text-align: center;
 	}
 }
 

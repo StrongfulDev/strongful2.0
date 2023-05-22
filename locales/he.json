@@ -452,7 +452,7 @@
       "total": "סה״כ",
       "total_refunded": "סה״כ זיכויים",
       "fulfilled_at_html": "נארז בתאריך {{ date }}",
-      "track_shipment": "Track shipment",
+      "track_shipment": "מעקב משלוח",
       "tracking_url": "Tracking link",
       "tracking_company": "חברת משלוח",
       "tracking_number": "מספר מעקב",
@@ -469,7 +469,8 @@
       "fulfillment_status_unfulfilled": "לא נשלח",
       "fulfillment_status_pending": "ממתין לאריזה",
       "fulfillment_status_restocked": "מחזיר מלאי",
-      "order_status_cancelled": "בוטלה"
+      "order_status_cancelled": "בוטלה",
+      "shipping_company": "קרגו"
     },
     "orders": {
       "title": "ההזמנות שלי",
