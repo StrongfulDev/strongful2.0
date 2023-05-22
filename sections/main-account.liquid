@@ -32,8 +32,6 @@
 
 <div class="customer account fix-direction section-{{ section.id }}-padding">
   <div>
-    {% comment %}<h1 class="customer__title">{{ 'customer.account.title' | t }}</h1>{% endcomment %}
-    {% comment %}<h1 class="customer__title">{{ customer.first_name }}</h1>{% endcomment %}
       <h1 class="customer__title">{{ 'customer.account.title' | t: name: customer.first_name }}</h1>
   </div>
 
@@ -50,9 +48,10 @@
 
               <div class="main-account-info-container main-account-info-container--my-account">
                   <h2 class="container-title bold">{{ 'customer.account.sub-title' | t }}</h2>
-                  <a href="#" class="container-menu-item container-menu-item-orders-toggler toggle-orders">{{ 'customer.orders.title' | t }}
+                  <span class="container-menu-item container-menu-item-orders-toggler toggle-orders">
+                      {{ 'customer.orders.title' | t }}
                       {% render 'icon-caret' %}
-                  </a>
+                  </span>
                   <a href="{{ routes.account_addresses_url }}" class="container-menu-item container-menu-item--addresses">
                       {{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})
                       {% render 'icon-caret' %}
@@ -65,7 +64,7 @@
                 <span class="toggle-orders-button toggle-orders">
                     {% render 'icon-caret' %}
                 </span>
-                      {% paginate customer.orders by 100 %}
+                      {% paginate customer.orders by customer.orders_count %}
                           {%- if customer.orders.size > 0 -%}
                               <table role="table" class="order-history">
                                   <caption class="visually-hidden">
@@ -86,17 +85,18 @@
                                   {%- for order in customer.orders -%}
                                       <tr role="row">
                                           <td headers="RowOrder ColumnDate" role="cell" data-label="{{ 'customer.orders.date' | t }}">
-                                              {{ order.created_at | time_tag: format: 'date' }}
+                                              <a href="{{ order.customer_url }}" class="order-date-link no-decoration">
+                                                  <span>{{ 'customer.order.date_done' | t }} {{ order.created_at | date: "%d/%m/%Y" }}</span>
+                                                  {% render 'icon-caret' %}
+                                              </a>
                                           </td>
-                                          {% comment %}
                                           <td
-                                                  headers="RowOrder ColumnPayment"
+                                                  headers="RowOrder ColumnFulfillment"
                                                   role="cell"
-                                                  data-label="{{ 'customer.orders.payment_status' | t }}"
+                                                  data-label="{{ 'customer.orders.fulfillment_status' | t }}"
                                           >
-                                              {{ order.financial_status_label }}
+                                              {{ order.fulfillment_status_label }}
                                           </td>
-                                          {% endcomment %}
                                           <td
                                                   headers="RowOrder ColumnImages"
                                                   role="cell"
@@ -113,13 +113,6 @@
                                                       {% endif %}
                                                   </div>
                                               {% endfor %}
-                                          </td>
-                                          <td
-                                                  headers="RowOrder ColumnFulfillment"
-                                                  role="cell"
-                                                  data-label="{{ 'customer.orders.fulfillment_status' | t }}"
-                                          >
-                                              {{ order.fulfillment_status_label }}
                                           </td>
                                           <td headers="RowOrder ColumnTotal" role="cell" data-label="{{ 'customer.orders.total' | t }}">
                                               {{ order.total_net_amount | money_with_currency }}
@@ -200,11 +193,11 @@
                       {{ 'customer.account.support.our-promise' | t }}
                       {% render 'icon-caret' %}
                   </a>
-                  <a href="/" class="container-menu-item container-menu-item--terms">
+                  <a href="/blogs/%D7%AA%D7%A7%D7%A0%D7%95%D7%A0%D7%99%D7%9D/%D7%AA%D7%A7%D7%A0%D7%95%D7%9F-%D7%94%D7%90%D7%AA%D7%A8" class="container-menu-item container-menu-item--terms">
                       {{ 'customer.account.support.terms' | t }}
                       {% render 'icon-caret' %}
                   </a>
-                  <a href="/" class="container-menu-item container-menu-item-refer">
+                  <a href="/blogs/%D7%AA%D7%A7%D7%A0%D7%95%D7%A0%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA" class="container-menu-item container-menu-item-refer">
                       {{ 'customer.account.support.privacy-policy' | t }}
                       {% render 'icon-caret' %}
                   </a>

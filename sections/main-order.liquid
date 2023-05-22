@@ -1,5 +1,8 @@
 {{ 'customer.css' | asset_url | stylesheet_tag }}
 
+{% assign finStat = order.financial_status_label %}
+{% assign fulfillStat = order.fulfillment_status_label %}
+
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -14,20 +17,19 @@
   }
 {%- endstyle -%}
 
-<div class="customer order section-{{ section.id }}-padding">
+<div class="customer order fix-direction section-{{ section.id }}-padding">
   <svg style="display:none">
     <symbol id="icon-discount" viewBox="0 0 12 12">
       <path fill-rule="evenodd" clip-rule="evenodd" d="M7 0h3a2 2 0 012 2v3a1 1 0 01-.3.7l-6 6a1 1 0 01-1.4 0l-4-4a1 1 0 010-1.4l6-6A1 1 0 017 0zm2 2a1 1 0 102 0 1 1 0 00-2 0z" fill="currentColor">
     </symbol>
   </svg>
   <div>
-    <h1 class="customer__title">{{ 'customer.account.title' | t }}</h1>
+    <h1 class="customer__title">{{ 'customer.order.title' | t: number: order.name }}</h1>
     <a href="{{ routes.account_url }}">{{ 'customer.account.return' | t }}</a>
   </div>
 
   <div>
     <div>
-      <h2>{{ 'customer.order.title' | t: name: order.name }}</h2>
       {%- assign order_date = order.created_at | time_tag: format: 'date_at_time' -%}
       <p>{{ 'customer.order.date_html' | t: date: order_date }}</p>
       {%- if order.cancelled -%}
@@ -61,9 +63,13 @@
               >
                 <div>
                   {%- if line_item.url != blank -%}
-                    <a href="{{ line_item.url }}">{{ line_item.title }}</a>
+                      {% if line_item.product.tags contains 'מתנה' %}
+                          <p>{{ line_item.title }}</p>
+                    {% else %}
+                          <a href="{{ line_item.url }}">{{ line_item.title }} {{ line_item.vendor }}</a>
+                    {% endif %}
                   {%- else -%}
-                    <p>{{ line_item.title }}</p>
+                    <p>{{ line_item.title }} {{ line_item.vendor }}</p>
                   {%- endif -%}
                   {%- assign property_size = line_item.properties | size -%}
                   {%- unless line_item.selling_plan_allocation == null and property_size == 0 -%}
@@ -200,6 +206,7 @@
               >
                 {{ line_item.quantity }}
               </td>
+                {% if line_item.quantity > 1 %}
               <td
                 headers="Row{{ line_item.key }} ColumnTotal"
                 role="cell"
@@ -224,6 +231,7 @@
                   {{ line_item.original_line_price | money }}
                 {%- endif -%}
               </td>
+              {% endif %}
             </tr>
           {%- endfor -%}
         </tbody>
@@ -328,7 +336,18 @@
         <h2>{{ 'customer.order.billing_address' | t }}</h2>
         <p>
           <strong>{{ 'customer.order.payment_status' | t }}:</strong>
-          {{ order.financial_status_label }}
+            {% case finStat %}
+                {% when 'paid' %}
+                {{ 'customer.order.payment_status_paid' | t }}
+                {% when 'pending' %}
+                {{ 'customer.order.payment_status_pending' | t }}
+                {% when 'refunded' %}
+                {{ 'customer.order.payment_status_refunded' | t }}
+                {% when 'voided' %}
+                {{ 'customer.order.payment_status_voided' | t }}
+                {% else %}
+                {{ 'customer.order.payment_status_unpaid' | t }}
+            {% endcase %}
         </p>
         {{ order.billing_address | format_address }}
       </div>
@@ -336,7 +355,14 @@
         <h2>{{ 'customer.order.shipping_address' | t }}</h2>
         <p>
           <strong>{{ 'customer.order.fulfillment_status' | t }}:</strong>
-          {{ order.fulfillment_status_label }}
+            {% case fulfillStat %}
+                {% when 'fulfilled' %}
+                {{ 'customer.order.fulfillment_status_fulfilled' | t }}
+                {% when 'partial' %}
+                {{ 'customer.order.fulfillment_status_partial' | t }}
+                {% else %}
+                {{ 'customer.order.fulfillment_status_unfulfilled' | t }}
+            {% endcase %}
         </p>
         {{ order.shipping_address | format_address }}
       </div>

@@ -434,6 +434,7 @@
     },
     "order": {
       "title": "הזמנה מספר {{ number }}",
+      "date_done": "בוצעה בתאריך",
       "date_html": "בוצעה בתאריך {{ date }}",
       "cancelled_html": "בוטלה בתאריך {{ date }}",
       "cancelled_reason": "סיבת ביטול: {{ reason }}",
@@ -456,7 +457,19 @@
       "tracking_company": "חברת משלוח",
       "tracking_number": "מספר מעקב",
       "subtotal": "סיכום ביניים",
-      "total_duties": "Duties"
+      "total_duties": "Duties",
+      "payment_status_paid": "שולם",
+      "payment_status_unpaid": "לא שולם",
+      "payment_status_pending": "ממתין לתשלום",
+      "payment_status_refunded": "הוחזר",
+      "payment_status_voided": "בוטל",
+      "payment_status_partially_refunded": "הוחזר חלקית",
+      "payment_status_partially_paid": "שולם חלקית",
+      "fulfillment_status_fulfilled": "נשלח",
+      "fulfillment_status_unfulfilled": "לא נשלח",
+      "fulfillment_status_pending": "ממתין לאריזה",
+      "fulfillment_status_restocked": "מחזיר מלאי",
+      "order_status_cancelled": "בוטלה"
     },
     "orders": {
       "title": "ההזמנות שלי",

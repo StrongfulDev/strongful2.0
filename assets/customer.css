@@ -6,9 +6,13 @@
 	font-weight: bold;
 }
 
-a {
-	text-decoration: none !important;
+.customer a {
+	text-decoration: none;
 	display: block;
+}
+
+a.no-decoration {
+	text-decoration: none;
 }
 
 .customer:not(.account):not(.order) {
@@ -479,7 +483,7 @@ a {
   align-items: center;
 }
 
-.account a svg {
+.account a svg, .account span svg {
   width: 1.5rem;
   margin-bottom: -0.03rem;
   margin-right: 1rem;
@@ -495,14 +499,6 @@ a {
     padding-top: 1.2rem;
     padding-bottom: 1.2rem;
   }
-}
-
-.account table td:first-of-type a {
-  padding: 1.1rem 1.5rem;
-  text-decoration: none;
-  box-shadow: 0 0 0 0.1rem rgba(var(--color-link), 0.2);
-  border: 0.1rem solid transparent;
-  font-size: 1.2rem;
 }
 
 .account table td:first-of-type a:hover {
@@ -599,7 +595,7 @@ a {
   list-style: none;
   font-size: 1.2rem;
   text-align: right;
-  padding-left: 0;
+  padding: 0;
   margin-top: 1rem;
   margin-bottom: 0;
 }
@@ -647,7 +643,7 @@ a {
 }
 
 .order dd {
-  margin-left: 0;
+  margin-right: 0;
   line-height: calc(1 + 0.3 / var(--font-body-scale));
 }
 
@@ -851,7 +847,7 @@ li.multicolumn-list__item {
 	margin-bottom: var(--grid-desktop-horizontal-spacing);
 }
 
-a.container-menu-item {
+a.container-menu-item, span.container-menu-item {
 	font-size: var(--font-body-size-medium);
 	margin-bottom: var(--grid-desktop-horizontal-spacing);
 	border-bottom: 1px var(--gradient-base-background-4) solid;
@@ -1066,8 +1062,9 @@ td.table-data-images {
 	max-width: 100%;
 }
 
-.custom-orders-container a {
-	text-decoration: underline !important;
+.custom-orders-container a:not(.no-decoration) {
+	text-decoration: underline;
+	display: block;
 }
 
 .div-for-appending {
@@ -1089,6 +1086,16 @@ td.table-data-images {
 	align-items: center;
 	justify-content: center;
 	font-size: 2em;
+}
+
+a.order-date-link {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+a.order-date-link .icon {
+	transform: rotate(90deg);
 }
 
 @media screen and (min-width: 990px) {
