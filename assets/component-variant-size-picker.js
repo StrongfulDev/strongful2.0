@@ -44,16 +44,17 @@ function quickAdd() {
 					}
 				}
 	    } else {
-		    console.log("not in products-product-size-picker")
 		    element.find(".size_variant_button_add").hide();
-		    element.find(".size-picker-loading").addClass("block");
+				element.find(".loading-overlay").css("display", "flex");
+		    element.find(".loading-overlay__spinner").removeClass("hidden");
 		    setTimeout(() => {
 			    element.parents("form").find('[type="submit"]').click();
 		    }, 500);
 		    setTimeout(() => {
 			    element.find(".size_variant_button_add").show();
-			    element.find(".size-picker-loading").removeClass("block");
-		    }, 500);
+			    element.find(".loading-overlay").css("display", "none");
+			    element.find(".loading-overlay__spinner").addClass("hidden");
+		    }, 1500);
 	    }
     })
     .on("click", ".variant_modal__toggle_button, .variant_modal__toggle_button svg", function (e) {

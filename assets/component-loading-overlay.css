@@ -22,6 +22,14 @@
   display: inline-block;
 }
 
+.size_variant_button_container .loading-overlay {
+	align-items: center;
+}
+
+.size_variant_button_container .loading-overlay__spinner {
+	margin-right: auto;
+}
+
 .spinner {
   animation: rotator 1.4s linear infinite;
 }
