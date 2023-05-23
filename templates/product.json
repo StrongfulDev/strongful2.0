@@ -9,12 +9,6 @@
             "show_mobile": false
           }
         },
-        "541e5241-b778-47c7-bac5-f037a6a85960": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "<div class=\"product-sale-announcement\">\n        {% if product.tags contains 'OUTLET' %}\n        <strong class=\"product-sale-text englishFont\">OUTLET<\/strong>\n        <p class=\"product-sale-text bold englishFont ltr upper\">up to 70% off<\/p>\n          {% else %}\n          <div>\n          <strong class=\"product-sale-text\">עד 30% הנחה על דגמים נבחרים<\/strong>\n          <p class=\"product-sale-text small smaller tiny\">לזמן מוגבל<\/p>\n          <\/div>\n        {% endif %}\n      <\/div>"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {
@@ -101,7 +95,6 @@
       },
       "block_order": [
         "7c99b889-3ad8-4802-a5c7-9802ab40f12c",
-        "541e5241-b778-47c7-bac5-f037a6a85960",
         "title",
         "vendor",
         "price",
@@ -154,11 +147,18 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "8bb31773-3add-4a1a-b42f-368102c7844b": {
+      "type": "main-product-quick-add",
+      "settings": {
+        "quick_add_type_mobile": "modal"
+      }
     }
   },
   "order": [
     "main",
     "complete-look-products",
-    "related-products"
+    "related-products",
+    "8bb31773-3add-4a1a-b42f-368102c7844b"
   ]
 }

@@ -40,7 +40,7 @@
     },
     "search": {
       "search": "Search",
-      "reset": "Clear search term"
+      "reset": "איפוס"
     },
     "cart": {
       "view": "View my cart ({{ count }})",
@@ -191,7 +191,7 @@
     "facets": {
       "apply": "מימוש",
       "clear": "איפוס",
-      "clear_all": "Remove all",
+      "clear_all": "איפוס",
       "from": "From",
       "filter_and_sort": "פילטר",
       "filter_by_label": "פילטר:",
