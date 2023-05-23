@@ -1,0 +1,21 @@
+{% comment %}
+  Renders a package protection selection form
+
+  Accepts:
+
+  Usage:
+  {% render 'package-protection' %}
+{% endcomment %}
+
+{% liquid
+    assign product = all_products['7304895987852']
+%}
+
+<div class="package-protection-container">
+    <h3>{{ product.title }}</h3>
+    <p>{{  product.description }}</p>
+    <p>For more information, see our <a href="#">FAQ</a>.</p>
+    <p>it costs: {{ product.price }}</p>
+    <label for="protect">Protect my package</label>
+    <input type="checkbox" id="protect" name="protect">
+</div>
