@@ -63,6 +63,7 @@
           <legend class="form__label">{{ option.name }}</legend>
           {% render 'product-variant-options', product: product, option: option, block: block %}
         </fieldset>
+          {% render 'back-in-stock' %}
       {%- endfor -%}
       <script type="application/json">
         {{ product.variants | json }}

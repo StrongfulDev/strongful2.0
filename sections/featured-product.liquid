@@ -403,7 +403,8 @@
         </div>
       {%- endif -%}
     </div>
-    {% render 'product-media-modal', product: product, variant_images: media_to_render %}
+    {% comment %}{% render 'product-media-modal', product: product, variant_images: media_to_render %}{% endcomment %}
+    {% render 'product-media-modal', product: product %}
   </div>
 </section>
 
