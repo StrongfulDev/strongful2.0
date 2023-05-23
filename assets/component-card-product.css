@@ -139,3 +139,9 @@
 .card--standard:not(.card--horizontal) > .card__content .card__badge:has(> .badge.color-custom-red) {
 	display: none;
 }
+
+@media screen and (min-width: 990px) {
+	.product_variants.default_product_variants {
+		display: none;
+	}
+}

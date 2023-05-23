@@ -276,6 +276,7 @@ ul.default_variant_list {
     margin: auto;
     width: 20px;
     height: 20px;
+		display: none;
 }
 
 .variant_modal__toggle_button .icon {
