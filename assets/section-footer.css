@@ -732,8 +732,7 @@ noscript .localization-selector.link {
 }
 
 .footer-blockgrid__item {
-    padding-left: calc(4rem / var(--font-body-scale));
-    padding-right: calc(4rem / var(--font-body-scale));
+
 }
 
 .link_list .summary__title {
@@ -847,9 +846,13 @@ noscript .localization-selector.link {
 
     .footer .grid {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 3fr;
+        grid-template-columns: repeat(8, 1fr) 3fr;
         row-gap: 2rem;
     }
+
+	.footer-blockgrid__item.blog_and_newsletter, .list-payment, div.footer__column--info, .footer__content-bottom-wrapper, .footer__content-bottom {
+		grid-column: 7 / 10;
+	}
 
     .footer__content-top {
         max-width: inherit;
@@ -912,7 +915,7 @@ noscript .localization-selector.link {
     }
 
     .list-social__item:not(:last-child),
-    .footer_policies_list-item.footer_policy_item:not(:last-child) {
+    .footer_policies_list-item.footer_policy_item:not(:first-child) {
         margin-right: 1rem;
     }
     
