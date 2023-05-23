@@ -5,6 +5,10 @@ window.addEventListener("DOMContentLoaded", function() {
 		$(this).next().closest(".variant_selector").toggle();
 		$(".sticky-cart-cta .variant_selector").toggle();
 		$(".sticky-cart-cta-overlay").toggle();
+
+		if (window.innerWidth > 990) {
+		$(".variant_modal .quick-add-variant-modal.mobile").toggle();
+		}
 	}
 
 	$(".variant_modal .quick_add_modal__close").click(toggleQuickAdd);

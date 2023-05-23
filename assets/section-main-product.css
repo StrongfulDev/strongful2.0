@@ -1786,7 +1786,7 @@ variant-radios {
         max-width: 100%;
     }
 
-    .product-form__input .variant-button:not(.disabled-variant-button) input[type='radio'] + label:hover {
+    variant-radios .product-form__input .variant-button:not(.disabled-variant-button) input[type='radio'] + label:hover {
         background: black;
         color: white;
     }
