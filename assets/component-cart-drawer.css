@@ -19,7 +19,6 @@
     height: 100%;
     width: 40rem;
     max-width: calc(100vw - 3rem);
-    padding: 0 1.5rem;
     border: 0.1rem solid rgba(var(--color-foreground), 0.2);
     border-right: 0;
     background-color: rgb(var(--color-background));
@@ -57,6 +56,12 @@ cart-drawer.is-empty .drawer__header {
     display: none;
 }
 
+.drawer__header {
+	background: var(--color-icon);
+	padding: 0 1.5rem;
+	color: var(--gradient-background);
+}
+
 cart-drawer:not(.is-empty) .cart-drawer__warnings,
 cart-drawer:not(.is-empty) .cart-drawer__collection {
     display: none;
@@ -72,7 +77,6 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
 
 .drawer__header_title {
     position: relative;
-    background-color: rgb(var(--color-background));
     padding: 1.5rem 0 0 0;
     display: flex;
     justify-content: space-between;
@@ -81,6 +85,11 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
 
 .drawer__heading {
     margin: 0 0 1rem;
+	color: var(--gradient-background);
+}
+
+.kettle-reward {
+	fill: var(--gradient-background);
 }
 
 .drawer__close {
@@ -103,8 +112,10 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
 }
 
 .drawer__close svg {
-    height: 2.4rem;
-    width: 2.4rem;
+    height: 1.4rem;
+    width: 1.4rem;
+	fill: var(--gradient-background);
+	stroke: var(--gradient-background);
 }
 
 .drawer__contents {
@@ -119,7 +130,7 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
     padding: 1.5rem 0;
 	position: absolute;
 	bottom: 0;
-	width: 100%;
+	width: calc(100% - 3rem);
 	z-index: 2;
 }
 
@@ -398,7 +409,6 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 }
 
 .reward-item.active-reward {
-    background-color: rgba(var(--color-foreground), 0.05);
     padding: 10px;
 }
 
@@ -439,6 +449,7 @@ cart-drawer.loading .rewards-section {
 .drawer__inner__content {
 	position: relative;
 	height: 100%;
+	padding: 0 1.5rem;
 }
 
 .cart-drawer__footer {
@@ -451,4 +462,26 @@ cart-drawer.loading .rewards-section {
 
 cart-drawer-items {
 	height: calc(100vh - 273px);
+}
+
+.cart-rewards-icon-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(225,225,225,.32);
+	border-radius: 50%;
+	height: 18px;
+	width: 18px;
+}
+
+.reward-item .kettle-light, .reward-item.active-reward .kettle-reward {
+	display: none;
+}
+
+.reward-item.active-reward .kettle-light {
+	display: inline;
+}
+
+.kettle-light {
+	background: rgb(29, 91, 79);
 }

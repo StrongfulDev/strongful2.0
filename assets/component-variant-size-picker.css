@@ -151,7 +151,7 @@
 
 .variant_modal .product_variants .size_variant_button_container label {
     text-align: var(--text-alignment);
-    padding: 10px;
+    padding: 10px 2.5rem;
     display: flex;
     justify-content: space-between;
 }
@@ -328,11 +328,4 @@ ul.default_variant_list {
 .disabled-variant-button label.product_size_picker__button__label,
 .disabled-variant-button .size_variant_button_container{
     background: var(--gradient-base-background-3);
-}
-
-@media screen and (min-width: 990px) {
-	variant-radios .product_variants .size_variant_button_container label:hover {
-		background: var(--color-icon);
-		color: var(--gradient-base-background-1);
-	}
 }

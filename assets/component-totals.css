@@ -17,10 +17,6 @@
   line-height: 1;
 }
 
-.totals > * + * {
-  margin-left: 2rem;
-}
-
 .totals__subtotal-value {
   font-size: 1.8rem;
 }

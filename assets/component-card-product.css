@@ -144,4 +144,9 @@
 	.product_variants.default_product_variants {
 		display: none;
 	}
+
+	.product_variants .size_variant_button:not(.disabled-variant-button) label:hover {
+		background: var(--color-icon);
+		color: var(--gradient-base-background-1);
+	}
 }

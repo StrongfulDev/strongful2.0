@@ -18,12 +18,9 @@
 {% endcomment %}
 
 <span class="reward-item {{ class }} {% if active %}active-reward{% endif %}">
-  {%comment%} render a snippet with the icon parameter {%endcomment%}
-  {% case icon %}
-  {% when 'lock' %}
-    {% render 'icon-lock' %}
-  {% when 'reward' %}
-    {% render 'icon-reward' %}
-  {% endcase %}
+  <div class="cart-rewards-icon-container">
+      {% render 'icon-lock' %}
+      {% render 'icon-reward' %}
+  </div>
   <span class="reward-item__title">{{ title }}</span>
 </span>
