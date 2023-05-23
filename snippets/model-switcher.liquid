@@ -17,7 +17,7 @@
         </summary>
         <div class="model-switcher__list">
             {% for model in shop.metaobjects.model.values %}
-                <div class="model-switcher__item">
+                <div class="model-switcher__item" data-model-size="{{ model.size_letter.value }}">
                     <input type="radio" name="model" id="model-{{ model.size_letter.value }}"
                            value="{{ model.size_letter.value }}">
                     <label for="model-{{ model.size_letter.value }}">
