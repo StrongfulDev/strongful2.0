@@ -73,17 +73,17 @@
     padding: 0 1.5rem;
     max-width: none;
   }
+
+	#product-grid {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -1.5rem;
+	}
 }
 
 .collection__view-all a:not(.link) {
   margin: var(--heading-margin) 0;
 }
-
-/*.product-grid#product-grid {*/
-/*  display: grid;*/
-/*  grid-template-columns: repeat(2, 1fr);*/
-/*  grid-gap: var(--grid-spacing);*/
-/*}*/
 
 .collection div.size-picker-loading {
   position: static;

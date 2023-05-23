@@ -328,3 +328,10 @@ ul.default_variant_list {
 .disabled-variant-button .size_variant_button_container{
     background: var(--gradient-base-background-3);
 }
+
+@media screen and (min-width: 990px) {
+	.product_variants .size_variant_button_container label:hover {
+		background: var(--color-icon);
+		color: var(--gradient-base-background-1);
+	}
+}
