@@ -1042,6 +1042,7 @@ summary::-webkit-details-marker {
 
 #product-grid {
 	column-gap: var(--grid-desktop-horizontal-spacing);
+	row-gap: calc(var(--grid-desktop-horizontal-spacing) * 2);
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 }

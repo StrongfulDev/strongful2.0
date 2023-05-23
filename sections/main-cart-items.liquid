@@ -222,7 +222,8 @@
                       <label class="visually-hidden" for="Quantity-{{ item.index | plus: 1 }}">
                         {{ 'products.product.quantity.label' | t }}
                       </label>
-                      <quantity-input class="quantity cart-quantity">
+                        {% if item.final_line_price > 0 %}
+                      <quantity-input class="quantity cart-quantity {% if item.final_line_price == 0 %}hidden{% endif %}" data-price="item.final_line_price">
                         <button class="quantity__button no-js-hidden" name="minus" type="button">
                           <span class="visually-hidden">
                             {{- 'products.product.quantity.decrease' | t: product: item.product.title | escape -}}
@@ -254,7 +255,7 @@
                           {% render 'icon-plus' %}
                         </button>
                       </quantity-input>
-
+                        {% endif %}
                       <cart-remove-button
                         id="Remove-{{ item.index | plus: 1 }}"
                         data-index="{{ item.index | plus: 1 }}"

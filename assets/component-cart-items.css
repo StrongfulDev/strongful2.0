@@ -57,6 +57,12 @@
   margin-top: 0.6rem;
 }
 
+.cart-item__details > dl {
+	border-right: 1px var(--gradient-base-background-4) solid;
+	padding-right: .5rem;
+	margin-right: .5rem;
+}
+
 .cart-item__media {
   position: relative;
 }

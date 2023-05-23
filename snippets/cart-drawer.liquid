@@ -305,6 +305,7 @@
                                                                 {% render 'icon-remove' %}
                                                             </button>
                                                         </cart-remove-button>
+                                                        {% if item.final_line_price > 0 %}
                                                         <quantity-input class="quantity cart-quantity">
                                                             <button class="quantity__button no-js-hidden" name="minus"
                                                                     type="button">
@@ -339,6 +340,7 @@
                                                                 {% render 'icon-plus' %}
                                                             </button>
                                                         </quantity-input>
+                                                        {% endif %}
                                                     </div>
 
                                                     <div

@@ -447,9 +447,6 @@ cart-drawer.loading .rewards-section {
 
 .cart-item__details .caption-with-letter-spacing {
 	display: inline-block;
-	border-left: 1px var(--gradient-base-background-4) solid;
-	padding-left: .5rem;
-	margin-left: .5rem;
 }
 
 cart-drawer-items {

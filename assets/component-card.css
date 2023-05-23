@@ -151,6 +151,10 @@
     padding: 1.3rem 1rem;
 }
 
+#product-grid .card__information {
+	padding-top: 1rem;
+}
+
 .card:not(.ratio) > .card__content {
     grid-template-rows: max-content minmax(0, 1fr) max-content auto;
 }
@@ -382,7 +386,7 @@
 .card-information
 > *:not(.visually-hidden:first-child)
 + *:not(.rating) {
-    margin-top: 0.7rem;
+    margin-top: 0rem;
 }
 
 .card-information .caption {
