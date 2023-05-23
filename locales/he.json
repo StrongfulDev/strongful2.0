@@ -31,7 +31,7 @@
         "tiktok": "TikTok"
       }
     },
-    "continue_shopping": "Continue shopping",
+    "continue_shopping": "SHOP NOW",
     "pagination": {
       "label": "Pagination",
       "page": "Page {{ number }}",
@@ -261,7 +261,7 @@
       "pages": "Pages"
     },
     "cart": {
-      "cart": "Cart"
+      "cart": "סל קניות"
     },
     "contact": {
       "form": {
@@ -299,6 +299,7 @@
       "note": "Order special instructions",
       "checkout": "מעבר לתשלום",
       "empty": "הסל שלך ריק",
+      "empty_paragraph": "לחצי כאן כדי להוסיף את הפריטים הכי שיקיים לעגלה",
       "cart_error": "There was an error while updating your cart. Please try again.",
       "cart_quantity_error_html": "You can only add {{ quantity }} of this item to your cart.",
       "taxes_and_shipping_policy_at_checkout_html": "Taxes and <a href=\"{{ link }}\">shipping<\/a> calculated at checkout",
@@ -314,8 +315,8 @@
       },
       "update": "Update",
       "login": {
-        "title": "Have an account?",
-        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Log in<\/a> to check out faster."
+        "title": "חברת מועדון?",
+        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">הכנסי<\/a> כדי להזמין מהר יותר ולצבור נקודות."
       },
       "rewards": {
         "title": "Earn rewards",
@@ -512,7 +513,7 @@
       "title": "Here's your {{ value }} gift card for {{ shop }}!",
       "subtext": "Your gift card",
       "gift_card_code": "Gift card code",
-      "shop_link": "Continue shopping",
+      "shop_link": "SHOP NOW",
       "remaining_html": "Remaining {{ balance }}",
       "add_to_apple_wallet": "Add to Apple Wallet",
       "qr_image_alt": "QR code — scan to redeem gift card",
@@ -524,7 +525,7 @@
   },
   "rewards": {
     "free_shipping": {
-      "message_html": "Add <span class=\"rewards__missing_amount\"><\/span> more and get free shipping</span>"
+      "message_html": "הוסיפי עוד <span class=\"rewards__missing_amount\"><\/span> וקבלי משלוח אקספרס חינם</span>"
     },
     "free_bottle": {
       "message_html": "תוסיפי <span class=\"rewards__missing_amount\"></span> שח ותקבלי בקבוק חינם"

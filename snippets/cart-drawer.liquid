@@ -50,7 +50,8 @@
                     <div class="drawer__inner-empty">
                         <div class="cart-drawer__warnings center{% if settings.cart_drawer_collection != blank %} cart-drawer__warnings--has-collection{% endif %}">
                             <div class="cart-drawer__empty-content">
-                                <h2 class="cart__empty-text">{{ 'sections.cart.empty' | t }}</h2>
+                                <h2 class="cart__empty-text bold">{{ 'sections.cart.empty' | t }}</h2>
+                                <p class="cart__empty-paragraph">{{ 'sections.cart.empty_paragraph' | t }}</p>
                                 <button
                                         class="drawer__close"
                                         type="button"
