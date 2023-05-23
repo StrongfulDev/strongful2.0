@@ -23,21 +23,29 @@
         <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
       </symbol>
     </svg>
-    <h1>{{ 'customer.addresses.title' | t }}</h1>
-    <a href="{{ routes.account_url }}">
+    <h1 class="address-main-title">
+        {{ 'customer.addresses.title' | t }}
+        <a href="{{ routes.account_url }}" class="address-back-link">
+            {% render 'icon-caret' %}
+        </a>
+    </h1>
+    {% comment %}
+    <a href="{{ routes.account_url }}" class="address-back-link">
       {{ 'customer.account.return' | t }}
     </a>
+    {% endcomment %}
 
     <div data-address>
       <button
         type="button"
         aria-expanded="false"
         aria-controls="AddAddress"
+        class="add-address-button"
       >
         {{ 'customer.addresses.add_new' | t }}
       </button>
       <div id="AddAddress">
-        <h2 id="AddressNewHeading">{{ 'customer.addresses.add_new' | t }}</h2>
+        {% comment %}<h2 id="AddressNewHeading">{{ 'customer.addresses.add_new' | t }}</h2>{% endcomment %}
         {%- form 'customer_address', customer.new_address, aria-labelledBy: 'AddressNewHeading' -%}
           <div class="field">
             <input
@@ -173,9 +181,6 @@
     <ul role="list">
       {%- for address in customer.addresses -%}
         <li data-address>
-          {%- if address == customer.default_address -%}
-            <h2>{{ 'customer.addresses.default' | t }}</h2>
-          {%- endif -%}
           {{ address | format_address }}
           <button
             type="button"
@@ -187,6 +192,7 @@
           >
             {{ 'customer.addresses.edit' | t }}
           </button>
+            {%- unless address == customer.default_address -%}
           <button
             type="button"
             aria-label="{{ 'customer.addresses.delete' | t }} {{ forloop.index }}"
@@ -195,8 +201,12 @@
           >
             {{ 'customer.addresses.delete' | t }}
           </button>
+          {% endunless %}
+            {%- if address == customer.default_address -%}
+                <h2>{{ 'customer.addresses.default' | t }}</h2>
+            {%- endif -%}
           <div id="EditAddress_{{ address.id }}">
-            <h2>{{ 'customer.addresses.edit_address' | t }}</h2>
+            <h2 class="edit-address-title">{{ 'customer.addresses.edit_address' | t }}</h2>
             {%- form 'customer_address', address -%}
               <div class="field">
                 <input

@@ -69,6 +69,7 @@ class CustomerAddresses {
 
   _handleAddEditButtonClick = ({ currentTarget }) => {
     this._toggleExpanded(currentTarget);
+		currentTarget.classList.toggle('active');
   }
 
   _handleCancelButtonClick = ({ currentTarget }) => {
@@ -77,6 +78,7 @@ class CustomerAddresses {
         .closest(selectors.addressContainer)
         .querySelector(`[${attributes.expanded}]`)
     )
+	  document.querySelector('.add-address-button').classList.toggle('active');
   }
 
   _handleDeleteButtonClick = ({ currentTarget }) => {
@@ -88,3 +90,16 @@ class CustomerAddresses {
     }
   }
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+	if ($(window).width() < 990) {
+		$(".toggle-orders").click(function() {
+			$(".custom-orders-container.mobile").toggleClass("active");
+		});
+
+		let mainTitle = document.querySelector(".customer__title");
+		let mainTitleLength = mainTitle.innerHTML.length;
+		let slicedLength = parseInt(mainTitleLength - 3);
+		mainTitle.innerHTML = mainTitle.innerHTML.slice(slicedLength, mainTitleLength);
+	}
+});

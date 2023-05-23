@@ -1934,7 +1934,11 @@
       }
     },
     "main-account": {
-      "name": "Account"
+      "name": "Account",
+      "menu": {
+        "name": "Account menu"
+      },
+      "order-pagination": "How many orders to show"
     },
     "main-activate-account": {
       "name": "Account activation"

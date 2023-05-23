@@ -2,9 +2,20 @@
   "sections": {
     "main": {
       "type": "main-account",
+      "blocks": {
+        "a1409791-72c1-4d15-b03d-c4dd6c0f3fc2": {
+          "type": "link_list",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "a1409791-72c1-4d15-b03d-c4dd6c0f3fc2"
+      ],
       "settings": {
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "order_pagination": 6
       }
     }
   },

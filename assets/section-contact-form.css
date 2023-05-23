@@ -30,6 +30,10 @@
   }
 }
 
+.contact__button, .contact-us-content {
+	text-align: center;
+}
+
 @media screen and (min-width: 750px) {
   .contact__fields {
     display: grid;

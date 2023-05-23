@@ -911,8 +911,8 @@ noscript .localization-selector.link {
         padding: 0;
     }
 
-    .list-social__item:not(:first-child),
-    .footer_policies_list-item.footer_policy_item:not(:first-child) {
+    .list-social__item:not(:last-child),
+    .footer_policies_list-item.footer_policy_item:not(:last-child) {
         margin-right: 1rem;
     }
     

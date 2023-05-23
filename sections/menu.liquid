@@ -1,0 +1,36 @@
+
+<div>
+    <ul class="link-list">
+        {% for link in section.settings.menu.links %}
+            <li class="link-list__item">
+                <a href="{{ link.url }}" class="link-list__link">{{ link.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% schema %}
+
+{
+    "name": "Link List",
+    "class": "link-list-section",
+    "settings": [
+        {
+            "type":"link_list",
+            "id":"menu",
+            "default":"main-menu",
+            "label":"t:sections.header.settings.menu.label"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Link List",
+            "category": "Link List",
+            "settings": {
+                "menu": "main-menu"
+            }
+        }
+    ]
+}
+
+{% endschema %}
