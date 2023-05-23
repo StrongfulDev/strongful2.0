@@ -3105,3 +3105,7 @@ fieldset {
 .view-all-link {
 	min-height: calc(3.5rem + var(--buttons-border-width) * 2);
 }
+
+div.needsclick, button.needsclick {
+		z-index: 3!important;
+}

@@ -129,7 +129,7 @@
     "cart_type": "drawer",
     "show_vendor": true,
     "show_cart_note": false,
-    "cart_drawer_collection": "just-landed",
+    "cart_drawer_collection": "",
     "checkout_accent_color": "#000000",
     "checkout_button_color": "#000000",
     "sections": {

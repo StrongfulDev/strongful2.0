@@ -19,7 +19,8 @@ function quickAdd() {
     .on("click", '.variant_selector.submit_on_click .size_variant_button:not(.disabled-variant-button)', function (e) {
       const element = $(this);
 			let productPageIdentifier = document.querySelector(".products-product-size-picker");
-	    if (productPageIdentifier !== null || true) {
+	    console.log("productPageIdentifier", productPageIdentifier)
+	    if (productPageIdentifier !== null) {
 		    const elementFormGrandParent = element.parents(".products-product-size-picker");
 				const variantButtons = document.querySelectorAll("variant-radios .product-form__input input[type='radio']");
 				if (variantButtons.length === 0) {
