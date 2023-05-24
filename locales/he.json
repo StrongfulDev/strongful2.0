@@ -87,7 +87,7 @@
     "title": "StrongBlog",
     "most-viewed-posts": {
       "title": "הכי נצפים"
-      },
+    },
     "article": {
       "blog": "Blog",
       "read_more_title": "Read more: {{ title }}",
@@ -525,10 +525,10 @@
   },
   "rewards": {
     "free_shipping": {
-      "message_html": "הוסיפי עוד <span class=\"rewards__missing_amount\"><\/span> וקבלי משלוח אקספרס חינם</span>"
+      "message_html": "הוסיפי עוד <span class=\"rewards__missing_amount\"><\/span> וקבלי משלוח אקספרס חינם<\/span>"
     },
     "free_bottle": {
-      "message_html": "תוסיפי <span class=\"rewards__missing_amount\"></span> שח ותקבלי בקבוק חינם"
+      "message_html": "תוסיפי <span class=\"rewards__missing_amount\"><\/span> שח ותקבלי בקבוק חינם"
     }
   }
 }

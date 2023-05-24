@@ -183,6 +183,7 @@ class PredictiveSearch extends SearchForm {
 
   getSearchResults(searchTerm) {
     const queryKey = searchTerm.replace(" ", "-").toLowerCase();
+	  console.log(queryKey);
     this.setLiveRegionLoadingState();
 
     if (this.cachedResults[queryKey]) {
