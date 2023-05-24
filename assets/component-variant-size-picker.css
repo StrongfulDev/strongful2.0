@@ -313,6 +313,11 @@ ul.default_variant_list {
     padding: .3rem 0;
 }
 
+.complete_look__item .product_variants .size_variant_button_container label:hover {
+	background: var(--gradient-base-accent-1);
+	color: var(--gradient-base-background-1);
+}
+
 .complete_look__item .product_variants .size_variant_button {
     width: 100%;
 }

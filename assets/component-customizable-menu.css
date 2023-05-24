@@ -350,10 +350,12 @@
 
 	.mega-menu__content.customizable.fix-direction li:first-child {
 		text-transform: uppercase;
+		text-decoration: none;
 	}
 
 	.mega-menu__content.customizable.fix-direction li:first-child a {
 		font-weight: var(--font-body-weight-bold);
+		text-decoration: none;
 	}
 
 	.desktop_links_images {

@@ -72,6 +72,22 @@
                                 {%- endif -%}
                             </div>
                         </div>
+                        <a href="{{ routes.root_url }}"
+                           class="header__heading-link link link--text focus-inset">
+                            {%- if settings.logo != blank -%}
+                                {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
+                                {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
+                                {{ settings.logo | image_url: width: 500 | image_tag:
+                                class: 'header__heading-logo motion-reduce',
+                                widths: '50, 100, 150, 200, 250, 300, 400, 500',
+                                height: logo_height,
+                                width: settings.logo_width,
+                                alt: logo_alt
+                                }}
+                            {%- else -%}
+                                <span class="h2">{{ shop.name }}</span>
+                            {%- endif -%}
+                        </a>
                         {%- if settings.cart_drawer_collection != blank -%}
                             <div class="cart-drawer__collection">
                                 {% render 'card-collection', card_collection: settings.cart_drawer_collection, columns: 1 %}
