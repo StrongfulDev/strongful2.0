@@ -321,7 +321,9 @@
       "rewards": {
         "title": "Earn rewards",
         "free_shipping": "משלוח חינם",
-        "upsell_text": "בקבוק מתנה"
+        "upsell_text": "בקבוק מתנה",
+        "hundred_discount": "100₪ הנחה",
+        "two_hundred_discount": "200₪ הנחה"
       }
     },
     "footer": {
@@ -529,6 +531,12 @@
     },
     "free_bottle": {
       "message_html": "תוסיפי <span class=\"rewards__missing_amount\"><\/span> שח ותקבלי בקבוק חינם"
+    },
+    "hundred_discount": {
+      "message_html": "הוסיפי עוד <span class=\"rewards__missing_amount\"></span> וקבלי 100₪ הנחה"
+    },
+    "two_hundred_discount": {
+      "message_html": "הוסיפי עוד <span class=\"rewards__missing_amount\"></span> וקבלי 200₪ הנחה"
     }
   }
 }

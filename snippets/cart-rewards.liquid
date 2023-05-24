@@ -13,10 +13,14 @@
     <div class="reward-items">
         {% liquid
             assign free_shipping_text = 'sections.cart.rewards.free_shipping' | t
+            assign hundred_discount = 'sections.cart.rewards.hundred_discount' | t
             assign upsell_text = 'sections.cart.rewards.upsell_text' | t
+            assign two_hundred_discount = 'sections.cart.rewards.two_hundred_discount' | t
         %}
         {% render 'reward-item', icon: "lock", class: "free_shipping", title: free_shipping_text, active: false %}
+        {% render 'reward-item', icon: "lock", class: "hundred_discount", title: hundred_discount, active: false %}
         {% render 'reward-item', icon: "lock", class: "free_bottle", title: upsell_text, active: false %}
+        {% render 'reward-item', icon: "lock", class: "two_hundred_discount", title: two_hundred_discount, active: false %}
     </div>
     <div class="track-progress">
         <span class="progress-value"></span>

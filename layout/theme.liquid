@@ -384,12 +384,20 @@
         },
         give_free_bottle: {
             message: '{{ 'rewards.free_bottle.message_html' | t }}',
+        },
+        hundred_discount: {
+            message: '{{ 'rewards.hundred_discount.message_html' | t }}',
+        },
+        two_hundred_discount: {
+            message: '{{ 'rewards.two_hundred_discount.message_html' | t }}',
         }
     };
     window.rewardsRules = [
-        {% for reward in shop.metaobjects.reward.values %}
+        {% assign rewards = shop.metaobjects.reward.values | sort: "order" %}
+        {% for reward in rewards %}
         {
             title: "{{ reward.title.value }}",
+            order: parseInt("{{ reward.order.value }}"),
             element_class: "{{ reward.element_class.value }}",
             condition: {
                 type: "{{ reward.condition_type.value }}",

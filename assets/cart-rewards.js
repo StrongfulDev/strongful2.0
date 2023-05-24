@@ -197,15 +197,16 @@ class CartRewards {
 		const isLatestDeactivatedRule = ruleIndex === this.activeRewards && !isConditionMet;
 		const missingAmount = rule.condition.value - this.cartTotalValue;
 
-		// Apply reward message.
-		if (isLatestActiveRule) {
-			rewardText.html(rule.reward.message);
-		}
 		// Apply condition message.
-		else if (isLatestDeactivatedRule && missingAmount > 0) {
+	  if (isLatestDeactivatedRule && missingAmount > 0) {
 			const rewardMessage = $(`<span class="${rule.element_class}-message" data-index="${ruleIndex}">${rule.condition.message}</span>`);
 			rewardMessage.find('.rewards__missing_amount').text(missingAmount);
 			rewardText.html(rewardMessage);
+		}
+
+		// Apply reward message.
+		else if (isLatestActiveRule) {
+			rewardText.html(rule.reward.message);
 		}
 	}
 
