@@ -770,6 +770,9 @@
                                             <div id="MegaMenu-Content-{{ forloop.index }}"
                                                  class="mega-menu__content customizable fix-direction gradient motion-reduce global-settings-popup"
                                                  tabindex="-1">
+                                                <a href="{{ block.settings.shop_all_link }}" class="shop-all-link">
+                                                    {{ block.settings.shop_all_title }}
+                                                </a>
                                                 <ul class="mega-menu__list page-width{% if link_levels == 1 %} mega-menu__list--condensed{% endif %}"
                                                     role="list">
                                                     {%- for childlink in block.settings.menu.links -%}
@@ -1356,7 +1359,17 @@
     "type": "url",
     "id": "mobile_logo_link",
     "label": "t:sections.header.settings.mobile_logo_link.label"
-    }
+    },
+      {
+          "type": "url",
+            "id": "shop_all_link",
+            "label": "t:sections.header.settings.shop_all_link.label"
+      },
+      {
+          "type": "text",
+            "id": "shop_all_title",
+          "label": "t:sections.header.settings.shop_all_title.label"
+      }
   ],
   "blocks":[
     {
@@ -1429,7 +1442,27 @@
           "id":"mobile_title",
           "label":"t:sections.header.blocks.menu_item.settings.mobile.title.label",
           "info":"t:sections.header.blocks.menu_item.settings.mobile.title.info"
-        }
+        },
+          {
+              "type": "url",
+                "id": "main_link",
+                "label": "t:sections.header.blocks.menu_item.settings.main_link.label"
+          },
+          {
+                "type": "text",
+                    "id": "main_title",
+                "label": "t:sections.header.blocks.menu_item.settings.main_title.label"
+            },
+            {
+                "type": "url",
+                    "id": "shop_all_link",
+                    "label": "t:sections.header.blocks.menu_item.settings.shop_all_link.label"
+            },
+            {
+                "type": "text",
+                    "id": "shop_all_title",
+                "label": "t:sections.header.blocks.menu_item.settings.shop_all_title.label"
+          }
       ]
     },
     {

@@ -1429,6 +1429,14 @@
                 "label": "Cover image",
                 "info": "Image to show under link text"
               }
+            },
+            "shop_all_title": {
+              "label": "Shop all title",
+              "info": "Title to show for the shop all link"
+            },
+            "shop_all_link": {
+              "label": "Shop all link",
+              "info": "The link for the shop all link"
             }
           }
         },

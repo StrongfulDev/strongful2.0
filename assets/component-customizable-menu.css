@@ -329,16 +329,29 @@
         flex-direction: column;
         flex-wrap: wrap;
         margin: 0;
-        grid-gap: 0.4rem 3rem;
+        grid-gap: 0.4rem 1rem;
+	    width: 100%;
+	    height: 16vw;
     }
 
     .mega-menu__content.customizable {
-        display: flex;
+        display: grid;
+	    grid-template-columns: 1fr 1fr;
+    }
+
+    .shop-all-link {
+	    text-align: right;
+	    align-self: baseline;
+	    grid-column: 1 / 3;
     }
 
     .mega-menu__content.customizable.fix-direction li:first-child a {
         font-weight: bold;
     }
+
+	.desktop_links_images {
+		max-width: 100%;
+	}
 
     .desktop_links_images a {
         border-right: 1px var(--gradient-base-background-3) solid;
