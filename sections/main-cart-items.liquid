@@ -77,7 +77,7 @@
                       <a href="{{ item.url }}" class="cart-item__link" aria-hidden="true" tabindex="-1"> </a>
                       <div class="cart-item__image-container gradient global-media-settings">
                         <img
-                          src="{{ item.image | image_url: width: 300 }}"
+                          src="{{ item.variant.image | image_url: width: 300 }}"
                           class="cart-item__image"
                           alt="{{ item.image.alt | escape }}"
                           loading="lazy"
