@@ -2130,6 +2130,10 @@
         "show_vendor": {
           "label": "Show vendor"
         },
+        "announcement_tag": {
+          "label": "Announcement tag",
+          "info": "Add a tag to products to display an announcement. [Learn more](https:\/\/help.shopify.com\/manual\/products\/organize-products#add-tags-to-products)"
+        },
         "show_rating": {
           "label": "Show product rating",
           "info": "To display a rating, add a product rating app. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/theme-structure\/page-types#product-grid-section-settings)"

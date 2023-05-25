@@ -91,12 +91,18 @@
 }
 
 .card_banner_text {
-    margin-top: -10px;
-    width: 100%;
-    display: block;
-    padding: 5px;
-    margin-bottom: 8px;
-    text-align: center;
+	width: 100%;
+	display: block;
+	padding: 4px;
+	margin-bottom: 8px;
+	text-align: center;
+	font-size: var(--font-body-size-small);
+}
+
+@media screen and (min-width: 990px) {
+	.card_banner_text {
+		font-size: var(--font-body-size-smallest);
+	}
 }
 
 .outlet-collection-tag {

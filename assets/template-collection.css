@@ -27,6 +27,11 @@
     padding-left: 5rem;
     padding-right: 5rem;
   }
+
+	.product_variants .size_variant_button_container label:hover {
+		background: var(--gradient-base-accent-1);
+		color: var(--gradient-base-background-1);
+	}
 }
 
 .collection.loading .loading-overlay {

@@ -19,9 +19,10 @@
   - image_count: {Number} Amount of images to show
   - card_banner_text: {String} Text to show under the image as banner
   - card_header_size: {String} Size of the card header. Values are "h1", "h2", etc.  (optional)
+  - announcement_tag: {String} the tag to show on the card
 
   Usage:
-  {% render 'card-product', show_vendor: section.settings.show_vendor %}
+  {% render 'card-product', show_vendor: section.settings.show_vendor, announcement_tag: sections.settings.announcement_tag %}
 {% endcomment %}
 
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
@@ -171,7 +172,9 @@
                 <div class="card__information">
                     {% if card_banner_text and card_banner_text != blank %}
                         {% unless card_product.tags contains "no_announcement" %}
+                            {% if card_product.tags contains announcement_tag %}
                             <span class="card_banner_text color-background-2">{{ card_banner_text }}</span>
+                                {% endif %}
                         {% endunless %}
                     {% endif %}
                     <div class="discount-price-container">

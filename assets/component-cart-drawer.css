@@ -392,6 +392,10 @@ cart-drawer-items::-webkit-scrollbar {
     .drawer__footer #dynamic-checkout-cart ul > li:first-child:nth-last-child(4) ~ li {
         flex-basis: calc(50% - 0.5rem) !important;
     }
+
+	.drawer__inner {
+		width: 42rem;
+	}
 }
 
 cart-drawer-items::-webkit-scrollbar {
