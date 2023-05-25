@@ -58,7 +58,7 @@ function changeModel(modelSize) {
 
 	const model = window.models[modelSize];
 
-	$('.model-switch-button span').text(model ? `${model.name} (${modelSize})` : `${modelSize}`);
+	// $('.model-switch-button span').text(model ? `${model.name} (${modelSize})` : `${modelSize}`);
 }
 
 function updateVariantRadios(modelSize) {
