@@ -467,4 +467,9 @@
     min-height: 16rem;
 }
 
+.button--primary {
+	font-size: 2rem;
+	padding: 1rem 2rem;
+}
+
 

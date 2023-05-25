@@ -500,3 +500,21 @@ cart-drawer-items.is-empty {
 .reward-item.active-reward .cart-rewards-icon-container {
 	background: var(--cart-rewards-background);
 }
+
+.quantity {
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	direction: rtl;
+}
+
+.quantity__button:not(:focus-visible):not(.focused) {
+	background-color: var(--gradient-base-background-3);
+}
+
+.quantity__button:focus {
+	z-index: 1;
+}
+
+.quantity:before, .quantity:after {
+	content: none;
+}

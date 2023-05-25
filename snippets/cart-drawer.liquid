@@ -227,13 +227,13 @@
                                 {{ 'products.product.price.regular_price' | t }}
                               </span>
                                                             <s class="cart-item__old-price product-option">
-                                                                {{- item.original_price | money -}}
+                                                                {{- item.original_line_price | money -}}
                                                             </s>
                                                             <span class="visually-hidden">
                                 {{ 'products.product.price.sale_price' | t }}
                               </span>
                                                             <strong class="cart-item__final-price product-option">
-                                                                {{ item.final_price | money }}
+                                                                {{ item.final_line_price | money }}
                                                             </strong>
                                                         </div>
                                                     {%- else -%}
@@ -249,7 +249,6 @@
                                                     >
                                                         {%- for discount in item.discounts -%}
                                                             <li class="discounts__discount">
-                                                                {%- render 'icon-discount' -%}
                                                                 {{ discount.title }}
                                                             </li>
                                                         {%- endfor -%}
@@ -441,7 +440,6 @@
                                     aria-label="{{ 'customer.order.discount' | t }}">
                                     {%- for discount in cart.cart_level_discount_applications -%}
                                         <li class="discounts__discount discounts__discount--end">
-                                            {%- render 'icon-discount' -%}
                                             {{ discount.title }}
                                             (-{{ discount.total_allocated_amount | money }})
                                         </li>

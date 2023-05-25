@@ -10,7 +10,9 @@ class CartRewards {
 	allRewardsAmount = 0;
 	activeRewards = 0;
 	cartTotalValue = 0;
+	cartOriginalTotalValue = 0;
 	lastCartTotalValue = 0;
+	lastCartOriginalTotalValue = 0;
 
 	async init() {
 		console.log("Reward rules", this.rules);
@@ -29,11 +31,14 @@ class CartRewards {
 	}
 
 	async checkRules() {
+
 		this.loading(true);
 
 		this.lastCartTotalValue = this.cartTotalValue;
+		this.lastCartOriginalTotalValue = this.cartOriginalTotalValue;
 		this.cart = await this.getCart();
-		this.cartTotalValue = parseInt(this.cart.total_price / 100)
+		this.cartTotalValue = parseInt(this.cart.total_price / 100);
+		this.cartOriginalTotalValue = parseInt(this.cart.original_total_price / 100);
 		this.activeRewards = 0
 
 		this.rules.forEach((rule, index) => {
@@ -62,14 +67,16 @@ class CartRewards {
 	checkCondition(rule) {
 		let isConditionMet = false;
 
-		switch (rule.condition.type) {
-			case "CartAmount":
-				const isRightQuantity = this.checkProductQuantity(rule);
-				const isAmountGreaterThan = rule.condition.operator === "Greater than or equal" && this.cartTotalValue >= rule.condition.value;
-				const isAmountLessThan = rule.condition.operator === "Less than or equal" && this.cartTotalValue <= rule.condition.value;
-				isConditionMet = (isRightQuantity || isRightQuantity === null) && (isAmountGreaterThan || isAmountLessThan)
-
-				break;
+		if (rule.condition.type === "CartAmount") {
+			const isRightQuantity = this.checkProductQuantity(rule);
+			const isAmountGreaterThan = rule.condition.operator === "Greater than or equal" && this.cartTotalValue >= rule.condition.value;
+			const isAmountLessThan = rule.condition.operator === "Less than or equal" && this.cartTotalValue <= rule.condition.value;
+			isConditionMet = (isRightQuantity || isRightQuantity === null) && (isAmountGreaterThan || isAmountLessThan)
+		} else if (rule.condition.type === "OriginalCartAmount") {
+			const isRightQuantity = this.checkProductQuantity(rule);
+			const isAmountGreaterThan = rule.condition.operator === "Greater than or equal" && this.cartOriginalTotalValue >= rule.condition.value;
+			const isAmountLessThan = rule.condition.operator === "Less than or equal" && this.cartOriginalTotalValue <= rule.condition.value;
+			isConditionMet = (isRightQuantity || isRightQuantity === null) && (isAmountGreaterThan || isAmountLessThan)
 		}
 
 		return isConditionMet;
@@ -185,9 +192,9 @@ class CartRewards {
 	}
 
 	trackProgress() {
-		const progressPrecentage = (this.cartTotalValue / this.allRewardsAmount) * 100;
+		const progressPercentage = (this.cartTotalValue / this.allRewardsAmount) * 100;
 		$('.progress-value').animate({
-			width: `${progressPrecentage}%`
+			width: `${progressPercentage}%`
 		})
 	}
 
@@ -199,6 +206,7 @@ class CartRewards {
 
 		// Apply condition message.
 	  if (isLatestDeactivatedRule && missingAmount > 0) {
+			console.log("we here")
 			const rewardMessage = $(`<span class="${rule.element_class}-message" data-index="${ruleIndex}">${rule.condition.message}</span>`);
 			rewardMessage.find('.rewards__missing_amount').text(missingAmount);
 			rewardText.html(rewardMessage);
