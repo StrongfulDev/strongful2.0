@@ -8,6 +8,7 @@
 
 .complete_look__title {
     text-align: center;
+	font-weight: var(--font-body-weight-bold);
 }
 
 .complete_look__columns {
