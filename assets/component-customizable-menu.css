@@ -162,6 +162,7 @@
 
 .menu-drawer-container.customizable a.list-menu__item {
     padding: 0 30px;
+	height: 125px;
 }
 
 .menu-drawer-container.customizable li:not(:last-child) a.list-menu__item {

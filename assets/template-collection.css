@@ -28,7 +28,7 @@
     padding-right: 5rem;
   }
 
-	.product_variants .size_variant_button_container label:hover {
+	.product_variants .size_variant_button:not(.disabled-variant-button) label:hover {
 		background: var(--gradient-base-accent-1);
 		color: var(--gradient-base-background-1);
 	}

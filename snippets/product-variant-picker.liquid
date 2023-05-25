@@ -55,16 +55,18 @@
       {% endif %}
       {{ block.shopify_attributes }}
     >
-        {% unless product.tags contains 'noSizeTable' %}
-            <span class="size-table-toggler">{{ 'products.product.size_table' | t }}</span>
-        {% endunless %}
       {%- for option in product.options_with_values -%}
         <fieldset class="js product-form__input {% if product.title == 'גיפט קארד' %}gift-card-product-form__input{% endif %}">
           <legend class="form__label">{{ option.name }}</legend>
           {% render 'product-variant-options', product: product, option: option, block: block %}
         </fieldset>
-          {% render 'back-in-stock' %}
       {%- endfor -%}
+        {% unless product.tags contains 'noSizeTable' %}
+            <p class="size-table-toggler">{{ 'products.product.size_table' | t }}</p>
+        {% endunless %}
+        <p class="out-of-stock out-of-stock-toggle" id="outOfStock">{{ 'products.product.missing_size_toggler' | t }}</p>
+        <p class="out-of-stock out-of-stock-explain hidden">{{ 'products.product.missing_size_explanation' | t }}</p>
+        {% render 'back-in-stock' %}
       <script type="application/json">
         {{ product.variants | json }}
       </script>

@@ -183,6 +183,14 @@
       "size_table": "טבלת מידות",
       "variant": {
         "default_title": "הוספה לסל"
+      },
+      "missing_size_toggler": "המידה חסרה? לחצי כאן",
+      "missing_size_explanation": "לחצי על המידה החסרה, השאירי מייל ואנחנו נעדכן אותך ברגע שהמידה תחזור למלאי",
+      "model_switch": {
+        "button": "החלפת דוגמנית",
+        "model_wears_female": "הדוגמנית לובשת מידות:",
+        "female_top_part": "חלק עליון:",
+        "female_bottom_part": "חלק תחתון:"
       }
     },
     "modal": {

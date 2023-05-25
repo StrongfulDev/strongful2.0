@@ -45,20 +45,28 @@ function getAvailableSizes() {
 
 function changeModel(modelSize) {
 	const list = $('.product__media-list');
+	const sizeTable = $('.div-block-460');
 
 	const imagesToHide = list.find(`.product__media-item:not([data-model-size="${modelSize}"])`);
 	const imagesToShow = list.find(`.product__media-item[data-model-size="${modelSize}"]`);
 
+	const divsToHide = sizeTable.find(`span:not([data-model-size="${modelSize}"])`);
+	const divsToShow = sizeTable.find(`span[data-model-size="${modelSize}"]`);
+
 	if (imagesToShow.length > 0) {
 		imagesToHide.hide();
 		imagesToShow.show();
+		divsToHide.hide();
+		divsToShow.show();
 	}
+
+	$("#model-switch").removeAttr('open');
 
 	localStorage.setItem('modelSize', modelSize);
 
 	const model = window.models[modelSize];
 
-	$('.model-switch-button span').text(model ? `${model.name} (${modelSize})` : `${modelSize}`);
+	// $('.model-switch-button span').text(model ? `${model.name} (${modelSize})` : `${modelSize}`);
 }
 
 function updateVariantRadios(modelSize) {

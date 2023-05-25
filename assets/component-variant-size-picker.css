@@ -334,3 +334,26 @@ ul.default_variant_list {
 .disabled-variant-button .size_variant_button_container{
     background: var(--gradient-base-background-3);
 }
+
+.soldout-variant-line {
+	position: absolute;
+	inset: 0;
+	height: 90%;
+	width: 100%;
+	z-index: 9;
+	left: 0;
+	pointer-events: none;
+}
+
+.eJiSh {
+	stroke: #bbbcbc;
+	stroke-width: 1;
+}
+
+.out-of-stock {
+	margin: 0;
+}
+
+.out-of-stock-toggle {
+	text-decoration: underline;
+}

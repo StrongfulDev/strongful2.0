@@ -160,7 +160,7 @@
 .product-form__input {
     flex: 0 0 100%;
     padding: 0;
-    margin: 0 0 1.2rem auto;
+    margin: 0 0 .6rem auto;
     min-width: fit-content;
     border: none;
 
@@ -180,7 +180,9 @@ variant-selects {
 }
 
 fieldset.product-form__input .form__label {
-    margin-bottom: 1.2rem;
+    margin-bottom: 2rem;
+	font-size: var(--font-body-size-medium);
+	font-weight: var(--font-body-weight-bold);
 }
 
 .product-form__input input[type='radio'] {
@@ -198,7 +200,7 @@ fieldset.product-form__input .form__label {
     border-radius: var(--variant-pills-radius);
     color: rgb(var(--color-foreground));
     display: inline-block;
-    margin: 0.7rem 0.5rem 0.2rem 0;
+    margin: 0;
     padding: 1rem 2rem;
     font-size: 1.4rem;
     letter-spacing: 0.1rem;
@@ -1542,7 +1544,7 @@ variant-radios fieldset {
 .product-form__input {
     display: flex;
     justify-content: space-between;
-    column-gap: 1rem;
+    column-gap: .8rem;
 }
 
 .product .price .badge {
@@ -1552,7 +1554,8 @@ variant-radios fieldset {
 .product-form__input input[type='radio'] + label {
     width: 100%;
     display: block;
-    padding: .8rem;
+    padding: 1.3rem .8rem;
+	font-weight: var(--font-body-weight-bold);
 }
 
 .variant-button {
@@ -1662,6 +1665,7 @@ variant-radios fieldset {
 
 .productVendor {
 	font-size: var(--font-body-size-small);
+	margin: .5rem 0;
 }
 
 .first-similar-item {
@@ -1686,11 +1690,11 @@ variant-radios {
 }
 
 .size-table-toggler {
-	position: absolute;
-	top: 0;
-	left: 0;
 	font-size: var(--font-body-size-small);
-	z-index: 2;
+	margin: 0;
+	width: fit-content;
+	color: var(--gradient-base-background-4);
+	text-decoration: underline;
 }
 
 .gift-card-product-form__input {
