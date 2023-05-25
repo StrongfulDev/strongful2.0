@@ -15,18 +15,14 @@
 {% style %}
     .div-block-460 {
     display: grid;
-    margin: 10px 5px;
     gap: 0;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-columns: repeat(5, 1fr);
     border: 1px solid rgba(var(--color-foreground));
-    width: 96%;
     margin: 1em auto;
-    font-size: 16px;
     place-items: center;
     }
 
-    .model-size-text {
+    .model-size-text, .size-span {
         width: 100%;
     border: 0.5px var(--gradient-base-accent-1) solid;
     text-align: center;
@@ -43,19 +39,15 @@
                     <div class="model-size-text text-center">חזה</div>
                     <div class="model-size-text text-center">מותן</div>
                     <div class="model-size-text text-center">אגן</div>
-                    {% if product.tags contains "plusSizeProduct" %}
-                        <div class="model-size-text text-center">{{ product.metafields.global.model }}</div>
-                        <div class="model-size-text text-center">{{ product.metafields.global.height }}</div>
-                        <div class="model-size-text text-center">{{ product.metafields.global.chest }}</div>
-                        <div class="model-size-text text-center">{{ product.metafields.global.waist }}</div>
-                        <div class="model-size-text text-center">{{ product.metafields.global.butt }}</div>
-                    {% else %}
-                        <div class="model-size-text text-center">{{ product.metafields.global.plusmodel }}</div>
-                        <div class="model-size-text text-center">{{ product.metafields.global.plusheight }}</div>
-                        <div class="model-size-text text-center">{{ product.metafields.global.pluschest }}</div>
-                        <div class="model-size-text text-center">{{ product.metafields.global.pluswaist }}</div>
-                        <div class="model-size-text text-center">{{ product.metafields.global.plusbutt }}</div>
-                    {% endif %}
+    {% for model in shop.metaobjects.model.values %}
+        {% if product.tags contains model.name %}
+            <span class="size-span" data-model-size="{{ model.size_letter.value }}">{{ model.name }}</span>
+            <span class="size-span" data-model-size="{{ model.size_letter.value }}">{{ model.height }}</span>
+            <span class="size-span" data-model-size="{{ model.size_letter.value }}">{{ model.bust }}</span>
+            <span class="size-span" data-model-size="{{ model.size_letter.value }}">{{ model.waist }}</span>
+            <span class="size-span" data-model-size="{{ model.size_letter.value }}">{{ model.hips }}</span>
+        {% endif %}
+        {% endfor %}
                 </div>
                 <div class="all-sizes-are-in">{{ 'products.product.shipping_sizes' | t }}</div>
             </div>

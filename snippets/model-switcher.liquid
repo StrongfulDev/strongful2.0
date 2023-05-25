@@ -17,6 +17,7 @@
         </summary>
         <div class="model-switcher__list">
             {% for model in shop.metaobjects.model.values %}
+                {% if product.tags contains model.name %}
                 <div class="model-switcher__item" data-model-size="{{ model.size_letter.value }}">
                     <input type="radio" name="model" id="model-{{ model.size_letter.value }}"
                            value="{{ model.size_letter.value }}">
@@ -41,6 +42,7 @@
                         </div>
                     </label>
                 </div>
+            {% endif %}
             {% endfor %}
         </div>
     </details>
