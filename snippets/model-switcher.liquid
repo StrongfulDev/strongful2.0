@@ -2,9 +2,10 @@
   Renders dropdown that switches the selected model
 
   Accepts:
+  - model_product: product object
 
   Usage:
-  {% render 'model-switcher' %}
+  {% render 'model-switcher', model_product: product %}
 {% endcomment %}
 
 <div class="model-switcher fix-direction">
@@ -20,10 +21,13 @@
                     <input type="radio" name="model" id="model-{{ model.size_letter.value }}"
                            value="{{ model.size_letter.value }}">
                     <label for="model-{{ model.size_letter.value }}">
-                        {{ model.image.value
-                        | image_url: width: 400
-                        | image_tag: loading: 'lazy', sizes: "100x150", widths: '100' }}
-                        {% comment %}<span>{{ model.name.value }} ({{ model.size_letter.value }})</span>{% endcomment %}
+                        {% for image in product.images %}
+                            {% if image.alt contains model.size_letter.value %}
+                                {{ image
+                                | image_url: width: 400
+                                | image_tag: loading: 'lazy', sizes: "100x150", widths: '100' }}
+                            {% endif %}
+                        {% endfor %}
                         <div class="model-wears-content">
                             <p class="model-wears-text">{{ 'products.product.model_switch.model_wears_female' | t }}</p>
                             <p class="model-wears-text">

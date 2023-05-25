@@ -53,6 +53,10 @@
 	object-fit: cover;
 }
 
+.model-switcher__item img:not(:first-child) {
+	display: none;
+}
+
 .model-switcher__item label {
     width: 100%;
 	display: grid;
