@@ -60,6 +60,8 @@ function changeModel(modelSize) {
 		divsToShow.show();
 	}
 
+	$("#model-switch").removeAttr('open');
+
 	localStorage.setItem('modelSize', modelSize);
 
 	const model = window.models[modelSize];
