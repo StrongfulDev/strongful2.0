@@ -1726,6 +1726,21 @@ variant-radios {
 
 .swiper-slide-body {
 	display: flex;
+	align-items: center;
+}
+
+.product-badge__text {
+	margin: 0;
+	font-size: var(--font-body-size-small);
+}
+
+.swiper-slide + .swiper-slide {
+	margin-top: 1rem;
+}
+
+.swiper-container {
+	background: var(--gradient-base-background-3);
+	padding: 1rem;
 }
 
 @media screen and (min-width: 990px) {
