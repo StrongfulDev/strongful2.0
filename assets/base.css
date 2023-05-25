@@ -3072,6 +3072,10 @@ fieldset {
     }
 }
 
+.variant-button.disabled-variant-button {
+	position: relative;
+}
+
 .disabled-variant-button label {
     background: linear-gradient(to top left,
     rgba(0, 0, 0, 0) 0%,

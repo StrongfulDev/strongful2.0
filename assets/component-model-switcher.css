@@ -11,14 +11,10 @@
 
 .model-switch-button {
     padding: 5px 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    background: #fff;
-    font-size: 14px;
+    border: 1px solid var(--color-icon);
+    background: var(--gradient-base-background-1);
     font-family: inherit;
-    color: #333;
     cursor: pointer;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .model-switcher__list {

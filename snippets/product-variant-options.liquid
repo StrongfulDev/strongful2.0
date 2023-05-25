@@ -75,6 +75,9 @@
                     <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
                 </label>
             {% endif %}
+            {% if option_disabled %}
+                <svg class="soldout-variant-line"><line x1="0" y1="100%" x2="100%" y2="0" class="Styles__StrikethroughLine-sc-1hxn211-12 eJiSh"></line></svg>
+                {% endif %}
         </span>
     {%- elsif block.settings.picker_type == 'dropdown' -%}
         <option

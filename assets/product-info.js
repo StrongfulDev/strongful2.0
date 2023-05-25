@@ -102,3 +102,7 @@ for (let i = 0; i < productImages.length; i++) {
 			$(productImages[i]).parents("li").addClass("hidden");
 		}
 }
+
+$(".out-of-stock").click(function() {
+	$(this).next().toggleClass("hidden");
+});
