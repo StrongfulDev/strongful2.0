@@ -1724,6 +1724,10 @@ variant-radios {
 	border-radius: 0 !important;
 }
 
+.swiper-slide-body {
+	display: flex;
+}
+
 @media screen and (min-width: 990px) {
 
 	.product-sale-announcement {
