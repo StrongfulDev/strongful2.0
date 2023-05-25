@@ -48,7 +48,9 @@
             "newsletter_image": "shopify:\/\/shop_images\/2G6A2988_1.jpg",
             "alist_text": "LOYALTY PROGRAM",
             "blog_text": "BLOG",
-            "newsletter_text": "EMAIL SIGN UP"
+            "newsletter_text": "EMAIL SIGN UP",
+            "image_width": 700,
+            "image_height": 700
           }
         },
         "d25d823f-febf-433c-8835-5fe8d374bd70": {

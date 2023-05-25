@@ -206,26 +206,26 @@
                                             <div class="blog_and_newsletter-grid">
                                               <a href="{{ block.settings.alist_url }}" class="blog-link">
                                                 <img
-                                                  srcset="{{ block.settings.alist_image | image_url: width: block.settings.image_width }}, {{ block.settings.alist_image | image_url: width: image_size_2x }} 2x"
+                                                  srcset="{{ block.settings.alist_image | image_url: width: block.settings.image_width }}, {{ block.settings.alist_image | image_url: width: block.settings.image_width }} 2x"
                                                   src="{{ block.settings.alist_image | image_url: width: 760 }}"
                                                   alt="{{ block.settings.alist_image.alt | escape }}"
-                                                  loading="lazy" width="100" height="100"
+                                                  loading="lazy" width="{{ block.settings.image_width }}" height="{{ block.settings.image_height }}"
                                                   class="blog_and_newsletter_image"
                                                 />
                                               </a>
                                               <img
-                                                            srcset="{{ block.settings.newsletter_image | image_url: width: block.settings.image_width }}, {{ block.settings.newsletter_image | image_url: width: image_size_2x }} 2x"
+                                                            srcset="{{ block.settings.newsletter_image | image_url: width: block.settings.image_width }}, {{ block.settings.newsletter_image | image_url: width: block.settings.image_width }} 2x"
                                                             src="{{ block.settings.newsletter_image | image_url: width: 760 }}"
                                                             alt="{{ block.settings.newsletter_image.alt | escape }}"
-                                                            loading="lazy" width="100" height="100"
+                                                            loading="lazy" width="{{ block.settings.image_width }}" height="{{ block.settings.image_height }}"
                                                             class="blog_and_newsletter_image newsletter-image"
                                                     >
                                               <a href="{{ block.settings.blog_url }}" class="blog-link desktop--only">
                                                 <img
-                                                  srcset="{{ block.settings.blog_image | image_url: width: block.settings.image_width }}, {{ block.settings.blog_image | image_url: width: image_size_2x }} 2x"
+                                                  srcset="{{ block.settings.blog_image | image_url: width: block.settings.image_width }}, {{ block.settings.blog_image | image_url: width: block.settings.image_width }} 2x"
                                                   src="{{ block.settings.blog_image | image_url: width: 760 }}"
                                                   alt="{{ block.settings.blog_image.alt | escape }}"
-                                                  loading="lazy" width="100" height="100"
+                                                  loading="lazy" width="{{ block.settings.image_width }}" height="{{ block.settings.image_height }}"
                                                   class="blog_and_newsletter_image desktop--only"
                                                 />
                                               </a>
@@ -654,12 +654,30 @@ customElements.define('localization-form', LocalizationForm);
           "label": "t:sections.footer.blocks.blog_and_newsletter.settings.blog_text.label",
           "default": "Blog"
         },
-        {
-          "type": "text",
-          "id": "newsletter_text",
-          "label": "t:sections.footer.blocks.blog_and_newsletter.settings.newsletter_text.label",
-          "default": "Email sign up"
-        }
+          {
+              "type": "text",
+              "id": "newsletter_text",
+              "label": "t:sections.footer.blocks.blog_and_newsletter.settings.newsletter_text.label",
+              "default": "Email sign up"
+          },
+          {
+              "type": "range",
+              "id": "image_width",
+              "label": "t:sections.footer.blocks.blog_and_newsletter.settings.image_width.label",
+              "default": 100,
+              "min": 100,
+              "max": 1000,
+              "step": 100
+          },
+          {
+              "type": "range",
+              "id": "image_height",
+              "label": "t:sections.footer.blocks.blog_and_newsletter.settings.image_height.label",
+              "default": 100,
+              "min": 100,
+              "max": 1000,
+              "step": 100
+          }
       ]
     },
     {

@@ -109,3 +109,7 @@
     min-width: calc(8rem + var(--buttons-border-width) * 2);
     min-height: calc(2.5rem + var(--buttons-border-width) * 2)
 }
+
+.complete_look__item .variant_selector {
+	display: block;
+}
