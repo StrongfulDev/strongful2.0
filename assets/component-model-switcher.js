@@ -53,11 +53,16 @@ function changeModel(modelSize) {
 	const divsToHide = sizeTable.find(`span:not([data-model-size="${modelSize}"])`);
 	const divsToShow = sizeTable.find(`span[data-model-size="${modelSize}"]`);
 
+	const modelWearsSizeParagraphsToShow = $(document).find(`.model-wears-size[data-model="${modelSize}"]`);
+	const modelWearsSizeParagraphsToHide = $(document).find(`.model-wears-size:not([data-model="${modelSize}"])`);
+
 	if (imagesToShow.length > 0) {
 		imagesToHide.hide();
 		imagesToShow.show();
 		divsToHide.hide();
 		divsToShow.show();
+		modelWearsSizeParagraphsToShow.show();
+		modelWearsSizeParagraphsToHide.hide();
 	}
 
 	$("#model-switch").removeAttr('open');

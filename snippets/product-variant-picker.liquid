@@ -58,6 +58,11 @@
       {%- for option in product.options_with_values -%}
         <fieldset class="js product-form__input {% if product.title == 'גיפט קארד' %}gift-card-product-form__input{% endif %}">
           <legend class="form__label">{{ option.name }}</legend>
+            {% for model in shop.metaobjects.model.values %}
+                {% if product.tags contains model.name %}
+            <legend class="model-wears-size" data-model="{{ model.size_letter.value }}">הדוגמנית לובשת <span class="bold">{{ option.name }} {{ model.size_letter.value }}</span></legend>
+                {% endif %}
+            {% endfor %}
           {% render 'product-variant-options', product: product, option: option, block: block %}
         </fieldset>
       {%- endfor -%}

@@ -1743,6 +1743,20 @@ variant-radios {
 	padding: 1rem;
 }
 
+li.grid--peek.slider .grid__item, li.product__media-item.grid__item.slider__slide {
+	margin-left: 1.5rem;
+}
+
+.model-wears-size {
+	position: absolute;
+	top: 0;
+	direction: rtl;
+}
+
+.model-wears-size .bold {
+	font-weight: var(--font-body-weight-bold);
+}
+
 @media screen and (min-width: 990px) {
 
 	.product-sale-announcement {
