@@ -254,7 +254,7 @@
 }
 
 .menu-drawer-container.customizable  .menu-drawer__navigation:has(.menu-drawer__menu.submenu-open) .nav_top {
-	padding: 0 2rem;
+	padding: 2rem 2rem 0;
 }
 
 .menu-drawer-container.customizable .menu-drawer__submenu li + li {
@@ -271,6 +271,10 @@
 
 .header__menu-item {
     padding: 0;
+}
+
+.header__menu-item.active {
+	font-weight: var(--font-body-weight-bold);
 }
 
 .menu-drawer-container.customizable .mobile_menu .header__menu-item:first-child {
@@ -312,7 +316,7 @@
 }
 
 .menu-drawer__menu.has-submenu.list-menu.submenu-open {
-	top: 6.5em;
+	top: 8.5em;
 }
 
 @media screen and (min-width: 990px) {

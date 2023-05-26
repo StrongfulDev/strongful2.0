@@ -99,9 +99,12 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .menu-drawer__inner-submenu {
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
+	overflow: hidden;
+}
+
+.menu-drawer__inner-submenu > ul {
+	overflow-x: hidden;
+	overflow-y: auto;
 }
 
 .no-js .menu-drawer__navigation {
@@ -283,4 +286,7 @@ details[open].menu-opening > .menu-drawer__submenu {
     padding-bottom: 0;
 }
 
-
+.menu-drawer__close-button {
+	position: absolute;
+	top: -6rem;
+}
