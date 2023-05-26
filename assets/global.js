@@ -388,14 +388,14 @@ class MenuDrawer extends HTMLElement {
 
 		if (!$(summaryElement).hasClass("header__icon")) {
 			let summaryDataClass = summaryElement.getAttribute('data-class');
-
-			// if ($(".mobile_menu_link.header__menu-item").text() != summaryDataClass) {
-			// 	$(".mobile_menu_link.header__menu-item").toggleClass("hidden");
-			// } else {
-			// 	$(".mobile_menu_link.header__menu-item").toggleClass("active");
-			// }
-
-
+			let navItems = document.querySelectorAll('.mobile_menu_link.header__menu-item');
+			navItems.forEach(function(item) {
+				if (item.innerText.includes(summaryDataClass)) {
+					$(item).removeClass('hidden').addClass('active');
+					$(item).siblings().removeClass('active').addClass('hidden');
+					$(item).parent().css('display', 'block');
+				}
+			});
 		}
 
     function addTrapFocus() {

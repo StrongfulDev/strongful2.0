@@ -213,6 +213,7 @@
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+	text-align: center;
 }
 
 .menu-drawer-container.customizable .nav_top .menu_images {
