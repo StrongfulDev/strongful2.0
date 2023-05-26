@@ -3125,3 +3125,10 @@ div.needsclick, button.needsclick {
 	font-size: var(--font-body-size-large);
 	margin: 0 0 var(--heading-type-2-margin) 0;
 }
+
+@media screen and (min-width: 990px) {
+	.collection__title_heading .title.heading_type_2:not(:only-child) {
+		font-size: calc(var(--font-body-size-large) * 1.5);
+		margin: 0;
+	}
+}

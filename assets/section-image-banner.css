@@ -452,24 +452,33 @@
     }
 }
 
-@media screen and (min-width: 750px) {
-    .banner__media img:not(.mobile_version) + .mobile_version {
-        display: none !important;
-    }
-
-    .banner__media img.mobile_version {
-        display: block !important;
-    }
-}
-
 .banner--auto {
     height: 16rem;
     min-height: 16rem;
 }
 
 .button--primary {
-	font-size: 2rem;
+	font-size: calc(var(--font-body-size-smallest) * 1.5);
 	padding: 1rem 2rem;
+	border: 0;
 }
 
+@media screen and (min-width: 750px) {
+	.banner__media img:not(.mobile_version) + .mobile_version {
+		display: none !important;
+	}
 
+	.banner__media img.mobile_version {
+		display: block !important;
+	}
+
+	.button--primary {
+		padding: 1.5rem 4rem;
+		font-size: calc(var(--font-body-size-smallest) * 1.8);
+	}
+
+	.button--primary:hover {
+		background-color: var(--gradient-base-background-1);
+		color: var(--gradient-base-accent-1);
+	}
+}

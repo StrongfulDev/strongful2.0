@@ -96,6 +96,6 @@
   padding: 0;
 }
 
-button--secondary:before, button--secondary:after {
+.collection__view-all a:not(.link):before, .collection__view-all a:not(.link):after {
 	content: none;
 }

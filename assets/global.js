@@ -386,6 +386,10 @@ class MenuDrawer extends HTMLElement {
     let isOpen = detailsElement.hasAttribute('open');
     let reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
+	  if (summaryElement.parentElement.id == 'Details-menu-drawer-menu-item-3') {
+		  console.log('menu item 3 clicked')
+	  }
+
     function addTrapFocus() {
       trapFocus(summaryElement.nextElementSibling, detailsElement.querySelector('button'));
       summaryElement.nextElementSibling.removeEventListener('transitionend', addTrapFocus);
@@ -410,7 +414,6 @@ class MenuDrawer extends HTMLElement {
 
   onSummaryHover(event) {
     let summaryElementHover = event.target;
-    console.log(summaryElementHover);
     let detailsElementHover = summaryElementHover.parentNode;
     let parentMenuElementHover = detailsElementHover.closest('.has-submenu');
     let isOpenHover = detailsElementHover.hasAttribute('open');
