@@ -1387,6 +1387,10 @@
               "label": "Item title",
               "info": "Title to show at the top most level"
             },
+            "item_class": {
+              "label": "Item class",
+              "info": "Add a class to the menu item"
+            },
             "title_link": {
               "label": "Title link",
               "info": "The link for the title"

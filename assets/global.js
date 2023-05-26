@@ -386,9 +386,17 @@ class MenuDrawer extends HTMLElement {
     let isOpen = detailsElement.hasAttribute('open');
     let reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-	  if (summaryElement.parentElement.id == 'Details-menu-drawer-menu-item-3') {
-		  console.log('menu item 3 clicked')
-	  }
+		if (!$(summaryElement).hasClass("header__icon")) {
+			let summaryDataClass = summaryElement.getAttribute('data-class');
+
+			// if ($(".mobile_menu_link.header__menu-item").text() != summaryDataClass) {
+			// 	$(".mobile_menu_link.header__menu-item").toggleClass("hidden");
+			// } else {
+			// 	$(".mobile_menu_link.header__menu-item").toggleClass("active");
+			// }
+
+
+		}
 
     function addTrapFocus() {
       trapFocus(summaryElement.nextElementSibling, detailsElement.querySelector('button'));
