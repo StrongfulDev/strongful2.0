@@ -199,6 +199,7 @@ class CartRewards {
 	}
 
 	toggleMessage(isConditionMet, rule, ruleIndex) {
+
 		const rewardText = $(".reward-text");
 		const isLatestActiveRule = ruleIndex >= this.activeRewards && isConditionMet;
 		const isLatestDeactivatedRule = ruleIndex === this.activeRewards && !isConditionMet;
@@ -206,7 +207,6 @@ class CartRewards {
 
 		// Apply condition message.
 	  if (isLatestDeactivatedRule && missingAmount > 0) {
-			console.log("we here")
 			const rewardMessage = $(`<span class="${rule.element_class}-message" data-index="${ruleIndex}">${rule.condition.message}</span>`);
 			rewardMessage.find('.rewards__missing_amount').text(missingAmount);
 			rewardText.html(rewardMessage);

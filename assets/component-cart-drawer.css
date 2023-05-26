@@ -518,3 +518,7 @@ cart-drawer-items.is-empty {
 .quantity:before, .quantity:after {
 	content: none;
 }
+
+.cart-item__quantity-wrapper {
+	justify-content: space-between;
+}
