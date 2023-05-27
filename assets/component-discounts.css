@@ -12,6 +12,10 @@
 	width: fit-content;
 }
 
+.discounts__discount + .discounts__discount {
+	display: none;
+}
+
 .discounts__discount svg {
   color: rgba(var(--color-button), var(--alpha-button-background));
 }

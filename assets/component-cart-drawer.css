@@ -522,3 +522,15 @@ cart-drawer-items.is-empty {
 .cart-item__quantity-wrapper {
 	justify-content: space-between;
 }
+
+.totals__value {
+	align-items: center;
+}
+
+.totals__value:not(:nth-child(2)) {
+	display: none;
+}
+
+.totals__value p {
+	margin: 0;
+}

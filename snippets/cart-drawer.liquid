@@ -238,7 +238,11 @@
                                                         </div>
                                                     {%- else -%}
                                                         <div class="product-option">
+                                                            {% if item.product.compare_at_price > item.product.price %}
+                                                                {% render 'price', product: item.product %}
+                                                                {% else %}
                                                             {{ item.original_price | money }}
+                                                                {% endif %}
                                                         </div>
                                                     {%- endif -%}
 
@@ -431,7 +435,17 @@
                     <div class="cart-drawer__footer" {{ block.shopify_attributes }}>
                         <div class="totals" role="status">
                             <h2 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}</h2>
-                            <p class="totals__subtotal-value">{{ cart.total_price | money_with_currency }}</p>
+                            {% for item in cart.items %}
+                            <div class="totals__value flex">
+                                {% assign itemComparePrice = item.product.compare_at_price %}
+                                {% assign cartOriginalTotalPrice = cart.original_total_price %}
+                                {% assign customCartOriginalTotalPrice = cartOriginalTotalPrice | plus: itemComparePrice %}
+                                {% if customCartOriginalTotalPrice > cart.total_price %}
+                                    <p class="totals__original-subtotal-value" data-price="{{ customCartOriginalTotalPrice }}">{{ customCartOriginalTotalPrice | money_with_currency }}</p>
+                                {% endif %}
+                                <p class="totals__subtotal-value">{{ cart.total_price | money_with_currency }}</p>
+                            </div>
+                            {% endfor %}
                         </div>
 
                         <div>
