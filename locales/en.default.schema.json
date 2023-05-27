@@ -2363,9 +2363,6 @@
         "image": {
           "name": "Image",
           "settings": {
-            "logged_out_text": {
-              "label": "Logged out text"
-            },
             "image_picker": {
               "label": "Image",
               "info": "Select an image from your library, or upload a new one."
@@ -2377,7 +2374,7 @@
           }
         },
         "loyalty": {
-          "name": "image",
+          "name": "Loyalty",
           "settings": {
             "logged_out_text": {
               "label": "Logged out text"

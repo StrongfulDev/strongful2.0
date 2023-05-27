@@ -1705,6 +1705,7 @@ variant-radios {
 
 .gift-card-product-form__input .variant-button {
 	width: 100%;
+	margin-bottom: 1rem;
 }
 
 #esc-out-of-stock-inputs {
