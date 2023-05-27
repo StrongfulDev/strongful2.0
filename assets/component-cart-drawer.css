@@ -534,3 +534,9 @@ cart-drawer-items.is-empty {
 .totals__value p {
 	margin: 0;
 }
+
+/*.price__sale .price-item.price-item--sale {*/
+/*	color: firebrick;*/
+/*	font-weight: 600;*/
+/*	margin-right: 5px;*/
+/*}*/
