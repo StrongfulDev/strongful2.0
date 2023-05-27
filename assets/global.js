@@ -386,6 +386,19 @@ class MenuDrawer extends HTMLElement {
     let isOpen = detailsElement.hasAttribute('open');
     let reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
+		if (!$(summaryElement).hasClass("header__icon")) {
+			let summaryDataClass = summaryElement.getAttribute('data-class');
+			let navItems = document.querySelectorAll('.mobile_menu_link.header__menu-item');
+			navItems.forEach(function(item) {
+				if (item.innerText.includes(summaryDataClass)) {
+					console.log(item)
+					$(item).removeClass('hidden').addClass('active');
+					$(item).siblings().removeClass('active').addClass('hidden');
+					$(item).parent().css('display', 'block');
+				}
+			});
+		}
+
     function addTrapFocus() {
       trapFocus(summaryElement.nextElementSibling, detailsElement.querySelector('button'));
       summaryElement.nextElementSibling.removeEventListener('transitionend', addTrapFocus);
@@ -410,7 +423,6 @@ class MenuDrawer extends HTMLElement {
 
   onSummaryHover(event) {
     let summaryElementHover = event.target;
-    console.log(summaryElementHover);
     let detailsElementHover = summaryElementHover.parentNode;
     let parentMenuElementHover = detailsElementHover.closest('.has-submenu');
     let isOpenHover = detailsElementHover.hasAttribute('open');
@@ -472,6 +484,8 @@ class MenuDrawer extends HTMLElement {
   onCloseButtonClick(event) {
     const detailsElement = event.currentTarget.closest('details');
     this.closeSubmenu(detailsElement);
+		$(".mobile_menu_link.header__menu-item").removeClass('hidden').removeClass('active');
+		$(".mobile_menu_link.header__menu-item").parent().css('display', 'flex');
   }
 
   closeSubmenu(detailsElement) {

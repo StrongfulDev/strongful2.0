@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}" dir="{{ direction }}" class="{{ checkout_html_classes }}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0">
+    <meta name="referrer" content="origin">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn-widgetsrepository.yotpo.com/v1/loader/qGZpUcqW7-E2nBL0lvSZUA" async></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>{{ page_title }}</title>
+    {{ content_for_header }}
+    {{ checkout_stylesheets }}
+    {{ checkout_scripts }}
+
+    <style>
+
+        .field__additional-info {
+            display: none;
+        }
+
+        .yotpo-widget-redemption {
+            direction: rtl !important;
+        }
+
+        .tag__button svg {
+            pointer-events: none;
+        }
+
+        .sms-marketing-phone-description {
+            display: none;
+        }
+
+        .icon-svg--center {
+            transform: translate(50%, -50%) !important;
+        }
+
+        .yotpo-arrow-icon {
+            transform: rotate(180deg);
+        }
+
+        #vs1__listbox, #vs1__listbox li {
+            direction: rtl !important;
+            text-align: right;
+        }
+
+        .payment-due__currency {
+            display: none !important;
+        }
+
+        .swell-tab {
+            display: none !important;
+        }
+
+        .yotpo-widget-checkout-redemptions-widget .yotpo-point-balance-text {
+            text-align: right !important;
+        }
+
+        .yotpo-redemption-options-dropdown {
+            margin: 0 0 0 14px !important;
+        }
+
+        .yotpo-redeem-summary-container {
+            margin-top: 1.5em !important;
+        }
+
+        .yotpo-checkout-variable-widget .yotpo-slider {
+            margin: 1.5em 2em 0 !important;
+        }
+
+        .section.section--contact-information .fieldset-description {
+            opacity: 0;
+        }
+
+        @media (min-width: 1000px) {
+            .order-summary__section--product-list {
+                min-height: 18em;
+            }
+
+            .yotpo-point-balance-text {
+                text-align: right !important;
+                padding: 0 1em;
+            }
+
+            .yotpo-apply-redemption-options {
+                flex-direction: row-reverse;
+            }
+
+            .yotpo-redemption-details-container {
+                direction: rtl !important;
+            }
+        }
+
+        .payment-icon.payment-icon--american-express,
+        .payment-icon.payment-icon--jcb {
+            display: none !important;
+        }
+
+        .lottery-tr {
+            text-align: center;
+            width: 100%;
+            text-align: right;
+            margin: auto;
+            padding: 0.5em 0 0;
+        }
+
+        .none {
+            display: none;
+        }
+
+    </style>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NS9ZW7H');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Dialogue-Checkout snippet load -->
+    {% include 'dialogue' %}
+</head>
+<body>
+{{ skip_to_content_link }}
+
+<header class="banner" data-header role="banner">
+    <div class="wrap">
+        {{ content_for_logo }}
+    </div>
+</header>
+
+{{ order_summary_toggle }}
+<div class="content" data-content>
+    <div class="wrap">
+        <div class="main">
+            <header class="main__header" role="banner">
+                {{ content_for_logo }}
+                {{ breadcrumb }}
+                {{ alternative_payment_methods }}
+            </header>
+            <main class="main__content" role="main">
+                {{ content_for_layout }}
+            </main>
+            <footer class="main__footer" role="contentinfo">
+                {{ content_for_footer }}
+            </footer>
+        </div>
+        <aside class="sidebar" role="complementary">
+
+            {% for line_item in checkout.line_items %}
+                {% if line_item.product.tags contains 'preorder' %}
+                    <span class="regular-preorder none" style="display: none;">Preorder</span>
+                {% endif %}
+            {% endfor %}
+
+            <div class="sidebar__header">
+                {{ content_for_logo }}
+            </div>
+            <div class="sidebar__content">
+                {{ content_for_order_summary }}
+            </div>
+            <div class="yotpo-widget-instance" data-yotpo-instance-id="89434"></div>
+        </aside>
+    </div>
+</div>
+
+{{ tracking_code }}
+<script type="text/javascript">
+
+    // remove discount code here
+    // let now = Date.now();
+    // if (localStorage.getItem('date')!==null) {
+    //  if (localStorage.getItem('date') < now) {
+    //     $('.tag__button').click();
+    //     localStorage.removeItem('date');
+    //     localStorage.removeItem('coupon');
+    //   } else {
+    //   }
+    // }
+
+    document.addEventListener('DOMContentLoaded', (e) => {
+
+        let requiredInputs = document.querySelectorAll("input[aria-required=true]");
+        for (let i = 0; i < requiredInputs.length; i++) {
+            let label = $(requiredInputs[i]).siblings("label");
+            label.text("* " + label.text());
+        }
+
+        let deleteCoupon;
+
+        let checkout = Shopify.Checkout;
+
+        // use.addEventListener('click', (e) => {
+        //   setTimeout((event) => {
+        //     let notice = document.querySelector('.notice__text');
+        // if (notice != null || notice != undefined) {
+        //   if (notice.innerHTML.includes('OFF100')) {
+        //     notice.innerHTML = 'קוד הקופון <strong>OFF100</strong> תקף בקנייה מעל ₪320';
+        //   }
+        // }
+        //   }, 3000);
+        // });
+
+        // let notice = document.querySelector('.notice__text');
+        // if (notice != null || notice != undefined) {
+        //   if (notice.innerHTML.includes('OFF100')) {
+        //     notice.innerHTML = 'קוד הקופון <strong>OFF100</strong> תקף בקנייה מעל ₪320';
+        //   }
+        // }
+
+        setTimeout((yotpo) => {
+
+            // lottery code start
+            // function that creates a line for lottery text and appends it to the checkout totals
+
+            // function lottery() {
+            //   let checkoutTotalPrice = document.querySelector('.payment-due__price');
+            //   let slicedCheckoutPrice = checkoutTotalPrice.dataset.checkoutPaymentDueTarget;
+            //   let newTableRow = document.createElement('div');
+            //   newTableRow.classList.add('total-line');
+            //   newTableRow.classList.add('lottery-tr');
+            //   let newContent = document.createTextNode('בהצלחה! נכנסת להגרלה ואולי תזכי ב ₪5000');
+
+            //   // add the text node to the newly created div
+            //   newTableRow.appendChild(newContent);
+            //   let currentRow = document.querySelector('.total-line-table__tbody');
+            //   currentRow.append(newTableRow);
+            //   slicedCheckoutPrice = checkoutTotalPrice.dataset.checkoutPaymentDueTarget;
+            //   console.log(slicedCheckoutPrice);
+
+            //   if (slicedCheckoutPrice > 35000) {
+            //     $('.lottery-tr').html('בהצלחה! נכנסת להגרלה ואולי תזכי ב ₪5000');
+            //   } else {
+            //     $('.lottery-tr').html('חסר לך עוד ₪' + (Math.round(35000 - slicedCheckoutPrice).toFixed(0) / 100) + ' להשתתפות בהגרלה ואולי לזכות ב ₪5000');
+            //   }
+            // }
+
+            // calling the lottery function on load
+            // lottery();
+
+            // calling the lottery function after coupon code changes
+            // $("#checkout_submit").click((e) => {
+            //     setTimeout(() => {
+            //       lottery();
+            //       deleteCoupon = document.querySelector('.tag__button');
+            //       console.log(deleteCoupon);
+            //     }, 3000);
+
+            //     $('.tag__button').click(() => {
+            //       setTimeout(() => {
+            //         lottery();
+            //       }, 3000);
+            //     });
+            // });
+
+            // $('.tag__button').click(() => {
+            //       setTimeout(() => {
+            //         lottery();
+            //       }, 3000);
+            //     });
+
+            // lottery code end
+
+            var expires = (Date.now() + 180000);
+
+            // if (tag_btn !== null) {
+            //   let couponCode = document.querySelector('.tag .reduction-code__text').innerText;
+            //   localStorage.setItem('coupon', couponCode);
+            //   localStorage.setItem('date', expires);
+            // }
+
+            // let couponCodeApplier = document.querySelector('.order-summary__section.order-summary__section--discount .edit_checkout.animate-floating-labels');
+            // let couponCodeApplier = document.querySelector('#checkout_submit.field__input-btn.btn');
+            // couponCodeApplier.addEventListener('click', (e) => {
+            //   setTimeout((e) => {
+            //     let couponCode = document.querySelector('.tag .reduction-code__text').innerText;
+            //     localStorage.setItem('coupon', couponCode);
+            //     localStorage.setItem('date', expires);
+            //   }, 5000);
+            // });
+
+
+            if (Shopify.Checkout.isOrderStatusPage == true) {
+                $( '.modal-dialog' ).css( 'direction','rtl' );
+                $( '.modal-content' ).css( 'direction','rtl' );
+            } else {
+                let orderSummary = document.querySelector('.order-summary');
+                $('.order-summary-toggle').removeClass('order-summary-toggle--show').addClass('order-summary-toggle--hide');
+                orderSummary.classList.remove('order-summary--is-collapsed');
+                orderSummary.classList.add('order-summary--is-expanded');
+
+                let step = Shopify.Checkout.step;
+                if (step == 'contact_information') {
+
+                    document.getElementById("checkout_buyer_accepts_marketing").checked = true;
+                    document.getElementById("checkout_remember_me").checked = true;
+                    // document.getElementById("checkout_buyer_accepts_sms").checked = true;
+                }
+            }
+            // preorder code start
+            //   if (document.querySelectorAll( '.regular-preorder' ) != null || document.querySelectorAll( '.regular-preorder' ) != undefined) {
+            //     if (Shopify.Checkout.step == 'shipping_method') {
+            //      if ($( '.radio__label__primary' ).data('shipping-method-label-title')) {
+            //          $( '.radio__label__primary' ).html( 'הזמנות הכוללות פריטים ממכירה מוקדמת יקלטו ויגיעו עד 3 ימי עסקים מיום השקת הקולקציה' );
+            //       }
+            //     }
+
+            //     if (Shopify.Checkout.step == 'payment_method') {
+            //    document.getElementsByClassName( 'review-block__content' )[2].innerText = 'הזמנות הכוללות פריטים ממכירה מוקדמת יקלטו ויגיעו עד 3 ימי עסקים מיום השקת הקולקציה';
+            //     }
+
+            // } else {
+            //   if (Shopify.Checkout.step == 'shipping_method') {
+            //   if ($( '.radio__label__primary' ).data('shipping-method-label-title')) {
+            //        $( '.radio__label__primary' ).html( 'משלוח אקספרס - 1-3 ימי עסקים' );
+            //       }
+            //   }
+
+            //   if (Shopify.Checkout.step == 'payment_method') {
+            //         document.getElementsByClassName( 'review-block__content' )[2].innerText = 'משלוח אקספרס - 1-3 ימי עסקים';
+            //   }
+            // }
+            // preorder code end
+
+        }, 2900);
+
+        let breadcrumbs = document.querySelectorAll( '.breadcrumb__link' );
+        breadcrumbs.forEach((crumb) => {
+            if (crumb.innerText == 'עגלה') {
+                crumb.innerText = 'חזרה';
+                crumb.href = '/';
+            }
+        });
+
+    });
+</script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NS9ZW7H"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+</body>
+</html>

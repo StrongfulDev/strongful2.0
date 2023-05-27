@@ -43,7 +43,7 @@
 <style>
     header-drawer {
         justify-self: start;
-        margin-left: -1.2rem;
+        margin-left: -0.6rem;
     }
 
     .header__heading-logo {
@@ -227,7 +227,11 @@
                                                       <details
                                                               id="Details-menu-drawer-menu-item-{{ forloop.index }}">
                                                           <summary
-                                                                  class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.child_active %} menu-drawer__menu-item--active{% endif %}">
+                                                                  class="menu-drawer__menu-item list-menu__item link link--text focus-inset
+                                                                    {% if link.child_active %} menu-drawer__menu-item--active{% endif %}
+                                                                    {{ block.settings.item_class }}"
+                                                          data-class="{{ block.settings.item_class }}"
+                                                          >
                                                               <div class="mobile-link-cover"
                                                                    style="background-image: url('{{ block.settings.mobile_cover_image.src | image_url: width: 300 }}')">
                                                                   {% if block.settings.mobile_title %}
@@ -243,10 +247,6 @@
                                                                class="menu-drawer__submenu has-submenu gradient motion-reduce"
                                                                tabindex="-1">
                                                               <div class="menu-drawer__inner-submenu">
-                                                                  <img loading="lazy"
-                                                                       class="hamburger-logo"
-                                                                       src="https://cdn.shopify.com/s/files/1/0574/2995/0671/files/facebook_profile.png?v=1631624674"
-                                                                       alt="Strongful's logo - The Black Lightning"/>
                                                                   <button class="menu-drawer__close-button link link--text focus-inset"
                                                                           aria-expanded="true">
                                                                       {% render 'icon-caret' %}
@@ -1397,6 +1397,12 @@
           "label":"t:sections.header.blocks.menu_item.settings.title.label",
           "info":"t:sections.header.blocks.menu_item.settings.title.info"
         },
+          {
+              "type":"text",
+              "id":"item_class",
+              "label":"t:sections.header.blocks.menu_item.settings.item_class.label",
+              "info":"t:sections.header.blocks.menu_item.settings.item_class.info"
+          },
         {
           "type":"text",
           "id":"title_link",

@@ -525,7 +525,11 @@ slider-component.slider-component-full-width {
 }
 
 li.product__media-item.grid__item.slider__slide {
-    margin-left: 1.5rem;
+    margin-left: 0;
+}
+
+.product__media-list li.product__media-item.grid__item.slider__slide {
+	margin-left: 1.5rem;
 }
 
 .product__media-list + .slider-buttons .slider-button {

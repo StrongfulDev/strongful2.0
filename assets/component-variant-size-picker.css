@@ -112,7 +112,7 @@
 
 .variant_modal .product_details__image {
     width: auto;
-    height: 100px;
+    height: 115px;
 }
 
 .variant_modal .product_details__info {
@@ -147,11 +147,13 @@
     border: none;
     border-bottom: 1px solid rgba(var(--color-foreground), 0.3);
     border-radius: unset;
+	width: 90%;
+	margin: auto;
 }
 
 .variant_modal .product_variants .size_variant_button_container label {
     text-align: var(--text-alignment);
-    padding: 10px 2.5rem;
+    padding: 10px 0;
     display: flex;
     justify-content: space-between;
 }
@@ -316,6 +318,10 @@ ul.default_variant_list {
 .complete_look__item .product_variants .size_variant_button_container label:hover {
 	background: var(--gradient-base-accent-1);
 	color: var(--gradient-base-background-1);
+}
+
+.complete_look__item .product_variants.default_product_variants ul.default_variant_list {
+	display: none;
 }
 
 .complete_look__item .product_variants .size_variant_button {

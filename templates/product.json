@@ -151,7 +151,8 @@
     "8bb31773-3add-4a1a-b42f-368102c7844b": {
       "type": "main-product-quick-add",
       "settings": {
-        "quick_add_type_mobile": "modal"
+        "quick_add_type_mobile": "modal",
+        "quick_add_text": "בחרי מידה"
       }
     }
   },

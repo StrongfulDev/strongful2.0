@@ -12,10 +12,6 @@
        'click',
        this.onSummaryClick.bind(this)
      );
-     this.summaryToggle.addEventListener(
-       'mouseenter',
-       this.onSummaryHover.bind(this)
-     );
      this.querySelector('button[type="button"]').addEventListener(
        'click',
        this.close.bind(this)
@@ -28,10 +24,6 @@
      return this.detailsContainer.hasAttribute('open');
    }
 
-   isOpenHover() {
-      return this.detailsContainer.hasAttribute('open');
-   }
-
    onSummaryClick(event) {
      event.preventDefault();
      event.target.closest('details').hasAttribute('open')
@@ -39,19 +31,8 @@
        : this.open(event);
    }
 
-   onSummaryHover(event) {
-     event.preventDefault();
-     event.target.closest('details').hasAttribute('open')
-       ? this.close()
-       : this.openHover(event);
-   }
-
    onBodyClick(event) {
      if (!this.contains(event.target) || event.target.classList.contains('modal-overlay')) this.close(false);
-   }
-
-   onBodyHover(event) {
-      if (!this.contains(event.target) || event.target.classList.contains('modal-overlay')) this.close(false);
    }
 
    open(event) {
@@ -59,18 +40,6 @@
        this.onBodyClickEvent || this.onBodyClick.bind(this);
      event.target.closest('details').setAttribute('open', true);
      document.body.addEventListener('click', this.onBodyClickEvent);
-     document.body.classList.add('overflow-hidden');
-
-     trapFocus(
-       this.detailsContainer.querySelector('[tabindex="-1"]'),
-       this.detailsContainer.querySelector('input:not([type="hidden"])')
-     );
-   }
-
-   openHover(event) {
-     this.onBodyMouseEnterEvent = this.onBodyMouseEnterEvent || this.onBodyHover.bind(this);
-     event.target.closest('details').setAttribute('open', true);
-     document.body.addEventListener('mouseenter', this.onBodyMouseEnterEvent);
      document.body.classList.add('overflow-hidden');
 
      trapFocus(

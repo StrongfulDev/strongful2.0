@@ -131,6 +131,16 @@ div:not(.product-size-picker-container) .variant-button .size_variant_button:not
 	align-items: baseline;
 	justify-content: space-between;
 	margin: 0 0 6px;
+	direction: rtl;
+}
+
+.product_details__info .discount-price-container {
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.product_details__info .discount-price-container .rect-discount-tag {
+	margin: 0 0 6px;
 }
 
 .rect-discount-tag {

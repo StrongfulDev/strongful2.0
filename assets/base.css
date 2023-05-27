@@ -1,7 +1,7 @@
 /* Text alignment */
 :root {
     --text-alignment: right;
-    /*--english-font: 'Spartan', sans-serif;*/
+    --heading-type-2-margin: 1rem;
 }
 
 /* Color custom properties */
@@ -276,6 +276,10 @@ html.no-js .no-js-hidden {
 	justify-content: space-between;
 }
 
+.pointer:hover {
+	cursor: pointer;
+}
+
 .custom-page-width {
     max-width: var(--custom-page-width);
     margin: 0 auto;
@@ -348,7 +352,7 @@ body,
 .color-inverse,
 .color-accent-1,
 .color-accent-2 {
-    color: rgba(var(--color-foreground), 0.75);
+    color: rgba(var(--color-foreground), 1);
     background-color: rgb(var(--color-background));
 }
 
@@ -2014,10 +2018,10 @@ input[type='checkbox'] {
 .quantity {
     color: rgba(var(--color-foreground));
     position: relative;
-    width: calc(14rem / var(--font-body-scale) + var(--inputs-border-width) * 2);
+    width: calc(9rem / var(--font-body-scale) + var(--inputs-border-width) * 2);
     display: flex;
     border-radius: var(--inputs-radius);
-    min-height: calc((var(--inputs-border-width) * 2) + 4.5rem);
+    min-height: 2.5rem;
 }
 
 .quantity:after {
@@ -2065,11 +2069,10 @@ input[type='checkbox'] {
 }
 
 .quantity__button {
-    width: calc(4.5rem / var(--font-body-scale));
-    flex-shrink: 0;
+    width: 100%;
     font-size: 1.8rem;
     border: 0;
-    background-color: transparent;
+    background-color: var(--gradient-base-background-3);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -2106,7 +2109,6 @@ input[type='checkbox'] {
 .quantity__button:not(:focus-visible):not(.focused),
 .quantity__input:not(:focus-visible):not(.focused) {
     box-shadow: inherit;
-    background-color: inherit;
 }
 
 .quantity__input:-webkit-autofill,
@@ -2150,6 +2152,10 @@ input[type='checkbox'] {
 product-info .loading-overlay:not(.hidden) ~ *,
 .quantity__rules-cart .loading-overlay:not(.hidden) ~ * {
     visibility: hidden;
+}
+
+quantity-input button.quantity__button {
+	background-color: var(--gradient-base-background-3);
 }
 
 /* component-modal */
@@ -2601,6 +2607,7 @@ details[open] .modal-overlay::after {
     opacity: 1;
     transform: scale(1);
     transition: transform 150ms ease, opacity 150ms ease;
+	stroke: var(--gradient-base-accent-1);
 }
 
 details:not([open]) > .header__icon--menu .icon-close,
@@ -3113,4 +3120,16 @@ fieldset {
 
 div.needsclick, button.needsclick {
 		z-index: 3!important;
+}
+
+.collection__title_heading .title.heading_type_2:not(:only-child) {
+	font-size: var(--font-body-size-large);
+	margin: 0 0 var(--heading-type-2-margin) 0;
+}
+
+@media screen and (min-width: 990px) {
+	.collection__title_heading .title.heading_type_2:not(:only-child) {
+		font-size: calc(var(--font-body-size-large) * 1.5);
+		margin: 0;
+	}
 }

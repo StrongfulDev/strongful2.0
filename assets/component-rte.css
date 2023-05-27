@@ -4,6 +4,14 @@
   display: block;
 }
 
+.rte p {
+	margin-bottom: 0.5rem;
+}
+
+.rte p + p {
+	margin: 0.5rem 0;
+}
+
 .rte > p:first-child {
   margin-top: 0;
 }
