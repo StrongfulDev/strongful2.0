@@ -19,7 +19,7 @@
     }
 {%- endstyle -%}
 
-<div class="customer register section-{{ section.id }}-padding fix-direction {% unless template.name == 'register' %}hidden{% endunless %}">
+<div class="customer register section-{{ section.id }}-padding fix-direction {% if template.name == 'login' %}hidden{% endif %}">
   <svg style="display: none">
     <symbol id="icon-error" viewBox="0 0 13 13">
       <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
@@ -146,12 +146,15 @@
     <button>
       {{ 'customer.register.submit' | t }}
     </button>
+      {% if template.name != 'login' or template.name != 'register' %}
+          <div class='oxi-social-login'></div>
+      {% endif %}
       <div class="inputRegister" id="accepts_marketing_checkbox">
           <input type="checkbox" name="customer[accepts_marketing]" checked="checked" hidden="hidden" id="marketing" value="true" class="hidden" />
           <div class="text-center accept-marketing-notice">בהרשמה לאתר את\ה מאשרת את <a href="/blogs/policies/תקנון-האתר" class="inline">תקנון האתר ומדיניות הפרטיות,</a> וקבלת מיילים שיווקיים</div>
       </div>
   {%- endform -%}
-    <div class="form-toggler">
+    <div class="form-toggler pointer">
         {{ 'customer.register.login_toggler' | t }}
     </div>
 </div>

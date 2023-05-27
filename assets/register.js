@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		let position = $(".multicolumn-list__item").eq(1).position();
 		$("#js-border-position").css("width", activeWidth + "px");
 		$("#js-border-position").css("left", position.left + "px");
-	} else {
+	} else if (customURL.includes('login')) {
 		$(".multicolumn-list__item").eq(0).addClass("active");
 		$(".multicolumn-list__item").eq(1).removeClass("active");
 		let activeWidth = $(".multicolumn-list__item").eq(0).innerWidth();
