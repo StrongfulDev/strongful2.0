@@ -95,6 +95,7 @@
     },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "heading": "אולי תאהבי גם",
         "heading_alignment": "center",
@@ -110,19 +111,10 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
-    },
-    "main-product-quick-add": {
-      "type": "main-product-quick-add",
-      "settings": {
-        "quick_add_type_mobile": "modal",
-        "quick_add_text": "",
-        "quick_add_accessories_text": ""
-      }
     }
   },
   "order": [
     "main",
-    "related-products",
-    "main-product-quick-add"
+    "related-products"
   ]
 }
