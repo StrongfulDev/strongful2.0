@@ -60,7 +60,7 @@
           <legend class="form__label">{{ option.name }}</legend>
             {% for model in shop.metaobjects.model.values %}
                 {% if product.tags contains model.name %}
-            <legend class="model-wears-size" data-model="{{ model.size_letter.value }}">הדוגמנית לובשת <span class="bold">{{ option.name }} {{ model.size_letter.value }}</span></legend>
+            <legend class="model-wears-size fix-direction" data-model="{{ model.size_letter.value }}">הדוגמנית לובשת <span class="bold">{{ option.name }}: {{ model.size_letter.value }}</span></legend>
                 {% endif %}
             {% endfor %}
           {% render 'product-variant-options', product: product, option: option, block: block %}

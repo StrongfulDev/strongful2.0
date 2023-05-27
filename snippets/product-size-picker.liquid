@@ -30,6 +30,19 @@
                         widths: '375'
                         }}
                         <div class="product_details__info">
+                            {% if product.compare_at_price > product.price %}
+                                <div class="discount-price-container">
+                                    <p class="rect-discount-tag">
+                                        {{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | ceil }}% OFF
+                                    </p>
+                                    {% if product.tags contains 'OUTLET' or product.tags contains 'outlet' %}
+                                        <p class="outlet-collection-tag upper h4">
+                                            <span>{{- 'products.product.outlet' | t -}}</span>
+                                            <i>{% render 'icon-discount-tag' %}</i>
+                                        </p>
+                                    {% endif %}
+                                </div>
+                            {% endif %}
                             <p class="product_details-titles product-title">{{ product.title }}</p>
                             <p class="product_details-titles product-color">{{ product.vendor }}</p>
                             {% render "price", product: product %}
@@ -46,16 +59,9 @@
                                     <fieldset name="line_items" class="js">
                                         <ul {% if product.has_only_default_variant %}class="default_variant_list"{% endif %}>
                                             {% for variant in product.variants %}
-                                                {% unless variant.title == '39' %}
                                                     {%- liquid
                                                         assign product_disabled = false
                                                         if variant.available == false
-                                                            assign product_disabled = true
-                                                        endif
-
-                                                        if product.title contains 'Chummy' and variant.title != "L"
-                                                            assign product_disabled = true
-                                                        elsif variant.title == '39'
                                                             assign product_disabled = true
                                                         endif
                                                     %}
@@ -90,7 +96,6 @@
                                                             </label>
                                                         </div>
                                                     </li>
-                                                {% endunless %}
                                             {% endfor %}
                                         </ul>
                                     </fieldset>
@@ -112,15 +117,9 @@
                         <fieldset name="line_items" class="js">
                             <ul {% if product.has_only_default_variant %}class="default_variant_list"{% endif %}>
                                 {% for variant in product.variants %}
-                                    {% unless variant.title == '39' %}
                                         {%- liquid
                                             assign product_disabled = false
                                             if variant.available == false
-                                                assign product_disabled = true
-                                            endif
-                                            if product.title contains 'Chummy' and variant.title != "L"
-                                                assign product_disabled = true
-                                            elsif variant.title == '39'
                                                 assign product_disabled = true
                                             endif
                                         %}
@@ -146,12 +145,10 @@
                                                 </label>
                                             </div>
                                         </li>
-                                    {% endunless %}
                                 {% endfor %}
                             </ul>
                         </fieldset>
                     </div>
-                    {% comment %} TODO: Make ajax add to cart open cart widget {% endcomment %}
                     <div class="add_to_cart_container product-form__buttons">
                         {% if product.tags contains 'fakeOutOfStock' %}
                             <button class="soldout-variant fakeOutOfStock">

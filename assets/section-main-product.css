@@ -163,7 +163,7 @@
     margin: 0 0 .6rem auto;
     min-width: fit-content;
     border: none;
-
+flex-wrap: wrap;
 }
 
 variant-radios,
@@ -1559,7 +1559,8 @@ variant-radios fieldset {
 }
 
 .variant-button {
-    width: 90%;
+    width: 100%;
+	flex: 1;
 }
 
 .accordion__title:after, .accordion__title:before {
@@ -1664,7 +1665,7 @@ variant-radios fieldset {
 }
 
 .productVendor {
-	font-size: var(--font-body-size-small);
+	font-size: var(--font-body-size-smallest);
 	margin: .5rem 0;
 }
 
@@ -1676,7 +1677,7 @@ variant-radios fieldset {
 
 .first-similar-item a:after {
 	position: absolute;
-	bottom: 0;
+	bottom: -3px;
 	height: 3px;
 	background: #000;
 	width: 100%;
@@ -1748,13 +1749,16 @@ li.grid--peek.slider .grid__item, li.product__media-item.grid__item.slider__slid
 }
 
 .model-wears-size {
-	position: absolute;
-	top: 0;
-	direction: rtl;
+	flex: 1 1 100%;
+	margin-bottom: 1rem;
 }
 
 .model-wears-size .bold {
 	font-weight: var(--font-body-weight-bold);
+}
+
+.variant_modal .product_size_picker__heading {
+	display: block;
 }
 
 @media screen and (min-width: 990px) {
