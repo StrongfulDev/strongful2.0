@@ -50,9 +50,9 @@ class CartRewards {
 
 			// If the state changed
 			if (isRewardInCart !== isConditionMet) {
-				toggeled = this.toggleReward(isConditionMet, rule);	
+				toggeled = this.toggleReward(isConditionMet, rule);
 			}
-			
+
 			if (toggeled || (isRewardInCart && isConditionMet)) {
 				this.activeRulesCount += 1;
 				this.activeRules.push(rule);
@@ -199,10 +199,11 @@ class CartRewards {
 
 	trackProgress(rule) {
 		const activeRule = this.activeRules.find(activeRuleToCheck => activeRuleToCheck.id === rule.id);
-		if(activeRule && activeRule.reward?.action === "gift_product") {
-			this.cartOriginalTotalValue += this.getProductPrice(activeRule);
-		}
 
+		if (activeRule && activeRule.reward?.action === "gift_product") {
+			const productsPrice = this.getProductPrice(rule);
+			this.cartOriginalTotalValue += productsPrice;
+		}
 
 		const progressPercentage = (this.cartOriginalTotalValue / this.allRewardsAmount) * 100;
 		$('.progress-value').animate({
@@ -213,24 +214,28 @@ class CartRewards {
 	getProductPrice(rule) {
 		const ruleProducts = this.getProductIdsFromRule(rule);
 		const products = this.cart.items.filter(item => ruleProducts.indexOf(item.id.toString()) !== -1);
-		
-		if(products.length <= 0 )
+
+		if (products.length <= 0)
 			return 0;
-		
-		return products.reduce((acc, product) => {
-			return acc + (product.original_line_price ?? product.grams);
+
+		let price = 0;
+
+		products.forEach(product => {
+			price += product.original_line_price || product.grams;
 		});
+
+		return price;
 	}
 
 	toggleMessage(isConditionMet, rule, ruleIndex) {
 
 		const rewardText = $(".reward-text");
-		const isLatestActiveRule = ruleIndex+1 >= this.activeRulesCount && isConditionMet;
-		const isLatestDeactivatedRule = ruleIndex-1 === this.activeRulesCount && !isConditionMet;
+		const isLatestActiveRule = ruleIndex + 1 >= this.activeRulesCount && isConditionMet;
+		const isLatestDeactivatedRule = ruleIndex - 1 === this.activeRulesCount && !isConditionMet;
 		const missingAmount = rule.condition.value - this.cartOriginalTotalValue;
 
 		// Apply condition message.
-	  if (isLatestDeactivatedRule && missingAmount > 0) {
+		if (isLatestDeactivatedRule && missingAmount > 0) {
 			const rewardMessage = $(`<span class="${rule.element_class}-message" data-index="${ruleIndex}">${rule.condition.message}</span>`);
 			rewardMessage.find('.rewards__missing_amount').text(missingAmount);
 			rewardText.html(rewardMessage);
