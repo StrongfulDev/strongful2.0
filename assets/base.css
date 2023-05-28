@@ -3133,3 +3133,8 @@ div.needsclick, button.needsclick {
 		margin: 0;
 	}
 }
+
+body.trigger-position-left button#enable-toolbar-trigger {
+	top: -100%;
+	left: 0;
+}
