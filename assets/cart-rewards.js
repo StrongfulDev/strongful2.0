@@ -198,14 +198,14 @@ class CartRewards {
 	}
 
 	trackProgress(rule) {
-		const activeRule = this.activeRules.find(activeRuleToCheck => activeRuleToCheck.id === rule.id);
+		// const activeRule = this.activeRules.find(activeRuleToCheck => activeRuleToCheck.id === rule.id);
+		//
+		// if (activeRule && activeRule.reward?.action === "gift_product") {
+		// 	const productsPrice = this.getProductPrice(rule);
+		// 	this.cartOriginalTotalValue += productsPrice;
+		// }
 
-		if (activeRule && activeRule.reward?.action === "gift_product") {
-			const productsPrice = this.getProductPrice(rule);
-			this.cartOriginalTotalValue += productsPrice;
-		}
-
-		const progressPercentage = (this.cartOriginalTotalValue / this.allRewardsAmount) * 100;
+		const progressPercentage = (this.cartTotalValue / this.allRewardsAmount) * 100;
 		$('.progress-value').animate({
 			width: `${progressPercentage}%`
 		})
@@ -232,7 +232,7 @@ class CartRewards {
 		const rewardText = $(".reward-text");
 		const isLatestActiveRule = ruleIndex + 1 >= this.activeRulesCount && isConditionMet;
 		const isLatestDeactivatedRule = ruleIndex - 1 === this.activeRulesCount && !isConditionMet;
-		const missingAmount = rule.condition.value - this.cartOriginalTotalValue;
+		const missingAmount = rule.condition.value - this.cartTotalValue;
 
 		// Apply condition message.
 		if (isLatestDeactivatedRule && missingAmount > 0) {
