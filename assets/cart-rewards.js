@@ -43,12 +43,19 @@ class CartRewards {
 
 		this.rules.forEach((rule, index) => {
 			const isConditionMet = this.checkCondition(rule);
-			const isRewardInCart = this.cartHasReward(rule);
+			const isRewardInCart = this.cartHasReward(rule, index);
 			const rewardItem = this.getRewardItemByRule(rule);
+			let toggeled;
 
 			// If the state changed
 			if (isRewardInCart !== isConditionMet) {
-				this.toggleReward(isConditionMet, rule);
+				toggeled = this.toggleReward(isConditionMet, rule);	
+			}
+			
+			if (toggeled || (isRewardInCart && isConditionMet)) {
+				this.activeRewards += 1;
+			} else {
+				this.activeRewards -= 1;
 			}
 
 			this.trackProgress();
@@ -89,11 +96,7 @@ class CartRewards {
 				break;
 		}
 
-		if (isConditionMet) {
-			this.activeRewards += 1;
-		} else {
-			this.activeRewards -= 1;
-		}
+		return isConditionMet;
 	}
 
 	async handleGiftReward(rule, isConditionMet) {
@@ -192,7 +195,8 @@ class CartRewards {
 	}
 
 	trackProgress() {
-		const progressPercentage = (this.cartTotalValue / this.allRewardsAmount) * 100;
+
+		const progressPercentage = (this.cartOriginalTotalValue / this.allRewardsAmount) * 100;
 		$('.progress-value').animate({
 			width: `${progressPercentage}%`
 		})
@@ -201,9 +205,9 @@ class CartRewards {
 	toggleMessage(isConditionMet, rule, ruleIndex) {
 
 		const rewardText = $(".reward-text");
-		const isLatestActiveRule = ruleIndex >= this.activeRewards && isConditionMet;
-		const isLatestDeactivatedRule = ruleIndex === this.activeRewards && !isConditionMet;
-		const missingAmount = rule.condition.value - this.cartTotalValue;
+		const isLatestActiveRule = ruleIndex+1 >= this.activeRewards && isConditionMet;
+		const isLatestDeactivatedRule = ruleIndex-1 === this.activeRewards && !isConditionMet;
+		const missingAmount = rule.condition.value - this.cartOriginalTotalValue;
 
 		// Apply condition message.
 	  if (isLatestDeactivatedRule && missingAmount > 0) {
@@ -243,7 +247,7 @@ class CartRewards {
 			}
 		}
 
-		return ruleIndex <= this.activeRewards
+		return ruleIndex < this.activeRewards
 	}
 
 	checkProductQuantity(rule) {
