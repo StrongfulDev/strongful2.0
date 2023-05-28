@@ -206,9 +206,15 @@ class CartRewards {
 		// }
 
 		const progressPercentage = (this.cartTotalValue / this.allRewardsAmount) * 100;
-		$('.progress-value').animate({
-			width: `${progressPercentage}%`
-		})
+		if (this.activeRulesCount === this.rules.length) {
+			$('.progress-value').animate({
+				width: `100%`
+			})
+		} else {
+			$('.progress-value').animate({
+				width: `${progressPercentage}%`
+			})
+		}
 	}
 
 	getProductPrice(rule) {
