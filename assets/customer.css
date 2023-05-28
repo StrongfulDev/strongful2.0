@@ -47,7 +47,7 @@ a.no-decoration {
 .customer ul {
   line-height: calc(1 + 0.6 / var(--font-body-scale));
   padding-left: 4.4rem;
-  text-align: left;
+  text-align: right;
   margin-bottom: 4rem;
 }
 

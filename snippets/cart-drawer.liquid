@@ -436,14 +436,21 @@
                         <div class="totals" role="status">
                             <h2 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}</h2>
                             {% for item in cart.items %}
-                            <div class="totals__value flex">
                                 {% assign itemComparePrice = item.product.compare_at_price %}
                                 {% assign cartOriginalTotalPrice = cart.original_total_price %}
                                 {% assign customCartOriginalTotalPrice = cartOriginalTotalPrice | plus: itemComparePrice %}
+                            <div class="totals__value flex
+                                {% if customCartOriginalTotalPrice > cart.total_price %}price__sale price--on-sale{% endif %}">
                                 {% if customCartOriginalTotalPrice > cart.total_price %}
-                                    <p class="totals__original-subtotal-value" data-price="{{ customCartOriginalTotalPrice }}">{{ customCartOriginalTotalPrice | money_with_currency }}</p>
+                                    <p class="totals__original-subtotal-value price-item--regular" data-price="{{ customCartOriginalTotalPrice }}">{{ customCartOriginalTotalPrice | money_with_currency }}</p>
                                 {% endif %}
-                                <p class="totals__subtotal-value">{{ cart.total_price | money_with_currency }}</p>
+                                <p class="totals__subtotal-value
+                                   {% if customCartOriginalTotalPrice > cart.total_price %}
+                                   price-item price-item--sale
+                                   {% endif %}"
+                                >
+                                    {{ cart.total_price | money_with_currency }}
+                                </p>
                             </div>
                             {% endfor %}
                         </div>

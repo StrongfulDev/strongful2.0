@@ -122,7 +122,7 @@
                             <a
                                     href="{{ card_product.url }}"
                                     id="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }}"
-                                    class="full-unstyled-link"
+                                    class="full-unstyled-link pointer"
                                     aria-labelledby="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }} NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
                             >
                                 {{ card_product.title | escape }}
@@ -151,7 +151,11 @@
                     {%- if show_quick_add and quick_add_type == "hover" -%}
                         <div class="quick-add hover no-js-hidden">
                             <div class="product-size-picker-container">
-                                <span class="product_size_picker__heading">{{ section.settings.quick_add_text }}</span>
+                                {% unless card_product.has_only_default_variant %}
+                                    <span class="product_size_picker__heading">{{ section.settings.quick_add_text }}</span>
+                                    {% else %}
+                                    <span class="product_size_picker__heading">{{ section.settings.quick_add_accessories_text }}</span>
+                                {% endunless %}
                                 <div class="product-size-picker">
                                     {% render 'product-size-picker', product: card_product, wrapper_class: "hover", submit_on_click: true %}
                                 </div>
@@ -200,7 +204,7 @@
                         <a
                                 href="/collections/{{ collection.handle }}{{ card_product.url }}"
                                 id="CardLink-{{ section_id }}-{{ card_product.id }}"
-                                class="full-unstyled-link"
+                                class="full-unstyled-link pointer"
                                 aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}"
                         >
                             {{ card_product.title | escape }}
@@ -209,7 +213,7 @@
                             <a
                                     href="{{ card_product.url }}"
                                     id="CardLink-{{ section_id }}-{{ card_product.id }}"
-                                    class="full-unstyled-link"
+                                    class="full-unstyled-link pointer"
                                     aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}"
                             >
                                 {{ card_product.title | escape }}
@@ -414,7 +418,7 @@
                 <div class="card__content">
                     <div class="card__information">
                         <h3 class="card__heading">
-                            <a role="link" aria-disabled="true" class="full-unstyled-link">
+                            <a role="link" aria-disabled="true" class="full-unstyled-link pointer">
                                 {{ 'onboarding.product_title' | t }}
                             </a>
                         </h3>
@@ -424,7 +428,7 @@
             <div class="card__content">
                 <div class="card__information">
                     <h3 class="card__heading{% if settings.card_style == 'standard' %} h5{% endif %} ">
-                        <a role="link" aria-disabled="true" class="full-unstyled-link">
+                        <a role="link" aria-disabled="true" class="full-unstyled-link pointer">
                             {{ 'onboarding.product_title' | t }}
                         </a>
                     </h3>

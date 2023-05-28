@@ -34,10 +34,12 @@
 }
 
 .product_size_picker__button.default_input + label {
-	background: black;
-	color: white;
 	width: 100%;
 	padding: 1rem;
+}
+
+.product_size_picker__button.default_input + label span {
+	text-decoration: underline;
 }
 
 .product_variants .size_variant_button_container input {
@@ -238,7 +240,7 @@
 }
 
 ul.default_variant_list {
-	padding: 1.4em;
+	padding: 1.4em 0;
 }
 
 .variant_modal__toggle_button svg {
@@ -362,4 +364,14 @@ ul.default_variant_list {
 
 .out-of-stock-toggle {
 	text-decoration: underline;
+}
+
+@media screen and (min-width: 990px) {
+	.product_variants .size_variant_button_container label {
+		padding: .6rem 0;
+	}
+
+	.size_variant_button.default_size_variant_button.disabled-variant-button label:hover {
+		cursor: not-allowed !important;
+	}
 }

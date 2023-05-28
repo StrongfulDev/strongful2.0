@@ -178,7 +178,6 @@ cart-remove-button .icon-remove {
 .cart-item__error {
   display: flex;
   align-items: flex-start;
-  margin-top: 1rem;
 }
 
 .cart-item__error-text {

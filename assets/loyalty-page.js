@@ -47,7 +47,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 		$('.already-has-account-uno').click(scrollThere);
 
 		let smsToggler = document.querySelector('.yotpo-tile.yotpo-campaign-tile-smssignupcampaign');
-		console.log(customerTags);
 
 		if (customerTags != null) {
 			$('.yotpo-vip-tiers-headline').html('תעלי שלב!');
@@ -83,7 +82,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	}, 7500);
 
 	let aListFaqOpener = document.querySelectorAll( '.a-list__question-and-icon' );
-	console.log(aListFaqOpener);
 	aListFaqOpener.forEach((opener) => {
 		$(opener).click((cE) => {
 			let answer = cE.target.nextElementSibling;

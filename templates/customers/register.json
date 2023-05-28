@@ -45,6 +45,9 @@
     },
     "main": {
       "type": "main-register",
+      "custom_css": [
+        ".oxi_social_wrapper {display: none;}"
+      ],
       "settings": {
         "padding_top": 36,
         "padding_bottom": 36

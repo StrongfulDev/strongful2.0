@@ -140,13 +140,9 @@
       <button>
         {{ 'customer.login_page.sign_in' | t }}
       </button>
-
-
-        {% comment %}
-      <a href="{{ routes.account_register_url }}">
-        {{ 'customer.login_page.create_account' | t }}
-      </a>
-        {% endcomment %}
+        {% if template.name != 'login' or template.name != 'register' %}
+            <div class='oxi-social-login'></div>
+        {% endif %}
     {%- endform -%}
   </div>
 

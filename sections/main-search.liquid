@@ -245,7 +245,7 @@
                             <div class="card__content">
                               <div class="card__information">
                                 <h3 class="card__heading">
-                                  <a href="{{ item.url }}" class="full-unstyled-link">
+                                  <a href="{{ item.url }}" class="full-unstyled-link pointer">
                                     {{ item.title | truncate: 50 | escape }}
                                   </a>
                                 </h3>
@@ -270,6 +270,9 @@
     </div>
   {%- endif -%}
 </div>
+
+<script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
+
 
 {% schema %}
 {

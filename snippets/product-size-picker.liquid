@@ -51,7 +51,11 @@
                             {% render 'icon-close' %}
                         </div>
                     </div>
-                    <span class="product_size_picker__heading fix-direction">{{ section.settings.quick_add_text }}</span>
+                    {% unless product.has_only_default_variant %}
+                    <span class="product_size_picker__heading fix-direction">{{ section.settings.x }}</span>
+                        {% else %}
+                        <span class="product_size_picker__heading fix-direction">{{ section.settings.quick_add_accessories_text }}</span>
+                    {% endunless %}
                     <div class="product-size-picker">
                         <product-form class="size-variant-product-form">
                             {%- form 'product', product, class: 'product_size_picker__form form', data-type: 'add-to-cart-form' -%}

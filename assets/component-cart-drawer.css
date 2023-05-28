@@ -534,3 +534,10 @@ cart-drawer-items.is-empty {
 .totals__value p {
 	margin: 0;
 }
+
+@media screen and (min-width: 990px) {
+	.cart-drawer .cart-items .cart-item__quantity {
+		align-self: center;
+		height: fit-content;
+	}
+}

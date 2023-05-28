@@ -206,7 +206,6 @@
                                 </div>
                             {%- endif -%}
                         {%- when 'loyalty' -%}
-                        {% comment %} TODO: RENAME TO LOYATLY {% endcomment %}
                             {% if block.settings.image != blank %}
                                 <div class="product-loyalty-container fix-direction">
                                     <a href="{{ block.settings.loyalty_link }}" target="_blank" class="product-loyalty-link {% if customer %}logged-in{% endif %}">
@@ -221,33 +220,6 @@
                                     </a>
                                 </div>
                             {% endif %}
-                        {%- when 'image' -%}
-                            {%- if block.settings.image != blank -%}
-                                <div class="product__details_image" {{ block.shopify_attributes }}>
-                                    {% if block.settings.image != blank %}
-                                        <div class="desktop_version">
-                                            {% if section.settings.image_link != blank %}
-                                                <a href="{{ section.settings.image_link }}">
-                                                    {{ block.settings.image | image_url: width: 350 | image_tag }}
-                                                </a>
-                                            {% else %}
-                                                {{ block.settings.image | image_url: width: 350 | image_tag }}
-                                            {% endif %}
-                                        </div>
-                                    {% endif %}
-                                    {% if block.settings.mobile_image != blank %}
-                                        <div class="mobile_version">
-                                            {% if section.settings.mobile_image_link != blank %}
-                                                <a href="{{ section.settings.mobile_image_link }}">
-                                                    {{ block.settings.mobile_image | image_url: width: 350 | image_tag }}
-                                                </a>
-                                            {% else %}
-                                                {{ block.settings.mobile_image | image_url: width: 350 | image_tag }}
-                                            {% endif %}
-                                        </div>
-                                    {% endif %}
-                                </div>
-                            {%- endif -%}
                         {%- when 'sku' -%}
                             <p
                                     class="product__sku no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
