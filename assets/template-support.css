@@ -3,6 +3,10 @@ a {
 	text-decoration: none;
 }
 
+.none {
+	display: none;
+}
+
 ul, ol {
 	list-style: inside;
 	padding-right: 0;

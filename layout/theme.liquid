@@ -43,6 +43,8 @@
 
     <script src="{{ 'jquery-3.6.4.min.js' | asset_url }}" defer="defer"></script>
 
+      <script src="https://cdn.enable.co.il/licenses/enable-L55285s2wakc6tr-0520-13100/init.js" defer="defer"></script>
+
     <script
             src="{{ 'constants.js' | asset_url }}"
             defer="defer"></script>
@@ -396,6 +398,7 @@
         {% assign rewards = shop.metaobjects.reward.values | sort: "order" %}
         {% for reward in rewards %}
         {
+            id: "{{ reward.system.id }}",
             title: "{{ reward.title.value }}",
             order: parseInt("{{ reward.order.value }}"),
             element_class: "{{ reward.element_class.value }}",

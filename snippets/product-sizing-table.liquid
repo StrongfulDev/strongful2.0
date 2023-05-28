@@ -39,15 +39,14 @@
                     <div class="model-size-text text-center">חזה</div>
                     <div class="model-size-text text-center">מותן</div>
                     <div class="model-size-text text-center">אגן</div>
-    {% for model in shop.metaobjects.model.values %}
-        {% if product.tags contains model.name %}
-            <span class="size-span" data-model-size="{{ model.size_letter.value }}">{{ model.name }}</span>
-            <span class="size-span" data-model-size="{{ model.size_letter.value }}">{{ model.height }}</span>
-            <span class="size-span" data-model-size="{{ model.size_letter.value }}">{{ model.bust }}</span>
-            <span class="size-span" data-model-size="{{ model.size_letter.value }}">{{ model.waist }}</span>
-            <span class="size-span" data-model-size="{{ model.size_letter.value }}">{{ model.hips }}</span>
-        {% endif %}
-        {% endfor %}
+                    {% for modelName in product.metafields.model.names.value %}
+                        {% assign model = shop.metaobjects.model[modelName] %}
+                            <span class="size-span" data-model-size="{{ model.size_letter.value }}">{{ model.name }}</span>
+                            <span class="size-span" data-model-size="{{ model.size_letter.value }}">{{ model.height }}</span>
+                            <span class="size-span" data-model-size="{{ model.size_letter.value }}">{{ model.bust }}</span>
+                            <span class="size-span" data-model-size="{{ model.size_letter.value }}">{{ model.waist }}</span>
+                            <span class="size-span" data-model-size="{{ model.size_letter.value }}">{{ model.hips }}</span>
+                    {% endfor %}
                 </div>
                 <div class="all-sizes-are-in">{{ 'products.product.shipping_sizes' | t }}</div>
             </div>

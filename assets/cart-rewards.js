@@ -8,7 +8,8 @@ class CartRewards {
 	error;
 	rules = window.rewardsRules
 	allRewardsAmount = 0;
-	activeRewards = 0;
+	activeRulesCount = 0;
+	activeRules = [];
 	cartTotalValue = 0;
 	cartOriginalTotalValue = 0;
 	lastCartTotalValue = 0;
@@ -39,19 +40,28 @@ class CartRewards {
 		this.cart = await this.getCart();
 		this.cartTotalValue = parseInt(this.cart.total_price / 100);
 		this.cartOriginalTotalValue = parseInt(this.cart.original_total_price / 100);
-		this.activeRewards = 0
+		this.activeRulesCount = 0
 
 		this.rules.forEach((rule, index) => {
 			const isConditionMet = this.checkCondition(rule);
-			const isRewardInCart = this.cartHasReward(rule);
+			const isRewardInCart = this.cartHasReward(rule, index);
 			const rewardItem = this.getRewardItemByRule(rule);
+			let toggeled;
 
 			// If the state changed
 			if (isRewardInCart !== isConditionMet) {
-				this.toggleReward(isConditionMet, rule);
+				toggeled = this.toggleReward(isConditionMet, rule);
 			}
 
-			this.trackProgress();
+			if (toggeled || (isRewardInCart && isConditionMet)) {
+				this.activeRulesCount += 1;
+				this.activeRules.push(rule);
+			} else {
+				this.activeRulesCount -= 1;
+				this.activeRules = this.activeRules.filter((activeReward) => activeReward.id !== rule.id);
+			}
+
+			this.trackProgress(rule);
 			this.toggleMessage(isConditionMet, rule, index);
 
 			if (isConditionMet) {
@@ -89,11 +99,7 @@ class CartRewards {
 				break;
 		}
 
-		if (isConditionMet) {
-			this.activeRewards += 1;
-		} else {
-			this.activeRewards -= 1;
-		}
+		return isConditionMet;
 	}
 
 	async handleGiftReward(rule, isConditionMet) {
@@ -191,22 +197,51 @@ class CartRewards {
 		}
 	}
 
-	trackProgress() {
+	trackProgress(rule) {
+		// const activeRule = this.activeRules.find(activeRuleToCheck => activeRuleToCheck.id === rule.id);
+		//
+		// if (activeRule && activeRule.reward?.action === "gift_product") {
+		// 	const productsPrice = this.getProductPrice(rule);
+		// 	this.cartOriginalTotalValue += productsPrice;
+		// }
+
 		const progressPercentage = (this.cartTotalValue / this.allRewardsAmount) * 100;
-		$('.progress-value').animate({
-			width: `${progressPercentage}%`
-		})
+		if (this.activeRulesCount === this.rules.length) {
+			$('.progress-value').animate({
+				width: `100%`
+			})
+		} else {
+			$('.progress-value').animate({
+				width: `${progressPercentage}%`
+			})
+		}
+	}
+
+	getProductPrice(rule) {
+		const ruleProducts = this.getProductIdsFromRule(rule);
+		const products = this.cart.items.filter(item => ruleProducts.indexOf(item.id.toString()) !== -1);
+
+		if (products.length <= 0)
+			return 0;
+
+		let price = 0;
+
+		products.forEach(product => {
+			price += product.original_line_price || product.grams;
+		});
+
+		return price;
 	}
 
 	toggleMessage(isConditionMet, rule, ruleIndex) {
 
 		const rewardText = $(".reward-text");
-		const isLatestActiveRule = ruleIndex >= this.activeRewards && isConditionMet;
-		const isLatestDeactivatedRule = ruleIndex === this.activeRewards && !isConditionMet;
+		const isLatestActiveRule = ruleIndex + 1 >= this.activeRulesCount && isConditionMet;
+		const isLatestDeactivatedRule = ruleIndex - 1 === this.activeRulesCount && !isConditionMet;
 		const missingAmount = rule.condition.value - this.cartTotalValue;
 
 		// Apply condition message.
-	  if (isLatestDeactivatedRule && missingAmount > 0) {
+		if (isLatestDeactivatedRule && missingAmount > 0) {
 			const rewardMessage = $(`<span class="${rule.element_class}-message" data-index="${ruleIndex}">${rule.condition.message}</span>`);
 			rewardMessage.find('.rewards__missing_amount').text(missingAmount);
 			rewardText.html(rewardMessage);
@@ -243,7 +278,7 @@ class CartRewards {
 			}
 		}
 
-		return ruleIndex <= this.activeRewards
+		return ruleIndex < this.activeRulesCount
 	}
 
 	checkProductQuantity(rule) {
