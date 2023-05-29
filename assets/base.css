@@ -2361,8 +2361,8 @@ quantity-input button.quantity__button {
 }
 
 .header__heading-link {
-    display: inline-block;
-    padding: 0.75rem;
+    display: block;
+    padding: 0 0.75rem;
     text-decoration: none;
     word-break: break-word;
 }
