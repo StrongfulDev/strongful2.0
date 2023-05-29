@@ -67,6 +67,8 @@ function changeModel(modelSize) {
 
 	$("#model-switch").removeAttr('open');
 
+	$(".model-switcher-overlay").addClass("hidden");
+
 	localStorage.setItem('modelSize', modelSize);
 
 	const model = window.models[modelSize];
@@ -86,3 +88,13 @@ function updateModelSwitch(modelSize) {
 		.filter(`[value="${modelSize}"]`)
 		.attr('checked', true).prop('checked', true);
 }
+
+$(".model-switch-button").click(function() {
+	if ($(window).width() < 990) {
+		$(".model-switcher-overlay").removeClass("hidden");
+	}
+});
+
+$(".model-switcher-overlay").click(function() {
+	$(this).addClass("hidden");
+});
