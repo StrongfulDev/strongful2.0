@@ -76,7 +76,6 @@
 }
 
 .a-list__q-and-a-single-ctn {
-	border-top: 1px var(--gradient-base-background-3) solid;
 	border-bottom: 1px var(--gradient-base-background-3) solid;
 	padding: .4em;
 }
@@ -85,9 +84,12 @@
 	border-top: none;
 }
 
+.a-list__q-and-a-single-ctn:last-child {
+	border-bottom: none;
+}
+
 .a-list__faq-title {
 	font-size: 2em;
-	margin: 0 0 1em;
 }
 
 .a-list__question-and-icon {

@@ -1137,3 +1137,4 @@ $(headerOverlay).on('mouseenter', function() {
   $('.header__menu-item').attr('aria-expanded', false);
   $('details.mega-menu').attr('open', false);
 });
+

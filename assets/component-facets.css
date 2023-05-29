@@ -1186,7 +1186,8 @@ div.mobile-facets__label {
   left: auto;
   background: #000;
   color: #fff;
-  top: 2.3rem;
+  top: 50%;
+	transform: translateY(-50%);
 }
 
 .mobile-facets__checkbox:checked + .mobile-facets__highlight + svg {
