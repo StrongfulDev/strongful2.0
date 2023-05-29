@@ -303,6 +303,8 @@
       "caption": "Cart items",
       "remove_title": "Remove {{ title }}",
       "subtotal": "סה״כ",
+      "benefits": "הטבות",
+      "benefits_announcement": "חסכת",
       "new_subtotal": "New subtotal",
       "note": "Order special instructions",
       "checkout": "מעבר לתשלום",

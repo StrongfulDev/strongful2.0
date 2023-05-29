@@ -527,8 +527,17 @@ cart-drawer-items.is-empty {
 	align-items: center;
 }
 
-.totals__value:not(:nth-child(2)) {
+.totals:not(:first-child) {
 	display: none;
+}
+
+.customer-saved, .benefits-amount {
+	color: firebrick;
+	font-weight: var(--font-body-weight-bold);
+}
+
+.totals h2, div.benefits-announcement {
+	font-size: var(--font-body-size-small);
 }
 
 .totals__value p {
