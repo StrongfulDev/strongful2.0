@@ -14,8 +14,6 @@ class CartRewards {
 	cartOriginalTotalValue = 0;
 	lastCartTotalValue = 0;
 	lastCartOriginalTotalValue = 0;
-	outletTotalValue = 0;
-	outletOriginalTotalValue = 0;
 
 	async init() {
 		console.log("Reward rules", this.rules);
@@ -43,17 +41,6 @@ class CartRewards {
 		this.cartTotalValue = parseInt(this.cart.total_price / 100);
 		this.cartOriginalTotalValue = parseInt(this.cart.original_total_price / 100);
 		this.activeRulesCount = 0
-
-		for (let i = 0; i < this.cart.items.length; i++) {
-			let item = this.cart.items[i];
-			if (item.line_level_total_discount === 0 && (item.price / 100) < item.grams) {
-				this.outletTotalValue += item.price / 100;
-				this.outletOriginalTotalValue += item.grams;
-			}
-		}
-
-		this.cartTotalValue = this.cartTotalValue - this.outletTotalValue;
-		console.log("Cart total", this.cartTotalValue);
 
 		this.rules.forEach((rule, index) => {
 			const isConditionMet = this.checkCondition(rule);
