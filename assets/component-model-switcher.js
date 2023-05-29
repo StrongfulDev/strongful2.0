@@ -91,10 +91,11 @@ function updateModelSwitch(modelSize) {
 
 $(".model-switch-button").click(function() {
 	if ($(window).width() < 990) {
-		$(".model-switcher-overlay").removeClass("hidden");
+		$(".model-switcher-overlay").toggleClass("hidden");
 	}
 });
 
 $(".model-switcher-overlay").click(function() {
 	$(this).addClass("hidden");
+	$("#model-switch").removeAttr("open");
 });
