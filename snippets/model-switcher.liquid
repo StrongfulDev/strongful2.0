@@ -8,6 +8,8 @@
   {% render 'model-switcher', model_product: product %}
 {% endcomment %}
 
+<div class="model-switcher-overlay hidden">&nbsp;</div>
+
 <div class="model-switcher fix-direction">
     <details id="model-switch">
         <summary class="model-switch-button">
@@ -25,8 +27,8 @@
                         {% for image in product.images %}
                             {% if image.alt contains model.size_letter.value %}
                                 {{ image
-                                | image_url: width: 400
-                                | image_tag: loading: 'lazy', sizes: "100x150", widths: '100' }}
+                                | image_url: width: 600
+                                | image_tag: loading: 'lazy', sizes: "400x600", widths: '400' }}
                             {% endif %}
                         {% endfor %}
                         <div class="model-wears-content">
