@@ -1016,9 +1016,13 @@
                             <button type="button"
                                     class="search-modal__close-button modal__close-button link link--text focus-inset"
                                     aria-label="{{ 'accessibility.close' | t }}">
+                                {% comment %}
                                 <svg class="icon icon-close" aria-hidden="true" focusable="false">
                                     <use href="#icon-close">
                                 </svg>
+                                {% endcomment %}
+                                <span class="visually-hidden">{{ 'accessibility.close' | t }}</span>
+                                <span class="search-modal__close-button--custom">{{ 'general.search.close' | t }}</span>
                             </button>
                         </div>
                     </div>

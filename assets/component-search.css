@@ -1,16 +1,18 @@
 .search__input.field__input {
-  padding-right: 9.8rem;
+  padding: 1rem 4.8rem;
+	background-color: var(--gradient-base-background-3);
 }
 
 .search__button {
-  left: var(--inputs-border-width);
-	right: auto;
+  left: auto;
+	right: var(--inputs-border-width);
   top: var(--inputs-border-width);
 }
 
 .reset__button {
-  right: calc(var(--inputs-border-width) + 4.4rem);
-  top: var(--inputs-border-width);
+	left: var(--inputs-border-width);
+	top: var(--inputs-border-width);
+	right: auto;
 }
 
 .reset__button:not(:focus-visible)::after {
@@ -69,4 +71,9 @@
 /* Remove extra spacing for search inputs in Safari */
 input::-webkit-search-decoration {
   -webkit-appearance: none;
+}
+
+.field__label {
+	right: calc(var(--inputs-border-width) + 4rem);
+	display: none;
 }

@@ -2200,10 +2200,12 @@ quantity-input button.quantity__button {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0rem;
+    padding: 0;
     height: 4.4rem;
-    width: 4.4rem;
+    width: 5.4rem;
     background-color: transparent;
+	text-decoration: none;
+	font-size: var(--font-body-size-medium);
 }
 
 .modal__close-button .icon {
@@ -2562,7 +2564,7 @@ details[open] .modal-overlay::after {
     justify-content: center;
     width: 100%;
     height: 100%;
-    padding: 0.5rem 1rem 0 5rem;
+    padding: 0.5rem 1rem 0 6rem;
     line-height: calc(1 + 0.8 / var(--font-body-scale));
     position: relative;
 }
