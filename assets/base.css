@@ -860,6 +860,11 @@ summary::-webkit-details-marker {
     0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
+*:focus-visible {
+	outline: 0;
+	box-shadow: none;
+}
+
 /* Fallback - for browsers that don't support :focus-visible, a fallback is set for :focus */
 .focused,
 .no-js *:focus {
@@ -2473,16 +2478,16 @@ quantity-input button.quantity__button {
     }
 }
 
-.header__icon--menu[aria-expanded="true"]::before {
-    content: "";
-    top: 100%;
-    left: 0;
-    height: calc(var(--viewport-height, 100vh) - (var(--header-bottom-position, 100%)));
-    width: 100%;
-    display: block;
-    position: absolute;
-    background: rgba(var(--color-foreground), 0.5);
-}
+/*.header__icon--menu[aria-expanded="true"]::before {*/
+/*    content: "";*/
+/*    top: 100%;*/
+/*    left: 0;*/
+/*    height: calc(var(--viewport-height, 100vh) - (var(--header-bottom-position, 100%)));*/
+/*    width: 100%;*/
+/*    display: block;*/
+/*    position: absolute;*/
+/*    background: rgba(var(--color-foreground), 0.5);*/
+/*}*/
 
 /* Search */
 menu-drawer + .header__search {

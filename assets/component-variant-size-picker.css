@@ -135,7 +135,7 @@
 .variant_modal .product_variants ul {
     flex-direction: column;
     width: 100%;
-	padding-bottom: 3rem;
+	padding-bottom: 4rem;
 }
 
 .variant_modal .product_variants li {

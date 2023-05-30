@@ -57,7 +57,7 @@
 
 .product_variants ul {
     width: 100%;
-    gap: 1rem .5rem;
+    column-gap: .5rem;
     direction: ltr;
 }
 
@@ -100,6 +100,10 @@
 @media screen and (min-width: 990px) {
 	.card_banner_text {
 		font-size: var(--font-body-size-smallest);
+	}
+
+	.product_variants ul {
+		column-gap: 1rem .5rem;
 	}
 }
 
