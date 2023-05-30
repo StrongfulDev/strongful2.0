@@ -123,14 +123,16 @@
                                 show_rating: section.settings.show_rating,
                                 show_quick_add: section.settings.enable_quick_add,
                                 section_id: section.id,
-                                show_sale_badge: section.settings.show_sale_badge
-
+                                show_sale_badge: section.settings.show_sale_badge,
+                                quick_add_text: section.settings.quick_add_text,
+                                quick_add_accessories_text: section.settings.quick_add_accessories_text
                         %}
                     </li>
                 {%- else -%}
                     {%- for i in (1..4) -%}
                         <li class="grid__item">
-                            {% render 'card-product', show_vendor: section.settings.show_vendor %}
+                            {% render 'card-product', show_vendor: section.settings.show_vendor, quick_add_text: section.settings.quick_add_text,
+                                    quick_add_accessories_text: section.settings.quick_add_accessories_text %}
                         </li>
                     {%- endfor -%}
                 {%- endfor -%}

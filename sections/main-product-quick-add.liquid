@@ -34,7 +34,14 @@
         </div>
     <p class="sticky-add-to-cart-btn">הוספה לסל</p>
     <div class="product-size-picker">
-        {% render 'product-size-picker', product: product, wrapper_class: "hover", submit_on_click: true, is_modal: true %}
+        {% render 'product-size-picker',
+                product: product,
+                wrapper_class: "hover",
+                submit_on_click: true,
+                is_modal: true,
+                quick_add_text: quick_add_text,
+                quick_add_accessories_text: quick_add_accessories_text
+        %}
     </div>
 </div>
 

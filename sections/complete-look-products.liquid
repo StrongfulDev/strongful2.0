@@ -79,7 +79,13 @@
                                             {% render 'price', product: product, price_class: "complete_look_variant_price" %}
                                         </div>
                                         <div class="variant_selector">
-                                            {% render 'product-size-picker', product: product, block: block, is_modal: false %}
+                                            {% render 'product-size-picker',
+                                                    product: product,
+                                                    block: block,
+                                                    is_modal: false,
+                                                    quick_add_text: quick_add_text,
+                                                    quick_add_accessories_text: quick_add_accessories_text
+                                            %}
                                         </div>
                                     </div>
                                 </li>

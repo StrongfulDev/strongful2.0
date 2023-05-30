@@ -7,6 +7,8 @@
   - submit_on_click: {Boolean} should clicking an option add to cart or show a seperate button for adding to cart.
   - is_modal: {Boolean} is modal or hover
   - id: {String} parent id.
+  - quick_add_text: {String} text for the quick add button.
+  - quick_add_accessories_text: {String} text for the quick add button for accessories.
 
   Usage:
   {% render 'product-size-picker', product: product %}
@@ -52,9 +54,9 @@
                         </div>
                     </div>
                     {% unless product.has_only_default_variant %}
-                    <span class="product_size_picker__heading fix-direction">{{ section.settings.quick_add_text }}</span>
+                    <span class="product_size_picker__heading fix-direction">{{ quick_add_text }}</span>
                         {% else %}
-                        <span class="product_size_picker__heading fix-direction">{{ section.settings.quick_add_accessories_text }}</span>
+                        <span class="product_size_picker__heading fix-direction">{{ quick_add_accessories_text }}</span>
                     {% endunless %}
                     <div class="product-size-picker">
                         <product-form class="size-variant-product-form">

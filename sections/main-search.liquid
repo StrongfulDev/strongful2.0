@@ -227,7 +227,9 @@
                           show_secondary_image: section.settings.show_secondary_image,
                           show_vendor: section.settings.show_vendor,
                           show_rating: section.settings.show_rating,
-                          lazy_load: lazy_load
+                          lazy_load: lazy_load,
+                                quick_add_text: section.settings.quick_add_text,
+                                quick_add_accessories_text: section.settings.quick_add_accessories_text
                         %}
                       {%- when 'article' -%}
                         {% render 'article-card',

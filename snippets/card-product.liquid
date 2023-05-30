@@ -20,6 +20,8 @@
   - card_banner_text: {String} Text to show under the image as banner
   - card_header_size: {String} Size of the card header. Values are "h1", "h2", etc.  (optional)
   - announcement_tag: {String} the tag to show on the card
+  - quick_add_text: {String} the text that describes quick addition of products with size variants
+  - quick_add_accessories_text: {String} the text that describes quick addition of products with accessories
 
   Usage:
   {% render 'card-product', show_vendor: section.settings.show_vendor, announcement_tag: sections.settings.announcement_tag %}
@@ -152,12 +154,18 @@
                         <div class="quick-add hover no-js-hidden">
                             <div class="product-size-picker-container">
                                 {% unless card_product.has_only_default_variant %}
-                                    <span class="product_size_picker__heading">{{ section.settings.quick_add_text }}</span>
+                                    <span class="product_size_picker__heading">{{ quick_add_text }}</span>
                                     {% else %}
-                                    <span class="product_size_picker__heading">{{ section.settings.quick_add_accessories_text }}</span>
+                                    <span class="product_size_picker__heading">{{ quick_add_accessories_text }}</span>
                                 {% endunless %}
                                 <div class="product-size-picker">
-                                    {% render 'product-size-picker', product: card_product, wrapper_class: "hover", submit_on_click: true %}
+                                    {% render 'product-size-picker',
+                                            product: card_product,
+                                            wrapper_class: "hover",
+                                            submit_on_click: true,
+                                            quick_add_text: quick_add_text,
+                                            quick_add_accessories_text: quick_add_accessories_text
+                                    %}
                                 </div>
                             </div>
                         </div>
@@ -174,12 +182,8 @@
             </div>
             <div class="card__content">
                 <div class="card__information">
-                    {% if card_banner_text and card_banner_text != blank %}
-                        {% unless card_product.tags contains "no_announcement" %}
-                            {% if card_product.tags contains announcement_tag %}
-                            <span class="card_banner_text color-background-2">{{ card_banner_text }}</span>
-                                {% endif %}
-                        {% endunless %}
+                    {% if card_product.tags contains announcement_tag %}
+                        <span class="card_banner_text color-background-2">{{ card_banner_text }}</span>
                     {% endif %}
                     {% if card_product.compare_at_price > card_product.price %}
                     <div class="discount-price-container">
@@ -395,7 +399,14 @@
     </div>
 
     {%- if show_quick_add and quick_add_type_mobile == "modal" -%}
-        {% render 'product-size-picker', product: card_product, submit_on_click: true, is_modal: true, id: quick_add_modal_id %}
+        {% render 'product-size-picker',
+                product: card_product,
+                submit_on_click: true,
+                is_modal: true,
+                id: quick_add_modal_id,
+                quick_add_text: quick_add_text,
+                quick_add_accessories_text: quick_add_accessories_text
+        %}
     {%- endif -%}
 {%- else -%}
     <div class="product-card-wrapper card-wrapper underline-links-hover">

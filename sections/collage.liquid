@@ -56,7 +56,9 @@
                 card_product: block.settings.product,
                 media_aspect_ratio: 'adapt',
                 show_secondary_image: block.settings.second_image,
-                extend_height: true
+                extend_height: true,
+                  quick_add_text: block.settings.quick_add_text,
+                      quick_add_accessories_text: block.settings.quick_add_accessories_text
               %}
             {%- when 'collection' -%}
               {% render 'card-collection',
