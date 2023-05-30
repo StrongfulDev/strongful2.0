@@ -248,9 +248,9 @@ predictive-search[loading]
 	height: auto;
 }
 
-.predictive-search__list-item .product-size-picker-container {
-	background: var(--gradient-base-background-1);
-}
+/*.predictive-search__list-item .product-size-picker-container {*/
+/*	background: var(--gradient-base-background-1);*/
+/*}*/
 
 .predictive-search__list-item .loading-overlay {
 	top: 50%;

@@ -8,12 +8,9 @@ class CartRewards {
 	error;
 	rules = window.rewardsRules
 	allRewardsAmount = 0;
-	activeRulesCount = 0;
-	activeRules = [];
+	activeRewards = 0;
 	cartTotalValue = 0;
-	cartOriginalTotalValue = 0;
 	lastCartTotalValue = 0;
-	lastCartOriginalTotalValue = 0;
 
 	async init() {
 		console.log("Reward rules", this.rules);
@@ -36,32 +33,21 @@ class CartRewards {
 		this.loading(true);
 
 		this.lastCartTotalValue = this.cartTotalValue;
-		this.lastCartOriginalTotalValue = this.cartOriginalTotalValue;
 		this.cart = await this.getCart();
-		this.cartTotalValue = parseInt(this.cart.total_price / 100);
-		this.cartOriginalTotalValue = parseInt(this.cart.original_total_price / 100);
-		this.activeRulesCount = 0
+		this.cartTotalValue = this.cart.total_price / 100;
+		this.activeRewards = 0
 
 		this.rules.forEach((rule, index) => {
 			const isConditionMet = this.checkCondition(rule);
-			const isRewardInCart = this.cartHasReward(rule, index);
+			const isRewardInCart = this.cartHasReward(rule);
 			const rewardItem = this.getRewardItemByRule(rule);
-			let toggeled;
 
 			// If the state changed
 			if (isRewardInCart !== isConditionMet) {
-				toggeled = this.toggleReward(isConditionMet, rule);
+				this.toggleReward(isConditionMet, rule);
 			}
 
-			if (toggeled || (isRewardInCart && isConditionMet)) {
-				this.activeRulesCount += 1;
-				this.activeRules.push(rule);
-			} else {
-				this.activeRulesCount -= 1;
-				this.activeRules = this.activeRules.filter((activeReward) => activeReward.id !== rule.id);
-			}
-
-			this.trackProgress(rule);
+			this.trackProgress();
 			this.toggleMessage(isConditionMet, rule, index);
 
 			if (isConditionMet) {
@@ -74,10 +60,6 @@ class CartRewards {
 		this.loading(false);
 	}
 
-	async getOutletValue() {
-
-	}
-
 	checkCondition(rule) {
 		let isConditionMet = false;
 
@@ -85,11 +67,6 @@ class CartRewards {
 			const isRightQuantity = this.checkProductQuantity(rule);
 			const isAmountGreaterThan = rule.condition.operator === "Greater than or equal" && this.cartTotalValue >= rule.condition.value;
 			const isAmountLessThan = rule.condition.operator === "Less than or equal" && this.cartTotalValue <= rule.condition.value;
-			isConditionMet = (isRightQuantity || isRightQuantity === null) && (isAmountGreaterThan || isAmountLessThan)
-		} else if (rule.condition.type === "OriginalCartAmount") {
-			const isRightQuantity = this.checkProductQuantity(rule);
-			const isAmountGreaterThan = rule.condition.operator === "Greater than or equal" && this.cartOriginalTotalValue >= rule.condition.value;
-			const isAmountLessThan = rule.condition.operator === "Less than or equal" && this.cartOriginalTotalValue <= rule.condition.value;
 			isConditionMet = (isRightQuantity || isRightQuantity === null) && (isAmountGreaterThan || isAmountLessThan)
 		}
 
@@ -103,7 +80,11 @@ class CartRewards {
 				break;
 		}
 
-		return isConditionMet;
+		if (isConditionMet) {
+			this.activeRewards += 1;
+		} else {
+			this.activeRewards -= 1;
+		}
 	}
 
 	async handleGiftReward(rule, isConditionMet) {
@@ -201,47 +182,18 @@ class CartRewards {
 		}
 	}
 
-	trackProgress(rule) {
-		// const activeRule = this.activeRules.find(activeRuleToCheck => activeRuleToCheck.id === rule.id);
-		//
-		// if (activeRule && activeRule.reward?.action === "gift_product") {
-		// 	const productsPrice = this.getProductPrice(rule);
-		// 	this.cartOriginalTotalValue += productsPrice;
-		// }
-
+	trackProgress() {
 		const progressPercentage = (this.cartTotalValue / this.allRewardsAmount) * 100;
-		if (this.activeRulesCount === this.rules.length) {
-			$('.progress-value').animate({
-				width: `100%`
-			})
-		} else {
 			$('.progress-value').animate({
 				width: `${progressPercentage}%`
 			})
 		}
-	}
-
-	getProductPrice(rule) {
-		const ruleProducts = this.getProductIdsFromRule(rule);
-		const products = this.cart.items.filter(item => ruleProducts.indexOf(item.id.toString()) !== -1);
-
-		if (products.length <= 0)
-			return 0;
-
-		let price = 0;
-
-		products.forEach(product => {
-			price += product.original_line_price || product.grams;
-		});
-
-		return price;
-	}
 
 	toggleMessage(isConditionMet, rule, ruleIndex) {
 
 		const rewardText = $(".reward-text");
-		const isLatestActiveRule = ruleIndex + 1 >= this.activeRulesCount && isConditionMet;
-		const isLatestDeactivatedRule = ruleIndex - 1 === this.activeRulesCount && !isConditionMet;
+		const isLatestActiveRule = ruleIndex >= this.activeRewards && isConditionMet;
+		const isLatestDeactivatedRule = ruleIndex === this.activeRewards && !isConditionMet;
 		const missingAmount = rule.condition.value - this.cartTotalValue;
 
 		// Apply condition message.
@@ -282,7 +234,7 @@ class CartRewards {
 			}
 		}
 
-		return ruleIndex < this.activeRulesCount
+		return ruleIndex <= this.activeRewards
 	}
 
 	checkProductQuantity(rule) {
