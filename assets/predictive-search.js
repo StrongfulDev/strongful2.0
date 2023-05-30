@@ -19,6 +19,7 @@ class PredictiveSearch extends SearchForm {
     this.addEventListener('focusout', this.onFocusOut.bind(this));
     this.addEventListener('keyup', this.onKeyup.bind(this));
     this.addEventListener('keydown', this.onKeydown.bind(this));
+
   }
 
   getQuery() {
@@ -48,7 +49,7 @@ class PredictiveSearch extends SearchForm {
   }
 
   onFormSubmit(event) {
-    if (!this.getQuery().length || this.querySelector('[aria-selected="true"] a')) event.preventDefault();
+    if (this.getQuery().length || this.querySelector('[aria-selected="true"] a')) event.preventDefault();
   }
 
   onFormReset(event) {
@@ -183,7 +184,6 @@ class PredictiveSearch extends SearchForm {
 
   getSearchResults(searchTerm) {
     const queryKey = searchTerm.replace(" ", "-").toLowerCase();
-	  console.log(queryKey);
     this.setLiveRegionLoadingState();
 
     if (this.cachedResults[queryKey]) {
@@ -249,7 +249,45 @@ class PredictiveSearch extends SearchForm {
 
     this.setLiveRegionResults();
     this.open();
+
+		const productModalButtons = this.predictiveSearchResults.querySelectorAll('.variant_modal__toggle_button');
+	  $(".variant_selector.submit_on_click .size_variant_button:not(.disabled-variant-button)").on("click", this.addToCart);
+
+	  $(".variant_modal__toggle_button").on("click", this.toggleModal);
   }
+
+	addToCart() {
+		const element = $(this);
+		element.find(".size_variant_button_add").hide();
+		element.find(".loading-overlay").css("display", "flex");
+		element.find(".loading-overlay__spinner").removeClass("hidden");
+		setTimeout(() => {
+			element.parents(".product_size_picker__form.form").find('[type="submit"]').click();
+		}, 500);
+		setTimeout(() => {
+			element.find(".size_variant_button_add").show();
+			element.find(".loading-overlay").css("display", "none");
+			element.find(".loading-overlay__spinner").addClass("hidden");
+		}, 1500);
+	}
+
+	toggleModal() {
+		const element = $(this);
+		const modalId = element.data("modal-id");
+		const modal = $(".variant_modal#" + modalId) || $(".variant_selector#" + modalId);
+		const modalOverlay = $(".variant_modal_overlay#" + modalId + "-overlay");
+
+		modal.show();
+		modalOverlay.show()
+		modalOverlay.on("click", () => {
+			modal.hide()
+			modalOverlay.hide()
+		})
+		modal.find('.quick_add_modal__close').on("click", () => {
+			modal.hide()
+			modalOverlay.hide()
+		})
+	}
 
   setLiveRegionResults() {
     this.removeAttribute('loading');

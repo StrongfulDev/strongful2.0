@@ -138,7 +138,6 @@ predictive-search[loading]
 }
 
 .predictive-search__list-item[aria-selected="true"] > *,
-.predictive-search__list-item:hover > *,
 .predictive-search__item[aria-selected="true"],
 .predictive-search__item:hover {
   color: rgb(var(--color-foreground));
@@ -248,3 +247,23 @@ predictive-search[loading]
 	width: 100%;
 	height: auto;
 }
+
+.predictive-search__list-item .product-size-picker-container {
+	background: var(--gradient-base-background-1);
+}
+
+.predictive-search__list-item .loading-overlay {
+	top: 50%;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: none;
+	width: 100%;
+	padding: 0 5%;
+	opacity: .7;
+	transform: translateY(-50%);
+}
+
+/*.predictive-search__results-list .variant_selector, .predictive-search__results-list .variant_modal {*/
+/*	display: none;*/
+/*}*/

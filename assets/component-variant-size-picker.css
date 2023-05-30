@@ -135,6 +135,7 @@
 .variant_modal .product_variants ul {
     flex-direction: column;
     width: 100%;
+	padding-bottom: 3rem;
 }
 
 .variant_modal .product_variants li {
@@ -158,10 +159,6 @@
     padding: 10px 0;
     display: flex;
     justify-content: space-between;
-}
-
-.variant_modal .product_variants .size_variant_button:last-child label {
-	padding-bottom: 3rem;
 }
 
 .variant_modal .size_variant_button_add {

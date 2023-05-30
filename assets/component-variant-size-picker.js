@@ -15,7 +15,7 @@ function quickAdd() {
     element.parents('.variant_selector').find('.add_to_cart').removeAttr("disabled");
   })
 
-  $('#MainContent')
+  $("#MainContent")
     .on("click", '.variant_selector.submit_on_click .size_variant_button:not(.disabled-variant-button)', function (e) {
       const element = $(this);
 			let productPageIdentifier = document.querySelector(".products-product-size-picker");
