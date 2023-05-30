@@ -3138,3 +3138,12 @@ div.needsclick, button.needsclick {
 		margin: 0;
 	}
 }
+
+body:not(.enable-toolbar-RTL) #enable-reader, body:not(.enable-toolbar-RTL) #enable-toolbar-buttons, body:not(.enable-toolbar-RTL) #enable-toolbar-buttons li button[disabled=disabled], body:not(.enable-toolbar-RTL) #enable-toolbar-content {
+	direction: rtl !important;
+}
+
+body.trigger-position-right #enable-toolbar-trigger {
+	left: 5px !important;
+	right: auto !important;
+}
