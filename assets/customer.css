@@ -239,11 +239,10 @@ a.no-decoration {
 
 /* mobile table overrides */
 @media screen and (max-width: 749px) {
-  .customer thead,
-  .customer th,
-  .customer tfoot td:first-of-type {
-    display: none;
-  }
+
+	thead {
+		display: none;
+	}
 
   .customer td {
     display: flex;
@@ -833,6 +832,7 @@ a.container-menu-item, span.container-menu-item {
 	border-bottom: 1px var(--gradient-base-background-4) solid;
 	display: block;
 	position: relative;
+	padding: 0 0 var(--grid-desktop-horizontal-spacing) 0;
 }
 
 .container-menu-item .icon-caret {
@@ -847,7 +847,7 @@ a.container-menu-item, span.container-menu-item {
 }
 
 a.container-menu-item span {
-	font-size: var(--font-body-size-smallest);
+	font-size: var(--font-body-size-small);
 }
 
 p.container-extra-info {
@@ -859,7 +859,7 @@ p.container-extra-info {
 .custom-orders-container {
 	position: fixed;
 	width: 100%;
-	z-index: 4;
+	z-index: 9;
 	background: #fff;
 	top: 0;
 	right: 0;

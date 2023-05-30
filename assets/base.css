@@ -2262,7 +2262,7 @@ quantity-input button.quantity__button {
 
 /* section-header */
 .section-header.shopify-section-group-header-group {
-    z-index: 4;
+    z-index: 7;
 }
 
 .shopify-section-header-sticky {
@@ -3154,3 +3154,364 @@ body.trigger-position-right #enable-toolbar-trigger {
 	left: 5px !important;
 	right: auto !important;
 }
+
+.header-overlay {
+	position: fixed;
+	background: rgba(var(--color-shadow), 0.5);
+	width: 100%;
+	height: 100%;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	top: 0;
+	z-index: 6;
+}
+
+/*   ReturnGO Styling start     */
+
+#ReturngoPortalEmbedding, #ReturngoPortalEmbedding div {
+	direction: rtl !important;
+}
+
+#returnGoAssistant .ReturnGO_InputField-module_inputField .ReturnGO_InputField-module_label, #returnGoCartWidget .ReturnGO_InputField-module_inputField .ReturnGO_InputField-module_label, #returnGoAccountWidget .ReturnGO_InputField-module_inputField .ReturnGO_InputField-module_label {
+	left: auto !important;
+	right: 19px;
+}
+
+.ltr .ReturnGO_InputField-module_tooltipIconWrapper, #returnGoAssistant .ltr .ReturnGO_Tooltip-module_tooltip .ReturnGO_Tooltip-module_close, #returnGoCartWidget .ltr .ReturnGO_Tooltip-module_tooltip .ReturnGO_Tooltip-module_close, #returnGoAccountWidget .ltr .ReturnGO_Tooltip-module_tooltip .ReturnGO_Tooltip-module_close {
+	right: auto !important;
+	left: 14px;
+}
+
+#returnGoAssistant .ReturnGO_ItemContent-module_info .ReturnGO_ItemContent-module_title, #returnGoCartWidget .ReturnGO_ItemContent-module_info .ReturnGO_ItemContent-module_title, #returnGoAccountWidget .ReturnGO_ItemContent-module_info .ReturnGO_ItemContent-module_title,
+#returnGoAssistant .ReturnGO_ItemContent-module_info .ReturnGO_ItemContent-module_article, #returnGoCartWidget .ReturnGO_ItemContent-module_info .ReturnGO_ItemContent-module_article, #returnGoAccountWidget .ReturnGO_ItemContent-module_info .ReturnGO_ItemContent-module_article,
+#returnGoAssistant .ReturnGO_ItemContent-module_info .ReturnGO_ItemContent-module_article, #returnGoCartWidget .ReturnGO_ItemContent-module_info .ReturnGO_ItemContent-module_article, #returnGoAccountWidget .ReturnGO_ItemContent-module_info .ReturnGO_ItemContent-module_article,
+#returnGoAssistant .ReturnGO_ItemContent-module_itemContentContainer .ReturnGO_ItemContent-module_price, #returnGoCartWidget .ReturnGO_ItemContent-module_itemContentContainer .ReturnGO_ItemContent-module_price, #returnGoAccountWidget .ReturnGO_ItemContent-module_itemContentContainer .ReturnGO_ItemContent-module_price {
+	text-align: right !important;
+}
+
+#returnGoAssistant .ReturnGO_ItemContent-module_itemContentContainer .ReturnGO_ItemContent-module_info, #returnGoCartWidget .ReturnGO_ItemContent-module_itemContentContainer .ReturnGO_ItemContent-module_info, #returnGoAccountWidget .ReturnGO_ItemContent-module_itemContentContainer .ReturnGO_ItemContent-module_info {
+	-webkit-margin-start: 0 !important;
+	margin-inline-start: 0 !important;
+	margin-inline-end: 85px;
+}
+
+#returnGoAssistant .ReturnGO_RadioButton-module_radioButton .ReturnGO_RadioButton-module_checkmark, #returnGoCartWidget .ReturnGO_RadioButton-module_radioButton .ReturnGO_RadioButton-module_checkmark, #returnGoAccountWidget .ReturnGO_RadioButton-module_radioButton .ReturnGO_RadioButton-module_checkmark, .ltr .ReturnGO_RadioButton-module_radioButton .ReturnGO_RadioButton-module_checkmark {
+	right: 0;
+}
+
+#returnGoAssistant .ReturnGO_RadioButton-module_radioButton.ReturnGO_RadioButton-module_checked .ReturnGO_RadioButton-module_checkmarkChecked, #returnGoCartWidget .ReturnGO_RadioButton-module_radioButton.ReturnGO_RadioButton-module_checked .ReturnGO_RadioButton-module_checkmarkChecked, #returnGoAccountWidget .ReturnGO_RadioButton-module_radioButton.ReturnGO_RadioButton-module_checked .ReturnGO_RadioButton-module_checkmarkChecked, .ltr .ReturnGO_RadioButton-module_radioButton.ReturnGO_RadioButton-module_checked .ReturnGO_RadioButton-module_checkmarkChecked,
+#returnGoAssistant .ReturnGO_RadioButton-module_radioButton.ReturnGO_RadioButton-module_checked .ReturnGO_RadioButton-module_checkmarkChecked, #returnGoCartWidget .ReturnGO_RadioButton-module_radioButton.ReturnGO_RadioButton-module_checked .ReturnGO_RadioButton-module_checkmarkChecked, #returnGoAccountWidget .ReturnGO_RadioButton-module_radioButton.ReturnGO_RadioButton-module_checked .ReturnGO_RadioButton-module_checkmarkChecked, .ltr .ReturnGO_RadioButton-module_radioButton.ReturnGO_RadioButton-module_checked .ReturnGO_RadioButton-module_checkmarkChecked,
+.ReturnGO_RadioButton-module_checkmarkChecked {
+	right: 5px;
+}
+
+#returnGoAssistant .ReturnGO_CheckBox-module_checkBoxLabelContainer .ReturnGO_CheckBox-module_checkBox.ReturnGO_CheckBox-module_shadowed, #returnGoCartWidget .ReturnGO_CheckBox-module_checkBoxLabelContainer .ReturnGO_CheckBox-module_checkBox.ReturnGO_CheckBox-module_shadowed, #returnGoAccountWidget .ReturnGO_CheckBox-module_checkBoxLabelContainer .ReturnGO_CheckBox-module_checkBox.ReturnGO_CheckBox-module_shadowed {
+	padding: 14px 10px !important;
+}
+
+.ReturnGO_ReturnItemProposition-module_additionalCosts, .ReturnGO_ReturnItemProposition-module_subtotal,
+.ReturnGO_Text-module_text.ReturnGO_Text-module_light.ReturnGO_Text-module_sm.ReturnGO_Text-module_normal.undefined.undefined.undefined + hr,
+.ReturnGO_RadioButton-module_input[value="skip"], .ReturnGO_RadioButton-module_input[value="skip"] ~ span {
+	display: none !important;
+}
+
+.ReturnGO_ReturnItemProposition-module_alternativeItem {
+	align-items: self-start !important;
+}
+
+#returnGoAssistant .ReturnGO_ItemContent-module_shadowedBlock .ReturnGO_ItemContent-module_img, #returnGoCartWidget .ReturnGO_ItemContent-module_shadowedBlock .ReturnGO_ItemContent-module_img, #returnGoAccountWidget .ReturnGO_ItemContent-module_shadowedBlock .ReturnGO_ItemContent-module_img {
+	max-height: 100px !important;
+}
+
+#returnGoAssistant .ReturnGO_ItemContent-module_shadowedBlock .ReturnGO_ItemContent-module_info, #returnGoCartWidget .ReturnGO_ItemContent-module_shadowedBlock .ReturnGO_ItemContent-module_info, #returnGoAccountWidget .ReturnGO_ItemContent-module_shadowedBlock .ReturnGO_ItemContent-module_info {
+	height: auto !important;
+}
+
+
+.ReturnGO_Text-module_text.ReturnGO_Text-module_light.ReturnGO_Text-module_xs.ReturnGO_Text-module_bold.undefined.undefined.undefined.ReturnGO_ReturnItemProposition-module_freeTag {
+	right: 6px !important;
+}
+
+.ReturnGO_ReturnItemProposition-module_arrow {
+	right: auto !important;
+	left: 0;
+}
+
+.ReturnGO_ButtonContainer-module_buttonContainer {
+	flex-direction: column-reverse !important;
+
+}
+
+#ReturngoPortalEmbedding {
+	min-height: auto !important;
+}
+
+#ReturngoPortalEmbedding div.ReturnGO_OptionBlock-module_optionValueChipsBlock {
+	direction: ltr !important;
+	justify-content: end !important;
+}
+
+.ReturnGO_ExchangeProductLayout-module_variantExchangeContainer .ReturnGO_ItemContent-module_price {
+	display: none !important;
+	position: relative;
+}
+
+.ReturnGO_ExchangeProductLayout-module_variantExchangeContainer .ReturnGO_ItemContent-module_price::after {
+	display: block;
+	visibility: visible;
+	position: absolute;
+	content: '0';
+	top: 0;
+}
+
+.ReturnGO_ReturnItemProposition-module_shippingContent svg {
+	display: none !important;
+}
+
+.ReturnGO_ReturnItemProposition-module_shippingContent {
+	justify-content: flex-start !important;
+	direction: rtl !important;
+}
+
+
+.ReturnGO_RadioButton-module_radioButton.ReturnGO_RadioButton-module_checked.ReturnGO_RadioButton-module_boxed.ReturnGO_ReturnItemProposition-module_radio .ReturnGO_RadioButton-module_checkmarkChecked,
+.ReturnGO_RadioButton-module_radioButton.ReturnGO_RadioButton-module_checked.ReturnGO_RadioButton-module_boxed.ReturnGO_ReturnItemProposition-module_radio .ReturnGO_RadioButton-module_checkmark,
+.ReturnGO_RadioButton-module_radioButton.ReturnGO_RadioButton-module_checked.ReturnGO_RadioButton-module_boxed.ReturnGO_ReturnItemProposition-module_radio .ReturnGO_ReturnItemProposition-module_titles,
+.ReturnGO_RadioButton-module_radioButton.ReturnGO_RadioButton-module_checked.ReturnGO_RadioButton-module_boxed.ReturnGO_ReturnItemProposition-module_radio .ReturnGO_RadioButton-module_checkmark {
+	display: none !important;
+	opacity: 0 !important;
+	visibility: hidden !important;
+}
+
+.ReturnGO_ReturnItemProposition-module_radioContent {
+	padding: 15px 15px 180px 15px !important;
+	order: 2 !important;
+	position: relative;
+	pointer-events: none !important;
+}
+
+label .ReturnGO_ReturnItemProposition-module_open, .ReturnGO_ReturnItemProposition-module_costs {
+	pointer-events: none !important;
+}
+
+.ReturnGO_ReturnItemProposition-module_alternativeItem > div {
+	width: 100% !important;
+	flex-direction: column !important;
+	font-size: .9em !important;
+}
+
+.ReturnGO_ReturnItemProposition-module_alternativeItem > div > p:first-child {
+	font-size: 1.2em !important;
+}
+
+.ReturnGO_ReturnItemProposition-module_alternativeItem > div > p:last-child {
+	font-size: 1em !important;
+}
+
+/*     here */
+
+.ReturnGO_ReturnItemProposition-module_radioContent::after {
+	content: 'במידה ותצטרכי להוסיף תשלום עבור החלפה - דרישת תשלום מפורטת תישלח אלייך במייל';
+	pointer-events: none !important;
+	position: absolute;
+	display: block;
+	visibility: visible;
+	right: 15px;
+	top: 3em;
+	font-size: .7em;
+}
+
+.ReturnGO_ReturnItemProposition-module_radioContent::before {
+	content: 'במידה ותהיי זכאית לזיכוי בעקבות הפרשי מחירים בהחלפתך - יישלח במייל גיפט קארד לאחר אישור בקשת החלפתך';
+	pointer-events: none !important;
+	position: absolute;
+	display: block;
+	visibility: visible;
+	right: 15px;
+	top: 7em;
+	font-size: .7em;
+}
+
+.ReturnGO_ReturnItemProposition-module_costs {
+	position: relative !important;
+	width: 100% !important;
+	direction: rtl !important;
+}
+
+#returnGoAssistant .ReturnGO_Text-module_text.ReturnGO_Text-module_dir-left {
+	direction: rtl !important;
+}
+
+.ReturnGO_ReturnItemProposition-module_costs::before {
+	content: 'במידה וביקשת החזרה עם שליח לצורך זיכוי כספי - הזיכוי יתבצע בניכוי 5% כחוק, לאמצעי התשלום ממנו ביצעת את ההזמנה';
+	pointer-events: none !important;
+	position: absolute;
+	display: block;
+	visibility: visible;
+	right: 0;
+	top: 11em;
+	font-size: .7em;
+	color: #242b33cc;
+}
+
+.ReturnGO_ReturnItemProposition-module_shipping {
+	order: 1 !important;
+}
+
+.ReturnGO_ReturnItemProposition-module_description {
+	order: 3 !important;
+}
+
+#returnGoAssistant .rtl .ReturnGO_ReturnItemProposition-module_returnItemProposition .ReturnGO_ReturnItemProposition-module_content .ReturnGO_ReturnItemProposition-module_solution .ReturnGO_ReturnItemProposition-module_offers .ReturnGO_ReturnItemProposition-module_radio .ReturnGO_ReturnItemProposition-module_radioContent .ReturnGO_ReturnItemProposition-module_costs, #returnGoCartWidget .rtl .ReturnGO_ReturnItemProposition-module_returnItemProposition .ReturnGO_ReturnItemProposition-module_content .ReturnGO_ReturnItemProposition-module_solution .ReturnGO_ReturnItemProposition-module_offers .ReturnGO_ReturnItemProposition-module_radio .ReturnGO_ReturnItemProposition-module_radioContent .ReturnGO_ReturnItemProposition-module_costs, #returnGoAccountWidget .rtl .ReturnGO_ReturnItemProposition-module_returnItemProposition .ReturnGO_ReturnItemProposition-module_content .ReturnGO_ReturnItemProposition-module_solution .ReturnGO_ReturnItemProposition-module_offers .ReturnGO_ReturnItemProposition-module_radio .ReturnGO_ReturnItemProposition-module_radioContent .ReturnGO_ReturnItemProposition-module_costs {
+	padding-top: 0 !important;
+}
+
+
+.ReturnGO_ReturnItemProposition-module_description .ReturnGO_Text-module_text.ReturnGO_Text-module_light.ReturnGO_Text-module_sm.ReturnGO_Text-module_normal:nth-child(2) span {
+	position: relative !important;
+	visibility: hidden !important;
+	display: block !important;
+	width: 100%;
+}
+
+.ReturnGO_ReturnItemProposition-module_description .ReturnGO_Text-module_text.ReturnGO_Text-module_light.ReturnGO_Text-module_sm.ReturnGO_Text-module_normal:nth-child(2) span::after {
+	visibility: visible !important;
+	width: 100%;
+	display: block !important;
+	content: 'שליח עד הבית (1-5 ימי עסקים)';
+	position: absolute !important;
+	top: 0 !important;
+	right: 0 !important;
+}
+
+.ReturnGO_ReturnItemProposition-module_taxDisclaimer:last-child p span {
+	position: relative !important;
+	visibility: hidden !important;
+	display: block !important;
+	width: 100%;
+}
+
+.ReturnGO_ReturnItemProposition-module_taxDisclaimer:last-child p span::after {
+	visibility: visible !important;
+	width: 100%;
+	display: block !important;
+	content: 'החלפה ראשונה חינם בכל הזמנה, במידה ויידרשו עלויות נוספות, עם אישור ההחלפה יישלח מייל עם דרישת תשלום.';
+	position: absolute !important;
+	top: 0 !important;
+	right: 0 !important;
+}
+
+/*      .ReturnGO_ReturnItemProposition-module_legend    */
+
+.ReturnGO_ItemContent-module_info .ReturnGO_ItemContent-module_article:last-child,
+.ReturnGO_ReturnItemProposition-module_legend {
+	display: none !important;
+}
+
+.ReturnGO_SearchLayout-module_resultsContainer p a {
+	text-decoration: underline !important;
+}
+
+.ReturnGO_ItemContent-module_infoPriceContainer .ReturnGO_ItemContent-module_info:first-child,
+.ReturnGO_ItemContent-module_infoPriceContainer .ReturnGO_ItemContent-module_info:first-child p:nth-child(2) {
+	width: 100% !important;
+}
+
+
+.ReturnGO_Collapse-module_container {
+	display: none !important;
+}
+
+.ReturnGO_ReturnItemProposition-module_solution {
+	margin-top: 1em !important;
+}
+
+#returnGoAssistant img {
+	pointer-events: none !important;
+}
+
+.ReturnGO_UploadImages-module_uploadImages {
+	position: relative;
+}
+
+.ReturnGO_UploadImages-module_uploadImages::after {
+	position: absolute;
+	bottom: -1.5em;
+	visibility: visible;
+	display: block;
+	transform: translateX(50%);
+	content: 'תמונה לא ברורה עלולה לגרום לדחיית הבקשה';
+	text-align: center;
+	right: 50%;
+	width: max-content;
+}
+
+#returnGoAssistant .rtl .ReturnGO_ItemContent-module_badge.ReturnGO_ItemContent-module_returned {
+	background: #000 !important;
+}
+
+.ReturnGO_Footer-module_footer {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+.ReturnGO_InputField-module_inputField + .ReturnGO_Error-module_error,
+.ReturnGO_LoaderScreen-module_loaderScreen .ReturnGO_LoaderScreen-module_stepBlock,
+.ReturnGO_SnippetWrapper-module_snippetWrapper span div:last-child {
+	display: none !important;
+}
+
+.ReturnGO_SnippetWrapper-module_snippetWrapper > span > div {
+	text-align: center;
+}
+
+.ReturnGO_ReturnItemSummary-module_alternativeItemLabel {
+	width: max-content !important;
+	min-width: auto !important;
+	margin-left: 5px !important;
+}
+
+.ReturnGO_Common-module_content {
+	padding-top: 30px !important;
+}
+
+#returnGoAccountWidget {
+	display: none !important;
+}
+
+.hardNone {
+	display: none !important;
+}
+
+.ReturnGO_CheckBox-module_checkBox.ReturnGO_CheckBox-module_inline {
+	width: auto !important;
+}
+
+
+.ReturnGO_Button-module_button.ReturnGO_Button-module_link.ReturnGO_Button-module_md {
+	position: relative;
+	visibility: hidden;
+}
+
+.ReturnGO_Button-module_button.ReturnGO_Button-module_link.ReturnGO_Button-module_md:after {
+	position: absolute;
+	visibility: visible;
+	display: block;
+	content: 'שלב קודם';
+	top: 50%;
+	right: 50%;
+	transform: translate(50%, -50%);
+	width: max-content;
+	font-weight: 600;
+}
+
+.ReturnGO_Footer-module_footer .ReturnGO_SnippetWrapper-module_snippetWrapper {
+	margin: auto;
+}
+
+#enable-modal, #enable-reader {
+	display: none;
+}
+
+/*   ReturnGO Styling end     */

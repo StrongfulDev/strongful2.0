@@ -551,3 +551,11 @@ li.product__media-item.grid__item.slider__slide {
 .product__media-list + .slider-buttons .slider-button .icon {
     height: 1.5rem;
 }
+
+slider-component .card__information * {
+	font-size: calc(var(--font-body-size-medium) * 0.9);
+}
+
+slider-component .discount-price-container * {
+	font-size: calc(var(--font-body-size-small) * 1.2);
+}

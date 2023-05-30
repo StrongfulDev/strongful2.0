@@ -786,7 +786,7 @@ noscript .localization-selector.link {
     margin: 0;
     padding: .5em;
     background: rgb(var(--color-base-background-2));
-    font-size: var(--font-body-size-small);
+    font-size: calc(var(--font-body-size-small) * 1.4);
 }
 
 .footer-block__brand-info .footer__list-social.list-social {

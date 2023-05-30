@@ -486,7 +486,13 @@
       "fulfillment_status_pending": "ממתין לאריזה",
       "fulfillment_status_restocked": "מחזיר מלאי",
       "order_status_cancelled": "בוטלה",
-      "shipping_company": "קרגו"
+      "shipping_company": "קרגו",
+      "fulfillment_statuses": {
+        "Fulfilled": "נשלח",
+        "Partial": "נשלח חלקית",
+        "Restocked": "מחזיר מלאי",
+        "Unfulfilled": "לא נשלח"
+      }
     },
     "orders": {
       "title": "ההזמנות שלי",

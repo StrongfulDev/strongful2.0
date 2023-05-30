@@ -396,6 +396,8 @@ class MenuDrawer extends HTMLElement {
 					$(item).parent().css('display', 'block');
 				}
 			});
+		} else if ($(summaryElement).hasClass("header__icon--summary")) {
+			$(".header-overlay").toggleClass("hidden");
 		}
 
     function addTrapFocus() {
@@ -1131,9 +1133,12 @@ class ProductRecommendations extends HTMLElement {
 customElements.define('product-recommendations', ProductRecommendations);
 
 let headerOverlay = document.querySelector('.header-overlay');
+let menuDrawer = document.querySelector('header-drawer');
 $(headerOverlay).on('mouseenter', function() {
   $(this).addClass('hidden');
   $('.header__menu-item').attr('aria-expanded', false);
   $('details.mega-menu').attr('open', false);
+	$('.menu-drawer-container').attr('open', false);
+	document.body.classList.remove(`overflow-hidden-${menuDrawer.dataset.breakpoint}`);
 });
 

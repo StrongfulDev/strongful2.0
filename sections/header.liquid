@@ -163,7 +163,7 @@
                     <details id="Details-menu-drawer-container"
                              class="menu-drawer-container customizable">
                         <summary
-                                class="header__icon header__icon--menu header__icon--summary link focus-inset"
+                                class="header__icon header__icon--menu header__icon--summary link"
                                 aria-label="{{ 'sections.header.menu' | t }}">
                             <span>
                               {% render 'icon-hamburger' %}
@@ -317,7 +317,7 @@
                                                 {% else %}
                                                 <li class="{% if block.settings.show_on_mobile == false %}desktop-only{% endif %}">
                                                   <a href="{{ block.settings.title_link }}" class="mobile_link_header">
-                                                    {{ block.settings.menu_link_image | image_url: width: 320 | image_tag:
+                                                    {{ block.settings.menu_link_image | image_url: width: 700 | image_tag:
                                                     loading: 'lazy',
                                                     class: "mobile_link_header_image"
                                                     }}
@@ -364,7 +364,7 @@
                 <header-drawer data-breakpoint="tablet">
                     <details id="Details-menu-drawer-container" class="menu-drawer-container">
                         <summary
-                                class="header__icon header__icon--menu header__icon--summary link focus-inset"
+                                class="header__icon header__icon--menu header__icon--summary link"
                                 aria-label="{{ 'sections.header.menu' | t }}">
             <span>
               {% render 'icon-hamburger' %}

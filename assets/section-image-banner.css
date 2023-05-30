@@ -458,7 +458,7 @@
 }
 
 .button--primary {
-	font-size: calc(var(--font-body-size-smallest) * 1.5);
+	font-size: calc(var(--font-body-size-medium) * 1.2);
 	padding: 1rem 2rem;
 	border: 0;
 }

@@ -316,7 +316,7 @@
 }
 
 .menu-drawer__menu.has-submenu.list-menu.submenu-open {
-	top: 8.5em;
+	top: 4em;
 }
 
 @media screen and (min-width: 990px) {

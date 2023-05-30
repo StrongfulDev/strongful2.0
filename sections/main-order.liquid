@@ -9,6 +9,10 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
+    .account-desktop-container {
+    display: none;
+    }
+
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -89,7 +93,7 @@
                                                       role="cell"
                                                       data-label="{{ 'customer.orders.fulfillment_status' | t }}"
                                               >
-                                                  {{ order.fulfillment_status_label }}
+                                                  {{ 'customer.order.fulfillment_statuses.' | append: order.fulfillment_status_label | t }}
                                               </td>
                                               <td
                                                       headers="RowOrder ColumnImages"
@@ -206,13 +210,19 @@
       </div>
       <div class="order-details-container">
           <div class="order--first-part">
-              {%- assign order_date = order.created_at | time_tag: format: 'date_at_time' -%}
+              {% comment %}{%- assign order_date = order.created_at | time_tag: format: 'date_at_time' -%}{% endcomment %}
+              {% assign order_date = order.created_at | date: "%d-%m-%Y" %}
               <p>{{ 'customer.order.date_html' | t: date: order_date }}</p>
               {%- if order.cancelled -%}
-                  {%- assign cancelled_at = order.cancelled_at | time_tag: format: 'date_at_time' -%}
+                  {% comment %}{%- assign cancelled_at = order.cancelled_at | time_tag: format: 'date_at_time' -%}{% endcomment %}
+                  {% assign cancelled_at = order.cancelled_at | date: "%d-%m-%Y" %}
                   <p>{{ 'customer.order.cancelled_html' | t: date: cancelled_at }}</p>
                   <p>{{ 'customer.order.cancelled_reason' | t: reason: order.cancel_reason_label }}</p>
               {%- endif -%}
+
+              {% if order.fulfillment_status == 'fulfilled' %}
+                  <a href="/a/return?email={{ order.email }}&orderId={{ order.name }}">החזרות והחלפות</a>
+              {% endif %}
 
               <table role="table" class="order-details">
                   <caption class="visually-hidden">
