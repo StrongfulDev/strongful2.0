@@ -2087,6 +2087,103 @@
         }
       }
     },
+    "predictive-search": {
+      "name": "Predictive search",
+      "settings": {
+        "products_per_page": {
+          "label": "Products per page"
+        },
+        "columns_desktop": {
+          "label": "Number of columns on desktop"
+        },
+        "enable_filtering": {
+          "label": "Enable filtering",
+          "info": "Customize filters with the Search & Discovery app. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/search-and-discovery\/filters)"
+        },
+        "image_ratio": {
+          "label": "Image ratio",
+          "options__1": {
+            "label": "Adapt to image"
+          },
+          "options__2": {
+            "label": "Portrait"
+          },
+          "options__3": {
+            "label": "Square"
+          }
+        },
+        "show_secondary_image": {
+          "label": "Show second image on hover"
+        },
+        "show_vendor": {
+          "label": "Show vendor"
+        },
+        "announcement_tag": {
+          "label": "Announcement tag",
+          "info": "Add a tag to products to display an announcement. [Learn more](https:\/\/help.shopify.com\/manual\/products\/organize-products#add-tags-to-products)"
+        },
+        "show_rating": {
+          "label": "Show product rating",
+          "info": "To display a rating, add a product rating app. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/theme-structure\/page-types#product-grid-section-settings)"
+        },
+        "header__3": {
+          "content": "Product card"
+        },
+        "enable_tags": {
+          "label": "Enable filtering",
+          "info": "Customize filters with the Search & Discovery app. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/search-and-discovery\/filters)"
+        },
+        "enable_quick_buy": {
+          "label": "Enable quick add button",
+          "info": "Optimal with popup or drawer cart type."
+        },
+        "header_mobile": {
+          "content": "Mobile Layout"
+        },
+        "columns_mobile": {
+          "label": "Number of columns on mobile",
+          "options__1": {
+            "label": "1 column"
+          },
+          "options__2": {
+            "label": "2 columns"
+          }
+        },
+        "show_card_collection_announcement": {
+          "label": "Show collection announcement"
+        },
+        "custom_collection_announcement": {
+          "label": "Text for collection announcement"
+        },
+        "announcement_customizer_override": {
+          "label": "Override announcement text from customizer"
+        },
+        "quick_add_type": {
+          "label": "Quick add type on desktop",
+          "options__1": {
+            "label": "Button under the card"
+          },
+          "options__2": {
+            "label": "Options on hover"
+          }
+        },
+        "quick_add_type_mobile": {
+          "label": "Quick add type on mobile",
+          "options__1": {
+            "label": "Modal from bottom"
+          }
+        },
+        "quick_add_text": {
+          "label": "Quick add text"
+        },
+        "quick_add_accessories_text": {
+          "label": "Quick add accessories text"
+        },
+        "image_count": {
+          "label": "Number of images to show"
+        }
+      }
+    },
     "main-collection-product-grid": {
       "name": "Product grid",
       "settings": {

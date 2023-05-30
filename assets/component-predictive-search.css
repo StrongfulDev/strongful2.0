@@ -155,7 +155,7 @@ predictive-search[loading]
 .predictive-search__item {
   display: flex;
   padding: 1rem 2rem;
-  text-align: left;
+  text-align: right;
   text-decoration: none;
   width: 100%;
 }
@@ -234,4 +234,17 @@ predictive-search[loading]
   grid-area: product-image;
   object-fit: contain;
   font-family: "object-fit: contain";
+}
+
+/* Custom Styles */
+
+.predictive-search__item--link-with-thumbnail {
+	display: block;
+	padding: 0;
+}
+
+.predictive-search__image {
+	display: block;
+	width: 100%;
+	height: auto;
 }

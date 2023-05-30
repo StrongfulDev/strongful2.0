@@ -3,6 +3,15 @@
 	background-color: var(--gradient-base-background-3);
 }
 
+.search-modal__form > form > .field:before, .search-modal__form > form > .field:after {
+	content: none;
+}
+
+.search__input.field__input:focus, .search__input.field__input:active {
+	border: none;
+	box-shadow: none;
+}
+
 .search__button {
   left: auto;
 	right: var(--inputs-border-width);
@@ -76,4 +85,11 @@ input::-webkit-search-decoration {
 .field__label {
 	right: calc(var(--inputs-border-width) + 4rem);
 	display: none;
+}
+
+#predictive-search-results-products-list {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: var(--grid-desktop-horizontal-spacing);
+	margin: 0 2rem;
 }
