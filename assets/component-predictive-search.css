@@ -88,7 +88,7 @@ predictive-search[loading] .predictive-search {
     display: initial;
   }
   .predictive-search__result-group:first-child {
-    flex: 0 0 26.4rem;
+    flex: 0 0 29.4rem;
   }
   .predictive-search__results-groups-wrapper--no-products
     .predictive-search__result-group:first-child,
@@ -264,6 +264,8 @@ predictive-search[loading]
 	transform: translateY(-50%);
 }
 
-/*.predictive-search__results-list .variant_selector, .predictive-search__results-list .variant_modal {*/
-/*	display: none;*/
-/*}*/
+@media screen and (min-width: 990px) {
+	div.quick-add {
+		z-index: 3;
+	}
+}
