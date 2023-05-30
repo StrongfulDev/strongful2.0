@@ -433,16 +433,24 @@
                     <!-- Subtotals -->
 
                     <div class="cart-drawer__footer" {{ block.shopify_attributes }}>
+                        {% for item in cart.items %}
+                        {% assign itemComparePrice = item.product.compare_at_price | minus: item.product.price %}
+                        {% assign cartOriginalTotalPrice = cart.original_total_price %}
+                        {% assign customCartOriginalTotalPrice = cartOriginalTotalPrice | plus: itemComparePrice %}
+                        {% assign discount = customCartOriginalTotalPrice | minus: cart.total_price %}
                         <div class="totals" role="status">
-                            <h2 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}</h2>
-                            {% for item in cart.items %}
-                                {% assign itemComparePrice = item.product.compare_at_price %}
-                                {% assign cartOriginalTotalPrice = cart.original_total_price %}
-                                {% assign customCartOriginalTotalPrice = cartOriginalTotalPrice | plus: itemComparePrice %}
+                            {% if discount > 0 %}
+                                <h2 class="total-benefits">{{ 'sections.cart.benefits' | t }}:</h2>
+                                <div class="benefits-announcement">
+                                    <span class="customer-saved">{{ 'sections.cart.benefits_announcement' | t }}</span>
+                                    <span class="benefits-amount">{{ discount | money_with_currency }}</span>
+                                </div>
+                            {% endif %}
+                                <h2 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}:</h2>
                             <div class="totals__value flex
                                 {% if customCartOriginalTotalPrice > cart.total_price %}price__sale price--on-sale{% endif %}">
                                 {% if customCartOriginalTotalPrice > cart.total_price %}
-                                    <p class="totals__original-subtotal-value price-item--regular" data-price="{{ customCartOriginalTotalPrice }}">{{ customCartOriginalTotalPrice | money_with_currency }}</p>
+                                    <p class="totals__original-subtotal-value price-item--regular" data-price="{{ cart.total_price }}" data-original-price="{{ customCartOriginalTotalPrice }}">{{ customCartOriginalTotalPrice | money_with_currency }}</p>
                                 {% endif %}
                                 <p class="totals__subtotal-value
                                    {% if customCartOriginalTotalPrice > cart.total_price %}
@@ -452,8 +460,8 @@
                                     {{ cart.total_price | money_with_currency }}
                                 </p>
                             </div>
-                            {% endfor %}
                         </div>
+                        {% endfor %}
 
                         <div>
                             {%- if cart.cart_level_discount_applications.size > 0 -%}

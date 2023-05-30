@@ -391,7 +391,6 @@ class MenuDrawer extends HTMLElement {
 			let navItems = document.querySelectorAll('.mobile_menu_link.header__menu-item');
 			navItems.forEach(function(item) {
 				if (item.innerText.includes(summaryDataClass)) {
-					console.log(item)
 					$(item).removeClass('hidden').addClass('active');
 					$(item).siblings().removeClass('active').addClass('hidden');
 					$(item).parent().css('display', 'block');
@@ -1137,3 +1136,4 @@ $(headerOverlay).on('mouseenter', function() {
   $('.header__menu-item').attr('aria-expanded', false);
   $('details.mega-menu').attr('open', false);
 });
+

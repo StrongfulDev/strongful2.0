@@ -4,6 +4,10 @@
     --heading-type-2-margin: 1rem;
 }
 
+* {
+	line-height: normal !important;
+}
+
 /* Color custom properties */
 
 :root,
@@ -453,7 +457,7 @@ h5,
     font-weight: var(--font-heading-weight);
     letter-spacing: calc(var(--font-heading-scale) * 0.06rem);
     color: rgb(var(--color-foreground));
-    line-height: calc(1 + 0.3 / max(1, var(--font-heading-scale)));
+    line-height: calc(1 / max(1, var(--font-heading-scale)));
     word-break: break-word;
 }
 
@@ -554,7 +558,7 @@ blockquote {
 .caption-with-letter-spacing {
     font-size: 1.6rem;
     letter-spacing: 0.13rem;
-    line-height: calc(1 + 0.2 / var(--font-body-scale));
+    line-height: calc(1 / var(--font-body-scale));
     text-transform: uppercase;
 }
 
@@ -575,7 +579,7 @@ blockquote {
 .form__label,
 .select__select {
     font-size: 1.3rem;
-    line-height: calc(1 + 0.5 / var(--font-body-scale));
+    line-height: calc(1 / var(--font-body-scale));
     letter-spacing: 0.04rem;
 }
 
@@ -1463,7 +1467,8 @@ button.shopify-payment-button__button--unbranded {
 .customer button {
     font-size: 1.5rem;
     letter-spacing: 0.1rem;
-    line-height: calc(1 + 0.2 / var(--font-body-scale));
+    /*line-height: calc(1 / var(--font-body-scale));*/
+	line-height: normal;
 }
 
 .button--tertiary {
@@ -2228,9 +2233,9 @@ quantity-input button.quantity__button {
 }
 
 /* component-cart-count-bubble */
-.cart-count-bubble:empty {
+/* .cart-count-bubble:empty {
     display: none;
-}
+} */
 
 .cart-count-bubble {
     position: absolute;
@@ -2356,8 +2361,8 @@ quantity-input button.quantity__button {
 }
 
 .header__heading-link {
-    display: inline-block;
-    padding: 0.75rem;
+    display: block;
+    padding: 0 0.75rem;
     text-decoration: none;
     word-break: break-word;
 }
@@ -3134,7 +3139,11 @@ div.needsclick, button.needsclick {
 	}
 }
 
-body.trigger-position-left button#enable-toolbar-trigger {
-	top: -100%;
-	left: 0;
+body:not(.enable-toolbar-RTL) #enable-reader, body:not(.enable-toolbar-RTL) #enable-toolbar-buttons, body:not(.enable-toolbar-RTL) #enable-toolbar-buttons li button[disabled=disabled], body:not(.enable-toolbar-RTL) #enable-toolbar-content {
+	direction: rtl !important;
+}
+
+body.trigger-position-right #enable-toolbar-trigger {
+	left: 5px !important;
+	right: auto !important;
 }

@@ -74,6 +74,10 @@ class CartRewards {
 		this.loading(false);
 	}
 
+	async getOutletValue() {
+
+	}
+
 	checkCondition(rule) {
 		let isConditionMet = false;
 

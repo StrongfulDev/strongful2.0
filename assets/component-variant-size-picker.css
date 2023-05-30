@@ -160,6 +160,10 @@
     justify-content: space-between;
 }
 
+.variant_modal .product_variants .size_variant_button:last-child label {
+	padding-bottom: 3rem;
+}
+
 .variant_modal .size_variant_button_add {
     height: 20px;
     width: 20px;

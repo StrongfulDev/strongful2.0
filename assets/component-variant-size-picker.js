@@ -77,6 +77,6 @@ function quickAdd() {
     )
 }
 
-window.onload = () => {
-  quickAdd();
-}
+window.addEventListener('DOMContentLoaded', () => {
+	quickAdd();
+});
