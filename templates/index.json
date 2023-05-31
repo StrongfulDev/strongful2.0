@@ -37,44 +37,6 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
-      "custom_css": [
-        ".button {width: 100%;}",
-        ".discount-price-container {direction: rtl;}"
-      ],
-      "settings": {
-        "steps": 5,
-        "title": "SALE - UP TO 30% OFF",
-        "heading_size": "h1",
-        "heading_type": "heading_type_2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "upto30homepage",
-        "products_to_show": 14,
-        "columns_desktop": 5,
-        "full_width": true,
-        "show_view_all": true,
-        "view_all_text": "SHOP ALL",
-        "view_all_style": "link",
-        "view_all_location": "desktop_top_tablet_bottom",
-        "enable_desktop_slider": true,
-        "show_peak": true,
-        "pagination_type": "sides",
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "show_sale_badge": false,
-        "enable_quick_add": true,
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 56,
-        "padding_bottom": 36
-      }
-    },
     "ecf1e0a5-0973-4674-ac5b-b5370ff1bae1": {
       "type": "featured-collection",
       "custom_css": [
@@ -109,7 +71,7 @@
         "enable_quick_add": true,
         "columns_mobile": "2",
         "swipe_on_mobile": true,
-        "padding_top": 32,
+        "padding_top": 64,
         "padding_bottom": 36
       }
     },
@@ -162,7 +124,7 @@
       "settings": {
         "title": "OUR COLLECTIONS",
         "heading_size": "h1",
-        "heading_type": "heading_type_1",
+        "heading_type": "heading_type_2",
         "image_ratio": "portrait",
         "columns_desktop": 4,
         "color_scheme": "background-1",
@@ -178,7 +140,6 @@
   },
   "order": [
     "slideshow",
-    "featured_collection",
     "ecf1e0a5-0973-4674-ac5b-b5370ff1bae1",
     "our_collection_list"
   ]

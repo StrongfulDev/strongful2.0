@@ -474,7 +474,6 @@
 
 	.button--primary {
 		padding: 1.5rem 4rem;
-		font-size: calc(var(--font-body-size-smallest) * 1.8);
 	}
 
 	.button--primary:hover {

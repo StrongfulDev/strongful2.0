@@ -537,12 +537,6 @@ li.product__media-item.grid__item.slider__slide {
 	margin-right: 1.5rem;
 }
 
-@media screen and (min-width: 990px) {
-	.product__media-list li.product__media-item.grid__item.slider__slide:only-child {
-		margin-right: 0;
-	}
-}
-
 .product__media-list + .slider-buttons .slider-button {
     padding: 10px;
 	z-index: 2;
@@ -558,4 +552,14 @@ slider-component .card__information * {
 
 slider-component .discount-price-container * {
 	font-size: calc(var(--font-body-size-small) * 1.2);
+}
+
+@media screen and (min-width: 990px) {
+	.product__media-list li.product__media-item.grid__item.slider__slide:only-child {
+		margin-right: 0;
+	}
+
+	slider-component .card__information {
+		padding-top: 1rem;
+	}
 }

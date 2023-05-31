@@ -323,7 +323,7 @@
 
 	.header__menu-item {
 		font-weight: var(--font-body-weight-bold);
-		font-size: var(--font-body-size-medium);
+		font-size: calc(var(--font-body-size-large) * 0.9);
 	}
 
 	.list-menu li:last-child span {

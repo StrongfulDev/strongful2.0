@@ -5,6 +5,7 @@
 
 .collection-list-title {
   margin: 0;
+	font-size: calc(var(--font-body-size-large) * 1.5);
 }
 
 @media screen and (max-width: 749px) {
@@ -91,7 +92,7 @@
 @media screen and (min-width: 990px) {
   .our-collections-list-title {
     width: 55%;
-    padding: .3rem 0;
+    padding: .5rem 0;
   }
 
   .our-collections-list-image__img {

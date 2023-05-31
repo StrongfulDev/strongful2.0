@@ -3036,14 +3036,6 @@ details-disclosure > details {
     direction: ltr;
 }
 
-.english-font {
-    font-family: var(--english-font);
-}
-
-.heading_type_1 {
-    font-family: var(--english-font);
-}
-
 fieldset {
     border: none;
     padding: 0;
@@ -3072,6 +3064,7 @@ fieldset {
     border: 1px #000 solid;
     outline: 0;
     padding: 1rem 3rem;
+	  font-weight: var(--font-body-weight-bold);
 }
 
 .title-wrapper--self-padded-tablet-down, .title-wrapper--self-padded-mobile {
