@@ -313,33 +313,6 @@ ul.default_variant_list {
 
 /* Custom style */
 
-.complete_look__item .product_variants .size_variant_button_container label {
-    font-size: var(--font-body-size-small);
-    padding: .3rem 0;
-}
-
-.complete_look__item .product_variants .size_variant_button_container label:hover,
-.complete_look__item .product_variants .size_variant_button_container input:checked + label {
-	background: var(--gradient-base-accent-1);
-	color: var(--gradient-base-background-1);
-}
-
-.complete_look__item .product_variants.default_product_variants ul.default_variant_list {
-	display: none;
-}
-
-.complete_look__item .product_variants .size_variant_button {
-    width: 100%;
-}
-
-.complete_look__item .product_variants ul {
-    gap: 0.5rem;
-    flex-wrap: nowrap;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 0 0 0.5rem;
-}
-
 .disabled-variant-button label.product_size_picker__button__label,
 .disabled-variant-button .size_variant_button_container{
     background: var(--gradient-base-background-3);

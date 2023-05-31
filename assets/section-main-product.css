@@ -1665,7 +1665,7 @@ variant-radios fieldset {
 }
 
 .productVendor {
-	font-size: var(--font-body-size-medium);
+	font-size: calc(var(--font-body-size-medium) * 0.9);
 	margin: .5rem 0;
 }
 
@@ -1766,6 +1766,14 @@ li.grid--peek.slider .grid__item, li.product__media-item.grid__item.slider__slid
 
 	.product-sale-announcement {
 		margin: 0;
+	}
+
+	.productVendor {
+		opacity: 0;
+	}
+
+	.similiar-child:hover .productVendor, .similiar-child:focus .productVendor, .similiar-child:active .productVendor {
+		opacity: 1;
 	}
 
 	.breadcrumbs {
