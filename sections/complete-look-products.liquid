@@ -1,17 +1,19 @@
 {% assign setParent = product.metafields.global.setParent %}
 
+{% assign handle = collection.title | downcase %}
+
 {{ 'component-complete-look.css' | asset_url | stylesheet_tag }}
 {{ 'component-variant-size-picker.css' | asset_url | stylesheet_tag }}
 {{ 'component-variant-size-picker.js' | asset_url | script_tag }}
 
-<div class="complete_look__slider {{ setParent }} {{ setParentValue }} fix-direction custom-page-width" {{ section.shopify_attributes }}>
+<div class="complete_look__slider fix-direction page-width" {{ section.shopify_attributes }}>
     <div class="complete_look__columns">
         <div class="featured_photo">
           {% for collection in collections %}
             {% if collection.title == setParent %}
                     {% for product in collection.products limit: 1 %}
                         {% if product.tags contains 'לייב' %}
-                            <a href="{{ product.url }}" class="rtl desktop mono-link">
+                            <a href="{{ product.url }}" class="rtl desktop mono-link {{ handle }} {{ collection.handle }}">
                               <img
                                   srcset="
                   {%- if product.featured_media.width >= 165 -%}{{ product.featured_media | image_url: width: 165 }} 165w,{%- endif -%}

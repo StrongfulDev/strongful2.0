@@ -19,7 +19,6 @@ function quickAdd() {
     .on("click", '.variant_selector.submit_on_click .size_variant_button:not(.disabled-variant-button)', function (e) {
       const element = $(this);
 			let productPageIdentifier = document.querySelector(".products-product-size-picker");
-	    console.log("productPageIdentifier", productPageIdentifier)
 	    if (productPageIdentifier !== null) {
 		    const elementFormGrandParent = element.parents(".products-product-size-picker");
 				const variantButtons = document.querySelectorAll("variant-radios .product-form__input input[type='radio']");
@@ -44,6 +43,7 @@ function quickAdd() {
 					}
 				}
 	    } else {
+		    console.log(element);
 		    element.find(".size_variant_button_add").hide();
 				element.find(".loading-overlay").css("display", "flex");
 		    element.find(".loading-overlay__spinner").removeClass("hidden");

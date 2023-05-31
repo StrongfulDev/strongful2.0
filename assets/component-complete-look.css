@@ -82,6 +82,11 @@
 }
 
 @media screen and (max-width: 949px) {
+
+	.complete_look__slider {
+		padding: 0 5rem;
+	}
+
     .complete_look__columns {
         flex-direction: column;
     }

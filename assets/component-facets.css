@@ -1345,9 +1345,6 @@ details.mobile-facets__details {
 }
 
 @media screen and (min-width: 990px) {
-  .facets-vertical {
-    max-width: 1600px;
-  }
 
   .facets-vertical .facets-wrapper {
     padding-right: 0;

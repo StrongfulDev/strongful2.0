@@ -141,13 +141,14 @@
                                                 {% if product.has_only_default_variant %}class="product_size_picker__button default_input"
                                                     checked{% else %}class="product_size_picker__button new_input shoppable"{% endif %}>
                                                 <label for="radio_{{ variant.id }}"
-                                                       class="product_size_picker__button__label">
+                                                       class="product_size_picker__button__label desktop-label">
                                                     {% if product.has_only_default_variant %}
                                                         {{ 'products.product.variant.default_title' | t }}
                                                     {% else %}
                                                         {{ variant.title | escape }}
                                                         <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
                                                     {% endif %}
+                                                    {% render 'loading-spinner' %}
                                                 </label>
                                             </div>
                                         </li>
