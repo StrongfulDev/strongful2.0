@@ -8,6 +8,14 @@
 	line-height: normal !important;
 }
 
+input {
+	font-size: 16px !important;
+}
+
+.grecaptcha-badge {
+	display: none !important;
+}
+
 /* Color custom properties */
 
 :root,
@@ -1991,7 +1999,7 @@ input[type='checkbox'] {
 .customer .form__message svg {
     flex-shrink: 0;
     height: 1.3rem;
-    margin-right: 0.5rem;
+    margin-left: 0.5rem;
     width: 1.3rem;
 }
 
@@ -1999,7 +2007,7 @@ input[type='checkbox'] {
 .customer .form__message svg {
     height: 1.5rem;
     width: 1.5rem;
-    margin-right: 1rem;
+    margin-left: 1rem;
 }
 
 .customer .field .form__message svg {

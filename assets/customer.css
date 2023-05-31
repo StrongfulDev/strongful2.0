@@ -11,6 +11,10 @@
 	display: block;
 }
 
+.customer a.inline {
+	text-decoration: underline;
+}
+
 a.no-decoration {
 	text-decoration: none;
 }
@@ -352,8 +356,8 @@ a.no-decoration {
 
 .login h3 {
   margin-top: 1.5rem;
-  text-align: left;
-  font-size: calc(var(--font-heading-scale) * 1.6rem);
+  text-align: right;
+  font-size: calc(var(--font-heading-scale) * 1.5rem);
 }
 
 #customer_login_guest button {
@@ -753,7 +757,7 @@ li[data-address] > h2 {
 }
 
 .multicolumn-list h3, .multicolumn-list p {
-	font-size: var(--font-body-size-medium);
+	font-size: calc(var(--font-heading-scale) * 1.6rem);
 }
 
 .multicolumn-list {

@@ -23,7 +23,7 @@
                 <div class="model-switcher__item" data-model-size="{{ model.size_letter.value }}">
                     <input type="radio" name="model" id="model-{{ model.size_letter.value }}"
                            value="{{ model.size_letter.value }}">
-                    <label for="model-{{ model.size_letter.value }}">
+                    <label class="pointer" for="model-{{ model.size_letter.value }}">
                         {% for image in product.images %}
                             {% if image.alt contains model.size_letter.value %}
                                 {{ image

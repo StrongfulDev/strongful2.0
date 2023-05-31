@@ -14,6 +14,12 @@
           "settings": {
           }
         },
+        "14b24ddb-674b-4e99-8edd-1a1aaed80560": {
+          "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
         "vendor": {
           "type": "text",
           "settings": {
@@ -96,6 +102,7 @@
       "block_order": [
         "7c99b889-3ad8-4802-a5c7-9802ab40f12c",
         "title",
+        "14b24ddb-674b-4e99-8edd-1a1aaed80560",
         "vendor",
         "price",
         "variant_picker",
@@ -152,7 +159,25 @@
       "type": "main-product-quick-add",
       "settings": {
         "quick_add_type_mobile": "modal",
-        "quick_add_text": "בחרי מידה"
+        "quick_add_text": "בחרי מידה",
+        "quick_add_accessories_text": ""
+      }
+    },
+    "168551910448762f1f": {
+      "type": "apps",
+      "blocks": {
+        "c4cba5f0-c4b6-4691-8c28-8a47e08e1754": {
+          "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "c4cba5f0-c4b6-4691-8c28-8a47e08e1754"
+      ],
+      "settings": {
+        "include_margins": true
       }
     }
   },
@@ -160,6 +185,7 @@
     "main",
     "complete-look-products",
     "related-products",
-    "8bb31773-3add-4a1a-b42f-368102c7844b"
+    "8bb31773-3add-4a1a-b42f-368102c7844b",
+    "168551910448762f1f"
   ]
 }

@@ -47,6 +47,7 @@
 
 .announcement-bar-container.container-columns {
     display: flex;
+	min-height: 6rem;
 }
 
 .announcement-bar-container.container-columns > * {

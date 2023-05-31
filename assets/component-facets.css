@@ -1453,7 +1453,7 @@ details.mobile-facets__details {
 	.facets-container {
 		position: -webkit-sticky;
 		position: sticky;
-		top: 7em;
+		top: 8rem;
 		max-width: 240px;
 		min-width: 200px;
 		max-height: 85vh;

@@ -11,6 +11,8 @@
         assign vipTier = 'Premium'
     elsif customer.tags contains 'swell_vip_legend'
         assign vipTier = 'Legend'
+    elsif customer.tags contains 'ALIST'
+        assign vipTier = 'Basic'
     else
         assign vipTier = 'None'
     endif
@@ -135,7 +137,10 @@
                                   </tbody>
                               </table>
                           {%- else -%}
-                              <p>{{ 'customer.orders.none' | t }}</p>
+                              <div class="empty-orders">
+                                  <p>{{ 'customer.orders.none' | t }}</p>
+
+                              </div>
                           {%- endif -%}
 
                           {%- if paginate.pages > 1 -%}
@@ -201,10 +206,11 @@
                       {{ 'customer.account.support.privacy-policy' | t }}
                       {% render 'icon-caret' %}
                   </a>
+                  {% comment %}
                   <a href="{{ routes.account_logout_url }}" class="container-menu-item container-menu-item-refer">
                       {{ 'customer.log_out' | t }}
                       {% render 'icon-caret' %}
-                  </a>
+                  </a>{% endcomment %}
               </div>
 
           </div>
