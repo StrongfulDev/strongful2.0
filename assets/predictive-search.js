@@ -16,7 +16,7 @@ class PredictiveSearch extends SearchForm {
     this.input.form.addEventListener('submit', this.onFormSubmit.bind(this));
 
     this.input.addEventListener('focus', this.onFocus.bind(this));
-    this.addEventListener('focusout', this.onFocusOut.bind(this));
+    // this.addEventListener('focusout', this.onFocusOut.bind(this));
     this.addEventListener('keyup', this.onKeyup.bind(this));
     this.addEventListener('keydown', this.onKeydown.bind(this));
 
@@ -77,11 +77,11 @@ class PredictiveSearch extends SearchForm {
     }
   }
 
-  onFocusOut() {
-    setTimeout(() => {
-      if (!this.contains(document.activeElement)) this.close();
-    })
-  }
+  // onFocusOut() {
+    // setTimeout(() => {
+    //   if (!this.contains(document.activeElement)) this.close();
+    // })
+  // }
 
   onKeyup(event) {
     if (!this.getQuery().length) this.close(true);
