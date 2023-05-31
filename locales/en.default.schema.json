@@ -1950,6 +1950,8 @@
       "menu": {
         "name": "Account menu"
       },
+      "shop_all_link": "Shop all link",
+      "shop_all_text": "Shop all collection title",
       "order-pagination": "How many orders to show"
     },
     "main-activate-account": {

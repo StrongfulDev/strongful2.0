@@ -34,4 +34,19 @@ window.addEventListener('DOMContentLoaded', () => {
 			$("#js-border-position").css("left", position.left + 14 + "px");
 		}
 	});
+
+	(function() {
+		let redirectPath = '/account';
+
+		let selector = '#create_customer, form[action$="/account"][method="post"]',
+			$form = document.querySelectorAll(selector)[0];
+
+		if ($form) {
+			$redirect = document.createElement('input');
+			$redirect.setAttribute('name', 'return_to');
+			$redirect.setAttribute('type', 'hidden');
+			$redirect.value = redirectPath;
+			$form.appendChild($redirect);
+		}
+	})();
 });

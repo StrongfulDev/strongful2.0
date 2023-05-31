@@ -839,6 +839,10 @@ a.container-menu-item, span.container-menu-item {
 	padding: 0 0 var(--grid-desktop-horizontal-spacing) 0;
 }
 
+a.container-menu-item:last-child, span.container-menu-item:last-child, a.container-menu-item-refer {
+	border-bottom: none;
+}
+
 .container-menu-item .icon-caret {
 	position: absolute;
 	left: 0;

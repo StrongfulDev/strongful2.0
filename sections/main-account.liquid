@@ -139,7 +139,9 @@
                           {%- else -%}
                               <div class="empty-orders">
                                   <p>{{ 'customer.orders.none' | t }}</p>
-
+                                  <a href="{{ section.settings.shop_all_link }}" class="empty-orders--shop-all-link">
+                                      {{ section.settings.shop_all_text }}
+                                  </a>
                               </div>
                           {%- endif -%}
 
@@ -277,7 +279,12 @@
                       </tbody>
                   </table>
               {%- else -%}
-                  <p>{{ 'customer.orders.none' | t }}</p>
+                  <div class="empty-orders">
+                      <p>{{ 'customer.orders.none' | t }}</p>
+                      <a href="{{ section.settings.shop_all_link }}" class="empty-orders--shop-all-link">
+                          {{ section.settings.shop_all_text }}
+                      </a>
+                  </div>
               {%- endif -%}
 
               {%- if paginate.pages > 1 -%}
@@ -364,6 +371,16 @@
       "type": "header",
       "content": "t:sections.all.padding.section_padding_heading"
     },
+    {
+        "type": "url",
+        "id": "shop_all_link",
+        "label": "t:sections.main-account.shop_all_link"
+    },
+      {
+        "type": "text",
+        "id": "shop_all_text",
+        "label": "t:sections.main-account.shop_all_text"
+      },
     {
       "type": "range",
       "id": "padding_top",
