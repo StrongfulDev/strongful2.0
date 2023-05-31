@@ -84,7 +84,7 @@
 	.blog-container-for-desktop {
 		display: grid;
 		grid-template-columns: 2fr 1fr;
-	grid-gap: var(--grid-desktop-vertical-spacing);
+	grid-gap: calc(var(--grid-desktop-vertical-spacing) * 4);
 	}
 
 	.most-viewed-posts .blog-title-container {
@@ -107,6 +107,10 @@
 		text-decoration: none;
 		column-gap: 1em;
 		margin: 1em 0;
+	}
+
+	.featured-post-link:hover strong, .featured-post-link:hover p {
+		text-decoration: underline;
 	}
 
 	.most-view-article-excerpt {

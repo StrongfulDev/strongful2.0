@@ -163,17 +163,6 @@ class CartRewards {
 
 			this.cartElement.renderContents(response);
 
-			// if (quickAddModal) {
-			// 	document.body.addEventListener('modalClosed', () => {
-			// 		setTimeout(() => {
-			// 			this.cartElement.renderContents(response)
-			// 		});
-			// 	}, {once: true});
-			// 	quickAddModal.hide(true);
-			// } else {
-			// 	this.cartElement.renderContents(response);
-			// }
-
 			return response
 		} catch (e) {
 			console.error(e);

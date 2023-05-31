@@ -77,7 +77,7 @@
 @media screen and (min-width: 990px) {
 	.sticky-cart-cta {
 		grid-template-columns: 2fr 24fr 4fr;
-		padding: 1em 7em;
+		padding: 1em 18rem;
 	}
 
 	.sticky-add-to-cart-btn:hover, .quick_add_modal__close:hover {
@@ -86,7 +86,7 @@
 
 	.sticky-cart-cta .variant_selector {
 		width: 30%;
-		left: 7em;
-		bottom: 5em;
+		left: 18rem;
+		bottom: 6rem;
 	}
 }

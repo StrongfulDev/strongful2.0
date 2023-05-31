@@ -1691,7 +1691,7 @@ variant-radios {
 }
 
 .size-table-toggler {
-	font-size: var(--font-body-size-small);
+	font-size: var(--font-body-size-medium);
 	margin: 0;
 	width: fit-content;
 	color: var(--gradient-base-background-4);
@@ -1733,7 +1733,7 @@ variant-radios {
 
 .product-badge__text {
 	margin: 0;
-	font-size: var(--font-body-size-small);
+	font-size: var(--font-body-size-medium);
 }
 
 .swiper-slide + .swiper-slide {
@@ -1763,6 +1763,10 @@ li.grid--peek.slider .grid__item, li.product__media-item.grid__item.slider__slid
 }
 
 @media screen and (min-width: 990px) {
+
+	.variant_modal div.product_variants ul {
+		padding-bottom: 0;
+	}
 
 	.product-sale-announcement {
 		margin: 0;

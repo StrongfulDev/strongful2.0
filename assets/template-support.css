@@ -125,6 +125,10 @@ ul, ol {
 	border: none;
 }
 
+.article-content li a {
+	text-decoration: underline;
+}
+
 @media screen and (min-width: 990px) {
 
 	.supportful__grid-for-desk {

@@ -191,6 +191,10 @@ article .footer__list-social.list-social {
     margin: 5rem 0 8rem;
   }
 
+	li.list-social__item:not(:first-child) {
+		margin-right: 1rem;
+	}
+
 	.title--primary {
 		font-size: calc(var(--font-body-size-large) * 3.5);
 	}
@@ -202,7 +206,7 @@ article .footer__list-social.list-social {
 	.blog-container-for-desktop {
 		display: grid;
 		grid-template-columns: 2fr 1fr;
-		grid-gap: var(--grid-desktop-vertical-spacing);
+		grid-gap: calc(var(--grid-desktop-vertical-spacing) * 4);
 		padding-top: calc(var(--grid-desktop-horizontal-spacing) * 5);
 	}
 

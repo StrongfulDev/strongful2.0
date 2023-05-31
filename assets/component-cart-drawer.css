@@ -415,17 +415,20 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 
 }
 
+.reward-item__title {
+	margin-right: var(--grid-mobile-vertical-spacing);
+}
+
 .rewards-section {
     direction: rtl;
     margin: 1rem 0;
 	padding: 1rem 0 0;
     border-bottom: 1px solid rgba(var(--color-foreground), 0.1);
-	font-size: var(--font-body-size-smallest);
+	font-size: calc(var(--font-body-size-small) * 1.2);
 	border-top: 1px solid var(--gradient-base-background-4);
 }
 
 .reward-item {
-	font-size: var(--font-body-size-small);
 	display: inline-flex;
 	align-items: center;
 }
@@ -539,7 +542,7 @@ cart-drawer-items.is-empty {
 }
 
 .totals h2, div.benefits-announcement {
-	font-size: var(--font-body-size-small);
+	font-size: var(--font-body-size-medium);
 }
 
 .totals__value p {

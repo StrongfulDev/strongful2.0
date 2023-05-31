@@ -131,6 +131,7 @@ class FacetFiltersForm extends HTMLElement {
     })
 
     FacetFiltersForm.toggleActiveFacets(false);
+	  onlyShowIfInStock();
   }
 
   static renderAdditionalElements(html) {
@@ -469,11 +470,6 @@ function designSort() {
         y[i].classList.remove("select-arrow-active");
       }
     }
-    // for (let i = 0; i < fakeSelectContainer.length; i++) {
-    //   if (arrNo.indexOf(i)) {
-    //     fakeSelectContainer[i].classList.add("select-hide");
-    //   }
-    // }
   }
 }
 
@@ -482,5 +478,11 @@ sizeRounds(document);
 hideInStockFacet();
 designSort();
 
-// TODO: Insert to class
-document.getElementById('Filter-filter.v.availability-mobile-1').checked = true;
+function onlyShowIfInStock() {
+	const inputsToQuery = $(".facet-checkbox").find("input");
+	for (let i = 0; i < inputsToQuery.length; i++) {
+		if (inputsToQuery[i].value === '1') {
+			inputsToQuery[i].checked = true;
+		}
+	}
+}

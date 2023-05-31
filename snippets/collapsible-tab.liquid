@@ -26,9 +26,6 @@
         </summary>
         <div class="accordion__content rte"
              id="ProductAccordion-{{ block.id }}-{{ section.id }}">
-            {{ block.settings.content }}
-            {{ additional_content }}
-            {{ block.settings.page.content }}
             {% case block.settings.product_content %}
                 {% when "description" %}
                     {{ product.content }}
@@ -50,6 +47,9 @@
                             block: block
                     %}
             {% endcase %}
+            {{ block.settings.content }}
+            {{ additional_content }}
+            {{ block.settings.page.content }}
         </div>
     </details>
 </div>

@@ -28,7 +28,3 @@
 .cart__ctas + .totals {
   margin-top: 2rem;
 }
-
-.totals h2, div.benefits-announcement {
-	font-size: var(--font-body-size-small);
-}

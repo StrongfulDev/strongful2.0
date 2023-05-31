@@ -6,6 +6,10 @@
   margin-bottom: 3rem;
 }
 
+div.about-us {
+	padding: 0;
+}
+
 @media screen and (min-width: 750px) {
   .main-page-title {
     margin-bottom: 4rem;
@@ -322,7 +326,7 @@
 }
 
 .inputRegister {
-	margin: 2rem 0 0;
+	margin: 2rem 0;
 }
 
 .customer.login {
@@ -350,6 +354,7 @@
 
 	.our-promise-content {
 		direction: rtl;
+		padding: 4rem;
 	}
 
 	.our-promise-content p {

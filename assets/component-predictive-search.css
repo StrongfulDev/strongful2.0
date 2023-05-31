@@ -268,4 +268,8 @@ predictive-search[loading]
 	div.quick-add {
 		z-index: 3;
 	}
+
+	.search-modal__close-button--custom:hover {
+		text-decoration: underline;
+	}
 }

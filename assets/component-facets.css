@@ -1236,8 +1236,8 @@ input.mobile-facets__checkbox {
   cursor: pointer;
 }
 
-.select-items {
-
+.select-selected + .select-selected {
+	display: none;
 }
 
 .select-hide {
@@ -1456,5 +1456,9 @@ details.mobile-facets__details {
 		max-height: 85vh;
 		overflow: hidden;
 		overflow-y: auto;
+	}
+
+	.page-width {
+		max-width: calc(var(--page-width) * 1.2);
 	}
 }

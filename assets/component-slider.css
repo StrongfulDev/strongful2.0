@@ -432,7 +432,7 @@ slider-component.slider-component-full-width {
 }
 
 .full-unstyled-link {
-    font-size: var(--font-body-size-small);
+    font-size: var(--font-body-size-medium);
 }
 
 
@@ -559,7 +559,7 @@ slider-component .discount-price-container * {
 		margin-right: 0;
 	}
 
-	slider-component .card__information {
+	.card__information {
 		padding-top: 1rem;
 	}
 }

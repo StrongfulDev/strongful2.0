@@ -364,7 +364,7 @@
 	    text-decoration: none;
 	    color: var(--color-icon);
 	    font-weight: var(--font-body-weight-bold);
-	    font-size: var(--font-body-size-medium);
+	    font-size: var(--font-body-size-large);
     }
 
 	.mega-menu__content.customizable.fix-direction li:first-child {
