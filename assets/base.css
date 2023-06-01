@@ -3529,3 +3529,25 @@ label .ReturnGO_ReturnItemProposition-module_open, .ReturnGO_ReturnItemPropositi
 }
 
 /*   ReturnGO Styling end     */
+
+.enable-trigger-circle {
+	display: none !important;
+}
+
+#enable-toolbar-trigger-svg, #enable-toolbar-trigger-svg path {
+	z-index: 1;
+	position: relative;
+}
+
+#enable-toolbar-trigger .svg-icon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: rotate(180deg);
+	width: auto;
+	height: auto;
+}
+
+.svg-icon__rect {
+	background-color: firebrick;
+}

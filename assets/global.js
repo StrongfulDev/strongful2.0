@@ -1132,13 +1132,37 @@ class ProductRecommendations extends HTMLElement {
 
 customElements.define('product-recommendations', ProductRecommendations);
 
-let headerOverlay = document.querySelector('.header-overlay');
-let menuDrawer = document.querySelector('header-drawer');
-$(headerOverlay).on('mouseenter', function() {
-  $(this).addClass('hidden');
-  $('.header__menu-item').attr('aria-expanded', false);
-  $('details.mega-menu').attr('open', false);
-	$('.menu-drawer-container').attr('open', false);
-	document.body.classList.remove(`overflow-hidden-${menuDrawer.dataset.breakpoint}`);
+window.addEventListener('DOMContentLoaded', () => {
+	let headerOverlay = document.querySelector('.header-overlay');
+	let menuDrawer = document.querySelector('header-drawer');
+	$(headerOverlay).on('mouseenter', function() {
+		$(this).addClass('hidden');
+		$('.header__menu-item').attr('aria-expanded', false);
+		$('details.mega-menu').attr('open', false);
+		$('.menu-drawer-container').attr('open', false);
+		document.body.classList.remove(`overflow-hidden-${menuDrawer.dataset.breakpoint}`);
+	});
+
+	const enableToolbarButton = document.querySelector('#enable-toolbar-trigger');
+
+	// Create an SVG namespace
+	const svgns = "http://www.w3.org/2000/svg";
+
+// Create the <svg> element
+	const svg = document.createElementNS(svgns, "svg");
+	svg.setAttribute("width", "55");
+	svg.setAttribute("height", "40");
+	svg.classList.add('svg-icon');
+
+// Create the <rect> element
+	const path = document.createElementNS(svgns, "path");
+	path.setAttribute("d", "M7,10 h41 v40 h-41 a15,15 0 0 1 -15,-15 v-10 a15,15 0 0 1 15,-15 z")
+
+// Append the <path> element to the <svg> element
+	svg.appendChild(path);
+
+// Append the <svg> element to the document body
+	enableToolbarButton.appendChild(svg);
+
 });
 
