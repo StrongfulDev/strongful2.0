@@ -17,19 +17,15 @@
                         {%- endif -%}
                         <div class="page-width">
                             <div class="announcement-bar__message {{ block.settings.text_alignment }} rtl">
-                                <strong class="announcement-main-text {% if block.settings.main_text_direction == 'rtl' %}fixdirection{% else %}ltr{% endif %}
-                                {%- if block.settings.toggle_main_font == true -%}
-                                    english-font
-                                    {%- endif -%}
-                                    "
-                                    >
+                                <p class="announcement-text announcement-main-text bold {% if block.settings.main_text_direction == 'rtl' %}fix-direction{% else %}ltr{% endif %}">
                                     {{ block.settings.main_text }}
-                                </strong>
-                                <p class="announcement-sub-text {{ block.settings.sub_text_direction }}
+                                </p>
+                                <p class="announcement-text announcement-sub-text {{ block.settings.sub_text_direction }}
                                 {%- if block.settings.toggle_sub_font == true -%}
                                     english-font
-                                    {%- endif -%}
-                                    ">{{ block.settings.sub_text }}</p>
+                                    {%- endif -%}">
+                                    {{ block.settings.sub_text }}
+                                </p>
                             </div>
                         </div>
                         {%- if block.settings.link != blank -%}

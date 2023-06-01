@@ -270,17 +270,17 @@
         }
 
         body {
-        display: grid;
-        grid-template-rows: auto auto 1fr auto;
-        grid-template-columns: 100%;
-        min-height: 100%;
-        margin: 0;
-        font-size: 1.5rem;
-        letter-spacing: 0.06rem;
-        line-height: calc(1 + 0.5 / var(--font-body-scale));
-        font-family: var(--font-body-family);
-        font-style: var(--font-body-style);
-        font-weight: var(--font-body-weight);
+            display: grid;
+            grid-template-rows: auto auto 1fr auto;
+            grid-template-columns: 100%;
+            min-height: 100%;
+            margin: 0;
+            font-size: 1.5rem;
+            {% comment %}letter-spacing: 0.06rem;{% endcomment %}
+            line-height: calc(1 + 0.5 / var(--font-body-scale));
+            font-family: var(--font-body-family);
+            font-style: var(--font-body-style);
+            font-weight: var(--font-body-weight);
         }
 
         @media screen and (min-width: 750px) {

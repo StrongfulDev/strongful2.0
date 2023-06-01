@@ -101,7 +101,8 @@
 
 {%- style -%}
     .header {
-    padding: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+        padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+        padding-bottom: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
     }
 
     .section-header {
@@ -116,10 +117,10 @@
     }
 
     @media screen and (min-width: 990px) {
-    .header {
-    padding-top: {{ section.settings.padding_top }}px;
-    padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
+        .header {
+            padding-top: {{ section.settings.padding_top | times: 0.6 | round: 0 }}px;
+            padding-bottom: {{ section.settings.padding_top | times: 0.6 | round: 0 }}px;
+        }
     }
 {%- endstyle -%}
 
@@ -156,7 +157,7 @@
 
 <{% if section.settings.sticky_header_type != 'none' %}sticky-header data-sticky-type="{{ section.settings.sticky_header_type }}" {% else %}div{% endif %}
         class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
-    <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} {% if section.settings.menu != blank %}header--has-menu{% endif %}">
+    <header class="header page-width header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} {% if section.settings.menu != blank %}header--has-menu{% endif %}">
         {%- if section.settings.menu != blank -%}
             {% if section.settings.menu_type_desktop == 'customizable' %}
                 <header-drawer class="customizable" data-breakpoint="tablet">
@@ -253,7 +254,7 @@
                                                                       {{ block.settings.mobile_title | escape }}
                                                                   </button>
                                                                   <div class="menu-drawer__item-image"
-                                                                       style="background-image: url('{{ block.settings.mobile_cover_image.src | image_url: width: 300 }}')">
+                                                                       style="background-image: url('{{ block.settings.mobile_cover_image.src | image_url: width: 900 }}')">
                                                                       &nbsp;
                                                                   </div>
                                                                   <ul class="menu-drawer__menu list-menu"
@@ -759,6 +760,14 @@
                                     {%- liquid
                                         assign link_child_active = false
                                         assign link_levels = 1
+
+                                        if block.settings.menu_second != blank
+                                            assign gridClass = 'two-grid'
+                                            endif
+
+                                        if block.settings.menu_third != blank
+                                            assign gridClass = 'three-grid'
+                                            endif
                                     -%}
                                     <header-menu>
                                         <details id="Details-HeaderMenu-{{ forloop.index }}"
@@ -770,7 +779,7 @@
                                             <div id="MegaMenu-Content-{{ forloop.index }}"
                                                  class="mega-menu__content customizable fix-direction gradient motion-reduce global-settings-popup"
                                                  tabindex="-1">
-                                                <div>
+                                                <div class="mega-menu-grid-container {{ gridClass }}">
                                                     <a href="{{ block.settings.shop_all_link }}" class="shop-all-link">
                                                         {{ block.settings.shop_all_title }}
                                                     </a>
@@ -798,6 +807,58 @@
                                                             </li>
                                                         {%- endfor -%}
                                                     </ul>
+                                                    {% if block.settings.menu_second != blank %}
+                                                    <ul class="mega-menu__list page-width{% if link_levels == 1 %} mega-menu__list--condensed{% endif %}"
+                                                        role="list">
+                                                        {%- for childlink in block.settings.menu_second.links -%}
+                                                            <li>
+                                                                <a href="{{ childlink.url }}"
+                                                                   class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                                                                    {{ childlink.title | escape }}
+                                                                </a>
+                                                                {%- if childlink.links != blank -%}
+                                                                    <ul class="list-unstyled"
+                                                                        role="list">
+                                                                        {%- for grandchildlink in childlink.links -%}
+                                                                            <li>
+                                                                                <a href="{{ grandchildlink.url }}"
+                                                                                   class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
+                                                                                    {{ grandchildlink.title | escape }}
+                                                                                </a>
+                                                                            </li>
+                                                                        {%- endfor -%}
+                                                                    </ul>
+                                                                {%- endif -%}
+                                                            </li>
+                                                        {%- endfor -%}
+                                                    </ul>
+                                                    {% endif %}
+                                                    {% if block.settings.menu_third != blank %}
+                                                    <ul class="mega-menu__list page-width{% if link_levels == 1 %} mega-menu__list--condensed{% endif %}"
+                                                        role="list">
+                                                        {%- for childlink in block.settings.menu_third.links -%}
+                                                            <li>
+                                                                <a href="{{ childlink.url }}"
+                                                                   class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                                                                    {{ childlink.title | escape }}
+                                                                </a>
+                                                                {%- if childlink.links != blank -%}
+                                                                    <ul class="list-unstyled"
+                                                                        role="list">
+                                                                        {%- for grandchildlink in childlink.links -%}
+                                                                            <li>
+                                                                                <a href="{{ grandchildlink.url }}"
+                                                                                   class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
+                                                                                    {{ grandchildlink.title | escape }}
+                                                                                </a>
+                                                                            </li>
+                                                                        {%- endfor -%}
+                                                                    </ul>
+                                                                {%- endif -%}
+                                                            </li>
+                                                        {%- endfor -%}
+                                                    </ul>
+                                                    {% endif %}
                                                 </div>
                                                 <div class="desktop_links_images">
                                                     {% if block.settings.desktop_links_image_1 != nil %}
@@ -1381,12 +1442,22 @@
           "default": false,
           "label": "t:sections.header.blocks.menu_item.settings.show_on_mobile.label"
         },
-        {
-          "type":"link_list",
-          "id":"menu",
-          "default":"main-menu",
-          "label":"t:sections.header.blocks.menu_item.settings.menu.label"
-        },
+          {
+              "type":"link_list",
+              "id":"menu",
+              "default":"main-menu",
+              "label":"t:sections.header.blocks.menu_item.settings.menu.label"
+          },
+          {
+              "type":"link_list",
+              "id":"menu_second",
+              "label":"t:sections.header.blocks.menu_item.settings.menu.label"
+          },
+          {
+              "type":"link_list",
+              "id":"menu_third",
+              "label":"t:sections.header.blocks.menu_item.settings.menu.label"
+          },
         {
           "type":"text",
           "id":"title",

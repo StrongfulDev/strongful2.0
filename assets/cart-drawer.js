@@ -45,7 +45,7 @@ class CartDrawer extends HTMLElement {
         // here the animation doesn't seem to always get triggered. A timeout seem to help
         setTimeout(() => {
             this.classList.add("animate", "active");
-        });
+        }, 1000);
 
         this.addEventListener(
             "transitionend",
