@@ -67,6 +67,7 @@
           "type": "url",
           "settings": {
             "show_on_mobile": false,
+            "small_font": true,
             "title": "SALE",
             "title_link": "shopify:\/\/collections\/upto30"
           }
@@ -75,6 +76,7 @@
           "type": "menu_item",
           "settings": {
             "show_on_mobile": false,
+            "small_font": false,
             "menu": "desktop-menu-one",
             "menu_second": "desktop-menu-two",
             "menu_third": "desktop-menu-three",
@@ -97,6 +99,7 @@
           "type": "menu_item",
           "settings": {
             "show_on_mobile": false,
+            "small_font": true,
             "menu": "outlet-menu-main",
             "menu_second": "outlet-menu-sub",
             "menu_third": "",
@@ -118,6 +121,7 @@
           "type": "menu_item",
           "settings": {
             "show_on_mobile": false,
+            "small_font": false,
             "menu": "main-menu",
             "menu_second": "",
             "menu_third": "",
@@ -139,6 +143,7 @@
           "type": "menu_item",
           "settings": {
             "show_on_mobile": false,
+            "small_font": false,
             "menu": "bottom-menu",
             "menu_second": "",
             "menu_third": "",
@@ -160,6 +165,7 @@
           "type": "menu_item",
           "settings": {
             "show_on_mobile": false,
+            "small_font": false,
             "menu": "dawn-accessories",
             "menu_second": "",
             "menu_third": "",
@@ -181,6 +187,7 @@
           "type": "url",
           "settings": {
             "show_on_mobile": true,
+            "small_font": true,
             "title": "GIFT CARD",
             "title_link": "shopify:\/\/products\/גיפט-קארד",
             "menu_link_image": "shopify:\/\/shop_images\/gift_card_hamburger_2.jpg"
@@ -190,6 +197,7 @@
           "type": "url",
           "settings": {
             "show_on_mobile": false,
+            "small_font": false,
             "title": "מועדון לקוחות",
             "title_link": "shopify:\/\/pages\/a-list"
           }

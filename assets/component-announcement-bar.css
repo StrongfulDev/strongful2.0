@@ -69,4 +69,10 @@
     .announcement-bar-container.container-columns {
         font-size: var(--font-size);
     }
+
+	.announcement-bar__message p:last-child {
+		margin-top: .5rem;
+		font-size: calc(var(--font-body-size-medium) * 0.95);
+		font-weight: 300;
+	}
 }

@@ -260,56 +260,18 @@
                                                                   <ul class="menu-drawer__menu list-menu"
                                                                       role="list" tabindex="-1">
                                                                       {%- for childlink in block.settings.menu.links -%}
-                                                                          <li>
-                                                                              {%- if childlink.links == blank -%}
-                                                                                  <a href="{{ childlink.url }}"
-                                                                                     class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if childlink.current %} menu-drawer__menu-item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
-                                                                                      {{ childlink.title | escape }}
-                                                                                      {% for collection in collections %}
-                                                                                          {% if collection.url == childlink.url and collection.image != null %}
-                                                                                              {{ collection.image | image_url: width: 600 | image_tag:
-                                                                                              loading: 'lazy',
-                                                                                              class: "mobile_link_collection_image",
-                                                                                              sizes: "100vw",
-                                                                                              widths: '600',
-                                                                                              height: '600'
-                                                                                              }}
-                                                                                          {% endif %}
-                                                                                      {% endfor %}
-                                                                                  </a>
-                                                                              {%- else -%}
-                                                                                  <details
-                                                                                          id="Details-menu-drawer-submenu-{{ forloop.index }}">
-                                                                                      <summary
-                                                                                              class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
-                                                                                          {{ childlink.title | escape }}
-                                                                                          {% render 'icon-arrow' %}
-                                                                                          {% render 'icon-caret' %}
-                                                                                      </summary>
-                                                                                      <div id="childlink-{{ childlink.handle | escape }}"
-                                                                                           class="menu-drawer__submenu has-submenu gradient motion-reduce">
-                                                                                          <button class="menu-drawer__close-button link link--text focus-inset"
-                                                                                                  aria-expanded="true">
-                                                                                              {% render 'icon-caret' %}
-                                                                                              {{ childlink.title | escape }}
-                                                                                          </button>
-                                                                                          <ul class="menu-drawer__menu list-menu"
-                                                                                              role="list"
-                                                                                              tabindex="-1">
-                                                                                              {%- for grandchildlink in childlink.links -%}
-                                                                                                  <li>
-                                                                                                      <a href="{{ grandchildlink.url }}"
-                                                                                                         class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if grandchildlink.current %} menu-drawer__menu-item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
-                                                                                                          {{ grandchildlink.title | escape }}
-                                                                                                      </a>
-                                                                                                  </li>
-                                                                                              {%- endfor -%}
-                                                                                          </ul>
-                                                                                      </div>
-                                                                                  </details>
-                                                                              {%- endif -%}
-                                                                          </li>
+                                                                          {% render 'menu-drawer-grandchild-link', childlink: childlink %}
                                                                       {%- endfor -%}
+                                                                      {% if block.settings.menu_second != blank %}
+                                                                            {%- for childlink in block.settings.menu_second.links -%}
+                                                                                {% render 'menu-drawer-grandchild-link', childlink: childlink %}
+                                                                            {%- endfor -%}
+                                                                        {% endif %}
+                                                                      {% if block.settings.menu_third != blank %}
+                                                                            {%- for childlink in block.settings.menu_third.links -%}
+                                                                                {% render 'menu-drawer-grandchild-link', childlink: childlink %}
+                                                                            {%- endfor -%}
+                                                                        {% endif %}
                                                                   </ul>
                                                               </div>
                                                           </div>
@@ -753,9 +715,9 @@
                 </nav>
             {%- elsif section.settings.menu_type_desktop == 'customizable' -%}
                 <nav class="header__inline-menu {{ section.settings.menu_position }}">
-                    <ul class="list-menu list-menu--inline fix-direction" role="list">
+                    <ul class="list-menu list-menu--inline header-blocks-list fix-direction" role="list">
                         {%- for block in section.blocks -%}
-                            <li>
+                            <li class="header-block-list-element {% if block.settings.small_font %}small{% endif %}">
                                 {%- if block.settings.menu != blank -%}
                                     {%- liquid
                                         assign link_child_active = false
@@ -783,81 +745,12 @@
                                                     <a href="{{ block.settings.shop_all_link }}" class="shop-all-link">
                                                         {{ block.settings.shop_all_title }}
                                                     </a>
-                                                    <ul class="mega-menu__list page-width{% if link_levels == 1 %} mega-menu__list--condensed{% endif %}"
-                                                        role="list">
-                                                        {%- for childlink in block.settings.menu.links -%}
-                                                            <li>
-                                                                <a href="{{ childlink.url }}"
-                                                                   class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
-                                                                    {{ childlink.title | escape }}
-                                                                </a>
-                                                                {%- if childlink.links != blank -%}
-                                                                    <ul class="list-unstyled"
-                                                                        role="list">
-                                                                        {%- for grandchildlink in childlink.links -%}
-                                                                            <li>
-                                                                                <a href="{{ grandchildlink.url }}"
-                                                                                   class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
-                                                                                    {{ grandchildlink.title | escape }}
-                                                                                </a>
-                                                                            </li>
-                                                                        {%- endfor -%}
-                                                                    </ul>
-                                                                {%- endif -%}
-                                                            </li>
-                                                        {%- endfor -%}
-                                                    </ul>
+                                                    {% render 'header-lists', childlinks: block.settings.menu.links, link_levels: link_levels %}
                                                     {% if block.settings.menu_second != blank %}
-                                                    <ul class="mega-menu__list page-width{% if link_levels == 1 %} mega-menu__list--condensed{% endif %}"
-                                                        role="list">
-                                                        {%- for childlink in block.settings.menu_second.links -%}
-                                                            <li>
-                                                                <a href="{{ childlink.url }}"
-                                                                   class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
-                                                                    {{ childlink.title | escape }}
-                                                                </a>
-                                                                {%- if childlink.links != blank -%}
-                                                                    <ul class="list-unstyled"
-                                                                        role="list">
-                                                                        {%- for grandchildlink in childlink.links -%}
-                                                                            <li>
-                                                                                <a href="{{ grandchildlink.url }}"
-                                                                                   class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
-                                                                                    {{ grandchildlink.title | escape }}
-                                                                                </a>
-                                                                            </li>
-                                                                        {%- endfor -%}
-                                                                    </ul>
-                                                                {%- endif -%}
-                                                            </li>
-                                                        {%- endfor -%}
-                                                    </ul>
+                                                        {% render 'header-lists', childlinks: block.settings.menu_second.links, link_levels: link_levels %}
                                                     {% endif %}
                                                     {% if block.settings.menu_third != blank %}
-                                                    <ul class="mega-menu__list page-width{% if link_levels == 1 %} mega-menu__list--condensed{% endif %}"
-                                                        role="list">
-                                                        {%- for childlink in block.settings.menu_third.links -%}
-                                                            <li>
-                                                                <a href="{{ childlink.url }}"
-                                                                   class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
-                                                                    {{ childlink.title | escape }}
-                                                                </a>
-                                                                {%- if childlink.links != blank -%}
-                                                                    <ul class="list-unstyled"
-                                                                        role="list">
-                                                                        {%- for grandchildlink in childlink.links -%}
-                                                                            <li>
-                                                                                <a href="{{ grandchildlink.url }}"
-                                                                                   class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
-                                                                                    {{ grandchildlink.title | escape }}
-                                                                                </a>
-                                                                            </li>
-                                                                        {%- endfor -%}
-                                                                    </ul>
-                                                                {%- endif -%}
-                                                            </li>
-                                                        {%- endfor -%}
-                                                    </ul>
+                                                        {% render 'header-lists', childlinks: block.settings.menu_third.links, link_levels: link_levels %}
                                                     {% endif %}
                                                 </div>
                                                 <div class="desktop_links_images">
@@ -1443,6 +1336,12 @@
           "label": "t:sections.header.blocks.menu_item.settings.show_on_mobile.label"
         },
           {
+            "type": "checkbox",
+            "id": "small_font",
+            "default": false,
+            "label": "t:sections.header.blocks.menu_item.settings.small_font.label"
+          },
+          {
               "type":"link_list",
               "id":"menu",
               "default":"main-menu",
@@ -1550,6 +1449,12 @@
           "default": false,
           "label": "t:sections.header.blocks.menu_item.settings.show_on_mobile.label"
         },
+          {
+              "type": "checkbox",
+              "id": "small_font",
+              "default": false,
+              "label": "t:sections.header.blocks.menu_item.settings.small_font.label"
+          },
         {
           "type": "text",
           "id": "title",
