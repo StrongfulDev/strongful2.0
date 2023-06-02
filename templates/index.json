@@ -41,7 +41,8 @@
       "type": "featured-collection",
       "custom_css": [
         ".button {width: 100%;}",
-        ".discount-price-container {direction: rtl;}"
+        ".discount-price-container {direction: rtl;}",
+        "@media screen and (min-width: 990px) {.slider--desktop.grid--peek.grid--5-col-desktop .grid__item {width: calc((94% - var(--desktop-margin-left-first-item)) \/ 5 - var(--grid-desktop-horizontal-spacing) * 2) }}"
       ],
       "settings": {
         "steps": 4,
@@ -71,8 +72,8 @@
         "enable_quick_add": true,
         "columns_mobile": "2",
         "swipe_on_mobile": true,
-        "padding_top": 64,
-        "padding_bottom": 36
+        "padding_top": 52,
+        "padding_bottom": 24
       }
     },
     "our_collection_list": {

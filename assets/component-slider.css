@@ -360,8 +360,8 @@ slider-component.slider-component-full-width {
     background: transparent;
     border: none;
     cursor: pointer;
-    width: 44px;
-    height: 44px;
+    width: 26px;
+    height: 26px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -372,7 +372,7 @@ slider-component.slider-component-full-width {
 }
 
 .slider-button .icon {
-    height: 1rem;
+    height: .8rem;
 }
 
 .slider-button[disabled] .icon {
@@ -399,7 +399,7 @@ slider-component.slider-component-full-width {
 /* CUSTOM STYLE AND DESIGN */
 .pagination_type_sides .slider-button {
     border: 1px solid rgb(var(--color-foreground));
-    padding: 5px;
+    padding: 5px 0;
     margin: 10px;
 }
 

@@ -42,6 +42,9 @@
             assign ratio = 1
         endif
     -%}
+
+    {% assign plusModelImages = card_product.images | where: 'attached_to_variant?', false %}
+
     <div class="card-wrapper product-card-wrapper underline-links-hover">
         <div
                 class="
@@ -61,7 +64,8 @@
             >
                 {%- if card_product.featured_media -%}
                     <div class="card__media">
-                        <a href="{{ card_product.url }}">
+                        <a href="{{ card_product.url }}" data-tags="{{ card_product.tags }}">
+                            {% unless card_product.tags contains 'plusSizeProduct' %}
                             <div class="media media--transparent media--hover-effect">
                                 {% if image_count <= 2 or true -%}
                                     <img
@@ -84,7 +88,6 @@
                                             width="{{ card_product.featured_media.width }}"
                                             height="{{ card_product.featured_media.height }}"
                                     >
-                                    {% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
 
                                     {%- if card_product.media[1] != null and show_secondary_image -%}
                                         <img
@@ -110,6 +113,53 @@
                                     {% render "card-product-slideshow", card_product: card_product %}
                                 {% endif %}
                             </div>
+                                {% else %}
+                                <div class="media media--transparent media--hover-effect">
+                                    {% for image in plusModelImages %}
+                                        <img
+                                                srcset="
+                  {%- if plusModelImages[0].width >= 165 -%}{{ plusModelImages[0] | image_url: width: 165 }} 165w,{%- endif -%}
+                  {%- if plusModelImages[0].width >= 360 -%}{{ plusModelImages[0] | image_url: width: 360 }} 360w,{%- endif -%}
+                  {%- if plusModelImages[0].width >= 533 -%}{{ plusModelImages[0] | image_url: width: 533 }} 533w,{%- endif -%}
+                  {%- if plusModelImages[0].width >= 720 -%}{{ plusModelImages[0] | image_url: width: 720 }} 720w,{%- endif -%}
+                  {%- if plusModelImages[0].width >= 940 -%}{{ plusModelImages[0] | image_url: width: 940 }} 940w,{%- endif -%}
+                  {%- if plusModelImages[0].width >= 1066 -%}{{ plusModelImages[0] | image_url: width: 1066 }} 1066w,{%- endif -%}
+                  {{ plusModelImages[0] | image_url }} {{ plusModelImages[0].width }}w
+                "
+                                                src="{{ plusModelImages[0] | image_url: width: 533 }}"
+                                                sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                                                alt="{{ plusModelImages[0].alt | escape }}"
+                                                class="motion-reduce"
+                                                {% unless lazy_load == false %}
+                                                    loading="lazy"
+                                                {% endunless %}
+                                                width="{{ plusModelImages[0].width }}"
+                                                height="{{ plusModelImages[0].height }}"
+                                        >
+                                        {% endfor %}
+
+                                        {%- if show_secondary_image -%}
+                                            <img
+                                                    srcset="
+                    {%- if plusModelImages[1].width >= 165 -%}{{ plusModelImages[1] | image_url: width: 165 }} 165w,{%- endif -%}
+                    {%- if plusModelImages[1].width >= 360 -%}{{ plusModelImages[1] | image_url: width: 360 }} 360w,{%- endif -%}
+                    {%- if plusModelImages[1].width >= 533 -%}{{ plusModelImages[1] | image_url: width: 533 }} 533w,{%- endif -%}
+                    {%- if plusModelImages[1].width >= 720 -%}{{ plusModelImages[1] | image_url: width: 720 }} 720w,{%- endif -%}
+                    {%- if plusModelImages[1].width >= 940 -%}{{ plusModelImages[1] | image_url: width: 940 }} 940w,{%- endif -%}
+                    {%- if plusModelImages[1].width >= 1066 -%}{{ plusModelImages[1] | image_url: width: 1066 }} 1066w,{%- endif -%}
+                    {{ plusModelImages[1] | image_url }} {{ plusModelImages[1].width }}w
+                  "
+                                                    src="{{ plusModelImages[1] | image_url: width: 533 }}"
+                                                    sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                                                    alt=""
+                                                    class="motion-reduce"
+                                                    loading="lazy"
+                                                    width="{{ plusModelImages[1].width }}"
+                                                    height="{{ plusModelImages[1].height }}"
+                                            >
+                                        {%- endif -%}
+                                </div>
+                                {% endunless %}
                         </a>
                     </div>
                 {%- endif -%}
