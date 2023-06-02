@@ -94,7 +94,7 @@
 	padding: 4px;
 	margin-bottom: 8px;
 	text-align: center;
-	font-size: var(--font-body-size-medium);
+	font-size: calc(var(--font-body-size-medium) * 0.8);
 }
 
 @media screen and (min-width: 990px) {

@@ -343,7 +343,8 @@ ul.default_variant_list {
 
 @media screen and (min-width: 990px) {
 	.product_variants .size_variant_button_container label {
-		padding: .6rem 0;
+		padding: .5rem 0;
+		font-size: calc(var(--font-body-size-medium) * 0.9);
 	}
 
 	.size_variant_button.default_size_variant_button.disabled-variant-button label:hover {
