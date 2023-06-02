@@ -1,6 +1,11 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 {{ 'component-rte.css' | asset_url | stylesheet_tag }}
+{{ 'component-variant-size-picker.css' | asset_url | stylesheet_tag }}
+{{ 'component-variant-size-picker.js' | asset_url | script_tag }}
+{{ 'template-collection.css' | asset_url | stylesheet_tag }}
+{{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
+{{ 'featured-collection.css' | asset_url | stylesheet_tag }}
 
 <link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print"
       onload="this.media='all'">
@@ -122,6 +127,8 @@
                                 show_vendor: section.settings.show_vendor,
                                 show_rating: section.settings.show_rating,
                                 show_quick_add: section.settings.enable_quick_add,
+                                quick_add_type: section.settings.quick_add_type,
+                                quick_add_type_mobile: section.settings.quick_add_type_mobile,
                                 section_id: section.id,
                                 show_sale_badge: section.settings.show_sale_badge,
                                 quick_add_text: section.settings.quick_add_text,
@@ -504,6 +511,46 @@
       "default": false,
       "label": "t:sections.featured-collection.settings.enable_quick_buy.label"
     },
+      {
+          "type": "select",
+          "id": "quick_add_type",
+          "options": [
+              {
+                  "value": "button",
+                  "label": "t:sections.main-collection-product-grid.settings.quick_add_type.options__1.label"
+              },
+              {
+                  "value": "hover",
+                  "label": "t:sections.main-collection-product-grid.settings.quick_add_type.options__2.label"
+              }
+          ],
+          "default": "hover",
+          "label": "t:sections.main-collection-product-grid.settings.quick_add_type.label"
+      },
+      {
+          "type": "select",
+          "id": "quick_add_type_mobile",
+          "options": [
+              {
+                  "value": "modal",
+                  "label": "t:sections.main-collection-product-grid.settings.quick_add_type_mobile.options__1.label"
+              }
+          ],
+          "default": "modal",
+          "label": "t:sections.main-collection-product-grid.settings.quick_add_type_mobile.label"
+      },
+      {
+          "type": "text",
+          "id": "quick_add_text",
+          "default": "Pick size",
+          "label": "t:sections.main-collection-product-grid.settings.quick_add_text.label"
+      },
+      {
+          "type": "text",
+          "id": "quick_add_accessories_text",
+          "default": "Pick accessories",
+          "label": "t:sections.main-collection-product-grid.settings.quick_add_accessories_text.label"
+      },
     {
       "type": "header",
       "content": "t:sections.featured-collection.settings.header_mobile.content"

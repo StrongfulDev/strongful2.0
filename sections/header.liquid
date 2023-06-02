@@ -899,7 +899,8 @@
                                     class="search-modal__close-button modal__close-button link link--text focus-inset"
                                     aria-label="{{ 'accessibility.close' | t }}">
                                 <span class="visually-hidden">{{ 'accessibility.close' | t }}</span>
-                                <span class="search-modal__close-button--custom">{{ 'general.search.close' | t }}</span>
+                                {% comment %}<span class="search-modal__close-button--custom">{{ 'general.search.close' | t }}</span>{% endcomment %}
+                                {% render 'icon-close' %}
                             </button>
                         {%- if settings.predictive_search_enabled -%}
                             <predictive-search class="search-modal__form"

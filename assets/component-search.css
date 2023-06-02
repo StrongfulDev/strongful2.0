@@ -86,10 +86,3 @@ input::-webkit-search-decoration {
 	right: calc(var(--inputs-border-width) + 4rem);
 	display: none;
 }
-
-#predictive-search-results-products-list {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	column-gap: var(--grid-desktop-horizontal-spacing);
-	margin: 0 2rem;
-}

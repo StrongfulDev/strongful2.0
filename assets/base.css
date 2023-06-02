@@ -2624,7 +2624,7 @@ details[open] .modal-overlay::after {
 
 @media screen and (min-width: 990px) {
     .search-modal__form {
-        max-width: 94.2rem;
+        max-width: 81.2rem;
     }
 
     .search-modal__close-button {
@@ -3584,4 +3584,9 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 	top: -1.4rem;
 	left: -2.6rem;
 	stroke-width: 0.05rem;
+}
+
+.featured-collection.index-section {
+	position: relative;
+	z-index: 4;
 }
