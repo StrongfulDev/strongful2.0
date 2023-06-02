@@ -258,7 +258,6 @@ class PredictiveSearch extends SearchForm {
 
 	addToCart() {
 		const element = $(this);
-		console.log(element)
 		element.find(".size_variant_button_add").hide();
 		element.find(".loading-overlay").css("display", "flex");
 		element.find(".loading-overlay__spinner").removeClass("hidden");

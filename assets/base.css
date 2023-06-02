@@ -2617,9 +2617,9 @@ details[open] .modal-overlay::after {
         right: 1rem;
     }
 
-    .search-modal__content {
-        padding: 0 6rem;
-    }
+	.search-modal__content {
+		padding: 0;
+	}
 }
 
 @media screen and (min-width: 990px) {
@@ -2693,7 +2693,14 @@ details[open] > .header__submenu {
 @media screen and (min-width: 990px) {
     .header__inline-menu {
         display: block;
+	    transform: translateX(0);
+	    transition: .2s;
     }
+
+	.header__inline-menu.header__menu--swiped {
+transform: translateX(-300%);
+		transition: .2s;
+	}
 
     .header--top-center .header__inline-menu {
         justify-self: center;

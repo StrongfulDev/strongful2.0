@@ -39,6 +39,8 @@
      this.onBodyClickEvent =
        this.onBodyClickEvent || this.onBodyClick.bind(this);
      event.target.closest('details').setAttribute('open', true);
+	   let headerMenu = $(event.target).closest('details').parents('.header__icons').siblings('nav')
+	   headerMenu.addClass("header__menu--swiped");
      document.body.addEventListener('click', this.onBodyClickEvent);
      document.body.classList.add('overflow-hidden');
 
@@ -50,6 +52,8 @@
 
    close(focusToggle = true) {
      removeTrapFocus(focusToggle ? this.summaryToggle : null);
+	   let headerMenu = $(event.target).closest('details').parents('.header__icons').siblings('nav')
+	   headerMenu.removeClass("header__menu--swiped");
      this.detailsContainer.removeAttribute('open');
      document.body.removeEventListener('click', this.onBodyClickEvent);
      document.body.classList.remove('overflow-hidden');

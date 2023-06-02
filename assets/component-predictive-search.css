@@ -272,4 +272,20 @@ predictive-search[loading]
 	.search-modal__close-button--custom:hover {
 		text-decoration: underline;
 	}
+
+	.header__search > details {
+		position: relative;
+	}
+
+	details[open] > .search-modal {
+		width: 50vw;
+		right: 0;
+		left: auto;
+	}
+
+	.header__search details[open] .modal-overlay::after {
+		top: 5.5rem;
+		width: 120vw;
+		right: -12rem;
+	}
 }
