@@ -3536,6 +3536,10 @@ body.trigger-position-right #enable-toolbar-trigger {
 	display: none !important;
 }
 
+#enable-toolbar-trigger-svg {
+	width: 26px !important;
+}
+
 #enable-toolbar-trigger-svg, #enable-toolbar-trigger-svg path {
 	z-index: 3;
 	position: relative;
@@ -3554,10 +3558,10 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 #enable-toolbar-trigger .icon-pill, #enable-toolbar-trigger .icon-pill-border {
 	position: absolute;
 	top: -10px;
-	left: -11px;
+	left: -17px;
 	transform: rotate(90deg);
-	width: 50px;
-	height: 50px;
+	width: 43px;
+	height: 49px;
 }
 
 #enable-toolbar-trigger .icon-pill {
@@ -3568,8 +3572,9 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 	z-index: 1;
 	stroke: var(--gradient-base-accent-1);
 	fill: var(--gradient-background);
-	height: 65px;
-	width: 65px;
-	top: -18px;
-	left: -20px;
+	height: 6rem;
+	width: 5.9rem;
+	top: -1.4rem;
+	left: -2.6rem;
+	stroke-width: 0.05rem;
 }
