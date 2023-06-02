@@ -1144,25 +1144,30 @@ window.addEventListener('DOMContentLoaded', () => {
 	});
 
 	const enableToolbarButton = document.querySelector('#enable-toolbar-trigger');
+	const pill = document.querySelector('.icon-pill');
+	const pillBorder = document.querySelector('.icon-pill-border');
+
+	enableToolbarButton.appendChild(pill);
+	enableToolbarButton.appendChild(pillBorder);
 
 	// Create an SVG namespace
-	const svgns = "http://www.w3.org/2000/svg";
-
-// Create the <svg> element
-	const svg = document.createElementNS(svgns, "svg");
-	svg.setAttribute("width", "55");
-	svg.setAttribute("height", "40");
-	svg.classList.add('svg-icon');
-
-// Create the <rect> element
-	const path = document.createElementNS(svgns, "path");
-	path.setAttribute("d", "M7,10 h41 v40 h-41 a15,15 0 0 1 -15,-15 v-10 a15,15 0 0 1 15,-15 z")
-
-// Append the <path> element to the <svg> element
-	svg.appendChild(path);
-
-// Append the <svg> element to the document body
-	enableToolbarButton.appendChild(svg);
+// 	const svgns = "http://www.w3.org/2000/svg";
+//
+// // Create the <svg> element
+// 	const svg = document.createElementNS(svgns, "svg");
+// 	svg.setAttribute("width", "55");
+// 	svg.setAttribute("height", "40");
+// 	svg.classList.add('svg-icon');
+//
+// // Create the <rect> element
+// 	const path = document.createElementNS(svgns, "path");
+// 	path.setAttribute("d", "M7,10 h41 v40 h-41 a15,15 0 0 1 -15,-15 v-10 a15,15 0 0 1 15,-15 z")
+//
+// // Append the <path> element to the <svg> element
+// 	svg.appendChild(path);
+//
+// // Append the <svg> element to the document body
+// 	enableToolbarButton.appendChild(svg);
 
 });
 
