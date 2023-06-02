@@ -159,6 +159,10 @@ div:not(.product-size-picker-container) .variant-button .size_variant_button:not
 		display: block;
 	}
 
+	.product-size-picker-container {
+		padding: 15px 10px 5px;
+	}
+
 	ul.default_variant_list {
 		padding: 1rem 0 0;
 	}

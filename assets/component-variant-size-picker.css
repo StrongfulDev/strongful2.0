@@ -250,6 +250,11 @@ ul.default_variant_list {
 
 @media screen and (min-width: 750px) {
 
+	.product-size-picker-container {
+		border-radius: 4px;
+		padding: 15px 10px;
+	}
+
 	input.disabled-variant-button label:hover, input.disabled-variant-button label {
 		cursor: pointer !important;
 	}
