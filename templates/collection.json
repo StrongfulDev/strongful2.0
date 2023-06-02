@@ -3,7 +3,7 @@
     "745dda66-63ce-4705-8d8d-eff54d17367f": {
       "type": "image-banner",
       "custom_css": [
-        "@media screen and (min-width: 990px) {.banner__media img {object-fit: cover; } .banner--auto {min-height: 24rem; height: 24rem; }}"
+        "@media screen and (min-width: 990px) {.banner__media img {object-fit: contain; } .banner--auto {min-height: 21rem; height: 21rem; }}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/c2374306d59d1b224034812ca62e5162.jpg",

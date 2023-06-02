@@ -18,7 +18,7 @@
 @media screen and (min-width: 750px) {
     .product__column-sticky {
         display: block;
-        position: sticky;
+        /*position: sticky;*/
         top: 3rem;
         z-index: 2;
     }
@@ -1758,11 +1758,19 @@ li.grid--peek.slider .grid__item, li.product__media-item.grid__item.slider__slid
 	font-weight: var(--font-body-weight-bold);
 }
 
+.model-wears-size + .model-wears-size {
+	display: none;
+}
+
 .variant_modal .product_size_picker__heading {
 	display: block;
 }
 
 @media screen and (min-width: 990px) {
+
+	section[id^="MainProduct"] {
+		max-width: calc(var(--page-width) * 0.9);
+	}
 
 	.variant_modal div.product_variants ul {
 		padding-bottom: 0;

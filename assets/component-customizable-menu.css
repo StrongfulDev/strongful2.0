@@ -31,8 +31,7 @@
 
 .mega-menu[open] .mega-menu__content {
     opacity: 1;
-    transform: translateY(0);
-
+    transform: translateY(2.5rem);
 }
 
 .mega-menu__list {
@@ -319,7 +318,7 @@
 @media screen and (min-width: 990px) {
 
 	.mega-menu__content.customizable {
-		width: 60%;
+		width: 100%;
 		margin: 0 auto;
 		padding: 3.4rem 3.4rem 3.4rem 3.3rem;
 	}

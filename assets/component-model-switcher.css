@@ -18,13 +18,15 @@
 }
 
 .model-switch-button {
-    padding: 5px 10px;
-    border: 1px solid var(--color-icon);
+    padding: 0.6rem 1.5rem;
 	width: fit-content;
-    background: var(--gradient-base-background-1);
+    background: var(--gradient-base-background-3);
+	border-radius: 2rem;
     font-family: inherit;
-    cursor: pointer;
 	margin-bottom: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .model-switcher__list {
@@ -33,10 +35,6 @@
     background-color: rgb(var(--color-background));
     padding: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-
-#model-switch {
-
 }
 
 .model-switcher__item + .model-switcher__item {
@@ -76,6 +74,15 @@
 		backdrop-filter: blur(4px);
 		z-index: 2;
 	background: rgba(0, 0, 0, 0.5);
+}
+
+summary .icon-caret {
+	position: static;
+	margin-right: var(--grid-mobile-vertical-spacing);
+}
+
+summary .icon-caret.rotate-arrow {
+	transform: rotate(180deg);
 }
 
 @media screen and (min-width: 990px) {

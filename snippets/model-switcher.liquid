@@ -16,6 +16,7 @@
             <span>
             {{ 'products.product.model_switch.button' | t }}
             </span>
+            {% render 'icon-caret' %}
         </summary>
         <div class="model-switcher__list">
             {% for modelName in product.metafields.model.names.value %}

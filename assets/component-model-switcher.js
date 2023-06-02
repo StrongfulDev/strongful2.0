@@ -1,3 +1,6 @@
+const arrowIcon = document.querySelector(".model-switch-button .icon-caret");
+console.log(arrowIcon);
+
 $(document).ready(function () {
 	hideUnAvailableModels();
 
@@ -66,8 +69,8 @@ function changeModel(modelSize) {
 	}
 
 	$("#model-switch").removeAttr('open');
-
 	$(".model-switcher-overlay").addClass("hidden");
+	$(arrowIcon).removeClass('rotate-arrow');
 
 	localStorage.setItem('modelSize', modelSize);
 
@@ -90,6 +93,9 @@ function updateModelSwitch(modelSize) {
 }
 
 $(".model-switch-button").click(function() {
+
+	$(arrowIcon).toggleClass('rotate-arrow');
+
 	if ($(window).width() < 990) {
 		$(".model-switcher-overlay").toggleClass("hidden");
 	}
