@@ -203,7 +203,7 @@
       "clear_all": "איפוס",
       "from": "From",
       "filter_and_sort": "פילטר",
-      "filter_by_label": "פילטר:",
+      "filter_by_label": "פילטר",
       "filter_button": "פילטר",
       "filters_selected": {
         "one": "{{ count }} selected",

@@ -1811,8 +1811,8 @@ li.grid--peek.slider .grid__item, li.product__media-item.grid__item.slider__slid
 	.breadcrumbs__item a {
 		text-decoration: underline;
 		display: inline-block;
-		font-size: var(--font-body-size-medium);
-		color: var(--gradient-base-background-4);
+		font-size: calc(var(--font-body-size-medium) * 0.9);
+		color: #7d7d7d;
 	}
 
 	.breadcrumbs__item:not(:last-child):after {

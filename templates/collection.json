@@ -3,7 +3,7 @@
     "745dda66-63ce-4705-8d8d-eff54d17367f": {
       "type": "image-banner",
       "custom_css": [
-        "@media screen and (min-width: 990px) {.banner__media img {object-fit: contain; } .banner--auto {min-height: 21rem; height: 21rem; }}"
+        "@media screen and (min-width: 990px) {.banner__media img {object-fit: contain; } .banner--auto {min-height: 13vw; }}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/c2374306d59d1b224034812ca62e5162.jpg",
@@ -45,7 +45,7 @@
         "enable_quick_add": true,
         "quick_add_type": "hover",
         "quick_add_type_mobile": "modal",
-        "quick_add_text": "בחירת מידה",
+        "quick_add_text": "הוספה מהירה",
         "quick_add_accessories_text": "הוספה מהירה",
         "image_count": 1,
         "enable_filtering": true,

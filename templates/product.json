@@ -159,8 +159,8 @@
       "type": "main-product-quick-add",
       "settings": {
         "quick_add_type_mobile": "modal",
-        "quick_add_text": "בחרי מידה",
-        "quick_add_accessories_text": ""
+        "quick_add_text": "בחירת מידה",
+        "quick_add_accessories_text": "הוספה מהירה"
       }
     },
     "168551910448762f1f": {

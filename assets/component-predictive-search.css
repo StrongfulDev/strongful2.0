@@ -185,12 +185,15 @@ predictive-search[loading]
   margin-top: 0.5rem;
 }
 
-.predictive-search__item--term {
+.predictive-search__item--term, .predictive-search__item--empty {
   justify-content: space-between;
   align-items: center;
   padding: 1.3rem 2rem;
   word-break: break-all;
   line-height: calc(1 + 0.4 / var(--font-body-scale));
+}
+.predictive-search__item--empty {
+	margin: 0;
 }
 
 .predictive-search__item--term .icon-arrow {

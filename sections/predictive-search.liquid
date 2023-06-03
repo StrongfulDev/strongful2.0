@@ -159,7 +159,7 @@
     </div>
   </div>
 
-  <span class="hidden" data-predictive-search-live-region-count-value>
+  <p class="predictive-search__item--empty" data-predictive-search-live-region-count-value>
     {% liquid
       assign total_results = predictive_search.resources.products.size | plus: first_column_results_size
       if total_results == 0
@@ -179,5 +179,5 @@
         endif
       endif
     %}
-  </span>
+  </p>
 {%- endif -%}

@@ -54,7 +54,6 @@
 
    close(focusToggle = true) {
      removeTrapFocus(focusToggle ? this.summaryToggle : null);
-	   console.log(this.summaryToggle)
 		 if (this.summaryToggle.classList.contains('header__icon')) {
 			 let headerMenu = $(this.summaryToggle).closest('details').parents('.header__icons').siblings('nav')
 			 if (window.screen.width > 990) {

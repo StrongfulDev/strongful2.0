@@ -167,6 +167,7 @@ class FacetFiltersForm extends HTMLElement {
     activeFiltersDOMElements.forEach(function(element) {
       element.innerHTML = "(" + activeFilters.length + ")";
     });
+		$(".custom-active-facets").html("(" + activeFilters.length + ")");
   }
 
   static updateURLHash(searchParams) {
