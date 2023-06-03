@@ -408,8 +408,10 @@
                 action: "{{ reward.reward_action.value }}",
                 amount: parseInt("{{ reward.reward_amount.value }}"),
                 products: eval(`{{ reward.reward_products }}`),
+                variantId: eval(`{{ reward.reward_products | replace: '["gid://shopify/ProductVariant/', '' | replace: '"]', '' }}`),
                 product_method: "{{ reward.product_rewards_method.value }}",
                 message: `{{ reward.reward_message.value }}`,
+                loyaltyText: `{{ reward.loyalty_text.value }}`
             }
         },
         {% endfor %}

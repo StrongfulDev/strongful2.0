@@ -228,8 +228,8 @@ cart-drawer-items::-webkit-scrollbar {
 
 .cart-drawer .cart-item {
     display: grid;
-    grid-template: repeat(2, auto) / repeat(4, 1fr);
-    gap: 1.5rem;
+    grid-template: repeat(2, auto) / 1.8fr 2fr 2fr 1fr;
+    gap: 1rem;
     margin-bottom: 0;
 }
 

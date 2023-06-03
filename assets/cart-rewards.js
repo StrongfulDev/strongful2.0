@@ -42,6 +42,22 @@ class CartRewards {
 			const isRewardInCart = this.cartHasReward(rule);
 			const rewardItem = this.getRewardItemByRule(rule);
 
+			if (rule.condition.type == 'CustomerTags') {
+				const ruleVariantId = rule.reward.variantId;
+				const loyaltyText = rule.reward.loyaltyText;
+				const frontCartItems = document.querySelectorAll('.cart-item');
+				frontCartItems.forEach((item) => {
+					const itemId = parseInt(item.dataset.id);
+					const loyaltyDiscount = $(item).find('.loyalty-reward-discount-text');
+
+					console.log(itemId, ruleVariantId)
+
+					if (itemId === ruleVariantId) {
+						$(loyaltyDiscount).removeClass('hidden').text(loyaltyText);
+					}
+				});
+			}
+
 			// If the state changed
 			if (isRewardInCart !== isConditionMet) {
 				this.toggleReward(isConditionMet, rule);

@@ -141,7 +141,7 @@
 
                                         <tbody role="rowgroup">
                                         {%- for item in cart.items -%}
-                                            <tr id="CartDrawer-Item-{{ item.index | plus: 1 }}" data-index="{{ item.index | plus: 1 }}" data-id="{{ item.id }}" class="cart-item"
+                                            <tr id="CartDrawer-Item-{{ item.index | plus: 1 }}" data-index="{{ item.index | plus: 1 }}" data-product-id="{{ item.product.id }}" data-id="{{ item.id }}" class="cart-item"
                                                 role="row">
                                                 <td class="cart-item__media" role="cell"
                                                     headers="CartDrawer-ColumnProductImage">
@@ -251,18 +251,12 @@
                                                             role="list"
                                                             aria-label="{{ 'customer.order.discount' | t }}"
                                                     >
-                                                        {% assign rewards = shop.metaobjects.reward.values | sort: "order" %}
                                                         {%- for discount in item.discounts -%}
                                                             <li class="discounts__discount">
                                                                 {{ discount.title }}
                                                             </li>
                                                         {%- endfor -%}
-                                                        {% for reward in rewards %}
-                                                            {% if reward.condition_type.value == 'CustomerTags' %}
-                                                                {% assign variantId = reward.reward_products %}
-                                                            <li class="loyalty-reward-discount-text">{{ variantId }}</li>
-                                                            {% endif %}
-                                                        {% endfor %}
+                                                            <li class="discounts__discount loyalty-reward-discount-text hidden"></li>
                                                     </ul>
                                                 </td>
 
