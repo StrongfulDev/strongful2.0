@@ -15,9 +15,6 @@ class CartRewards {
 	async init() {
 		console.log("Reward rules", this.rules);
 
-		// defined in theme.liquid file
-		console.log(customerTags);
-
 		this.allRewardsAmount = Math.max.apply(Math, this.rules.map(function (o) {
 			return o.condition.value;
 		}));
@@ -62,8 +59,6 @@ class CartRewards {
 			if (this.cartTotalValue === 0) {
 				this.clearCart();
 			}
-
-			console.log("Rule", rule, "isConditionMet", isConditionMet, "isRewardInCart", isRewardInCart);
 		});
 
 		this.loading(false);

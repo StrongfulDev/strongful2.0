@@ -251,11 +251,18 @@
                                                             role="list"
                                                             aria-label="{{ 'customer.order.discount' | t }}"
                                                     >
+                                                        {% assign rewards = shop.metaobjects.reward.values | sort: "order" %}
                                                         {%- for discount in item.discounts -%}
                                                             <li class="discounts__discount">
                                                                 {{ discount.title }}
                                                             </li>
                                                         {%- endfor -%}
+                                                        {% for reward in rewards %}
+                                                            {% if reward.condition_type.value == 'CustomerTags' %}
+                                                                {% assign variantId = reward.reward_products %}
+                                                            <li class="loyalty-reward-discount-text">{{ variantId }}</li>
+                                                            {% endif %}
+                                                        {% endfor %}
                                                     </ul>
                                                 </td>
 
