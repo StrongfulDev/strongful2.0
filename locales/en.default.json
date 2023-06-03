@@ -203,7 +203,7 @@
       "clear_all": "איפוס",
       "from": "From",
       "filter_and_sort": "פילטר",
-      "filter_by_label": "פילטר",
+      "filter_by_label": "פילטר:",
       "filter_button": "פילטר",
       "filters_selected": {
         "one": "{{ count }} selected",
@@ -550,10 +550,10 @@
       "message_html": "תוסיפי <span class=\"rewards__missing_amount\"><\/span> שח ותקבלי בקבוק חינם"
     },
     "hundred_discount": {
-      "message_html": "הוסיפי עוד <span class=\"rewards__missing_amount\"></span> וקבלי 100₪ הנחה"
+      "message_html": "הוסיפי עוד <span class=\"rewards__missing_amount\"><\/span> וקבלי 100₪ הנחה"
     },
     "two_hundred_discount": {
-      "message_html": "הוסיפי עוד <span class=\"rewards__missing_amount\"></span> וקבלי 200₪ הנחה"
+      "message_html": "הוסיפי עוד <span class=\"rewards__missing_amount\"><\/span> וקבלי 200₪ הנחה"
     }
   },
   "shopify": {

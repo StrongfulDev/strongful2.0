@@ -1,21 +1,37 @@
 
 window.addEventListener('DOMContentLoaded', () => {
 
-	let customURL = window.location.href;
-	if (customURL.includes('register')) {
-		$(".multicolumn-list__item").eq(0).removeClass("active");
-		$(".multicolumn-list__item").eq(1).addClass("active");
-		let activeWidth = $(".multicolumn-list__item").eq(1).innerWidth();
-		let position = $(".multicolumn-list__item").eq(1).position();
-		$("#js-border-position").css("width", activeWidth + "px");
-		$("#js-border-position").css("left", position.left + "px");
-	} else if (customURL.includes('login')) {
-		$(".multicolumn-list__item").eq(0).addClass("active");
-		$(".multicolumn-list__item").eq(1).removeClass("active");
-		let activeWidth = $(".multicolumn-list__item").eq(0).innerWidth();
-		let position = $(".multicolumn-list__item").eq(0).position();
-		$("#js-border-position").css("width", activeWidth - 14 + "px");
-		$("#js-border-position").css("left", position.left + 14 + "px");
+	// account toggler site-wide
+	$(".account-toggler-site-wide").click(function() {
+		$(".custom-customer-account-container").addClass("active");
+		$(".custom-login-overlay").removeClass("hidden");
+		animations();
+	});
+
+	$(".close-custom-account-container").click(closePopup);
+	$(".custom-login-overlay").click(closePopup);
+
+	function closePopup() {
+		$(".custom-customer-account-container").removeClass("active");
+		$(".custom-login-overlay").addClass("hidden");
+	}
+
+	function animations() {
+		if (customerTags !== null) {
+			$(".multicolumn-list__item").eq(0).removeClass("active");
+			$(".multicolumn-list__item").eq(1).addClass("active");
+			let activeWidth = $(".multicolumn-list__item").eq(1).innerWidth();
+			let position = $(".multicolumn-list__item").eq(1).position();
+			$("#js-border-position").css("width", activeWidth + "px");
+			$("#js-border-position").css("left", position.left + "px");
+		} else {
+			$(".multicolumn-list__item").eq(0).addClass("active");
+			$(".multicolumn-list__item").eq(1).removeClass("active");
+			let activeWidth = $(".multicolumn-list__item").eq(0).innerWidth();
+			let position = $(".multicolumn-list__item").eq(0).position();
+			$("#js-border-position").css("width", activeWidth - 14 + "px");
+			$("#js-border-position").css("left", position.left + 14 + "px");
+		}
 	}
 
 	$('.multicolumn-list__item').on('click', function() {
@@ -34,6 +50,8 @@ window.addEventListener('DOMContentLoaded', () => {
 			$("#js-border-position").css("left", position.left + 14 + "px");
 		}
 	});
+
+	animations();
 
 	(function() {
 		let redirectPath = '/account';

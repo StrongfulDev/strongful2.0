@@ -141,6 +141,7 @@
         --gradient-base-background-4: {% if settings.gradient_background_4 != blank %}{{ settings.gradient_background_4 }}{% else %}{{ settings.colors_background_4 }}{% endif %};
         --gradient-base-accent-1: {% if settings.gradient_accent_1 != blank %}{{ settings.gradient_accent_1 }}{% else %}{{ settings.colors_accent_1 }}{% endif %};
         --gradient-base-accent-2: {% if settings.gradient_accent_2 != blank %}{{ settings.gradient_accent_2 }}{% else %}{{ settings.colors_accent_2 }}{% endif %};
+        --loyalty-title-color: #bc0b0b;
 
         --media-padding: {{ settings.media_padding }}px;
         --media-border-opacity: {{ settings.media_border_opacity | divided_by: 100.0 }};
@@ -432,5 +433,12 @@
 {%- endif -%}
 {% render 'pill' %}
 {% render 'pill-border' %}
+<div class="custom-customer-account-container">
+    <p class="close-custom-account-container page-width pointer">{% render 'icon-close' %}</p>
+    {% section 'multicolumn' %}
+    {% section 'main-register' %}
+    {% section 'main-login' %}
+</div>
+<div class="custom-login-overlay hidden">&nbsp;</div>
 </body>
 </html>

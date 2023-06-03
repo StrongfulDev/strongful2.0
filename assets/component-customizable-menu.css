@@ -315,6 +315,34 @@
 		font-size: calc(var(--font-body-size-medium) * 0.9);
 }
 
+.menu-drawer__utility-links svg.icon-caret {
+	width: 1.6rem;
+	height: 1.6rem;
+	top: 40%;
+}
+
+.menu-drawer__utility-links a.container-menu-item {
+	color: var(--gradient-base-accent-1);
+	text-decoration: none;
+}
+
+.menu-drawer__utility-links a.container-menu-item span {
+	color: var(--loyalty-title-color);
+}
+
+.container-menu-item .icon-account {
+	display: inline-block;
+	height: 1.6rem;
+	width: 1.6rem;
+	margin-left: 0.5rem;
+}
+
+.mobile-menu-customer-container .menu-drawer__account-register.button--secondary {
+	display: flex;
+	width: 100%;
+	margin: calc(var(--grid-desktop-horizontal-spacing) * 3) 0;
+}
+
 @media screen and (min-width: 990px) {
 
 	.mega-menu__content.customizable {

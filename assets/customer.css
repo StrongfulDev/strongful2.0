@@ -813,7 +813,6 @@ li.multicolumn-list__item {
 
 	.multicolumn {
 		max-width: 47rem;
-		padding-top: 5rem;
 	}
 
 	.multicolumn .page-width {
@@ -1088,7 +1087,81 @@ a.order-date-link .icon {
 	transform: rotate(90deg);
 }
 
+.custom-customer-account-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 99999;
+	background: #fff;
+	transform: translateX(-100%);
+	transition: 0.3s ease-in-out;
+}
+
+.custom-customer-account-container.active {
+	transform: translateX(0);
+	transition: 0.3s ease-in-out;
+}
+
+.oxi_social_wrapper {
+	display: none;
+}
+
+.close-custom-account-container .icon-close {
+	width: 2rem;
+	height: 2rem;
+}
+
+.close-custom-account-container {
+	padding-top: 2rem;
+	text-align: right;
+}
+
+.custom-login-overlay {
+	display: none;
+}
+
 @media screen and (min-width: 990px) {
+
+	.customer:not(.account):not(.order) {
+		overflow-y: auto;
+		height: 49rem;
+	}
+
+	.custom-login-overlay {
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 99998;
+		background: rgba(var(--color-foreground), 0.6);
+	}
+
+	.custom-customer-account-container {
+		width: 43rem;
+		left: 50%;
+		top: 50%;
+		bottom: auto;
+		border-radius: 7px;
+		max-width: 43rem;
+		height: 60rem;
+		transform: translate(0);
+		display: none;
+	}
+
+	.custom-customer-account-container.active {
+		transform: translate(-50%, -50%);
+		display: block;
+	}
+
+	.close-custom-account-container {
+		padding-right: 1.5rem;
+		padding-left: 1.5rem;
+	}
+
 	.account-desktop-container > .custom-orders-container {
 		position: static;
 		transform: translateX(0);

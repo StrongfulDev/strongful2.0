@@ -1066,15 +1066,15 @@ summary::-webkit-details-marker {
 }
 
 #product-grid {
-	column-gap: calc(var(--grid-desktop-horizontal-spacing) * 3.5);
+	column-gap: calc(var(--grid-desktop-horizontal-spacing) * 2);
 	row-gap: calc(var(--grid-desktop-horizontal-spacing) * 5);
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 }
 
 #product-grid .grid__item {
-	width: calc(22% - var(--grid-desktop-horizontal-spacing) * 3 / 4);
-	max-width: calc(23% - var(--grid-desktop-horizontal-spacing) / 2);
+	width: calc(24% - var(--grid-desktop-horizontal-spacing) * 3 / 4);
+	max-width: calc(24% - var(--grid-desktop-horizontal-spacing) / 2);
 }
 
 #product-grid .card__heading a {
