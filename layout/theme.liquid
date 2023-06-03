@@ -397,6 +397,7 @@
             title: "{{ reward.title.value }}",
             order: parseInt("{{ reward.order.value }}"),
             element_class: "{{ reward.element_class.value }}",
+            customer_tags: "{{ reward.customer_tags.value }}",
             condition: {
                 type: "{{ reward.condition_type.value }}",
                 operator: "{{ reward.condition_operator.value }}",
@@ -414,7 +415,7 @@
         {% endfor %}
     ];
 
-    let customerTags = `{{ customer.tags | json }}`;
+    const customerTags = `{{ customer.tags | json }}`;
     window.models = {
         {% for model in shop.metaobjects.model.values %}
         "{{ model.size_letter.value }}": {

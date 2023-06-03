@@ -15,6 +15,9 @@ class CartRewards {
 	async init() {
 		console.log("Reward rules", this.rules);
 
+		// defined in theme.liquid file
+		console.log(customerTags);
+
 		this.allRewardsAmount = Math.max.apply(Math, this.rules.map(function (o) {
 			return o.condition.value;
 		}));
@@ -55,6 +58,12 @@ class CartRewards {
 			} else {
 				rewardItem.removeClass("active-reward");
 			}
+
+			if (this.cartTotalValue === 0) {
+				// $.post('/cart/clear.js');
+			}
+
+			console.log("Rule", rule, "isConditionMet", isConditionMet, "isRewardInCart", isRewardInCart);
 		});
 
 		this.loading(false);
@@ -63,11 +72,18 @@ class CartRewards {
 	checkCondition(rule) {
 		let isConditionMet = false;
 
+		const isRightQuantity = this.checkProductQuantity(rule);
+		const isAmountGreaterThan = rule.condition.operator === "Greater than or equal" && this.cartTotalValue >= rule.condition.value;
+		const isAmountLessThan = rule.condition.operator === "Less than or equal" && this.cartTotalValue <= rule.condition.value;
+
 		if (rule.condition.type === "CartAmount") {
-			const isRightQuantity = this.checkProductQuantity(rule);
-			const isAmountGreaterThan = rule.condition.operator === "Greater than or equal" && this.cartTotalValue >= rule.condition.value;
-			const isAmountLessThan = rule.condition.operator === "Less than or equal" && this.cartTotalValue <= rule.condition.value;
-			isConditionMet = (isRightQuantity || isRightQuantity === null) && (isAmountGreaterThan || isAmountLessThan)
+			isConditionMet = (isRightQuantity || isRightQuantity === null) && (isAmountGreaterThan || isAmountLessThan);
+		} else if (rule.condition.type === "CustomerTags") {
+			if (customerTags.includes(rule.customer_tags) && this.cartTotalValue > rule.condition.value) {
+				isConditionMet = (isRightQuantity || isRightQuantity === null) && (isAmountGreaterThan || isAmountLessThan);
+			} else {
+				isConditionMet = false;
+			}
 		}
 
 		return isConditionMet;

@@ -47,7 +47,6 @@ class CartItems extends HTMLElement {
 	  const lineItem = document.getElementById(`CartItem-${lineIndex}`) || document.getElementById(`CartDrawer-Item-${lineIndex}`);
 // Manipulate the line item as needed
 			  const lineItemPrice = lineItem.querySelector('.price--on-sale .money');
-	  console.log(lineItemPrice);
   }
 
   onCartUpdate() {

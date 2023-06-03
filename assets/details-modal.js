@@ -54,10 +54,13 @@
 
    close(focusToggle = true) {
      removeTrapFocus(focusToggle ? this.summaryToggle : null);
-	   let headerMenu = $(event.target).closest('details').parents('.header__icons').siblings('nav')
-	   if (window.screen.width > 990) {
-		   headerMenu.removeClass("header__menu--swiped");
-	   }
+	   console.log(this.summaryToggle)
+		 if (this.summaryToggle.classList.contains('header__icon')) {
+			 let headerMenu = $(this.summaryToggle).closest('details').parents('.header__icons').siblings('nav')
+			 if (window.screen.width > 990) {
+				 headerMenu.removeClass("header__menu--swiped");
+			 }
+		 }
      this.detailsContainer.removeAttribute('open');
      document.body.removeEventListener('click', this.onBodyClickEvent);
      document.body.classList.remove('overflow-hidden');
