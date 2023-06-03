@@ -60,13 +60,27 @@ class CartRewards {
 			}
 
 			if (this.cartTotalValue === 0) {
-				// $.post('/cart/clear.js');
+				this.clearCart();
 			}
 
 			console.log("Rule", rule, "isConditionMet", isConditionMet, "isRewardInCart", isRewardInCart);
 		});
 
 		this.loading(false);
+	}
+
+	async clearCart() {
+		$.ajax({
+			type: 'POST',
+			url: '/cart/clear.js',
+			dataType: 'json',
+			success: function() {
+				console.log('Cart cleared successfully');
+			},
+			error: function(xhr, status, error) {
+				console.log('An error occurred while clearing the cart:', error);
+			}
+		});
 	}
 
 	checkCondition(rule) {
