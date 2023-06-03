@@ -50,8 +50,6 @@ class CartRewards {
 					const itemId = parseInt(item.dataset.id);
 					const loyaltyDiscount = $(item).find('.loyalty-reward-discount-text');
 
-					console.log(itemId, ruleVariantId)
-
 					if (itemId === ruleVariantId) {
 						$(loyaltyDiscount).removeClass('hidden').text(loyaltyText);
 					}

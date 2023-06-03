@@ -5,7 +5,6 @@
 {{ 'component-variant-size-picker.js' | asset_url | script_tag }}
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
 {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
-{{ 'featured-collection.css' | asset_url | stylesheet_tag }}
 
 <link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print"
       onload="this.media='all'">
@@ -19,6 +18,8 @@
 {%- endif -%}
 <noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'template-collection.css' | asset_url | stylesheet_tag }}</noscript>
+
+{{ 'featured-collection.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
     .section-{{ section.id }}-padding {

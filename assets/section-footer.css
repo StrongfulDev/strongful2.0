@@ -880,6 +880,7 @@ noscript .localization-selector.link {
 
     .footer__blocks-wrapper .footer-blockgrid__item:first-child {
         grid-column: 1 / -1;
+	    width: 100%;
     }
 
     .footer-blockgrid__item.brand_information,
