@@ -617,7 +617,7 @@ a.no-decoration {
 }
 
 .order svg {
-  width: 1.1rem;
+  width: 1.5rem;
   color: rgb(var(--color-base-accent-2));
   margin-right: 0.5rem;
 }
@@ -868,7 +868,7 @@ p.container-extra-info {
 .custom-orders-container {
 	position: fixed;
 	width: 100%;
-	z-index: 4;
+	z-index: 10;
 	background: #fff;
 	top: 0;
 	right: 0;
@@ -1077,13 +1077,13 @@ td.table-data-images {
 	font-size: 2em;
 }
 
-a.order-date-link {
+a.order-number-link:not(.no-decoration) {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
 }
 
-a.order-date-link .icon {
+a.order-number-link .icon {
 	transform: rotate(90deg);
 }
 
@@ -1120,6 +1120,26 @@ a.order-date-link .icon {
 
 .custom-login-overlay {
 	display: none;
+}
+
+.customer td, .customer td a {
+	font-size: var(--font-body-size-medium);
+}
+
+.main-order-header-container h1 {
+	font-size: var(--font-body-size-large);
+	text-align: center;
+}
+
+.main-order-header-container {
+	position: relative;
+}
+
+.main-order-header-caret {
+	position: absolute;
+	left: 0;
+	transform: translateY(-50%) rotate(90deg);
+	top: 50%;
 }
 
 @media screen and (min-width: 990px) {

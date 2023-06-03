@@ -27,9 +27,11 @@
       <path fill-rule="evenodd" clip-rule="evenodd" d="M7 0h3a2 2 0 012 2v3a1 1 0 01-.3.7l-6 6a1 1 0 01-1.4 0l-4-4a1 1 0 010-1.4l6-6A1 1 0 017 0zm2 2a1 1 0 102 0 1 1 0 00-2 0z" fill="currentColor">
     </symbol>
   </svg>
-  <div>
-    <h1 class="customer__title">{{ 'customer.order.title' | t: number: order.name }}</h1>
-    <a href="{{ routes.account_url }}">{{ 'customer.account.return' | t }}</a>
+  <div class="main-order-header-container">
+    <h1 class="customer__title">{{ 'customer.order.details' | t }}</h1>
+    <a href="{{ routes.account_url }}" class="main-order-header-caret">
+        {% render 'icon-caret' %}
+    </a>
   </div>
 
   <div class="order-main-container-desktop">
@@ -210,11 +212,17 @@
       </div>
       <div class="order-details-container">
           <div class="order--first-part">
-              {% comment %}{%- assign order_date = order.created_at | time_tag: format: 'date_at_time' -%}{% endcomment %}
+
+              <div class="main-order-information fix-direction">
+                  <div class="flex">
+                      <span>{{ 'customer.order.title' | t: number: order.name }}</span>
+                      <span>{{ 'customer.order.total' | t }}</span>
+                  </div>
+              </div>
+
               {% assign order_date = order.created_at | date: "%d-%m-%Y" %}
               <p>{{ 'customer.order.date_html' | t: date: order_date }}</p>
               {%- if order.cancelled -%}
-                  {% comment %}{%- assign cancelled_at = order.cancelled_at | time_tag: format: 'date_at_time' -%}{% endcomment %}
                   {% assign cancelled_at = order.cancelled_at | date: "%d-%m-%Y" %}
                   <p>{{ 'customer.order.cancelled_html' | t: date: cancelled_at }}</p>
                   <p>{{ 'customer.order.cancelled_reason' | t: reason: order.cancel_reason_label }}</p>

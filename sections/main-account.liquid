@@ -86,10 +86,23 @@
                                   <tbody role="rowgroup">
                                   {%- for order in customer.orders -%}
                                       <tr role="row">
+                                          <td
+                                                  id="RowOrder"
+                                                  role="cell"
+                                                  headers="ColumnOrder"
+                                                  data-label="{{ 'customer.orders.order_number' | t }}"
+                                          >
+                                              <a
+                                                      href="{{ order.customer_url }}" class="order-number-link"
+                                                      aria-label="{{ 'customer.orders.order_number_link' | t: number: order.name }}"
+                                              >
+                                                  {{ 'customer.order.title' | t: number: order.name }}
+                                                  {% render 'icon-caret' %}
+                                              </a>
+                                          </td>
                                           <td headers="RowOrder ColumnDate" role="cell" data-label="{{ 'customer.orders.date' | t }}">
                                               <a href="{{ order.customer_url }}" class="order-date-link no-decoration">
                                                   <span>{{ 'customer.order.date_done' | t }} {{ order.created_at | date: "%d/%m/%Y" }}</span>
-                                                  {% render 'icon-caret' %}
                                               </a>
                                           </td>
                                           <td
@@ -97,7 +110,7 @@
                                                   role="cell"
                                                   data-label="{{ 'customer.orders.fulfillment_status' | t }}"
                                           >
-                                              {{ 'customer.order.fulfillment_statuses.' | append: order.fulfillment_status_label | t }}
+                                             {{ 'customer.orders.fulfillment_status' | t }}: {{ 'customer.order.fulfillment_statuses.' | append: order.fulfillment_status_label | t }}
                                           </td>
                                           <td
                                                   headers="RowOrder ColumnImages"
@@ -117,20 +130,7 @@
                                               {% endfor %}
                                           </td>
                                           <td headers="RowOrder ColumnTotal" role="cell" data-label="{{ 'customer.orders.total' | t }}">
-                                              {{ order.total_net_amount | money_with_currency }}
-                                          </td>
-                                          <td
-                                                  id="RowOrder"
-                                                  role="cell"
-                                                  headers="ColumnOrder"
-                                                  data-label="{{ 'customer.orders.order_number' | t }}"
-                                          >
-                                              <a
-                                                      href="{{ order.customer_url }}"
-                                                      aria-label="{{ 'customer.orders.order_number_link' | t: number: order.name }}"
-                                              >
-                                                  {{ 'customer.order.title' | t: number: order.name }}
-                                              </a>
+                                              {{ 'customer.orders.total' | t }}: &nbsp; {{ order.total_net_amount | money_with_currency }}
                                           </td>
                                       </tr>
                                   {%- endfor -%}
@@ -269,7 +269,7 @@
                                       role="cell"
                                       data-label="{{ 'customer.orders.fulfillment_status' | t }}"
                               >
-                                  {{ 'customer.order.fulfillment_statuses.' | append: order.fulfillment_status_label | t }}
+                                  {{ 'customer.orders.fulfillment_status' | t }}: {{ 'customer.order.fulfillment_statuses.' | append: order.fulfillment_status_label | t }}
                               </td>
                               <td headers="RowOrder ColumnTotal" role="cell" data-label="{{ 'customer.orders.total' | t }}">
                                   {{ order.total_net_amount | money_with_currency }}

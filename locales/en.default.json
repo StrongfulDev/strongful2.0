@@ -448,6 +448,7 @@
     },
     "order": {
       "title": "הזמנה מספר {{ number }}",
+      "details": "פרטי הזמנה",
       "date_done": "בוצעה בתאריך",
       "date_html": "בוצעה בתאריך {{ date }}",
       "cancelled_html": "בוטלה בתאריך {{ date }}",
@@ -455,7 +456,7 @@
       "billing_address": "כתובת לחיוב",
       "payment_status": "סטטוס תשלום",
       "shipping_address": "כתובת למשלוח",
-      "fulfillment_status": "סטטוס אריזה",
+      "fulfillment_status": "סטטוס משלוח",
       "discount": "הנחה",
       "shipping": "משלוח",
       "tax": "מיסים",
@@ -480,7 +481,7 @@
       "payment_status_partially_refunded": "הוחזר חלקית",
       "payment_status_partially_paid": "שולם חלקית",
       "fulfillment_status_fulfilled": "נשלח",
-      "fulfillment_status_unfulfilled": "לא נשלח",
+      "fulfillment_status_unfulfilled": "טרם נשלח",
       "fulfillment_status_pending": "ממתין לאריזה",
       "fulfillment_status_restocked": "מחזיר מלאי",
       "order_status_cancelled": "בוטלה",
@@ -489,7 +490,7 @@
         "Fulfilled": "נשלח",
         "Partial": "נשלח חלקית",
         "Restocked": "מחזיר מלאי",
-        "Unfulfilled": "לא נשלח"
+        "Unfulfilled": "טרם נשלח"
       }
     },
     "orders": {
@@ -498,7 +499,7 @@
       "order_number_link": "הזמנה מספר {{ number }}",
       "date": "תאריך",
       "payment_status": "סטטוס תשלום",
-      "fulfillment_status": "סטטוס אריזה",
+      "fulfillment_status": "סטטוס משלוח",
       "total": "סה״כ",
       "none": "You haven't placed any orders yet.",
       "refer": "חברה מביאה חברה"
