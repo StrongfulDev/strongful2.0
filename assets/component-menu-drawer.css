@@ -1,7 +1,6 @@
 .header__icon--menu {
     position: initial;
 	width: 3.5rem;
-	padding: 1rem;
 }
 
 .js menu-drawer > details > summary::before,
@@ -29,12 +28,12 @@ menu-drawer > details[open] > summary::before {
 }
 
 .menu-drawer {
-    position: absolute;
+    position: fixed;
     transform: translateX(-100%);
     visibility: hidden;
     z-index: 3;
     left: 0;
-    top: 100%;
+    top: var(--header-bottom-position);
     width: calc(100vw - 4rem);
     padding: 0;
     border-width: 0 var(--drawer-border-width) 0 0;
@@ -48,10 +47,9 @@ menu-drawer > details[open] > summary::before {
 }
 
 .js .menu-drawer {
-    height: calc(100vh - 100%);
-    height: calc(
-            var(--viewport-height, 100vh) - (var(--header-bottom-position, 100%))
-    );
+	height: calc((var(--vh, 1vh) * 100) - 100%);
+    /*height: calc(100vh - 100%);*/
+	height: calc((var(--vh, 1vh) * 100) - (var(--header-bottom-position, 100%)));
 }
 
 .js details[open] > .menu-drawer,

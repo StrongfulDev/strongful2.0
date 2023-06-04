@@ -339,6 +339,11 @@ div.about-us {
 	margin: 0;
 }
 
+.our-promise-content {
+	direction: rtl;
+	padding: 4rem 2rem 1rem;
+}
+
 @media screen and (min-width: 990px) {
 
 	.our-promise-container {
@@ -349,7 +354,6 @@ div.about-us {
 	}
 
 	.our-promise-content {
-		direction: rtl;
 		padding: 4rem;
 	}
 

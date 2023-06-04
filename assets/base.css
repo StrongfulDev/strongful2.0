@@ -3594,3 +3594,8 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 	position: relative;
 	z-index: 4;
 }
+
+.shopify-section.shopify-section-group-header-group:last-of-type {
+	z-index: 6;
+	position: relative;
+}

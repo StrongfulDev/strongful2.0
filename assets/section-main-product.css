@@ -1662,7 +1662,7 @@ variant-radios fieldset {
 }
 
 .productVendor {
-	font-size: calc(var(--font-body-size-medium) * 0.9);
+	font-size: calc(var(--font-body-size-medium) * 0.85);
 	margin: .5rem 0;
 }
 
