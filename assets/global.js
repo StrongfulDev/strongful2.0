@@ -366,7 +366,9 @@ class MenuDrawer extends HTMLElement {
 
   bindEvents() {
     this.querySelectorAll('summary').forEach(summary => summary.addEventListener('click', this.onSummaryClick.bind(this)));
-    this.querySelectorAll('summary').forEach(summary => summary.addEventListener('mouseenter', this.onSummaryHover.bind(this)));
+		if (window.innerWidth > 990) {
+			this.querySelectorAll('summary').forEach(summary => summary.addEventListener('mouseenter', this.onSummaryHover.bind(this)));
+		}
     this.querySelectorAll('button').forEach(button => button.addEventListener('click', this.onCloseButtonClick.bind(this)));
   }
 
@@ -536,7 +538,7 @@ class HeaderDrawer extends MenuDrawer {
   openMenuDrawer(summaryElement) {
     this.header = this.header || document.querySelector('.section-header');
     this.borderOffset = this.borderOffset || this.closest('.header-wrapper').classList.contains('header-wrapper--border-bottom') ? 1 : 0;
-    document.documentElement.style.setProperty('--header-bottom-position', `${parseInt(this.header.getBoundingClientRect().bottom - this.borderOffset)}px`);
+    document.documentElement.style.setProperty('--header-bottom-position', `${parseInt(this.header.getBoundingClientRect().bottom)}px`);
     this.header.classList.add('menu-open');
 
     setTimeout(() => {
@@ -1141,8 +1143,8 @@ window.addEventListener('DOMContentLoaded', function() {
 	let menuDrawer = document.querySelector('header-drawer');
 
 	$(".header-overlay").on('click', function() {
-		$('body').removeClass(`overflow-hidden-${menuDrawer.dataset.breakpoint}`);
-		$('html').removeClass(`overflow-hidden-${menuDrawer.dataset.breakpoint}`);
+		$('body').removeClass(`overflow-hidden-${menuDrawer.dataset.breakpoint}`).removeClass('overflow-hidden');
+		$('html').removeClass(`overflow-hidden-${menuDrawer.dataset.breakpoint}`).removeClass('overflow-hidden');
 		$(".menu-drawer-container.customizable.menu-opening").attr('open', false).removeClass('menu-opening');
 		$(this).addClass('hidden');
 	});
