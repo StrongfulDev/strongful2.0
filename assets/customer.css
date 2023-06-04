@@ -1226,6 +1226,10 @@ td.more-returns-info {
 
 @media screen and (min-width: 990px) {
 
+	.account-desktop-container {
+		display: block;
+	}
+
 	.customer:not(.account):not(.order) {
 		overflow-y: auto;
 		height: 49rem;
@@ -1289,6 +1293,41 @@ td.more-returns-info {
 
 	tfoot tr:nth-child(3) td:last-child, tfoot tr:nth-child(4) td:last-child {
 		text-align: center;
+	}
+
+	.icon-plus, .icon-minus {
+		width: 1.5rem;
+		height: 1.5rem;
+		margin-right: auto;
+	}
+
+	.main-account--desktop-order-container {
+		margin: calc(var(--grid-desktop-vertical-spacing) * 2) 0;
+		border: 1px solid var(--gradient-base-background-4);
+		border-radius: 0.4rem;
+		padding: 1rem 2rem;
+	}
+
+	.main-account--desktop-order-container p {
+		margin-bottom: var(--grid-desktop-vertical-spacing);
+	}
+
+	.main-account--desktop-order-container p:last-child {
+		margin: 0;
+	}
+
+	.main-account--desktop-order-container .plus-and-minus {
+		text-align: left;
+	}
+
+	.plus-and-minus .icon-minus {
+		display: none;
+	}
+
+	.desktop-order-container-headers {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		align-items: center;
 	}
 }
 

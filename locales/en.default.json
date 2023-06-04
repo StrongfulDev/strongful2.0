@@ -501,6 +501,14 @@
         "Restocked": "מחזיר מלאי",
         "Unfulfilled": "טרם נשלח"
       },
+      "payment_statuses": {
+        "partially_paid": "שולם חלקית",
+        "partially_refunded": "הוחזר חלקית",
+        "Paid": "שולם",
+        "pending": "ממתין לתשלום",
+        "Refunded": "הוחזר",
+        "voided": "בוטל"
+      },
       "summary": "סיכום"
     },
     "orders": {

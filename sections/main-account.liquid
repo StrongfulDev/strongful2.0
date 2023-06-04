@@ -221,9 +221,40 @@
                 <span class="toggle-orders-button toggle-orders">
                     {% render 'icon-caret' %}
                 </span>
+          <div class="orders-and-description">
+              <h2 class="desktop-orders-title"></h2>
+              <p class="desktop-orders-description"></p>
+          </div>
           {% paginate customer.orders by 6 %}
               {%- if customer.orders.size > 0 -%}
-                  <table role="table" class="order-history">
+                  {% for order in customer.orders %}
+                      <div class="main-account--desktop-order-container">
+                          <div>
+                              <div class="desktop-order-container-headers pointer">
+                                  <div class="headers headers--order-number">
+                                      <p><b>{{ 'customer.order.order_number' | t }}</b></p>
+                                      <p>{{ order.name }}</p>
+                                  </div>
+                                  <div class="headers headers--order-date">
+                                      <p><b>{{ 'customer.order.date_only' | t }}</b></p>
+                                      <p>{{ order.created_at | date: "%d-%m-%Y" }}</p>
+                                  </div>
+                                  <div class="headers headers--order-status">
+                                      <p><b>{{ 'customer.order.fulfillment_status' | t }}</b></p>
+                                      <p>{{ 'customer.order.fulfillment_statuses.' | append: order.fulfillment_status_label | t }}</p>
+                                  </div>
+                                  <div class="plus-and-minus">
+                                      {% render 'icon-plus' %}
+                                      {% render 'icon-minus' %}
+                                  </div>
+                              </div>
+                              <div class="desktop-order-data hidden">
+
+                              </div>
+                          </div>
+                      </div>
+                  {% endfor %}
+                  <table role="table" class="order-history mobile--only">
                       <caption class="visually-hidden">
                           {{ 'customer.orders.title' | t }}
                       </caption>
@@ -255,14 +286,14 @@
                                   </a>
                               </td>
                               <td headers="RowOrder ColumnDate" role="cell" data-label="{{ 'customer.orders.date' | t }}">
-                                  {{ order.created_at | time_tag: format: 'date' }}
+                                  {{ order.created_at | date: "%d/%m/%Y" }}
                               </td>
                               <td
                                       headers="RowOrder ColumnPayment"
                                       role="cell"
                                       data-label="{{ 'customer.orders.payment_status' | t }}"
                               >
-                                  {{ order.financial_status_label }}
+                                  {{ 'customer.order.payment_statuses.'| append: order.financial_status_label | t }}
                               </td>
                               <td
                                       headers="RowOrder ColumnFulfillment"

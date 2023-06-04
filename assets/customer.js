@@ -101,5 +101,10 @@ window.addEventListener('DOMContentLoaded', () => {
 		let mainTitleLength = mainTitle.innerHTML.length;
 		let slicedLength = parseInt(mainTitleLength - 3);
 		mainTitle.innerHTML = mainTitle.innerHTML.slice(slicedLength, mainTitleLength);
+	} else {
+		$(".desktop-order-container-headers").click(function() {
+			$(this).next().toggleClass("hidden");
+			$(this).find(".plus-and-minus").find("svg").toggle();
+		});
 	}
 });

@@ -4,6 +4,22 @@
 {% assign finStat = order.financial_status_label %}
 {% assign fulfillStat = order.fulfillment_status_label %}
 
+{%- liquid
+    if customer.tags contains 'swell_vip_basic'
+        assign vipTier = 'Basic'
+    elsif customer.tags contains 'swell_vip_plus'
+        assign vipTier = 'Plus'
+    elsif customer.tags contains 'swell_vip_premium'
+        assign vipTier = 'Premium'
+    elsif customer.tags contains 'swell_vip_legend'
+        assign vipTier = 'Legend'
+    elsif customer.tags contains 'ALIST'
+        assign vipTier = 'Basic'
+    else
+        assign vipTier = 'None'
+    endif
+-%}
+
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -71,7 +87,7 @@
                                       <caption class="visually-hidden">
                                           {{ 'customer.orders.title' | t }}
                                       </caption>
-                                      <thead role="rowgroup">
+                                      <thead role="rowgroup" class="hidden">
                                       <tr role="row">
                                           <th id="ColumnOrder" scope="col" role="columnheader">{{ 'customer.orders.order_number' | t }}</th>
                                           <th id="ColumnDate" scope="col" role="columnheader">{{ 'customer.orders.date' | t }}</th>
@@ -245,7 +261,7 @@
                   <caption class="visually-hidden">
                       {{ 'customer.order.title' | t: name: order.name }}
                   </caption>
-                  <thead role="rowgroup">
+                  <thead role="rowgroup" class="hidden">
                   <tr role="row">
                       <th id="ColumnProduct" scope="col" role="columnheader">{{ 'customer.order.product' | t }}</th>
                       <th id="ColumnSku" scope="col" role="columnheader">{{ 'customer.order.sku' | t }}</th>
