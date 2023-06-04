@@ -47,7 +47,11 @@
                             block: block
                     %}
             {% endcase %}
-            {{ block.settings.content }}
+            {% unless product.has_only_default_variant %}
+            <div class="extra-content">
+                {{ block.settings.content }}
+            </div>
+            {% endunless %}
             {{ additional_content }}
             {{ block.settings.page.content }}
         </div>

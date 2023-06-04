@@ -7,6 +7,7 @@
 {{ 'component-variant-size-picker.css' | asset_url | stylesheet_tag }}
 {{ 'component-variant-size-picker.js' | asset_url | script_tag }}
 
+{% unless handle == blank %}
 <div class="complete_look__slider fix-direction page-width" data-handle='{{ handle }}' {{ section.shopify_attributes }}>
     <div class="complete_look__columns">
         <div class="featured_photo">
@@ -92,6 +93,7 @@
         </ul>
     </div>
 </div>
+    {% endunless %}
 
 {% schema %}
 {
