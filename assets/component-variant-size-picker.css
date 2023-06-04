@@ -180,6 +180,7 @@
 
 .variant_modal .quick_add_modal__close {
     width: 15px;
+	height: fit-content;
     margin-right: auto;
 }
 

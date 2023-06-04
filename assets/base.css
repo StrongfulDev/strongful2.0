@@ -3156,7 +3156,7 @@ fieldset {
 }
 
 div.needsclick, button.needsclick {
-		z-index: 4 !important;
+		z-index: 1 !important;
 }
 
 .collection__title_heading .title.heading_type_2:not(:only-child) {

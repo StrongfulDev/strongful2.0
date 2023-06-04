@@ -193,7 +193,7 @@
                                                     </a>
                                                 {% endfor %}
                                             </div>
-                                            <div class="menu_images desktop-only">
+                                            <div class="menu_images">
                                                 {% if section.settings.mobile_top_image_1 != nil %}
                                                 <{% if section.settings.mobile_top_image_1_link != "" %}a href="{{ section.settings.mobile_top_image_1_link }}" {% else %}div class="desktop_links_image_1_container"{% endif %}>
                                                     {%- assign height = section.settings.mobile_top_image_1.width | divided_by: section.settings.mobile_top_image_1.aspect_ratio | round -%}
@@ -1318,7 +1318,7 @@
       "info":"t:sections.header.settings.mobile_top_section.image__1.info"
     },
     {
-      "type":"text",
+      "type":"url",
       "id":"mobile_top_image_1_link",
       "label":"t:sections.header.settings.mobile_top_section.image__1.link.label"
     },
@@ -1329,7 +1329,7 @@
       "info":"t:sections.header.settings.mobile_top_section.image__2.info"
     },
     {
-      "type":"text",
+      "type":"url",
       "id":"mobile_top_image_2_link",
       "label":"t:sections.header.settings.mobile_top_section.image__2.link.label"
     },

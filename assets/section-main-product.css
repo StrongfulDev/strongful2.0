@@ -1856,3 +1856,10 @@ li.grid--peek.slider .grid__item, li.product__media-item.grid__item.slider__slid
 		color: var(--gradient-base-background-1);
 	}
 }
+
+.product__media-list + .slider-buttons button.slider-button {
+	height: 5rem;
+	width: 3rem;
+	padding: 0;
+
+}

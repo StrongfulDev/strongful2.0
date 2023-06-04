@@ -5,11 +5,18 @@
     top: 0;
 	bottom: 0;
     width: 100vw;
-    height: 100vh;
     display: flex;
     justify-content: flex-end;
     background-color: rgba(var(--color-foreground), 0.5);
     transition: visibility var(--duration-default) ease;
+	height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+	height: calc(var(--vh, 1vh) * 100);
+	overflow-y: hidden;
+}
+
+#CartDrawer {
+	height: 100%;
+	overflow-y: hidden;
 }
 
 .drawer.active {
@@ -17,16 +24,17 @@
 }
 
 .drawer__inner {
-    height: 100%;
+	height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+	height: calc(var(--vh, 1vh) * 100);
     width: 40rem;
     max-width: calc(100vw - 3rem);
     border: 0.1rem solid rgba(var(--color-foreground), 0.2);
     border-right: 0;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     transform: translateX(100%);
     transition: transform var(--duration-default) ease;
+	overflow: hidden;
 }
 
 .drawer__inner-empty {
@@ -172,6 +180,9 @@ cart-drawer {
     right: 0;
     bottom: 0;
     left: 0;
+	height: 100%;
+	width: 100%;
+	overflow-y: hidden;
 }
 
 .cart-drawer__overlay:empty {
@@ -195,6 +206,9 @@ cart-drawer {
 .cart-drawer .cart-items, .cart-drawer tbody {
     display: block;
     width: 100%;
+	height: 60vh;
+	height: calc(var(--vh, 1vh) * 60);
+	overflow-y: scroll;
 }
 
 .cart-drawer thead {
@@ -207,7 +221,7 @@ cart-drawer {
 }
 
 cart-drawer-items {
-    overflow: auto;
+    overflow-y: scroll;
     flex: 1;
 	display: block;
 }
@@ -467,6 +481,7 @@ cart-drawer.loading .rewards-section {
 	height: 100%;
 	padding: 0 1.5rem;
 	background: var(--gradient-background);
+	overflow: hidden;
 }
 
 .cart-drawer__footer {
@@ -475,10 +490,6 @@ cart-drawer.loading .rewards-section {
 
 .cart-item__details .caption-with-letter-spacing {
 	display: inline-block;
-}
-
-cart-drawer-items {
-	height: calc(100vh - 273px);
 }
 
 cart-drawer-items.is-empty {

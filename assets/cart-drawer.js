@@ -57,11 +57,6 @@ class CartDrawer extends HTMLElement {
                     this.querySelector(".drawer__inner") ||
                     this.querySelector(".drawer__close");
                 trapFocus(containerToTrapFocusOn, focusElement);
-								let cartHeaderHeight = document.querySelector('.drawer__header').offsetHeight;
-								let cartFooterHeight = document.querySelector('.drawer__footer').offsetHeight;
-								let heightToDecrease = cartHeaderHeight + cartFooterHeight;
-								let drawer = this.querySelector("cart-drawer-items");
-								drawer.style.height = `calc(100vh - ${heightToDecrease}px)`; // 100vh - header height - footer height
             },
             {once: true}
         );
