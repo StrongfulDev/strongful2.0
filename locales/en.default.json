@@ -495,6 +495,8 @@
       "fulfillment_status_restocked": "מחזיר מלאי",
       "order_status_cancelled": "בוטלה",
       "shipping_company": "קרגו",
+      "item_count_desktop": "כמות פריטים",
+      "change_address": "אם ברצונך לשנות את כתובת המשלוח של ההזמנה שלך, את יכולה לעשות זאת לפני שהיא נארזת",
       "fulfillment_statuses": {
         "Fulfilled": "נשלח",
         "Partial": "נשלח חלקית",
