@@ -141,6 +141,19 @@
 	direction: ltr;
 }
 
+.complete_look__item .product_variants .size_variant_button_container label {
+	position: relative;
+}
+
+.complete_look__item .loading-overlay {
+	width: 100%;
+	height: 100%;
+}
+
+.complete_look__item span.loading-overlay__spinner {
+	margin: 0;
+}
+
 @media screen and (min-width: 990px) {
 	.complete_look__slider {
 		padding: 0 5rem;

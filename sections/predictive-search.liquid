@@ -1,5 +1,7 @@
-
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
 {{ 'component-variant-size-picker.css' | asset_url | stylesheet_tag }}
+{{ 'component-variant-size-picker.js' | asset_url | script_tag }}
 
 {%- if predictive_search.performed -%}
 {% assign first_column_results_size = predictive_search.resources.queries.size

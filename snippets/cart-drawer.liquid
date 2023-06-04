@@ -436,8 +436,9 @@
                     <div class="cart-drawer__footer" {{ block.shopify_attributes }}>
                         {% for item in cart.items %}
                         {% assign itemComparePrice = item.product.compare_at_price | minus: item.product.price %}
+                            {% assign itemOriginalPrice = item.original_line_price %}
                         {% assign cartOriginalTotalPrice = cart.original_total_price %}
-                        {% assign customCartOriginalTotalPrice = cartOriginalTotalPrice | plus: itemComparePrice %}
+                            {% assign customCartOriginalTotalPrice = cartOriginalTotalPrice | plus: itemComparePrice | plus: itemOriginalPrice %}
                         {% assign discount = customCartOriginalTotalPrice | minus: cart.total_price %}
                         <div class="totals" role="status">
                             {% if discount > 0 %}

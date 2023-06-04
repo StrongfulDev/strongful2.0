@@ -1341,7 +1341,7 @@ details.mobile-facets__details {
   margin-left: 0;
 }
 
-.custom-active-facets + .custom-active-facets {
+.custom-active-facets:not(:last-child) {
 	display: none;
 }
 

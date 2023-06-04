@@ -64,7 +64,7 @@
             >
                 {%- if card_product.featured_media -%}
                     <div class="card__media">
-                        <a href="{{ card_product.url }}" data-tags="{{ card_product.tags }}">
+                        <a href="{{ card_product.url }}">
                             {% unless card_product.tags contains 'plusSizeProduct' %}
                             <div class="media media--transparent media--hover-effect">
                                 {% if image_count <= 2 or true -%}
