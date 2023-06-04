@@ -401,7 +401,7 @@
 
     .list-menu--inline {
         direction: rtl;
-        column-gap: 3rem;
+        column-gap: 3.6rem;
     }
 
     summary.list-menu__item {

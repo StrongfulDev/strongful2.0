@@ -254,6 +254,10 @@ input {
     display: none !important;
 }
 
+html {
+	overflow-x: hidden;
+}
+
 html.no-js .no-js:not(html) {
     display: block !important;
 }
@@ -1171,7 +1175,7 @@ summary::-webkit-details-marker {
     }
 
     .slider--tablet.grid--peek .grid__item {
-        box-sizing: content-box;
+        box-sizing: border-box;
         margin: 0;
     }
 }
@@ -1222,7 +1226,7 @@ summary::-webkit-details-marker {
     }
 
     .grid--peek.slider--mobile .grid__item {
-        box-sizing: content-box;
+        box-sizing: border-box;
         margin: 0;
     }
 

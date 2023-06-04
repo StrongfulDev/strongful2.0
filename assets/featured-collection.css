@@ -1,8 +1,4 @@
-.variant_modal .product_details, .variant_modal .product_size_picker__heading,
-.collection span.loading-overlay {
-	width: 90%;
-}
 
-.collection .product-grid {
+.slider {
 	overflow-y: hidden;
 }
