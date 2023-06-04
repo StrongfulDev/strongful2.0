@@ -509,8 +509,12 @@ a.no-decoration {
 .order tfoot tr:last-of-type td,
 .order tfoot tr:last-of-type th {
   font-size: 2.2rem;
-  padding-top: 1.5rem;
-  padding-bottom: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.customer.order table {
+	border-bottom: none;
 }
 
 @media screen and (min-width: 750px) {
@@ -618,7 +622,7 @@ a.no-decoration {
 
 .order svg {
   width: 1.5rem;
-  color: rgb(var(--color-base-accent-2));
+  color: rgb(var(--color-base-accent-1));
   margin-right: 0.5rem;
 }
 
@@ -1127,15 +1131,19 @@ a.order-number-link .icon {
 }
 
 .main-order-header-container {
-	position: relative;
-	padding-left: 2rem;
-	padding-right: 2rem;
+	position: sticky;
+	padding: 2rem;
 	max-width: var(--page-width);
+	top: 0;
+	background: var(--gradient-background);
+	z-index: 11;
+	border-bottom: 1px solid var(--gradient-base-background-3);
 }
 
 .main-order-header-container h1 {
 	font-size: var(--font-body-size-large);
 	text-align: center;
+	margin: 0;
 }
 
 .main-order-header-caret {
@@ -1155,7 +1163,7 @@ div.customer.order {
 	padding: 1rem 2rem;
 }
 
-.main-order-information .flex {
+.main-order-information .flex, td.more-returns-info .flex, .order-summary .flex {
 	justify-content: space-between;
 }
 
@@ -1169,6 +1177,7 @@ a.underlined-link {
 
 .order-line-item-link {
 	display: block;
+	margin: auto;
 }
 
 .order-line-item-link--image {
@@ -1177,7 +1186,7 @@ a.underlined-link {
 	display: block;
 }
 
-.customer.order table tr {
+.customer.order table tbody tr {
 	display: grid;
 	grid-template-columns: 1fr 2fr;
 	grid-template-rows: repeat(6, auto);
@@ -1186,9 +1195,34 @@ a.underlined-link {
 
 .customer.order tbody td:first-of-type {
 	grid-row: 1 / -1;
+	padding-top: 1rem;
 }
 
+td.more-returns-info {
+	display: block;
+	grid-column: 1 / -1;
+}
 
+.more-returns-info .flex + div {
+	margin-top: 1rem;
+}
+
+.icon-caret.rotate-arrow {
+	transform: rotate(180deg);
+}
+
+.customer tfoot td:first-of-type, .customer tfoot td {
+	display: block;
+}
+
+.customer.order tfoot tr td.order-summary:first-of-type {
+	padding-bottom: 1rem;
+}
+
+.customer.order tfoot tr:first-of-type td.order-summary-totals {
+	padding-top: 1rem;
+	border-top: 1px solid var(--gradient-base-background-3);
+}
 
 @media screen and (min-width: 990px) {
 

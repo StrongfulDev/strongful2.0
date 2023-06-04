@@ -1,4 +1,5 @@
 {{ 'customer.css' | asset_url | stylesheet_tag }}
+{{ 'order.js' | asset_url | script_tag }}
 
 {% assign finStat = order.financial_status_label %}
 {% assign fulfillStat = order.fulfillment_status_label %}
@@ -233,7 +234,9 @@
                   <div class="flex">
                       <p>{{ 'customer.order.items' | t }}: <b>{{ order.line_items.size }}</b></p>
                       {% if order.fulfillment_status == 'fulfilled' %}
-                          <a href="/a/return?email={{ order.email }}&orderId={{ order.name }}" class="underlined-link">החזרות והחלפות</a>
+                          <a href="/a/return?email={{ order.email }}&orderId={{ order.name }}" class="underlined-link">
+                              {{ 'customer.order.returns_and_exchanges' | t }}
+                          </a>
                       {% endif %}
                   </div>
               </div>
@@ -329,10 +332,7 @@
                                   {%- if line_item.line_level_discount_allocations != blank -%}
                                       <ul role="list" aria-label="{{ 'customer.order.discount' | t }}">
                                           {%- for discount_allocation in line_item.line_level_discount_allocations -%}
-                                              <li>
-                                                  <svg aria-hidden="true" focusable="false" viewBox="0 0 12 12">
-                                                      <use href="#icon-discount" />
-                                                  </svg>
+                                              <li class="discounts__discount">
                                                   {{- discount_allocation.discount_application.title }} (-
                                                   {{- discount_allocation.amount | money -}}
                                                   )
@@ -343,7 +343,7 @@
 
                                   {%- if line_item.fulfillment -%}
                                       <div class="fulfillment">
-                                          {%- assign created_at = line_item.fulfillment.created_at | time_tag: format: 'date' -%}
+                                          {%- assign created_at = line_item.fulfillment.created_at | date: "%d/%m/%Y" -%}
                                           <span>{{ 'customer.order.fulfilled_at_html' | t: date: created_at }}</span>
 
                                           {%- if line_item.fulfillment.tracking_url -%}
@@ -365,31 +365,25 @@
                                   {%- endif -%}
                               </div>
                           </td>
-                          <td
-                                  headers="Row{{ line_item.key }} ColumnSku"
-                                  role="cell"
-                                  data-label="{{ 'customer.order.sku' | t }}"
-                          >
-                              {{ line_item.sku }}
-                          </td>
+                          {% comment %}
                           <td
                                   headers="Row{{ line_item.key }} ColumnPrice"
                                   role="cell"
                                   data-label="{{ 'customer.order.price' | t }}"
                           >
                               {%- if line_item.original_price != line_item.final_price or line_item.unit_price_measurement -%}
-                                  <dl>
+                                  <dl class="flex price__sale price--on-sale">
                                       {%- if line_item.original_price != line_item.final_price -%}
                                           <dt>
                                               <span class="visually-hidden">{{ 'products.product.price.regular_price' | t }}</span>
                                           </dt>
-                                          <dd class="regular-price">
+                                          <dd class="regular-price price-item--regular">
                                               <s>{{ line_item.original_price | money }}</s>
                                           </dd>
                                           <dt>
                                               <span class="visually-hidden">{{ 'products.product.price.sale_price' | t }}</span>
                                           </dt>
-                                          <dd>
+                                          <dd class="price-item price-item--sale">
                                               <span>{{ line_item.final_price | money }}</span>
                                           </dd>
                                       {%- else -%}
@@ -427,30 +421,41 @@
                                   <span>{{ line_item.final_price | money }}</span>
                               {%- endif -%}
                           </td>
+                          {% endcomment %}
                           <td
                                   headers="Row{{ line_item.key }} ColumnQuantity"
                                   role="cell"
                                   data-label="{{ 'customer.order.quantity' | t }}"
                           >
-                              {{ line_item.quantity }}
+                              {{ 'customer.order.quantity' | t }} {{ line_item.quantity }}
                           </td>
+                          {% if line_item.product.tags contains 'noReturns' %}
+                          <td
+                                  headers="Row{{ line_item }} ColumnReturns"
+                                  role="cell"
+                                  data-label="{{ 'customer.order.returns' | t }}"
+                                  class="no-returns-table-data fulfillment"
+                          >
+                              {{ 'customer.order.no_returns' | t }}
+                          </td>
+                          {% endif %}
                           <td
                                   headers="Row{{ line_item.key }} ColumnTotal"
                                   role="cell"
                                   data-label="{{ 'customer.order.total' | t }}"
                           >
                               {%- if line_item.original_line_price != line_item.final_line_price -%}
-                                  <dl>
+                                  <dl class="flex price__sale price--on-sale">
                                       <dt>
                                           <span class="visually-hidden">{{ 'products.product.price.regular_price' | t }}</span>
                                       </dt>
-                                      <dd class="regular-price">
+                                      <dd class="regular-price price-item--regular">
                                           <s>{{ line_item.original_line_price | money }}</s>
                                       </dd>
                                       <dt>
                                           <span class="visually-hidden">{{ 'products.product.price.sale_price' | t }}</span>
                                       </dt>
-                                      <dd>
+                                      <dd class="price-item price-item--sale">
                                           <span>{{ line_item.final_line_price | money }}</span>
                                       </dd>
                                   </dl>
@@ -458,16 +463,72 @@
                                   {{ line_item.original_line_price | money }}
                               {%- endif -%}
                           </td>
+                          {% if line_item.product.tags contains 'noReturns' %}
+                          <td class="more-returns-info">
+                              <div class="flex">
+                                  <p>{{ 'customer.order.returns_and_exchanges' | t }}</p>
+                                  {% render 'icon-caret' %}
+                              </div>
+                              <div class="hidden">
+                                  <p>{{ 'customer.order.returns_and_exchanges_info' | t }}</p>
+                                  <a href="/blogs/policies/החזרות-והחלפות" class="underlined-link">{{ 'customer.order.return_policy' | t }}</a>
+                              </div>
+                          </td>
+                          {% endif %}
                       </tr>
                   {%- endfor -%}
                   </tbody>
                   <tfoot role="rowgroup">
                   <tr role="row">
-                      <td id="RowSubtotal" role="rowheader" scope="row" colspan="4">
-                          {{ 'customer.order.subtotal' | t }}
+                      <td id="RowOrderNumber" role="rowheader" scope="row" colspan="4">
+                          <p><b>{{ 'customer.order.order_number' | t }}</b></p>
+                          <p>{{ order.name }}</p>
                       </td>
-                      <td headers="RowSubtotal" role="cell" data-label="{{ 'customer.order.subtotal' | t }}">
-                          {{ order.line_items_subtotal_price | money }}
+                      <td id="RowOrderTransactionDate" role="rowheader" scope="row" colspan="4">
+                          <p><b>{{ 'customer.order.transaction_date' | t }}</b></p>
+                          <p>{{ order.created_at | date: "%d/%m/%Y" }}</p>
+                      </td>
+                      <td id="RowOrderBilling" role="rowheader" scope="row" colspan="4">
+                          <div>
+                              <p><b>{{ 'customer.order.billing_address' | t }}</b></p>
+                              {{ order.billing_address | format_address }}
+                          </div>
+                      </td>
+                      <td id="RowOrderShipping" role="rowheader" scope="row" colspan="4">
+                          <div>
+                              <p><b>{{ 'customer.order.shipping_address' | t }}</b></p>
+                              {{ order.shipping_address | format_address }}
+                          </div>
+                      </td>
+                      {%- if order.total_refunded_amount > 0 -%}
+                          <td
+                                  headers="RowTotalRefund"
+                                  role="cell"
+                                  colspan="4"
+                                  data-label="{{ 'customer.order.total_refunded' | t }}"
+                          >
+                              <p><b>{{ 'customer.order.total_refunded' | t }}</b></p>
+                              <p>-{{ order.total_refunded_amount | money_with_currency }}</p>
+                          </td>
+                      {%- endif -%}
+                      <td class="order-summary" id="RowSubtotal" role="rowheader" scope="row" colspan="4">
+                          <p><b>{{ 'customer.order.summary' | t }}</b></p>
+                          <div class="flex">
+                              <p>{{ 'customer.order.subtotal' | t }} ({{ order.line_items.size }})</p>
+                              <p>{{ order.line_items_subtotal_price | money }}</p>
+                          </div>
+                          <div class="flex">
+                              {%- for shipping_method in order.shipping_methods -%}
+                                  <p>{{ 'customer.order.shipping' | t }} ({{ shipping_method.title }})</p>
+                                  <p>{{ shipping_method.price | money }}</p>
+                              {%- endfor -%}
+                          </div>
+                      </td>
+                      <td class="order-summary order-summary-totals" id="RowTotal" role="rowheader" scope="row" colspan="3">
+                          <div class="flex">
+                              <p><b>{{ 'customer.order.total' | t }}</b></p>
+                              <p><b>{{ order.total_net_amount | money_with_currency }}</b></p>
+                          </div>
                       </td>
                   </tr>
                   {%- if order.cart_level_discount_applications != blank -%}
@@ -496,20 +557,6 @@
                           {%- endfor -%}
                       </tr>
                   {%- endif -%}
-                  {%- for shipping_method in order.shipping_methods -%}
-                      <tr role="row">
-                          <td id="RowShipping" role="rowheader" scope="row" colspan="4">
-                              {{ 'customer.order.shipping' | t }} ({{ shipping_method.title }})
-                          </td>
-                          <td
-                                  headers="RowShipping"
-                                  role="cell"
-                                  data-label="{{ 'customer.order.shipping' | t }} ({{ shipping_method.title }})"
-                          >
-                              {{ shipping_method.price | money }}
-                          </td>
-                      </tr>
-                  {%- endfor -%}
                   {% comment %}
                   {%- for tax_line in order.tax_lines -%}
                       <tr role="row">
@@ -535,67 +582,35 @@
                           </td>
                       </tr>
                   {%- endif -%}
-                  {%- if order.total_refunded_amount > 0 -%}
-                      <tr role="row">
-                          <td id="RowTotalRefund" role="rowheader" scope="row" colspan="3">
-                              {{ 'customer.order.total_refunded' | t }}
-                          </td>
-                          <td
-                                  headers="RowTotalRefund"
-                                  role="cell"
-                                  colspan="2"
-                                  data-label="{{ 'customer.order.total_refunded' | t }}"
-                          >
-                              -{{ order.total_refunded_amount | money_with_currency }}
-                          </td>
-                      </tr>
-                  {%- endif -%}
-                  <tr role="row">
-                      <td id="RowTotal" role="rowheader" scope="row" colspan="3">{{ 'customer.order.total' | t }}</td>
-                      <td headers="RowTotal" role="cell" colspan="2" data-label="{{ 'customer.order.total' | t }}">
-                          {{ order.total_net_amount | money_with_currency }}
-                      </td>
-                  </tr>
                   </tfoot>
               </table>
           </div>
-          <div class="order--second-part">
-              <div>
-                  <h2>{{ 'customer.order.billing_address' | t }}</h2>
-                  <p>
-                      <strong>{{ 'customer.order.payment_status' | t }}:</strong>
-                      {% case finStat %}
-                          {% when 'paid' %}
-                              {{ 'customer.order.payment_status_paid' | t }}
-                          {% when 'pending' %}
-                              {{ 'customer.order.payment_status_pending' | t }}
-                          {% when 'refunded' %}
-                              {{ 'customer.order.payment_status_refunded' | t }}
-                          {% when 'voided' %}
-                              {{ 'customer.order.payment_status_voided' | t }}
-                          {% else %}
-                              {{ 'customer.order.payment_status_unpaid' | t }}
-                      {% endcase %}
-                  </p>
-                  {{ order.billing_address | format_address }}
+      </div>
+      <div class="order--second-part page-width">
+          <div class="main-account-info-container main-account-info-container--contact">
+              <p>{{ 'customer.account.contact.title' | t }}</p>
+              <div class="contact-icons-container">
+                  <div class="contact-icon-child">
+                      <a href="mailto:{{ shop.email }}">
+                          {% render 'envelope' %}
+                      </a>
+                      <p class="contact-text">{{ 'customer.account.contact.email' | t }}</p>
+                  </div>
+                  <div class="contact-icon-child">
+                      <a href="tel:{{ shop.phone }}">
+                          {% render 'telephone' %}
+                      </a>
+                      <p class="contact-text">{{ 'customer.account.contact.phone' | t }}</p>
+                  </div>
               </div>
-              <div>
-                  <h2>{{ 'customer.order.shipping_address' | t }}</h2>
-                  <p>
-                      <strong>{{ 'customer.order.fulfillment_status' | t }}: </strong>
-                      {% case fulfillStat %}
-                          {% when 'Fulfilled' %}
-                              {{ 'customer.order.fulfillment_status_fulfilled' | t }}
-                          {% when 'Complete' %}
-                          {{ 'customer.order.fulfillment_status_fulfilled' | t }}
-                          {% when 'Partial' %}
-                              {{ 'customer.order.fulfillment_status_partial' | t }}
-                          {% else %}
-                              {{ 'customer.order.fulfillment_status_unfulfilled' | t }}
-                      {% endcase %}
-                  </p>
-                  {{ order.shipping_address | format_address }}
-              </div>
+              <p class="business-hours">{{ 'customer.account.contact.business-hours' | t }}</p>
+          </div>
+
+          <div class="container-menu-item container-menu-item--logout">
+              <p>לא {{ customer.first_name }}?</p>
+              <a class="logout-link" href="{{ routes.account_logout_url }}">
+                  {{ 'customer.log_out' | t }}
+              </a>
           </div>
       </div>
   </div>

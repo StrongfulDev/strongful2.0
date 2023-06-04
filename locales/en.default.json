@@ -448,8 +448,12 @@
     },
     "order": {
       "title": "הזמנה מספר {{ number }}",
-      "order_number": "הזמנה מספר",
+      "order_number": "מספר הזמנה",
       "details": "פרטי הזמנה",
+      "returns_and_exchanges": "החלפות והחזרות",
+      "returns_and_exchanges_info": "לקבלת מידע נוסף על החלפות והחזרות, אנא צרי קשר",
+      "return_policy": "מדיניות החזרות",
+      "transaction_date": "תאריך העסקה",
       "date_done": "בוצעה בתאריך",
       "date_html": "תאריך {{ date }}",
       "date_only": "תאריך",
@@ -469,6 +473,7 @@
       "price": "מחיר",
       "quantity": "כמות",
       "total": "סה״כ",
+      "no_returns": "לא ניתן להחזיר את פריט זה",
       "total_refunded": "סה״כ זיכויים",
       "fulfilled_at_html": "נארז בתאריך {{ date }}",
       "track_shipment": "מעקב משלוח",
@@ -495,7 +500,8 @@
         "Partial": "נשלח חלקית",
         "Restocked": "מחזיר מלאי",
         "Unfulfilled": "טרם נשלח"
-      }
+      },
+      "summary": "סיכום"
     },
     "orders": {
       "title": "ההזמנות שלי",
@@ -678,7 +684,7 @@
         "go_back_to_cart_button_label": "חזרה לסל"
       },
       "order_summary": {
-        "title": "סיכום הזמנה",
+        "title": "סיכום",
         "order_name_label": "הזמנה {{name}}",
         "shopping_cart_label": "סל הקניות",
         "discount_title": "הנחה",
