@@ -1126,13 +1126,16 @@ a.order-number-link .icon {
 	font-size: var(--font-body-size-medium);
 }
 
+.main-order-header-container {
+	position: relative;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	max-width: var(--page-width);
+}
+
 .main-order-header-container h1 {
 	font-size: var(--font-body-size-large);
 	text-align: center;
-}
-
-.main-order-header-container {
-	position: relative;
 }
 
 .main-order-header-caret {
@@ -1141,6 +1144,51 @@ a.order-number-link .icon {
 	transform: translateY(-50%) rotate(90deg);
 	top: 50%;
 }
+
+div.customer.order {
+	max-width: auto;
+	padding: 0;
+}
+
+.main-order-information {
+	background: var(--gradient-base-background-3);
+	padding: 1rem 2rem;
+}
+
+.main-order-information .flex {
+	justify-content: space-between;
+}
+
+.main-order-information .flex p {
+	margin: 0 0 1.5rem;
+}
+
+a.underlined-link {
+	text-decoration: underline;
+}
+
+.order-line-item-link {
+	display: block;
+}
+
+.order-line-item-link--image {
+	width: 100%;
+	height: fit-content;
+	display: block;
+}
+
+.customer.order table tr {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-template-rows: repeat(6, auto);
+	column-gap: calc(var(--grid-desktop-vertical-spacing) * 2);
+}
+
+.customer.order tbody td:first-of-type {
+	grid-row: 1 / -1;
+}
+
+
 
 @media screen and (min-width: 990px) {
 
@@ -1186,6 +1234,7 @@ a.order-number-link .icon {
 		position: static;
 		transform: translateX(0);
 		max-height: 100vh;
+		z-index: 2;
 	}
 
 	.toggle-orders-button, .main-account-info-container--contact, .container-menu-item--logout {

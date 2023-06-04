@@ -1,19 +1,59 @@
 {
   "sections": {
+    "958ebc39-a682-4c5c-8046-c55413a29f20": {
+      "type": "slideshow",
+      "blocks": {
+        "template--15943402684556__958ebc39-a682-4c5c-8046-c55413a29f20-16858614349a3d1164-0": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/desk_collection.png",
+            "mobile_image": "shopify:\/\/shop_images\/6da0ad68ebf2fd1559d4390d6bca8075_1973028c-4c41-4473-95eb-9025a072ca3e.gif",
+            "heading": "",
+            "whole_slide_link": "shopify:\/\/collections\/סטים",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--15943402684556__958ebc39-a682-4c5c-8046-c55413a29f20-16858614349a3d1164-0"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": false,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
     "slideshow": {
       "type": "slideshow",
       "blocks": {
         "slideshow-block-0": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Banner_Desktop_59036ce8-d53e-4d2e-acbb-d3be708f40c1.jpg",
-            "top_pos": 2,
-            "mobile_image": "shopify:\/\/shop_images\/Banner_Mobile_ae34d2e5-eddf-41c3-a5e6-80b193506dab.jpg",
+            "image": "shopify:\/\/shop_images\/4_584def6c-f058-476f-982f-ba32a927b9d0.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/2G6A0904.jpg",
             "heading": "",
+            "whole_slide_link": "",
             "heading_size": "h1",
             "subheading": "",
             "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/upto30",
+            "link": "shopify:\/\/collections\/סטים",
             "button_style_secondary": false,
             "box_align": "middle-center",
             "show_text_box": false,
@@ -144,6 +184,7 @@
     }
   },
   "order": [
+    "958ebc39-a682-4c5c-8046-c55413a29f20",
     "slideshow",
     "ecf1e0a5-0973-4674-ac5b-b5370ff1bae1",
     "our_collection_list"

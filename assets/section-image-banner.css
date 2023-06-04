@@ -473,7 +473,8 @@
 	}
 
 	.button--primary {
-		padding: 1.5rem 4rem;
+		padding: 1rem 4rem;
+		font-size: var(--font-body-size-large);
 	}
 
 	.button--primary:hover {

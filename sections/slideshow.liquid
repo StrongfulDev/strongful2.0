@@ -95,7 +95,10 @@
                     opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }};
                 }
             </style>
-            <div class="slideshow__slide grid__item grid--1-col slider__slide"
+            {% if block.settings.whole_slide_link != blank %}
+                <a href="{{ block.settings.whole_slide_link }}" class="whole-slide-link">
+            {% endif %}
+                <div class="slideshow__slide grid__item grid--1-col slider__slide"
                  id="Slide-{{ section.id }}-{{ forloop.index }}"
                     {{ block.shopify_attributes }}
                  role="group"
@@ -146,6 +149,9 @@
                     </div>
                 </div>
             </div>
+            {% if block.settings.whole_slide_link != blank %}
+                </a>
+            {% endif %}
         {%- endfor -%}
     </div>
 
@@ -332,16 +338,6 @@
           "label": "t:sections.slideshow.blocks.slide.settings.image.label"
         },
         {
-          "type": "range",
-          "id": "top_pos",
-          "label": "t:sections.slideshow.blocks.slide.settings.top_position.label",
-          "min": 0,
-          "max": 100,
-          "step": 1,
-          "unit": "%",
-          "default": 0
-        },
-        {
           "type": "image_picker",
           "id": "mobile_image",
           "label": "t:sections.slideshow.blocks.slide.settings.mobile_image.label"
@@ -351,6 +347,11 @@
           "id": "heading",
           "default": "Image slide",
           "label": "t:sections.slideshow.blocks.slide.settings.heading.label"
+        },
+        {
+          "type": "url",
+          "id": "whole_slide_link",
+          "label": "t:sections.slideshow.blocks.slide.settings.whole_slide_link.label"
         },
         {
           "type": "select",

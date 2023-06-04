@@ -203,7 +203,7 @@
       "clear_all": "איפוס",
       "from": "From",
       "filter_and_sort": "פילטר",
-      "filter_by_label": "פילטר",
+      "filter_by_label": "פילטר:",
       "filter_button": "פילטר",
       "filters_selected": {
         "one": "{{ count }} selected",
@@ -448,14 +448,18 @@
     },
     "order": {
       "title": "הזמנה מספר {{ number }}",
+      "order_number": "הזמנה מספר",
+      "details": "פרטי הזמנה",
       "date_done": "בוצעה בתאריך",
-      "date_html": "בוצעה בתאריך {{ date }}",
+      "date_html": "תאריך {{ date }}",
+      "date_only": "תאריך",
       "cancelled_html": "בוטלה בתאריך {{ date }}",
       "cancelled_reason": "סיבת ביטול: {{ reason }}",
+      "items": "פריטים",
       "billing_address": "כתובת לחיוב",
       "payment_status": "סטטוס תשלום",
       "shipping_address": "כתובת למשלוח",
-      "fulfillment_status": "סטטוס אריזה",
+      "fulfillment_status": "סטטוס משלוח",
       "discount": "הנחה",
       "shipping": "משלוח",
       "tax": "מיסים",
@@ -550,10 +554,10 @@
       "message_html": "תוסיפי <span class=\"rewards__missing_amount\"><\/span> שח ותקבלי בקבוק חינם"
     },
     "hundred_discount": {
-      "message_html": "הוסיפי עוד <span class=\"rewards__missing_amount\"></span> וקבלי 100₪ הנחה"
+      "message_html": "הוסיפי עוד <span class=\"rewards__missing_amount\"><\/span> וקבלי 100₪ הנחה"
     },
     "two_hundred_discount": {
-      "message_html": "הוסיפי עוד <span class=\"rewards__missing_amount\"></span> וקבלי 200₪ הנחה"
+      "message_html": "הוסיפי עוד <span class=\"rewards__missing_amount\"><\/span> וקבלי 200₪ הנחה"
     }
   },
   "shopify": {
