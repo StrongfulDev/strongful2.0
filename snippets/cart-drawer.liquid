@@ -142,7 +142,7 @@
                                         <tbody role="rowgroup">
                                         {%- for item in cart.items -%}
                                             <tr id="CartDrawer-Item-{{ item.index | plus: 1 }}" data-index="{{ item.index | plus: 1 }}" data-product-id="{{ item.product.id }}" data-id="{{ item.id }}" class="cart-item"
-                                                role="row">
+                                                role="row" data-price="{{ item.variant.price }}">
                                                 <td class="cart-item__media" role="cell"
                                                     headers="CartDrawer-ColumnProductImage">
                                                     {% if item.image %}
@@ -435,7 +435,7 @@
 
                     <div class="cart-drawer__footer" {{ block.shopify_attributes }}>
                         {% for item in cart.items %}
-                        {% assign itemComparePrice = item.product.compare_at_price | minus: item.product.price %}
+                        {% assign itemComparePrice = item.product.compare_at_price | minus: item.variant.price %}
                             {% assign itemOriginalPrice = item.original_line_price %}
                         {% assign cartOriginalTotalPrice = cart.original_total_price %}
                             {% assign customCartOriginalTotalPrice = cartOriginalTotalPrice | plus: itemComparePrice | plus: itemOriginalPrice %}
