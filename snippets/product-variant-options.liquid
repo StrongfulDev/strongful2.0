@@ -22,6 +22,10 @@
     assign variants_option3_arr = product.variants | map: 'option3'
 
     assign product_form_id = 'product-form-' | append: section.id
+
+    for variant in product.variants
+        assign variant_id = variant.id
+        endfor
 -%}
 
 {%- for value in option.values -%}
@@ -53,6 +57,7 @@
                     name="{{ option.name }}"
                     value="{{ value | escape }}"
                     form="{{ product_form_id }}"
+                    data-variant-id="{{ variant_id }}"
                     {% comment %}
                     {% if option.selected_value == value %}
                         checked
