@@ -1,0 +1,29 @@
+name: Lighthouse Check
+
+on:
+    push:
+        branches:
+            - development
+            - master
+
+jobs:
+    lighthouse:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
+            - name: Audit URLs using Lighthouse
+              uses: treosh/lighthouse-ci-action@v10
+              with:
+                  urls: |
+                      http://localhost
+                  uploadArtifacts: true # save results as an action artifacts
+                  temporaryPublicStorage: true # upload lighthouse report to the temporary storage
+            - name: Comment on pull request
+              uses: unsplash/comment-on-pr@v1
+              with:
+                  message: |
+                      Lighthouse report:
+                      ${{ steps.lighthouse.outputs.report }}
+            #   env:
+            #       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
