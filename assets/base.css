@@ -3538,6 +3538,11 @@ div#returnGoCartWidget {
 	display: none !important;
 }
 
+#returnGoAssistant .ReturnGO_Steps-module_line, #returnGoCartWidget .ReturnGO_Steps-module_line, #returnGoAccountWidget .ReturnGO_Steps-module_line {
+	right: 70% !important;
+	left: auto !important;
+}
+
 /*   ReturnGO Styling end     */
 
 body.trigger-position-right #enable-toolbar-trigger {
