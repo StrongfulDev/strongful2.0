@@ -102,7 +102,7 @@
                         {% liquid
                             assign alt_items_array = media.alt | split: " | "
                             assign alt = alt_items_array[0]
-                            assign image_model_size = alert_items_array[1]
+                            assign image_model_size = alt_items_array[1]
                         %}
                         <li
                                 id="Slide-{{ section.id }}-{{ media.id }}{{ id_append }}"

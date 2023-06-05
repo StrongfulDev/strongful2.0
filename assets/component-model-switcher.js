@@ -1,11 +1,11 @@
 const arrowIcon = document.querySelector(".model-switch-button .icon-caret");
-console.log(arrowIcon);
 
 $(document).ready(function () {
 	hideUnAvailableModels();
 
 	$('.model-switcher__item input').change(function () {
 		const modelSize = $(this).val();
+		console.log(modelSize)
 		if (modelSize) {
 			changeModel(modelSize);
 			updateVariantRadios(modelSize);
@@ -26,6 +26,7 @@ $(document).ready(function () {
 
 function hideUnAvailableModels() {
 	const availableSizes = getAvailableSizes();
+	console.log(availableSizes)
 
 	if (availableSizes.length === 0) {
 		$('.model-switcher').hide();
@@ -81,7 +82,7 @@ function changeModel(modelSize) {
 
 function updateVariantRadios(modelSize) {
 	const button = $(`variant-radios input[name="Size"][value="${modelSize}"], variant-radios input[name="מידה"][value="${modelSize}"]`)
-	button.prop('checked', true);
+	button.click();
 }
 
 function updateModelSwitch(modelSize) {

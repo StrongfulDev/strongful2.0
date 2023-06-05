@@ -3155,7 +3155,7 @@ fieldset {
 	min-height: calc(3.5rem + var(--buttons-border-width) * 2);
 }
 
-div.needsclick, button.needsclick {
+button.needsclick {
 		z-index: 1 !important;
 }
 
@@ -3532,6 +3532,10 @@ label .ReturnGO_ReturnItemProposition-module_open, .ReturnGO_ReturnItemPropositi
 
 #enable-modal, #enable-reader {
 	display: none;
+}
+
+div#returnGoCartWidget {
+	display: none !important;
 }
 
 /*   ReturnGO Styling end     */

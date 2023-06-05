@@ -206,8 +206,8 @@ cart-drawer {
 .cart-drawer .cart-items, .cart-drawer tbody {
     display: block;
     width: 100%;
-	height: 60vh;
-	height: calc(var(--vh, 1vh) * 60);
+	height: 64vh;
+	height: calc(var(--vh, 1vh) * 64);
 	overflow-y: scroll;
 }
 
@@ -566,5 +566,10 @@ cart-drawer-items.is-empty {
 	.cart-drawer .cart-items .cart-item__quantity {
 		align-self: center;
 		height: fit-content;
+	}
+
+	.cart-drawer .cart-items, .cart-drawer tbody {
+		height: 64vh;
+		height: calc(var(--vh, 1vh) * 64);
 	}
 }

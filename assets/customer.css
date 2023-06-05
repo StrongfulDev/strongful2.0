@@ -1300,7 +1300,7 @@ td.more-returns-info {
 		text-align: center;
 	}
 
-	.icon-plus, .icon-minus {
+	.customer .icon-plus, .customer .icon-minus {
 		width: 1.5rem;
 		height: 1.5rem;
 		margin-right: auto;
