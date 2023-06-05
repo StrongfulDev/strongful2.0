@@ -31,19 +31,35 @@ function quickAdd() {
 				} else {
 					const elementText = element.find("span").first().text().replace(/\s/g,'').slice(0, -27);
 					for (let i = 0; i < variantButtons.length; i++) {
-						if (variantButtons[i].value === elementText) {
-							variantButtons[i].click();
+						let actualVariantId = $(variantButtons[i]).data("variant-id");
+						let relatedProductVariantId = element.find('input').data("variant-id");
+						if (actualVariantId !== relatedProductVariantId) {
+							element.find(".size_variant_button_add").hide();
+							element.find(".loading-overlay").css("display", "flex");
+							element.find(".loading-overlay__spinner").removeClass("hidden");
 							setTimeout(() => {
-								$(".sticky-cart-cta .variant_selector").toggle();
-								$(".sticky-cart-cta-overlay").toggle();
-								$("variant-radios").siblings("div").find("button.product-form__submit.button.button--full-width.button--primary span").click();
-							}, 2000);
+								element.parents("form").find('[type="submit"]').click();
+							}, 500);
+							setTimeout(() => {
+								element.find(".size_variant_button_add").show();
+								element.find(".loading-overlay").css("display", "none");
+								element.find(".loading-overlay__spinner").addClass("hidden");
+							}, 1500);
 							break;
+						} else {
+							if (variantButtons[i].value === elementText) {
+								variantButtons[i].click();
+								setTimeout(() => {
+									$(".sticky-cart-cta .variant_selector").toggle();
+									$(".sticky-cart-cta-overlay").toggle();
+									$("variant-radios").siblings("div").find("button.product-form__submit.button.button--full-width.button--primary span").click();
+								}, 2000);
+								break;
+							}
 						}
 					}
 				}
 	    } else {
-		    console.log(element);
 		    element.find(".size_variant_button_add").hide();
 				element.find(".loading-overlay").css("display", "flex");
 		    element.find(".loading-overlay__spinner").removeClass("hidden");
