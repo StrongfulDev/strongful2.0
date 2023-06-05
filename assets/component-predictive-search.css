@@ -285,7 +285,7 @@ predictive-search[loading]
 	}
 
 	details[open] > .search-modal {
-		width: 69vw;
+		width: 65vw;
 		right: 0;
 		left: auto;
 	}
@@ -293,7 +293,7 @@ predictive-search[loading]
 	.header__search details[open] .modal-overlay::after {
 		top: 5.5rem;
 		width: 120vw;
-		right: -12rem;
+		right: -11vw;
 	}
 
 	.modal__close-button.link {
