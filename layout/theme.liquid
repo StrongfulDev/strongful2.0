@@ -134,6 +134,7 @@
         --cart-rewards-background: rgb(29, 91, 79);
 
         --border-global-color: #e7e7e7;
+        --yotpo-stars: #000000;
 
         --gradient-base-background-1: {% if settings.gradient_background_1 != blank %}{{ settings.gradient_background_1 }}{% else %}{{ settings.colors_background_1 }}{% endif %};
         --gradient-base-background-2: {% if settings.gradient_background_2 != blank %}{{ settings.gradient_background_2 }}{% else %}{{ settings.colors_background_2 }}{% endif %};
@@ -328,8 +329,8 @@
             document.documentElement.classList.add('shopify-design-mode');
         }
     </script>
-  <script src="https://cdn-widgetsrepository.yotpo.com/v1/loader/qGZpUcqW7-E2nBL0lvSZUA" async></script>
-      <script type="text/javascript">(function e(){var e=document.createElement("script");e.type="text/javascript",e.async=true,e.src="//staticw2.yotpo.com/QI0VdT7ROUF5r1ybHPM5YgLRsUiPFRMOXKeGNWSJ/widget.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();</script>
+  <script src="https://cdn-widgetsrepository.yotpo.com/v1/loader/qGZpUcqW7-E2nBL0lvSZUA" defer="defer"></script>
+      <script type="text/javascript">(function e(){var e=document.createElement("script");e.type="text/javascript",e.async=true,e.defer=true,e.src="//staticw2.yotpo.com/QI0VdT7ROUF5r1ybHPM5YgLRsUiPFRMOXKeGNWSJ/widget.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();</script>
 </head>
 
 <body class="gradient">
