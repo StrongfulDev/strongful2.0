@@ -1769,7 +1769,7 @@ li.grid--peek.slider .grid__item, li.product__media-item.grid__item.slider__slid
 		margin-top: 0;
 	}
 
-	section[id^="MainProduct"], .complete_look__slider, .related-products {
+	section[id^="MainProduct"], .complete_look__slider, .related-products, .page-width {
 		max-width: calc(var(--page-width) * 0.9);
 	}
 
@@ -2008,6 +2008,6 @@ li.grid--peek.slider .grid__item, li.product__media-item.grid__item.slider__slid
 	}
 
 	.bottom-line-items-container-desktop {
-		height: fit-content !important;
+		height: fit-content;
 	}
 }

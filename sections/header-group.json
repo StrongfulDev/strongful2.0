@@ -23,13 +23,13 @@
           "type": "announcement",
           "settings": {
             "toggle_main_font": true,
-            "toggle_sub_font": true,
-            "main_text": "UP TO 30% OFF",
-            "sub_text": "ON SELECTED ITEMS",
+            "toggle_sub_font": false,
+            "main_text": "BUY ₪500 PAY ₪400",
+            "sub_text": "לא כולל אאוטלט",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "ltr",
-            "link": "shopify:\/\/collections\/upto30",
+            "link": "shopify:\/\/collections\/סטים",
             "color_scheme": "accent-1"
           }
         },
