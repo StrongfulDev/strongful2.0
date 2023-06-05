@@ -1,28 +1,14 @@
-name: Lighthouse Check
-
-on:
-    push:
-        branches:
-            - development
-            - master
-
+name: Shopify Lighthouse CI
+on: [push]
 jobs:
-    lighthouse:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout code
-              uses: actions/checkout@v3
-            - name: Install dependencies
-              run: npm install
-            - name: Build
-              run: npm run build
-            - name: Start
-              run: npm start
-            - name: Audit URLs using Lighthouse
-              uses: treosh/lighthouse-ci-action@v10
-              with:
-                  urls: |
-                      http://localhost
-                      http://localhost:3000
-                  uploadArtifacts: true # save results as an action artifacts
-                  temporaryPublicStorage: true # upload lighthouse report to the temporary storage
+  lhci:
+    name: Lighthouse
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Lighthouse
+      uses: shopify/lighthouse-ci-action@v1
+      with:
+        access_token: ${{ secrets.SHOP_ACCESS_TOKEN }}
+        store: ${{ secrets.SHOP_STORE }}
+        password: ${{ secrets.SHOP_PASSWORD }}
