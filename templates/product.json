@@ -14,7 +14,7 @@
           "settings": {
           }
         },
-        "651b9a10-7fb7-4389-b506-28a6841cfc00": {
+        "656bd184-5523-4c74-aee3-c2664a058063": {
           "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
             "product": "{{product}}"
@@ -102,7 +102,7 @@
       "block_order": [
         "7c99b889-3ad8-4802-a5c7-9802ab40f12c",
         "title",
-        "651b9a10-7fb7-4389-b506-28a6841cfc00",
+        "656bd184-5523-4c74-aee3-c2664a058063",
         "vendor",
         "price",
         "variant_picker",
@@ -163,6 +163,29 @@
         "quick_add_accessories_text": "הוספה מהירה"
       }
     },
+    "37dac536-c5a1-4fb0-9990-6e388a96185b": {
+      "type": "rich-text",
+      "blocks": {
+        "template--15943403045004__37dac536-c5a1-4fb0-9990-6e388a96185b-1685962586a6717fa8-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p><strong>STRONGIRLS REVIEWS<\/strong><\/p>",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--15943403045004__37dac536-c5a1-4fb0-9990-6e388a96185b-1685962586a6717fa8-0"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 16
+      }
+    },
     "168551910448762f1f": {
       "type": "apps",
       "blocks": {
@@ -186,6 +209,7 @@
     "complete-look-products",
     "related-products",
     "8bb31773-3add-4a1a-b42f-368102c7844b",
+    "37dac536-c5a1-4fb0-9990-6e388a96185b",
     "168551910448762f1f"
   ]
 }
