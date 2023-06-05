@@ -1861,7 +1861,18 @@ li.grid--peek.slider .grid__item, li.product__media-item.grid__item.slider__slid
 	height: 5rem;
 	width: 3rem;
 	padding: 0;
+}
 
+product-recommendations, product-recommendations.collection--full-width,
+product-recommendations .collection--full-width .title-wrapper--self-padded-tablet-down {
+	display: block;
+	padding: 1.5rem;
+}
+
+product-recommendations .collection__title_heading {
+	display: block;
+	text-align: center;
+	margin-bottom: calc(var(--grid-desktop-horizontal-spacing) * 2);
 }
 
 /*  YOTPO REVIEWS BEGIN  */
