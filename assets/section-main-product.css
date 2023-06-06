@@ -1765,6 +1765,10 @@ li.grid--peek.slider .grid__item, li.product__media-item.grid__item.slider__slid
 
 @media screen and (min-width: 990px) {
 
+	product-recommendations {
+		margin: auto;
+	}
+
 	.product__title {
 		margin-top: 0;
 	}
