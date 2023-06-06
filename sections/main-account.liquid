@@ -196,7 +196,7 @@
 
               <div class="main-account-info-container main-account-info-container--support">
                   <h2 class="container-title bold">{{ 'customer.account.support.title' | t }}</h2>
-                  <a href="/page/our-promise" class="container-menu-item container-menu-item--our-promise">
+                  <a href="/pages/our-promise" class="container-menu-item container-menu-item--our-promise">
                       {{ 'customer.account.support.our-promise' | t }}
                       {% render 'icon-caret' %}
                   </a>
@@ -532,6 +532,11 @@
                                               <div class="flex">
                                                   <p>{{ 'customer.order.total' | t }}</p>
                                                   <p>{{ order.total_net_amount | money_with_currency }}</p>
+                                              </div>
+                                          </td>
+                                          <td class="order-summary order-summary-totals" id="RowTotal" role="rowheader" scope="row" colspan="3">
+                                              <div class="flex">
+                                                  <a href="{{ order.customer_url }}">{{ 'customer.order.more_details' | t }}</a>
                                               </div>
                                           </td>
                                       </tr>
