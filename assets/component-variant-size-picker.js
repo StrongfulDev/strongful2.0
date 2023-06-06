@@ -20,7 +20,6 @@ function quickAdd() {
       const element = $(this);
 			let productPageIdentifier = document.querySelector(".products-product-size-picker");
 	    if (productPageIdentifier !== null) {
-		    const elementFormGrandParent = element.parents(".products-product-size-picker");
 				const variantButtons = document.querySelectorAll("variant-radios .product-form__input input[type='radio']");
 				if (variantButtons.length === 0) {
 					setTimeout(() => {
@@ -33,7 +32,7 @@ function quickAdd() {
 					for (let i = 0; i < variantButtons.length; i++) {
 						let actualVariantId = $(variantButtons[i]).data("variant-id");
 						let relatedProductVariantId = element.find('input').data("variant-id");
-						if (actualVariantId !== relatedProductVariantId) {
+						if (relatedProductVariantId !== actualVariantId) {
 							element.find(".size_variant_button_add").hide();
 							element.find(".loading-overlay").css("display", "flex");
 							element.find(".loading-overlay__spinner").removeClass("hidden");
@@ -49,6 +48,18 @@ function quickAdd() {
 						} else {
 							if (variantButtons[i].value === elementText) {
 								variantButtons[i].click();
+								element.find(".size_variant_button_add").hide();
+								element.find(".loading-overlay").css("display", "flex");
+								element.siblings().find(".loading-overlay").css("display", "none");
+								element.find(".loading-overlay__spinner").removeClass("hidden");
+								setTimeout(() => {
+									element.parents("form").find('[type="submit"]').click();
+								}, 500);
+								setTimeout(() => {
+									element.find(".size_variant_button_add").show();
+									element.find(".loading-overlay").css("display", "none");
+									element.find(".loading-overlay__spinner").addClass("hidden");
+								}, 1500);
 								setTimeout(() => {
 									$(".sticky-cart-cta .variant_selector").toggle();
 									$(".sticky-cart-cta-overlay").toggle();
