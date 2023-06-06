@@ -1781,6 +1781,10 @@ li.grid--peek.slider .grid__item, li.product__media-item.grid__item.slider__slid
 		max-width: calc(var(--page-width) * 0.9);
 	}
 
+	header.page-width {
+		max-width: var(--page-width);
+	}
+
 	.variant_modal div.product_variants ul {
 		padding-bottom: 0;
 	}
