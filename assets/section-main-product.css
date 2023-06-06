@@ -1700,6 +1700,10 @@ variant-radios {
 	grid-template-columns: repeat(5, 1fr);
 }
 
+.gift-card-product-form__input ~ p, .gift-card-product-form__input legend {
+	display: none;
+}
+
 .gift-card-product-form__input .variant-button {
 	width: 100%;
 	margin-bottom: 1rem;
