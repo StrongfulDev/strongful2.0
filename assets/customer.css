@@ -7,6 +7,10 @@
 	max-height: 2rem !important;
 }
 
+.form__general-errors {
+	text-align: right;
+}
+
 .bold {
 	font-weight: bold;
 }
