@@ -159,6 +159,7 @@
     padding: 10px 0;
     display: flex;
     justify-content: space-between;
+	position: relative;
 }
 
 .variant_modal .size_variant_button_add {
