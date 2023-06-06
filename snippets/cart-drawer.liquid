@@ -512,7 +512,8 @@
                                     disabled
                                 {% endif %}
                         >
-                            {{ 'sections.cart.checkout' | t }}
+                            <span>{{ 'sections.cart.checkout' | t }}</span>
+                            {% render 'loading-spinner' %}
                         </button>
                     </div>
                 </div>

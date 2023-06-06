@@ -562,6 +562,15 @@ cart-drawer-items.is-empty {
 	margin: 0;
 }
 
+.cart__checkout-button circle, .cart__checkout-button svg {
+	stroke: rgb(var(--color-background));
+}
+
+.cart__checkout-button .loading-overlay {
+	justify-content: center;
+	width: 100%;
+}
+
 @media screen and (min-width: 990px) {
 	.cart-drawer .cart-items .cart-item__quantity {
 		align-self: center;

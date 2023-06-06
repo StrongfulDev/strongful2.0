@@ -214,3 +214,9 @@ if (!customElements.get('cart-note')) {
       }
   });
 };
+
+$(".cart__checkout-button").click(function() {
+	$(this).find("span").first().hide();
+	$(this).find(".loading-overlay").css("display", "flex");
+	$(this).find(".loading-overlay__spinner").removeClass("hidden");
+});
