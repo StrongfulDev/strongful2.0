@@ -65,36 +65,7 @@
                 {%- if section.settings.title != blank -%}
                     <h2 class="title {{ section.settings.heading_size }} {{ section.settings.heading_type }}">{{ section.settings.title | escape }}</h2>
                 {%- endif -%}
-
-                {%- if section.settings.show_view_all and more_in_collection and section.settings.view_all_location == "top" or section.settings.view_all_location == "desktop_top_tablet_bottom" -%}
-                    {%- liquid
-                        assign view_all_wrapper = "top"
-                        if section.settings.view_all_location == "desktop_top_tablet_bottom"
-                            assign view_all_wrapper = "top show-desktop"
-                        endif
-                    %}
-                    {% render 'collection-view-all',
-                            collection_url: section.settings.collection.url,
-                            collection_title: section.settings.collection.title,
-                            style: section.settings.view_all_style,
-                            class_wrapper: view_all_wrapper,
-                            view_all_text: section.settings.view_all_text
-                    %}
-                {%- endif -%}
             </div>
-
-            {%- if section.settings.description != blank
-            or section.settings.show_description
-            and section.settings.collection.description != empty
-            -%}
-                <div class="collection__description {{ section.settings.description_style }} rte">
-                    {%- if section.settings.show_description -%}
-                        {{ section.settings.collection.description }}
-                    {%- else -%}
-                        {{ section.settings.description -}}
-                    {%- endif %}
-                </div>
-            {%- endif -%}
         </div>
 
         <slider-component
@@ -132,18 +103,12 @@
                                 quick_add_type: section.settings.quick_add_type,
                                 quick_add_type_mobile: section.settings.quick_add_type_mobile,
                                 section_id: section.id,
+                                lazy_load: lazy_load,
                                 show_sale_badge: section.settings.show_sale_badge,
                                 quick_add_text: section.settings.quick_add_text,
                                 quick_add_accessories_text: section.settings.quick_add_accessories_text
                         %}
                     </li>
-                {%- else -%}
-                    {%- for i in (1..4) -%}
-                        <li class="grid__item">
-                            {% render 'card-product', show_vendor: section.settings.show_vendor, quick_add_text: section.settings.quick_add_text,
-                                    quick_add_accessories_text: section.settings.quick_add_accessories_text %}
-                        </li>
-                    {%- endfor -%}
                 {%- endfor -%}
             </ul>
             {%- if show_side_arrows -%}
