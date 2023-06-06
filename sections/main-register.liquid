@@ -49,8 +49,7 @@
               {{ form.errors.messages[field] }}
             {%- else -%}
               <a href="#RegisterForm-{{ field }}">
-                {{ form.errors.translated_fields[field] | capitalize }}
-                {{ form.errors.messages[field] }}
+                  {{ 'customer.register.form_errors.' | append: field | t }}
               </a>
             {%- endif -%}
           </li>
@@ -110,13 +109,12 @@
       </label>
     </div>
     {%- if form.errors contains 'email' -%}
-      <span id="RegisterForm-email-error" class="form__message">
+      <div id="RegisterForm-email-error" class="form__message">
         <svg aria-hidden="true" focusable="false">
           <use href="#icon-error" />
         </svg>
-        {{ form.errors.translated_fields.email | capitalize }}
-        {{ form.errors.messages.email }}.
-      </span>
+        {{ 'customer.register.form_errors.email' | t }}
+      </div>
     {%- endif -%}
     <div class="field">
       <input
@@ -139,8 +137,7 @@
         <svg aria-hidden="true" focusable="false">
           <use href="#icon-error" />
         </svg>
-        {{ form.errors.translated_fields.password | capitalize }}
-        {{ form.errors.messages.password }}.
+        {{ 'customer.register.form_errors.password' | t }}
       </span>
     {%- endif -%}
     <button>
