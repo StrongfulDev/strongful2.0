@@ -6,8 +6,8 @@
         "@media screen and (min-width: 990px) {.banner__media img {object-fit: contain; } .banner--auto {min-height: 13vw; }}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/desk_collection.png",
-        "mobile_image": "shopify:\/\/shop_images\/mobile_collection.png",
+        "image": "shopify:\/\/shop_images\/2200x287_copy.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/800x317_copy.png",
         "image_overlay_opacity": 0,
         "image_height": "auto",
         "desktop_content_position": "middle-center",
@@ -37,10 +37,10 @@
         "card_header_size": "h2",
         "show_secondary_image": true,
         "show_vendor": true,
-        "announcement_tag": "dawn sale",
+        "announcement_tag": "twoplusone",
         "show_rating": false,
         "show_card_collection_announcement": true,
-        "custom_collection_announcement": "BUY 500 PAY 400",
+        "custom_collection_announcement": "BUY 2 GET 1",
         "announcement_customizer_override": true,
         "enable_quick_add": true,
         "quick_add_type": "hover",
