@@ -12,6 +12,14 @@ input {
 	font-size: 16px !important;
 }
 
+.small {
+	font-size: var(--font-body-size-small);
+}
+
+.smallest {
+	font-size: var(--font-body-size-smallest);
+}
+
 .bold {
 	font-weight: var(--font-body-weight-bold);
 }
