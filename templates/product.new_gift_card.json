@@ -14,26 +14,10 @@
             "picker_type": "button"
           }
         },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "disabled": true,
-          "settings": {
-          }
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": false
-          }
-        },
-        "6f6b14d9-b698-4abb-8430-c0fa6ace0781": {
-          "type": "loyalty",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Screenshot_2023-04-25_at_14.54.14.png",
-            "logged_out_text": "הרשמי עכשיו למועדון הלקוחות וקבלי 20% הנחה",
-            "logged_in_text": "<p><strong>ALIST<\/strong> - חברת מועדון<\/p>",
-            "loyalty_link": "shopify:\/\/pages\/a-list",
-            "alt_text": "Image block"
           }
         },
         "679aaa7e-cf01-48c6-85e3-b35a4a905d19": {
@@ -67,9 +51,7 @@
       "block_order": [
         "title",
         "variant_picker",
-        "quantity_selector",
         "buy_buttons",
-        "6f6b14d9-b698-4abb-8430-c0fa6ace0781",
         "679aaa7e-cf01-48c6-85e3-b35a4a905d19",
         "6bb9c7f3-70b8-4986-9a85-148874103e99",
         "1b30499f-a9b2-4f41-bbad-151626bae3d0"
@@ -111,10 +93,49 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "272ef111-4126-4bde-9ffc-6a19bd46db9e": {
+      "type": "related-products-slider",
+      "settings": {
+        "steps": 1,
+        "title": "קניות נפוצות בגיפט קארד",
+        "heading_size": "h1",
+        "heading_type": "heading_type_default",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "",
+        "products_to_show": 14,
+        "columns_desktop": 4,
+        "full_width": true,
+        "show_view_all": false,
+        "view_all_text": "",
+        "view_all_style": "solid",
+        "view_all_location": "bottom",
+        "enable_desktop_slider": true,
+        "show_peak": true,
+        "pagination_type": "sides",
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": false,
+        "show_sale_badge": false,
+        "enable_quick_add": true,
+        "quick_add_type": "hover",
+        "quick_add_type_mobile": "modal",
+        "quick_add_text": "הוספה מהירה",
+        "quick_add_accessories_text": "הוספה מהירה",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "272ef111-4126-4bde-9ffc-6a19bd46db9e"
   ]
 }
