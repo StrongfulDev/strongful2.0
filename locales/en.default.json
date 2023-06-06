@@ -117,6 +117,8 @@
     "product": {
       "add_to_cart": "הוספה לסל",
       "choose_options": "Choose options",
+      "up_size_recommendation": "במוצר זה מומלץ לקחת מידה יותר",
+      "down_size_recommendation": "במוצר זה מומלץ לקחת מידה פחות",
       "choose_product_options": "Choose options for {{ product_name }}",
       "description": "Description",
       "inventory_in_stock": "In stock",
@@ -190,6 +192,7 @@
       "model_switch": {
         "button": "החלפת דוגמנית",
         "model_wears_female": "הדוגמנית לובשת מידות:",
+        "model_wears_only_female": "הדוגמנית לובשת",
         "female_top_part": "חלק עליון:",
         "female_bottom_part": "חלק תחתון:"
       }
