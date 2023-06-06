@@ -354,6 +354,7 @@
 
     {% render 'pill' %}
     {% render 'pill-border' %}
+    {% unless template.name == 'register' or template.name == 'login' %}
     <div class="custom-customer-account-container">
         <p class="close-custom-account-container page-width pointer">{% render 'icon-close' %}</p>
         {% section 'multicolumn' %}
@@ -361,6 +362,7 @@
         {% section 'main-login' %}
     </div>
     <div class="custom-login-overlay hidden">&nbsp;</div>
+    {% endunless %}
 </main>
 
 {% sections 'footer-group' %}
