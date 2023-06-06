@@ -335,17 +335,6 @@
 
 <body class="gradient">
 
-{% assign isLive = true %}
-<div class="hidden">
-    {% if content_for_header contains "previewBarInjector.init();" %}
-        isLive = false
-    {% elsif content_for_header contains "Shopify.designMode" %}
-        isLive = false
-    {% else %}
-        isLive = true
-    {% endif %}
-</div>
-
 <a class="skip-to-content-link button visually-hidden" href="#MainContent">
     {{ "accessibility.skip_to_text" | t }}
 </a>
@@ -362,6 +351,16 @@
         role="main"
         tabindex="-1">
     {{ content_for_layout }}
+
+    {% render 'pill' %}
+    {% render 'pill-border' %}
+    <div class="custom-customer-account-container">
+        <p class="close-custom-account-container page-width pointer">{% render 'icon-close' %}</p>
+        {% section 'multicolumn' %}
+        {% section 'main-register' %}
+        {% section 'main-login' %}
+    </div>
+    <div class="custom-login-overlay hidden">&nbsp;</div>
 </main>
 
 {% sections 'footer-group' %}
@@ -445,14 +444,5 @@
 {%- if settings.predictive_search_enabled -%}
     <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
-{% render 'pill' %}
-{% render 'pill-border' %}
-<div class="custom-customer-account-container">
-    <p class="close-custom-account-container page-width pointer">{% render 'icon-close' %}</p>
-    {% section 'multicolumn' %}
-    {% section 'main-register' %}
-    {% section 'main-login' %}
-</div>
-<div class="custom-login-overlay hidden">&nbsp;</div>
 </body>
 </html>

@@ -145,7 +145,7 @@
     "79de2a4e-3fc7-44c0-8863-102918fa0faf": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "{%- unless isLive -%}\n<div\n\tclass=\"yotpo yotpo-pictures-widget\"\n\tdata-gallery-id=\"643511ba2ed1151bb3dcb2ae\">\n<\/div>\n{%- endunless -%}",
+        "custom_liquid": "<div\n\tclass=\"yotpo yotpo-pictures-widget\"\n\tdata-gallery-id=\"643511ba2ed1151bb3dcb2ae\">\n<\/div>",
         "color_scheme": "background-1",
         "padding_top": 40,
         "padding_bottom": 12
