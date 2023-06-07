@@ -154,6 +154,7 @@
 
 .variant_modal .product_variants .size_variant_button_container label {
     text-align: var(--text-alignment);
+	font-weight: 500;
     padding: 10px 0;
     display: flex;
     justify-content: space-between;
@@ -319,7 +320,7 @@ ul.default_variant_list {
 }
 
 .variant_modal .product_variants li:last-child .size_variant_button_container {
-    border-bottom: none;
+
 }
 
 .disabled-variant-button label {
