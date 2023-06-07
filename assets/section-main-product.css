@@ -1960,7 +1960,7 @@ product-recommendations .collection__title_heading {
 	line-height: 1.5em !important;
 }
 
-.yotpo-filter-stars .yotpo-icon-star {
+.yotpo-filter-stars .yotpo-icon-star, .yotpo-icon-half-star {
 	color: var(--yotpo-stars) !important;
 	font-size: calc(var(--font-body-size-medium) * 2) !important;
 	height: fit-content !important;
