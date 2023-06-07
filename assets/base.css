@@ -2498,6 +2498,10 @@ quantity-input button.quantity__button {
     vertical-align: middle;
 }
 
+.header__icon svg.icon-account {
+	fill: #000000;
+}
+
 .header__icon,
 .header__icon--cart .icon {
     height: 3.5rem;
@@ -2578,6 +2582,10 @@ details[open] .modal-overlay {
     display: block;
 }
 
+details .modal-overlay:after {
+	content: none;
+}
+
 details[open] .modal-overlay::after {
     position: absolute;
     content: '';
@@ -2628,17 +2636,16 @@ details[open] .modal-overlay::after {
     left: 0.3rem;
 }
 
-@media screen and (min-width: 750px) {
-    .search-modal__close-button {
-        right: 1rem;
-    }
+@media screen and (min-width: 990px) {
+
+	.search-modal__close-button {
+		right: 1rem;
+	}
 
 	.search-modal__content {
 		padding: 0;
 	}
-}
 
-@media screen and (min-width: 990px) {
     .search-modal__form {
         max-width: 81.2rem;
     }
@@ -2657,6 +2664,9 @@ details[open] .modal-overlay::after {
     transform: scale(1);
     transition: transform 150ms ease, opacity 150ms ease;
 	stroke: var(--gradient-base-accent-1);
+	stroke-width: 0px;
+	height: 18px;
+	width: 18px;
 }
 
 details:not([open]) > .header__icon--menu .icon-close,
