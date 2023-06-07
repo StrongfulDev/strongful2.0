@@ -14,6 +14,8 @@
     {{ checkout_stylesheets }}
     {{ checkout_scripts }}
 
+    {{ 'package-protection.css' | asset_url | stylesheet_tag }}
+    {{ 'package-protection.js' | asset_url | script_tag }}
     <style>
 
         * {
@@ -275,23 +277,14 @@
                 {{ content_for_order_summary }}
             </div>
             <div class="yotpo-widget-instance" data-yotpo-instance-id="89434"></div>
+            <div class="package-protection-root"></div>
         </aside>
     </div>
 </div>
 
 {{ tracking_code }}
-<script type="text/javascript">
 
-    // remove discount code here
-    // let now = Date.now();
-    // if (localStorage.getItem('date')!==null) {
-    //  if (localStorage.getItem('date') < now) {
-    //     $('.tag__button').click();
-    //     localStorage.removeItem('date');
-    //     localStorage.removeItem('coupon');
-    //   } else {
-    //   }
-    // }
+<script type="text/javascript">
 
     document.addEventListener('DOMContentLoaded', (e) => {
 
