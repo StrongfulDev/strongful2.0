@@ -14,8 +14,9 @@
     {{ checkout_stylesheets }}
     {{ checkout_scripts }}
 
-    {{ 'package-protection.css' | asset_url | stylesheet_tag }}
-    {{ 'package-protection.js' | asset_url | script_tag }}
+    <script type="module" crossorigin src="{{ 'package-protection.js' | asset_url }}"></script>
+    <link rel="stylesheet" href="{{ 'package-protection.css' | asset_url }}">
+
     <style>
 
         * {
