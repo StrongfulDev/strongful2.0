@@ -38,6 +38,13 @@
 
 .variant_selector {
     width: 100%;
+	transition: 0.5s ease-in-out;
+	transform: translateY(100%);
+}
+
+.variant_selector.active {
+	transition: 0.5s ease-in-out;
+	transform: translateY(0);
 }
 
 .size-variant-product-form {

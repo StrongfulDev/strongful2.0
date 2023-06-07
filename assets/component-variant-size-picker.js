@@ -91,14 +91,23 @@ function quickAdd() {
         const modalOverlay = $(".variant_modal_overlay#" + modalId + "-overlay");
 
         modal.show();
-        modalOverlay.show()
+				setTimeout(() => {
+					modal.addClass("active");
+				}, 100);
+        modalOverlay.show();
         modalOverlay.on("click", () => {
-          modal.hide()
+	        modal.removeClass("active");
+          setTimeout(() => {
+	          modal.hide();
+          }, 1000);
           modalOverlay.hide()
         })
         modal.find('.quick_add_modal__close').on("click", () => {
-          modal.hide()
-          modalOverlay.hide()
+	        modal.removeClass("active");
+	        setTimeout(() => {
+		        modal.hide();
+	        }, 1000);
+	        modalOverlay.hide()
         })
       }
     )
