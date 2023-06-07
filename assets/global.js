@@ -219,7 +219,6 @@ class QuantityInput extends HTMLElement {
     addDeleteButton(buttonMinus) {
         const button = $(buttonMinus);
         button.toggleClass('delete');
-        button.html("<span class='delete'>x</span>");
         button.bind('click', '.delete', () => {
             $(this).parent().find('cart-remove-button button').click();
         });
