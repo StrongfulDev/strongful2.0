@@ -106,6 +106,7 @@
 
 .complete_look__item .variant_selector {
 	display: block;
+	transform: translateY(0);
 }
 
 .complete_look__item .product_variants .size_variant_button_container {
