@@ -43,7 +43,15 @@
     letter-spacing: 0.13rem;
 }
 
-@media screen and (min-width: 750px) {
+.price__container {
+	font-family: 'Arimo', sans-serif;
+}
+
+.price__regular .price-item.price-item--last {
+	font-weight: var(--font-body-weight-bold);
+}
+
+@media screen and (min-width: 990px) {
     .price--large {
         font-size: 1.8rem;
     }

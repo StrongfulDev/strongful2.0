@@ -23,8 +23,8 @@
     assign money_price = price | money
     assign money_compare_price = compare_at_price | money
     if settings.currency_code_enabled
-        assign money_price = price | money_with_currency
-        assign money_compare_price = compare_at_price | money_with_currency
+        assign money_price = price | money_without_trailing_zeros
+        assign money_compare_price = compare_at_price | money_without_trailing_zeros
     endif
 
     if target == product and product.price_varies

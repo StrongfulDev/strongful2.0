@@ -154,6 +154,10 @@ div:not(.product-size-picker-container) .variant-button .size_variant_button:not
 	display: none;
 }
 
+.card-information div.light {
+	font-size: calc(var(--font-body-size-small) * 1.3);
+}
+
 @media screen and (min-width: 990px) {
 	.product_variants.default_product_variants {
 		display: block;

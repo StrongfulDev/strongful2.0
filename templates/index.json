@@ -42,6 +42,7 @@
       "custom_css": [
         ".button {width: 100%;}",
         ".discount-price-container {direction: rtl;}",
+        ".slider--tablet.grid--peek.grid--2-col-tablet-down .grid__item,.grid--peek .grid__item {width: calc(42% - var(--grid-mobile-horizontal-spacing) - 3rem);}",
         "@media screen and (min-width: 990px) {.slider--desktop.grid--peek.grid--5-col-desktop .grid__item {width: calc( (94% - var(--desktop-margin-left-first-item)) \/ 5 - var(--grid-desktop-horizontal-spacing) * 2 ); }}"
       ],
       "settings": {
@@ -59,14 +60,14 @@
         "show_view_all": true,
         "view_all_text": "SHOP ALL",
         "view_all_style": "link",
-        "view_all_location": "desktop_top_tablet_bottom",
+        "view_all_location": "top",
         "enable_desktop_slider": true,
         "show_peak": true,
         "pagination_type": "sides",
         "color_scheme": "background-1",
         "image_ratio": "adapt",
         "show_secondary_image": true,
-        "show_vendor": false,
+        "show_vendor": true,
         "show_rating": false,
         "show_sale_badge": false,
         "enable_quick_add": true,

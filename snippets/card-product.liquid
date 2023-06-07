@@ -258,7 +258,7 @@
                         <a
                                 href="/collections/{{ collection.handle }}{{ card_product.url }}"
                                 id="CardLink-{{ section_id }}-{{ card_product.id }}"
-                                class="full-unstyled-link pointer"
+                                class="full-unstyled-link pointer fix-direction"
                                 aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}"
                         >
                             {{ card_product.title | escape }}
@@ -267,7 +267,7 @@
                             <a
                                     href="{{ card_product.url }}"
                                     id="CardLink-{{ section_id }}-{{ card_product.id }}"
-                                    class="full-unstyled-link pointer"
+                                    class="full-unstyled-link pointer fix-direction"
                                     aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}"
                             >
                                 {{ card_product.title | escape }}
@@ -479,7 +479,7 @@
                 <div class="card__content">
                     <div class="card__information">
                         <h3 class="card__heading">
-                            <a role="link" aria-disabled="true" class="full-unstyled-link pointer">
+                            <a role="link" aria-disabled="true" class="full-unstyled-link pointer fix-direction">
                                 {{ 'onboarding.product_title' | t }}
                             </a>
                         </h3>
@@ -489,7 +489,7 @@
             <div class="card__content">
                 <div class="card__information">
                     <h3 class="card__heading{% if settings.card_style == 'standard' %} h5{% endif %} ">
-                        <a role="link" aria-disabled="true" class="full-unstyled-link pointer">
+                        <a role="link" aria-disabled="true" class="full-unstyled-link pointer fix-direction">
                             {{ 'onboarding.product_title' | t }}
                         </a>
                     </h3>

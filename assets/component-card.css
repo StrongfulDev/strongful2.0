@@ -273,6 +273,11 @@
     outline: 0;
 }
 
+.card__heading a.full-unstyled-link {
+	font-weight: var(--font-body-weight);
+	font-size: var(--font-body-size-medium);
+}
+
 @media screen and (min-width: 990px) {
     .card .media.media--hover-effect > img:only-child,
     .card-wrapper .media.media--hover-effect > img:only-child {
