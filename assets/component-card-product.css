@@ -108,6 +108,10 @@
 	.product_variants ul {
 		gap: 1rem .5rem;
 	}
+
+	.variant_selector {
+		transform: translateY(0);
+	}
 }
 
 .outlet-collection-tag {
