@@ -2500,6 +2500,15 @@ quantity-input button.quantity__button {
 
 .header__icon svg.icon-account {
 	fill: #000000;
+	stroke: #000;
+	stroke-width: 1rem;
+}
+
+.header__icon .icon-search {
+	stroke: #000;
+	stroke-width: 0.5px;
+	height: 22px;
+	width: 22px;
 }
 
 .header__icon,
@@ -2664,7 +2673,7 @@ details[open] .modal-overlay::after {
     transform: scale(1);
     transition: transform 150ms ease, opacity 150ms ease;
 	stroke: var(--gradient-base-accent-1);
-	stroke-width: 0px;
+	stroke-width: 0.6px;
 	height: 18px;
 	width: 18px;
 }
@@ -3157,7 +3166,7 @@ fieldset {
 }
 
 .header__icons {
-    column-gap: .8rem;
+    column-gap: var(--grid-desktop-vertical-spacing);
 }
 
 .header__icon, .header__icon--cart .icon {
@@ -3570,7 +3579,7 @@ div#returnGoCartWidget {
 body.trigger-position-right #enable-toolbar-trigger {
 	left: -3px !important;
 	right: auto !important;
-	top: -10rem;
+	top: -7rem;
 	height: fit-content;
 }
 
@@ -3602,7 +3611,7 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 	top: -10px;
 	left: -17px;
 	transform: rotate(90deg);
-	width: 43px;
+	width: 41px;
 	height: 49px;
 }
 
@@ -3615,7 +3624,7 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 	stroke: var(--gradient-base-accent-1);
 	fill: var(--gradient-background);
 	height: 6rem;
-	width: 5.9rem;
+	width: 5.7rem;
 	top: -1.4rem;
 	left: -2.6rem;
 	stroke-width: 0.05rem;
