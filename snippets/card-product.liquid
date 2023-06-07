@@ -20,6 +20,7 @@
   - card_banner_text: {String} Text to show under the image as banner
   - card_header_size: {String} Size of the card header. Values are "h1", "h2", etc.  (optional)
   - announcement_tag: {String} the tag to show on the card
+  - pick_size_text: {String} the text that describes quick addition header of products with size variants
   - quick_add_text: {String} the text that describes quick addition of products with size variants
   - quick_add_accessories_text: {String} the text that describes quick addition of products with accessories
 
@@ -213,6 +214,7 @@
                                             product: card_product,
                                             wrapper_class: "hover",
                                             submit_on_click: true,
+                                            pick_size_text: pick_size_text,
                                             quick_add_text: quick_add_text,
                                             quick_add_accessories_text: quick_add_accessories_text
                                     %}
@@ -454,6 +456,7 @@
                 submit_on_click: true,
                 is_modal: true,
                 id: quick_add_modal_id,
+                pick_size_text: pick_size_text,
                 quick_add_text: quick_add_text,
                 quick_add_accessories_text: quick_add_accessories_text
         %}

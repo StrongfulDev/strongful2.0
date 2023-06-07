@@ -107,7 +107,6 @@
 
 .variant_modal .product_details {
     display: flex;
-    justify-content: flex-start;
     width: 100%;
     padding: 20px;
 }
@@ -120,7 +119,6 @@
 .variant_modal .product_details__info {
     text-align: var(--text-alignment);
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
     padding: 4px 10px;
 }
@@ -165,7 +163,7 @@
 .variant_modal .size_variant_button_add {
     height: 20px;
     width: 20px;
-    border: 2px #000 solid;
+    border: 1px #000 solid;
     border-radius: 50%;
     padding: 0px;
     display: flex;
@@ -173,16 +171,28 @@
     justify-content: center;
 }
 
+.quick_add_modal-header-container {
+	position: relative;
+}
+
+.product_size_picker__header-text {
+	text-align: center;
+}
+
 .variant_modal .size_variant_button_add .icon {
     width: 10px;
     height: 10px;
-    stroke: #000;
 }
 
 .variant_modal .quick_add_modal__close {
-    width: 15px;
+	width: 15px;
 	height: fit-content;
-    margin-right: auto;
+	right: auto;
+	position: absolute;
+	left: 2rem;
+	z-index: 2;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 @keyframes borderOpacity {
@@ -299,6 +309,13 @@ ul.default_variant_list {
 
 .product_details-titles {
     margin: 0;
+	font-weight: var(--font-body-weight);
+	font-size: var(--font-body-size-medium);
+	line-height: 2rem !important;
+}
+
+.product_details-titles.product-color {
+	font-size: calc(var(--font-body-size-small) * 1.3);
 }
 
 .variant_modal .product_variants li:last-child .size_variant_button_container {
@@ -323,6 +340,20 @@ ul.default_variant_list {
 .disabled-variant-button label.product_size_picker__button__label,
 .disabled-variant-button .size_variant_button_container{
     background: var(--gradient-base-background-3);
+}
+
+.product_size_picker__button__label .icon-checkmark {
+	position: absolute;
+	top: 50%;
+	bottom: 0;
+	left: 0;
+	width: 1.7rem;
+	height: 1.7rem;
+	padding: 0;
+	transform: translate(20%, -50%);
+	stroke: var(--color-foreground);
+	stroke-width: 1px;
+	display: none;
 }
 
 .soldout-variant-line {

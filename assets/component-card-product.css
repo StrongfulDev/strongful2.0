@@ -38,12 +38,15 @@
 
 .variant_selector {
     width: 100%;
-	transition: 0.5s ease-in-out;
+	transition: .3s ease-in-out;
 	transform: translateY(100%);
+	border-top: 1px solid var(--gradient-base-background-3);
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
 }
 
 .variant_selector.active {
-	transition: 0.5s ease-in-out;
+	transition: .3s ease-in-out;
 	transform: translateY(0);
 }
 
@@ -149,7 +152,7 @@ div:not(.product-size-picker-container) .variant-button .size_variant_button:not
 }
 
 .product_details__info .discount-price-container .rect-discount-tag {
-	margin: 0 0 6px;
+	margin: 6px 0;
 }
 
 .rect-discount-tag {

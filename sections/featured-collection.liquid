@@ -133,13 +133,16 @@
                                 section_id: section.id,
                                 show_sale_badge: section.settings.show_sale_badge,
                                 quick_add_text: section.settings.quick_add_text,
+                                pick_size_text: section.settings.pick_size_text,
                                 quick_add_accessories_text: section.settings.quick_add_accessories_text
                         %}
                     </li>
                 {%- else -%}
                     {%- for i in (1..4) -%}
                         <li class="grid__item">
-                            {% render 'card-product', show_vendor: section.settings.show_vendor, quick_add_text: section.settings.quick_add_text,
+                            {% render 'card-product', show_vendor: section.settings.show_vendor,
+                                    quick_add_text: section.settings.quick_add_text,
+                                    pick_size_text: section.settings.pick_size_text,
                                     quick_add_accessories_text: section.settings.quick_add_accessories_text %}
                         </li>
                     {%- endfor -%}
@@ -542,8 +545,14 @@
       {
           "type": "text",
           "id": "quick_add_text",
-          "default": "Pick size",
+          "default": "בחירת מידה",
           "label": "t:sections.main-collection-product-grid.settings.quick_add_text.label"
+      },
+      {
+          "type": "text",
+          "id": "pick_size_text",
+          "default": "בחירת מידה",
+          "label": "t:sections.main-collection-product-grid.settings.pick_size_text.label"
       },
       {
           "type": "text",

@@ -562,6 +562,10 @@ cart-drawer-items.is-empty {
 	margin: 0;
 }
 
+.quantity.cart-quantity.Package.Protection {
+	display: none;
+}
+
 .cart__checkout-button circle, .cart__checkout-button svg {
 	stroke: rgb(var(--color-background));
 }

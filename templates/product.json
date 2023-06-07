@@ -168,6 +168,7 @@
         "quick_add_type": "hover",
         "quick_add_type_mobile": "modal",
         "quick_add_text": "הוספה מהירה",
+        "pick_size_text": "בחירת מידה",
         "quick_add_accessories_text": "הוספה מהירה",
         "columns_mobile": "2",
         "swipe_on_mobile": true,
@@ -199,6 +200,7 @@
       "settings": {
         "quick_add_type_mobile": "modal",
         "quick_add_text": "בחירת מידה",
+        "pick_size_text": "בחירת מידה",
         "quick_add_accessories_text": "הוספה מהירה"
       }
     },
