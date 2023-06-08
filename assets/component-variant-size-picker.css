@@ -261,7 +261,11 @@ ul.default_variant_list {
 	pointer-events: none;
 }
 
-@media screen and (min-width: 750px) {
+.product_size_picker__header-text {
+	margin-bottom: 0;
+}
+
+@media screen and (min-width: 990px) {
 
 	.product-size-picker-container {
 		border-radius: 4px;

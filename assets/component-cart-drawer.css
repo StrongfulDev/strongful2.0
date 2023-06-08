@@ -17,9 +17,6 @@
 #CartDrawer {
 	height: 100%;
 	overflow-y: hidden;
-	border-top-left-radius: 1rem;
-	border-bottom-left-radius: 1rem;
-	border-left: 0.5px solid var(--gradient-base-background-3);
 }
 
 .drawer.active {
@@ -62,6 +59,9 @@ cart-drawer .drawer__inner {
     grid-template-rows: auto 1fr;
     align-items: center;
     padding: 0;
+	border-top-left-radius: 1rem;
+	border-bottom-left-radius: 1rem;
+	border-left: 0.5px solid var(--gradient-base-background-3);
 }
 
 cart-drawer.is-empty .drawer__header {
