@@ -433,8 +433,10 @@ noscript .localization-selector.link {
     }
 }
 
-.footer-block__details-content {
-    margin-bottom: 4rem;
+.rte ul.footer-block__details-content {
+    margin-bottom: 2rem;
+	padding-left: 0;
+	padding-right: 0;
 }
 
 @media screen and (min-width: 750px) {
@@ -786,9 +788,7 @@ noscript .localization-selector.link {
 }
 
 .footer-block__brand-info .footer__list-social.list-social {
-    justify-content: space-between;
-    width: 75%;
-    margin: auto;
+    justify-content: flex-end;
     direction: ltr;
 }
 
@@ -808,7 +808,17 @@ noscript .localization-selector.link {
 }
 
 .footer-blockgrid__item {
-    margin: auto;
+	margin: calc(var(--grid-desktop-horizontal-spacing) * 2) 0;
+}
+
+.footer-blockgrid__item.footer-block--menu {
+	margin: 0;
+}
+
+.footer_policies_list-item.footer_policy_item {
+	margin: var(--grid-desktop-horizontal-spacing) 0;
+	font-size: calc(var(--font-body-size-small) * 1.2);
+	color: gray;
 }
 
 .blog_and_newsletter {

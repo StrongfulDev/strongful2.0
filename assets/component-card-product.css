@@ -114,6 +114,7 @@
 
 	.variant_selector {
 		transform: translateY(0);
+		border-top: none;
 	}
 }
 
