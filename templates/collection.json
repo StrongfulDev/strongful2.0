@@ -15,7 +15,8 @@
         "b12ab2ae-119f-4c68-9a4f-1e499db126b3"
       ],
       "custom_css": [
-        "@media screen and (min-width: 990px) {.banner__media img {object-fit: contain; } .banner--auto {min-height: 13vw; }}"
+        "@media screen and (min-width: 990px) {.banner__media img {object-fit: contain; }}",
+        ".media > *:not(.zoom):not(.deferred-media__poster-button),.media model-viewer {position: static;}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/2200x287_copy.jpg",
