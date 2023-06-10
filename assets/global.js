@@ -1141,12 +1141,15 @@ window.addEventListener('DOMContentLoaded', function() {
 	let headerOverlay = document.querySelector('.header-overlay');
 	let menuDrawer = document.querySelector('header-drawer');
 
-	$(".header-overlay").on('click', function() {
+	function closeHeader(event) {
 		$('body').removeClass(`overflow-hidden-${menuDrawer.dataset.breakpoint}`).removeClass('overflow-hidden');
 		$('html').removeClass(`overflow-hidden-${menuDrawer.dataset.breakpoint}`).removeClass('overflow-hidden');
 		$(".menu-drawer-container.customizable.menu-opening").attr('open', false).removeClass('menu-opening');
-		$(this).addClass('hidden');
-	});
+		$(headerOverlay).addClass('hidden');
+	}
+
+	$(".header-overlay").on('click', closeHeader);
+	$(".mobile-header-closer").on('click', closeHeader);
 
 	if (window.innerWidth > 990) {
 		$(headerOverlay).on('mouseenter', function() {
