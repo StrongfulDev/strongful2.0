@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(2, auto);
-  padding-top: 1rem;
 }
 
 .active-facets-mobile {
@@ -26,8 +25,8 @@
 
 @media screen and (max-width: 989px) {
   .facets-container {
-    grid-template-columns: auto minmax(0, max-content);
-    column-gap: 2rem;
+    display: flex;
+	  flex-direction: column-reverse;
   }
 }
 
@@ -563,13 +562,54 @@ a.active-facets__button.focused .active-facets__button-inner,
   pointer-events: none;
 }
 
-.mobile-facets__disclosure {
+.mobile-facets__disclosure, .mobile-facets__disclosure + div {
   display: flex;
+	width: 100%;
+	background-color: var(--gradient-base-background-3);
+	height: 4.5rem;
+}
+
+.grid-display-swapper {
+	padding: var(--grid-mobile-vertical-spacing);
+	column-gap: var(--grid-mobile-vertical-spacing);
+}
+
+.grid-display {
+	width: 100%;
+}
+
+.grid-display.active {
+	background: var(--gradient-background);
+}
+
+.grid-display-two-columns {
+	display: grid;
+	grid-template: repeat(2, 1.2rem) / repeat(2, 1rem);
+	place-content: center;
+	gap: 0.3rem;
+}
+
+.grid-display.grid-display-one-column {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.grid-display-inner-shape.one-shape {
+	height: 2.5rem;
+	width: 2rem;
+	border: 1pt solid var(--gradient-base-accent-1);
+	display: block;
+}
+
+.grid-display.active .grid-display-inner-shape {
+	background: var(--gradient-base-accent-1);
 }
 
 .mobile-facets__wrapper {
   margin-left: 0;
   display: flex;
+	column-gap: calc(var(--grid-desktop-horizontal-spacing) * 2);
 }
 
 .mobile-facets__wrapper .disclosure-has-popup[open] > summary::before {
@@ -638,7 +678,9 @@ a.active-facets__button.focused .active-facets__button-inner,
 }
 
 .mobile-facets__open-wrapper {
-  display: inline-block;
+  display: inline-flex;
+	align-items: center;
+	height: 100%;
 }
 
 .mobile-facets__open {
@@ -662,6 +704,7 @@ a.active-facets__button.focused .active-facets__button-inner,
 
 .mobile-facets__open-label {
   transition: text-decoration var(--duration-short) ease;
+	font-size: var(--font-body-size-large);
 }
 
 .mobile-facets__open:hover .mobile-facets__open-label {
@@ -1133,7 +1176,7 @@ input.mobile-facets__checkbox {
 }
 
 .product-count {
-  margin: 1rem 0 0;
+  margin: 1rem 0;
   text-align: center;
 }
 
@@ -1339,6 +1382,7 @@ details.mobile-facets__details {
 
 .mobile-facets__open-label {
   margin-left: 0;
+	margin-right: var(--grid-mobile-vertical-spacing);
 }
 
 .custom-active-facets:not(:last-child) {

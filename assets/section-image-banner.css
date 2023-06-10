@@ -443,18 +443,21 @@
 
 
 @media screen and (max-width: 749px) {
-    .banner__media img:not(.mobile_version) + .mobile_version {
-        display: block !important
+    .banner__media img.mobile_version {
+        display: block;
     }
 
+	.banner__media.media img:not(.mobile_version) {
+		display: none;
+	}
+
     .banner__media img.mobile_version {
-        display: none !important;
+        display: none;
     }
 }
 
-.banner--auto {
-    height: 16rem;
-    min-height: 16rem;
+.banner__media + .banner__content .banner__box {
+		padding: calc(var(--grid-desktop-horizontal-spacing) * 2) 0 0;
 }
 
 .button--primary {
