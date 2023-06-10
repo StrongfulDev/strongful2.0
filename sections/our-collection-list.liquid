@@ -84,7 +84,6 @@
             %}
             {% endcomment %}
             <a href="{{ block.settings.url }}" class="our-collections-list-link">
-              <div class="our-collections-list-image">
                 {%- if block.settings.image -%}
                   {{ block.settings.image | image_url: width: 1500 | image_tag:
                   loading: 'lazy',
@@ -94,7 +93,6 @@
                 {%- else -%}
                   {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
                 {%- endif -%}
-              </div>
               <span class="our-collections-list-title">
                 {{ block.settings.link }}
               </span>
