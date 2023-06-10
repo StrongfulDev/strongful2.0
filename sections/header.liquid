@@ -179,14 +179,19 @@
                                 <div class="menu-drawer__navigation-container">
                                     <nav class="menu-drawer__navigation">
                                         <div class="nav_top">
-                                          {% if section.settings.mobile_logo_link != '' %}
-                                            <a href="{{ section.settings.mobile_logo_link }}" class="nav_top--mobile-logo">
-                                              {% if section.settings.mobile_logo %}
-                                                <img src="{{ section.settings.mobile_logo | img_url: 'master' }}" alt="{{ shop.name }}"
-                                                     class="logo menu-drawer__logo" style="width: {{ section.settings.mobile_logo_width }}px">
-                                              {% endif %}
-                                            </a>
-                                          {% endif %}
+                                            <div class="nav_top--logo-container">
+                                                {% if section.settings.mobile_logo_link != '' %}
+                                                    <a href="{{ section.settings.mobile_logo_link }}" class="nav_top--mobile-logo">
+                                                        {% if section.settings.mobile_logo %}
+                                                            <img src="{{ section.settings.mobile_logo | img_url: 'master' }}" alt="{{ shop.name }}"
+                                                                 class="logo menu-drawer__logo" style="width: {{ section.settings.mobile_logo_width }}px">
+                                                        {% endif %}
+                                                        <button class="mobile-header-closer">
+                                                            {% render 'icon-close' %}
+                                                        </button>
+                                                    </a>
+                                                {% endif %}
+                                            </div>
                                             <div class="mobile_menu fix-direction">
                                                 {% for menu_item in section.settings.mobile_menu.links %}
                                                     <a href="{{ menu_item.url }}"
@@ -1435,7 +1440,7 @@
     {
       "type": "range",
       "id": "mobile_logo_width",
-      "min": 40,
+      "min": 10,
       "max": 100,
       "step": 5,
       "unit": "px",

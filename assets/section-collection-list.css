@@ -26,7 +26,7 @@
 }
 
 .section-collection-list .collection-list:not(.slider) {
-	gap: var(--grid-desktop-horizontal-spacing);
+	gap: calc(var(--grid-desktop-horizontal-spacing) * 2) var(--grid-desktop-horizontal-spacing);
 }
 
 .section-collection-list .grid--2-col-tablet-down .grid__item {
@@ -86,15 +86,14 @@
 
 .our-collections-list-title {
   color: var(--gradient-base-accent-1);
-  font-size: 1.8rem;
-  font-weight: var(--font-body-weight-bold);
+  font-size: var(--font-body-size-medium);
+  font-weight: 600;
   text-align: center;
   text-transform: uppercase;
   background: var(--gradient-background);
 	display: block;
 	padding: var(--grid-mobile-horizontal-spacing) 0;
 	border: 1px solid var(--gradient-base-accent-1);
-	border-top: none;
 }
 
 @media screen and (min-width: 990px) {
