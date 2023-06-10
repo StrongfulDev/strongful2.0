@@ -88,6 +88,8 @@
             font-weight: --font-body-weight;
             font-style: --font-body-style;
             }
+
+
         {% else %}
             {% assign body_font_family = settings.type_body_font.family %}
             {{ settings.type_body_font | font_face: font_display: 'swap' }}
@@ -110,8 +112,7 @@
         {{ body_font_bold_italic | font_face: font_display: 'swap' }}
 
         :root  {
-        {% comment %}--font-body-family: {{ body_font_family }}, {{ settings.type_body_font.fallback_families }};{% endcomment %}
-        --font-body-family: 'Noto Sans Hebrew', sans-serif;
+        --font-body-family: {{ body_font_family }}, {{ settings.type_body_font.fallback_families }};
         --font-body-style: {{ settings.type_body_font.style }};
         --font-body-weight: {{ settings.type_body_font.weight }};
         --font-body-weight-bold: {{ settings.type_body_font.weight | plus: 300 | at_most: 1000 }};
@@ -119,8 +120,7 @@
         --font-body-size-medium: 1.5rem;
         --font-body-size-small: 1rem;
         --font-body-size-smallest: 0.9rem;
-        {% comment %}--font-heading-family: {{ header_font_family }}, {{ settings.type_header_font.fallback_families }};{% endcomment %}
-        --font-heading-family: 'Noto Sans Hebrew', sans-serif;
+        --font-heading-family: {{ header_font_family }}, {{ settings.type_header_font.fallback_families }};
         --font-heading-style: {{ settings.type_header_font.style }};
         --font-heading-weight: {{ settings.type_header_font.weight }};
         --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
