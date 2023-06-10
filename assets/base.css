@@ -1093,6 +1093,10 @@ summary::-webkit-details-marker {
 	max-width: calc(24% - var(--grid-desktop-horizontal-spacing) / 2);
 }
 
+#product-grid.product-grid-one-column {
+	grid-template-columns: 1fr;
+}
+
 @media screen and (min-width: 990px) {
     .grid {
         column-gap: var(--grid-desktop-horizontal-spacing);

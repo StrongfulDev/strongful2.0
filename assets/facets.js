@@ -491,3 +491,20 @@ function onlyShowIfInStock() {
 		}
 	}
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+	let gridDisplays = document.querySelectorAll(".grid-display");
+	gridDisplays.forEach(function(gridDisplay) {
+		gridDisplay.addEventListener("click", function() {
+			let gridDisplayActive = document.querySelector(".grid-display.active");
+			gridDisplayActive.classList.remove("active");
+			gridDisplay.classList.add("active");
+			const productGrid = document.querySelector("#product-grid");
+			if (this.classList.contains("grid-display-one-column")) {
+				productGrid.classList.add("product-grid-one-column");
+			} else {
+				productGrid.classList.remove("product-grid-one-column");
+			}
+		});
+	});
+});

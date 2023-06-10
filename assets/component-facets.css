@@ -598,6 +598,9 @@ a.active-facets__button.focused .active-facets__button-inner,
 .grid-display-inner-shape.one-shape {
 	height: 2.5rem;
 	width: 2rem;
+}
+
+.grid-display-inner-shape {
 	border: 1pt solid var(--gradient-base-accent-1);
 	display: block;
 }
