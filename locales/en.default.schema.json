@@ -258,6 +258,16 @@
             "label": "Spartan"
           }
         },
+        "type_body_font_english": {
+          "label": "English Font",
+          "info": "Selecting a font to use for english.",
+          "options__1": {
+            "label": "None"
+          },
+          "options__2": {
+            "label": "Spartan"
+          }
+        },
         "body_scale": {
           "label": "Font size scale"
         }

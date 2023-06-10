@@ -42,7 +42,7 @@
       "custom_css": [
         ".button {width: 100%;}",
         ".discount-price-container {direction: rtl;}",
-        ".slider--tablet.grid--peek.grid--2-col-tablet-down .grid__item,.grid--peek .grid__item {width: calc(42% - var(--grid-mobile-horizontal-spacing) - 3rem);}",
+        ".slider--tablet.grid--peek.grid--2-col-tablet-down .grid__item,.grid--peek .grid__item {width: calc(48% - var(--grid-mobile-horizontal-spacing) - 3rem);}",
         "@media screen and (min-width: 990px) {.slider--desktop.grid--peek.grid--5-col-desktop .grid__item {width: calc( (94% - var(--desktop-margin-left-first-item)) \/ 5 - var(--grid-desktop-horizontal-spacing) * 2 ); }}"
       ],
       "settings": {
@@ -90,7 +90,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/2G6A6596_1_1.jpg",
             "alt": "",
-            "link": "TOPS",
+            "link": "SHOP TOPS",
             "url": "shopify:\/\/collections\/all-tops"
           }
         },
@@ -99,7 +99,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/f3a11fd37b5fc77d0729d87fc4423674.jpg",
             "alt": "",
-            "link": "BOTTOMS",
+            "link": "SHOP BOTTOMS",
             "url": "shopify:\/\/collections\/allbottoms"
           }
         },
@@ -108,7 +108,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/76d89d3582cfa04436c752f4a801a041.jpg",
             "alt": "",
-            "link": "SETS",
+            "link": "SHOP SETS",
             "url": "shopify:\/\/collections\/סטים"
           }
         },
@@ -117,7 +117,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/6bc2de0268346daf920ba4af2927e455.jpg",
             "alt": "",
-            "link": "ACCESSORIES",
+            "link": "SHOP ACCESSORIES",
             "url": "shopify:\/\/collections\/accessories"
           }
         }
@@ -129,7 +129,7 @@
         "d4c24f14-7485-452d-a6c5-ab2dbbf11ee6"
       ],
       "settings": {
-        "title": "OUR COLLECTIONS",
+        "title": "COLLECTIONS",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "image_ratio": "portrait",
