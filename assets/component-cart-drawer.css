@@ -61,7 +61,6 @@ cart-drawer .drawer__inner {
     padding: 0;
 	border-top-left-radius: 1rem;
 	border-bottom-left-radius: 1rem;
-	border-left: 0.5px solid var(--gradient-base-background-3);
 }
 
 cart-drawer.is-empty .drawer__header {
