@@ -180,8 +180,21 @@
                                     <nav class="menu-drawer__navigation">
                                         <div class="nav_top">
                                             <div class="nav_top--logo-container">
+                                                {% comment %}
                                                 {% if section.settings.mobile_logo_link != '' %}
                                                     <a href="{{ section.settings.mobile_logo_link }}" class="nav_top--mobile-logo">
+                                                        {% if section.settings.mobile_logo %}
+                                                            <img src="{{ section.settings.mobile_logo | img_url: 'master' }}" alt="{{ shop.name }}"
+                                                                 class="logo menu-drawer__logo" style="width: {{ section.settings.mobile_logo_width }}px">
+                                                        {% endif %}
+                                                        <button class="mobile-header-closer">
+                                                            {% render 'icon-close' %}
+                                                        </button>
+                                                    </a>
+                                                {% endif %}
+                                                {% endcomment %}
+                                                {% if section.settings.mobile_logo_link != '' %}
+                                                    <a href="/" class="nav_top--mobile-logo">
                                                         {% if section.settings.mobile_logo %}
                                                             <img src="{{ section.settings.mobile_logo | img_url: 'master' }}" alt="{{ shop.name }}"
                                                                  class="logo menu-drawer__logo" style="width: {{ section.settings.mobile_logo_width }}px">
@@ -1475,6 +1488,21 @@
     "type": "image_picker",
     "id": "mobile_logo",
     "label": "t:sections.header.settings.mobile_logo.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_logo_secondary",
+      "label": "t:sections.header.settings.mobile_logo_secondary.label"
+    },
+    {
+      "type": "range",
+      "id": "mobile_logo_secondary_width",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "t:sections.header.settings.mobile_logo_secondary_size.label",
+      "default": 60
     },
     {
     "type": "url",
