@@ -57,7 +57,7 @@
     endif
 -%}
 
-<div class="color-{{ section.settings.color_scheme }} isolate gradient">
+<div class="color-{{ section.settings.color_scheme }} isolate gradient section-{{ section.id }}-padding">
     <product-recommendations data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ section.settings.products_to_show }}"
             class="related-products collection section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width  full-width-padding{% endif %} pagination_type_{{ section.settings.pagination_type }}">
         <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">

@@ -1886,7 +1886,8 @@ li.grid--peek.slider .grid__item, li.product__media-item.grid__item.slider__slid
 product-recommendations, product-recommendations.collection--full-width,
 product-recommendations .collection--full-width .title-wrapper--self-padded-tablet-down {
 	display: block;
-	padding: 1.5rem;
+	padding-right: 1.5rem;
+	padding-left: 1.5rem;
 }
 
 product-recommendations .collection__title_heading {
