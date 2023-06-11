@@ -5,7 +5,6 @@ $(document).ready(function () {
 
 	$('.model-switcher__item input').change(function () {
 		const modelSize = $(this).val();
-		console.log(modelSize)
 		if (modelSize) {
 			changeModel(modelSize);
 			updateVariantRadios(modelSize);
@@ -26,7 +25,6 @@ $(document).ready(function () {
 
 function hideUnAvailableModels() {
 	const availableSizes = getAvailableSizes();
-	console.log(availableSizes)
 
 	if (availableSizes.length === 0) {
 		$('.model-switcher').hide();

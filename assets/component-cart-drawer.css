@@ -1,6 +1,6 @@
 .drawer {
     position: fixed;
-    z-index: 1000;
+    z-index: 100000;
     left: 0;
     top: 0;
 	bottom: 0;
@@ -575,6 +575,8 @@ cart-drawer-items.is-empty {
 .cart__checkout-button .loading-overlay {
 	justify-content: center;
 	width: 100%;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 @media screen and (min-width: 990px) {

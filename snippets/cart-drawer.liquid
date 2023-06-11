@@ -142,7 +142,7 @@
                                         <tbody role="rowgroup">
                                         {%- for item in cart.items -%}
                                             <tr id="CartDrawer-Item-{{ item.index | plus: 1 }}" data-index="{{ item.index | plus: 1 }}" data-product-id="{{ item.product.id }}" data-id="{{ item.id }}" class="cart-item"
-                                                role="row" data-price="{{ item.variant.price }}">
+                                                role="row" data-variant-price="{{ item.variant.price }}" data-compare-price="{{ item.product.compare_at_price }}" data-original-line-price="{{ item.original_line_price }}">
                                                 <td class="cart-item__media" role="cell"
                                                     headers="CartDrawer-ColumnProductImage">
                                                     {% if item.image %}
@@ -227,7 +227,12 @@
                                 {{ 'products.product.price.regular_price' | t }}
                               </span>
                                                             <s class="cart-item__old-price product-option">
+                                                                {% assign customOriginalPrice = item.product.compare_at_price | times: item.quantity %}
+                                                                {% if item.original_line_price > customOriginalPrice %}
                                                                 {{- item.original_line_price | money -}}
+                                                                {% else %}
+                                                                {{- item.product.compare_at_price | times: item.quantity | money -}}
+                                                                {% endif %}
                                                             </s>
                                                             <span class="visually-hidden">
                                 {{ 'products.product.price.sale_price' | t }}
@@ -434,11 +439,25 @@
                     <!-- Subtotals -->
 
                     <div class="cart-drawer__footer" {{ block.shopify_attributes }}>
-                        {% for item in cart.items %}
-                        {% assign itemComparePrice = item.product.compare_at_price | minus: item.variant.price %}
-                            {% assign itemOriginalPrice = item.original_line_price %}
                         {% assign cartOriginalTotalPrice = cart.original_total_price %}
-                            {% assign customCartOriginalTotalPrice = cartOriginalTotalPrice | plus: itemComparePrice | plus: itemOriginalPrice %}
+                        {% assign cartTotalPrice = cart.total_price %}
+                        {% assign totalPriceGaps = 0 %}
+                        {% for item in cart.items %}
+                            {% assign itemFinalPrice = item.final_line_price %}
+                            {% if item.product.compare_at_price > item.original_price %}
+                                {% assign itemOriginalPrice = item.product.compare_at_price | times: item.quantity %}
+                            {% else %}
+                                {% assign itemOriginalPrice = item.original_line_price %}
+                            {% endif %}
+                            {% assign itemPriceGap = itemOriginalPrice | minus: itemFinalPrice %}
+                            {{ itemPriceGap }}
+                            {% assign totalPriceGaps = totalPriceGaps | plus: itemPriceGap %}
+                        {% endfor %}
+                        {% if cartOriginalTotalPrice == cart.total_price %}
+                            {% assign customCartOriginalTotalPrice = cartOriginalTotalPrice | plus: totalPriceGaps %}
+                        {% else %}
+                            {% assign customCartOriginalTotalPrice = cartTotalPrice | plus: totalPriceGaps %}
+                        {% endif %}
                         {% assign discount = customCartOriginalTotalPrice | minus: cart.total_price %}
                         <div class="totals" role="status">
                             {% if discount > 0 %}
@@ -463,7 +482,6 @@
                                 </p>
                             </div>
                         </div>
-                        {% endfor %}
 
                         <div>
                             {%- if cart.cart_level_discount_applications.size > 0 -%}

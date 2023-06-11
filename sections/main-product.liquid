@@ -104,7 +104,7 @@
                                 {{- block.settings.text -}}
                             </p>
                         {%- when 'title' -%}
-                            <div class="product__title fix-direction" {{ block.shopify_attributes }}>
+                            <div class="product__title fix-direction" {{ block.shopify_attributes }} data-product-color="{{ product.vendor }}">
                                 <h1>{{ product.title | escape }}</h1>
                                 <a href="{{ product.url }}" class="product__title">
                                     <h2 class="h1">

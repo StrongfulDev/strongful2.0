@@ -13,7 +13,6 @@ class CartRewards {
 	lastCartTotalValue = 0;
 
 	async init() {
-		console.log("Reward rules", this.rules);
 
 		this.allRewardsAmount = Math.max.apply(Math, this.rules.map(function (o) {
 			return o.condition.value;
@@ -222,7 +221,7 @@ class CartRewards {
 		const rewardText = $(".reward-text");
 		const isLatestActiveRule = ruleIndex >= this.activeRewards && isConditionMet;
 		const isLatestDeactivatedRule = ruleIndex === this.activeRewards && !isConditionMet;
-		const missingAmount = rule.condition.value - this.cartTotalValue;
+		const missingAmount = (rule.condition.value - this.cartTotalValue).toFixed(2);
 
 		// Apply condition message.
 		if (isLatestDeactivatedRule && missingAmount > 0) {
