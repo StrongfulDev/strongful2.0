@@ -450,7 +450,6 @@
                                 {% assign itemOriginalPrice = item.original_line_price %}
                             {% endif %}
                             {% assign itemPriceGap = itemOriginalPrice | minus: itemFinalPrice %}
-                            {{ itemPriceGap }}
                             {% assign totalPriceGaps = totalPriceGaps | plus: itemPriceGap %}
                         {% endfor %}
                         {% if cartOriginalTotalPrice == cart.total_price %}

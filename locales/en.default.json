@@ -446,7 +446,7 @@
       "guest_title": "המשיכי ללא משתמש",
       "password": "סיסמה",
       "title": "כניסה",
-      "sign_in": "כניסה>>",
+      "sign_in": "כניסה",
       "submit": "שליחה"
     },
     "order": {
@@ -541,7 +541,7 @@
       "last_name": "שם משפחה",
       "email": "אימייל",
       "password": "סיסמה",
-      "submit": "הרשמה>>",
+      "submit": "הרשמה",
       "login_toggler": "כבר חברת מועדון? התחברי",
       "form_errors": {
         "email": "כתובת המייל שהוזנה אינה תקינה",
