@@ -1767,7 +1767,15 @@ li.grid--peek.slider .grid__item, li.product__media-item.grid__item.slider__slid
 	display: block;
 }
 
+#product .footer {
+	padding-bottom: 5em;
+}
+
 @media screen and (min-width: 990px) {
+
+	#product .footer {
+		padding-bottom: 7.5em;
+	}
 
 	product-recommendations {
 		margin: auto;
@@ -2033,4 +2041,8 @@ product-recommendations .collection__title_heading {
 	.bottom-line-items-container-desktop {
 		height: fit-content;
 	}
+}
+
+button.needsclick {
+	z-index: 0 !important;
 }
