@@ -1,11 +1,12 @@
 {
   "sections": {
-    "7ad32885-ebea-41fc-8bab-89b75bc8089d": {
-      "type": "countdown",
+    "bdc8ff47-878a-4d72-b6dc-09c87e3bd9f1": {
+      "type": "custom-liquid",
       "settings": {
-        "main_link": "#",
-        "main_text": "Main Text",
-        "sub_text": "Sub Text"
+        "custom_liquid": "{{ 'component-countdown.css' | asset_url | stylesheet_tag }}\n{{ 'component-countdown.js' | asset_url | script_tag }}\n\n<a href=\"\/collections\/סטים\" id=\"countdown\" class=\"countdown rtl\">\n    <div class=\"countdown-ctn flex\">\n        <div class=\"announce-countdown\">\n            <div id=\"tiles\" class=\"flex ltr\">\n                <div class=\"tiles-div tiles-div-days\">\n                    <p class=\"tiles-time tiles-time-days\"><\/p>\n                <\/div>\n                <div class=\"tiles-div tiles-div-hours\">\n                    <p class=\"tiles-time tiles-time-hours\"><\/p>\n                <\/div>\n                <div class=\"tiles-div tiles-div-minutes\">\n                    <p class=\"tiles-time tiles-time-minutes\"><\/p>\n                <\/div>\n                <div class=\"tiles-div tiles-div-seconds\">\n                    <p class=\"tiles-time tiles-time-seconds\"><\/p>\n                <\/div>\n            <\/div>\n        <\/div>\n        <div class=\"countdown-sale-description-ctn\">\n            <p class=\"countdown-sale-description upper\">15% off all site<\/p>\n            <p class=\"countdown-sale-description\">רק ל24 שעות! לא כולל אאוטלט<\/p>\n        <\/div>\n    <\/div>\n<\/a>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "slideshow": {
@@ -163,7 +164,7 @@
     }
   },
   "order": [
-    "7ad32885-ebea-41fc-8bab-89b75bc8089d",
+    "bdc8ff47-878a-4d72-b6dc-09c87e3bd9f1",
     "slideshow",
     "ecf1e0a5-0973-4674-ac5b-b5370ff1bae1",
     "our_collection_list",
