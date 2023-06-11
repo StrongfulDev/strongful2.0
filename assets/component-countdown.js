@@ -15,14 +15,14 @@ document.addEventListener('DOMContentLoaded', function() {
 			let current_date = new Date().getTime();
 			let seconds_left = (target_date - current_date) / 1000;
 
-			days = pad(parseInt(seconds_left / 86400));
+			days = parseInt(seconds_left / 86400);
 			seconds_left = seconds_left % 86400;
 
-			hours = pad(parseInt(seconds_left / 3600));
+			hours = parseInt(seconds_left / 3600);
 			seconds_left = seconds_left % 3600;
 
-			minutes = pad(parseInt(seconds_left / 60));
-			seconds = pad(parseInt(seconds_left % 60));
+			minutes = parseInt(seconds_left / 60);
+			seconds = parseInt(seconds_left % 60);
 
 			// $('.tiles-time-days').html(days);
 			$('.tiles-time-hours').html(hours);
@@ -30,8 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
 			$('.tiles-time-seconds').html(seconds);
 		}
 
-		function pad(n) {
-			return (n < 10 ? '0' : '') + n;
-		}
+		// function pad(n) {
+		// 	return (n < 10 ? '0' : '') + n;
+		// }
 	}
 });
