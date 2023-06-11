@@ -20,14 +20,6 @@
             "product": "{{product}}"
           }
         },
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "is_vendor": true,
-            "text_style": "uppercase"
-          }
-        },
         "price": {
           "type": "price",
           "settings": {
@@ -103,7 +95,6 @@
         "7c99b889-3ad8-4802-a5c7-9802ab40f12c",
         "title",
         "656bd184-5523-4c74-aee3-c2664a058063",
-        "vendor",
         "price",
         "variant_picker",
         "quantity_selector",

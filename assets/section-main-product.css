@@ -361,7 +361,7 @@ a.product__text {
 }
 
 .product .price__container {
-    margin-bottom: 0.5rem;
+    margin: 0.5rem 0;
 }
 
 .product .price dl {

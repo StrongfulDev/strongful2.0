@@ -156,15 +156,6 @@ div:not(.product-size-picker-container) .variant-button .size_variant_button:not
 	margin: 6px 0;
 }
 
-.rect-discount-tag {
-	margin: 0;
-	direction: ltr;
-	font-size: .75em;
-	color: #b22222;
-	border: 1px firebrick solid;
-	padding: 0 7px;
-}
-
 .card--standard:not(.card--horizontal) > .card__content .card__badge:has(> .badge.color-custom-red) {
 	display: none;
 }
