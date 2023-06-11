@@ -1,7 +1,7 @@
 {{ 'component-countdown.css' | asset_url | stylesheet_tag }}
 {{ 'component-countdown.js' | asset_url | script_tag }}
 
-<a href="{{ section.settings.main_link }}" id="countdown" class="countdown rtl">
+<a href="/collections/סטים" id="countdown" class="countdown rtl">
     <div class="countdown-ctn flex">
         <div class="announce-countdown">
             <div id="tiles" class="flex ltr">
@@ -20,40 +20,8 @@
             </div>
         </div>
         <div class="countdown-sale-description-ctn">
-            <p class="countdown-sale-description englishFont upper">{{ section.settings.main_text }}</p>
-            <p class="countdown-sale-description upper">{{ section.settings.sub_text }}</p>
+            <p class="countdown-sale-description upper">15% off all site</p>
+            <p class="countdown-sale-description">רק ל24 שעות! לא כולל אאוטלט</p>
         </div>
     </div>
 </a>
-
-{% schema %}
-
-{
-    "name": "t:sections.countdown.name",
-    "tag": "section",
-    "class": "section",
-    "settings": [
-        {
-            "type": "url",
-            "id": "main_link",
-            "label": "t:sections.countdown.settings.main_link"
-        },
-        {
-            "type": "text",
-            "id": "main_text",
-            "label": "t:sections.countdown.settings.main_text"
-        },
-        {
-            "type": "text",
-            "id": "sub_text",
-            "label": "t:sections.countdown.settings.sub_text"
-        }
-    ],
-    "presets": [
-        {
-            "name": "t:sections.countdown.presets.name"
-        }
-    ]
-}
-
-{% endschema %}

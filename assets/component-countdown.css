@@ -4,6 +4,7 @@
 	width: 100%;
 	padding: 0.6em 0;
 	background: var(--gradient-base-accent-1);
+	color: rgb(var(--color-base-text));
 }
 
 .headerLink-countdown {
@@ -18,7 +19,7 @@
 }
 
 .countdown-sale-description {
-	color: #fff;
+	color: rgb(var(--color-base-background-1));
 	font-weight: 600;
 	margin: 0;
 	font-size: .9em;
@@ -50,7 +51,6 @@
 	color: #cfcfcf;
 	position: relative;
 	font-size: 1.8em;
-	font-family: 'Roboto', sans-serif;
 	margin: 0 6px;
 	font-weight: 900;
 	box-shadow: 0px 0px 6px 0px rgb(255 255 255 / 30%);
@@ -73,5 +73,16 @@
 	font-size: .9em;
 	margin: .6em auto 0;
 	text-align: center;
-	color: #fff;
+	color: rgb(var(--color-base-background-1));
+}
+
+@media screen and (min-width: 990px) {
+	.countdown-ctn {
+		justify-content: center;
+		column-gap: 1.5em;
+	}
+
+	.countdown-sale-description {
+		font-size: 1.1em;
+	}
 }
