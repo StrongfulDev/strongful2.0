@@ -16,7 +16,7 @@
       ],
       "custom_css": [
         "@media screen and (min-width: 990px) {.banner__media img {object-fit: contain; }}",
-        ".media > *:not(.zoom):not(.deferred-media__poster-button),.media model-viewer {position: static;}"
+        ".media > *:not(.zoom):not(.deferred-media__poster-button),.media model-viewer {position: static; object-fit: cover;}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/2200x287_copy.jpg",

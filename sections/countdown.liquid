@@ -1,0 +1,69 @@
+{{ 'countdown.css' | asset_url | stylesheet_tag }}
+{{ 'countdown.js' | asset_url | script_tag }}
+
+<a href="{{ section.settings.main_link }}" id="countdown" class="countdown rtl">
+    <div class="countdown-ctn flex">
+        <div class="announce-countdown">
+            <div id='tiles' class='flex ltr'>
+                <div class="tiles-div tiles-div-days">
+                    <p class="tiles-time tiles-time-days"></p>
+                </div>
+                <div class="tiles-div tiles-div-hours">
+                    <p class="tiles-time tiles-time-hours"></p>
+                </div>
+                <div class="tiles-div tiles-div-minutes">
+                    <p class="tiles-time tiles-time-minutes"></p>
+                </div>
+                <div class="tiles-div tiles-div-seconds">
+                    <p class="tiles-time tiles-time-seconds"></p>
+                </div>
+            </div>
+        </div>
+        <div class="countdown-sale-description-ctn">
+            <p class="countdown-sale-description englishFont upper">{{ sections.settings.main_text }}</p>
+            <p class="countdown-sale-description upper">{{ sections.settings.sub_text }}</p>
+        </div>
+    </div>
+</a>
+
+{% schema %}
+
+{
+    "name": {
+        "en": "Countdown"
+    },
+    "settings": [
+        {
+            "type": "text",
+            "id": "main_link",
+            "label": {
+                "en": "Main Link"
+            },
+            "default": {
+                "en": "#"
+            }
+        },
+        {
+            "type": "text",
+            "id": "main_text",
+            "label": {
+                "en": "Main Text"
+            },
+            "default": {
+                "en": "Main Text"
+            }
+        },
+        {
+            "type": "text",
+            "id": "sub_text",
+            "label": {
+                "en": "Sub Text"
+            },
+            "default": {
+                "en": "Sub Text"
+            }
+        }
+    ]
+}
+
+{% endschema %}
