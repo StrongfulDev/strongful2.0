@@ -1,5 +1,13 @@
 {
   "sections": {
+    "7ad32885-ebea-41fc-8bab-89b75bc8089d": {
+      "type": "countdown",
+      "settings": {
+        "main_link": "#",
+        "main_text": "Main Text",
+        "sub_text": "Sub Text"
+      }
+    },
     "slideshow": {
       "type": "slideshow",
       "blocks": {
@@ -155,6 +163,7 @@
     }
   },
   "order": [
+    "7ad32885-ebea-41fc-8bab-89b75bc8089d",
     "slideshow",
     "ecf1e0a5-0973-4674-ac5b-b5370ff1bae1",
     "our_collection_list",

@@ -809,6 +809,26 @@
         "name": "Contact form"
       }
     },
+    "countdown": {
+      "name": "Countdown timer",
+      "settings": {
+        "main_link": {
+          "label": "Link",
+          "info": "Select a page or enter a URL to create a link for the countdown timer."
+        },
+        "main_text": {
+          "label": "Text",
+          "info": "Add a message to display above the countdown timer."
+        },
+        "sub_text": {
+          "label": "Subtext",
+          "info": "Add a message to display below the countdown timer."
+        }
+      },
+      "presets": {
+        "name": "Countdown timer"
+      }
+    },
     "custom-liquid": {
       "name": "Custom Liquid",
       "settings": {

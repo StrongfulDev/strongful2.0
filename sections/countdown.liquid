@@ -29,39 +29,29 @@
 {% schema %}
 
 {
-    "name": {
-        "en": "Countdown"
-    },
+    "name": "t:sections.countdown.name",
+    "tag": "section",
+    "class": "section",
     "settings": [
         {
-            "type": "text",
+            "type": "url",
             "id": "main_link",
-            "label": {
-                "en": "Main Link"
-            },
-            "default": {
-                "en": "#"
-            }
+            "label": "t:sections.countdown.settings.main_link"
         },
         {
             "type": "text",
             "id": "main_text",
-            "label": {
-                "en": "Main Text"
-            },
-            "default": {
-                "en": "Main Text"
-            }
+            "label": "t:sections.countdown.settings.main_text"
         },
         {
             "type": "text",
             "id": "sub_text",
-            "label": {
-                "en": "Sub Text"
-            },
-            "default": {
-                "en": "Sub Text"
-            }
+            "label": "t:sections.countdown.settings.sub_text"
+        }
+    ],
+    "presets": [
+        {
+            "name": "t:sections.countdown.presets.name"
         }
     ]
 }
