@@ -285,7 +285,7 @@ predictive-search[loading]
 	}
 
 	details[open] > .search-modal {
-		width: 65vw;
+		width: 69vw;
 		right: 0;
 		left: auto;
 	}
