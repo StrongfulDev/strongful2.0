@@ -680,12 +680,12 @@
             {%- endif -%}
           </span>
         </span>
-        <span tabindex="0" class="mobile-facets__close mobile-facets__close--no-js">{%- render 'icon-close' -%}</span>
       </summary>
       <facet-filters-form>
         <form id="FacetFiltersFormMobile" class="mobile-facets">
           <div class="mobile-facets__inner gradient fix-direction">
             <div class="mobile-facets__header">
+                <span tabindex="0" class="mobile-facets__close mobile-facets__close--no-js">{%- render 'icon-close' -%}</span>
               <div class="mobile-facets__header-inner">
                 <h2 class="mobile-facets__heading medium-hide large-up-hide">
                   {%- if enable_filtering and enable_sorting -%}
@@ -696,6 +696,11 @@
                     {{ 'products.facets.sort_button' | t }}
                   {%- endif -%}
                 </h2>
+                  <facet-remove class="mobile-facets__clear-wrapper">
+                      <a href="{{ results_url }}" class="mobile-facets__clear underlined-link">
+                          {{- 'products.facets.clear_all' | t -}}
+                      </a>
+                  </facet-remove>
                 <p class="mobile-facets__active-filter-count"></p>
                 <h2 class="mobile-facets__heading small-hide">
                   {%- if enable_filtering -%}
@@ -717,6 +722,41 @@
               </div>
             </div>
             <div class="mobile-facets__main has-submenu gradient">
+                {%- if enable_sorting -%}
+                    <div
+                            class="mobile-facets__details js-filter{% if filter_type == 'drawer' %} medium-hide large-up-hide{% endif %}"
+                            data-index="mobile-{{ forloop.index }}"
+                    >
+                        <div class="mobile-facets__summary">
+                            <div class="mobile-facets__sort">
+                                <label for="SortBy-mobile">{{ 'products.facets.sort_by_label' | t }}</label>
+                                <div class="select">
+                                    <select
+                                            name="sort_by"
+                                            class="select__select"
+                                            id="SortBy-mobile"
+                                            aria-describedby="a11y-refresh-page-message"
+                                    >
+                                        {%- for option in results.sort_options -%}
+                                            {{ option.value }}
+                                            {% unless option.value == 'title-descending' or option.value == 'title-ascending' or option.value == 'created-descending' %}
+                                            <option
+                                                    value="{{ option.value | escape }}"
+                                                    {% if option.value == sort_by %}
+                                                        selected="selected"
+                                                    {% endif %}
+                                            >
+                                                {{ 'products.facets.filters.' | append: option.value | t }}
+                                            </option>
+                                        {% endunless %}
+                                        {%- endfor -%}
+                                    </select>
+                                    {% render 'icon-caret' %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {%- endif -%}
               {%- if enable_filtering -%}
                 {%- for filter in results.filters -%}
                   {% case filter.type %}
@@ -781,7 +821,7 @@
                                       aria-hidden="true"
                                       focusable="false"
                                   >
-                                    <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>
+                                    <rect width="16" height="16" fill="none" class="rect-border"></rect>
                                   </svg>
 
                                   <svg
@@ -963,45 +1003,7 @@
                 {%- endfor -%}
               {%- endif -%}
 
-              {%- if enable_sorting -%}
-                <div
-                    class="mobile-facets__details js-filter{% if filter_type == 'drawer' %} medium-hide large-up-hide{% endif %}"
-                    data-index="mobile-{{ forloop.index }}"
-                >
-                  <div class="mobile-facets__summary">
-                    <div class="mobile-facets__sort">
-                      <label for="SortBy-mobile">{{ 'products.facets.sort_by_label' | t }}</label>
-                      <div class="select">
-                        <select
-                            name="sort_by"
-                            class="select__select"
-                            id="SortBy-mobile"
-                            aria-describedby="a11y-refresh-page-message"
-                        >
-                          {%- for option in results.sort_options -%}
-                            <option
-                                value="{{ option.value | escape }}"
-                                {% if option.value == sort_by %}
-                                  selected="selected"
-                                {% endif %}
-                            >
-                              {{ 'products.facets.filters.' | append: option.value | t }}
-                            </option>
-                          {%- endfor -%}
-                        </select>
-                        {% render 'icon-caret' %}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              {%- endif -%}
-
               <div class="mobile-facets__footer">
-                <facet-remove class="mobile-facets__clear-wrapper">
-                  <a href="{{ results_url }}" class="mobile-facets__clear underlined-link">
-                    {{- 'products.facets.clear_all' | t -}}
-                  </a>
-                </facet-remove>
                 <button
                     type="button"
                     class="no-js-hidden button button--primary"

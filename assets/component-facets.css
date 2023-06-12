@@ -10,6 +10,7 @@
 
 .mobile-facets__list {
   overflow-y: auto;
+	transition: 1s ease-in-out;
 }
 
 @media screen and (min-width: 750px) {
@@ -557,7 +558,7 @@ a.active-facets__button.focused .active-facets__button-inner,
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 100;
+  z-index: 100000;
   background-color: rgba(var(--color-foreground), 0.5);
   pointer-events: none;
 }
@@ -566,7 +567,7 @@ a.active-facets__button.focused .active-facets__button-inner,
   display: flex;
 	width: 100%;
 	background-color: var(--gradient-base-background-3);
-	height: 3rem;
+	height: 3.5rem;
 	border-radius: 1em;
 }
 
@@ -615,12 +616,15 @@ a.active-facets__button.focused .active-facets__button-inner,
   margin-left: 0;
   display: flex;
 	column-gap: calc(var(--grid-desktop-horizontal-spacing) * 2);
-	padding: 0 3rem;
 }
 
 .mobile-facets__wrapper .disclosure-has-popup[open] > summary::before {
   height: 100vh;
   z-index: 3;
+}
+
+.disclosure-has-popup[open] > summary + * {
+	z-index: 100000;
 }
 
 .mobile-facets__inner {
@@ -630,7 +634,7 @@ a.active-facets__button.focused .active-facets__button-inner,
   height: 100%;
   overflow-y: auto;
   pointer-events: all;
-  transition: transform var(--duration-short) ease;
+  transition: transform var(--duration-long) ease;
   max-width: 37.5rem;
   display: flex;
   flex-direction: column;
@@ -647,10 +651,12 @@ a.active-facets__button.focused .active-facets__button-inner,
 
 .menu-opening .mobile-facets__inner {
   transform: translateX(0);
+	transition: var(--duration-long) ease;
 }
 
 .js .disclosure-has-popup:not(.menu-opening) .mobile-facets__inner {
   transform: translateX(105vw);
+	transition: var(--duration-long) ease;
 }
 
 .mobile-facets__header {
@@ -832,27 +838,22 @@ details.menu-opening .mobile-facets__close svg {
   align-items: center;
 }
 
-.js .mobile-facets__submenu {
-  position: absolute;
-  top: 0;
+.mobile-facets__submenu {
   width: 100%;
-  bottom: 0;
-  left: 0;
-  z-index: 3;
-  transform: translateX(100%);
-  visibility: hidden;
   display: flex;
   flex-direction: column;
+	max-height: 0;
+	height: 0;
+	transition: max-height 1s ease-in-out;
 }
 
-.js details[open] > .mobile-facets__submenu {
-  transition: transform 0.4s cubic-bezier(0.29, 0.63, 0.44, 1),
-    visibility 0.4s cubic-bezier(0.29, 0.63, 0.44, 1);
+details[open] > .mobile-facets__submenu {
+	max-height: 100vh;
+	height: auto;
 }
 
-.js details[open].menu-opening > .mobile-facets__submenu {
-  transform: translateX(0);
-  visibility: visible;
+.js details:not([open]) > .mobile-facets__submenu {
+
 }
 
 .js .menu-drawer__submenu .mobile-facets__submenu {
@@ -872,7 +873,6 @@ input.mobile-facets__checkbox {
   position: absolute;
   width: 1.6rem;
   height: 1.6rem;
-  position: absolute;
   left: 2.1rem;
   top: 1.2rem;
   z-index: 0;
@@ -881,11 +881,12 @@ input.mobile-facets__checkbox {
 }
 
 .mobile-facets__label {
-  padding: 1.5rem 2rem 1.5rem 2.5rem;
+  padding: 1.5rem 0;
   width: 100%;
   transition: background-color 0.2s ease;
   word-break: break-word;
   display: flex;
+	color: var(--gradient-base-accent-1);
 }
 
 .mobile-facets__label > svg {
@@ -894,6 +895,13 @@ input.mobile-facets__checkbox {
   z-index: 2;
   margin-right: 1.2rem;
   flex-shrink: 0;
+	border: 1px solid var(--gradient-base-accent-1);
+	border-radius: 2px;
+}
+
+.mobile-facets__label > svg:first-of-type {
+	width: 2rem;
+	height: 2rem;
 }
 
 .mobile-facets__item .mobile-facets__label .icon-checkmark {
@@ -905,6 +913,7 @@ input.mobile-facets__checkbox {
 
 .mobile-facets__label > input[type='checkbox']:checked ~ .icon-checkmark {
   visibility: visible;
+	border: none;
 }
 
 .mobile-facets__arrow,
@@ -915,11 +924,12 @@ input.mobile-facets__checkbox {
 
 .mobile-facets__label--disabled {
   opacity: 0.5;
+	display: none;
 }
 
 .mobile-facets__footer {
   border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
-  padding: 2rem;
+  padding: 2rem 0;
   bottom: 0;
   position: sticky;
   display: flex;
@@ -934,7 +944,7 @@ input.mobile-facets__checkbox {
 }
 
 .mobile-facets__footer > * {
-  width: 50%;
+  width: 100%;
 }
 
 .mobile-facets__footer noscript .button {
@@ -1171,11 +1181,11 @@ input.mobile-facets__checkbox {
 }
 
 .mobile-facets__close {
-  left: 6rem;
+  left: 1rem;
   right: auto;
 }
 
-.mobile-facets__details.js-filter:first-child {
+details.mobile-facets__details.js-filter:first-of-type {
   display: none;
 }
 
@@ -1184,18 +1194,12 @@ input.mobile-facets__checkbox {
 }
 
 .product-count {
-  margin: 1rem 0;
+  margin: .5rem 0 2.5rem;
   text-align: center;
 }
 
 .mobile-facets__wrapper {
   align-items: center;
-}
-
-.js .mobile-facets__submenu {
-  position: static;
-  transform: translate(0);
-  visibility: visible;
 }
 
 .js .mobile-facets .submenu-open {
@@ -1207,13 +1211,9 @@ input.mobile-facets__checkbox {
   display: none;
 }
 
-.mobile-facets__label {
-  padding: 1.5rem 2rem;
-  align-items: center;
-}
-
 div.mobile-facets__label {
   position: relative;
+	align-items: center;
 }
 
 .mobile-facets__label > svg {
@@ -1226,11 +1226,11 @@ div.mobile-facets__label {
   right: auto;
   left: 1.5rem;
   height: 0.7rem;
-  stroke: #000;
+  stroke: var(--gradient-base-background-4);
 }
 
 .mobile-facets__label > input[type='checkbox']:checked ~ .icon-checkmark {
-  right: 2.2rem;
+  right: 3pt;
   left: auto;
   background: #000;
   color: #fff;
@@ -1247,7 +1247,7 @@ div.mobile-facets__label {
 }
 
 input.mobile-facets__checkbox {
-  right: 2.1rem;
+  right: 0;
   left: auto;
 }
 
@@ -1316,11 +1316,12 @@ input.mobile-facets__checkbox {
 }
 
 .mobile-facets__inner {
-  padding: 0 1.5rem;
+  padding: 0 2rem;
 }
 
-details.mobile-facets__details {
+details.mobile-facets__details, div.mobile-facets__details {
   border-bottom: 1px solid var(--border-global-color);
+	transition: 1s ease-in-out;
 }
 
 .mobile-facets__details:nth-child(2) {
@@ -1341,7 +1342,7 @@ details.mobile-facets__details {
 .mobile-facets__label-checkmark {
   position: absolute;
   top: 35%;
-  right: 2rem;
+  right: 0;
   width: 1.6rem;
   height: 1.6rem;
   margin-left: 1.2rem;
@@ -1377,6 +1378,7 @@ details.mobile-facets__details {
 .mobile-facets__header-inner {
   display: flex;
   align-items: center;
+	justify-content: space-between;
 }
 
 .mobile-facets__active-filter-count {

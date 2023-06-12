@@ -201,7 +201,7 @@
       "label": "Media gallery"
     },
     "facets": {
-      "apply": "מימוש",
+      "apply": "אישור",
       "clear": "איפוס",
       "clear_all": "איפוס",
       "from": "From",
@@ -237,7 +237,7 @@
         "title-descending": "מת׳ עד א׳",
         "price-ascending": "מחיר, מהנמוך לגבוה",
         "price-descending": "מחיר, מהגבוה לנמוך",
-        "created-ascending": "תאריך, מהחדש לישן",
+        "created-ascending": "החדשים ביותר",
         "created-descending": "תאריך, מהישן לחדש"
       }
     }

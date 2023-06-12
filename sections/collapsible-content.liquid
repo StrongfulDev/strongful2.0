@@ -65,7 +65,7 @@
                     open
                   {% endif %}
                 >
-                  <summary id="Summary-{{ block.id }}-{{ section.id }}">
+                  <summary id="Summary-{{ block.id }}-{{ section.id }}" class="footer--summary">
                     {% render 'icon-accordion', icon: block.settings.icon %}
                     <h3 class="accordion__title h4">
                       {{ block.settings.heading | default: block.settings.page.title }}

@@ -32,7 +32,7 @@ document.querySelectorAll('[id^="Details-"] summary').forEach((summary) => {
         });
     });
 
-  } else if (!$(summary).hasClass("header__icon--summary")) {
+  } else if ($(summary).hasClass("footer--summary")) {
     summary.addEventListener('click', (event) => {
       event.currentTarget.setAttribute('aria-expanded', !event.currentTarget.closest('details').hasAttribute('open'));
       $(event.currentTarget).find("h2").toggleClass("no-after");
@@ -398,10 +398,15 @@ class MenuDrawer extends HTMLElement {
 				}
 			});
 		} else if ($(summaryElement).hasClass("header__icon--summary")) {
+			$(".header-overlay").toggleClass("hidden");
 			$('body').toggleClass('overflow-hidden');
 			$('html').toggleClass('overflow-hidden');
-			$(".header-overlay").toggleClass("hidden");
 		}
+
+	  $(".mobile-facets__close").click(function() {
+		  $(".details.menu-opening").removeClass("menu-opening");
+			$(".mobile-facets__disclosure.menu-opening").removeAttr("open");
+	  });
 
     function addTrapFocus() {
       trapFocus(summaryElement.nextElementSibling, detailsElement.querySelector('button'));
@@ -450,7 +455,7 @@ class MenuDrawer extends HTMLElement {
 					detailsElementHover.classList.add('menu-opening');
 					summaryElementHover.setAttribute('aria-expanded', true);
 					parentMenuElementHover && parentMenuElementHover.classList.add('submenu-open');
-					!reducedMotionHover || reducedMotionHover.matches ? addTrapFocus() : summaryElementHover.nextElementSibling.addEventListener('transitionend', addTrapFocus);
+					// !reducedMotionHover || reducedMotionHover.matches ? addTrapFocus() : summaryElementHover.nextElementSibling.addEventListener('transitionend', addTrapFocus);
 				}, 100);
 			}
 		}
