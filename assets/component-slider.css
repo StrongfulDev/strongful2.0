@@ -505,9 +505,9 @@ slider-component.slider-component-full-width {
     display: block;
 }
 
-.collection__view-all:not(.show-desktop) {
-    display: none;
-}
+/*.collection__view-all:not(.show-desktop) {*/
+/*    display: none;*/
+/*}*/
 
 @media screen and (max-width: 749px) {
     .collection__view-all.show-mobile {
@@ -562,5 +562,9 @@ slider-component .discount-price-container * {
 
 	.card__information {
 		padding-top: 1rem;
+	}
+
+	.collection__title_heading {
+		flex-direction: row;
 	}
 }
