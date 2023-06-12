@@ -202,6 +202,7 @@
     },
     "facets": {
       "apply": "אישור",
+      "select_more_filters": "נא לבחור סינון",
       "clear": "איפוס",
       "clear_all": "איפוס",
       "from": "From",
