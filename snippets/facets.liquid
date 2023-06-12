@@ -738,7 +738,6 @@
                                             aria-describedby="a11y-refresh-page-message"
                                     >
                                         {%- for option in results.sort_options -%}
-                                            {{ option.value }}
                                             {% unless option.value == 'title-descending' or option.value == 'title-ascending' or option.value == 'created-descending' %}
                                             <option
                                                     value="{{ option.value | escape }}"
