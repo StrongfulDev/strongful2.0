@@ -14,7 +14,7 @@
                          aria-label="{{ 'sections.header.announcement' | t }}" {{ block.shopify_attributes }}>
                         {%- if block.settings.main_text != blank -%}
                             {%- if block.settings.link != blank -%}
-                                <a href="{{ block.settings.link }}" class="announcement-bar__link link link--text focus-inset animate-arrow">
+                                <a href="{{ block.settings.link }}" class="announcement-bar__link link focus-inset animate-arrow">
                             {%- endif -%}
                             <div class="page-width">
                                 <div class="announcement-bar__message {{ block.settings.text_alignment }} rtl">
