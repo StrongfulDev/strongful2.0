@@ -1214,6 +1214,7 @@ details.mobile-facets__details.js-filter:first-of-type {
 div.mobile-facets__label {
   position: relative;
 	align-items: center;
+	order: 2;
 }
 
 .mobile-facets__label > svg {
@@ -1288,7 +1289,7 @@ input.mobile-facets__checkbox {
 	display: none;
 }
 
-.select-hide {
+.select-items.select-hide {
   display: none;
 }
 
@@ -1395,8 +1396,13 @@ details.mobile-facets__details, div.mobile-facets__details {
 	margin-right: var(--grid-mobile-vertical-spacing);
 }
 
-.custom-active-facets:not(:last-child) {
-	display: none;
+.select-items {
+	display: flex;
+	flex-direction: column;
+}
+
+div.החדשיםביותר {
+	order: 1;
 }
 
 @media screen and (min-width: 990px) {
@@ -1511,9 +1517,9 @@ details.mobile-facets__details, div.mobile-facets__details {
 	  box-shadow: 0 0 6px #636363;
   }
 
-	.facets__disclosure-vertical[data-index='2'] {
+	/* .facets__disclosure-vertical[data-index='2'] {
 		border-top: 0;
-	}
+	} */
 
 	.facets-container {
 		position: -webkit-sticky;

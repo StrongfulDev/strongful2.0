@@ -397,7 +397,7 @@ function designSort() {
 
       // create a fake option (div) for each option of the real select element
       let fakeOption = document.createElement("DIV");
-      fakeOption.setAttribute("class", "mobile-facets__label");
+      fakeOption.setAttribute("class", `mobile-facets__label ${realSelectElement.options[j].innerHTML.replaceAll(' ', '')}`);
       let fakeOptionSquare = document.createElement("span");
       fakeOptionSquare.setAttribute("class", "mobile-facets__label-square");
       fakeOption.prepend(fakeOptionSquare);
