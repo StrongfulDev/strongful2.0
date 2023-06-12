@@ -352,7 +352,7 @@ a.product__text {
 }
 
 .product__accordion .accordion__content {
-    padding: 0 1rem;
+    padding: 0;
 }
 
 .product .price .badge {
@@ -361,7 +361,7 @@ a.product__text {
 }
 
 .product .price__container {
-    margin: 0.5rem 0;
+    margin: 1.5rem 0 .5rem;
 }
 
 .product .price dl {
