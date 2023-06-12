@@ -24,7 +24,7 @@
 	width: 100%;
 }
 
-.featured_photo, .complete_look__list {
+.featured_photo, .featured_photo ~ .complete_look__list-container {
     width: 50%;
 }
 
@@ -166,6 +166,6 @@
 	.complete_look__list {
 		margin-top: 0;
 		overflow-y: scroll;
-		max-height: 46vw;
+		max-height: 41.5vw;
 	}
 }
