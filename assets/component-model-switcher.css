@@ -20,7 +20,7 @@
 .model-switch-button {
     padding: 0.6rem 1.5rem;
 		width: fit-content;
-    background: var(--gradient-base-background-3);
+    background: var(--global-background-light);
 		border-radius: 2rem;
     font-family: inherit;
 		margin-bottom: 1rem;
