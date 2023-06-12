@@ -64,6 +64,7 @@
 
                   <div class="custom-orders-container mobile">
                 <span class="toggle-orders-button toggle-orders">
+                    {{ 'customer.orders.title' | t }}
                     {% render 'icon-caret' %}
                 </span>
                       {% paginate customer.orders by customer.orders_count %}
