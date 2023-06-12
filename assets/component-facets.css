@@ -1442,6 +1442,22 @@ div.החדשיםביותר {
 	order: 1;
 }
 
+@media screen and (max-width: 989px) {
+	.facets-wrapper {
+		position: sticky;
+		top: 21px;
+		z-index: 3;
+		background: white;
+		padding: 1em;
+		width: 100vw;
+		margin-right: -1.5rem;
+	}
+
+	.facets-wrapper.high-index {
+		z-index: 50;
+	}
+}
+
 @media screen and (min-width: 990px) {
 
   .facets-vertical .facets-wrapper {

@@ -32,6 +32,17 @@ input {
 	display: none !important;
 }
 
+.zero-opacity {
+	opacity: 0;
+}
+
+.pagination-wrapper.zero-opacity {
+	/*position: absolute;*/
+	/*z-index: -1;*/
+	/*visibility: hidden;*/
+	/*display: none;*/
+}
+
 /* Color custom properties */
 
 :root,
