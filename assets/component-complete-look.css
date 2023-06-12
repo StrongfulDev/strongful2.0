@@ -24,10 +24,6 @@
 	width: 100%;
 }
 
-.featured_photo, .featured_photo ~ .complete_look__list-container {
-    width: 50%;
-}
-
 .featured_photo img, .complete_look__list_item img {
     width: 100%;
     height: 100%;
@@ -161,6 +157,10 @@
 @media screen and (min-width: 990px) {
 	.complete_look__slider {
 		padding: 0 5rem;
+	}
+
+	.featured_photo, .featured_photo ~ .complete_look__list-container {
+		width: 50%;
 	}
 
 	.complete_look__list {
