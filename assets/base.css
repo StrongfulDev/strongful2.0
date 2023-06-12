@@ -1332,7 +1332,7 @@ summary::-webkit-details-marker {
 .media > img {
     object-fit: cover;
     object-position: center center;
-    transition: 0.1s;
+    transition: 0.01s;
 }
 
 .media--square {
