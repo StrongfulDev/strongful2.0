@@ -431,7 +431,7 @@ class MenuDrawer extends HTMLElement {
   }
 
   onSummaryHover(event) {
-		if (window.innerWidth < 990) {
+		if (window.innerWidth > 990) {
 			let summaryElementHover = event.target;
 			let detailsElementHover = summaryElementHover.parentNode;
 			let parentMenuElementHover = detailsElementHover.closest('.has-submenu');
@@ -455,7 +455,7 @@ class MenuDrawer extends HTMLElement {
 					detailsElementHover.classList.add('menu-opening');
 					summaryElementHover.setAttribute('aria-expanded', true);
 					parentMenuElementHover && parentMenuElementHover.classList.add('submenu-open');
-					// !reducedMotionHover || reducedMotionHover.matches ? addTrapFocus() : summaryElementHover.nextElementSibling.addEventListener('transitionend', addTrapFocus);
+					!reducedMotionHover || reducedMotionHover.matches ? addTrapFocus() : summaryElementHover.nextElementSibling.addEventListener('transitionend', addTrapFocus);
 				}, 100);
 			}
 		}
@@ -1143,8 +1143,14 @@ class ProductRecommendations extends HTMLElement {
 customElements.define('product-recommendations', ProductRecommendations);
 
 window.addEventListener('DOMContentLoaded', function() {
+
 	let headerOverlay = document.querySelector('.header-overlay');
 	let menuDrawer = document.querySelector('header-drawer');
+
+	$(".header-block-list-element .closing-link").on('mouseenter', function(event) {
+		$("details.mega-menu").attr('open', false);
+		$(headerOverlay).addClass('hidden');
+	});
 
 	function closeHeader(event) {
 		$('body').removeClass(`overflow-hidden-${menuDrawer.dataset.breakpoint}`).removeClass('overflow-hidden');
