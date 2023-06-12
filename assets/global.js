@@ -384,7 +384,7 @@ class MenuDrawer extends HTMLElement {
     let summaryElement = event.currentTarget;
     let detailsElement = summaryElement.parentNode;
     let parentMenuElement = detailsElement.closest('.has-submenu');
-    let isOpen = detailsElement.hasAttribute('open');
+    let isOpen = detailsElement.hasAttribute('open') || $(detailsElement).attr('open') === true;
     let reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 		if (!$(summaryElement).hasClass("header__icon")) {
@@ -414,11 +414,11 @@ class MenuDrawer extends HTMLElement {
 		if (isOpen === false) {
 			$('body').addClass('overflow-hidden');
 			$('html').addClass('overflow-hidden');
-			$(".facets-wrapper").addClass('high-index');
+			// $(".facets-wrapper").addClass('high-index');
 		} else {
 			$('body').removeClass('overflow-hidden');
 			$('html').removeClass('overflow-hidden');
-			$(".facets-wrapper").removeClass('high-index');
+			// $(".facets-wrapper").removeClass('high-index');
 		}
 
     if (detailsElement === this.mainDetailsToggle) {
