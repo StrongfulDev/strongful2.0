@@ -286,7 +286,7 @@
 
     .card:hover .media.media--hover-effect > img:first-child:only-child,
     .card-wrapper:hover .media.media--hover-effect > img:first-child:only-child {
-        transform: scale(1.03);
+        /* transform: scale(1.03); */
     }
 
     .card-wrapper:hover
@@ -298,7 +298,6 @@
     .card-wrapper:hover .media.media--hover-effect > img + img {
         opacity: 1;
         transition: transform var(--duration-short) ease-in-out;
-        transform: scale(1.03);
     }
 
     .underline-links-hover:hover a {
