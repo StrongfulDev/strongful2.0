@@ -10,10 +10,14 @@ div.about-us {
 	padding: 0;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 990px) {
   .main-page-title {
     margin-bottom: 4rem;
   }
+
+	.loyalty-form.loyalty-form-register div.customer:not(.account):not(.order) {
+		height: auto;
+	}
 }
 
 .page-placeholder-wrapper {
@@ -315,10 +319,6 @@ div.about-us {
 	padding: 0;
 	margin: 0;
 	list-style: none;
-}
-
-.login a:last-child {
-	display: none;
 }
 
 .inputRegister {
