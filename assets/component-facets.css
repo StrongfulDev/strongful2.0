@@ -654,6 +654,13 @@ a.active-facets__button.focused .active-facets__button-inner,
 	transition: var(--duration-long) ease;
 }
 
+@media screen and (max-width: 989px) {
+	.menu-opening .mobile-facets__inner {
+		border-top-left-radius: 4px;
+		border-bottom-left-radius: 4px;
+	}
+}
+
 .js .disclosure-has-popup:not(.menu-opening) .mobile-facets__inner {
   transform: translateX(105vw);
 	transition: var(--duration-long) ease;
