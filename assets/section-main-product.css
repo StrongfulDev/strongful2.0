@@ -1786,7 +1786,11 @@ li.grid--peek.slider .grid__item, li.product__media-item.grid__item.slider__slid
 	}
 
 	section[id^="MainProduct"], .complete_look__slider, .related-products, .page-width {
-		max-width: calc(var(--page-width) * 0.9);
+		max-width: calc(var(--page-width) * 0.8);
+	}
+
+	.complete_look__slider {
+		max-width: calc(var(--page-width) * 0.7);
 	}
 
 	header.page-width {

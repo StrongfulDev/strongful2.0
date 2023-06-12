@@ -166,12 +166,12 @@ class FacetFiltersForm extends HTMLElement {
 	  let searchParams = new URLSearchParams(window.location.search);
 	  let numOfParams = searchParams.size;
 
-	  let activeFiltersDOMElements = document.querySelectorAll(".mobile-facets__active-filter-count");
-    activeFiltersDOMElements.forEach(function(element) {
-      element.innerHTML = "(" + numOfParams + ")";
-    });
-	  $(".mobile-facets__active-filter-count").html(`${numOfParams}`);
-		$(".custom-active-facets").html("(" + numOfParams + ")");
+	  // let activeFiltersDOMElements = document.querySelectorAll(".mobile-facets__active-filter-count");
+    // activeFiltersDOMElements.forEach(function(element) {
+    //   element.innerHTML = "(" + numOfParams + ")";
+    // });
+	  // $(".mobile-facets__active-filter-count").html(`${numOfParams}`);
+		// $(".custom-active-facets").html("(" + numOfParams + ")");
   }
 
   static updateURLHash(searchParams) {

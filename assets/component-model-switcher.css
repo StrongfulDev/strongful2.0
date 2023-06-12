@@ -19,14 +19,14 @@
 
 .model-switch-button {
     padding: 0.6rem 1.5rem;
-	width: fit-content;
+		width: fit-content;
     background: var(--gradient-base-background-3);
-	border-radius: 2rem;
+		border-radius: 2rem;
     font-family: inherit;
-	margin-bottom: 1rem;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+		margin-bottom: 1rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 }
 
 .model-switcher__list {

@@ -111,6 +111,7 @@
 
 .complete_look__item .product_variants .size_variant_button_container {
 	border: 1px rgb(var(--color-foreground)) solid;
+	border-radius: 4px;
 }
 
 .complete_look__item .product_variants .size_variant_button_container label {
@@ -119,8 +120,8 @@
 	font-weight: var(--font-body-weight-bold);
 }
 
-.complete_look__item .product_variants .size_variant_button_container label:hover,
-.complete_look__item .product_variants .size_variant_button_container input:checked + label {
+.complete_look__item .product_variants .size_variant_button:not(.disabled-variant-button) .size_variant_button_container label:hover,
+.complete_look__item .product_variants .size_variant_button:not(.disabled-variant-button) .size_variant_button_container input:checked + label {
 	background: var(--gradient-base-accent-1);
 	color: var(--gradient-base-background-1);
 }
@@ -131,6 +132,7 @@
 
 .complete_look__item .product_variants .size_variant_button {
 	width: 100%;
+	border-radius: 3px;
 }
 
 .complete_look__item .product_variants ul {
@@ -144,6 +146,7 @@
 
 .complete_look__item .product_variants .size_variant_button_container label {
 	position: relative;
+	border-radius: 4px;
 }
 
 .complete_look__item .loading-overlay {
@@ -158,5 +161,11 @@
 @media screen and (min-width: 990px) {
 	.complete_look__slider {
 		padding: 0 5rem;
+	}
+
+	.complete_look__list {
+		margin-top: 0;
+		overflow-y: scroll;
+		max-height: 46vw;
 	}
 }

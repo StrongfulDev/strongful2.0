@@ -1,6 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-	let target_date = new Date("Mon Jun 12 2023 11:00:00 GMT+0300 (שעון ישראל (קיץ))").getTime() + (1000*24);
+	let target_date = new Date("Mon Jun 12 2023 23:59:59 GMT+0300 (שעון ישראל (קיץ))").getTime() + (1000*24);
 	let days, hours, minutes, seconds;
 
 	if (document.getElementById('tiles') != null) {

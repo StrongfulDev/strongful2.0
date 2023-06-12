@@ -221,7 +221,7 @@ class CartRewards {
 		const rewardText = $(".reward-text");
 		const isLatestActiveRule = ruleIndex >= this.activeRewards && isConditionMet;
 		const isLatestDeactivatedRule = ruleIndex === this.activeRewards && !isConditionMet;
-		const missingAmount = (rule.condition.value - this.cartTotalValue).toFixed(2);
+		const missingAmount = (rule.condition.value - this.cartTotalValue).toFixed(0);
 
 		// Apply condition message.
 		if (isLatestDeactivatedRule && missingAmount > 0) {

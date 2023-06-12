@@ -457,7 +457,7 @@
                         {% else %}
                             {% assign customCartOriginalTotalPrice = cartTotalPrice | plus: totalPriceGaps %}
                         {% endif %}
-                        {% assign discount = customCartOriginalTotalPrice | minus: cart.total_price %}
+                        {% assign discount = customCartOriginalTotalPrice | minus: cart.total_price | round %}
                         <div class="totals" role="status">
                             {% if discount > 0 %}
                                 <h2 class="total-benefits">{{ 'sections.cart.benefits' | t }}:</h2>
