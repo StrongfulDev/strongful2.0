@@ -63,7 +63,7 @@
                         {%- for filter in results.filters -%}
                             {%- assign total_active_values = total_active_values | plus: filter.active_values.size -%}
                         {%- endfor -%}
-                        <span class="custom-active-facets">({{ total_active_values }})</span>
+                        <span class="custom-active-facets {% unless total_active_values > 0 %}hidden{% endunless %}">({{ total_active_values }})</span>
                     </h2>
                   {%- endunless -%}
                   <facet-remove class="active-facets__button-wrapper">
@@ -128,9 +128,11 @@
                                   {% unless option.value == 'title-descending' or option.value == 'title-ascending' or option.value == 'created-descending' %}
                                   <option
                                           value="{{ option.value | escape }}"
+                                          {%- comment -%}
                                           {% if option.value == sort_by %}
                                               selected="selected"
                                           {% endif %}
+                                          {%- endcomment -%}
                                   >
                                       {% comment %}{{ option.name | escape }}{% endcomment %}
                                       {{ 'products.facets.filters.' | append: option.value | t }}
@@ -577,7 +579,7 @@
               {{ 'products.facets.sort_button' | t }}
             {%- endif -%}
           </span>
-          <span class="mobile-facets__active-filter-count"></span>
+            <span class="custom-active-facets {% unless total_active_values > 0 %}hidden{% endunless %}">{{ total_active_values }}</span>
           <span class="mobile-facets__open-label button-label small-hide">
             {%- if enable_filtering -%}
               {{ 'products.facets.filter_button' | t }}
@@ -591,15 +593,18 @@
             <div class="mobile-facets__header">
                 <span tabindex="0" class="mobile-facets__close mobile-facets__close--no-js">{%- render 'icon-close' -%}</span>
               <div class="mobile-facets__header-inner">
-                <h2 class="mobile-facets__heading medium-hide large-up-hide">
+                <div class="mobile-facets__heading medium-hide large-up-hide">
                   {%- if enable_filtering and enable_sorting -%}
-                    {{ 'products.facets.filter_and_sort' | t }}
+                    <h2>{{ 'products.facets.filter_and_sort' | t }}</h2>
                   {%- elsif enable_filtering -%}
-                    {{ 'products.facets.filter_button' | t }}
+                    <h2>{{ 'products.facets.filter_button' | t }}</h2>
                   {%- elsif enable_sorting -%}
-                    {{ 'products.facets.sort_button' | t }}
+                    <h2>{{ 'products.facets.sort_button' | t }}</h2>
                   {%- endif -%}
-                </h2>
+                    {% comment %}
+                    <span class="custom-active-facets {% unless total_active_values > 0 %}hidden{% endunless %}">({{ total_active_values }})</span>
+                    {% endcomment %}
+                </div>
                   <facet-remove class="mobile-facets__clear-wrapper">
                       <a href="{{ results_url }}" class="mobile-facets__clear underlined-link">
                           {{- 'products.facets.clear_all' | t -}}
@@ -645,9 +650,11 @@
                                             {% unless option.value == 'title-descending' or option.value == 'title-ascending' or option.value == 'created-descending' %}
                                             <option
                                                     value="{{ option.value | escape }}"
+                                                    {% comment %}
                                                     {% if option.value == sort_by %}
                                                         selected="selected"
                                                     {% endif %}
+                                                    {% endcomment %}
                                             >
                                                 {{ 'products.facets.filters.' | append: option.value | t }}
                                             </option>
@@ -909,10 +916,14 @@
               <div class="mobile-facets__footer">
                 <button
                     type="button"
-                    class="no-js-hidden button button--primary"
+                    class="no-js-hidden button button--primary {% if total_active_values < 1 %}button--disabled{% else %}{% endif %}"
                     onclick="this.closest('.mobile-facets__wrapper').querySelector('summary').click()"
                 >
+                    {% if total_active_values < 1 %}
+                    {{ 'products.facets.select_more_filters' | t }}
+                    {% else %}
                   {{ 'products.facets.apply' | t }}
+                    {% endif %}
                 </button>
                 <noscript
                 ><button class="button button--primary">{{ 'products.facets.apply' | t }}</button></noscript

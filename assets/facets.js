@@ -89,6 +89,13 @@ class FacetFiltersForm extends HTMLElement {
       containerDesktop.classList.remove('loading');
     }
 
+		let countNumber = parseInt($(".mobile-facets__open .custom-active-facets").text());
+	  if (countNumber > 0) {
+			$(".no-js-hidden.button.button--primary").removeClass("button--disabled").html("אישור");
+	  } else {
+			$(".no-js-hidden.button.button--primary").addClass("button--disabled").html("נא לבחור סינון");
+	  }
+
 	  const endlessCollection = new Ajaxinate({
 		  container: '#product-grid',
 		  pagination: '.infinite_next',
@@ -164,14 +171,6 @@ class FacetFiltersForm extends HTMLElement {
   static activeFilterCount() {
     let activeFilters = document.querySelectorAll('.mobile-facets__checkbox:checked');
 	  let searchParams = new URLSearchParams(window.location.search);
-	  let numOfParams = searchParams.size;
-
-	  // let activeFiltersDOMElements = document.querySelectorAll(".mobile-facets__active-filter-count");
-    // activeFiltersDOMElements.forEach(function(element) {
-    //   element.innerHTML = "(" + numOfParams + ")";
-    // });
-	  // $(".mobile-facets__active-filter-count").html(`${numOfParams}`);
-		// $(".custom-active-facets").html("(" + numOfParams + ")");
   }
 
   static updateURLHash(searchParams) {
@@ -224,7 +223,7 @@ class FacetFiltersForm extends HTMLElement {
   onActiveFilterClick(event) {
     event.preventDefault();
     FacetFiltersForm.toggleActiveFacets();
-    const url = event.currentTarget.href.indexOf('?') == -1 ? '' : event.currentTarget.href.slice(event.currentTarget.href.indexOf('?') + 1);
+    const url = event.currentTarget.href.indexOf('?') === -1 ? '' : event.currentTarget.href.slice(event.currentTarget.href.indexOf('?') + 1);
     FacetFiltersForm.renderPage(url);
   }
 }
