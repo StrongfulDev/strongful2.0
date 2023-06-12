@@ -314,7 +314,7 @@
       "note": "Order special instructions",
       "checkout": "מעבר לתשלום",
       "empty": "הסל שלך ריק",
-      "empty_paragraph": "לחצי כאן כדי להוסיף את הפריטים הכי שיקיים לעגלה",
+      "empty_paragraph": "לחצי כאן לראות מה חדש",
       "cart_error": "There was an error while updating your cart. Please try again.",
       "cart_quantity_error_html": "You can only add {{ quantity }} of this item to your cart.",
       "taxes_and_shipping_policy_at_checkout_html": "Taxes and <a href=\"{{ link }}\">shipping<\/a> calculated at checkout",
@@ -331,7 +331,8 @@
       "update": "Update",
       "login": {
         "title": "חברת מועדון?",
-        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">הכנסי<\/a> כדי להזמין מהר יותר ולצבור נקודות."
+        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">התחברי<\/a> להזמנה קלה ומהירה.",
+        "paragraph_secondary": "צבירת נקודות בכל הזמנה!"
       },
       "rewards": {
         "title": "Earn rewards",
