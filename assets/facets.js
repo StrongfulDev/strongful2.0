@@ -89,6 +89,11 @@ class FacetFiltersForm extends HTMLElement {
       containerDesktop.classList.remove('loading');
     }
 
+	  let endlessCollection = new AjaxinateMin({
+		  container: '#product-grid',
+		  pagination: '.infinite_next',
+	  });
+
 		let countNumber = parseInt($(".mobile-facets__open .custom-active-facets").text());
 	  if (countNumber > 0) {
 			$(".no-js-hidden.button.button--primary").removeClass("button--disabled").html("אישור");
@@ -571,5 +576,10 @@ document.addEventListener("DOMContentLoaded", function() {
 //
 // // Observe the sentinel element
 // 	observer.observe(sentinel);
+
+	let endlessCollection = new AjaxinateMin({
+		container: '#product-grid',
+		pagination: '.infinite_next',
+	});
 
 });
