@@ -399,8 +399,6 @@ class MenuDrawer extends HTMLElement {
 			});
 		} else if ($(summaryElement).hasClass("header__icon--summary")) {
 			$(".header-overlay").toggleClass("hidden");
-			$('body').toggleClass('overflow-hidden');
-			$('html').toggleClass('overflow-hidden');
 		}
 
 	  $(".mobile-facets__close").click(function() {
@@ -412,6 +410,14 @@ class MenuDrawer extends HTMLElement {
       trapFocus(summaryElement.nextElementSibling, detailsElement.querySelector('button'));
       summaryElement.nextElementSibling.removeEventListener('transitionend', addTrapFocus);
     }
+
+		if (isOpen === false) {
+			$('body').addClass('overflow-hidden');
+			$('html').addClass('overflow-hidden');
+		} else {
+			$('body').removeClass('overflow-hidden');
+			$('html').removeClass('overflow-hidden');
+		}
 
     if (detailsElement === this.mainDetailsToggle) {
       if(isOpen) event.preventDefault();
@@ -467,7 +473,7 @@ class MenuDrawer extends HTMLElement {
     });
     summaryElement.setAttribute('aria-expanded', true);
     trapFocus(this.mainDetailsToggle, summaryElement);
-    document.body.classList.add(`overflow-hidden-${this.dataset.breakpoint}`);
+    // document.body.classList.add(`overflow-hidden-${this.dataset.breakpoint}`);
   }
 
   closeMenuDrawer(event, elementToFocus = false) {
@@ -481,7 +487,7 @@ class MenuDrawer extends HTMLElement {
     this.mainDetailsToggle.querySelectorAll('.submenu-open').forEach(submenu => {
       submenu.classList.remove('submenu-open');
     });
-    document.body.classList.remove(`overflow-hidden-${this.dataset.breakpoint}`);
+    // document.body.classList.remove(`overflow-hidden-${this.dataset.breakpoint}`);
     removeTrapFocus(elementToFocus);
     this.closeAnimation(this.mainDetailsToggle);
   }
@@ -551,7 +557,7 @@ class HeaderDrawer extends MenuDrawer {
 
     summaryElement.setAttribute('aria-expanded', true);
     trapFocus(this.mainDetailsToggle, summaryElement);
-    document.body.classList.add(`overflow-hidden-${this.dataset.breakpoint}`);
+    // document.body.classList.add(`overflow-hidden-${this.dataset.breakpoint}`);
   }
 
   closeMenuDrawer(event, elementToFocus) {
@@ -592,7 +598,7 @@ class ModalDialog extends HTMLElement {
   show(opener) {
     this.openedBy = opener;
     const popup = this.querySelector('.template-popup');
-    document.body.classList.add('overflow-hidden');
+		// document.body.classList.add('overflow-hidden');
     this.setAttribute('open', '');
     if (popup) popup.loadContent();
     trapFocus(this, this.querySelector('[role="dialog"]'));
@@ -600,8 +606,8 @@ class ModalDialog extends HTMLElement {
   }
 
   hide() {
-    document.body.classList.remove('overflow-hidden');
-    document.body.dispatchEvent(new CustomEvent('modalClosed'));
+    // document.body.classList.remove('overflow-hidden');
+    // document.body.dispatchEvent(new CustomEvent('modalClosed'));
     this.removeAttribute('open');
     removeTrapFocus(this.openedBy);
     window.pauseAllMedia();
@@ -1170,7 +1176,7 @@ window.addEventListener('DOMContentLoaded', function() {
 			$('.header__menu-item').attr('aria-expanded', false);
 			$('details.mega-menu').attr('open', false);
 			$('.menu-drawer-container').attr('open', false);
-			document.body.classList.remove(`overflow-hidden-${menuDrawer.dataset.breakpoint}`);
+			// document.body.classList.remove(`overflow-hidden-${menuDrawer.dataset.breakpoint}`);
 		});
 	}
 
