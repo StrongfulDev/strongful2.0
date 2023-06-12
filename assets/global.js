@@ -1144,6 +1144,8 @@ customElements.define('product-recommendations', ProductRecommendations);
 
 window.addEventListener('DOMContentLoaded', function() {
 
+	$(".loader-wrapper").delay().fadeOut("slow");
+
 	let headerOverlay = document.querySelector('.header-overlay');
 	let menuDrawer = document.querySelector('header-drawer');
 
