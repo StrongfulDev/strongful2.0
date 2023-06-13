@@ -14,8 +14,10 @@
     {{ checkout_stylesheets }}
     {{ checkout_scripts }}
 
+    {% comment %}
     <script type="module" crossorigin src="{{ 'package-protection.js' | asset_url }}"></script>
     <link rel="stylesheet" href="{{ 'package-protection.css' | asset_url }}">
+    {% endcomment %}
 
     <style>
 
@@ -255,7 +257,7 @@
                 {{ content_for_logo }}
                 {{ breadcrumb }}
                 {{ alternative_payment_methods }}
-                <div id="package-protection"></div>
+                {% comment %}<div id="package-protection"></div>{% endcomment %}
             </header>
             <main class="main__content" role="main">
                 {{ content_for_layout }}
