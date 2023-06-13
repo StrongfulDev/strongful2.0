@@ -352,6 +352,11 @@ div.about-us {
 
 @media screen and (min-width: 990px) {
 
+	.list-social__item .icon {
+		height: 1.8rem !important;
+		width: 1.8rem !important;
+	}
+
 	.our-promise-container {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
