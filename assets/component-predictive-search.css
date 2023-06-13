@@ -230,7 +230,6 @@ predictive-search[loading]
 	left: 0;
 	display: none;
 	width: 100%;
-	padding: 0 5%;
 	opacity: .7;
 	transform: translateY(-50%);
 }

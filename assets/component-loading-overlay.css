@@ -24,6 +24,9 @@
 
 .size_variant_button_container .loading-overlay {
 	align-items: center;
+	top: auto;
+	left: 0;
+	right: auto;
 }
 
 .size_variant_button_container .loading-overlay__spinner {
