@@ -180,6 +180,7 @@
                                         endif
                                     endif
                                 -%}
+                                {% unless product.tags contains 'giftHide' %}
                                 <li class="grid__item">
                                     {% render 'card-product',
                                             card_product: product,
@@ -201,6 +202,7 @@
                                             quick_add_accessories_text: section.settings.quick_add_accessories_text
                                     %}
                                 </li>
+                                {% endunless %}
                             {%- endfor -%}
                         </ul>
 
