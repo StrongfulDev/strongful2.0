@@ -1,0 +1,128 @@
+
+<script>
+      let info = {}
+      let now = new Date();
+      now.setDate(now.getDate() + 7);
+      info['store_id'] = 20903
+      info['uid'] = 895
+
+      info['expires'] = now.toISOString();
+      info['user_agent'] = navigator.userAgent;
+      sessionStorage.setItem('dialogue_shopify',JSON.stringify(info));
+
+      localStorage.setItem('dialogue_shopify',JSON.stringify(info));
+</script>
+
+<script type="text/javascript"  src="https://cdn.nowdialogue.com/prod/build/bundle.js?t=2"></script>
+
+
+<script>
+!function() {
+fetch('https://dashboard.nowdialogue.com/api/merchant/895/store/20903/master-script?hoster='+encodeURIComponent(window.location.href))
+ .then(response =>
+      {
+      if (!response.ok) {
+		    console.warn(`If you have removed DialogueAI app, please go to you theme.liquid and remove \{\% include 'dialogue' %} `)
+		}
+      else return response.json()
+      }
+      )
+  .then(text => {
+    
+    let DialogueInterval1 = setInterval(() => {
+        
+        if (window.DialogueAI != undefined ){   
+          clearInterval(DialogueInterval1);
+
+          DialogueAI.master_requested = true;
+     	  DialogueAI.construct(895, 20903)
+
+          DialogueAI.startTimeTracking();
+
+          getInfo();
+      	    DialogueAI.getShopifyCartToken().then(function(e){
+              let info = JSON.parse(localStorage.getItem('dialogue_shopify'))
+              info['token'] = e;
+              localStorage.setItem('dialogue_shopify',JSON.stringify(info));
+          	});
+      
+            let websiteBodyInterval1 = setInterval(() => {
+                    if (document.body) {
+                        clearInterval(websiteBodyInterval1);
+                        const range = document.createRange();
+                        const fragment = range.createContextualFragment(text);
+                        document.body.appendChild(fragment);
+                    }
+                }, 20);
+              setTimeout(() => {clearInterval(websiteBodyInterval1)}, 8000)
+		}
+      }, 10);
+      setTimeout(() => {clearInterval(DialogueInterval1)}, 8000)
+    
+  }).catch(function() {
+		console.warn(`If you have removed DialogueAI app, please go to you theme.liquid and remove \{\% include 'dialogue' %} `)
+    });
+
+}();
+  function getInfo(){
+    DialogueAI.settings.categories = [];
+    DialogueAI.settings.skus = [];                                                
+  window.DialogueShopify = window.DialogueShopify === undefined ? {} : DialogueShopify;{% assign t = template | prepend: '/' | append: '.' %}
+    {% if t contains '/product.' %} DialogueAI.settings['sku'] = {{ product.id }};  DialogueShopify.page_info = { page_type: "product", id: {{ product.id }}};
+    {% elsif t contains '/collection.' %} DialogueAI.settings['categories'] = [ {{ collection.id }} ]; DialogueShopify.page_info = { page_type: "collection", id: {{ collection.id }} };
+    {% elsif t contains '/page.' %}  DialogueShopify.page_info = { page_type: "collection", id: {{ page.id }} };
+    {% elsif t contains '/article.' %} DialogueShopify.page_info = { page_type: "article" , tag: " {{ current_tags.first }} "};
+    {% elsif t contains '/cart.' %} DialogueShopify.page_info = { page_type: "Cart", id: null };
+    {% elsif t contains '/search.' %} DialogueShopify.page_info = { page_type: "search", query: "{{ search.terms  }}" };
+    {% elsif t contains '/404.' %}DialogueShopify.page_info = { page_type: "o404", id: null };
+    {% elsif checkout.id != blank and checkout.order_id == blank %}DialogueShopify.page_info = { page_type: "checkout", id: null };
+    {% else %}DialogueShopify.page_info = { page_type: "home", id: null };
+    {% endif %}{% if customer %}DialogueShopify.UserInfo = { id: "{{ customer.id }}", email: "{{ customer.email }}", mobile: "{{ customer.phone }}",full_name: "{{ customer.name }}",  name: "{{ customer.first_name }}", last: "{{ customer.last_name }}" };
+    {% endif %}
+    DialogueShopify.tags = [];      
+
+
+    {% if collection.all_tags.size > 0 %}
+         {% for tag in collection.all_tags %}
+            {% if current_tags contains tag %}
+                DialogueShopify.tags.push( "{{ tag }}" )
+            {% endif %}
+        {% endfor %}
+     {% endif %}
+
+    {% for tag in article.tags limit:5 %}
+        DialogueShopify.tags.push( "{{ tag }}" )
+	{% endfor %}
+
+    {% if collection.all_vendors.size == 1 %}
+        DialogueShopify.single_vendor = true;
+    {% else %}
+        DialogueShopify.single_vendor = false;
+    {% endif %}
+    
+    DialogueShopify.locale = "{{ locale }}"
+
+    DialogueShopify.StoreInfo = { Theme: "{{ theme.name | escape }}" };
+    DialogueShopify.conversion_rate = 0                                                                                                       
+    let cart_obj = []                                         
+    {% if  checkout.line_items.size > 0 %}
+        {% for item in checkout.line_items %}                 
+            cart_obj.push({'quantity': {{ item.quantity  }} ,'sku': {{ item.variant.id }} , 'group': {{ item.product.id }} , 'price': {{ item.product.price | money_without_currency | replace:',','' }} })        
+            DialogueAI.settings.skus.push({{  item.variant.id }})
+        {% endfor %}
+        DialogueAI.settings.cart_price = {{ checkout.total_price | money_without_currency | replace:',','' }};
+        DialogueShopify.cart = {'items':cart_obj, 'total':"{{ checkout.total_price | money_without_currency | replace:',','' }}" };
+
+    {% else %}
+        {% for item in cart.items %}
+        cart_obj.push({'quantity': {{ item.quantity  }} ,'sku': {{ item.variant.id }} , 'group': {{ item.product.id }} , 'price': {{ item.product.price | money_without_currency | replace:',','' }} })        
+        DialogueAI.settings.skus.push({{  item.variant.id }})
+        {% endfor %}
+        DialogueAI.settings.cart_price = {{ cart.total_price | money_without_currency | replace:',','' }};
+        DialogueShopify.cart = {'items':cart_obj, 'total':"{{ cart.total_price | money_without_currency  | replace:',','' }}" };
+
+    {% endif %}
+     let params = (new URL(document.location)).searchParams;
+     DialogueAI.settings.search = params.get("q") || params.get("search") 
+  }
+</script>
