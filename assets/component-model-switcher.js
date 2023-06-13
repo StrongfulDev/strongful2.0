@@ -1,6 +1,6 @@
 const arrowIcon = document.querySelector(".model-switch-button .icon-caret");
 
-$(document).ready(function () {
+document.addEventListener('DOMContentLoaded', function () {
 	hideUnAvailableModels();
 
 	$('.model-switcher__item input').change(function () {
