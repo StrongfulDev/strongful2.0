@@ -170,8 +170,10 @@ div.about-us {
 	color: #fff;
 }
 
-.vip-benefits-list-th.active .vip-benefits-th-text {
-	color: #fff;
+@media screen and (max-width: 990px) {
+	.vip-benefits-list-th.active .vip-benefits-th-text {
+		color: #fff;
+	}
 }
 
 .vip-benefits-th-text {
