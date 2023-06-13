@@ -429,6 +429,7 @@
                                                                 <ul class="list-unstyled"
                                                                     role="list">
                                                                     {%- for product in recommendations.products limit: block.settings.products_per_page offset: continue -%}
+                                                                        {% unless product.tags contains 'giftHide' %}
                                                                         <li>
                                                                             {% render 'card-product',
                                                                                     card_product: product,
@@ -444,6 +445,7 @@
                                                                                     quick_add_accessories_text: section.settings.quick_add_accessories_text
                                                                             %}
                                                                         </li>
+                                                                    {% endunless %}
                                                                     {%- endfor -%}
                                                                 </ul>
                                                             </div>
