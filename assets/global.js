@@ -414,11 +414,15 @@ class MenuDrawer extends HTMLElement {
 		if (isOpen === false) {
 			$('body').addClass('overflow-hidden');
 			$('html').addClass('overflow-hidden');
-			// $(".facets-wrapper").addClass('high-index');
+			if (summaryElement.classList.contains("mobile-facets__open-wrapper")) {
+				 $(".facets-wrapper").addClass('high-index');
+			}
 		} else {
 			$('body').removeClass('overflow-hidden');
 			$('html').removeClass('overflow-hidden');
-			// $(".facets-wrapper").removeClass('high-index');
+			if (summaryElement.classList.contains("mobile-facets__open-wrapper")) {
+				$(".facets-wrapper").removeClass('high-index');
+			}
 		}
 
     if (detailsElement === this.mainDetailsToggle) {
