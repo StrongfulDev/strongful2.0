@@ -877,8 +877,9 @@ a.container-menu-item:last-child, span.container-menu-item:last-child, a.contain
 .container-menu-item .icon-caret {
 	position: absolute;
 	left: 0;
-	top: 50%;
+	top: 35%;
 	transform: translateY(-50%) rotate(90deg);
+	margin: 0;
 }
 
 .container-menu-item .icon-caret.rotate {
