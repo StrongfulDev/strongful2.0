@@ -24,10 +24,10 @@
           "settings": {
             "toggle_main_font": true,
             "toggle_sub_font": false,
-            "main_text": "HOT GIRLS SUMMER",
-            "sub_text": "3 FOR 300",
+            "main_text": "3=300",
+            "sub_text": "HOT GIRLS SUMMER",
             "text_alignment": "center",
-            "main_text_direction": "rtl",
+            "main_text_direction": "ltr",
             "sub_text_direction": "rtl",
             "link": "shopify:\/\/collections\/sale-3-for-300",
             "color_scheme": "accent-1"
