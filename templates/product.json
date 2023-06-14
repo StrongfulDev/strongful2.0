@@ -218,6 +218,15 @@
         "padding_top": 40,
         "padding_bottom": 16
       }
+    },
+    "7cdab2e2-73e8-4ee9-9440-afe44e06755c": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"yotpo yotpo-main-widget\"\ndata-product-id=\"{{ product.id }}\"\ndata-name=\"{{ product.title | escape }}\"\ndata-url=\"{{ shop.url }}{{ product.url }}\"\ndata-image-url=\"{{ product.featured_image | product_img_url: 'large' |replace: '?', '%3F' | replace: '&','%26'}}\"\ndata-price=\"{{ variant.price | money_without_currency }}\"\ndata-currency=\"{{ shop.currency }}\"\ndata-description=\"{{ product.description | escape }}\">\n<\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -226,6 +235,7 @@
     "daadfb7d-6377-46b9-9592-68ff753bf341",
     "related-products",
     "8bb31773-3add-4a1a-b42f-368102c7844b",
-    "37dac536-c5a1-4fb0-9990-6e388a96185b"
+    "37dac536-c5a1-4fb0-9990-6e388a96185b",
+    "7cdab2e2-73e8-4ee9-9440-afe44e06755c"
   ]
 }
