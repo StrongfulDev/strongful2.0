@@ -102,6 +102,8 @@ slideshow-component .slideshow.banner {
     .slideshow__text-wrapper.banner__content {
         height: 100%;
         padding: 5rem;
+	    margin: 0 auto;
+	    width: 46vw;
     }
 }
 
@@ -269,6 +271,6 @@ slideshow-component:not(.page-width) .slider-buttons {
 
 	.slideshow__text.banner__box {
 		bottom: 8rem;
-		left: 27%;
+		left: 0;
 	}
 }
