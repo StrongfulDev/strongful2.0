@@ -254,9 +254,9 @@
       },
       "8962992520437913685": {
         "type": "shopify:\/\/apps\/yotpo-loyalty-rewards\/blocks\/loader-app-embed-block\/2f9660df-5018-4e02-9868-ee1fb88d6ccd",
-        "disabled": false,
+        "disabled": true,
         "settings": {
-          "inject_modules_loader": true,
+          "inject_modules_loader": false,
           "inject_sdk_loader": false
         }
       }
