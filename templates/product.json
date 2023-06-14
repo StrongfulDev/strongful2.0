@@ -221,7 +221,7 @@
     "7cdab2e2-73e8-4ee9-9440-afe44e06755c": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div class=\"yotpo yotpo-main-widget\"\ndata-product-id=\"{{ product.id }}\"\ndata-name=\"{{ product.title | escape }}\"\ndata-url=\"{{ shop.url }}{{ product.url }}\"\ndata-image-url=\"{{ product.featured_image | product_img_url: 'large' |replace: '?', '%3F' | replace: '&','%26'}}\"\ndata-price=\"{{ variant.price | money_without_currency }}\"\ndata-currency=\"{{ shop.currency }}\"\ndata-description=\"{{ product.description | escape }}\">\n<\/div>",
+        "custom_liquid": "<div class=\"yotpo yotpo-main-widget page-width\"\ndata-product-id=\"{{ product.id }}\"\ndata-name=\"{{ product.title | escape }}\"\ndata-url=\"{{ shop.url }}{{ product.url }}\"\ndata-image-url=\"{{ product.featured_image | product_img_url: 'large' |replace: '?', '%3F' | replace: '&','%26'}}\"\ndata-price=\"{{ variant.price | money_without_currency }}\"\ndata-currency=\"{{ shop.currency }}\"\ndata-description=\"{{ product.description | escape }}\">\n<\/div>",
         "color_scheme": "background-1",
         "padding_top": 0,
         "padding_bottom": 32
