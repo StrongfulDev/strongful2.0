@@ -6,14 +6,14 @@
         "slideshow-block-0": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/3840x1424_copy_7b30b323-1806-4a06-a641-d43d27fa7523.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/2000x2500_copy.jpg",
+            "image": "shopify:\/\/shop_images\/01_c39dba74-0365-4a2b-9cf2-d868b2a23447.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/01_bd1e70f9-2cb3-4cee-b2b3-be5f91bbaabf.jpg",
             "heading": "",
             "whole_slide_link": "",
             "heading_size": "h1",
             "subheading": "",
             "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/sale",
+            "link": "shopify:\/\/collections\/sale-3-for-300",
             "button_style_secondary": false,
             "box_align": "middle-center",
             "show_text_box": false,
@@ -35,6 +35,45 @@
         "change_slides_speed": 5,
         "show_text_below": false,
         "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "17711ea4-9001-4425-9527-79593a92ff94": {
+      "type": "featured-collection",
+      "settings": {
+        "steps": 4,
+        "title": "3 FOR ₪300",
+        "heading_size": "h1",
+        "heading_type": "heading_type_2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "sale-3-for-300",
+        "products_to_show": 13,
+        "columns_desktop": 5,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_text": "SHOP ALL",
+        "view_all_style": "link",
+        "view_all_location": "top",
+        "enable_desktop_slider": true,
+        "show_peak": true,
+        "pagination_type": "sides",
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": false,
+        "show_sale_badge": false,
+        "enable_quick_add": true,
+        "quick_add_type": "hover",
+        "quick_add_type_mobile": "modal",
+        "quick_add_text": "הוספה מהירה",
+        "pick_size_text": "בחירת מידה",
+        "quick_add_accessories_text": "הוספה מהירה",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 60,
+        "padding_bottom": 36
       }
     },
     "ecf1e0a5-0973-4674-ac5b-b5370ff1bae1": {
@@ -147,6 +186,7 @@
   },
   "order": [
     "slideshow",
+    "17711ea4-9001-4425-9527-79593a92ff94",
     "ecf1e0a5-0973-4674-ac5b-b5370ff1bae1",
     "our_collection_list"
   ]

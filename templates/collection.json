@@ -19,8 +19,8 @@
         ".media > *:not(.zoom):not(.deferred-media__poster-button),.media model-viewer {position: static; object-fit: cover;}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/2200x287_copy.jpg",
-        "mobile_image": "shopify:\/\/shop_images\/800x317_copy.png",
+        "image": "shopify:\/\/shop_images\/01-01.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/49c85ebd8db895dfcbe1a47a4d71b05d.jpg",
         "image_overlay_opacity": 0,
         "image_height": "auto",
         "desktop_content_position": "middle-center",
@@ -44,16 +44,16 @@
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
-        "products_per_page": 16,
+        "products_per_page": 20,
         "columns_desktop": 4,
         "image_ratio": "adapt",
         "card_header_size": "h2",
         "show_secondary_image": true,
         "show_vendor": true,
-        "announcement_tag": "twoplusone",
+        "announcement_tag": "3for300",
         "show_rating": false,
         "show_card_collection_announcement": true,
-        "custom_collection_announcement": "BUY 2 GET 1",
+        "custom_collection_announcement": "3 FOR ₪300",
         "announcement_customizer_override": true,
         "enable_quick_add": true,
         "quick_add_type": "hover",
