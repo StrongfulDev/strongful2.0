@@ -2501,11 +2501,6 @@ quantity-input button.quantity__button {
     content: none;
 }
 
-.header__icon:hover .icon,
-.modal__close-button:hover .icon {
-    transform: scale(1.07);
-}
-
 .header__icon .icon {
     height: 23px;
     width: 23px;
