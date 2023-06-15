@@ -1,0 +1,58 @@
+<--Google Ads Conversion Tag-->
+{% if first_time_accessed %}
+<!-- Global site tag (gtag.js) - Google Ads: 630455920 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-630455920"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-630455920');
+</script>
+
+<!-- Event snippet for Sales conversion page -->
+<script>
+  gtag('event', 'conversion', {
+    'send_to': 'AW-630455920/JRc_CPO_j9EBEPD8z6wC',
+    'value': {{ checkout.total_price | money_without_currency | remove: ',' }},
+    'currency': 'ILS',
+    'transaction_id': '{{ order.order_number  }}'
+  });
+</script>
+
+<!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=TAG_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-GZN0H137Z7');
+    </script>
+
+<script>
+    gtag("event", "purchase", {
+        transaction_id: {{ transaction.name }},
+        value: {{ transaction.amount }},
+        currency: "ILS"
+    });
+    </script>
+
+
+
+{% endif %}
+
+<script>
+document.getElementsByClassName("thank-you__additional-content")[0].style.display = "none";
+let checkoutId = {{ checkout.id }}
+console.log(checkoutId);
+</script>
+<script>window.cffOrderEditOrderStatusPageOrderId = '{{order.id}}'</script>
+<--GTM SCRIPT DON'T MODIFY -->
+
+
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    </script>
+
+<img src="https://api.yotpo.com/conversion_tracking.gif?app_key=QI0VdT7ROUF5r1ybHPM5YgLRsUiPFRMOXKeGNWSJ&order_id={{order_name|handleize}}&order_amount={{subtotal_price|money_without_currency}}&order_currency={{ shop.currency }}" width="1" height="1">

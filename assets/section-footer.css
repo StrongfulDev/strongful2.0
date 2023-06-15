@@ -770,7 +770,7 @@ noscript .localization-selector.link {
 .blog_and_newsletter-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: .5em;
+    column-gap: var(--grid-desktop-vertical-spacing);
 }
 
 .blog_and_newsletter_image {
@@ -887,7 +887,7 @@ noscript .localization-selector.link {
     }
 
     .blog_and_newsletter-ctn {
-        width: 61%;
+        width: 74%;
         margin-right: auto;
     }
 
@@ -916,6 +916,7 @@ noscript .localization-selector.link {
 
     .blog_and_newsletter-grid {
         grid-template-columns: repeat(3, 1fr);
+	    column-gap: calc(var(--grid-desktop-vertical-spacing) * 1.5);
     }
 
     .footer-block__brand-info .footer__list-social.list-social {
