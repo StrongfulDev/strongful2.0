@@ -20,14 +20,6 @@
             "product": "{{product}}"
           }
         },
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "is_vendor": true,
-            "text_style": "uppercase"
-          }
-        },
         "price": {
           "type": "price",
           "settings": {
@@ -103,7 +95,6 @@
         "7c99b889-3ad8-4802-a5c7-9802ab40f12c",
         "title",
         "656bd184-5523-4c74-aee3-c2664a058063",
-        "vendor",
         "price",
         "variant_picker",
         "quantity_selector",
@@ -137,8 +128,48 @@
         "heading_size": "h1"
       }
     },
+    "daadfb7d-6377-46b9-9592-68ff753bf341": {
+      "type": "related-products-slider",
+      "settings": {
+        "steps": 1,
+        "title": "אולי תאהבי גם",
+        "heading_size": "h1",
+        "heading_type": "heading_type_default",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "",
+        "products_to_show": 15,
+        "columns_desktop": 4,
+        "full_width": true,
+        "show_view_all": false,
+        "view_all_text": "",
+        "view_all_style": "solid",
+        "view_all_location": "bottom",
+        "enable_desktop_slider": true,
+        "show_peak": true,
+        "pagination_type": "sides",
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": false,
+        "show_sale_badge": false,
+        "enable_quick_add": true,
+        "quick_add_type": "hover",
+        "quick_add_type_mobile": "modal",
+        "quick_add_text": "הוספה מהירה",
+        "pick_size_text": "בחירת מידה",
+        "quick_add_accessories_text": "הוספה מהירה",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "heading": "אולי תאהבי גם",
         "heading_alignment": "center",
@@ -159,7 +190,8 @@
       "type": "main-product-quick-add",
       "settings": {
         "quick_add_type_mobile": "modal",
-        "quick_add_text": "בחירת מידה",
+        "quick_add_text": "הוספה מהירה",
+        "pick_size_text": "בחירת מידה",
         "quick_add_accessories_text": "הוספה מהירה"
       }
     },
@@ -186,30 +218,23 @@
         "padding_bottom": 16
       }
     },
-    "168551910448762f1f": {
-      "type": "apps",
-      "blocks": {
-        "c4cba5f0-c4b6-4691-8c28-8a47e08e1754": {
-          "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-          "settings": {
-            "product": "{{product}}"
-          }
-        }
-      },
-      "block_order": [
-        "c4cba5f0-c4b6-4691-8c28-8a47e08e1754"
-      ],
+    "7cdab2e2-73e8-4ee9-9440-afe44e06755c": {
+      "type": "custom-liquid",
       "settings": {
-        "include_margins": true
+        "custom_liquid": "<div class=\"yotpo yotpo-main-widget page-width\"\ndata-product-id=\"{{ product.id }}\"\ndata-name=\"{{ product.title | escape }}\"\ndata-url=\"{{ shop.url }}{{ product.url }}\"\ndata-image-url=\"{{ product.featured_image | product_img_url: 'large' |replace: '?', '%3F' | replace: '&','%26'}}\"\ndata-price=\"{{ variant.price | money_without_currency }}\"\ndata-currency=\"{{ shop.currency }}\"\ndata-description=\"{{ product.description | escape }}\">\n<\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 32
       }
     }
   },
   "order": [
     "main",
     "complete-look-products",
+    "daadfb7d-6377-46b9-9592-68ff753bf341",
     "related-products",
     "8bb31773-3add-4a1a-b42f-368102c7844b",
     "37dac536-c5a1-4fb0-9990-6e388a96185b",
-    "168551910448762f1f"
+    "7cdab2e2-73e8-4ee9-9440-afe44e06755c"
   ]
 }

@@ -265,10 +265,14 @@ class PredictiveSearch extends SearchForm {
 			element.parents(".product_size_picker__form.form").find('[type="submit"]').click();
 		}, 500);
 		setTimeout(() => {
-			element.find(".size_variant_button_add").show();
 			element.find(".loading-overlay").css("display", "none");
 			element.find(".loading-overlay__spinner").addClass("hidden");
-		}, 1500);
+			element.find(".icon-checkmark").show();
+		}, 1000);
+		setTimeout(() => {
+			element.find(".icon-checkmark").hide();
+			element.find(".size_variant_button_add").show();
+		}, 3500);
 	}
 
 	toggleModal() {
@@ -278,13 +282,22 @@ class PredictiveSearch extends SearchForm {
 		const modalOverlay = $(".variant_modal_overlay#" + modalId + "-overlay");
 
 		modal.show();
-		modalOverlay.show()
+		setTimeout(() => {
+			modal.addClass("active");
+		}, 100);
+		modalOverlay.show();
 		modalOverlay.on("click", () => {
-			modal.hide()
+			modal.removeClass("active");
+			setTimeout(() => {
+				modal.hide();
+			}, 1000);
 			modalOverlay.hide()
 		})
 		modal.find('.quick_add_modal__close').on("click", () => {
-			modal.hide()
+			modal.removeClass("active");
+			setTimeout(() => {
+				modal.hide();
+			}, 1000);
 			modalOverlay.hide()
 		})
 	}

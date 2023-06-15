@@ -1,11 +1,10 @@
 const arrowIcon = document.querySelector(".model-switch-button .icon-caret");
 
-$(document).ready(function () {
+document.addEventListener('DOMContentLoaded', function () {
 	hideUnAvailableModels();
 
 	$('.model-switcher__item input').change(function () {
 		const modelSize = $(this).val();
-		console.log(modelSize)
 		if (modelSize) {
 			changeModel(modelSize);
 			updateVariantRadios(modelSize);
@@ -26,7 +25,6 @@ $(document).ready(function () {
 
 function hideUnAvailableModels() {
 	const availableSizes = getAvailableSizes();
-	console.log(availableSizes)
 
 	if (availableSizes.length === 0) {
 		$('.model-switcher').hide();

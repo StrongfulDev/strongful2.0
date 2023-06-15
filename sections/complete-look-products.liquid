@@ -16,15 +16,10 @@
                     <a href="{{ product.url }}" class="rtl desktop mono-link">
                       <img
                           srcset="
-                                  {%- if product.featured_media.width >= 165 -%}{{ product.featured_media | image_url: width: 165 }} 165w,{%- endif -%}
-                                  {%- if product.featured_media.width >= 360 -%}{{ product.featured_media | image_url: width: 360 }} 360w,{%- endif -%}
-                                  {%- if product.featured_media.width >= 533 -%}{{ product.featured_media | image_url: width: 533 }} 533w,{%- endif -%}
-                                  {%- if product.featured_media.width >= 720 -%}{{ product.featured_media | image_url: width: 720 }} 720w,{%- endif -%}
-                                  {%- if product.featured_media.width >= 940 -%}{{ product.featured_media | image_url: width: 940 }} 940w,{%- endif -%}
                                   {%- if product.featured_media.width >= 1066 -%}{{ product.featured_media | image_url: width: 1066 }} 1066w,{%- endif -%}
                                   {{ product.featured_media | image_url }} {{ product.featured_media.width }}w
                                 "
-                          src="{{ product.featured_media | image_url: width: 533 }}"
+                          src="{{ product.featured_media | image_url: width: 1033 }}"
                           sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
                           alt="{{ product.title | escape }}"
                           class="complete_look__image"
@@ -39,10 +34,9 @@
             {% endfor %}
         </div>
         <div class="column_spacer" style="width: 30px; display: block">&nbsp;</div>
-        <ul class="complete_look__list">
-            <li>
-                <h4 class="title title-wrapper--no-top-margin complete_look__title {{ section.settings.heading_size }}">{{ section.settings.heading }}</h4>
-            </li>
+        <div class="complete_look__list-container">
+            <h4 class="title title-wrapper--no-top-margin complete_look__title {{ section.settings.heading_size }}">{{ section.settings.heading }}</h4>
+            <ul class="complete_look__list">
                 {% for product in collections[handle].products %}
                     {% unless product.id == productId %}
                         {% if product.tags contains 'לייב' %}
@@ -50,8 +44,8 @@
                                 <div class="complete_look__item {% if product.tags contains 'fakeOutOfStock' %}fake-out-of-stock{% endif %}">
                                     <div class="item_picture">
                                         <a href="{{ product.url }}">
-                                          <img
-                                              srcset="
+                                            <img
+                                                    srcset="
                                                   {%- if product.featured_media.width >= 165 -%}{{ product.featured_media | image_url: width: 165 }} 165w,{%- endif -%}
                                                   {%- if product.featured_media.width >= 360 -%}{{ product.featured_media | image_url: width: 360 }} 360w,{%- endif -%}
                                                   {%- if product.featured_media.width >= 533 -%}{{ product.featured_media | image_url: width: 533 }} 533w,{%- endif -%}
@@ -60,16 +54,16 @@
                                                   {%- if product.featured_media.width >= 1066 -%}{{ product.featured_media | image_url: width: 1066 }} 1066w,{%- endif -%}
                                                   {{ product.featured_media | image_url }} {{ product.featured_media.width }}w
                                                 "
-                                              src="{{ product.featured_media | image_url: width: 533 }}"
-                                              sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-                                              alt="{{ product.featured_media.alt | escape }}"
-                                              class="new-stl--image"
-                                              {% unless lazy_load == false %}
-                                                loading="lazy"
-                                              {% endunless %}
-                                              width="{{ product.featured_media.width }}"
-                                              height="{{ product.featured_media.height }}"
-                                          >
+                                                    src="{{ product.featured_media | image_url: width: 533 }}"
+                                                    sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                                                    alt="{{ product.featured_media.alt | escape }}"
+                                                    class="new-stl--image"
+                                                    {% unless lazy_load == false %}
+                                                        loading="lazy"
+                                                    {% endunless %}
+                                                    width="{{ product.featured_media.width }}"
+                                                    height="{{ product.featured_media.height }}"
+                                            >
                                         </a>
                                     </div>
                                     <div class="item_details">
@@ -82,6 +76,7 @@
                                                 block: block,
                                                 is_modal: false,
                                                 quick_add_text: quick_add_text,
+                                                pick_size_text: pick_size_text,
                                                 quick_add_accessories_text: quick_add_accessories_text
                                         %}
                                     </div>
@@ -90,7 +85,8 @@
                         {% endif %}
                     {% endunless %}
                 {% endfor %}
-        </ul>
+            </ul>
+        </div>
     </div>
 </div>
     {% endunless %}

@@ -63,6 +63,8 @@
      this.detailsContainer.removeAttribute('open');
      document.body.removeEventListener('click', this.onBodyClickEvent);
      document.body.classList.remove('overflow-hidden');
+		 $("html").removeClass("overflow-hidden");
+		 $(".header-overlay").addClass("hidden");
    }
  }
 

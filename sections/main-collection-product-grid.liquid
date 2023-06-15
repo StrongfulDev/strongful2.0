@@ -4,7 +4,6 @@
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 {{ 'component-variant-size-picker.css' | asset_url | stylesheet_tag }}
 {{ 'component-variant-size-picker.js' | asset_url | script_tag }}
-{{ 'ajaxinate.js' | asset_url | script_tag }}
 
 {% comment %}{{ 'component-slider.css' | asset_url | stylesheet_tag }}{% endcomment %}
 {% comment %}{{ 'component-slideshow.css' | asset_url | stylesheet_tag }}{% endcomment %}
@@ -181,6 +180,7 @@
                                         endif
                                     endif
                                 -%}
+                                {% unless product.tags contains 'giftHide' %}
                                 <li class="grid__item">
                                     {% render 'card-product',
                                             card_product: product,
@@ -197,10 +197,12 @@
                                             card_banner_text: card_announcement,
                                             card_header_size: section.settings.card_header_size,
                                         announcement_tag: section.settings.announcement_tag,
+                                            pick_size_text: section.settings.pick_size_text,
                                             quick_add_text: section.settings.quick_add_text,
                                             quick_add_accessories_text: section.settings.quick_add_accessories_text
                                     %}
                                 </li>
+                                {% endunless %}
                             {%- endfor -%}
                         </ul>
 
@@ -210,16 +212,10 @@
                     </div>
                 {%- endif -%}
             {%- endpaginate -%}
+            {% comment %}<div id="sentinel">&nbsp;</div>{% endcomment %}
         </div>
     </div>
 </div>
-
-<script>
-    const endlessCollection = new Ajaxinate({
-        container: '#product-grid',
-        pagination: '.infinite_next',
-    });
-</script>
 
 {% schema %}
 {
@@ -367,12 +363,18 @@
       "default": "modal",
       "label": "t:sections.main-collection-product-grid.settings.quick_add_type_mobile.label"
     },
-    {
-      "type": "text",
-      "id": "quick_add_text",
-      "default": "Pick size",
-      "label": "t:sections.main-collection-product-grid.settings.quick_add_text.label"
-    },
+      {
+          "type": "text",
+          "id": "quick_add_text",
+          "default": "בחירת מידה",
+          "label": "t:sections.main-collection-product-grid.settings.quick_add_text.label"
+      },
+      {
+          "type": "text",
+          "id": "pick_size_text",
+          "default": "בחירת מידה",
+          "label": "t:sections.main-collection-product-grid.settings.pick_size_text.label"
+      },
 {
     "type": "text",
     "id": "quick_add_accessories_text",

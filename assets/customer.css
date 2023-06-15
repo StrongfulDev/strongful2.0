@@ -7,6 +7,14 @@
 	max-height: 2rem !important;
 }
 
+.form__general-errors {
+	text-align: right;
+}
+
+a.container-menu-item.container-menu-item-logout.desktop--only {
+	display: none;
+}
+
 .bold {
 	font-weight: bold;
 }
@@ -431,6 +439,19 @@ a.no-decoration {
 }
 
 @media screen and (min-width: 990px) {
+
+	a.container-menu-item.container-menu-item-logout.desktop--only {
+		display: block;
+	}
+
+	a.container-menu-item.container-menu-item-refer {
+		border-bottom: 1px var(--gradient-base-background-4) solid;
+	}
+
+	.container-menu-item .icon-caret {
+		transform: translateY(-100%);
+	}
+
   :is(.account, .order) > div:nth-of-type(2) {
     display: grid;
 	  grid-template-columns: 1fr 3fr;
@@ -856,8 +877,9 @@ a.container-menu-item:last-child, span.container-menu-item:last-child, a.contain
 .container-menu-item .icon-caret {
 	position: absolute;
 	left: 0;
-	top: 50%;
+	top: 35%;
 	transform: translateY(-50%) rotate(90deg);
+	margin: 0;
 }
 
 .container-menu-item .icon-caret.rotate {
@@ -901,11 +923,17 @@ p.container-extra-info {
 	padding: 1em;
 	width: 100%;
 	display: block;
+	text-align: center;
+	border-bottom: 1px solid var(--gradient-base-background-4);
 }
 
 .toggle-orders-button .icon {
 	width: 1em;
-	transform: rotate(270deg);
+	position: absolute;
+	right: 1rem;
+	margin: 0;
+	top: 50%;
+	transform: translateY(-50%) rotate(270deg);
 }
 
 .main-account-info-container--contact, .container-menu-item--logout {

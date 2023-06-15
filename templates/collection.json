@@ -2,12 +2,25 @@
   "sections": {
     "745dda66-63ce-4705-8d8d-eff54d17367f": {
       "type": "image-banner",
+      "blocks": {
+        "b12ab2ae-119f-4c68-9a4f-1e499db126b3": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ collection.title }}",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "b12ab2ae-119f-4c68-9a4f-1e499db126b3"
+      ],
       "custom_css": [
-        "@media screen and (min-width: 990px) {.banner__media img {object-fit: contain; } .banner--auto {min-height: 13vw; }}"
+        "@media screen and (min-width: 990px) {.banner__media img {object-fit: contain; }}",
+        ".media > *:not(.zoom):not(.deferred-media__poster-button),.media model-viewer {position: static; object-fit: cover;}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/desk_collection.png",
-        "mobile_image": "shopify:\/\/shop_images\/mobile_collection.png",
+        "image": "shopify:\/\/shop_images\/01-01.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/49c85ebd8db895dfcbe1a47a4d71b05d.jpg",
         "image_overlay_opacity": 0,
         "image_height": "auto",
         "desktop_content_position": "middle-center",
@@ -31,29 +44,30 @@
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
-        "products_per_page": 16,
+        "products_per_page": 20,
         "columns_desktop": 4,
         "image_ratio": "adapt",
         "card_header_size": "h2",
         "show_secondary_image": true,
         "show_vendor": true,
-        "announcement_tag": "dawn sale",
+        "announcement_tag": "3for300",
         "show_rating": false,
         "show_card_collection_announcement": true,
-        "custom_collection_announcement": "BUY 500 PAY 400",
+        "custom_collection_announcement": "3 FOR ₪300",
         "announcement_customizer_override": true,
         "enable_quick_add": true,
         "quick_add_type": "hover",
         "quick_add_type_mobile": "modal",
         "quick_add_text": "הוספה מהירה",
+        "pick_size_text": "בחירת מידה",
         "quick_add_accessories_text": "הוספה מהירה",
         "image_count": 1,
         "enable_filtering": true,
         "filter_type": "vertical",
         "enable_sorting": true,
         "columns_mobile": "2",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },

@@ -35,13 +35,14 @@ window.addEventListener('DOMContentLoaded', () => {
 	}
 
 	$('.multicolumn-list__item').on('click', function() {
-		$('.multicolumn-list__item').removeClass('active');
+		$(this).siblings().removeClass('active');
 		$(this).addClass('active');
 		let activeWidth = $(this).innerWidth();
 		let position = $(this).position();
 		let id = $(this).attr('id');
 		let lastChar = id.substr(id.length - 1);
-		$(".customer").toggleClass("hidden");
+		console.log($('.customer'));
+		$('.customer').toggleClass("hidden");
 		if (lastChar == 2) {
 			$("#js-border-position").css("width", activeWidth + "px");
 			$("#js-border-position").css("left", position.left + "px");

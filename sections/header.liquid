@@ -44,6 +44,8 @@
     header-drawer {
         justify-self: start;
         margin-left: -0.6rem;
+        display: flex;
+        column-gap: var(--grid-desktop-horizontal-spacing);
     }
 
     .header__heading-logo {
@@ -177,14 +179,32 @@
                                 <div class="menu-drawer__navigation-container">
                                     <nav class="menu-drawer__navigation">
                                         <div class="nav_top">
-                                          {% if section.settings.mobile_logo_link != '' %}
-                                            <a href="{{ section.settings.mobile_logo_link }}" class="nav_top--mobile-logo">
-                                              {% if section.settings.mobile_logo %}
-                                                <img src="{{ section.settings.mobile_logo | img_url: 'master' }}" alt="{{ shop.name }}"
-                                                     class="logo menu-drawer__logo" style="width: {{ section.settings.mobile_logo_width }}px">
-                                              {% endif %}
-                                            </a>
-                                          {% endif %}
+                                            <div class="nav_top--logo-container">
+                                                {% comment %}
+                                                {% if section.settings.mobile_logo_link != '' %}
+                                                    <a href="{{ section.settings.mobile_logo_link }}" class="nav_top--mobile-logo">
+                                                        {% if section.settings.mobile_logo %}
+                                                            <img src="{{ section.settings.mobile_logo | img_url: 'master' }}" alt="{{ shop.name }}"
+                                                                 class="logo menu-drawer__logo" style="width: {{ section.settings.mobile_logo_width }}px">
+                                                        {% endif %}
+                                                        <button class="mobile-header-closer">
+                                                            {% render 'icon-close' %}
+                                                        </button>
+                                                    </a>
+                                                {% endif %}
+                                                {% endcomment %}
+                                                {% if section.settings.mobile_logo_link != '' %}
+                                                    <a href="#" class="nav_top--mobile-logo">
+                                                        {% if section.settings.mobile_logo %}
+                                                            <img src="{{ section.settings.mobile_logo | img_url: 'master' }}" alt="{{ shop.name }}"
+                                                                 class="logo menu-drawer__logo" style="width: {{ section.settings.mobile_logo_width }}px">
+                                                        {% endif %}
+                                                        <button class="mobile-header-closer">
+                                                            {% render 'icon-close' %}
+                                                        </button>
+                                                    </a>
+                                                {% endif %}
+                                            </div>
                                             <div class="mobile_menu fix-direction">
                                                 {% for menu_item in section.settings.mobile_menu.links %}
                                                     <a href="{{ menu_item.url }}"
@@ -334,12 +354,12 @@
                                                             <a href="/pages/a-list" class="container-menu-item">ALIST <span>{{ vipTier }}</span>
                                                                 {% render 'icon-caret' %}
                                                             </a>
-                                                            <p class="container-extra-info">קופי על מועדון לקוחות שווה</p>
+                                                            <p class="container-extra-info">צבירת נקודות בכל קנייה</p>
                                                         </div>
                                                         <div class="main-account-info-container main-account-info-container--loyalty">
                                                             <h4 class="container-title">{{ "sections.header.account_title" | t }}</h4>
                                                             <a href="{{ routes.account_url }}" class="container-menu-item">
-                                                                {% render 'icon-account' %}
+                                                                {% render 'icon-new-user' %}
                                                                 {{ customer.name }}
                                                                 {% render 'icon-caret' %}
                                                             </a>
@@ -376,6 +396,108 @@
                             </div>
                         </div>
                     </details>
+                    <details-modal class="header__search">
+                        <details>
+                            <summary
+                                    class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle"
+                                    aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
+            <span>
+              <svg class="modal__toggle-open icon icon-search" aria-hidden="true" focusable="false">
+                <use href="#icon-search">
+              </svg>
+              <svg class="modal__toggle-close icon icon-close" aria-hidden="true" focusable="false">
+                <use href="#icon-close">
+              </svg>
+            </span>
+                            </summary>
+                            <div class="search-modal modal__content fix-direction gradient" role="dialog"
+                                 aria-modal="true" aria-label="{{ 'general.search.search' | t }}">
+                                <div class="modal-overlay"></div>
+                                <div class="search-modal__content{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} search-modal__content-top{% else %} search-modal__content-bottom{% endif %}"
+                                     tabindex="-1">
+                                    <button type="button"
+                                            class="search-modal__close-button modal__close-button link link--text focus-inset"
+                                            aria-label="{{ 'accessibility.close' | t }}">
+                                        <span class="visually-hidden">{{ 'accessibility.close' | t }}</span>
+                                        {% comment %}<span class="search-modal__close-button--custom">{{ 'general.search.close' | t }}</span>{% endcomment %}
+                                        {% render 'icon-close' %}
+                                    </button>
+                                {%- if settings.predictive_search_enabled -%}
+                                    <predictive-search class="search-modal__form"
+                                                       data-loading-text="{{ 'accessibility.loading' | t }}">
+                                        {%- else -%}
+                                        <search-form class="search-modal__form">
+                                            {%- endif -%}
+                                            <form action="{{ routes.search_url }}" method="get"
+                                                  role="search" class="search search-modal__form">
+                                                <div class="field">
+                                                    <input class="search__input field__input"
+                                                           id="Search-In-Modal"
+                                                           type="search"
+                                                           name="q"
+                                                           value="{{ search.terms | escape }}"
+                                                           placeholder="{{ 'general.search.search' | t }}"
+                                                            {%- if settings.predictive_search_enabled -%}
+                                                                role="combobox"
+                                                                aria-expanded="false"
+                                                                aria-owns="predictive-search-results"
+                                                                aria-controls="predictive-search-results"
+                                                                aria-haspopup="listbox"
+                                                                aria-autocomplete="list"
+                                                                autocorrect="off"
+                                                                autocomplete="off"
+                                                                autocapitalize="off"
+                                                                spellcheck="false"
+                                                            {%- endif -%}
+                                                    >
+                                                    <label class="field__label"
+                                                           for="Search-In-Modal">{{ 'general.search.search' | t }}</label>
+                                                    <input type="hidden" name="options[prefix]"
+                                                           value="last">
+                                                    <button type="reset"
+                                                            class="reset__button field__button{% if search.terms == blank %} hidden{% endif %}"
+                                                            aria-label="{{ 'general.search.reset' | t }}">
+                                                        <svg class="icon icon-close" aria-hidden="true"
+                                                             focusable="false">
+                                                            <use xlink:href="#icon-reset">
+                                                        </svg>
+                                                    </button>
+                                                    <button class="search__button field__button"
+                                                            aria-label="{{ 'general.search.search' | t }}">
+                                                        <svg class="icon icon-search" aria-hidden="true"
+                                                             focusable="false">
+                                                            <use href="#icon-search">
+                                                        </svg>
+                                                    </button>
+                                                </div>
+
+                                                {%- if settings.predictive_search_enabled -%}
+                                                    <div class="predictive-search predictive-search--header"
+                                                         tabindex="-1" data-predictive-search>
+                                                        <div class="predictive-search__loading-state">
+                                                            <svg aria-hidden="true" focusable="false"
+                                                                 class="spinner" viewBox="0 0 66 66"
+                                                                 xmlns="http://www.w3.org/2000/svg">
+                                                                <circle class="path" fill="none"
+                                                                        stroke-width="6" cx="33" cy="33"
+                                                                        r="30"></circle>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+
+                                                    <span class="predictive-search-status visually-hidden"
+                                                          role="status" aria-hidden="true"></span>
+                                                {%- endif -%}
+                                            </form>
+                                            {%- if settings.predictive_search_enabled -%}
+                                    </predictive-search>
+                                {%- else -%}
+                                    </search-form>
+                                    {%- endif -%}
+                                </div>
+                            </div>
+                        </details>
+                    </details-modal>
                 </header-drawer>
             {% else %}
                 <header-drawer data-breakpoint="tablet">
@@ -476,7 +598,7 @@
                                         {%- if shop.customer_accounts_enabled -%}
                                             <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
                                                class="menu-drawer__account link focus-inset h5">
-                                                {% render 'icon-account' %}
+                                                {% render 'icon-new-user' %}
                                                 {%- liquid
                                                     if customer
                                                         echo 'customer.account_fallback' | t
@@ -574,16 +696,11 @@
                             </div>
                         </div>
                     </details>
-                </header-drawer>
-            {% endif %}
-        {%- endif -%}
-
-        {%- if section.settings.logo_position == 'top-center' or section.settings.menu == blank -%}
-            <details-modal class="header__search">
-                <details>
-                    <summary
-                            class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle"
-                            aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
+                    <details-modal class="header__search">
+                        <details>
+                            <summary
+                                    class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle"
+                                    aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
             <span>
               <svg class="modal__toggle-open icon icon-search" aria-hidden="true" focusable="false">
                 <use href="#icon-search">
@@ -592,95 +709,97 @@
                 <use href="#icon-close">
               </svg>
             </span>
-                    </summary>
-                    <div class="search-modal modal__content fix-direction gradient" role="dialog"
-                         aria-modal="true" aria-label="{{ 'general.search.search' | t }}">
-                        <div class="modal-overlay"></div>
-                        <div class="search-modal__content{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} search-modal__content-top{% else %} search-modal__content-bottom{% endif %}"
-                             tabindex="-1">
-                            <button type="button"
-                                    class="modal__close-button link link--text focus-inset"
-                                    aria-label="{{ 'accessibility.close' | t }}">
-                                <svg class="icon icon-close" aria-hidden="true" focusable="false">
-                                    <use href="#icon-close">
-                                </svg>
-                            </button>
-                        {%- if settings.predictive_search_enabled -%}
-                            <predictive-search class="search-modal__form"
-                                               data-loading-text="{{ 'accessibility.loading' | t }}">
-                                {%- else -%}
-                                <search-form class="search-modal__form">
-                                    {%- endif -%}
-                                    <form action="{{ routes.search_url }}" method="get"
-                                          role="search" class="search search-modal__form">
-                                        <div class="field">
-                                            <input class="search__input field__input"
-                                                   id="Search-In-Modal-1"
-                                                   type="search"
-                                                   name="q"
-                                                   value="{{ search.terms | escape }}"
-                                                   placeholder="{{ 'general.search.search' | t }}"
-                                                    {%- if settings.predictive_search_enabled -%}
-                                                        role="combobox"
-                                                        aria-expanded="false"
-                                                        aria-owns="predictive-search-results"
-                                                        aria-controls="predictive-search-results"
-                                                        aria-haspopup="listbox"
-                                                        aria-autocomplete="list"
-                                                        autocorrect="off"
-                                                        autocomplete="off"
-                                                        autocapitalize="off"
-                                                        spellcheck="false"
-                                                    {%- endif -%}
-                                            >
-                                            <label class="field__label"
-                                                   for="Search-In-Modal-1">{{ 'general.search.search' | t }}</label>
-                                            <input type="hidden" name="options[prefix]"
-                                                   value="last">
-                                            <button type="reset"
-                                                    class="reset__button field__button{% if search.terms == blank %} hidden{% endif %}"
-                                                    aria-label="{{ 'general.search.reset' | t }}">
-                                                <svg class="icon icon-close" aria-hidden="true"
-                                                     focusable="false">
-                                                    <use xlink:href="#icon-reset">
-                                                </svg>
-                                            </button>
-                                            <button class="search__button field__button"
-                                                    aria-label="{{ 'general.search.search' | t }}">
-                                                <svg class="icon icon-search" aria-hidden="true"
-                                                     focusable="false">
-                                                    <use href="#icon-search">
-                                                </svg>
-                                            </button>
-                                        </div>
-
-                                        {%- if settings.predictive_search_enabled -%}
-                                            <div class="predictive-search predictive-search--header"
-                                                 tabindex="-1" data-predictive-search>
-                                                <div class="predictive-search__loading-state">
-                                                    <svg aria-hidden="true" focusable="false"
-                                                         class="spinner" viewBox="0 0 66 66"
-                                                         xmlns="http://www.w3.org/2000/svg">
-                                                        <circle class="path" fill="none"
-                                                                stroke-width="6" cx="33" cy="33"
-                                                                r="30"></circle>
-                                                    </svg>
+                            </summary>
+                            <div class="search-modal modal__content fix-direction gradient" role="dialog"
+                                 aria-modal="true" aria-label="{{ 'general.search.search' | t }}">
+                                <div class="modal-overlay"></div>
+                                <div class="search-modal__content{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} search-modal__content-top{% else %} search-modal__content-bottom{% endif %}"
+                                     tabindex="-1">
+                                    <button type="button"
+                                            class="search-modal__close-button modal__close-button link link--text focus-inset"
+                                            aria-label="{{ 'accessibility.close' | t }}">
+                                        <span class="visually-hidden">{{ 'accessibility.close' | t }}</span>
+                                        {% comment %}<span class="search-modal__close-button--custom">{{ 'general.search.close' | t }}</span>{% endcomment %}
+                                        {% render 'icon-close' %}
+                                    </button>
+                                {%- if settings.predictive_search_enabled -%}
+                                    <predictive-search class="search-modal__form"
+                                                       data-loading-text="{{ 'accessibility.loading' | t }}">
+                                        {%- else -%}
+                                        <search-form class="search-modal__form">
+                                            {%- endif -%}
+                                            <form action="{{ routes.search_url }}" method="get"
+                                                  role="search" class="search search-modal__form">
+                                                <div class="field">
+                                                    <input class="search__input field__input"
+                                                           id="Search-In-Modal"
+                                                           type="search"
+                                                           name="q"
+                                                           value="{{ search.terms | escape }}"
+                                                           placeholder="{{ 'general.search.search' | t }}"
+                                                            {%- if settings.predictive_search_enabled -%}
+                                                                role="combobox"
+                                                                aria-expanded="false"
+                                                                aria-owns="predictive-search-results"
+                                                                aria-controls="predictive-search-results"
+                                                                aria-haspopup="listbox"
+                                                                aria-autocomplete="list"
+                                                                autocorrect="off"
+                                                                autocomplete="off"
+                                                                autocapitalize="off"
+                                                                spellcheck="false"
+                                                            {%- endif -%}
+                                                    >
+                                                    <label class="field__label"
+                                                           for="Search-In-Modal">{{ 'general.search.search' | t }}</label>
+                                                    <input type="hidden" name="options[prefix]"
+                                                           value="last">
+                                                    <button type="reset"
+                                                            class="reset__button field__button{% if search.terms == blank %} hidden{% endif %}"
+                                                            aria-label="{{ 'general.search.reset' | t }}">
+                                                        <svg class="icon icon-close" aria-hidden="true"
+                                                             focusable="false">
+                                                            <use xlink:href="#icon-reset">
+                                                        </svg>
+                                                    </button>
+                                                    <button class="search__button field__button"
+                                                            aria-label="{{ 'general.search.search' | t }}">
+                                                        <svg class="icon icon-search" aria-hidden="true"
+                                                             focusable="false">
+                                                            <use href="#icon-search">
+                                                        </svg>
+                                                    </button>
                                                 </div>
-                                            </div>
 
-                                            <span class="predictive-search-status visually-hidden"
-                                                  role="status" aria-hidden="true"></span>
-                                        {%- endif -%}
-                                    </form>
-                                    {%- if settings.predictive_search_enabled -%}
-                            </predictive-search>
-                        {%- else -%}
-                            </search-form>
-                            {%- endif -%}
-                        </div>
-                    </div>
-                </details>
-            </details-modal>
+                                                {%- if settings.predictive_search_enabled -%}
+                                                    <div class="predictive-search predictive-search--header"
+                                                         tabindex="-1" data-predictive-search>
+                                                        <div class="predictive-search__loading-state">
+                                                            <svg aria-hidden="true" focusable="false"
+                                                                 class="spinner" viewBox="0 0 66 66"
+                                                                 xmlns="http://www.w3.org/2000/svg">
+                                                                <circle class="path" fill="none"
+                                                                        stroke-width="6" cx="33" cy="33"
+                                                                        r="30"></circle>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+
+                                                    <span class="predictive-search-status visually-hidden"
+                                                          role="status" aria-hidden="true"></span>
+                                                {%- endif -%}
+                                            </form>
+                                            {%- if settings.predictive_search_enabled -%}
+                                    </predictive-search>
+                                {%- else -%}
+                                    </search-form>
+                                    {%- endif -%}
+                                </div>
+                            </div>
+                        </details>
+                    </details-modal>
+                </header-drawer>
+            {% endif %}
         {%- endif -%}
 
         {%- if section.settings.logo_position != 'middle-center' -%}
@@ -839,7 +958,7 @@
                                 {%- else -%}
                                     {% assign link_current = false %}
                                     <a href="{{ block.settings.title_link }}"
-                                       class="header__menu-item list-menu__item link link--text focus-inset"{% if link_current %} aria-current="page"{% endif %}>
+                                       class="header__menu-item closing-link list-menu__item link link--text focus-inset"{% if link_current %} aria-current="page"{% endif %}>
                                         <span {%- if link_current %} class="header__active-menu-item"{% endif %}>{{ block.settings.title | escape }}</span>
                                     </a>
                                 {%- endif -%}
@@ -930,7 +1049,7 @@
         {%- endif -%}
 
         <div class="header__icons">
-            <details-modal class="header__search">
+            <details-modal class="header__search desktop--only">
                 <details>
                     <summary
                             class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle"
@@ -1032,26 +1151,10 @@
                     </div>
                 </details>
             </details-modal>
-
             {%- if shop.customer_accounts_enabled -%}
-                {% comment %}
-                <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
-                   class="header__icon header__icon--account link focus-inset">
-                    {% render 'icon-account' %}
-                    <span class="visually-hidden">
-            {%- liquid
-                if customer
-                    echo 'customer.account_fallback' | t
-                else
-                    echo 'customer.log_in' | t
-                endif
-            -%}
-          </span>
-                </a>
-                {% endcomment %}
                 {% unless customer %}
                 <summary class="header__icon header__icon--account link focus-inset account-toggler-site-wide">
-                    {% render 'icon-account' %}
+                    {% render 'icon-new-user' %}
                     <span class="visually-hidden">
             {%- liquid
                 if customer
@@ -1064,7 +1167,7 @@
                 </summary>
                     {% else %}
                     <a href="{{ routes.account_url }}" class="header__icon header__icon--account link focus-inset">
-                        {% render 'icon-account' %}
+                        {% render 'icon-new-user' %}
                         <span class="visually-hidden">
             {%- liquid
                 if customer
@@ -1350,7 +1453,7 @@
     {
       "type": "range",
       "id": "mobile_logo_width",
-      "min": 40,
+      "min": 10,
       "max": 100,
       "step": 5,
       "unit": "px",
@@ -1385,6 +1488,21 @@
     "type": "image_picker",
     "id": "mobile_logo",
     "label": "t:sections.header.settings.mobile_logo.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_logo_secondary",
+      "label": "t:sections.header.settings.mobile_logo_secondary.label"
+    },
+    {
+      "type": "range",
+      "id": "mobile_logo_secondary_width",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "t:sections.header.settings.mobile_logo_secondary_size.label",
+      "default": 60
     },
     {
     "type": "url",

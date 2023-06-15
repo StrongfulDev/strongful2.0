@@ -1678,8 +1678,14 @@
       {
         "type": "text",
         "id": "quick_add_text",
-        "default": "Pick size",
+        "default": "בחירת מידה",
         "label": "t:sections.main-collection-product-grid.settings.quick_add_text.label"
+      },
+      {
+        "type": "text",
+        "id": "pick_size_text",
+        "default": "בחירת מידה",
+        "label": "t:sections.main-collection-product-grid.settings.pick_size_text.label"
       },
       {
         "type": "text",

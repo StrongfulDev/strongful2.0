@@ -89,10 +89,17 @@ class FacetFiltersForm extends HTMLElement {
       containerDesktop.classList.remove('loading');
     }
 
-	  const endlessCollection = new Ajaxinate({
+	  let endlessCollection = new AjaxinateMin({
 		  container: '#product-grid',
 		  pagination: '.infinite_next',
 	  });
+
+		let countNumber = parseInt($(".mobile-facets__open .custom-active-facets").text());
+	  if (countNumber > 0) {
+			$(".no-js-hidden.button.button--primary").removeClass("button--disabled").html("אישור");
+	  } else {
+			$(".no-js-hidden.button.button--primary").addClass("button--disabled").html("נא לבחור סינון");
+	  }
   }
 
   static renderFilters(html, event) {
@@ -164,14 +171,6 @@ class FacetFiltersForm extends HTMLElement {
   static activeFilterCount() {
     let activeFilters = document.querySelectorAll('.mobile-facets__checkbox:checked');
 	  let searchParams = new URLSearchParams(window.location.search);
-	  let numOfParams = searchParams.size;
-
-	  // let activeFiltersDOMElements = document.querySelectorAll(".mobile-facets__active-filter-count");
-    // activeFiltersDOMElements.forEach(function(element) {
-    //   element.innerHTML = "(" + numOfParams + ")";
-    // });
-// 	  $(".mobile-facets__active-filter-count").html(`${numOfParams}`);
-		// $(".custom-active-facets").html("(" + numOfParams + ")");
   }
 
   static updateURLHash(searchParams) {
@@ -224,7 +223,7 @@ class FacetFiltersForm extends HTMLElement {
   onActiveFilterClick(event) {
     event.preventDefault();
     FacetFiltersForm.toggleActiveFacets();
-    const url = event.currentTarget.href.indexOf('?') == -1 ? '' : event.currentTarget.href.slice(event.currentTarget.href.indexOf('?') + 1);
+    const url = event.currentTarget.href.indexOf('?') === -1 ? '' : event.currentTarget.href.slice(event.currentTarget.href.indexOf('?') + 1);
     FacetFiltersForm.renderPage(url);
   }
 }
@@ -290,8 +289,6 @@ class FacetRemove extends HTMLElement {
 }
 
 customElements.define('facet-remove', FacetRemove);
-
-$(".pagination__list .loading-overlay__spinner").removeClass("hidden");
 
     function colorRounds(html) {
       let colorLabels = html.querySelectorAll(".color-label");
@@ -397,7 +394,7 @@ function designSort() {
 
       // create a fake option (div) for each option of the real select element
       let fakeOption = document.createElement("DIV");
-      fakeOption.setAttribute("class", "mobile-facets__label");
+      fakeOption.setAttribute("class", `mobile-facets__label ${realSelectElement.options[j].innerHTML.replaceAll(' ', '')}`);
       let fakeOptionSquare = document.createElement("span");
       fakeOptionSquare.setAttribute("class", "mobile-facets__label-square");
       fakeOption.prepend(fakeOptionSquare);
@@ -491,3 +488,99 @@ function onlyShowIfInStock() {
 		}
 	}
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+	let gridDisplays = document.querySelectorAll(".grid-display");
+	gridDisplays.forEach(function(gridDisplay) {
+		gridDisplay.addEventListener("click", function() {
+			let gridDisplayActive = document.querySelector(".grid-display.active");
+			gridDisplayActive.classList.remove("active");
+			gridDisplay.classList.add("active");
+			const productGrid = document.querySelector("#product-grid");
+			if (this.classList.contains("grid-display-one-column")) {
+				productGrid.classList.add("product-grid-one-column");
+			} else {
+				productGrid.classList.remove("product-grid-one-column");
+			}
+		});
+	});
+
+	$(".details.menu-opening .mobile-facets__close").click(function() {
+		$(".details.menu-opening").removeClass("menu-opening");
+	});
+
+	// Function to load the next page of products
+// 	function loadNextPage(entries, observer) {
+// 		entries.forEach(entry => {
+// 			if (entry.isIntersecting) {
+// 				let nextPageLink = document.querySelector('.collection:nth-last-child(2) .infinite_next .pagination__item.pagination__item--prev');
+// 				let loader = $(".collection:nth-last-child(2) .pagination__list .loading-overlay__spinner");
+//
+// 				if (nextPageLink) {
+//
+// 					let nextPageURL = nextPageLink.getAttribute('href');
+// 					$(loader).removeClass('hidden');
+//
+// 					fetch(nextPageURL)
+// 						.then(response => response.text())
+// 						.then((responseText) => {
+// 							let html = new DOMParser().parseFromString(responseText, 'text/html');
+// 							let productGridContainer = html.getElementById('ProductGridContainer');
+//
+// 							if (productGridContainer) {
+// 								let currentProductGrid = document.getElementById('ProductGridContainer');
+// 								currentProductGrid.innerHTML += productGridContainer.innerHTML;
+//
+// 								// Update query parameters
+// 								let searchParams = new URLSearchParams(window.location.search);
+// 								let nextPageSearchParams = new URLSearchParams(nextPageURL.split('?')[1]);
+//
+// 								for (let [key, value] of nextPageSearchParams.entries()) {
+// 									searchParams.set(key, value);
+// 								}
+//
+// 								let newURL = `${window.location.pathname}?${searchParams.toString()}`;
+// 								window.history.replaceState({}, '', newURL);
+//
+// 								// Reconnect the sentinel element
+// 								let newSentinel = document.createElement('div');
+// 								newSentinel.id = 'sentinel';
+// 								newSentinel.innerHTML = '&nbsp;'
+// 								currentProductGrid.appendChild(newSentinel);
+// 								$("#sentinel:not(:last-child)").remove();
+//
+// 								// Unobserve the old sentinel element
+// 								observer.unobserve(entry.target);
+//
+// 								// Observe the new sentinel element
+// 								observer.observe(newSentinel);
+// 							}
+// 						})
+// 						.catch(error => {
+// 							console.error('Error loading next page:', error);
+// 						});
+// 				}
+// 			}
+// 		});
+// 	}
+//
+// // Create an Intersection Observer instance
+// 	let options = {
+// 		root: null,
+// 		rootMargin: '500px',
+// 		threshold: 0.1
+// 	};
+//
+// 	let sentinel = document.getElementById('sentinel'); // Replace with the ID of your sentinel element
+// 	let observer = new IntersectionObserver(loadNextPage, options);
+//
+// // Observe the sentinel element
+// 	observer.observe(sentinel);
+
+	let endlessCollection = new AjaxinateMin({
+		container: '#product-grid',
+		pagination: '.infinite_next',
+		offset: 2000
+	});
+
+});

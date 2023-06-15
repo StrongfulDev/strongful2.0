@@ -2,8 +2,10 @@
 window.addEventListener("DOMContentLoaded", function() {
 	const stickyButton = document.querySelector('.sticky-add-to-cart-btn');
 	function toggleQuickAdd() {
-		$(this).next().closest(".variant_selector").toggle();
 		$(".sticky-cart-cta .variant_selector").toggle();
+		setTimeout(() => {
+			$(".sticky-cart-cta .variant_selector").addClass("active");
+		}, 100);
 		$(".sticky-cart-cta-overlay").toggle();
 
 		if (window.innerWidth > 990) {

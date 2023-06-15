@@ -273,6 +273,11 @@
     outline: 0;
 }
 
+.card__heading a.full-unstyled-link {
+	font-weight: var(--font-body-weight);
+	font-size: var(--font-body-size-medium);
+}
+
 @media screen and (min-width: 990px) {
     .card .media.media--hover-effect > img:only-child,
     .card-wrapper .media.media--hover-effect > img:only-child {
@@ -281,7 +286,7 @@
 
     .card:hover .media.media--hover-effect > img:first-child:only-child,
     .card-wrapper:hover .media.media--hover-effect > img:first-child:only-child {
-        transform: scale(1.03);
+        /* transform: scale(1.03); */
     }
 
     .card-wrapper:hover
@@ -293,7 +298,6 @@
     .card-wrapper:hover .media.media--hover-effect > img + img {
         opacity: 1;
         transition: transform var(--duration-short) ease-in-out;
-        transform: scale(1.03);
     }
 
     .underline-links-hover:hover a {

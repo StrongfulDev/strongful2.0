@@ -1,0 +1,88 @@
+
+.countdown {
+	display: block;
+	width: 100%;
+	padding: 0.6em 0;
+	background: var(--gradient-base-accent-1);
+	color: rgb(var(--color-base-text));
+}
+
+.headerLink-countdown {
+	padding: 10px 10px 0;
+}
+
+.countdown-ctn {
+	justify-content: space-between;
+	align-items: center;
+	width: 80%;
+	margin: auto;
+}
+
+.countdown-sale-description {
+	color: rgb(var(--color-base-background-1));
+	font-weight: 600;
+	margin: 0;
+	font-size: .9em;
+	text-align: center;
+	line-height: 1.5rem;
+}
+
+.countdown-sale-description:first-child {
+	direction: ltr;
+}
+
+.countdown-sale-description:last-child {
+	font-size: .8em;
+	direction: rtl;
+}
+
+.countdown #tiles {
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	height: 100%;
+	font-size: .9em;
+}
+
+.countdown #tiles > span, .tiles-time {
+	background: var(--gradient-base-accent-1);
+	text-align: center;
+	color: #cfcfcf;
+	position: relative;
+	font-size: 1.8em;
+	margin: 0 6px;
+	font-weight: 900;
+	box-shadow: 0px 0px 6px 0px rgb(255 255 255 / 30%);
+	padding: .15em;
+}
+
+.countdown #tiles > span:before, .tiles-time:before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	background: var(--gradient-base-accent-1);
+	height: 1px;
+	box-shadow: 0px 0px 3px rgb(255 255 255 / 80%);
+	transform: translateY(-50%);
+	left: 0;
+}
+
+.countdown .labels-li {
+	font-size: .9em;
+	margin: .6em auto 0;
+	text-align: center;
+	color: rgb(var(--color-base-background-1));
+}
+
+@media screen and (min-width: 990px) {
+	.countdown-ctn {
+		justify-content: center;
+		column-gap: 1.5em;
+	}
+
+	.countdown-sale-description {
+		font-size: 1.1em;
+	}
+}

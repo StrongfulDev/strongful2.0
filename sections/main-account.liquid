@@ -44,7 +44,7 @@
               <a href="/pages/a-list" class="container-menu-item">ALIST <span>{{ vipTier }}</span>
                   {% render 'icon-caret' %}
               </a>
-              <p class="container-extra-info">קופי על מועדון לקוחות שווה</p>
+              <p class="container-extra-info">צבירת נקודות בכל קנייה</p>
           </div>
           <div>
 
@@ -64,6 +64,7 @@
 
                   <div class="custom-orders-container mobile">
                 <span class="toggle-orders-button toggle-orders">
+                    {{ 'customer.orders.title' | t }}
                     {% render 'icon-caret' %}
                 </span>
                       {% paginate customer.orders by customer.orders_count %}
@@ -196,7 +197,7 @@
 
               <div class="main-account-info-container main-account-info-container--support">
                   <h2 class="container-title bold">{{ 'customer.account.support.title' | t }}</h2>
-                  <a href="/page/our-promise" class="container-menu-item container-menu-item--our-promise">
+                  <a href="/pages/about-us" class="container-menu-item container-menu-item--our-promise">
                       {{ 'customer.account.support.our-promise' | t }}
                       {% render 'icon-caret' %}
                   </a>
@@ -208,11 +209,10 @@
                       {{ 'customer.account.support.privacy-policy' | t }}
                       {% render 'icon-caret' %}
                   </a>
-                  {% comment %}
-                  <a href="{{ routes.account_logout_url }}" class="container-menu-item container-menu-item-refer">
+                  <a href="{{ routes.account_logout_url }}" class="container-menu-item container-menu-item-logout desktop--only">
                       {{ 'customer.log_out' | t }}
                       {% render 'icon-caret' %}
-                  </a>{% endcomment %}
+                  </a>
               </div>
 
           </div>
@@ -532,6 +532,11 @@
                                               <div class="flex">
                                                   <p>{{ 'customer.order.total' | t }}</p>
                                                   <p>{{ order.total_net_amount | money_with_currency }}</p>
+                                              </div>
+                                          </td>
+                                          <td class="order-summary order-summary-totals" id="RowTotal" role="rowheader" scope="row" colspan="3">
+                                              <div class="flex">
+                                                  <a href="{{ order.customer_url }}">{{ 'customer.order.more_details' | t }}</a>
                                               </div>
                                           </td>
                                       </tr>

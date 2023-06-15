@@ -7,6 +7,7 @@
   - submit_on_click: {Boolean} should clicking an option add to cart or show a seperate button for adding to cart.
   - is_modal: {Boolean} is modal or hover
   - id: {String} parent id.
+  - pick_size_text: {String} text for the quick add button container header.
   - quick_add_text: {String} text for the quick add button.
   - quick_add_accessories_text: {String} text for the quick add button for accessories.
 
@@ -20,6 +21,18 @@
              id="{{ id }}">
             <div class="quick-add-variant-modal mobile no-js-hidden"
                  id="quick_add_modal-{{ section.id }}-{{ card_product.id }}">
+                <div class="quick_add_modal-header-container">
+                    <p class="product_size_picker__header-text fix-direction bold">
+                        {% unless product.has_only_default_variant %}
+                            {{ quick_add_text }}
+                        {% else %}
+                            {{ quick_add_accessories_text }}
+                        {% endunless %}
+                    </p>
+                    <div class="quick_add_modal__close">
+                        {% render 'icon-close' %}
+                    </div>
+                </div>
                 <div class="product-size-picker-container">
                     <div class="product_details fix-direction">
                         {%- assign height = product.featured_media.width | divided_by: product.featured_media.aspect_ratio | round -%}
@@ -32,6 +45,9 @@
                         widths: '375'
                         }}
                         <div class="product_details__info">
+                            <p class="product_details-titles product-title">{{ product.title }}</p>
+                            <p class="product_details-titles product-color">{{ product.vendor }}</p>
+                            {% render "price", product: product %}
                             {% if product.compare_at_price > product.price %}
                                 <div class="discount-price-container">
                                     <p class="rect-discount-tag">
@@ -45,16 +61,10 @@
                                     {% endif %}
                                 </div>
                             {% endif %}
-                            <p class="product_details-titles product-title">{{ product.title }}</p>
-                            <p class="product_details-titles product-color">{{ product.vendor }}</p>
-                            {% render "price", product: product %}
-                        </div>
-                        <div class="quick_add_modal__close">
-                            {% render 'icon-close' %}
                         </div>
                     </div>
                     {% unless product.has_only_default_variant %}
-                    <span class="product_size_picker__heading fix-direction">{{ quick_add_text }}</span>
+                    <span class="product_size_picker__heading fix-direction">{{ pick_size_text }}</span>
                         {% else %}
                         <span class="product_size_picker__heading fix-direction">{{ quick_add_accessories_text }}</span>
                     {% endunless %}
@@ -99,6 +109,7 @@
                                                                     {% render 'icon-plus' %}
                                                                 </div>
                                                                 {% render "loading-spinner" %}
+                                                                {% render 'icon-checkmark' %}
                                                             </label>
                                                         </div>
                                                     </li>

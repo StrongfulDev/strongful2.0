@@ -23,7 +23,7 @@ cart-items.is-empty .title-wrapper-with-link,
 
 .cart__empty-text {
   margin: 0;
-	font-size: calc(var(--font-body-size-large) * 2);
+	font-size: calc(var(--font-body-size-large) * 1.6);
 	font-weight: var(--font-body-weight-bold);
 }
 

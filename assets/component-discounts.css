@@ -9,7 +9,7 @@
 	color: #b22222;
 	border: 1px firebrick solid;
 	padding: 2pt 7px;
-	width: fit-content;
+	width: max-content;
 }
 
 .discounts__discount + .discounts__discount {

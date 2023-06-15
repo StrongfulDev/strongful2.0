@@ -352,7 +352,7 @@ a.product__text {
 }
 
 .product__accordion .accordion__content {
-    padding: 0 1rem;
+    padding: 0;
 }
 
 .product .price .badge {
@@ -361,7 +361,7 @@ a.product__text {
 }
 
 .product .price__container {
-    margin-bottom: 0.5rem;
+    margin: 1.5rem 0 .5rem;
 }
 
 .product .price dl {
@@ -1700,6 +1700,10 @@ variant-radios {
 	grid-template-columns: repeat(5, 1fr);
 }
 
+.gift-card-product-form__input ~ p, .gift-card-product-form__input legend {
+	display: none;
+}
+
 .gift-card-product-form__input .variant-button {
 	width: 100%;
 	margin-bottom: 1rem;
@@ -1763,14 +1767,34 @@ li.grid--peek.slider .grid__item, li.product__media-item.grid__item.slider__slid
 	display: block;
 }
 
+#product .footer {
+	padding-bottom: 5em;
+}
+
 @media screen and (min-width: 990px) {
+
+	#product .footer {
+		padding-bottom: 7.5em;
+	}
+
+	product-recommendations {
+		margin: auto;
+	}
 
 	.product__title {
 		margin-top: 0;
 	}
 
 	section[id^="MainProduct"], .complete_look__slider, .related-products, .page-width {
-		max-width: calc(var(--page-width) * 0.9);
+		max-width: calc(var(--page-width) * 0.8);
+	}
+
+	.complete_look__slider {
+		max-width: calc(var(--page-width) * 0.7);
+	}
+
+	header.page-width {
+		max-width: var(--page-width);
 	}
 
 	.variant_modal div.product_variants ul {
@@ -1861,7 +1885,19 @@ li.grid--peek.slider .grid__item, li.product__media-item.grid__item.slider__slid
 	height: 5rem;
 	width: 3rem;
 	padding: 0;
+}
 
+product-recommendations, product-recommendations.collection--full-width,
+product-recommendations .collection--full-width .title-wrapper--self-padded-tablet-down {
+	display: block;
+	padding-right: 1.5rem;
+	padding-left: 1.5rem;
+}
+
+product-recommendations .collection__title_heading {
+	display: block;
+	text-align: center;
+	margin-bottom: calc(var(--grid-desktop-horizontal-spacing) * 2);
 }
 
 /*  YOTPO REVIEWS BEGIN  */
@@ -1937,7 +1973,7 @@ li.grid--peek.slider .grid__item, li.product__media-item.grid__item.slider__slid
 	line-height: 1.5em !important;
 }
 
-.yotpo-filter-stars .yotpo-icon-star {
+.yotpo-filter-stars .yotpo-icon-star, .yotpo-icon-half-star {
 	color: var(--yotpo-stars) !important;
 	font-size: calc(var(--font-body-size-medium) * 2) !important;
 	height: fit-content !important;
@@ -2010,4 +2046,8 @@ li.grid--peek.slider .grid__item, li.product__media-item.grid__item.slider__slid
 	.bottom-line-items-container-desktop {
 		height: fit-content;
 	}
+}
+
+button.needsclick {
+	z-index: 0 !important;
 }

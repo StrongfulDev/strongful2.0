@@ -28,6 +28,8 @@ class CartDrawer extends HTMLElement {
         cartLink.addEventListener("click", (event) => {
             event.preventDefault();
             this.open(cartLink);
+						$('body').addClass('overflow-hidden');
+						$('html').addClass('overflow-hidden');
         });
         cartLink.addEventListener("keydown", (event) => {
             if (event.code.toUpperCase() === "SPACE") {
@@ -67,7 +69,8 @@ class CartDrawer extends HTMLElement {
     close() {
         this.classList.remove("active");
         removeTrapFocus(this.activeElement);
-        document.body.classList.remove("overflow-hidden");
+		    $('body').removeClass('overflow-hidden');
+		    $('html').removeClass('overflow-hidden');
     }
 
     setSummaryAccessibility(cartDrawerNote) {

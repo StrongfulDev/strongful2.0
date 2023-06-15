@@ -1,0 +1,27 @@
+{{ 'component-countdown.css' | asset_url | stylesheet_tag }}
+{{ 'component-countdown.js' | asset_url | script_tag }}
+
+<a href="/collections/סטים" id="countdown" class="countdown rtl">
+    <div class="countdown-ctn flex">
+        <div class="announce-countdown">
+            <div id="tiles" class="flex ltr">
+                <div class="tiles-div tiles-div-days">
+                    <p class="tiles-time tiles-time-days"></p>
+                </div>
+                <div class="tiles-div tiles-div-hours">
+                    <p class="tiles-time tiles-time-hours"></p>
+                </div>
+                <div class="tiles-div tiles-div-minutes">
+                    <p class="tiles-time tiles-time-minutes"></p>
+                </div>
+                <div class="tiles-div tiles-div-seconds">
+                    <p class="tiles-time tiles-time-seconds"></p>
+                </div>
+            </div>
+        </div>
+        <div class="countdown-sale-description-ctn">
+            <p class="countdown-sale-description upper">15% off all site</p>
+            <p class="countdown-sale-description">רק ל24 שעות! לא כולל אאוטלט</p>
+        </div>
+    </div>
+</a>

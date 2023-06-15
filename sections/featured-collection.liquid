@@ -117,6 +117,7 @@
                     aria-label="{{ 'general.slider.name' | t }}"
             >
                 {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
+                    {% unless product.tags contains 'giftHide' %}
                     <li
                             id="Slide-{{ section.id }}-{{ forloop.index }}"
                             class="grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}"
@@ -133,13 +134,17 @@
                                 section_id: section.id,
                                 show_sale_badge: section.settings.show_sale_badge,
                                 quick_add_text: section.settings.quick_add_text,
+                                pick_size_text: section.settings.pick_size_text,
                                 quick_add_accessories_text: section.settings.quick_add_accessories_text
                         %}
                     </li>
+                        {% endunless %}
                 {%- else -%}
                     {%- for i in (1..4) -%}
                         <li class="grid__item">
-                            {% render 'card-product', show_vendor: section.settings.show_vendor, quick_add_text: section.settings.quick_add_text,
+                            {% render 'card-product', show_vendor: section.settings.show_vendor,
+                                    quick_add_text: section.settings.quick_add_text,
+                                    pick_size_text: section.settings.pick_size_text,
                                     quick_add_accessories_text: section.settings.quick_add_accessories_text %}
                         </li>
                     {%- endfor -%}
@@ -542,8 +547,14 @@
       {
           "type": "text",
           "id": "quick_add_text",
-          "default": "Pick size",
+          "default": "בחירת מידה",
           "label": "t:sections.main-collection-product-grid.settings.quick_add_text.label"
+      },
+      {
+          "type": "text",
+          "id": "pick_size_text",
+          "default": "בחירת מידה",
+          "label": "t:sections.main-collection-product-grid.settings.pick_size_text.label"
       },
       {
           "type": "text",

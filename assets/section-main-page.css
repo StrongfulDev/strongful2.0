@@ -10,10 +10,14 @@ div.about-us {
 	padding: 0;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 990px) {
   .main-page-title {
     margin-bottom: 4rem;
   }
+
+	.loyalty-form.loyalty-form-register div.customer:not(.account):not(.order) {
+		height: auto;
+	}
 }
 
 .page-placeholder-wrapper {
@@ -164,6 +168,12 @@ div.about-us {
 .vip-benefits-list-th.active {
 	background: #000;
 	color: #fff;
+}
+
+@media screen and (max-width: 990px) {
+	.vip-benefits-list-th.active .vip-benefits-th-text {
+		color: #fff;
+	}
 }
 
 .vip-benefits-th-text {
@@ -317,10 +327,6 @@ div.about-us {
 	list-style: none;
 }
 
-.login a:last-child {
-	display: none;
-}
-
 .inputRegister {
 	margin: 2rem 0;
 }
@@ -345,6 +351,11 @@ div.about-us {
 }
 
 @media screen and (min-width: 990px) {
+
+	.list-social__item .icon {
+		height: 1.8rem !important;
+		width: 1.8rem !important;
+	}
 
 	.our-promise-container {
 		display: grid;

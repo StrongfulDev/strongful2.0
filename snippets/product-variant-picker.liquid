@@ -60,7 +60,15 @@
           <legend class="form__label">{{ option.name }}</legend>
             {% for modelName in product.metafields.model.names.value %}
                 {% assign model = shop.metaobjects.model[modelName] %}
-            <legend class="model-wears-size fix-direction" data-model="{{ model.size_letter.value }}">הדוגמנית לובשת <span class="bold">{{ option.name }}: {{ model.size_letter.value }}</span></legend>
+            <legend class="model-wears-size fix-direction" data-model="{{ model.size_letter.value }}">
+                {{ 'products.product.model_switch.model_wears_only_female' | t }}
+                <span class="bold">{{ option.name }}: {{ model.size_letter.value }}</span>
+                {% if product.tags contains 'up-size-recommendation' %}
+            <span class="small">&nbsp; ({{ 'products.product.up_size_recommendation' | t }})</span>
+                    {% elsif product.tags contains 'down-size-recommendation' %}
+            <span class="small">&nbsp; ({{ 'products.product.down_size_recommendation' | t }})</span>
+            {% endif %}
+            </legend>
             {% endfor %}
           {% render 'product-variant-options', product: product, option: option, block: block %}
         </fieldset>

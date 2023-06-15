@@ -2,17 +2,21 @@
     color: rgb(var(--color-foreground));
 	background-color: rgb(var(--color-background));
 	padding: 1.5rem 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .announcement-bar__link {
     display: block;
     width: 100%;
     text-decoration: none;
-}
-
-.announcement-bar__link:hover {
-    color: rgb(var(--color-foreground));
-    background-color: rgba(var(--color-card-hover), 0.06);
 }
 
 .announcement-bar__link .icon-arrow {
@@ -44,23 +48,27 @@
 	justify-content: center;
 }
 
-@media screen and (max-width: 749px) {
-    .announcement-bar:not(.show-mobile) {
-        display: none;
-    }
+.announcement-bar-container {
+	overflow: hidden;
+	width: 100vw;
+	position: relative;
+	height: 66px;
 }
 
-.announcement-bar, .announcement-bar.active + .announcement-bar, .announcement-bar.active + .announcement-bar + .announcement-bar {
-    display: none;
+.announcement-bar--inner {
+	display: flex;
+	width: 100%;
+	height: 100%;
 }
 
 .announcement-bar.active {
-    display: block;
+    opacity: 1;
 }
 
 @media screen and (min-width: 990px) {
 	.announcement-bar, .announcement-bar.active + .announcement-bar, .announcement-bar.active + .announcement-bar + .announcement-bar {
-        display: block;
+        opacity: 1;
+		position: static;
     }
 
     .announcement-bar-container.container-columns {

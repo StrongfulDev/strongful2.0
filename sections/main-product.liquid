@@ -104,7 +104,7 @@
                                 {{- block.settings.text -}}
                             </p>
                         {%- when 'title' -%}
-                            <div class="product__title fix-direction" {{ block.shopify_attributes }}>
+                            <div class="product__title fix-direction" {{ block.shopify_attributes }} data-product-color="{{ product.vendor }}">
                                 <h1>{{ product.title | escape }}</h1>
                                 <a href="{{ product.url }}" class="product__title">
                                     <h2 class="h1">
@@ -119,6 +119,7 @@
                                         product: product,
                                         use_variant: true,
                                         show_badges: true,
+                                        show_discount: true,
                                         price_class: 'price--large'
                                 -%}
                             </div>
@@ -428,6 +429,7 @@
                                                                 <ul class="list-unstyled"
                                                                     role="list">
                                                                     {%- for product in recommendations.products limit: block.settings.products_per_page offset: continue -%}
+                                                                        {% unless product.tags contains 'giftHide' %}
                                                                         <li>
                                                                             {% render 'card-product',
                                                                                     card_product: product,
@@ -438,10 +440,12 @@
                                                                                     section_id: section.id,
                                                                                     horizontal_class: true,
                                                                                     horizontal_quick_add: true,
+                                                                                    pick_size_text: section.settings.pick_size_text,
                                                                                     quick_add_text: section.settings.quick_add_text,
                                                                                     quick_add_accessories_text: section.settings.quick_add_accessories_text
                                                                             %}
                                                                         </li>
+                                                                    {% endunless %}
                                                                     {%- endfor -%}
                                                                 </ul>
                                                             </div>

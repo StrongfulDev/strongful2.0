@@ -258,6 +258,16 @@
             "label": "Spartan"
           }
         },
+        "type_body_font_english": {
+          "label": "English Font",
+          "info": "Selecting a font to use for english.",
+          "options__1": {
+            "label": "None"
+          },
+          "options__2": {
+            "label": "Spartan"
+          }
+        },
         "body_scale": {
           "label": "Font size scale"
         }
@@ -797,6 +807,26 @@
       "name": "Contact Form",
       "presets": {
         "name": "Contact form"
+      }
+    },
+    "countdown": {
+      "name": "Countdown timer",
+      "settings": {
+        "main_link": {
+          "label": "Link",
+          "info": "Select a page or enter a URL to create a link for the countdown timer."
+        },
+        "main_text": {
+          "label": "Text",
+          "info": "Add a message to display above the countdown timer."
+        },
+        "sub_text": {
+          "label": "Subtext",
+          "info": "Add a message to display below the countdown timer."
+        }
+      },
+      "presets": {
+        "name": "Countdown timer"
       }
     },
     "custom-liquid": {
@@ -2182,6 +2212,9 @@
         "quick_add_text": {
           "label": "Quick add text"
         },
+        "pick_size_text": {
+          "label": "Pick size text"
+        },
         "quick_add_accessories_text": {
           "label": "Quick add accessories text"
         },
@@ -2297,6 +2330,9 @@
         },
         "quick_add_text": {
           "label": "Quick add text"
+        },
+        "pick_size_text": {
+          "label": "Pick size text"
         },
         "quick_add_accessories_text": {
           "label": "Quick add accessories text"

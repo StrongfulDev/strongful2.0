@@ -46,7 +46,8 @@
     "main": {
       "type": "main-login",
       "custom_css": [
-        ".oxi_social_wrapper {display: none;}"
+        ".oxi_social_wrapper {display: none;}",
+        "@media screen and (min-width: 990px) {.customer:not(.account):not(.order) {overflow-y: auto; height: auto; }}"
       ],
       "settings": {
         "padding_top": 36,
@@ -55,6 +56,9 @@
     },
     "sub": {
       "type": "main-register",
+      "custom_css": [
+        "@media screen and (min-width: 990px) {.customer:not(.account):not(.order) {overflow-y: auto; height: auto;}}"
+      ],
       "settings": {
         "padding_top": 36,
         "padding_bottom": 36

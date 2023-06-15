@@ -435,7 +435,6 @@ slider-component.slider-component-full-width {
     font-size: var(--font-body-size-medium);
 }
 
-
 @media screen and (min-width: 990px) {
     .collection .slider--desktop.product-grid {
         scroll-padding-left: 0rem;
@@ -479,7 +478,8 @@ slider-component.slider-component-full-width {
 .collection__title_heading {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: baseline;
+	flex-direction: column;
 }
 
 .collection .slider-button[disabled="disabled"] {
@@ -505,9 +505,9 @@ slider-component.slider-component-full-width {
     display: block;
 }
 
-.collection__view-all:not(.show-desktop) {
-    display: none;
-}
+/*.collection__view-all:not(.show-desktop) {*/
+/*    display: none;*/
+/*}*/
 
 @media screen and (max-width: 749px) {
     .collection__view-all.show-mobile {
@@ -516,7 +516,7 @@ slider-component.slider-component-full-width {
     }
 
     .collection__view-all:not(.show-mobile) {
-        display: none;
+        display: block;
     }
 }
 
@@ -547,7 +547,8 @@ li.product__media-item.grid__item.slider__slide {
 }
 
 slider-component .card__information * {
-	font-size: calc(var(--font-body-size-medium) * 0.9);
+	font-size: var(--font-body-size-medium);
+	line-height: 1.6rem !important;
 }
 
 slider-component .discount-price-container * {
@@ -561,5 +562,9 @@ slider-component .discount-price-container * {
 
 	.card__information {
 		padding-top: 1rem;
+	}
+
+	.collection__title_heading {
+		flex-direction: row;
 	}
 }

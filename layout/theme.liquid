@@ -1,6 +1,15 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>
+
+      <!-- Google Tag Manager -->
+      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-NS9ZW7H');</script>
+      <!-- End Google Tag Manager -->
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -24,6 +33,9 @@
         href="https://fonts.shopifycdn.com"
         crossorigin>
     {%- endunless -%}
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <title>
         {{ page_title }}
@@ -84,6 +96,8 @@
             font-weight: --font-body-weight;
             font-style: --font-body-style;
             }
+
+
         {% else %}
             {% assign body_font_family = settings.type_body_font.family %}
             {{ settings.type_body_font | font_face: font_display: 'swap' }}
@@ -106,17 +120,15 @@
         {{ body_font_bold_italic | font_face: font_display: 'swap' }}
 
         :root  {
-        {% comment %}--font-body-family: {{ body_font_family }}, {{ settings.type_body_font.fallback_families }};{% endcomment %}
-        --font-body-family: 'Noto Sans Hebrew', sans-serif;
+        --font-body-family: {{ body_font_family }}, {{ settings.type_body_font.fallback_families }};
         --font-body-style: {{ settings.type_body_font.style }};
         --font-body-weight: {{ settings.type_body_font.weight }};
         --font-body-weight-bold: {{ settings.type_body_font.weight | plus: 300 | at_most: 1000 }};
         --font-body-size-large: 2rem;
         --font-body-size-medium: 1.5rem;
         --font-body-size-small: 1rem;
-        --font-body-size-smallest: 0.75rem;
-        {% comment %}--font-heading-family: {{ header_font_family }}, {{ settings.type_header_font.fallback_families }};{% endcomment %}
-        --font-heading-family: 'Noto Sans Hebrew', sans-serif;
+        --font-body-size-smallest: 0.9rem;
+        --font-heading-family: {{ header_font_family }}, {{ settings.type_header_font.fallback_families }};
         --font-heading-style: {{ settings.type_header_font.style }};
         --font-heading-weight: {{ settings.type_header_font.weight }};
         --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
@@ -134,6 +146,7 @@
         --cart-rewards-background: rgb(29, 91, 79);
 
         --border-global-color: #e7e7e7;
+        --global-background-light: #f3f3f3;
         --yotpo-stars: #000000;
 
         --gradient-base-background-1: {% if settings.gradient_background_1 != blank %}{{ settings.gradient_background_1 }}{% else %}{{ settings.colors_background_1 }}{% endif %};
@@ -329,11 +342,26 @@
             document.documentElement.classList.add('shopify-design-mode');
         }
     </script>
-  <script src="https://cdn-widgetsrepository.yotpo.com/v1/loader/qGZpUcqW7-E2nBL0lvSZUA" defer="defer"></script>
+      {% if template.suffix == "ALIST" %}
+        <script src="https://cdn-widgetsrepository.yotpo.com/v1/loader/qGZpUcqW7-E2nBL0lvSZUA" defer="defer"></script>
+      {% endif %}
       <script type="text/javascript">(function e(){var e=document.createElement("script");e.type="text/javascript",e.async=true,e.defer=true,e.src="//staticw2.yotpo.com/QI0VdT7ROUF5r1ybHPM5YgLRsUiPFRMOXKeGNWSJ/widget.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();</script>
+  {% comment %}<script src="https://cdn-widgetsrepository.yotpo.com/v1/loader/qGZpUcqW7-E2nBL0lvSZUA" async></script>{% endcomment %}
+
 </head>
 
-<body class="gradient">
+<body class="gradient" id="{{ template.name }}">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NS9ZW7H"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="loader-wrapper">
+    <img src="https://cdn.shopify.com/s/files/1/0574/2995/0671/files/logo_white.png?v=1636381426"
+         class="loader"  alt="Strongful Logo" loading="lazy"/>
+</div>
+
 <a class="skip-to-content-link button visually-hidden" href="#MainContent">
     {{ "accessibility.skip_to_text" | t }}
 </a>
@@ -350,6 +378,18 @@
         role="main"
         tabindex="-1">
     {{ content_for_layout }}
+
+    {% render 'pill' %}
+    {% render 'pill-border' %}
+    {% unless template.name == 'register' or template.name == 'login' %}
+    <div class="custom-customer-account-container">
+        <p class="close-custom-account-container page-width pointer">{% render 'icon-close' %}</p>
+        {% section 'multicolumn' %}
+        {% section 'main-register' %}
+        {% section 'main-login' %}
+    </div>
+    <div class="custom-login-overlay hidden">&nbsp;</div>
+    {% endunless %}
 </main>
 
 {% sections 'footer-group' %}
@@ -433,14 +473,6 @@
 {%- if settings.predictive_search_enabled -%}
     <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
-{% render 'pill' %}
-{% render 'pill-border' %}
-<div class="custom-customer-account-container">
-    <p class="close-custom-account-container page-width pointer">{% render 'icon-close' %}</p>
-    {% section 'multicolumn' %}
-    {% section 'main-register' %}
-    {% section 'main-login' %}
-</div>
-<div class="custom-login-overlay hidden">&nbsp;</div>
+{{ 'ajaxinate.min.js' | asset_url | script_tag }}
 </body>
 </html>

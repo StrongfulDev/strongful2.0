@@ -74,6 +74,15 @@
 	color: #fff;
 }
 
+.sticky-cart-cta .size_variant_button_container .loading-overlay,
+product-recommendations .size_variant_button_container .loading-overlay {
+	top: 50%;
+	right: auto;
+	left: 0;
+	transform: translateY(-50%);
+	padding: 0;
+}
+
 @media screen and (min-width: 990px) {
 	.sticky-cart-cta {
 		grid-template-columns: 2fr 24fr 4fr;

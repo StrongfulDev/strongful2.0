@@ -13,7 +13,7 @@
 
 <div class="product__accordion accordion quick-add-hidden rtl" {{ block.shopify_attributes }}>
     <details id="Details-{{ block.id }}-{{ section.id }}">
-        <summary>
+        <summary class="footer--summary">
             <div class="summary__title">
                 {% if block.settings.icon != blank %}
                     {% render 'icon-accordion', icon: block.settings.icon %}

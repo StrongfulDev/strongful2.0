@@ -6,7 +6,7 @@
   position: relative;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 990px) {
   .image-with-text__grid--reverse {
     flex-direction: row-reverse;
   }
@@ -29,7 +29,7 @@
   height: 43.5rem;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 990px) {
   .image-with-text__media--small {
     height: 31.4rem;
   }
@@ -60,7 +60,7 @@
   height: 20rem;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 990px) {
   .image-with-text__media--placeholder.image-with-text__media--adapt {
     height: 30rem;
   }
@@ -175,7 +175,7 @@
   margin: -3rem auto 0;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 990px) {
   .image-with-text__grid--reverse .image-with-text__content {
     margin-left: auto;
   }
@@ -335,7 +335,7 @@
   }
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 990px) {
   .collapse-padding .image-with-text__grid:not(.image-with-text__grid--reverse) .image-with-text__content:not(.image-with-text__content--desktop-center) {
     padding-right: 0;
   }
@@ -362,7 +362,7 @@
   row-gap: var(--grid-mobile-vertical-spacing);
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 990px) {
   .multirow__inner {
     row-gap: var(--grid-desktop-vertical-spacing);
   }
