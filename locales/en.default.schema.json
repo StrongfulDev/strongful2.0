@@ -3141,6 +3141,15 @@
         "column": {
           "name": "Column",
           "settings": {
+            "data_account": {
+              "options__1": {
+                "label": "login"
+              },
+              "options__2": {
+                "label": "register"
+              },
+              "label": "Account popup binder"
+            },
             "image": {
               "label": "Image"
             },

@@ -180,6 +180,7 @@
           "0c98e703-5f3e-421f-85a1-f7a1cf32c727": {
             "type": "column",
             "settings": {
+              "data_account": "login",
               "title": "כניסה",
               "text": "",
               "link_label": "",
@@ -189,6 +190,7 @@
           "27ea88e1-0a25-4370-bba9-fe4273a990c0": {
             "type": "column",
             "settings": {
+              "data_account": "register",
               "title": "הרשמה",
               "text": "",
               "link_label": "",

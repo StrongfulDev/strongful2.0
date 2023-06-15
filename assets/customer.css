@@ -796,7 +796,7 @@ li[data-address] > h2 {
 }
 
 li.multicolumn-list__item:first-child > div {
-	padding-left: 1em;
+	margin-left: 1em;
 }
 
 ul.multicolumn-list {

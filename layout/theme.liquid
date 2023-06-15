@@ -460,6 +460,13 @@
         {% endfor %}
     ];
 
+    let customerLoggedIn;
+    {% if customer %}
+    customerLoggedIn = true;
+    {% else %}
+    customerLoggedIn = false;
+    {% endif %}
+
     const customerTags = `{{ customer.tags | json }}`;
     window.models = {
         {% for model in shop.metaobjects.model.values %}
