@@ -105,6 +105,9 @@
         "6bb9c7f3-70b8-4986-9a85-148874103e99",
         "1b30499f-a9b2-4f41-bbad-151626bae3d0"
       ],
+      "custom_css": [
+        ".yotpo-bottomline.pull-left.star-clickable {align-items: center;}"
+      ],
       "settings": {
         "enable_sticky_info": true,
         "media_size": "large",
