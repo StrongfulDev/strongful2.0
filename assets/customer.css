@@ -795,10 +795,6 @@ li[data-address] > h2 {
 	column-gap: 0;
 }
 
-li.multicolumn-list__item:first-child > div {
-	margin-left: 1em;
-}
-
 ul.multicolumn-list {
   display: flex;
   padding: 0;
@@ -1139,6 +1135,15 @@ a.order-number-link .icon {
 .custom-customer-account-container.active {
 	transform: translateX(0);
 	transition: 0.3s ease-in-out;
+}
+
+.custom-customer-account-container.active .multicolumn {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.custom-customer-account-container.active .multicolumn-list {
+	column-gap: var(--grid-desktop-vertical-spacing);
 }
 
 .oxi_social_wrapper {

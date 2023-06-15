@@ -14,6 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	$(".account-toggler-site-wide").click(function() {
 		$(".custom-customer-account-container").addClass("active");
 		customerOverlay.removeClass("hidden");
+		animations(registerListItem);
 	});
 
 	$(".close-custom-account-container").click(closePopup);
@@ -25,7 +26,6 @@ window.addEventListener('DOMContentLoaded', () => {
 	}
 
 	function animations(element) {
-		console.log(element)
 		element.addClass("active");
 		element.siblings().removeClass("active");
 		let activeWidth = element.innerWidth();
