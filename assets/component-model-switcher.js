@@ -1,10 +1,11 @@
 const arrowIcon = document.querySelector(".model-switch-button .icon-caret");
 
-document.addEventListener('DOMContentLoaded', function () {
+$(document).ready(function (e) {
 	hideUnAvailableModels();
 
 	$('.model-switcher__item input').change(function () {
-		const modelSize = $(this).val();
+		let modelSize = $(this).val();
+		console.log(modelSize)
 		if (modelSize) {
 			changeModel(modelSize);
 			updateVariantRadios(modelSize);
@@ -17,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		updateModelSwitch(modelSize);
 	});
 
-	const modelSize = localStorage.getItem('modelSize');
+	// const modelSize = localStorage.getItem('modelSize');
 	if (modelSize) {
 		changeModel(modelSize);
 	}
@@ -71,7 +72,7 @@ function changeModel(modelSize) {
 	$(".model-switcher-overlay").addClass("hidden");
 	$(arrowIcon).removeClass('rotate-arrow');
 
-	localStorage.setItem('modelSize', modelSize);
+	// localStorage.setItem('modelSize', modelSize);
 
 	const model = window.models[modelSize];
 

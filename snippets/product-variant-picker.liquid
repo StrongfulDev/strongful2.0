@@ -10,7 +10,15 @@
   {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
 {% endcomment %}
 
-{% assign similarParent = product.metafields.global.collectionTitle %}
+{%- liquid
+    assign similarParent = product.metafields.global.collectionTitle
+    if product.tags contains 'plusSizeProduct'
+        assign plusProduct = true
+    else
+        assign plusProduct = false
+    endif
+ -%}
+
 
 {% unless product.tags contains 'noSimilar' %}
 <ul class="similiar
@@ -60,7 +68,13 @@
           <legend class="form__label">{{ option.name }}</legend>
             {% for modelName in product.metafields.model.names.value %}
                 {% assign model = shop.metaobjects.model[modelName] %}
-            <legend class="model-wears-size fix-direction" data-model="{{ model.size_letter.value }}">
+            <legend class="model-wears-size fix-direction"
+                    data-model="{{ model.size_letter.value }}"
+            {% if plusProduct and model.size_letter.value == 'XS' %}
+                style="display: none"
+            {% elsif plusProduct == false and model.size_letter.value == 'L' %}
+                style="display: none"
+                    {% endif %}>
                 {{ 'products.product.model_switch.model_wears_only_female' | t }}
                 <span class="bold">{{ option.name }}: {{ model.size_letter.value }}</span>
                 {% if product.tags contains 'up-size-recommendation' %}

@@ -1759,10 +1759,6 @@ li.grid--peek.slider .grid__item, li.product__media-item.grid__item.slider__slid
 	font-weight: var(--font-body-weight-bold);
 }
 
-.model-wears-size + .model-wears-size {
-	display: none;
-}
-
 .variant_modal .product_size_picker__heading {
 	display: block;
 }
