@@ -131,7 +131,7 @@
     "daadfb7d-6377-46b9-9592-68ff753bf341": {
       "type": "related-products-slider",
       "settings": {
-        "steps": 1,
+        "steps": 4,
         "title": "אולי תאהבי גם",
         "heading_size": "h1",
         "heading_type": "heading_type_default",
