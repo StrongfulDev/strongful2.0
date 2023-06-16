@@ -5,7 +5,6 @@ $(document).ready(function (e) {
 
 	$('.model-switcher__item input').change(function () {
 		let modelSize = $(this).val();
-		console.log(modelSize)
 		if (modelSize) {
 			changeModel(modelSize);
 			updateVariantRadios(modelSize);
@@ -22,7 +21,6 @@ $(document).ready(function (e) {
 	if (modelSize) {
 		changeModel(modelSize);
 	}
-});
 
 function hideUnAvailableModels() {
 	const availableSizes = getAvailableSizes();
@@ -104,4 +102,6 @@ $(".model-switch-button").click(function() {
 $(".model-switcher-overlay").click(function() {
 	$(this).addClass("hidden");
 	$("#model-switch").removeAttr("open");
+});
+
 });
