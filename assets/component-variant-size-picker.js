@@ -26,7 +26,7 @@ function quickAdd() {
 						$(".sticky-cart-cta .variant_selector").toggle();
 						$(".sticky-cart-cta-overlay").toggle();
 						$(".similiar").siblings("div").find("button.product-form__submit.button.button--full-width.button--primary span").click();
-					}, 2000);
+					}, 500);
 				} else {
 					const elementText = element.find("span").first().text().replace(/\s/g,'').slice(0, -27);
 					for (let i = 0; i < variantButtons.length; i++) {
@@ -38,16 +38,16 @@ function quickAdd() {
 							element.find(".loading-overlay__spinner").removeClass("hidden");
 							setTimeout(() => {
 								element.parents("form").find('[type="submit"]').click();
-							}, 500);
+							}, 100);
 							setTimeout(() => {
 								element.find(".loading-overlay").css("display", "none");
 								element.find(".loading-overlay__spinner").addClass("hidden");
 								element.find(".icon-checkmark").show();
-							}, 1000);
+							}, 100);
 							setTimeout(() => {
 								element.find(".icon-checkmark").hide();
 								element.find(".size_variant_button_add").show();
-							}, 3500);
+							}, 100);
 							break;
 						} else {
 							if (variantButtons[i].value === elementText) {
@@ -57,21 +57,21 @@ function quickAdd() {
 								element.find(".loading-overlay__spinner").removeClass("hidden");
 								setTimeout(() => {
 									element.parents("form").find('[type="submit"]').click();
-								}, 500);
+								}, 100);
 								setTimeout(() => {
 									element.find(".loading-overlay").css("display", "none");
 									element.find(".loading-overlay__spinner").addClass("hidden");
 									element.find(".icon-checkmark").show();
-								}, 1000);
+								}, 100);
 								setTimeout(() => {
 									element.find(".icon-checkmark").hide();
 									element.find(".size_variant_button_add").show();
-								}, 3500);
+								}, 100);
 								setTimeout(() => {
 									$(".sticky-cart-cta .variant_selector").toggle();
 									$(".sticky-cart-cta-overlay").toggle();
 									$("variant-radios").siblings("div").find("button.product-form__submit.button.button--full-width.button--primary span").click();
-								}, 2000);
+								}, 500);
 								break;
 							}
 						}
@@ -92,7 +92,7 @@ function quickAdd() {
 		    setTimeout(() => {
 			    element.find(".icon-checkmark").hide();
 			    element.find(".size_variant_button_add").show();
-		    }, 3500);
+		    }, 2000);
 	    }
     })
     .on("click", ".variant_modal__toggle_button, .variant_modal__toggle_button svg", function (e) {
@@ -104,20 +104,23 @@ function quickAdd() {
         modal.show();
 				setTimeout(() => {
 					modal.addClass("active");
-				}, 100);
+					modal.parents("section").addClass('high-z-index');
+				}, 10);
         modalOverlay.show();
         modalOverlay.on("click", () => {
 	        modal.removeClass("active");
+	        modal.parents("section").removeClass('high-z-index');
           setTimeout(() => {
 	          modal.hide();
-          }, 1000);
+          }, 500);
           modalOverlay.hide()
         })
         modal.find('.quick_add_modal__close').on("click", () => {
 	        modal.removeClass("active");
 	        setTimeout(() => {
 		        modal.hide();
-	        }, 1000);
+	        }, 500);
+	        modal.parents("section").removeClass('high-z-index');
 	        modalOverlay.hide()
         })
       }

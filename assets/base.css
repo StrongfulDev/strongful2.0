@@ -32,6 +32,10 @@ input {
 	display: none !important;
 }
 
+.high-z-index {
+	z-index: 9999;
+}
+
 .zero-opacity {
 	opacity: 0;
 }
@@ -3650,7 +3654,6 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 
 .featured-collection.index-section {
 	position: relative;
-	z-index: 4;
 }
 
 .shopify-section.shopify-section-group-header-group:last-of-type {

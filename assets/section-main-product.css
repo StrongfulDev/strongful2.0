@@ -1790,7 +1790,7 @@ li.grid--peek.slider .grid__item, li.product__media-item.grid__item.slider__slid
 	}
 
 	header.page-width {
-		max-width: var(--page-width);
+		max-width: 100%;
 	}
 
 	.variant_modal div.product_variants ul {
