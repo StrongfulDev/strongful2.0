@@ -131,6 +131,16 @@
         "heading_size": "h1"
       }
     },
+    "6a92001a-1714-49ba-a6c2-ab5ee898262d": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<div\nclass=\"yotpo yotpo-pictures-widget fix-direction page-width\"\ndata-gallery-id=\"6485d44f5a9ff33c2b713f14\"\ndata-product-id=\"{{ product.id }}\">\n<\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "daadfb7d-6377-46b9-9592-68ff753bf341": {
       "type": "related-products-slider",
       "settings": {
@@ -234,6 +244,7 @@
   "order": [
     "main",
     "complete-look-products",
+    "6a92001a-1714-49ba-a6c2-ab5ee898262d",
     "daadfb7d-6377-46b9-9592-68ff753bf341",
     "related-products",
     "8bb31773-3add-4a1a-b42f-368102c7844b",
