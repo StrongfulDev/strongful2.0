@@ -633,7 +633,7 @@
       },
       "contact": {
         "title": "מידע",
-        "address_title": "רחוב ומספר בית בלבד *",
+        "address_title": "* רחוב ומספר בית בלבד",
         "shipping_address_title": "כתובת למשלוח",
         "delivery_option_title": "שיטת שילוח",
         "contact_method_title": "פרטים ליצירת קשר",
@@ -646,7 +646,7 @@
         "first_name_label": "* שם פרטי",
         "last_name_label": "* שם משפחה",
         "company_label": "חברה",
-        "address1_label": "רחוב ומספר בית בלבד *",
+        "address1_label": "* רחוב ומספר בית בלבד",
         "address2_label": "מספר דירה",
         "optional_address2_label": "מספר דירה",
         "city_label": "* עיר",
