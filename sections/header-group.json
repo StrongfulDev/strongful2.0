@@ -220,7 +220,7 @@
         "logo_position": "middle-left",
         "menu": "dawn-mega-menu",
         "menu_type_desktop": "customizable",
-        "sticky_header_type": "on-scroll-up",
+        "sticky_header_type": "always",
         "show_line_separator": true,
         "mobile_menu": "mobile-menu",
         "mobile_logo_position": "center",
