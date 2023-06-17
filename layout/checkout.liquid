@@ -325,13 +325,13 @@
                     container.classList.remove('field--half');
                 }
             });
-        }, 1000);
 
-        let requiredInputs = document.querySelectorAll("input[aria-required=true]");
-        for (let i = 0; i < requiredInputs.length; i++) {
-            let label = $(requiredInputs[i]).siblings("label");
-            label.text("* " + label.text());
-        }
+            let requiredInputs = document.querySelectorAll("input[aria-required=true]");
+            for (let i = 0; i < requiredInputs.length; i++) {
+                let label = $(requiredInputs[i]).siblings("label");
+                label.text("* " + label.text());
+            }
+        }, 1000);
 
         let checkout = Shopify.Checkout;
 
