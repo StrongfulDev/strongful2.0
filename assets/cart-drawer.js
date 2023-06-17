@@ -28,7 +28,6 @@ class CartDrawer extends HTMLElement {
         cartLink.addEventListener("click", (event) => {
             event.preventDefault();
             this.open(cartLink);
-						$('body').addClass('overflow-hidden');
 						$('html').addClass('overflow-hidden');
         });
         cartLink.addEventListener("keydown", (event) => {
@@ -63,13 +62,12 @@ class CartDrawer extends HTMLElement {
             {once: true}
         );
 
-        document.body.classList.add("overflow-hidden");
+        $('html').addClass('overflow-hidden');
     }
 
     close() {
         this.classList.remove("active");
         removeTrapFocus(this.activeElement);
-		    $('body').removeClass('overflow-hidden');
 		    $('html').removeClass('overflow-hidden');
     }
 
