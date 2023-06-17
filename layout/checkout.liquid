@@ -325,12 +325,6 @@
                     container.classList.remove('field--half');
                 }
             });
-
-            let requiredInputs = document.querySelectorAll("input[aria-required=true]");
-            for (let i = 0; i < requiredInputs.length; i++) {
-                let label = $(requiredInputs[i]).siblings("label");
-                label.text("* " + label.text());
-            }
         }, 2000);
 
         let checkout = Shopify.Checkout;
