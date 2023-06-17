@@ -643,7 +643,7 @@
         "email_or_phone_placeholder": "אימייל או מספר פלאפון",
         "stored_addresses_label": "שמירת כתובת",
         "new_address_label": "כתובת חדשה",
-        "first_name_label": "שם פרטי",
+        "first_name_label": "שם פרטי *",
         "last_name_label": "שם משפחה",
         "company_label": "חברה",
         "address1_label": "רחוב ומספר בית בלבד",
