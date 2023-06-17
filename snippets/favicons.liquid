@@ -5,12 +5,12 @@
 <link rel="mask-icon" href="{{ safari-pinned-tab.svg | asset_url }}" color="#de3e27">
 <meta name="msapplication-TileColor" content="#de3e27">
 <meta name="theme-color" content="#ffffff">
-<link rel="icon" type="image/png" href="{{ 'favicon-16x16.png' | asset_url }}" sizes="16x16">
-<link rel="icon" type="image/png" href="{{ 'favicon-32x32.png' | asset_url }}" sizes="32x32">
+<link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 16, height: 16 }}" sizes="16x16">
+<link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}" sizes="32x32">
 <link rel="icon" type="image/png" href="{{ 'android-chrome-192x192.png' | asset_url }}" sizes="192x192">
-<link rel="icon" type="image/png" href="{{ 'favicon.png' | asset_url }}" sizes="16x16">
+<link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}" sizes="16x16">
 <link rel="manifest" href="{{ 'manifest.json' | asset_url }}">
-<link rel="shortcut icon" href="{{ 'favicon.ico' | asset_url }}">
+<link rel="shortcut icon" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
 <meta name="apple-mobile-web-app-title" content="{{ shop.name }}">
 <meta name="application-name" content="{{ shop.name }}">
 <meta name="msapplication-TileColor" content="#722020">
