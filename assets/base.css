@@ -3711,3 +3711,14 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 	align-items: center;
 	z-index: 2247483647;
 }
+
+.variant_modal .product_size_picker__heading .small, .model-wears-size .small {
+	background-color: var(--gradient-base-background-3);
+	border-radius: 1em;
+	padding: 0.5rem 1rem;
+	margin-right: 0.5rem;
+}
+
+.model-wears-size .small {
+	margin-bottom: 3px;
+}

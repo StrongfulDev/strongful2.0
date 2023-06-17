@@ -43,7 +43,8 @@
 	   if (window.screen.width > 990) {
 		   headerMenu.addClass("header__menu--swiped");
 	   } else {
-		   if (event.target.href === '#icon-search' || event.target.classList.contains("icon-search")) {
+		   if ($(event.target).parents(".header__search").length) {
+			   console.log($(event.target).parents(".header__search"));
 			   $(event.target).parents(".header__search").addClass("search--active");
 		   }
 	   }

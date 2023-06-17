@@ -1753,10 +1753,13 @@ li.grid--peek.slider .grid__item, li.product__media-item.grid__item.slider__slid
 .model-wears-size {
 	flex: 1 1 100%;
 	margin-bottom: 1rem;
+	display: flex;
+	align-items: center;
 }
 
 .model-wears-size .bold {
 	font-weight: var(--font-body-weight-bold);
+	margin-right: var(--grid-mobile-vertical-spacing);
 }
 
 .variant_modal .product_size_picker__heading {

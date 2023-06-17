@@ -78,9 +78,9 @@
                 {{ 'products.product.model_switch.model_wears_only_female' | t }}
                 <span class="bold">{{ option.name }}: {{ model.size_letter.value }}</span>
                 {% if product.tags contains 'up-size-recommendation' %}
-            <span class="small">&nbsp; ({{ 'products.product.up_size_recommendation' | t }})</span>
+            <span class="small">{{ 'products.product.up_size_recommendation' | t }}</span>
                     {% elsif product.tags contains 'down-size-recommendation' %}
-            <span class="small">&nbsp; ({{ 'products.product.down_size_recommendation' | t }})</span>
+            <span class="small">{{ 'products.product.down_size_recommendation' | t }}</span>
             {% endif %}
             </legend>
             {% endfor %}
