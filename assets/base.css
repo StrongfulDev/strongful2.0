@@ -2572,6 +2572,17 @@ menu-drawer + .header__search {
     line-height: 0;
 }
 
+@media screen and (max-width: 989px) {
+	.header__search {
+		position: absolute;
+		left: 5rem;
+	}
+
+	.header__search details[open] {
+		width: 100%;
+	}
+}
+
 .header--top-center > .header__search {
     display: none;
 }

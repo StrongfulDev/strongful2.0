@@ -42,6 +42,11 @@
 	   let headerMenu = $(event.target).closest('details').parents('.header__icons').siblings('nav')
 	   if (window.screen.width > 990) {
 		   headerMenu.addClass("header__menu--swiped");
+	   } else {
+		   if (event.target.href === '#icon-search' || event.target.classList.contains("icon-search")) {
+			   console.log(event.target)
+			   $(event.target).parents(".header__search").addClass("search--active");
+		   }
 	   }
      document.body.addEventListener('click', this.onBodyClickEvent);
      document.body.classList.add('overflow-hidden');
@@ -58,6 +63,10 @@
 			 let headerMenu = $(this.summaryToggle).closest('details').parents('.header__icons').siblings('nav')
 			 if (window.screen.width > 990) {
 				 headerMenu.removeClass("header__menu--swiped");
+			 } else {
+				 if (event.target.classList.contains("header__icon--search")) {
+					 $(event.target).parents(".header__search").removeClass("search--active");
+				 }
 			 }
 		 }
      this.detailsContainer.removeAttribute('open');
