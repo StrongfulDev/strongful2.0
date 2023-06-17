@@ -44,7 +44,6 @@
 		   headerMenu.addClass("header__menu--swiped");
 	   } else {
 		   if (event.target.href === '#icon-search' || event.target.classList.contains("icon-search")) {
-			   console.log(event.target)
 			   $(event.target).parents(".header__search").addClass("search--active");
 		   }
 	   }
@@ -64,8 +63,8 @@
 			 if (window.screen.width > 990) {
 				 headerMenu.removeClass("header__menu--swiped");
 			 } else {
-				 if (event.target.classList.contains("header__icon--search")) {
-					 $(event.target).parents(".header__search").removeClass("search--active");
+				 if ($(".header__search").hasClass("search--active")) {
+					 $(".header__search").removeClass("search--active");
 				 }
 			 }
 		 }

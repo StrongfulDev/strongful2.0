@@ -2581,6 +2581,13 @@ menu-drawer + .header__search {
 	.header__search details[open] {
 		width: 100%;
 	}
+
+	.header__search details[open] > summary {
+		position: absolute;
+		top: 50%;
+		left: 5rem;
+		transform: translateY(-50%);
+	}
 }
 
 .header--top-center > .header__search {
