@@ -3688,6 +3688,42 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 	padding: 0 7px;
 }
 
+@-webkit-keyframes loader {
+	0% {
+		opacity:.2
+	}
+	25% {
+		opacity: .9
+	}
+	50% {
+		opacity: .4
+	}
+	75% {
+		opacity: 1
+	}
+	100% {
+		opacity: .4
+	}
+}
+
+@keyframes loader {
+	0% {
+		opacity:.2
+	}
+	25% {
+		opacity: .9
+	}
+	50% {
+		opacity: .4
+	}
+	75% {
+		opacity: 1
+	}
+	100% {
+		opacity: .4
+	}
+}
+
 .loader {
 	display: inline-block;
 	width: 45px;
