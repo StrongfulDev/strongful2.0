@@ -44,12 +44,11 @@
 		   headerMenu.addClass("header__menu--swiped");
 	   } else {
 		   if ($(event.target).parents(".header__search").length) {
-			   console.log($(event.target).parents(".header__search"));
 			   $(event.target).parents(".header__search").addClass("search--active");
 		   }
 	   }
      document.body.addEventListener('click', this.onBodyClickEvent);
-     document.body.classList.add('overflow-hidden');
+	   $("html").addClass("overflow-hidden");
 
      trapFocus(
        this.detailsContainer.querySelector('[tabindex="-1"]'),

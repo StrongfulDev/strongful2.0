@@ -407,18 +407,16 @@ class MenuDrawer extends HTMLElement {
 	  });
 
     function addTrapFocus() {
-      trapFocus(summaryElement.nextElementSibling, detailsElement.querySelector('button'));
-      summaryElement.nextElementSibling.removeEventListener('transitionend', addTrapFocus);
+     // trapFocus(summaryElement.nextElementSibling, detailsElement.querySelector('button'));
+     // summaryElement.nextElementSibling.removeEventListener('transitionend', addTrapFocus);
     }
 
 		if (isOpen === false) {
-			$('body').addClass('overflow-hidden');
 			$('html').addClass('overflow-hidden');
 			if (summaryElement.classList.contains("mobile-facets__open-wrapper")) {
 				 $(".facets-wrapper").addClass('high-index');
 			}
 		} else {
-			$('body').removeClass('overflow-hidden');
 			$('html').removeClass('overflow-hidden');
 			if (summaryElement.classList.contains("mobile-facets__open-wrapper")) {
 				$(".facets-wrapper").removeClass('high-index');
@@ -507,8 +505,14 @@ class MenuDrawer extends HTMLElement {
   onCloseButtonClick(event) {
     const detailsElement = event.currentTarget.closest('details');
     this.closeSubmenu(detailsElement);
-		$(".mobile_menu_link.header__menu-item").removeClass('hidden').removeClass('active');
-		$(".mobile_menu_link.header__menu-item").parent().css('display', 'flex');
+		let mobileHeaderMenuItem = $(".mobile_menu_link.header__menu-item");
+		mobileHeaderMenuItem.removeClass('hidden').removeClass('active');
+		mobileHeaderMenuItem.parent().css('display', 'flex');
+		$(".header-overlay").addClass("hidden");
+		$('html').removeClass('overflow-hidden');
+	  if (window.matchMedia('(max-width: 990px)')) {
+		  document.documentElement.style.removeProperty('--viewport-height');
+	  }
   }
 
   closeSubmenu(detailsElement) {
@@ -1167,14 +1171,13 @@ window.addEventListener('DOMContentLoaded', function() {
 	});
 
 	function closeHeader(event) {
-		$('body').removeClass(`overflow-hidden-${menuDrawer.dataset.breakpoint}`).removeClass('overflow-hidden');
 		$('html').removeClass(`overflow-hidden-${menuDrawer.dataset.breakpoint}`).removeClass('overflow-hidden');
 		$(".menu-drawer-container.customizable.menu-opening").attr('open', false).removeClass('menu-opening');
 		$(headerOverlay).addClass('hidden');
 	}
 
 	$(".header-overlay").on('click', closeHeader);
-	$(".mobile-header-closer").on('click', closeHeader);
+	// $(".mobile-header-closer").on('click', closeHeader);
 
 	if (window.innerWidth > 990) {
 		$(headerOverlay).on('mouseenter', function() {
