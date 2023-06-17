@@ -26,6 +26,10 @@
             padding-inline-start: 0;
         }
 
+        .hidden {
+            display: none;
+        }
+
         @media screen and (max-width: 1000px) {
             .floating-labels .field__input-wrapper.field__input-wrapper--icon-right label.field__label {
                 padding-right: 0.9em !important;
@@ -75,10 +79,15 @@
             text-align: left;
         }
 
-        .floating-labels .field--show-floating-label .field__label {
+        .floating-labels .field--show-floating-label .field__label, .floating-labels .field__input-wrapper--icon-right .field__label {
             margin-left: auto;
             margin-right: 1px;
             text-align: right;
+            padding: 0 .9em !important;
+        }
+
+        .field__input-wrapper--icon-right .field__input {
+            padding-right: 0.9em !important;
         }
 
         bdo {
@@ -305,26 +314,26 @@
 
     document.addEventListener('DOMContentLoaded', (e) => {
 
+        setTimeout(() => {
+            const fieldContainers = document.querySelectorAll('.field');
+            fieldContainers.forEach(function(container) {
+                let data = container.dataset.addressField;
+                if (data === 'zip') {
+                    container.classList.add('hidden');
+                }
+                if (data === 'city') {
+                    container.classList.remove('field--half');
+                }
+            });
+        }, 1000);
+
         let requiredInputs = document.querySelectorAll("input[aria-required=true]");
         for (let i = 0; i < requiredInputs.length; i++) {
             let label = $(requiredInputs[i]).siblings("label");
             label.text("* " + label.text());
         }
 
-        let deleteCoupon;
-
         let checkout = Shopify.Checkout;
-
-        // use.addEventListener('click', (e) => {
-        //   setTimeout((event) => {
-        //     let notice = document.querySelector('.notice__text');
-        // if (notice != null || notice != undefined) {
-        //   if (notice.innerHTML.includes('OFF100')) {
-        //     notice.innerHTML = 'קוד הקופון <strong>OFF100</strong> תקף בקנייה מעל ₪320';
-        //   }
-        // }
-        //   }, 3000);
-        // });
 
         // let notice = document.querySelector('.notice__text');
         // if (notice != null || notice != undefined) {
@@ -335,77 +344,7 @@
 
         setTimeout((yotpo) => {
 
-            // lottery code start
-            // function that creates a line for lottery text and appends it to the checkout totals
-
-            // function lottery() {
-            //   let checkoutTotalPrice = document.querySelector('.payment-due__price');
-            //   let slicedCheckoutPrice = checkoutTotalPrice.dataset.checkoutPaymentDueTarget;
-            //   let newTableRow = document.createElement('div');
-            //   newTableRow.classList.add('total-line');
-            //   newTableRow.classList.add('lottery-tr');
-            //   let newContent = document.createTextNode('בהצלחה! נכנסת להגרלה ואולי תזכי ב ₪5000');
-
-            //   // add the text node to the newly created div
-            //   newTableRow.appendChild(newContent);
-            //   let currentRow = document.querySelector('.total-line-table__tbody');
-            //   currentRow.append(newTableRow);
-            //   slicedCheckoutPrice = checkoutTotalPrice.dataset.checkoutPaymentDueTarget;
-            //   console.log(slicedCheckoutPrice);
-
-            //   if (slicedCheckoutPrice > 35000) {
-            //     $('.lottery-tr').html('בהצלחה! נכנסת להגרלה ואולי תזכי ב ₪5000');
-            //   } else {
-            //     $('.lottery-tr').html('חסר לך עוד ₪' + (Math.round(35000 - slicedCheckoutPrice).toFixed(0) / 100) + ' להשתתפות בהגרלה ואולי לזכות ב ₪5000');
-            //   }
-            // }
-
-            // calling the lottery function on load
-            // lottery();
-
-            // calling the lottery function after coupon code changes
-            // $("#checkout_submit").click((e) => {
-            //     setTimeout(() => {
-            //       lottery();
-            //       deleteCoupon = document.querySelector('.tag__button');
-            //       console.log(deleteCoupon);
-            //     }, 3000);
-
-            //     $('.tag__button').click(() => {
-            //       setTimeout(() => {
-            //         lottery();
-            //       }, 3000);
-            //     });
-            // });
-
-            // $('.tag__button').click(() => {
-            //       setTimeout(() => {
-            //         lottery();
-            //       }, 3000);
-            //     });
-
-            // lottery code end
-
-            var expires = (Date.now() + 180000);
-
-            // if (tag_btn !== null) {
-            //   let couponCode = document.querySelector('.tag .reduction-code__text').innerText;
-            //   localStorage.setItem('coupon', couponCode);
-            //   localStorage.setItem('date', expires);
-            // }
-
-            // let couponCodeApplier = document.querySelector('.order-summary__section.order-summary__section--discount .edit_checkout.animate-floating-labels');
-            // let couponCodeApplier = document.querySelector('#checkout_submit.field__input-btn.btn');
-            // couponCodeApplier.addEventListener('click', (e) => {
-            //   setTimeout((e) => {
-            //     let couponCode = document.querySelector('.tag .reduction-code__text').innerText;
-            //     localStorage.setItem('coupon', couponCode);
-            //     localStorage.setItem('date', expires);
-            //   }, 5000);
-            // });
-
-
-            if (Shopify.Checkout.isOrderStatusPage == true) {
+            if (checkout.isOrderStatusPage === true) {
                 $( '.modal-dialog' ).css( 'direction','rtl' );
                 $( '.modal-content' ).css( 'direction','rtl' );
             } else {
@@ -415,7 +354,7 @@
                 orderSummary.classList.add('order-summary--is-expanded');
 
                 let step = Shopify.Checkout.step;
-                if (step == 'contact_information') {
+                if (step === 'contact_information') {
 
                     document.getElementById("checkout_buyer_accepts_marketing").checked = true;
                     document.getElementById("checkout_remember_me").checked = true;
@@ -451,7 +390,7 @@
 
         let breadcrumbs = document.querySelectorAll( '.breadcrumb__link' );
         breadcrumbs.forEach((crumb) => {
-            if (crumb.innerText == 'עגלה') {
+            if (crumb.innerText === 'עגלה') {
                 crumb.innerText = 'חזרה';
                 crumb.href = '/';
             }
