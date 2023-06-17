@@ -580,7 +580,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	let endlessCollection = new AjaxinateMin({
 		container: '#product-grid',
 		pagination: '.infinite_next',
-		offset: 2000
+		offset: 2000,
+		callback: removeDeadProduct
 	});
 
 });

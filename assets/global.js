@@ -1158,7 +1158,18 @@ class ProductRecommendations extends HTMLElement {
 
 customElements.define('product-recommendations', ProductRecommendations);
 
+function removeDeadProduct() {
+	let listItems = document.querySelectorAll('.grid__item');
+	listItems.forEach(item => {
+		if (item.childNodes.length === 1) {
+			item.remove();
+		}
+	});
+}
+
 window.addEventListener('DOMContentLoaded', function() {
+
+	removeDeadProduct();
 
 	$(".loader-wrapper").delay().fadeOut("slow");
 

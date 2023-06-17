@@ -28,6 +28,9 @@
   {% render 'card-product', show_vendor: section.settings.show_vendor, announcement_tag: sections.settings.announcement_tag %}
 {% endcomment %}
 
+{% if card_product.tags contains 'dead-product' and card_product.available == false %}
+{% else %}
+
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
 {{ 'component-card-product.css' | asset_url | stylesheet_tag }}
 
@@ -45,7 +48,6 @@
     -%}
 
     {% assign plusModelImages = card_product.images | where: 'attached_to_variant?', false %}
-
     <div class="card-wrapper product-card-wrapper underline-links-hover">
         <div
                 class="
@@ -508,3 +510,5 @@
         </div>
     </div>
 {%- endif -%}
+
+{% endif %}
