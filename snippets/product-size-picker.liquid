@@ -35,15 +35,17 @@
                 </div>
                 <div class="product-size-picker-container">
                     <div class="product_details fix-direction">
-                        {%- assign height = product.featured_media.width | divided_by: product.featured_media.aspect_ratio | round -%}
+                        <a href="{{ product.url | within: collection}}">
+                            {%- assign height = product.featured_media.width | divided_by: product.featured_media.aspect_ratio | round -%}
 
-                        {{ product.featured_media | image_url: width: 375 | image_tag:
-                        loading: 'lazy',
-                        height: height,
-                        class: "product_details__image",
-                        sizes: "100vw",
-                        widths: '375'
-                        }}
+                            {{ product.featured_media | image_url: width: 375 | image_tag:
+                            loading: 'lazy',
+                            height: height,
+                            class: "product_details__image",
+                            sizes: "100vw",
+                            widths: '375'
+                            }}
+                        </a>
                         <div class="product_details__info">
                             <p class="product_details-titles product-title">{{ product.title }}</p>
                             <p class="product_details-titles product-color">{{ product.vendor }}</p>
