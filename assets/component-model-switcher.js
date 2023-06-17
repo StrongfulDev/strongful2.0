@@ -1,6 +1,6 @@
 const arrowIcon = document.querySelector(".model-switch-button .icon-caret");
 
-$(document).ready(function (e) {
+$(document).ready( function(e) {
 	hideUnAvailableModels();
 
 	$('.model-switcher__item input').change(function () {
@@ -18,9 +18,9 @@ $(document).ready(function (e) {
 	});
 
 	// const modelSize = localStorage.getItem('modelSize');
-	if (modelSize) {
-		changeModel(modelSize);
-	}
+	// if (modelSize) {
+	// 	changeModel(modelSize);
+	// }
 
 function hideUnAvailableModels() {
 	const availableSizes = getAvailableSizes();
