@@ -3681,16 +3681,15 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 
 .loader-wrapper {
 	width: 100%;
-	height: 100vh;
+	height: 100%;
 	position: fixed;
 	top: 0;
+	right: 0;
+	bottom: 0;
 	left: 0;
 	background-color: #000;
-	display: -webkit-box;
 	display: flex;
-	-webkit-box-pack: center;
 	justify-content: center;
-	-webkit-box-align: center;
 	align-items: center;
 	z-index: 2247483647;
 }
