@@ -201,29 +201,28 @@ class FacetFiltersForm extends HTMLElement {
     return new URLSearchParams(formData).toString();
   }
 
-  onSubmitForm(searchParams, event) {
-	  const queryParams = new URLSearchParams(searchParams);
-	  const paramsMap = new Map();
+  // onSubmitForm(searchParams, event) {
+  //   FacetFiltersForm.activeFilterCount();
+  //   FacetFiltersForm.renderPage(searchParams, event);
+  // }
 
-	  // Store the latest occurrence of each parameter key in a map
-	  for (const [key, value] of queryParams) {
-			paramsMap.set(key, value);
-	  }
+	onSubmitForm(searchParams, event) {
+		const searchParamsObject = new URLSearchParams(searchParams);
 
-	  // Create a new URLSearchParams instance with the updated parameters
-	  const updatedSearchParams = new URLSearchParams();
-	  for (const [key, value] of paramsMap) {
-		  updatedSearchParams.append(key, value);
-	  }
+		// Remove duplicate "sort_by" query parameters
+		if (searchParamsObject.has('sort_by')) {
+			const sortValues = searchParamsObject.getAll('sort_by');
+			searchParamsObject.delete('sort_by');
+			searchParamsObject.append('sort_by', sortValues[sortValues.length - 1]);
+		}
 
-	  // Get the updated search string
-	  const updatedSearchString = updatedSearchParams.toString();
-    FacetFiltersForm.activeFilterCount();
-    // FacetFiltersForm.renderPage(searchParams, event);
-	  FacetFiltersForm.renderPage(updatedSearchString, event);
-  }
+		searchParams = searchParamsObject.toString();
+		FacetFiltersForm.activeFilterCount();
+		FacetFiltersForm.renderPage(searchParams, event);
+	}
 
-  onSubmitHandler(event) {
+
+	onSubmitHandler(event) {
     event.preventDefault();
     const sortFilterForms = document.querySelectorAll('facet-filters-form form');
     if (event.srcElement.className == 'mobile-facets__checkbox') {
@@ -397,7 +396,6 @@ function designSort() {
 
   // get all the parent divs of the real select elements
   let realSelectContainer = document.querySelectorAll(".sort-by-container");
-	console.log(realSelectContainer)
 
   // loop through all the parent divs
   for (let i = 0; i < realSelectContainer.length; i++) {
@@ -435,7 +433,6 @@ function designSort() {
 
 			let currentURL = window.location.href;
 			let currentURLArray = currentURL.split("?");
-	    console.log(currentURLArray)
 			// let currentURLParams = currentURLArray[1].split("&");
 			// let currentURLSort = currentURLParams[0].split("=");
 			// let currentURLSortValue = currentURLSort[1];
