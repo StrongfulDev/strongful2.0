@@ -908,6 +908,10 @@ input.mobile-facets__checkbox {
   -webkit-appearance: none;
 }
 
+.select-items.mobile-facets__list.list-unstyled + .select-items.mobile-facets__list.list-unstyled {
+	display: none;
+}
+
 .mobile-facets__label {
   padding: 1.5rem 0;
   width: 100%;
@@ -1274,6 +1278,8 @@ div.mobile-facets__label {
   color: #fff;
   top: 50%;
 	transform: translateY(-50%);
+	width: 1.1rem;
+	height: 0.7rem;
 }
 
 .mobile-facets__checkbox:checked + .mobile-facets__highlight + svg {

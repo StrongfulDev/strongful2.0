@@ -111,6 +111,23 @@ class FacetFiltersForm extends HTMLElement {
 			  })
 			  .remove();
 	  });
+
+		// let currentUrl = window.location.href;
+		// let urlSplitOnce = currentUrl.split("?");
+		// if (urlSplitOnce[1].includes("sort_by")) {
+		// 	console.log(urlSplitOnce[1]);
+		// 	let urlSplitTwice = urlSplitOnce[1].split("&");
+		// 	console.log(urlSplitTwice);
+		// 	urlSplitTwice.forEach(function(item) {
+		// 		if (item.includes("sort_by")) {
+		// 			let sortValue = item.split("=");
+		// 			console.log(sortValue);
+		// 			// $(".js-sort-select").val(sortValue[1]);
+		// 			document.querySelector(".mobile-facets__checkbox[value='" + sortValue[1] + "']").setAttribute("checked", "checked");
+		// 			document.querySelector(".mobile-facets__checkbox:not([value='" + sortValue[1] + "'])").removeAttribute("checked");
+		// 		}
+		// 	});
+		// }
   }
 
   static renderFilters(html, event) {
@@ -153,6 +170,28 @@ class FacetFiltersForm extends HTMLElement {
   }
 
   static renderAdditionalElements(html) {
+
+	  let currentUrl = window.location.href;
+	  let urlSplitOnce = currentUrl.split("?");
+	  if (urlSplitOnce[1].includes("sort_by")) {
+		  let urlSplitTwice = urlSplitOnce[1].split("&");
+		  urlSplitTwice.forEach(function (item) {
+			  if (item.includes("sort_by")) {
+				  let sortValue = item.split("=");
+				  document.querySelector(".mobile-facets__checkbox[value='" + sortValue[1] + "']").setAttribute("checked", "checked");
+				  let badInputs = document.querySelectorAll(".mobile-facets__checkbox");
+					badInputs.forEach(function (badInput) {
+						if (badInput.value !== sortValue[1]) {
+							badInput.removeAttribute("checked");
+							$(badInput).siblings("svg").css("background-color", "transparent");
+						} else {
+							$(badInput).siblings("svg").css("background-color", "#000");
+						}
+					});
+			  }
+		  });
+	  }
+
     const mobileElementSelectors = ['.mobile-facets__open', '.mobile-facets__count', '.sorting'];
 
     mobileElementSelectors.forEach((selector) => {
@@ -214,6 +253,10 @@ class FacetFiltersForm extends HTMLElement {
 			const sortValues = searchParamsObject.getAll('sort_by');
 			searchParamsObject.delete('sort_by');
 			searchParamsObject.append('sort_by', sortValues[sortValues.length - 1]);
+			console.log(sortValues[sortValues.length - 1])
+			console.log(document.querySelector(".mobile-facets__checkbox:not([value='" + sortValues[sortValues.length - 1] + "'])"));
+			// document.querySelector(".mobile-facets__checkbox[value='" + sortValues[sortValues.length - 1] + "']").setAttribute("checked", "checked");
+			// document.querySelector(".mobile-facets__checkbox:not([value='" + sortValues[sortValues.length - 1] + "'])").setAttribute("checked", false);
 		}
 
 		searchParams = searchParamsObject.toString();
@@ -430,21 +473,15 @@ function designSort() {
 			fakeOptionInput.setAttribute("id", "sort_by");
 			fakeOptionInput.setAttribute("name", "sort_by");
 			fakeOptionInput.setAttribute("value", realSelectElement.options[j].value);
-
-			let currentURL = window.location.href;
-			let currentURLArray = currentURL.split("?");
-			// let currentURLParams = currentURLArray[1].split("&");
-			// let currentURLSort = currentURLParams[0].split("=");
-			// let currentURLSortValue = currentURLSort[1];
-			// if (currentURLSortValue === realSelectElement.options[j].value) {
-			// 	fakeOptionInput.setAttribute("checked", "checked");
-			// }
-
 			fakeOptionLabel.append(fakeOptionInput);
+			let fakeHighlight = document.createElement("span");
+			fakeHighlight.setAttribute("class", "mobile-facets__highlight");
+			fakeOptionLabel.append(fakeHighlight);
 			let fakeOptionSvg = document.createElement("svg");
-			fakeOptionSvg.setAttribute("class", "mobile-facets__checkmark");
 			fakeOptionSvg.setAttribute("viewBox", "0 0 16 16");
 			fakeOptionSvg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+			fakeOptionSvg.setAttribute("height", "1.6rem");
+	    fakeOptionSvg.setAttribute("width", "1.6rem");
 			let fakeOptionPath = document.createElement("path");
 			fakeOptionPath.setAttribute("d", "M5.5 13.5L1 9l1.5-1.5 3 3 6.5-6.5L15 5z");
 			fakeOptionSvg.append(fakeOptionPath);
@@ -456,7 +493,6 @@ function designSort() {
 			fakeOptionCheckmark.setAttribute("width", "1.1rem");
 			fakeOptionCheckmark.setAttribute("xmlns", "http://www.w3.org/2000/svg");
 			fakeOptionCheckmark.setAttribute("aria-hidden", "true");
-			fakeOptionCheckmark.setAttribute("focusable", "false");
 			fakeOptionCheckmark.setAttribute("fill", "none");
 			let fakeOptionCheckmarkPath = document.createElement("path");
 			fakeOptionCheckmarkPath.setAttribute("d", "M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1");
@@ -485,7 +521,6 @@ function designSort() {
         let fakeDropdownOption = this.parentNode.previousSibling;
 
         for (let i = 0; i < fakeOptionRealSelect.length; i++) {
-	        console.log(this)
           if (fakeOptionRealSelect.options[i].innerHTML === this.firstElementChild.nextElementSibling.innerHTML) {
             fakeOptionRealSelect.selectedIndex = i;
             fakeDropdownOption.innerHTML = this.firstElementChild.nextElementSibling.innerHTML;
