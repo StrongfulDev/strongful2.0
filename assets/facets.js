@@ -202,8 +202,25 @@ class FacetFiltersForm extends HTMLElement {
   }
 
   onSubmitForm(searchParams, event) {
+	  const queryParams = new URLSearchParams(searchParams);
+	  const paramsMap = new Map();
+
+	  // Store the latest occurrence of each parameter key in a map
+	  for (const [key, value] of queryParams) {
+			paramsMap.set(key, value);
+	  }
+
+	  // Create a new URLSearchParams instance with the updated parameters
+	  const updatedSearchParams = new URLSearchParams();
+	  for (const [key, value] of paramsMap) {
+		  updatedSearchParams.append(key, value);
+	  }
+
+	  // Get the updated search string
+	  const updatedSearchString = updatedSearchParams.toString();
     FacetFiltersForm.activeFilterCount();
-    FacetFiltersForm.renderPage(searchParams, event);
+    // FacetFiltersForm.renderPage(searchParams, event);
+	  FacetFiltersForm.renderPage(updatedSearchString, event);
   }
 
   onSubmitHandler(event) {
@@ -390,9 +407,8 @@ function designSort() {
 
     // create a fake select element container
     let fakeDropDown = document.createElement("summary");
-    // fakeDropDown.setAttribute("class", "select-selected");
+    fakeDropDown.setAttribute("class", "select-selected");
     // fakeDropDown.innerHTML = realSelectElement.options[realSelectElement.selectedIndex].innerHTML;
-    // fakeDropDown.innerHTML = 'סינון לפי';
 
     // add the fake dropdown to the real select element
     // realSelectContainer[i].appendChild(fakeDropDown);
@@ -409,16 +425,24 @@ function designSort() {
       fakeOption.setAttribute("class", `mobile-facets__item list-menu__item ${realSelectElement.options[j].innerHTML.replaceAll(' ', '')}`);
       let fakeOptionLabel = document.createElement("label");
       fakeOptionLabel.setAttribute("class", "mobile-facets__label");
-			// fakeOptionLabel.setAttribute("for", "Filter-" + realSelectElement.options[j].value.replaceAll(' ', ''));
-	    			fakeOptionLabel.setAttribute("for", "sort_by");
+			fakeOptionLabel.setAttribute("for", "sort_by");
 			let fakeOptionInput = document.createElement("input");
 			fakeOptionInput.setAttribute("class", "mobile-facets__checkbox");
 			fakeOptionInput.setAttribute("type", "checkbox");
-			// fakeOptionInput.setAttribute("id", "Filter-" + realSelectElement.options[j].value.replaceAll(' ', ''));
-			// fakeOptionInput.setAttribute("name", "Filter-" + realSelectElement.options[j].value.replaceAll(' ', ''));
-	    			fakeOptionInput.setAttribute("id", "sort_by");
+			fakeOptionInput.setAttribute("id", "sort_by");
 			fakeOptionInput.setAttribute("name", "sort_by");
 			fakeOptionInput.setAttribute("value", realSelectElement.options[j].value);
+
+			let currentURL = window.location.href;
+			let currentURLArray = currentURL.split("?");
+	    console.log(currentURLArray)
+			// let currentURLParams = currentURLArray[1].split("&");
+			// let currentURLSort = currentURLParams[0].split("=");
+			// let currentURLSortValue = currentURLSort[1];
+			// if (currentURLSortValue === realSelectElement.options[j].value) {
+			// 	fakeOptionInput.setAttribute("checked", "checked");
+			// }
+
 			fakeOptionLabel.append(fakeOptionInput);
 			let fakeOptionSvg = document.createElement("svg");
 			fakeOptionSvg.setAttribute("class", "mobile-facets__checkmark");
@@ -428,6 +452,23 @@ function designSort() {
 			fakeOptionPath.setAttribute("d", "M5.5 13.5L1 9l1.5-1.5 3 3 6.5-6.5L15 5z");
 			fakeOptionSvg.append(fakeOptionPath);
 			fakeOptionLabel.append(fakeOptionSvg);
+			let fakeOptionCheckmark = document.createElement("svg");
+			fakeOptionCheckmark.setAttribute("class", "icon icon-checkmark");
+			fakeOptionCheckmark.setAttribute("viewBox", "0 0 11 7");
+			fakeOptionCheckmark.setAttribute("height", "0.7rem");
+			fakeOptionCheckmark.setAttribute("width", "1.1rem");
+			fakeOptionCheckmark.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+			fakeOptionCheckmark.setAttribute("aria-hidden", "true");
+			fakeOptionCheckmark.setAttribute("focusable", "false");
+			fakeOptionCheckmark.setAttribute("fill", "none");
+			let fakeOptionCheckmarkPath = document.createElement("path");
+			fakeOptionCheckmarkPath.setAttribute("d", "M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1");
+			fakeOptionCheckmarkPath.setAttribute("stroke-linecap", "round");
+			fakeOptionCheckmarkPath.setAttribute("stroke-linejoin", "round");
+			fakeOptionCheckmarkPath.setAttribute("stroke", "currentColor");
+			fakeOptionCheckmarkPath.setAttribute("stroke-width", "1.75");
+			fakeOptionCheckmark.append(fakeOptionCheckmarkPath);
+			fakeOptionLabel.append(fakeOptionCheckmark);
 			let fakeOptionSpan = document.createElement("span");
 			fakeOptionSpan.setAttribute("class", "mobile-facets__label-text");
 			fakeOptionSpan.innerHTML = realSelectElement.options[j].innerHTML;
@@ -437,6 +478,8 @@ function designSort() {
 
       // when the fake option is clicked, update the fake dropdown text and the real select element
       fakeOptionLabel.addEventListener("click", function(e) {
+
+				$(this).find("input").prop("checked", true);
 
         // get the real select element of the fake option that was clicked
         let fakeOptionRealSelect = $(this).parents("details").find("select")[0];

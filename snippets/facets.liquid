@@ -638,7 +638,7 @@
                                 {%- for option in results.sort_options -%}
                                     {% unless option.value == 'title-descending' or option.value == 'title-ascending' or option.value == 'created-descending' %}
                                         {% if results.sort_by == option.value %}
-                                            {{ 'products.facets.filters.' | append: option.value | t }}
+                                            {% comment %}{{ 'products.facets.filters.' | append: option.value | t }}{% endcomment %}
                                         {% endif %}
                                     {% endunless %}
                                 {%- endfor -%}
