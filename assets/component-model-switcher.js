@@ -1,107 +1,108 @@
 const arrowIcon = document.querySelector(".model-switch-button .icon-caret");
 
-$(document).ready( function(e) {
-	hideUnAvailableModels();
+window.addEventListener('DOMContentLoaded', function(e) {
+	setTimeout(() => {
+		hideUnAvailableModels();
 
-	$('.model-switcher__item input').change(function () {
-		let modelSize = $(this).val();
-		if (modelSize) {
+		$('.model-switcher__item input').change(function () {
+			let modelSize = $(this).val();
+			if (modelSize) {
+				changeModel(modelSize);
+				updateVariantRadios(modelSize);
+			}
+		});
+
+		$('variant-radios input[name="Size"], variant-radios input[name="מידה"]').on('change', function () {
+			const modelSize = $(this).val();
 			changeModel(modelSize);
-			updateVariantRadios(modelSize);
+			updateModelSwitch(modelSize);
+		});
+
+		// const modelSize = localStorage.getItem('modelSize');
+		// if (modelSize) {
+		// 	changeModel(modelSize);
+		// }
+
+		function hideUnAvailableModels() {
+			const availableSizes = getAvailableSizes();
+
+			if (availableSizes.length === 0) {
+				$('.model-switcher').hide();
+			}
+
+			$(".model-switcher__item").filter((function () {
+				const size = $(this).data('model-size');
+				return !availableSizes.includes(size);
+			})).hide();
 		}
-	});
 
-	$('variant-radios input[name="Size"], variant-radios input[name="מידה"]').on('change', function () {
-		const modelSize = $(this).val();
-		changeModel(modelSize);
-		updateModelSwitch(modelSize);
-	});
+		function getAvailableSizes() {
+			const sizes = new Set()
+			$('.product__media-item:not([data-model-size=""])').each(function () {
+				sizes.add($(this).data('model-size'));
+			});
 
-	// const modelSize = localStorage.getItem('modelSize');
-	// if (modelSize) {
-	// 	changeModel(modelSize);
-	// }
+			return Array.from(sizes);
+		}
 
-function hideUnAvailableModels() {
-	const availableSizes = getAvailableSizes();
+		function changeModel(modelSize) {
+			const list = $('.product__media-list');
+			const sizeTable = $('.div-block-460');
 
-	if (availableSizes.length === 0) {
-		$('.model-switcher').hide();
-	}
+			const imagesToHide = list.find(`.product__media-item:not([data-model-size="${modelSize}"])`);
+			const imagesToShow = list.find(`.product__media-item[data-model-size="${modelSize}"]`);
 
-	$(".model-switcher__item").filter((function () {
-		const size = $(this).data('model-size');
-		return !availableSizes.includes(size);
-	})).hide();
-}
+			const divsToHide = sizeTable.find(`span:not([data-model-size="${modelSize}"])`);
+			const divsToShow = sizeTable.find(`span[data-model-size="${modelSize}"]`);
 
-function getAvailableSizes() {
-	const sizes = new Set()
-	$('.product__media-item:not([data-model-size=""])').each(function () {
-		sizes.add($(this).data('model-size'));
-	});
+			const modelWearsSizeParagraphsToShow = $(document).find(`.model-wears-size[data-model="${modelSize}"]`);
+			const modelWearsSizeParagraphsToHide = $(document).find(`.model-wears-size:not([data-model="${modelSize}"])`);
 
-	return Array.from(sizes);
-}
+			if (imagesToShow.length > 0) {
+				imagesToHide.hide();
+				imagesToShow.show();
+				divsToHide.hide();
+				divsToShow.show();
+				modelWearsSizeParagraphsToShow.show();
+				modelWearsSizeParagraphsToHide.hide();
+			}
 
-function changeModel(modelSize) {
-	const list = $('.product__media-list');
-	const sizeTable = $('.div-block-460');
+			$("#model-switch").removeAttr('open');
+			$(".model-switcher-overlay").addClass("hidden");
+			$(arrowIcon).removeClass('rotate-arrow');
 
-	const imagesToHide = list.find(`.product__media-item:not([data-model-size="${modelSize}"])`);
-	const imagesToShow = list.find(`.product__media-item[data-model-size="${modelSize}"]`);
+			// localStorage.setItem('modelSize', modelSize);
 
-	const divsToHide = sizeTable.find(`span:not([data-model-size="${modelSize}"])`);
-	const divsToShow = sizeTable.find(`span[data-model-size="${modelSize}"]`);
+			const model = window.models[modelSize];
 
-	const modelWearsSizeParagraphsToShow = $(document).find(`.model-wears-size[data-model="${modelSize}"]`);
-	const modelWearsSizeParagraphsToHide = $(document).find(`.model-wears-size:not([data-model="${modelSize}"])`);
+			// $('.model-switch-button span').text(model ? `${model.name} (${modelSize})` : `${modelSize}`);
+		}
 
-	if (imagesToShow.length > 0) {
-		imagesToHide.hide();
-		imagesToShow.show();
-		divsToHide.hide();
-		divsToShow.show();
-		modelWearsSizeParagraphsToShow.show();
-		modelWearsSizeParagraphsToHide.hide();
-	}
+		function updateVariantRadios(modelSize) {
+			const button = $(`variant-radios input[name="Size"][value="${modelSize}"], variant-radios input[name="מידה"][value="${modelSize}"]`)
+			button.click();
+		}
 
-	$("#model-switch").removeAttr('open');
-	$(".model-switcher-overlay").addClass("hidden");
-	$(arrowIcon).removeClass('rotate-arrow');
+		function updateModelSwitch(modelSize) {
+			const inputs = $('.model-switcher__item input')
+			inputs
+				.removeAttr('checked')
+				.filter(`[value="${modelSize}"]`)
+				.attr('checked', true).prop('checked', true);
+		}
 
-	// localStorage.setItem('modelSize', modelSize);
+		$(".model-switch-button").click(function() {
 
-	const model = window.models[modelSize];
+			$(arrowIcon).toggleClass('rotate-arrow');
 
-	// $('.model-switch-button span').text(model ? `${model.name} (${modelSize})` : `${modelSize}`);
-}
+			if ($(window).width() < 990) {
+				$(".model-switcher-overlay").toggleClass("hidden");
+			}
+		});
 
-function updateVariantRadios(modelSize) {
-	const button = $(`variant-radios input[name="Size"][value="${modelSize}"], variant-radios input[name="מידה"][value="${modelSize}"]`)
-	button.click();
-}
-
-function updateModelSwitch(modelSize) {
-	const inputs = $('.model-switcher__item input')
-	inputs
-		.removeAttr('checked')
-		.filter(`[value="${modelSize}"]`)
-		.attr('checked', true).prop('checked', true);
-}
-
-$(".model-switch-button").click(function() {
-
-	$(arrowIcon).toggleClass('rotate-arrow');
-
-	if ($(window).width() < 990) {
-		$(".model-switcher-overlay").toggleClass("hidden");
-	}
-});
-
-$(".model-switcher-overlay").click(function() {
-	$(this).addClass("hidden");
-	$("#model-switch").removeAttr("open");
-});
-
+		$(".model-switcher-overlay").click(function() {
+			$(this).addClass("hidden");
+			$("#model-switch").removeAttr("open");
+		});
+	}, 1000);
 });
