@@ -1223,7 +1223,7 @@ input.mobile-facets__checkbox {
 }
 
 details.mobile-facets__details.js-filter:first-of-type {
-  display: none;
+
 }
 
 .active-facets {
@@ -1327,7 +1327,7 @@ input.mobile-facets__checkbox {
 }
 
 .select-items.select-hide {
-  display: none;
+  /*display: none;*/
 }
 
 .mobile-facets__label:active .mobile-facets__label-square {

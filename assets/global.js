@@ -257,9 +257,9 @@ Shopify.bind = function(fn, scope) {
 };
 
 Shopify.setSelectorByValue = function(selector, value) {
-  for (var i = 0, count = selector.options.length; i < count; i++) {
-    var option = selector.options[i];
-    if (value == option.value || value == option.innerHTML) {
+  for (let i = 0, count = selector.options.length; i < count; i++) {
+    let option = selector.options[i];
+    if (value === option.value || value === option.innerHTML) {
       selector.selectedIndex = i;
       return i;
     }

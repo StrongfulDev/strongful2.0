@@ -368,7 +368,8 @@ function hideInStockFacet() {
 function designSort() {
 
   // get all the parent divs of the real select elements
-  let realSelectContainer = document.querySelectorAll(".select");
+  let realSelectContainer = document.querySelectorAll(".sort-by-container");
+	console.log(realSelectContainer)
 
   // loop through all the parent divs
   for (let i = 0; i < realSelectContainer.length; i++) {
@@ -377,30 +378,42 @@ function designSort() {
     let realSelectElement = realSelectContainer[i].querySelector("select");
 
     // create a fake select element container
-    let fakeDropDown = document.createElement("DIV");
-    fakeDropDown.setAttribute("class", "select-selected");
+    let fakeDropDown = document.createElement("summary");
+    // fakeDropDown.setAttribute("class", "select-selected");
     // fakeDropDown.innerHTML = realSelectElement.options[realSelectElement.selectedIndex].innerHTML;
-    fakeDropDown.innerHTML = 'סינון לפי';
+    // fakeDropDown.innerHTML = 'סינון לפי';
 
     // add the fake dropdown to the real select element
-    realSelectContainer[i].appendChild(fakeDropDown);
+    // realSelectContainer[i].appendChild(fakeDropDown);
 
     // create a fake select element (div) that will contain all the fake options
-    let fakeSelectElement = document.createElement("DIV");
-    fakeSelectElement.setAttribute("class", "select-items select-hide");
+    let fakeSelectElement = document.createElement("ul");
+    fakeSelectElement.setAttribute("class", "select-items mobile-facets__list list-unstyled");
 
     // loop through all the options of the real select element
     for (let j = 1; j < realSelectElement.length; j++) {
 
       // create a fake option (div) for each option of the real select element
-      let fakeOption = document.createElement("DIV");
-      fakeOption.setAttribute("class", `mobile-facets__label ${realSelectElement.options[j].innerHTML.replaceAll(' ', '')}`);
+      let fakeOption = document.createElement("li");
+      fakeOption.setAttribute("class", `mobile-facets__item list-menu__item ${realSelectElement.options[j].innerHTML.replaceAll(' ', '')}`);
       let fakeOptionSquare = document.createElement("span");
       fakeOptionSquare.setAttribute("class", "mobile-facets__label-square");
       fakeOption.prepend(fakeOptionSquare);
-      let fakeOptionLabel = document.createElement("span");
-      fakeOptionLabel.setAttribute("class", "mobile-facets__label-text");
-      fakeOptionLabel.innerHTML = realSelectElement.options[j].innerHTML;
+      let fakeOptionLabel = document.createElement("label");
+      fakeOptionLabel.setAttribute("class", "mobile-facets__label");
+			fakeOptionLabel.setAttribute("for", "Filter-" + realSelectElement.options[j].value.replaceAll(' ', ''));
+			let fakeOptionInput = document.createElement("input");
+			fakeOptionInput.setAttribute("type", "checkbox");
+			fakeOptionInput.setAttribute("id", "Filter-" + realSelectElement.options[j].value.replaceAll(' ', ''));
+			fakeOptionInput.setAttribute("name", "Filter-" + realSelectElement.options[j].value.replaceAll(' ', ''));
+			fakeOptionInput.setAttribute("value", realSelectElement.options[j].value);
+			fakeOptionLabel.append(fakeOptionInput);
+			let fakeOptionSpan = document.createElement("span");
+			fakeOptionSpan.setAttribute("class", "mobile-facets__label-text");
+			fakeOptionSpan.innerHTML = realSelectElement.options[j].innerHTML;
+			fakeOptionSpan.setAttribute("aria-hidden", "true");
+			fakeOptionLabel.append(fakeOptionSpan);
+      // fakeOptionLabel.innerHTML = realSelectElement.options[j].innerHTML;
       fakeOption.append(fakeOptionLabel);
       let fakeOptionCheckmark = document.createElement("span");
       fakeOptionCheckmark.setAttribute("class", "mobile-facets__label-checkmark");
@@ -439,18 +452,17 @@ function designSort() {
             this.classList.remove("same-as-selected");
           }
         }
-        // fakeDropdownOption.click();
       });
       fakeSelectElement.appendChild(fakeOption);
     }
     realSelectContainer[i].appendChild(fakeSelectElement);
-    fakeDropDown.addEventListener("click", function(e) {
-      e.stopPropagation();
-      closeAllSelect(this);
-      this.nextSibling.classList.toggle("select-hide");
-      this.parentElement.firstElementChild.nextElementSibling.classList.toggle("rotate-arrow");
-      this.classList.toggle("select-arrow-active");
-    });
+    // fakeDropDown.addEventListener("click", function(e) {
+    //   e.stopPropagation();
+    //   closeAllSelect(this);
+    //   this.nextSibling.classList.toggle("select-hide");
+    //   this.parentElement.firstElementChild.nextElementSibling.classList.toggle("rotate-arrow");
+    //   this.classList.toggle("select-arrow-active");
+    // });
   }
 
   function closeAllSelect(elmnt) {

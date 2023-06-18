@@ -126,15 +126,7 @@
                           >
                               {%- for option in results.sort_options -%}
                                   {% unless option.value == 'title-descending' or option.value == 'title-ascending' or option.value == 'created-descending' %}
-                                  <option
-                                          value="{{ option.value | escape }}"
-                                          {%- comment -%}
-                                          {% if option.value == sort_by %}
-                                              selected="selected"
-                                          {% endif %}
-                                          {%- endcomment -%}
-                                  >
-                                      {% comment %}{{ option.name | escape }}{% endcomment %}
+                                  <option value="{{ option.value | escape }}">
                                       {{ 'products.facets.filters.' | append: option.value | t }}
                                   </option>
                               {% endunless %}
@@ -632,40 +624,47 @@
             </div>
             <div class="mobile-facets__main has-submenu gradient">
                 {%- if enable_sorting -%}
-                    <div
-                            class="mobile-facets__details js-filter{% if filter_type == 'drawer' %} medium-hide large-up-hide{% endif %}"
+                    <details
+                            id="Details-Mobile-{{ forloop.index }}-{{ section.id }}"
+                            class="mobile-facets__details js-filter"
                             data-index="mobile-{{ forloop.index }}"
                     >
-                        <div class="mobile-facets__summary">
-                            <div class="mobile-facets__sort">
-                                <label for="SortBy-mobile">{{ 'products.facets.sort_by_label' | t }}</label>
-                                <div class="select">
-                                    <select
-                                            name="sort_by"
-                                            class="select__select"
-                                            id="SortBy-mobile"
-                                            aria-describedby="a11y-refresh-page-message"
-                                    >
-                                        {%- for option in results.sort_options -%}
-                                            {% unless option.value == 'title-descending' or option.value == 'title-ascending' or option.value == 'created-descending' %}
-                                            <option
-                                                    value="{{ option.value | escape }}"
-                                                    {% comment %}
-                                                    {% if option.value == sort_by %}
-                                                        selected="selected"
-                                                    {% endif %}
-                                                    {% endcomment %}
-                                            >
-                                                {{ 'products.facets.filters.' | append: option.value | t }}
-                                            </option>
-                                        {% endunless %}
-                                        {%- endfor -%}
-                                    </select>
-                                    {% render 'icon-caret' %}
-                                </div>
-                            </div>
+                        {% comment %}<label for="SortBy-mobile">{{ 'products.facets.sort_by_label' | t }}</label>{% endcomment %}
+                        <summary class="mobile-facets__summary focus-inset">
+                            <span class="mobile-facets__summary-label">
+                                {{ 'products.facets.sort_by_label' | t }}
+                            </span>
+                            <span class="mobile-facets__summary-value">
+                                {%- for option in results.sort_options -%}
+                                    {% unless option.value == 'title-descending' or option.value == 'title-ascending' or option.value == 'created-descending' %}
+                                        {% if results.sort_by == option.value %}
+                                            {{ 'products.facets.filters.' | append: option.value | t }}
+                                        {% endif %}
+                                    {% endunless %}
+                                {%- endfor -%}
+                            </span>
+                        </summary>
+                        <div
+                                id="FacetMobile-{{ forloop.index }}-{{ section.id }}"
+                                class="mobile-facets__submenu gradient sort-by-container"
+                        >
+                            <select
+                                    name="sort_by"
+                                    class="select__select"
+                                    id="SortBy-mobile"
+                                    aria-describedby="a11y-refresh-page-message"
+                            >
+                                {%- for option in results.sort_options -%}
+                                    {% unless option.value == 'title-descending' or option.value == 'title-ascending' or option.value == 'created-descending' %}
+                                        <option value="{{ option.value | escape }}">
+                                            {{ 'products.facets.filters.' | append: option.value | t }}
+                                        </option>
+                                    {% endunless %}
+                                {%- endfor -%}
+                            </select>
                         </div>
-                    </div>
+                            {% comment %}{% render 'icon-caret' %}{% endcomment %}
+                    </details>
                 {%- endif -%}
               {%- if enable_filtering -%}
                 {%- for filter in results.filters -%}
