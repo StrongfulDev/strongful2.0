@@ -807,6 +807,7 @@
                                 {{ filter.label | escape }}
                               {%- endif -%}
                             </p>
+                              <p class="mobile-facets__arrow-filtering">{{ filter.active_values }}</p>
                             <p class="mobile-facets__arrow no-js-hidden">{% render 'icon-caret' %}</p>
                             <noscript>{% render 'icon-caret' %}</noscript>
                           </div>

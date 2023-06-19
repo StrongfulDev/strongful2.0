@@ -1470,15 +1470,17 @@ div.החדשיםביותר {
 	}
 }
 
-.mobile-facets__arrow-sorting {
+.mobile-facets__arrow-sorting, .mobile-facets__arrow-filtering {
 	font-size: calc(var(--font-body-size-small) * 1.3);
 }
 
-details[open] .mobile-facets__arrow-sorting {
+details[open] .mobile-facets__arrow-sorting,
+details[open] .mobile-facets__arrow-filtering {
 	display: none;
 }
 
-details:not([open]) .mobile-facets__arrow-sorting {
+details:not([open]) .mobile-facets__arrow-sorting,
+details:not([open]) .mobile-facets__arrow-filtering {
 	display: block;
 }
 
