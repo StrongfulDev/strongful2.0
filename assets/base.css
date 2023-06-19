@@ -1267,7 +1267,7 @@ summary::-webkit-details-marker {
     }
 
     .grid--peek.slider .grid__item:first-of-type {
-        margin-left: 1.5rem;
+        /*margin-left: 1.5rem;*/
     }
 
     /* Fix to show some space at the end of our sliders in all browsers */
