@@ -153,30 +153,7 @@ class FacetFiltersForm extends HTMLElement {
 
   static renderAdditionalElements(html) {
 
-	  let currentUrl = window.location.href;
-	  let urlSplitOnce = currentUrl.split("?");
-	  if (urlSplitOnce[1].includes("sort_by")) {
-		  let urlSplitTwice = urlSplitOnce[1].split("&");
-		  urlSplitTwice.forEach(function (item) {
-			  if (item.includes("sort_by")) {
-				  let sortValue = item.split("=");
-				  document.querySelector(".facet-checkbox__input[value='" + sortValue[1] + "']").setAttribute("checked", "checked");
-				  document.querySelector(".mobile-facets__checkbox[value='" + sortValue[1] + "']").setAttribute("checked", "checked");
-					function uncheckSiblingInputs(input) {
-						if (input.value !== sortValue[1]) {
-							input.removeAttribute("checked");
-						}
-					}
-				  let badInputs = document.querySelectorAll(".mobile-facets__checkbox");
-					badInputs.forEach(uncheckSiblingInputs);
-					let desktopBadInputs = document.querySelectorAll(".facet-checkbox__input");
-					desktopBadInputs.forEach(uncheckSiblingInputs);
-
-				  $(".sort_by_desktop_input:checked").parents("details").find(".desktop-facets__arrow-sorting").text("(" + $(".sort_by_desktop_input:checked").siblings(".visually-hidden").text() + ")");
-				  $(".sort_by_mobile_input:checked").parents("details").find(".mobile-facets__arrow-sorting").text("(" + $(".sort_by_mobile_input:checked").siblings(".visibility-hidden").text() + ")");
-			  }
-		  });
-	  }
+	  checkSortingInputs();
 
     const mobileElementSelectors = ['.mobile-facets__open', '.mobile-facets__count', '.sorting'];
 
@@ -239,6 +216,7 @@ class FacetFiltersForm extends HTMLElement {
 		searchParams = searchParamsObject.toString();
 		FacetFiltersForm.activeFilterCount();
 		FacetFiltersForm.renderPage(searchParams, event);
+		checkSortingInputs();
 	}
 
 
@@ -425,10 +403,36 @@ function onlyShowIfInStock() {
 	}
 }
 
+function checkSortingInputs() {
+	let currentUrl = window.location.href;
+	let urlSplitOnce = currentUrl.split("?");
+	if (urlSplitOnce[1].includes("sort_by")) {
+		let urlSplitTwice = urlSplitOnce[1].split("&");
+		urlSplitTwice.forEach(function (item) {
+			if (item.includes("sort_by")) {
+				let sortValue = item.split("=");
+				document.querySelector(".facet-checkbox__input[value='" + sortValue[1] + "']").setAttribute("checked", "checked");
+				document.querySelector(".mobile-facets__checkbox[value='" + sortValue[1] + "']").setAttribute("checked", "checked");
+				function uncheckSiblingInputs(input) {
+					if (input.value !== sortValue[1]) {
+						input.removeAttribute("checked");
+					}
+				}
+				let badInputs = document.querySelectorAll(".mobile-facets__checkbox");
+				badInputs.forEach(uncheckSiblingInputs);
+				let desktopBadInputs = document.querySelectorAll(".facet-checkbox__input");
+				desktopBadInputs.forEach(uncheckSiblingInputs);
+
+				$(".sort_by_desktop_input:checked").parents("details").find(".desktop-facets__arrow-sorting").text("(" + $(".sort_by_desktop_input:checked").siblings(".visually-hidden").text() + ")");
+				$(".sort_by_mobile_input:checked").parents("details").find(".mobile-facets__arrow-sorting").text("(" + $(".sort_by_mobile_input:checked").siblings(".visibility-hidden").text() + ")");
+			}
+		});
+	}
+}
+
 document.addEventListener("DOMContentLoaded", function() {
 
-	$(".sort_by_desktop_input:checked").parents("details").find(".desktop-facets__arrow-sorting").text("(" + $(".sort_by_desktop_input:checked").siblings(".visually-hidden").text() + ")");
-	$(".sort_by_mobile_input:checked").parents("details").find(".mobile-facets__arrow-sorting").text("(" + $(".sort_by_mobile_input:checked").siblings(".visibility-hidden").text() + ")");
+	checkSortingInputs();
 
 	let gridDisplays = document.querySelectorAll(".grid-display");
 	gridDisplays.forEach(function(gridDisplay) {
