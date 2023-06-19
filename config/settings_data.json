@@ -261,6 +261,12 @@
           "inject_modules_loader": false,
           "inject_sdk_loader": false
         }
+      },
+      "yoast-seo-metatags": {
+        "type": "shopify:\/\/apps\/yoast-seo-seo-for-everyone\/blocks\/metatags\/7c777011-bc88-4743-a24e-64336e1e5b46",
+        "disabled": false,
+        "settings": {
+        }
       }
     }
   },
