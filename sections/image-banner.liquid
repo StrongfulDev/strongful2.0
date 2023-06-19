@@ -123,9 +123,9 @@
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'heading' -%}
-          <h2 class="banner__heading {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
+          <{{ block.settings.heading_size }} class="banner__heading {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
             <span>{{ block.settings.heading | escape }}</span>
-          </h2>
+          </{{ block.settings.heading_size }}>
           {%- when 'text' -%}
           <div class="banner__text {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
             <span>{{ block.settings.text | escape }}</span>
@@ -354,7 +354,8 @@
             "id": "heading",
             "default": "Image banner",
             "label": "t:sections.image-banner.blocks.heading.settings.heading.label"
-          }, {
+          },
+          {
             "type": "select",
             "id": "heading_size",
             "options": [

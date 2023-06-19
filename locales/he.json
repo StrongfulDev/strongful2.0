@@ -232,14 +232,14 @@
       "clear_filter": "Remove filter",
       "product_type": "סוג מוצר",
       "filters": {
-        "manual": "מומלץ",
+        "manual": "נבחרים",
         "best-selling": "הנמכרים ביותר",
         "title-ascending": "מא׳ עד ת׳",
         "title-descending": "מת׳ עד א׳",
         "price-ascending": "מחיר, מהנמוך לגבוה",
         "price-descending": "מחיר, מהגבוה לנמוך",
         "created-ascending": "תאריך, מהישן לחדש",
-        "created-descending": "החדשים ביותר"
+        "created-descending": "חדש ביותר"
       }
     }
   },
