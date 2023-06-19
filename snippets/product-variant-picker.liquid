@@ -87,7 +87,6 @@
           {% render 'product-variant-options', product: product, option: option, block: block %}
         </fieldset>
       {%- endfor -%}
-        <a class="klaviyo-bis-trigger" href="#">Notify Me When Available</a>
         {% unless product.tags contains 'noSizeTable' %}
             <p class="size-table-toggler pointer">{{ 'products.product.size_table' | t }}</p>
         {% endunless %}

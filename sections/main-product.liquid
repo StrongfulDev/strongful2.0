@@ -149,6 +149,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                     <input type="hidden" name="id"
                                            value="{{ product.selected_or_first_available_variant.id }}">
                                     {{ form | payment_terms }}
+                                    <a class="klaviyo-bis-trigger" href="#" style="display: block">Notify Me When Available</a>
                                 {%- endform -%}
                             </div>
                         {%- when 'inventory' -%}
