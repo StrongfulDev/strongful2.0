@@ -172,10 +172,8 @@ class FacetFiltersForm extends HTMLElement {
 					let desktopBadInputs = document.querySelectorAll(".facet-checkbox__input");
 					desktopBadInputs.forEach(uncheckSiblingInputs);
 
-				  setTimeout(function () {
-					  $(".facet-checkbox__input:checked").parents("details").find(".desktop-facets__arrow-sorting").text("(" + $(".facet-checkbox__input:checked").siblings(".visually-hidden").text() + ")");
-					  $(".mobile-facets__checkbox:checked").parents("details").find(".mobile-facets__arrow-sorting").text("(" + $(".mobile-facets__checkbox:checked").siblings(".visually-hidden").text() + ")");
-				  }, 100);
+				  $(".sort_by_desktop_input:checked").parents("details").find(".desktop-facets__arrow-sorting").text("(" + $(".sort_by_desktop_input:checked").siblings(".visually-hidden").text() + ")");
+				  $(".sort_by_mobile_input:checked").parents("details").find(".mobile-facets__arrow-sorting").text("(" + $(".sort_by_mobile_input:checked").siblings(".visibility-hidden").text() + ")");
 			  }
 		  });
 	  }
@@ -429,8 +427,8 @@ function onlyShowIfInStock() {
 
 document.addEventListener("DOMContentLoaded", function() {
 
-	$(".facet-checkbox__input:checked").parents("details").find(".desktop-facets__arrow-sorting").text("(" + $(".facet-checkbox__input:checked").siblings(".visually-hidden").text() + ")");
-	$(".mobile-facets__checkbox:checked").parents("details").find(".mobile-facets__arrow-sorting").text("(" + $(".mobile-facets__checkbox:checked").siblings(".visually-hidden").text() + ")");
+	$(".sort_by_desktop_input:checked").parents("details").find(".desktop-facets__arrow-sorting").text("(" + $(".sort_by_desktop_input:checked").siblings(".visually-hidden").text() + ")");
+	$(".sort_by_mobile_input:checked").parents("details").find(".mobile-facets__arrow-sorting").text("(" + $(".sort_by_mobile_input:checked").siblings(".visibility-hidden").text() + ")");
 
 	let gridDisplays = document.querySelectorAll(".grid-display");
 	gridDisplays.forEach(function(gridDisplay) {
