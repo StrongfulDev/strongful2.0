@@ -445,7 +445,7 @@ span.active-facets__button-inner:after {
   .active-facets__button,
   .active-facets__button-remove {
     margin: 0;
-    padding: 1rem;
+    padding: 1rem 1rem .5rem;
   }
 
   span.active-facets__button-inner {
@@ -1205,7 +1205,7 @@ input.mobile-facets__checkbox {
 
 @media screen and (min-width: 750px) and (max-width: 989px) {
   .facets-vertical .active-facets__button {
-    padding: 1rem;
+    padding: .6rem;
     margin-bottom: 0;
     margin-left: -0.5rem;
   }
@@ -1461,7 +1461,7 @@ div.החדשיםביותר {
 		top: 21px;
 		z-index: 3;
 		background: white;
-		padding: 1em 1em 0;
+		padding: 1em;
 		width: 100vw;
 		margin-right: -1.5rem;
 	}

@@ -712,7 +712,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                         <details id="Details-HeaderMenu-{{ forloop.index }}">
                                             <summary
                                                     class="header__menu-item list-menu__item link focus-inset">
-                                                <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
+                                                <a href="{{ link.url }}" {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</a>
                                             </summary>
                                             <ul id="HeaderMenu-MenuList-{{ forloop.index }}"
                                                 class="header__submenu list-menu list-menu--disclosure gradient caption-large motion-reduce global-settings-popup"
@@ -783,7 +783,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                                  class="mega-menu">
                                             <summary
                                                     class="header__menu-item list-menu__item link focus-inset">
-                                                <span {%- if link_child_active %} class="header__active-menu-item"{% endif %}>{{ block.settings.title | escape }}</span>
+                                                <a href="{{ block.settings.shop_all_link }}" {%- if link_child_active %} class="header__active-menu-item"{% endif %}>{{ block.settings.title | escape }}</a>
                                             </summary>
                                             <div id="MegaMenu-Content-{{ forloop.index }}"
                                                  class="mega-menu__content customizable fix-direction gradient motion-reduce global-settings-popup"

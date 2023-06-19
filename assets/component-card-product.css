@@ -19,7 +19,7 @@
 }
 
 .product-size-picker-container {
-    background-color: rgba(var(--color-background), 0.8);
+    background-color: rgba(var(--color-background), 0.9);
     padding: 20px 10px;
     margin: 0;
     display: flex;
@@ -196,6 +196,7 @@ div:not(.product-size-picker-container) .variant-button .size_variant_button:not
 		background: var(--gradient-base-accent-1);
 		opacity: 1;
 		display: none;
+		border-radius: 4px;
 	}
 
 	.size_variant_button_container .loading-overlay__spinner {

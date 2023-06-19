@@ -385,6 +385,11 @@ ul.menu-drawer__menu {
 
 @media screen and (min-width: 990px) {
 
+	summary.list-menu__item > a {
+		color: black;
+		text-decoration: none;
+	}
+
 	.mega-menu__content.customizable {
 		width: 100%;
 		margin: 0 auto;
