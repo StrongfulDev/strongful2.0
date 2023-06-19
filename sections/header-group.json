@@ -76,6 +76,7 @@
           "type": "menu_item",
           "settings": {
             "show_on_mobile": false,
+            "order": "",
             "small_font": false,
             "menu": "desktop-menu-one",
             "menu_second": "desktop-menu-two",
@@ -95,32 +96,11 @@
             "shop_all_title": "סטים"
           }
         },
-        "70af0289-2846-42bd-93c5-5598239a8ddc": {
-          "type": "menu_item",
-          "settings": {
-            "show_on_mobile": false,
-            "small_font": true,
-            "menu": "outlet-menu-main",
-            "menu_second": "outlet-menu-sub",
-            "menu_third": "",
-            "title": "OUTLET",
-            "item_class": "OUTLET",
-            "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/1_2c12ffff-0680-4352-a1ef-c3af00d8c7da.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/sale-3-for-300",
-            "desktop_links_image_2_link": "",
-            "mobile_cover_image": "shopify:\/\/shop_images\/outlet-up-to-50.jpg",
-            "mobile_title": "",
-            "main_link": "",
-            "main_title": "",
-            "shop_all_link": "shopify:\/\/collections\/outlet",
-            "shop_all_title": "OUTLET"
-          }
-        },
         "fc929aa6-aab6-4c25-be13-8267425330c3": {
           "type": "menu_item",
           "settings": {
             "show_on_mobile": false,
+            "order": "",
             "small_font": false,
             "menu": "main-menu",
             "menu_second": "",
@@ -143,6 +123,7 @@
           "type": "menu_item",
           "settings": {
             "show_on_mobile": false,
+            "order": "",
             "small_font": false,
             "menu": "bottom-menu",
             "menu_second": "",
@@ -165,6 +146,7 @@
           "type": "menu_item",
           "settings": {
             "show_on_mobile": false,
+            "order": "",
             "small_font": false,
             "menu": "dawn-accessories",
             "menu_second": "",
@@ -181,6 +163,29 @@
             "main_title": "",
             "shop_all_link": "shopify:\/\/collections\/accessories",
             "shop_all_title": "אקססוריז"
+          }
+        },
+        "70af0289-2846-42bd-93c5-5598239a8ddc": {
+          "type": "menu_item",
+          "settings": {
+            "show_on_mobile": false,
+            "order": "",
+            "small_font": true,
+            "menu": "outlet-menu-main",
+            "menu_second": "outlet-menu-sub",
+            "menu_third": "",
+            "title": "OUTLET",
+            "item_class": "OUTLET",
+            "title_link": "",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/1_2c12ffff-0680-4352-a1ef-c3af00d8c7da.jpg",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/sale-3-for-300",
+            "desktop_links_image_2_link": "",
+            "mobile_cover_image": "shopify:\/\/shop_images\/outlet-up-to-50.jpg",
+            "mobile_title": "",
+            "main_link": "",
+            "main_title": "",
+            "shop_all_link": "shopify:\/\/collections\/outlet",
+            "shop_all_title": "OUTLET"
           }
         },
         "93921bbc-631f-46c2-a66b-9df086c3f7a0": {
@@ -206,10 +211,10 @@
       "block_order": [
         "b3598a84-e3e7-4790-a124-330f65ab27da",
         "8878d4cf-d83f-42a2-90b9-ddebceb7501c",
-        "70af0289-2846-42bd-93c5-5598239a8ddc",
         "fc929aa6-aab6-4c25-be13-8267425330c3",
         "03fa03f7-aac1-443b-acba-9a19fb5aa148",
         "4d0d7344-0f17-4600-86d8-3481f2a1c4a1",
+        "70af0289-2846-42bd-93c5-5598239a8ddc",
         "93921bbc-631f-46c2-a66b-9df086c3f7a0",
         "69313e8a-8818-485d-9c44-529f1b10ccdd"
       ],

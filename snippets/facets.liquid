@@ -244,8 +244,8 @@
                           {% endif %}
                           {%- if filter_type == 'vertical' -%}
                             <span class="facets__selected no-js-hidden{% if filter.active_values.size == 0 %} hidden{% endif %}">
-                              ({{ filter.active_values.size }})</span
-                            >
+                              ({{ filter.active_values.size }})
+                            </span>
                           {%- endif -%}
                         </span>
                         {% render 'icon-caret' %}
@@ -441,6 +441,9 @@
                         {% else %}
                         <span>{{ filter.label | escape }}</span>
                         {% endif %}
+                          <span class="facets__selected no-js-hidden{% if filter.active_values.size == 0 %} hidden{% endif %}">
+                              ({{ filter.active_values.size }})
+                            </span>
                         {% render 'icon-caret' %}
                       </div>
                     </summary>
@@ -798,13 +801,16 @@
                         <summary class="mobile-facets__summary focus-inset">
                           <div>
                               <div class="filter-title-container">
-                                  <p class="mobile-facets__arrow-sorting-sibling">
+                                  <span class="mobile-facets__arrow-sorting-sibling">
                                       {%- if filter.label == "Product type" -%}
                                           {{ 'products.facets.product_type' | t }}
                                       {%- else -%}
                                           {{ filter.label | escape }}
                                       {%- endif -%}
-                                  </p>
+                                  </span>
+                                  <span class="facets__selected no-js-hidden{% if filter.active_values.size == 0 %} hidden{% endif %}">
+                                      ({{ filter.active_values.size }})
+                                  </span>
                               </div>
                             <p class="mobile-facets__arrow no-js-hidden">{% render 'icon-caret' %}</p>
                             <noscript>{% render 'icon-caret' %}</noscript>

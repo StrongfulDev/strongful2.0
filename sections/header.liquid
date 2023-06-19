@@ -764,7 +764,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                 <nav class="header__inline-menu {{ section.settings.menu_position }}">
                     <ul class="list-menu list-menu--inline header-blocks-list fix-direction" role="list">
                         {%- for block in section.blocks -%}
-                            <li class="header-block-list-element {% if block.settings.small_font %}small{% endif %}">
+                            <li class="header-block-list-element {% if block.settings.small_font %}small{% endif %}" style="order: {{ block.settings.order }}">
                                 {%- if block.settings.menu != blank -%}
                                     {%- liquid
                                         assign link_child_active = false
@@ -1416,6 +1416,11 @@ You can learn more about this (and learn how to cleanly revert these changes) at
           "default": false,
           "label": "t:sections.header.blocks.menu_item.settings.show_on_mobile.label"
         },
+          {
+              "type": "text",
+              "id": "order",
+              "label": "t:sections.header.blocks.text.order.label"
+          },
           {
             "type": "checkbox",
             "id": "small_font",

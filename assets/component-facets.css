@@ -1422,7 +1422,7 @@ details.mobile-facets__details, div.mobile-facets__details {
 }
 
 .mobile-facets__header {
-  padding: 5rem 0 0;
+  padding: 5rem 0 1rem;
 }
 
 .mobile-facets__header-inner {
@@ -1555,8 +1555,13 @@ summary .icon-caret {
 	  height: 2rem;
   }
 
+  .facet-checkbox svg {
+	  border: 1pt solid var(--gradient-base-accent-1);
+	  border-radius: 5px;
+  }
+
   .facet-checkbox {
-    padding: 1rem 0 1rem 2rem;
+    padding: .8rem 0 1rem 1.6rem;
     align-items: center;
   }
 
