@@ -124,7 +124,10 @@
                         <span>
                             {{ 'products.facets.sort_by_label' | t }}
                         </span>
-                          <span class="mobile-facets__arrow no-js-hidden">{% render 'icon-caret' %}</span>
+                          <span class="desktop-facets__arrow-sorting"></span>
+                          <span class="mobile-facets__arrow no-js-hidden">
+                              {% render 'icon-caret' %}
+                          </span>
                           <noscript>{% render 'icon-caret' %}</noscript>
                       </div>
                   </summary>
@@ -151,7 +154,7 @@
                                   role="list"
                           >
                               {%- for option in results.sort_options -%}
-                                {% unless option.value == 'title-descending' or option.value == 'title-ascending' or option.value == 'created-descending' %}
+                                {% unless option.value == 'title-descending' or option.value == 'title-ascending' or option.value == 'created-ascending' %}
                                   <li class="list-menu__item facets__item">
                                       <label
                                               for="sort_by_{{ option.value | escape }}"
@@ -709,6 +712,7 @@
                             <span>
                               {{ 'products.facets.sort_by_label' | t }}
                             </span>
+                                <span class="mobile-facets__arrow-sorting"></span>
                                 <span class="mobile-facets__arrow no-js-hidden">{% render 'icon-caret' %}</span>
                                 <noscript>{% render 'icon-caret' %}</noscript>
                             </div>
@@ -719,7 +723,7 @@
                         >
                             <ul class="mobile-facets__list list-unstyled" role="list">
                                 {%- for option in results.sort_options -%}
-                                    {% unless option.value == 'title-descending' or option.value == 'title-ascending' or option.value == 'created-descending' %}
+                                    {% unless option.value == 'title-descending' or option.value == 'title-ascending' or option.value == 'created-ascending' %}
                                     <li class="mobile-facets__item list-menu__item">
                                         <label
                                                 for="sort_by_{{ option.value | escape }}"

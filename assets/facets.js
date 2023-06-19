@@ -162,15 +162,20 @@ class FacetFiltersForm extends HTMLElement {
 				  let sortValue = item.split("=");
 				  document.querySelector(".facet-checkbox__input[value='" + sortValue[1] + "']").setAttribute("checked", "checked");
 				  document.querySelector(".mobile-facets__checkbox[value='" + sortValue[1] + "']").setAttribute("checked", "checked");
-					function bad(input) {
+					function uncheckSiblingInputs(input) {
 						if (input.value !== sortValue[1]) {
 							input.removeAttribute("checked");
 						}
 					}
 				  let badInputs = document.querySelectorAll(".mobile-facets__checkbox");
-					badInputs.forEach(bad);
+					badInputs.forEach(uncheckSiblingInputs);
 					let desktopBadInputs = document.querySelectorAll(".facet-checkbox__input");
-					desktopBadInputs.forEach(bad);
+					desktopBadInputs.forEach(uncheckSiblingInputs);
+
+				  setTimeout(function () {
+					  $(".facet-checkbox__input:checked").parents("details").find(".desktop-facets__arrow-sorting").text("(" + $(".facet-checkbox__input:checked").siblings(".visually-hidden").text() + ")");
+					  $(".mobile-facets__checkbox:checked").parents("details").find(".mobile-facets__arrow-sorting").text("(" + $(".mobile-facets__checkbox:checked").siblings(".visually-hidden").text() + ")");
+				  }, 100);
 			  }
 		  });
 	  }
@@ -409,141 +414,9 @@ function hideInStockFacet() {
   });
 }
 
-// function designSort() {
-//
-//   // get all the parent divs of the real select elements
-//   let realSelectContainer = document.querySelectorAll(".sort-by-container");
-//
-//   // loop through all the parent divs
-//   for (let i = 0; i < realSelectContainer.length; i++) {
-//
-//     // get the real select element of each parent div
-//     let realSelectElement = realSelectContainer[i].querySelector("select");
-//
-//     // create a fake select element container
-//     let fakeDropDown = document.createElement("summary");
-//     fakeDropDown.setAttribute("class", "select-selected");
-//     // fakeDropDown.innerHTML = realSelectElement.options[realSelectElement.selectedIndex].innerHTML;
-//
-//     // add the fake dropdown to the real select element
-//     // realSelectContainer[i].appendChild(fakeDropDown);
-//
-// 		  // create a fake select element (div) that will contain all the fake options
-// 		  let fakeSelectElement = document.createElement("ul");
-// 		  fakeSelectElement.setAttribute("class", "select-items mobile-facets__list list-unstyled");
-//
-//     // loop through all the options of the real select element
-//     for (let j = 1; j < realSelectElement.length; j++) {
-//
-//       // create a fake option (div) for each option of the real select element
-//       let fakeOption = document.createElement("li");
-//       fakeOption.setAttribute("class", `mobile-facets__item list-menu__item ${realSelectElement.options[j].innerHTML.replaceAll(' ', '')}`);
-//       let fakeOptionLabel = document.createElement("label");
-//       fakeOptionLabel.setAttribute("class", "mobile-facets__label");
-// 			fakeOptionLabel.setAttribute("for", "sort_by");
-// 			let fakeOptionInput = document.createElement("input");
-// 			fakeOptionInput.setAttribute("class", "mobile-facets__checkbox");
-// 			fakeOptionInput.setAttribute("type", "checkbox");
-// 			fakeOptionInput.setAttribute("id", "sort_by");
-// 			fakeOptionInput.setAttribute("name", "sort_by");
-// 			fakeOptionInput.setAttribute("value", realSelectElement.options[j].value);
-// 			fakeOptionLabel.append(fakeOptionInput);
-// 			let fakeHighlight = document.createElement("span");
-// 			fakeHighlight.setAttribute("class", "mobile-facets__highlight");
-// 			fakeOptionLabel.append(fakeHighlight);
-// 			let fakeOptionSvg = document.createElement("svg");
-// 			fakeOptionSvg.setAttribute("viewBox", "0 0 16 16");
-// 			fakeOptionSvg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
-// 			fakeOptionSvg.setAttribute("height", "1.6rem");
-// 	    fakeOptionSvg.setAttribute("width", "1.6rem");
-// 			let fakeOptionPath = document.createElement("path");
-// 			fakeOptionPath.setAttribute("d", "M5.5 13.5L1 9l1.5-1.5 3 3 6.5-6.5L15 5z");
-// 			fakeOptionSvg.append(fakeOptionPath);
-// 			fakeOptionLabel.append(fakeOptionSvg);
-// 			let fakeOptionCheckmark = document.createElement("svg");
-// 			fakeOptionCheckmark.setAttribute("class", "icon icon-checkmark");
-// 			fakeOptionCheckmark.setAttribute("viewBox", "0 0 11 7");
-// 			fakeOptionCheckmark.setAttribute("height", "0.7rem");
-// 			fakeOptionCheckmark.setAttribute("width", "1.1rem");
-// 			fakeOptionCheckmark.setAttribute("xmlns", "http://www.w3.org/2000/svg");
-// 			fakeOptionCheckmark.setAttribute("aria-hidden", "true");
-// 			fakeOptionCheckmark.setAttribute("fill", "none");
-// 			let fakeOptionCheckmarkPath = document.createElement("path");
-// 			fakeOptionCheckmarkPath.setAttribute("d", "M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1");
-// 			fakeOptionCheckmarkPath.setAttribute("stroke-linecap", "round");
-// 			fakeOptionCheckmarkPath.setAttribute("stroke-linejoin", "round");
-// 			fakeOptionCheckmarkPath.setAttribute("stroke", "currentColor");
-// 			fakeOptionCheckmarkPath.setAttribute("stroke-width", "1.75");
-// 			fakeOptionCheckmark.append(fakeOptionCheckmarkPath);
-// 			fakeOptionLabel.append(fakeOptionCheckmark);
-// 			let fakeOptionSpan = document.createElement("span");
-// 			fakeOptionSpan.setAttribute("class", "mobile-facets__label-text");
-// 			fakeOptionSpan.innerHTML = realSelectElement.options[j].innerHTML;
-// 			fakeOptionSpan.setAttribute("aria-hidden", "true");
-// 			fakeOptionLabel.append(fakeOptionSpan);
-//       fakeOption.append(fakeOptionLabel);
-//
-//       // when the fake option is clicked, update the fake dropdown text and the real select element
-//       fakeOptionLabel.addEventListener("click", function(e) {
-//
-// 				$(this).find("input").prop("checked", true);
-//
-//         // get the real select element of the fake option that was clicked
-//         let fakeOptionRealSelect = $(this).parents("details").find("select")[0];
-//
-//         // get the fake dropdown of the fake option that was clicked
-//         let fakeDropdownOption = this.parentNode.previousSibling;
-//
-//         for (let i = 0; i < fakeOptionRealSelect.length; i++) {
-//           if (fakeOptionRealSelect.options[i].innerHTML === this.firstElementChild.nextElementSibling.innerHTML) {
-//             fakeOptionRealSelect.selectedIndex = i;
-//             fakeDropdownOption.innerHTML = this.firstElementChild.nextElementSibling.innerHTML;
-//             let fakeSelectedOption = this.parentNode.getElementsByClassName("same-as-selected");
-//             fakeOptionRealSelect.options[i].setAttribute("selected", "selected");
-//             //submit the parent form of the select element when the fake option is clicked using jquery
-//             $(fakeOptionRealSelect).closest('form').submit();
-//
-//             for (let k = 0; k < fakeSelectedOption.length; k++) {
-//               fakeSelectedOption[k].removeAttribute("class");
-//             }
-//             this.classList.add("same-as-selected");
-//             break;
-//           } else {
-//             this.classList.remove("same-as-selected");
-//           }
-//         }
-//       });
-//       fakeSelectElement.appendChild(fakeOption);
-//     }
-//     realSelectContainer[i].appendChild(fakeSelectElement);
-//   }
-//
-//   function closeAllSelect(elmnt) {
-//
-//     // a function that will close all select boxes in the document, except the current select box
-//     let arrNo = [];
-//
-//     // get all the fake select elements
-//     let fakeSelectContainer = document.getElementsByClassName("select-items");
-//
-//     // get all the fake dropdowns
-//     let y = document.getElementsByClassName("select-selected");
-//
-//     // loop through all the fake dropdowns
-//     for (let i = 0; i < y.length; i++) {
-//       if (elmnt == y[i]) {
-//         arrNo.push(i)
-//       } else {
-//         y[i].classList.remove("select-arrow-active");
-//       }
-//     }
-//   }
-// }
-
 colorRounds(document);
 sizeRounds(document);
 hideInStockFacet();
-// designSort();
 
 function onlyShowIfInStock() {
 	const inputsToQuery = $(".facet-checkbox").find("input");
@@ -555,6 +428,10 @@ function onlyShowIfInStock() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
+
+	$(".facet-checkbox__input:checked").parents("details").find(".desktop-facets__arrow-sorting").text("(" + $(".facet-checkbox__input:checked").siblings(".visually-hidden").text() + ")");
+	$(".mobile-facets__checkbox:checked").parents("details").find(".mobile-facets__arrow-sorting").text("(" + $(".mobile-facets__checkbox:checked").siblings(".visually-hidden").text() + ")");
+
 	let gridDisplays = document.querySelectorAll(".grid-display");
 	gridDisplays.forEach(function(gridDisplay) {
 		gridDisplay.addEventListener("click", function() {
