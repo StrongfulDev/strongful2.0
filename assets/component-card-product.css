@@ -19,7 +19,7 @@
 }
 
 .product-size-picker-container {
-    background-color: rgba(var(--color-background), 0.9);
+    background-color: rgba(var(--color-background), 0.95);
     padding: 20px 10px;
     margin: 0;
     display: flex;
