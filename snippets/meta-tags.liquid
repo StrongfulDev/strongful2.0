@@ -1,3 +1,13 @@
+{%- comment -%}
+This file has been modified by the Yoast SEO for Shopify app.
+You can learn more about this (and learn how to cleanly revert these changes) at https://yoa.st/removing-theme-changes.
+{%- endcomment -%}
+{%- liquid
+	assign disabled_by_yoast_seo = true
+	if content_for_header contains 'yoast-active-script'
+		assign disabled_by_yoast_seo = false
+	endif
+-%}
 {%- liquid
   assign og_title = page_title | default: shop.name
   assign og_url = canonical_url | default: request.origin
@@ -13,27 +23,87 @@
   endif
 %}
 
+{%- comment -%}Auto-disabled. Yoast plugin is taking care of Meta Tags output.{%- endcomment -%}
+{%- if disabled_by_yoast_seo -%}
 <meta property="og:site_name" content="{{ shop.name }}">
+{%- comment -%} End Yoast auto-disable. {%- endcomment -%}
+{%- endif -%}
+{%- comment -%}Auto-disabled. Yoast plugin is taking care of Meta Tags output.{%- endcomment -%}
+{%- if disabled_by_yoast_seo -%}
 <meta property="og:url" content="{{ og_url }}">
+{%- comment -%} End Yoast auto-disable. {%- endcomment -%}
+{%- endif -%}
+{%- comment -%}Auto-disabled. Yoast plugin is taking care of Meta Tags output.{%- endcomment -%}
+{%- if disabled_by_yoast_seo -%}
 <meta property="og:title" content="{{ og_title | escape }}">
+{%- comment -%} End Yoast auto-disable. {%- endcomment -%}
+{%- endif -%}
+{%- comment -%}Auto-disabled. Yoast plugin is taking care of Meta Tags output.{%- endcomment -%}
+{%- if disabled_by_yoast_seo -%}
 <meta property="og:type" content="{{ og_type }}">
+{%- comment -%} End Yoast auto-disable. {%- endcomment -%}
+{%- endif -%}
+{%- comment -%}Auto-disabled. Yoast plugin is taking care of Meta Tags output.{%- endcomment -%}
+{%- if disabled_by_yoast_seo -%}
 <meta property="og:description" content="{{ og_description | escape }}">
+{%- comment -%} End Yoast auto-disable. {%- endcomment -%}
+{%- endif -%}
 
 {%- if page_image -%}
-  <meta property="og:image" content="http:{{ page_image | image_url }}">
-  <meta property="og:image:secure_url" content="https:{{ page_image | image_url }}">
-  <meta property="og:image:width" content="{{ page_image.width }}">
-  <meta property="og:image:height" content="{{ page_image.height }}">
+  {%- comment -%}Auto-disabled. Yoast plugin is taking care of Meta Tags output.{%- endcomment -%}
+{%- if disabled_by_yoast_seo -%}
+<meta property="og:image" content="http:{{ page_image | image_url }}">
+{%- comment -%} End Yoast auto-disable. {%- endcomment -%}
+{%- endif -%}
+  {%- comment -%}Auto-disabled. Yoast plugin is taking care of Meta Tags output.{%- endcomment -%}
+{%- if disabled_by_yoast_seo -%}
+<meta property="og:image:secure_url" content="https:{{ page_image | image_url }}">
+{%- comment -%} End Yoast auto-disable. {%- endcomment -%}
+{%- endif -%}
+  {%- comment -%}Auto-disabled. Yoast plugin is taking care of Meta Tags output.{%- endcomment -%}
+{%- if disabled_by_yoast_seo -%}
+<meta property="og:image:width" content="{{ page_image.width }}">
+{%- comment -%} End Yoast auto-disable. {%- endcomment -%}
+{%- endif -%}
+  {%- comment -%}Auto-disabled. Yoast plugin is taking care of Meta Tags output.{%- endcomment -%}
+{%- if disabled_by_yoast_seo -%}
+<meta property="og:image:height" content="{{ page_image.height }}">
+{%- comment -%} End Yoast auto-disable. {%- endcomment -%}
+{%- endif -%}
 {%- endif -%}
 
 {%- if request.page_type == 'product' -%}
-  <meta property="og:price:amount" content="{{ product.price | money_without_currency | strip_html }}">
-  <meta property="og:price:currency" content="{{ cart.currency.iso_code }}">
+  {%- comment -%}Auto-disabled. Yoast plugin is taking care of Meta Tags output.{%- endcomment -%}
+{%- if disabled_by_yoast_seo -%}
+<meta property="og:price:amount" content="{{ product.price | money_without_currency | strip_html }}">
+{%- comment -%} End Yoast auto-disable. {%- endcomment -%}
+{%- endif -%}
+  {%- comment -%}Auto-disabled. Yoast plugin is taking care of Meta Tags output.{%- endcomment -%}
+{%- if disabled_by_yoast_seo -%}
+<meta property="og:price:currency" content="{{ cart.currency.iso_code }}">
+{%- comment -%} End Yoast auto-disable. {%- endcomment -%}
+{%- endif -%}
 {%- endif -%}
 
 {%- if settings.social_twitter_link != blank -%}
-  <meta name="twitter:site" content="{{ settings.social_twitter_link | split: 'twitter.com/' | last | prepend: '@' }}">
+  {%- comment -%}Auto-disabled. Yoast plugin is taking care of Meta Tags output.{%- endcomment -%}
+{%- if disabled_by_yoast_seo -%}
+<meta name="twitter:site" content="{{ settings.social_twitter_link | split: 'twitter.com/' | last | prepend: '@' }}">
+{%- comment -%} End Yoast auto-disable. {%- endcomment -%}
 {%- endif -%}
+{%- endif -%}
+{%- comment -%}Auto-disabled. Yoast plugin is taking care of Meta Tags output.{%- endcomment -%}
+{%- if disabled_by_yoast_seo -%}
 <meta name="twitter:card" content="summary_large_image">
+{%- comment -%} End Yoast auto-disable. {%- endcomment -%}
+{%- endif -%}
+{%- comment -%}Auto-disabled. Yoast plugin is taking care of Meta Tags output.{%- endcomment -%}
+{%- if disabled_by_yoast_seo -%}
 <meta name="twitter:title" content="{{ og_title | escape }}">
+{%- comment -%} End Yoast auto-disable. {%- endcomment -%}
+{%- endif -%}
+{%- comment -%}Auto-disabled. Yoast plugin is taking care of Meta Tags output.{%- endcomment -%}
+{%- if disabled_by_yoast_seo -%}
 <meta name="twitter:description" content="{{ og_description | escape }}">
+{%- comment -%} End Yoast auto-disable. {%- endcomment -%}
+{%- endif -%}
