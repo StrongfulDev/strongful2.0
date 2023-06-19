@@ -1,3 +1,13 @@
+{%- comment -%}
+This file has been modified by the Yoast SEO for Shopify app.
+You can learn more about this (and learn how to cleanly revert these changes) at https://yoa.st/removing-theme-changes.
+{%- endcomment -%}
+{%- liquid
+	assign disabled_by_yoast_seo = true
+	if content_for_header contains 'yoast-active-script'
+		assign disabled_by_yoast_seo = false
+	endif
+-%}
 <link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="print"
       onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print"
@@ -1064,7 +1074,10 @@
         {%- render 'cart-notification', color_scheme: section.settings.color_scheme -%}
     {%- endif -%}
 
-    <script type="application/ld+json">
+    {%- comment -%}Yoast SEO schema control block: start.{%- endcomment -%}
+{%- assign yoast_seo_settings = shop.metafields.yoast_seo.settings.value | default: shop.metafields.yoast_seo.settings -%}
+{%- if disabled_by_yoast_seo or yoast_seo_settings.schema.useTheme.schema or yoast_seo_settings.schema.useTheme.organization -%}
+<script type="application/ld+json">
   {
     "@context": "http://schema.org",
     "@type": "Organization",
@@ -1085,11 +1098,16 @@
     ],
     "url": {{ request.origin | append: page.url | json }}
   }
-    </script>
+    {%- comment -%}Yoast SEO schema control block: end.{%- endcomment -%}
+</script>
+{%- endif -%}
 
     {%- if request.page_type == 'index' -%}
         {% assign potential_action_target = request.origin | append: routes.search_url | append: "?q={search_term_string}" %}
-        <script type="application/ld+json">
+        {%- comment -%}Yoast SEO schema control block: start.{%- endcomment -%}
+{%- assign yoast_seo_settings = shop.metafields.yoast_seo.settings.value | default: shop.metafields.yoast_seo.settings -%}
+{%- if disabled_by_yoast_seo or yoast_seo_settings.schema.useTheme.schema or yoast_seo_settings.schema.useTheme.website -%}
+<script type="application/ld+json">
     {
       "@context": "http://schema.org",
       "@type": "WebSite",
@@ -1102,7 +1120,9 @@
       "url": {{ request.origin | append: page.url | json }}
     }
 
-        </script>
+        {%- comment -%}Yoast SEO schema control block: end.{%- endcomment -%}
+</script>
+{%- endif -%}
     {%- endif -%}
 
     {% schema %}
