@@ -44,8 +44,6 @@ slider-component.slider-component-full-width {
         scroll-behavior: smooth;
         scroll-padding-left: 1.5rem;
         /*-webkit-overflow-scrolling: touch;*/
-        margin: 0 auto;
-	    width: 90%;
     }
 
     /* Fix to show some space at the end of our sliders in all browsers */
@@ -530,7 +528,7 @@ li.product__media-item.grid__item.slider__slide {
 }
 
 .product__media-list li.product__media-item.grid__item.slider__slide {
-	margin-left: 5rem;
+	margin-left: 1.5rem;
 }
 
 .product__media-list li.product__media-item.grid__item.slider__slide:only-child {

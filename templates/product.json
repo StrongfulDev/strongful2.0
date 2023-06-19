@@ -31,6 +31,16 @@
             "picker_type": "button"
           }
         },
+        "b55fdabd-3fe5-4fa2-b3ea-4aa1488491cd": {
+          "type": "inventory",
+          "disabled": true,
+          "settings": {
+            "text_style": "body",
+            "inventory_threshold": 10,
+            "minimum_inventory_to_show": 20,
+            "show_inventory_quantity": true
+          }
+        },
         "quantity_selector": {
           "type": "quantity_selector",
           "disabled": true,
@@ -97,6 +107,7 @@
         "656bd184-5523-4c74-aee3-c2664a058063",
         "price",
         "variant_picker",
+        "b55fdabd-3fe5-4fa2-b3ea-4aa1488491cd",
         "quantity_selector",
         "buy_buttons",
         "5ae0b953-0e37-48c5-b5cc-e50d6004b25c",

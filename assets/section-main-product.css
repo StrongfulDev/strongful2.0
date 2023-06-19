@@ -274,6 +274,9 @@ fieldset.product-form__input .form__label {
 
 .product-form__submit {
     margin-bottom: 1rem;
+	font-size: calc(var(--font-body-size-medium) * 1.2);
+	padding: 1.5rem;
+	border-radius: 4px;
 }
 
 .no-js .product-form__submit.button--secondary {
@@ -493,9 +496,8 @@ a.product__text {
     }
 
     .product__media-wrapper slider-component:not(.thumbnail-slider--no-slide) {
-        /*margin-left: .5rem;*/
-        /*margin-right: -1.5rem;*/
-	    margin: 0;
+        margin-left: -1rem;
+        margin-right: -1.5rem;
     }
 
     .slider.product__media-list::-webkit-scrollbar {
@@ -1735,7 +1737,7 @@ variant-radios {
 
 .product-badge__text {
 	margin: 0;
-	font-size: var(--font-body-size-medium);
+	font-size: 14px;
 }
 
 .swiper-slide + .swiper-slide {
@@ -1743,8 +1745,7 @@ variant-radios {
 }
 
 .swiper-container {
-	background: var(--gradient-base-background-3);
-	padding: 1rem;
+	padding: 1rem 3rem;
 }
 
 li.grid--peek.slider .grid__item, li.product__media-item.grid__item.slider__slide {
