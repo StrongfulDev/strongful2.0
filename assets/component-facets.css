@@ -1479,8 +1479,8 @@ details[open] .mobile-facets__arrow-filtering {
 	display: none;
 }
 
-details:not([open]) .mobile-facets__arrow-sorting,
-details:not([open]) .mobile-facets__arrow-filtering {
+details:not([open]) .mobile-facets__arrow-sorting:not(:empty),
+details:not([open]) .mobile-facets__arrow-filtering:not(:empty) {
 	display: block;
 }
 

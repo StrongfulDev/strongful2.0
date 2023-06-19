@@ -668,9 +668,6 @@
                   {%- elsif enable_sorting -%}
                     <h2>{{ 'products.facets.sort_button' | t }}</h2>
                   {%- endif -%}
-                    {% comment %}
-                    <span class="custom-active-facets {% unless total_active_values > 0 %}hidden{% endunless %}">({{ total_active_values }})</span>
-                    {% endcomment %}
                 </div>
                   <facet-remove class="mobile-facets__clear-wrapper">
                       <a href="{{ results_url }}" class="mobile-facets__clear underlined-link">
@@ -795,19 +792,20 @@
                     {% when 'boolean', 'list' %}
                       <details
                           id="Details-Mobile-{{ forloop.index }}-{{ section.id }}"
-                          class="mobile-facets__details js-filter"
+                          class="mobile-facets__details js-filter mobile-facets-filters"
                           data-index="mobile-{{ forloop.index }}"
                       >
                         <summary class="mobile-facets__summary focus-inset">
                           <div>
-                            <p class="mobile-facets__arrow-sorting-sibling">
-                              {%- if filter.label == "Product type" -%}
-                                {{ 'products.facets.product_type' | t }}
-                              {%- else -%}
-                                {{ filter.label | escape }}
-                              {%- endif -%}
-                            </p>
-                              <p class="mobile-facets__arrow-filtering">{{ filter.active_values }}</p>
+                              <div class="filter-title-container">
+                                  <p class="mobile-facets__arrow-sorting-sibling">
+                                      {%- if filter.label == "Product type" -%}
+                                          {{ 'products.facets.product_type' | t }}
+                                      {%- else -%}
+                                          {{ filter.label | escape }}
+                                      {%- endif -%}
+                                  </p>
+                              </div>
                             <p class="mobile-facets__arrow no-js-hidden">{% render 'icon-caret' %}</p>
                             <noscript>{% render 'icon-caret' %}</noscript>
                           </div>
@@ -844,9 +842,7 @@
                                         disabled
                                       {% endif %}
                                   >
-
                                   <span class="mobile-facets__highlight"></span>
-
                                   <svg
                                       width="1.6rem"
                                       height="1.6rem"
@@ -880,17 +876,6 @@
                                   >
                                     {{- value.label | escape -}}
                                   </span>
-                                  {% comment %}
-                                  <span class="visually-hidden">
-                                    {{- value.label | escape }} (
-                                    {%- if value.count == '1' -%}
-                                      {{- 'products.facets.product_count_simple.one' | t: count: value.count -}}
-                                    {%- else -%}
-                                      {{- 'products.facets.product_count_simple.other' | t: count: value.count -}}
-                                    {%- endif -%}
-                                    )</span
-                                  >
-                                  {% endcomment %}
                                   <span class="visibility-hidden">{{ value.label | escape }}</span>
                                 </label>
                               </li>
