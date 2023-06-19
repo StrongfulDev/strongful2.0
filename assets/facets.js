@@ -421,7 +421,7 @@ function checkSortingInputs() {
 		}
 	}
 
-	document.getElementById("Filter-filter.v.availability-mobile-1").checked = true;
+	// document.getElementById("Filter-filter.v.availability-mobile-1").checked = true;
 }
 
 document.addEventListener("DOMContentLoaded", function() {

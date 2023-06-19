@@ -706,8 +706,8 @@
                     >
                         <summary class="mobile-facets__summary focus-inset">
                             <div>
-                                <div>
-                                    <p>
+                                <div class="filter-title-container">
+                                    <p class="mobile-facets__arrow-sorting-sibling">
                                         {{ 'products.facets.sort_by_label' | t }}
                                     </p>
                                     <p class="mobile-facets__arrow-sorting"></p>
@@ -800,7 +800,7 @@
                       >
                         <summary class="mobile-facets__summary focus-inset">
                           <div>
-                            <p>
+                            <p class="mobile-facets__arrow-sorting-sibling">
                               {%- if filter.label == "Product type" -%}
                                 {{ 'products.facets.product_type' | t }}
                               {%- else -%}
@@ -836,7 +836,7 @@
                                       name="{{ value.param_name }}"
                                       value="{{ value.value }}"
                                       id="Filter-{{ filter.param_name | escape }}-mobile-{{ forloop.index }}"
-                                      {% if value.active %}
+                                      {% if value.active or value.value == '1' %}
                                         checked
                                       {% endif %}
                                       {% if value.count == 0 and value.active == false %}
@@ -1041,11 +1041,7 @@
                     class="no-js-hidden button button--primary {% if total_active_values < 1 %}button--disabled{% else %}{% endif %}"
                     onclick="this.closest('.mobile-facets__wrapper').querySelector('summary').click()"
                 >
-                    {% if total_active_values < 1 %}
-                    {{ 'products.facets.select_more_filters' | t }}
-                    {% else %}
                   {{ 'products.facets.apply' | t }}
-                    {% endif %}
                 </button>
                 <noscript
                 ><button class="button button--primary">{{ 'products.facets.apply' | t }}</button></noscript
