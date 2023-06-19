@@ -37,6 +37,7 @@
 
 .collection.loading .loading-overlay {
   display: block;
+	z-index: 1;
 }
 
 .collection--empty .title-wrapper {

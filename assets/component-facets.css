@@ -27,7 +27,7 @@
 @media screen and (max-width: 989px) {
   .facets-container {
     display: flex;
-	  flex-direction: column-reverse;
+	  flex-direction: column;
   }
 }
 
@@ -402,12 +402,12 @@ span.active-facets__button-inner {
   color: rgb(var(--color-foreground));
   box-shadow: 0 0 0 0.1rem rgb(var(--color-foreground));
   border-radius: 2.6rem;
-  font-size: 1rem;
+  font-size: var(--font-body-family);
   min-height: 0;
   min-width: 0;
   padding: 0.5rem 1rem;
   display: flex;
-  align-items: stretch;
+  align-items: center;
 }
 
 span.active-facets__button-inner:before,
@@ -445,7 +445,7 @@ span.active-facets__button-inner:after {
   .active-facets__button,
   .active-facets__button-remove {
     margin: 0;
-    padding: 1.2rem;
+    padding: 1rem;
   }
 
   span.active-facets__button-inner {
@@ -506,8 +506,8 @@ a.active-facets__button.focused .active-facets__button-inner,
 .active-facets__button svg {
   align-self: center;
   flex-shrink: 0;
-  margin-left: 0.6rem;
-  margin-right: -0.2rem;
+  margin-right: 0.6rem;
+  margin-left: -0.2rem;
   pointer-events: none;
   width: 1.2rem;
 }
@@ -729,7 +729,7 @@ a.active-facets__button.focused .active-facets__button-inner,
 	position: absolute;
 	top: -8px;
 	right: 0;
-	background: var(--gradient-base-accent-1);
+	background: var(--cart-rewards-background);
 	color: var(--global-background-light);
 	border-radius: 50%;
 	height: 2rem;
@@ -738,6 +738,7 @@ a.active-facets__button.focused .active-facets__button-inner,
 	align-items: center;
 	justify-content: center;
 	line-height: 1rem !important;
+	font-size: calc(var(--font-body-size-small) * 1.2);
 }
 
 .mobile-facets__open:hover line,
@@ -915,7 +916,7 @@ input.mobile-facets__checkbox {
 }
 
 .mobile-facets__label {
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   width: 100%;
   transition: background-color 0.2s ease;
   word-break: break-word;
@@ -1436,9 +1437,9 @@ details.mobile-facets__details, div.mobile-facets__details {
   font-weight: var(--font-body-weight-bold);
 }
 
-.active-facets {
-  display: none;
-}
+/*.active-facets {*/
+/*  display: none;*/
+/*}*/
 
 .mobile-facets__open-label {
   margin-left: 0;
@@ -1460,7 +1461,7 @@ div.החדשיםביותר {
 		top: 21px;
 		z-index: 3;
 		background: white;
-		padding: 1em;
+		padding: 1em 1em 0;
 		width: 100vw;
 		margin-right: -1.5rem;
 	}
