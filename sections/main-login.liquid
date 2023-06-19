@@ -15,9 +15,15 @@
 {%- endstyle -%}
 
 <div class="customer login section-{{ section.id }}-padding fix-direction">
-  <h1 id="recover" tabindex="-1">
-    {{ 'customer.recover_password.title' | t }}
-  </h1>
+    {% if template.name == 'register' or template.name == 'login' %}
+      <h1 id="recover" tabindex="-1">
+        {{ 'customer.recover_password.title' | t }}
+      </h1>
+    {% else %}
+        <h4 id="recover" tabindex="-1" class="custom-customer-popup-main-title">
+            {{ 'customer.recover_password.title' | t }}
+        </h4>
+    {% endif %}
   <div>
     <p>
       {{ 'customer.recover_password.subtext' | t }}
@@ -67,9 +73,15 @@
     {%- endform -%}
   </div>
 
-  <h1 id="login" tabindex="-1">
-    {{ 'customer.login_page.title' | t }}
-  </h1>
+    {% if template.name == 'register' or template.name == 'login' %}
+        <h1 id="login" tabindex="-1">
+            {{ 'customer.login_page.title' | t }}
+        </h1>
+    {% else %}
+    <h4 id="login" tabindex="-1" class="custom-customer-popup-main-title">
+            {{ 'customer.login_page.title' | t }}
+        </h4>
+    {% endif %}
   <div class="fix-direction">
     {%- if recover_success == true -%}
       <h3 class="form__message" tabindex="-1" autofocus>

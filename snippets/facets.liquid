@@ -584,7 +584,7 @@
           {%- if enable_sorting -%}
           {%- endif -%}
           <div class="product-count light" role="status">
-            <h2 class="product-count__text text-body">
+            <h4 class="product-count__text text-body">
               <span id="ProductCountDesktop">
                 {%- if results.results_count -%}
                   {{ 'templates.search.results_with_count' | t: terms: results.terms, count: results.results_count }}
@@ -597,7 +597,7 @@
                   }}
                 {%- endif -%}
               </span>
-            </h2>
+            </h4>
             <div class="loading-overlay__spinner">
               <svg
                   aria-hidden="true"
@@ -1140,7 +1140,7 @@
       class="product-count light{% if filter_type == 'vertical' or filter_type == 'horizontal' %} medium-hide large-up-hide{% endif %}"
       role="status"
   >
-    <h2 class="product-count__text text-body">
+    <h4 class="product-count__text text-body">
       <span id="ProductCount">
         {%- if results.results_count -%}
           {{ 'templates.search.results_with_count' | t: terms: results.terms, count: results.results_count }}
@@ -1153,7 +1153,7 @@
           }}
         {%- endif -%}
       </span>
-    </h2>
+    </h4>
     <div class="loading-overlay__spinner">
       <svg
           aria-hidden="true"
