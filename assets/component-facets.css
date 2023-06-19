@@ -931,7 +931,7 @@ input.mobile-facets__checkbox {
   margin-right: 1.2rem;
   flex-shrink: 0;
 	border: 1px solid var(--gradient-base-accent-1);
-	border-radius: 2px;
+	border-radius: 4px;
 }
 
 .mobile-facets__label > svg:first-of-type {
@@ -1272,7 +1272,7 @@ div.mobile-facets__label {
   right: auto;
   left: 1.5rem;
   height: 0.7rem;
-  /*stroke: var(--gradient-base-background-4);*/
+  margin: 0;
 }
 
 .mobile-facets__label > input[type='checkbox']:checked ~ .icon-checkmark,
@@ -1307,8 +1307,8 @@ input.mobile-facets__checkbox {
   background-color: initial;
   border-radius: 50%;
   padding: 0;
-  margin-left: 12px;
-  border: 1px solid #fff;
+  margin-left: var(--grid-desktop-vertical-spacing);
+  border: 1px solid var(--gradient-base-background-2);
 }
 
 .mobile-facets__list {
@@ -1470,10 +1470,44 @@ div.החדשיםביותר {
 	}
 }
 
-span.mobile-facets__arrow-sorting {
-	display: block;
+.mobile-facets__arrow-sorting {
 	font-size: calc(var(--font-body-size-small) * 1.3);
-	margin-right: var(--grid-desktop-vertical-spacing);
+}
+
+details[open] .mobile-facets__arrow-sorting {
+	display: none;
+}
+
+details:not([open]) .mobile-facets__arrow-sorting {
+	display: block;
+}
+
+.mobile-facets__item-manual {
+	order: 1;
+}
+
+.mobile-facets__item-best-selling {
+	order: 2;
+}
+
+.mobile-facets__item-created-descending {
+	order: 3;
+}
+
+.mobile-facets__item-price-descending {
+	order: 4;
+}
+
+.mobile-facets__item-price-ascending {
+	order: 5;
+}
+
+.mobile-facets__arrow-sorting-sibling, .mobile-facets__arrow-sorting {
+	margin: 0;
+}
+
+summary .icon-caret {
+	top: 1.5em;
 }
 
 @media screen and (min-width: 990px) {

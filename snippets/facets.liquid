@@ -584,7 +584,7 @@
           {%- if enable_sorting -%}
           {%- endif -%}
           <div class="product-count light" role="status">
-            <h2 class="product-count__text text-body">
+            <h4 class="product-count__text text-body">
               <span id="ProductCountDesktop">
                 {%- if results.results_count -%}
                   {{ 'templates.search.results_with_count' | t: terms: results.terms, count: results.results_count }}
@@ -597,7 +597,7 @@
                   }}
                 {%- endif -%}
               </span>
-            </h2>
+            </h4>
             <div class="loading-overlay__spinner">
               <svg
                   aria-hidden="true"
@@ -706,10 +706,12 @@
                     >
                         <summary class="mobile-facets__summary focus-inset">
                             <div>
-                            <span>
-                              {{ 'products.facets.sort_by_label' | t }}
-                            </span>
-                                <span class="mobile-facets__arrow-sorting"></span>
+                                <div class="filter-title-container">
+                                    <p class="mobile-facets__arrow-sorting-sibling">
+                                        {{ 'products.facets.sort_by_label' | t }}
+                                    </p>
+                                    <p class="mobile-facets__arrow-sorting"></p>
+                                </div>
                                 <span class="mobile-facets__arrow no-js-hidden">{% render 'icon-caret' %}</span>
                                 <noscript>{% render 'icon-caret' %}</noscript>
                             </div>
@@ -721,7 +723,7 @@
                             <ul class="mobile-facets__list list-unstyled" role="list">
                                 {%- for option in results.sort_options -%}
                                     {% unless option.value == 'title-descending' or option.value == 'title-ascending' or option.value == 'created-ascending' %}
-                                    <li class="mobile-facets__item list-menu__item">
+                                    <li class="mobile-facets__item list-menu__item mobile-facets__item-{{ option.value }}">
                                         <label
                                                 for="sort_by_{{ option.value | escape }}"
                                                 class="mobile-facets__label{% if value.count == 0 and value.active == false %} mobile-facets__label--disabled{% endif %}"
@@ -798,14 +800,14 @@
                       >
                         <summary class="mobile-facets__summary focus-inset">
                           <div>
-                            <span>
+                            <p class="mobile-facets__arrow-sorting-sibling">
                               {%- if filter.label == "Product type" -%}
                                 {{ 'products.facets.product_type' | t }}
                               {%- else -%}
                                 {{ filter.label | escape }}
                               {%- endif -%}
-                            </span>
-                            <span class="mobile-facets__arrow no-js-hidden">{% render 'icon-caret' %}</span>
+                            </p>
+                            <p class="mobile-facets__arrow no-js-hidden">{% render 'icon-caret' %}</p>
                             <noscript>{% render 'icon-caret' %}</noscript>
                           </div>
                         </summary>
@@ -834,7 +836,7 @@
                                       name="{{ value.param_name }}"
                                       value="{{ value.value }}"
                                       id="Filter-{{ filter.param_name | escape }}-mobile-{{ forloop.index }}"
-                                      {% if value.active %}
+                                      {% if value.active or value.value == '1' %}
                                         checked
                                       {% endif %}
                                       {% if value.count == 0 and value.active == false %}
@@ -1039,11 +1041,7 @@
                     class="no-js-hidden button button--primary {% if total_active_values < 1 %}button--disabled{% else %}{% endif %}"
                     onclick="this.closest('.mobile-facets__wrapper').querySelector('summary').click()"
                 >
-                    {% if total_active_values < 1 %}
-                    {{ 'products.facets.select_more_filters' | t }}
-                    {% else %}
                   {{ 'products.facets.apply' | t }}
-                    {% endif %}
                 </button>
                 <noscript
                 ><button class="button button--primary">{{ 'products.facets.apply' | t }}</button></noscript
@@ -1138,7 +1136,7 @@
       class="product-count light{% if filter_type == 'vertical' or filter_type == 'horizontal' %} medium-hide large-up-hide{% endif %}"
       role="status"
   >
-    <h2 class="product-count__text text-body">
+    <h4 class="product-count__text text-body">
       <span id="ProductCount">
         {%- if results.results_count -%}
           {{ 'templates.search.results_with_count' | t: terms: results.terms, count: results.results_count }}
@@ -1151,7 +1149,7 @@
           }}
         {%- endif -%}
       </span>
-    </h2>
+    </h4>
     <div class="loading-overlay__spinner">
       <svg
           aria-hidden="true"

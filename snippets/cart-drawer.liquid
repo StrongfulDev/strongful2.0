@@ -50,7 +50,7 @@
                     <div class="drawer__inner-empty">
                         <div class="cart-drawer__warnings center{% if settings.cart_drawer_collection != blank %} cart-drawer__warnings--has-collection{% endif %}">
                             <div class="cart-drawer__empty-content">
-                                <h2 class="cart__empty-text bold">{{ 'sections.cart.empty' | t }}</h2>
+                                <h4 class="cart__empty-text bold">{{ 'sections.cart.empty' | t }}</h4>
                                 <p class="cart__empty-paragraph">{{ 'sections.cart.empty_paragraph' | t }}</p>
                                 <button
                                         class="drawer__close"
@@ -469,7 +469,7 @@
                                     <span class="benefits-amount">{{ discount | money_with_currency }}</span>
                                 </div>
                             {% endif %}
-                                <h2 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}:</h2>
+                                <p class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}:</p>
                             <div class="totals__value flex
                                 {% if customCartOriginalTotalPrice > cart.total_price %}price__sale price--on-sale{% endif %}">
                                 {% if customCartOriginalTotalPrice > cart.total_price %}

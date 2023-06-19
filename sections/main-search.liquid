@@ -167,7 +167,7 @@
           </div>
 
           <div class="product-count-vertical light" role="status">
-            <h2 class="product-count__text text-body">
+            <h4 class="product-count__text text-body">
               <span id="ProductCountDesktop">
                 {%- if search.results_count -%}
                   {{ 'templates.search.results_with_count' | t: terms: search.terms, count: search.results_count }}
@@ -177,7 +177,7 @@
                   {{ 'products.facets.product_count' | t: product_count: search.products_count, count: search.all_products_count }}
                 {%- endif -%}
               </span>
-            </h2>
+            </h4>
             <div class="loading-overlay__spinner">
               <svg aria-hidden="true" focusable="false" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
                 <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
