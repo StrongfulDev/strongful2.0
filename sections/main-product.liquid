@@ -7,6 +7,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
 	if content_for_header contains 'yoast-active-script'
 		assign disabled_by_yoast_seo = false
 	endif
+    assign myBlock = section.blocks | where: 'id', 'e290d1ee-22d0-4ae8-9219-8d77d6585fae' | first
 -%}
 {% assign loyaltyPoints = product.price | divided_by: 100 %}
 {% assign loyaltyPointsPlus = loyaltyPoints | times: 1.25 %}
@@ -174,6 +175,45 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                     </a>
                                 </div>
                             {% endif %}
+                        {%- when 'inventory' -%}
+                        <p class="product__inventory no-js-hidden fix-direction
+                                    {% if block.settings.text_style == 'uppercase' %}
+                                     caption-with-letter-spacing
+                                    {% elsif block.settings.text_style == 'subtitle' %}
+                                     subtitle
+                                    {% endif %}
+                                    {% if product.selected_or_first_available_variant.inventory_management != 'shopify' %}
+                                     visibility-hidden
+                                    {% endif %}"
+                                {{ block.shopify_attributes }}
+                                id="Inventory-{{ section.id }}"
+                           data-block-id="{{ block.id }}"
+                                role="status"
+                        >
+                            {%- if product.selected_or_first_available_variant.inventory_management == 'shopify' -%}
+                                {%- if product.selected_or_first_available_variant.inventory_quantity < block.settings.minimum_inventory_to_show -%}
+                                    {%- if product.selected_or_first_available_variant.inventory_quantity <= block.settings.inventory_threshold -%}
+                                        {%- if block.settings.show_inventory_quantity -%}
+                                            {{- 'products.product.inventory_low_stock_show_count' | t: quantity: product.selected_or_first_available_variant.inventory_quantity -}}
+                                        {%- else -%}
+                                            {{- 'products.product.inventory_low_stock' | t -}}
+                                        {%- endif -%}
+                                    {%- else -%}
+                                        {%- if block.settings.show_inventory_quantity -%}
+                                            {{- 'products.product.inventory_in_stock_show_count' | t: quantity: product.selected_or_first_available_variant.inventory_quantity -}}
+                                        {%- else -%}
+                                            {{- 'products.product.inventory_in_stock' | t -}}
+                                        {%- endif -%}
+                                    {%- endif -%}
+                                {%- else -%}
+                                    {%- if product.selected_or_first_available_variant.inventory_policy == 'continue' -%}
+                                        {{- 'products.product.inventory_out_of_stock_continue_selling' | t -}}
+                                    {%- elsif product.selected_or_first_available_variant.inventory_quantity < 1 -%}
+                                        {{- 'products.product.inventory_out_of_stock' | t -}}
+                                    {%- endif -%}
+                                {%- endif -%}
+                            {%- endif -%}
+                        </p>
                         {%- when 'sku' -%}
                             <p
                                     class="product__sku no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
@@ -306,47 +346,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                             %}
 
                         {%- when 'variant_picker' -%}
-                            {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
-                        {% if section.settings.enable_inventory_threshold %}
-                        <p
-                                class="product__inventory no-js-hidden fix-direction
-                                    {% if block.settings.text_style == 'uppercase' %}
-                                     caption-with-letter-spacing
-                                    {% elsif block.settings.text_style == 'subtitle' %}
-                                     subtitle
-                                    {% endif %}
-                                    {% if product.selected_or_first_available_variant.inventory_management != 'shopify' %}
-                                     visibility-hidden
-                                    {% endif %}"
-                                {{ block.shopify_attributes }}
-                                id="Inventory-{{ section.id }}"
-                                role="status"
-                        >
-                            {%- if product.selected_or_first_available_variant.inventory_management == 'shopify' -%}
-                                {%- if product.selected_or_first_available_variant.inventory_quantity < block.settings.minimum_inventory_to_show -%}
-                                    {%- if product.selected_or_first_available_variant.inventory_quantity <= block.settings.inventory_threshold -%}
-                                        {%- if block.settings.show_inventory_quantity -%}
-                                            {{- 'products.product.inventory_low_stock_show_count' | t: quantity: product.selected_or_first_available_variant.inventory_quantity -}}
-                                        {%- else -%}
-                                            {{- 'products.product.inventory_low_stock' | t -}}
-                                        {%- endif -%}
-                                    {%- else -%}
-                                        {%- if block.settings.show_inventory_quantity -%}
-                                            {{- 'products.product.inventory_in_stock_show_count' | t: quantity: product.selected_or_first_available_variant.inventory_quantity -}}
-                                        {%- else -%}
-                                            {{- 'products.product.inventory_in_stock' | t -}}
-                                        {%- endif -%}
-                                    {%- endif -%}
-                                {%- else -%}
-                                    {%- if product.selected_or_first_available_variant.inventory_policy == 'continue' -%}
-                                        {{- 'products.product.inventory_out_of_stock_continue_selling' | t -}}
-                                    {%- elsif product.selected_or_first_available_variant.inventory_quantity < 1 -%}
-                                        {{- 'products.product.inventory_out_of_stock' | t -}}
-                                    {%- endif -%}
-                                {%- endif -%}
-                            {%- endif -%}
-                        </p>
-                        {% endif %}
+                            {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id, section_block: myBlock %}
                         {%- when 'buy_buttons' -%}
                             {%- render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true -%}
                         {%- when 'rating' -%}
@@ -2128,12 +2128,6 @@ You can learn more about this (and learn how to cleanly revert these changes) at
       "default": true,
       "label": "t:sections.main-product.settings.enable_sticky_info.label"
     },
-      {
-        "type": "checkbox",
-        "id": "enable_inventory_threshold",
-        "default": false,
-        "label": "t:sections.main-product.settings.enable_inventory_threshold.label"
-      },
     {
       "type": "header",
       "content": "t:sections.main-product.settings.header.content",

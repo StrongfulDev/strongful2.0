@@ -87,6 +87,43 @@
           {% render 'product-variant-options', product: product, option: option, block: block %}
         </fieldset>
       {%- endfor -%}
+        <p class="product__inventory no-js-hidden fix-direction
+                                    {% if section_block.settings.text_style == 'uppercase' %}
+                                     caption-with-letter-spacing
+                                    {% elsif section_block.settings.text_style == 'subtitle' %}
+                                     subtitle
+                                    {% endif %}
+                                    {% if product.selected_or_first_available_variant.inventory_management != 'shopify' %}
+                                     visibility-hidden
+                                    {% endif %}"
+                {{ section_block.shopify_attributes }}
+                id="Inventory-{{ section.id }}"
+                role="status"
+        >
+            {%- if product.selected_or_first_available_variant.inventory_management == 'shopify' -%}
+                {%- if product.selected_or_first_available_variant.inventory_quantity < section_block.settings.minimum_inventory_to_show -%}
+                    {%- if product.selected_or_first_available_variant.inventory_quantity <= section_block.settings.inventory_threshold -%}
+                        {%- if section_block.settings.show_inventory_quantity -%}
+                            {{- 'products.product.inventory_low_stock_show_count' | t: quantity: product.selected_or_first_available_variant.inventory_quantity -}}
+                        {%- else -%}
+                            {{- 'products.product.inventory_low_stock' | t -}}
+                        {%- endif -%}
+                    {%- else -%}
+                        {%- if section_block.settings.show_inventory_quantity -%}
+                            {{- 'products.product.inventory_in_stock_show_count' | t: quantity: product.selected_or_first_available_variant.inventory_quantity -}}
+                        {%- else -%}
+                            {{- 'products.product.inventory_in_stock' | t -}}
+                        {%- endif -%}
+                    {%- endif -%}
+                {%- else -%}
+                    {%- if product.selected_or_first_available_variant.inventory_policy == 'continue' -%}
+                        {{- 'products.product.inventory_out_of_stock_continue_selling' | t -}}
+                    {%- elsif product.selected_or_first_available_variant.inventory_quantity < 1 -%}
+                        {{- 'products.product.inventory_out_of_stock' | t -}}
+                    {%- endif -%}
+                {%- endif -%}
+            {%- endif -%}
+        </p>
         {% unless product.tags contains 'noSizeTable' %}
             <p class="size-table-toggler pointer">{{ 'products.product.size_table' | t }}</p>
         {% endunless %}
