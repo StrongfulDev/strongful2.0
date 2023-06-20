@@ -151,65 +151,6 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                     {{ form | payment_terms }}
                                 {%- endform -%}
                             </div>
-                        {%- when 'inventory' -%}
-                            <p
-                                    class="product__inventory no-js-hidden fix-direction{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"
-                                    {{ block.shopify_attributes }}
-                                    id="Inventory-{{ section.id }}"
-                                    role="status"
-                            >
-                                {%- if product.selected_or_first_available_variant.inventory_management == 'shopify' -%}
-                                    {%- if product.selected_or_first_available_variant.inventory_quantity < block.settings.minimum_inventory_to_show -%}
-                                        {%- if product.selected_or_first_available_variant.inventory_quantity <= block.settings.inventory_threshold -%}
-                                            <svg width="15" height="15" aria-hidden="true">
-                                                <circle cx="7.5" cy="7.5" r="7.5"
-                                                        fill="rgb(238,148,65, 0.3)"/>
-                                                <circle cx="7.5" cy="7.5" r="5"
-                                                        stroke="rgb(255, 255, 255)" stroke-width="1"
-                                                        fill="rgb(238,148,65)"/>
-                                            </svg>
-                                            {%- if block.settings.show_inventory_quantity -%}
-                                                {{- 'products.product.inventory_low_stock_show_count' | t: quantity: product.selected_or_first_available_variant.inventory_quantity -}}
-                                            {%- else -%}
-                                                {{- 'products.product.inventory_low_stock' | t -}}
-                                            {%- endif -%}
-                                        {%- else -%}
-                                            <svg width="15" height="15" aria-hidden="true" class="high-inventory-icon">
-                                                <circle cx="7.5" cy="7.5" r="7.5"
-                                                        fill="rgb(62,214,96, 0.3)"/>
-                                                <circle cx="7.5" cy="7.5" r="5"
-                                                        stroke="rgb(255, 255, 255)" stroke-width="1"
-                                                        fill="rgb(62,214,96)"/>
-                                            </svg>
-                                            {%- if block.settings.show_inventory_quantity -%}
-                                                {{- 'products.product.inventory_in_stock_show_count' | t: quantity: product.selected_or_first_available_variant.inventory_quantity -}}
-                                            {%- else -%}
-                                                {{- 'products.product.inventory_in_stock' | t -}}
-                                            {%- endif -%}
-                                        {%- endif -%}
-                                    {%- else -%}
-                                        {%- if product.selected_or_first_available_variant.inventory_policy == 'continue' -%}
-                                            <svg width="15" height="15" aria-hidden="true">
-                                                <circle cx="7.5" cy="7.5" r="7.5"
-                                                        fill="rgb(62,214,96, 0.3)"/>
-                                                <circle cx="7.5" cy="7.5" r="5"
-                                                        stroke="rgb(255, 255, 255)" stroke-width="1"
-                                                        fill="rgb(62,214,96)"/>
-                                            </svg>
-                                            {{- 'products.product.inventory_out_of_stock_continue_selling' | t -}}
-                                        {%- elsif product.selected_or_first_available_variant.inventory_quantity < 1 -%}
-                                            <svg width="15" height="15" aria-hidden="true">
-                                                <circle cx="7.5" cy="7.5" r="7.5"
-                                                        fill="rgb(200,200,200, 0.3)"/>
-                                                <circle cx="7.5" cy="7.5" r="5"
-                                                        stroke="rgb(255, 255, 255)" stroke-width="1"
-                                                        fill="rgb(200,200,200)"/>
-                                            </svg>
-                                            {{- 'products.product.inventory_out_of_stock' | t -}}
-                                        {%- endif -%}
-                                    {%- endif -%}
-                                {%- endif -%}
-                            </p>
                         {%- when 'description' -%}
                             {%- if product.description != blank -%}
                                 <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
@@ -366,6 +307,46 @@ You can learn more about this (and learn how to cleanly revert these changes) at
 
                         {%- when 'variant_picker' -%}
                             {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+                        {% if section.settings.enable_inventory_threshold %}
+                        <p
+                                class="product__inventory no-js-hidden fix-direction
+                                    {% if block.settings.text_style == 'uppercase' %}
+                                     caption-with-letter-spacing
+                                    {% elsif block.settings.text_style == 'subtitle' %}
+                                     subtitle
+                                    {% endif %}
+                                    {% if product.selected_or_first_available_variant.inventory_management != 'shopify' %}
+                                     visibility-hidden
+                                    {% endif %}"
+                                {{ block.shopify_attributes }}
+                                id="Inventory-{{ section.id }}"
+                                role="status"
+                        >
+                            {%- if product.selected_or_first_available_variant.inventory_management == 'shopify' -%}
+                                {%- if product.selected_or_first_available_variant.inventory_quantity < block.settings.minimum_inventory_to_show -%}
+                                    {%- if product.selected_or_first_available_variant.inventory_quantity <= block.settings.inventory_threshold -%}
+                                        {%- if block.settings.show_inventory_quantity -%}
+                                            {{- 'products.product.inventory_low_stock_show_count' | t: quantity: product.selected_or_first_available_variant.inventory_quantity -}}
+                                        {%- else -%}
+                                            {{- 'products.product.inventory_low_stock' | t -}}
+                                        {%- endif -%}
+                                    {%- else -%}
+                                        {%- if block.settings.show_inventory_quantity -%}
+                                            {{- 'products.product.inventory_in_stock_show_count' | t: quantity: product.selected_or_first_available_variant.inventory_quantity -}}
+                                        {%- else -%}
+                                            {{- 'products.product.inventory_in_stock' | t -}}
+                                        {%- endif -%}
+                                    {%- endif -%}
+                                {%- else -%}
+                                    {%- if product.selected_or_first_available_variant.inventory_policy == 'continue' -%}
+                                        {{- 'products.product.inventory_out_of_stock_continue_selling' | t -}}
+                                    {%- elsif product.selected_or_first_available_variant.inventory_quantity < 1 -%}
+                                        {{- 'products.product.inventory_out_of_stock' | t -}}
+                                    {%- endif -%}
+                                {%- endif -%}
+                            {%- endif -%}
+                        </p>
+                        {% endif %}
                         {%- when 'buy_buttons' -%}
                             {%- render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true -%}
                         {%- when 'rating' -%}
@@ -2147,6 +2128,12 @@ You can learn more about this (and learn how to cleanly revert these changes) at
       "default": true,
       "label": "t:sections.main-product.settings.enable_sticky_info.label"
     },
+      {
+        "type": "checkbox",
+        "id": "enable_inventory_threshold",
+        "default": false,
+        "label": "t:sections.main-product.settings.enable_inventory_threshold.label"
+      },
     {
       "type": "header",
       "content": "t:sections.main-product.settings.header.content",

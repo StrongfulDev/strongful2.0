@@ -33,7 +33,6 @@
         },
         "b55fdabd-3fe5-4fa2-b3ea-4aa1488491cd": {
           "type": "inventory",
-          "disabled": true,
           "settings": {
             "text_style": "body",
             "inventory_threshold": 10,
@@ -117,10 +116,11 @@
         "1b30499f-a9b2-4f41-bbad-151626bae3d0"
       ],
       "custom_css": [
-        ".yotpo-bottomline.pull-left.star-clickable {align-items: center;}"
+        ".yotpo-bottomline.pull-left.star-clickable {align-items: baseline;}"
       ],
       "settings": {
         "enable_sticky_info": true,
+        "enable_inventory_threshold": true,
         "media_size": "large",
         "constrain_to_viewport": false,
         "media_fit": "contain",

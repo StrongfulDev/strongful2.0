@@ -675,13 +675,13 @@ class SliderComponent extends HTMLElement {
     this.pageTotalElement = this.querySelector('.slider-counter--total');
     this.prevButton = this.querySelector('button[name="previous"]');
     this.nextButton = this.querySelector('button[name="next"]');
-		this.progressBar = this.querySelector('.slider-component-progress-bar');
-	  console.log(this.progressBar);
+		if (this.querySelector('.slider-component-progress-bar') !== null) {
+			this.progressBar = this.querySelector('.slider-component-progress-bar');
+		}
 
     if (!this.slider || !this.nextButton) return;
 
     this.initPages();
-	  this.moveProgressBar();
     const resizeObserver = new ResizeObserver(entries => this.initPages());
     resizeObserver.observe(this.slider);
 
@@ -714,6 +714,9 @@ class SliderComponent extends HTMLElement {
   update() {
     // Temporarily prevents unneeded updates resulting from variant changes
     // This should be refactored as part of https://github.com/Shopify/dawn/issues/2057
+
+	  this.moveProgressBar();
+
     if (!this.slider || !this.nextButton) return;
 
     const previousPage = this.currentPage;
@@ -744,8 +747,6 @@ class SliderComponent extends HTMLElement {
     } else {
       this.nextButton.removeAttribute('disabled');
     }
-
-	  this.moveProgressBar();
   }
 
   isSlideVisible(element, offset = 0) {
@@ -760,7 +761,6 @@ class SliderComponent extends HTMLElement {
     this.slider.scrollTo({
       left: this.slideScrollPosition
     });
-	  this.moveProgressBar();
   }
 }
 
