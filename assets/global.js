@@ -675,10 +675,13 @@ class SliderComponent extends HTMLElement {
     this.pageTotalElement = this.querySelector('.slider-counter--total');
     this.prevButton = this.querySelector('button[name="previous"]');
     this.nextButton = this.querySelector('button[name="next"]');
+		this.progressBar = this.querySelector('.slider-component-progress-bar');
+	  console.log(this.progressBar);
 
     if (!this.slider || !this.nextButton) return;
 
     this.initPages();
+	  this.moveProgressBar();
     const resizeObserver = new ResizeObserver(entries => this.initPages());
     resizeObserver.observe(this.slider);
 
@@ -700,6 +703,13 @@ class SliderComponent extends HTMLElement {
     this.sliderItems = this.querySelectorAll('[id^="Slide-"]');
     this.initPages();
   }
+
+	moveProgressBar() {
+		if (this.progressBar) {
+			this.progressBar.style.left = `${(this.currentPage - 1) * 100 / this.totalPages}%`;
+			this.progressBar.style.width = `${100 / this.totalPages}%`;
+		}
+	}
 
   update() {
     // Temporarily prevents unneeded updates resulting from variant changes
@@ -734,6 +744,8 @@ class SliderComponent extends HTMLElement {
     } else {
       this.nextButton.removeAttribute('disabled');
     }
+
+	  this.moveProgressBar();
   }
 
   isSlideVisible(element, offset = 0) {
@@ -748,6 +760,7 @@ class SliderComponent extends HTMLElement {
     this.slider.scrollTo({
       left: this.slideScrollPosition
     });
+	  this.moveProgressBar();
   }
 }
 

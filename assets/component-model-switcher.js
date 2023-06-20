@@ -58,6 +58,9 @@ window.addEventListener('DOMContentLoaded', function(e) {
 			const modelWearsSizeParagraphsToShow = $(document).find(`.model-wears-size[data-model="${modelSize}"]`);
 			const modelWearsSizeParagraphsToHide = $(document).find(`.model-wears-size:not([data-model="${modelSize}"])`);
 
+			let progressBar = document.querySelector('.slider-component-progress-bar');
+			$(progressBar).css('width', `calc(100% / ${imagesToShow.length})`);
+
 			if (imagesToShow.length > 0) {
 				imagesToHide.hide();
 				imagesToShow.show();
