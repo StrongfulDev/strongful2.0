@@ -7,6 +7,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
 	if content_for_header contains 'yoast-active-script'
 		assign disabled_by_yoast_seo = false
 	endif
+
     assign myBlock = section.blocks | where: 'id', 'e290d1ee-22d0-4ae8-9219-8d77d6585fae' | first
 -%}
 {% assign loyaltyPoints = product.price | divided_by: 100 %}
@@ -346,7 +347,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                             %}
 
                         {%- when 'variant_picker' -%}
-                            {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id, section_block: myBlock %}
+                            {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id, myBlock: myBlock %}
                         {%- when 'buy_buttons' -%}
                             {%- render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true -%}
                         {%- when 'rating' -%}

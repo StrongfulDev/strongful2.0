@@ -16,6 +16,7 @@
   %}
 {% endcomment %}
 {%- liquid
+
     assign variants_available_arr = product.variants | map: 'available'
     assign variants_option1_arr = product.variants | map: 'option1'
     assign variants_option2_arr = product.variants | map: 'option2'
@@ -26,6 +27,7 @@
     for variant in product.variants
         assign variant_id = variant.id
         endfor
+
 -%}
 
 {%- for value in option.values -%}
@@ -58,18 +60,12 @@
                     value="{{ value | escape }}"
                     form="{{ product_form_id }}"
                     data-variant-id="{{ variant_id }}"
-                    {% comment %}
-                    {% if option.selected_value == value %}
-                        checked
-                    {% endif %}
-                    {% endcomment %}
                     {% if option_disabled %}
                         {% comment %}disabled="disabled"{% endcomment %}
                         class="disabled disabled-variant-button"
                     {% endif %}
             >
             {% if option.name == "Color" or option.name == "צבע" %}
-                {% comment %} TODO: Inducate the option is disbled by taking into account all variant selections. add: {% if option_disabled %} disabled{% endif %} to classes{% endcomment %}
                 <label class="no-background color-variant-tile"
                        for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
                     <span style="background-color: {{  value }}">&nbsp;</span>
@@ -83,6 +79,45 @@
             {% if option_disabled %}
                 <svg class="soldout-variant-line"><line x1="0" y1="100%" x2="100%" y2="0" class="Styles__StrikethroughLine-sc-1hxn211-12 eJiSh"></line></svg>
                 {% endif %}
+
+            <p class="product__inventory no-js-hidden fix-direction
+               {% if myBlock.settings.text_style == 'uppercase' %}
+                caption-with-letter-spacing
+               {% elsif myBlock.settings.text_style == 'subtitle' %}
+                subtitle
+               {% endif %}
+               {% if product.selected_or_first_available_variant.inventory_management != 'shopify' %}
+                visibility-hidden
+               {% endif %}"
+                {{ myBlock.shopify_attributes }}
+                id="Inventory-{{ section.id }}"
+               data-varaint-title="{{ product.selected_or_first_available_variant.title }}"
+               role="status"
+            >
+            {%- if product.selected_or_first_available_variant.inventory_management == 'shopify' -%}
+                {%- if product.selected_or_first_available_variant.inventory_quantity < myBlock.settings.minimum_inventory_to_show -%}
+                    {%- if product.selected_or_first_available_variant.inventory_quantity <= myBlock.settings.inventory_threshold -%}
+                        {%- if myBlock.settings.show_inventory_quantity -%}
+                            {{- 'products.product.inventory_low_stock_show_count' | t: quantity: product.selected_or_first_available_variant.inventory_quantity -}}
+                        {%- else -%}
+                            {{- 'products.product.inventory_low_stock' | t -}}
+                        {%- endif -%}
+                    {%- else -%}
+                        {%- if myBlock.settings.show_inventory_quantity -%}
+                            {{- 'products.product.inventory_low_stock_show_count' | t: quantity: product.selected_or_first_available_variant.inventory_quantity -}}
+                        {%- else -%}
+                            {{- 'products.product.inventory_in_stock' | t -}}
+                        {%- endif -%}
+                    {%- endif -%}
+                {%- else -%}
+                    {%- if product.selected_or_first_available_variant.inventory_policy == 'continue' -%}
+                        {{- 'products.product.inventory_out_of_stock_continue_selling' | t -}}
+                    {%- elsif product.selected_or_first_available_variant.inventory_quantity < 1 -%}
+                        {{- 'products.product.inventory_out_of_stock' | t -}}
+                    {%- endif -%}
+                {%- endif -%}
+            {%- endif -%}
+        </p>
         </span>
     {%- elsif block.settings.picker_type == 'dropdown' -%}
         <option

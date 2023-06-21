@@ -35,7 +35,7 @@
           "type": "inventory",
           "settings": {
             "text_style": "body",
-            "inventory_threshold": 10,
+            "inventory_threshold": 100,
             "minimum_inventory_to_show": 20,
             "show_inventory_quantity": true
           }

@@ -1282,9 +1282,10 @@ a.product__text {
 /* Inventory status */
 
 .product__inventory {
-    display: flex;
+    display: none;
     align-items: center;
     gap: 0.5rem;
+	position: absolute;
 }
 
 .product--no-media .product__inventory {
@@ -1772,7 +1773,19 @@ li.grid--peek.slider .grid__item, li.product__media-item.grid__item.slider__slid
 	padding-bottom: 5em;
 }
 
+product-info > .product__inventory {
+	display: none;
+}
+
 @media screen and (min-width: 990px) {
+
+	.swiper-container {
+		padding: 1rem 0;
+	}
+
+	.product-badge__text {
+		font-size: 12px;
+	}
 
 	#product .footer {
 		padding-bottom: 7.5em;

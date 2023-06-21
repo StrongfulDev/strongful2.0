@@ -16,12 +16,21 @@ window.addEventListener('DOMContentLoaded', function(e) {
 			const modelSize = $(this).val();
 			changeModel(modelSize);
 			updateModelSwitch(modelSize);
+			showLowStock(this);
 		});
 
 		// const modelSize = localStorage.getItem('modelSize');
 		// if (modelSize) {
 		// 	changeModel(modelSize);
 		// }
+
+		function showLowStock(element) {
+			console.log(element);
+			let lowStockText = $(element).siblings(".product__inventory");
+			if (lowStockText.length > 0) {
+				lowStockText.show();
+			}
+		}
 
 		function hideUnAvailableModels() {
 			const availableSizes = getAvailableSizes();
