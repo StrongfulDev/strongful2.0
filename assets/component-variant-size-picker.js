@@ -14,9 +14,9 @@ window.addEventListener('DOMContentLoaded', function(event) {
 
 	$("#MainContent")
 		.on("click", '.variant_selector.submit_on_click .size_variant_button:not(.disabled-variant-button)', function (e) {
-			// let productPageIdentifier = document.querySelector(".products-product-size-picker");
 				$(this).find(".size_variant_button_add").hide();
 				$(this).find(".loading-overlay").css("display", "flex");
+				$(this).siblings().find(".loading-overlay").css("display", "none");
 				$(this).find(".loading-overlay__spinner").removeClass("hidden");
 				setTimeout(() => {
 					$(this).parents("form").find('[type="submit"]').click();
