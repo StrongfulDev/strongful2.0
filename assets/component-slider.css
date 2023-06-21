@@ -430,6 +430,10 @@ slider-component.slider-component-full-width {
     margin-left: 0;
 }
 
+.slider.slider--tablet.contains-card--standard .slider__slide:not(.collection-list__item--no-media):last-child {
+		margin-right: 0;
+}
+
 .full-unstyled-link {
     font-size: var(--font-body-size-medium);
 }
