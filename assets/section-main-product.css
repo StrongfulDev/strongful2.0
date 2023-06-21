@@ -1691,12 +1691,22 @@ variant-radios {
 	position: relative;
 }
 
+.size-table-stock-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
 .size-table-toggler {
 	font-size: var(--font-body-size-medium);
-	margin: 0;
-	width: fit-content;
 	color: var(--gradient-base-background-4);
 	text-decoration: underline;
+	margin: 0;
+	text-align: left;
+}
+
+.out-of-stock-explain {
+	grid-column: 1 / -1;
+	margin-top: var(--grid-desktop-vertical-spacing);
 }
 
 .gift-card-product-form__input {
