@@ -1532,6 +1532,11 @@ a.product__text {
     }
 }
 
+.out-of-stock.out-of-stock-explain {
+	grid-column: 1 / -1;
+	margin-top: var(--grid-desktop-vertical-spacing);
+}
+
 variant-radios fieldset {
     margin-left: auto;
 }
@@ -1702,11 +1707,6 @@ variant-radios {
 	text-decoration: underline;
 	margin: 0;
 	text-align: left;
-}
-
-.out-of-stock-explain {
-	grid-column: 1 / -1;
-	margin-top: var(--grid-desktop-vertical-spacing);
 }
 
 .gift-card-product-form__input {
@@ -1908,7 +1908,7 @@ product-info > .product__inventory {
 	}
 }
 
-.product__media-list + .slider-buttons button.slider-button {
+.product__column-sticky .slider-buttons button.slider-button {
 	height: 3.5rem;
 	width: 3.5rem;
 	padding: 0;
