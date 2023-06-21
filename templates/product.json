@@ -134,11 +134,43 @@
         "padding_bottom": 80
       }
     },
-    "complete-look-products": {
-      "type": "complete-look-products",
+    "e7a9b59b-79c7-43d1-8e8e-c5586eda96e8": {
+      "type": "featured-collection",
       "settings": {
-        "heading": "SHOP THE LOOK",
-        "heading_size": "h1"
+        "steps": 4,
+        "title": "SHOP THE LOOK",
+        "heading_size": "h1",
+        "heading_type": "heading_type_default",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "{{ product.metafields.global.new_shop_the_look.value }}",
+        "products_to_show": 14,
+        "columns_desktop": 4,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_text": "",
+        "view_all_style": "link",
+        "view_all_location": "bottom",
+        "enable_desktop_slider": true,
+        "show_peak": false,
+        "pagination_type": "sides",
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": false,
+        "show_sale_badge": false,
+        "enable_quick_add": true,
+        "quick_add_type": "hover",
+        "quick_add_type_mobile": "modal",
+        "quick_add_text": "הוספה מהירה",
+        "pick_size_text": "בחירת מידה",
+        "quick_add_accessories_text": "הוספה מהירה",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "6a92001a-1714-49ba-a6c2-ab5ee898262d": {
@@ -253,7 +285,7 @@
   },
   "order": [
     "main",
-    "complete-look-products",
+    "e7a9b59b-79c7-43d1-8e8e-c5586eda96e8",
     "6a92001a-1714-49ba-a6c2-ab5ee898262d",
     "daadfb7d-6377-46b9-9592-68ff753bf341",
     "related-products",
