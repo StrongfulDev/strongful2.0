@@ -175,6 +175,9 @@
     },
     "daadfb7d-6377-46b9-9592-68ff753bf341": {
       "type": "related-products-slider",
+      "custom_css": [
+        ".collection {}"
+      ],
       "settings": {
         "steps": 4,
         "title": "אולי תאהבי גם",

@@ -1799,12 +1799,15 @@ product-info > .product__inventory {
 		margin-top: 0;
 	}
 
-	section[id^="MainProduct"], .complete_look__slider, .related-products, .page-width {
+	section[id^="MainProduct"], .complete_look__slider, .related-products, .page-width, #product .collection {
 		max-width: calc(var(--page-width) * 0.8);
+		margin-left: auto;
+		margin-right: auto;
 	}
 
-	.complete_look__slider {
-		max-width: calc(var(--page-width) * 0.7);
+	#product .collection {
+		padding-left: 0;
+		padding-right: 0;
 	}
 
 	header.page-width {
