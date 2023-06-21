@@ -40,10 +40,14 @@
   margin-bottom: var(--media-shadow-vertical-offset);
 }
 
-.rte ul,
-.rte ol {
+.rte ul {
   list-style: none;
   padding-left: 0;
+	padding-right: 0;
+}
+
+.rte ol {
+	padding-left: 0;
 	padding-right: 0;
 }
 
