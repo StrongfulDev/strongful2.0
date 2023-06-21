@@ -16,7 +16,9 @@ window.addEventListener('DOMContentLoaded', function(e) {
 			const modelSize = $(this).val();
 			changeModel(modelSize);
 			updateModelSwitch(modelSize);
-			showLowStock(this);
+			if (window.innerWidth < 990) {
+				showLowStock(this);
+			}
 		});
 
 		// const modelSize = localStorage.getItem('modelSize');
@@ -25,9 +27,10 @@ window.addEventListener('DOMContentLoaded', function(e) {
 		// }
 
 		function showLowStock(element) {
-			console.log(element);
 			let lowStockText = $(element).siblings(".product__inventory");
-			if (lowStockText.length > 0) {
+			let otherLowStocks = $(element).parents().find(".product__inventory").not(lowStockText);
+			otherLowStocks.hide();
+			if (lowStockText.text() !== "") {
 				lowStockText.show();
 			}
 		}
@@ -116,5 +119,5 @@ window.addEventListener('DOMContentLoaded', function(e) {
 			$(this).addClass("hidden");
 			$("#model-switch").removeAttr("open");
 		});
-	}, 500);
+	}, 2000);
 });

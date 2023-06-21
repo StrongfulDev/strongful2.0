@@ -370,7 +370,7 @@ ul.default_variant_list {
 	inset: 0;
 	height: 90%;
 	width: 100%;
-	z-index: 9;
+	z-index: 3;
 	left: 0;
 	pointer-events: none;
 }
