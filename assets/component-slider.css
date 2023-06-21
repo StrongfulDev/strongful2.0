@@ -554,6 +554,10 @@ slider-component .discount-price-container * {
 	font-size: calc(var(--font-body-size-small) * 1.2);
 }
 
+#product .collection__title_heading .title, #product .collection__title_heading .title:not(:only-child) {
+	margin: auto;
+}
+
 @media screen and (min-width: 990px) {
 	.product__media-list li.product__media-item.grid__item.slider__slide:only-child {
 		margin-right: 0;
