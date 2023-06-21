@@ -979,7 +979,7 @@
       "payment_gateway": {
         "credit_card_label": "כרטיס אשראי",
         "bank_deposit_label": "העברה בנקאית",
-        "cash_on_delivery_label": "העברה בנקאית"
+        "cash_on_delivery_label": "תשלום במזומן"
       },
       "shipping_errors": {
         "shipping_method": "הסל שלך עודכן ושיטת המשלוח התעדכנה בהתאמה."
