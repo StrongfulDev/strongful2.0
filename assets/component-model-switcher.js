@@ -116,5 +116,5 @@ window.addEventListener('DOMContentLoaded', function(e) {
 			$(this).addClass("hidden");
 			$("#model-switch").removeAttr("open");
 		});
-	}, 2000);
+	}, 500);
 });
