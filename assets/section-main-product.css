@@ -1774,6 +1774,14 @@ li.grid--peek.slider .grid__item, li.product__media-item.grid__item.slider__slid
 
 @media screen and (min-width: 990px) {
 
+	.swiper-container {
+		padding: 1rem 0;
+	}
+
+	.product-badge__text {
+		font-size: 12px;
+	}
+
 	#product .footer {
 		padding-bottom: 7.5em;
 	}

@@ -63,6 +63,13 @@
             "alt_text": "Image block"
           }
         },
+        "1b30499f-a9b2-4f41-bbad-151626bae3d0": {
+          "type": "swiper",
+          "settings": {
+            "swiper_preset": "shipping_returns",
+            "swiper_delay": 3
+          }
+        },
         "679aaa7e-cf01-48c6-85e3-b35a4a905d19": {
           "type": "collapsible_tab",
           "settings": {
@@ -92,13 +99,6 @@
             "page": "",
             "icon": "none"
           }
-        },
-        "1b30499f-a9b2-4f41-bbad-151626bae3d0": {
-          "type": "swiper",
-          "settings": {
-            "swiper_preset": "shipping_returns",
-            "swiper_delay": 3
-          }
         }
       },
       "block_order": [
@@ -111,10 +111,10 @@
         "quantity_selector",
         "buy_buttons",
         "5ae0b953-0e37-48c5-b5cc-e50d6004b25c",
+        "1b30499f-a9b2-4f41-bbad-151626bae3d0",
         "679aaa7e-cf01-48c6-85e3-b35a4a905d19",
         "ef2147de-71f3-41a2-ac7d-bf55352b85a5",
-        "6bb9c7f3-70b8-4986-9a85-148874103e99",
-        "1b30499f-a9b2-4f41-bbad-151626bae3d0"
+        "6bb9c7f3-70b8-4986-9a85-148874103e99"
       ],
       "custom_css": [
         ".yotpo-bottomline.pull-left.star-clickable {align-items: center;}"
