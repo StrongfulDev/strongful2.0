@@ -1245,8 +1245,4 @@ function checkUrl() {
 	}
 }
 
-// check if page was loaded from back button
-if (window.performance && window.performance.navigation.type === window.performance.navigation.TYPE_BACK_FORWARD) {
-	// window.location.reload();
-	checkUrl();
-}
+checkUrl();
