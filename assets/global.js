@@ -1233,3 +1233,20 @@ function getViewportHeight() {
 window.addEventListener('resize', getViewportHeight);
 
 getViewportHeight();
+
+// check the previous window url
+function checkUrl() {
+	let previousUrl = sessionStorage.getItem('previousUrl');
+	console.log(previousUrl)
+	if (previousUrl) {
+		if (previousUrl.includes('checkout')) {
+			window.location.reload();
+		}
+	}
+}
+
+// check if page was loaded from back button
+if (window.performance && window.performance.navigation.type === window.performance.navigation.TYPE_BACK_FORWARD) {
+	// window.location.reload();
+	checkUrl();
+}
