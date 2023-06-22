@@ -208,8 +208,8 @@ cart-drawer {
 .cart-drawer .cart-items, .cart-drawer tbody {
 	display: block;
 	width: 100%;
-	max-height: 68%;
-	max-height: calc(var(--vh, 1%) * 64);
+	height: 68%;
+	height: calc(var(--vh, 1%) * 64);
 	overflow-y: scroll;
 }
 
