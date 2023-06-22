@@ -209,7 +209,7 @@ cart-drawer {
 	display: block;
 	width: 100%;
 	max-height: 68%;
-	max-height: calc(var(--vh, 1%) * 66);
+	max-height: calc(var(--vh, 1%) * 64);
 	overflow-y: scroll;
 }
 
