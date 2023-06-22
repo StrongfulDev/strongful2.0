@@ -1237,7 +1237,6 @@ getViewportHeight();
 // check the previous window url
 function checkUrl() {
 	let previousUrl = sessionStorage.getItem('previousUrl');
-	console.log(previousUrl)
 	if (previousUrl) {
 		if (previousUrl.includes('checkout')) {
 			window.location.reload();
