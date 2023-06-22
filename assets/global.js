@@ -1234,14 +1234,14 @@ window.addEventListener('resize', getViewportHeight);
 
 getViewportHeight();
 
-function checkUrl() {
-	let previousUrl = sessionStorage.getItem('previousUrl');
-	console.log(previousUrl)
-	if (previousUrl) {
-		if (previousUrl.includes('checkout')) {
-			window.location.reload();
-		}
-	}
-}
-
-checkUrl();
+// function checkUrl() {
+// 	let previousUrl = sessionStorage.getItem('previousUrl');
+// 	console.log(previousUrl)
+// 	if (previousUrl) {
+// 		if (previousUrl.includes('checkout')) {
+// 			window.location.reload();
+// 		}
+// 	}
+// }
+//
+// checkUrl();
