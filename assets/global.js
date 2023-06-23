@@ -682,6 +682,7 @@ class SliderComponent extends HTMLElement {
     if (!this.slider || !this.nextButton) return;
 
     this.initPages();
+	  this.moveProgressBar();
     const resizeObserver = new ResizeObserver(entries => this.initPages());
     resizeObserver.observe(this.slider);
 
