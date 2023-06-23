@@ -374,10 +374,8 @@ You can learn more about this (and learn how to cleanly revert these changes) at
 
 <body class="gradient" id="{{ template.name }}">
 
-<!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NS9ZW7H"
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
 <div class="loader-wrapper">
     <img src="https://cdn.shopify.com/s/files/1/0574/2995/0671/files/logo_white.png?v=1636381426"
@@ -396,7 +394,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
 
 <main
         id="MainContent"
-        class="content-for-layout focus-none"
+        class="content-for-layout focus-none {{ template.name }}"
         role="main"
         tabindex="-1">
     {{ content_for_layout }}
