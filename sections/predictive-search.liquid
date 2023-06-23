@@ -82,27 +82,51 @@
               </h2>
               <ul id="predictive-search-results-products-list" class="predictive-search__results-list list-unstyled" role="group" aria-labelledby="predictive-search-products">
                 {%- for product in predictive_search.resources.products limit:2 -%}
-                    {% unless product.tags contains 'giftHide' %}
-                  <li id="predictive-search-option-product-{{ forloop.index }}" class="predictive-search__list-item" role="option" aria-selected="false">
-                      {% render 'card-product',
-                              card_product: product,
-                              media_aspect_ratio: settings.image_ratio,
-                              show_secondary_image: settings.show_secondary_image,
-                              show_vendor: settings.show_vendor,
-                              show_rating: settings.show_rating,
-                              show_quick_add: settings.enable_quick_add,
-                              quick_add_type: settings.quick_add_type,
-                              quick_add_type_mobile: settings.quick_add_type_mobile,
-                              image_count: settings.image_count,
-                              card_banner_text: settings.custom_collection_announcement,
-                              card_header_size: settings.card_header_size,
-                              announcement_tag: settings.announcement_tag,
-                              pick_size_text: settings.pick_size_text,
-                              quick_add_text: settings.quick_add_text,
-                              quick_add_accessories_text: settings.quick_add_accessories_text
-                      %}
-                  </li>
-                  {% endunless %}
+                    {% if isLiveTheme == 'true' %}
+                        {% unless product.tags contains 'giftHide' or product.tags contains 'hidden' %}
+                            <li id="predictive-search-option-product-{{ forloop.index }}" class="predictive-search__list-item" role="option" aria-selected="false">
+                                {% render 'card-product',
+                                        card_product: product,
+                                        media_aspect_ratio: settings.image_ratio,
+                                        show_secondary_image: settings.show_secondary_image,
+                                        show_vendor: settings.show_vendor,
+                                        show_rating: settings.show_rating,
+                                        show_quick_add: settings.enable_quick_add,
+                                        quick_add_type: settings.quick_add_type,
+                                        quick_add_type_mobile: settings.quick_add_type_mobile,
+                                        image_count: settings.image_count,
+                                        card_banner_text: settings.custom_collection_announcement,
+                                        card_header_size: settings.card_header_size,
+                                        announcement_tag: settings.announcement_tag,
+                                        pick_size_text: settings.pick_size_text,
+                                        quick_add_text: settings.quick_add_text,
+                                        quick_add_accessories_text: settings.quick_add_accessories_text
+                                %}
+                            </li>
+                        {% endunless %}
+                    {% else %}
+                        {% unless product.tags contains 'giftHide' %}
+                            <li id="predictive-search-option-product-{{ forloop.index }}" class="predictive-search__list-item" role="option" aria-selected="false">
+                                {% render 'card-product',
+                                        card_product: product,
+                                        media_aspect_ratio: settings.image_ratio,
+                                        show_secondary_image: settings.show_secondary_image,
+                                        show_vendor: settings.show_vendor,
+                                        show_rating: settings.show_rating,
+                                        show_quick_add: settings.enable_quick_add,
+                                        quick_add_type: settings.quick_add_type,
+                                        quick_add_type_mobile: settings.quick_add_type_mobile,
+                                        image_count: settings.image_count,
+                                        card_banner_text: settings.custom_collection_announcement,
+                                        card_header_size: settings.card_header_size,
+                                        announcement_tag: settings.announcement_tag,
+                                        pick_size_text: settings.pick_size_text,
+                                        quick_add_text: settings.quick_add_text,
+                                        quick_add_accessories_text: settings.quick_add_accessories_text
+                                %}
+                            </li>
+                        {% endunless %}
+                    {% endif %}
                 {%- endfor -%}
               </ul>
             </div>

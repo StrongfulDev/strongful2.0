@@ -34,17 +34,33 @@
     {% for collection in collections %}
         {% if collection.title == similarParent or collection.title == similarParent.value %}
             {% for product in collection.products %}
-                <li class="relative-discount similiar-child {% if product.tags contains 'special-edition' %}special-edition{% elsif product.tags contains 'special-edition-family' %}special-edition-sibling{% endif %} {{ forloop.index0 }}">
-                    <a href="{{ product.url }}" class="similar-a">
-                        <img src="{{ product.featured_image | product_img_url: 'master' }}"
-                             srcset="{{ product.featured_image | product_img_url: '200x' }} 200w,
+                {% if isLiveTheme == 'true' %}
+                {% unless product.tags contains 'hidden' %}
+                    <li class="relative-discount similiar-child {% if product.tags contains 'special-edition' %}special-edition{% elsif product.tags contains 'special-edition-family' %}special-edition-sibling{% endif %} {{ forloop.index0 }}">
+                        <a href="{{ product.url }}" class="similar-a">
+                            <img src="{{ product.featured_image | product_img_url: 'master' }}"
+                                 srcset="{{ product.featured_image | product_img_url: '200x' }} 200w,
                     {{ product.featured_image | product_img_url: '300x' }} 300w,
                     {{ product.featured_image | product_img_url: '400x' }} 400w,
                     {{ product.featured_image | product_img_url: '600x' }} 600w"
-                             alt="{{ product.title | escape }}" class="similar-child-img" loading="lazy"/>
-                    </a>
-                    <p class="productVendor">{{ product.vendor }}</p>
-                </li>
+                                 alt="{{ product.title | escape }}" class="similar-child-img" loading="lazy"/>
+                        </a>
+                        <p class="productVendor">{{ product.vendor }}</p>
+                    </li>
+                {% endunless %}
+                {% else %}
+                    <li class="relative-discount similiar-child {% if product.tags contains 'special-edition' %}special-edition{% elsif product.tags contains 'special-edition-family' %}special-edition-sibling{% endif %} {{ forloop.index0 }}">
+                        <a href="{{ product.url }}" class="similar-a">
+                            <img src="{{ product.featured_image | product_img_url: 'master' }}"
+                                 srcset="{{ product.featured_image | product_img_url: '200x' }} 200w,
+                    {{ product.featured_image | product_img_url: '300x' }} 300w,
+                    {{ product.featured_image | product_img_url: '400x' }} 400w,
+                    {{ product.featured_image | product_img_url: '600x' }} 600w"
+                                 alt="{{ product.title | escape }}" class="similar-child-img" loading="lazy"/>
+                        </a>
+                        <p class="productVendor">{{ product.vendor }}</p>
+                    </li>
+                {% endif %}
             {% endfor %}
         {% endif %}
     {% endfor %}

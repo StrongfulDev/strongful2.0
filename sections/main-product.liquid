@@ -423,23 +423,43 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                                                 <ul class="list-unstyled"
                                                                     role="list">
                                                                     {%- for product in recommendations.products limit: block.settings.products_per_page offset: continue -%}
-                                                                        {% unless product.tags contains 'giftHide' %}
-                                                                        <li>
-                                                                            {% render 'card-product',
-                                                                                    card_product: product,
-                                                                                    media_aspect_ratio: block.settings.image_ratio,
-                                                                                    show_secondary_image: false,
-                                                                                    lazy_load: false,
-                                                                                    show_quick_add: block.settings.enable_quick_add,
-                                                                                    section_id: section.id,
-                                                                                    horizontal_class: true,
-                                                                                    horizontal_quick_add: true,
-                                                                                    pick_size_text: section.settings.pick_size_text,
-                                                                                    quick_add_text: section.settings.quick_add_text,
-                                                                                    quick_add_accessories_text: section.settings.quick_add_accessories_text
-                                                                            %}
-                                                                        </li>
-                                                                    {% endunless %}
+                                                                        {% if isLiveTheme == 'true' %}
+                                                                            {% unless product.tags contains 'giftHide' or product.tags contains 'hidden' %}
+                                                                                <li>
+                                                                                    {% render 'card-product',
+                                                                                            card_product: product,
+                                                                                            media_aspect_ratio: block.settings.image_ratio,
+                                                                                            show_secondary_image: false,
+                                                                                            lazy_load: false,
+                                                                                            show_quick_add: block.settings.enable_quick_add,
+                                                                                            section_id: section.id,
+                                                                                            horizontal_class: true,
+                                                                                            horizontal_quick_add: true,
+                                                                                            pick_size_text: section.settings.pick_size_text,
+                                                                                            quick_add_text: section.settings.quick_add_text,
+                                                                                            quick_add_accessories_text: section.settings.quick_add_accessories_text
+                                                                                    %}
+                                                                                </li>
+                                                                            {% endunless %}
+                                                                        {% else %}
+                                                                            {% unless product.tags contains 'giftHide' %}
+                                                                                <li>
+                                                                                    {% render 'card-product',
+                                                                                            card_product: product,
+                                                                                            media_aspect_ratio: block.settings.image_ratio,
+                                                                                            show_secondary_image: false,
+                                                                                            lazy_load: false,
+                                                                                            show_quick_add: block.settings.enable_quick_add,
+                                                                                            section_id: section.id,
+                                                                                            horizontal_class: true,
+                                                                                            horizontal_quick_add: true,
+                                                                                            pick_size_text: section.settings.pick_size_text,
+                                                                                            quick_add_text: section.settings.quick_add_text,
+                                                                                            quick_add_accessories_text: section.settings.quick_add_accessories_text
+                                                                                    %}
+                                                                                </li>
+                                                                            {% endunless %}
+                                                                        {% endif %}
                                                                     {%- endfor -%}
                                                                 </ul>
                                                             </div>

@@ -373,7 +373,16 @@ You can learn more about this (and learn how to cleanly revert these changes) at
   <script src="https://cdn-widgetsrepository.yotpo.com/v1/loader/qGZpUcqW7-E2nBL0lvSZUA" async></script>
 </head>
 
-<body class="gradient" id="{{ template.name }}">
+  {% assign isLiveTheme = 'false' %}
+  {% if content_for_header contains "previewBarInjector.init();" %}
+      {% assign isLiveTheme = 'false' %}
+  {% elsif content_for_header contains "Shopify.designMode" %}
+      {% assign isLiveTheme = 'false' %}
+  {% else %}
+      {% assign isLiveTheme = 'true' %}
+  {% endif %}
+
+<body class="gradient {{ isLiveTheme }}" id="{{ template.name }}">
 
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NS9ZW7H"
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

@@ -180,29 +180,55 @@
                                         endif
                                     endif
                                 -%}
-                                {% unless product.tags contains 'giftHide' %}
-                                <li class="grid__item">
-                                    {% render 'card-product',
-                                            card_product: product,
-                                            media_aspect_ratio: section.settings.image_ratio,
-                                            show_secondary_image: section.settings.show_secondary_image,
-                                            show_vendor: section.settings.show_vendor,
-                                            show_rating: section.settings.show_rating,
-                                            lazy_load: lazy_load,
-                                            show_quick_add: section.settings.enable_quick_add,
-                                            quick_add_type: section.settings.quick_add_type,
-                                            quick_add_type_mobile: section.settings.quick_add_type_mobile,
-                                            section_id: section.id,
-                                            image_count: section.settings.image_count,
-                                            card_banner_text: card_announcement,
-                                            card_header_size: section.settings.card_header_size,
-                                        announcement_tag: section.settings.announcement_tag,
-                                            pick_size_text: section.settings.pick_size_text,
-                                            quick_add_text: section.settings.quick_add_text,
-                                            quick_add_accessories_text: section.settings.quick_add_accessories_text
-                                    %}
-                                </li>
-                                {% endunless %}
+                                {% if isLiveTheme == 'true' %}
+                                    {% unless product.tags contains 'giftHide' or product.tags contains 'hidden' %}
+                                        <li class="grid__item">
+                                            {% render 'card-product',
+                                                    card_product: product,
+                                                    media_aspect_ratio: section.settings.image_ratio,
+                                                    show_secondary_image: section.settings.show_secondary_image,
+                                                    show_vendor: section.settings.show_vendor,
+                                                    show_rating: section.settings.show_rating,
+                                                    lazy_load: lazy_load,
+                                                    show_quick_add: section.settings.enable_quick_add,
+                                                    quick_add_type: section.settings.quick_add_type,
+                                                    quick_add_type_mobile: section.settings.quick_add_type_mobile,
+                                                    section_id: section.id,
+                                                    image_count: section.settings.image_count,
+                                                    card_banner_text: card_announcement,
+                                                    card_header_size: section.settings.card_header_size,
+                                                announcement_tag: section.settings.announcement_tag,
+                                                    pick_size_text: section.settings.pick_size_text,
+                                                    quick_add_text: section.settings.quick_add_text,
+                                                    quick_add_accessories_text: section.settings.quick_add_accessories_text
+                                            %}
+                                        </li>
+                                    {% endunless %}
+                                {% else %}
+                                    {% unless product.tags contains 'giftHide' %}
+                                        <li class="grid__item">
+                                            {% render 'card-product',
+                                                    card_product: product,
+                                                    media_aspect_ratio: section.settings.image_ratio,
+                                                    show_secondary_image: section.settings.show_secondary_image,
+                                                    show_vendor: section.settings.show_vendor,
+                                                    show_rating: section.settings.show_rating,
+                                                    lazy_load: lazy_load,
+                                                    show_quick_add: section.settings.enable_quick_add,
+                                                    quick_add_type: section.settings.quick_add_type,
+                                                    quick_add_type_mobile: section.settings.quick_add_type_mobile,
+                                                    section_id: section.id,
+                                                    image_count: section.settings.image_count,
+                                                    card_banner_text: card_announcement,
+                                                    card_header_size: section.settings.card_header_size,
+                                                    announcement_tag: section.settings.announcement_tag,
+                                                    pick_size_text: section.settings.pick_size_text,
+                                                    quick_add_text: section.settings.quick_add_text,
+                                                    quick_add_accessories_text: section.settings.quick_add_accessories_text
+                                            %}
+                                        </li>
+                                        {% endunless %}
+                                {% endif %}
                             {%- endfor -%}
                         </ul>
 
