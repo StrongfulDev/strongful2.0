@@ -136,6 +136,7 @@
     flex-direction: column;
     width: 100%;
 	padding-bottom: 4rem;
+	margin-top: 0;
 }
 
 .variant_modal .product_variants li {
@@ -363,6 +364,11 @@ ul.default_variant_list {
 	stroke: var(--color-foreground);
 	stroke-width: 1px;
 	display: none;
+}
+
+.product_size_picker__button__label-span {
+	display: flex;
+	align-items: center;
 }
 
 .soldout-variant-line {
