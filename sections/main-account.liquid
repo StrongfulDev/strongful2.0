@@ -166,7 +166,7 @@
 
               <div class="main-account-info-container main-account-info-container--support desktop--only">
                   <h2 class="container-title bold">{{ 'customer.account.support.title' | t }}</h2>
-                  <a href="{{ routes.account_logout_url }}" class="container-menu-item container-menu-item-logout pointer">
+                  <a href="{{ routes.account_logout_url }}" class="container-menu-item container-menu-item-logout pointer underlined-link">
                       {{ 'customer.account.not_customer' | t: name: customer.name }} {{ 'customer.log_out' | t }}
                       {% render 'icon-caret' %}
                   </a>
@@ -295,8 +295,8 @@
                                                               <div class="properties">
                                                                   {%- unless line_item.product.has_only_default_variant -%}
                                                                       <span>
-                          {{ line_item.variant.title }}
-                        </span>
+                                                                      {{ line_item.variant.title }}
+                                                                    </span>
                                                                   {%- endunless -%}
                                                                   {%- unless line_item.selling_plan_allocation == null -%}
                                                                       <span>
@@ -490,11 +490,6 @@
                                                   <div class="flex">
                                                       <p>{{ 'customer.order.total' | t }}</p>
                                                       <p>{{ order.total_net_amount | money_with_currency }}</p>
-                                                  </div>
-                                              </td>
-                                              <td class="order-summary order-summary-totals" id="RowTotal" role="rowheader" scope="row" colspan="3">
-                                                  <div class="flex">
-                                                      <a href="{{ order.customer_url }}">{{ 'customer.order.more_details' | t }}</a>
                                                   </div>
                                               </td>
                                           </tr>

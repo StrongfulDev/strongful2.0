@@ -32,7 +32,7 @@ a.no-decoration {
 	text-decoration: none;
 }
 
-.customer:not(.account):not(.order) {
+.customer:not(.account):not(.order):not(.addresses) {
   margin: 0 auto;
   max-width: 44rem;
   padding-left: 1.5rem;
@@ -42,7 +42,7 @@ a.no-decoration {
 
 @media screen and (min-width: 750px) {
   .customer:not(.account):not(.order) {
-    max-width: 47.8rem;
+    max-width: var(--page-width);
   }
 }
 
@@ -447,7 +447,7 @@ a.no-decoration {
 }
 
 @media screen and (min-width: 750px) {
-  :is(.account, .order) {
+  :is(.account,.order,.addresses) {
     padding-left: 5rem;
     padding-right: 5rem;
 	  padding-bottom: 0 !important;
@@ -468,7 +468,7 @@ a.no-decoration {
 		transform: translateY(-100%);
 	}
 
-  :is(.account, .order) > div:nth-of-type(2) {
+  :is(.account, .order) > div:nth-of-type(2), .account-desktop-container {
     display: grid;
 	  grid-template-columns: 1fr 3fr;
     margin-top: 5rem;
@@ -797,16 +797,6 @@ li[data-address] > h2 {
 @media only screen and (min-width: 750px) {
   .addresses form > div:nth-of-type(1) {
     margin-right: 0;
-  }
-
-  .addresses form > div:nth-of-type(2) {
-    margin-top: 0;
-  }
-
-  .addresses form > div:nth-of-type(1),
-  .addresses form > div:nth-of-type(2) {
-    box-sizing: border-box;
-    flex-basis: calc(50%);
   }
 }
 
@@ -1349,6 +1339,30 @@ td.more-returns-info {
 
 @media screen and (min-width: 990px) {
 
+	.text-right {
+		text-align: right;
+	}
+
+	h1.address-main-title {
+		margin-top: 0;
+		font-size: var(--font-body-size-large);
+	}
+
+	p.container-extra-info {
+		margin-top: 0;
+		margin-bottom: calc(var(--grid-desktop-vertical-spacing) * 4);
+	}
+
+	button.add-address-button {
+		width: fit-content;
+		padding: 2rem 5rem;
+		margin-right: auto;
+	}
+
+	button.add-address-button:hover {
+		opacity: 0.8;
+	}
+
 	a.container-menu-item, span.container-menu-item, a.container-menu-item.container-menu-item-refer {
 		border: none;
 	}
@@ -1374,10 +1388,6 @@ td.more-returns-info {
 	.custom-customer-account-container.active .multicolumn {
 		padding-right: 1.5rem;
 		padding-left: 1.5rem;
-	}
-
-	.account-desktop-container {
-		display: block;
 	}
 
 	.customer:not(.account):not(.order) {
@@ -1451,7 +1461,7 @@ td.more-returns-info {
 	}
 
 	.main-account--desktop-order-container {
-		margin: calc(var(--grid-desktop-vertical-spacing) * 2) 0;
+		margin: calc(var(--grid-desktop-vertical-spacing) * 3.5) 0;
 		border: 1px solid var(--gradient-base-background-4);
 		border-radius: 0.4rem;
 		padding: 1rem 2rem;
@@ -1510,6 +1520,10 @@ td.more-returns-info {
 		padding-left: 1rem;
 	}
 
+	.toggle-orders-button-content, a.toggle-orders-button-content {
+		display: none;
+	}
+
 	.desktop-order-data tbody td.fulfillment-table-data + td {
 		padding-right: 1rem;
 	}
@@ -1551,6 +1565,33 @@ td.more-returns-info {
 
 	.desktop-order-data tfoot .order-summary p {
 		margin-bottom: 0;
+	}
+
+	.addresses [aria-expanded='true'] ~ div[id] {
+		padding: 2rem;
+		border: 1px solid var(--gradient-base-background-3);
+		border-radius: 4px;
+	}
+
+	.price__sale {
+		margin-top: 0;
+	}
+
+	.addresses form > div {
+		width: 60%;
+	}
+
+	.addresses form > div:last-child {
+		width: 35%;
+		margin-right: auto;
+		display: flex;
+		flex-direction: row-reverse;
+		margin-top: 5rem;
+		column-gap: var(--grid-desktop-horizontal-spacing);
+	}
+
+	.addresses form > div:last-child button {
+		margin: 0;
 	}
 }
 
