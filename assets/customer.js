@@ -108,11 +108,22 @@ window.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 
-	let endlessCollection = new AjaxinateMin({
-		method: "click",
-		container: '#desktop-order-container',
-		pagination: '.infinite_next',
-		offset: 100,
-		loadingText: "טוען...",
-	});
+	if (window.innerWidth < 990) {
+		let endlessCollection = new AjaxinateMin({
+			method: "click",
+			container: '#orderHistory',
+			pagination: '.infinite_next',
+			offset: 100,
+			loadingText: "טוען...",
+		});
+	} else {
+		let endlessCollection = new AjaxinateMin({
+			method: "click",
+			container: '.desktop-order-container-paginator',
+			pagination: '.infinite_next',
+			offset: 100,
+			loadingText: "טוען...",
+		});
+	}
+
 });

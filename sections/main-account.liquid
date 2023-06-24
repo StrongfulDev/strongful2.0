@@ -72,9 +72,9 @@
                         <p class="orders-modal-account-title">{{ 'customer.account.sub_title' | t }}</p>
                     </div>
                 </div>
-                      {% paginate customer.orders by customer.orders_count %}
+                      {% paginate customer.orders by 6 %}
                           {%- if customer.orders.size > 0 -%}
-                              <table role="table" class="order-history">
+                              <table id="orderHistory" role="table" class="order-history">
                                   <caption class="visually-hidden">
                                       {{ 'customer.orders.title' | t }}
                                   </caption>
@@ -158,49 +158,7 @@
                           {%- endif -%}
 
                           {%- if paginate.pages > 1 -%}
-                              {%- if paginate.parts.size > 0 -%}
-                                  <nav class="pagination" role="navigation" aria-label="{{ 'general.pagination.label' | t }}">
-                                      <ul role="list">
-                                          {%- if paginate.previous -%}
-                                              <li>
-                                                  <a href="{{ paginate.previous.url }}" aria-label="{{ 'general.pagination.previous' | t }}">
-                                                      <svg aria-hidden="true" focusable="false" viewBox="0 0 10 6">
-                                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
-                                                      </svg>
-                                                  </a>
-                                              </li>
-                                          {%- endif -%}
-
-                                          {%- for part in paginate.parts -%}
-                                              <li>
-                                                  {%- if part.is_link -%}
-                                                      <a href="{{ part.url }}" aria-label="{{ 'general.pagination.page' | t: number: part.title }}">
-                                                          {{- part.title -}}
-                                                      </a>
-                                                  {%- else -%}
-                                                      {%- if part.title == paginate.current_page -%}
-                                                          <span aria-current="page" aria-label="{{ 'general.pagination.page' | t: number: part.title }}">
-                          {{- part.title -}}
-                        </span>
-                                                      {%- else -%}
-                                                          <span>{{ part.title }}</span>
-                                                      {%- endif -%}
-                                                  {%- endif -%}
-                                              </li>
-                                          {%- endfor -%}
-
-                                          {%- if paginate.next -%}
-                                              <li>
-                                                  <a href="{{ paginate.next.url }}" aria-label="{{ 'general.pagination.next' | t }}">
-                                                      <svg aria-hidden="true" focusable="false" viewBox="0 0 10 6">
-                                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
-                                                      </svg>
-                                                  </a>
-                                              </li>
-                                          {%- endif -%}
-                                      </ul>
-                                  </nav>
-                              {%- endif -%}
+                              {% render 'pagination', paginate: paginate, anchor: '' %}
                           {%- endif -%}
                       {% endpaginate %}
                   </div>
@@ -226,7 +184,7 @@
           </div>
           {% paginate customer.orders by 6 %}
               {%- if customer.orders.size > 0 -%}
-                  <div id="desktop-order-container">
+                  <div class="desktop-order-container-paginator">
                       {% for order in customer.orders %}
                           <div class="main-account--desktop-order-container">
                               <div>
