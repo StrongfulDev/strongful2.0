@@ -670,7 +670,7 @@ class SliderComponent extends HTMLElement {
     super();
     this.slider = this.querySelector('[id^="Slider-"]');
     this.sliderItems = this.querySelectorAll('[id^="Slide-"]');
-    this.enableSliderLooping = false;
+    this.enableSliderLooping = true;
     this.currentPageElement = this.querySelector('.slider-counter--current');
     this.pageTotalElement = this.querySelector('.slider-counter--total');
     this.prevButton = this.querySelector('button[name="previous"]');
@@ -755,14 +755,43 @@ class SliderComponent extends HTMLElement {
     return (element.offsetLeft + element.clientWidth) <= lastVisibleSlide && element.offsetLeft >= this.slider.scrollLeft;
   }
 
-  onButtonClick(event) {
-    event.preventDefault();
-    const step = event.currentTarget.dataset.step || 1;
-    this.slideScrollPosition = event.currentTarget.name === 'next' ? this.slider.scrollLeft + (step * this.sliderItemOffset) : this.slider.scrollLeft - (step * this.sliderItemOffset);
-    this.slider.scrollTo({
-      left: this.slideScrollPosition
-    });
-  }
+  // onButtonClick(event) {
+  //   event.preventDefault();
+  //   const step = event.currentTarget.dataset.step || 1;
+  //   this.slideScrollPosition = event.currentTarget.name === 'next' ? this.slider.scrollLeft + (step * this.sliderItemOffset) : this.slider.scrollLeft - (step * this.sliderItemOffset);
+  //   this.slider.scrollTo({
+  //     left: this.slideScrollPosition
+  //   });
+  // }
+
+	onButtonClick(event) {
+		event.preventDefault();
+		const step = event.currentTarget.dataset.step || 1;
+		this.slideScrollPosition = event.currentTarget.name === 'next' ?
+			this.slider.scrollLeft + (step * this.sliderItemOffset) :
+			this.slider.scrollLeft - (step * this.sliderItemOffset);
+		// Check if it's the end or the beginning of the slides for looping
+		// if (this.enableSliderLooping) {
+		// 	if (this.slideScrollPosition < 0) {
+		// 		this.slideScrollPosition = (this.totalPages - 1) * this.sliderItemOffset;
+		// 	} else if (this.slideScrollPosition / this.sliderItemOffset >= this.totalPages) {
+		// 		this.slideScrollPosition = 0;
+		// 	}
+		// }
+
+		if (this.enableSliderLooping) {
+			if (this.slideScrollPosition < 0) {
+				this.slideScrollPosition = (this.totalPages - 1) * this.sliderItemOffset;
+			} else if (Math.round(this.slideScrollPosition / this.sliderItemOffset) >= this.totalPages) {
+				this.slideScrollPosition = 0;
+			}
+		}
+
+		this.slider.scrollTo({
+			left: this.slideScrollPosition,
+			behavior: 'smooth' // Smooth scroll
+		});
+	}
 }
 
 customElements.define('slider-component', SliderComponent);
