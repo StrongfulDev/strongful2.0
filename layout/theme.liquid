@@ -413,7 +413,10 @@ You can learn more about this (and learn how to cleanly revert these changes) at
     {% render 'pill-border' %}
     {% unless template.name == 'register' or template.name == 'login' %}
     <div class="custom-customer-account-container">
-        <p class="close-custom-account-container page-width pointer">{% render 'icon-close' %}</p>
+        <div class="close-custom-account-container page-width pointer">
+            <h4 class="custom-customer-popup-main-title">{{ 'customer.account.personal_area' | t }}</h4>
+            {% render 'icon-close' %}
+        </div>
         {% section 'multicolumn' %}
         {% section 'main-register' %}
         {% section 'main-login' %}

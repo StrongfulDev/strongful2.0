@@ -73,14 +73,10 @@
     {%- endform -%}
   </div>
 
-    {% if template.name == 'register' or template.name == 'login' %}
-        <h1 id="login" tabindex="-1">
-            {{ 'customer.login_page.title' | t }}
-        </h1>
-    {% else %}
-    <h4 id="login" tabindex="-1" class="custom-customer-popup-main-title">
-            {{ 'customer.login_page.title' | t }}
-        </h4>
+    {% if template.name == 'login' or template.name == 'register' %}
+    <h1 id="login" tabindex="-1">
+        {{ 'customer.login_page.title' | t }}
+    </h1>
     {% endif %}
   <div class="fix-direction">
     {%- if recover_success == true -%}

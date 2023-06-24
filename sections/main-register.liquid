@@ -29,17 +29,8 @@
     </symbol>
   </svg>
     {% if template.name == 'register' or template.name == 'login' %}
-  <h1>
-    {{ 'customer.register.title' | t }}
-  </h1>
-    {% else %}
-    <h4 class="custom-customer-popup-main-title">
-        {{ 'customer.register.title' | t }}
-    </h4>
+      <h1>{{ 'customer.register.title' | t }}</h1>
     {% endif %}
-    <p>
-        {{ 'customer.register.text' | t }}
-    </p>
   {%- form 'create_customer', novalidate: 'novalidate' -%}
     {%- if form.errors -%}
       <h2 class="form__message" tabindex="-1" autofocus>

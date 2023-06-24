@@ -88,11 +88,18 @@ a.no-decoration {
 }
 
 .customer .field {
-  margin: 2rem 0 0 0;
+  margin: 4rem 0 0 0;
 }
 
 .customer .field:first-of-type {
   margin-top: 0;
+}
+
+.custom-customer-account-container .customer .field label,
+.customer .field input:focus ~ label {
+	top: -3rem;
+	right: 0;
+	font-size: 1.6rem;
 }
 
 /* Customer Table */
@@ -391,7 +398,8 @@ a.no-decoration {
 }
 
 #recover:target ~ #login,
-#recover:target ~ #login + div {
+#recover:target ~ #login + div,
+#recover:target + div + div {
   display: none;
 }
 
@@ -804,10 +812,13 @@ ul.multicolumn-list {
   padding: 0;
 }
 
-/* TODO: remove important rule */
-li.multicolumn-list__item {
-  width: auto !important;
+li.multicolumn-list__item.grid__item {
+  width: fit-content;
   flex-grow: initial;
+}
+
+.multicolumn-card__info {
+	padding: 0;
 }
 
 .js-border-container {
@@ -1144,6 +1155,7 @@ a.order-number-link .icon {
 
 .custom-customer-account-container.active .multicolumn-list {
 	column-gap: var(--grid-desktop-vertical-spacing);
+	padding-bottom: var(--grid-mobile-vertical-spacing);
 }
 
 .oxi_social_wrapper {
@@ -1156,8 +1168,10 @@ a.order-number-link .icon {
 }
 
 .close-custom-account-container {
-	padding-top: 2rem;
-	text-align: right;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	direction: rtl;
 }
 
 .custom-login-overlay {
@@ -1267,15 +1281,31 @@ td.more-returns-info {
 	font-weight: var(--font-body-weight-bold);
 }
 
+.custom-customer-account-container .multicolumn-list h3 {
+	opacity: 0.6;
+}
+
+.custom-customer-account-container .multicolumn-list__item.active h3 {
+	opacity: 1;
+}
+
 @media screen and (min-width: 990px) {
+
+	.custom-customer-account-container .background-none .multicolumn-list .multicolumn-card__info, .background-none .multicolumn-list:not(.slider) .center .multicolumn-card__info {
+		padding: 0;
+	}
+
+	.custom-customer-account-container.active .multicolumn {
+		padding-right: 1.5rem;
+		padding-left: 1.5rem;
+	}
 
 	.account-desktop-container {
 		display: block;
 	}
 
 	.customer:not(.account):not(.order) {
-		overflow-y: auto;
-		height: 49rem;
+
 	}
 
 	.custom-login-overlay {
@@ -1296,7 +1326,7 @@ td.more-returns-info {
 		bottom: auto;
 		border-radius: 7px;
 		max-width: 43rem;
-		height: 60rem;
+		min-height: 90vh;
 		transform: translate(0);
 		display: none;
 	}
