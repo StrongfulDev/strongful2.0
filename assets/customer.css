@@ -49,7 +49,6 @@ a.no-decoration {
 .customer > h1,
 .customer__title {
   margin-top: 0;
-	margin-bottom: 1rem;
 }
 
 .customer form {
@@ -58,7 +57,13 @@ a.no-decoration {
 
 .customer button {
   margin: 2rem 0 1.5rem;
+	padding: 1.8rem;
+	border-radius: 4px;
 	width: 100%;
+}
+
+.customer button:before, .customer button:after {
+	border-radius: 4px;
 }
 
 .customer ul {
@@ -95,7 +100,7 @@ a.no-decoration {
   margin-top: 0;
 }
 
-.custom-customer-account-container .customer .field label,
+.customer .field label,
 .customer .field input:focus ~ label,
 .customer .field input:-webkit-autofill~label,
 .customer .field input:not(:placeholder-shown) ~ label {
@@ -491,7 +496,7 @@ a.no-decoration {
 }
 
 :is(.account, .order) h1 {
-  margin-bottom: 1rem;
+
 }
 
 :is(.account, .order) h2 {
@@ -745,11 +750,14 @@ label[for='AddressProvinceNew'] {
 .addresses ul {
   list-style: none;
   padding-left: 0;
+	padding-right: 0;
   text-align: right;
 }
 
 li[data-address] {
   margin-top: 5rem;
+	padding: 1.5rem;
+	border: 1px solid var(--gradient-base-background-3)
 }
 
 .addresses [aria-expanded='false'] ~ div[id] {
@@ -778,7 +786,7 @@ li[data-address] > h2 {
 }
 
 .addresses ul p {
-  margin-bottom: 0;
+  /*margin: 0;*/
 }
 
 .addresses input[type='checkbox'] {
@@ -981,12 +989,13 @@ p.container-extra-info {
 	display: block;
 }
 
-.toggle-orders-button-content {
+.toggle-orders-button-content, a.toggle-orders-button-content {
+	display: flex;
 	align-items: center;
 	column-gap: var(--grid-desktop-vertical-spacing);
 }
 
-.toggle-orders-button .icon {
+.toggle-orders-button-content .icon {
 	transform: rotate(270deg);
 }
 
@@ -1037,8 +1046,10 @@ div.contact-icon-child a svg {
 
 /* Addresses */
 
-.address-main-title {
+h1.address-main-title {
 	position: relative;
+	margin-top: revert;
+	text-align: right;
 }
 
 a.address-back-link {
@@ -1056,10 +1067,10 @@ a.address-back-link svg {
 }
 
 button.add-address-button {
-	color: var(--gradient-base-accent-1);
-	background: var(--gradient-background);
-	border: 1px var(--gradient-base-background-3) solid;
-	padding: 0;
+	color: var(--gradient-background);
+	background: var(--gradient-base-accent-1);
+	padding: 2rem;
+	border-radius: 4px;
 	position: relative;
 	display: block;
 }
@@ -1076,7 +1087,7 @@ button.add-address-button:before, button.add-address-button:after {
 	content: "";
 	display: block;
 	visibility: visible;
-	background-color: rgb(var(--color-foreground));
+	background-color: var(--gradient-base-background-1);
 	top: 2.8rem;
 }
 
