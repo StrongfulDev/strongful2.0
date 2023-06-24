@@ -96,7 +96,9 @@ a.no-decoration {
 }
 
 .custom-customer-account-container .customer .field label,
-.customer .field input:focus ~ label {
+.customer .field input:focus ~ label,
+.customer .field input:-webkit-autofill~label,
+.customer .field input:not(:placeholder-shown) ~ label {
 	top: -3rem;
 	right: 0;
 	font-size: 1.6rem;
@@ -431,11 +433,11 @@ a.no-decoration {
 }
 
 /* Account/Order */
-:is(.account, .order) {
+.account, .order {
   margin: 0 auto;
-  max-width: var(--page-width);
-  padding-left: 2rem;
-  padding-right: 2rem;
+  width: 100%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 @media screen and (min-width: 750px) {
@@ -660,8 +662,17 @@ a.no-decoration {
   margin-right: 0.5rem;
 }
 
-.order dl {
+.order dl, p.orders-modal-account-title {
   margin: 0;
+}
+
+.orders-title {
+	font-weight: var(--font-body-weight-bold);
+}
+
+.orders-modal-account-title {
+	font-size: var(--font-body-size-medium);
+	font-weight: var(--font-body-weight-bold);
 }
 
 .order dd {
@@ -868,13 +879,28 @@ li.multicolumn-list__item.grid__item {
 	margin-bottom: var(--grid-desktop-horizontal-spacing);
 }
 
+.main-account-info-container--loyalty .container-title {
+	display: flex;
+	align-items: center;
+}
+
+.main-account-info-container--loyalty .container-title h4,
+.main-account-info-container--loyalty .container-title h6 {
+	margin: 0;
+}
+
+.main-account-info-container--loyalty .container-title h6 {
+	font-weight: var(--font-body-weight-normal);
+	font-size: calc(var(--font-body-size-medium) * .9);
+	color: rgba(var(--color-foreground),.6);
+}
+
 a.container-menu-item, span.container-menu-item {
 	font-size: var(--font-body-size-medium);
-	margin-bottom: var(--grid-desktop-horizontal-spacing);
-	border-bottom: 1px var(--gradient-base-background-4) solid;
+	border-bottom: 1px var(--gradient-base-background-3) solid;
 	display: block;
 	position: relative;
-	padding: 0 0 var(--grid-desktop-horizontal-spacing) 0;
+	padding: calc(var(--grid-desktop-horizontal-spacing) * 1.4) 0;
 }
 
 a.container-menu-item:last-child, span.container-menu-item:last-child, a.container-menu-item-refer {
@@ -884,7 +910,7 @@ a.container-menu-item:last-child, span.container-menu-item:last-child, a.contain
 .container-menu-item .icon-caret {
 	position: absolute;
 	left: 0;
-	top: 35%;
+	top: 55%;
 	transform: translateY(-50%) rotate(90deg);
 	margin: 0;
 }
@@ -898,9 +924,9 @@ a.container-menu-item span {
 }
 
 p.container-extra-info {
-	margin: 0;
 	font-size: var(--font-body-size-small);
 	color: var(--rtg-text-color);
+	margin-top: var(--grid-desktop-horizontal-spacing);
 }
 
 .custom-orders-container {
@@ -930,17 +956,15 @@ p.container-extra-info {
 	padding: 1em;
 	width: 100%;
 	display: block;
-	text-align: center;
-	border-bottom: 1px solid var(--gradient-base-background-4);
+}
+
+.toggle-orders-button-content {
+	align-items: center;
+	column-gap: var(--grid-desktop-vertical-spacing);
 }
 
 .toggle-orders-button .icon {
-	width: 1em;
-	position: absolute;
-	right: 1rem;
-	margin: 0;
-	top: 50%;
-	transform: translateY(-50%) rotate(270deg);
+	transform: rotate(270deg);
 }
 
 .main-account-info-container--contact, .container-menu-item--logout {
@@ -1319,7 +1343,7 @@ td.more-returns-info {
 		background: rgba(var(--color-foreground), 0.6);
 	}
 
-	.custom-customer-account-container {
+	div.custom-customer-account-container {
 		width: 43rem;
 		left: 50%;
 		top: 50%;

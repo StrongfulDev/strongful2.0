@@ -387,20 +387,26 @@
   },
   "customer": {
     "account": {
-      "title": "ברוכה הבאה למשתמש שלך {{ name }}",
-      "sub-title": "האיזור האישי שלי",
+      "title": "איזור אישי - {{ name }}",
+      "sub_title": "איזור אישי",
       "details": "פרטי משתמש",
       "view_addresses": "הכתובות שלי",
       "personal_area": "איזור אישי",
       "return": "חזרה",
+      "not_customer": "לא {{ name }}?",
       "support": {
         "title": "תמיכה",
         "our-promise": "על סטרונגפול",
         "terms": "תנאי השימוש",
         "privacy-policy": "מדיניות פרטיות"
       },
+      "loyalty":{
+        "title": "STRONGFUL Club - ",
+        "sub_title": "מועדון הלקוחות",
+        "earn_points": "צבירת נקודות קאשבק בכל קנייה"
+      },
       "contact": {
-        "title": "צרי קשר",
+        "title": "יש לך שאלה? צרי קשר",
         "phone": "טלפון",
         "email": "מייל",
         "business-hours": "ימים ראשון עד חמישי בין השעות 09:00 עד 16:00"
@@ -522,6 +528,7 @@
     },
     "orders": {
       "title": "ההזמנות שלי",
+      "description": "כאן תוכלי לראות את כל המידע על ההזמנות, כתובות והחלפות",
       "order_number": "הזמנה",
       "order_number_link": "הזמנה מספר {{ number }}",
       "date": "תאריך",
@@ -685,7 +692,7 @@
         "pick_up_locations": "כתובת לאיסוף"
       },
       "customer_account": {
-        "not_user_label": "לא {{ first_name}}?",
+        "not_user_label": "לא {{ name}}?",
         "have_an_account_label": "חברת מועדון?",
         "sign_in_link_label": "התחברי",
         "sign_out_link_label": "ליציאה",

@@ -99,8 +99,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
 		let mainTitle = document.querySelector(".customer__title");
 		let mainTitleLength = mainTitle.innerHTML.length;
-		let slicedLength = parseInt(mainTitleLength - 3);
-		mainTitle.innerHTML = mainTitle.innerHTML.slice(slicedLength, mainTitleLength);
+		console.log(mainTitleLength)
+		mainTitle.innerHTML = mainTitle.innerHTML.slice(13, mainTitleLength);
 	} else {
 		$(".desktop-order-container-headers").click(function() {
 			$(this).next().toggleClass("hidden");

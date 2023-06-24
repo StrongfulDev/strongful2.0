@@ -34,22 +34,25 @@
 
 <div class="customer account fix-direction section-{{ section.id }}-padding">
   <div>
-      <h1 class="customer__title">{{ 'customer.account.title' | t: name: customer.first_name }}</h1>
+      <h1 class="customer__title">{{ 'customer.account.title' | t: name: customer.name }}</h1>
   </div>
 
   <div class="account-desktop-container">
       <div>
           <div class="main-account-info-container main-account-info-container--loyalty">
-              <h4 class="container-title bold">מועדון הלקוחות שלי</h4>
+              <div class="container-title bold">
+                  <h6>{{ 'customer.account.loyalty.sub_title' | t }}</h6>
+                  <h4 class="ltr">{{ 'customer.account.loyalty.title' | t }}&nbsp;</h4>
+              </div>
               <a href="/pages/a-list" class="container-menu-item">ALIST <span>{{ vipTier }}</span>
                   {% render 'icon-caret' %}
               </a>
-              <p class="container-extra-info">צבירת נקודות בכל קנייה</p>
+              <p class="container-extra-info">{{ 'customer.account.loyalty.earn_points' | t }}</p>
           </div>
           <div>
 
               <div class="main-account-info-container main-account-info-container--my-account">
-                  <h2 class="container-title bold">{{ 'customer.account.sub-title' | t }}</h2>
+                  <h2 class="container-title bold">{{ 'customer.account.sub_title' | t }}</h2>
                   <span class="container-menu-item container-menu-item-orders-toggler toggle-orders">
                       {{ 'customer.orders.title' | t }}
                       {% render 'icon-caret' %}
@@ -63,10 +66,14 @@
                   </a>
 
                   <div class="custom-orders-container mobile">
-                <span class="toggle-orders-button toggle-orders">
-                    {{ 'customer.orders.title' | t }}
-                    {% render 'icon-caret' %}
-                </span>
+                <div class="toggle-orders-button toggle-orders">
+                    <div class="toggle-orders-button-content flex">
+                        {% render 'icon-caret' %}
+                        <p class="orders-modal-account-title">{{ 'customer.account.sub_title' | t }}</p>
+                    </div>
+                    <h4 class="orders-title">{{ 'customer.orders.title' | t }}</h4>
+                    <p class="orders-description">{{ 'customer.orders.description' | t }}</p>
+                </div>
                       {% paginate customer.orders by customer.orders_count %}
                           {%- if customer.orders.size > 0 -%}
                               <table role="table" class="order-history">
@@ -195,21 +202,9 @@
                   </div>
               </div>
 
-              <div class="main-account-info-container main-account-info-container--support">
+              <div class="main-account-info-container main-account-info-container--support desktop--only">
                   <h2 class="container-title bold">{{ 'customer.account.support.title' | t }}</h2>
-                  <a href="/pages/about-us" class="container-menu-item container-menu-item--our-promise">
-                      {{ 'customer.account.support.our-promise' | t }}
-                      {% render 'icon-caret' %}
-                  </a>
-                  <a href="/blogs/%D7%AA%D7%A7%D7%A0%D7%95%D7%A0%D7%99%D7%9D/%D7%AA%D7%A7%D7%A0%D7%95%D7%9F-%D7%94%D7%90%D7%AA%D7%A8" class="container-menu-item container-menu-item--terms">
-                      {{ 'customer.account.support.terms' | t }}
-                      {% render 'icon-caret' %}
-                  </a>
-                  <a href="/blogs/%D7%AA%D7%A7%D7%A0%D7%95%D7%A0%D7%99%D7%9D/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A4%D7%A8%D7%98%D7%99%D7%95%D7%AA" class="container-menu-item container-menu-item-refer">
-                      {{ 'customer.account.support.privacy-policy' | t }}
-                      {% render 'icon-caret' %}
-                  </a>
-                  <a href="{{ routes.account_logout_url }}" class="container-menu-item container-menu-item-logout desktop--only">
+                  <a href="{{ routes.account_logout_url }}" class="container-menu-item container-menu-item-logout">
                       {{ 'customer.log_out' | t }}
                       {% render 'icon-caret' %}
                   </a>
@@ -679,7 +674,7 @@
     </div>
 
     <div class="container-menu-item container-menu-item--logout">
-        <p>לא {{ customer.first_name }}?</p>
+        <p>{{ 'customer.account.not_customer' | t: name: customer.name }}</p>
         <a class="logout-link" href="{{ routes.account_logout_url }}">
             {{ 'customer.log_out' | t }}
         </a>
