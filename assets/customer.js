@@ -107,4 +107,12 @@ window.addEventListener('DOMContentLoaded', () => {
 			$(this).find(".plus-and-minus").find("svg").toggle();
 		});
 	}
+
+	let endlessCollection = new AjaxinateMin({
+		method: "click",
+		container: '#desktop-order-container',
+		pagination: '.infinite_next',
+		offset: 100,
+		loadingText: "טוען...",
+	});
 });

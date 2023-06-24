@@ -299,8 +299,8 @@ a.no-decoration {
 
 /* Pagination */
 .customer .pagination {
-  margin-top: 5rem;
-  margin-bottom: 7rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .customer .pagination ul {
@@ -311,8 +311,9 @@ a.no-decoration {
 }
 
 .customer .pagination li {
-  flex: 1 1;
-  max-width: 4rem;
+  width: 23rem;
+	flex: initial;
+	max-width: 100%;
 }
 
 .customer .pagination li:not(:last-child) {
@@ -667,7 +668,18 @@ a.no-decoration {
 }
 
 .orders-title {
-	font-weight: var(--font-body-weight-bold);
+	font-size: var(--font-body-size-large);
+}
+
+.customer tbody td.block {
+	flex-direction: column;
+	text-align: right;
+	align-items: flex-start;
+	padding-top: 0;
+}
+
+p.orders-description {
+	margin: 0;
 }
 
 .orders-modal-account-title {
@@ -855,8 +867,19 @@ li.multicolumn-list__item.grid__item {
 
 @media screen and (min-width: 990px) {
 	.customer .pagination {
-		margin-top: 7rem;
-		margin-bottom: 10rem;
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+	}
+
+	.customer .pagination .infinite_next a {
+		display: flex;
+		border: 1pt solid var(--gradient-base-background-3);
+		padding: 2.5rem 4rem;
+		border-radius: 4px;
+	}
+
+	.account span.loading-overlay {
+		display: none;
 	}
 
 	.multicolumn {
@@ -1315,6 +1338,24 @@ td.more-returns-info {
 
 @media screen and (min-width: 990px) {
 
+	a.container-menu-item, span.container-menu-item, a.container-menu-item.container-menu-item-refer {
+		border: none;
+	}
+
+	a.container-menu-item:hover,
+	span.container-menu-item:hover,
+	a.container-menu-item.container-menu-item-refer:hover {
+		text-decoration: underline;
+	}
+
+	.orders-title {
+		margin-top: 0;
+	}
+
+	.container-menu-item .icon-caret {
+		display: none;
+	}
+
 	.custom-customer-account-container .background-none .multicolumn-list .multicolumn-card__info, .background-none .multicolumn-list:not(.slider) .center .multicolumn-card__info {
 		padding: 0;
 	}
@@ -1368,8 +1409,8 @@ td.more-returns-info {
 	.account-desktop-container > .custom-orders-container {
 		position: static;
 		transform: translateX(0);
-		max-height: 100vh;
 		z-index: 2;
+		overflow-y: hidden;
 	}
 
 	.toggle-orders-button, .main-account-info-container--contact, .container-menu-item--logout {

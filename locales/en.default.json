@@ -536,7 +536,8 @@
       "fulfillment_status": "סטטוס משלוח",
       "total": "סה״כ",
       "none": "You haven't placed any orders yet.",
-      "refer": "חברה מביאה חברה"
+      "refer": "חברה מביאה חברה",
+      "load_more": "טעינת הזמנות נוספות"
     },
     "recover_password": {
       "title": "איפוס סיסמה",

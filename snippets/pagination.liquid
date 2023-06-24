@@ -62,9 +62,15 @@
                     <li class="infinite_next">
                         <a
                                 href="{{ paginate.next.url }}{{ anchor }}"
-                                class="pagination__item pagination__item--prev pagination__item-arrow link motion-reduce hidden"
+                                class="pagination__item pagination__item--prev pagination__item-arrow link motion-reduce
+                                {% unless template.name == 'account' %}
+                                hidden
+                                {% endunless %}"
                                 aria-label="{{ 'general.pagination.next' | t }}"
                         >
+                            {% if template.name == 'account' %}
+                            {{ 'customer.orders.load_more' | t }}
+                            {% endif %}
                         </a>
                         {% render 'loading-spinner' %}
                     </li>
