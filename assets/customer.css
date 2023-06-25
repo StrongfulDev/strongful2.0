@@ -1202,7 +1202,7 @@ a.order-number-link .icon {
 }
 
 .custom-customer-account-container.active .multicolumn-list {
-	column-gap: var(--grid-desktop-vertical-spacing);
+	column-gap: calc(var(--grid-desktop-vertical-spacing) * 2);
 	padding-bottom: var(--grid-mobile-vertical-spacing);
 }
 
