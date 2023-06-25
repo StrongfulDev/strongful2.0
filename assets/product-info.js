@@ -95,14 +95,32 @@ if (!customElements.get('product-info')) {
   }
 )};
 
-let productImages = document.querySelectorAll(".image-magnify-lightbox");
-for (let i = 0; i < productImages.length; i++) {
+window.addEventListener('DOMContentLoaded', () => {
+	let productImages = document.querySelectorAll(".image-magnify-lightbox");
+	for (let i = 0; i < productImages.length; i++) {
 		let alt = productImages[i].getAttribute("alt");
 		if (alt == 'instagram') {
 			$(productImages[i]).parents("li").addClass("hidden");
 		}
-}
+	}
 
-$(".out-of-stock").click(function() {
-	$(this).next().toggleClass("hidden");
+	$(".out-of-stock").click(function() {
+		$(this).next().toggleClass("hidden");
+	});
+
+	let mediaList = document.querySelector(".product__media-list");
+	let mediaListLength = Array.from(mediaList.children).length;
+	if (mediaListLength < 2) {
+		mediaList.style.direction = 'rtl';
+	}
+
+	setTimeout(function() {
+		let unnecessaryReviews = document.querySelector(".yotpo-sr-bottom-line-text.yotpo-sr-bottom-line-text--right-panel");
+		console.log(unnecessaryReviews);
+		if (unnecessaryReviews) {
+			unnecessaryReviews.innerText = unnecessaryReviews.innerText.replace("Reviews", "");
+			unnecessaryReviews.innerText = "(" + unnecessaryReviews.innerText + ")";
+			$(".yotpo-sr-vertical-border").remove();
+		}
+	}, 2000);
 });

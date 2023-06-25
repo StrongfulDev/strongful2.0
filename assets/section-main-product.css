@@ -2127,6 +2127,39 @@ product-recommendations .collection__title_heading, #product .collection__title_
 	margin-right: 0 !important;
 }
 
+.bottom-line-items-container-desktop .bottom-line-items-wrapper .bottom-line-items {
+	padding: 0 !important;
+}
+
+.yotpo-sr-bottom-line-text.yotpo-sr-bottom-line-text--right-panel {
+	font-weight: var(--font-body-weight-bold) !important;
+}
+
+.yotpo-sr-bottom-line-summary {
+	direction: rtl !important;
+}
+
+.yotpo-sr-bottom-line-summary > div {
+	margin-right: 0 !important;
+	margin-left: 5px !important;
+	align-items: baseline !important;
+}
+
+.yotpo-sr-bottom-line-summary > div .star-container {
+	margin-right: 0 !important;
+	margin-left: 3.5px !important;
+}
+
+.yotpo-sr-bottom-line-summary > div > div:last-child {
+	margin-left: 0 !important;
+	margin-bottom: -2px !important;
+}
+
+.yotpo-sr-bottom-line-summary div  {
+	font-size: .9em !important;
+	line-height: 1.5em !important;
+}
+
 /* YOTPO REVIEWS END */
 
 @media screen and (min-width: 990px) {
