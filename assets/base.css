@@ -3298,6 +3298,7 @@ button.needsclick {
 		justify-content: space-between;
 		align-items: center;
 		padding: 1.5rem;
+		text-decoration: none;
 	}
 
 	.desktop-account-modal--links:hover {
@@ -3306,13 +3307,12 @@ button.needsclick {
 
 	.desktop-account-modal--links .icon-caret {
 		transform: rotate(90deg);
-		width: 1.2rem;
-		height: 1.2rem;
+		width: 1.2rem !important;
+		height: 1.2rem !important;
 	}
 
 	.desktop-account-modal--link {
 		color: var(--gradient-base-accent-1);
-		text-decoration: none;
 	}
 
 	.links-container .container-menu-item-logout {

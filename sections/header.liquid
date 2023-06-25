@@ -1079,12 +1079,12 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                             </div>
                             <div class="links-container">
                                 {% for link in section.settings.account.links %}
-                                    <div class="relative desktop-account-modal--links pointer">
-                                        <a href="{{ link.url }}" class="desktop-account-modal--link">
+                                    <a href="{{ link.url }}" class="relative desktop-account-modal--links pointer">
+                                        <div class="desktop-account-modal--link">
                                             {{ link.title }}
-                                        </a>
+                                        </div>
                                         {% render 'icon-caret' %}
-                                    </div>
+                                    </a>
                                 {% endfor %}
                                 <a href="{{ routes.account_logout_url }}" class="container-menu-item container-menu-item-logout pointer underlined-link">
                                     {{ 'customer.account.not_customer' | t: name: customer.name }} {{ 'customer.log_out' | t }}
