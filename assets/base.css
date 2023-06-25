@@ -3275,7 +3275,7 @@ button.needsclick {
 		position: absolute;
 		right: 0;
 		background: var(--gradient-background);
-		min-width: 27vw;
+		min-width: 25vw;
 		border: 1px solid var(--gradient-base-background-3);
 		border-radius: var(--inputs-radius);
 		padding: 2rem 0;
