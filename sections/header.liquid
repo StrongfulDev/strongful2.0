@@ -1042,6 +1042,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                     {% else %}
                     <a href="{{ routes.account_url }}" class="header__icon header__icon--account link focus-inset">
                         {% render 'icon-new-user' %}
+                        <span class="desktop-customer-name desktop--only">{{ customer.name }}</span>
                         <span class="visually-hidden">
             {%- liquid
                 if customer

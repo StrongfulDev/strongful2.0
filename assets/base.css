@@ -2486,6 +2486,7 @@ quantity-input button.quantity__button {
     display: flex;
     grid-area: icons;
     justify-self: end;
+	align-items: center;
 }
 
 .header__icon:not(.header__icon--summary),
@@ -2992,6 +2993,10 @@ details-disclosure > details {
     .content-container--full-width-mobile:after {
         display: none;
     }
+
+	.header__icon--account span.desktop-customer-name {
+		display: none;
+	}
 }
 
 .global-media-settings {
@@ -3205,6 +3210,23 @@ fieldset {
 
 .header__icon, .header__icon--cart .icon {
     width: 2.5rem;
+}
+
+.header__icon--account {
+	width: fit-content;
+	column-gap: var(--grid-desktop-horizontal-spacing);
+	text-decoration: none;
+	padding: 1rem .5rem;
+	height: fit-content;
+	border-radius: 4px;
+}
+
+.header__icon--account:hover {
+	background: var(--gradient-base-background-3)
+}
+
+.header__icon--account span.desktop-customer-name {
+	font-size: var(--font-body-size-medium);
 }
 
 .header__icon--cart .icon {
