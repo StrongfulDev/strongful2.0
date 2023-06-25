@@ -369,6 +369,7 @@ class MenuDrawer extends HTMLElement {
 			this.querySelectorAll('summary').forEach(summary => summary.addEventListener('mouseenter', this.onSummaryHover.bind(this)));
 		}
     this.querySelectorAll('button').forEach(button => button.addEventListener('click', this.onCloseButtonClick.bind(this)));
+		document.querySelector('.desktop-account-modal button').addEventListener('click', this.onCloseButtonClick.bind(this));
   }
 
   onKeyUp(event) {
@@ -1231,8 +1232,6 @@ window.addEventListener('DOMContentLoaded', function() {
 	}
 
 	$(".header-overlay").on('click', closeHeader);
-	// $(".mobile-header-closer").on('click', closeHeader);
-
 	if (window.innerWidth > 990) {
 		$(headerOverlay).on('mouseenter', function() {
 			$(this).addClass('hidden');

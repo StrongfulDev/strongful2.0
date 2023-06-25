@@ -653,7 +653,7 @@ table:not([class]) th {
 }
 
 @media screen and (max-width: 749px) {
-    .small-hide {
+    .small-hide, .header__icon--account + .header__icon--account {
         display: none !important;
     }
 }
@@ -3275,7 +3275,7 @@ button.needsclick {
 		position: absolute;
 		right: 0;
 		background: var(--gradient-background);
-		min-width: 30vw;
+		min-width: 27vw;
 		border: 1px solid var(--gradient-base-background-3);
 		border-radius: var(--inputs-radius);
 		padding: 2rem 0;
@@ -3334,6 +3334,14 @@ button.needsclick {
 
 	details[open] .square {
 		display: block;
+	}
+
+	.close-account {
+		border: none;
+		background: transparent;
+		height: fit-content;
+		width: fit-content;
+		padding: 0;
 	}
 }
 

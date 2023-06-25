@@ -1073,7 +1073,9 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                             <div class="square">&nbsp;</div>
                             <div class="close-custom-account-container">
                                 <h4 class="custom-customer-popup-main-title">{{ customer.name }}</h4>
-                                {% render 'icon-close' %}
+                                <button class="close-account pointer">
+                                    {% render 'icon-close' %}
+                                </button>
                             </div>
                             <div class="links-container">
                                 {% for link in section.settings.account.links %}
