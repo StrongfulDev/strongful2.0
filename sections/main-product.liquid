@@ -170,7 +170,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                             <span class="logged-out-text">{{ block.settings.logged_out_text }}</span>
                                             {% endcomment %}
                                         {% else %}
-                                            <span class="product-logged-in-text product-logged-in-text--main">{{ block.settings.logged_in_text }}</span>
+                                            <span class="product-logged-in-text product-logged-in-text--main">{{ 'products.product.loyalty.earn_title' | t: name: customer.first_name }}</span>
                                             <span class="product-logged-in-text product-logged-in-text--sub">{{ 'products.product.loyalty.earn' | t: points: loyaltyPoints }}</span>
                                         {% endunless %}
                                     </a>
