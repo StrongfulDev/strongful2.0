@@ -1303,6 +1303,9 @@
     "header": {
       "name": "Header",
       "settings": {
+        "desktop_loyalty_link": {
+          "label": "Desktop loyalty link"
+        },
         "logo_header": {
           "content": "Logo"
         },

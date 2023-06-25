@@ -3217,8 +3217,10 @@ fieldset {
 	column-gap: var(--grid-desktop-horizontal-spacing);
 	text-decoration: none;
 	padding: 1rem .5rem;
-	height: fit-content;
+	height: 5rem;
+	align-items: center;
 	border-radius: 4px;
+	display: flex;
 }
 
 .header__icon--account:hover {
