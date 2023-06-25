@@ -1211,8 +1211,8 @@ a.order-number-link .icon {
 }
 
 .close-custom-account-container .icon-close {
-	width: 2rem;
-	height: 2rem;
+	width: 2rem !important;
+	height: 2rem !important;
 }
 
 .close-custom-account-container {

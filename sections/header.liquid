@@ -1055,19 +1055,42 @@ You can learn more about this (and learn how to cleanly revert these changes) at
           </span>
                 </summary>
                     {% else %}
-                    <a href="{{ routes.account_url }}" class="header__icon header__icon--account link focus-inset">
-                        {% render 'icon-new-user' %}
-                        <span class="desktop-customer-name desktop--only">{{ customer.name }}</span>
-                        <span class="visually-hidden">
-                        {%- liquid
-                            if customer
-                                echo 'customer.account_fallback' | t
-                            else
-                                echo 'customer.log_in' | t
-                            endif
-                        -%}
-                      </span>
-                    </a>
+                    <details class="relative">
+                        <summary class="header__icon header__icon--account focus-inset">
+                            {% render 'icon-new-user' %}
+                            <span class="desktop-customer-name desktop--only">{{ customer.name }}</span>
+                            <span class="visually-hidden">
+                                {%- liquid
+                                    if customer
+                                        echo 'customer.account_fallback' | t
+                                    else
+                                        echo 'customer.log_in' | t
+                                    endif
+                                -%}
+                            </span>
+                        </summary>
+                        <div class="desktop-account-modal desktop--only fix-direction">
+                            <div class="square">&nbsp;</div>
+                            <div class="close-custom-account-container">
+                                <h4 class="custom-customer-popup-main-title">{{ customer.name }}</h4>
+                                {% render 'icon-close' %}
+                            </div>
+                            <div class="links-container">
+                                {% for link in section.settings.account.links %}
+                                    <div class="relative desktop-account-modal--links pointer">
+                                        <a href="{{ link.url }}" class="desktop-account-modal--link">
+                                            {{ link.title }}
+                                        </a>
+                                        {% render 'icon-caret' %}
+                                    </div>
+                                {% endfor %}
+                                <a href="{{ routes.account_logout_url }}" class="container-menu-item container-menu-item-logout pointer underlined-link">
+                                    {{ 'customer.account.not_customer' | t: name: customer.name }} {{ 'customer.log_out' | t }}
+                                    {% render 'icon-caret' %}
+                                </a>
+                            </div>
+                        </div>
+                    </details>
                     <a href="{{ section.settings.desktop_loyalty_link }}" class="header__icon--account desktop--only">
                         <span class="desktop-customer-name loyalty-tier">{{ vipTier }}</span>
                     </a>
@@ -1149,6 +1172,12 @@ You can learn more about this (and learn how to cleanly revert these changes) at
   "name":"t:sections.header.name",
   "class":"section-header",
   "settings":[
+      {
+          "type": "link_list",
+            "id": "account",
+            "label": "t:sections.header.account.label",
+            "info": "t:sections.header.account.info"
+      },
       {
         "type": "url",
           "id": "desktop_loyalty_link",
