@@ -7,6 +7,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	const customerOverlay = $(".custom-login-overlay");
 	const borderPosition = $("#js-border-position");
 	let customerSection;
+	let secondaryLogo;
 
 	document.querySelector("#shopify-section-main-login").classList.add("hidden");
 
@@ -26,6 +27,12 @@ window.addEventListener('DOMContentLoaded', () => {
 	}
 
 	function animations(element) {
+		secondaryLogo = document.querySelector(".header__heading-logo_secondary");
+		if (element.attr('data-account') === 'login') {
+			secondaryLogo.classList.remove("hidden");
+		} else {
+			secondaryLogo.classList.add("hidden");
+		}
 		element.addClass("active");
 		element.siblings().removeClass("active");
 		let activeWidth = element.innerWidth();

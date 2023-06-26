@@ -240,6 +240,7 @@
         "padding_top": 16,
         "padding_bottom": 16,
         "mobile_logo": "shopify:\/\/shop_images\/9ed861fba4dae099b0b04754bbc299cc.png",
+        "mobile_logo_secondary": "shopify:\/\/shop_images\/STRONGFUL_LOGO.webp",
         "mobile_logo_secondary_width": 60,
         "mobile_logo_link": "\/",
         "shop_all_link": "",

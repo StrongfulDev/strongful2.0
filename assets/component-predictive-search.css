@@ -293,11 +293,13 @@ predictive-search[loading]
 	details[open] > .search-modal {
 		width: 69vw;
 		right: 0;
+		padding-right: 1rem;
+		padding-left: 1rem;
 		left: auto;
 	}
 
 	.header__search details[open] .modal-overlay::after {
-		top: 5.5rem;
+		top: 6rem;
 		width: 120vw;
 		right: -11vw;
 	}

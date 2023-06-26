@@ -35,9 +35,10 @@ a.no-decoration {
 .customer:not(.account):not(.order):not(.addresses) {
   margin: 0 auto;
   max-width: 44rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   text-align: center;
+	height: fit-content;
 }
 
 @media screen and (min-width: 750px) {
@@ -1211,8 +1212,8 @@ a.order-number-link .icon {
 }
 
 .close-custom-account-container .icon-close {
-	width: 2rem !important;
-	height: 2rem !important;
+	width: 1.6rem !important;
+	height: 1.6rem !important;
 }
 
 .close-custom-account-container {
@@ -1337,7 +1338,24 @@ td.more-returns-info {
 	opacity: 1;
 }
 
+.accept-marketing-notice {
+	color: gray;
+	text-align: right;
+}
+
+p.customer-social-separator {
+	margin-top: 0;
+}
+
 @media screen and (min-width: 990px) {
+
+	.accept-marketing-notice {
+		font-size: calc(var(--font-body-size-medium) * 0.8);
+	}
+
+	.accept-marketing-notice a {
+		color: gray;
+	}
 
 	.text-right {
 		text-align: right;
@@ -1386,8 +1404,8 @@ td.more-returns-info {
 	}
 
 	.custom-customer-account-container.active .multicolumn {
-		padding-right: 1.5rem;
-		padding-left: 1.5rem;
+		padding-right: 2rem;
+		padding-left: 2rem;
 	}
 
 	.customer:not(.account):not(.order) {
@@ -1406,7 +1424,7 @@ td.more-returns-info {
 	}
 
 	div.custom-customer-account-container {
-		width: 43rem;
+		width: 41rem;
 		left: 50%;
 		top: 50%;
 		bottom: auto;
@@ -1423,8 +1441,8 @@ td.more-returns-info {
 	}
 
 	.close-custom-account-container {
-		padding-right: 1.5rem;
-		padding-left: 1.5rem;
+		padding-right: 2rem;
+		padding-left: 2rem;
 	}
 
 	.account-desktop-container > .custom-orders-container {

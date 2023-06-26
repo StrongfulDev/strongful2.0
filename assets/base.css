@@ -2296,11 +2296,6 @@ quantity-input button.quantity__button {
     cursor: initial;
 }
 
-/* component-cart-count-bubble */
-/* .cart-count-bubble:empty {
-    display: none;
-} */
-
 .cart-count-bubble {
     position: absolute;
     background-color: rgb(var(--color-button));
@@ -2382,7 +2377,7 @@ quantity-input button.quantity__button {
 
     .header--middle-left {
         grid-template-areas: 'heading navigation icons';
-        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-columns: 1fr 3.5fr 1fr;
         column-gap: 2rem;
     }
 
@@ -3212,7 +3207,7 @@ fieldset {
     width: 2.5rem;
 }
 
-.header__icon--account {
+.header__icon {
 	width: fit-content;
 	column-gap: var(--grid-desktop-horizontal-spacing);
 	text-decoration: none;
@@ -3223,7 +3218,7 @@ fieldset {
 	display: flex;
 }
 
-.header__icon--account:hover {
+.header__icon:hover {
 	background: var(--gradient-base-background-3)
 }
 
@@ -3265,6 +3260,13 @@ button.needsclick {
 	.collection__title_heading .title.heading_type_2:not(:only-child) {
 		font-size: calc(var(--font-body-size-large) * 1.5);
 		margin: 0;
+	}
+
+	.header__heading-logo_secondary {
+		position: absolute;
+		bottom: 3rem;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 
 	.relative {
