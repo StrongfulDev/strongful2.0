@@ -3148,7 +3148,7 @@ fieldset {
 /* Custom Styles starting 12.4.23 */
 
 .desktop--only {
-    display: none;
+    display: none !important;
 }
 
 .button--primary {
