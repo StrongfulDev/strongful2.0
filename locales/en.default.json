@@ -143,7 +143,7 @@
         "play_video": "Play video"
       },
       "loyalty": {
-        "earn_title": "STRONGFUL Club - היי {{ name }}",
+        "earn_title": "STRONGFUL CLUB - היי {{ name }}",
         "earn": "חברת מועדון, בקניית פריט זה תצברי {{ points }} נקודות"
       },
       "quantity": {
