@@ -104,7 +104,8 @@ a.no-decoration {
 .customer .field label,
 .customer .field input:focus ~ label,
 .customer .field input:-webkit-autofill~label,
-.customer .field input:not(:placeholder-shown) ~ label {
+.customer .field input:not(:placeholder-shown) ~ label,
+.field__label {
 	top: -3rem;
 	right: 0;
 	font-size: 1.6rem;

@@ -3790,13 +3790,17 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 	color: var(--gradient-base-accent-1) !important;
 }
 
+#enable-toolbar-trigger svg {
+	height: 28px !important;
+}
+
 #enable-toolbar-trigger .icon-pill, #enable-toolbar-trigger .icon-pill-border {
 	position: absolute;
 	top: -10px;
 	left: -17px;
 	transform: rotate(90deg);
-	width: 41px;
-	height: 49px;
+	width: 41px !important;
+	height: 49px !important;
 }
 
 #enable-toolbar-trigger .icon-pill {
@@ -3807,8 +3811,8 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 	z-index: 1;
 	stroke: var(--gradient-base-accent-1);
 	fill: var(--gradient-background);
-	height: 6rem;
-	width: 5.7rem;
+	height: 6rem !important;
+	width: 5.7rem !important;
 	top: -1.4rem;
 	left: -2.6rem;
 	stroke-width: 0.05rem;
