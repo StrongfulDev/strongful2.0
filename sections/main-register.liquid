@@ -137,8 +137,9 @@
         {{ 'customer.register.form_errors.password' | t }}
       </span>
     {%- endif -%}
-    <button>
-      {{ 'customer.register.submit' | t }}
+    <button class="button-loader-activator">
+      <span class="button-loader-text">{{ 'customer.register.submit' | t }}</span>
+        {% render 'loading-spinner' %}
     </button>
       <p class="customer-social-separator">{{ 'customer.register.or' | t }}</p>
       {% if template.name != 'login' or template.name != 'register' %}

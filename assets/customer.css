@@ -1349,6 +1349,21 @@ p.customer-social-separator {
 
 @media screen and (min-width: 990px) {
 
+	.main-account-info-container--contact {
+		margin: 3rem 0 1rem auto;
+		width: 70%;
+	}
+
+	.contact-icons-container {
+		border-top: 0;
+		border-bottom: 0;
+	}
+
+	.container-menu-item.container-menu-item--logout {
+		width: 70%;
+		margin-left: auto;
+	}
+
 	.accept-marketing-notice {
 		font-size: calc(var(--font-body-size-medium) * 0.8);
 	}
@@ -1452,7 +1467,7 @@ p.customer-social-separator {
 		overflow-y: hidden;
 	}
 
-	.toggle-orders-button, .main-account-info-container--contact, .container-menu-item--logout {
+	.toggle-orders-button {
 		display: none;
 	}
 

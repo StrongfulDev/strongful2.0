@@ -145,8 +145,9 @@
         </a>
       {%- endif -%}
 
-      <button>
-        {{ 'customer.login_page.sign_in' | t }}
+      <button class="button-loader-activator">
+        <span class="button-loader-text">{{ 'customer.login_page.sign_in' | t }}</span>
+          {% render 'loading-spinner' %}
       </button>
         <p class="customer-social-separator">{{ 'customer.register.or' | t }}</p>
         {% if template.name != 'login' or template.name != 'register' %}

@@ -3863,3 +3863,13 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 .model-wears-size .small {
 	margin-bottom: 3px;
 }
+
+.button-loader-activator .loading-overlay {
+	top: 50%;
+	right: 50%;
+	transform: translate(50%, -50%);
+}
+
+.button-loader-activator .spinner .path {
+	stroke: var(--gradient-background);
+}
