@@ -3200,7 +3200,7 @@ fieldset {
 }
 
 .header__icons {
-    column-gap: var(--grid-desktop-vertical-spacing);
+    column-gap: var(--grid-mobile-vertical-spacing);
 }
 
 .header__icon, .header__icon--cart .icon {
