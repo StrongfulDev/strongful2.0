@@ -1213,6 +1213,14 @@ function removeDeadProduct() {
 
 window.addEventListener('DOMContentLoaded', function() {
 
+	function toggleButtonLoading() {
+		$(this).find('.button-loader-text').addClass('zero-opacity');
+		$(this).find('.loading-overlay__spinner').removeClass('hidden');
+		$(this).css('opacity', '0.5');
+	}
+
+	$('.button-loader-activator').on('click', toggleButtonLoading);
+
 	removeDeadProduct();
 
 	$(".loader-wrapper").delay().fadeOut("slow");
