@@ -3177,7 +3177,7 @@ fieldset {
     }
 
     .desktop--only {
-        display: block;
+        display: flex !important;
     }
 }
 
@@ -3207,7 +3207,7 @@ fieldset {
     width: 2.5rem;
 }
 
-.header__icon {
+.header__icon, .header__icon--account {
 	width: fit-content;
 	column-gap: var(--grid-desktop-horizontal-spacing);
 	text-decoration: none;
@@ -3218,7 +3218,7 @@ fieldset {
 	display: flex;
 }
 
-.header__icon:hover {
+.header__icon:hover, .header__icon--account:hover {
 	background: var(--gradient-base-background-3)
 }
 
@@ -3281,6 +3281,7 @@ button.needsclick {
 		border: 1px solid var(--gradient-base-background-3);
 		border-radius: var(--inputs-radius);
 		padding: 2rem 0;
+		flex-direction: column;
 	}
 
 	.desktop-account-modal h4 {
