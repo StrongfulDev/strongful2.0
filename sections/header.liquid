@@ -1083,7 +1083,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                         <div class="desktop-account-modal--link">
                                             {{ link.title }}
                                         </div>
-                                        {% render 'icon-caret' %}
+                                        {% comment %}{% render 'icon-caret' %}{% endcomment %}
                                     </a>
                                 {% endfor %}
                                 <a href="{{ routes.account_logout_url }}" class="container-menu-item container-menu-item-logout pointer underlined-link">
