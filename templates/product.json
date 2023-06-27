@@ -134,8 +134,16 @@
         "padding_bottom": 80
       }
     },
+    "complete-look-products": {
+      "type": "complete-look-products",
+      "settings": {
+        "heading": "SHOP THE LOOK",
+        "heading_size": "h1"
+      }
+    },
     "e7a9b59b-79c7-43d1-8e8e-c5586eda96e8": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "steps": 4,
         "title": "SHOP THE LOOK",
@@ -211,7 +219,7 @@
         "quick_add_accessories_text": "הוספה מהירה",
         "columns_mobile": "2",
         "swipe_on_mobile": true,
-        "padding_top": 0,
+        "padding_top": 36,
         "padding_bottom": 36
       }
     },
@@ -288,6 +296,7 @@
   },
   "order": [
     "main",
+    "complete-look-products",
     "e7a9b59b-79c7-43d1-8e8e-c5586eda96e8",
     "daadfb7d-6377-46b9-9592-68ff753bf341",
     "6a92001a-1714-49ba-a6c2-ab5ee898262d",
