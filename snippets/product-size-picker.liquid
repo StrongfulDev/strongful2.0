@@ -175,13 +175,12 @@
                                 אזל המלאי
                             </button>
                         {% else %}
-                            <button type="submit"
-                                    name="add"
+                            <button type="submit" name="add"
                                     class="add_to_cart product-form__submit button button--full-width button--secondary">
-                                הוספה
+                                <span class="button-loader-text">הוספה</span>
+                                {% render 'loading-spinner' %}
                             </button>
                         {% endif %}
-                        {% render 'loading-spinner' %}
                         <input type="submit" hidden="hidden"/>
                     </div>
                 {%- endform -%}

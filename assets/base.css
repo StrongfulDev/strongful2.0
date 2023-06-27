@@ -3319,6 +3319,7 @@ button.needsclick {
 		border-radius: var(--inputs-radius);
 		padding: 2rem 0;
 		flex-direction: column;
+		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 	}
 
 	.desktop-account-modal h4 {
@@ -3900,6 +3901,10 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 
 .model-wears-size .small {
 	margin-bottom: 3px;
+}
+
+.button-loader-activator {
+	position: relative;
 }
 
 .button-loader-activator .loading-overlay {

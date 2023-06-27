@@ -1082,6 +1082,9 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                     <a href="{{ link.url }}" class="relative desktop-account-modal--links pointer">
                                         <div class="desktop-account-modal--link">
                                             {{ link.title }}
+                                            {% if link.title == 'מועדון לקוחות' %}
+                                            <span class="desktop-customer-name loyalty-tier">{{ vipTier }}</span>
+                                            {% endif %}
                                         </div>
                                         {% comment %}{% render 'icon-caret' %}{% endcomment %}
                                     </a>

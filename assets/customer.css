@@ -272,6 +272,10 @@ a.no-decoration {
 /* mobile table overrides */
 @media screen and (max-width: 749px) {
 
+	.container-menu-item {
+		font-weight: var(--font-body-weight);
+	}
+
 	thead {
 		display: none;
 	}
@@ -911,10 +915,14 @@ li.multicolumn-list__item.grid__item {
 	margin: 0;
 }
 
+.main-account-info-container--loyalty .container-title h4 {
+	font-size: calc(var(--font-body-size-large) * 0.8);
+	margin-right: var(--grid-mobile-vertical-spacing);
+}
+
 .main-account-info-container--loyalty .container-title h6 {
 	font-weight: var(--font-body-weight-normal);
 	font-size: calc(var(--font-body-size-medium) * .9);
-	color: rgba(var(--color-foreground),.6);
 }
 
 a.container-menu-item, span.container-menu-item {
@@ -946,7 +954,7 @@ a.container-menu-item span {
 }
 
 p.container-extra-info {
-	font-size: var(--font-body-size-small);
+	font-size: calc(var(--font-body-size-small) * 1.2);
 	color: var(--rtg-text-color);
 	margin-top: var(--grid-desktop-horizontal-spacing);
 }
@@ -1006,7 +1014,7 @@ p.container-extra-info {
 	margin: 3em 0;
 }
 
-.contact-icon-child:first-child {
+.contact-icon-child:not(:last-child) {
 	border-left: 1px var(--gradient-base-background-3) solid;
 }
 
@@ -1079,14 +1087,14 @@ button.add-address-button:before, button.add-address-button:after {
 	display: block;
 	visibility: visible;
 	background-color: var(--gradient-base-background-1);
-	top: 2.8rem;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 button.add-address-button:before {
 	width: 1.2rem;
 	height: 0.2rem;
-	left: 1rem;
-	top: 50%;
+	left: 2rem;
 }
 
 button.add-address-button.active:after {
@@ -1096,10 +1104,8 @@ button.add-address-button.active:after {
 button.add-address-button:after {
 	height: 1.2rem;
 	width: 0.2rem;
-	left: 1.5rem;
-	transform: translateY(-0.5rem);
+	left: 2.5rem;
 	box-shadow: none;
-	top: 50%;
 }
 
 .addresses li > button {
@@ -1357,6 +1363,7 @@ p.customer-social-separator {
 	.contact-icons-container {
 		border-top: 0;
 		border-bottom: 0;
+		grid-template-columns: repeat(3, 1fr);
 	}
 
 	.container-menu-item.container-menu-item--logout {
@@ -1376,6 +1383,10 @@ p.customer-social-separator {
 		text-align: right;
 	}
 
+	.text-right.desktop--only {
+		flex-direction: column;
+	}
+
 	h1.address-main-title {
 		margin-top: 0;
 		font-size: var(--font-body-size-large);
@@ -1388,8 +1399,8 @@ p.customer-social-separator {
 
 	button.add-address-button {
 		width: fit-content;
-		padding: 2rem 5rem;
-		margin-right: auto;
+		padding: 2rem 4.5rem;
+		margin: auto;
 	}
 
 	button.add-address-button:hover {
@@ -1604,6 +1615,7 @@ p.customer-social-separator {
 		padding: 2rem;
 		border: 1px solid var(--gradient-base-background-3);
 		border-radius: 4px;
+		margin-top: 4rem;
 	}
 
 	.price__sale {

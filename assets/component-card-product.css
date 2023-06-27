@@ -59,6 +59,7 @@
     min-height: unset;
     margin-top: 2px;
     margin-bottom: 0;
+	border-radius: var(--inputs-radius);
 }
 
 /*.card .product_variants .size_variant_button {*/

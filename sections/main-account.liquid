@@ -42,7 +42,7 @@
           <div class="main-account-info-container main-account-info-container--loyalty">
               <div class="container-title bold">
                   <h6>{{ 'customer.account.loyalty.sub_title' | t }}</h6>
-                  <h4 class="ltr">{{ 'customer.account.loyalty.title' | t }}&nbsp;</h4>
+                  <h4 class="ltr">{{ 'customer.account.loyalty.title' | t }}</h4>
               </div>
               <a href="/pages/a-list" class="container-menu-item pointer">ALIST <span>{{ vipTier }}</span>
                   {% render 'icon-caret' %}
@@ -167,6 +167,12 @@
               <div class="main-account-info-container main-account-info-container--contact">
                   <p>{{ 'customer.account.contact.title' | t }}</p>
                   <div class="contact-icons-container">
+                      <div class="contact-icon-child">
+                          <a href="https://wa.me/972533076158">
+                              {% render 'whatsapp' %}
+                          </a>
+                          <p class="contact-text">{{ 'customer.account.contact.whatsapp' | t }}</p>
+                      </div>
                       <div class="contact-icon-child">
                           <a href="mailto:{{ shop.email }}">
                               {% render 'envelope' %}

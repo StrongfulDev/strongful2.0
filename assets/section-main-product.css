@@ -1827,6 +1827,10 @@ product-info > .product__inventory {
 
 @media screen and (min-width: 990px) {
 
+	.product__inventory {
+		width: max-content;
+	}
+
 	.swiper-container {
 		padding: 1rem 0;
 	}

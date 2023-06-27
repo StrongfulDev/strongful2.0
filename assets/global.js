@@ -1216,7 +1216,15 @@ window.addEventListener('DOMContentLoaded', function() {
 	function toggleButtonLoading() {
 		$(this).find('.button-loader-text').addClass('zero-opacity');
 		$(this).find('.loading-overlay__spinner').removeClass('hidden');
+		$(this).find('.loading-overlay').show();
 		$(this).css('opacity', '0.5');
+
+		setTimeout(() => {
+			$(this).find('.button-loader-text').removeClass('zero-opacity');
+			$(this).find('.loading-overlay__spinner').addClass('hidden');
+			$(this).find('.loading-overlay').hide();
+			$(this).css('opacity', '1');
+		}, 5000);
 	}
 
 	$('.button-loader-activator').on('click', toggleButtonLoading);
