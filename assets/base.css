@@ -3257,6 +3257,43 @@ button.needsclick {
 }
 
 @media screen and (min-width: 990px) {
+
+	.account-menu-buttons {
+		padding: 1.5rem;
+	}
+
+	.account-menu-buttons a:before, .account-menu-buttons a:after {
+		display: none;
+		content: none;
+	}
+
+	.account-menu-buttons a.logout-link, .account-menu-buttons .button {
+		padding: 1rem 2rem;
+		font-size: var(--font-body-size-medium);
+		font-weight: var(--font-body-weight-bold);
+		min-height: auto;
+		border-radius: var(--inputs-radius);
+		border: 0;
+	}
+
+	.account-menu-buttons .button:hover {
+		background: var(--gradient-base-background-4);
+	}
+
+	.account-menu-buttons a.logout-link:hover {
+		background: var(--gradient-base-background-3);
+	}
+
+	.account-menu-buttons a.logout-link {
+		color: var(--gradient-base-accent-1);
+		text-decoration: none;
+		background: var(--gradient-background)
+	}
+
+	.account-menu-buttons .button {
+		margin-right: var(--grid-desktop-vertical-spacing);
+	}
+
 	.collection__title_heading .title.heading_type_2:not(:only-child) {
 		font-size: calc(var(--font-body-size-large) * 1.5);
 		margin: 0;

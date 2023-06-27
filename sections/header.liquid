@@ -1086,10 +1086,15 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                         {% comment %}{% render 'icon-caret' %}{% endcomment %}
                                     </a>
                                 {% endfor %}
-                                <a href="{{ routes.account_logout_url }}" class="container-menu-item container-menu-item-logout pointer underlined-link">
-                                    {{ 'customer.account.not_customer' | t: name: customer.name }} {{ 'customer.log_out' | t }}
-                                    {% render 'icon-caret' %}
-                                </a>
+                                <div class="account-menu-buttons">
+                                    <a class="logout-link" href="{{ routes.account_logout_url }}">
+                                        {{ 'customer.log_out' | t }}
+                                    </a>
+                                    <a href="{{ routes.account_url }}" class="button button-loader-activator">
+                                        <span class="button-loader-text">{{ 'customer.account.sub_title' | t }}</span>
+                                        {% render 'loading-spinner' %}
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </details>
