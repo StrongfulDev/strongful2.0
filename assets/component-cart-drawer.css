@@ -205,7 +205,7 @@ cart-drawer {
 	flex-grow: 1;
 }
 
-.cart-drawer .cart-items, .cart-drawer tbody {
+.cart-drawer .cart-items {
 	display: block;
 	width: 100%;
 	height: 64vh;
