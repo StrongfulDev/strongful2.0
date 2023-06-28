@@ -3919,3 +3919,7 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 .button-loader-activator .spinner .path {
 	stroke: var(--gradient-background);
 }
+
+.admin-bar__page {
+	display: none;
+}
