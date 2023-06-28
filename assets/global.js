@@ -257,9 +257,9 @@ Shopify.bind = function(fn, scope) {
 };
 
 Shopify.setSelectorByValue = function(selector, value) {
-  for (var i = 0, count = selector.options.length; i < count; i++) {
-    var option = selector.options[i];
-    if (value == option.value || value == option.innerHTML) {
+  for (let i = 0, count = selector.options.length; i < count; i++) {
+    let option = selector.options[i];
+    if (value === option.value || value === option.innerHTML) {
       selector.selectedIndex = i;
       return i;
     }
@@ -369,6 +369,7 @@ class MenuDrawer extends HTMLElement {
 			this.querySelectorAll('summary').forEach(summary => summary.addEventListener('mouseenter', this.onSummaryHover.bind(this)));
 		}
     this.querySelectorAll('button').forEach(button => button.addEventListener('click', this.onCloseButtonClick.bind(this)));
+		document.querySelector('.desktop-account-modal button').addEventListener('click', this.onCloseButtonClick.bind(this));
   }
 
   onKeyUp(event) {
@@ -407,18 +408,16 @@ class MenuDrawer extends HTMLElement {
 	  });
 
     function addTrapFocus() {
-      trapFocus(summaryElement.nextElementSibling, detailsElement.querySelector('button'));
-      summaryElement.nextElementSibling.removeEventListener('transitionend', addTrapFocus);
+     // trapFocus(summaryElement.nextElementSibling, detailsElement.querySelector('button'));
+     // summaryElement.nextElementSibling.removeEventListener('transitionend', addTrapFocus);
     }
 
 		if (isOpen === false) {
-			$('body').addClass('overflow-hidden');
 			$('html').addClass('overflow-hidden');
 			if (summaryElement.classList.contains("mobile-facets__open-wrapper")) {
 				 $(".facets-wrapper").addClass('high-index');
 			}
 		} else {
-			$('body').removeClass('overflow-hidden');
 			$('html').removeClass('overflow-hidden');
 			if (summaryElement.classList.contains("mobile-facets__open-wrapper")) {
 				$(".facets-wrapper").removeClass('high-index');
@@ -507,8 +506,14 @@ class MenuDrawer extends HTMLElement {
   onCloseButtonClick(event) {
     const detailsElement = event.currentTarget.closest('details');
     this.closeSubmenu(detailsElement);
-		$(".mobile_menu_link.header__menu-item").removeClass('hidden').removeClass('active');
-		$(".mobile_menu_link.header__menu-item").parent().css('display', 'flex');
+		let mobileHeaderMenuItem = $(".mobile_menu_link.header__menu-item");
+		mobileHeaderMenuItem.removeClass('hidden').removeClass('active');
+		mobileHeaderMenuItem.parent().css('display', 'flex');
+		$(".header-overlay").addClass("hidden");
+		$('html').removeClass('overflow-hidden');
+	  if (window.matchMedia('(max-width: 990px)')) {
+		  document.documentElement.style.removeProperty('--viewport-height');
+	  }
   }
 
   closeSubmenu(detailsElement) {
@@ -666,15 +671,19 @@ class SliderComponent extends HTMLElement {
     super();
     this.slider = this.querySelector('[id^="Slider-"]');
     this.sliderItems = this.querySelectorAll('[id^="Slide-"]');
-    this.enableSliderLooping = false;
+    this.enableSliderLooping = true;
     this.currentPageElement = this.querySelector('.slider-counter--current');
     this.pageTotalElement = this.querySelector('.slider-counter--total');
     this.prevButton = this.querySelector('button[name="previous"]');
     this.nextButton = this.querySelector('button[name="next"]');
+		if (this.querySelector('.slider-component-progress-bar') !== null) {
+			this.progressBar = this.querySelector('.slider-component-progress-bar');
+		}
 
     if (!this.slider || !this.nextButton) return;
 
     this.initPages();
+	  this.moveProgressBar();
     const resizeObserver = new ResizeObserver(entries => this.initPages());
     resizeObserver.observe(this.slider);
 
@@ -697,9 +706,19 @@ class SliderComponent extends HTMLElement {
     this.initPages();
   }
 
+	moveProgressBar() {
+		if (this.progressBar) {
+			this.progressBar.style.left = `${(this.currentPage - 1) * 100 / this.totalPages}%`;
+			this.progressBar.style.width = `${100 / this.totalPages}%`;
+		}
+	}
+
   update() {
     // Temporarily prevents unneeded updates resulting from variant changes
     // This should be refactored as part of https://github.com/Shopify/dawn/issues/2057
+
+	  this.moveProgressBar();
+
     if (!this.slider || !this.nextButton) return;
 
     const previousPage = this.currentPage;
@@ -737,14 +756,43 @@ class SliderComponent extends HTMLElement {
     return (element.offsetLeft + element.clientWidth) <= lastVisibleSlide && element.offsetLeft >= this.slider.scrollLeft;
   }
 
-  onButtonClick(event) {
-    event.preventDefault();
-    const step = event.currentTarget.dataset.step || 1;
-    this.slideScrollPosition = event.currentTarget.name === 'next' ? this.slider.scrollLeft + (step * this.sliderItemOffset) : this.slider.scrollLeft - (step * this.sliderItemOffset);
-    this.slider.scrollTo({
-      left: this.slideScrollPosition
-    });
-  }
+  // onButtonClick(event) {
+  //   event.preventDefault();
+  //   const step = event.currentTarget.dataset.step || 1;
+  //   this.slideScrollPosition = event.currentTarget.name === 'next' ? this.slider.scrollLeft + (step * this.sliderItemOffset) : this.slider.scrollLeft - (step * this.sliderItemOffset);
+  //   this.slider.scrollTo({
+  //     left: this.slideScrollPosition
+  //   });
+  // }
+
+	onButtonClick(event) {
+		event.preventDefault();
+		const step = event.currentTarget.dataset.step || 1;
+		this.slideScrollPosition = event.currentTarget.name === 'next' ?
+			this.slider.scrollLeft + (step * this.sliderItemOffset) :
+			this.slider.scrollLeft - (step * this.sliderItemOffset);
+		// Check if it's the end or the beginning of the slides for looping
+		// if (this.enableSliderLooping) {
+		// 	if (this.slideScrollPosition < 0) {
+		// 		this.slideScrollPosition = (this.totalPages - 1) * this.sliderItemOffset;
+		// 	} else if (this.slideScrollPosition / this.sliderItemOffset >= this.totalPages) {
+		// 		this.slideScrollPosition = 0;
+		// 	}
+		// }
+
+		if (this.enableSliderLooping) {
+			if (this.slideScrollPosition < 0) {
+				this.slideScrollPosition = (this.totalPages - 1) * this.sliderItemOffset;
+			} else if (Math.round(this.slideScrollPosition / this.sliderItemOffset) >= this.totalPages) {
+				this.slideScrollPosition = 0;
+			}
+		}
+
+		this.slider.scrollTo({
+			left: this.slideScrollPosition,
+			behavior: 'smooth' // Smooth scroll
+		});
+	}
 }
 
 customElements.define('slider-component', SliderComponent);
@@ -1154,7 +1202,34 @@ class ProductRecommendations extends HTMLElement {
 
 customElements.define('product-recommendations', ProductRecommendations);
 
+function removeDeadProduct() {
+	let listItems = document.querySelectorAll('.grid__item');
+	listItems.forEach(item => {
+		if (item.childNodes.length === 1) {
+			item.remove();
+		}
+	});
+}
+
 window.addEventListener('DOMContentLoaded', function() {
+
+	function toggleButtonLoading() {
+		$(this).find('.button-loader-text').addClass('zero-opacity');
+		$(this).find('.loading-overlay__spinner').removeClass('hidden');
+		$(this).find('.loading-overlay').show();
+		$(this).css('opacity', '0.5');
+
+		setTimeout(() => {
+			$(this).find('.button-loader-text').removeClass('zero-opacity');
+			$(this).find('.loading-overlay__spinner').addClass('hidden');
+			$(this).find('.loading-overlay').hide();
+			$(this).css('opacity', '1');
+		}, 5000);
+	}
+
+	$('.button-loader-activator').on('click', toggleButtonLoading);
+
+	removeDeadProduct();
 
 	$(".loader-wrapper").delay().fadeOut("slow");
 
@@ -1167,15 +1242,12 @@ window.addEventListener('DOMContentLoaded', function() {
 	});
 
 	function closeHeader(event) {
-		$('body').removeClass(`overflow-hidden-${menuDrawer.dataset.breakpoint}`).removeClass('overflow-hidden');
 		$('html').removeClass(`overflow-hidden-${menuDrawer.dataset.breakpoint}`).removeClass('overflow-hidden');
 		$(".menu-drawer-container.customizable.menu-opening").attr('open', false).removeClass('menu-opening');
 		$(headerOverlay).addClass('hidden');
 	}
 
 	$(".header-overlay").on('click', closeHeader);
-	$(".mobile-header-closer").on('click', closeHeader);
-
 	if (window.innerWidth > 990) {
 		$(headerOverlay).on('mouseenter', function() {
 			$(this).addClass('hidden');
@@ -1195,14 +1267,16 @@ window.addEventListener('DOMContentLoaded', function() {
 
 });
 
-function getViewportHeight() {
-	// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-		let vh = window.innerHeight * 0.01;
-	// Then we set the value in the --vh custom property to the root of the document
-		document.documentElement.style.setProperty('--vh', `${vh}px`);
+// check the previous window url
+function checkUrl() {
+	let previousUrl = sessionStorage.getItem('previousUrl');
+	if (previousUrl) {
+		if (previousUrl.includes('checkout')) {
+			window.location.reload();
+		}
+	}
 }
 
-// We listen to the resize event
-window.addEventListener('resize', getViewportHeight);
-
-getViewportHeight();
+if (window.performance && window.performance.navigation.type === window.performance.navigation.TYPE_BACK_FORWARD) {
+	checkUrl();
+}

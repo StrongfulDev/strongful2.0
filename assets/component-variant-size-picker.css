@@ -128,12 +128,15 @@
     border-bottom: 1px solid grey;
     text-align: var(--text-alignment);
     padding: 0 20px 10px;
+	display: flex;
+	align-items: center;
 }
 
 .variant_modal .product_variants ul {
     flex-direction: column;
     width: 100%;
 	padding-bottom: 4rem;
+	margin-top: 0;
 }
 
 .variant_modal .product_variants li {
@@ -148,8 +151,10 @@
     border: none;
     border-bottom: 1px solid rgba(var(--color-foreground), 0.3);
     border-radius: unset;
-	width: 90%;
+	width: 100%;
 	margin: auto;
+	padding-left: 5%;
+	padding-right: 5%;
 }
 
 .variant_modal .product_variants .size_variant_button_container label {
@@ -361,12 +366,17 @@ ul.default_variant_list {
 	display: none;
 }
 
+.product_size_picker__button__label-span {
+	display: flex;
+	align-items: center;
+}
+
 .soldout-variant-line {
 	position: absolute;
 	inset: 0;
 	height: 90%;
 	width: 100%;
-	z-index: 9;
+	z-index: 3;
 	left: 0;
 	pointer-events: none;
 }
@@ -388,6 +398,7 @@ ul.default_variant_list {
 	.product_variants .size_variant_button_container label {
 		padding: .5rem 0;
 		font-size: calc(var(--font-body-size-medium) * 0.9);
+		border-radius: 4px;
 	}
 
 	.size_variant_button.default_size_variant_button.disabled-variant-button label:hover {

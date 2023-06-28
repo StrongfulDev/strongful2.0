@@ -117,6 +117,8 @@
     "product": {
       "add_to_cart": "הוספה לסל",
       "choose_options": "Choose options",
+      "up_size_recommendation": "במוצר זה מומלץ לקחת מידה יותר",
+      "down_size_recommendation": "במוצר זה מומלץ לקחת מידה פחות",
       "choose_product_options": "Choose options for {{ product_name }}",
       "description": "Description",
       "inventory_in_stock": "In stock",
@@ -190,6 +192,7 @@
       "model_switch": {
         "button": "החלפת דוגמנית",
         "model_wears_female": "הדוגמנית לובשת מידות:",
+        "model_wears_only_female": "הדוגמנית לובשת",
         "female_top_part": "חלק עליון:",
         "female_bottom_part": "חלק תחתון:"
       }
@@ -198,7 +201,8 @@
       "label": "Media gallery"
     },
     "facets": {
-      "apply": "מימוש",
+      "apply": "אישור",
+      "select_more_filters": "נא לבחור סינון",
       "clear": "איפוס",
       "clear_all": "איפוס",
       "from": "From",
@@ -223,19 +227,19 @@
       },
       "reset": "איפוס",
       "sort_button": "Sort",
-      "sort_by_label": "סידור לפי:",
+      "sort_by_label": "סינון לפי",
       "to": "To",
       "clear_filter": "Remove filter",
       "product_type": "סוג מוצר",
       "filters": {
-        "manual": "מומלץ",
+        "manual": "נבחרים",
         "best-selling": "הנמכרים ביותר",
         "title-ascending": "מא׳ עד ת׳",
         "title-descending": "מת׳ עד א׳",
         "price-ascending": "מחיר, מהנמוך לגבוה",
         "price-descending": "מחיר, מהגבוה לנמוך",
-        "created-ascending": "תאריך, מהחדש לישן",
-        "created-descending": "תאריך, מהישן לחדש"
+        "created-ascending": "תאריך, מהישן לחדש",
+        "created-descending": "חדש ביותר"
       }
     }
   },
@@ -281,11 +285,11 @@
         "comment": "תוכן ההודעה",
         "send": "שליחה",
         "post_success": "תודה על פנייתך! נחזור אליך בהקדם האפשרי.",
-        "error_heading": "הייתה בעיה בשליחת ההודעה"
+        "error_heading": "אירעה שגיאה"
       }
     },
     "404": {
-      "title": "Page not found",
+      "title": "דף לא נמצא",
       "subtext": "404"
     }
   },
@@ -310,7 +314,7 @@
       "note": "Order special instructions",
       "checkout": "מעבר לתשלום",
       "empty": "הסל שלך ריק",
-      "empty_paragraph": "לחצי כאן כדי להוסיף את הפריטים הכי שיקיים לעגלה",
+      "empty_paragraph": "לחצי כאן לראות מה חדש",
       "cart_error": "There was an error while updating your cart. Please try again.",
       "cart_quantity_error_html": "You can only add {{ quantity }} of this item to your cart.",
       "taxes_and_shipping_policy_at_checkout_html": "Taxes and <a href=\"{{ link }}\">shipping<\/a> calculated at checkout",
@@ -327,7 +331,8 @@
       "update": "Update",
       "login": {
         "title": "חברת מועדון?",
-        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">הכנסי<\/a> כדי להזמין מהר יותר ולצבור נקודות."
+        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">התחברי<\/a> להזמנה קלה ומהירה.",
+        "paragraph_secondary": "צבירת נקודות בכל הזמנה!"
       },
       "rewards": {
         "title": "Earn rewards",
@@ -397,7 +402,7 @@
         "title": "צרי קשר",
         "phone": "טלפון",
         "email": "מייל",
-        "business-hours": "ימים ראשון עד חמישי בין השעות 09:00 עד 16:00"
+        "business-hours": "ימים ראשון עד חמישי בין השעות 09:00 עד 14:00"
       }
     },
     "account_fallback": "משתמש",
@@ -422,7 +427,7 @@
       "city": "עיר",
       "country": "Country\/region",
       "province": "Province",
-      "zip": "מיקוד דואר",
+      "zip": "מיקוד",
       "phone": "טלפון",
       "set_default": "אני רוצה שזו תהיה הכתובת הראשית שלי",
       "add": "הוספת כתובת",
@@ -443,19 +448,25 @@
       "guest_title": "המשיכי ללא משתמש",
       "password": "סיסמה",
       "title": "כניסה",
-      "sign_in": "כניסה>>",
+      "sign_in": "כניסה",
       "submit": "שליחה"
     },
     "order": {
       "title": "הזמנה מספר {{ number }}",
-      "order_number": "הזמנה מספר",
+      "order_number": "מספר הזמנה",
       "details": "פרטי הזמנה",
+      "more_details": "פרטים נוספים",
+      "returns_and_exchanges": "החלפות והחזרות",
+      "returns_and_exchanges_info": "לקבלת מידע נוסף על החלפות והחזרות, אנא צרי קשר",
+      "return_policy": "מדיניות החזרות",
+      "transaction_date": "תאריך העסקה",
       "date_done": "בוצעה בתאריך",
       "date_html": "תאריך {{ date }}",
       "date_only": "תאריך",
       "cancelled_html": "בוטלה בתאריך {{ date }}",
       "cancelled_reason": "סיבת ביטול: {{ reason }}",
       "items": "פריטים",
+      "product_image": "תמונת מוצר",
       "billing_address": "כתובת לחיוב",
       "payment_status": "סטטוס תשלום",
       "shipping_address": "כתובת למשלוח",
@@ -468,6 +479,7 @@
       "price": "מחיר",
       "quantity": "כמות",
       "total": "סה״כ",
+      "no_returns": "לא ניתן להחזיר את פריט זה",
       "total_refunded": "סה״כ זיכויים",
       "fulfilled_at_html": "נארז בתאריך {{ date }}",
       "track_shipment": "מעקב משלוח",
@@ -489,12 +501,23 @@
       "fulfillment_status_restocked": "מחזיר מלאי",
       "order_status_cancelled": "בוטלה",
       "shipping_company": "קרגו",
+      "item_count_desktop": "כמות פריטים",
+      "change_address": "אם ברצונך לשנות את כתובת המשלוח של ההזמנה שלך, את יכולה לעשות זאת לפני שהיא נארזת",
       "fulfillment_statuses": {
         "Fulfilled": "נשלח",
         "Partial": "נשלח חלקית",
         "Restocked": "מחזיר מלאי",
         "Unfulfilled": "טרם נשלח"
-      }
+      },
+      "payment_statuses": {
+        "partially_paid": "שולם חלקית",
+        "partially_refunded": "הוחזר חלקית",
+        "Paid": "שולם",
+        "pending": "ממתין לתשלום",
+        "Refunded": "הוחזר",
+        "voided": "בוטל"
+      },
+      "summary": "סיכום"
     },
     "orders": {
       "title": "ההזמנות שלי",
@@ -520,8 +543,15 @@
       "last_name": "שם משפחה",
       "email": "אימייל",
       "password": "סיסמה",
-      "submit": "הרשמה>>",
-      "login_toggler": "כבר חברת מועדון? התחברי"
+      "submit": "הרשמה",
+      "login_toggler": "כבר חברת מועדון? התחברי",
+      "form_errors": {
+        "email": "כתובת המייל שהוזנה אינה תקינה",
+        "password": "סיסמה לא יכולה להיות ריקה",
+        "body": "אירעה שגיאה בעת שליחת הטופס. אנא נסי שוב.",
+        "author": "שמך הפרטי חייב להיות באורך של 3 תווים לפחות",
+        "form": "אירעה שגיאה בעת שליחת הטופס. אנא נסי שוב."
+      }
     },
     "reset_password": {
       "title": "איפוס סיסמה",
@@ -607,19 +637,19 @@
         "shipping_address_title": "כתובת למשלוח",
         "delivery_option_title": "שיטת שילוח",
         "contact_method_title": "פרטים ליצירת קשר",
-        "email_label": "אימייל",
+        "email_label": "* אימייל",
         "email_placeholder": "אימייל",
         "email_or_phone_label": "אימייל",
         "email_or_phone_placeholder": "אימייל או מספר פלאפון",
         "stored_addresses_label": "שמירת כתובת",
         "new_address_label": "כתובת חדשה",
-        "first_name_label": "שם פרטי",
-        "last_name_label": "שם משפחה",
+        "first_name_label": "* שם פרטי",
+        "last_name_label": "* שם משפחה",
         "company_label": "חברה",
-        "address1_label": "רחוב ומספר בית בלבד",
+        "address1_label": "* רחוב ומספר בית בלבד",
         "address2_label": "מספר דירה",
         "optional_address2_label": "מספר דירה",
-        "city_label": "עיר",
+        "city_label": "* עיר",
         "country_label": "ארץ",
         "country_code": "איזור",
         "province_label": "מחוז",
@@ -637,7 +667,7 @@
         "governorate_placeholder": "גם לא צריך לתרגם",
         "emirate_label": "האיחוד הגדול",
         "emirate_placeholder": "האיחוד הגדול",
-        "phone_label": "מספר פלאפון",
+        "phone_label": "* מספר פלאפון",
         "phone_placeholder": "0515454420",
         "phone_tooltip": "למקרה שנצטרך ליצור קשר לגבי ההזמנה שלך",
         "zip_code_label": "מיקוד",
@@ -677,7 +707,7 @@
         "go_back_to_cart_button_label": "חזרה לסל"
       },
       "order_summary": {
-        "title": "סיכום הזמנה",
+        "title": "סיכום",
         "order_name_label": "הזמנה {{name}}",
         "shopping_cart_label": "סל הקניות",
         "discount_title": "הנחה",
@@ -949,11 +979,14 @@
       "payment_gateway": {
         "credit_card_label": "כרטיס אשראי",
         "bank_deposit_label": "העברה בנקאית",
-        "cash_on_delivery_label": "העברה בנקאית"
+        "cash_on_delivery_label": "תשלום במזומן"
       },
       "shipping_errors": {
         "shipping_method": "הסל שלך עודכן ושיטת המשלוח התעדכנה בהתאמה."
       }
+    },
+    "errors": {
+      "blank": "לא יכול להיות ריק"
     }
   }
 }

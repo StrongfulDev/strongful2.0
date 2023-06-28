@@ -10,7 +10,15 @@
   {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
 {% endcomment %}
 
-{% assign similarParent = product.metafields.global.collectionTitle %}
+{%- liquid
+    assign similarParent = product.metafields.global.collectionTitle
+    if product.tags contains 'plusSizeProduct'
+        assign plusProduct = true
+    else
+        assign plusProduct = false
+    endif
+ -%}
+
 
 {% unless product.tags contains 'noSimilar' %}
 <ul class="similiar
@@ -26,17 +34,33 @@
     {% for collection in collections %}
         {% if collection.title == similarParent or collection.title == similarParent.value %}
             {% for product in collection.products %}
-                <li class="relative-discount similiar-child {% if product.tags contains 'special-edition' %}special-edition{% elsif product.tags contains 'special-edition-family' %}special-edition-sibling{% endif %} {{ forloop.index0 }}">
-                    <a href="{{ product.url }}" class="similar-a">
-                        <img src="{{ product.featured_image | product_img_url: 'master' }}"
-                             srcset="{{ product.featured_image | product_img_url: '200x' }} 200w,
+                {% if isLiveTheme == 'true' %}
+                {% unless product.tags contains 'hidden' %}
+                    <li class="relative-discount similiar-child {% if product.tags contains 'special-edition' %}special-edition{% elsif product.tags contains 'special-edition-family' %}special-edition-sibling{% endif %} {{ forloop.index0 }}">
+                        <a href="{{ product.url }}" class="similar-a">
+                            <img src="{{ product.featured_image | product_img_url: 'master' }}"
+                                 srcset="{{ product.featured_image | product_img_url: '200x' }} 200w,
                     {{ product.featured_image | product_img_url: '300x' }} 300w,
                     {{ product.featured_image | product_img_url: '400x' }} 400w,
                     {{ product.featured_image | product_img_url: '600x' }} 600w"
-                             alt="{{ product.title | escape }}" class="similar-child-img" loading="lazy"/>
-                    </a>
-                    <p class="productVendor">{{ product.vendor }}</p>
-                </li>
+                                 alt="{{ product.title | escape }}" class="similar-child-img" loading="lazy"/>
+                        </a>
+                        <p class="productVendor">{{ product.vendor }}</p>
+                    </li>
+                {% endunless %}
+                {% else %}
+                    <li class="relative-discount similiar-child {% if product.tags contains 'special-edition' %}special-edition{% elsif product.tags contains 'special-edition-family' %}special-edition-sibling{% endif %} {{ forloop.index0 }}">
+                        <a href="{{ product.url }}" class="similar-a">
+                            <img src="{{ product.featured_image | product_img_url: 'master' }}"
+                                 srcset="{{ product.featured_image | product_img_url: '200x' }} 200w,
+                    {{ product.featured_image | product_img_url: '300x' }} 300w,
+                    {{ product.featured_image | product_img_url: '400x' }} 400w,
+                    {{ product.featured_image | product_img_url: '600x' }} 600w"
+                                 alt="{{ product.title | escape }}" class="similar-child-img" loading="lazy"/>
+                        </a>
+                        <p class="productVendor">{{ product.vendor }}</p>
+                    </li>
+                {% endif %}
             {% endfor %}
         {% endif %}
     {% endfor %}
@@ -60,25 +84,35 @@
           <legend class="form__label">{{ option.name }}</legend>
             {% for modelName in product.metafields.model.names.value %}
                 {% assign model = shop.metaobjects.model[modelName] %}
-            <legend class="model-wears-size fix-direction" data-model="{{ model.size_letter.value }}">
+            <legend class="model-wears-size fix-direction"
+                    data-model="{{ model.size_letter.value }}"
+            {% if plusProduct and model.size_letter.value == 'XS' %}
+                style="display: none"
+            {% elsif plusProduct == false and model.size_letter.value == 'L' %}
+                style="display: none"
+                    {% endif %}>
                 {{ 'products.product.model_switch.model_wears_only_female' | t }}
                 <span class="bold">{{ option.name }}: {{ model.size_letter.value }}</span>
                 {% if product.tags contains 'up-size-recommendation' %}
-            <span class="small">&nbsp; ({{ 'products.product.up_size_recommendation' | t }})</span>
+            <span class="small">{{ 'products.product.up_size_recommendation' | t }}</span>
                     {% elsif product.tags contains 'down-size-recommendation' %}
-            <span class="small">&nbsp; ({{ 'products.product.down_size_recommendation' | t }})</span>
+            <span class="small">{{ 'products.product.down_size_recommendation' | t }}</span>
             {% endif %}
             </legend>
             {% endfor %}
-          {% render 'product-variant-options', product: product, option: option, block: block %}
+          {% render 'product-variant-options', product: product, option: option, block: block, myBlock: myBlock %}
         </fieldset>
       {%- endfor -%}
-        {% unless product.tags contains 'noSizeTable' %}
-            <p class="size-table-toggler pointer">{{ 'products.product.size_table' | t }}</p>
-        {% endunless %}
-        <p class="out-of-stock out-of-stock-toggle pointer" id="outOfStock">{{ 'products.product.missing_size_toggler' | t }}</p>
-        <p class="out-of-stock out-of-stock-explain hidden">{{ 'products.product.missing_size_explanation' | t }}</p>
-        {% render 'back-in-stock' %}
+        <div class="size-table-stock-container">
+            {% unless product.tags contains 'noSizeTable' %}
+                <p class="size-table-toggler pointer">{{ 'products.product.size_table' | t }}</p>
+            {% endunless %}
+            {% unless product.tags contains 'dead-product' %}
+                <p class="out-of-stock out-of-stock-toggle pointer" id="outOfStock">{{ 'products.product.missing_size_toggler' | t }}</p>
+                <p class="out-of-stock out-of-stock-explain hidden">{{ 'products.product.missing_size_explanation' | t }}</p>
+                {% render 'back-in-stock' %}
+            {% endunless %}
+        </div>
       <script type="application/json">
         {{ product.variants | json }}
       </script>

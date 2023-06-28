@@ -64,7 +64,7 @@
             {%- assign empty_column = ' multicolumn-list__item--empty' -%}
           {%- endif -%}
 
-          <li
+          <li data-account="{{ block.settings.data_account }}"
             id="Slide-{{ section.id }}-{{ forloop.index }}"
             class="multicolumn-list__item grid__item{% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}{{ empty_column }}"
             {{ block.shopify_attributes }}
@@ -389,6 +389,22 @@
           "id": "image",
           "label": "t:sections.multicolumn.blocks.column.settings.image.label"
         },
+          {
+            "type": "select",
+              "id": "data_account",
+                "options": [
+                    {
+                    "value": "login",
+                    "label": "t:sections.multicolumn.blocks.column.settings.data_account.options__1.label"
+                    },
+                    {
+                    "value": "register",
+                    "label": "t:sections.multicolumn.blocks.column.settings.data_account.options__2.label"
+                    }
+                ],
+                "default": "login",
+                "label": "t:sections.multicolumn.blocks.column.settings.data_account.label"
+          },
         {
           "type": "text",
           "id": "title",

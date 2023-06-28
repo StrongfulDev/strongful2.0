@@ -28,7 +28,6 @@ class CartDrawer extends HTMLElement {
         cartLink.addEventListener("click", (event) => {
             event.preventDefault();
             this.open(cartLink);
-						$('body').addClass('overflow-hidden');
 						$('html').addClass('overflow-hidden');
         });
         cartLink.addEventListener("keydown", (event) => {
@@ -63,13 +62,12 @@ class CartDrawer extends HTMLElement {
             {once: true}
         );
 
-        document.body.classList.add("overflow-hidden");
+        $('html').addClass('overflow-hidden');
     }
 
     close() {
         this.classList.remove("active");
         removeTrapFocus(this.activeElement);
-		    $('body').removeClass('overflow-hidden');
 		    $('html').removeClass('overflow-hidden');
     }
 
@@ -114,6 +112,17 @@ class CartDrawer extends HTMLElement {
                 this.close.bind(this)
             );
             this.open();
+	        function getViewportHeight() {
+		        // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+		        let vh = window.innerHeight * 0.01;
+		        // Then we set the value in the --vh custom property to the root of the document
+		        document.documentElement.style.setProperty('--vh', `${vh}px`);
+	        }
+
+// We listen to the resize event
+	        window.addEventListener('resize', getViewportHeight);
+
+	        getViewportHeight();
         });
     }
 

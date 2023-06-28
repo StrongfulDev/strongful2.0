@@ -28,6 +28,9 @@
   {% render 'card-product', show_vendor: section.settings.show_vendor, announcement_tag: sections.settings.announcement_tag %}
 {% endcomment %}
 
+{% if card_product.tags contains 'dead-product' and card_product.available == false %}
+{% else %}
+
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
 {{ 'component-card-product.css' | asset_url | stylesheet_tag }}
 
@@ -45,7 +48,6 @@
     -%}
 
     {% assign plusModelImages = card_product.images | where: 'attached_to_variant?', false %}
-
     <div class="card-wrapper product-card-wrapper underline-links-hover">
         <div
                 class="
@@ -166,7 +168,7 @@
                 {%- endif -%}
                 <div class="card__content">
                     <div class="card__information">
-                        <h3
+                        <p
                                 class="card__heading"
                                 {% if card_product.featured_media == null and settings.card_style == 'standard' %}
                                     id="title-{{ section_id }}-{{ card_product.id }}"
@@ -180,7 +182,7 @@
                             >
                                 {{ card_product.title | escape }}
                             </a>
-                        </h3>
+                        </p>
                     </div>
                     {% if show_sale_badge %}
                         <div class="card__badge {{ settings.badge_position }}">
@@ -250,7 +252,7 @@
                         {% endif %}
                     </div>
                         {% endif %}
-                    <h3
+                    <p
                             class="card__heading {{ card_header_size }}"
                             {% if card_product.featured_media or settings.card_style == 'card' %}
                                 id="title-{{ section_id }}-{{ card_product.id }}"
@@ -275,7 +277,7 @@
                                 {{ card_product.title | escape }}
                             </a>
                         {% endif %}
-                    </h3>
+                    </p>
                     <div class="card-information">
                         {%- if show_vendor -%}
                             <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
@@ -481,21 +483,21 @@
             >
                 <div class="card__content">
                     <div class="card__information">
-                        <h3 class="card__heading">
+                        <p class="card__heading">
                             <a role="link" aria-disabled="true" class="full-unstyled-link pointer fix-direction">
                                 {{ 'onboarding.product_title' | t }}
                             </a>
-                        </h3>
+                        </p>
                     </div>
                 </div>
             </div>
             <div class="card__content">
                 <div class="card__information">
-                    <h3 class="card__heading{% if settings.card_style == 'standard' %} h5{% endif %} ">
+                    <p class="card__heading{% if settings.card_style == 'standard' %} h5{% endif %} ">
                         <a role="link" aria-disabled="true" class="full-unstyled-link pointer fix-direction">
                             {{ 'onboarding.product_title' | t }}
                         </a>
-                    </h3>
+                    </p>
                     <div class="card-information">
                         {%- if show_vendor -%}
                             <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
@@ -508,3 +510,5 @@
         </div>
     </div>
 {%- endif -%}
+
+{% endif %}

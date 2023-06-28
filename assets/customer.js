@@ -99,12 +99,31 @@ window.addEventListener('DOMContentLoaded', () => {
 
 		let mainTitle = document.querySelector(".customer__title");
 		let mainTitleLength = mainTitle.innerHTML.length;
-		let slicedLength = parseInt(mainTitleLength - 3);
-		mainTitle.innerHTML = mainTitle.innerHTML.slice(slicedLength, mainTitleLength);
+		console.log(mainTitleLength)
+		mainTitle.innerHTML = mainTitle.innerHTML.slice(13, mainTitleLength);
 	} else {
 		$(".desktop-order-container-headers").click(function() {
 			$(this).next().toggleClass("hidden");
 			$(this).find(".plus-and-minus").find("svg").toggle();
 		});
 	}
+
+	if (window.innerWidth < 990) {
+		let endlessCollection = new AjaxinateMin({
+			method: "click",
+			container: '#orderHistory',
+			pagination: '.infinite_next',
+			offset: 100,
+			loadingText: "טוען...",
+		});
+	} else {
+		let endlessCollection = new AjaxinateMin({
+			method: "click",
+			container: '.desktop-order-container-paginator',
+			pagination: '.infinite_next',
+			offset: 100,
+			loadingText: "טוען...",
+		});
+	}
+
 });

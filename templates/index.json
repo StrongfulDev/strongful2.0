@@ -6,8 +6,8 @@
         "slideshow-block-0": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/01_c39dba74-0365-4a2b-9cf2-d868b2a23447.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/01_bd1e70f9-2cb3-4cee-b2b3-be5f91bbaabf.jpg",
+            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_7efbcb56-b948-4e4a-8618-8d875e48c131.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_e7714253-3446-4d56-8faf-544daf74c2ea.jpg",
             "heading": "",
             "whole_slide_link": "",
             "heading_size": "h1",
@@ -39,6 +39,12 @@
     },
     "17711ea4-9001-4425-9527-79593a92ff94": {
       "type": "featured-collection",
+      "custom_css": [
+        ".button {width: 100%;}",
+        ".discount-price-container {direction: rtl;}",
+        ".slider--tablet.grid--peek.grid--2-col-tablet-down .grid__item,.grid--peek .grid__item {width: calc(48% - var(--grid-mobile-horizontal-spacing) - 3rem);}",
+        "@media screen and (min-width: 990px) {.slider--desktop.grid--peek.grid--5-col-desktop .grid__item {width: calc( (94% - var(--desktop-margin-left-first-item)) \/ 5 - var(--grid-desktop-horizontal-spacing) * 2 ); }}"
+      ],
       "settings": {
         "steps": 4,
         "title": "3 FOR ₪300",

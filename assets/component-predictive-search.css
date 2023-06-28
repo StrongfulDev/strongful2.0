@@ -28,7 +28,14 @@
   padding-bottom: 1rem;
 }
 
-@media screen and (max-width: 749px) {
+@media screen and (max-width: 989px) {
+	.header__search.search--active {
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+	}
+
   .predictive-search--header {
     right: 0;
     left: 0;
@@ -286,11 +293,13 @@ predictive-search[loading]
 	details[open] > .search-modal {
 		width: 69vw;
 		right: 0;
+		padding-right: 1rem;
+		padding-left: 1rem;
 		left: auto;
 	}
 
 	.header__search details[open] .modal-overlay::after {
-		top: 5.5rem;
+		top: 6rem;
 		width: 120vw;
 		right: -11vw;
 	}

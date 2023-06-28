@@ -25,6 +25,36 @@
 -%}
 
 <div class="facets-container fix-direction{% if filter_type == 'drawer' %} facets-container-drawer{% endif %}">
+    <div
+            class="product-count light{% if filter_type == 'vertical' or filter_type == 'horizontal' %} medium-hide large-up-hide{% endif %}"
+            role="status"
+    >
+        <h4 class="product-count__text text-body">
+      <span id="ProductCount">
+        {%- if results.results_count -%}
+            {{ 'templates.search.results_with_count' | t: terms: results.terms, count: results.results_count }}
+        {%- elsif results.products_count == results.all_products_count -%}
+            {{ 'products.facets.product_count_simple' | t: count: results.products_count }}
+        {%- else -%}
+            {{
+            'products.facets.product_count'
+            | t: product_count: results.products_count, count: results.all_products_count
+            }}
+        {%- endif -%}
+      </span>
+        </h4>
+        <div class="loading-overlay__spinner">
+            <svg
+                    aria-hidden="true"
+                    focusable="false"
+                    class="spinner"
+                    viewBox="0 0 66 66"
+                    xmlns="http://www.w3.org/2000/svg"
+            >
+                <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+            </svg>
+        </div>
+    </div>
   {%- if filter_type == 'vertical' or filter_type == 'horizontal' -%}
     <facet-filters-form class="facets small-hide">
       <form
@@ -111,45 +141,112 @@
               </div>
             {%- endif -%}
 
-              <div class="facet-filters sorting caption">
-                  <div class="facet-filters__field">
-                      <h2 class="facet-filters__label caption-large text-body">
-                          <label for="SortBy">{{ 'products.facets.sort_by_label' | t }}</label>
-                      </h2>
-                      <div class="select">
-                          {%- assign sort_by = results.sort_by | default: results.default_sort_by -%}
-                          <select
-                                  name="sort_by"
-                                  class="facet-filters__sort select__select caption-large"
-                                  id="SortBy"
-                                  aria-describedby="a11y-refresh-page-message"
+              <details
+                      id="Details-{{ forloop.index }}-{{ section.id }}"
+                      class="{% if filter_type == 'horizontal' %}disclosure-has-popup facets__disclosure{% else %} facets__disclosure-vertical{% endif %} js-filter"
+                      data-index="{{ forloop.index }}" open
+              >
+                  <summary class="facets__summary caption-large focus-offset">
+                      <div>
+                        <span>
+                            {{ 'products.facets.sort_by_label' | t }}
+                        </span>
+                          <span class="desktop-facets__arrow-sorting"></span>
+                          <span class="mobile-facets__arrow no-js-hidden">
+                              {% render 'icon-caret' %}
+                          </span>
+                          <noscript>{% render 'icon-caret' %}</noscript>
+                      </div>
+                  </summary>
+                  <div
+                          id="Facet-{{ forloop.index }}-{{ section.id }}"
+                          class="parent-display {% if filter_type == 'horizontal' %}facets__display{% else %}facets__display-vertical{% endif %}"
+                  >
+                      {%- if filter_type != 'vertical' -%}
+                          <div class="facets__header">
+                          <span class="facets__selected no-js-hidden">
+                            {{- 'products.facets.filters_selected' | t: count: filter.active_values.size -}}
+                          </span>
+                              <facet-remove>
+                                  <a href="{{ filter.url_to_remove }}" class="facets__reset link underlined-link">
+                                      {{ 'products.facets.reset' | t }}
+                                  </a>
+                              </facet-remove>
+                          </div>
+                      {%- endif -%}
+                      <fieldset class="facets-wrap parent-wrap {% if filter_type == 'vertical' %} facets-wrap-vertical{% endif %}">
+                          <legend class="visually-hidden">{{ 'products.facets.sort_by_label' | t }}</legend>
+                          <ul
+                                  class="{% if filter_type != 'vertical' %} facets__list{% endif %} list-unstyled no-js-hidden"
+                                  role="list"
                           >
                               {%- for option in results.sort_options -%}
-                                  {% unless option.value == 'title-descending' or option.value == 'title-ascending' or option.value == 'created-descending' %}
-                                  <option
-                                          value="{{ option.value | escape }}"
-                                          {%- comment -%}
-                                          {% if option.value == sort_by %}
-                                              selected="selected"
-                                          {% endif %}
-                                          {%- endcomment -%}
-                                  >
-                                      {% comment %}{{ option.name | escape }}{% endcomment %}
-                                      {{ 'products.facets.filters.' | append: option.value | t }}
-                                  </option>
-                              {% endunless %}
+                                {% unless option.value == 'title-descending' or option.value == 'title-ascending' or option.value == 'created-ascending' %}
+                                  <li class="list-menu__item facets__item">
+                                      <label
+                                              for="sort_by_{{ option.value | escape }}"
+                                              class="facet-checkbox{% if value.count == 0 and value.active == false %} facet-checkbox--disabled{% endif %}"
+                                      >
+                                          <input
+                                                  type="radio"
+                                                  name="sort_by"
+                                                    class="facet-checkbox__input sort_by_desktop_input"
+                                                  value="{{ option.value | escape }}"
+                                                  id="sort_by_{{ option.value | escape }}"
+                                                    {% if option.value == results.sort_by %}
+                                                        checked
+                                                    {% endif %}
+                                          >
+                                          <svg
+                                                  width="1.6rem"
+                                                  height="1.6rem"
+                                                  viewBox="0 0 16 16"
+                                                  aria-hidden="true"
+                                                  focusable="false"
+                                          >
+                                              <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>
+                                          </svg>
+                                          <svg
+                                                  aria-hidden="true"
+                                                  class="icon icon-checkmark"
+                                                  width="1.1rem"
+                                                  height="0.7rem"
+                                                  viewBox="0 0 11 7"
+                                                  fill="none"
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                          >
+                                              <path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1"
+                                                    stroke="currentColor"
+                                                    stroke-width="1.75"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                          </svg>
+                                  <span aria-hidden="true">{{ 'products.facets.filters.' | append: option.value | t }}</span>
+                                  <span class="visually-hidden">{{ 'products.facets.filters.' | append: option.value | t }}</span>
+                                      </label>
+                                  </li>
+                                {% endunless %}
                               {%- endfor -%}
-                          </select>
-                          {% render 'icon-caret' %}
-                      </div>
+                          </ul>
+                      </fieldset>
+                      {%- if filter.values.size > 20 and filter_type == 'vertical' -%}
+                          <show-more-button>
+                              <button
+                                      class="button-show-more link underlined-link no-js-hidden"
+                                      id="Show-More-{{ forloop.index }}-{{ section.id }}"
+                                      type="button"
+                              >
+                            <span class="label-show-more label-text"
+                            ><span aria-hidden="true">+ </span>{{ 'products.facets.show_more' | t -}}
+                            </span>
+                                  <span class="label-show-less label-text hidden"
+                                  ><span aria-hidden="true">- </span>{{ 'products.facets.show_less' | t -}}
+                            </span>
+                              </button>
+                          </show-more-button>
+                      {%- endif %}
                   </div>
-
-                  <noscript>
-                      <button type="submit" class="facets__button-no-js button button--secondary">
-                          {{ 'products.facets.sort_button' | t }}
-                      </button>
-                  </noscript>
-              </div>
+              </details>
             <script src="{{ 'show-more.js' | asset_url }}" defer="defer"></script>
             {% comment %} Filters for both horizontal and vertical filter {% endcomment %}
             {%- for filter in results.filters -%}
@@ -177,8 +274,8 @@
                           {% endif %}
                           {%- if filter_type == 'vertical' -%}
                             <span class="facets__selected no-js-hidden{% if filter.active_values.size == 0 %} hidden{% endif %}">
-                              ({{ filter.active_values.size }})</span
-                            >
+                              ({{ filter.active_values.size }})
+                            </span>
                           {%- endif -%}
                         </span>
                         {% render 'icon-caret' %}
@@ -374,6 +471,9 @@
                         {% else %}
                         <span>{{ filter.label | escape }}</span>
                         {% endif %}
+                          <span class="facets__selected no-js-hidden{% if filter.active_values.size == 0 %} hidden{% endif %}">
+                              ({{ filter.active_values.size }})
+                            </span>
                         {% render 'icon-caret' %}
                       </div>
                     </summary>
@@ -469,7 +569,11 @@
                   <facet-remove>
                     <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light">
                       <span class="active-facets__button-inner button button--tertiary">
-                        {{ filter.label }}: {{ value.label | escape }}
+                        {%- if filter.label == "Product type" -%}
+                            {{ 'products.facets.product_type' | t }}: {{ value.label | escape }}
+                        {%- else -%}
+                            {{ filter.label | escape }}: {{ value.label | escape }}
+                        {%- endif -%}
                         {% render 'icon-close-small' %}
                         <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
                       </span>
@@ -517,7 +621,7 @@
           {%- if enable_sorting -%}
           {%- endif -%}
           <div class="product-count light" role="status">
-            <h2 class="product-count__text text-body">
+            <h4 class="product-count__text text-body">
               <span id="ProductCountDesktop">
                 {%- if results.results_count -%}
                   {{ 'templates.search.results_with_count' | t: terms: results.terms, count: results.results_count }}
@@ -530,7 +634,7 @@
                   }}
                 {%- endif -%}
               </span>
-            </h2>
+            </h4>
             <div class="loading-overlay__spinner">
               <svg
                   aria-hidden="true"
@@ -601,9 +705,6 @@
                   {%- elsif enable_sorting -%}
                     <h2>{{ 'products.facets.sort_button' | t }}</h2>
                   {%- endif -%}
-                    {% comment %}
-                    <span class="custom-active-facets {% unless total_active_values > 0 %}hidden{% endunless %}">({{ total_active_values }})</span>
-                    {% endcomment %}
                 </div>
                   <facet-remove class="mobile-facets__clear-wrapper">
                       <a href="{{ results_url }}" class="mobile-facets__clear underlined-link">
@@ -632,40 +733,95 @@
             </div>
             <div class="mobile-facets__main has-submenu gradient">
                 {%- if enable_sorting -%}
-                    <div
-                            class="mobile-facets__details js-filter{% if filter_type == 'drawer' %} medium-hide large-up-hide{% endif %}"
-                            data-index="mobile-{{ forloop.index }}"
+                    <details
+                            id="Details-Mobile-{{ forloop.index }}-{{ section.id }}"
+                            class="mobile-facets__details js-filter menu-opening"
+                            data-index="mobile-{{ forloop.index }}" open
                     >
-                        <div class="mobile-facets__summary">
-                            <div class="mobile-facets__sort">
-                                <label for="SortBy-mobile">{{ 'products.facets.sort_by_label' | t }}</label>
-                                <div class="select">
-                                    <select
-                                            name="sort_by"
-                                            class="select__select"
-                                            id="SortBy-mobile"
-                                            aria-describedby="a11y-refresh-page-message"
-                                    >
-                                        {%- for option in results.sort_options -%}
-                                            {% unless option.value == 'title-descending' or option.value == 'title-ascending' or option.value == 'created-descending' %}
-                                            <option
-                                                    value="{{ option.value | escape }}"
-                                                    {% comment %}
-                                                    {% if option.value == sort_by %}
-                                                        selected="selected"
-                                                    {% endif %}
-                                                    {% endcomment %}
-                                            >
-                                                {{ 'products.facets.filters.' | append: option.value | t }}
-                                            </option>
-                                        {% endunless %}
-                                        {%- endfor -%}
-                                    </select>
-                                    {% render 'icon-caret' %}
+                        <summary class="mobile-facets__summary focus-inset">
+                            <div>
+                                <div class="filter-title-container">
+                                    <p class="mobile-facets__arrow-sorting-sibling">
+                                        {{ 'products.facets.sort_by_label' | t }}
+                                    </p>
+                                    <p class="mobile-facets__arrow-sorting"></p>
                                 </div>
+                                <span class="mobile-facets__arrow no-js-hidden">{% render 'icon-caret' %}</span>
+                                <noscript>{% render 'icon-caret' %}</noscript>
+                            </div>
+                        </summary>
+                        <div
+                                id="FacetMobile-{{ forloop.index }}-{{ section.id }}"
+                                class="mobile-facets__submenu gradient"
+                        >
+                            <ul class="mobile-facets__list list-unstyled" role="list">
+                                {%- for option in results.sort_options -%}
+                                    {% unless option.value == 'title-descending' or option.value == 'title-ascending' or option.value == 'created-ascending' %}
+                                    <li class="mobile-facets__item list-menu__item mobile-facets__item-{{ option.value }}">
+                                        <label
+                                                for="sort_by_{{ option.value | escape }}"
+                                                class="mobile-facets__label{% if value.count == 0 and value.active == false %} mobile-facets__label--disabled{% endif %}"
+                                        >
+                                            <input
+                                                    class="mobile-facets__checkbox sort_by_mobile_input"
+                                                    type="radio"
+                                                    name="sort_by"
+                                                    value="{{ option.value | escape }}"
+                                                    id="sort_by_{{ option.value | escape }}"
+                                                    {% if results.sort_by == option.value %}
+                                                        checked
+                                                    {% endif %}
+                                            >
+                                            <span class="mobile-facets__highlight"></span>
+                                            <svg
+                                                    width="1.6rem"
+                                                    height="1.6rem"
+                                                    viewBox="0 0 16 16"
+                                                    aria-hidden="true"
+                                                    focusable="false"
+                                            >
+                                                <rect width="16" height="16" fill="none" class="rect-border"></rect>
+                                            </svg>
+                                            <svg
+                                                    aria-hidden="true"
+                                                    class="icon icon-checkmark"
+                                                    width="1.1rem"
+                                                    height="0.7rem"
+                                                    viewBox="0 0 11 7"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                            <span aria-hidden="true">{{ 'products.facets.filters.' | append: option.value | t }}</span>
+                                            <span class="visibility-hidden">{{ 'products.facets.filters.' | append: option.value | t }}</span>
+                                        </label>
+                                    </li>
+                                    {% endunless %}
+                                {%- endfor -%}
+                            </ul>
+
+                            <div class="no-js-hidden mobile-facets__footer gradient">
+                                <facet-remove class="mobile-facets__clear-wrapper">
+                                    <a href="{{ filter.url_to_remove }}" class="mobile-facets__clear underlined-link">
+                                        {{- 'products.facets.clear' | t -}}
+                                    </a>
+                                </facet-remove>
+                                <button
+                                        type="button"
+                                        class="no-js-hidden button button--primary"
+                                        onclick="this.closest('.mobile-facets__wrapper').querySelector('summary').click()"
+                                >
+                                    {{ 'products.facets.apply' | t }}
+                                </button>
+                                <noscript>
+                                    <button class="button button--primary">
+                                        {{ 'products.facets.apply' | t }}
+                                    </button>
+                                </noscript>
                             </div>
                         </div>
-                    </div>
+                    </details>
                 {%- endif -%}
               {%- if enable_filtering -%}
                 {%- for filter in results.filters -%}
@@ -673,19 +829,24 @@
                     {% when 'boolean', 'list' %}
                       <details
                           id="Details-Mobile-{{ forloop.index }}-{{ section.id }}"
-                          class="mobile-facets__details js-filter"
+                          class="mobile-facets__details js-filter mobile-facets-filters"
                           data-index="mobile-{{ forloop.index }}"
                       >
                         <summary class="mobile-facets__summary focus-inset">
                           <div>
-                            <span>
-                              {%- if filter.label == "Product type" -%}
-                                {{ 'products.facets.product_type' | t }}
-                              {%- else -%}
-                                {{ filter.label | escape }}
-                              {%- endif -%}
-                            </span>
-                            <span class="mobile-facets__arrow no-js-hidden">{% render 'icon-caret' %}</span>
+                              <div class="filter-title-container">
+                                  <span class="mobile-facets__arrow-sorting-sibling">
+                                      {%- if filter.label == "Product type" -%}
+                                          {{ 'products.facets.product_type' | t }}
+                                      {%- else -%}
+                                          {{ filter.label | escape }}
+                                      {%- endif -%}
+                                  </span>
+                                  <span class="facets__selected no-js-hidden{% if filter.active_values.size == 0 %} hidden{% endif %}">
+                                      ({{ filter.active_values.size }})
+                                  </span>
+                              </div>
+                            <p class="mobile-facets__arrow no-js-hidden">{% render 'icon-caret' %}</p>
                             <noscript>{% render 'icon-caret' %}</noscript>
                           </div>
                         </summary>
@@ -709,21 +870,19 @@
                                     class="mobile-facets__label{% if value.count == 0 and value.active == false %} mobile-facets__label--disabled{% endif %}"
                                 >
                                   <input
-                                      class="mobile-facets__checkbox"
+                                      class="mobile-facets__checkbox "
                                       type="checkbox"
                                       name="{{ value.param_name }}"
                                       value="{{ value.value }}"
                                       id="Filter-{{ filter.param_name | escape }}-mobile-{{ forloop.index }}"
-                                      {% if value.active %}
+                                      {% if value.active or value.value == '1' %}
                                         checked
                                       {% endif %}
                                       {% if value.count == 0 and value.active == false %}
                                         disabled
                                       {% endif %}
                                   >
-
                                   <span class="mobile-facets__highlight"></span>
-
                                   <svg
                                       width="1.6rem"
                                       height="1.6rem"
@@ -757,17 +916,6 @@
                                   >
                                     {{- value.label | escape -}}
                                   </span>
-                                  {% comment %}
-                                  <span class="visually-hidden">
-                                    {{- value.label | escape }} (
-                                    {%- if value.count == '1' -%}
-                                      {{- 'products.facets.product_count_simple.one' | t: count: value.count -}}
-                                    {%- else -%}
-                                      {{- 'products.facets.product_count_simple.other' | t: count: value.count -}}
-                                    {%- endif -%}
-                                    )</span
-                                  >
-                                  {% endcomment %}
                                   <span class="visibility-hidden">{{ value.label | escape }}</span>
                                 </label>
                               </li>
@@ -919,11 +1067,7 @@
                     class="no-js-hidden button button--primary {% if total_active_values < 1 %}button--disabled{% else %}{% endif %}"
                     onclick="this.closest('.mobile-facets__wrapper').querySelector('summary').click()"
                 >
-                    {% if total_active_values < 1 %}
-                    {{ 'products.facets.select_more_filters' | t }}
-                    {% else %}
                   {{ 'products.facets.apply' | t }}
-                    {% endif %}
                 </button>
                 <noscript
                 ><button class="button button--primary">{{ 'products.facets.apply' | t }}</button></noscript
@@ -955,52 +1099,6 @@
           </div>
       </div>
   </menu-drawer>
-
-  <div class="active-facets active-facets-mobile medium-hide large-up-hide">
-    {%- for filter in results.filters -%}
-      {%- for value in filter.active_values -%}
-        <facet-remove>
-          <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light">
-            <span class="active-facets__button-inner button button--tertiary">
-              {{ filter.label }}: {{ value.label | escape }}
-              {% render 'icon-close-small' %}
-              <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
-            </span>
-          </a>
-        </facet-remove>
-      {%- endfor -%}
-
-      {%- if filter.type == 'price_range' -%}
-        {%- if filter.min_value.value != null or filter.max_value.value != null -%}
-          <facet-remove>
-            <a href="{{ filter.url_to_remove }}" class="active-facets__button active-facets__button--light">
-              <span class="active-facets__button-inner button button--tertiary">
-                {%- if filter.min_value.value -%}
-                  {{ filter.min_value.value | money }}
-                {%- else -%}
-                  {{ 0 | money }}
-                {%- endif -%}
-                -
-                {%- if filter.max_value.value -%}
-                  {{ filter.max_value.value | money }}
-                {%- else -%}
-                  {{ filter.range_max | money }}
-                {%- endif -%}
-                {% render 'icon-close-small' %}
-                <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
-              </span>
-            </a>
-          </facet-remove>
-        {%- endif -%}
-      {%- endif -%}
-    {%- endfor -%}
-    <facet-remove class="active-facets__button-wrapper">
-      <a href="{{ results_url }}" class="active-facets__button-remove underlined-link">
-        <span>{{ 'products.facets.clear_all' | t }}</span>
-      </a>
-    </facet-remove>
-  </div>
-  {% comment %} Sort, product count and filter pills at the end when filter is type of Drawer for the correct tabbing order {% endcomment %}
   {%- if enable_sorting and filter_type == 'drawer' -%}
     <facet-filters-form class="facets small-hide">
       <form id="FacetSortDrawerForm" class="facets__form">
@@ -1015,36 +1113,54 @@
       </form>
     </facet-filters-form>
   {%- endif -%}
-  <div
-      class="product-count light{% if filter_type == 'vertical' or filter_type == 'horizontal' %} medium-hide large-up-hide{% endif %}"
-      role="status"
-  >
-    <h2 class="product-count__text text-body">
-      <span id="ProductCount">
-        {%- if results.results_count -%}
-          {{ 'templates.search.results_with_count' | t: terms: results.terms, count: results.results_count }}
-        {%- elsif results.products_count == results.all_products_count -%}
-          {{ 'products.facets.product_count_simple' | t: count: results.products_count }}
-        {%- else -%}
-          {{
-          'products.facets.product_count'
-          | t: product_count: results.products_count, count: results.all_products_count
-          }}
-        {%- endif -%}
-      </span>
-    </h2>
-    <div class="loading-overlay__spinner">
-      <svg
-          aria-hidden="true"
-          focusable="false"
-          class="spinner"
-          viewBox="0 0 66 66"
-          xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-      </svg>
+    <div class="active-facets active-facets-mobile medium-hide large-up-hide">
+        {%- for filter in results.filters -%}
+            {%- for value in filter.active_values -%}
+                <facet-remove>
+                    <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light">
+            <span class="active-facets__button-inner button button--tertiary">
+                {%- if filter.label == "Product type" -%}
+                    {{ 'products.facets.product_type' | t }}: {{ value.label | escape }}
+                {%- else -%}
+                    {{ filter.label | escape }}: {{ value.label | escape }}
+                {%- endif -%}
+                {% render 'icon-close-small' %}
+              <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
+            </span>
+                    </a>
+                </facet-remove>
+            {%- endfor -%}
+
+            {%- if filter.type == 'price_range' -%}
+                {%- if filter.min_value.value != null or filter.max_value.value != null -%}
+                    <facet-remove>
+                        <a href="{{ filter.url_to_remove }}" class="active-facets__button active-facets__button--light">
+              <span class="active-facets__button-inner button button--tertiary">
+                {%- if filter.min_value.value -%}
+                    {{ filter.min_value.value | money }}
+                {%- else -%}
+                    {{ 0 | money }}
+                {%- endif -%}
+                -
+                {%- if filter.max_value.value -%}
+                    {{ filter.max_value.value | money }}
+                {%- else -%}
+                    {{ filter.range_max | money }}
+                {%- endif -%}
+                  {% render 'icon-close-small' %}
+                <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
+              </span>
+                        </a>
+                    </facet-remove>
+                {%- endif -%}
+            {%- endif -%}
+        {%- endfor -%}
+        <facet-remove class="active-facets__button-wrapper">
+            <a href="{{ results_url }}" class="active-facets__button-remove underlined-link">
+                <span>{{ 'products.facets.clear_all' | t }}</span>
+            </a>
+        </facet-remove>
     </div>
-  </div>
   {%- if filter_type == 'drawer' -%}
     <facet-filters-form class="facets facets-pill small-hide">
       <form id="FacetFiltersPillsForm" class="facets__form">
@@ -1054,7 +1170,11 @@
               <facet-remove>
                 <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light">
                   <span class="active-facets__button-inner button button--tertiary">
-                    {{ filter.label }}: {{ value.label | escape }}
+                    {%- if filter.label == "Product type" -%}
+                        {{ 'products.facets.product_type' | t }}: {{ value.label | escape }}
+                    {%- else -%}
+                        {{ filter.label | escape }}: {{ value.label | escape }}
+                    {%- endif -%}
                     {% render 'icon-close-small' %}
                     <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
                   </span>

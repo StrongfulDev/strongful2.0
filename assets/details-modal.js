@@ -42,9 +42,13 @@
 	   let headerMenu = $(event.target).closest('details').parents('.header__icons').siblings('nav')
 	   if (window.screen.width > 990) {
 		   headerMenu.addClass("header__menu--swiped");
+	   } else {
+		   if ($(event.target).parents(".header__search").length) {
+			   $(event.target).parents(".header__search").addClass("search--active");
+		   }
 	   }
      document.body.addEventListener('click', this.onBodyClickEvent);
-     document.body.classList.add('overflow-hidden');
+	   $("html").addClass("overflow-hidden");
 
      trapFocus(
        this.detailsContainer.querySelector('[tabindex="-1"]'),
@@ -58,6 +62,10 @@
 			 let headerMenu = $(this.summaryToggle).closest('details').parents('.header__icons').siblings('nav')
 			 if (window.screen.width > 990) {
 				 headerMenu.removeClass("header__menu--swiped");
+			 } else {
+				 if ($(".header__search").hasClass("search--active")) {
+					 $(".header__search").removeClass("search--active");
+				 }
 			 }
 		 }
      this.detailsContainer.removeAttribute('open');

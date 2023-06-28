@@ -103,7 +103,7 @@ slideshow-component .slideshow.banner {
         height: 100%;
         padding: 5rem;
 	    margin: 0 auto;
-	    width: 45vw;
+	    width: 49vw;
     }
 }
 
@@ -270,7 +270,7 @@ slideshow-component:not(.page-width) .slider-buttons {
     }
 
 	.slideshow__text.banner__box {
-		bottom: 9rem;
+		bottom: 11rem;
 		left: 0;
 	}
 }
