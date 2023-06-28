@@ -277,6 +277,10 @@ a.no-decoration {
 		font-weight: var(--font-body-weight);
 	}
 
+	.contact-icon-child:first-child {
+		display: none;
+	}
+
 	thead {
 		display: none;
 	}
@@ -906,19 +910,13 @@ li.multicolumn-list__item.grid__item {
 	margin-bottom: var(--grid-desktop-horizontal-spacing);
 }
 
-.main-account-info-container--loyalty .container-title {
-	display: flex;
-	align-items: center;
-}
-
 .main-account-info-container--loyalty .container-title h4,
 .main-account-info-container--loyalty .container-title h6 {
 	margin: 0;
 }
 
 .main-account-info-container--loyalty .container-title h4 {
-	font-size: calc(var(--font-body-size-large) * 0.8);
-	margin-right: var(--grid-mobile-vertical-spacing);
+	font-size: calc(var(--font-body-size-large) * 0.7);
 }
 
 .main-account-info-container--loyalty .container-title h6 {
@@ -1001,6 +999,11 @@ p.container-extra-info {
 
 .main-account-info-container--contact, .container-menu-item--logout {
 	text-align: center;
+	margin: 7rem 0;
+}
+
+.main-account-info-container--contact {
+	margin-bottom: 0;
 }
 
 .contact-icons-container {
@@ -1009,10 +1012,6 @@ p.container-extra-info {
 	grid-template-columns: repeat(2, 1fr);
 	border-top: 1px var(--gradient-base-background-3) solid;
 	border-bottom: 1px var(--gradient-base-background-3) solid;
-}
-
-.main-account-info-container--contact {
-	margin: 3em 0;
 }
 
 .contact-icon-child:not(:last-child) {
@@ -1037,9 +1036,13 @@ p.business-hours {
 }
 
 div.contact-icon-child a svg {
-	width: 1.5em !important;
-	height: 1.5em !important;
+	width: 1.2em !important;
+	height: 1.2em !important;
 	margin: 0;
+}
+
+.zero-margin {
+	margin-top: 0;
 }
 
 /* Custom Styles */
@@ -1356,9 +1359,26 @@ p.customer-social-separator {
 
 @media screen and (min-width: 990px) {
 
+
+
+	.main-account-info-container.main-account-info-container--my-account {
+		border-bottom: 1px solid var(--gradient-base-background-3);
+	}
+
+	.sidebar-container {
+		display: flex;
+		justify-content: space-between;
+		height: 71vh;
+		flex-direction: column;
+	}
+
 	.main-account-info-container--contact {
 		margin: 3rem 0 1rem auto;
 		width: 70%;
+	}
+
+	.main-account-info-container--contact p {
+		font-size: calc(var(--font-body-size-medium) * 0.9);
 	}
 
 	.contact-icons-container {
@@ -1396,6 +1416,8 @@ p.customer-social-separator {
 	p.container-extra-info {
 		margin-top: 0;
 		margin-bottom: calc(var(--grid-desktop-vertical-spacing) * 4);
+		border-bottom: 1px solid var(--gradient-base-background-3);
+		padding-bottom: var(--grid-desktop-vertical-spacing);
 	}
 
 	button.add-address-button {
@@ -1484,6 +1506,10 @@ p.customer-social-separator {
 	}
 
 	.container-title {
+		margin-top: 0;
+	}
+
+	.container-title.zero-margin h2 {
 		margin-top: 0;
 	}
 

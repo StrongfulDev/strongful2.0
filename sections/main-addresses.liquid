@@ -36,25 +36,25 @@
 
         <div class="customer addresses fix-direction page-width section-{{ section.id }}-padding" data-customer-addresses>
             <div class="account-desktop-container">
-                <div class="text-right desktop--only">
+                <div>
                     <div class="main-account-info-container main-account-info-container--loyalty">
-                        <div class="container-title bold">
-                            <h6>{{ 'customer.account.loyalty.sub_title' | t }}</h6>
-                            <h4 class="ltr">{{ 'customer.account.loyalty.title' | t }}&nbsp;</h4>
+                        <div class="container-title bold zero-margin">
+                            <h2 class="container-title bold">{{ 'customer.account.loyalty.sub_title' | t }}</h2>
+                            <h4>{{ 'customer.account.loyalty.title' | t }}</h4>
                         </div>
                         <a href="/pages/a-list" class="container-menu-item pointer">ALIST <span>{{ vipTier }}</span>
                             {% render 'icon-caret' %}
                         </a>
                         <p class="container-extra-info">{{ 'customer.account.loyalty.earn_points' | t }}</p>
                     </div>
-                    <div>
+                    <div class="sidebar-container">
 
                         <div class="main-account-info-container main-account-info-container--my-account">
-                            <h2 class="container-title bold">{{ 'customer.account.sub_title' | t }}</h2>
-                            <a href="{{ routes.account_url }}" class="container-menu-item container-menu-item-orders-toggler toggle-orders pointer">
-                                {{ 'customer.orders.title' | t }}
+                            <h2 class="container-title">{{ 'customer.account.sub_title' | t }}</h2>
+                            <span class="container-menu-item container-menu-item-orders-toggler toggle-orders pointer">
+                      {{ 'customer.orders.title' | t }}
                                 {% render 'icon-caret' %}
-                            </a>
+                  </span>
                             <a href="{{ routes.account_addresses_url }}" class="container-menu-item container-menu-item--addresses pointer bold">
                                 {{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})
                                 {% render 'icon-caret' %}
@@ -162,6 +162,13 @@
                             </div>
                         </div>
 
+                        <div class="container-menu-item container-menu-item--logout">
+                            <p>{{ 'customer.account.not_customer' | t: name: customer.name }}</p>
+                            <a class="logout-link" href="{{ routes.account_logout_url }}">
+                                {{ 'customer.log_out' | t }}
+                            </a>
+                        </div>
+
                         <div class="main-account-info-container main-account-info-container--contact">
                             <p>{{ 'customer.account.contact.title' | t }}</p>
                             <div class="contact-icons-container">
@@ -184,14 +191,6 @@
                                     <p class="contact-text">{{ 'customer.account.contact.phone' | t }}</p>
                                 </div>
                             </div>
-                            <p class="business-hours">{{ 'customer.account.contact.business-hours' | t }}</p>
-                        </div>
-
-                        <div class="container-menu-item container-menu-item--logout">
-                            <p>{{ 'customer.account.not_customer' | t: name: customer.name }}</p>
-                            <a class="logout-link" href="{{ routes.account_logout_url }}">
-                                {{ 'customer.log_out' | t }}
-                            </a>
                         </div>
 
                     </div>

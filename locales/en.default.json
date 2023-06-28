@@ -400,12 +400,12 @@
         "privacy-policy": "מדיניות פרטיות"
       },
       "loyalty":{
-        "title": "STRONGFUL CLUB - ",
-        "sub_title": "מועדון הלקוחות",
+        "title": "STRONGFUL CLUB",
+        "sub_title": "מועדון לקוחות",
         "earn_points": "צבירת נקודות קאשבק בכל קנייה"
       },
       "contact": {
-        "title": "יש לך שאלה? צרי קשר",
+        "title": "יש לך שאלה? צרי איתנו קשר",
         "phone": "טלפון",
         "email": "מייל",
         "whatsapp": "וואטסאפ",
@@ -435,7 +435,7 @@
       "city": "עיר",
       "country": "Country\/region",
       "province": "Province",
-      "zip": "מיקוד דואר",
+      "zip": "מיקוד",
       "phone": "טלפון",
       "set_default": "אני רוצה שזו תהיה הכתובת הראשית שלי",
       "add": "הוספת כתובת",

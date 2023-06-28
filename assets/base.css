@@ -3255,6 +3255,13 @@ button.needsclick {
 	line-height: 2.5rem !important;
 }
 
+.header__heading-logo_secondary {
+	position: absolute;
+	bottom: 3rem;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
 @media screen and (min-width: 990px) {
 
 	.account-menu-buttons {
@@ -3296,13 +3303,6 @@ button.needsclick {
 	.collection__title_heading .title.heading_type_2:not(:only-child) {
 		font-size: calc(var(--font-body-size-large) * 1.5);
 		margin: 0;
-	}
-
-	.header__heading-logo_secondary {
-		position: absolute;
-		bottom: 3rem;
-		left: 50%;
-		transform: translateX(-50%);
 	}
 
 	.relative {

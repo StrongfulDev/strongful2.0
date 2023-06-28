@@ -87,7 +87,7 @@
         "enable_language_selector": false,
         "payment_enable": true,
         "show_policy": false,
-        "margin_top": 84,
+        "margin_top": 64,
         "padding_top": 36,
         "padding_bottom": 0
       }
