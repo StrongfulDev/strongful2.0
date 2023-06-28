@@ -249,6 +249,10 @@ cart-drawer-items::-webkit-scrollbar {
 	margin-bottom: 0;
 }
 
+.cart-drawer .cart-item:last-of-type {
+	margin-bottom: 1rem;
+}
+
 .cart-drawer .cart-item:last-child {
 	margin-bottom: 1rem;
 }
