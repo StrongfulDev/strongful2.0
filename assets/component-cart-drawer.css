@@ -249,7 +249,7 @@ cart-drawer-items::-webkit-scrollbar {
 	margin-bottom: 0;
 }
 
-.cart-drawer .cart-item:last-of-type {
+.cart-drawer .cart-item:nth-last-child(2) {
 	margin-bottom: 1rem;
 }
 
