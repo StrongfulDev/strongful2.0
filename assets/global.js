@@ -369,6 +369,7 @@ class MenuDrawer extends HTMLElement {
 			this.querySelectorAll('summary').forEach(summary => summary.addEventListener('mouseenter', this.onSummaryHover.bind(this)));
 		}
     this.querySelectorAll('button').forEach(button => button.addEventListener('click', this.onCloseButtonClick.bind(this)));
+		document.querySelector('.desktop-account-modal button').addEventListener('click', this.onCloseButtonClick.bind(this));
   }
 
   onKeyUp(event) {
@@ -1212,6 +1213,22 @@ function removeDeadProduct() {
 
 window.addEventListener('DOMContentLoaded', function() {
 
+	function toggleButtonLoading() {
+		$(this).find('.button-loader-text').addClass('zero-opacity');
+		$(this).find('.loading-overlay__spinner').removeClass('hidden');
+		$(this).find('.loading-overlay').show();
+		$(this).css('opacity', '0.5');
+
+		setTimeout(() => {
+			$(this).find('.button-loader-text').removeClass('zero-opacity');
+			$(this).find('.loading-overlay__spinner').addClass('hidden');
+			$(this).find('.loading-overlay').hide();
+			$(this).css('opacity', '1');
+		}, 5000);
+	}
+
+	$('.button-loader-activator').on('click', toggleButtonLoading);
+
 	removeDeadProduct();
 
 	$(".loader-wrapper").delay().fadeOut("slow");
@@ -1231,8 +1248,6 @@ window.addEventListener('DOMContentLoaded', function() {
 	}
 
 	$(".header-overlay").on('click', closeHeader);
-	// $(".mobile-header-closer").on('click', closeHeader);
-
 	if (window.innerWidth > 990) {
 		$(headerOverlay).on('mouseenter', function() {
 			$(this).addClass('hidden');

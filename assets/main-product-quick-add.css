@@ -28,6 +28,7 @@
 
 .sticky-title-and-price {
 	color: var(--gradient-base-background-1);
+	flex-direction: column;
 }
 
 .sticky-add-to-cart-image {

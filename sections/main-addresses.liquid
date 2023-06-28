@@ -162,11 +162,35 @@
                             </div>
                         </div>
 
-                        <div class="main-account-info-container main-account-info-container--support desktop--only">
-                            <h2 class="container-title bold">{{ 'customer.account.support.title' | t }}</h2>
-                            <a href="{{ routes.account_logout_url }}" class="container-menu-item container-menu-item-logout pointer underlined-link">
-                                {{ 'customer.account.not_customer' | t: name: customer.name }} {{ 'customer.log_out' | t }}
-                                {% render 'icon-caret' %}
+                        <div class="main-account-info-container main-account-info-container--contact">
+                            <p>{{ 'customer.account.contact.title' | t }}</p>
+                            <div class="contact-icons-container">
+                                <div class="contact-icon-child">
+                                    <a href="https://wa.me/972533076158">
+                                        {% render 'whatsapp' %}
+                                    </a>
+                                    <p class="contact-text">{{ 'customer.account.contact.whatsapp' | t }}</p>
+                                </div>
+                                <div class="contact-icon-child">
+                                    <a href="mailto:{{ shop.email }}">
+                                        {% render 'envelope' %}
+                                    </a>
+                                    <p class="contact-text">{{ 'customer.account.contact.email' | t }}</p>
+                                </div>
+                                <div class="contact-icon-child">
+                                    <a href="tel:{{ shop.phone }}">
+                                        {% render 'telephone' %}
+                                    </a>
+                                    <p class="contact-text">{{ 'customer.account.contact.phone' | t }}</p>
+                                </div>
+                            </div>
+                            <p class="business-hours">{{ 'customer.account.contact.business-hours' | t }}</p>
+                        </div>
+
+                        <div class="container-menu-item container-menu-item--logout">
+                            <p>{{ 'customer.account.not_customer' | t: name: customer.name }}</p>
+                            <a class="logout-link" href="{{ routes.account_logout_url }}">
+                                {{ 'customer.log_out' | t }}
                             </a>
                         </div>
 

@@ -119,7 +119,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		console.log(unnecessaryReviews);
 		if (unnecessaryReviews) {
 			unnecessaryReviews.innerText = unnecessaryReviews.innerText.replace("Reviews", "");
-			unnecessaryReviews.innerText = "(" + unnecessaryReviews.innerText + ")";
+			// unnecessaryReviews.innerText = "(" + unnecessaryReviews.innerText + ")";
 			$(".yotpo-sr-vertical-border").remove();
 		}
 	}, 2000);

@@ -11,13 +11,11 @@
 }
 
 .contact .field {
-  margin-bottom: 1.5rem;
+  margin-bottom: 4rem;
 }
 
-@media screen and (min-width: 750px) {
-  .contact .field {
-    margin-bottom: 2rem;
-  }
+.field__label {
+	display: block;
 }
 
 .contact__button {

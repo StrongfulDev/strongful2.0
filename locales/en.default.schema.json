@@ -187,6 +187,13 @@
         "favicon": {
           "label": "Favicon image",
           "info": "Will be scaled down to 32 x 32px"
+        },
+        "logo_secondary": {
+          "label": "Secondary logo"
+        },
+        "logo_secondary_width": {
+          "label": "Secondary logo width",
+          "info": "Logo width is automatically optimized for mobile."
         }
       }
     },
@@ -1303,6 +1310,9 @@
     "header": {
       "name": "Header",
       "settings": {
+        "desktop_loyalty_link": {
+          "label": "Desktop loyalty link"
+        },
         "logo_header": {
           "content": "Logo"
         },

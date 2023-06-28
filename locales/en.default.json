@@ -4,39 +4,39 @@
       "homepage": "דף בית"
     },
     "password_page": {
-      "login_form_heading": "Enter store using password:",
-      "login_password_button": "Enter using password",
-      "login_form_password_label": "Password",
-      "login_form_password_placeholder": "Your password",
-      "login_form_error": "Wrong password!",
-      "login_form_submit": "Enter",
-      "admin_link_html": "Are you the store owner? <a href=\"\/admin\" class=\"link underlined-link\">Log in here<\/a>",
-      "powered_by_shopify_html": "This shop will be powered by {{ shopify }}"
+      "login_form_heading": "כניסה לחנות",
+      "login_password_button": "כניסה",
+      "login_form_password_label": "סיסמה",
+      "login_form_password_placeholder": "הכנס סיסמה",
+      "login_form_error": "הסיסמה שהזנת אינה נכונה",
+      "login_form_submit": "כניסה",
+      "admin_link_html": "בעל החנות? <a href=\"\/admin\" id=\"return_to_login\">כניסת מנהלים<\/a>",
+      "powered_by_shopify_html": "האתר יושב על פלטפורמת {{ shopify }}"
     },
     "social": {
       "alt_text": {
-        "share_on_facebook": "Share on Facebook",
-        "share_on_twitter": "Tweet on Twitter",
-        "share_on_pinterest": "Pin on Pinterest"
+        "share_on_facebook": "שיתוף בפייסבוק",
+        "share_on_twitter": "שיתוף בטוויטר",
+        "share_on_pinterest": "שיתוף בפינטרסט"
       },
       "links": {
-        "twitter": "Twitter",
-        "facebook": "Facebook",
-        "pinterest": "Pinterest",
-        "instagram": "Instagram",
-        "tumblr": "Tumblr",
-        "snapchat": "Snapchat",
-        "youtube": "YouTube",
-        "vimeo": "Vimeo",
-        "tiktok": "TikTok"
+        "twitter": "טוויטר",
+        "facebook": "פייסבוק",
+        "pinterest": "פינטרסט",
+        "instagram": "אינסטגרם",
+        "tumblr": "טאמבלר",
+        "snapchat": "סנאפצ'ט",
+        "youtube": "יוטיוב",
+        "vimeo": "וימאו",
+        "tiktok": "טיקטוק"
       }
     },
     "continue_shopping": "SHOP NOW",
     "pagination": {
       "label": "Pagination",
-      "page": "Page {{ number }}",
-      "next": "Next page",
-      "previous": "Previous page"
+      "page": "דף {{ number }}",
+      "next": "דף הבא",
+      "previous": "דף הקודם"
     },
     "search": {
       "search": "חיפוש",
@@ -44,27 +44,27 @@
       "close": "סגירה"
     },
     "cart": {
-      "view": "View my cart ({{ count }})",
-      "view_empty_cart": "View my cart",
-      "item_added": "Item added to your cart"
+      "view": "הצגת סל קניות ({{ count }})",
+      "view_empty_cart": "הצגת סל קניות",
+      "item_added": "המוצר נוסף לסל"
     },
     "share": {
-      "close": "Close share",
-      "copy_to_clipboard": "Copy link",
-      "share_url": "Link",
-      "success_message": "Link copied to clipboard"
+      "close": "סגירה",
+      "copy_to_clipboard": "העתקה ללוח",
+      "share_url": "שיתוף קישור",
+      "success_message": "הקישור הועתק"
     },
     "slider": {
-      "of": "of",
-      "next_slide": "Slide right",
-      "previous_slide": "Slide left",
-      "name": "Slider"
+      "of": "מתוך",
+      "next_slide": "גלילה ימינה",
+      "previous_slide": "גלילה שמאלה",
+      "name": "גלילה בין השקופיות"
     }
   },
   "newsletter": {
-    "label": "Email",
-    "success": "Thanks for subscribing",
-    "button_label": "Subscribe"
+    "label": "הרשמה לניוזלטר",
+    "success": "תודה על ההרשמה לניוזלטר שלנו!",
+    "button_label": "הרשמה"
   },
   "accessibility": {
     "skip_to_text": "דילוג לתוכן",
@@ -78,11 +78,11 @@
       "new_window": "נפתח בלשונית חדשה",
       "external": "פתח קישור חיצוני בחלונית חדשה"
     },
-    "loading": "Loading...",
-    "total_reviews": "total reviews",
-    "star_reviews_info": "{{ rating_value }} out of {{ rating_max }} stars",
-    "collapsible_content_title": "Collapsible content",
-    "complementary_products": "Complementary products"
+    "loading": "טוען...",
+    "total_reviews": "{{ count }} ביקורות",
+    "star_reviews_info": "{{ rating_value }} מתוך {{ rating_max }} כוכבים",
+    "collapsible_content_title": "פתח\/סגור תוכן",
+    "complementary_products": "מוצרים נלווים"
   },
   "blogs": {
     "title": "StrongBlog",
@@ -116,17 +116,17 @@
   "products": {
     "product": {
       "add_to_cart": "הוספה לסל",
-      "choose_options": "Choose options",
+      "choose_options": "בחירת אפשרויות",
       "up_size_recommendation": "במוצר זה מומלץ לקחת מידה יותר",
       "down_size_recommendation": "במוצר זה מומלץ לקחת מידה פחות",
-      "choose_product_options": "Choose options for {{ product_name }}",
-      "description": "Description",
-      "inventory_in_stock": "In stock",
+      "choose_product_options": "בחירת אפשרויות עבור {{ product_name }}",
+      "description": "תיאור",
+      "inventory_in_stock": "במלאי",
       "inventory_in_stock_show_count": "נשאר {{ quantity }} מפריט זה",
-      "inventory_low_stock": "Low stocxk",
+      "inventory_low_stock": "מלאי נמוך",
       "inventory_low_stock_show_count": "נשארו {{ quantity }} במלאי",
-      "inventory_out_of_stock": "Out of stock",
-      "inventory_out_of_stock_continue_selling": "In stock",
+      "inventory_out_of_stock": "אזל מהמלאי",
+      "inventory_out_of_stock_continue_selling": "מוצר זה אזל מהמלאי, אך עדיין ניתן להזמין אותו והוא יגיע בהקדם",
       "sku": "SKU",
       "on_sale": "Sale",
       "outlet": "OUTLET",
@@ -143,12 +143,12 @@
         "play_video": "Play video"
       },
       "loyalty": {
-        "earn_title": "STRONGFUL Club - היי {{ name }}",
+        "earn_title": "STRONGFUL CLUB - היי {{ name }}",
         "earn": "חברת מועדון, בקניית פריט זה תצברי {{ points }} נקודות"
       },
       "quantity": {
-        "label": "Quantity",
-        "input_label": "Quantity for {{ product }}",
+        "label": "כמות",
+        "input_label": "כמות עבור {{ product }}",
         "increase": "Increase quantity for {{ product }}",
         "decrease": "Decrease quantity for {{ product }}",
         "minimum_of": "Minimum of {{ quantity }}",
@@ -206,18 +206,18 @@
       "select_more_filters": "נא לבחור סינון",
       "clear": "איפוס",
       "clear_all": "איפוס",
-      "from": "From",
+      "from": "מ",
       "filter_and_sort": "פילטר",
       "filter_by_label": "פילטר:",
       "filter_button": "פילטר",
       "filters_selected": {
-        "one": "{{ count }} selected",
-        "other": "{{ count }} selected"
+        "one": "{{ count }} סינונים פעילים",
+        "other": "{{ count }} סינונים פעילים"
       },
       "filter_selected_accessibility": "{{ type }} ({{ count }} סינונים פעילים)",
       "show_more": "הצג עוד",
       "show_less": "הצג פחות",
-      "max_price": "The highest price is {{ price }}",
+      "max_price": "המחיר הגבוה ביותר הוא {{ price }}",
       "product_count": {
         "one": "{{ product_count }} מתוך {{ count }} מוצרים",
         "other": "{{ product_count }} מתוך {{ count }} מוצרים"
@@ -227,10 +227,10 @@
         "other": "{{ count }} מוצרים"
       },
       "reset": "איפוס",
-      "sort_button": "Sort",
+      "sort_button": "מיון",
       "sort_by_label": "סינון לפי",
-      "to": "To",
-      "clear_filter": "Remove filter",
+      "to": "עד",
+      "clear_filter": "איפוס סינון",
       "product_type": "סוג מוצר",
       "filters": {
         "manual": "נבחרים",
@@ -279,7 +279,7 @@
     },
     "contact": {
       "form": {
-        "title": "Contact form",
+        "title": "יצירת קשר",
         "name": "שם",
         "email": "מייל",
         "phone": "מספר פלאפון",
@@ -316,12 +316,12 @@
       "checkout": "מעבר לתשלום",
       "empty": "הסל שלך ריק",
       "empty_paragraph": "לחצי כאן לראות מה חדש",
-      "cart_error": "There was an error while updating your cart. Please try again.",
+      "cart_error": "אירעה שגיאה בעת טעינת הסל",
       "cart_quantity_error_html": "You can only add {{ quantity }} of this item to your cart.",
       "taxes_and_shipping_policy_at_checkout_html": "Taxes and <a href=\"{{ link }}\">shipping<\/a> calculated at checkout",
-      "taxes_included_but_shipping_at_checkout": "Tax included and shipping calculated at checkout",
+      "taxes_included_but_shipping_at_checkout": "מסים כלולים. משלוח יחושב בקופה",
       "taxes_included_and_shipping_policy_html": "Tax included. <a href=\"{{ link }}\">Shipping<\/a> calculated at checkout.",
-      "taxes_and_shipping_at_checkout": "Taxes and shipping calculated at checkout",
+      "taxes_and_shipping_at_checkout": "מסים ומשלוח יחושבו בקופה",
       "headings": {
         "product": "מוצר",
         "price": "מחיר",
@@ -338,9 +338,7 @@
       "rewards": {
         "title": "Earn rewards",
         "free_shipping": "משלוח חינם",
-        "upsell_text": "בקבוק מתנה",
-        "hundred_discount": "100₪ הנחה",
-        "two_hundred_discount": "200₪ הנחה"
+        "upsell_text": "בקבוק מתנה"
       }
     },
     "footer": {
@@ -360,9 +358,9 @@
       "view_all": "View all"
     },
     "collection_template": {
-      "empty": "No products found",
-      "title": "Collection",
-      "use_fewer_filters_html": "Use fewer filters or <a class=\"{{ class }}\" href=\"{{ link }}\">remove all<\/a>"
+      "empty": "לא נמצאו מוצרים בקטגוריה זו",
+      "title": "קטגוריה: {{ title }}",
+      "use_fewer_filters_html": "נסי להפחית את הסינונים, או <a href=\"{{ link }}\" class=\"link\">נסי חיפוש אחר<\/a>."
     },
     "video": {
       "load_video": "Load video: {{ description }}"
@@ -402,7 +400,7 @@
         "privacy-policy": "מדיניות פרטיות"
       },
       "loyalty":{
-        "title": "STRONGFUL Club - ",
+        "title": "STRONGFUL CLUB - ",
         "sub_title": "מועדון הלקוחות",
         "earn_points": "צבירת נקודות קאשבק בכל קנייה"
       },
@@ -410,6 +408,7 @@
         "title": "יש לך שאלה? צרי קשר",
         "phone": "טלפון",
         "email": "מייל",
+        "whatsapp": "וואטסאפ",
         "business-hours": "ימים ראשון עד חמישי בין השעות 09:00 עד 14:00"
       }
     },
@@ -424,7 +423,7 @@
     },
     "addresses": {
       "title": "הכתובות שלי",
-      "subtitle": "כאן תוכלי להוסיף כתובות חדשות או לערוך כתובות קיימות",
+      "subtitle": "כאן תוכלי להוסיף כתובות חדשות או לערוך כתובות קיימות.",
       "default": "כתובת המשלוח והחיוב המועדפת שלי",
       "add_new": "הוספת כתובת חדשה",
       "edit_address": "עריכת כתובת",
@@ -530,7 +529,7 @@
     },
     "orders": {
       "title": "ההזמנות שלי",
-      "description": "כאן תוכלי לראות את כל המידע על ההזמנות, כתובות והחלפות",
+      "description": "כאן תוכלי לראות את כל המידע על ההזמנות / ההחלפות שלך.",
       "order_number": "הזמנה",
       "order_number_link": "הזמנה מספר {{ number }}",
       "date": "תאריך",
@@ -547,6 +546,7 @@
       "success": "ברגעים אלו נשלח אליך מייל עם קישור לאיפוס הסיסמה שלך."
     },
     "register": {
+      "or": "או",
       "link_text": "הרשמה",
       "title": "הרשמה",
       "text": "הרשמי עכשיו וקבלי את כל ההטבות",
