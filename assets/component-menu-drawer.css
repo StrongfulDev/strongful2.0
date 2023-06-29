@@ -94,8 +94,9 @@ padding: 1.5rem;
 }
 
 .dropdown-slider-image {
-	width: 100%;
+	width: 200px;
 	height: 150px;
+/*  Only temp	*/
 }
 
 .mobile-header-closer {
@@ -431,6 +432,49 @@ padding: 1.5rem;
 
 .js .dropdown .menu-drawer__inner-submenu .menu-drawer__menu-list-item:last-child {
 	border-bottom: 0;
+}
+
+.desktop_links_image_1_text {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+}
+
+.desktop_links_image_1_text span {
+	color: var(--gradient-base-accent-1);
+	font-size: var(--font-body-size-small);
+	background: var(--gradient-background);
+	padding: 0.5rem;
+	font-weight: var(--font-body-weight-bold);
+	border-radius: 4px;
+}
+
+.desktop_links_image_1_title {
+	width: calc(100% - 2rem);
+	position: absolute;
+	bottom: 1rem;
+	left: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+	color: var(--gradient-background);
+	font-weight: var(--font-body-weight-bold);
+	font-size: var(--font-body-size-large);
+}
+
+.desktop_links_image_1_title .icon-container {
+	background: var(--gradient-background);
+	height: 34px;
+	width: 34px;
+	border-radius: 50%;
+	transform: rotate(270deg);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.desktop_links_image_1_title .icon-caret {
+	color: var(--gradient-base-accent-1);
 }
 
 @media screen and (min-width: 990px) {
