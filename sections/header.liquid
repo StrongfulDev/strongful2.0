@@ -1058,7 +1058,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                     <details class="relative">
                         <summary class="header__icon header__icon--account focus-inset">
                             {% render 'icon-new-user' %}
-                            <span class="desktop-customer-name desktop--only">{{ customer.name }}</span>
+                            <span class="desktop-customer-name">{{ customer.name }}</span>
                             <span class="visually-hidden">
                                 {%- liquid
                                     if customer
@@ -1069,7 +1069,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                 -%}
                             </span>
                         </summary>
-                        <div class="desktop-account-modal desktop--only fix-direction">
+                        <div class="desktop-account-modal fix-direction">
                             <div class="square">&nbsp;</div>
                             <div class="close-custom-account-container">
                                 <h4 class="custom-customer-popup-main-title">{{ customer.name }}</h4>
@@ -1090,12 +1090,12 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                     </a>
                                 {% endfor %}
                                 <div class="account-menu-buttons">
-                                    <a class="logout-link" href="{{ routes.account_logout_url }}">
-                                        {{ 'customer.log_out' | t }}
-                                    </a>
                                     <a href="{{ routes.account_url }}" class="button button-loader-activator">
                                         <span class="button-loader-text">{{ 'customer.account.sub_title' | t }}</span>
                                         {% render 'loading-spinner' %}
+                                    </a>
+                                    <a class="logout-link" href="{{ routes.account_logout_url }}">
+                                        {{ 'customer.log_out' | t }}
                                     </a>
                                 </div>
                             </div>
