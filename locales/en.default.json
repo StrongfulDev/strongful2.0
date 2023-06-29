@@ -302,6 +302,9 @@
       "cart_count": {
         "one": "{{ count }} item",
         "other": "{{ count }} items"
+      },
+      "dropdown": {
+        "login_or_register": "הרשמה / כניסה"
       }
     },
     "cart": {
