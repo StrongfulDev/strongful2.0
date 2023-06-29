@@ -402,18 +402,18 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                         </summary>
                         <div id="menu-drawer" class="gradient menu-drawer motion-reduce"
                              tabindex="-1">
-                            <button class="mobile-header-closer">
-                                {% render 'icon-close' %}
-                            </button>
                             <div class="menu-drawer__inner-container">
                                 <div class="menu-drawer__navigation-container">
                                     <nav class="menu-drawer__navigation">
                                         <div class="nav_top">
                                             <div class="nav_top--logo-container">
                                                 <div class="nav_top--mobile-logo">
+                                                    <button class="mobile-header-closer">
+                                                        {% render 'icon-close' %}
+                                                    </button>
                                                     {% if customer %}
                                                         <div class="login-or-register-container">
-                                                            <span class="login-or-register"></span>
+                                                            <a href="{{ routes.account_url }}" class="login-or-register">{{ 'customer.account.sub_title' | t }}</a>
                                                         </div>
                                                     {% else %}
                                                         <div class="login-or-register-container account-toggler-site-wide">
@@ -433,6 +433,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                             <div class="menu_images">
                                                 {% if section.settings.mobile_top_image_1 != nil %}
                                                 <{% if section.settings.mobile_top_image_1_link != "" %}a href="{{ section.settings.mobile_top_image_1_link }}" class="{{ section.settings.menu_type_desktop }}-image-container" {% else %}div class="desktop_links_image_1_container"{% endif %}>
+
                                                     {%- assign height = section.settings.mobile_top_image_1.width | divided_by: section.settings.mobile_top_image_1.aspect_ratio | round -%}
                                                     {{ section.settings.mobile_top_image_1 | image_url: width: 600 | image_tag:
                                                     loading: 'lazy',
@@ -465,7 +466,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                                         <details
                                                                 id="Details-menu-drawer-menu-item-{{ forloop.index }}">
                                                             <summary
-                                                                    class="menu-drawer__menu-item list-menu__item link link--text focus-inset
+                                                                    class="menu-drawer__menu-item list-menu__item grandchild-link link link--text focus-inset
                                                                     {% if link.child_active %} menu-drawer__menu-item--active{% endif %}
                                                                     {{ block.settings.item_class }}"
                                                                     data-class="{{ block.settings.item_class }}"

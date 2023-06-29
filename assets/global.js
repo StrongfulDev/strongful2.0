@@ -1243,7 +1243,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
 	function closeHeader(event) {
 		$('html').removeClass(`overflow-hidden-${menuDrawer.dataset.breakpoint}`).removeClass('overflow-hidden');
-		$(".menu-drawer-container.customizable.menu-opening").attr('open', false).removeClass('menu-opening');
+		$(".menu-drawer-container.menu-opening").attr('open', false).removeClass('menu-opening');
 		$(headerOverlay).addClass('hidden');
 	}
 
