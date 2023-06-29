@@ -402,18 +402,24 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                         </summary>
                         <div id="menu-drawer" class="gradient menu-drawer motion-reduce"
                              tabindex="-1">
+                            <button class="mobile-header-closer">
+                                {% render 'icon-close' %}
+                            </button>
                             <div class="menu-drawer__inner-container">
                                 <div class="menu-drawer__navigation-container">
                                     <nav class="menu-drawer__navigation">
                                         <div class="nav_top">
                                             <div class="nav_top--logo-container">
                                                 <div class="nav_top--mobile-logo">
-                                                    <button class="login-or-register-container">
-                                                        <span class="login-or-register">{{ 'sections.header.dropdown.login_or_register' | t }}</span>
-                                                    </button>
-                                                    <button class="mobile-header-closer">
-                                                        {% render 'icon-close' %}
-                                                    </button>
+                                                    {% if customer %}
+                                                        <div class="login-or-register-container">
+                                                            <span class="login-or-register"></span>
+                                                        </div>
+                                                    {% else %}
+                                                        <div class="login-or-register-container account-toggler-site-wide">
+                                                            <span class="login-or-register">{{ 'sections.header.dropdown.login_or_register' | t }}</span>
+                                                        </div>
+                                                    {% endif %}
                                                 </div>
                                             </div>
                                             <div class="mobile_menu fix-direction">
@@ -464,43 +470,30 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                                                     {{ block.settings.item_class }}"
                                                                     data-class="{{ block.settings.item_class }}"
                                                             >
-                                                                <div class="mobile-link-cover"
-                                                                     style="background-image: url('{{ block.settings.mobile_cover_image.src | image_url: width: 700 }}')">
-                                                                    {% if block.settings.mobile_title %}
-                                                                        <span>
-                                                                              {{ block.settings.mobile_title | escape }}
-                                                                            {% render 'icon-arrow' %}
-                                                                            {% render 'icon-caret' %}
-                                                                          </span>
-                                                                    {% endif %}
-                                                                </div>
+                                                                {% if block.settings.mobile_title %}
+                                                                    <div class="mobile-link-cover bold">
+                                                                        {{ block.settings.mobile_title | escape }}
+                                                                    </div>
+                                                                {% endif %}
+                                                                {% render 'icon-caret' %}
                                                             </summary>
                                                             <div id="link-{{ block.id | escape }}"
                                                                  class="menu-drawer__submenu has-submenu gradient motion-reduce"
                                                                  tabindex="-1">
                                                                 <div class="menu-drawer__inner-submenu">
-                                                                    <button class="menu-drawer__close-button link link--text focus-inset"
-                                                                            aria-expanded="true">
-                                                                        {% render 'icon-caret' %}
-                                                                        {{ block.settings.mobile_title | escape }}
-                                                                    </button>
-                                                                    <div class="menu-drawer__item-image"
-                                                                         style="background-image: url('{{ block.settings.mobile_cover_image.src | image_url: width: 900 }}')">
-                                                                        &nbsp;
-                                                                    </div>
                                                                     <ul class="menu-drawer__menu list-menu"
                                                                         role="list" tabindex="-1">
                                                                         {%- for childlink in block.settings.menu.links -%}
-                                                                            {% render 'menu-drawer-grandchild-link', childlink: childlink %}
+                                                                            {% render 'menu-drawer-grandchild-link', childlink: childlink, menu_type: section.settings.menu_type_desktop %}
                                                                         {%- endfor -%}
                                                                         {% if block.settings.menu_second != blank %}
                                                                             {%- for childlink in block.settings.menu_second.links -%}
-                                                                                {% render 'menu-drawer-grandchild-link', childlink: childlink %}
+                                                                                {% render 'menu-drawer-grandchild-link', childlink: childlink, menu_type: section.settings.menu_type_desktop %}
                                                                             {%- endfor -%}
                                                                         {% endif %}
                                                                         {% if block.settings.menu_third != blank %}
                                                                             {%- for childlink in block.settings.menu_third.links -%}
-                                                                                {% render 'menu-drawer-grandchild-link', childlink: childlink %}
+                                                                                {% render 'menu-drawer-grandchild-link', childlink: childlink, menu_type: section.settings.menu_type_desktop %}
                                                                             {%- endfor -%}
                                                                         {% endif %}
                                                                     </ul>
@@ -511,7 +504,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                                 {% else %}
                                                     <li class="{% if block.settings.show_on_mobile == false %}desktop-only{% endif %}">
                                                         <a href="{{ block.settings.title_link }}" class="mobile_link_header">
-                                                            <span>{{ block.settings.title }}</span>
+                                                            <span class="bold">{{ block.settings.title }}</span>
                                                         </a>
                                                     </li>
                                                 {% endif %}
@@ -524,48 +517,9 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                                 {% render "social-icons" %}
                                             </div>
                                         {%- endif -%}
-                                        {%- if shop.customer_accounts_enabled -%}
-                                            <div class="menu-drawer__account-container">
-                                                {% if customer %}
-                                                    {%- liquid
-                                                        if customer.tags contains 'swell_vip_basic'
-                                                            assign vipTier = 'Basic'
-                                                        elsif customer.tags contains 'swell_vip_plus'
-                                                            assign vipTier = 'Plus'
-                                                        elsif customer.tags contains 'swell_vip_premium'
-                                                            assign vipTier = 'Premium'
-                                                        elsif customer.tags contains 'swell_vip_legend'
-                                                            assign vipTier = 'Legend'
-                                                        elsif customer.tags contains 'ALIST'
-                                                            assign vipTier = 'Basic'
-                                                        else
-                                                            assign vipTier = 'None'
-                                                        endif
-                                                    -%}
-                                                    <div class="mobile-menu-customer-container fix-direction">
-                                                        <div class="main-account-info-container main-account-info-container--loyalty">
-                                                            <h4 class="container-title">מועדון הלקוחות שלי</h4>
-                                                            <a href="/pages/a-list" class="container-menu-item">ALIST <span>{{ vipTier }}</span>
-                                                                {% render 'icon-caret' %}
-                                                            </a>
-                                                            <p class="container-extra-info">צבירת נקודות בכל קנייה</p>
-                                                        </div>
-                                                        <div class="main-account-info-container main-account-info-container--loyalty">
-                                                            <h4 class="container-title">{{ "sections.header.account_title" | t }}</h4>
-                                                            <a href="{{ routes.account_url }}" class="container-menu-item">
-                                                                {% render 'icon-new-user' %}
-                                                                {{ customer.name }}
-                                                                {% render 'icon-caret' %}
-                                                            </a>
-                                                        </div>
-                                                        <a href="{{ routes.account_logout_url }}"
-                                                           class="menu-drawer__account-register link focus-inset h5 button button--secondary">
-                                                            {{ 'customer.log_out' | t }}
-                                                        </a>
-                                                    </div>
-                                                {%- endif -%}
-                                            </div>
-                                        {%- endif -%}
+                                        {% comment %}
+                                        Insert hamburger menu extras here
+                                        {% endcomment %}
                                     </div>
                                 </div>
                             </div>
@@ -602,57 +556,79 @@ You can learn more about this (and learn how to cleanly revert these changes) at
 
         {%- if section.settings.menu != blank -%}
             {%- if section.settings.menu_type_desktop == 'dropdown' -%}
-                <nav class="header__inline-menu  {{ section.settings.menu_position }}">
-                    <ul class="list-menu list-menu--inline" role="list">
-                        {%- for link in section.settings.menu.links -%}
-                            <li>
-                                {%- if link.links != blank -%}
+                <nav class="header__inline-menu {{ section.settings.menu_position }}">
+                    <ul class="list-menu list-menu--inline header-blocks-list fix-direction" role="list">
+                        {%- for block in section.blocks -%}
+                            <li class="header-block-list-element {% if block.settings.small_font %}small{% endif %}" style="order: {{ block.settings.order }}">
+                                {%- if block.settings.menu != blank -%}
+                                    {%- liquid
+                                        assign link_child_active = false
+                                        assign link_levels = 1
+
+                                        if block.settings.menu_second != blank
+                                            assign gridClass = 'two-grid'
+                                        endif
+
+                                        if block.settings.menu_third != blank
+                                            assign gridClass = 'three-grid'
+                                        endif
+                                    -%}
                                     <header-menu>
-                                        <details id="Details-HeaderMenu-{{ forloop.index }}">
+                                        <details id="Details-HeaderMenu-{{ forloop.index }}"
+                                                 class="mega-menu">
                                             <summary
                                                     class="header__menu-item list-menu__item link focus-inset">
-                                                <a href="{{ link.url }}" {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</a>
+                                                <a href="{{ block.settings.shop_all_link }}" class="{{ section.settings.menu_type_desktop }}-header__menu-item">{{ block.settings.title | escape }}</a>
                                             </summary>
-                                            <ul id="HeaderMenu-MenuList-{{ forloop.index }}"
-                                                class="header__submenu list-menu list-menu--disclosure gradient caption-large motion-reduce global-settings-popup"
-                                                role="list" tabindex="-1">
-                                                {%- for childlink in link.links -%}
-                                                    <li>
-                                                        {%- if childlink.links == blank -%}
-                                                            <a href="{{ childlink.url }}"
-                                                               class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
-                                                                {{ childlink.title | escape }}
-                                                            </a>
-                                                        {%- else -%}
-                                                            <details
-                                                                    id="Details-HeaderSubMenu-{{ forloop.index }}">
-                                                                <summary
-                                                                        class="header__menu-item link link--text list-menu__item focus-inset caption-large">
-                                                                    <span>{{ childlink.title | escape }}</span>
-                                                                    {% render 'icon-caret' %}
-                                                                </summary>
-                                                                <ul id="HeaderMenu-SubMenuList-{{ forloop.index }}"
-                                                                    class="header__submenu list-menu motion-reduce">
-                                                                    {%- for grandchildlink in childlink.links -%}
-                                                                        <li>
-                                                                            <a href="{{ grandchildlink.url }}"
-                                                                               class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if grandchildlink.current %} list-menu__item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
-                                                                                {{ grandchildlink.title | escape }}
-                                                                            </a>
-                                                                        </li>
-                                                                    {%- endfor -%}
-                                                                </ul>
-                                                            </details>
-                                                        {%- endif -%}
-                                                    </li>
-                                                {%- endfor -%}
-                                            </ul>
+                                            <div id="MegaMenu-Content-{{ forloop.index }}"
+                                                 class="mega-menu__content customizable fix-direction gradient motion-reduce global-settings-popup"
+                                                 tabindex="-1">
+                                                <div class="mega-menu-grid-container {{ gridClass }}">
+                                                    <a href="{{ block.settings.shop_all_link }}" class="shop-all-link">
+                                                        {{ block.settings.shop_all_title }}
+                                                    </a>
+                                                    {% render 'header-lists', childlinks: block.settings.menu.links, link_levels: link_levels %}
+                                                    {% if block.settings.menu_second != blank %}
+                                                        {% render 'header-lists', childlinks: block.settings.menu_second.links, link_levels: link_levels %}
+                                                    {% endif %}
+                                                    {% if block.settings.menu_third != blank %}
+                                                        {% render 'header-lists', childlinks: block.settings.menu_third.links, link_levels: link_levels %}
+                                                    {% endif %}
+                                                </div>
+                                                <div class="desktop_links_images">
+                                                    {% if block.settings.desktop_links_image_1 != nil %}
+                                                    <{% if block.settings.desktop_links_image_1_link != "" %}a href="{{ block.settings.desktop_links_image_1_link }}" {% else %}div class="desktop_links_image_1_container"{% endif %}>
+                                                        {%- assign height = block.settings.desktop_links_image_1.width | divided_by: block.settings.desktop_links_image_1.aspect_ratio | round -%}
+                                                        {{ block.settings.desktop_links_image_1 | image_url: width: 600 | image_tag:
+                                                        loading: 'lazy',
+                                                        height: height,
+                                                        class: "desktop_links_image_1",
+                                                        sizes: "100vw",
+                                                        widths: '600'
+                                                        }}
+                                                        </{% if block.settings.desktop_links_image_1_link != "" %}a{% else %}div{% endif %}>
+
+                                                        {% endif %}
+                                                        {% if block.settings.desktop_links_image_2 != nil %}
+                                                        <{% if block.settings.desktop_links_image_2_link != "" %}a href="{{ block.settings.desktop_links_image_2_link }}" {% else %}div class="desktop_links_image_2_container"{% endif %}>
+                                                            {%- assign height = block.settings.desktop_links_image_2.width | divided_by: block.settings.desktop_links_image_2.aspect_ratio | round -%}
+                                                            {{ block.settings.desktop_links_image_2 | image_url: width: 600 | image_tag:
+                                                            loading: 'lazy',
+                                                            height: height,
+                                                            sizes: "100vw",
+                                                            widths: '600'
+                                                            }}
+                                                            </{% if block.settings.desktop_links_image_2_link != "" %}a{% else %}div{% endif %}>
+                                                            {% endif %}
+                                                </div>
+                                            </div>
                                         </details>
                                     </header-menu>
                                 {%- else -%}
-                                    <a href="{{ link.url }}"
-                                       class="header__menu-item list-menu__item link link--text focus-inset"{% if link.current %} aria-current="page"{% endif %}>
-                                        <span {%- if link.current %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
+                                    {% assign link_current = false %}
+                                    <a href="{{ block.settings.title_link }}"
+                                       class="header__menu-item closing-link list-menu__item link link--text focus-inset"{% if link_current %} aria-current="page"{% endif %}>
+                                        <span {%- if link_current %} class="header__active-menu-item"{% endif %}>{{ block.settings.title | escape }}</span>
                                     </a>
                                 {%- endif -%}
                             </li>

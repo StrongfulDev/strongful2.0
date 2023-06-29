@@ -849,9 +849,13 @@ summary {
 
 summary .icon-caret {
     position: absolute;
-    height: 0.6rem;
     right: 1.5rem;
     top: calc(50% - 0.2rem);
+}
+
+.icon-caret {
+	height: 0.6rem;
+	width: 1.2rem;
 }
 
 summary::-webkit-details-marker {
@@ -2821,6 +2825,8 @@ details[open] > .header__menu-item .icon-caret {
     text-decoration: underline;
     text-underline-offset: 0.3rem;
 }
+
+
 
 .header__menu-item:hover .header__active-menu-item {
     text-decoration-thickness: 0.2rem;

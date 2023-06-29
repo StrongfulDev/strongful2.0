@@ -66,16 +66,16 @@
         "b3598a84-e3e7-4790-a124-330f65ab27da": {
           "type": "url",
           "settings": {
-            "show_on_mobile": false,
+            "show_on_mobile": true,
             "small_font": true,
-            "title": "SALE",
+            "title": "NEW IN",
             "title_link": "shopify:\/\/collections\/sale-3-for-300"
           }
         },
         "8878d4cf-d83f-42a2-90b9-ddebceb7501c": {
           "type": "menu_item",
           "settings": {
-            "show_on_mobile": false,
+            "show_on_mobile": true,
             "order": "",
             "small_font": false,
             "menu": "desktop-menu-one",
@@ -89,7 +89,7 @@
             "desktop_links_image_2": "shopify:\/\/shop_images\/1_9df2f717-f159-49df-a1a1-2e82e610723d.jpg",
             "desktop_links_image_2_link": "shopify:\/\/collections\/sale-3-for-300",
             "mobile_cover_image": "shopify:\/\/shop_images\/20e5c3f719da92dc7bfd0c70c57f7186.jpg",
-            "mobile_title": "",
+            "mobile_title": "SETS",
             "main_link": "",
             "main_title": "",
             "shop_all_link": "shopify:\/\/collections\/סטים",
@@ -99,7 +99,7 @@
         "fc929aa6-aab6-4c25-be13-8267425330c3": {
           "type": "menu_item",
           "settings": {
-            "show_on_mobile": false,
+            "show_on_mobile": true,
             "order": "",
             "small_font": false,
             "menu": "main-menu",
@@ -112,7 +112,7 @@
             "desktop_links_image_1_link": "shopify:\/\/collections\/sale-3-for-300",
             "desktop_links_image_2_link": "",
             "mobile_cover_image": "shopify:\/\/shop_images\/bra_hamburger.jpg",
-            "mobile_title": "",
+            "mobile_title": "TOPS",
             "main_link": "",
             "main_title": "",
             "shop_all_link": "shopify:\/\/collections\/all-tops",
@@ -122,7 +122,7 @@
         "03fa03f7-aac1-443b-acba-9a19fb5aa148": {
           "type": "menu_item",
           "settings": {
-            "show_on_mobile": false,
+            "show_on_mobile": true,
             "order": "",
             "small_font": false,
             "menu": "bottom-menu",
@@ -135,7 +135,7 @@
             "desktop_links_image_1_link": "shopify:\/\/collections\/sale-3-for-300",
             "desktop_links_image_2_link": "",
             "mobile_cover_image": "shopify:\/\/shop_images\/leggings_hamburger.jpg",
-            "mobile_title": "",
+            "mobile_title": "BOTTOMS",
             "main_link": "",
             "main_title": "",
             "shop_all_link": "shopify:\/\/collections\/allbottoms",
@@ -145,7 +145,7 @@
         "4d0d7344-0f17-4600-86d8-3481f2a1c4a1": {
           "type": "menu_item",
           "settings": {
-            "show_on_mobile": false,
+            "show_on_mobile": true,
             "order": "",
             "small_font": false,
             "menu": "dawn-accessories",
@@ -158,7 +158,7 @@
             "desktop_links_image_1_link": "shopify:\/\/collections\/sale-3-for-300",
             "desktop_links_image_2_link": "",
             "mobile_cover_image": "shopify:\/\/shop_images\/accessories_hamburger.jpg",
-            "mobile_title": "",
+            "mobile_title": "ACCESSORIES",
             "main_link": "",
             "main_title": "",
             "shop_all_link": "shopify:\/\/collections\/accessories",
@@ -168,7 +168,7 @@
         "70af0289-2846-42bd-93c5-5598239a8ddc": {
           "type": "menu_item",
           "settings": {
-            "show_on_mobile": false,
+            "show_on_mobile": true,
             "order": "",
             "small_font": true,
             "menu": "outlet-menu-main",
@@ -181,7 +181,7 @@
             "desktop_links_image_1_link": "shopify:\/\/collections\/sale-3-for-300",
             "desktop_links_image_2_link": "",
             "mobile_cover_image": "shopify:\/\/shop_images\/outlet-up-to-50.jpg",
-            "mobile_title": "",
+            "mobile_title": "OUTLET",
             "main_link": "",
             "main_title": "",
             "shop_all_link": "shopify:\/\/collections\/outlet",

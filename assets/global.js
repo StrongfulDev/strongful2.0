@@ -389,15 +389,15 @@ class MenuDrawer extends HTMLElement {
     let reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 		if (!$(summaryElement).hasClass("header__icon")) {
-			let summaryDataClass = summaryElement.getAttribute('data-class');
-			let navItems = document.querySelectorAll('.mobile_menu_link.header__menu-item');
-			navItems.forEach(function(item) {
-				if (item.innerText.includes(summaryDataClass)) {
-					$(item).removeClass('hidden').addClass('active');
-					$(item).siblings().removeClass('active').addClass('hidden');
-					$(item).parent().css('display', 'block');
-				}
-			});
+			// let summaryDataClass = summaryElement.getAttribute('data-class');
+			// let navItems = document.querySelectorAll('.mobile_menu_link.header__menu-item');
+			// navItems.forEach(function(item) {
+			// 	if (item.innerText.includes(summaryDataClass)) {
+			// 		$(item).removeClass('hidden').addClass('active');
+			// 		$(item).siblings().removeClass('active').addClass('hidden');
+			// 		$(item).parent().css('display', 'flex');
+			// 	}
+			// });
 		} else if ($(summaryElement).hasClass("header__icon--summary")) {
 			$(".header-overlay").toggleClass("hidden");
 		}
