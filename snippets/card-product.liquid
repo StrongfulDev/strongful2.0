@@ -47,15 +47,6 @@
         endif
     -%}
 
-    {% comment %}{% assign plusModelImages = card_product.images | where: 'variants', 'L' %}{% endcomment %}
-
-    {% assign plusModelImages = '' %}
-    {% for image in card_product.image %}
-        {% if image.variants.first.title contains 'L' %}
-            {% assign plusModelImages = plusModelImages | plus: image %}
-        {% endif %}
-    {% endfor %}
-
     <div class="card-wrapper product-card-wrapper underline-links-hover">
         <div
                 class="
@@ -125,55 +116,56 @@
                                 {% endif %}
                             </div>
 
-                                {% comment %}
                                 {% else %}
                                 <div class="media media--transparent media--hover-effect">
-                                    {% for image in plusModelImages %}
-                                        <img
-                                                srcset="
-                  {%- if plusModelImages[0].width >= 165 -%}{{ plusModelImages[0] | image_url: width: 165 }} 165w,{%- endif -%}
-                  {%- if plusModelImages[0].width >= 360 -%}{{ plusModelImages[0] | image_url: width: 360 }} 360w,{%- endif -%}
-                  {%- if plusModelImages[0].width >= 533 -%}{{ plusModelImages[0] | image_url: width: 533 }} 533w,{%- endif -%}
-                  {%- if plusModelImages[0].width >= 720 -%}{{ plusModelImages[0] | image_url: width: 720 }} 720w,{%- endif -%}
-                  {%- if plusModelImages[0].width >= 940 -%}{{ plusModelImages[0] | image_url: width: 940 }} 940w,{%- endif -%}
-                  {%- if plusModelImages[0].width >= 1066 -%}{{ plusModelImages[0] | image_url: width: 1066 }} 1066w,{%- endif -%}
-                  {{ plusModelImages[0] | image_url }} {{ plusModelImages[0].width }}w
-                "
-                                                src="{{ plusModelImages[0] | image_url: width: 533 }}"
-                                                sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-                                                alt="{{ plusModelImages[0].alt | escape }}"
-                                                class="motion-reduce"
-                                                {% unless lazy_load == false %}
-                                                    loading="lazy"
-                                                {% endunless %}
-                                                width="{{ plusModelImages[0].width }}"
-                                                height="{{ plusModelImages[0].height }}"
-                                        >
+                                    {% for image in card_product.images %}
+                                        {{ image.variants.first.title }}
+                                            {% if image.variants.title contains 'L' %}
+                                                <img srcset="
+                                                          {%- if image.width >= 165 -%}{{ image | image_url: width: 165 }} 165w,{%- endif -%}
+                                                          {%- if image.width >= 360 -%}{{ image | image_url: width: 360 }} 360w,{%- endif -%}
+                                                          {%- if image.width >= 533 -%}{{ image | image_url: width: 533 }} 533w,{%- endif -%}
+                                                          {%- if image.width >= 720 -%}{{ image | image_url: width: 720 }} 720w,{%- endif -%}
+                                                          {%- if image.width >= 940 -%}{{ image | image_url: width: 940 }} 940w,{%- endif -%}
+                                                          {%- if image.width >= 1066 -%}{{ image | image_url: width: 1066 }} 1066w,{%- endif -%}
+                                                          {{ image | image_url }} {{ image.width }}w"
+                                                        src="{{ image | image_url: width: 533 }}"
+                                                        sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                                                        alt="{{ image.alt | escape }}"
+                                                        class="motion-reduce"
+                                                        {% unless lazy_load == false %}
+                                                            loading="lazy"
+                                                        {% endunless %}
+                                                        width="{{ image.width }}"
+                                                        height="{{ image.height }}"
+                                                >
+                                            {% endif %}
                                         {% endfor %}
 
                                         {%- if show_secondary_image -%}
-                                            <img
-                                                    srcset="
-                    {%- if plusModelImages[1].width >= 165 -%}{{ plusModelImages[1] | image_url: width: 165 }} 165w,{%- endif -%}
-                    {%- if plusModelImages[1].width >= 360 -%}{{ plusModelImages[1] | image_url: width: 360 }} 360w,{%- endif -%}
-                    {%- if plusModelImages[1].width >= 533 -%}{{ plusModelImages[1] | image_url: width: 533 }} 533w,{%- endif -%}
-                    {%- if plusModelImages[1].width >= 720 -%}{{ plusModelImages[1] | image_url: width: 720 }} 720w,{%- endif -%}
-                    {%- if plusModelImages[1].width >= 940 -%}{{ plusModelImages[1] | image_url: width: 940 }} 940w,{%- endif -%}
-                    {%- if plusModelImages[1].width >= 1066 -%}{{ plusModelImages[1] | image_url: width: 1066 }} 1066w,{%- endif -%}
-                    {{ plusModelImages[1] | image_url }} {{ plusModelImages[1].width }}w
-                  "
-                                                    src="{{ plusModelImages[1] | image_url: width: 533 }}"
-                                                    sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-                                                    alt=""
-                                                    class="motion-reduce"
-                                                    loading="lazy"
-                                                    width="{{ plusModelImages[1].width }}"
-                                                    height="{{ plusModelImages[1].height }}"
-                                            >
+                                            {% for image in card_product.images %}
+                                                {% if image.variants.first.title contains 'L' %}
+                                                    <img srcset="
+                                                {%- if image.width >= 165 -%}{{ image | image_url: width: 165 }} 165w,{%- endif -%}
+                                                {%- if image.width >= 360 -%}{{ image | image_url: width: 360 }} 360w,{%- endif -%}
+                                                {%- if image.width >= 533 -%}{{ image | image_url: width: 533 }} 533w,{%- endif -%}
+                                                {%- if image.width >= 720 -%}{{ image | image_url: width: 720 }} 720w,{%- endif -%}
+                                                {%- if image.width >= 940 -%}{{ image | image_url: width: 940 }} 940w,{%- endif -%}
+                                                {%- if image.width >= 1066 -%}{{ image | image_url: width: 1066 }} 1066w,{%- endif -%}
+                                                {{ image | image_url }} {{ image.width }}w"
+                                                         src="{{ image | image_url: width: 533 }}"
+                                                         sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                                                         alt=""
+                                                         class="motion-reduce"
+                                                         loading="lazy"
+                                                         width="{{ image.width }}"
+                                                         height="{{ image.height }}"
+                                                    >
+                                                {% endif %}
+                                            {% endfor %}
                                         {%- endif -%}
                                 </div>
                                 {% endunless %}
-                                {% endcomment %}
                         </a>
                     </div>
                 {%- endif -%}
