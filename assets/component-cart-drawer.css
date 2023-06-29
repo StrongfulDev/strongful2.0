@@ -247,6 +247,7 @@ cart-drawer-items::-webkit-scrollbar {
 	grid-template: repeat(2, auto) / 1.8fr 2fr 2fr 1fr;
 	gap: 1rem;
 	margin-bottom: 0;
+	position: relative;
 }
 
 .cart-drawer .cart-item:nth-last-child(2) {
@@ -295,8 +296,15 @@ cart-drawer-items::-webkit-scrollbar {
 }
 
 .cart-drawer .cart-item .loading-overlay {
-	left: 5px;
-	padding-top: 2.5rem;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(var(--color-base-background-1), 0.5);
+	padding-top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .cart-drawer .cart-items td {

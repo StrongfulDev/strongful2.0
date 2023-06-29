@@ -16,7 +16,7 @@
 }
 
 .cart-item__totals {
-  position: relative;
+  /*position: relative;*/
 }
 
 .cart-items *.right {
@@ -172,7 +172,7 @@ cart-remove-button .icon-remove {
 }
 
 .cart-item .loading-overlay:not(.hidden) ~ * {
-  visibility: hidden;
+  /*visibility: hidden;*/
 }
 
 .cart-item__error {
