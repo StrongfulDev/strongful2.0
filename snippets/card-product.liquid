@@ -47,7 +47,15 @@
         endif
     -%}
 
-    {% assign plusModelImages = card_product.images | where: 'attached_to_variant?', false %}
+    {% comment %}{% assign plusModelImages = card_product.images | where: 'variants', 'L' %}{% endcomment %}
+
+    {% assign plusModelImages = '' %}
+    {% for image in card_product.image %}
+        {% if image.variants.first.title contains 'L' %}
+            {% assign plusModelImages = plusModelImages | plus: image %}
+        {% endif %}
+    {% endfor %}
+
     <div class="card-wrapper product-card-wrapper underline-links-hover">
         <div
                 class="
@@ -116,6 +124,8 @@
                                     {% render "card-product-slideshow", card_product: card_product %}
                                 {% endif %}
                             </div>
+
+                                {% comment %}
                                 {% else %}
                                 <div class="media media--transparent media--hover-effect">
                                     {% for image in plusModelImages %}
@@ -163,6 +173,7 @@
                                         {%- endif -%}
                                 </div>
                                 {% endunless %}
+                                {% endcomment %}
                         </a>
                     </div>
                 {%- endif -%}
