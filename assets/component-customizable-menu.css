@@ -239,7 +239,7 @@
     padding: 1rem 0;
 }
 
-ul.menu-drawer__menu {
+:is(:not(.dropdown))ul.menu-drawer__menu {
 	padding: 0 2rem;
 }
 
@@ -249,6 +249,10 @@ ul.menu-drawer__menu {
 
 .submenu-open ul.menu-drawer__menu li:first-child a {
 	font-weight: bold;
+}
+
+.dropdown .submenu-open ul.menu-drawer__menu li:first-child a {
+	font-weight: var(--font-body-weight);
 }
 
 .menu-drawer-container.customizable .menu-drawer__menu li + li {
@@ -298,6 +302,12 @@ ul.menu-drawer__menu {
 	border-bottom: 1px solid var(--gradient-base-background-4);
 }
 
+.dropdown .nav_top--logo-container {
+	border-bottom: none;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
 .nav_top--mobile-logo {
     margin: auto;
     display: flex;
@@ -305,6 +315,10 @@ ul.menu-drawer__menu {
 	align-items: center;
     text-align: center;
 	padding: 0 2rem;
+}
+
+.dropdown .nav_top--mobile-logo {
+	padding: 0;
 }
 
 .mobile-header-closer {
@@ -335,6 +349,10 @@ ul.menu-drawer__menu {
 .mobile_link_header {
     height: 150px;
     display: block;
+}
+
+.dropdown .mobile_link_header {
+	height: auto;
 }
 
 .mobile_link_header_image {
@@ -394,7 +412,7 @@ ul.menu-drawer__menu {
 		text-decoration: none;
 	}
 
-	.mega-menu__content.customizable {
+	.mega-menu__content {
 		width: 100%;
 		margin: 0 auto;
 		padding: 3.4rem 3.4rem 3.4rem 3.3rem;
@@ -418,7 +436,7 @@ ul.menu-drawer__menu {
 		grid-template-columns: 1fr 1.5fr;
 	}
 
-	.mega-menu__content.customizable li a {
+	.mega-menu__content li a {
 		text-transform: uppercase;
 		font-size: var(--font-body-size-medium);
 		padding: 0;
@@ -459,7 +477,7 @@ ul.menu-drawer__menu {
         grid-gap: 0.4rem 1rem;
     }
 
-    .mega-menu__content.customizable {
+    .mega-menu__content {
         display: grid;
 	    grid-template-columns: 1fr 1fr;
     }
@@ -474,12 +492,12 @@ ul.menu-drawer__menu {
 	    grid-column: 1 / -1;
     }
 
-	.mega-menu__content.customizable.fix-direction li:first-child {
+	.mega-menu__content.fix-direction li:first-child {
 		text-transform: uppercase;
 		text-decoration: none;
 	}
 
-	.mega-menu__content.customizable.fix-direction ul:nth-child(2) li:first-child a {
+	.mega-menu__content.fix-direction ul:nth-child(2) li:first-child a {
 		font-weight: var(--font-body-weight-bold);
 		text-decoration: none;
 	}

@@ -124,6 +124,10 @@ padding: 1.5rem;
 	border: none;
 }
 
+.login-or-register-container span {
+	color: var(--gradient-background);
+}
+
 .login-or-register-container.header__logged-in {
 	text-align: right;
 	direction: rtl;
@@ -215,6 +219,10 @@ padding: 1.5rem;
 
 .js .dropdown .menu-drawer__menu > li {
 	border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.1);
+}
+
+.js .dropdown .menu-drawer__menu > li:last-child {
+	border-bottom: none;
 }
 
 .js .dropdown .menu-drawer__menu.has-submenu.list-menu.submenu-open > li:last-child,

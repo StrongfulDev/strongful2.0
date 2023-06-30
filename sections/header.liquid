@@ -43,7 +43,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
     <link rel="stylesheet" href="{{ 'component-mega-menu.css' | asset_url }}" media="print"
           onload="this.media='all'">
     <noscript>{{ 'component-mega-menu.css' | asset_url | stylesheet_tag }}</noscript>
-{%- elsif section.settings.menu_type_desktop == 'customizable' -%}
+{%- elsif section.settings.menu_type_desktop == 'customizable' or section.settings.menu_type_desktop == 'dropdown' -%}
     <link rel="stylesheet" href="{{ 'component-customizable-menu.css' | asset_url }}" media="print"
           onload="this.media='all'">
     <noscript>{{ 'component-customizable-menu.css' | asset_url | stylesheet_tag }}</noscript>
@@ -1272,42 +1272,22 @@ You can learn more about this (and learn how to cleanly revert these changes) at
       "id":"mobile_top_image_1_link",
       "label":"t:sections.header.settings.mobile_top_section.image__1.link.label"
     },
-      {
-          "type": "text",
-            "id": "mobile_top_image_1_text",
-            "label": "t:sections.header.settings.mobile_top_section.image__1.text.label"
-      },
-      {
-          "type": "text",
-          "id": "mobile_top_image_1_title",
-          "label": "t:sections.header.settings.mobile_top_section.image__1.title.label"
-      },
     {
       "type":"image_picker",
       "id":"mobile_top_image_2",
       "label":"t:sections.header.settings.mobile_top_section.image__2.label",
       "info":"t:sections.header.settings.mobile_top_section.image__2.info"
     },
-      {
-        "type": "link_list",
-        "id": "slider_menu",
-        "label": "t:sections.header.settings.slider_menu.label"
-      },
+    {
+    "type": "link_list",
+    "id": "slider_menu",
+    "label": "t:sections.header.settings.slider_menu.label"
+    },
     {
       "type":"url",
       "id":"mobile_top_image_2_link",
       "label":"t:sections.header.settings.mobile_top_section.image__2.link.label"
     },
-      {
-          "type": "text",
-          "id": "mobile_top_image_2_text",
-          "label": "t:sections.header.settings.mobile_top_section.image__2.text.label"
-      },
-      {
-          "type": "text",
-          "id": "mobile_top_image_2_title",
-          "label": "t:sections.header.settings.mobile_top_section.image__2.title.label"
-      },
     {
       "type":"header",
       "content":"t:sections.all.spacing"
