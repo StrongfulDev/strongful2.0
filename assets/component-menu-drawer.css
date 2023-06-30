@@ -104,7 +104,7 @@ padding: 1.5rem;
 .dropdown .mobile-header-closer {
 	position: absolute;
 	right: 1rem;
-	top: 55%;
+	top: 50%;
 	transform: translateY(-50%);
 	background-color: transparent;
 	border: none;
@@ -149,7 +149,7 @@ padding: 1.5rem;
 	bottom: .2rem;
 }
 
-.dropdown a.login-or-register {
+.dropdown a.login-or-register, .dropdown span.login-or-register {
 	color: var(--gradient-background);
 	font-size: calc(var(--font-body-size-medium) * 0.8);
 	text-decoration: underline;
@@ -158,11 +158,15 @@ padding: 1.5rem;
 	column-gap: var(--grid-desktop-vertical-spacing);
 }
 
+.dropdown span.login-or-register {
+	justify-content: center;
+}
+
 .dropdown .mobile_menu {
 	display: flex;
 	justify-content: space-between;
-	padding-left: 2.5rem;
-	padding-right: 2.5rem;
+	padding-left: 3rem;
+	padding-right: 3rem;
 }
 
 .menu-drawer__inner-container {

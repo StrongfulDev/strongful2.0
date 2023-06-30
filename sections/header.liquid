@@ -412,14 +412,14 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                                         {% render 'icon-close' %}
                                                     </button>
                                                     {% if customer %}
-                                                        <div class="login-or-register-container header__logged-in">
+                                                        <div class="login-or-register-container fix-direction header__logged-in">
                                                             <a href="{{ routes.account_url }}" class="login-or-register">
                                                                 {% render 'icon-new-user' %}
                                                                 <span>{{ 'customer.account.greet' | t: first_name: customer.first_name }} - {{ vipTier }}</span>
                                                             </a>
                                                         </div>
                                                     {% else %}
-                                                        <div class="login-or-register-container account-toggler-site-wide">
+                                                        <div class="login-or-register-container fix-direction account-toggler-site-wide">
                                                             <span class="login-or-register">{{ 'sections.header.dropdown.login_or_register' | t }}</span>
                                                         </div>
                                                     {% endif %}
