@@ -2793,6 +2793,10 @@ transform: translateX(-300%);
     color: rgba(var(--color-foreground), 0.75);
 }
 
+.dropdown .header__menu-item {
+	padding: 2rem 0;
+}
+
 .header__menu-item:hover {
     color: rgb(var(--color-foreground));
 }

@@ -97,20 +97,20 @@ padding: 1.5rem;
 .dropdown-image-container img {
 	width: 250px;
 	height: fit-content;
-	height: 150px;
+	height: 17rem;
 /*  Only temp	*/
 }
 
-.mobile-header-closer {
+.dropdown .mobile-header-closer {
 	position: absolute;
 	right: 1rem;
-	top: 50%;
+	top: 55%;
 	transform: translateY(-50%);
 	background-color: transparent;
 	border: none;
 }
 
-.mobile-header-closer .icon-close {
+.dropdown .mobile-header-closer .icon-close {
 	width: 1.4rem;
 	height: 1.4rem;
 	stroke: var(--gradient-background);
@@ -124,22 +124,41 @@ padding: 1.5rem;
 	border: none;
 }
 
+.login-or-register-container.header__logged-in {
+	text-align: right;
+	direction: rtl;
+	padding-right: 4rem;
+}
+
+.login-or-register .icon {
+	width: 1.6rem;
+	height: 1.6rem;
+	fill: var(--gradient-background);
+}
+
 .nav_top--mobile-logo {
 	position: relative;
 }
 
+.dropdown a.login-or-register span {
+	position: relative;
+	bottom: .2rem;
+}
 
-
-.login-or-register {
+.dropdown a.login-or-register {
 	color: var(--gradient-background);
 	font-size: calc(var(--font-body-size-medium) * 0.8);
 	text-decoration: underline;
+	display: flex;
+	align-items: baseline;
+	column-gap: var(--grid-desktop-vertical-spacing);
 }
 
 .dropdown .mobile_menu {
 	display: flex;
 	justify-content: space-between;
-	width: 100%;
+	padding-left: 2.5rem;
+	padding-right: 2.5rem;
 }
 
 .menu-drawer__inner-container {
@@ -452,16 +471,29 @@ padding: 1.5rem;
 }
 
 .desktop_links_image_1_title {
-	width: calc(100% - 2rem);
+	/*width: calc(100% - 2rem);*/
+	/*position: absolute;*/
+	/*bottom: 1.5rem;*/
+	/*left: 1rem;*/
+	/*display: flex;*/
+	/*justify-content: space-between;*/
+	/*align-items: end;*/
+	/*color: var(--gradient-background);*/
+	/*font-weight: var(--font-body-weight-bold);*/
+	/*font-size: var(--font-body-size-large);*/
+
 	position: absolute;
-	bottom: 1.5rem;
-	left: 1rem;
+	bottom: 0;
+	left: 0;
+	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: end;
 	color: var(--gradient-background);
 	font-weight: var(--font-body-weight-bold);
 	font-size: var(--font-body-size-large);
+	padding: 1em 1.5rem;
+	background: linear-gradient(0deg, black, transparent);
 }
 
 .desktop_links_image_1_title .icon-container {
@@ -477,6 +509,7 @@ padding: 1.5rem;
 
 .desktop_links_image_1_title .icon-caret {
 	color: var(--gradient-base-accent-1);
+	width: 1.3rem;
 }
 
 @media screen and (min-width: 990px) {

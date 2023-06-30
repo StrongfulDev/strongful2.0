@@ -389,6 +389,7 @@
   },
   "customer": {
     "account": {
+      "greet": "היי {{ first_name }}",
       "title": "איזור אישי - {{ name }}",
       "sub_title": "איזור אישי",
       "details": "פרטי משתמש",
