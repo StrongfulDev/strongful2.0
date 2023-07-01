@@ -2587,6 +2587,7 @@ menu-drawer + .header__search {
 	.dropdown .header__search {
 		position: relative;
 		left: 0;
+		width: 100%;
 	}
 
 	.header__search details[open] {
@@ -2625,17 +2626,17 @@ menu-drawer + .header__search {
     display: none;
 }
 
-details[open] > .search-modal {
+details[open]>.search-modal {
     opacity: 1;
     animation: animateMenuOpen var(--duration-default) ease;
 }
 
-.dropdown details[open] > .search-modal {
-		position: fixed;
+.dropdown details[open]>.search-modal {
+	position: fixed;
 	top: 0;
 	left: 0;
-	height: 100vh;
-	width: 100vw;
+	width: 100%;
+	height: calc(100% - 5rem);
 	background-color: var(--gradient-background);
 }
 
@@ -2681,13 +2682,11 @@ details[open] .modal-overlay::after {
 }
 
 .dropdown .search-modal__content {
-	position: fixed;
-	z-index: 9;
-	width: 100%;
+	position: absolute;
 	padding: 0;
-	left: 0;
+	top: 0;
 	align-items: baseline;
-	height: 100%;
+	height: calc(100% - 5.4rem);
 }
 
 .search-modal__content-bottom {
@@ -2703,8 +2702,9 @@ details[open] .modal-overlay::after {
 }
 
 .dropdown .search-modal__form {
-		z-index: 3;
-	position: relative;
+	overflow-y: scroll;
+	height: calc(100% - 5.4rem);
+	height: 100%;
 }
 
 .search-modal__close-button {

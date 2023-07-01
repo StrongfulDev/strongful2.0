@@ -438,8 +438,6 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                                         </span>
                                                         <label class="search__label"
                                                                for="SearchDrawerInput">{{ 'general.search.search' | t }}</label>
-                                                        <input class="search__input field__input" type="text"
-                                                               placeholder="{{ 'general.search.search' | t }}">
                                                     </summary>
                                                     <div class="search-modal modal__content fix-direction gradient" role="dialog"
                                                          aria-modal="true" aria-label="{{ 'general.search.search' | t }}">
@@ -447,7 +445,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                                         <div class="search-modal__content{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} search-modal__content-top{% else %} search-modal__content-bottom{% endif %}"
                                                              tabindex="-1">
                                                             <button type="button"
-                                                                    class="search-modal__close-button modal__close-button link link--text focus-inset"
+                                                                    class="search-modal__close-button modal__close-button link link--text focus-inset {{ section.settings.menu_type_desktop }}__search--close"
                                                                     aria-label="{{ 'accessibility.close' | t }}">
                                                                 <span class="visually-hidden visibility-hidden">{{ 'accessibility.close' | t }}</span>
                                                                 {% comment %}<span class="search-modal__close-button--custom">{{ 'general.search.close' | t }}</span>{% endcomment %}

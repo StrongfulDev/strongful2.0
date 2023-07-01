@@ -388,18 +388,12 @@ class MenuDrawer extends HTMLElement {
     let isOpen = detailsElement.hasAttribute('open') || $(detailsElement).attr('open') === true;
     let reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-		if (!$(summaryElement).hasClass("header__icon")) {
-			// let summaryDataClass = summaryElement.getAttribute('data-class');
-			// let navItems = document.querySelectorAll('.mobile_menu_link.header__menu-item');
-			// navItems.forEach(function(item) {
-			// 	if (item.innerText.includes(summaryDataClass)) {
-			// 		$(item).removeClass('hidden').addClass('active');
-			// 		$(item).siblings().removeClass('active').addClass('hidden');
-			// 		$(item).parent().css('display', 'flex');
-			// 	}
-			// });
-		} else if ($(summaryElement).hasClass("header__icon--summary")) {
-			$(".header-overlay").toggleClass("hidden");
+		if ($(summaryElement).hasClass("header__icon--summary")) {
+			if (isOpen) {
+				$(".header-overlay").removeClass("hidden");
+			} else {
+				$(".header-overlay").removeClass("hidden");
+			}
 		}
 
 	  $(".mobile-facets__close").click(function() {
@@ -506,14 +500,16 @@ class MenuDrawer extends HTMLElement {
   onCloseButtonClick(event) {
     const detailsElement = event.currentTarget.closest('details');
     this.closeSubmenu(detailsElement);
-		let mobileHeaderMenuItem = $(".mobile_menu_link.header__menu-item");
-		mobileHeaderMenuItem.removeClass('hidden').removeClass('active');
-		mobileHeaderMenuItem.parent().css('display', 'flex');
-		$(".header-overlay").addClass("hidden");
-		$('html').removeClass('overflow-hidden');
-	  if (window.matchMedia('(max-width: 990px)')) {
-		  document.documentElement.style.removeProperty('--viewport-height');
-	  }
+		if (!event.target.classList.contains("dropdown__search--close")) {
+			let mobileHeaderMenuItem = $(".mobile_menu_link.header__menu-item");
+			mobileHeaderMenuItem.removeClass('hidden').removeClass('active');
+			mobileHeaderMenuItem.parent().css('display', 'flex');
+			$(".header-overlay").addClass("hidden");
+			$('html').removeClass('overflow-hidden');
+			if (window.matchMedia('(max-width: 990px)')) {
+				document.documentElement.style.removeProperty('--viewport-height');
+			}
+		}
   }
 
   closeSubmenu(detailsElement) {

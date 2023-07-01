@@ -45,6 +45,7 @@
   .dropdown .predictive-search--header {
 	  position: relative;
 	  top: 0;
+	  overflow-y: scroll;
   }
 
   .predictive-search__results-groups-wrapper {

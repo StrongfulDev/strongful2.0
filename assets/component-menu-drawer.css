@@ -146,6 +146,7 @@ padding: 1.5rem;
 
 .dropdown .header__icon--search {
 	background: var(--gradient-base-background-3);
+	width: 100%;
 }
 
 .dropdown a.login-or-register span {
@@ -155,6 +156,7 @@ padding: 1.5rem;
 
 .dropdown-search-details {
 	padding: 0 2rem;
+	width: 100%;
 }
 
 .dropdown a.login-or-register, .dropdown span.login-or-register {
