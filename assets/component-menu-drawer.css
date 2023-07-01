@@ -144,9 +144,17 @@ padding: 1.5rem;
 	position: relative;
 }
 
+.dropdown .header__icon--search {
+	background: var(--gradient-base-background-3);
+}
+
 .dropdown a.login-or-register span {
 	position: relative;
 	bottom: .2rem;
+}
+
+.dropdown-search-details {
+	padding: 0 2rem;
 }
 
 .dropdown a.login-or-register, .dropdown span.login-or-register {

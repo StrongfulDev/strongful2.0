@@ -2579,6 +2579,11 @@ menu-drawer + .header__search {
 		left: 5rem;
 	}
 
+	.dropdown .header__search {
+		position: relative;
+		left: 0;
+	}
+
 	.header__search details[open] {
 		width: 100%;
 	}
@@ -2620,6 +2625,15 @@ details[open] > .search-modal {
     animation: animateMenuOpen var(--duration-default) ease;
 }
 
+.dropdown details[open] > .search-modal {
+		position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	background-color: var(--gradient-background);
+}
+
 details[open] .modal-overlay {
     display: block;
 }
@@ -2659,6 +2673,16 @@ details[open] .modal-overlay::after {
     padding: 0.5rem 1rem 0 6rem;
     line-height: calc(1 + 0.8 / var(--font-body-scale));
     position: relative;
+}
+
+.dropdown .search-modal__content {
+	position: fixed;
+	z-index: 9;
+	width: 100%;
+	padding: 0;
+	left: 0;
+	align-items: baseline;
+	height: 100%;
 }
 
 .search-modal__content-bottom {
