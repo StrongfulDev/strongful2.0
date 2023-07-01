@@ -9,6 +9,14 @@
 | plus: predictive_search.resources.pages.size
 | plus: predictive_search.resources.articles.size
 %}
+    {% assign isLiveTheme = 'false' %}
+    {% if content_for_header contains "previewBarInjector.init();" %}
+        {% assign isLiveTheme = 'false' %}
+    {% elsif content_for_header contains "Shopify.designMode" %}
+        {% assign isLiveTheme = 'false' %}
+    {% else %}
+        {% assign isLiveTheme = 'true' %}
+    {% endif %}
   <div id="predictive-search-results" role="listbox">
     {%- if first_column_results_size > 0 or predictive_search.resources.products.size > 0 -%}
       <div id="predictive-search-results-groups-wrapper" class="predictive-search__results-groups-wrapper{% unless predictive_search.resources.products.size > 0 %} predictive-search__results-groups-wrapper--no-products{% endunless %}{% unless predictive_search.resources.queries.size > 0 or predictive_search.resources.collections.size > 0 %} predictive-search__results-groups-wrapper--no-suggestions{% endunless %}">

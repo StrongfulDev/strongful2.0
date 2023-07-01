@@ -8,6 +8,15 @@
 {% comment %}{{ 'component-slider.css' | asset_url | stylesheet_tag }}{% endcomment %}
 {% comment %}{{ 'component-slideshow.css' | asset_url | stylesheet_tag }}{% endcomment %}
 
+{% assign isLiveTheme = 'false' %}
+{% if content_for_header contains "previewBarInjector.init();" %}
+    {% assign isLiveTheme = 'false' %}
+{% elsif content_for_header contains "Shopify.designMode" %}
+    {% assign isLiveTheme = 'false' %}
+{% else %}
+    {% assign isLiveTheme = 'true' %}
+{% endif %}
+
 <link
         rel="preload"
         href="{{ 'component-rte.css' | asset_url }}"
@@ -182,7 +191,7 @@
                                 -%}
                                 {% if isLiveTheme == 'true' %}
                                     {% unless product.tags contains 'giftHide' or product.tags contains 'hidden' %}
-                                        <li class="grid__item">
+                                        <li class="grid__item {{ isLiveTheme }}">
                                             {% render 'card-product',
                                                     card_product: product,
                                                     media_aspect_ratio: section.settings.image_ratio,
@@ -206,7 +215,7 @@
                                     {% endunless %}
                                 {% else %}
                                     {% unless product.tags contains 'giftHide' %}
-                                        <li class="grid__item">
+                                        <li class="grid__item {{ isLiveTheme }}">
                                             {% render 'card-product',
                                                     card_product: product,
                                                     media_aspect_ratio: section.settings.image_ratio,

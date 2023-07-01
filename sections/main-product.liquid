@@ -15,6 +15,15 @@ You can learn more about this (and learn how to cleanly revert these changes) at
 {% assign loyaltyPointsPremium = loyaltyPoints | times: 1.5 %}
 {% assign loyaltyPointsLegend = loyaltyPoints | times: 1.75 %}
 
+{% assign isLiveTheme = 'false' %}
+{% if content_for_header contains "previewBarInjector.init();" %}
+    {% assign isLiveTheme = 'false' %}
+{% elsif content_for_header contains "Shopify.designMode" %}
+    {% assign isLiveTheme = 'false' %}
+{% else %}
+    {% assign isLiveTheme = 'true' %}
+{% endif %}
+
 <section
         id="MainProduct-{{ section.id }}"
         class="page-width section-{{ section.id }}-padding"

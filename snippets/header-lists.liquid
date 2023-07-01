@@ -3,7 +3,7 @@
     {%- for childlink in childlinks -%}
         <li>
             <a href="{{ childlink.url }}"
-               class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+               class="mega-menu__link mega-menu__link--level-2 link pointer{% if childlink.current %} mega-menu__link--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
                 {{ childlink.title | escape }}
             </a>
             {%- if childlink.links != blank -%}
