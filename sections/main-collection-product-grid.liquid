@@ -182,7 +182,7 @@
                                 -%}
                                 {% if isLiveTheme == 'true' %}
                                     {% unless product.tags contains 'giftHide' or product.tags contains 'hidden' %}
-                                        <li class="grid__item">
+                                        <li class="grid__item {{ isLiveTheme }}">
                                             {% render 'card-product',
                                                     card_product: product,
                                                     media_aspect_ratio: section.settings.image_ratio,
@@ -206,7 +206,7 @@
                                     {% endunless %}
                                 {% else %}
                                     {% unless product.tags contains 'giftHide' %}
-                                        <li class="grid__item">
+                                        <li class="grid__item {{ isLiveTheme }}">
                                             {% render 'card-product',
                                                     card_product: product,
                                                     media_aspect_ratio: section.settings.image_ratio,
