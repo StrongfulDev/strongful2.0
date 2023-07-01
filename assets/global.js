@@ -369,7 +369,9 @@ class MenuDrawer extends HTMLElement {
 			this.querySelectorAll('summary').forEach(summary => summary.addEventListener('mouseenter', this.onSummaryHover.bind(this)));
 		}
     this.querySelectorAll('button').forEach(button => button.addEventListener('click', this.onCloseButtonClick.bind(this)));
-		document.querySelector('.desktop-account-modal button').addEventListener('click', this.onCloseButtonClick.bind(this));
+		if (document.querySelector('.desktop-account-modal button') !== null) {
+			document.querySelector('.desktop-account-modal button').addEventListener('click', this.onCloseButtonClick.bind(this));
+		}
   }
 
   onKeyUp(event) {
