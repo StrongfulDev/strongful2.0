@@ -13,6 +13,15 @@
 
 <script src="{{ 'main-search.js' | asset_url }}" defer="defer"></script>
 
+{% assign isLiveTheme = 'false' %}
+{% if content_for_header contains "previewBarInjector.init();" %}
+    {% assign isLiveTheme = 'false' %}
+{% elsif content_for_header contains "Shopify.designMode" %}
+    {% assign isLiveTheme = 'false' %}
+{% else %}
+    {% assign isLiveTheme = 'true' %}
+{% endif %}
+
 <style>
   .template-search__header {
     margin-bottom: 3rem;

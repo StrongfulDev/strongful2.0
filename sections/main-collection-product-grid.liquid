@@ -8,6 +8,15 @@
 {% comment %}{{ 'component-slider.css' | asset_url | stylesheet_tag }}{% endcomment %}
 {% comment %}{{ 'component-slideshow.css' | asset_url | stylesheet_tag }}{% endcomment %}
 
+{% assign isLiveTheme = 'false' %}
+{% if content_for_header contains "previewBarInjector.init();" %}
+    {% assign isLiveTheme = 'false' %}
+{% elsif content_for_header contains "Shopify.designMode" %}
+    {% assign isLiveTheme = 'false' %}
+{% else %}
+    {% assign isLiveTheme = 'true' %}
+{% endif %}
+
 <link
         rel="preload"
         href="{{ 'component-rte.css' | asset_url }}"

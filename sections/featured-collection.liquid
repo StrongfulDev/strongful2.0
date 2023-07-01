@@ -6,6 +6,15 @@
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
 {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
 
+{% assign isLiveTheme = 'false' %}
+{% if content_for_header contains "previewBarInjector.init();" %}
+    {% assign isLiveTheme = 'false' %}
+{% elsif content_for_header contains "Shopify.designMode" %}
+    {% assign isLiveTheme = 'false' %}
+{% else %}
+    {% assign isLiveTheme = 'true' %}
+{% endif %}
+
 <link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print"
       onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'template-collection.css' | asset_url }}" media="print"
