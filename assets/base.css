@@ -2273,6 +2273,11 @@ quantity-input button.quantity__button {
 	font-size: var(--font-body-size-medium);
 }
 
+.dropdown .modal__close-button.link {
+	z-index: 2;
+	width: 4rem;
+}
+
 .modal__close-button .icon {
     width: 1.7rem;
     height: 1.7rem;
@@ -2695,6 +2700,11 @@ details[open] .modal-overlay::after {
 
 .search-modal__form {
     width: 100%;
+}
+
+.dropdown .search-modal__form {
+		z-index: 3;
+	position: relative;
 }
 
 .search-modal__close-button {

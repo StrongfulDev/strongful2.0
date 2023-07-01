@@ -449,7 +449,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                                             <button type="button"
                                                                     class="search-modal__close-button modal__close-button link link--text focus-inset"
                                                                     aria-label="{{ 'accessibility.close' | t }}">
-                                                                <span class="visually-hidden">{{ 'accessibility.close' | t }}</span>
+                                                                <span class="visually-hidden visibility-hidden">{{ 'accessibility.close' | t }}</span>
                                                                 {% comment %}<span class="search-modal__close-button--custom">{{ 'general.search.close' | t }}</span>{% endcomment %}
                                                                 {% render 'icon-close' %}
                                                             </button>
@@ -503,7 +503,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                                                         </div>
 
                                                                         {%- if settings.predictive_search_enabled -%}
-                                                                            <div class="predictive-search predictive-search--header"
+                                                                            <div class="predictive-search predictive-search--header {{ section.settings.menu_type_desktop }}"
                                                                                  tabindex="-1" data-predictive-search>
                                                                                 <div class="predictive-search__loading-state">
                                                                                     <svg aria-hidden="true" focusable="false"
