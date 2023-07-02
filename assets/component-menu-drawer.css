@@ -49,8 +49,8 @@ menu-drawer > details[open] > summary::before {
 }
 
 .dropdown .menu-drawer {
-	border-right-top-radius: var(--inputs-radius);
-	border-right-bottom-radius: var(--inputs-radius);
+	border-top-right-radius: var(--inputs-radius);
+	border-bottom-right-radius: var(--inputs-radius);
 }
 
 .js .menu-drawer {
@@ -104,6 +104,7 @@ padding: 1.5rem;
 	height: fit-content;
 	height: 21rem;
 	border-radius: var(--inputs-radius);
+	max-width: initial;
 /*  Only temp	*/
 }
 
@@ -137,7 +138,6 @@ padding: 1.5rem;
 .login-or-register-container.header__logged-in {
 	text-align: right;
 	direction: rtl;
-	padding-right: 4rem;
 }
 
 .login-or-register .icon {
@@ -160,6 +160,10 @@ padding: 1.5rem;
 	bottom: .2rem;
 }
 
+.dropdown a.login-or-register span.underlined-link {
+	text-decoration: underline;
+}
+
 .dropdown-search-details {
 	padding: 0 2rem;
 	width: 100%;
@@ -167,11 +171,12 @@ padding: 1.5rem;
 
 .dropdown a.login-or-register, .dropdown span.login-or-register {
 	color: var(--gradient-background);
-	font-size: calc(var(--font-body-size-medium) * 0.8);
-	text-decoration: underline;
+	font-size: calc(var(--font-body-size-medium) * 0.9);
 	display: flex;
 	align-items: baseline;
-	column-gap: var(--grid-desktop-vertical-spacing);
+	justify-content: center;
+	column-gap: var(--grid-mobile-vertical-spacing);
+	text-decoration: none;
 }
 
 .dropdown span.login-or-register {

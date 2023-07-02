@@ -229,7 +229,7 @@
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "always",
         "show_line_separator": true,
-        "mobile_menu": "mobile-menu",
+        "mobile_menu": "",
         "mobile_logo_position": "center",
         "mobile_top_image_1": "shopify:\/\/shop_images\/05_1_0659fca6-4ff6-4b70-9ae4-3ba00e07ddc5.jpg",
         "mobile_top_image_1_link": "shopify:\/\/collections\/sale-3-for-300",

@@ -2588,6 +2588,7 @@ menu-drawer + .header__search {
 		position: relative;
 		left: 0;
 		width: 100%;
+		margin-bottom: calc(var(--grid-desktop-vertical-spacing) * 2);
 	}
 
 	.header__search details[open] {

@@ -414,8 +414,12 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                                     {% if customer %}
                                                         <div class="login-or-register-container fix-direction header__logged-in">
                                                             <a href="{{ routes.account_url }}" class="login-or-register">
-                                                                {% render 'icon-new-user' %}
-                                                                <span>{{ 'customer.account.greet' | t: first_name: customer.first_name }} - {{ vipTier }}</span>
+                                                                {% render 'user-fill' %}
+                                                                <span class="underlined-link">{{ 'customer.account.greet' | t: first_name: customer.first_name }}</span>
+                                                                <span>{{ vipTier }} - </span>
+                                                                <span>{{ 'sections.header.dropdown.you_have' | t }}</span>
+                                                                <span class="swell-point-balance"></span>
+                                                                <span>{{ 'sections.header.dropdown.points' | t }}</span>
                                                             </a>
                                                         </div>
                                                     {% else %}
