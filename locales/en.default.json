@@ -335,7 +335,7 @@
       "update": "Update",
       "login": {
         "title": "חברת מועדון?",
-        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">התחברי<\/a> להזמנה קלה ומהירה.",
+        "paragraph_html": "<a class=\"link underlined-link account-toggler-site-wide\">התחברי<\/a> להזמנה קלה ומהירה.",
         "paragraph_secondary": "צבירת נקודות בכל הזמנה!"
       },
       "rewards": {
