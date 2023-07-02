@@ -32,17 +32,28 @@
                                 | image_tag: loading: 'lazy', sizes: "400x600", widths: '400' }}
                             {% endif %}
                         {% endfor %}
-                        <div class="model-wears-content">
-                            <p class="model-wears-text">{{ 'products.product.model_switch.model_wears_female' | t }}</p>
-                            <p class="model-wears-text">
-                                {{ 'products.product.model_switch.female_top_part' | t }}
-                                <span class="model-size-bold">{{ model.size_letter.value }}</span>
-                            </p>
-                            <p class="model-wears-text">
-                                {{ 'products.product.model_switch.female_bottom_part' | t }}
-                                <span class="model-size-bold">{{ model.size_letter.value }}</span>
-                            </p>
-                        </div>
+                        {% if model_product.type contains 'אוברול' %}
+                            <div class="model-wears-content">
+                                <div class="model-wears-text">
+                                    {{ 'products.product.model_switch.model_wears_one_product' | t }}
+                                    <span class="model-size-bold">
+                                        {{ model.size_letter.value }}
+                                    </span>
+                                </div>
+                            </div>
+                        {% else %}
+                            <div class="model-wears-content">
+                                <p class="model-wears-text">{{ 'products.product.model_switch.model_wears_female' | t }}</p>
+                                <p class="model-wears-text">
+                                    {{ 'products.product.model_switch.female_top_part' | t }}
+                                    <span class="model-size-bold">{{ model.size_letter.value }}</span>
+                                </p>
+                                <p class="model-wears-text">
+                                    {{ 'products.product.model_switch.female_bottom_part' | t }}
+                                    <span class="model-size-bold">{{ model.size_letter.value }}</span>
+                                </p>
+                            </div>
+                        {% endif %}
                     </label>
                 </div>
             {% endfor %}
