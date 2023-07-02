@@ -48,6 +48,11 @@ menu-drawer > details[open] > summary::before {
     border-color: rgba(var(--color-foreground), var(--drawer-border-opacity));
 }
 
+.dropdown .menu-drawer {
+	border-right-top-radius: var(--inputs-radius);
+	border-right-bottom-radius: var(--inputs-radius);
+}
+
 .js .menu-drawer {
 	height: calc((var(--vh, 1vh) * 100) - 100%);
     /*height: calc(100vh - 100%);*/
@@ -95,9 +100,10 @@ padding: 1.5rem;
 }
 
 .dropdown-image-container img {
-	width: 250px;
+	width: 80vw;
 	height: fit-content;
-	height: 17rem;
+	height: 21rem;
+	border-radius: var(--inputs-radius);
 /*  Only temp	*/
 }
 
@@ -283,7 +289,7 @@ padding: 1.5rem;
 }
 
 .menu-drawer__menu-item, .mobile_link_header {
-	font-size: var(--font-body-size-medium);
+	font-size: calc(var(--font-body-size-medium) * 1.2);
 }
 
 .no-js .menu-drawer__menu-item .icon-caret {
@@ -456,7 +462,7 @@ padding: 1.5rem;
 }
 
 .dropdown .list-menu__item {
-	padding: 1.3rem 0;
+	padding: 2.1rem 0;
 }
 
 .dropdown .menu-drawer__inner-container {
@@ -468,9 +474,15 @@ padding: 1.5rem;
 }
 
 .js .dropdown .menu-drawer__menu .menu-drawer__menu-list-item a {
-	font-size: calc(var(--font-body-size-medium) * 0.85);
+	font-size: var(--font-body-size-medium);
 	color: rgba(var(--color-foreground), 0.8);
 	padding-left: .5rem;
+}
+
+.js .dropdown .menu-drawer__menu .menu-drawer__menu-list-item a:focus,
+.js .dropdown .menu-drawer__menu .menu-drawer__menu-list-item a:active,
+.js .dropdown .menu-drawer__menu .menu-drawer__menu-list-item a:hover {
+	color: var(--gradient-base-accent-1);
 }
 
 .js .dropdown .menu-drawer__inner-submenu .menu-drawer__menu-list-item:last-child {
@@ -514,8 +526,10 @@ padding: 1.5rem;
 	color: var(--gradient-background);
 	font-weight: var(--font-body-weight-bold);
 	font-size: var(--font-body-size-large);
-	padding: 1em 1.5rem;
+	padding: 1rem 1.5rem;
 	background: linear-gradient(0deg, black, transparent);
+	border-bottom-left-radius: var(--inputs-radius);
+	border-bottom-right-radius: var(--inputs-radius);
 }
 
 .desktop_links_image_1_title .icon-container {
