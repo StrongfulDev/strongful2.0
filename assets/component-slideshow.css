@@ -227,7 +227,8 @@ slideshow-component:not(.page-width) .slider-buttons {
     padding: 2rem 1.5rem;
     width: fit-content;
     position: absolute;
-    bottom: 5em;
+    bottom: 21em;
+	left: 5rem;
 }
 
 .whole-slide-link {
@@ -271,6 +272,6 @@ slideshow-component:not(.page-width) .slider-buttons {
 
 	.slideshow__text.banner__box {
 		bottom: 16rem;
-		left: 28%;
+		left: 27%;
 	}
 }
