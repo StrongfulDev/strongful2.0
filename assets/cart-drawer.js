@@ -63,6 +63,15 @@ class CartDrawer extends HTMLElement {
         );
 
         $('html').addClass('overflow-hidden');
+
+	    function getViewportHeight() {
+		    let vh = window.innerHeight * 0.01;
+		    document.documentElement.style.setProperty('--vh', `${vh}px`);
+	    }
+
+	    window.addEventListener('resize', getViewportHeight);
+
+	    getViewportHeight();
     }
 
     close() {
@@ -112,17 +121,6 @@ class CartDrawer extends HTMLElement {
                 this.close.bind(this)
             );
             this.open();
-	        function getViewportHeight() {
-		        // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-		        let vh = window.innerHeight * 0.01;
-		        // Then we set the value in the --vh custom property to the root of the document
-		        document.documentElement.style.setProperty('--vh', `${vh}px`);
-	        }
-
-// We listen to the resize event
-	        window.addEventListener('resize', getViewportHeight);
-
-	        getViewportHeight();
         });
     }
 
