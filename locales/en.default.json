@@ -403,7 +403,7 @@
         "terms": "תנאי השימוש",
         "privacy-policy": "מדיניות פרטיות"
       },
-      "loyalty":{
+      "loyalty": {
         "title": "STRONGFUL CLUB",
         "sub_title": "מועדון לקוחות",
         "earn_points": "צבירת נקודות קאשבק בכל קנייה"
@@ -450,7 +450,7 @@
       "delete_confirm": "למחוק את הכתובת?"
     },
     "log_in": "כניסה",
-    "log_out": "התנתק/י",
+    "log_out": "התנתק\/י",
     "login_page": {
       "cancel": "ביטול",
       "create_account": "הרשמה",
@@ -533,7 +533,7 @@
     },
     "orders": {
       "title": "ההזמנות שלי",
-      "description": "כאן תוכלי לראות את כל המידע על ההזמנות / ההחלפות שלך.",
+      "description": "כאן תוכלי לראות את כל המידע על ההזמנות \/ ההחלפות שלך.",
       "order_number": "הזמנה",
       "order_number_link": "הזמנה מספר {{ number }}",
       "date": "תאריך",

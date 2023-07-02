@@ -1825,6 +1825,10 @@ product-info > .product__inventory {
 	display: none;
 }
 
+#esc-oos-form {
+	grid-column: 1 / -1;
+}
+
 @media screen and (min-width: 990px) {
 
 	.product__inventory {
