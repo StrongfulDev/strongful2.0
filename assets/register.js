@@ -6,6 +6,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	const registerListItem = $(".multicolumn-list__item[data-account='register']");
 	const customerOverlay = $(".custom-login-overlay");
 	const borderPosition = $("#js-border-position");
+	let cartDrawer = $(".drawer");
 	let customerSection;
 	let secondaryLogo;
 
@@ -16,6 +17,10 @@ window.addEventListener('DOMContentLoaded', () => {
 		$(".custom-customer-account-container").addClass("active");
 		customerOverlay.removeClass("hidden");
 		animations(registerListItem);
+
+		if (cartDrawer.hasClass("active")) {
+			cartDrawer.removeClass("active");
+		}
 	});
 
 	$(".close-custom-account-container").click(closePopup);
