@@ -663,9 +663,70 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                                 {% render "social-icons" %}
                                             </div>
                                         {%- endif -%}
-                                        {% comment %}
-                                        Insert hamburger menu extras here
-                                        {% endcomment %}
+                                        {%- if shop.customer_accounts_enabled -%}
+                                            <div class="menu-drawer__account-container">
+                                                {% comment %}<h4 class="menu-drawer__account-title text-center">{{ "sections.header.account_title" | t }}</h4>{% endcomment %}
+                                                {% unless customer %}
+                                                    <span class="menu-drawer__account-login link focus-inset h5  button button--inverse account-toggler-site-wide">
+                                                    {%- liquid
+                                                        if customer
+                                                            echo 'customer.account_fallback' | t
+                                                        else
+                                                            echo 'customer.log_in' | t
+                                                        endif
+                                                    -%}
+                                                </span>
+                                                    <span class="menu-drawer__account-register link focus-inset h5 button button--secondary account-toggler-site-wide">
+                                                        {{ 'customer.register.link_text' | t }}
+                                                    </span>
+                                                {% else %}
+                                                    {%- liquid
+                                                        if customer.tags contains 'swell_vip_basic'
+                                                            assign vipTier = 'Basic'
+                                                        elsif customer.tags contains 'swell_vip_plus'
+                                                            assign vipTier = 'Plus'
+                                                        elsif customer.tags contains 'swell_vip_premium'
+                                                            assign vipTier = 'Premium'
+                                                        elsif customer.tags contains 'swell_vip_legend'
+                                                            assign vipTier = 'Legend'
+                                                        elsif customer.tags contains 'ALIST'
+                                                            assign vipTier = 'Basic'
+                                                        else
+                                                            assign vipTier = 'None'
+                                                        endif
+                                                    -%}
+                                                    <div class="mobile-menu-customer-container fix-direction">
+                                                        <div class="main-account-info-container main-account-info-container--loyalty">
+                                                            <h4 class="container-title">מועדון הלקוחות שלי</h4>
+                                                            <a href="/pages/a-list" class="container-menu-item">ALIST <span>{{ vipTier }}</span>
+                                                                {% render 'icon-caret' %}
+                                                            </a>
+                                                            <p class="container-extra-info">צבירת נקודות בכל קנייה</p>
+                                                        </div>
+                                                        <div class="main-account-info-container main-account-info-container--loyalty">
+                                                            <h4 class="container-title">{{ "sections.header.account_title" | t }}</h4>
+                                                            <a href="{{ routes.account_url }}" class="container-menu-item">
+                                                                {% render 'icon-new-user' %}
+                                                                {{ customer.name }}
+                                                                {% render 'icon-caret' %}
+                                                            </a>
+                                                        </div>
+                                                        <a href="{{ routes.account_logout_url }}"
+                                                           class="menu-drawer__account-register link focus-inset h5 button button--secondary">
+                                                            {{ 'customer.log_out' | t }}
+                                                        </a>
+                                                    </div>
+                                                {%- endunless -%}
+                                            </div>
+                                        {%- endif -%}
+                                    </div>
+                                    <div class="header--footer fix-direction">
+                                        <h4></h4>
+                                        <ul class="header--footer-linklist">
+                                            {% for link in section.settings.header_footer_menu.links %}
+                                            {{ link.title | link_to: link.url, class: 'header--footer-link link focus-inset' }}
+                                            {% endfor %}
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -1188,6 +1249,12 @@ You can learn more about this (and learn how to cleanly revert these changes) at
   "name":"t:sections.header.name",
   "class":"section-header",
   "settings":[
+      {
+        "type": "link_list",
+          "id": "header_footer_menu",
+            "label": "t:sections.header.header_footer_menu.label",
+            "info": "t:sections.header.header_footer_menu.info"
+      },
       {
           "type": "link_list",
             "id": "account",
