@@ -305,7 +305,7 @@
         "other": "{{ count }} items"
       },
       "dropdown": {
-        "login_or_register": "הרשמה / כניסה",
+        "login_or_register": "הרשמה \/ כניסה",
         "you_have": "יש לך",
         "points": "נקודות"
       }
