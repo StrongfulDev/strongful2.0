@@ -300,7 +300,7 @@ padding: 1.5rem;
 }
 
 .menu-drawer__menu-item, .mobile_link_header {
-	font-size: calc(var(--font-body-size-medium) * 1.2);
+	font-size: calc(var(--font-body-size-medium) * 1.1);
 }
 
 .no-js .menu-drawer__menu-item .icon-caret {
