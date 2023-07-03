@@ -424,6 +424,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                                         </div>
                                                     {% else %}
                                                         <div class="login-or-register-container fix-direction">
+                                                            {% render 'user-fill' %}
                                                             <span class="login-or-register account-toggler-site-wide">{{ 'sections.header.dropdown.login_or_register' | t }}</span>
                                                         </div>
                                                     {% endif %}
@@ -555,9 +556,6 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                                                  sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
                                                                  alt="{{ link.object.metafields.global.slider_image.alt | escape }}"
                                                                  class="motion-reduce"
-                                                                    {% unless lazy_load == false %}
-                                                                        loading="lazy"
-                                                                    {% endunless %}
                                                                  width="{{ link.object.metafields.global.slider_image.width }}"
                                                                  height="{{ link.object.metafields.global.slider_image.height }}"
                                                             >
@@ -584,9 +582,6 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                                                  sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
                                                                  alt="{{ link.object.featured_image.alt | escape }}"
                                                                  class="motion-reduce"
-                                                                    {% unless lazy_load == false %}
-                                                                        loading="lazy"
-                                                                    {% endunless %}
                                                                  width="{{ link.object.featured_image.width }}"
                                                                  height="{{ link.object.featured_image.height }}"
                                                             >
