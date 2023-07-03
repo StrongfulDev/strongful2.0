@@ -436,7 +436,6 @@
 	}
 
 	.mega-menu__content li a {
-		text-transform: uppercase;
 		font-size: var(--font-body-size-medium);
 		padding: 0;
 		margin: var(--grid-desktop-vertical-spacing) 0;
