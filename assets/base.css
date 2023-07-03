@@ -3813,6 +3813,11 @@ body.trigger-position-right #enable-toolbar-trigger {
 	right: auto !important;
 	top: -7rem;
 	height: fit-content;
+	z-index: 4 !important;
+}
+
+div#enable-toolbar div#enable-toolbar-content, div#enable-toolbar {
+	z-index: 4 !important;
 }
 
 .enable-trigger-circle {
