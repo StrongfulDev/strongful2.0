@@ -491,7 +491,6 @@
     }
 
 	.mega-menu__content.fix-direction li:first-child {
-		text-transform: uppercase;
 		text-decoration: none;
 	}
 
