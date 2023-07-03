@@ -66,11 +66,9 @@ class CartDrawer extends HTMLElement {
 
 	    function getViewportHeight() {
 		    let vh = window.innerHeight * 0.01;
-		    console.log(vh)
 		    document.documentElement.style.setProperty('--vh', `${vh}px`);
 	    }
 
-// We listen to the resize event
 	    window.addEventListener('resize', getViewportHeight);
 
 	    getViewportHeight();
@@ -122,7 +120,6 @@ class CartDrawer extends HTMLElement {
                 "click",
                 this.close.bind(this)
             );
-	        console.log('open')
             this.open();
         });
     }

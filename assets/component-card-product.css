@@ -2,8 +2,28 @@
     display: none;
 }
 
+.new-product-span {
+	position: absolute;
+	bottom: 1rem;
+	left: 1rem;
+	background: rgba(var(--color-background),.95);
+	padding: 0.5rem .9rem;
+	border-radius: var(--inputs-radius);
+	font-weight: var(--font-body-weight-bold);
+	font-size: calc(var(--font-body-size-small) * 1.2);
+}
+
+.product_details__info .new-product-span {
+	position: static;
+	width: fit-content;
+}
+
 .card:hover .quick-add.hover {
     display: block;
+}
+
+.card:hover .new-product-span {
+	display: none;
 }
 
 @media screen and (max-width: 749px) {

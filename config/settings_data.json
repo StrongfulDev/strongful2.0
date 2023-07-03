@@ -15,6 +15,7 @@
     "gradient_background_1": "",
     "colors_background_2": "#f3f3f3",
     "gradient_background_2": "",
+    "colors_background_3": "#f0f0f0",
     "type_header_font": "arimo_n4",
     "type_header_font_custom": "none",
     "heading_scale": 90,
@@ -257,10 +258,10 @@
       },
       "8962992520437913685": {
         "type": "shopify:\/\/apps\/yotpo-loyalty-rewards\/blocks\/loader-app-embed-block\/2f9660df-5018-4e02-9868-ee1fb88d6ccd",
-        "disabled": true,
+        "disabled": false,
         "settings": {
-          "inject_modules_loader": false,
-          "inject_sdk_loader": false
+          "inject_modules_loader": true,
+          "inject_sdk_loader": true
         }
       },
       "yoast-seo-metatags": {

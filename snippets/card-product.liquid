@@ -227,6 +227,11 @@
                                 </div>
                             </div>
                         {%- endif -%}
+                        {% if card_product.tags contains 'new' %}
+                            <span class="new-product-span">
+                                {{ 'products.product.new' | t }}
+                            </span>
+                        {% endif %}
                         {%- if show_quick_add and quick_add_type_mobile == "modal" -%}
                             {% assign quick_add_modal_id = "quick_add_modal-" | append: section.id | append: "-" | append: card_product.id %}
 

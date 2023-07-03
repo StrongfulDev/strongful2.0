@@ -6,14 +6,14 @@
         "slideshow-block-0": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_7efbcb56-b948-4e4a-8618-8d875e48c131.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_e7714253-3446-4d56-8faf-544daf74c2ea.jpg",
+            "image": "shopify:\/\/shop_images\/9a9dc0dde049ee5ace5c55db571643bc.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/1_fcd87c08-7577-4241-a8cc-99ad36bc2088.jpg",
             "heading": "",
             "whole_slide_link": "",
             "heading_size": "h1",
             "subheading": "",
             "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/sale-3-for-300",
+            "link": "shopify:\/\/collections\/סטים",
             "button_style_secondary": false,
             "box_align": "middle-center",
             "show_text_box": false,
@@ -47,13 +47,13 @@
       ],
       "settings": {
         "steps": 4,
-        "title": "3 FOR ₪300",
+        "title": "NEW IN",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "sale-3-for-300",
+        "collection": "new-in",
         "products_to_show": 13,
         "columns_desktop": 5,
         "full_width": true,
@@ -188,12 +188,23 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "c1cf6865-40c7-4101-bd7e-f7243f65c7a8": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<div\n\tclass=\"yotpo yotpo-pictures-widget\"\n\tdata-gallery-id=\"643511ba2ed1151bb3dcb2ae\">\n<\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "slideshow",
     "17711ea4-9001-4425-9527-79593a92ff94",
     "ecf1e0a5-0973-4674-ac5b-b5370ff1bae1",
-    "our_collection_list"
+    "our_collection_list",
+    "c1cf6865-40c7-4101-bd7e-f7243f65c7a8"
   ]
 }

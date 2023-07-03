@@ -313,7 +313,11 @@ class PredictiveSearch extends SearchForm {
   }
 
   open() {
-    this.predictiveSearchResults.style.maxHeight = this.resultsMaxHeight || `${this.getResultsMaxHeight()}px`;
+		if (!this.predictiveSearchResults.classList.contains("dropdown")) {
+			this.predictiveSearchResults.style.maxHeight = this.resultsMaxHeight || `${this.getResultsMaxHeight()}px`;
+		} else {
+			this.predictiveSearchResults.style.maxHeight = "calc(100% - 4.4rem)";
+		}
     this.setAttribute('open', true);
     this.input.setAttribute('aria-expanded', true);
     this.isOpen = true;

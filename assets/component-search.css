@@ -24,6 +24,10 @@
 	right: auto;
 }
 
+.dropdown .reset__button {
+	left: 3.5rem;
+}
+
 .reset__button:not(:focus-visible)::after {
   border-right: 0.1rem solid rgba(var(--color-foreground), 0.08);
   display: block;
