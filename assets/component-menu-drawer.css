@@ -128,6 +128,9 @@ padding: 1.5rem;
 	text-align: center;
 	background: var(--gradient-base-accent-1);
 	border: none;
+	display: flex;
+	justify-content: center;
+	column-gap: var(--grid-mobile-horizontal-spacing);
 }
 
 .login-or-register-container span {
@@ -180,7 +183,7 @@ padding: 1.5rem;
 }
 
 .dropdown span.login-or-register {
-	justify-content: center;
+	text-decoration: underline;
 }
 
 .dropdown .mobile_menu {

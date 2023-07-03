@@ -424,6 +424,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                                         </div>
                                                     {% else %}
                                                         <div class="login-or-register-container fix-direction">
+                                                            {% render 'user-fill' %}
                                                             <span class="login-or-register account-toggler-site-wide">{{ 'sections.header.dropdown.login_or_register' | t }}</span>
                                                         </div>
                                                     {% endif %}

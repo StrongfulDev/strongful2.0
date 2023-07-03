@@ -412,8 +412,8 @@
 	}
 
 	.mega-menu__content {
-		width: 100%;
-		margin: 0 auto;
+		width: 130%;
+		margin: 0 auto 0 -15%;
 		padding: 3.4rem 3.4rem 3.4rem 3.3rem;
 	}
 
@@ -428,7 +428,7 @@
 	}
 
 	.mega-menu-grid-container.three-grid {
-		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: repeat(3, auto);
 	}
 
 	#MegaMenu-Content-1 {
