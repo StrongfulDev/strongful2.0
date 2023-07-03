@@ -2742,7 +2742,7 @@ details[open] .modal-overlay::after {
     transition: transform 150ms ease, opacity 150ms ease;
 	stroke: var(--gradient-base-accent-1);
 	stroke-width: 0.6px;
-	height: 18px;
+	height: 18px !important;
 	width: 18px;
 }
 
