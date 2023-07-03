@@ -57,7 +57,8 @@ menu-drawer > details[open] > summary::before {
 	height: calc((var(--vh, 1vh) * 100) - 100%);
     /*height: calc(100vh - 100%);*/
 	/*height: calc((var(--vh, 1vh) * 100) - (var(--header-bottom-position, 100%)));*/
-	height: var(--viewport-height, 100vh);
+	/*height: var(--viewport-height, 100vh);*/
+	height: calc(var(--viewport-height, 1vh) * 100);
 }
 
 .js details[open] > .menu-drawer,
@@ -130,6 +131,7 @@ padding: 1.5rem;
 	border: none;
 	display: flex;
 	justify-content: center;
+	align-items: baseline;
 	column-gap: var(--grid-mobile-horizontal-spacing);
 }
 
@@ -184,6 +186,7 @@ padding: 1.5rem;
 
 .dropdown span.login-or-register {
 	text-decoration: underline;
+	font-size: var(--font-body-size-medium);
 }
 
 .dropdown .mobile_menu {

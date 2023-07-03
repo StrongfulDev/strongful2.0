@@ -425,7 +425,16 @@ class MenuDrawer extends HTMLElement {
       isOpen ? this.closeMenuDrawer(event, summaryElement) : this.openMenuDrawer(summaryElement);
 
       if (window.matchMedia('(max-width: 990px)')) {
-        document.documentElement.style.setProperty('--viewport-height', `${window.innerHeight}px`);
+        // document.documentElement.style.setProperty('--viewport-height', `${window.innerHeight}px`);
+
+	      function getViewportHeightForMenu() {
+		      let viewportHeight = window.innerHeight * 0.01;
+		      document.documentElement.style.setProperty('--viewport-height', `${viewportHeight}px`);
+	      }
+
+	      window.addEventListener('resize', getViewportHeightForMenu);
+
+	      getViewportHeightForMenu();
       }
     } else {
       setTimeout(() => {
