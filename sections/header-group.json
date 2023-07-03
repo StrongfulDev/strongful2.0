@@ -93,7 +93,7 @@
             "show_on_mobile": true,
             "order": "",
             "small_font": false,
-            "menu": "main-menu",
+            "menu": "dropdown-tops",
             "menu_second": "",
             "menu_third": "",
             "title": "טופים",

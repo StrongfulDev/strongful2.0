@@ -102,7 +102,6 @@ padding: 1.5rem;
 .dropdown-image-container img {
 	width: 80vw;
 	height: fit-content;
-	height: 21rem;
 	border-radius: var(--inputs-radius);
 	max-width: initial;
 /*  Only temp	*/
