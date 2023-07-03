@@ -553,6 +553,20 @@ padding: 1.5rem;
 	width: 1.3rem;
 }
 
+.header--footer-linklist {
+	padding: 0;
+}
+
+.header--footer {
+	padding: 0 2rem 2rem;
+	background: var(--gradient-base-background-3);
+}
+
+.header--footer-link {
+	text-decoration: none;
+	margin: var(--grid-desktop-vertical-spacing) 0;
+}
+
 @media screen and (min-width: 990px) {
 
 	.dropdown-header__menu-item {
