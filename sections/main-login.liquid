@@ -31,7 +31,6 @@
 
     {%- form 'recover_customer_password' -%}
       {% assign recover_success = form.posted_successfully? %}
-        <input type="hidden" name="return_to" value="/">
         <div class="field">
         <input
           type="email"
@@ -104,6 +103,8 @@
         </h2>
         <p class="form__general-errors">{{ 'customer.register.form_errors.form' | t }}</p>
       {%- endif -%}
+
+        <input type="hidden" name="return_to" value="{{ routes.root_url }}">
 
       <div class="field">
         <input
