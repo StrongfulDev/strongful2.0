@@ -687,7 +687,7 @@ a.product__text {
 	border-radius: var(--inputs-radius);
 	font-weight: var(--font-body-weight-bold);
 	font-size: calc(var(--font-body-size-small) * 1.2);
-	z-index: 9;
+	z-index: 2;
 }
 
 .product__media-toggle {

@@ -2,14 +2,14 @@ window.addEventListener('DOMContentLoaded', function(event) {
 	$('.variant_selector').each(function (index, element) {
 		element = $(element);
 		if (element.find('input[checked="checked"]').length === 0) {
-			element.find('.add_to_cart').attr('disabled', 'disabled');
+			// element.find('.add_to_cart').attr('disabled', 'disabled');
 		}
 	})
 
 	$('.product_size_picker__button.default_input').parents('.variant_selector').find('.add_to_cart').removeAttr("disabled");
 
 	$('.variant_selector input[type="radio"]').on("change", function (e) {
-		$(this).parents('.variant_selector').find('.add_to_cart').removeAttr("disabled");
+		// $(this).parents('.variant_selector').find('.add_to_cart').removeAttr("disabled");
 	})
 
 	$("#MainContent")

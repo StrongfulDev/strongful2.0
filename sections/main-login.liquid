@@ -31,7 +31,8 @@
 
     {%- form 'recover_customer_password' -%}
       {% assign recover_success = form.posted_successfully? %}
-      <div class="field">
+        <input type="hidden" name="return_to" value="/">
+        <div class="field">
         <input
           type="email"
           value=""

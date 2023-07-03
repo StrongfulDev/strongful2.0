@@ -187,6 +187,8 @@ padding: 1.5rem;
 .dropdown span.login-or-register {
 	text-decoration: underline;
 	font-size: var(--font-body-size-medium);
+	position: relative;
+	bottom: 2px;
 }
 
 .dropdown .mobile_menu {

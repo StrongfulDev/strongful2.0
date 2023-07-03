@@ -68,7 +68,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		// 	redirectPath = currentURL;
 		// }
 
-		redirectPath = '/';
+		redirectPath = 'https://strongful.co.il';
 
 		let selector = '#create_customer, form[action$="/account"][method="post"]',
 			$form = document.querySelectorAll(selector)[0];
