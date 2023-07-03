@@ -3,17 +3,19 @@
         <a href="{{ childlink.url }}"
            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if childlink.current %} menu-drawer__menu-item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
             {{ childlink.title | escape }}
-            {% for collection in collections %}
-                {% if collection.url == childlink.url and collection.image != null %}
-                    {{ collection.image | image_url: width: 600 | image_tag:
-                    loading: 'lazy',
-                    class: "mobile_link_collection_image",
-                    sizes: "100vw",
-                    widths: '600',
-                    height: '600'
-                    }}
-                {% endif %}
-            {% endfor %}
+            {% if menu_type == 'customizable' %}
+                {% for collection in collections %}
+                    {% if collection.url == childlink.url and collection.image != null %}
+                        {{ collection.image | image_url: width: 600 | image_tag:
+                        loading: 'lazy',
+                        class: "mobile_link_collection_image",
+                        sizes: "100vw",
+                        widths: '600',
+                        height: '600'
+                        }}
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
         </a>
     {%- else -%}
         <details
@@ -21,7 +23,6 @@
             <summary
                     class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
                 {{ childlink.title | escape }}
-                {% render 'icon-arrow' %}
                 {% render 'icon-caret' %}
             </summary>
             <div id="childlink-{{ childlink.handle | escape }}"

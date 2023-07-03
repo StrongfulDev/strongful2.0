@@ -202,6 +202,69 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                              tabindex="-1">
                             <div class="menu-drawer__inner-container">
                                 <div class="menu-drawer__navigation-container">
+                                    <div class="menu-drawer__utility-links">
+                                        {%- if section.settings.toggle_socials -%}
+                                            <div class="menu-drawer__account-social_icons">
+                                                {% render "social-icons" %}
+                                            </div>
+                                        {%- endif -%}
+                                        {%- if shop.customer_accounts_enabled -%}
+                                            <div class="menu-drawer__account-container">
+                                                {% comment %}<h4 class="menu-drawer__account-title text-center">{{ "sections.header.account_title" | t }}</h4>{% endcomment %}
+                                                {% unless customer %}
+                                                    <span class="menu-drawer__account-login link focus-inset h5  button button--inverse account-toggler-site-wide">
+                                                    {%- liquid
+                                                        if customer
+                                                            echo 'customer.account_fallback' | t
+                                                        else
+                                                            echo 'customer.log_in' | t
+                                                        endif
+                                                    -%}
+                                                </span>
+                                                    <span class="menu-drawer__account-register link focus-inset h5 button button--secondary account-toggler-site-wide">
+                                                        {{ 'customer.register.link_text' | t }}
+                                                    </span>
+                                                {% else %}
+                                                    {%- liquid
+                                                        if customer.tags contains 'swell_vip_basic'
+                                                            assign vipTier = 'Basic'
+                                                        elsif customer.tags contains 'swell_vip_plus'
+                                                            assign vipTier = 'Plus'
+                                                        elsif customer.tags contains 'swell_vip_premium'
+                                                            assign vipTier = 'Premium'
+                                                        elsif customer.tags contains 'swell_vip_legend'
+                                                            assign vipTier = 'Legend'
+                                                        elsif customer.tags contains 'ALIST'
+                                                            assign vipTier = 'Basic'
+                                                        else
+                                                            assign vipTier = 'None'
+                                                        endif
+                                                    -%}
+                                                    <div class="mobile-menu-customer-container fix-direction">
+                                                        <div class="main-account-info-container main-account-info-container--loyalty">
+                                                            <h4 class="container-title">מועדון הלקוחות שלי</h4>
+                                                            <a href="/pages/a-list" class="container-menu-item">ALIST <span>{{ vipTier }}</span>
+                                                                {% render 'icon-caret' %}
+                                                            </a>
+                                                            <p class="container-extra-info">צבירת נקודות בכל קנייה</p>
+                                                        </div>
+                                                        <div class="main-account-info-container main-account-info-container--loyalty">
+                                                            <h4 class="container-title">{{ "sections.header.account_title" | t }}</h4>
+                                                            <a href="{{ routes.account_url }}" class="container-menu-item">
+                                                                {% render 'icon-new-user' %}
+                                                                {{ customer.name }}
+                                                                {% render 'icon-caret' %}
+                                                            </a>
+                                                        </div>
+                                                        <a href="{{ routes.account_logout_url }}"
+                                                           class="menu-drawer__account-register link focus-inset h5 button button--secondary">
+                                                            {{ 'customer.log_out' | t }}
+                                                        </a>
+                                                    </div>
+                                                {%- endunless -%}
+                                            </div>
+                                        {%- endif -%}
+                                    </div>
                                     <nav class="menu-drawer__navigation">
                                         <div class="nav_top">
                                             <div class="nav_top--logo-container">
@@ -319,18 +382,287 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                               {% endif %}
                                             {%- endfor -%}
                                         </ul>
-                                    </nav> 
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                </header-drawer>
+            {% else %}
+                <header-drawer class="{{ section.settings.menu_type_desktop }}" data-breakpoint="tablet">
+                    <details id="Details-menu-drawer-container"
+                             class="menu-drawer-container {{ section.settings.menu_type_desktop }}">
+                        <summary
+                                class="header__icon header__icon--menu header__icon--summary link"
+                                aria-label="{{ 'sections.header.menu' | t }}">
+                            <span>
+                              {% render 'icon-hamburger' %}
+                                {% render 'icon-close' %}
+                            </span>
+                        </summary>
+                        <div id="menu-drawer" class="gradient menu-drawer motion-reduce"
+                             tabindex="-1">
+                            <div class="menu-drawer__inner-container">
+                                <div class="menu-drawer__navigation-container">
+                                    <nav class="menu-drawer__navigation">
+                                        <div class="nav_top">
+                                            <div class="nav_top--logo-container">
+                                                <div class="nav_top--mobile-logo">
+                                                    <button class="mobile-header-closer">
+                                                        {% render 'icon-close' %}
+                                                    </button>
+                                                    {% if customer %}
+                                                        <div class="login-or-register-container fix-direction header__logged-in">
+                                                            <a href="{{ routes.account_url }}" class="login-or-register">
+                                                                {% render 'user-fill' %}
+                                                                <span class="underlined-link">{{ 'customer.account.greet' | t: first_name: customer.first_name }}</span>
+                                                                <span>{{ vipTier }} - </span>
+                                                                <span>{{ 'sections.header.dropdown.you_have' | t }}</span>
+                                                                <span class="swell-point-balance"></span>
+                                                                <span>{{ 'sections.header.dropdown.points' | t }}</span>
+                                                            </a>
+                                                        </div>
+                                                    {% else %}
+                                                        <div class="login-or-register-container fix-direction">
+                                                            {% render 'user-fill' %}
+                                                            <span class="login-or-register account-toggler-site-wide">{{ 'sections.header.dropdown.login_or_register' | t }}</span>
+                                                        </div>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+
+                                            <details-modal class="header__search">
+                                                <details class="dropdown-search-details">
+                                                    <summary
+                                                            class="header__icon header__icon--search fix-direction header__icon--summary link focus-inset modal__toggle"
+                                                            aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
+                                                        <span>
+                                                          <svg class="modal__toggle-open icon icon-search" aria-hidden="true" focusable="false">
+                                                            <use href="#icon-search">
+                                                          </svg>
+                                                        </span>
+                                                        <label class="search__label"
+                                                               for="SearchDrawerInput">{{ 'general.search.search' | t }}</label>
+                                                    </summary>
+                                                    <div class="search-modal modal__content fix-direction gradient" role="dialog"
+                                                         aria-modal="true" aria-label="{{ 'general.search.search' | t }}">
+                                                        <div class="search-modal__content{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} search-modal__content-top{% else %} search-modal__content-bottom{% endif %}"
+                                                             tabindex="-1">
+                                                            <button type="button"
+                                                                    class="search-modal__close-button modal__close-button link link--text focus-inset {{ section.settings.menu_type_desktop }}__search--close"
+                                                                    aria-label="{{ 'accessibility.close' | t }}">
+                                                                <span class="visually-hidden visibility-hidden">{{ 'accessibility.close' | t }}</span>
+                                                                {% render 'icon-close' %}
+                                                            </button>
+                                                        {%- if settings.predictive_search_enabled -%}
+                                                            <predictive-search class="search-modal__form"
+                                                                               data-loading-text="{{ 'accessibility.loading' | t }}">
+                                                                {%- else -%}
+                                                                <search-form class="search-modal__form">
+                                                                    {%- endif -%}
+                                                                    <form action="{{ routes.search_url }}" method="get"
+                                                                          role="search" class="search search-modal__form">
+                                                                        <div class="field">
+                                                                            <input class="search__input field__input"
+                                                                                   id="Search-In-Modal"
+                                                                                   type="search"
+                                                                                   name="q"
+                                                                                   value="{{ search.terms | escape }}"
+                                                                                   placeholder="{{ 'general.search.search' | t }}"
+                                                                                    {%- if settings.predictive_search_enabled -%}
+                                                                                        role="combobox"
+                                                                                        aria-expanded="false"
+                                                                                        aria-owns="predictive-search-results"
+                                                                                        aria-controls="predictive-search-results"
+                                                                                        aria-haspopup="listbox"
+                                                                                        aria-autocomplete="list"
+                                                                                        autocorrect="off"
+                                                                                        autocomplete="off"
+                                                                                        autocapitalize="off"
+                                                                                        spellcheck="false"
+                                                                                    {%- endif -%}
+                                                                            >
+                                                                            <label class="field__label"
+                                                                                   for="Search-In-Modal">{{ 'general.search.search' | t }}</label>
+                                                                            <input type="hidden" name="options[prefix]"
+                                                                                   value="last">
+                                                                            <button type="reset"
+                                                                                    class="reset__button field__button{% if search.terms == blank %} hidden{% endif %}"
+                                                                                    aria-label="{{ 'general.search.reset' | t }}">
+                                                                                <svg class="icon icon-close" aria-hidden="true"
+                                                                                     focusable="false">
+                                                                                    <use xlink:href="#icon-reset">
+                                                                                </svg>
+                                                                            </button>
+                                                                            <button class="search__button field__button"
+                                                                                    aria-label="{{ 'general.search.search' | t }}">
+                                                                                <svg class="icon icon-search" aria-hidden="true"
+                                                                                     focusable="false">
+                                                                                    <use href="#icon-search">
+                                                                                </svg>
+                                                                            </button>
+                                                                        </div>
+
+                                                                        {%- if settings.predictive_search_enabled -%}
+                                                                            <div class="predictive-search predictive-search--header {{ section.settings.menu_type_desktop }}"
+                                                                                 tabindex="-1" data-predictive-search>
+                                                                                <div class="predictive-search__loading-state">
+                                                                                    <svg aria-hidden="true" focusable="false"
+                                                                                         class="spinner" viewBox="0 0 66 66"
+                                                                                         xmlns="http://www.w3.org/2000/svg">
+                                                                                        <circle class="path" fill="none"
+                                                                                                stroke-width="6" cx="33" cy="33"
+                                                                                                r="30"></circle>
+                                                                                    </svg>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <span class="predictive-search-status visually-hidden"
+                                                                                  role="status" aria-hidden="true"></span>
+                                                                        {%- endif -%}
+                                                                    </form>
+                                                                    {%- if settings.predictive_search_enabled -%}
+                                                            </predictive-search>
+                                                        {%- else -%}
+                                                            </search-form>
+                                                            {%- endif -%}
+                                                        </div>
+                                                    </div>
+                                                </details>
+                                            </details-modal>
+
+                                            <div class="mobile_menu fix-direction">
+                                                {% for menu_item in section.settings.mobile_menu.links %}
+                                                    <a href="{{ menu_item.url }}"
+                                                       class="mobile_menu_link header__menu-item">
+                                                        {{ menu_item.title }}
+                                                    </a>
+                                                {% endfor %}
+                                            </div>
+
+                                            <div class="menu_images">
+                                                {% for link in section.settings.slider_menu.links %}
+                                                    {% if link.object.handle == 'a-list' %}
+                                                        <a href="{{ link.url }}" class="dropdown-image-container">
+                                                            <img srcset="
+                                                                          {%- if link.object.metafields.global.slider_image.width >= 165 -%}{{ link.object.metafields.global.slider_image | image_url: width: 165 }} 165w,{%- endif -%}
+                                                                          {%- if link.object.metafields.global.slider_image.width >= 360 -%}{{ link.object.metafields.global.slider_image | image_url: width: 360 }} 360w,{%- endif -%}
+                                                                          {%- if link.object.metafields.global.slider_image.width >= 533 -%}{{ link.object.metafields.global.slider_image | image_url: width: 533 }} 533w,{%- endif -%}
+                                                                          {%- if link.object.metafields.global.slider_image.width >= 720 -%}{{ link.object.metafields.global.slider_image | image_url: width: 720 }} 720w,{%- endif -%}
+                                                                          {%- if link.object.metafields.global.slider_image.width >= 940 -%}{{ link.object.metafields.global.slider_image | image_url: width: 940 }} 940w,{%- endif -%}
+                                                                          {%- if link.object.metafields.global.slider_image.width >= 1066 -%}{{ link.object.metafields.global.slider_image | image_url: width: 1066 }} 1066w,{%- endif -%}
+                                                                          {{ link.object.metafields.global.slider_image | image_url }} {{ link.object.metafields.global.slider_image.width }}w"
+                                                                 src="{{ link.object.metafields.global.slider_image | image_url: width: 533 }}"
+                                                                 sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                                                                 alt="{{ link.object.metafields.global.slider_image.alt | escape }}"
+                                                                 class="motion-reduce"
+                                                                 width="{{ link.object.metafields.global.slider_image.width }}"
+                                                                 height="{{ link.object.metafields.global.slider_image.height }}"
+                                                            >
+                                                            <div class="desktop_links_image_1_title">
+                                                            <span>
+                                                                {{ link.object.title }}
+                                                            </span>
+                                                                <div class="icon-container">
+                                                                    {% render 'icon-caret' %}
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    {% else %}
+                                                        <a href="{{ link.url }}" class="dropdown-image-container">
+                                                            <img srcset="
+                                                                          {%- if link.object.featured_image.width >= 165 -%}{{ link.object.featured_image | image_url: width: 165 }} 165w,{%- endif -%}
+                                                                          {%- if link.object.featured_image.width >= 360 -%}{{ link.object.featured_image | image_url: width: 360 }} 360w,{%- endif -%}
+                                                                          {%- if link.object.featured_image.width >= 533 -%}{{ link.object.featured_image | image_url: width: 533 }} 533w,{%- endif -%}
+                                                                          {%- if link.object.featured_image.width >= 720 -%}{{ link.object.featured_image | image_url: width: 720 }} 720w,{%- endif -%}
+                                                                          {%- if link.object.featured_image.width >= 940 -%}{{ link.object.featured_image | image_url: width: 940 }} 940w,{%- endif -%}
+                                                                          {%- if link.object.featured_image.width >= 1066 -%}{{ link.object.featured_image | image_url: width: 1066 }} 1066w,{%- endif -%}
+                                                                          {{ link.object.featured_image | image_url }} {{ link.object.featured_image.width }}w"
+                                                                 src="{{ link.object.featured_image | image_url: width: 533 }}"
+                                                                 sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                                                                 alt="{{ link.object.featured_image.alt | escape }}"
+                                                                 class="motion-reduce"
+                                                                 width="{{ link.object.featured_image.width }}"
+                                                                 height="{{ link.object.featured_image.height }}"
+                                                            >
+                                                            <div class="desktop_links_image_1_title">
+                                                                    <span>
+                                                                        {{ link.object.title }}
+                                                                    </span>
+                                                                <div class="icon-container">
+                                                                    {% render 'icon-caret' %}
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                        <ul class="menu-drawer__menu has-submenu list-menu"
+                                            role="list">
+                                            {%- for block in section.blocks -%}
+                                                {% if block.type == 'menu_item' %}
+                                                    <li>
+                                                        <details
+                                                                id="Details-menu-drawer-menu-item-{{ forloop.index }}">
+                                                            <summary
+                                                                    class="menu-drawer__menu-item list-menu__item grandchild-link link link--text focus-inset
+                                                                    {% if link.child_active %} menu-drawer__menu-item--active{% endif %}
+                                                                    {{ block.settings.item_class }}"
+                                                                    data-class="{{ block.settings.item_class }}"
+                                                            >
+                                                                {% if block.settings.mobile_title %}
+                                                                    <div class="mobile-link-cover bold">
+                                                                        {{ block.settings.mobile_title | escape }}
+                                                                    </div>
+                                                                {% endif %}
+                                                                {% render 'icon-caret' %}
+                                                            </summary>
+                                                            <div id="link-{{ block.id | escape }}"
+                                                                 class="menu-drawer__submenu has-submenu gradient motion-reduce"
+                                                                 tabindex="-1">
+                                                                <div class="menu-drawer__inner-submenu">
+                                                                    <ul class="menu-drawer__menu list-menu"
+                                                                        role="list" tabindex="-1">
+                                                                        {%- for childlink in block.settings.menu.links -%}
+                                                                            {% render 'menu-drawer-grandchild-link', childlink: childlink, menu_type: section.settings.menu_type_desktop %}
+                                                                        {%- endfor -%}
+                                                                        {% if block.settings.menu_second != blank %}
+                                                                            {%- for childlink in block.settings.menu_second.links -%}
+                                                                                {% render 'menu-drawer-grandchild-link', childlink: childlink, menu_type: section.settings.menu_type_desktop %}
+                                                                            {%- endfor -%}
+                                                                        {% endif %}
+                                                                        {% if block.settings.menu_third != blank %}
+                                                                            {%- for childlink in block.settings.menu_third.links -%}
+                                                                                {% render 'menu-drawer-grandchild-link', childlink: childlink, menu_type: section.settings.menu_type_desktop %}
+                                                                            {%- endfor -%}
+                                                                        {% endif %}
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </details>
+                                                    </li>
+                                                {% else %}
+                                                    <li class="{% if block.settings.show_on_mobile == false %}desktop-only{% endif %}">
+                                                        <a href="{{ block.settings.title_link }}" class="mobile_link_header">
+                                                            <span class="bold">{{ block.settings.title }}</span>
+                                                        </a>
+                                                    </li>
+                                                {% endif %}
+                                            {%- endfor -%}
+                                        </ul>
+                                    </nav>
                                     <div class="menu-drawer__utility-links">
                                         {%- if section.settings.toggle_socials -%}
-                                        <div class="menu-drawer__account-social_icons">
-                                            {% render "social-icons" %}
-                                        </div>
+                                            <div class="menu-drawer__account-social_icons">
+                                                {% render "social-icons" %}
+                                            </div>
                                         {%- endif -%}
                                         {%- if shop.customer_accounts_enabled -%}
                                             <div class="menu-drawer__account-container">
                                                 {% comment %}<h4 class="menu-drawer__account-title text-center">{{ "sections.header.account_title" | t }}</h4>{% endcomment %}
                                                 {% unless customer %}
-                                                <span class="menu-drawer__account-login link focus-inset h5  button button--inverse account-toggler-site-wide">
+                                                    <span class="menu-drawer__account-login link focus-inset h5  button button--inverse account-toggler-site-wide">
                                                     {%- liquid
                                                         if customer
                                                             echo 'customer.account_fallback' | t
@@ -342,7 +674,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                                     <span class="menu-drawer__account-register link focus-inset h5 button button--secondary account-toggler-site-wide">
                                                         {{ 'customer.register.link_text' | t }}
                                                     </span>
-                                                    {% else %}
+                                                {% else %}
                                                     {%- liquid
                                                         if customer.tags contains 'swell_vip_basic'
                                                             assign vipTier = 'Basic'
@@ -383,310 +715,20 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                             </div>
                                         {%- endif -%}
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </details>
-                </header-drawer>
-            {% else %}
-                <header-drawer data-breakpoint="tablet">
-                    <details id="Details-menu-drawer-container" class="menu-drawer-container">
-                        <summary
-                                class="header__icon header__icon--menu header__icon--summary link"
-                                aria-label="{{ 'sections.header.menu' | t }}">
-            <span>
-              {% render 'icon-hamburger' %}
-                {% render 'icon-close' %}
-            </span>
-                        </summary>
-                        <div id="menu-drawer" class="gradient menu-drawer motion-reduce"
-                             tabindex="-1">
-                            <div class="menu-drawer__inner-container">
-                                <div class="menu-drawer__navigation-container">
-                                    <nav class="menu-drawer__navigation">
-                                        <ul class="menu-drawer__menu has-submenu list-menu"
-                                            role="list">
-                                            {%- for link in section.settings.menu.links -%}
-                                                <li>
-                                                    {%- if link.links != blank -%}
-                                                        <details
-                                                                id="Details-menu-drawer-menu-item-{{ forloop.index }}">
-                                                            <summary
-                                                                    class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.child_active %} menu-drawer__menu-item--active{% endif %}">
-                                                                {{ link.title | escape }}
-                                                                {% render 'icon-arrow' %}
-                                                                {% render 'icon-caret' %}
-                                                            </summary>
-                                                            <div id="link-{{ link.handle | escape }}"
-                                                                 class="menu-drawer__submenu has-submenu gradient motion-reduce"
-                                                                 tabindex="-1">
-                                                                <div class="menu-drawer__inner-submenu">
-                                                                    <button class="menu-drawer__close-button link link--text focus-inset"
-                                                                            aria-expanded="true">
-                                                                        {% render 'icon-caret' %}
-                                                                        {{ link.title | escape }}
-                                                                    </button>
-                                                                    <ul class="menu-drawer__menu list-menu"
-                                                                        role="list" tabindex="-1">
-                                                                        {%- for childlink in link.links -%}
-                                                                            <li>
-                                                                                {%- if childlink.links == blank -%}
-                                                                                    <a href="{{ childlink.url }}"
-                                                                                       class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if childlink.current %} menu-drawer__menu-item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
-                                                                                        {{ childlink.title | escape }}
-                                                                                    </a>
-                                                                                {%- else -%}
-                                                                                    <details
-                                                                                            id="Details-menu-drawer-submenu-{{ forloop.index }}">
-                                                                                        <summary
-                                                                                                class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
-                                                                                            {{ childlink.title | escape }}
-                                                                                            {% render 'icon-arrow' %}
-                                                                                            {% render 'icon-caret' %}
-                                                                                        </summary>
-                                                                                        <div id="childlink-{{ childlink.handle | escape }}"
-                                                                                             class="menu-drawer__submenu has-submenu gradient motion-reduce">
-                                                                                            <button class="menu-drawer__close-button link link--text focus-inset"
-                                                                                                    aria-expanded="true">
-                                                                                                {% render 'icon-caret' %}
-                                                                                                {{ childlink.title | escape }}
-                                                                                            </button>
-                                                                                            <ul class="menu-drawer__menu list-menu"
-                                                                                                role="list"
-                                                                                                tabindex="-1">
-                                                                                                {%- for grandchildlink in childlink.links -%}
-                                                                                                    <li>
-                                                                                                        <a href="{{ grandchildlink.url }}"
-                                                                                                           class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if grandchildlink.current %} menu-drawer__menu-item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
-                                                                                                            {{ grandchildlink.title | escape }}
-                                                                                                        </a>
-                                                                                                    </li>
-                                                                                                {%- endfor -%}
-                                                                                            </ul>
-                                                                                        </div>
-                                                                                    </details>
-                                                                                {%- endif -%}
-                                                                            </li>
-                                                                        {%- endfor -%}
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                        </details>
-                                                    {%- else -%}
-                                                        <a href="{{ link.url }}"
-                                                           class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"{% if link.current %} aria-current="page"{% endif %}>
-                                                            {{ link.title | escape }}
-                                                        </a>
-                                                    {%- endif -%}
-                                                </li>
-                                            {%- endfor -%}
-                                          <li class="gift-card"></li>
-                                        </ul>
-                                    </nav>
-                                    <div class="menu-drawer__utility-links">
-                                        {%- if shop.customer_accounts_enabled -%}
-                                            <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
-                                               class="menu-drawer__account link focus-inset h5">
-                                                {% render 'icon-new-user' %}
-                                                {%- liquid
-                                                    if customer
-                                                        echo 'customer.account_fallback' | t
-                                                    else
-                                                        echo 'customer.log_in' | t
-                                                    endif
-                                                -%}
-                                            </a>
-                                        {%- endif -%}
-                                        <ul class="list list-social list-unstyled" role="list">
-                                            {%- if settings.social_twitter_link != blank -%}
-                                                <li class="list-social__item">
-                                                    <a href="{{ settings.social_twitter_link }}"
-                                                       class="list-social__link link">
-                                                        {%- render 'icon-twitter' -%}
-                                                        <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
-                                                    </a>
-                                                </li>
-                                            {%- endif -%}
-                                            {%- if settings.social_facebook_link != blank -%}
-                                                <li class="list-social__item">
-                                                    <a href="{{ settings.social_facebook_link }}"
-                                                       class="list-social__link link">
-                                                        {%- render 'icon-facebook' -%}
-                                                        <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
-                                                    </a>
-                                                </li>
-                                            {%- endif -%}
-                                            {%- if settings.social_pinterest_link != blank -%}
-                                                <li class="list-social__item">
-                                                    <a href="{{ settings.social_pinterest_link }}"
-                                                       class="list-social__link link">
-                                                        {%- render 'icon-pinterest' -%}
-                                                        <span class="visually-hidden">{{ 'general.social.links.pinterest' | t }}</span>
-                                                    </a>
-                                                </li>
-                                            {%- endif -%}
-                                            {%- if settings.social_instagram_link != blank -%}
-                                                <li class="list-social__item">
-                                                    <a href="{{ settings.social_instagram_link }}"
-                                                       class="list-social__link link">
-                                                        {%- render 'icon-instagram' -%}
-                                                        <span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
-                                                    </a>
-                                                </li>
-                                            {%- endif -%}
-                                            {%- if settings.social_tiktok_link != blank -%}
-                                                <li class="list-social__item">
-                                                    <a href="{{ settings.social_tiktok_link }}"
-                                                       class="list-social__link link">
-                                                        {%- render 'icon-tiktok' -%}
-                                                        <span class="visually-hidden">{{ 'general.social.links.tiktok' | t }}</span>
-                                                    </a>
-                                                </li>
-                                            {%- endif -%}
-                                            {%- if settings.social_tumblr_link != blank -%}
-                                                <li class="list-social__item">
-                                                    <a href="{{ settings.social_tumblr_link }}"
-                                                       class="list-social__link link">
-                                                        {%- render 'icon-tumblr' -%}
-                                                        <span class="visually-hidden">{{ 'general.social.links.tumblr' | t }}</span>
-                                                    </a>
-                                                </li>
-                                            {%- endif -%}
-                                            {%- if settings.social_snapchat_link != blank -%}
-                                                <li class="list-social__item">
-                                                    <a href="{{ settings.social_snapchat_link }}"
-                                                       class="list-social__link link">
-                                                        {%- render 'icon-snapchat' -%}
-                                                        <span class="visually-hidden">{{ 'general.social.links.snapchat' | t }}</span>
-                                                    </a>
-                                                </li>
-                                            {%- endif -%}
-                                            {%- if settings.social_youtube_link != blank -%}
-                                                <li class="list-social__item">
-                                                    <a href="{{ settings.social_youtube_link }}"
-                                                       class="list-social__link link">
-                                                        {%- render 'icon-youtube' -%}
-                                                        <span class="visually-hidden">{{ 'general.social.links.youtube' | t }}</span>
-                                                    </a>
-                                                </li>
-                                            {%- endif -%}
-                                            {%- if settings.social_vimeo_link != blank -%}
-                                                <li class="list-social__item">
-                                                    <a href="{{ settings.social_vimeo_link }}"
-                                                       class="list-social__link link">
-                                                        {%- render 'icon-vimeo' -%}
-                                                        <span class="visually-hidden">{{ 'general.social.links.vimeo' | t }}</span>
-                                                    </a>
-                                                </li>
-                                            {%- endif -%}
+                                    {% comment %}
+                                    <div class="header--footer fix-direction">
+                                        <h4></h4>
+                                        <ul class="header--footer-linklist">
+                                            {% for link in section.settings.header_footer_menu.links %}
+                                            {{ link.title | link_to: link.url, class: 'header--footer-link link focus-inset' }}
+                                            {% endfor %}
                                         </ul>
                                     </div>
+                                    {%endcomment%}
                                 </div>
                             </div>
                         </div>
                     </details>
-                    <details-modal class="header__search">
-                        <details>
-                            <summary
-                                    class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle"
-                                    aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
-            <span>
-              <svg class="modal__toggle-open icon icon-search" aria-hidden="true" focusable="false">
-                <use href="#icon-search">
-              </svg>
-              <svg class="modal__toggle-close icon icon-close" aria-hidden="true" focusable="false">
-                <use href="#icon-close">
-              </svg>
-            </span>
-                            </summary>
-                            <div class="search-modal modal__content fix-direction gradient" role="dialog"
-                                 aria-modal="true" aria-label="{{ 'general.search.search' | t }}">
-                                <div class="modal-overlay"></div>
-                                <div class="search-modal__content{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} search-modal__content-top{% else %} search-modal__content-bottom{% endif %}"
-                                     tabindex="-1">
-                                    <button type="button"
-                                            class="search-modal__close-button modal__close-button link link--text focus-inset"
-                                            aria-label="{{ 'accessibility.close' | t }}">
-                                        <span class="visually-hidden">{{ 'accessibility.close' | t }}</span>
-                                        {% comment %}<span class="search-modal__close-button--custom">{{ 'general.search.close' | t }}</span>{% endcomment %}
-                                        {% render 'icon-close' %}
-                                    </button>
-                                {%- if settings.predictive_search_enabled -%}
-                                    <predictive-search class="search-modal__form"
-                                                       data-loading-text="{{ 'accessibility.loading' | t }}">
-                                        {%- else -%}
-                                        <search-form class="search-modal__form">
-                                            {%- endif -%}
-                                            <form action="{{ routes.search_url }}" method="get"
-                                                  role="search" class="search search-modal__form">
-                                                <div class="field">
-                                                    <input class="search__input field__input"
-                                                           id="Search-In-Modal"
-                                                           type="search"
-                                                           name="q"
-                                                           value="{{ search.terms | escape }}"
-                                                           placeholder="{{ 'general.search.search' | t }}"
-                                                            {%- if settings.predictive_search_enabled -%}
-                                                                role="combobox"
-                                                                aria-expanded="false"
-                                                                aria-owns="predictive-search-results"
-                                                                aria-controls="predictive-search-results"
-                                                                aria-haspopup="listbox"
-                                                                aria-autocomplete="list"
-                                                                autocorrect="off"
-                                                                autocomplete="off"
-                                                                autocapitalize="off"
-                                                                spellcheck="false"
-                                                            {%- endif -%}
-                                                    >
-                                                    <label class="field__label"
-                                                           for="Search-In-Modal">{{ 'general.search.search' | t }}</label>
-                                                    <input type="hidden" name="options[prefix]"
-                                                           value="last">
-                                                    <button type="reset"
-                                                            class="reset__button field__button{% if search.terms == blank %} hidden{% endif %}"
-                                                            aria-label="{{ 'general.search.reset' | t }}">
-                                                        <svg class="icon icon-close" aria-hidden="true"
-                                                             focusable="false">
-                                                            <use xlink:href="#icon-reset">
-                                                        </svg>
-                                                    </button>
-                                                    <button class="search__button field__button"
-                                                            aria-label="{{ 'general.search.search' | t }}">
-                                                        <svg class="icon icon-search" aria-hidden="true"
-                                                             focusable="false">
-                                                            <use href="#icon-search">
-                                                        </svg>
-                                                    </button>
-                                                </div>
-
-                                                {%- if settings.predictive_search_enabled -%}
-                                                    <div class="predictive-search predictive-search--header"
-                                                         tabindex="-1" data-predictive-search>
-                                                        <div class="predictive-search__loading-state">
-                                                            <svg aria-hidden="true" focusable="false"
-                                                                 class="spinner" viewBox="0 0 66 66"
-                                                                 xmlns="http://www.w3.org/2000/svg">
-                                                                <circle class="path" fill="none"
-                                                                        stroke-width="6" cx="33" cy="33"
-                                                                        r="30"></circle>
-                                                            </svg>
-                                                        </div>
-                                                    </div>
-
-                                                    <span class="predictive-search-status visually-hidden"
-                                                          role="status" aria-hidden="true"></span>
-                                                {%- endif -%}
-                                            </form>
-                                            {%- if settings.predictive_search_enabled -%}
-                                    </predictive-search>
-                                {%- else -%}
-                                    </search-form>
-                                    {%- endif -%}
-                                </div>
-                            </div>
-                        </details>
-                    </details-modal>
                 </header-drawer>
             {% endif %}
         {%- endif -%}
@@ -718,57 +760,79 @@ You can learn more about this (and learn how to cleanly revert these changes) at
 
         {%- if section.settings.menu != blank -%}
             {%- if section.settings.menu_type_desktop == 'dropdown' -%}
-                <nav class="header__inline-menu  {{ section.settings.menu_position }}">
-                    <ul class="list-menu list-menu--inline" role="list">
-                        {%- for link in section.settings.menu.links -%}
-                            <li>
-                                {%- if link.links != blank -%}
+                <nav class="header__inline-menu {{ section.settings.menu_position }}">
+                    <ul class="list-menu list-menu--inline header-blocks-list fix-direction" role="list">
+                        {%- for block in section.blocks -%}
+                            <li class="header-block-list-element {% if block.settings.small_font %}small{% endif %}" style="order: {{ block.settings.order }}">
+                                {%- if block.settings.menu != blank -%}
+                                    {%- liquid
+                                        assign link_child_active = false
+                                        assign link_levels = 1
+
+                                        if block.settings.menu_second != blank
+                                            assign gridClass = 'two-grid'
+                                        endif
+
+                                        if block.settings.menu_third != blank
+                                            assign gridClass = 'three-grid'
+                                        endif
+                                    -%}
                                     <header-menu>
-                                        <details id="Details-HeaderMenu-{{ forloop.index }}">
+                                        <details id="Details-HeaderMenu-{{ forloop.index }}"
+                                                 class="mega-menu">
                                             <summary
                                                     class="header__menu-item list-menu__item link focus-inset">
-                                                <a href="{{ link.url }}" {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</a>
+                                                <a href="{{ block.settings.shop_all_link }}" class="{{ section.settings.menu_type_desktop }}-header__menu-item">{{ block.settings.title | escape }}</a>
                                             </summary>
-                                            <ul id="HeaderMenu-MenuList-{{ forloop.index }}"
-                                                class="header__submenu list-menu list-menu--disclosure gradient caption-large motion-reduce global-settings-popup"
-                                                role="list" tabindex="-1">
-                                                {%- for childlink in link.links -%}
-                                                    <li>
-                                                        {%- if childlink.links == blank -%}
-                                                            <a href="{{ childlink.url }}"
-                                                               class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
-                                                                {{ childlink.title | escape }}
-                                                            </a>
-                                                        {%- else -%}
-                                                            <details
-                                                                    id="Details-HeaderSubMenu-{{ forloop.index }}">
-                                                                <summary
-                                                                        class="header__menu-item link link--text list-menu__item focus-inset caption-large">
-                                                                    <span>{{ childlink.title | escape }}</span>
-                                                                    {% render 'icon-caret' %}
-                                                                </summary>
-                                                                <ul id="HeaderMenu-SubMenuList-{{ forloop.index }}"
-                                                                    class="header__submenu list-menu motion-reduce">
-                                                                    {%- for grandchildlink in childlink.links -%}
-                                                                        <li>
-                                                                            <a href="{{ grandchildlink.url }}"
-                                                                               class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if grandchildlink.current %} list-menu__item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
-                                                                                {{ grandchildlink.title | escape }}
-                                                                            </a>
-                                                                        </li>
-                                                                    {%- endfor -%}
-                                                                </ul>
-                                                            </details>
-                                                        {%- endif -%}
-                                                    </li>
-                                                {%- endfor -%}
-                                            </ul>
+                                            <div id="MegaMenu-Content-{{ forloop.index }}"
+                                                 class="mega-menu__content customizable fix-direction gradient motion-reduce global-settings-popup"
+                                                 tabindex="-1">
+                                                <div class="mega-menu-grid-container {{ gridClass }}">
+                                                    <a href="{{ block.settings.shop_all_link }}" class="shop-all-link">
+                                                        {{ block.settings.shop_all_title }}
+                                                    </a>
+                                                    {% render 'header-lists', childlinks: block.settings.menu.links, link_levels: link_levels %}
+                                                    {% if block.settings.menu_second != blank %}
+                                                        {% render 'header-lists', childlinks: block.settings.menu_second.links, link_levels: link_levels %}
+                                                    {% endif %}
+                                                    {% if block.settings.menu_third != blank %}
+                                                        {% render 'header-lists', childlinks: block.settings.menu_third.links, link_levels: link_levels %}
+                                                    {% endif %}
+                                                </div>
+                                                <div class="desktop_links_images">
+                                                    {% if block.settings.desktop_links_image_1 != nil %}
+                                                    <{% if block.settings.desktop_links_image_1_link != "" %}a href="{{ block.settings.desktop_links_image_1_link }}" {% else %}div class="desktop_links_image_1_container"{% endif %}>
+                                                        {%- assign height = block.settings.desktop_links_image_1.width | divided_by: block.settings.desktop_links_image_1.aspect_ratio | round -%}
+                                                        {{ block.settings.desktop_links_image_1 | image_url: width: 600 | image_tag:
+                                                        loading: 'lazy',
+                                                        height: height,
+                                                        class: "desktop_links_image_1",
+                                                        sizes: "100vw",
+                                                        widths: '600'
+                                                        }}
+                                                        </{% if block.settings.desktop_links_image_1_link != "" %}a{% else %}div{% endif %}>
+
+                                                        {% endif %}
+                                                        {% if block.settings.desktop_links_image_2 != nil %}
+                                                        <{% if block.settings.desktop_links_image_2_link != "" %}a href="{{ block.settings.desktop_links_image_2_link }}" {% else %}div class="desktop_links_image_2_container"{% endif %}>
+                                                            {%- assign height = block.settings.desktop_links_image_2.width | divided_by: block.settings.desktop_links_image_2.aspect_ratio | round -%}
+                                                            {{ block.settings.desktop_links_image_2 | image_url: width: 600 | image_tag:
+                                                            loading: 'lazy',
+                                                            height: height,
+                                                            sizes: "100vw",
+                                                            widths: '600'
+                                                            }}
+                                                            </{% if block.settings.desktop_links_image_2_link != "" %}a{% else %}div{% endif %}>
+                                                            {% endif %}
+                                                </div>
+                                            </div>
                                         </details>
                                     </header-menu>
                                 {%- else -%}
-                                    <a href="{{ link.url }}"
-                                       class="header__menu-item list-menu__item link link--text focus-inset"{% if link.current %} aria-current="page"{% endif %}>
-                                        <span {%- if link.current %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
+                                    {% assign link_current = false %}
+                                    <a href="{{ block.settings.title_link }}"
+                                       class="header__menu-item closing-link list-menu__item link link--text focus-inset"{% if link_current %} aria-current="page"{% endif %}>
+                                        <span {%- if link_current %} class="header__active-menu-item"{% endif %}>{{ block.settings.title | escape }}</span>
                                     </a>
                                 {%- endif -%}
                             </li>
@@ -1183,6 +1247,12 @@ You can learn more about this (and learn how to cleanly revert these changes) at
   "class":"section-header",
   "settings":[
       {
+        "type": "link_list",
+          "id": "header_footer_menu",
+            "label": "t:sections.header.header_footer_menu.label",
+            "info": "t:sections.header.header_footer_menu.info"
+      },
+      {
           "type": "link_list",
             "id": "account",
             "label": "t:sections.header.account.label",
@@ -1377,6 +1447,11 @@ You can learn more about this (and learn how to cleanly revert these changes) at
       "id":"mobile_top_image_2",
       "label":"t:sections.header.settings.mobile_top_section.image__2.label",
       "info":"t:sections.header.settings.mobile_top_section.image__2.info"
+    },
+    {
+    "type": "link_list",
+    "id": "slider_menu",
+    "label": "t:sections.header.settings.slider_menu.label"
     },
     {
       "type":"url",

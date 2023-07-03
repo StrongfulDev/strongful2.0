@@ -76,7 +76,7 @@
 
 .loading-overlay:not(.hidden) + .cart-item__price-wrapper,
 .loading-overlay:not(.hidden) ~ cart-remove-button {
-  /*opacity: 50%;*/
+  opacity: 50%;
 }
 
 .loading-overlay:not(.hidden) ~ cart-remove-button {

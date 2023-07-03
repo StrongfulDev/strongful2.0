@@ -193,6 +193,7 @@
       "model_switch": {
         "button": "החלפת דוגמנית",
         "model_wears_female": "הדוגמנית לובשת מידות:",
+        "model_wears_one_product": "הדוגמנית לובשת מידה",
         "model_wears_only_female": "הדוגמנית לובשת",
         "female_top_part": "חלק עליון:",
         "female_bottom_part": "חלק תחתון:"
@@ -272,7 +273,7 @@
       "title": "תוצאות חיפוש",
       "search_for": "תוצאות חיפוש עבור “{{ terms }}”",
       "suggestions": "קולקציות",
-      "pages": "עמודים"
+      "pages": "בלוג"
     },
     "cart": {
       "cart": "סל קניות"
@@ -302,6 +303,11 @@
       "cart_count": {
         "one": "{{ count }} item",
         "other": "{{ count }} items"
+      },
+      "dropdown": {
+        "login_or_register": "הרשמה / כניסה",
+        "you_have": "יש לך",
+        "points": "נקודות"
       }
     },
     "cart": {
@@ -386,6 +392,7 @@
   },
   "customer": {
     "account": {
+      "greet": "היי {{ first_name }}",
       "title": "איזור אישי - {{ name }}",
       "sub_title": "איזור אישי",
       "details": "פרטי משתמש",

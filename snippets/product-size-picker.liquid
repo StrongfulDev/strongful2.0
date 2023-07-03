@@ -47,6 +47,11 @@
                             }}
                         </a>
                         <div class="product_details__info">
+                            {% if product.tags contains 'new' %}
+                                <span class="new-product-span">
+                                {{ 'products.product.new' | t }}
+                            </span>
+                            {% endif %}
                             <p class="product_details-titles product-title">{{ product.title }}</p>
                             <p class="product_details-titles product-color">{{ product.vendor }}</p>
                             {% render "price", product: product %}
