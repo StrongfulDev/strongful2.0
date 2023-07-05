@@ -431,7 +431,7 @@
 		grid-template-columns: repeat(3, auto);
 	}
 
-	#MegaMenu-Content-1 {
+	#MegaMenu-Content-2 {
 		grid-template-columns: 1fr 1.5fr;
 	}
 
