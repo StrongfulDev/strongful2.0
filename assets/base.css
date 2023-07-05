@@ -3305,13 +3305,6 @@ button.needsclick p, button.needsclick span {
 	font-size: 14px !important;
 }
 
-@media screen and (min-width: 990px) {
-	button.needsclick {
-		width: 60px !important;
-		height: 60px !important;
-	}
-}
-
 .collection__title_heading .title.heading_type_2:not(:only-child) {
 	margin: 0 0 var(--heading-type-2-margin) 0;
 	font-weight: 500;
