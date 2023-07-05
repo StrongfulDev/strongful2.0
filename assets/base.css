@@ -2357,6 +2357,14 @@ quantity-input button.quantity__button {
     background-color: rgb(var(--color-background));
 }
 
+.header-wrapper.blackend {
+			background-color: rgba(var(--color-background), 0.5);
+}
+
+.header-wrapper.blackend .header__icon span {
+	color: rgba(var(--color-background), 0.8);
+}
+
 .header-wrapper--border-bottom {
     border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
 }
@@ -2540,6 +2548,10 @@ quantity-input button.quantity__button {
 
 .header__icon--cart {
     position: relative;
+}
+
+.header-wrapper.blackend .header__icon--cart {
+	z-index: -1;
 }
 
 @media screen and (max-width: 989px) {
