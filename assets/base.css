@@ -3297,6 +3297,19 @@ fieldset {
 
 button.needsclick {
 		z-index: 3 !important;
+	right: 0 !important;
+	left: auto !important;
+}
+
+button.needsclick p, button.needsclick span {
+	font-size: 14px !important;
+}
+
+@media screen and (min-width: 990px) {
+	button.needsclick {
+		width: 60px !important;
+		height: 60px !important;
+	}
 }
 
 .collection__title_heading .title.heading_type_2:not(:only-child) {
@@ -3986,4 +3999,8 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 
 .button-loader-activator .spinner .path {
 	stroke: var(--gradient-background);
+}
+
+body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-shorcut {
+	display: none !important;
 }
