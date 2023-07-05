@@ -19,6 +19,15 @@
     endif
  -%}
 
+{% assign isLiveTheme = 'false' %}
+{% if content_for_header contains "previewBarInjector.init();" %}
+    {% assign isLiveTheme = 'false' %}
+{% elsif content_for_header contains "Shopify.designMode" %}
+    {% assign isLiveTheme = 'false' %}
+{% else %}
+    {% assign isLiveTheme = 'true' %}
+{% endif %}
+
 
 {% unless product.tags contains 'noSimilar' %}
 <ul class="similiar
