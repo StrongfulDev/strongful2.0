@@ -391,11 +391,8 @@ class MenuDrawer extends HTMLElement {
     let reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 		if ($(summaryElement).hasClass("header__icon--summary")) {
-			if (isOpen) {
-				$(".header-overlay").removeClass("hidden");
-			} else {
-				$(".header-overlay").removeClass("hidden");
-			}
+			$(".header-overlay").removeClass("hidden");
+			$(".header-wrapper").addClass("blackend");
 		}
 
 	  $(".mobile-facets__close").click(function() {
@@ -517,6 +514,7 @@ class MenuDrawer extends HTMLElement {
 			mobileHeaderMenuItem.parent().css('display', 'flex');
 			$(".header-overlay").addClass("hidden");
 			$('html').removeClass('overflow-hidden');
+			$(".header-wrapper").removeClass("blackend");
 			if (window.matchMedia('(max-width: 990px)')) {
 				document.documentElement.style.removeProperty('--viewport-height');
 			}
@@ -1252,6 +1250,7 @@ window.addEventListener('DOMContentLoaded', function() {
 		$('html').removeClass(`overflow-hidden-${menuDrawer.dataset.breakpoint}`).removeClass('overflow-hidden');
 		$(".menu-drawer-container.menu-opening").attr('open', false).removeClass('menu-opening');
 		$(headerOverlay).addClass('hidden');
+		$(".header-wrapper").removeClass("blackend");
 	}
 
 	$(".header-overlay").on('click', closeHeader);

@@ -1107,7 +1107,7 @@ summary::-webkit-details-marker {
     row-gap: var(--grid-mobile-vertical-spacing);
 }
 
-#product-grid {
+#product-grid:not(.template-search__results) {
 	column-gap: calc(var(--grid-desktop-horizontal-spacing) * 2);
 	row-gap: calc(var(--grid-desktop-horizontal-spacing) * 5);
 	display: grid;
@@ -2357,6 +2357,14 @@ quantity-input button.quantity__button {
     background-color: rgb(var(--color-background));
 }
 
+.header-wrapper.blackend {
+			background-color: rgba(var(--color-background), 0.5);
+}
+
+.header-wrapper.blackend .header__icon span {
+	color: rgba(var(--color-background), 0.8);
+}
+
 .header-wrapper--border-bottom {
     border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
 }
@@ -2540,6 +2548,10 @@ quantity-input button.quantity__button {
 
 .header__icon--cart {
     position: relative;
+}
+
+.header-wrapper.blackend .header__icon--cart {
+	z-index: -1;
 }
 
 @media screen and (max-width: 989px) {
@@ -3285,6 +3297,12 @@ fieldset {
 
 button.needsclick {
 		z-index: 3 !important;
+	right: 0 !important;
+	left: auto !important;
+}
+
+button.needsclick p, button.needsclick span {
+	font-size: 14px !important;
 }
 
 .collection__title_heading .title.heading_type_2:not(:only-child) {
@@ -3809,11 +3827,12 @@ div#returnGoCartWidget {
 /*   ReturnGO Styling end     */
 
 body.trigger-position-right #enable-toolbar-trigger {
-	left: -3px !important;
-	right: auto !important;
+	/*left: -3px !important;*/
+	/*right: auto !important;*/
 	top: -7rem;
 	height: fit-content;
 	z-index: 4 !important;
+	right: var(--grid-desktop-vertical-spacing) !important;
 }
 
 div#enable-toolbar div#enable-toolbar-content, div#enable-toolbar {
@@ -3825,7 +3844,8 @@ div#enable-toolbar div#enable-toolbar-content, div#enable-toolbar {
 }
 
 #enable-toolbar-trigger-svg {
-	width: 26px !important;
+	width: 23px !important;
+	right: -8px;
 }
 
 #enable-toolbar-trigger-svg, #enable-toolbar-trigger-svg path {
@@ -3850,10 +3870,10 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 #enable-toolbar-trigger .icon-pill, #enable-toolbar-trigger .icon-pill-border {
 	position: absolute;
 	top: -10px;
-	left: -17px;
-	transform: rotate(90deg);
-	width: 41px !important;
-	height: 49px !important;
+	right: -15px;
+	transform: rotate(-90deg);
+	width: 35px !important;
+	height: 48px !important;
 }
 
 #enable-toolbar-trigger .icon-pill {
@@ -3864,10 +3884,10 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 	z-index: 1;
 	stroke: var(--gradient-base-accent-1);
 	fill: var(--gradient-background);
-	height: 6rem !important;
-	width: 5.7rem !important;
-	top: -1.4rem;
-	left: -2.6rem;
+	height: 50px!important;
+	width: 40px!important;
+	top: -11px !important;
+	right: -18px !important;
 	stroke-width: 0.05rem;
 }
 
@@ -3972,4 +3992,8 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 
 .button-loader-activator .spinner .path {
 	stroke: var(--gradient-background);
+}
+
+body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-shorcut {
+	display: none !important;
 }

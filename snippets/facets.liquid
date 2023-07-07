@@ -624,14 +624,11 @@
             <h4 class="product-count__text text-body">
               <span id="ProductCountDesktop">
                 {%- if results.results_count -%}
-                  {{ 'templates.search.results_with_count' | t: terms: results.terms, count: results.results_count }}
+                  {{ 'templates.search.results_with_count_and_terms' | t: terms: results.terms, count: results.results_count }}
                 {%- elsif results.products_count == results.all_products_count -%}
                   {{ 'products.facets.product_count_simple' | t: count: results.products_count }}
                 {%- else -%}
-                  {{
-                  'products.facets.product_count'
-                  | t: product_count: results.products_count, count: results.all_products_count
-                  }}
+                  {{ 'products.facets.product_count' | t: product_count: results.products_count, count: results.all_products_count }}
                 {%- endif -%}
               </span>
             </h4>
