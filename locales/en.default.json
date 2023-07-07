@@ -90,7 +90,7 @@
       "title": "הכי נצפים"
     },
     "article": {
-      "blog": "Blog",
+      "blog": "כתבת תוכן",
       "read_more_title": "Read more: {{ title }}",
       "comments": {
         "one": "{{ count }} comment",
@@ -235,6 +235,7 @@
       "product_type": "סוג מוצר",
       "filters": {
         "manual": "נבחרים",
+        "relevance": "רלוונטיות",
         "best-selling": "הנמכרים ביותר",
         "title-ascending": "מא׳ עד ת׳",
         "title-descending": "מת׳ עד א׳",
@@ -247,7 +248,7 @@
   },
   "templates": {
     "search": {
-      "no_results": "לא נמצאו תוצאות חיפוש עבור “{{ terms }}”. בדקי בבקשה שכתבת נכון או שתנסי חיפוש אחר.",
+      "no_results": "לא נמצאו תוצאות חיפוש עבור {{ terms }}. בדקי בבקשה שכתבת נכון או שתנסי חיפוש אחר.",
       "page": "עמוד",
       "products": "מוצרים",
       "results_pages_with_count": {
@@ -267,11 +268,11 @@
         "other": "{{ count }} תוצאות"
       },
       "results_with_count_and_term": {
-        "one": "תוצאה {{ count }} נמצאה עבור “{{ terms }}”",
-        "other": "{{ count }} תוצאות נמצאו עבור “{{ terms }}”"
+        "one": "נמצאה תוצאה אחת עבור {{ terms}}",
+        "other": "{{ count }} תוצאות נמצאו עבור {{ terms }}"
       },
       "title": "תוצאות חיפוש",
-      "search_for": "תוצאות חיפוש עבור “{{ terms }}”",
+      "search_for": "תוצאות חיפוש עבור {{ terms }}",
       "suggestions": "קולקציות",
       "pages": "בלוג"
     },

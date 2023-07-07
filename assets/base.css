@@ -1107,7 +1107,7 @@ summary::-webkit-details-marker {
     row-gap: var(--grid-mobile-vertical-spacing);
 }
 
-#product-grid {
+#product-grid:not(.template-search__results) {
 	column-gap: calc(var(--grid-desktop-horizontal-spacing) * 2);
 	row-gap: calc(var(--grid-desktop-horizontal-spacing) * 5);
 	display: grid;
