@@ -252,7 +252,7 @@ slider-component.slider-component-full-width {
     border-radius: 0.4rem;
 }
 
-.slider-counter {
+.slider-counter:not(.slider-counter--dots) {
     display: none;
     justify-content: center;
     min-width: 4.4rem;
