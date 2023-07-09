@@ -49,8 +49,7 @@
         "55848455-bcdc-421a-b1dd-8847f95e73b9"
       ],
       "custom_css": [
-        ".slider-button {display: none; }",
-        " .slider-buttons {position: absolute; bottom: 2em; left: 50%; transform: translateX(-50%); }"
+        ".slider-buttons {position: absolute; bottom: 2em; left: 50%; transform: translateX(-50%);}"
       ],
       "settings": {
         "layout": "full_bleed",
