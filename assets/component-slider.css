@@ -372,7 +372,7 @@ slider-component.slider-component-full-width {
 }
 
 .slider-button.dots {
-	display: none;
+	/*display: none;*/
 }
 
 .slider-button:not([disabled]):hover {
