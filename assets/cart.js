@@ -182,7 +182,10 @@ class CartItems extends HTMLElement {
     const cartItemElements = this.querySelectorAll(`#CartItem-${line} .loading-overlay`);
     const cartDrawerItemElements = this.querySelectorAll(`#CartDrawer-Item-${line} .loading-overlay`);
 
-    [...cartItemElements, ...cartDrawerItemElements].forEach((overlay) => overlay.classList.remove('hidden'));
+    [...cartItemElements, ...cartDrawerItemElements].forEach((overlay) => {
+	    overlay.classList.remove('hidden');
+	    console.log(overlay);
+    });
 
     document.activeElement.blur();
     this.lineItemStatusElement.setAttribute('aria-hidden', false);

@@ -44,7 +44,6 @@ slider-component.slider-component-full-width {
         scroll-behavior: smooth;
         scroll-padding-left: 1.5rem;
         /*-webkit-overflow-scrolling: touch;*/
-        margin-bottom: 1rem;
     }
 
     /* Fix to show some space at the end of our sliders in all browsers */
@@ -431,6 +430,10 @@ slider-component.slider-component-full-width {
     margin-left: 0;
 }
 
+.slider.slider--tablet.contains-card--standard .slider__slide:not(.collection-list__item--no-media):last-child {
+		margin-right: 0;
+}
+
 .full-unstyled-link {
     font-size: var(--font-body-size-medium);
 }
@@ -553,6 +556,10 @@ slider-component .card__information * {
 
 slider-component .discount-price-container * {
 	font-size: calc(var(--font-body-size-small) * 1.2);
+}
+
+#product .collection__title_heading .title, #product .collection__title_heading .title:not(:only-child) {
+	margin: auto;
 }
 
 @media screen and (min-width: 990px) {

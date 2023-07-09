@@ -63,6 +63,15 @@ class CartDrawer extends HTMLElement {
         );
 
         $('html').addClass('overflow-hidden');
+
+	    function getViewportHeight() {
+		    let vh = window.innerHeight * 0.01;
+		    document.documentElement.style.setProperty('--vh', `${vh}px`);
+	    }
+
+	    window.addEventListener('resize', getViewportHeight);
+
+	    getViewportHeight();
     }
 
     close() {

@@ -17,7 +17,7 @@ window.addEventListener("DOMContentLoaded", function() {
 	$(".sticky-cart-cta-overlay").click(toggleQuickAdd);
 	stickyButton.addEventListener('click', toggleQuickAdd);
 
-	const el = document.querySelector(".product-loyalty-container");
+	const el = document.querySelector(".product-form__buttons");
 
 	const options = {
 		root: null,
@@ -27,6 +27,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
 	const observer = new IntersectionObserver((entries, observer) => {
 		entries.forEach((entry) => {
+			console.log(entry)
 			let topPos = entry.boundingClientRect.top;
 			let stickyATC = document.querySelector('.sticky-cart-cta');
 			if (topPos < 100 && entry.isIntersecting === false) {

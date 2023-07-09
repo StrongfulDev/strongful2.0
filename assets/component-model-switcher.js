@@ -9,6 +9,8 @@ window.addEventListener('DOMContentLoaded', function(e) {
 			if (modelSize) {
 				changeModel(modelSize);
 				updateVariantRadios(modelSize);
+				$(this).parents().removeClass("inactive");
+				$(this).parents().siblings().addClass("inactive");
 			}
 		});
 
@@ -16,12 +18,24 @@ window.addEventListener('DOMContentLoaded', function(e) {
 			const modelSize = $(this).val();
 			changeModel(modelSize);
 			updateModelSwitch(modelSize);
+			if (window.innerWidth < 990) {
+				showLowStock(this);
+			}
 		});
 
 		// const modelSize = localStorage.getItem('modelSize');
 		// if (modelSize) {
 		// 	changeModel(modelSize);
 		// }
+
+		function showLowStock(element) {
+			let lowStockText = $(element).siblings(".product__inventory");
+			let otherLowStocks = $(element).parents().find(".product__inventory").not(lowStockText);
+			otherLowStocks.hide();
+			if (lowStockText.text() !== "") {
+				lowStockText.show();
+			}
+		}
 
 		function hideUnAvailableModels() {
 			const availableSizes = getAvailableSizes();
@@ -57,6 +71,9 @@ window.addEventListener('DOMContentLoaded', function(e) {
 
 			const modelWearsSizeParagraphsToShow = $(document).find(`.model-wears-size[data-model="${modelSize}"]`);
 			const modelWearsSizeParagraphsToHide = $(document).find(`.model-wears-size:not([data-model="${modelSize}"])`);
+
+			let progressBar = document.querySelector('.slider-component-progress-bar');
+			$(progressBar).css('width', `calc(100% / ${imagesToShow.length})`);
 
 			if (imagesToShow.length > 0) {
 				imagesToHide.hide();
@@ -104,5 +121,5 @@ window.addEventListener('DOMContentLoaded', function(e) {
 			$(this).addClass("hidden");
 			$("#model-switch").removeAttr("open");
 		});
-	}, 1000);
+	}, 2000);
 });

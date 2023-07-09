@@ -6,14 +6,14 @@
         "slideshow-block-0": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/01_1_f4ea4d89-a16c-441c-b875-3891104b0a6b.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/02_1_e30d7ef7-e9d1-4953-b0ca-c71571333610.jpg",
+            "image": "shopify:\/\/shop_images\/9a9dc0dde049ee5ace5c55db571643bc.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/1_fcd87c08-7577-4241-a8cc-99ad36bc2088.jpg",
             "heading": "",
             "whole_slide_link": "",
             "heading_size": "h1",
             "subheading": "",
             "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/sale-3-for-300",
+            "link": "shopify:\/\/collections\/סטים",
             "button_style_secondary": false,
             "box_align": "middle-center",
             "show_text_box": false,
@@ -39,15 +39,21 @@
     },
     "17711ea4-9001-4425-9527-79593a92ff94": {
       "type": "featured-collection",
+      "custom_css": [
+        ".button {width: 100%;}",
+        ".discount-price-container {direction: rtl;}",
+        ".slider--tablet.grid--peek.grid--2-col-tablet-down .grid__item,.grid--peek .grid__item {width: calc(48% - var(--grid-mobile-horizontal-spacing) - 3rem);}",
+        "@media screen and (min-width: 990px) {.slider--desktop.grid--peek.grid--5-col-desktop .grid__item {width: calc( (94% - var(--desktop-margin-left-first-item)) \/ 5 - var(--grid-desktop-horizontal-spacing) * 2 ); }}"
+      ],
       "settings": {
         "steps": 4,
-        "title": "3 FOR ₪300",
+        "title": "NEW IN",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "sale-3-for-300",
+        "collection": "new-in",
         "products_to_show": 13,
         "columns_desktop": 5,
         "full_width": true,
@@ -182,12 +188,23 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "c1cf6865-40c7-4101-bd7e-f7243f65c7a8": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<div\n\tclass=\"yotpo yotpo-pictures-widget\"\n\tdata-gallery-id=\"643511ba2ed1151bb3dcb2ae\">\n<\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "slideshow",
     "17711ea4-9001-4425-9527-79593a92ff94",
     "ecf1e0a5-0973-4674-ac5b-b5370ff1bae1",
-    "our_collection_list"
+    "our_collection_list",
+    "c1cf6865-40c7-4101-bd7e-f7243f65c7a8"
   ]
 }

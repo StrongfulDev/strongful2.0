@@ -2,21 +2,21 @@ window.addEventListener('DOMContentLoaded', function(event) {
 	$('.variant_selector').each(function (index, element) {
 		element = $(element);
 		if (element.find('input[checked="checked"]').length === 0) {
-			element.find('.add_to_cart').attr('disabled', 'disabled');
+			// element.find('.add_to_cart').attr('disabled', 'disabled');
 		}
 	})
 
 	$('.product_size_picker__button.default_input').parents('.variant_selector').find('.add_to_cart').removeAttr("disabled");
 
 	$('.variant_selector input[type="radio"]').on("change", function (e) {
-		$(this).parents('.variant_selector').find('.add_to_cart').removeAttr("disabled");
+		// $(this).parents('.variant_selector').find('.add_to_cart').removeAttr("disabled");
 	})
 
 	$("#MainContent")
 		.on("click", '.variant_selector.submit_on_click .size_variant_button:not(.disabled-variant-button)', function (e) {
-			// let productPageIdentifier = document.querySelector(".products-product-size-picker");
 				$(this).find(".size_variant_button_add").hide();
 				$(this).find(".loading-overlay").css("display", "flex");
+				$(this).siblings().find(".loading-overlay").css("display", "none");
 				$(this).find(".loading-overlay__spinner").removeClass("hidden");
 				setTimeout(() => {
 					$(this).parents("form").find('[type="submit"]').click();

@@ -33,10 +33,20 @@
 		background: var(--gradient-base-accent-1);
 		color: var(--gradient-base-background-1);
 	}
+
+	.sticky-cart-cta .product_variants .size_variant_button:not(.disabled-variant-button) label:hover {
+		background: var(--gradient-background);
+		color: var(--gradient-base-accent-1);
+	}
+
+	.sticky-cart-cta .product_variants ul {
+		gap: 0;
+	}
 }
 
 .collection.loading .loading-overlay {
   display: block;
+	z-index: 1;
 }
 
 .collection--empty .title-wrapper {
@@ -94,7 +104,7 @@
 		max-width: none;
 	}
 
-	#product-grid {
+	#product-grid:not(.template-search__results) {
 		display: flex;
 		flex-wrap: wrap;
 		margin: 0 -1.5rem;

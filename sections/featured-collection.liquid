@@ -6,6 +6,15 @@
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
 {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
 
+{% assign isLiveTheme = 'false' %}
+{% if content_for_header contains "previewBarInjector.init();" %}
+    {% assign isLiveTheme = 'false' %}
+{% elsif content_for_header contains "Shopify.designMode" %}
+    {% assign isLiveTheme = 'false' %}
+{% else %}
+    {% assign isLiveTheme = 'true' %}
+{% endif %}
+
 <link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print"
       onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'template-collection.css' | asset_url }}" media="print"
@@ -118,27 +127,50 @@
             >
                 {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
                     {% unless product.tags contains 'giftHide' %}
-                    <li
-                            id="Slide-{{ section.id }}-{{ forloop.index }}"
-                            class="grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}"
-                    >
-                        {% render 'card-product',
-                                card_product: product,
-                                media_aspect_ratio: section.settings.image_ratio,
-                                show_secondary_image: section.settings.show_secondary_image,
-                                show_vendor: section.settings.show_vendor,
-                                show_rating: section.settings.show_rating,
-                                show_quick_add: section.settings.enable_quick_add,
-                                quick_add_type: section.settings.quick_add_type,
-                                quick_add_type_mobile: section.settings.quick_add_type_mobile,
-                                section_id: section.id,
-                                show_sale_badge: section.settings.show_sale_badge,
-                                quick_add_text: section.settings.quick_add_text,
-                                pick_size_text: section.settings.pick_size_text,
-                                quick_add_accessories_text: section.settings.quick_add_accessories_text
-                        %}
-                    </li>
-                        {% endunless %}
+                        {% if isLiveTheme == 'true' %}
+                            {% unless product.tags contains 'hidden' %}
+                                <li
+                                    id="Slide-{{ section.id }}-{{ forloop.index }}"
+                                    class="grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}">
+                                {% render 'card-product',
+                                        card_product: product,
+                                        media_aspect_ratio: section.settings.image_ratio,
+                                        show_secondary_image: section.settings.show_secondary_image,
+                                        show_vendor: section.settings.show_vendor,
+                                        show_rating: section.settings.show_rating,
+                                        show_quick_add: section.settings.enable_quick_add,
+                                        quick_add_type: section.settings.quick_add_type,
+                                        quick_add_type_mobile: section.settings.quick_add_type_mobile,
+                                        section_id: section.id,
+                                        show_sale_badge: section.settings.show_sale_badge,
+                                        quick_add_text: section.settings.quick_add_text,
+                                        pick_size_text: section.settings.pick_size_text,
+                                        quick_add_accessories_text: section.settings.quick_add_accessories_text
+                                %}
+                                </li>
+                              {% endunless %}
+                        {% else %}
+                            <li
+                                    id="Slide-{{ section.id }}-{{ forloop.index }}"
+                                    class="grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}">
+                                {% render 'card-product',
+                                        card_product: product,
+                                        media_aspect_ratio: section.settings.image_ratio,
+                                        show_secondary_image: section.settings.show_secondary_image,
+                                        show_vendor: section.settings.show_vendor,
+                                        show_rating: section.settings.show_rating,
+                                        show_quick_add: section.settings.enable_quick_add,
+                                        quick_add_type: section.settings.quick_add_type,
+                                        quick_add_type_mobile: section.settings.quick_add_type_mobile,
+                                        section_id: section.id,
+                                        show_sale_badge: section.settings.show_sale_badge,
+                                        quick_add_text: section.settings.quick_add_text,
+                                        pick_size_text: section.settings.pick_size_text,
+                                        quick_add_accessories_text: section.settings.quick_add_accessories_text
+                                %}
+                            </li>
+                        {% endif %}
+                    {% endunless %}
                 {%- else -%}
                     {%- for i in (1..4) -%}
                         <li class="grid__item">

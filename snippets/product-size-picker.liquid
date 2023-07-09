@@ -47,6 +47,11 @@
                             }}
                         </a>
                         <div class="product_details__info">
+                            {% if product.tags contains 'new' %}
+                                <span class="new-product-span">
+                                {{ 'products.product.new' | t }}
+                            </span>
+                            {% endif %}
                             <p class="product_details-titles product-title">{{ product.title }}</p>
                             <p class="product_details-titles product-color">{{ product.vendor }}</p>
                             {% render "price", product: product %}
@@ -98,7 +103,7 @@
                                                                     {% if product_disabled %} disabled="disabled"{% endif %}
 
                                                                    class="product_size_picker__button__label">
-                                                                <span>
+                                                                <span class="product_size_picker__button__label-span">
                                                                     {% if product.has_only_default_variant %}
                                                                     {{ 'products.product.variant.default_title' | t }}
                                                                     {% else %}
@@ -175,13 +180,12 @@
                                 אזל המלאי
                             </button>
                         {% else %}
-                            <button type="submit"
-                                    name="add"
+                            <button type="submit" name="add"
                                     class="add_to_cart product-form__submit button button--full-width button--secondary">
-                                הוספה
+                                <span class="button-loader-text">הוספה</span>
+                                {% render 'loading-spinner' %}
                             </button>
                         {% endif %}
-                        {% render 'loading-spinner' %}
                         <input type="submit" hidden="hidden"/>
                     </div>
                 {%- endform -%}

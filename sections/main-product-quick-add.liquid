@@ -16,14 +16,14 @@
             src="{{ product.featured_media | image_url: width: 533 }}"
             sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
             alt="{{ product.title | escape }}"
-            class="sticky-add-to-cart-image"
+            class="sticky-add-to-cart-image desktop--only"
             {% unless lazy_load == false %}
                 loading="lazy"
             {% endunless %}
             width="{{ product.featured_media.width | divided_by: 2 }}"
             height="{{ product.featured_media.height }}"
     >
-        <div class="sticky-title-and-price">
+        <div class="sticky-title-and-price desktop--only">
             <p class="sticky-product-title">{{ product.title | escape }}</p>
             {% unless product.title == 'גיפט קארד' %}
             <div class="sticky-add-to-cart-color">

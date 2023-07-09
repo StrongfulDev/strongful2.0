@@ -370,14 +370,22 @@ You can learn more about this (and learn how to cleanly revert these changes) at
       <script type="text/javascript">(function e(){var e=document.createElement("script");e.type="text/javascript",e.async=true,e.defer=true,e.src="//staticw2.yotpo.com/QI0VdT7ROUF5r1ybHPM5YgLRsUiPFRMOXKeGNWSJ/widget.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();</script>
       {% include 'favicons' %}
 
+  <script src="https://cdn-widgetsrepository.yotpo.com/v1/loader/qGZpUcqW7-E2nBL0lvSZUA" async></script>
 </head>
 
-<body class="gradient" id="{{ template.name }}">
+  {% assign isLiveTheme = 'false' %}
+  {% if content_for_header contains "previewBarInjector.init();" %}
+      {% assign isLiveTheme = 'false' %}
+  {% elsif content_for_header contains "Shopify.designMode" %}
+      {% assign isLiveTheme = 'false' %}
+  {% else %}
+      {% assign isLiveTheme = 'true' %}
+  {% endif %}
 
-<!-- Google Tag Manager (noscript) -->
+<body class="gradient {{ isLiveTheme }}" id="{{ template.name }}">
+
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NS9ZW7H"
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
 <div class="loader-wrapper">
     <img src="https://cdn.shopify.com/s/files/1/0574/2995/0671/files/logo_white.png?v=1636381426"
@@ -396,19 +404,33 @@ You can learn more about this (and learn how to cleanly revert these changes) at
 
 <main
         id="MainContent"
-        class="content-for-layout focus-none"
+        class="content-for-layout focus-none {{ template.name }}"
         role="main"
         tabindex="-1">
     {{ content_for_layout }}
 
     {% render 'pill' %}
     {% render 'pill-border' %}
-    {% unless template.name == 'register' or template.name == 'login' %}
+    {% unless template.name == 'register' or template.name == 'login' or template.name == 'account' %}
     <div class="custom-customer-account-container">
-        <p class="close-custom-account-container page-width pointer">{% render 'icon-close' %}</p>
+        <div class="close-custom-account-container page-width pointer">
+            <h4 class="custom-customer-popup-main-title">{{ 'customer.account.sub_title' | t }}</h4>
+            {% render 'icon-close' %}
+        </div>
         {% section 'multicolumn' %}
         {% section 'main-register' %}
         {% section 'main-login' %}
+        {%- if settings.logo_secondary != blank -%}
+            {%- assign logo_secondary_alt = settings.logo_secondary.alt | default: shop.name | escape -%}
+            {%- assign logo_secondary_height = settings.logo_secondary_width | divided_by: settings.logo_secondary.aspect_ratio -%}
+            {{ settings.logo_secondary | image_url: width: 500 | image_tag:
+            class: 'header__heading-logo_secondary motion-reduce',
+            widths: '50, 100, 150, 200, 250, 300, 400, 500',
+            height: logo_secondary_height,
+            width: settings.logo_secondary_width,
+            alt: logo_secondary_alt
+            }}
+        {%- endif -%}
     </div>
     <div class="custom-login-overlay hidden">&nbsp;</div>
     {% endunless %}

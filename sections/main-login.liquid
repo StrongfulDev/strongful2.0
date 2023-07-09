@@ -31,7 +31,7 @@
 
     {%- form 'recover_customer_password' -%}
       {% assign recover_success = form.posted_successfully? %}
-      <div class="field">
+        <div class="field">
         <input
           type="email"
           value=""
@@ -73,14 +73,10 @@
     {%- endform -%}
   </div>
 
-    {% if template.name == 'register' or template.name == 'login' %}
-        <h1 id="login" tabindex="-1">
-            {{ 'customer.login_page.title' | t }}
-        </h1>
-    {% else %}
-    <h4 id="login" tabindex="-1" class="custom-customer-popup-main-title">
-            {{ 'customer.login_page.title' | t }}
-        </h4>
+    {% if template.name == 'login' or template.name == 'register' %}
+    <h1 id="login" tabindex="-1">
+        {{ 'customer.login_page.title' | t }}
+    </h1>
     {% endif %}
   <div class="fix-direction">
     {%- if recover_success == true -%}
@@ -149,9 +145,11 @@
         </a>
       {%- endif -%}
 
-      <button>
-        {{ 'customer.login_page.sign_in' | t }}
+      <button class="button-loader-activator">
+        <span class="button-loader-text">{{ 'customer.login_page.sign_in' | t }}</span>
+          {% render 'loading-spinner' %}
       </button>
+        <p class="customer-social-separator">{{ 'customer.register.or' | t }}</p>
         {% if template.name != 'login' or template.name != 'register' %}
             <div class='oxi-social-login'></div>
         {% endif %}
