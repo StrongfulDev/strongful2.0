@@ -22,10 +22,31 @@
             "color_scheme": "inverse",
             "text_alignment_mobile": "center"
           }
+        },
+        "55848455-bcdc-421a-b1dd-8847f95e73b9": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/9a9dc0dde049ee5ace5c55db571643bc.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/919243cb0782f30a2a160b4f61989d9a.jpg",
+            "heading": "",
+            "whole_slide_link": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "SHOP NOW",
+            "link": "shopify:\/\/collections\/aura",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "inverse",
+            "text_alignment_mobile": "center"
+          }
         }
       },
       "block_order": [
-        "slideshow-block-0"
+        "slideshow-block-0",
+        "55848455-bcdc-421a-b1dd-8847f95e73b9"
       ],
       "settings": {
         "layout": "full_bleed",
