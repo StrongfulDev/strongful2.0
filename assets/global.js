@@ -761,29 +761,12 @@ class SliderComponent extends HTMLElement {
     return (element.offsetLeft + element.clientWidth) <= lastVisibleSlide && element.offsetLeft >= this.slider.scrollLeft;
   }
 
-  // onButtonClick(event) {
-  //   event.preventDefault();
-  //   const step = event.currentTarget.dataset.step || 1;
-  //   this.slideScrollPosition = event.currentTarget.name === 'next' ? this.slider.scrollLeft + (step * this.sliderItemOffset) : this.slider.scrollLeft - (step * this.sliderItemOffset);
-  //   this.slider.scrollTo({
-  //     left: this.slideScrollPosition
-  //   });
-  // }
-
 	onButtonClick(event) {
 		event.preventDefault();
 		const step = event.currentTarget.dataset.step || 1;
 		this.slideScrollPosition = event.currentTarget.name === 'next' ?
 			this.slider.scrollLeft + (step * this.sliderItemOffset) :
 			this.slider.scrollLeft - (step * this.sliderItemOffset);
-		// Check if it's the end or the beginning of the slides for looping
-		// if (this.enableSliderLooping) {
-		// 	if (this.slideScrollPosition < 0) {
-		// 		this.slideScrollPosition = (this.totalPages - 1) * this.sliderItemOffset;
-		// 	} else if (this.slideScrollPosition / this.sliderItemOffset >= this.totalPages) {
-		// 		this.slideScrollPosition = 0;
-		// 	}
-		// }
 
 		if (this.enableSliderLooping) {
 			if (this.slideScrollPosition < 0) {
@@ -854,6 +837,7 @@ class SlideshowComponent extends SliderComponent {
 
   update() {
     super.update();
+	  this.rects = this.querySelectorAll(".slideshow--rect");
     this.sliderControlButtons = this.querySelectorAll('.slider-counter__link');
     this.prevButton.removeAttribute('disabled');
 
@@ -865,6 +849,14 @@ class SlideshowComponent extends SliderComponent {
     });
     this.sliderControlButtons[this.currentPage - 1].classList.add('slider-counter__link--active');
     this.sliderControlButtons[this.currentPage - 1].setAttribute('aria-current', true);
+
+	  this.rects.forEach(rect => {
+		  rect.classList.remove('slideshow--rect--active');
+			rect.removeAttribute('aria-current');
+	  });
+		this.rects[this.currentPage - 1].classList.add('slideshow--rect--active');
+		this.rects[this.currentPage - 1].setAttribute('aria-current', true);
+		$(this.rects[this.currentPage - 1]).find(".slideshow--rect-filler").css("animation-duration", this.autoplaySpeed + "ms");
   }
 
   autoPlayToggle() {

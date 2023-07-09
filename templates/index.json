@@ -6,8 +6,8 @@
         "slideshow-block-0": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/9a9dc0dde049ee5ace5c55db571643bc.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/1_fcd87c08-7577-4241-a8cc-99ad36bc2088.jpg",
+            "image": "shopify:\/\/shop_images\/01_2be7c868-61a4-4ff6-b8ed-a63212fef064.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Artboard_1.jpg",
             "heading": "",
             "whole_slide_link": "",
             "heading_size": "h1",
@@ -22,17 +22,41 @@
             "color_scheme": "inverse",
             "text_alignment_mobile": "center"
           }
+        },
+        "55848455-bcdc-421a-b1dd-8847f95e73b9": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/9a9dc0dde049ee5ace5c55db571643bc.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/919243cb0782f30a2a160b4f61989d9a.jpg",
+            "heading": "",
+            "whole_slide_link": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "SHOP NOW",
+            "link": "shopify:\/\/collections\/aura",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "inverse",
+            "text_alignment_mobile": "center"
+          }
         }
       },
       "block_order": [
-        "slideshow-block-0"
+        "slideshow-block-0",
+        "55848455-bcdc-421a-b1dd-8847f95e73b9"
+      ],
+      "custom_css": [
+
       ],
       "settings": {
         "layout": "full_bleed",
         "slide_height": "adapt_image",
         "slider_visual": "sides",
-        "auto_rotate": false,
-        "change_slides_speed": 5,
+        "auto_rotate": true,
+        "change_slides_speed": 9,
         "show_text_below": false,
         "accessibility_info": "Slideshow about our brand"
       }
@@ -54,7 +78,7 @@
         "show_description": false,
         "description_style": "body",
         "collection": "new-in",
-        "products_to_show": 13,
+        "products_to_show": 25,
         "columns_desktop": 5,
         "full_width": true,
         "show_view_all": true,
