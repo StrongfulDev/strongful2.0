@@ -258,6 +258,10 @@ slider-component.slider-component-full-width {
     min-width: 4.4rem;
 }
 
+.slider-counter--dots {
+	margin: auto;
+}
+
 @media screen and (min-width: 750px) {
     .slider-counter--dots {
         margin: 0 1.2rem;
