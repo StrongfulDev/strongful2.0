@@ -121,6 +121,10 @@ slideshow-component .slideshow.banner {
         border-bottom-right-radius: var(--text-boxes-radius);
         border-bottom-left-radius: var(--text-boxes-radius);
     }
+
+	div.slider-buttons {
+		display: none;
+	}
 }
 
 .spaced-section--full-width:last-child slideshow-component:not(.page-width) .slideshow__controls {
