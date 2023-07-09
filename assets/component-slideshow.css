@@ -232,6 +232,12 @@ slideshow-component:not(.page-width) .slider-buttons {
 	transform: translateX(-50%);
 }
 
+#Slide-template--15943402684556__slideshow-2 .slideshow__text.banner__box {
+	bottom: 37vh;
+	left: 12vw;
+	transform: translateX(0);
+}
+
 .whole-slide-link {
 	display: block;
 	width: 100%;
