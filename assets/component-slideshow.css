@@ -257,6 +257,10 @@ slideshow-component:not(.page-width) .slider-buttons {
 
 @media screen and (min-width: 750px) {
 
+	#Slide-template--15943402684556__slideshow-2 .slideshow__text.banner__box {
+		bottom: 18vh;
+	}
+
 	.whole-slide-link .banner__media img {
 		object-fit: cover;
 	}
