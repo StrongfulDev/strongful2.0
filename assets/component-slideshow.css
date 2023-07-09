@@ -227,8 +227,9 @@ slideshow-component:not(.page-width) .slider-buttons {
     padding: 2rem 1.5rem;
     width: fit-content;
     position: absolute;
-    bottom: 37vh;
-	left: 12vw;
+    bottom: 12vh;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 .whole-slide-link {
@@ -271,7 +272,8 @@ slideshow-component:not(.page-width) .slider-buttons {
     }
 
 	.slideshow__text.banner__box {
-		bottom: 16rem;
-		left: 27%;
+		bottom: 7vw;
+		left: 0;
+		transform: translateX(0);
 	}
 }
