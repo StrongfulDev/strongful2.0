@@ -32,7 +32,7 @@
         aria-label="{{ section.settings.accessibility_info | escape }}">
     {%- if section.settings.auto_rotate and section.blocks.size > 1 -%}
         <div class="slideshow__controls slideshow__controls--top slider-buttons no-js-hidden{% if section.settings.show_text_below %} slideshow__controls--border-radius-mobile{% endif %}">
-            <button type="button" class="slider-button slider-button--prev" name="previous"
+            <button type="button" class="slider-button slider-button--prev {{ section.settings.slider_visual }}" name="previous"
                     aria-label="{{ 'sections.slideshow.previous_slideshow' | t }}"
                     aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}</button>
             <div class="slider-counter slider-counter--{{ section.settings.slider_visual }}{% if section.settings.slider_visual == 'counter' or section.settings.slider_visual == 'numbers' %} caption{% endif %}">
@@ -54,13 +54,13 @@
                     </div>
                 {%- endif -%}
             </div>
-            <button type="button" class="slider-button slider-button--next" name="next"
+            <button type="button" class="slider-button slider-button--next {{ section.settings.slider_visual }}" name="next"
                     aria-label="{{ 'sections.slideshow.next_slideshow' | t }}"
                     aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}</button>
 
             {%- if section.settings.auto_rotate -%}
                 <button type="button"
-                        class="slideshow__autoplay slider-button no-js-hidden{% if section.settings.auto_rotate == false %} slideshow__autoplay--paused{% endif %}"
+                        class="slideshow__autoplay slider-button no-js-hidden{% if section.settings.auto_rotate == false %} slideshow__autoplay--paused{% endif %} {{ section.settings.slider_visual }}"
                         aria-label="{{ 'sections.slideshow.pause_slideshow' | t }}">
                     {%- render 'icon-pause' -%}
                     {%- render 'icon-play' -%}

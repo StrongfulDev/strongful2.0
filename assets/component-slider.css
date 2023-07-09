@@ -371,6 +371,10 @@ slider-component.slider-component-full-width {
     justify-content: center;
 }
 
+.slider-button.dots {
+	display: none;
+}
+
 .slider-button:not([disabled]):hover {
     color: rgb(var(--color-foreground));
 }
