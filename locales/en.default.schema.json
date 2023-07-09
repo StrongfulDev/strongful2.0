@@ -1413,6 +1413,20 @@
             "link": {
               "label": "Mobile image 2 link"
             }
+          },
+          "image__3": {
+            "label": "Mobile image 3",
+            "info": "Another image to show on the mobile drawer top section",
+            "link": {
+              "label": "Mobile image 3 link"
+            }
+          },
+          "image__4": {
+            "label": "Mobile image 4",
+            "info": "Another image to show on the mobile drawer top section",
+            "link": {
+              "label": "Mobile image 4 link"
+            }
           }
         }
       },

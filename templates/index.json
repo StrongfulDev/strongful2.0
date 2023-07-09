@@ -49,12 +49,12 @@
         "55848455-bcdc-421a-b1dd-8847f95e73b9"
       ],
       "custom_css": [
-        ".slider-buttons {position: absolute; bottom: 2em; left: 50%; transform: translateX(-50%);}"
+
       ],
       "settings": {
         "layout": "full_bleed",
         "slide_height": "adapt_image",
-        "slider_visual": "dots",
+        "slider_visual": "sides",
         "auto_rotate": true,
         "change_slides_speed": 9,
         "show_text_below": false,
@@ -78,7 +78,7 @@
         "show_description": false,
         "description_style": "body",
         "collection": "new-in",
-        "products_to_show": 13,
+        "products_to_show": 25,
         "columns_desktop": 5,
         "full_width": true,
         "show_view_all": true,
