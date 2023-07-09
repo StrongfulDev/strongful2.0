@@ -256,18 +256,18 @@
         "settings": {
         }
       },
-      "yoast-seo-metatags": {
-        "type": "shopify:\/\/apps\/yoast-seo-seo-for-everyone\/blocks\/metatags\/7c777011-bc88-4743-a24e-64336e1e5b46",
-        "disabled": false,
-        "settings": {
-        }
-      },
       "8962992520437913685": {
         "type": "shopify:\/\/apps\/yotpo-loyalty-rewards\/blocks\/loader-app-embed-block\/2f9660df-5018-4e02-9868-ee1fb88d6ccd",
         "disabled": true,
         "settings": {
           "inject_modules_loader": true,
           "inject_sdk_loader": true
+        }
+      },
+      "yoast-seo-metatags": {
+        "type": "shopify:\/\/apps\/yoast-seo-seo-for-everyone\/blocks\/metatags\/7c777011-bc88-4743-a24e-64336e1e5b46",
+        "disabled": false,
+        "settings": {
         }
       }
     }

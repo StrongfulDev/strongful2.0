@@ -1,7 +1,7 @@
 {{ 'component-countdown.css' | asset_url | stylesheet_tag }}
 {{ 'component-countdown.js' | asset_url | script_tag }}
 
-<a href="/collections/סטים" id="countdown" class="countdown rtl">
+<a href="/collections/סטים" id="countdown" class="countdown fix-direction" data-date="{{ section.settings.countdown_date }}">
     <div class="countdown-ctn flex">
         <div class="announce-countdown">
             <div id="tiles" class="flex ltr">
@@ -20,8 +20,32 @@
             </div>
         </div>
         <div class="countdown-sale-description-ctn">
-            <p class="countdown-sale-description upper">15% off all site</p>
-            <p class="countdown-sale-description">רק ל24 שעות! לא כולל אאוטלט</p>
+            <p class="countdown-sale-description fix-direction">ל4 שעות בלבד!</p>
+            <p class="countdown-sale-description ltr"> - 15% OFF</p>
         </div>
     </div>
 </a>
+
+{% schema %}
+{
+    "name": "Countdown",
+    "class": "countdown-section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "countdown_date",
+            "label": "Countdown Date",
+            "default": "2021-01-01 00:00:00"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Countdown",
+            "category": "Countdown",
+            "settings": {
+                "countdown_date": "2021-01-01 00:00:00"
+            }
+        }
+    ]
+}
+{% endschema %}

@@ -3845,7 +3845,7 @@ div#enable-toolbar div#enable-toolbar-content, div#enable-toolbar {
 
 #enable-toolbar-trigger-svg {
 	width: 23px !important;
-	right: -8px;
+	right: -6px;
 }
 
 #enable-toolbar-trigger-svg, #enable-toolbar-trigger-svg path {
