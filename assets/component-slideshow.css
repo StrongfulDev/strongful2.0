@@ -142,13 +142,14 @@ slideshow-component:not(.page-width) .slider-buttons {
     display: flex;
 }
 
-.slideshow__autoplay {
+button.slideshow__autoplay {
     position: absolute;
     right: 0;
     border-left: none;
     display: flex;
     justify-content: center;
     align-items: center;
+	display: none;
 }
 
 @media screen and (max-width: 749px) {

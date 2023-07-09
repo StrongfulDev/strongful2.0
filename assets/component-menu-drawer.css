@@ -82,12 +82,12 @@ details[open].menu-opening > .menu-drawer__submenu {
 			visibility: visible;
 }
 
-.dropdown .menu_images {
+.dropdown .menu_images, .menu_images {
 	display: flex;
 	width: calc(100vw - 5rem);
 	overflow-x: auto;
 	overflow-y: hidden;
-padding: 1.5rem;
+  padding: 1.5rem;
 	height: fit-content;
 	background-color: var(--gradient-base-background-3);
 }
@@ -105,7 +105,6 @@ padding: 1.5rem;
 	border-radius: var(--inputs-radius);
 	height: 21rem;
 	object-fit: cover;
-/*  Only temp	*/
 }
 
 .dropdown .mobile-header-closer {
@@ -580,6 +579,36 @@ padding: 1.5rem;
 }
 
 @media screen and (min-width: 990px) {
+
+	.menu_images {
+		direction: ltr;
+		width: auto;
+		padding: 0;
+		padding-bottom: 5px;
+	}
+
+	.menu_images::-webkit-scrollbar-thumb {
+		background: var(--gradient-base-background-4);
+		height: 5px;
+		border-radius: 10px;
+	}
+
+	.menu_images::-webkit-scrollbar {
+		width: 5px;
+		height: 5px;
+		margin-top: 5px;
+	}
+
+	.menu_images::-webkit-scrollbar-track {
+		background: var(--gradient-base-background-3);
+		border-radius: 10px;
+		height: 5px;
+		margin-top: 5px;
+	}
+
+	.dropdown-image-container img {
+		width: 25vw;
+	}
 
 	.dropdown-header__menu-item {
 		color: rgb(var(--color-foreground));
