@@ -7,6 +7,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	text-align: center;
 }
 
 .instagram-ugc-ctn .icon-instagram {
@@ -34,12 +35,40 @@
 	background: var(--gradient-background);
 	color: var(--gradient-base-accent-1);
 	font-weight: var(--font-body-weight-bold);
-	border: 1px solid var(--gradient-base-accent-1);
+	border: 2px solid var(--gradient-base-accent-1);
 	text-decoration: none;
 	text-align: center;
 	padding: 1.5rem;
+	transition: .2s;
 }
 
 .yotpo-gallery-751 .yotpo-display-wrapper .y-slider-container .yotpo-single-image-container {
 	min-width: 170px !important;
+}
+
+@media screen and (min-width: 990px) {
+	.instagram-ugc-ctn {
+		display: grid;
+		grid-template-columns: 30vw 1fr;
+		grid-template-rows: auto auto;
+		column-gap: calc(var(--grid-desktop-horizontal-spacing) * 20);
+		padding: 3rem 20rem;
+	}
+
+	.yotpo-ugc-container {
+		grid-row: 1 / -1;
+	}
+
+	.yotpo.yotpo-pictures-widget {
+		margin: 0 !important;
+	}
+
+	.instagram-ugc-brand-name {
+		font-size: calc(var(--font-body-size-large) * 2.5);
+	}
+
+	.instagram-ugc-btn:hover {
+		background: var(--gradient-base-accent-1);
+		color: var(--gradient-background);
+	}
 }

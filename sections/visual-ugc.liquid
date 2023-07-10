@@ -2,15 +2,19 @@
 
 <div class="instagram-ugc-main">
     <div class="instagram-ugc-ctn page-width">
-        {% render 'icon-instagram' %}
-        <h4 class="instagram-ugc-brand-name upper ltr">@{{ shop.name }}</h4>
+        <div>
+            {% render 'icon-instagram' %}
+            <h4 class="instagram-ugc-brand-name upper ltr">@{{ shop.name }}</h4>
+        </div>
         <div class="yotpo-ugc-container">
             <div class="yotpo yotpo-pictures-widget" data-gallery-id="{{ section.settings.yotpo_widget_id }}"></div>
         </div>
-        <p>{{ section.settings.ugc_text }}</p>
-        <div class="instagram-buttons">
-            <a href="{{ section.settings.instagram_collection_url }}" class="instagram-ugc-btn">{{ section.settings.shop_instagram }}</a>
-            <a href="{{ settings.social_instagram_link }}" class="instagram-ugc-btn">{{ section.settings.follow_us }}</a>
+        <div>
+            <p>{{ section.settings.ugc_text }}</p>
+            <div class="instagram-buttons">
+                <a href="{{ section.settings.instagram_collection_url }}" class="instagram-ugc-btn">{{ section.settings.shop_instagram }}</a>
+                <a href="{{ settings.social_instagram_link }}" class="instagram-ugc-btn">{{ section.settings.follow_us }}</a>
+            </div>
         </div>
     </div>
 </div>
