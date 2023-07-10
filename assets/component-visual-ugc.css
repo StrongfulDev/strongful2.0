@@ -46,6 +46,12 @@
 	min-width: 170px !important;
 }
 
+.yotpo .yotpo-icon-cross:before {
+	background: var(--gradient-base-background-4);
+	border-radius: 50%;
+	padding: 1rem;
+}
+
 @media screen and (min-width: 990px) {
 
 	.instagram-ugc-ctn .icon-instagram {
