@@ -1,0 +1,31 @@
+
+<div>
+
+    <div class="yotpo yotpo-pictures-widget" data-gallery-id="{{ section.settings.yotpo_widget_id }}"></div>
+</div>
+
+{% schema %}
+
+{
+    "name": "Yotpo",
+    "settings": [
+        {
+            "type": "text",
+            "id": "yotpo_widget_id",
+            "label": "Yotpo Widget ID",
+            "default": "643511ba2ed1151bb3dcb2ae",
+            "info": "Enter your Yotpo Widget ID"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Yotpo",
+            "category": "Social media",
+            "settings": {
+                "yotpo_widget_id": "643511ba2ed1151bb3dcb2ae"
+            }
+        }
+    ]
+}
+
+{% endschema %}
