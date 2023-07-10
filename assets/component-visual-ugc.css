@@ -3,10 +3,15 @@
 }
 
 .instagram-ugc-ctn {
-	padding: 1.5rem;
+	padding: 3rem 1.5rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+.instagram-ugc-ctn .icon-instagram {
+	width: 4rem;
+	height: 4rem;
 }
 
 .instagram-ugc-brand-name {
@@ -17,6 +22,22 @@
 
 .yotpo-ugc-container {
 	width: 100%;
+}
+
+.instagram-buttons {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: var(--grid-desktop-horizontal-spacing);
+}
+
+.instagram-ugc-btn {
+	background: var(--gradient-background);
+	color: var(--gradient-base-accent-1);
+	font-weight: var(--font-body-weight-bold);
+	border: 1px solid var(--gradient-base-accent-1);
+	text-decoration: none;
+	text-align: center;
+	padding: 1.5rem;
 }
 
 .yotpo-gallery-751 .yotpo-display-wrapper .y-slider-container .yotpo-single-image-container {

@@ -216,7 +216,11 @@
     "eb801099-3113-4348-8f97-119459011525": {
       "type": "visual-ugc",
       "settings": {
-        "yotpo_widget_id": "643511ba2ed1151bb3dcb2ae"
+        "yotpo_widget_id": "643511ba2ed1151bb3dcb2ae",
+        "instagram_collection_url": "shopify:\/\/collections\/10",
+        "ugc_text": "קופי על האינסטגרם",
+        "shop_instagram": "SHOP INSTAGRAM",
+        "follow_us": "FOLLOW US"
       }
     }
   },
