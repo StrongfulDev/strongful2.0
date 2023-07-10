@@ -850,13 +850,15 @@ class SlideshowComponent extends SliderComponent {
     this.sliderControlButtons[this.currentPage - 1].classList.add('slider-counter__link--active');
     this.sliderControlButtons[this.currentPage - 1].setAttribute('aria-current', true);
 
-	  this.rects.forEach(rect => {
-		  rect.classList.remove('slideshow--rect--active');
-			rect.removeAttribute('aria-current');
-	  });
-		this.rects[this.currentPage - 1].classList.add('slideshow--rect--active');
-		this.rects[this.currentPage - 1].setAttribute('aria-current', true);
-		$(this.rects[this.currentPage - 1]).find(".slideshow--rect-filler").css("animation-duration", this.autoplaySpeed + "ms");
+	  if (this.rects && this.rects.length) {
+		  this.rects.forEach(rect => {
+			  rect.classList.remove('slideshow--rect--active');
+			  rect.removeAttribute('aria-current');
+		  });
+		  this.rects[this.currentPage - 1].classList.add('slideshow--rect--active');
+		  this.rects[this.currentPage - 1].setAttribute('aria-current', true);
+		  $(this.rects[this.currentPage - 1]).find(".slideshow--rect-filler").css("animation-duration", this.autoplaySpeed + "ms");
+	  }
   }
 
   autoPlayToggle() {
