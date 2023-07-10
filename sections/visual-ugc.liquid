@@ -7,6 +7,11 @@
         <div class="yotpo-ugc-container">
             <div class="yotpo yotpo-pictures-widget" data-gallery-id="{{ section.settings.yotpo_widget_id }}"></div>
         </div>
+        <p>{{ section.settings.ugc_text }}</p>
+        <div class="instagram-buttons">
+            <a href="{{ section.settings.instagram_collection_url }}" class="instagram-ugc-btn">{{ section.settings.shop_instagram }}</a>
+            <a href="{{ settings.social_instagram_link }}" class="instagram-ugc-btn">{{ section.settings.follow_us }}</a>
+        </div>
     </div>
 </div>
 
@@ -21,6 +26,26 @@
             "label": "Yotpo Widget ID",
             "default": "643511ba2ed1151bb3dcb2ae",
             "info": "Enter your Yotpo Widget ID"
+        },
+        {
+            "type": "url",
+            "id": "instagram_collection_url",
+            "label": "Instagram Collection URL"
+        },
+        {
+            "type": "text",
+            "id": "ugc_text",
+            "label": "UGC Text"
+        },
+        {
+            "type": "text",
+            "id": "shop_instagram",
+            "label": "Shop Instagram"
+        },
+        {
+            "type": "text",
+            "id": "follow_us",
+            "label": "Follow Us"
         }
     ],
     "presets": [

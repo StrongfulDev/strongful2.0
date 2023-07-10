@@ -12,6 +12,7 @@
 .instagram-ugc-brand-name {
 	font-size: calc(var(--font-body-size-large) * 1.5);
 	font-weight: var(--font-body-weight-bold);
+	margin: var(--grid-desktop-horizontal-spacing) 0;
 }
 
 .yotpo-ugc-container {
