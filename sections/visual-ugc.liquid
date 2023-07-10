@@ -1,7 +1,13 @@
+{{ 'component-visual-ugc.css' | asset_url | stylesheet_tag }}
 
-<div>
-
-    <div class="yotpo yotpo-pictures-widget" data-gallery-id="{{ section.settings.yotpo_widget_id }}"></div>
+<div class="instagram-ugc-main">
+    <div class="instagram-ugc-ctn page-width">
+        {% render 'icon-instagram' %}
+        <h4 class="instagram-ugc-brand-name upper ltr">@{{ shop.name }}</h4>
+        <div class="yotpo-ugc-container">
+            <div class="yotpo yotpo-pictures-widget" data-gallery-id="{{ section.settings.yotpo_widget_id }}"></div>
+        </div>
+    </div>
 </div>
 
 {% schema %}

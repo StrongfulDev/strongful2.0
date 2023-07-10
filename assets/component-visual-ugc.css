@@ -1,0 +1,23 @@
+.instagram-ugc-main {
+	background: var(--gradient-base-background-3);
+}
+
+.instagram-ugc-ctn {
+	padding: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.instagram-ugc-brand-name {
+	font-size: calc(var(--font-body-size-large) * 1.5);
+	font-weight: var(--font-body-weight-bold);
+}
+
+.yotpo-ugc-container {
+	width: 100%;
+}
+
+.yotpo-gallery-751 .yotpo-display-wrapper .y-slider-container .yotpo-single-image-container {
+	min-width: 170px !important;
+}
