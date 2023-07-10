@@ -47,6 +47,12 @@
 }
 
 @media screen and (min-width: 990px) {
+
+	.instagram-ugc-ctn .icon-instagram {
+		width: 5.5rem;
+		height: 5.5rem;
+	}
+
 	.instagram-ugc-ctn {
 		display: grid;
 		grid-template-columns: 30vw 1fr;
@@ -70,5 +76,9 @@
 	.instagram-ugc-btn:hover {
 		background: var(--gradient-base-accent-1);
 		color: var(--gradient-background);
+	}
+
+	.instagram-buttons {
+		column-gap: calc(var(--grid-desktop-horizontal-spacing) * 2);
 	}
 }
