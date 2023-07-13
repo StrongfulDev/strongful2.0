@@ -82,10 +82,6 @@
 	border-radius: var(--inputs-radius);
 }
 
-/*.card .product_variants .size_variant_button {*/
-/*    width: 100%;*/
-/*}*/
-
 .product_variants ul {
     width: 100%;
     column-gap: .5rem;
@@ -130,6 +126,15 @@
 }
 
 @media screen and (min-width: 990px) {
+
+	.quick-add__type-button.hover {
+		position: absolute;
+		bottom: 15%;
+		width: 90%;
+		transform: translateX(50%);
+		right: 50%;
+	}
+
 	.product_variants ul {
 		gap: 1rem .5rem;
 	}
