@@ -3,7 +3,8 @@
 }
 
 .instagram-ugc-ctn {
-	padding: 3rem 1.5rem;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -64,7 +65,6 @@
 		grid-template-columns: 30vw 1fr;
 		grid-template-rows: auto auto;
 		column-gap: calc(var(--grid-desktop-horizontal-spacing) * 20);
-		padding: 3rem 20rem;
 	}
 
 	.yotpo-ugc-container {
