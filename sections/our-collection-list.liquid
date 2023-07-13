@@ -93,9 +93,17 @@
                 {%- else -%}
                   {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
                 {%- endif -%}
-              <span class="our-collections-list-title">
-                {{ block.settings.link }}
-              </span>
+              {% comment %}<span class="our-collections-list-title">{% endcomment %}
+                {% comment %}{{ block.settings.link }}{% endcomment %}
+              {% comment %}</span>{% endcomment %}
+                <div class="desktop_links_image_1_title">
+                    <span>
+                        {{ block.settings.link }}
+                    </span>
+                    <div class="icon-container">
+                        {% render 'icon-caret' %}
+                    </div>
+                </div>
             </a>
           </li>
         {%- endfor -%}
