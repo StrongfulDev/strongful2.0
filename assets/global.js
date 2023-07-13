@@ -1212,6 +1212,11 @@ function removeDeadProduct() {
 
 window.addEventListener('DOMContentLoaded', function() {
 
+	$(".collection-banner-section").on("click", function() {
+		$(this).toggleClass("active");
+		$(this).find(".icon-caret").toggleClass("active");
+	});
+
 	function toggleButtonLoading() {
 		$(this).find('.button-loader-text').addClass('zero-opacity');
 		$(this).find('.loading-overlay__spinner').removeClass('hidden');
