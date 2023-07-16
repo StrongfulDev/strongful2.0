@@ -325,23 +325,23 @@ customElements.define('facet-remove', FacetRemove);
           siblingRound.style.backgroundColor = "#ffffff";
           siblingRound.style.border = "1px solid #000000";
         } else if (colorLabels[i].innerHTML.includes("אדום")) {
-          siblingRound.style.backgroundColor = "#ff0000";
+          siblingRound.style.backgroundColor = "#D81E05";
         } else if (colorLabels[i].innerHTML.includes("כחול")) {
-          siblingRound.style.backgroundColor = "rgb(34, 29, 193)";
+          siblingRound.style.backgroundColor = "#0084C9";
         } else if (colorLabels[i].innerHTML.includes("ירוק")) {
-          siblingRound.style.backgroundColor = "rgb(0, 106, 78)";
+          siblingRound.style.backgroundColor = "#006847";
         } else if (colorLabels[i].innerHTML.includes("ניוד")) {
-          siblingRound.style.backgroundColor = "rgb(225, 205, 180)";
+          siblingRound.style.backgroundColor = "#D8BFAA";
         } else if (colorLabels[i].innerHTML.includes("צהוב")) {
-          siblingRound.style.backgroundColor = "rgb(253, 226, 0)";
+          siblingRound.style.backgroundColor = "#F4E287";
         } else if (colorLabels[i].innerHTML.includes("כתום")) {
-          siblingRound.style.backgroundColor = "rgb(231, 155, 46)";
+          siblingRound.style.backgroundColor = "#FCA311";
         } else if (colorLabels[i].innerHTML.includes("סגול")) {
-          siblingRound.style.backgroundColor = "rgb(126, 11, 128)";
+          siblingRound.style.backgroundColor = "#664975";
         } else if (colorLabels[i].innerHTML.includes("ורוד")) {
-          siblingRound.style.backgroundColor = "rgb(252, 172, 173)";
+          siblingRound.style.backgroundColor = "#FF77A8";
         } else if (colorLabels[i].innerHTML.includes("חום")) {
-          siblingRound.style.backgroundColor = "rgb(123, 79, 44)";
+          siblingRound.style.backgroundColor = "#E9E9E9";
         } else if (colorLabels[i].innerHTML.includes("אפור")) {
           siblingRound.style.backgroundColor = "rgb(217, 217, 217)";
         } else {

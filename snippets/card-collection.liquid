@@ -97,6 +97,11 @@
                             {%- else -%}
                                 {{ 'onboarding.collection_title' | t }}
                             {%- endif -%}
+                            {% if card_collection.description != blank %}
+                                <div class="desktop--only">
+                                    {{ card_collection.description }}
+                                </div>
+                            {% endif %}
                         </a>
                     </h3>
                 </div>
