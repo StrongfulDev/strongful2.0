@@ -22,6 +22,7 @@
   .section-collection-list .collection-list:not(.slider) {
     padding-left: 0;
     padding-right: 0;
+	  padding-bottom: 1rem;
   }
 
 	.collection-list-wrapper {
@@ -115,6 +116,22 @@
 	display: block;
 	padding: var(--grid-mobile-horizontal-spacing) 0;
 	border: 1px solid var(--gradient-base-accent-1);
+}
+
+.collection-list::-webkit-scrollbar {
+	height: 3px;
+	width: calc(100% - 1.5rem);
+	margin-right: 1.5rem;
+}
+
+.collection-list::-webkit-scrollbar-track {
+	background: var(--gradient-base-background-4);
+	margin-right: 1.5rem;
+}
+
+.collection-list::-webkit-scrollbar-thumb {
+	border-radius: var(--inputs-radius);
+	background: var(--gradient-base-accent-1);
 }
 
 @media screen and (min-width: 990px) {
