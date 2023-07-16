@@ -2986,6 +2986,10 @@ details-disclosure > details {
     background-attachment: fixed;
 }
 
+.color-background-2.gradient.collection-list-parent, .color-background-2.gradient.collection-list-parent .gradient {
+	background: #fff;
+}
+
 @media screen and (forced-colors: active) {
     .icon {
         color: CanvasText;

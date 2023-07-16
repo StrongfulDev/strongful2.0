@@ -27,15 +27,13 @@
       role="list"
     >
       {%- for collection in collections -%}
-          {% if collection.metafields.global.color_match.value == 'yes' %}
-              <li class="collection-list__item grid__item">
-                  {% render 'card-collection',
-                    card_collection: collection,
-                    media_aspect_ratio: section.settings.image_ratio,
-                    columns: 4
-                  %}
-                </li>
-            {% endif %}
+          <li class="collection-list__item grid__item">
+              {% render 'card-collection',
+                card_collection: collection,
+                media_aspect_ratio: section.settings.image_ratio,
+                columns: 4
+              %}
+            </li>
       {%- endfor -%}
     </ul>
     {% render 'pagination', paginate: paginate %}
