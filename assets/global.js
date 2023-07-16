@@ -1215,14 +1215,14 @@ window.addEventListener('DOMContentLoaded', function() {
 	let scrollbarTrack = $(".scroll-track");
 	let scrollbarSlider = scrollbarTrack.siblings("ul");
 	let scrollbarThumb = scrollbarTrack.find(".scroll-thumb");
-	console.log(scrollbarTrack);
-	console.log(scrollbarSlider);
-	console.log(scrollbarThumb);
 	// make scrollbar thumb width dynamic
-	scrollbarThumb.css("width", scrollbarSlider.width() / scrollbarSlider[0].scrollWidth * 100 + "%");
-	scrollbarSlider.on("scroll", function() {
-		scrollbarThumb.css("left", scrollbarSlider.scrollLeft() / scrollbarSlider[0].scrollWidth * 100 + "%");
-	});
+
+	if (scrollbarTrack.length) {
+		scrollbarThumb.css("width", scrollbarSlider.width() / scrollbarSlider[0].scrollWidth * 100 + "%");
+		scrollbarSlider.on("scroll", function() {
+			scrollbarThumb.css("left", scrollbarSlider.scrollLeft() / scrollbarSlider[0].scrollWidth * 100 + "%");
+		});
+	}
 
 	$(".collection-banner-section").on("click", function() {
 		$(this).toggleClass("active");
