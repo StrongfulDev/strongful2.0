@@ -500,6 +500,10 @@
 		text-decoration: none;
 	}
 
+	.header-block-list-element:first-child .mega-menu__content.fix-direction ul:nth-child(2) li:first-child a {
+		color: firebrick;
+	}
+
 	.desktop_links_images {
 		max-width: 100%;
 		padding: 0;

@@ -289,6 +289,10 @@ details[open].menu-opening > .menu-drawer__submenu {
 	margin-left: 2rem;
 }
 
+.dropdown .menu-drawer__menu.has-submenu>li:first-child .menu-drawer__menu-list-item:first-child>a {
+	color: firebrick;
+}
+
 .dropdown .menu-drawer summary.menu-drawer__menu-item {
 	justify-content: space-between;
 	padding: 3rem 0;
