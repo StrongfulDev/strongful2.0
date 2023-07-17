@@ -263,7 +263,9 @@ button.slideshow__autoplay {
 @media screen and (min-width: 750px) {
 
 	#Slide-template--15943402684556__slideshow-2 .slideshow__text.banner__box {
-		bottom: 18vh;
+		bottom: 14vh;
+		left: -1vw;
+		transform: translate(0);
 	}
 
 	.whole-slide-link .banner__media img {
@@ -288,7 +290,11 @@ button.slideshow__autoplay {
 
 	.slideshow__text.banner__box {
 		bottom: 7vw;
-		left: 0;
-		transform: translateX(0);
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	#Slide-template--15943402684556__slideshow-3 .slideshow__text.banner__box {
+		bottom: 10vw;
+		left: 40%;
 	}
 }
