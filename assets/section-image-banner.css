@@ -455,8 +455,8 @@
     }
 }
 
-.banner__media + .banner__content .banner__box {
-		padding: calc(var(--grid-desktop-horizontal-spacing) * 2) 0 0;
+.banner__media+.banner__content .banner__box {
+		padding: 0;
 }
 
 .button--primary {
