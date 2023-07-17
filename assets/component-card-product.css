@@ -22,10 +22,6 @@
     display: block;
 }
 
-.card:hover .new-product-span {
-	display: none;
-}
-
 @media screen and (max-width: 749px) {
     .card:hover .quick-add.hover {
         display: none
@@ -126,6 +122,10 @@
 }
 
 @media screen and (min-width: 990px) {
+
+	.card:hover .new-product-span {
+		display: none;
+	}
 
 	.quick-add__type-button.hover {
 		position: absolute;
