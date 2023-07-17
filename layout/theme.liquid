@@ -525,8 +525,10 @@ You can learn more about this (and learn how to cleanly revert these changes) at
     <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
 {{ 'ajaxinate.min.js' | asset_url | script_tag }}
+{% comment %}
 {% if isLiveTheme == 'false' %}
 <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=1c45eb9c-3387-47e8-8fc0-684cd5b825fa"> </script>
 {% endif %}
+{% endcomment %}
 </body>
 </html>
