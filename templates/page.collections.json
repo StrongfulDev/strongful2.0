@@ -58,8 +58,8 @@
         "c1cb3b5d-fa01-4edf-8967-f1afa8ec37fc"
       ],
       "settings": {
-        "flex_grid_type": "flex",
-        "title": "COLORS",
+        "flex_grid_type": "grid",
+        "title": "MAIN COLORS",
         "heading_size": "h2",
         "image_ratio": "square",
         "columns_desktop": 3,
@@ -109,7 +109,7 @@
 
       ],
       "settings": {
-        "flex_grid_type": "flex",
+        "flex_grid_type": "grid",
         "title": "ALL COLORS",
         "heading_size": "h2",
         "image_ratio": "square",
