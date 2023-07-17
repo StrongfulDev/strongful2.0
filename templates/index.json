@@ -3,26 +3,6 @@
     "slideshow": {
       "type": "slideshow",
       "blocks": {
-        "3277eb64-5809-4a51-947a-a04281239741": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/3_e5999345-8aa7-4401-b75e-398d20b2bfb5.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/2_64e20a76-46f1-4987-832b-1ab189db5843.jpg",
-            "heading": "",
-            "whole_slide_link": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/night-sale",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "inverse",
-            "text_alignment_mobile": "center"
-          }
-        },
         "slideshow-block-0": {
           "type": "slide",
           "settings": {
@@ -65,7 +45,6 @@
         }
       },
       "block_order": [
-        "3277eb64-5809-4a51-947a-a04281239741",
         "slideshow-block-0",
         "55848455-bcdc-421a-b1dd-8847f95e73b9"
       ],
@@ -92,13 +71,13 @@
       ],
       "settings": {
         "steps": 4,
-        "title": "NIGHT SALE",
+        "title": "NEW IN",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "night-sale",
+        "collection": "new-in",
         "products_to_show": 25,
         "columns_desktop": 5,
         "full_width": true,
