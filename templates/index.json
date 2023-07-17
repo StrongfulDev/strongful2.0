@@ -3,6 +3,24 @@
     "slideshow": {
       "type": "slideshow",
       "blocks": {
+        "3277eb64-5809-4a51-947a-a04281239741": {
+          "type": "slide",
+          "settings": {
+            "heading": "",
+            "whole_slide_link": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "SHOP NOW",
+            "link": "shopify:\/\/collections\/night-sale",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        },
         "slideshow-block-0": {
           "type": "slide",
           "settings": {
@@ -45,6 +63,7 @@
         }
       },
       "block_order": [
+        "3277eb64-5809-4a51-947a-a04281239741",
         "slideshow-block-0",
         "55848455-bcdc-421a-b1dd-8847f95e73b9"
       ],

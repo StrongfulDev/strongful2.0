@@ -22,14 +22,14 @@
         "7c37c998-83a9-46d6-91fd-3ceaaab10008": {
           "type": "announcement",
           "settings": {
-            "toggle_main_font": true,
+            "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "NEW IN",
-            "sub_text": "Elara Collection",
+            "main_text": "NIGHT SALE",
+            "sub_text": "₪99-₪129 ON SELECTED ITEMS",
             "text_alignment": "center",
             "main_text_direction": "ltr",
-            "sub_text_direction": "rtl",
-            "link": "shopify:\/\/collections\/aura",
+            "sub_text_direction": "ltr",
+            "link": "shopify:\/\/collections\/night-sale",
             "color_scheme": "accent-1"
           }
         },

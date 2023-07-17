@@ -8,19 +8,20 @@
   }
 {%- endstyle -%}
 
+{% if collection.description != blank %}
 <div class="collection-hero{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %} color-{{ section.settings.color_scheme }} gradient page-width">
-  <div class="collection-hero__inner">
-    <div class="collection-hero__text-wrapper">
-      {%- if section.settings.show_collection_description -%}
-        <div class="collection-hero__description fix-direction">{{ collection.description }}</div>
-          {% render 'icon-caret' %}
-      {%- endif -%}
-    </div>
+    <div class="collection-hero__inner">
+        {%- if section.settings.show_collection_description -%}
+            <div class="collection-hero__text-wrapper">
+                <div class="collection-hero__description fix-direction">{{ collection.description }}</div>
+                {% render 'icon-caret' %}
+            </div>
+        {%- endif -%}
 
-    {%- if section.settings.show_collection_image and collection.image -%}
-      <div class="collection-hero__image-container media gradient">
-        <img
-          srcset="
+        {%- if section.settings.show_collection_image and collection.image -%}
+            <div class="collection-hero__image-container media gradient">
+                <img
+                        srcset="
             {%- if collection.image.width >= 165 -%}{{ collection.image | image_url: width: 165 }} 165w,{%- endif -%}
             {%- if collection.image.width >= 360 -%}{{ collection.image | image_url: width: 360 }} 360w,{%- endif -%}
             {%- if collection.image.width >= 535 -%}{{ collection.image | image_url: width: 535 }} 535w,{%- endif -%}
@@ -29,16 +30,17 @@
             {%- if collection.image.width >= 1500 -%}{{ collection.image | image_url: width: 1500 }} 1500w,{%- endif -%}
             {{ collection.image | image_url }} {{ collection.image.width }}w
           "
-          src="{{ collection.image | image_url: width: 750 }}"
-          sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc(50vw - 130px), calc(50vw - 55px)"
-          alt=""
-          width="{{ collection.image.width }}"
-          height="{{ collection.image.height }}"
-        >
-      </div>
-    {%- endif -%}
-  </div>
+                        src="{{ collection.image | image_url: width: 750 }}"
+                        sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc(50vw - 130px), calc(50vw - 55px)"
+                        alt=""
+                        width="{{ collection.image.width }}"
+                        height="{{ collection.image.height }}"
+                >
+            </div>
+        {%- endif -%}
+    </div>
 </div>
+{% endif %}
 
 {% schema %}
 {
