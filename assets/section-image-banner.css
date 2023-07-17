@@ -456,7 +456,7 @@
 }
 
 .banner__media+.banner__content .banner__box {
-		padding: 0;
+		padding: calc(var(--grid-desktop-horizontal-spacing) * 2) 0 0;
 }
 
 .button--primary {
