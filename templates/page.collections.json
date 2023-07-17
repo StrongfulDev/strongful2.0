@@ -58,7 +58,8 @@
         "c1cb3b5d-fa01-4edf-8967-f1afa8ec37fc"
       ],
       "settings": {
-        "title": "THE LATEST",
+        "flex_grid_type": "flex",
+        "title": "COLORS",
         "heading_size": "h2",
         "image_ratio": "square",
         "columns_desktop": 3,
@@ -108,57 +109,8 @@
 
       ],
       "settings": {
-        "title": "MUST HAVES",
-        "heading_size": "h2",
-        "image_ratio": "square",
-        "columns_desktop": 4,
-        "color_scheme": "background-1",
-        "show_view_all": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "3ab98696-e6d3-48cc-8a6d-306d8fbda4e3": {
-      "type": "collection-list",
-      "blocks": {
-        "template--15997288448140__3ab98696-e6d3-48cc-8a6d-306d8fbda4e3-1689518636b68091ba-0": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "אפור-בהיר"
-          }
-        },
-        "template--15997288448140__3ab98696-e6d3-48cc-8a6d-306d8fbda4e3-1689518636b68091ba-1": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "gray"
-          }
-        },
-        "template--15997288448140__3ab98696-e6d3-48cc-8a6d-306d8fbda4e3-1689518636b68091ba-2": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "pink"
-          }
-        },
-        "a80dcd66-dd22-40af-8972-d6c916459ede": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "brown"
-          }
-        }
-      },
-      "block_order": [
-        "template--15997288448140__3ab98696-e6d3-48cc-8a6d-306d8fbda4e3-1689518636b68091ba-0",
-        "template--15997288448140__3ab98696-e6d3-48cc-8a6d-306d8fbda4e3-1689518636b68091ba-1",
-        "template--15997288448140__3ab98696-e6d3-48cc-8a6d-306d8fbda4e3-1689518636b68091ba-2",
-        "a80dcd66-dd22-40af-8972-d6c916459ede"
-      ],
-      "custom_css": [
-
-      ],
-      "settings": {
-        "title": "ESSENTIALS",
+        "flex_grid_type": "flex",
+        "title": "ALL COLORS",
         "heading_size": "h2",
         "image_ratio": "square",
         "columns_desktop": 4,
@@ -174,7 +126,6 @@
   "order": [
     "acf939bd-5491-4a74-9af2-c68c2a2197f5",
     "c35db756-49b5-44be-8b5e-d174014e4957",
-    "f161594f-d389-491b-9906-e8a3bd1f8fe3",
-    "3ab98696-e6d3-48cc-8a6d-306d8fbda4e3"
+    "f161594f-d389-491b-9906-e8a3bd1f8fe3"
   ]
 }

@@ -26,7 +26,7 @@
   endif
 -%}
 
-<div class="color-{{ section.settings.color_scheme }} gradient collection-list-parent">
+<div class="color-{{ section.settings.color_scheme }} gradient collection-list-parent {{ section.settings.flex_grid_type }}">
   <div class="collection-list-wrapper page-width isolate{% if show_mobile_slider %} page-width-desktop{% endif %}{% if section.settings.title == blank %} no-heading{% endif %}{% if section.settings.show_view_all == false or section.blocks.size > collections.size %} no-mobile-link{% endif %} section-{{ section.id }}-padding">
     {%- unless section.settings.title == blank -%}
       <div class="title-wrapper-with-link{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %} title-wrapper--no-top-margin">
@@ -130,6 +130,22 @@
     ]
   },
   "settings": [
+      {
+        "type": "select",
+        "id": "flex_grid_type",
+        "label": "choose if display should be flexbox or grid",
+        "default": "flex",
+        "options": [
+          {
+            "value": "grid",
+            "label": "Grid Display"
+          },
+          {
+            "value": "flex",
+            "label": "Flexbox Display"
+          }
+        ]
+      },
     {
       "type": "text",
       "id": "title",
