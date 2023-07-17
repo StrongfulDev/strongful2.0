@@ -227,7 +227,7 @@
                                 </div>
                             </div>
                         {%- endif -%}
-                        {% if card_product.tags contains 'new' or card_product.tags contains 'NEW' %}
+                        {% if card_product.tags contains 'new' or card_product.tags contains 'NEW' or card_product.tags contains 'new-in' %}
                             <span class="new-product-span">
                                 {{ 'products.product.new' | t }}
                             </span>
