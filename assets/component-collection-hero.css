@@ -123,10 +123,11 @@
 
 	.collection-banner-section {
 		height: 7rem;
-		overflow-y: auto;
+		overflow-y: hidden;
 	}
 
 	.collection-banner-section.active {
 		height: auto;
+		overflow-y: auto;
 	}
 }
