@@ -151,8 +151,8 @@ cart-remove-button .button:not([disabled]):hover {
 }
 
 cart-remove-button .icon-remove {
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 1.5rem !important;
+  width: 1.5rem !important;
 }
 
 .cart-item .loading-overlay {

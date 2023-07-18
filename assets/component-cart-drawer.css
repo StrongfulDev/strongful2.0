@@ -100,6 +100,8 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
 }
 
 .kettle-reward {
+	width: 10px !important;
+	height: 10px !important;
 	fill: var(--gradient-background);
 }
 
@@ -122,8 +124,8 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
 }
 
 .drawer__close svg {
-	height: 1.4rem;
-	width: 1.4rem;
+	height: 1.4rem !important;
+	width: 1.4rem !important;
 	fill: var(--gradient-background);
 	stroke: var(--gradient-background);
 }
@@ -526,6 +528,8 @@ cart-drawer-items.is-empty {
 }
 
 .reward-item.active-reward .kettle-light {
+	width: 10px !important;
+	height: 10px !important;
 	display: inline;
 }
 
