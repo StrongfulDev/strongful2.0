@@ -49,7 +49,7 @@
 
     <slider-component class="slider-mobile-gutter">
       <ul
-        class="collection-list contains-card contains-card--collection{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} {{ section.settings.flex_grid_type }} grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down{% if section.settings.swipe_on_mobile %} slider slider--tablet grid--peek{% endif %} collection-list--{{ section.blocks.size }}-items"
+        class="collection-list contains-card contains-card--collection{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down{% if section.settings.swipe_on_mobile %} slider slider--tablet grid--peek{% endif %} collection-list--{{ section.blocks.size }}-items"
         id="Slider-{{ section.id }}"
         role="list"
       >
@@ -69,7 +69,8 @@
               card_collection: block.settings.collection,
               media_aspect_ratio: section.settings.image_ratio,
               columns: columns,
-                color: card_collection.metafields.global.collection_color
+                color: card_collection.metafields.global.collection_color,
+                imageChecker: section.settings.images_or_colors
             %}
           </li>
         {%- endfor -%}
@@ -132,17 +133,17 @@
   "settings": [
       {
         "type": "select",
-        "id": "flex_grid_type",
-        "label": "choose if display should be flexbox or grid",
-        "default": "flex",
+        "id": "images_or_colors",
+        "label": "Choose if the collection list will display images or colors",
+        "default": "images",
         "options": [
           {
-            "value": "grid",
-            "label": "Grid Display"
+            "value": "images",
+            "label": "Images Display"
           },
           {
-            "value": "flex",
-            "label": "Flexbox Display"
+            "value": "colors",
+            "label": "Colors Display"
           },
           {
             "value": "",

@@ -9,6 +9,7 @@
   - extend_height: {Boolean} Card height extends to available container space. Default: false (optional)
   - wrapper_class: {String} Wrapper class for card (optional)
   - custom_card_style: {String} Use to set a custom card style other than the theme's default (optional)
+  - imageChecker: {Boolean} Use to check if should display images or colors (optional)
 
   Usage:
   {% render 'card-collection' %}
@@ -35,7 +36,7 @@
 -%}
 
 <div class="card-wrapper animate-arrow {% if wrapper_class and wrapper_class != 'none' %}{{ wrapper_class }}{% else %}collection-card-wrapper{% endif %}
-{% if value != blank %}collection-color-card fix-direction{% endif %}">
+{% if imageChecker == 'colors' %}collection-color-card fix-direction{% endif %}">
     <div
             class="
       card
@@ -47,12 +48,11 @@
     "
             style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
     >
-        {% if value == blank %}
+        {% if imageChecker != 'colors' %}
             <div
                 class="card__inner {% if card_style == 'standard' %}color-{{ card_color_scheme }} gradient{% endif %}{% if card_collection.featured_image or card_style == 'standard' %} ratio{% endif %}"
-                style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
-        >
-            {%- if card_collection.featured_image and value == blank -%}
+                style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
+            {%- if card_collection.featured_image -%}
                 <div class="card__media {{ value }}">
                     <div class="media media--transparent media--hover-effect">
                         <img
@@ -107,7 +107,7 @@
                 </div>
             </div>
         </div>
-        {% else %}
+        {% elsif imageChecker == 'colors' %}
         <div class="collection-color-wrapper">
             <span class="shop-by-color-circle" style="background: {{ value }}"></span>
         </div>

@@ -325,25 +325,25 @@ customElements.define('facet-remove', FacetRemove);
           siblingRound.style.backgroundColor = "#ffffff";
           siblingRound.style.border = "1px solid #000000";
         } else if (colorLabels[i].innerHTML.includes("אדום")) {
-          siblingRound.style.backgroundColor = "#D81E05";
+          siblingRound.style.backgroundColor = "#d81e06";
         } else if (colorLabels[i].innerHTML.includes("כחול")) {
-          siblingRound.style.backgroundColor = "#0084C9";
+          siblingRound.style.backgroundColor = "#0084c9";
         } else if (colorLabels[i].innerHTML.includes("ירוק")) {
-          siblingRound.style.backgroundColor = "#006847";
+          siblingRound.style.backgroundColor = "#016847";
         } else if (colorLabels[i].innerHTML.includes("ניוד")) {
-          siblingRound.style.backgroundColor = "#D8BFAA";
+          siblingRound.style.backgroundColor = "#d8bfaa";
         } else if (colorLabels[i].innerHTML.includes("צהוב")) {
-          siblingRound.style.backgroundColor = "#F4E287";
+          siblingRound.style.backgroundColor = "#f4e287";
         } else if (colorLabels[i].innerHTML.includes("כתום")) {
-          siblingRound.style.backgroundColor = "#FCA311";
+          siblingRound.style.backgroundColor = "#fda310";
         } else if (colorLabels[i].innerHTML.includes("סגול")) {
           siblingRound.style.backgroundColor = "#664975";
         } else if (colorLabels[i].innerHTML.includes("ורוד")) {
-          siblingRound.style.backgroundColor = "#FF77A8";
+          siblingRound.style.backgroundColor = "#ff77a8";
         } else if (colorLabels[i].innerHTML.includes("חום")) {
-          siblingRound.style.backgroundColor = "#E9E9E9";
+          siblingRound.style.backgroundColor = "#472311";
         } else if (colorLabels[i].innerHTML.includes("אפור")) {
-          siblingRound.style.backgroundColor = "rgb(217, 217, 217)";
+          siblingRound.style.backgroundColor = "#a3a8a3";
         } else {
           console.log("no color");
         }
