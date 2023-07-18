@@ -10,6 +10,10 @@
   padding-bottom: 2rem;
 }
 
+.collection-hero__description span {
+	color: var(--gradient-base-accent-3);
+}
+
 @media screen and (min-width: 990px) {
   .collection-hero.collection-hero--with-image {
     padding: calc(4rem + var(--page-width-margin)) 0

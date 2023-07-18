@@ -181,6 +181,7 @@ div:not(.product-size-picker-container) .variant-button .size_variant_button:not
 
 .product_details__info .discount-price-container .rect-discount-tag {
 	margin: 6px 0;
+	width: fit-content;
 }
 
 .card--standard:not(.card--horizontal) > .card__content .card__badge:has(> .badge.color-custom-red) {
