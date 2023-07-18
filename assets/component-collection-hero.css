@@ -12,6 +12,7 @@
 
 .collection-hero__description span {
 	color: var(--gradient-base-accent-3);
+	font-size: calc(var(--font-body-size-medium) * 0.9);
 }
 
 @media screen and (min-width: 990px) {
