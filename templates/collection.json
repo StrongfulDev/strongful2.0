@@ -19,8 +19,8 @@
         ".media > *:not(.zoom):not(.deferred-media__poster-button),.media model-viewer {position: static; object-fit: cover;}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Artboard_1_2x-100.jpg",
-        "mobile_image": "shopify:\/\/shop_images\/1_661036cc-2b61-4559-8323-f02cdc6bc5d4.jpg",
+        "image": "shopify:\/\/shop_images\/0_84f8cc25-bf92-423b-8838-5fe7c94cc656.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/shorts0.jpg",
         "image_overlay_opacity": 0,
         "image_height": "auto",
         "desktop_content_position": "middle-center",
