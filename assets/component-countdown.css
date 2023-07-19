@@ -24,7 +24,7 @@
 	margin: auto;
 }
 
-.countdown-sale-description {
+.countdown-sale-description-ctn p {
 	color: rgb(var(--color-base-background-1));
 	font-weight: 600;
 	margin: 0;

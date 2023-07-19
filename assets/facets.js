@@ -144,7 +144,8 @@ class FacetFiltersForm extends HTMLElement {
       const activeFacetsElement = html.querySelector(selector);
       if (!activeFacetsElement) return;
       document.querySelector(selector).innerHTML = activeFacetsElement.innerHTML;
-      hideInStockFacet();
+      // hideInStockFacet();
+			setTimeout(hideInStockFacet, 1000);
     })
 
     FacetFiltersForm.toggleActiveFacets(false);
@@ -162,7 +163,9 @@ class FacetFiltersForm extends HTMLElement {
       document.querySelector(selector).innerHTML = html.querySelector(selector).innerHTML;
     });
 
-    document.getElementById('FacetFiltersFormMobile').closest('menu-drawer').bindEvents();
+		if (!document.getElementById('FacetFiltersFormMobile').classList.contains('farfetch-forms-mobile')) {
+			document.getElementById('FacetFiltersFormMobile').closest('menu-drawer').bindEvents();
+		}
   }
 
   static renderCounts(source, target) {
@@ -228,7 +231,7 @@ class FacetFiltersForm extends HTMLElement {
       this.onSubmitForm(searchParams, event)
     } else {
       const forms = [];
-      const isMobile = event.target.closest('form').id === 'FacetFiltersFormMobile';
+      const isMobile = event.target.closest('form').id === 'FacetFiltersFormMobile' || event.target.closest('form').id === 'FarfetchFiltersFormMobile';
 
       sortFilterForms.forEach((form) => {
         if (!isMobile) {
@@ -237,7 +240,7 @@ class FacetFiltersForm extends HTMLElement {
             noJsElements.forEach((el) => el.remove());
             forms.push(this.createSearchParams(form));
           }
-        } else if (form.id === 'FacetFiltersFormMobile') {
+        } else if (form.id === 'FacetFiltersFormMobile' || form.id === 'FarfetchFiltersFormMobile') {
           forms.push(this.createSearchParams(form));
         }
       });
@@ -344,8 +347,6 @@ customElements.define('facet-remove', FacetRemove);
           siblingRound.style.backgroundColor = "#472311";
         } else if (colorLabels[i].innerHTML.includes("אפור")) {
           siblingRound.style.backgroundColor = "#a3a8a3";
-        } else {
-          console.log("no color");
         }
       }
  }
@@ -382,17 +383,19 @@ function sizeRounds(dom) {
 }
 
 function hideInStockFacet() {
-  let spans = document.querySelectorAll('.active-facets__button-inner');
-  spans.forEach(function(span) {
-    if (span.innerText.includes('Availability')) {
-      $(span).parents('facet-remove').addClass('hidden');
-    }
-  });
+  let links = document.querySelectorAll('.active-facets__button');
+	console.log(links);
+	for (let i = 0; i < links.length; i++) {
+		if (links[i].href.includes("availability")) {
+			links[i].closest("facet-remove").style.display = "none";
+		}
+	}
 }
 
 colorRounds(document);
 sizeRounds(document);
-hideInStockFacet();
+// hideInStockFacet();
+setTimeout(hideInStockFacet, 1500);
 
 function onlyShowIfInStock() {
 	const inputsToQuery = $(".facet-checkbox").find("input");

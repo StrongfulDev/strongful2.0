@@ -1,15 +1,16 @@
 {{ 'component-countdown.css' | asset_url | stylesheet_tag }}
 {{ 'component-countdown.js' | asset_url | script_tag }}
 
-<a href="/collections/סטים" id="countdown" class="countdown fix-direction" data-date="{{ section.settings.countdown_date }}">
+<a href="{{ section.settings.countdown_url }}" id="countdown" class="countdown fix-direction" data-date="{{ section.settings.countdown_date }}">
     <div class="countdown-ctn flex">
-        {% comment %}<div class="countdown-sale-description-ctn">{% endcomment %}
-            {% comment %}<p class="countdown-sale-description fix-direction">₪99 - ₪119</p>{% endcomment %}
-            {% comment %}<p class="countdown-sale-description fix-direction">AURA COLLECTION</p>{% endcomment %}
-        {% comment %}</div>{% endcomment %}
         <div class="announce-countdown">
+            {% if section.settings.right_text %}
+                <div class="countdown-sale-description-ctn">
+                    {{ section.settings.right_copy }}
+                </div>
+            {% endif %}
             <div id="tiles" class="flex ltr">
-                <div class="tiles-div tiles-div-days">
+                <div class="tiles-div tiles-div-days {% unless section.settings.show_days %}hidden{% endunless %}">
                     <p class="tiles-time tiles-time-days"></p>
                 </div>
                 <div class="tiles-div tiles-div-hours">
@@ -23,9 +24,11 @@
                 </div>
             </div>
         </div>
-        <div class="countdown-sale-description-ctn">
-            <p class="countdown-sale-description fix-direction">NIGHT SALE</p>
-        </div>
+        {% if section.settings.left_text %}
+            <div class="countdown-sale-description-ctn">
+                {{ section.settings.left_copy }}
+            </div>
+        {% endif %}
     </div>
 </a>
 
@@ -35,10 +38,40 @@
     "class": "countdown-section",
     "settings": [
         {
+            "type": "checkbox",
+            "id": "show_days",
+            "label": "Show Days"
+        },
+        {
             "type": "text",
             "id": "countdown_date",
             "label": "Countdown Date",
-            "default": "2021-01-01 00:00:00"
+            "default": "Sun Jul 23 2023 12:00:00 GMT+0300 (שעון ישראל (קיץ))"
+        },
+        {
+            "type": "url",
+            "id": "countdown_url",
+            "label": "Countdown URL"
+        },
+        {
+            "type": "checkbox",
+            "id": "left_text",
+            "label": "Left text toggler"
+        },
+        {
+            "type": "richtext",
+            "id": "left_copy",
+            "label": "Left text content"
+        },
+        {
+            "type": "checkbox",
+            "id": "right_text",
+            "label": "Right text toggler"
+        },
+        {
+            "type": "richtext",
+            "id": "right_copy",
+            "label": "Right text content"
         }
     ],
     "presets": [
@@ -46,7 +79,7 @@
             "name": "Countdown",
             "category": "Countdown",
             "settings": {
-                "countdown_date": "2021-01-01 00:00:00"
+                "countdown_date": "Sun Jul 23 2023 12:00:00 GMT+0300 (שעון ישראל (קיץ))"
             }
         }
     ]

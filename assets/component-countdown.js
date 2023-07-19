@@ -1,6 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-	let target_date = new Date("Tue Jul 18 2023 08:00:00 GMT+0300 (שעון ישראל (קיץ))").getTime() + (1000*24);
+	let data = document.getElementById("countdown").dataset.date;
+	let target_date = new Date(data).getTime() + (1000*24);
 	let days, hours, minutes, seconds;
 
 	if (document.getElementById('tiles') != null) {
@@ -24,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			minutes = pad(parseInt(seconds_left / 60));
 			seconds = pad(parseInt(seconds_left % 60));
 
-			// $('.tiles-time-days').html(days);
+			$('.tiles-time-days').html(days);
 			$('.tiles-time-hours').html(hours);
 			$('.tiles-time-minutes').html(minutes);
 			$('.tiles-time-seconds').html(seconds);
