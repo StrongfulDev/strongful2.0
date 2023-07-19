@@ -286,7 +286,12 @@
       "type": "countdown",
       "settings": {
         "countdown_date": "Sun Jul 23 2023 12:00:00 GMT+0300 (שעון ישראל (קיץ))",
-        "countdown_url": "shopify:\/\/collections\/up-to-40"
+        "countdown_url": "shopify:\/\/collections\/up-to-40",
+        "show_days": true,
+        "left_text": true,
+        "left_copy": "<p>WEEKEND SALE<\/p>",
+        "right_text": false,
+        "right_copy": ""
       }
     }
   },
