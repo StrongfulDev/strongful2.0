@@ -455,7 +455,7 @@
     }
 }
 
-.banner__media + .banner__content .banner__box {
+.banner__media+.banner__content .banner__box {
 		padding: calc(var(--grid-desktop-horizontal-spacing) * 2) 0 0;
 }
 

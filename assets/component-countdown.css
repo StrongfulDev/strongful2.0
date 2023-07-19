@@ -1,3 +1,8 @@
+.countdown-section {
+	position: sticky;
+	top: 63px;
+	z-index: 4;
+}
 
 .countdown {
 	display: block;
@@ -12,13 +17,14 @@
 }
 
 .countdown-ctn {
-	justify-content: space-between;
+	justify-content: center;
+	column-gap: 1rem;
 	align-items: center;
-	width: 80%;
+	width: 90%;
 	margin: auto;
 }
 
-.countdown-sale-description {
+.countdown-sale-description-ctn p {
 	color: rgb(var(--color-base-background-1));
 	font-weight: 600;
 	margin: 0;
@@ -31,7 +37,7 @@
 	direction: ltr;
 }
 
-.countdown-sale-description:last-child {
+.countdown-sale-description:nth-child(2) {
 	font-size: .8em;
 	direction: rtl;
 }

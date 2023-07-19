@@ -5,9 +5,11 @@
   - card_collection: {Object} Collection Liquid object
   - media_aspect_ratio: {String} Size of the product image card. Values are "square" and "portrait". Default is "square" (optional)
   - columns: {Number}
+  - color: {String} Color for card (if it has any). Values are hex codes from metafields (optional)
   - extend_height: {Boolean} Card height extends to available container space. Default: false (optional)
   - wrapper_class: {String} Wrapper class for card (optional)
   - custom_card_style: {String} Use to set a custom card style other than the theme's default (optional)
+  - imageChecker: {Boolean} Use to check if should display images or colors (optional)
 
   Usage:
   {% render 'card-collection' %}
@@ -29,9 +31,12 @@
         assign card_color_scheme = settings.collection_card_color_scheme
         assign card_style = settings.collection_card_style
     endif
+
+    assign value = card_collection.metafields.global.collection_color.value
 -%}
 
-<div class="card-wrapper animate-arrow {% if wrapper_class and wrapper_class != 'none' %}{{ wrapper_class }}{% else %}collection-card-wrapper{% endif %}">
+<div class="card-wrapper animate-arrow {% if wrapper_class and wrapper_class != 'none' %}{{ wrapper_class }}{% else %}collection-card-wrapper{% endif %}
+{% if imageChecker == 'colors' %}collection-color-card fix-direction{% endif %}">
     <div
             class="
       card
@@ -43,12 +48,12 @@
     "
             style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
     >
-        <div
+        {% if imageChecker != 'colors' %}
+            <div
                 class="card__inner {% if card_style == 'standard' %}color-{{ card_color_scheme }} gradient{% endif %}{% if card_collection.featured_image or card_style == 'standard' %} ratio{% endif %}"
-                style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
-        >
+                style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
             {%- if card_collection.featured_image -%}
-                <div class="card__media">
+                <div class="card__media {{ value }}">
                     <div class="media media--transparent media--hover-effect">
                         <img
                                 srcset="
@@ -92,20 +97,21 @@
                             {%- else -%}
                                 {{ 'onboarding.collection_title' | t }}
                             {%- endif -%}
-                            {%- if card_collection.description == blank and card_style != "standard_overlay" -%}
-                                <span class="icon-wrap">{% render 'icon-arrow' %}</span>
-                            {%- endif %}
+                            {% if card_collection.description != blank %}
+                                <div class="desktop--only">
+                                    {{ card_collection.description }}
+                                </div>
+                            {% endif %}
                         </a>
                     </h3>
-                    {%- if card_collection.description != blank -%}
-                        <p class="card__caption">
-                            {{- card_collection.description | strip_html | truncatewords: 12 -}}
-                            <span class="icon-wrap">&nbsp;{% render 'icon-arrow' %}</span>
-                        </p>
-                    {%- endif -%}
                 </div>
             </div>
         </div>
+        {% elsif imageChecker == 'colors' %}
+        <div class="collection-color-wrapper">
+            <span class="shop-by-color-circle" style="background: {{ value }}"></span>
+        </div>
+        {% endif %}
         {% if card_style == 'card' %}
             <div class="card__content">
                 <div class="card__information">
@@ -123,17 +129,8 @@
                             {%- else -%}
                                 {{ 'onboarding.collection_title' | t }}
                             {%- endif -%}
-                            {%- if card_collection.featured_image or card_collection.description == blank -%}
-                                <span class="icon-wrap">{% render 'icon-arrow' %}</span>
-                            {%- endif %}
                         </a>
                     </h3>
-                    {%- if card_collection.featured_image == null and card_collection.description != blank -%}
-                        <p class="card__caption">
-                            {{- card_collection.description | strip_html | truncatewords: 12 -}}
-                            <span class="icon-wrap">&nbsp;{% render 'icon-arrow' %}</span>
-                        </p>
-                    {%- endif -%}
                 </div>
             </div>
         {% endif %}

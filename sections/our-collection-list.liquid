@@ -74,32 +74,32 @@
           <li
             id="Slide-{{ section.id }}-{{ forloop.index }}"
             class="collection-list__item grid__item{% if show_mobile_slider %} slider__slide{% endif %}{% if block.settings.collection.featured_image == nil %} collection-list__item--no-media{% endif %}">
-            {% comment %}
-            {% render 'card-collection',
-            card_collection: block.settings.collection,
-            media_aspect_ratio: section.settings.image_ratio,
-            columns: columns,
-            wrapper_class: wrapper_class,
-            custom_card_style: custom_card_style
-            %}
-            {% endcomment %}
             <a href="{{ block.settings.url }}" class="our-collections-list-link">
                 {%- if block.settings.image -%}
                   {{ block.settings.image | image_url: width: 1500 | image_tag:
-                  loading: 'lazy',
                   sizes: "100vw",
                   widths: '375, 550, 750, 1100, 1500',
                   class: 'our-collections-list-image__img' }}
                 {%- else -%}
                   {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
                 {%- endif -%}
-              <span class="our-collections-list-title">
-                {{ block.settings.link }}
-              </span>
+                <div class="desktop_links_image_1_title">
+                    <span>
+                        {{ block.settings.link }}
+                    </span>
+                    <div class="icon-container">
+                        {% render 'icon-caret' %}
+                    </div>
+                </div>
             </a>
           </li>
         {%- endfor -%}
       </ul>
+        {% if section.settings.show_scrollbar %}
+            <div class="scroll-track mobile--only">
+                <div class="scroll-thumb" style="display: block;"></div>
+            </div>
+        {% endif %}
       {%- if show_mobile_slider -%}
         <div class="slider-buttons no-js-hidden">
           <button
@@ -155,6 +155,12 @@
     ]
   },
   "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_scrollbar",
+        "default": false,
+        "label": "Show Scrollbar"
+      },
     {
       "type": "text",
       "id": "title",

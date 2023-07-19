@@ -1,0 +1,100 @@
+.instagram-ugc-main {
+	background: var(--gradient-base-background-3);
+}
+
+.instagram-ugc-ctn {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.instagram-ugc-ctn .icon-instagram {
+	width: 4rem;
+	height: 4rem;
+}
+
+.instagram-ugc-brand-name {
+	font-size: calc(var(--font-body-size-large) * 1.5);
+	font-weight: var(--font-body-weight-bold);
+	margin: var(--grid-desktop-horizontal-spacing) 0;
+}
+
+.yotpo-ugc-container {
+	width: 100%;
+}
+
+.instagram-buttons {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: var(--grid-desktop-horizontal-spacing);
+}
+
+.instagram-ugc-btn {
+	background: var(--gradient-background);
+	color: var(--gradient-base-accent-1);
+	font-weight: var(--font-body-weight-bold);
+	border: 2px solid var(--gradient-base-accent-1);
+	border-radius: var(--inputs-radius);
+	text-decoration: none;
+	text-align: center;
+	padding: 1.5rem;
+	transition: .2s;
+}
+
+.instagram-ugc-btn:first-child {
+	background: var(--gradient-base-accent-1);
+	color: var(--gradient-background);
+}
+
+.yotpo-gallery-751 .yotpo-display-wrapper .y-slider-container .yotpo-single-image-container {
+	min-width: 170px !important;
+}
+
+.yotpo .yotpo-icon-cross:before {
+	background: var(--gradient-base-background-4);
+	border-radius: 50%;
+	padding: 1rem;
+}
+
+@media screen and (min-width: 990px) {
+
+	.instagram-ugc-ctn .icon-instagram {
+		width: 5.5rem;
+		height: 5.5rem;
+	}
+
+	.instagram-ugc-ctn {
+		display: grid;
+		grid-template-columns: 30vw 1fr;
+		grid-template-rows: auto auto;
+		column-gap: calc(var(--grid-desktop-horizontal-spacing) * 20);
+	}
+
+	.yotpo-ugc-container {
+		grid-row: 1 / -1;
+	}
+
+	.yotpo.yotpo-pictures-widget {
+		margin: 0 !important;
+	}
+
+	.instagram-ugc-brand-name {
+		font-size: calc(var(--font-body-size-large) * 2.5);
+	}
+
+	.instagram-ugc-btn:hover {
+		background: var(--gradient-base-accent-1);
+		color: var(--gradient-background);
+	}
+
+	.instagram-buttons {
+		column-gap: calc(var(--grid-desktop-horizontal-spacing) * 2);
+	}
+
+	.ugc-text {
+		font-size: var(--font-body-size-large);
+	}
+}

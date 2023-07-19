@@ -91,6 +91,11 @@
                                 style="display: none;"
                             {% endif %}
                     >
+                        {% if product.tags contains 'new' %}
+                            <span class="new-product-span">
+                                {{ 'products.product.new' | t }}
+                            </span>
+                        {% endif %}
                         {%- assign media_position = 1 -%}
                         {% render 'product-thumbnail',
                                 media: featured_media,

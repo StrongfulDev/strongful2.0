@@ -42,6 +42,12 @@
     top: 100%;
   }
 
+  .dropdown .predictive-search--header {
+	  position: relative;
+	  top: 0;
+	  overflow-y: scroll;
+  }
+
   .predictive-search__results-groups-wrapper {
     flex-direction: column;
   }
@@ -298,10 +304,10 @@ predictive-search[loading]
 		left: auto;
 	}
 
-	.header__search details[open] .modal-overlay::after {
+	.header__search details[open] .modal-overlay:after {
 		top: 6rem;
 		width: 120vw;
-		right: -11vw;
+		right: -14vw;
 	}
 
 	.modal__close-button.link {

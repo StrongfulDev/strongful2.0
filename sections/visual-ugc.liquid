@@ -1,0 +1,66 @@
+{{ 'component-visual-ugc.css' | asset_url | stylesheet_tag }}
+
+<div class="instagram-ugc-main">
+    <div class="instagram-ugc-ctn page-width full-width-padding">
+        <div>
+            {% render 'icon-instagram' %}
+            <h4 class="instagram-ugc-brand-name upper ltr">@{{ shop.name }}_co</h4>
+        </div>
+        <div class="yotpo-ugc-container">
+            <div class="yotpo yotpo-pictures-widget" data-gallery-id="{{ section.settings.yotpo_widget_id }}"></div>
+        </div>
+        <div>
+            <p class="ugc-text">{{ section.settings.ugc_text }}</p>
+            <div class="instagram-buttons">
+                <a href="{{ section.settings.instagram_collection_url }}" class="instagram-ugc-btn">{{ section.settings.shop_instagram }}</a>
+                <a href="{{ settings.social_instagram_link }}" class="instagram-ugc-btn">{{ section.settings.follow_us }}</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+
+{
+    "name": "Yotpo",
+    "settings": [
+        {
+            "type": "text",
+            "id": "yotpo_widget_id",
+            "label": "Yotpo Widget ID",
+            "default": "643511ba2ed1151bb3dcb2ae",
+            "info": "Enter your Yotpo Widget ID"
+        },
+        {
+            "type": "url",
+            "id": "instagram_collection_url",
+            "label": "Instagram Collection URL"
+        },
+        {
+            "type": "text",
+            "id": "ugc_text",
+            "label": "UGC Text"
+        },
+        {
+            "type": "text",
+            "id": "shop_instagram",
+            "label": "Shop Instagram"
+        },
+        {
+            "type": "text",
+            "id": "follow_us",
+            "label": "Follow Us"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Yotpo",
+            "category": "Social media",
+            "settings": {
+                "yotpo_widget_id": "643511ba2ed1151bb3dcb2ae"
+            }
+        }
+    ]
+}
+
+{% endschema %}

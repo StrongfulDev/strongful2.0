@@ -2,10 +2,10 @@
 window.addEventListener('DOMContentLoaded', () => {
 
 	const listItem = $(".multicolumn-list__item");
-	const loginListItem = $(".multicolumn-list__item[data-account='login']");
 	const registerListItem = $(".multicolumn-list__item[data-account='register']");
 	const customerOverlay = $(".custom-login-overlay");
 	const borderPosition = $("#js-border-position");
+	let cartDrawer = $(".drawer");
 	let customerSection;
 	let secondaryLogo;
 
@@ -16,6 +16,10 @@ window.addEventListener('DOMContentLoaded', () => {
 		$(".custom-customer-account-container").addClass("active");
 		customerOverlay.removeClass("hidden");
 		animations(registerListItem);
+
+		if (cartDrawer.hasClass("active")) {
+			cartDrawer.removeClass("active");
+		}
 	});
 
 	$(".close-custom-account-container").click(closePopup);
@@ -49,29 +53,4 @@ window.addEventListener('DOMContentLoaded', () => {
 	});
 
 	animations(registerListItem);
-
-	(function() {
-		let currentURL = window.location.href;
-		let checker = false;
-		let redirectPath;
-		if (currentURL.includes('login') || currentURL.includes('register')) {
-			checker = true;
-		}
-		if (checker) {
-			redirectPath = '/account';
-		} else {
-			redirectPath = currentURL;
-		}
-
-		let selector = '#create_customer, form[action$="/account"][method="post"]',
-			$form = document.querySelectorAll(selector)[0];
-
-		if ($form) {
-			$redirect = document.createElement('input');
-			$redirect.setAttribute('name', 'return_to');
-			$redirect.setAttribute('type', 'hidden');
-			$redirect.value = redirectPath;
-			$form.appendChild($redirect);
-		}
-	})();
 });

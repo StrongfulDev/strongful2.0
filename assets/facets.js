@@ -144,7 +144,8 @@ class FacetFiltersForm extends HTMLElement {
       const activeFacetsElement = html.querySelector(selector);
       if (!activeFacetsElement) return;
       document.querySelector(selector).innerHTML = activeFacetsElement.innerHTML;
-      hideInStockFacet();
+      // hideInStockFacet();
+			setTimeout(hideInStockFacet, 1000);
     })
 
     FacetFiltersForm.toggleActiveFacets(false);
@@ -162,7 +163,9 @@ class FacetFiltersForm extends HTMLElement {
       document.querySelector(selector).innerHTML = html.querySelector(selector).innerHTML;
     });
 
-    document.getElementById('FacetFiltersFormMobile').closest('menu-drawer').bindEvents();
+		if (!document.getElementById('FacetFiltersFormMobile').classList.contains('farfetch-forms-mobile')) {
+			document.getElementById('FacetFiltersFormMobile').closest('menu-drawer').bindEvents();
+		}
   }
 
   static renderCounts(source, target) {
@@ -228,7 +231,7 @@ class FacetFiltersForm extends HTMLElement {
       this.onSubmitForm(searchParams, event)
     } else {
       const forms = [];
-      const isMobile = event.target.closest('form').id === 'FacetFiltersFormMobile';
+      const isMobile = event.target.closest('form').id === 'FacetFiltersFormMobile' || event.target.closest('form').id === 'FarfetchFiltersFormMobile';
 
       sortFilterForms.forEach((form) => {
         if (!isMobile) {
@@ -237,7 +240,7 @@ class FacetFiltersForm extends HTMLElement {
             noJsElements.forEach((el) => el.remove());
             forms.push(this.createSearchParams(form));
           }
-        } else if (form.id === 'FacetFiltersFormMobile') {
+        } else if (form.id === 'FacetFiltersFormMobile' || form.id === 'FarfetchFiltersFormMobile') {
           forms.push(this.createSearchParams(form));
         }
       });
@@ -325,27 +328,25 @@ customElements.define('facet-remove', FacetRemove);
           siblingRound.style.backgroundColor = "#ffffff";
           siblingRound.style.border = "1px solid #000000";
         } else if (colorLabels[i].innerHTML.includes("אדום")) {
-          siblingRound.style.backgroundColor = "#ff0000";
+          siblingRound.style.backgroundColor = "#d81e06";
         } else if (colorLabels[i].innerHTML.includes("כחול")) {
-          siblingRound.style.backgroundColor = "rgb(34, 29, 193)";
+          siblingRound.style.backgroundColor = "#0084c9";
         } else if (colorLabels[i].innerHTML.includes("ירוק")) {
-          siblingRound.style.backgroundColor = "rgb(0, 106, 78)";
+          siblingRound.style.backgroundColor = "#016847";
         } else if (colorLabels[i].innerHTML.includes("ניוד")) {
-          siblingRound.style.backgroundColor = "rgb(225, 205, 180)";
+          siblingRound.style.backgroundColor = "#d8bfaa";
         } else if (colorLabels[i].innerHTML.includes("צהוב")) {
-          siblingRound.style.backgroundColor = "rgb(253, 226, 0)";
+          siblingRound.style.backgroundColor = "#f4e287";
         } else if (colorLabels[i].innerHTML.includes("כתום")) {
-          siblingRound.style.backgroundColor = "rgb(231, 155, 46)";
+          siblingRound.style.backgroundColor = "#fda310";
         } else if (colorLabels[i].innerHTML.includes("סגול")) {
-          siblingRound.style.backgroundColor = "rgb(126, 11, 128)";
+          siblingRound.style.backgroundColor = "#664975";
         } else if (colorLabels[i].innerHTML.includes("ורוד")) {
-          siblingRound.style.backgroundColor = "rgb(252, 172, 173)";
+          siblingRound.style.backgroundColor = "#ff77a8";
         } else if (colorLabels[i].innerHTML.includes("חום")) {
-          siblingRound.style.backgroundColor = "rgb(123, 79, 44)";
+          siblingRound.style.backgroundColor = "#472311";
         } else if (colorLabels[i].innerHTML.includes("אפור")) {
-          siblingRound.style.backgroundColor = "rgb(217, 217, 217)";
-        } else {
-          console.log("no color");
+          siblingRound.style.backgroundColor = "#a3a8a3";
         }
       }
  }
@@ -382,17 +383,19 @@ function sizeRounds(dom) {
 }
 
 function hideInStockFacet() {
-  let spans = document.querySelectorAll('.active-facets__button-inner');
-  spans.forEach(function(span) {
-    if (span.innerText.includes('Availability')) {
-      $(span).parents('facet-remove').addClass('hidden');
-    }
-  });
+  let links = document.querySelectorAll('.active-facets__button');
+	console.log(links);
+	for (let i = 0; i < links.length; i++) {
+		if (links[i].href.includes("availability")) {
+			links[i].closest("facet-remove").style.display = "none";
+		}
+	}
 }
 
 colorRounds(document);
 sizeRounds(document);
-hideInStockFacet();
+// hideInStockFacet();
+setTimeout(hideInStockFacet, 1500);
 
 function onlyShowIfInStock() {
 	const inputsToQuery = $(".facet-checkbox").find("input");
@@ -447,78 +450,10 @@ document.addEventListener("DOMContentLoaded", function() {
 		$(".details.menu-opening").removeClass("menu-opening");
 	});
 
-	// Function to load the next page of products
-// 	function loadNextPage(entries, observer) {
-// 		entries.forEach(entry => {
-// 			if (entry.isIntersecting) {
-// 				let nextPageLink = document.querySelector('.collection:nth-last-child(2) .infinite_next .pagination__item.pagination__item--prev');
-// 				let loader = $(".collection:nth-last-child(2) .pagination__list .loading-overlay__spinner");
-//
-// 				if (nextPageLink) {
-//
-// 					let nextPageURL = nextPageLink.getAttribute('href');
-// 					$(loader).removeClass('hidden');
-//
-// 					fetch(nextPageURL)
-// 						.then(response => response.text())
-// 						.then((responseText) => {
-// 							let html = new DOMParser().parseFromString(responseText, 'text/html');
-// 							let productGridContainer = html.getElementById('ProductGridContainer');
-//
-// 							if (productGridContainer) {
-// 								let currentProductGrid = document.getElementById('ProductGridContainer');
-// 								currentProductGrid.innerHTML += productGridContainer.innerHTML;
-//
-// 								// Update query parameters
-// 								let searchParams = new URLSearchParams(window.location.search);
-// 								let nextPageSearchParams = new URLSearchParams(nextPageURL.split('?')[1]);
-//
-// 								for (let [key, value] of nextPageSearchParams.entries()) {
-// 									searchParams.set(key, value);
-// 								}
-//
-// 								let newURL = `${window.location.pathname}?${searchParams.toString()}`;
-// 								window.history.replaceState({}, '', newURL);
-//
-// 								// Reconnect the sentinel element
-// 								let newSentinel = document.createElement('div');
-// 								newSentinel.id = 'sentinel';
-// 								newSentinel.innerHTML = '&nbsp;'
-// 								currentProductGrid.appendChild(newSentinel);
-// 								$("#sentinel:not(:last-child)").remove();
-//
-// 								// Unobserve the old sentinel element
-// 								observer.unobserve(entry.target);
-//
-// 								// Observe the new sentinel element
-// 								observer.observe(newSentinel);
-// 							}
-// 						})
-// 						.catch(error => {
-// 							console.error('Error loading next page:', error);
-// 						});
-// 				}
-// 			}
-// 		});
-// 	}
-//
-// // Create an Intersection Observer instance
-// 	let options = {
-// 		root: null,
-// 		rootMargin: '500px',
-// 		threshold: 0.1
-// 	};
-//
-// 	let sentinel = document.getElementById('sentinel'); // Replace with the ID of your sentinel element
-// 	let observer = new IntersectionObserver(loadNextPage, options);
-//
-// // Observe the sentinel element
-// 	observer.observe(sentinel);
-
 	let endlessCollection = new AjaxinateMin({
 		container: '#product-grid',
 		pagination: '.infinite_next',
-		offset: 3000,
+		offset: 1000,
 		callback: removeDeadProduct
 	});
 

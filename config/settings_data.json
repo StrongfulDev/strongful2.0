@@ -9,12 +9,14 @@
     "gradient_accent_1": "",
     "colors_accent_2": "#334fb4",
     "gradient_accent_2": "",
+    "gradient_accent_3": "gray",
     "colors_text": "#000000",
     "colors_outline_button_labels": "#000000",
     "colors_background_1": "#ffffff",
     "gradient_background_1": "",
     "colors_background_2": "#f3f3f3",
     "gradient_background_2": "",
+    "colors_background_3": "#f0f0f0",
     "type_header_font": "arimo_n4",
     "type_header_font_custom": "none",
     "heading_scale": 90,
@@ -128,9 +130,9 @@
     "predictive_search_show_price": true,
     "image_ratio": "adapt",
     "show_secondary_image": true,
-    "announcement_tag": "twoplusone",
-    "show_card_collection_announcement": true,
-    "custom_collection_announcement": "BUY 2 GET 1",
+    "announcement_tag": "",
+    "show_card_collection_announcement": false,
+    "custom_collection_announcement": "",
     "announcement_customizer_override": true,
     "enable_quick_add": true,
     "quick_add_text": "בחירת מידה",
@@ -259,8 +261,8 @@
         "type": "shopify:\/\/apps\/yotpo-loyalty-rewards\/blocks\/loader-app-embed-block\/2f9660df-5018-4e02-9868-ee1fb88d6ccd",
         "disabled": true,
         "settings": {
-          "inject_modules_loader": false,
-          "inject_sdk_loader": false
+          "inject_modules_loader": true,
+          "inject_sdk_loader": true
         }
       },
       "yoast-seo-metatags": {

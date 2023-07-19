@@ -16,6 +16,11 @@
     height: 100%;
 }
 
+.collection-color-card .card:not(.ratio) {
+	flex-direction: row;
+	align-items: center;
+}
+
 .card.card--horizontal {
     --text-alignment: left;
     --image-padding: 0rem;

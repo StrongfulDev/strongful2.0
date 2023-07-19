@@ -108,7 +108,7 @@ slideshow-component .slideshow.banner {
 }
 
 .slideshow__controls {
-    border: 0.1rem solid rgba(var(--color-foreground), 0.08);
+    /*border: 0.1rem solid rgba(var(--color-foreground), 0.08);*/
 }
 
 .slideshow__controls--top {
@@ -121,6 +121,10 @@ slideshow-component .slideshow.banner {
         border-bottom-right-radius: var(--text-boxes-radius);
         border-bottom-left-radius: var(--text-boxes-radius);
     }
+
+	div.slider-buttons {
+		display: none;
+	}
 }
 
 .spaced-section--full-width:last-child slideshow-component:not(.page-width) .slideshow__controls {
@@ -142,13 +146,14 @@ slideshow-component:not(.page-width) .slider-buttons {
     display: flex;
 }
 
-.slideshow__autoplay {
+button.slideshow__autoplay {
     position: absolute;
     right: 0;
     border-left: none;
     display: flex;
     justify-content: center;
     align-items: center;
+	display: none;
 }
 
 @media screen and (max-width: 749px) {
@@ -227,7 +232,15 @@ slideshow-component:not(.page-width) .slider-buttons {
     padding: 2rem 1.5rem;
     width: fit-content;
     position: absolute;
-    bottom: 5em;
+    bottom: 10vh;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.slideshow__slide.grid__item.grid--1-col.slider__slide:nth-of-type(3) .slideshow__text.banner__box {
+	bottom: 37vh;
+	left: 12vw;
+	transform: translateX(0);
 }
 
 .whole-slide-link {
@@ -248,6 +261,12 @@ slideshow-component:not(.page-width) .slider-buttons {
 }
 
 @media screen and (min-width: 750px) {
+
+	.slideshow__slide.grid__item.grid--1-col.slider__slide:nth-of-type(2) .slideshow__text.banner__box {
+		bottom: 14vh;
+		left: -1vw;
+		transform: translate(0);
+	}
 
 	.whole-slide-link .banner__media img {
 		object-fit: cover;
@@ -270,7 +289,12 @@ slideshow-component:not(.page-width) .slider-buttons {
     }
 
 	.slideshow__text.banner__box {
-		bottom: 11rem;
-		left: 0;
+		bottom: 7vw;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	.slideshow__slide.grid__item.grid--1-col.slider__slide:nth-of-type(3) .slideshow__text.banner__box {
+		bottom: 10vw;
+		left: 28%;
 	}
 }

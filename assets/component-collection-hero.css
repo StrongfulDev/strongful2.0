@@ -1,6 +1,8 @@
 .collection-hero__inner {
   display: flex;
   flex-direction: column;
+	border-top: 1px solid var(--gradient-base-background-3);
+	padding-top: 2rem;
 }
 
 .collection-hero--with-image .collection-hero__inner {
@@ -8,7 +10,12 @@
   padding-bottom: 2rem;
 }
 
-@media screen and (min-width: 750px) {
+.collection-hero__description span {
+	color: var(--gradient-base-accent-3);
+	font-size: calc(var(--font-body-size-medium) * 0.9);
+}
+
+@media screen and (min-width: 990px) {
   .collection-hero.collection-hero--with-image {
     padding: calc(4rem + var(--page-width-margin)) 0
       calc(4rem + var(--page-width-margin));
@@ -24,11 +31,7 @@
   flex-basis: 100%;
 }
 
-@media screen and (min-width: 750px) {
-  .collection-hero {
-    padding: 0;
-  }
-
+@media screen and (min-width: 990px) {
   .collection-hero__inner {
     align-items: center;
     flex-direction: row;
@@ -47,7 +50,7 @@
   line-height: calc(1 + 0.5 / var(--font-body-scale));
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 990px) {
   .collection-hero__title + .collection-hero__description {
     font-size: 1.8rem;
     margin-top: 2rem;
@@ -55,7 +58,7 @@
   }
 
   .collection-hero__description {
-    max-width: 66.67%;
+    /*max-width: 40%;*/
   }
 
   .collection-hero--with-image .collection-hero__description {
@@ -80,17 +83,38 @@
     rgba(var(--color-shadow), var(--media-shadow-opacity));
 }
 
-@media screen and (max-width: 749px) {
+@media screen and (max-width: 989px) {
   .collection-hero__image-container {
     height: 20rem;
   }
 }
 
-@media screen and (min-width: 750px) {
+.collection-hero__text-wrapper .icon {
+	display: none;
+}
+
+@media screen and (min-width: 990px) {
   .collection-hero--with-image .collection-hero__text-wrapper {
     padding: 4rem 2rem 4rem 0;
     flex-basis: 50%;
   }
+
+	.collection-hero__text-wrapper {
+		margin: auto;
+		flex-basis: auto;
+		position: relative;
+	}
+
+	.collection-hero__text-wrapper .icon {
+		position: absolute;
+		top: 5.5rem;
+		left: 1rem;
+		display: block;
+	}
+
+	.collection-hero__text-wrapper .icon.active {
+		transform: rotate(180deg);
+	}
 
   .collection-hero__image-container {
     align-self: stretch;
