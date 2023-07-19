@@ -289,8 +289,7 @@
                     <h2
                         class="facets__heading facets__heading--vertical caption-large text-body"
                         id="verticalTitle"
-                        tabindex="-1"
-                    >
+                        tabindex="-1">
                       {{ 'products.facets.filter_by_label' | t }}
                         {%- for filter in results.filters -%}
                             {%- assign total_active_values = total_active_values | plus: filter.active_values.size -%}

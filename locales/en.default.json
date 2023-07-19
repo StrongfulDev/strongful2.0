@@ -210,7 +210,7 @@
       "clear_all": "איפוס",
       "from": "מ",
       "filter_and_sort": "סינון לפי",
-      "filter_by_label": "סינון לפי:",
+      "filter_by_label": "פילטר:",
       "filter_button": "סינון לפי",
       "filters_selected": {
         "one": "{{ count }} סינונים פעילים",
