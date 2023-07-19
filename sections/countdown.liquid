@@ -6,7 +6,7 @@
         <div class="announce-countdown">
             {% if section.settings.right_text %}
                 <div class="countdown-sale-description-ctn">
-                    <p class="countdown-sale-description fix-direction">{{ section.settings.right_copy }}</p>
+                    {{ section.settings.right_copy }}
                 </div>
             {% endif %}
             <div id="tiles" class="flex ltr">
@@ -26,7 +26,7 @@
         </div>
         {% if section.settings.left_text %}
             <div class="countdown-sale-description-ctn">
-                <p class="countdown-sale-description fix-direction">{{ section.settings.left_copy }}</p>
+                {{ section.settings.left_copy }}
             </div>
         {% endif %}
     </div>
