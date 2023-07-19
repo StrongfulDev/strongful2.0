@@ -1,6 +1,8 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-	let target_date = new Date("Sun Jul 23 2023 12:00:00 GMT+0300 (שעון ישראל (קיץ))").getTime() + (1000*24);
+	let data = document.getElementById("countdown").dataset.date;
+	console.log(data);
+	let target_date = new Date(data).getTime() + (1000*24);
 	let days, hours, minutes, seconds;
 
 	if (document.getElementById('tiles') != null) {
