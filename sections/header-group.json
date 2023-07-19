@@ -24,12 +24,12 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "NEW IN",
-            "sub_text": "Elara Collection",
+            "main_text": "Weekend Sale",
+            "sub_text": "UP TO 40% OFF",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "ltr",
-            "link": "shopify:\/\/collections\/new-in",
+            "link": "shopify:\/\/collections\/up-to-40",
             "color_scheme": "accent-1"
           }
         },
