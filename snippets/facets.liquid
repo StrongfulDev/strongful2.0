@@ -60,65 +60,16 @@
       new filter try here
       {% endcomment %}
 
-      <div class="farfetch-facets">
-          {%- if enable_sorting -%}
-              <div
-                      id="FacetMobile-{{ forloop.index }}-{{ section.id }}"
-                      class="mobile-facets__submenu gradient"
-              >
-                  <ul class="mobile-facets__list list-unstyled" role="list">
-                      {%- for option in results.sort_options -%}
-                          {% unless option.value == 'title-descending' or option.value == 'title-ascending' or option.value == 'created-ascending' %}
-                              <li class="mobile-facets__item list-menu__item mobile-facets__item-{{ option.value }}">
-                                  <label
-                                          for="sort_by_{{ option.value | escape }}"
-                                          class="mobile-facets__label{% if value.count == 0 and value.active == false %} mobile-facets__label--disabled{% endif %}"
-                                  >
-                                      <input
-                                              class="mobile-facets__checkbox sort_by_mobile_input"
-                                              type="radio"
-                                              name="sort_by"
-                                              value="{{ option.value | escape }}"
-                                              id="sort_by_{{ option.value | escape }}"
-                                              {% if results.sort_by == option.value %}
-                                                  checked
-                                              {% endif %}
-                                      >
-                                      <span class="mobile-facets__highlight"></span>
-                                      <span aria-hidden="true">{{ 'products.facets.filters.' | append: option.value | t }}</span>
-                                      <span class="visibility-hidden">{{ 'products.facets.filters.' | append: option.value | t }}</span>
-                                  </label>
-                              </li>
-                          {% endunless %}
-                      {%- endfor -%}
-                  </ul>
 
-                  <div class="no-js-hidden mobile-facets__footer gradient">
-                      <facet-remove class="mobile-facets__clear-wrapper">
-                          <a href="{{ filter.url_to_remove }}" class="mobile-facets__clear underlined-link">
-                              {{- 'products.facets.clear' | t -}}
-                          </a>
-                      </facet-remove>
-                      <button
-                              type="button"
-                              class="no-js-hidden button button--primary"
-                              onclick="this.closest('.mobile-facets__wrapper').querySelector('summary').click()"
-                      >
-                          {{ 'products.facets.apply' | t }}
-                      </button>
-                      <noscript>
-                          <button class="button button--primary">
-                              {{ 'products.facets.apply' | t }}
-                          </button>
-                      </noscript>
-                  </div>
-              </div>
-          {%- endif -%}
+      <div class="farfetch-facets">
+          <facet-filters-form class="facets">
+              <form id="FacetFiltersFormMobile" class="farfetch-forms-mobile">
           {%- if enable_filtering -%}
               {%- for filter in results.filters -%}
                   {% case filter.type %}
                       {% when 'boolean', 'list' %}
-                          <div
+                          {% if filter.label == 'אחוז הנחה' %}
+                            <div
                                   id="FacetMobile-{{ forloop.index }}-{{ section.id }}"
                                   class="mobile-facets__submenu gradient">
                               <button
@@ -188,6 +139,7 @@
                                   >
                               </div>
                           </div>
+                          {% endif %}
                       {% when 'price_range' %}
                           <details
                                   id="Details-Mobile-{{ forloop.index }}-{{ section.id }}"
@@ -305,7 +257,10 @@
                   {% endcase %}
               {%- endfor -%}
           {%- endif -%}
+              </form>
+          </facet-filters-form>
       </div>
+
 
 
     <facet-filters-form class="facets small-hide">
@@ -1363,7 +1318,7 @@
         {%- for filter in results.filters -%}
             {%- for value in filter.active_values -%}
                 <facet-remove>
-                    <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light">
+                    <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light {{ value }}">
             <span class="active-facets__button-inner button button--tertiary">
                 {%- if filter.label == "Product type" -%}
                     {{ 'products.facets.product_type' | t }}: {{ value.label | escape }}

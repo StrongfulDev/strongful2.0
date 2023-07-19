@@ -887,6 +887,10 @@ details[open]>.mobile-facets__submenu, .farfetch-facets .mobile-facets__submenu 
 	width: fit-content;
 }
 
+.farfetch-facets .mobile-facets__item {
+	border: 1px solid var(--gradient-base-background-4);
+}
+
 .js .menu-drawer__submenu .mobile-facets__submenu {
   overflow-y: auto;
 }
@@ -927,8 +931,26 @@ input.mobile-facets__checkbox {
 
 .farfetch-facets .mobile-facets__label {
 	min-width: 7.5rem;
-	max-width: 30rem;
+	max-width: 40rem;
 	height: 4.4rem;
+	justify-content: center;
+	position: relative;
+}
+
+.farfetch-facets .mobile-facets__label p {
+	pointer-events: none;
+}
+
+.farfetch-facets .mobile-facets__label input.mobile-facets__checkbox {
+	left: 0;
+	top: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.farfetch-facets .mobile-facets__checkbox:checked+.mobile-facets__highlight {
+	display: none;
 }
 
 .farfetch-facets .mobile-facets__label .visibility-hidden {

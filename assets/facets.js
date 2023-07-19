@@ -144,7 +144,8 @@ class FacetFiltersForm extends HTMLElement {
       const activeFacetsElement = html.querySelector(selector);
       if (!activeFacetsElement) return;
       document.querySelector(selector).innerHTML = activeFacetsElement.innerHTML;
-      hideInStockFacet();
+      // hideInStockFacet();
+			setTimeout(hideInStockFacet, 1000);
     })
 
     FacetFiltersForm.toggleActiveFacets(false);
@@ -162,7 +163,9 @@ class FacetFiltersForm extends HTMLElement {
       document.querySelector(selector).innerHTML = html.querySelector(selector).innerHTML;
     });
 
-    document.getElementById('FacetFiltersFormMobile').closest('menu-drawer').bindEvents();
+		if (!document.getElementById('FacetFiltersFormMobile').classList.contains('farfetch-forms-mobile')) {
+			document.getElementById('FacetFiltersFormMobile').closest('menu-drawer').bindEvents();
+		}
   }
 
   static renderCounts(source, target) {
@@ -382,17 +385,19 @@ function sizeRounds(dom) {
 }
 
 function hideInStockFacet() {
-  let spans = document.querySelectorAll('.active-facets__button-inner');
-  spans.forEach(function(span) {
-    if (span.innerText.includes('Availability')) {
-      $(span).parents('facet-remove').addClass('hidden');
-    }
-  });
+  let links = document.querySelectorAll('.active-facets__button');
+	console.log(links);
+	for (let i = 0; i < links.length; i++) {
+		if (links[i].href.includes("availability")) {
+			links[i].closest("facet-remove").style.display = "none";
+		}
+	}
 }
 
 colorRounds(document);
 sizeRounds(document);
-hideInStockFacet();
+// hideInStockFacet();
+setTimeout(hideInStockFacet, 1500);
 
 function onlyShowIfInStock() {
 	const inputsToQuery = $(".facet-checkbox").find("input");
@@ -425,6 +430,10 @@ function checkSortingInputs() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
+
+	if (document.getElementById("Filter-filter.v.availability-mobile-1").checked == false) {
+		document.getElementById("Filter-filter.v.availability-mobile-1").checked = true;
+	}
 
 	checkSortingInputs();
 
