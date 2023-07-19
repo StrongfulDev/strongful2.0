@@ -1,7 +1,7 @@
 {{ 'component-countdown.css' | asset_url | stylesheet_tag }}
 {{ 'component-countdown.js' | asset_url | script_tag }}
 
-<a href="/collections/סטים" id="countdown" class="countdown fix-direction" data-date="{{ section.settings.countdown_date }}">
+<a href="{{ countdown_url }}" id="countdown" class="countdown fix-direction" data-date="{{ section.settings.countdown_date }}">
     <div class="countdown-ctn flex">
         {% comment %}<div class="countdown-sale-description-ctn">{% endcomment %}
             {% comment %}<p class="countdown-sale-description fix-direction">₪99 - ₪119</p>{% endcomment %}
@@ -39,6 +39,11 @@
             "id": "countdown_date",
             "label": "Countdown Date",
             "default": "2021-01-01 00:00:00"
+        },
+        {
+            "type": "url",
+            "id": "countdown_url",
+            "label": "Countdown URL"
         }
     ],
     "presets": [
