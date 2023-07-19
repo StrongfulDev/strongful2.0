@@ -1,7 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 	let data = document.getElementById("countdown").dataset.date;
-	console.log(data);
 	let target_date = new Date(data).getTime() + (1000*24);
 	let days, hours, minutes, seconds;
 
@@ -26,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			minutes = pad(parseInt(seconds_left / 60));
 			seconds = pad(parseInt(seconds_left % 60));
 
-			// $('.tiles-time-days').html(days);
+			$('.tiles-time-days').html(days);
 			$('.tiles-time-hours').html(hours);
 			$('.tiles-time-minutes').html(minutes);
 			$('.tiles-time-seconds').html(seconds);
