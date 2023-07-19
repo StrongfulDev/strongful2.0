@@ -878,13 +878,13 @@ details.menu-opening .mobile-facets__close svg {
 	transition: max-height 1s ease-in-out;
 }
 
-details[open] > .mobile-facets__submenu {
+details[open]>.mobile-facets__submenu, .farfetch-facets .mobile-facets__submenu {
 	max-height: 100vh;
 	height: auto;
 }
 
-.js details:not([open]) > .mobile-facets__submenu {
-
+.farfetch-facets .mobile-facets__submenu, .farfetch-facets .mobile-facets__item {
+	width: fit-content;
 }
 
 .js .menu-drawer__submenu .mobile-facets__submenu {
@@ -923,6 +923,16 @@ input.mobile-facets__checkbox {
   display: flex;
 	color: var(--gradient-base-accent-1);
 	align-items: center;
+}
+
+.farfetch-facets .mobile-facets__label {
+	min-width: 7.5rem;
+	max-width: 30rem;
+	height: 4.4rem;
+}
+
+.farfetch-facets .mobile-facets__label .visibility-hidden {
+	display: none;
 }
 
 .mobile-facets__label > svg {
@@ -1317,6 +1327,11 @@ input.mobile-facets__checkbox {
   flex-direction: column;
 }
 
+div.farfetch-facets ul.mobile-facets__list {
+	flex-direction: row !important;
+	width: fit-content;
+}
+
 .mobile-facets__sort .select .icon-caret {
   right: auto;
   top: 6px;
@@ -1511,6 +1526,14 @@ details:not([open]) .mobile-facets__arrow-filtering:not(:empty) {
 
 summary .icon-caret {
 	top: 1.5em;
+}
+
+.farfetch-facets {
+	display: flex;
+	overflow-x: scroll;
+	width: 100%;
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
 }
 
 @media screen and (min-width: 990px) {
