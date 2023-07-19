@@ -290,7 +290,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .dropdown .menu-drawer__menu.has-submenu>li:first-child .menu-drawer__menu-list-item:first-child>a {
-	/*color: firebrick;*/
+	color: firebrick;
 }
 
 .dropdown .menu-drawer summary.menu-drawer__menu-item {
