@@ -231,7 +231,7 @@ class FacetFiltersForm extends HTMLElement {
       this.onSubmitForm(searchParams, event)
     } else {
       const forms = [];
-      const isMobile = event.target.closest('form').id === 'FacetFiltersFormMobile';
+      const isMobile = event.target.closest('form').id === 'FacetFiltersFormMobile' || event.target.closest('form').id === 'FarfetchFiltersFormMobile';
 
       sortFilterForms.forEach((form) => {
         if (!isMobile) {
@@ -240,7 +240,7 @@ class FacetFiltersForm extends HTMLElement {
             noJsElements.forEach((el) => el.remove());
             forms.push(this.createSearchParams(form));
           }
-        } else if (form.id === 'FacetFiltersFormMobile') {
+        } else if (form.id === 'FacetFiltersFormMobile' || form.id === 'FarfetchFiltersFormMobile') {
           forms.push(this.createSearchParams(form));
         }
       });
@@ -347,8 +347,6 @@ customElements.define('facet-remove', FacetRemove);
           siblingRound.style.backgroundColor = "#472311";
         } else if (colorLabels[i].innerHTML.includes("אפור")) {
           siblingRound.style.backgroundColor = "#a3a8a3";
-        } else {
-          console.log("no color");
         }
       }
  }
@@ -430,10 +428,6 @@ function checkSortingInputs() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-
-	if (document.getElementById("Filter-filter.v.availability-mobile-1").checked == false) {
-		document.getElementById("Filter-filter.v.availability-mobile-1").checked = true;
-	}
 
 	checkSortingInputs();
 
