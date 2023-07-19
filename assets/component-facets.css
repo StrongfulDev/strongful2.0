@@ -1495,7 +1495,7 @@ div.החדשיםביותר {
 @media screen and (max-width: 989px) {
 	.facets-wrapper {
 		position: sticky;
-		top: 21px;
+		top: 69px;
 		z-index: 3;
 		background: white;
 		padding: 1em;
@@ -1682,7 +1682,7 @@ summary .icon-caret {
 	.facets-container {
 		position: -webkit-sticky;
 		position: sticky;
-		top: 9rem;
+		top: 15rem;
 		max-width: 240px;
 		min-width: 200px;
 		max-height: 80vh;
