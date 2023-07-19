@@ -6,10 +6,30 @@
         "slideshow-block-0": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/01_2be7c868-61a4-4ff6-b8ed-a63212fef064.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/Artboard_1.jpg",
+            "image": "shopify:\/\/shop_images\/0_a7808658-f7c2-4303-be10-c37f17914e2d.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/0_4f057d58-701a-4de7-927c-0a9ebdfd21c2.jpg",
             "heading": "",
-            "whole_slide_link": "",
+            "whole_slide_link": "shopify:\/\/collections\/up-to-40",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "SHOP NOW",
+            "link": "shopify:\/\/collections\/elara",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "inverse",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "da38edea-5dac-40af-a420-a672116ae928": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/01_3_bf3a51d7-1c2d-4aa2-8aba-f38c84b708ca.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/min_96e5570c-c4af-46ac-885a-b12f791d566d.jpg",
+            "heading": "",
+            "whole_slide_link": "shopify:\/\/collections\/elara",
             "heading_size": "h1",
             "subheading": "",
             "button_label": "SHOP NOW",
@@ -46,6 +66,7 @@
       },
       "block_order": [
         "slideshow-block-0",
+        "da38edea-5dac-40af-a420-a672116ae928",
         "55848455-bcdc-421a-b1dd-8847f95e73b9"
       ],
       "custom_css": [
