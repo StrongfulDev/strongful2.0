@@ -232,12 +232,11 @@ button.slideshow__autoplay {
     padding: 2rem 1.5rem;
     width: fit-content;
     position: absolute;
-    bottom: 10vh;
-	left: 50%;
-	transform: translateX(-50%);
+    bottom: 23vh;
+	left: 7%;
 }
 
-.slideshow__slide.grid__item.grid--1-col.slider__slide:nth-of-type(3) .slideshow__text.banner__box {
+.slideshow__slide.grid__item.grid--1-col.slider__slide:nth-of-type(2) .slideshow__text.banner__box {
 	bottom: 37vh;
 	left: 12vw;
 	transform: translateX(0);
@@ -293,7 +292,7 @@ button.slideshow__autoplay {
 		left: 50%;
 		transform: translateX(-50%);
 	}
-	.slideshow__slide.grid__item.grid--1-col.slider__slide:nth-of-type(3) .slideshow__text.banner__box {
+	.slideshow__slide.grid__item.grid--1-col.slider__slide:nth-of-type(2) .slideshow__text.banner__box {
 		bottom: 10vw;
 		left: 28%;
 	}
