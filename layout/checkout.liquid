@@ -11,8 +11,6 @@ You can learn more about this (and learn how to cleanly revert these changes) at
 <!DOCTYPE html>
 <html lang="he-IL" dir="rtl" class="{{ checkout_html_classes }}">
 <head>
-    <script type="module" crossorigin src="{{ 'package-protection.js' | asset_url }}"></script>
-    <link rel="stylesheet" href="{{ 'package-protection.css' | asset_url }}">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
@@ -410,5 +408,11 @@ You can learn more about this (and learn how to cleanly revert these changes) at
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NS9ZW7H"
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+
+<script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'package-protection.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'package-protection-extension.js' | asset_url }}" defer="defer"></script>
+
+<link rel="stylesheet" href="{{ 'package-protection.css' | asset_url }}">
 </body>
 </html>
