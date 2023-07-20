@@ -24,12 +24,12 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "WEEKEND SALE",
-            "sub_text": "UP TO 40% OFF",
+            "main_text": "NEW IN",
+            "sub_text": "SHORT SEASON",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "ltr",
-            "link": "shopify:\/\/collections\/up-to-40",
+            "link": "shopify:\/\/collections\/shorts-collection",
             "color_scheme": "accent-1"
           }
         },
