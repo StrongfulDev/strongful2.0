@@ -254,7 +254,19 @@
                             <div class="discount-price-container">
                                 {% if card_product.tags contains 'balanceBundle' %}
                                     <p class="colored-tag old-copy">
-                                        3 ITEMS FOR ₪350
+                                        3 ITEMS FOR <span style="font-weight: 700;">₪350</span>
+                                    </p>
+                                {% elsif card_product.tags contains 'ventureBundle' %}
+                                    <p class="colored-tag old-copy">
+                                        3 ITEMS FOR <span style="font-weight: 700;">₪430</span>
+                                    </p>
+                                {% elsif card_product.tags contains 'kindBundle' or card_product.tags contains 'blissBundle' %}
+                                    <p class="colored-tag old-copy">
+                                        3 ITEMS FOR <span style="font-weight: 700;">₪400</span>
+                                    </p>
+                                {% elsif card_product.tags contains 'axelBundle' %}
+                                    <p class="colored-tag old-copy">
+                                        3 ITEMS FOR <span style="font-weight: 700;">₪370</span>
                                     </p>
                                     {% else %}
                                     <p class="rect-discount-tag">
@@ -271,7 +283,19 @@
                             {% else %}
                             {% if card_product.tags contains 'balanceBundle' %}
                                 <p class="colored-tag old-copy">
-                                    3 ITEMS FOR ₪350
+                                    3 ITEMS FOR <span style="font-weight: 700;">₪350</span>
+                                </p>
+                            {% elsif card_product.tags contains 'ventureBundle' %}
+                                <p class="colored-tag old-copy">
+                                    3 ITEMS FOR <span style="font-weight: 700;">₪430</span>
+                                </p>
+                            {% elsif card_product.tags contains 'kindBundle' or card_product.tags contains 'blissBundle' %}
+                                <p class="colored-tag old-copy">
+                                    3 ITEMS FOR <span style="font-weight: 700;">₪400</span>
+                                </p>
+                            {% elsif card_product.tags contains 'axelBundle' %}
+                                <p class="colored-tag old-copy">
+                                    3 ITEMS FOR <span style="font-weight: 700;">₪370</span>
                                 </p>
                             {% endif %}
                         {% endif %}
