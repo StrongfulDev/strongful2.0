@@ -130,3 +130,9 @@
     display: flex;
     flex-direction: row-reverse;
 }
+
+.old-copy {
+	font-family: 'Arimo', sans-serif;
+	font-size: .8em;
+	padding: var(--grid-desktop-vertical-spacing);
+}

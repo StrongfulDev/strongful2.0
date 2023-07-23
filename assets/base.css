@@ -3177,7 +3177,7 @@ details-disclosure > details {
     }
 }
 
-.rtl, .fix-direction {
+.rtl, .fix-direction, p.fix-direction, span.fix-direction {
     direction: rtl;
 }
 
@@ -3911,6 +3911,20 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 	color: #b22222;
 	border: 1px firebrick solid;
 	padding: 0 7px;
+}
+
+.rect-discount-tag.colored-tag {
+	color: var(--gradient-base-accent-3);
+	border-color: var(--gradient-base-accent-3);
+}
+
+.old-copy {
+	font-size: .8em;
+	margin: .5rem 0;
+	width: 100%;
+	text-align: center;
+	padding: var(--grid-mobile-vertical-spacing) 0;
+	background: var(--gradient-base-background-3);
 }
 
 @-webkit-keyframes loader {
