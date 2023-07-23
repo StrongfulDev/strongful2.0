@@ -3913,6 +3913,10 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 	padding: 0 7px;
 }
 
+.rect-discount-tag.colored-tag {
+	direction: rtl;
+}
+
 @-webkit-keyframes loader {
 	0% {
 		opacity:.2

@@ -252,9 +252,15 @@
                         {% endif %}
                         {% if card_product.compare_at_price > card_product.price %}
                             <div class="discount-price-container">
-                                <p class="rect-discount-tag">
-                                    {{ card_product.compare_at_price | minus: card_product.price | times: 100.0 | divided_by: card_product.compare_at_price | ceil }}% OFF
-                                </p>
+                                {% if card_product.tags contains 'balanceBundle' %}
+                                    <p class="rect-discount-tag colored-tag">
+                                        3 פריטים מדגם זה ב350₪ במקום 443₪
+                                    </p>
+                                    {% else %}
+                                    <p class="rect-discount-tag">
+                                        {{ card_product.compare_at_price | minus: card_product.price | times: 100.0 | divided_by: card_product.compare_at_price | ceil }}% OFF
+                                    </p>
+                                {% endif %}
                                 {% if card_product.tags contains 'OUTLET' or card_product.tags contains 'outlet' %}
                                     <p class="outlet-collection-tag upper h4">
                                         <span>{{- 'products.product.outlet' | t -}}</span>
@@ -262,6 +268,12 @@
                                     </p>
                                 {% endif %}
                             </div>
+                            {% else %}
+                            {% if card_product.tags contains 'balanceBundle' %}
+                                <p class="rect-discount-tag colored-tag">
+                                    3 פריטים מדגם זה ב350₪ במקום 443₪
+                                </p>
+                                {% endif %}
                         {% endif %}
                         <p
                                 class="card__heading {{ card_header_size }}"
