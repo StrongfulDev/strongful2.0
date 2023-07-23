@@ -132,6 +132,7 @@
 }
 
 .old-copy {
-	font-size: .75em;
+	font-family: 'Arimo', sans-serif;
+	font-size: .8em;
 	padding: var(--grid-desktop-vertical-spacing);
 }

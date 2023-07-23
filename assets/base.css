@@ -3920,7 +3920,7 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 
 .old-copy {
 	direction: ltr;
-	font-size: .75em;
+	font-size: .8em;
 	font-weight: var(--font-body-weight-bold);
 	margin: .5rem 0;
 	width: 100%;
