@@ -3914,7 +3914,8 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 }
 
 .rect-discount-tag.colored-tag {
-	direction: rtl;
+	color: var(--gradient-base-accent-3);
+	border-color: var(--gradient-base-accent-3);
 }
 
 @-webkit-keyframes loader {
