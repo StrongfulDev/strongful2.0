@@ -1,0 +1,78 @@
+{
+  "sections": {
+    "745dda66-63ce-4705-8d8d-eff54d17367f": {
+      "type": "image-banner",
+      "blocks": {
+        "b12ab2ae-119f-4c68-9a4f-1e499db126b3": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ collection.title }}",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "b12ab2ae-119f-4c68-9a4f-1e499db126b3"
+      ],
+      "custom_css": [
+        "@media screen and (min-width: 990px) {.banner__media img {object-fit: contain; }}",
+        ".media > *:not(.zoom):not(.deferred-media__poster-button),.media model-viewer {position: static; object-fit: cover;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/2f885abae251228a322d013e3b325aff_595f202c-1024-426b-ba3e-30ebc151c6e4.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/2fcc69e54b1545496c13b5ef282b856d.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "auto",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": true
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 20,
+        "columns_desktop": 4,
+        "image_ratio": "adapt",
+        "card_header_size": "h2",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "announcement_tag": "",
+        "show_rating": false,
+        "show_card_collection_announcement": false,
+        "custom_collection_announcement": "",
+        "announcement_customizer_override": true,
+        "enable_quick_add": true,
+        "quick_add_type": "hover",
+        "quick_add_type_mobile": "modal",
+        "quick_add_text": "הוספה מהירה",
+        "pick_size_text": "בחירת מידה",
+        "quick_add_accessories_text": "הוספה מהירה",
+        "image_count": 1,
+        "enable_filtering": true,
+        "filter_type": "vertical",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 0,
+        "padding_bottom": 44
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
+    }
+  },
+  "order": [
+    "745dda66-63ce-4705-8d8d-eff54d17367f",
+    "product-grid",
+    "banner"
+  ]
+}
