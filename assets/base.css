@@ -3177,7 +3177,7 @@ details-disclosure > details {
     }
 }
 
-.rtl, .fix-direction {
+.rtl, .fix-direction, p.fix-direction, span.fix-direction {
     direction: rtl;
 }
 
