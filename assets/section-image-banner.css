@@ -149,6 +149,10 @@
     width: 100%;
 }
 
+.banner__media.placeholder {
+	display: none !important;
+}
+
 .banner__media-half {
     width: 50%;
 }
