@@ -3918,6 +3918,17 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 	border-color: var(--gradient-base-accent-3);
 }
 
+.old-copy {
+	direction: ltr;
+	font-size: .75em;
+	font-weight: var(--font-body-weight-bold);
+	margin: .5rem 0;
+	width: 100%;
+	text-align: center;
+	padding: var(--grid-mobile-vertical-spacing) 0;
+	background: var(--gradient-base-background-3);
+}
+
 @-webkit-keyframes loader {
 	0% {
 		opacity:.2

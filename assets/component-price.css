@@ -130,3 +130,8 @@
     display: flex;
     flex-direction: row-reverse;
 }
+
+.old-copy {
+	font-size: .75em;
+	padding: var(--grid-desktop-vertical-spacing);
+}

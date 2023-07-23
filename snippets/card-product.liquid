@@ -253,7 +253,7 @@
                         {% if card_product.compare_at_price > card_product.price %}
                             <div class="discount-price-container">
                                 {% if card_product.tags contains 'balanceBundle' %}
-                                    <p class="rect-discount-tag colored-tag">
+                                    <p class="colored-tag old-copy">
                                         3 ITEMS FOR ₪350
                                     </p>
                                     {% else %}
@@ -268,6 +268,12 @@
                                     </p>
                                 {% endif %}
                             </div>
+                            {% else %}
+                            {% if card_product.tags contains 'balanceBundle' %}
+                                <p class="colored-tag old-copy">
+                                    3 ITEMS FOR ₪350
+                                </p>
+                            {% endif %}
                         {% endif %}
                         <p
                                 class="card__heading {{ card_header_size }}"
