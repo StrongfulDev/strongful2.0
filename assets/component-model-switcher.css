@@ -111,4 +111,26 @@ summary .icon-caret.rotate-arrow {
 	.model-switcher-overlay {
 		display: none;
 	}
+
+	.product-media-gallery-container .model-switcher {
+		bottom: auto;
+		top: 1em;
+	}
+
+	#model-switch {
+		flex-direction: column;
+	}
+
+	.model-switch-button {
+		margin-top: 0;
+		margin-bottom: 1em;
+	}
+
+	.model-switch-button .icon-caret {
+		transform: rotate(0deg);
+	}
+
+	.model-switch-button .icon-caret.rotate-arrow {
+		transform: rotate(180deg);
+	}
 }
