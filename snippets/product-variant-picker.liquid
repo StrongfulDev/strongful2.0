@@ -117,9 +117,10 @@
                 <p class="size-table-toggler pointer">{{ 'products.product.size_table' | t }}</p>
             {% endunless %}
             {% unless product.tags contains 'dead-product' %}
-                <p class="out-of-stock out-of-stock-toggle pointer" id="outOfStock">{{ 'products.product.missing_size_toggler' | t }}</p>
-                <p class="out-of-stock out-of-stock-explain hidden">{{ 'products.product.missing_size_explanation' | t }}</p>
-                {% render 'back-in-stock' %}
+                <a class="klaviyo-bis-trigger" href="#" style="display: block !important;">{{ 'products.product.missing_size_toggler' | t }}</a>
+                {% comment %}<p class="out-of-stock out-of-stock-toggle pointer" id="outOfStock">{{ 'products.product.missing_size_toggler' | t }}</p>{% endcomment %}
+                {% comment %}<p class="out-of-stock out-of-stock-explain hidden">{{ 'products.product.missing_size_explanation' | t }}</p>{% endcomment %}
+                {% comment %}{% render 'back-in-stock' %}{% endcomment %}
             {% endunless %}
         </div>
       <script type="application/json">
