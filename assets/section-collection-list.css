@@ -45,7 +45,7 @@
 
  #index .section-collection-list .grid--2-col-tablet-down .grid__item {
 	width: 91%;
-	max-width: fit-content;
+	max-width: inherit;
 }
 
  #index .collection-list__item:only-child {
