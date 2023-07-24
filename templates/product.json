@@ -242,29 +242,6 @@
         "quick_add_accessories_text": "הוספה מהירה"
       }
     },
-    "37dac536-c5a1-4fb0-9990-6e388a96185b": {
-      "type": "rich-text",
-      "blocks": {
-        "template--15943403045004__37dac536-c5a1-4fb0-9990-6e388a96185b-1685962586a6717fa8-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "<p><strong>STRONGIRLS REVIEWS<\/strong><\/p>",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "template--15943403045004__37dac536-c5a1-4fb0-9990-6e388a96185b-1685962586a6717fa8-0"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 16
-      }
-    },
     "7cdab2e2-73e8-4ee9-9440-afe44e06755c": {
       "type": "custom-liquid",
       "settings": {
@@ -282,7 +259,6 @@
     "daadfb7d-6377-46b9-9592-68ff753bf341",
     "6a92001a-1714-49ba-a6c2-ab5ee898262d",
     "8bb31773-3add-4a1a-b42f-368102c7844b",
-    "37dac536-c5a1-4fb0-9990-6e388a96185b",
     "7cdab2e2-73e8-4ee9-9440-afe44e06755c"
   ]
 }
