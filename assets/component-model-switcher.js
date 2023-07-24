@@ -84,7 +84,7 @@ window.addEventListener('DOMContentLoaded', function(e) {
 				modelWearsSizeParagraphsToHide.hide();
 			}
 
-			$(".model-switcher__list").removeClass("hidden");
+			$(".model-switcher__list").addClass("hidden");
 			$(".model-switcher-overlay").addClass("hidden");
 			$(arrowIcon).removeClass('rotate-arrow');
 
