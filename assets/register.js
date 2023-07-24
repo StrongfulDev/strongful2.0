@@ -2,7 +2,7 @@
 window.addEventListener('DOMContentLoaded', () => {
 
 	const listItem = $(".multicolumn-list__item");
-	const registerListItem = $(".multicolumn-list__item[data-account='register']");
+	const registerListItem = $(".multicolumn-list__item[data-account='login']");
 	const customerOverlay = $(".custom-login-overlay");
 	const borderPosition = $("#js-border-position");
 	let cartDrawer = $(".drawer");
