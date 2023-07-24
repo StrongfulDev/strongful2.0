@@ -1008,7 +1008,7 @@
     },
     "errors": {
       "blank": "לא יכול להיות ריק",
-      "reset_password_html": "כבר קיים משתמש עם האימייל הזה. אם שכחת את הסיסמה, את יכולה לאפס את הסיסמה שלך <a href=\"\/account\/login#recover\" class=\"error-recover\">כאן<\/a>",
+      "reset_password_html": "כבר קיים משתמש עם האימייל הזה. אם שכחת את הסיסמה, את יכולה <a href=\"\/account\/login#recover\" class=\"error-recover\">לאפס את הסיסמה שלך כאן<\/a>",
       "verify_email": "ברגעים אלה נשלח מייל הפעלת משתמש אל {{ customer_email }} - עקבי אחרי השלבים במייל כדי להפעיל את המשתמש שלך."
     }
   },
