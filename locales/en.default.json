@@ -891,7 +891,8 @@
         "gift_card_already_applied": "הגיפט קארד כבר מומש בהזמנה זאת.",
         "gift_card_disabled": "הגיפט קארד אינו זמין.",
         "gift_card_expired": "הגיפט קארד אינו בתוקף",
-        "gift_card_depleted": "לא נשאר כסף בגיפט קארד"
+        "gift_card_depleted": "לא נשאר כסף בגיפט קארד",
+        "gift_card_buying_gift_card": "לא ניתן לרכוש גיפט קארד בעזרת גיפט קארד"
       },
       "payment_errors": {
         "order_total_changed": "סוכם ההזמנה השתנה. אנא טעני מחדש את עגלת הקניות שלך.",
@@ -1007,7 +1008,13 @@
     },
     "errors": {
       "blank": "לא יכול להיות ריק",
-      "reset_password_html": "כבר קיים משתמש עם האימייל הזה. אם שכחת את הסיסמה, את יכולה לאפס את הסיסמה שלך <a href=\"\/account\/login#recover\">כאן<\/a>"
+      "reset_password_html": "כבר קיים משתמש עם האימייל הזה. אם שכחת את הסיסמה, את יכולה לאפס את הסיסמה שלך <a href=\"\/account\/login#recover\">כאן<\/a>",
+      "verify_email": "ברגעים אלה נשלח מייל הפעלת משתמש אל {{ customer_email }} - עקבי אחרי השלבים במייל כדי להפעיל את המשתמש שלך."
+    }
+  },
+  "customer_accounts": {
+    "errors": {
+      "retry_action_label": "נסי שוב"
     }
   }
 }
