@@ -413,27 +413,27 @@ You can learn more about this (and learn how to cleanly revert these changes) at
     {% render 'pill' %}
     {% render 'pill-border' %}
     {% unless template.name == 'register' or template.name == 'login' or template.name == 'account' %}
-    <div class="custom-customer-account-container">
-        <div class="close-custom-account-container page-width pointer">
-            <h4 class="custom-customer-popup-main-title">{{ 'customer.account.sub_title' | t }}</h4>
-            {% render 'icon-close' %}
+        <div class="custom-customer-account-container">
+            <div class="close-custom-account-container page-width pointer">
+                <h4 class="custom-customer-popup-main-title">{{ 'customer.account.sub_title' | t }}</h4>
+                {% render 'icon-close' %}
+            </div>
+            {% section 'multicolumn' %}
+            {% section 'main-register' %}
+            {% section 'main-login' %}
+            {%- if settings.logo_secondary != blank -%}
+                {%- assign logo_secondary_alt = settings.logo_secondary.alt | default: shop.name | escape -%}
+                {%- assign logo_secondary_height = settings.logo_secondary_width | divided_by: settings.logo_secondary.aspect_ratio -%}
+                {{ settings.logo_secondary | image_url: width: 500 | image_tag:
+                class: 'header__heading-logo_secondary motion-reduce',
+                widths: '50, 100, 150, 200, 250, 300, 400, 500',
+                height: logo_secondary_height,
+                width: settings.logo_secondary_width,
+                alt: logo_secondary_alt
+                }}
+            {%- endif -%}
         </div>
-        {% section 'multicolumn' %}
-        {% section 'main-register' %}
-        {% section 'main-login' %}
-        {%- if settings.logo_secondary != blank -%}
-            {%- assign logo_secondary_alt = settings.logo_secondary.alt | default: shop.name | escape -%}
-            {%- assign logo_secondary_height = settings.logo_secondary_width | divided_by: settings.logo_secondary.aspect_ratio -%}
-            {{ settings.logo_secondary | image_url: width: 500 | image_tag:
-            class: 'header__heading-logo_secondary motion-reduce',
-            widths: '50, 100, 150, 200, 250, 300, 400, 500',
-            height: logo_secondary_height,
-            width: settings.logo_secondary_width,
-            alt: logo_secondary_alt
-            }}
-        {%- endif -%}
-    </div>
-    <div class="custom-login-overlay hidden">&nbsp;</div>
+        <div class="custom-login-overlay hidden">&nbsp;</div>
     {% endunless %}
 </main>
 
@@ -526,10 +526,5 @@ You can learn more about this (and learn how to cleanly revert these changes) at
     <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
 {{ 'ajaxinate.min.js' | asset_url | script_tag }}
-{% comment %}
-{% if isLiveTheme == 'false' %}
-<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=1c45eb9c-3387-47e8-8fc0-684cd5b825fa"> </script>
-{% endif %}
-{% endcomment %}
 </body>
 </html>

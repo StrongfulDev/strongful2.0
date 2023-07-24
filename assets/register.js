@@ -9,7 +9,9 @@ window.addEventListener('DOMContentLoaded', () => {
 	let customerSection;
 	let secondaryLogo;
 
-	document.querySelector("#shopify-section-main-login").classList.add("hidden");
+	if (document.querySelector("#shopify-section-main-login") !== null) {
+		document.querySelector("#shopify-section-main-login").classList.add("hidden");
+	}
 
 	// account toggler site-wide
 	$(".account-toggler-site-wide").click(function() {
@@ -32,10 +34,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	function animations(element) {
 		secondaryLogo = document.querySelector(".header__heading-logo_secondary");
-		if (element.attr('data-account') === 'login') {
-			secondaryLogo.classList.remove("hidden");
-		} else {
-			secondaryLogo.classList.add("hidden");
+		if (secondaryLogo !== null) {
+			if (element.attr('data-account') === 'login') {
+				secondaryLogo.classList.remove("hidden");
+			} else {
+				secondaryLogo.classList.add("hidden");
+			}
 		}
 		element.addClass("active");
 		element.siblings().removeClass("active");
@@ -43,9 +47,12 @@ window.addEventListener('DOMContentLoaded', () => {
 		let position = element.position();
 		borderPosition.css("width", activeWidth + "px");
 		borderPosition.css("left", position.left + "px");
-		customerSection = document.querySelector("#shopify-section-main-" + element.attr('data-account'));
+		// customerSection = document.querySelector("#shopify-section-main-" + element.attr('data-account'));
+		customerSection = document.querySelector(`div[id$="${element.attr('data-account')}"]`);
+		console.log(customerSection)
 		customerSection.classList.remove("hidden");
-		$(customerSection).siblings('[id^="shopify-section-main-"]').addClass("hidden");
+		$(customerSection).siblings('div[id^="shopify-section"]').addClass("hidden");
+		console.log($(customerSection).siblings('div[id^="shopify-section"]'));
 	}
 
 	listItem.on("click", function() {
