@@ -4000,4 +4000,5 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 
 .klaviyo-bis-trigger {
 	color: var(--gradient-base-accent-1);
+	font-size: var(--font-body-size-medium);
 }
