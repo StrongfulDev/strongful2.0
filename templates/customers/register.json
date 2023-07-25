@@ -6,6 +6,7 @@
         "template--15928318099596__829ce617-c05d-4a9e-8dbd-913daef14a64-1681581730f23935bd-0": {
           "type": "column",
           "settings": {
+            "data_account": "login",
             "title": "כניסה",
             "text": "",
             "link_label": "",
@@ -15,6 +16,7 @@
         "template--15928318099596__829ce617-c05d-4a9e-8dbd-913daef14a64-1681581730f23935bd-1": {
           "type": "column",
           "settings": {
+            "data_account": "register",
             "title": "הרשמה",
             "text": "",
             "link_label": "",
@@ -43,7 +45,7 @@
         "padding_bottom": 0
       }
     },
-    "main": {
+    "register": {
       "type": "main-register",
       "custom_css": [
         ".oxi_social_wrapper {display: none;}",
@@ -54,10 +56,10 @@
         "padding_bottom": 36
       }
     },
-    "sub": {
+    "login": {
       "type": "main-login",
       "custom_css": [
-        "@media screen and (min-width: 990px) {.customer:not(.account):not(.order) {overflow-y: auto; height: auto;}}"
+        "@media screen and (min-width: 990px) {.customer:not(.account):not(.order) {overflow-y: auto; height: auto; }}"
       ],
       "settings": {
         "padding_top": 36,
@@ -67,7 +69,7 @@
   },
   "order": [
     "829ce617-c05d-4a9e-8dbd-913daef14a64",
-    "main",
-    "sub"
+    "register",
+    "login"
   ]
 }
