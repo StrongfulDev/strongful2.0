@@ -150,9 +150,6 @@
           {% render 'loading-spinner' %}
       </button>
         <p class="customer-social-separator">{{ 'customer.register.or' | t }}</p>
-        {% if template.name != 'login' or template.name != 'register' %}
-            <div class='oxi-social-login'></div>
-        {% endif %}
     {%- endform -%}
   </div>
 

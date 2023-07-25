@@ -247,7 +247,7 @@
       },
       "16548475241908962911": {
         "type": "shopify:\/\/apps\/oxi-social-login\/blocks\/social-login-embed\/24ad60bc-8f09-42fa-807e-e5eda0fdae17",
-        "disabled": false,
+        "disabled": true,
         "settings": {
         }
       },
