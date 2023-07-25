@@ -6,6 +6,7 @@
         "template--15943402356876__03ef0341-3b21-4120-9c16-46cccfe66061-1683748713b3005d49-0": {
           "type": "column",
           "settings": {
+            "data_account": "login",
             "title": "כניסה",
             "text": "",
             "link_label": "",
@@ -15,6 +16,7 @@
         "template--15943402356876__03ef0341-3b21-4120-9c16-46cccfe66061-1683748713b3005d49-1": {
           "type": "column",
           "settings": {
+            "data_account": "register",
             "title": "הרשמה",
             "text": "",
             "link_label": "",
@@ -57,7 +59,7 @@
     "sub": {
       "type": "main-register",
       "custom_css": [
-        "@media screen and (min-width: 990px) {.customer:not(.account):not(.order) {overflow-y: auto; height: auto;}}"
+        "@media screen and (min-width: 990px) {.customer:not(.account):not(.order) {overflow-y: auto; height: auto; }}"
       ],
       "settings": {
         "padding_top": 36,

@@ -11,14 +11,14 @@
 <div class="model-switcher-overlay hidden">&nbsp;</div>
 
 <div class="model-switcher fix-direction">
-    <details id="model-switch">
-        <summary class="model-switch-button">
+    <div id="model-switch">
+        <div class="model-switch-button">
             <span>
             {{ 'products.product.model_switch.button' | t }}
             </span>
             {% render 'icon-caret' %}
-        </summary>
-        <div class="model-switcher__list">
+        </div>
+        <div class="model-switcher__list hidden">
             {% for modelName in product.metafields.model.names.value %}
                 {% assign model = shop.metaobjects.model[modelName] %}
                 <div class="model-switcher__item" data-model-size="{{ model.size_letter.value }}">
@@ -58,5 +58,5 @@
                 </div>
             {% endfor %}
         </div>
-    </details>
+    </div>
 </div>
