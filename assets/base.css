@@ -4015,3 +4015,8 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-shorcut {
 	display: none !important;
 }
+
+.klaviyo-bis-trigger {
+	color: var(--gradient-base-accent-1);
+	font-size: var(--font-body-size-medium);
+}
