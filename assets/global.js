@@ -393,6 +393,7 @@ class MenuDrawer extends HTMLElement {
 		if ($(summaryElement).hasClass("header__icon--summary")) {
 			$(".header-overlay").removeClass("hidden");
 			$(".header-wrapper").addClass("blackend");
+			$(".account-menu-details").removeAttr("open");
 		}
 
 	  $(".mobile-facets__close").click(function() {
