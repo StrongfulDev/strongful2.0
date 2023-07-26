@@ -1214,6 +1214,20 @@ function removeDeadProduct() {
 
 window.addEventListener('DOMContentLoaded', function() {
 
+	if (window.innerWidth < 990) {
+		$("#page .section-collection-list:nth-child(3) .grid__item .card .full-unstyled-link").on("click", function(event) {
+			$(event.target).parents(".card").css("border", "1px solid black");
+		});
+	} else {
+		$("#page .section-collection-list:nth-child(3) .grid__item .card .full-unstyled-link").on("mouseenter", function(event) {
+			$(event.target).parents(".card").css("border", "1px solid black");
+		});
+
+		$("#page .section-collection-list:nth-child(3) .grid__item .card .full-unstyled-link").on("mouseleave", function(event) {
+			$(event.target).parents(".card").css("border", "1px solid #f0f0f0");
+		});
+	}
+
 	let scrollbarTrack = $(".scroll-track");
 	let scrollbarSlider = scrollbarTrack.siblings("ul");
 	let scrollbarThumb = scrollbarTrack.find(".scroll-thumb");
