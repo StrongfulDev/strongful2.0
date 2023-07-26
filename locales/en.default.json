@@ -347,7 +347,8 @@
         "title": "Earn rewards",
         "free_shipping": "משלוח חינם",
         "upsell_text": "בקבוק מתנה"
-      }
+      },
+      "out_of_stock": "הפריט אזל מהמלאי"
     },
     "footer": {
       "payment": "Payment methods",

@@ -1271,8 +1271,8 @@ window.addEventListener('DOMContentLoaded', function() {
 		$(headerOverlay).on('mouseenter', function() {
 			$(this).addClass('hidden');
 			$('.header__menu-item').attr('aria-expanded', false);
-			$('details.mega-menu').attr('open', false);
-			$('.menu-drawer-container').attr('open', false);
+			$('details.mega-menu').removeAttr('open');
+			$('.menu-drawer-container').removeAttr('open');
 			// document.body.classList.remove(`overflow-hidden-${menuDrawer.dataset.breakpoint}`);
 		});
 	}
