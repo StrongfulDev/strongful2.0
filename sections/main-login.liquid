@@ -149,10 +149,7 @@
         <span class="button-loader-text">{{ 'customer.login_page.sign_in' | t }}</span>
           {% render 'loading-spinner' %}
       </button>
-        <p class="customer-social-separator">{{ 'customer.register.or' | t }}</p>
-        {% if template.name != 'login' or template.name != 'register' %}
-            <div class='oxi-social-login'></div>
-        {% endif %}
+        {% comment %}<p class="customer-social-separator">{{ 'customer.register.or' | t }}</p>{% endcomment %}
     {%- endform -%}
   </div>
 

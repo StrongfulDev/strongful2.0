@@ -141,10 +141,7 @@
       <span class="button-loader-text">{{ 'customer.register.submit' | t }}</span>
         {% render 'loading-spinner' %}
     </button>
-      <p class="customer-social-separator">{{ 'customer.register.or' | t }}</p>
-      {% if template.name != 'login' or template.name != 'register' %}
-          <div class='oxi-social-login'></div>
-      {% endif %}
+      {% comment %}<p class="customer-social-separator">{{ 'customer.register.or' | t }}</p>{% endcomment %}
       <div class="inputRegister" id="accepts_marketing_checkbox">
           <input type="checkbox" name="customer[accepts_marketing]" checked="checked" hidden="hidden" id="marketing" value="true" class="hidden" />
           <div class="accept-marketing-notice">בהרשמה לאתר את\ה מאשרת את <a href="/blogs/policies/תקנון-האתר" class="inline link-underline">תקנון האתר ומדיניות הפרטיות,</a> וקבלת מיילים שיווקיים.</div>

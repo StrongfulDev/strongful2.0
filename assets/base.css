@@ -3267,7 +3267,8 @@ fieldset {
     width: 2.5rem;
 }
 
-.header__icon, .header__icon--account {
+.header__icon, .header__icon--account,
+.account-menu-details summary.header__icon, .account-menu-details summary.header__icon--account {
 	width: fit-content;
 	column-gap: var(--grid-desktop-horizontal-spacing);
 	text-decoration: none;

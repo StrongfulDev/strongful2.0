@@ -347,7 +347,8 @@
         "title": "Earn rewards",
         "free_shipping": "משלוח חינם",
         "upsell_text": "בקבוק מתנה"
-      }
+      },
+      "out_of_stock": "הפריט אזל מהמלאי"
     },
     "footer": {
       "payment": "Payment methods",
@@ -399,6 +400,7 @@
       "sub_title": "איזור אישי",
       "details": "פרטי משתמש",
       "view_addresses": "הכתובות שלי",
+      "exchange_portal": "פורטל החלפות \/ החזרות",
       "personal_area": "איזור אישי",
       "return": "חזרה",
       "not_customer": "לא {{ name }}?",

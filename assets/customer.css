@@ -1231,6 +1231,8 @@ a.order-number-link .icon {
 .close-custom-account-container .icon-close {
 	width: 1.6rem !important;
 	height: 1.6rem !important;
+	color: var(--gradient-base-accent-1);
+	fill: var(--gradient-base-accent-1);
 }
 
 .close-custom-account-container {

@@ -153,6 +153,7 @@
 
  #page .section-collection-list .grid {
 	 gap: calc(var(--grid-desktop-vertical-spacing) * 2);
+	 direction: rtl;
  }
 
  #page .section-collection-list:nth-child(2) .grid {
@@ -160,16 +161,21 @@
  }
 
  #page .section-collection-list:nth-child(2) .grid__item {
-	 width: 23%;
-	 max-width: 25%;
+	 width: 48%;
+	 max-width: 49%;
  }
 
  #page .section-collection-list:nth-child(3) .grid__item {
-	 width: calc(48% - var(--grid-mobile-horizontal-spacing) / 2);
+	 max-width: calc(48% - var(--grid-mobile-horizontal-spacing) / 2);
  }
 
  #page .section-collection-list:nth-child(3) .grid__item .card {
 	 border-radius: var(--inputs-radius);
+	 border: 1px solid var(--gradient-base-background-3);
+ }
+
+ #page .section-collection-list:nth-child(3) .grid__item .card .full-unstyled-link:hover {
+	 text-decoration: none;
  }
 
  #page .collection-list__item a.full-unstyled-link {
@@ -236,5 +242,10 @@
 
 	#page .section-collection-list:nth-child(3) .grid__item {
 		max-width: calc(24% - var(--grid-desktop-horizontal-spacing) * 3 / 4);
+	}
+
+	#page .section-collection-list:nth-child(2) .grid__item {
+		width: 24%;
+		max-width: 25%;
 	}
 }

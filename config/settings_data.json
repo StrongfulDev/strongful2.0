@@ -247,7 +247,7 @@
       },
       "16548475241908962911": {
         "type": "shopify:\/\/apps\/oxi-social-login\/blocks\/social-login-embed\/24ad60bc-8f09-42fa-807e-e5eda0fdae17",
-        "disabled": false,
+        "disabled": true,
         "settings": {
         }
       },
@@ -269,6 +269,13 @@
         "type": "shopify:\/\/apps\/yoast-seo-seo-for-everyone\/blocks\/metatags\/7c777011-bc88-4743-a24e-64336e1e5b46",
         "disabled": false,
         "settings": {
+        }
+      },
+      "8776485610325655785": {
+        "type": "shopify:\/\/apps\/hiko-social-login\/blocks\/hiko-auth\/3832d7e1-5bcd-4b72-91da-236b57feef8f",
+        "disabled": false,
+        "settings": {
+          "social_font": "enable"
         }
       }
     }
