@@ -166,7 +166,7 @@
  }
 
  #page .section-collection-list:nth-child(3) .grid__item {
-	 width: calc(48% - var(--grid-mobile-horizontal-spacing) / 2);
+	 max-width: calc(48% - var(--grid-mobile-horizontal-spacing) / 2);
  }
 
  #page .section-collection-list:nth-child(3) .grid__item .card {
