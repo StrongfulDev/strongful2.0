@@ -6,8 +6,8 @@
         "slideshow-block-0": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/a38d9e64edeabd8228ade9caaadc745e.gif",
-            "mobile_image": "shopify:\/\/shop_images\/c.gif",
+            "image": "shopify:\/\/shop_images\/banner-desktop.gif",
+            "mobile_image": "shopify:\/\/shop_images\/banner-mobile.gif",
             "heading": "",
             "whole_slide_link": "",
             "heading_size": "h1",
