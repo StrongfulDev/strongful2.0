@@ -245,12 +245,6 @@
         "settings": {
         }
       },
-      "16548475241908962911": {
-        "type": "shopify:\/\/apps\/oxi-social-login\/blocks\/social-login-embed\/24ad60bc-8f09-42fa-807e-e5eda0fdae17",
-        "disabled": true,
-        "settings": {
-        }
-      },
       "1338706403785571867": {
         "type": "shopify:\/\/apps\/dialogue-ai-personalization\/blocks\/dialogueai-embed\/43034bfa-b90a-4a14-aaa8-527eac735f6f",
         "disabled": false,
