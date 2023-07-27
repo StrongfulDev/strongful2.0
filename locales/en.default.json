@@ -586,16 +586,16 @@
   "gift_cards": {
     "issued": {
       "title": "Here's your {{ value }} gift card for {{ shop }}!",
-      "subtext": "Your gift card",
-      "gift_card_code": "Gift card code",
+      "subtext": "Here's your gift card!",
+      "gift_card_code": "הקוד של הגיפט קארד",
       "shop_link": "SHOP NOW",
-      "remaining_html": "Remaining {{ balance }}",
+      "remaining_html": "נותר {{ balance }}",
       "add_to_apple_wallet": "Add to Apple Wallet",
-      "qr_image_alt": "QR code — scan to redeem gift card",
-      "copy_code": "Copy code",
-      "expired": "Expired",
-      "copy_code_success": "Code copied successfully",
-      "print_gift_card": "Print"
+      "qr_image_alt": "קוד QR - סרקי אותו כדי לממש את הגיפט קארד",
+      "copy_code": "העתקת קוד",
+      "expired": "פג התוקף",
+      "copy_code_success": "הועתק ללוח",
+      "print_gift_card": "הדפסה"
     }
   },
   "rewards": {
