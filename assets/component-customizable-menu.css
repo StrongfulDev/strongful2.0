@@ -439,7 +439,7 @@
 	.mega-menu__content li a {
 		font-size: var(--font-body-size-medium);
 		padding: 0;
-		margin: var(--grid-desktop-vertical-spacing) 0;
+		margin: calc(var(--grid-desktop-vertical-spacing) * 1.4) 0;
 	}
 
 	.cart-count-bubble {
