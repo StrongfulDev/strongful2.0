@@ -356,7 +356,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
         function checkCouponText() {
 	        let notice = document.querySelector('.notice__text');
 	        if (notice != null || notice != undefined) {
-		        if (notice.innerHTML.toLocaleLowerCase().includes('WELCOME')) {
+		        if (notice.innerHTML.toLocaleLowerCase().includes('welcome')) {
 			        notice.innerHTML = 'קוד הקופון <strong>WELCOME30</strong> תקף בקנייה מעל ₪200';
 		        } else if (notice.innerHTML.toLocaleLowerCase().includes("dian")) {
 			        notice.innerHTML = 'קוד הקופון <strong>DIAN</strong> תקף בקניית 3 מוצרים ומעלה';
