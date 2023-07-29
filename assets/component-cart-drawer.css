@@ -459,6 +459,10 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 	border-top: 1px solid var(--gradient-base-background-4);
 }
 
+.rewards-section + section {
+	margin: 1rem 0;
+}
+
 .reward-item {
 	display: inline-flex;
 	align-items: center;

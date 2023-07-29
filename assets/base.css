@@ -3900,6 +3900,10 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 	position: relative;
 }
 
+.featured-collection.index-section.disabled {
+    opacity: 0.5;
+}
+
 .shopify-section.shopify-section-group-header-group:last-of-type {
 	z-index: 6;
 	position: relative;

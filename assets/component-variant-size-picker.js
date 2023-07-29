@@ -12,7 +12,7 @@ window.addEventListener('DOMContentLoaded', function(event) {
 		// $(this).parents('.variant_selector').find('.add_to_cart').removeAttr("disabled");
 	})
 
-	$("#MainContent")
+	$("body")
 		.on("click", '.variant_selector.submit_on_click .size_variant_button:not(.disabled-variant-button)', function (e) {
 				$(this).find(".size_variant_button_add").hide();
 				$(this).find(".loading-overlay").css("display", "flex");

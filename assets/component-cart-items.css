@@ -273,6 +273,10 @@ cart-remove-button .icon-remove {
   margin-top: 0.4rem;
 }
 
+.cart-drawer div.collection--full-width {
+  padding: 0;
+}
+
 @media screen and (min-width: 750px) {
   .cart-items {
     border-spacing: 0;
