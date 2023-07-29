@@ -184,7 +184,6 @@ class CartItems extends HTMLElement {
 
     [...cartItemElements, ...cartDrawerItemElements].forEach((overlay) => {
 	    overlay.classList.remove('hidden');
-	    console.log(overlay);
     });
 
     document.activeElement.blur();
