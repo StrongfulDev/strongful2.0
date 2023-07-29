@@ -483,21 +483,28 @@ You can learn more about this (and learn how to cleanly revert these changes) at
         {
             id: "{{ reward.system.id }}",
             title: "{{ reward.title.value }}",
-            order: parseInt("{{ reward.order.value }}"),
+            order: {{ reward.order.value }},
             element_class: "{{ reward.element_class.value }}",
             customer_tags: "{{ reward.customer_tags.value }}",
             condition: {
                 type: "{{ reward.condition_type.value }}",
                 operator: "{{ reward.condition_operator.value }}",
-                value: parseInt("{{ reward.condition_value.value }}"),
+                value: {{ reward.condition_value.value }},
                 message: `{{ reward.condition_message.value }}`,
             },
             reward: {
                 action: "{{ reward.reward_action.value }}",
-                amount: parseInt("{{ reward.reward_amount.value }}"),
-                products: eval(`{{ reward.reward_products }}`),
-                variantId: eval(`{{ reward.reward_products | replace: '["gid://shopify/ProductVariant/', '' | replace: '"]', '' }}`),
+                amount: {{ reward.reward_amount.value }},
+                {% if reward.reward_products != blank %}
+                    products: {{ reward.reward_products }},
+                    {% comment %}variantId: {{ reward.reward_products | replace: '["gid://shopify/ProductVariant/', '' | replace: '"]', '' }},{% endcomment %}
+                    variantId: {{ reward.reward_products | replace: '"gid://shopify/ProductVariant/', '' | replace: '"', '' }},
+                    giftMethod: "{{ reward.gift_method.value }}",
+                {% endif %}
                 product_method: "{{ reward.product_rewards_method.value }}",
+                {% if reward.eligible_message %}
+                    eligibleMessage: "{{ reward.eligible_message.value }}",
+                {% endif %}
                 message: `{{ reward.reward_message.value }}`,
                 loyaltyText: `{{ reward.loyalty_text.value }}`
             }
