@@ -14,6 +14,8 @@ class CartRewards {
 
 	async init() {
 
+		console.log(this.rules);
+
 		this.allRewardsAmount = Math.max.apply(Math, this.rules.map(function (o) {
 			return o.condition.value;
 		}));
@@ -95,11 +97,12 @@ class CartRewards {
 		let isConditionMet = false;
 
 		const isRightQuantity = this.checkProductQuantity(rule);
+		console.log(isRightQuantity)
 		const isAmountGreaterThan = rule.condition.operator === "Greater than or equal" && this.cartTotalValue >= rule.condition.value;
 		const isAmountLessThan = rule.condition.operator === "Less than or equal" && this.cartTotalValue <= rule.condition.value;
 
 		if (rule.condition.type === "CartAmount") {
-			isConditionMet = (isRightQuantity || isRightQuantity === null) && (isAmountGreaterThan || isAmountLessThan);
+			isConditionMet = (isRightQuantity) && (isAmountGreaterThan || isAmountLessThan);
 		} else if (rule.condition.type === "CustomerTags") {
 			if (customerTags.includes(rule.customer_tags) && this.cartTotalValue > rule.condition.value) {
 				isConditionMet = (isRightQuantity || isRightQuantity === null) && (isAmountGreaterThan || isAmountLessThan);
@@ -138,7 +141,7 @@ class CartRewards {
 				continue;
 			}
 
-			if (!productInCart && isConditionMet) {
+			if (!productInCart && isConditionMet && rule.reward.giftMethod === 'automatic') {
 				const res = await this.addProduct(productId)
 				if (isJustOne && res?.items?.length > 0) {
 					return;
@@ -223,15 +226,16 @@ class CartRewards {
 		const isLatestDeactivatedRule = ruleIndex === this.activeRewards && !isConditionMet;
 		const missingAmount = (rule.condition.value - this.cartTotalValue).toFixed(0);
 
+		console.log(missingAmount)
+
 		// Apply condition message.
 		if (isLatestDeactivatedRule && missingAmount > 0) {
 			const rewardMessage = $(`<span class="${rule.element_class}-message" data-index="${ruleIndex}">${rule.condition.message}</span>`);
 			rewardMessage.find('.rewards__missing_amount').text(missingAmount);
 			rewardText.html(rewardMessage);
-		}
-
-		// Apply reward message.
-		else if (isLatestActiveRule) {
+		} else if (missingAmount <= 0 && isLatestDeactivatedRule) {
+			rewardText.html(rule.reward.eligibleMessage);
+		} else if (isLatestActiveRule) {
 			rewardText.html(rule.reward.message);
 		}
 	}
@@ -284,6 +288,7 @@ class CartRewards {
 		}
 
 		const product = this.cart.items.find(item => item.id === parseInt(productIdsInCart[0]));
+		console.log(product)
 		return product.quantity === acceptableQuantity;
 	}
 
