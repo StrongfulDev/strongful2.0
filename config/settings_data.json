@@ -254,7 +254,7 @@
       "featured-collection": {
         "type": "featured-collection",
         "custom_css": [
-          ".full-unstyled-link.fix-direction, .price {display: none;}"
+          ".full-unstyled-link.fix-direction,.price, .card__content {display: none;}"
         ],
         "settings": {
           "steps": 1,
