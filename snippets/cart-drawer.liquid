@@ -43,6 +43,9 @@
                 </div>
 
                 {% render 'cart-rewards' %}
+                {% if settings.show_upsell_card %}
+                    {% section 'featured-collection' %}
+                {% endif %}
             </div>
 
             <div class="drawer__inner__content">

@@ -138,6 +138,7 @@
     "quick_add_text": "בחירת מידה",
     "quick_add_accessories_text": "הוספה לסל",
     "currency_code_enabled": true,
+    "show_upsell_card": true,
     "cart_type": "drawer",
     "show_vendor": true,
     "show_cart_note": false,
@@ -221,61 +222,86 @@
           "padding_top": 0,
           "padding_bottom": 0
         }
+      },
+      "featured-product": {
+        "type": "featured-product",
+        "blocks": {
+          "7f54b25e-f3e7-4e40-889f-67b6659aa8b8": {
+            "type": "buy_buttons",
+            "settings": {
+              "show_dynamic_checkout": false
+            }
+          }
+        },
+        "block_order": [
+          "7f54b25e-f3e7-4e40-889f-67b6659aa8b8"
+        ],
+        "settings": {
+          "product": "pink-slippers",
+          "color_scheme": "background-1",
+          "secondary_background": false,
+          "media_size": "medium",
+          "constrain_to_viewport": true,
+          "media_fit": "contain",
+          "media_position": "left",
+          "image_zoom": "none",
+          "hide_variants": false,
+          "enable_video_looping": false,
+          "padding_top": 8,
+          "padding_bottom": 8
+        }
+      },
+      "featured-collection": {
+        "type": "featured-collection",
+        "custom_css": [
+          ".full-unstyled-link.fix-direction, .price {display: none;}"
+        ],
+        "settings": {
+          "steps": 1,
+          "title": "",
+          "heading_size": "h2",
+          "heading_type": "heading_type_default",
+          "description": "",
+          "show_description": false,
+          "description_style": "body",
+          "collection": "upsell-collection",
+          "products_to_show": 4,
+          "columns_desktop": 3,
+          "full_width": true,
+          "show_view_all": false,
+          "view_all_text": "",
+          "view_all_style": "solid",
+          "view_all_location": "bottom",
+          "enable_desktop_slider": true,
+          "show_peak": true,
+          "pagination_type": "sides",
+          "color_scheme": "background-1",
+          "image_ratio": "square",
+          "show_secondary_image": false,
+          "show_vendor": false,
+          "show_rating": false,
+          "show_sale_badge": false,
+          "enable_quick_add": true,
+          "quick_add_type": "hover",
+          "quick_add_type_mobile": "modal",
+          "quick_add_text": "בחירת מידה",
+          "pick_size_text": "בחירת מידה",
+          "quick_add_accessories_text": "Pick accessories",
+          "columns_mobile": "2",
+          "swipe_on_mobile": true,
+          "padding_top": 4,
+          "padding_bottom": 4
+        }
       }
     },
     "content_for_index": [
 
     ],
     "blocks": {
-      "855628211100114053": {
-        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
-        "disabled": false,
-        "settings": {
-        }
-      },
       "7570552984445421165": {
         "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/settings\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
         "disabled": false,
         "settings": {
-        }
-      },
-      "10570433277407501837": {
-        "type": "shopify:\/\/apps\/simprosys-google-shopping-feed\/blocks\/gsf-gcr\/1f0b859e-9fa6-4007-97e8-4513aff5ff3b",
-        "disabled": false,
-        "settings": {
-        }
-      },
-      "16548475241908962911": {
-        "type": "shopify:\/\/apps\/oxi-social-login\/blocks\/social-login-embed\/24ad60bc-8f09-42fa-807e-e5eda0fdae17",
-        "disabled": true,
-        "settings": {
-        }
-      },
-      "1338706403785571867": {
-        "type": "shopify:\/\/apps\/dialogue-ai-personalization\/blocks\/dialogueai-embed\/43034bfa-b90a-4a14-aaa8-527eac735f6f",
-        "disabled": false,
-        "settings": {
-        }
-      },
-      "8962992520437913685": {
-        "type": "shopify:\/\/apps\/yotpo-loyalty-rewards\/blocks\/loader-app-embed-block\/2f9660df-5018-4e02-9868-ee1fb88d6ccd",
-        "disabled": true,
-        "settings": {
-          "inject_modules_loader": true,
-          "inject_sdk_loader": true
-        }
-      },
-      "yoast-seo-metatags": {
-        "type": "shopify:\/\/apps\/yoast-seo-seo-for-everyone\/blocks\/metatags\/7c777011-bc88-4743-a24e-64336e1e5b46",
-        "disabled": false,
-        "settings": {
-        }
-      },
-      "8776485610325655785": {
-        "type": "shopify:\/\/apps\/hiko-social-login\/blocks\/hiko-auth\/3832d7e1-5bcd-4b72-91da-236b57feef8f",
-        "disabled": false,
-        "settings": {
-          "social_font": "enable"
         }
       }
     }
