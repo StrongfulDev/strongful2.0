@@ -353,12 +353,34 @@ You can learn more about this (and learn how to cleanly revert these changes) at
 
         let checkout = Shopify.Checkout;
 
-        // let notice = document.querySelector('.notice__text');
-        // if (notice != null || notice != undefined) {
-        //   if (notice.innerHTML.includes('OFF100')) {
-        //     notice.innerHTML = 'קוד הקופון <strong>OFF100</strong> תקף בקנייה מעל ₪320';
-        //   }
-        // }
+        function checkCouponText() {
+	        let notice = document.querySelector('.notice__text');
+	        if (notice != null || notice != undefined) {
+		        if (notice.innerHTML.toLocaleLowerCase().includes('WELCOME')) {
+			        notice.innerHTML = 'קוד הקופון <strong>WELCOME30</strong> תקף בקנייה מעל ₪200';
+		        } else if (notice.innerHTML.toLocaleLowerCase().includes("dian")) {
+			        notice.innerHTML = 'קוד הקופון <strong>DIAN</strong> תקף בקניית 3 מוצרים ומעלה';
+		        } else if (notice.innerHTML.toLocaleLowerCase().includes("corrin")) {
+			        notice.innerHTML = 'קוד הקופון <strong>CORRIN</strong> תקף בקניית 3 מוצרים ומעלה';
+		        } else if (notice.innerHTML.toLocaleLowerCase().includes("talia")) {
+			        notice.innerHTML = 'קוד הקופון <strong>TALIA</strong> תקף בקניית 3 מוצרים ומעלה';
+		        } else if (notice.innerHTML.toLocaleLowerCase().includes("barc")) {
+			        notice.innerHTML = 'קוד הקופון <strong>BARC</strong> תקף בקניית 3 מוצרים ומעלה';
+		        } else if (notice.innerHTML.toLocaleLowerCase().includes("aviv")) {
+			        notice.innerHTML = 'קוד הקופון <strong>AVIV</strong> תקף בקניית 3 מוצרים ומעלה';
+		        } else if (notice.innerHTML.toLocaleLowerCase().includes("liel")) {
+			        notice.innerHTML = 'קוד הקופון <strong>LIEL</strong> תקף בקניית 3 מוצרים ומעלה';
+		        } else if (notice.innerHTML.toLocaleLowerCase().includes("kc")) {
+			        notice.innerHTML = 'קוד הקופון <strong>KC</strong> תקף בקניית 3 מוצרים ומעלה';
+		        } else if (notice.innerHTML.toLocaleLowerCase().includes("daniella")) {
+			        notice.innerHTML = 'קוד הקופון <strong>DANIELLA</strong> תקף בקניית 3 מוצרים ומעלה';
+		        } else if (notice.innerHTML.toLocaleLowerCase().includes("lee")) {
+			        notice.innerHTML = 'קוד הקופון <strong>LEE</strong> תקף בקניית 3 מוצרים ומעלה';
+		        }
+	        }
+        }
+
+				setInterval(checkCouponText, 3000);
 
         setTimeout((yotpo) => {
 
