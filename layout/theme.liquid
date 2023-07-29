@@ -497,7 +497,6 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                 amount: {{ reward.reward_amount.value }},
                 {% if reward.reward_products != blank %}
                     products: {{ reward.reward_products }},
-                    {% comment %}variantId: {{ reward.reward_products | replace: '["gid://shopify/ProductVariant/', '' | replace: '"]', '' }},{% endcomment %}
                     variantId: {{ reward.reward_products | replace: '"gid://shopify/ProductVariant/', '' | replace: '"', '' }},
                     giftMethod: "{{ reward.gift_method.value }}",
                 {% endif %}

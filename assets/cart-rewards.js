@@ -98,6 +98,7 @@ class CartRewards {
 		const isRightQuantity = this.checkProductQuantity(rule);
 		const isAmountGreaterThan = rule.condition.operator === "Greater than or equal" && this.cartTotalValue >= rule.condition.value;
 		const isAmountLessThan = rule.condition.operator === "Less than or equal" && this.cartTotalValue <= rule.condition.value;
+		console.log('isRightQuantity', isRightQuantity);
 
 		if (rule.condition.type === "CartAmount") {
 			isConditionMet = (isRightQuantity || isRightQuantity === null) && (isAmountGreaterThan || isAmountLessThan);
@@ -289,10 +290,10 @@ class CartRewards {
 			return true;
 		}
 
-		if (rule.reward.giftMethod === 'automatic') {
 			const product = this.cart.items.find(item => item.id === parseInt(productIdsInCart[0]));
-			return product.quantity === acceptableQuantity;
-		}
+			if (product) {
+				return product.quantity === acceptableQuantity;
+			}
 	}
 
 	productsExistInCart(productIds) {
