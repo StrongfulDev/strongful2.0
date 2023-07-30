@@ -1,7 +1,27 @@
 {{ 'component-countdown.css' | asset_url | stylesheet_tag }}
 {{ 'component-countdown.js' | asset_url | script_tag }}
 
-<a href="{{ section.settings.countdown_url }}" id="countdown" class="countdown fix-direction" data-date="{{ section.settings.countdown_date }}">
+{% comment %}
+
+if show only to loyalty
+    if user is not logged in
+        hide
+    else
+       show
+    endif
+    else
+    show
+    endif
+
+
+
+
+
+{% endcomment %}
+
+{% if show_only_to_loyalty %}
+    {% if customer %}
+        <a href="{{ section.settings.countdown_url }}" id="countdown" class="countdown fix-direction" data-date="{{ section.settings.countdown_date }}">
     <div class="countdown-ctn flex">
         <div class="announce-countdown">
             {% if section.settings.right_text %}
@@ -31,6 +51,39 @@
         {% endif %}
     </div>
 </a>
+    {% endif %}
+    {% else %}
+    <a href="{{ section.settings.countdown_url }}" id="countdown" class="countdown fix-direction" data-date="{{ section.settings.countdown_date }}">
+        <div class="countdown-ctn flex">
+            <div class="announce-countdown">
+                {% if section.settings.right_text %}
+                    <div class="countdown-sale-description-ctn">
+                        {{ section.settings.right_copy }}
+                    </div>
+                {% endif %}
+                <div id="tiles" class="flex ltr">
+                    <div class="tiles-div tiles-div-days {% unless section.settings.show_days %}hidden{% endunless %}">
+                        <p class="tiles-time tiles-time-days"></p>
+                    </div>
+                    <div class="tiles-div tiles-div-hours">
+                        <p class="tiles-time tiles-time-hours"></p>
+                    </div>
+                    <div class="tiles-div tiles-div-minutes">
+                        <p class="tiles-time tiles-time-minutes"></p>
+                    </div>
+                    <div class="tiles-div tiles-div-seconds">
+                        <p class="tiles-time tiles-time-seconds"></p>
+                    </div>
+                </div>
+            </div>
+            {% if section.settings.left_text %}
+                <div class="countdown-sale-description-ctn">
+                    {{ section.settings.left_copy }}
+                </div>
+            {% endif %}
+        </div>
+    </a>
+{% endif %}
 
 {% schema %}
 {
@@ -42,6 +95,12 @@
             "id": "show_days",
             "label": "Show Days"
         },
+      {
+        "type": "checkbox",
+        "id": "show_only_to_loyalty",
+        "label": "Show only to loyalty",
+        "default": false
+      },
         {
             "type": "text",
             "id": "countdown_date",
