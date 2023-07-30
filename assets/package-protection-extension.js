@@ -4,8 +4,6 @@ const extendPackageProtection = () => {
 	subscribe('PackageProtection/addToCard', (data) => {
 		window.location.reload();
 		const templateElement = itemsContainer.querySelector(".product").cloneNode(true);
-		console.log(data);
-		console.log(data.product);
 		templateElement.querySelector(".product-thumbnail__image").src = data.product.image.replace("https:", "");
 		templateElement.querySelector(".product__description__name").innerText = data.product.title;
 		templateElement.querySelector(".product__description__variant").remove();
