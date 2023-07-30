@@ -131,7 +131,7 @@
       "on_sale": "Sale",
       "outlet": "OUTLET",
       "new": "NEW",
-      "sale": "ON SALE",
+      "sale": "20% OFF",
       "product_variants": "Product variants",
       "media": {
         "gallery_viewer": "Gallery Viewer",
@@ -189,7 +189,7 @@
       "variant": {
         "default_title": "הוספה לסל"
       },
-      "missing_size_toggler": "המידה חסרה? לחצי כאן",
+      "missing_size_toggler": "המידה שלך חסרה? לחצי כאן",
       "missing_size_explanation": "לחצי על המידה החסרה, השאירי מייל ואנחנו נעדכן אותך ברגע שהמידה תחזור למלאי",
       "model_switch": {
         "button": "החלפת דוגמנית",
@@ -347,7 +347,8 @@
         "title": "Earn rewards",
         "free_shipping": "משלוח חינם",
         "upsell_text": "בקבוק מתנה"
-      }
+      },
+      "out_of_stock": "הפריט אזל מהמלאי"
     },
     "footer": {
       "payment": "Payment methods",
@@ -399,6 +400,7 @@
       "sub_title": "איזור אישי",
       "details": "פרטי משתמש",
       "view_addresses": "הכתובות שלי",
+      "exchange_portal": "פורטל החלפות \/ החזרות",
       "personal_area": "איזור אישי",
       "return": "חזרה",
       "not_customer": "לא {{ name }}?",
@@ -584,16 +586,16 @@
   "gift_cards": {
     "issued": {
       "title": "Here's your {{ value }} gift card for {{ shop }}!",
-      "subtext": "Your gift card",
-      "gift_card_code": "Gift card code",
+      "subtext": "Here's your gift card!",
+      "gift_card_code": "הקוד של הגיפט קארד",
       "shop_link": "SHOP NOW",
-      "remaining_html": "Remaining {{ balance }}",
+      "remaining_html": "נותר {{ balance }}",
       "add_to_apple_wallet": "Add to Apple Wallet",
-      "qr_image_alt": "QR code — scan to redeem gift card",
-      "copy_code": "Copy code",
-      "expired": "Expired",
-      "copy_code_success": "Code copied successfully",
-      "print_gift_card": "Print"
+      "qr_image_alt": "קוד QR - סרקי אותו כדי לממש את הגיפט קארד",
+      "copy_code": "העתקת קוד",
+      "expired": "פג התוקף",
+      "copy_code_success": "הועתק ללוח",
+      "print_gift_card": "הדפסה"
     }
   },
   "rewards": {
@@ -891,7 +893,8 @@
         "gift_card_already_applied": "הגיפט קארד כבר מומש בהזמנה זאת.",
         "gift_card_disabled": "הגיפט קארד אינו זמין.",
         "gift_card_expired": "הגיפט קארד אינו בתוקף",
-        "gift_card_depleted": "לא נשאר כסף בגיפט קארד"
+        "gift_card_depleted": "לא נשאר כסף בגיפט קארד",
+        "gift_card_buying_gift_card": "לא ניתן לרכוש גיפט קארד בעזרת גיפט קארד"
       },
       "payment_errors": {
         "order_total_changed": "סוכם ההזמנה השתנה. אנא טעני מחדש את עגלת הקניות שלך.",
@@ -1006,7 +1009,14 @@
       }
     },
     "errors": {
-      "blank": "לא יכול להיות ריק"
+      "blank": "לא יכול להיות ריק",
+      "reset_password_html": "כבר קיים משתמש עם האימייל הזה. אם שכחת את הסיסמה, את יכולה <a href=\"\/account\/login#recover\" class=\"error-recover\">לאפס את הסיסמה שלך כאן<\/a>",
+      "verify_email": "ברגעים אלה נשלח מייל הפעלת משתמש אל {{ customer_email }} - עקבי אחרי השלבים במייל כדי להפעיל את המשתמש שלך."
+    }
+  },
+  "customer_accounts": {
+    "errors": {
+      "retry_action_label": "נסי שוב"
     }
   }
 }

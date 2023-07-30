@@ -84,7 +84,7 @@ window.addEventListener('DOMContentLoaded', function(e) {
 				modelWearsSizeParagraphsToHide.hide();
 			}
 
-			$("#model-switch").removeAttr('open');
+			$(".model-switcher__list").addClass("hidden");
 			$(".model-switcher-overlay").addClass("hidden");
 			$(arrowIcon).removeClass('rotate-arrow');
 
@@ -108,18 +108,21 @@ window.addEventListener('DOMContentLoaded', function(e) {
 				.attr('checked', true).prop('checked', true);
 		}
 
-		$(".model-switch-button").click(function() {
-
-			$(arrowIcon).toggleClass('rotate-arrow');
-
-			if ($(window).width() < 990) {
-				$(".model-switcher-overlay").toggleClass("hidden");
-			}
-		});
-
 		$(".model-switcher-overlay").click(function() {
 			$(this).addClass("hidden");
-			$("#model-switch").removeAttr("open");
+			$(".model-switcher__list").addClass("hidden");
+			$(arrowIcon).removeClass('rotate-arrow');
 		});
 	}, 2000);
+
+	$(".model-switch-button").click(function(e) {
+
+		$(".model-switcher__list").toggleClass("hidden");
+
+		$(arrowIcon).toggleClass('rotate-arrow');
+
+		if ($(window).width() < 990) {
+			$(".model-switcher-overlay").toggleClass("hidden");
+		}
+	});
 });

@@ -6,54 +6,14 @@
         "slideshow-block-0": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0_9c057e03-7672-4f62-b66d-a9fe6b2b7758.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/0_bb89d8c4-8fd3-492a-81ef-9329e3ebe73a.jpg",
+            "image": "shopify:\/\/shop_images\/banner-desktop.gif",
+            "mobile_image": "shopify:\/\/shop_images\/banner-mobile.gif",
             "heading": "",
             "whole_slide_link": "",
             "heading_size": "h1",
             "subheading": "",
             "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/up-to-40",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "inverse",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "da38edea-5dac-40af-a420-a672116ae928": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/01_3_bf3a51d7-1c2d-4aa2-8aba-f38c84b708ca.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/min_96e5570c-c4af-46ac-885a-b12f791d566d.jpg",
-            "heading": "",
-            "whole_slide_link": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/elara",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "inverse",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "55848455-bcdc-421a-b1dd-8847f95e73b9": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/9a9dc0dde049ee5ace5c55db571643bc.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/919243cb0782f30a2a160b4f61989d9a.jpg",
-            "heading": "",
-            "whole_slide_link": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/aura",
+            "link": "shopify:\/\/collections\/20",
             "button_style_secondary": false,
             "box_align": "middle-center",
             "show_text_box": false,
@@ -65,9 +25,7 @@
         }
       },
       "block_order": [
-        "slideshow-block-0",
-        "da38edea-5dac-40af-a420-a672116ae928",
-        "55848455-bcdc-421a-b1dd-8847f95e73b9"
+        "slideshow-block-0"
       ],
       "custom_css": [
 
@@ -76,13 +34,13 @@
         "layout": "full_bleed",
         "slide_height": "adapt_image",
         "slider_visual": "sides",
-        "auto_rotate": true,
+        "auto_rotate": false,
         "change_slides_speed": 9,
         "show_text_below": false,
         "accessibility_info": "Slideshow about our brand"
       }
     },
-    "17711ea4-9001-4425-9527-79593a92ff94": {
+    "ecf1e0a5-0973-4674-ac5b-b5370ff1bae1": {
       "type": "featured-collection",
       "custom_css": [
         ".button {width: 100%;}",
@@ -92,14 +50,14 @@
       ],
       "settings": {
         "steps": 4,
-        "title": "NEW IN",
+        "title": "SELLING FAST",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "new-in",
-        "products_to_show": 25,
+        "collection": "selling-fast",
+        "products_to_show": 14,
         "columns_desktop": 5,
         "full_width": true,
         "show_view_all": true,
@@ -124,7 +82,7 @@
         "columns_mobile": "2",
         "swipe_on_mobile": true,
         "padding_top": 52,
-        "padding_bottom": 12
+        "padding_bottom": 24
       }
     },
     "our_collection_list": {
@@ -133,10 +91,10 @@
         "b5e51ca0-c5c6-4207-bb06-c9a69adc91b6": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1280X740.jpg",
+            "image": "shopify:\/\/shop_images\/Untitled-2-01.png",
             "alt": "",
-            "link": "NEW IN",
-            "url": "shopify:\/\/collections\/new-in"
+            "link": "20% OFF",
+            "url": "shopify:\/\/collections\/20"
           }
         },
         "3603325c-8c6d-4a1e-b28e-fe94adadefb7": {
@@ -190,51 +148,6 @@
         "padding_bottom": 64
       }
     },
-    "ecf1e0a5-0973-4674-ac5b-b5370ff1bae1": {
-      "type": "featured-collection",
-      "custom_css": [
-        ".button {width: 100%;}",
-        ".discount-price-container {direction: rtl;}",
-        ".slider--tablet.grid--peek.grid--2-col-tablet-down .grid__item,.grid--peek .grid__item {width: calc(48% - var(--grid-mobile-horizontal-spacing) - 3rem);}",
-        "@media screen and (min-width: 990px) {.slider--desktop.grid--peek.grid--5-col-desktop .grid__item {width: calc( (94% - var(--desktop-margin-left-first-item)) \/ 5 - var(--grid-desktop-horizontal-spacing) * 2 ); }}"
-      ],
-      "settings": {
-        "steps": 4,
-        "title": "SELLING FAST",
-        "heading_size": "h1",
-        "heading_type": "heading_type_2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "selling-fast",
-        "products_to_show": 14,
-        "columns_desktop": 5,
-        "full_width": true,
-        "show_view_all": true,
-        "view_all_text": "SHOP ALL",
-        "view_all_style": "link",
-        "view_all_location": "top",
-        "enable_desktop_slider": true,
-        "show_peak": true,
-        "pagination_type": "sides",
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": true,
-        "show_rating": false,
-        "show_sale_badge": false,
-        "enable_quick_add": true,
-        "quick_add_type": "hover",
-        "quick_add_type_mobile": "modal",
-        "quick_add_text": "הוספה מהירה",
-        "pick_size_text": "בחירת מידה",
-        "quick_add_accessories_text": "הוספה מהירה",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 52,
-        "padding_bottom": 24
-      }
-    },
     "eb801099-3113-4348-8f97-119459011525": {
       "type": "visual-ugc",
       "disabled": true,
@@ -249,9 +162,8 @@
   },
   "order": [
     "slideshow",
-    "17711ea4-9001-4425-9527-79593a92ff94",
-    "our_collection_list",
     "ecf1e0a5-0973-4674-ac5b-b5370ff1bae1",
+    "our_collection_list",
     "eb801099-3113-4348-8f97-119459011525"
   ]
 }

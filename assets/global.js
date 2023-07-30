@@ -393,6 +393,7 @@ class MenuDrawer extends HTMLElement {
 		if ($(summaryElement).hasClass("header__icon--summary")) {
 			$(".header-overlay").removeClass("hidden");
 			$(".header-wrapper").addClass("blackend");
+			$(".account-menu-details").removeAttr("open");
 		}
 
 	  $(".mobile-facets__close").click(function() {
@@ -1213,6 +1214,22 @@ function removeDeadProduct() {
 
 window.addEventListener('DOMContentLoaded', function() {
 
+	const shopByColorLink = $("#page .section-collection-list:nth-child(3) .grid__item .card .full-unstyled-link");
+
+	if (window.innerWidth < 990) {
+		shopByColorLink.on("click", function(event) {
+			$(event.target).parents(".card").css("border", "1px solid black");
+		});
+	} else {
+		shopByColorLink.on("mouseenter", function(event) {
+			$(event.target).parents(".card").css("border", "1px solid black");
+		});
+
+		shopByColorLink.on("mouseleave", function(event) {
+			$(event.target).parents(".card").css("border", "1px solid #f0f0f0");
+		});
+	}
+
 	let scrollbarTrack = $(".scroll-track");
 	let scrollbarSlider = scrollbarTrack.siblings("ul");
 	let scrollbarThumb = scrollbarTrack.find(".scroll-thumb");
@@ -1261,6 +1278,7 @@ window.addEventListener('DOMContentLoaded', function() {
 	function closeHeader(event) {
 		$('html').removeClass(`overflow-hidden-${menuDrawer.dataset.breakpoint}`).removeClass('overflow-hidden');
 		$(".menu-drawer-container.menu-opening").attr('open', false).removeClass('menu-opening');
+		$("details.account-menu-details").attr('open', false);
 		$(headerOverlay).addClass('hidden');
 		$(".header-wrapper").removeClass("blackend");
 	}
@@ -1270,8 +1288,9 @@ window.addEventListener('DOMContentLoaded', function() {
 		$(headerOverlay).on('mouseenter', function() {
 			$(this).addClass('hidden');
 			$('.header__menu-item').attr('aria-expanded', false);
-			$('details.mega-menu').attr('open', false);
-			$('.menu-drawer-container').attr('open', false);
+			$('details.mega-menu').removeAttr('open');
+			$('details.account-menu-details').removeAttr('open');
+			$('.menu-drawer-container').removeAttr('open');
 			// document.body.classList.remove(`overflow-hidden-${menuDrawer.dataset.breakpoint}`);
 		});
 	}

@@ -3177,7 +3177,7 @@ details-disclosure > details {
     }
 }
 
-.rtl, .fix-direction {
+.rtl, .fix-direction, p.fix-direction, span.fix-direction {
     direction: rtl;
 }
 
@@ -3267,7 +3267,8 @@ fieldset {
     width: 2.5rem;
 }
 
-.header__icon, .header__icon--account {
+.header__icon, .header__icon--account,
+.account-menu-details summary.header__icon, .account-menu-details summary.header__icon--account {
 	width: fit-content;
 	column-gap: var(--grid-desktop-horizontal-spacing);
 	text-decoration: none;
@@ -3913,6 +3914,20 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 	padding: 0 7px;
 }
 
+.rect-discount-tag.colored-tag {
+	color: var(--gradient-base-accent-3);
+	border-color: var(--gradient-base-accent-3);
+}
+
+.old-copy {
+	font-size: .8em;
+	margin: .5rem 0;
+	width: 100%;
+	text-align: center;
+	padding: var(--grid-mobile-vertical-spacing) 0;
+	background: var(--gradient-base-background-3);
+}
+
 @-webkit-keyframes loader {
 	0% {
 		opacity:.2
@@ -4000,6 +4015,11 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 
 body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-shorcut {
 	display: none !important;
+}
+
+.klaviyo-bis-trigger {
+	color: var(--gradient-base-accent-1);
+	font-size: var(--font-body-size-medium);
 }
 
 .admin-bar__page {

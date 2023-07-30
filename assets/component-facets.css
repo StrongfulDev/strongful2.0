@@ -1492,10 +1492,12 @@ div.החדשיםביותר {
 	order: 1;
 }
 
+/* countdown adjustments */
+
 @media screen and (max-width: 989px) {
 	.facets-wrapper {
 		position: sticky;
-		top: 69px;
+		top: 21px;
 		z-index: 3;
 		background: white;
 		padding: 1em;
@@ -1675,14 +1677,12 @@ summary .icon-caret {
 	  box-shadow: 0 0 6px #636363;
   }
 
-	/* .facets__disclosure-vertical[data-index='2'] {
-		border-top: 0;
-	} */
+	/* countdown adjustments */
 
 	.facets-container {
 		position: -webkit-sticky;
 		position: sticky;
-		top: 15rem;
+		top: 9rem;
 		max-width: 240px;
 		min-width: 200px;
 		max-height: 80vh;

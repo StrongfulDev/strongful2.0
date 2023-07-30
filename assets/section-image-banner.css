@@ -149,6 +149,10 @@
     width: 100%;
 }
 
+.banner__media.placeholder {
+	display: none !important;
+}
+
 .banner__media-half {
     width: 50%;
 }
@@ -490,6 +494,10 @@
 
 	.collection .banner__media {
 		position: static;
+	}
+
+	.collection .banner__media.placeholder {
+		display: none;
 	}
 
 	.collection .banner__content {

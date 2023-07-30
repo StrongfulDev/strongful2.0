@@ -1,7 +1,8 @@
 {{ 'component-countdown.css' | asset_url | stylesheet_tag }}
 {{ 'component-countdown.js' | asset_url | script_tag }}
 
-<a href="{{ section.settings.countdown_url }}" id="countdown" class="countdown fix-direction" data-date="{{ section.settings.countdown_date }}">
+    {% if customer %}
+        <a href="{{ section.settings.countdown_url }}" id="countdown" class="countdown fix-direction {{ show_only_to_loyalty }}" data-date="{{ section.settings.countdown_date }}">
     <div class="countdown-ctn flex">
         <div class="announce-countdown">
             {% if section.settings.right_text %}
@@ -31,6 +32,7 @@
         {% endif %}
     </div>
 </a>
+    {% endif %}
 
 {% schema %}
 {
@@ -42,6 +44,22 @@
             "id": "show_days",
             "label": "Show Days"
         },
+      {
+        "type": "select",
+        "id": "show_only_to_loyalty",
+        "label": "Show only to loyalty members",
+        "options": [
+          {
+            "value": "show only to loyalty",
+            "label": "Show only to loyalty members"
+          },
+          {
+            "value": "everyone",
+            "label": "Show to everyone"
+          }
+        ],
+        "default": "everyone"
+      },
         {
             "type": "text",
             "id": "countdown_date",
@@ -79,7 +97,9 @@
             "name": "Countdown",
             "category": "Countdown",
             "settings": {
-                "countdown_date": "Sun Jul 23 2023 12:00:00 GMT+0300 (שעון ישראל (קיץ))"
+                "countdown_date": "Sun Jul 23 2023 12:00:00 GMT+0300 (שעון ישראל (קיץ))",
+              "countdown_url": "/",
+                "show_only_to_loyalty": "everyone"
             }
         }
     ]

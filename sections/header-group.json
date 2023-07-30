@@ -24,12 +24,12 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "WEEKEND SALE",
-            "sub_text": "UP TO 40% OFF",
+            "main_text": "20% OFF",
+            "sub_text": "על כל האתר (לא כולל אאוטלט)",
             "text_alignment": "center",
             "main_text_direction": "ltr",
-            "sub_text_direction": "ltr",
-            "link": "shopify:\/\/collections\/up-to-40",
+            "sub_text_direction": "rtl",
+            "link": "shopify:\/\/collections\/20",
             "color_scheme": "accent-1"
           }
         },
@@ -75,14 +75,14 @@
             "title": "COLLECTIONS",
             "item_class": "",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/0_289e98b3-8577-47b2-b1af-cb9909645626.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/up-to-40",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/2x-100_ebfcd0cf-0646-4dbe-98d5-0694bbae2da0.jpg",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/20",
             "desktop_links_image_2_link": "",
             "mobile_title": "COLLECTIONS",
             "main_link": "",
             "main_title": "",
             "shop_all_link": "",
-            "shop_all_title": ""
+            "shop_all_title": "COLLECTIONS"
           }
         },
         "8878d4cf-d83f-42a2-90b9-ddebceb7501c": {
@@ -97,10 +97,10 @@
             "title": "סטים",
             "item_class": "סטים | SETS",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/1.gif",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/up-to-40",
-            "desktop_links_image_2": "shopify:\/\/shop_images\/2_20151a67-ac34-4356-9501-f974d6035721.jpg",
-            "desktop_links_image_2_link": "shopify:\/\/collections\/up-to-40",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/14720f9c2b5f45dfecbbe3226e0635a4.gif",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/20",
+            "desktop_links_image_2": "shopify:\/\/shop_images\/IMG_9950-01-01.jpg",
+            "desktop_links_image_2_link": "shopify:\/\/collections\/20",
             "mobile_cover_image": "shopify:\/\/shop_images\/20e5c3f719da92dc7bfd0c70c57f7186.jpg",
             "mobile_title": "סטים",
             "main_link": "",
@@ -121,10 +121,9 @@
             "title": "טייצים",
             "item_class": "סטים | SETS",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/0_4407e1cf-fea6-4dbe-aa82-4113c8b3ea61.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/up-to-40",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/2x-100.jpg",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/20",
             "desktop_links_image_2_link": "",
-            "mobile_cover_image": "shopify:\/\/shop_images\/leggings_hamburger.jpg",
             "mobile_title": "טייצים",
             "main_link": "",
             "main_title": "",
@@ -144,10 +143,9 @@
             "title": "טופים",
             "item_class": "סטים | SETS",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/0_ac0b44a9-5fa0-446d-9b4c-d071f4ffc34d.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/up-to-40",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/2x-100_e951cd4b-a912-469a-8a86-c03bcf9e701c.jpg",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/20",
             "desktop_links_image_2_link": "",
-            "mobile_cover_image": "shopify:\/\/shop_images\/bra_hamburger.jpg",
             "mobile_title": "טופים",
             "main_link": "",
             "main_title": "",
@@ -167,10 +165,9 @@
             "title": "OUTLET",
             "item_class": "OUTLET",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/0_0fc3857d-f655-4802-bbd2-1d00e126e2ea.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/up-to-40",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/2x-100_e2d9ac91-9aec-46ea-a9fa-f75da81fc684.jpg",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/20",
             "desktop_links_image_2_link": "",
-            "mobile_cover_image": "shopify:\/\/shop_images\/outlet-up-to-50.jpg",
             "mobile_title": "OUTLET - UP TO 50% OFF",
             "main_link": "",
             "main_title": "",
@@ -190,8 +187,8 @@
             "title": "אקססוריז",
             "item_class": "סטים | SETS",
             "title_link": "קולקציית אקססוריז",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/0_2d83409b-7730-45d2-be9d-67c543b522ff.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/up-to-40",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/2x-100_23b54f55-d632-4c43-8111-53224989d050.jpg",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/20",
             "desktop_links_image_2_link": "",
             "mobile_cover_image": "shopify:\/\/shop_images\/accessories_hamburger.jpg",
             "mobile_title": "ACCESSORIES",
@@ -245,9 +242,9 @@
         "show_line_separator": true,
         "mobile_menu": "",
         "mobile_logo_position": "center",
-        "mobile_top_image_1": "shopify:\/\/shop_images\/43fd72f01a94dc6b81b5c51d8009bd03.jpg",
-        "mobile_top_image_1_link": "shopify:\/\/collections\/up-to-40",
-        "mobile_top_image_1_title": "SHOP SALE",
+        "mobile_top_image_1": "shopify:\/\/shop_images\/Untitled-2-01_332e769c-ea02-4feb-ace1-d94f0dea4df7.png",
+        "mobile_top_image_1_link": "shopify:\/\/collections\/20",
+        "mobile_top_image_1_title": "20% OFF",
         "mobile_top_image_2": "shopify:\/\/shop_images\/Artboard_4_4x-100-min.jpg",
         "mobile_top_image_2_link": "shopify:\/\/collections\/best-seller-internal-use",
         "mobile_top_image_2_title": "BEST SELLERS",
@@ -282,14 +279,15 @@
         "padding_bottom": 0
       }
     },
-    "349cdaac-9b58-46d1-a7d8-dea3d3af5438": {
+    "94ab238e-a133-4905-a0be-f26a3cf38e52": {
       "type": "countdown",
       "settings": {
         "show_days": true,
-        "countdown_date": "Sun Jul 23 2023 12:00:00 GMT+0300 (שעון ישראל (קיץ))",
-        "countdown_url": "shopify:\/\/collections\/up-to-40",
-        "left_text": true,
-        "left_copy": "<p>WEEKEND SALE<\/p>",
+        "show_only_to_loyalty": true,
+        "countdown_date": "Thu Aug 03 2023 00:00:00 GMT+0300 (שעון ישראל (קיץ))",
+        "countdown_url": "",
+        "left_text": false,
+        "left_copy": "",
         "right_text": false,
         "right_copy": ""
       }
@@ -299,6 +297,6 @@
     "announcement-bar",
     "header",
     "7503b704-2110-400e-bc52-a2190d224c23",
-    "349cdaac-9b58-46d1-a7d8-dea3d3af5438"
+    "94ab238e-a133-4905-a0be-f26a3cf38e52"
   ]
 }

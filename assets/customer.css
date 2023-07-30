@@ -1,3 +1,7 @@
+.error-recover {
+	text-decoration: underline;
+}
+
 #returnGoAccountWidget {
 	display: none;
 }
@@ -7,8 +11,9 @@
 	max-height: 2rem !important;
 }
 
-.form__general-errors {
+p.form__general-errors, .login p.form__general-errors {
 	text-align: right;
+	margin-bottom: 3rem;
 }
 
 a.container-menu-item.container-menu-item-logout.desktop--only {
@@ -1212,7 +1217,9 @@ a.order-number-link .icon {
 	padding-left: 0;
 }
 
-.custom-customer-account-container.active .multicolumn-list {
+.custom-customer-account-container.active .multicolumn-list,
+.register .multicolumn-list.contains-content-container,
+.login .multicolumn-list.contains-content-container {
 	column-gap: calc(var(--grid-desktop-vertical-spacing) * 2);
 	padding-bottom: var(--grid-mobile-vertical-spacing);
 }
@@ -1224,6 +1231,8 @@ a.order-number-link .icon {
 .close-custom-account-container .icon-close {
 	width: 1.6rem !important;
 	height: 1.6rem !important;
+	color: var(--gradient-base-accent-1);
+	fill: var(--gradient-base-accent-1);
 }
 
 .close-custom-account-container {
