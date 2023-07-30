@@ -227,13 +227,9 @@
                                 </div>
                             </div>
                         {%- endif -%}
-                        {% if card_product.tags contains 'new' or card_product.tags contains 'NEW' or card_product.tags contains 'new-in' %}
+                        {% if card_product.tags contains 'new' or card_product.tags contains 'NEW' %}
                             <span class="new-product-span">
                                 {{ 'products.product.new' | t }}
-                            </span>
-                            {% elsif card_product.tags contains 'Special price' %}
-                            <span class="new-product-span">
-                                {{ 'products.product.sale' | t }}
                             </span>
                         {% endif %}
                         {%- if show_quick_add and quick_add_type_mobile == "modal" -%}
@@ -262,24 +258,6 @@
                                     </p>
                                 {% endif %}
                             </div>
-                            {% else %}
-                            {% if card_product.tags contains 'balanceBundle' %}
-                                <p class="colored-tag old-copy fix-direction">
-                                    3 פריטים ב <span style="font-weight: 700;">₪350</span>
-                                </p>
-                            {% elsif card_product.tags contains 'ventureBundle' %}
-                                <p class="colored-tag old-copy fix-direction">
-                                    3 פריטים ב <span style="font-weight: 700;">₪430</span>
-                                </p>
-                            {% elsif card_product.tags contains 'kindBundle' or card_product.tags contains 'blissBundle' %}
-                                <p class="colored-tag old-copy fix-direction">
-                                    3 פריטים ב <span style="font-weight: 700;">₪400</span>
-                                </p>
-                            {% elsif card_product.tags contains 'axelBundle' %}
-                                <p class="colored-tag old-copy fix-direction">
-                                    3 פריטים ב <span style="font-weight: 700;">₪370</span>
-                                </p>
-                            {% endif %}
                         {% endif %}
                         <p
                                 class="card__heading {{ card_header_size }}"

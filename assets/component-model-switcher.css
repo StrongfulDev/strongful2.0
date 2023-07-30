@@ -4,7 +4,7 @@
 
 .product-media-gallery-container .model-switcher {
 	position: absolute;
-	bottom: 1.5em;
+    bottom: 1.5em;
 	right: 1em;
 	z-index: 3;
 }
@@ -22,7 +22,7 @@
 	width: fit-content;
 	border-radius: 2rem;
 	font-family: inherit;
-	margin-top: 1rem;
+		margin-top: 1rem;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;

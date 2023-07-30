@@ -48,28 +48,6 @@
                     {{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | ceil }}% OFF
                 </p>
             </div>
-            {% else %}
-            {% if product.tags contains 'balanceBundle' %}
-                <p class="fix-direction colored-tag old-copy">
-                    בקניית טופ+שורט/בייקר+טייץ מדגם זה שלמי <span style="font-weight: 700;">₪350</span> במקום ₪443
-                </p>
-                {% elsif product.tags contains 'axelBundle' %}
-                <p class="fix-direction colored-tag old-copy">
-                    בקניית טופ+שורט+טייץ מדגם זה שלמי <span style="font-weight: 700;">₪370</span> במקום ₪503
-                </p>
-            {% elsif product.tags contains 'ventureBundle' %}
-                <p class="fix-direction colored-tag old-copy">
-                    בקניית טופ+שורט+טייץ מדגם זה שלמי <span style="font-weight: 700;">₪430</span> במקום ₪507
-                </p>
-            {% elsif product.tags contains 'blissBundle' %}
-                <p class="fix-direction colored-tag old-copy">
-                    בקניית טופ+שורט+טייץ מדגם זה שלמי <span style="font-weight: 700;">₪400</span> במקום ₪518
-                </p>
-            {% elsif product.tags contains 'kindBundle' %}
-                <p class="fix-direction colored-tag old-copy">
-                    בקניית טופ+שורט+טייץ מדגם זה שלמי <span style="font-weight: 700;">₪400</span> במקום ₪490
-                </p>
-                {% endif %}
         {% endif %}
     {% endif %}
     <div class="price__container fix-direction">

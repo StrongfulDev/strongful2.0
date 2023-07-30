@@ -115,9 +115,9 @@
         <div class="size-table-stock-container">
             {% unless product.tags contains 'noSizeTable' %}
                 <p class="size-table-toggler pointer">{{ 'products.product.size_table' | t }}</p>
-            {% endunless %}
-            {% unless product.tags contains 'dead-product' %}
-                <a class="klaviyo-bis-trigger" href="#" style="display: block !important;">{{ 'products.product.missing_size_toggler' | t }}</a>
+                {% unless product.tags contains 'dead-product' %}
+                    <a class="klaviyo-bis-trigger" href="#" style="display: block !important;">{{ 'products.product.missing_size_toggler' | t }}</a>
+                {% endunless %}
             {% endunless %}
         </div>
       <script type="application/json">
