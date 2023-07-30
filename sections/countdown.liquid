@@ -1,7 +1,6 @@
 {{ 'component-countdown.css' | asset_url | stylesheet_tag }}
 {{ 'component-countdown.js' | asset_url | script_tag }}
 
-{% if show_only_to_loyalty == 'show only to loyalty' %}
     {% if customer %}
         <a href="{{ section.settings.countdown_url }}" id="countdown" class="countdown fix-direction {{ show_only_to_loyalty }}" data-date="{{ section.settings.countdown_date }}">
     <div class="countdown-ctn flex">
@@ -34,38 +33,6 @@
     </div>
 </a>
     {% endif %}
-{% else %}
-    <a href="{{ section.settings.countdown_url }}" id="countdown" class="countdown fix-direction {{ show_only_to_loyalty }}" data-date="{{ section.settings.countdown_date }}">
-        <div class="countdown-ctn flex">
-            <div class="announce-countdown">
-                {% if section.settings.right_text %}
-                    <div class="countdown-sale-description-ctn">
-                        {{ section.settings.right_copy }}
-                    </div>
-                {% endif %}
-                <div id="tiles" class="flex ltr">
-                    <div class="tiles-div tiles-div-days {% unless section.settings.show_days %}hidden{% endunless %}">
-                        <p class="tiles-time tiles-time-days"></p>
-                    </div>
-                    <div class="tiles-div tiles-div-hours">
-                        <p class="tiles-time tiles-time-hours"></p>
-                    </div>
-                    <div class="tiles-div tiles-div-minutes">
-                        <p class="tiles-time tiles-time-minutes"></p>
-                    </div>
-                    <div class="tiles-div tiles-div-seconds">
-                        <p class="tiles-time tiles-time-seconds"></p>
-                    </div>
-                </div>
-            </div>
-            {% if section.settings.left_text %}
-                <div class="countdown-sale-description-ctn">
-                    {{ section.settings.left_copy }}
-                </div>
-            {% endif %}
-        </div>
-    </a>
-{% endif %}
 
 {% schema %}
 {
