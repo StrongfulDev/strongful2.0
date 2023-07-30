@@ -16,7 +16,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0">
     <meta name="referrer" content="origin">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer="defer"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn-widgetsrepository.yotpo.com/v1/loader/qGZpUcqW7-E2nBL0lvSZUA" async defer="defer"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,7 +36,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
             padding-inline-start: 0;
         }
 
-        .hidden {
+        .hidden, .notice.notice--error.default-background {
             display: none;
         }
 
@@ -267,8 +267,6 @@ You can learn more about this (and learn how to cleanly revert these changes) at
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {w[l] = w[l] || [];w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';j.async = true;j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j, f);})(window, document, 'script', 'dataLayer', 'GTM-NS9ZW7H');</script>
     <!-- End Google Tag Manager -->
- <!-- Dialogue-Checkout snippet load -->
-   {% comment %}{% include 'dialogue' %}{% endcomment %}
 </head>
 <body>
 {{ skip_to_content_link }}
@@ -369,7 +367,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
 	        }
         }
 
-				setInterval(checkCouponText, 3000);
+//				setInterval(checkCouponText, 3000);
 
         setTimeout((yotpo) => {
 
@@ -378,7 +376,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                 $('.modal-content').css('direction', 'rtl');
             } else {
                 let orderSummary = document.querySelector('.order-summary');
-                $('.order-summary-toggle').removeClass('order-summary-toggle--show').addClass('order-summary-toggle--hide');
+                jQuery('.order-summary-toggle').removeClass('order-summary-toggle--show').addClass('order-summary-toggle--hide');
                 orderSummary.classList.remove('order-summary--is-collapsed');
                 orderSummary.classList.add('order-summary--is-expanded');
 
@@ -415,7 +413,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
             // }
             // preorder code end
 
-        }, 2900);
+        }, 3900);
 
         let breadcrumbs = document.querySelectorAll( '.breadcrumb__link' );
         breadcrumbs.forEach((crumb) => {
