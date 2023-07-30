@@ -1,27 +1,9 @@
 {{ 'component-countdown.css' | asset_url | stylesheet_tag }}
 {{ 'component-countdown.js' | asset_url | script_tag }}
 
-{% comment %}
-
-if show only to loyalty
-    if user is not logged in
-        hide
-    else
-       show
-    endif
-    else
-    show
-    endif
-
-
-
-
-
-{% endcomment %}
-
-{% if show_only_to_loyalty %}
+{% if show_only_to_loyalty == 'show only to loyalty' %}
     {% if customer %}
-        <a href="{{ section.settings.countdown_url }}" id="countdown" class="countdown fix-direction" data-date="{{ section.settings.countdown_date }}">
+        <a href="{{ section.settings.countdown_url }}" id="countdown" class="countdown fix-direction {{ show_only_to_loyalty }}" data-date="{{ section.settings.countdown_date }}">
     <div class="countdown-ctn flex">
         <div class="announce-countdown">
             {% if section.settings.right_text %}
@@ -52,8 +34,8 @@ if show only to loyalty
     </div>
 </a>
     {% endif %}
-    {% else %}
-    <a href="{{ section.settings.countdown_url }}" id="countdown" class="countdown fix-direction" data-date="{{ section.settings.countdown_date }}">
+{% else %}
+    <a href="{{ section.settings.countdown_url }}" id="countdown" class="countdown fix-direction {{ show_only_to_loyalty }}" data-date="{{ section.settings.countdown_date }}">
         <div class="countdown-ctn flex">
             <div class="announce-countdown">
                 {% if section.settings.right_text %}
@@ -96,10 +78,20 @@ if show only to loyalty
             "label": "Show Days"
         },
       {
-        "type": "checkbox",
+        "type": "select",
         "id": "show_only_to_loyalty",
-        "label": "Show only to loyalty",
-        "default": false
+        "label": "Show only to loyalty members",
+        "options": [
+          {
+            "value": "show only to loyalty",
+            "label": "Show only to loyalty members"
+          },
+          {
+            "value": "everyone",
+            "label": "Show to everyone"
+          }
+        ],
+        "default": "everyone"
       },
         {
             "type": "text",
@@ -138,7 +130,9 @@ if show only to loyalty
             "name": "Countdown",
             "category": "Countdown",
             "settings": {
-                "countdown_date": "Sun Jul 23 2023 12:00:00 GMT+0300 (שעון ישראל (קיץ))"
+                "countdown_date": "Sun Jul 23 2023 12:00:00 GMT+0300 (שעון ישראל (קיץ))",
+              "countdown_url": "/",
+                "show_only_to_loyalty": "everyone"
             }
         }
     ]
