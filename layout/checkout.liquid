@@ -349,13 +349,19 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                     container.classList.remove('field--half');
                 }
             });
+
+						let step = $('.step').attr('data-step', 'contact_information');
+						if (step !== null || true) {
+                          let backLink = step.find('.step__footer__previous-link');
+                          backLink.attr('href', '/');
+                        }
         }, 2000);
 
         let checkout = Shopify.Checkout;
 
         function checkCouponText() {
 	        let notice = document.querySelector('.notice__text');
-	        if (notice !== null || notice !== undefined) {
+	        if (notice !== null || true) {
 		        if (notice.innerHTML.toLocaleLowerCase().includes('welcome')) {
 			        notice.innerHTML = 'קוד הקופון <strong>WELCOME30</strong> תקף בקנייה מעל ₪200';
 		        } else if (notice.innerHTML.toLocaleLowerCase().includes("dian")) {
