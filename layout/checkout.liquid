@@ -378,7 +378,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
 			        notice.innerHTML = 'קוד הקופון <strong>LEE</strong> תקף בקניית 3 מוצרים ומעלה';
 		        } else if (notice.innerHTML.toLocaleLowerCase().includes("love")) {
                     {% if customer %}
-                        notice.innerHTML = 'קוד הקופון <strong>LOVE50</strong> תקף בקנייה מעל ₪320';
+                        notice.innerHTML = 'הקוד <strong>LOVE50</strong> תקף בקנייה מעל ₪320';
                     {% else %}
                         notice.innerHTML = 'הקוד <strong>LOVE50</strong> תקף לחברות מועדון בלבד. <a style="text-decoration: underline;" href="/account/login">התחברי/הרשמי</a>';
                     {% endif %}
