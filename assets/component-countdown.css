@@ -12,8 +12,7 @@
 	display: block;
 	width: 100%;
 	padding: 0.6em 0;
-	/*background: var(--gradient-base-accent-1);*/
-	background-color: #b95c5e;
+	background: var(--gradient-base-background-1);
 	/*color: rgb(var(--color-base-text));*/
 	color: transparent;
 }
@@ -35,7 +34,7 @@
 }
 
 .countdown-sale-description-ctn p {
-	color: rgb(var(--color-base-background-1));
+	color: #000;
 	font-weight: 600;
 	margin: 0;
 	font-size: .9em;
