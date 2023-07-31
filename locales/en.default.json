@@ -632,7 +632,7 @@
         "continue_to_shipping_method": "המשך למשלוח",
         "continue_to_payment_method": "המשך למשלוח",
         "continue_to_review": "ביקור מוצר",
-        "back_to_cart": "חזרה לסל הקניות",
+        "back_to_cart": "חזרה לאתר",
         "back_to_contact_information": "חזרה",
         "back_to_shipping_method": "חזרה למשלוחים",
         "back_to_payment_method": "חזרה",
@@ -726,7 +726,7 @@
         "reduced_with_quantity_label": "רק {{ quantity_available}} נשאר",
         "remove_from_cart_button_label": "הסרה מעגלה",
         "continue_shopping_button_label": "להמשך",
-        "go_back_to_cart_button_label": "חזרה לסל"
+        "go_back_to_cart_button_label": "חזרה לאתר"
       },
       "order_summary": {
         "title": "סיכום",
@@ -997,7 +997,7 @@
         "escape_action": "הציגי את ההזמנה שלך"
       },
       "failed_payment": {
-        "return_to_cart_button_label": "חזרה לסל הקניות"
+        "return_to_cart_button_label": "חזרה לאתר"
       },
       "payment_gateway": {
         "credit_card_label": "כרטיס אשראי",
