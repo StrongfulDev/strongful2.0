@@ -221,10 +221,12 @@
                                                                 {%- endif -%}
                                                             {%- endfor -%}
                                                         </dl>
-                                                        {% if item.variant.inventory_quantity <= 0 %}
-                                                            <dl class="cart-inline-dl">
-                                                                {{ 'sections.cart.out_of_stock' | t }}
-                                                            </dl>
+                                                        {% if item.variant.requires_shipping %}
+                                                            {% if item.variant.inventory_quantity <= 0 %}
+                                                                <dl class="cart-inline-dl">
+                                                                    {{ 'sections.cart.out_of_stock' | t }}
+                                                                </dl>
+                                                            {% endif %}
                                                         {% endif %}
 
                                                             <p class="product-option">{{ item.selling_plan_allocation.selling_plan.name }}</p>
