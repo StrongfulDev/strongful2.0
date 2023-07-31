@@ -44,17 +44,12 @@
 }
 
 .countdown-sale-description-ctn p:nth-child(2) {
-	font-size: .7em;
+	font-size: .6em;
 	font-weight: var(--font-body-weight);
 }
 
 .countdown-sale-description:first-child {
 	direction: ltr;
-}
-
-.countdown-sale-description:nth-child(2) {
-	font-size: .8em;
-	direction: rtl;
 }
 
 .countdown #tiles {
@@ -67,13 +62,13 @@
 }
 
 .countdown #tiles>span, .tiles-time {
-	background: #b95c5e;;
+	background: #fff;
 	text-align: center;
 	color: #000;
 	position: relative;
-	font-size: 1.8em;
+	font-size: 1.5em;
 	margin: 0 4px;
-	font-weight: 900;
+	font-weight: 600;
 	box-shadow: 0px 0px 6px 0px rgb(255 255 255 / 30%);
 	padding: .15em;
 }
