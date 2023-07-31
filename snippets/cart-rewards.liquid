@@ -11,12 +11,6 @@
 
 <div class="rewards-section">
     <div class="reward-items">
-        {% liquid
-            comment
-            assign free_shipping_text = 'sections.cart.rewards.free_shipping' | t
-            assign upsell_text = 'sections.cart.rewards.upsell_text' | t
-            endcomment
-        %}
         {% assign rewards = shop.metaobjects.reward.values | sort: "order" %}
         {% for reward in rewards %}
             {% render 'reward-item', icon: "lock", class: reward.element_class.value, title: reward.title, active: false %}
