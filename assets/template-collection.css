@@ -9,6 +9,10 @@
   .collection .slider.slider--tablet {
     margin-bottom: 1.5rem;
   }
+
+	.cart-drawer .collection .slider.slider--tablet {
+		margin: 0;
+	}
 }
 
 .collection > .loading-overlay {
@@ -102,6 +106,14 @@
 	.collection--full-width slider-component:not(.slider-component-desktop) {
 		padding: 0 1.5rem;
 		max-width: none;
+	}
+
+	.cart-drawer .collection--full-width slider-component:not(.slider-component-desktop) {
+		padding: 0 .5rem;
+	}
+
+	.cart-drawer .collection--full-width slider-component:not(.slider-component-desktop) ul {
+		margin: 0;
 	}
 
 	#product-grid:not(.template-search__results) {

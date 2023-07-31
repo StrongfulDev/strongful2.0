@@ -265,7 +265,7 @@
           "show_description": false,
           "description_style": "body",
           "collection": "upsell-collection",
-          "products_to_show": 8,
+          "products_to_show": 3,
           "columns_desktop": 3,
           "full_width": true,
           "show_view_all": false,

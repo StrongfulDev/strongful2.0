@@ -240,6 +240,9 @@ class CartRewards {
 			}
 		} else if (isLatestActiveRule) {
 			rewardText.html(rule.reward.message);
+			if (this.featuredCollection) {
+				this.featuredCollection.addClass("disabled");
+			}
 		}
 	}
 

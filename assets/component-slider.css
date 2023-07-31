@@ -453,6 +453,11 @@ slider-component.slider-component-full-width {
         width: 100%;
     }
 
+    .cart-drawer .collection .slider--desktop.product-grid {
+        direction: ltr;
+        margin: 0;
+    }
+
     .slider-component-full-width .slider--desktop .slider__slide:first-child {
         margin-left: 0
     }

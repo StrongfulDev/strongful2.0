@@ -49,6 +49,10 @@
     font-weight: 700;
 }
 
+.cart-drawer .product_size_picker__heading {
+	font-size: var(--font-body-size-medium);
+}
+
 .product-size-picker {
     width: 100%;
 }
@@ -200,6 +204,10 @@ div:not(.product-size-picker-container) .variant-button .size_variant_button:not
 
 	.product-size-picker-container {
 		padding: 15px 10px 5px;
+	}
+
+	.cart-drawer .product-size-picker-container {
+		padding: 10px 5px 5px;
 	}
 
 	ul.default_variant_list {

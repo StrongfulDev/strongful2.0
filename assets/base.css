@@ -3902,6 +3902,7 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 
 .featured-collection.index-section.disabled {
     opacity: 0.5;
+    pointer-events: none;
 }
 
 .shopify-section.shopify-section-group-header-group:last-of-type {
