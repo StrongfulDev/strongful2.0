@@ -14,7 +14,8 @@
 	padding: 0.6em 0;
 	/*background: var(--gradient-base-accent-1);*/
 	background-color: #b95c5e;
-	color: rgb(var(--color-base-text));
+	/*color: rgb(var(--color-base-text));*/
+	color: transparent;
 }
 
 .headerLink-countdown {
@@ -27,6 +28,10 @@
 	align-items: center;
 	width: 90%;
 	margin: auto;
+}
+
+.countdown-sale-description-ctn {
+	color: #fff;
 }
 
 .countdown-sale-description-ctn p {

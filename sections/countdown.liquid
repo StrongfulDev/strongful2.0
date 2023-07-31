@@ -27,7 +27,9 @@
         </div>
         {% if section.settings.left_text %}
             <div class="countdown-sale-description-ctn">
-                {{ section.settings.left_copy }}
+                {% comment %}{{ section.settings.left_copy }}{% endcomment %}
+                <p>₪50 הנחה רק לחברות מועדון!</p>
+                <p>בקנייה מעל ₪320 | לא כולל אאוטלט</p>
             </div>
         {% endif %}
     </div>
