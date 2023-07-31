@@ -598,20 +598,6 @@
       "print_gift_card": "Print"
     }
   },
-  "rewards": {
-    "free_shipping": {
-      "message_html": "הוסיפי עוד <span class=\"rewards__missing_amount\"><\/span> וקבלי משלוח אקספרס חינם<\/span>"
-    },
-    "free_bottle": {
-      "message_html": "תוסיפי <span class=\"rewards__missing_amount\"><\/span> שח ותקבלי בקבוק חינם"
-    },
-    "hundred_discount": {
-      "message_html": "הוסיפי עוד <span class=\"rewards__missing_amount\"><\/span> וקבלי 100₪ הנחה"
-    },
-    "two_hundred_discount": {
-      "message_html": "הוסיפי עוד <span class=\"rewards__missing_amount\"><\/span> וקבלי 200₪ הנחה"
-    }
-  },
   "shopify": {
     "checkout": {
       "general": {

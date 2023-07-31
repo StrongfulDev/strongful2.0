@@ -33,6 +33,10 @@
     padding-right: 5rem;
   }
 
+	.cart-drawer .collection .loading-overlay {
+		padding: 0;
+	}
+
 	.product_variants .size_variant_button:not(.disabled-variant-button) label:hover {
 		background: var(--gradient-base-accent-1);
 		color: var(--gradient-base-background-1);
