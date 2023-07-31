@@ -31,7 +31,6 @@
 }
 
 .countdown-sale-description-ctn {
-	width: 100%;
 	width: max-content;
 }
 
@@ -45,7 +44,7 @@
 }
 
 .countdown-sale-description-ctn p:nth-child(2) {
-	font-size: .8em;
+	font-size: .7em;
 	font-weight: var(--font-body-weight);
 }
 
@@ -68,9 +67,9 @@
 }
 
 .countdown #tiles>span, .tiles-time {
-	background: var(--gradient-base-accent-1);
+	background: #b95c5e;;
 	text-align: center;
-	color: #cfcfcf;
+	color: #000;
 	position: relative;
 	font-size: 1.8em;
 	margin: 0 4px;
@@ -79,17 +78,17 @@
 	padding: .15em;
 }
 
-.countdown #tiles > span:before, .tiles-time:before {
-	content: '';
-	position: absolute;
-	width: 100%;
-	top: 50%;
-	background: var(--gradient-base-accent-1);
-	height: 1px;
-	box-shadow: 0px 0px 3px rgb(255 255 255 / 80%);
-	transform: translateY(-50%);
-	left: 0;
-}
+/*.countdown #tiles > span:before, .tiles-time:before {*/
+/*	content: '';*/
+/*	position: absolute;*/
+/*	width: 100%;*/
+/*	top: 50%;*/
+/*	background: var(--gradient-base-accent-1);*/
+/*	height: 1px;*/
+/*	box-shadow: 0px 0px 3px rgb(255 255 255 / 80%);*/
+/*	transform: translateY(-50%);*/
+/*	left: 0;*/
+/*}*/
 
 .countdown .labels-li {
 	font-size: .9em;
