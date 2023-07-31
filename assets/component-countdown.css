@@ -4,6 +4,10 @@
 	z-index: 4;
 }
 
+.announce-countdown {
+	column-gap: var(--grid-mobile-vertical-spacing);
+}
+
 .countdown {
 	display: block;
 	width: 100%;
