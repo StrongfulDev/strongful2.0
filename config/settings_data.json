@@ -260,15 +260,15 @@
           "social_font": "enable"
         }
       },
-      "yoast-seo-metatags": {
-        "type": "shopify:\/\/apps\/yoast-seo-seo-for-everyone\/blocks\/metatags\/7c777011-bc88-4743-a24e-64336e1e5b46",
-        "disabled": false,
-        "settings": {
-        }
-      },
       "1338706403785571867": {
         "type": "shopify:\/\/apps\/dialogue-ai-personalization\/blocks\/dialogueai-embed\/43034bfa-b90a-4a14-aaa8-527eac735f6f",
         "disabled": true,
+        "settings": {
+        }
+      },
+      "yoast-seo-metatags": {
+        "type": "shopify:\/\/apps\/yoast-seo-seo-for-everyone\/blocks\/metatags\/7c777011-bc88-4743-a24e-64336e1e5b46",
+        "disabled": false,
         "settings": {
         }
       }
