@@ -32,6 +32,7 @@
 
 .countdown-sale-description-ctn {
 	width: 100%;
+	width: max-content;
 }
 
 .countdown-sale-description-ctn p {
