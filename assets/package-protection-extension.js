@@ -10,12 +10,12 @@ const extendPackageProtection = () => {
 		templateElement.dataset.variantId = data.product.id.toString();
 		templateElement.querySelector(".product__price .order-summary__emphasis").innerText = "₪" + parseFloat(data.product.price / 100);
 		itemsContainer.appendChild(templateElement);
-	})
+	});
 
 	subscribe('PackageProtection/removeFromCart', (data) => {
 		itemsContainer.querySelector(`[data-variant-id="${data.product.id}"]`).remove();
 		window.location.reload();
-	})
+	});
 }
 
 extendPackageProtection();
