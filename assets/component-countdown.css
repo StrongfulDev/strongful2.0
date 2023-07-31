@@ -6,18 +6,14 @@
 
 .announce-countdown {
 	column-gap: var(--grid-mobile-vertical-spacing);
-	background: rgba(255, 255,255, 0.5);
-	border: 1px white solid;
 }
 
 .countdown {
 	display: block;
 	width: 100%;
 	padding: 0.6em 0;
-	/*background: var(--gradient-base-accent-1);*/
-	background-color: #b95c5e;
-	/*color: rgb(var(--color-base-text));*/
-	color: transparent;
+	background: var(--gradient-base-accent-1);
+	color: rgb(var(--color-base-text));
 }
 
 .headerLink-countdown {
@@ -65,26 +61,26 @@
 
 .countdown #tiles>span, .tiles-time {
 	text-align: center;
-	color: #000;
+	color: var(--gradient-base-background-1);
 	position: relative;
 	font-size: 1.5em;
 	margin: 0 4px;
 	font-weight: 600;
-	/*box-shadow: 0px 0px 6px 0px rgb(255 255 255 / 30%);*/
+	box-shadow: 0px 0px 6px 0px rgb(255 255 255 / 30%);
 	padding: .15em;
 }
 
-/*.countdown #tiles > span:before, .tiles-time:before {*/
-/*	content: '';*/
-/*	position: absolute;*/
-/*	width: 100%;*/
-/*	top: 50%;*/
-/*	background: var(--gradient-base-accent-1);*/
-/*	height: 1px;*/
-/*	box-shadow: 0px 0px 3px rgb(255 255 255 / 80%);*/
-/*	transform: translateY(-50%);*/
-/*	left: 0;*/
-/*}*/
+.countdown #tiles > span:before, .tiles-time:before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	background: var(--gradient-base-accent-1);
+	height: 1px;
+	box-shadow: 0px 0px 3px rgb(255 255 255 / 80%);
+	transform: translateY(-50%);
+	left: 0;
+}
 
 .countdown .labels-li {
 	font-size: .9em;
