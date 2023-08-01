@@ -2138,6 +2138,10 @@ input[type='checkbox'] {
     appearance: none;
 }
 
+.cart-drawer .quantity__input {
+    pointer-events: none;
+}
+
 .quantity__button {
     width: 100%;
     font-size: 1.8rem;
