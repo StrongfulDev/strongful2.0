@@ -446,6 +446,10 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 
 }
 
+.rewards__missing_amount {
+	font-weight: var(--font-body-weight-bold);
+}
+
 .reward-item__title {
 	margin-right: var(--grid-mobile-vertical-spacing);
 }

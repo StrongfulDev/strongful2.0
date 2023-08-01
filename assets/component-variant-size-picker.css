@@ -317,7 +317,8 @@ ul.default_variant_list {
 
 .variant_modal__toggle_button .icon {
     position: relative;
-    width: 50%;
+    width: 24px;
+	height: 24px;
     left: 2px;
 }
 
