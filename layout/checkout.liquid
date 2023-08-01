@@ -278,8 +278,6 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-NS9ZW7H');</script>
     <!-- End Google Tag Manager -->
- <!-- Dialogue-Checkout snippet load --> 
-   {% include 'dialogue' %}
 </head>
 <body>
 {{ skip_to_content_link }}
@@ -332,11 +330,13 @@ You can learn more about this (and learn how to cleanly revert these changes) at
 
     document.addEventListener('DOMContentLoaded', (e) => {
 
+      // Global Variables
+	    let checkout = Shopify.Checkout;
+
         setTimeout(() => {
 
             sessionStorage.setItem('previousUrl', window.location.href);
             let myUrl = sessionStorage.getItem('previousUrl');
-            console.log(myUrl);
 
             // function for hiding the zip code field
             const fieldContainers = document.querySelectorAll('.field');
@@ -350,14 +350,12 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                 }
             });
 
-						let step = $('.step').attr('data-step', 'contact_information');
-						if (step !== null || true) {
-                          let backLink = step.find('.step__footer__previous-link');
-                          backLink.attr('href', '/');
-                        }
+            let step = $('.step').attr('data-step', 'contact_information');
+            if (step !== null || true) {
+              let backLink = step.find('.step__footer__previous-link');
+              backLink.attr('href', '/');
+            }
         }, 2000);
-
-        let checkout = Shopify.Checkout;
 
         function checkCouponText() {
 	        let notice = document.querySelector('.notice__text');
@@ -409,12 +407,10 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                 orderSummary.classList.remove('order-summary--is-collapsed');
                 orderSummary.classList.add('order-summary--is-expanded');
 
-                let step = Shopify.Checkout.step;
+                let step = checkout.step;
                 if (step === 'contact_information') {
-
                     document.getElementById("checkout_buyer_accepts_marketing").checked = true;
                     document.getElementById("checkout_remember_me").checked = true;
-                    // document.getElementById("checkout_buyer_accepts_sms").checked = true;
                 }
             }
             // preorder code start
