@@ -69,7 +69,7 @@ class CartRewards {
 				rewardItem.removeClass("active-reward");
 			}
 
-			if (this.cartTotalValue === 0) {
+			if (this.cartTotalValue < 30) {
 				this.clearCart();
 			}
 		});
@@ -78,6 +78,8 @@ class CartRewards {
 	}
 
 	async clearCart() {
+		jQuery.post('/cart/change.js', { quantity: 0, id: '41547480268940' }, null, 'json');
+
 		$.ajax({
 			type: 'POST',
 			url: '/cart/clear.js',
