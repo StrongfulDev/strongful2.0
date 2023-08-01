@@ -44,6 +44,32 @@ You can learn more about this (and learn how to cleanly revert these changes) at
             font-size: 1em;
         }
 
+        .product-table {
+          display: block;
+        }
+
+        .product[data-product-id="7307408933004"] .product-thumbnail {
+            height: 0;
+          opacity: 0;
+        }
+
+        .product[data-product-id="7307408933004"] .product__image {
+          display: none;
+        }
+
+        tbody[data-order-summary-section="line-items"] {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+        }
+
+        tbody[data-order-summary-section="line-items"] tr[data-product-id="7307408933004"] {
+            order: 19;
+          margin: .5rem 0 0;
+          padding: .5rem 0 0;
+          border-top: 1px solid #bebebe;
+        }
+
         @media screen and (max-width: 1000px) {
             .floating-labels .field__input-wrapper.field__input-wrapper--icon-right label.field__label {
                 padding-right: 0.9em !important;
