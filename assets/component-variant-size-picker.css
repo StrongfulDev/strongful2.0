@@ -18,10 +18,6 @@
     cursor: pointer;
 }
 
-.cart-drawer .product_variants .size_variant_button {
-	width: 30%;
-}
-
 .product_variants .size_variant_button_container {
     /*border: 1px solid rgb(var(--color-foreground));*/
     width: 100%;
@@ -275,6 +271,10 @@ ul.default_variant_list {
 }
 
 @media screen and (min-width: 990px) {
+
+	.cart-drawer .product_variants .size_variant_button {
+		width: 30%;
+	}
 
 	.product-size-picker-container {
 		border-radius: 4px;

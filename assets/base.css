@@ -4026,3 +4026,7 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 	color: var(--gradient-base-accent-1);
 	font-size: var(--font-body-size-medium);
 }
+
+.cart-drawer .color-background-1.isolate.gradient {
+    background: #000;
+}

@@ -12,6 +12,7 @@
 
 	.cart-drawer .collection .slider.slider--tablet {
 		margin: 0;
+		column-gap: var(--grid-desktop-vertical-spacing);
 	}
 }
 
