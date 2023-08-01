@@ -283,7 +283,6 @@
       "type": "countdown",
       "settings": {
         "show_days": true,
-        "show_only_to_loyalty": true,
         "countdown_date": "Thu Aug 03 2023 00:00:00 GMT+0300 (שעון ישראל (קיץ))",
         "countdown_url": "",
         "left_text": false,
