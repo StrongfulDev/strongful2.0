@@ -242,6 +242,8 @@ class CartRewards {
 			rewardText.html(rule.reward.message);
 			if (this.featuredCollection) {
 				this.featuredCollection.addClass("disabled");
+				$(".cart-drawer .variant_selector.active").removeClass("active");
+				$(".cart-drawer .variant_modal_overlay").hide();
 			}
 		}
 	}
