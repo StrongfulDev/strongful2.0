@@ -289,6 +289,10 @@ ul.default_variant_list {
         display: none;
     }
 
+	.cart-drawer .variant_modal.mobile, .cart-drawer .variant_modal__toggle_button.mobile {
+		display: flex;
+	}
+
 	.variant_modal .product_variants .size_variant_button_container:hover {
 		border-bottom: black 1px solid;
 	}
