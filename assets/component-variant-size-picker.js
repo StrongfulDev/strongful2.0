@@ -31,33 +31,35 @@ window.addEventListener('DOMContentLoaded', function(event) {
 					$(this).find(".size_variant_button_add").show();
 				}, 2000);
 		})
-		.on("click", ".variant_modal__toggle_button, .variant_modal__toggle_button svg", function (e) {
-				let modalId = $(this).data("modal-id");
-				let modal = $(".variant_modal#" + modalId) || $(".variant_selector#" + modalId);
-				let modalOverlay = $(".variant_modal_overlay#" + modalId + "-overlay");
+		.on("click", ".variant_modal__toggle_button, .variant_modal__toggle_button svg", openModal)
+	$("cart-drawer .card__inner").click(openModal);
 
-				modal.show();
-				setTimeout(() => {
-					modal.addClass("active");
-					modal.parents("section").addClass('high-z-index');
-				}, 10);
-				modalOverlay.show();
-				modalOverlay.on("click", () => {
-					modal.removeClass("active");
-					modal.parents("section").removeClass('high-z-index');
-					setTimeout(() => {
-						modal.hide();
-					}, 500);
-					modalOverlay.hide()
-				})
-				modal.find('.quick_add_modal__close').on("click", () => {
-					modal.removeClass("active");
-					setTimeout(() => {
-						modal.hide();
-					}, 500);
-					modal.parents("section").removeClass('high-z-index');
-					modalOverlay.hide()
-				})
-			}
-		)
+	function openModal(e) {
+		let modalId = $(this).data("modal-id") || $(this).find(".variant_modal__toggle_button").data("modal-id");
+		let modal = $(".variant_modal#" + modalId) || $(".variant_selector#" + modalId);
+		let modalOverlay = $(".variant_modal_overlay#" + modalId + "-overlay");
+
+		modal.show();
+		setTimeout(() => {
+			modal.addClass("active");
+			modal.parents("section").addClass('high-z-index');
+		}, 10);
+		modalOverlay.show();
+		modalOverlay.on("click", () => {
+			modal.removeClass("active");
+			modal.parents("section").removeClass('high-z-index');
+			setTimeout(() => {
+				modal.hide();
+			}, 500);
+			modalOverlay.hide()
+		})
+		modal.find('.quick_add_modal__close').on("click", () => {
+			modal.removeClass("active");
+			setTimeout(() => {
+				modal.hide();
+			}, 500);
+			modal.parents("section").removeClass('high-z-index');
+			modalOverlay.hide()
+		})
+	}
 });
