@@ -408,10 +408,10 @@ You can learn more about this (and learn how to cleanly revert these changes) at
 
                 let step = Shopify.Checkout.step;
                 if (step === 'contact_information') {
-
                     document.getElementById("checkout_buyer_accepts_marketing").checked = true;
                     document.getElementById("checkout_remember_me").checked = true;
-                    // document.getElementById("checkout_buyer_accepts_sms").checked = true;
+                } else if (step === "thank_you") {
+                  document.getElementById("package-protection").style.display = "none";
                 }
             }
             // preorder code start
