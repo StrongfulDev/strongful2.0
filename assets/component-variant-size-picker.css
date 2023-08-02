@@ -272,10 +272,6 @@ ul.default_variant_list {
 
 @media screen and (min-width: 990px) {
 
-	.cart-drawer .product_variants .size_variant_button {
-		width: 30%;
-	}
-
 	.product-size-picker-container {
 		border-radius: 4px;
 		padding: 15px 10px;
@@ -302,8 +298,17 @@ ul.default_variant_list {
 		position: relative;
 	}
 
+	.cart-drawer .variant_modal, .cart-drawer .variant_selector {
+		position: fixed;
+	}
+
 	.quick-add-variant-modal.mobile {
 		display: none;
+	}
+
+	.cart-drawer .variant_selector.active .mobile,
+	.cart-drawer .variant_modal.active .mobile {
+		display: block;
 	}
 }
 
