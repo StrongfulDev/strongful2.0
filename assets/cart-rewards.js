@@ -70,6 +70,7 @@ class CartRewards {
 			}
 
 			if (this.cartTotalValue < 30) {
+				this.removePackageProtection();
 				this.clearCart();
 			}
 		});
@@ -85,7 +86,7 @@ class CartRewards {
 			url: '/cart/clear.js',
 			dataType: 'json',
 			success: function() {
-				console.log('Cart cleared successfully');
+				console.log("cart cleared");
 			},
 			error: function(xhr, status, error) {
 				console.log('An error occurred while clearing the cart:', error);
@@ -153,10 +154,21 @@ class CartRewards {
 		const drawerItems = document.querySelector('cart-drawer-items');
 
 		const cartItem = this.cart.items.find(item => item.id === parseInt(productId));
-		const cartItemIndex = $(`.cart-item[data-id="${productId}"]`).data('index')
+		const cartItemIndex = $(`.cart-item[data-id="${productId}"]`).data('index');
 
 		if (cartItem)
 			drawerItems.updateQuantity(cartItemIndex, 0);
+	}
+
+	async removePackageProtection() {
+		let drawerItems = document.querySelector('cart-drawer-items');
+
+		const packageProtection = this.cart.items.find(item => item.id === 41547480268940);
+		const packageProtectionIndex = $(`.cart-item[data-id="41547480268940"]`).data('index');
+
+		if (packageProtection) {
+			drawerItems.updateQuantity(packageProtectionIndex, 0);
+		}
 	}
 
 	async addProduct(productId) {

@@ -221,8 +221,7 @@ cart-remove-button .icon-remove {
 
 @media screen and (max-width: 749px) {
   .cart-items,
-  .cart-items thead,
-  .cart-items tbody {
+  .cart-items thead {
     display: block;
     width: 100%;
   }
@@ -267,6 +266,12 @@ cart-remove-button .icon-remove {
     align-items: flex-start;
     justify-content: flex-end;
   }
+}
+
+.cart-items tbody {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .cart-item__error-text + svg {
