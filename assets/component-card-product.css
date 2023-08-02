@@ -128,6 +128,10 @@
 
 @media screen and (min-width: 990px) {
 
+	.cart-drawer .product_size_picker__heading {
+		margin-bottom: 0;
+	}
+
 	.card:hover .new-product-span {
 		display: none;
 	}
@@ -241,5 +245,9 @@ div:not(.product-size-picker-container) .variant-button .size_variant_button:not
 
 	.size_variant_button_container .loading-overlay__spinner .spinner circle {
 		stroke: var(--gradient-base-background-1);
+	}
+
+	.cart-drawer .size_variant_button_container .loading-overlay__spinner .spinner circle {
+		stroke: var(--gradient-base-accent-1);
 	}
 }

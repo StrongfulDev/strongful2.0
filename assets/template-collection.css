@@ -36,6 +36,8 @@
 
 	.cart-drawer .collection .loading-overlay {
 		padding: 0;
+		background: var(--gradient-background);
+		justify-content: flex-end;
 	}
 
 	.product_variants .size_variant_button:not(.disabled-variant-button) label:hover {
@@ -124,6 +126,11 @@
 
 	.cart-drawer .collection--full-width slider-component:not(.slider-component-desktop) ul {
 		margin: 0;
+		row-gap: 0;
+	}
+
+	.cart-drawer .collection--full-width slider-component:not(.slider-component-desktop) .product_variants ul {
+		padding-bottom: 1rem;
 	}
 
 	#product-grid:not(.template-search__results) {
