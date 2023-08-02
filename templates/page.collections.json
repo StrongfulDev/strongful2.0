@@ -61,14 +61,14 @@
         "images_or_colors": "images",
         "title": "MAIN COLORS",
         "heading_size": "h2",
-        "image_ratio": "square",
+        "image_ratio": "adapt",
         "columns_desktop": 3,
         "color_scheme": "background-2",
         "show_view_all": false,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 40,
-        "padding_bottom": 36
+        "padding_bottom": 4
       }
     },
     "f161594f-d389-491b-9906-e8a3bd1f8fe3": {
@@ -80,16 +80,10 @@
             "collection": "black"
           }
         },
-        "template--15997288448140__f161594f-d389-491b-9906-e8a3bd1f8fe3-1689510549517d1fd7-1": {
+        "6d9803bf-9334-4a5e-b6a0-9553335c45fa": {
           "type": "featured_collection",
           "settings": {
-            "collection": "לבן"
-          }
-        },
-        "ff16029f-1212-4ca2-8aa4-efe3bfe636cb": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "ניוד"
+            "collection": "pink"
           }
         },
         "e208e1ba-1a66-47ac-baf3-2cac6b69f82f": {
@@ -104,6 +98,24 @@
             "collection": "green"
           }
         },
+        "16697e64-ebf9-4969-8055-a988a110e06d": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "gray"
+          }
+        },
+        "ff16029f-1212-4ca2-8aa4-efe3bfe636cb": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "ניוד"
+          }
+        },
+        "0ea071fa-d1e1-4442-9c60-7d4b656474df": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "כחול"
+          }
+        },
         "099c8523-15ca-4523-96cb-822dcec629f9": {
           "type": "featured_collection",
           "settings": {
@@ -116,10 +128,10 @@
             "collection": "אפור-בהיר"
           }
         },
-        "16697e64-ebf9-4969-8055-a988a110e06d": {
+        "template--15997288448140__f161594f-d389-491b-9906-e8a3bd1f8fe3-1689510549517d1fd7-1": {
           "type": "featured_collection",
           "settings": {
-            "collection": "gray"
+            "collection": "לבן"
           }
         },
         "a4f54757-f737-453c-bacf-635ac278f7a2": {
@@ -140,12 +152,6 @@
             "collection": "purple"
           }
         },
-        "6d9803bf-9334-4a5e-b6a0-9553335c45fa": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "pink"
-          }
-        },
         "08e2705a-ec07-4219-8048-db2a3e6a6b80": {
           "type": "featured_collection",
           "settings": {
@@ -155,17 +161,18 @@
       },
       "block_order": [
         "template--15997288448140__f161594f-d389-491b-9906-e8a3bd1f8fe3-1689510549517d1fd7-0",
-        "template--15997288448140__f161594f-d389-491b-9906-e8a3bd1f8fe3-1689510549517d1fd7-1",
-        "ff16029f-1212-4ca2-8aa4-efe3bfe636cb",
+        "6d9803bf-9334-4a5e-b6a0-9553335c45fa",
         "e208e1ba-1a66-47ac-baf3-2cac6b69f82f",
         "template--15997288448140__f161594f-d389-491b-9906-e8a3bd1f8fe3-1689510549517d1fd7-2",
+        "16697e64-ebf9-4969-8055-a988a110e06d",
+        "ff16029f-1212-4ca2-8aa4-efe3bfe636cb",
+        "0ea071fa-d1e1-4442-9c60-7d4b656474df",
         "099c8523-15ca-4523-96cb-822dcec629f9",
         "4edea345-3b00-4c51-9473-28ea7184655c",
-        "16697e64-ebf9-4969-8055-a988a110e06d",
+        "template--15997288448140__f161594f-d389-491b-9906-e8a3bd1f8fe3-1689510549517d1fd7-1",
         "a4f54757-f737-453c-bacf-635ac278f7a2",
         "255a110c-361f-42b3-9086-b17f4d05a3ff",
         "f6a715a3-e4b2-46a2-821c-7c1cda8322a6",
-        "6d9803bf-9334-4a5e-b6a0-9553335c45fa",
         "08e2705a-ec07-4219-8048-db2a3e6a6b80"
       ],
       "custom_css": [
