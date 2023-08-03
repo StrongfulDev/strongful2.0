@@ -1,8 +1,8 @@
 {{ 'component-countdown.css' | asset_url | stylesheet_tag }}
 {{ 'component-countdown.js' | asset_url | script_tag }}
 
-    {% if customer %}
-        <a href="{{ section.settings.countdown_url }}" id="countdown" class="countdown fix-direction" data-date="{{ section.settings.countdown_date }}">
+{% comment %}
+   <a href="{{ section.settings.countdown_url }}" id="countdown" class="countdown fix-direction" data-date="{{ section.settings.countdown_date }}">
     <div class="countdown-ctn flex">
         <div class="announce-countdown flex">
             {% if section.settings.right_text %}
@@ -32,7 +32,29 @@
         {% endif %}
     </div>
 </a>
-    {% endif %}
+{% endcomment %}
+
+<a href="{{ section.settings.countdown_url }}" id="countdown" class="countdown fix-direction" data-date="{{ section.settings.countdown_date }}">
+    <div class="countdown-ctn flex">
+        <div class="announce-countdown flex">
+            {% if section.settings.right_text %}
+                <div class="countdown-sale-description-ctn">
+                    {{ section.settings.right_copy }}
+                </div>
+            {% endif %}
+            <div id="tiles" class="flex ltr">
+                <div class="tiles-div tiles-div-hours">
+                    <p class="tiles-time tiles-time-hours" id="countdownDisplay">500</p>
+                </div>
+            </div>
+        </div>
+        {% if section.settings.left_text %}
+            <div class="countdown-sale-description-ctn">
+                {{ section.settings.left_copy }}
+            </div>
+        {% endif %}
+    </div>
+</a>
 
 {% schema %}
 {

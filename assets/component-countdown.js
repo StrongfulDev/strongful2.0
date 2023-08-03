@@ -6,9 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	if (document.getElementById('tiles') != null) {
 
-		getCountdown();
+		// getCountdown();
 
-		setInterval(() => { getCountdown(); }, 1000);
+		// setInterval(() => { getCountdown(); }, 1000);
 
 		function getCountdown() {
 
@@ -35,4 +35,52 @@ document.addEventListener('DOMContentLoaded', function() {
 			return (n < 10 ? '0' : '') + n;
 		}
 	}
+
+	// Fetches the starting timestamp and current count from local storage
+	const getStoredData = () => {
+		const startTimestamp = parseInt(localStorage.getItem('startTimestamp') || "0");
+		const currentCount = parseInt(localStorage.getItem('currentCount') || "500");
+		return { startTimestamp, currentCount };
+	};
+
+	const storeData = (timestamp, count) => {
+		localStorage.setItem('startTimestamp', timestamp.toString());
+		localStorage.setItem('currentCount', count.toString());
+	};
+
+	const calculateCount = (startTimestamp) => {
+		const elapsedTime = Date.now() - startTimestamp;
+		const decrementsPassed = Math.floor(elapsedTime / (86400000 / 500));
+		return Math.max(500 - decrementsPassed, 0);
+	};
+
+	const initCountdown = () => {
+		const { startTimestamp, currentCount } = getStoredData();
+
+		// If it's a new countdown or a finished one
+		if (!startTimestamp || currentCount <= 0) {
+			const newTimestamp = Date.now();
+			storeData(newTimestamp, 500);
+			return 500;
+		}
+
+		return currentCount; // Return the ongoing countdown value
+	};
+
+	let count = initCountdown();
+	document.getElementById('countdownDisplay').innerText = count;
+
+	const countdown = () => {
+		if (count > 0) {
+			count--;
+			document.getElementById('countdownDisplay').innerText = count;
+			storeData(parseInt(localStorage.getItem('startTimestamp')), count);
+		} else {
+			clearInterval(interval);
+		}
+	};
+
+	const timeBetweenDecrement = 86400000 / 500;
+	const interval = setInterval(countdown, timeBetweenDecrement);
+
 });
