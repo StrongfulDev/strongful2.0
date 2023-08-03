@@ -378,17 +378,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
 			        notice.innerHTML = 'קוד הקופון <strong>KC</strong> תקף בקניית 3 מוצרים ומעלה';
 		        } else if (notice.innerHTML.toLocaleLowerCase().includes("daniella")) {
 			        notice.innerHTML = 'קוד הקופון <strong>DANIELLA</strong> תקף בקניית 3 מוצרים ומעלה';
-		        } else if (notice.innerHTML.toLocaleLowerCase().includes("love")) {
-                    {% if customer %}
-                        notice.innerHTML = 'הקוד <strong>LOVE50</strong> תקף בקנייה מעל ₪320';
-                    {% else %}
-                  let linkUrl = $('.layout-flex__item a').attr('href');
-                  let code = 'הקוד';
-                  let onlyMembers = 'תקף לחברות מועדון בלבד.';
-                  let login = 'התחברי/הרשמי';
-                        notice.innerHTML = `${code} <strong>LOVE50</strong> ${onlyMembers} <a style="text-decoration: underline;" href="${linkUrl}">${login}</a>`;
-                    {% endif %}
-                }
+		        }
 	        }
         }
 
