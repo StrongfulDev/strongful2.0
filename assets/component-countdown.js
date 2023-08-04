@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		}
 	}
 
-	const startTime = new Date('2023-08-04T12:00:00+03:00').getTime(); // GMT +0300
+	const startTime = new Date('2023-08-03T12:00:00+03:00').getTime(); // GMT +0300
 	const endTime = startTime + (24 * 60 * 60 * 1000); // 24 hours later
 	const totalCount = 500;
 
@@ -45,6 +45,8 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (now < startTime) {
 			return totalCount; // Countdown hasn't started yet
 		} else if (now > endTime) {
+			$(".countdown-sale-description-ctn p").eq(0).text("המבצע הסתיים");
+			$(".countdown-sale-description-ctn p").eq(1).text("better luck next time");
 			return 0; // Countdown has ended
 		} else {
 			const elapsed = now - startTime;
