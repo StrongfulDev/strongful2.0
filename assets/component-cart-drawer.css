@@ -603,6 +603,25 @@ cart-drawer-items.is-empty {
 	transform: translateY(-50%);
 }
 
+.gift-span {
+	animation: ease-in-out .35s flash;
+	animation-iteration-count: 2;
+}
+
+@keyframes flash {
+	0% {
+		color: var(--gradient-background);
+	}
+
+	50% {
+		color: var(--cart-rewards-background);
+	}
+
+	100% {
+		color: var(--gradient-background);
+	}
+}
+
 @media screen and (min-width: 990px) {
 	.cart-drawer .cart-items .cart-item__quantity {
 		align-self: center;
