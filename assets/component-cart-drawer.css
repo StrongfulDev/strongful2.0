@@ -604,7 +604,7 @@ cart-drawer-items.is-empty {
 }
 
 .gift-span {
-	animation: ease-in-out .35s flash;
+	animation: ease-in-out .4s flash;
 	animation-iteration-count: 2;
 }
 
