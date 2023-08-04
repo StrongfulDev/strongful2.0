@@ -44,7 +44,8 @@
             {% endif %}
             <div id="tiles" class="flex ltr">
                 <div class="tiles-div tiles-div-hours">
-                    <p class="tiles-time tiles-time-hours" id="countdownDisplay">{{ shop.metafields.global.presale_count.value }}</p>
+                    {% comment %}<p class="tiles-time tiles-time-hours" id="countdownDisplay">{{ shop.metafields.global.presale_count.value }}</p>{% endcomment %}
+                    <p class="tiles-time tiles-time-hours" id="countdownDisplay"></p>
                 </div>
             </div>
         </div>

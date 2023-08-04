@@ -36,51 +36,32 @@ document.addEventListener('DOMContentLoaded', function() {
 		}
 	}
 
-	// Fetches the starting timestamp and current count from local storage
-	const getStoredData = () => {
-		const startTimestamp = parseInt(localStorage.getItem('startTimestamp') || "0");
-		const currentCount = parseInt(localStorage.getItem('currentCount') || "500");
-		return { startTimestamp, currentCount };
-	};
+	const startTime = new Date('2023-08-04T12:00:00+03:00').getTime(); // GMT +0300
+	const endTime = startTime + (24 * 60 * 60 * 1000); // 24 hours later
+	const totalCount = 500;
 
-	const storeData = (timestamp, count) => {
-		localStorage.setItem('startTimestamp', timestamp.toString());
-		localStorage.setItem('currentCount', count.toString());
-	};
-
-	const calculateCount = (startTimestamp) => {
-		const elapsedTime = Date.now() - startTimestamp;
-		const decrementsPassed = Math.floor(elapsedTime / (86400000 / 500));
-		return Math.max(500 - decrementsPassed, 0);
-	};
-
-	const initCountdown = () => {
-		const { startTimestamp, currentCount } = getStoredData();
-
-		// If it's a new countdown or a finished one
-		if (!startTimestamp || currentCount <= 0) {
-			const newTimestamp = Date.now();
-			storeData(newTimestamp, 500);
-			return 500;
-		}
-
-		return currentCount; // Return the ongoing countdown value
-	};
-
-	let count = initCountdown();
-	document.getElementById('countdownDisplay').innerText = count;
-
-	const countdown = () => {
-		if (count > 0) {
-			count--;
-			document.getElementById('countdownDisplay').innerText = count;
-			storeData(parseInt(localStorage.getItem('startTimestamp')), count);
+	function getCurrentCount() {
+		const now = Date.now();
+		if (now < startTime) {
+			return totalCount; // Countdown hasn't started yet
+		} else if (now > endTime) {
+			return 0; // Countdown has ended
 		} else {
-			clearInterval(interval);
+			const elapsed = now - startTime;
+			const totalDuration = endTime - startTime;
+			return Math.round(totalCount - (elapsed / totalDuration) * totalCount);
 		}
-	};
+	}
 
-	const timeBetweenDecrement = 86400000 / 500;
-	const interval = setInterval(countdown, timeBetweenDecrement);
+	function updateCounter() {
+		const count = getCurrentCount();
+		$("#countdownDisplay").text(count);
+
+		if (count > 0) {
+			setTimeout(updateCounter, 1000); // Update every second
+		}
+	}
+
+	updateCounter();
 
 });
