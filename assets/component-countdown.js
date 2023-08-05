@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		}
 	}
 
-	const startTime = new Date('2023-08-03T12:00:00+03:00').getTime(); // GMT +0300
+	const startTime = new Date('2023-08-05T12:00:00+03:00').getTime(); // GMT +0300
 	const endTime = startTime + (24 * 60 * 60 * 1000); // 24 hours later
 	const totalCount = 500;
 
