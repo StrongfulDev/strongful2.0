@@ -115,7 +115,7 @@
 .card_banner_text {
 	width: 100%;
 	display: block;
-	padding: 4px;
+	padding: var(--grid-desktop-vertical-spacing) 4px;
 	margin-bottom: 8px;
 	text-align: center;
 	font-size: calc(var(--font-body-size-medium) * 0.8);
