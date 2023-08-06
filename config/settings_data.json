@@ -262,7 +262,7 @@
       },
       "1338706403785571867": {
         "type": "shopify:\/\/apps\/dialogue-ai-personalization\/blocks\/dialogueai-embed\/43034bfa-b90a-4a14-aaa8-527eac735f6f",
-        "disabled": false,
+        "disabled": true,
         "settings": {
         }
       }
