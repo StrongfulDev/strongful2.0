@@ -509,9 +509,9 @@ a.product__text {
     }
 
     .product__media-wrapper slider-component:not(.thumbnail-slider--no-slide) {
-        margin-left: -1rem;
-        margin-right: -1.5rem;
-        /*margin: 0;*/
+        /*margin-left: -1rem;*/
+        /*margin-right: -1.5rem;*/
+        margin: 0;
     }
 
     .single-image-media-list, .slider.slider--mobile.single-image-media-list {

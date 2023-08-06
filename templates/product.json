@@ -121,7 +121,7 @@
         "enable_sticky_info": true,
         "media_size": "large",
         "constrain_to_viewport": false,
-        "media_fit": "cover",
+        "media_fit": "contain",
         "gallery_layout": "columns",
         "media_position": "left",
         "image_zoom": "lightbox",

@@ -138,7 +138,6 @@
     "quick_add_text": "בחירת מידה",
     "quick_add_accessories_text": "הוספה לסל",
     "currency_code_enabled": true,
-    "show_upsell_card": false,
     "cart_type": "drawer",
     "show_vendor": true,
     "show_cart_note": false,
@@ -222,10 +221,12 @@
           "padding_top": 0,
           "padding_bottom": 0
         }
-      },
-      "featured-product": {
-        "type": "featured-product",
-        "blocks": {
+      }
+    },
+    "content_for_index": [
+
+    ],
+    "blocks": {
       "855628211100114053": {
         "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
@@ -248,73 +249,15 @@
         "type": "shopify:\/\/apps\/yotpo-loyalty-rewards\/blocks\/loader-app-embed-block\/2f9660df-5018-4e02-9868-ee1fb88d6ccd",
         "disabled": true,
         "settings": {
-          "product": "pink-slippers",
-          "color_scheme": "background-1",
-          "secondary_background": false,
-          "media_size": "medium",
-          "constrain_to_viewport": true,
-          "media_fit": "contain",
-          "media_position": "left",
-          "image_zoom": "none",
-          "hide_variants": false,
-          "enable_video_looping": false,
-          "padding_top": 8,
-          "padding_bottom": 8
+          "inject_modules_loader": true,
+          "inject_sdk_loader": true
         }
       },
       "8776485610325655785": {
         "type": "shopify:\/\/apps\/hiko-social-login\/blocks\/hiko-auth\/3832d7e1-5bcd-4b72-91da-236b57feef8f",
-      "featured-collection": {
-        "type": "featured-collection",
-        "custom_css": [
-          ".full-unstyled-link.fix-direction,.price {display: none;}"
-        ],
-        "settings": {
-          "steps": 1,
-          "title": "",
-          "heading_size": "h2",
-          "heading_type": "heading_type_default",
-          "description": "",
-          "show_description": false,
-          "description_style": "body",
-          "collection": "upsell-collection",
-          "products_to_show": 3,
-          "columns_desktop": 3,
-          "full_width": true,
-          "show_view_all": false,
-          "view_all_text": "",
-          "view_all_style": "solid",
-          "view_all_location": "bottom",
-          "enable_desktop_slider": true,
-          "show_peak": true,
-          "pagination_type": "sides",
-          "color_scheme": "background-1",
-          "image_ratio": "square",
-          "show_secondary_image": false,
-          "show_vendor": false,
-          "show_rating": false,
-          "show_sale_badge": false,
-          "enable_quick_add": true,
-          "quick_add_type": "modal",
-          "quick_add_type_mobile": "modal",
-          "quick_add_text": "הוספה מהירה",
-          "pick_size_text": "בחירת מידה",
-          "quick_add_accessories_text": "הוספה מהירה",
-          "columns_mobile": "2",
-          "swipe_on_mobile": true,
-          "padding_top": 4,
-          "padding_bottom": 4
-        }
-      }
-    },
-    "content_for_index": [
-
-    ],
-    "blocks": {
-      "7570552984445421165": {
-        "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/settings\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
         "disabled": false,
         "settings": {
+          "social_font": "enable"
         }
       },
       "1338706403785571867": {
