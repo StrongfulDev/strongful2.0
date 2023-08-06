@@ -285,6 +285,10 @@ ul.default_variant_list {
         display: none;
     }
 
+	.cart-drawer .variant_modal.mobile, .cart-drawer .variant_modal__toggle_button.mobile {
+		display: flex;
+	}
+
 	.variant_modal .product_variants .size_variant_button_container:hover {
 		border-bottom: black 1px solid;
 	}
@@ -294,8 +298,17 @@ ul.default_variant_list {
 		position: relative;
 	}
 
+	.cart-drawer .variant_modal, .cart-drawer .variant_selector {
+		position: fixed;
+	}
+
 	.quick-add-variant-modal.mobile {
 		display: none;
+	}
+
+	.cart-drawer .variant_selector.active .mobile,
+	.cart-drawer .variant_modal.active .mobile {
+		display: block;
 	}
 }
 
@@ -313,7 +326,8 @@ ul.default_variant_list {
 
 .variant_modal__toggle_button .icon {
     position: relative;
-    width: 50%;
+    width: 24px;
+	height: 24px;
     left: 2px;
 }
 

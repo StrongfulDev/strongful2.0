@@ -2,6 +2,7 @@ class CartRewards {
 	constructor(parentContainer) {
 		this.container = $(parentContainer);
 		this.cartElement = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
+		this.featuredCollection = this.container.find('.featured-collection');
 	}
 
 	cart;
@@ -37,6 +38,7 @@ class CartRewards {
 		this.activeRewards = 0
 
 		this.rules.forEach((rule, index) => {
+
 			const isConditionMet = this.checkCondition(rule);
 			const isRewardInCart = this.cartHasReward(rule);
 			const rewardItem = this.getRewardItemByRule(rule);
@@ -69,21 +71,42 @@ class CartRewards {
 				rewardItem.removeClass("active-reward");
 			}
 
-			if (this.cartTotalValue === 0) {
+			if (this.cartTotalValue < 30) {
+				this.removePackageProtection();
 				this.clearCart();
 			}
 		});
 
+		// Here we remove all free products that are not included in the current rules
+		await this.removeNonGiftFreeProducts();
+
 		this.loading(false);
 	}
 
+	// This function will remove free products if they are not one of the gifts from the current rules
+	async removeNonGiftFreeProducts() {
+		const giftProductIds = this.rules
+			.filter(rule => rule.reward.action === 'gift_product')
+			.flatMap(rule => this.getProductIdsFromRule(rule));
+
+		for (const item of this.cart.items) {
+			// Here we assume that a product with price 0 is a free product.
+			console.log(item);
+			if (item.price === 0 && !giftProductIds.includes(item.id.toString())) {
+				await this.removeProduct(item.id);
+			}
+		}
+	}
+
 	async clearCart() {
+		jQuery.post('/cart/change.js', { quantity: 0, id: '41547480268940' }, null, 'json');
+
 		$.ajax({
 			type: 'POST',
 			url: '/cart/clear.js',
 			dataType: 'json',
 			success: function() {
-				console.log('Cart cleared successfully');
+				console.log("cart cleared");
 			},
 			error: function(xhr, status, error) {
 				console.log('An error occurred while clearing the cart:', error);
@@ -133,12 +156,14 @@ class CartRewards {
 			const productInCart = this.productsExistInCart([productId]);
 			const isRightQuantity = this.checkProductQuantity(rule, productId);
 
+			console.log(productId);
+
 			if (productInCart && (!isConditionMet || !isRightQuantity)) {
 				await this.removeProduct(productId)
 				continue;
 			}
 
-			if (!productInCart && isConditionMet) {
+			if (!productInCart && isConditionMet && rule.reward.giftMethod === 'automatic') {
 				const res = await this.addProduct(productId)
 				if (isJustOne && res?.items?.length > 0) {
 					return;
@@ -151,10 +176,21 @@ class CartRewards {
 		const drawerItems = document.querySelector('cart-drawer-items');
 
 		const cartItem = this.cart.items.find(item => item.id === parseInt(productId));
-		const cartItemIndex = $(`.cart-item[data-id="${productId}"]`).data('index')
+		const cartItemIndex = $(`.cart-item[data-id="${productId}"]`).data('index');
 
 		if (cartItem)
 			drawerItems.updateQuantity(cartItemIndex, 0);
+	}
+
+	async removePackageProtection() {
+		let drawerItems = document.querySelector('cart-drawer-items');
+
+		const packageProtection = this.cart.items.find(item => item.id === 41547480268940);
+		const packageProtectionIndex = $(`.cart-item[data-id="41547480268940"]`).data('index');
+
+		if (packageProtection) {
+			drawerItems.updateQuantity(packageProtectionIndex, 0);
+		}
 	}
 
 	async addProduct(productId) {
@@ -226,13 +262,23 @@ class CartRewards {
 		// Apply condition message.
 		if (isLatestDeactivatedRule && missingAmount > 0) {
 			const rewardMessage = $(`<span class="${rule.element_class}-message" data-index="${ruleIndex}">${rule.condition.message}</span>`);
-			rewardMessage.find('.rewards__missing_amount').text(missingAmount);
+			rewardMessage.find('.rewards__missing_amount').text("₪" + missingAmount);
 			rewardText.html(rewardMessage);
-		}
-
-		// Apply reward message.
-		else if (isLatestActiveRule) {
+			if (this.featuredCollection) {
+				this.featuredCollection.addClass("disabled");
+			}
+		} else if (missingAmount <= 0 && isLatestDeactivatedRule && rule.reward.giftMethod === 'manual') {
+			rewardText.html(rule.reward.eligibleMessage);
+			if (this.featuredCollection) {
+				this.featuredCollection.removeClass("disabled");
+			}
+		} else if (isLatestActiveRule) {
 			rewardText.html(rule.reward.message);
+			if (this.featuredCollection) {
+				this.featuredCollection.addClass("disabled");
+				$(".cart-drawer .variant_selector.active").removeClass("active");
+				$(".cart-drawer .variant_modal_overlay").hide();
+			}
 		}
 	}
 
@@ -271,7 +317,7 @@ class CartRewards {
 		const productIds = this.getProductIdsFromRule(rule)
 		const productIdsInCart = this.productsExistInCart(productIds);
 
-		if (!productIdsInCart) return null;
+		if (!productIdsInCart && rule.reward.giftMethod === 'automatic') return null;
 
 		if (rule.reward.product_method === "Add all products to cart") {
 			for (const productId of productIdsInCart) {
@@ -283,8 +329,10 @@ class CartRewards {
 			return true;
 		}
 
-		const product = this.cart.items.find(item => item.id === parseInt(productIdsInCart[0]));
-		return product.quantity === acceptableQuantity;
+			const product = this.cart.items.find(item => item.id === parseInt(productIdsInCart[0]));
+			if (product) {
+				return product.quantity === acceptableQuantity;
+			}
 	}
 
 	productsExistInCart(productIds) {

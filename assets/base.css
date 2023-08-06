@@ -2138,6 +2138,10 @@ input[type='checkbox'] {
     appearance: none;
 }
 
+.cart-drawer .quantity__input {
+    pointer-events: none;
+}
+
 .quantity__button {
     width: 100%;
     font-size: 1.8rem;
@@ -3039,6 +3043,17 @@ details-disclosure > details {
 }
 
 @media screen and (max-width: 749px) {
+
+    /*main.product .page-width {*/
+    /*    padding-left: 0;*/
+    /*    padding-right: 0;*/
+    /*}*/
+
+    /*main.product div.product__info-wrapper.grid__item {*/
+    /*    padding-right: 1.5rem;*/
+    /*    padding-left: 1.5rem;*/
+    /*}*/
+
     .content-container--full-width-mobile {
         border-left: none;
         border-right: none;
@@ -3782,6 +3797,11 @@ label .ReturnGO_ReturnItemProposition-module_open, .ReturnGO_ReturnItemPropositi
 	padding-top: 30px !important;
 }
 
+
+.ReturnGO_CheckBox-module_checkBox.ReturnGO_CheckBox-module_disabled.ReturnGO_CheckBox-module_shadowed {
+    display: none !important;
+}
+
 #returnGoAccountWidget {
 	display: none !important;
 }
@@ -3898,6 +3918,11 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 
 .featured-collection.index-section {
 	position: relative;
+}
+
+.featured-collection.index-section.disabled {
+    opacity: 0.5;
+    pointer-events: none;
 }
 
 .shopify-section.shopify-section-group-header-group:last-of-type {
@@ -4020,4 +4045,12 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 .klaviyo-bis-trigger {
 	color: var(--gradient-base-accent-1);
 	font-size: var(--font-body-size-medium);
+}
+
+.admin-bar__page {
+	display: none;
+}
+
+.cart-drawer .color-background-1.isolate.gradient {
+    background: #000;
 }

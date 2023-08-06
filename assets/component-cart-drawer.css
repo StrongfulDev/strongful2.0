@@ -249,7 +249,9 @@ cart-drawer-items::-webkit-scrollbar {
 	grid-template: repeat(2, auto) / 1.8fr 2fr 2fr 1fr;
 	gap: 1rem;
 	margin-bottom: 0;
+	padding-bottom: 1rem;
 	position: relative;
+	border-bottom: 1px solid var(--gradient-base-background-3);
 }
 
 .cart-drawer .cart-item:nth-last-child(2) {
@@ -310,11 +312,30 @@ cart-drawer-items::-webkit-scrollbar {
 }
 
 .cart-drawer .cart-items td {
-	padding-top: 2rem;
+	padding-top: 1rem;
 }
 
-.cart-drawer .cart-item>td+td {
-	/*padding-left: 1rem;*/
+.cart-item[data-product-id="7307408933004"] {
+order: 129;
+	grid-template: auto / repeat(2, 1fr);
+	border-bottom: none;
+
+}
+
+.cart-item[data-product-id="7307408933004"] .cart-item__details,
+.cart-item[data-product-id="7307408933004"] td.cart-item__quantity {
+	grid-column: auto;
+	padding: 0;
+}
+
+.cart-item[data-product-id="7307408933004"] .cart-item__media,
+.cart-item[data-product-id="7307408933004"] .quantity,
+.cart-item[data-product-id="7307408933004"] .cart-arranger {
+	display: none;
+}
+
+.cart-item[data-product-id="7307408933004"] .cart-item__totals {
+	display: none;
 }
 
 .cart-drawer .cart-item__details {
@@ -446,6 +467,10 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 
 }
 
+.rewards__missing_amount {
+	font-weight: var(--font-body-weight-bold);
+}
+
 .reward-item__title {
 	margin-right: var(--grid-mobile-vertical-spacing);
 }
@@ -459,13 +484,21 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 	border-top: 1px solid var(--gradient-base-background-4);
 }
 
+.rewards-section + section {
+	margin: 1rem 0;
+}
+
 .reward-item {
 	display: inline-flex;
 	align-items: center;
 }
 
-.reward-item + .reward-item {
+.reward-item+.reward-item {
 	margin-right: .5rem;
+}
+
+.reward-item.free_towel, .reward-item.free_hairties, .reward-item.free_hat {
+	display: none;
 }
 
 .rewards-section .track-progress {
@@ -593,6 +626,33 @@ cart-drawer-items.is-empty {
 	width: 100%;
 	top: 50%;
 	transform: translateY(-50%);
+}
+
+.gift-span {
+	animation: ease-in-out 1.4s flash;
+	animation-iteration-count: infinite;
+}
+
+@keyframes flash {
+	0% {
+		color: var(--gradient-background);
+	}
+
+	25% {
+		color: var(--gradient-background);
+	}
+
+	50% {
+		color: var(--cart-rewards-background);
+	}
+
+	75% {
+		color: var(--cart-rewards-background);
+	}
+
+	100% {
+		color: var(--gradient-background);
+	}
 }
 
 @media screen and (min-width: 990px) {

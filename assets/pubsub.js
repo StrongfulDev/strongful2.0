@@ -21,3 +21,6 @@ function publish(eventName, data) {
     })
   }
 }
+
+window.publish = publish;
+window.subscribe = subscribe;

@@ -68,7 +68,7 @@
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 40,
-        "padding_bottom": 36
+        "padding_bottom": 4
       }
     },
     "f161594f-d389-491b-9906-e8a3bd1f8fe3": {
@@ -110,7 +110,7 @@
             "collection": "ניוד"
           }
         },
-        "e2b5ddd2-4c3a-4f80-a542-998af3fc39bc": {
+        "0ea071fa-d1e1-4442-9c60-7d4b656474df": {
           "type": "featured_collection",
           "settings": {
             "collection": "כחול"
@@ -166,7 +166,7 @@
         "template--15997288448140__f161594f-d389-491b-9906-e8a3bd1f8fe3-1689510549517d1fd7-2",
         "16697e64-ebf9-4969-8055-a988a110e06d",
         "ff16029f-1212-4ca2-8aa4-efe3bfe636cb",
-        "e2b5ddd2-4c3a-4f80-a542-998af3fc39bc",
+        "0ea071fa-d1e1-4442-9c60-7d4b656474df",
         "099c8523-15ca-4523-96cb-822dcec629f9",
         "4edea345-3b00-4c51-9473-28ea7184655c",
         "template--15997288448140__f161594f-d389-491b-9906-e8a3bd1f8fe3-1689510549517d1fd7-1",

@@ -532,7 +532,8 @@ a.product__text {
     }
 
     .product__media-list .product__media-item {
-        width: calc(100% - 3rem - var(--grid-mobile-horizontal-spacing));
+        /*width: calc(100% - 3rem - var(--grid-mobile-horizontal-spacing));*/
+        width: 100%;
     }
 
     .product--mobile-columns .product__media-item {
@@ -1437,6 +1438,7 @@ a.product__text {
     position: relative;
     width: 100%;
     max-width: calc(100% - calc(var(--media-border-width) * 2));
+    /*max-width: 100%;*/
 }
 
 .product-media-container.constrain-height {

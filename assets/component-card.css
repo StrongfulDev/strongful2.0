@@ -139,6 +139,14 @@
     padding: calc(var(--image-padding) + 1rem);
 }
 
+.cart-drawer .card--media .card__inner .card__content {
+    padding: var(--image-padding);
+}
+
+.cart-drawer .card--media .card__inner .card__content:hover {
+    cursor: pointer;
+}
+
 .card__content {
     display: grid;
     grid-template-rows: minmax(0, 1fr) max-content minmax(0, 1fr);

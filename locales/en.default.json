@@ -598,20 +598,6 @@
       "print_gift_card": "הדפסה"
     }
   },
-  "rewards": {
-    "free_shipping": {
-      "message_html": "הוסיפי עוד <span class=\"rewards__missing_amount\"><\/span> וקבלי משלוח אקספרס חינם<\/span>"
-    },
-    "free_bottle": {
-      "message_html": "תוסיפי <span class=\"rewards__missing_amount\"><\/span> שח ותקבלי בקבוק חינם"
-    },
-    "hundred_discount": {
-      "message_html": "הוסיפי עוד <span class=\"rewards__missing_amount\"><\/span> וקבלי 100₪ הנחה"
-    },
-    "two_hundred_discount": {
-      "message_html": "הוסיפי עוד <span class=\"rewards__missing_amount\"><\/span> וקבלי 200₪ הנחה"
-    }
-  },
   "shopify": {
     "checkout": {
       "general": {
@@ -971,11 +957,12 @@
         "order_updates_submit_subscription": "בחירה",
         "confirmed_description": "קיבלנו את ההזמנה שלך, והיא תהיה מוכנה בקרוב!\nאת יכולה לחזור לעמוד הזה לקבלת עדכונים על המשלוח שלך.",
         "company_tracking_number": "מספר מעקב:",
+        "login_title": "התחברי למשתמש בשביל לראות את פרטי ההזמנה המלאים",
+        "login_description": "במידה ואין לך משתמש, את יכולה לראות את פרטי ההזמנה במייל אישור ההזמנה שנשלח אליך ברגעים אלה.",
         "login": "כניסה",
         "order_number_label": "מספר הזמנה",
-        "login_title": "התחברי למשתמש שלך ותוכלי לראות את כל פרטי ההזמנה.",
-        "non_shippable_title": "בוצע",
-        "login_description": "במידה ואין לך משתמש, את יכולה לראות את פרטי ההזמנה במייל אישור ההזמנה שנשלח אליך ברגעים אלה."
+        "unfulfilled_items_description": "הפריטים יגיעו אליך בימים הקרובים.",
+        "unfulfilled_items_title": "משלוח"
       },
       "processing": {
         "your_order_has_been_received_title": "תודה על ההזמנה",
@@ -1029,12 +1016,12 @@
       "retry_action_label": "נסי שוב"
     },
     "order_details": {
-      "order_details_skeleton_accessibility_label": "התחברי למשתמש שלך ותוכלי לראות את כל פרטי ההזמנה.",
-      "login_to_view_all_order_details": "התחברי למשתמש שלך ותוכלי לראות את כל פרטי ההזמנה."
+      "order_details_skeleton_accessibility_label": "התחברי למשתמש בשביל לראות את פרטי ההזמנה המלאים",
+      "login_to_view_all_order_details": "התחברי למשתמש בשביל לראות את פרטי ההזמנה המלאים"
     },
     "orders": {
       "order_status": {
-        "delivered_description_digital": "בוצע"
+        "preparing_for_shipping_label": "משלוח"
       }
     }
   }
