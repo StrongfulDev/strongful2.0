@@ -38,6 +38,7 @@ class CartRewards {
 		this.activeRewards = 0
 
 		this.rules.forEach((rule, index) => {
+
 			const isConditionMet = this.checkCondition(rule);
 			const isRewardInCart = this.cartHasReward(rule);
 			const rewardItem = this.getRewardItemByRule(rule);
@@ -76,7 +77,25 @@ class CartRewards {
 			}
 		});
 
+		// Here we remove all free products that are not included in the current rules
+		await this.removeNonGiftFreeProducts();
+
 		this.loading(false);
+	}
+
+	// This function will remove free products if they are not one of the gifts from the current rules
+	async removeNonGiftFreeProducts() {
+		const giftProductIds = this.rules
+			.filter(rule => rule.reward.action === 'gift_product')
+			.flatMap(rule => this.getProductIdsFromRule(rule));
+
+		for (const item of this.cart.items) {
+			// Here we assume that a product with price 0 is a free product.
+			console.log(item);
+			if (item.price === 0 && !giftProductIds.includes(item.id.toString())) {
+				await this.removeProduct(item.id);
+			}
+		}
 	}
 
 	async clearCart() {
@@ -101,7 +120,6 @@ class CartRewards {
 		const isRightQuantity = this.checkProductQuantity(rule);
 		const isAmountGreaterThan = rule.condition.operator === "Greater than or equal" && this.cartTotalValue >= rule.condition.value;
 		const isAmountLessThan = rule.condition.operator === "Less than or equal" && this.cartTotalValue <= rule.condition.value;
-		console.log('isRightQuantity', isRightQuantity);
 
 		if (rule.condition.type === "CartAmount") {
 			isConditionMet = (isRightQuantity || isRightQuantity === null) && (isAmountGreaterThan || isAmountLessThan);
@@ -322,8 +340,6 @@ class CartRewards {
 
 		for (const productId of productIds) {
 			const isProductExists = this.cart.items.some(item => item.id === parseInt(productId));
-			console.log(productId);
-			console.log(this.cart.items);
 
 			if (isProductExists) {
 				productsExist.push(productId);
