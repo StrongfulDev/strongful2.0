@@ -975,7 +975,8 @@
         "login_description": "במידה ואין לך משתמש, את יכולה לראות את פרטי ההזמנה במייל אישור ההזמנה שנשלח אליך ברגעים אלה.",
         "login": "כניסה",
         "order_number_label": "מספר הזמנה",
-        "unfulfilled_items_description": "הפריטים יגיעו אליך בימים הקרובים."
+        "unfulfilled_items_description": "הפריטים יגיעו אליך בימים הקרובים.",
+        "unfulfilled_items_title": "משלוח"
       },
       "processing": {
         "your_order_has_been_received_title": "תודה על ההזמנה",
@@ -1031,6 +1032,11 @@
     "order_details": {
       "order_details_skeleton_accessibility_label": "התחברי למשתמש בשביל לראות את פרטי ההזמנה המלאים",
       "login_to_view_all_order_details": "התחברי למשתמש בשביל לראות את פרטי ההזמנה המלאים"
+    },
+    "orders": {
+      "order_status": {
+        "preparing_for_shipping_label": "משלוח"
+      }
     }
   }
 }
