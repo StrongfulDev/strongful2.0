@@ -138,6 +138,8 @@ class CartRewards {
 			const productInCart = this.productsExistInCart([productId]);
 			const isRightQuantity = this.checkProductQuantity(rule, productId);
 
+			console.log(productId);
+
 			if (productInCart && (!isConditionMet || !isRightQuantity)) {
 				await this.removeProduct(productId)
 				continue;
