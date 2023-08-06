@@ -1505,6 +1505,10 @@ div.החדשיםביותר {
 		margin-right: -1.5rem;
 	}
 
+  .facets-wrapper.facets-customer {
+    top: 69px;
+  }
+
 	.facets-wrapper.high-index {
 		z-index: 50;
 	}
@@ -1689,6 +1693,10 @@ summary .icon-caret {
 		overflow: hidden;
 		overflow-y: auto;
 	}
+
+  .facets-container.customer-facet {
+    top: 15rem;
+  }
 
 	.page-width {
 		max-width: calc(var(--page-width) * 1.2);
