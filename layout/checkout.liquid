@@ -366,9 +366,12 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                 }
             });
 
-            let step = $('.step').attr('data-step', 'contact_information');
-            if (step !== null || true) {
-              let backLink = step.find('.step__footer__previous-link');
+					if (checkout.step !== 'contact_information') {
+						document.querySelector(".notice.notice--warning").style.display = "none";
+                    }
+
+            if ($('.step').attr('data-step', 'contact_information') !== null || true) {
+              let backLink = $('.step').attr('data-step', 'contact_information').find('.step__footer__previous-link');
               backLink.attr('href', '/');
             }
         }, 2000);
