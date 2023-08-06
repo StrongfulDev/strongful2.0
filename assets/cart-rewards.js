@@ -322,6 +322,8 @@ class CartRewards {
 
 		for (const productId of productIds) {
 			const isProductExists = this.cart.items.some(item => item.id === parseInt(productId));
+			console.log(productId);
+			console.log(this.cart.items);
 
 			if (isProductExists) {
 				productsExist.push(productId);
