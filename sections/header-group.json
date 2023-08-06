@@ -281,6 +281,7 @@
     },
     "94ab238e-a133-4905-a0be-f26a3cf38e52": {
       "type": "countdown",
+      "disabled": true,
       "settings": {
         "show_days": true,
         "countdown_date": "Fri Aug 11 2023 12:00:00 GMT+0300 (שעון ישראל (קיץ))",
@@ -295,6 +296,7 @@
   "order": [
     "announcement-bar",
     "header",
-    "7503b704-2110-400e-bc52-a2190d224c23"
+    "7503b704-2110-400e-bc52-a2190d224c23",
+    "94ab238e-a133-4905-a0be-f26a3cf38e52"
   ]
 }
