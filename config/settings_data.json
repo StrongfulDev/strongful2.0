@@ -226,16 +226,27 @@
       "featured-product": {
         "type": "featured-product",
         "blocks": {
-          "7f54b25e-f3e7-4e40-889f-67b6659aa8b8": {
-            "type": "buy_buttons",
-            "settings": {
-              "show_dynamic_checkout": false
-            }
-          }
-        },
-        "block_order": [
-          "7f54b25e-f3e7-4e40-889f-67b6659aa8b8"
-        ],
+      "855628211100114053": {
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "7570552984445421165": {
+        "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/settings\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "10570433277407501837": {
+        "type": "shopify:\/\/apps\/simprosys-google-shopping-feed\/blocks\/gsf-gcr\/1f0b859e-9fa6-4007-97e8-4513aff5ff3b",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "8962992520437913685": {
+        "type": "shopify:\/\/apps\/yotpo-loyalty-rewards\/blocks\/loader-app-embed-block\/2f9660df-5018-4e02-9868-ee1fb88d6ccd",
+        "disabled": true,
         "settings": {
           "product": "pink-slippers",
           "color_scheme": "background-1",
@@ -251,6 +262,8 @@
           "padding_bottom": 8
         }
       },
+      "8776485610325655785": {
+        "type": "shopify:\/\/apps\/hiko-social-login\/blocks\/hiko-auth\/3832d7e1-5bcd-4b72-91da-236b57feef8f",
       "featured-collection": {
         "type": "featured-collection",
         "custom_css": [
@@ -300,6 +313,12 @@
     "blocks": {
       "7570552984445421165": {
         "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/settings\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "1338706403785571867": {
+        "type": "shopify:\/\/apps\/dialogue-ai-personalization\/blocks\/dialogueai-embed\/43034bfa-b90a-4a14-aaa8-527eac735f6f",
         "disabled": false,
         "settings": {
         }

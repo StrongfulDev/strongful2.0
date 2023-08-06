@@ -227,13 +227,9 @@
                                 </div>
                             </div>
                         {%- endif -%}
-                        {% if card_product.tags contains 'new' or card_product.tags contains 'NEW' or card_product.tags contains 'new-in' %}
+                        {% if card_product.tags contains 'new' or card_product.tags contains 'NEW' %}
                             <span class="new-product-span">
                                 {{ 'products.product.new' | t }}
-                            </span>
-                            {% elsif card_product.tags contains '20%' %}
-                            <span class="new-product-span">
-                                {{ 'products.product.sale' | t }}
                             </span>
                         {% endif %}
                         {%- if show_quick_add and quick_add_type_mobile == "modal" -%}

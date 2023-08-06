@@ -147,7 +147,7 @@
 
                                         <tbody role="rowgroup">
                                         {%- for item in cart.items -%}
-                                            <tr id="CartDrawer-Item-{{ item.index | plus: 1 }}" data-index="{{ item.index | plus: 1 }}" data-product-id="{{ item.product.id }}" data-id="{{ item.id }}" class="cart-item"
+                                            <tr id="CartDrawer-Item-{{ item.index | plus: 1 }}" data-key="{{ item.key }}" data-index="{{ item.index | plus: 1 }}" data-product-id="{{ item.product.id }}" data-id="{{ item.id }}" class="cart-item"
                                                 role="row" data-variant-price="{{ item.variant.price }}" data-compare-price="{{ item.product.compare_at_price }}" data-original-line-price="{{ item.original_line_price }}">
                                                 <td class="cart-item__media" role="cell"
                                                     headers="CartDrawer-ColumnProductImage">
@@ -170,7 +170,7 @@
                                                 <td class="cart-item__details" role="cell"
                                                     headers="CartDrawer-ColumnProduct">
 
-                                                    {% if item.final_line_price == 0 %}
+                                                    {% if item.final_line_price < 500 %}
                                                         <p class="cart-item__name h4 break">
                                                             {{- item.product.title | escape -}}
                                                         </p>
@@ -224,11 +224,13 @@
                                                                 {%- endif -%}
                                                             {%- endfor -%}
                                                         </dl>
-                                                        {% if item.variant.inventory_quantity <= 0 %}
-                                                            <dl class="cart-inline-dl">
-                                                                {{ 'sections.cart.out_of_stock' | t }}
-                                                            </dl>
-                                                        {% endif %}
+                                                            {% if item.variant.requires_shipping %}
+                                                                {% if item.variant.inventory_quantity <= 0 %}
+                                                                    <dl class="cart-inline-dl">
+                                                                        {{ 'sections.cart.out_of_stock' | t }}
+                                                                    </dl>
+                                                                {% endif %}
+                                                            {% endif %}
 
                                                             <p class="product-option">{{ item.selling_plan_allocation.selling_plan.name }}</p>
                                                         {%- endif -%}

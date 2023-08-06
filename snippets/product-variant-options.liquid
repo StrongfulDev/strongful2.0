@@ -69,7 +69,7 @@
             {% if option.name == "Color" or option.name == "צבע" %}
                 <label class="no-background color-variant-tile"
                        for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
-                    <span style="background-color: {{  value }}">&nbsp;</span>
+                    <span style="background-color: {{ value }}">&nbsp;</span>
                 </label>
             {% else %}
                 <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">

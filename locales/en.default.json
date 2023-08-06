@@ -586,16 +586,16 @@
   "gift_cards": {
     "issued": {
       "title": "Here's your {{ value }} gift card for {{ shop }}!",
-      "subtext": "Your gift card",
-      "gift_card_code": "Gift card code",
+      "subtext": "Here's your gift card!",
+      "gift_card_code": "הקוד של הגיפט קארד",
       "shop_link": "SHOP NOW",
-      "remaining_html": "Remaining {{ balance }}",
+      "remaining_html": "נותר {{ balance }}",
       "add_to_apple_wallet": "Add to Apple Wallet",
-      "qr_image_alt": "QR code — scan to redeem gift card",
-      "copy_code": "Copy code",
-      "expired": "Expired",
-      "copy_code_success": "Code copied successfully",
-      "print_gift_card": "Print"
+      "qr_image_alt": "קוד QR - סרקי אותו כדי לממש את הגיפט קארד",
+      "copy_code": "העתקת קוד",
+      "expired": "פג התוקף",
+      "copy_code_success": "הועתק ללוח",
+      "print_gift_card": "הדפסה"
     }
   },
   "shopify": {
@@ -618,7 +618,7 @@
         "continue_to_shipping_method": "המשך למשלוח",
         "continue_to_payment_method": "המשך למשלוח",
         "continue_to_review": "ביקור מוצר",
-        "back_to_cart": "חזרה לסל הקניות",
+        "back_to_cart": "חזרה לאתר",
         "back_to_contact_information": "חזרה",
         "back_to_shipping_method": "חזרה למשלוחים",
         "back_to_payment_method": "חזרה",
@@ -712,7 +712,7 @@
         "reduced_with_quantity_label": "רק {{ quantity_available}} נשאר",
         "remove_from_cart_button_label": "הסרה מעגלה",
         "continue_shopping_button_label": "להמשך",
-        "go_back_to_cart_button_label": "חזרה לסל"
+        "go_back_to_cart_button_label": "חזרה לאתר"
       },
       "order_summary": {
         "title": "סיכום",
@@ -956,7 +956,13 @@
         "cancelled_description": "ההזמנה שלך בוטלה ב {{ date }}. אם יש לך שאלות, נשמח שתפני אלינו.",
         "order_updates_submit_subscription": "בחירה",
         "confirmed_description": "קיבלנו את ההזמנה שלך, והיא תהיה מוכנה בקרוב!\nאת יכולה לחזור לעמוד הזה לקבלת עדכונים על המשלוח שלך.",
-        "company_tracking_number": "מספר מעקב:"
+        "company_tracking_number": "מספר מעקב:",
+        "login_title": "התחברי למשתמש בשביל לראות את פרטי ההזמנה המלאים",
+        "login_description": "במידה ואין לך משתמש, את יכולה לראות את פרטי ההזמנה במייל אישור ההזמנה שנשלח אליך ברגעים אלה.",
+        "login": "כניסה",
+        "order_number_label": "מספר הזמנה",
+        "unfulfilled_items_description": "הפריטים יגיעו אליך בימים הקרובים.",
+        "unfulfilled_items_title": "משלוח"
       },
       "processing": {
         "your_order_has_been_received_title": "תודה על ההזמנה",
@@ -983,12 +989,17 @@
         "escape_action": "הציגי את ההזמנה שלך"
       },
       "failed_payment": {
-        "return_to_cart_button_label": "חזרה לסל הקניות"
+        "return_to_cart_button_label": "חזרה לאתר"
       },
       "payment_gateway": {
         "credit_card_label": "כרטיס אשראי",
         "bank_deposit_label": "העברה בנקאית",
-        "cash_on_delivery_label": "תשלום במזומן"
+        "cash_on_delivery_label": "תשלום במזומן",
+        "login_prompt": {
+          "no_access": {
+            "link": "כניסה"
+          }
+        }
       },
       "shipping_errors": {
         "shipping_method": "הסל שלך עודכן ושיטת המשלוח התעדכנה בהתאמה."
@@ -1003,6 +1014,15 @@
   "customer_accounts": {
     "errors": {
       "retry_action_label": "נסי שוב"
+    },
+    "order_details": {
+      "order_details_skeleton_accessibility_label": "התחברי למשתמש בשביל לראות את פרטי ההזמנה המלאים",
+      "login_to_view_all_order_details": "התחברי למשתמש בשביל לראות את פרטי ההזמנה המלאים"
+    },
+    "orders": {
+      "order_status": {
+        "preparing_for_shipping_label": "משלוח"
+      }
     }
   }
 }

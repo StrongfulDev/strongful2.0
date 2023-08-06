@@ -119,8 +119,6 @@ You can learn more about this (and learn how to cleanly revert these changes) at
 
   <body class="gradient">
     <header class="gift-card__title">
-      <span class="h2">{{ shop.name }}</span>
-      <h1 class="gift-card__heading">{{ 'gift_cards.issued.subtext' | t }}</h1>
       <div class="gift-card__price">
         <p>
           {% if settings.currency_code_enabled %}
@@ -146,7 +144,8 @@ You can learn more about this (and learn how to cleanly revert these changes) at
 
     <main class="gift-card">
       <div class="gift-card__image-wrapper">
-        <img src="{{ 'gift-card/card.svg' | shopify_asset_url }}" alt="" class="gift-card__image" height="{{ 570 | divided_by: 1.5 }}" width="570" loading="lazy">
+        <img src="https://cdn.shopify.com/s/files/1/0340/7986/7020/files/02.webp?v=1690472648" alt=""
+             class="gift-card__image" height="{{ 570 | divided_by: 1.5 }}" width="570" loading="lazy">
       </div>
       <div class="gift-card__qr-code" data-identifier="{{ gift_card.qr_identifier }}"></div>
       <div class="gift-card__information">

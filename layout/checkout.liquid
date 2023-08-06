@@ -13,9 +13,10 @@ You can learn more about this (and learn how to cleanly revert these changes) at
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0">
     <meta name="referrer" content="origin">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer="defer"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn-widgetsrepository.yotpo.com/v1/loader/qGZpUcqW7-E2nBL0lvSZUA" async defer="defer"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,11 +29,6 @@ You can learn more about this (and learn how to cleanly revert these changes) at
     {{ checkout_stylesheets }}
     {{ checkout_scripts }}
 
-    {% comment %}
-    <script type="module" crossorigin src="{{ 'package-protection.js' | asset_url }}"></script>
-    <link rel="stylesheet" href="{{ 'package-protection.css' | asset_url }}">
-    {% endcomment %}
-
     <style>
 
         * {
@@ -40,12 +36,38 @@ You can learn more about this (and learn how to cleanly revert these changes) at
             padding-inline-start: 0;
         }
 
-        .hidden {
+        .hidden, .notice.notice--error.default-background {
             display: none;
         }
 
         span.payment-due__price {
             font-size: 1em;
+        }
+
+        .product-table {
+          display: block;
+        }
+
+        .product[data-product-id="7307408933004"] .product-thumbnail {
+            height: 0;
+          opacity: 0;
+        }
+
+        .product[data-product-id="7307408933004"] .product__image {
+          display: none;
+        }
+
+        tbody[data-order-summary-section="line-items"] {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+        }
+
+        tbody[data-order-summary-section="line-items"] tr[data-product-id="7307408933004"] {
+            order: 19;
+          margin: .5rem 0 0;
+          padding: .5rem 0 0;
+          border-top: 1px solid #eaeaea;
         }
 
         @media screen and (max-width: 1000px) {
@@ -78,7 +100,6 @@ You can learn more about this (and learn how to cleanly revert these changes) at
             padding-right: 0;
             padding-left: .75em;
         }
-
 
         img.product-thumbnail__image {
             margin: auto;
@@ -145,7 +166,6 @@ You can learn more about this (and learn how to cleanly revert these changes) at
         }
 
         @media screen and (min-width: 1000px) {
-
             body {
                 background-color: #fff !important;
             }
@@ -175,7 +195,6 @@ You can learn more about this (and learn how to cleanly revert these changes) at
         }
 
         /*    Custom RTL End    */
-
         .field__additional-info {
             display: none;
         }
@@ -272,11 +291,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
     </style>
 
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-NS9ZW7H');</script>
+    <script>(function (w, d, s, l, i) {w[l] = w[l] || [];w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';j.async = true;j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j, f);})(window, document, 'script', 'dataLayer', 'GTM-NS9ZW7H');</script>
     <!-- End Google Tag Manager -->
  <!-- Dialogue-Checkout snippet load --> 
    {% include 'dialogue' %}
@@ -298,7 +313,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                 {{ content_for_logo }}
                 {{ breadcrumb }}
                 {{ alternative_payment_methods }}
-                {% comment %}<div id="package-protection"></div>{% endcomment %}
+                <div id="package-protection"></div>
             </header>
             <main class="main__content" role="main">
                 {{ content_for_layout }}
@@ -327,16 +342,17 @@ You can learn more about this (and learn how to cleanly revert these changes) at
 </div>
 
 {{ tracking_code }}
-
 <script type="text/javascript">
 
     document.addEventListener('DOMContentLoaded', (e) => {
+
+      // Global Variables
+	    let checkout = Shopify.Checkout;
 
         setTimeout(() => {
 
             sessionStorage.setItem('previousUrl', window.location.href);
             let myUrl = sessionStorage.getItem('previousUrl');
-            console.log(myUrl);
 
             // function for hiding the zip code field
             const fieldContainers = document.querySelectorAll('.field');
@@ -349,34 +365,56 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                     container.classList.remove('field--half');
                 }
             });
+
+            let step = $('.step').attr('data-step', 'contact_information');
+            if (step !== null || true) {
+              let backLink = step.find('.step__footer__previous-link');
+              backLink.attr('href', '/');
+            }
         }, 2000);
 
-        let checkout = Shopify.Checkout;
+        function checkCouponText() {
+	        let notice = document.querySelector('.notice__text');
+	        if (notice !== null || true) {
+		        if (notice.innerHTML.toLocaleLowerCase().includes('welcome')) {
+			        notice.innerHTML = 'קוד הקופון <strong>WELCOME30</strong> תקף בקנייה מעל ₪200';
+		        } else if (notice.innerHTML.toLocaleLowerCase().includes("dian")) {
+			        notice.innerHTML = 'קוד הקופון <strong>DIAN</strong> תקף בקניית 3 מוצרים ומעלה';
+		        } else if (notice.innerHTML.toLocaleLowerCase().includes("corrin")) {
+			        notice.innerHTML = 'קוד הקופון <strong>CORRIN</strong> תקף בקניית 3 מוצרים ומעלה';
+		        } else if (notice.innerHTML.toLocaleLowerCase().includes("talia")) {
+			        notice.innerHTML = 'קוד הקופון <strong>TALIA</strong> תקף בקניית 3 מוצרים ומעלה';
+		        } else if (notice.innerHTML.toLocaleLowerCase().includes("barc")) {
+			        notice.innerHTML = 'קוד הקופון <strong>BARC</strong> תקף בקניית 3 מוצרים ומעלה';
+		        } else if (notice.innerHTML.toLocaleLowerCase().includes("liel")) {
+			        notice.innerHTML = 'קוד הקופון <strong>LIEL</strong> תקף בקניית 3 מוצרים ומעלה';
+		        } else if (notice.innerHTML.toLocaleLowerCase().includes("kc")) {
+			        notice.innerHTML = 'קוד הקופון <strong>KC</strong> תקף בקניית 3 מוצרים ומעלה';
+		        } else if (notice.innerHTML.toLocaleLowerCase().includes("daniella")) {
+			        notice.innerHTML = 'קוד הקופון <strong>DANIELLA</strong> תקף בקניית 3 מוצרים ומעלה';
+		        }
+	        }
+        }
 
-        // let notice = document.querySelector('.notice__text');
-        // if (notice != null || notice != undefined) {
-        //   if (notice.innerHTML.includes('OFF100')) {
-        //     notice.innerHTML = 'קוד הקופון <strong>OFF100</strong> תקף בקנייה מעל ₪320';
-        //   }
-        // }
+//				setInterval(checkCouponText, 3000);
 
         setTimeout((yotpo) => {
 
             if (checkout.isOrderStatusPage === true) {
-                $( '.modal-dialog' ).css( 'direction','rtl' );
-                $( '.modal-content' ).css( 'direction','rtl' );
+                $('.modal-dialog').css('direction', 'rtl');
+                $('.modal-content').css('direction', 'rtl');
             } else {
                 let orderSummary = document.querySelector('.order-summary');
-                $('.order-summary-toggle').removeClass('order-summary-toggle--show').addClass('order-summary-toggle--hide');
+                jQuery('.order-summary-toggle').removeClass('order-summary-toggle--show').addClass('order-summary-toggle--hide');
                 orderSummary.classList.remove('order-summary--is-collapsed');
                 orderSummary.classList.add('order-summary--is-expanded');
 
-                let step = Shopify.Checkout.step;
+                let step = checkout.step;
                 if (step === 'contact_information') {
-
                     document.getElementById("checkout_buyer_accepts_marketing").checked = true;
                     document.getElementById("checkout_remember_me").checked = true;
-                    // document.getElementById("checkout_buyer_accepts_sms").checked = true;
+                } else if (step === "thank_you") {
+                  document.getElementById("package-protection").style.display = "none";
                 }
             }
             // preorder code start
@@ -404,7 +442,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
             // }
             // preorder code end
 
-        }, 2900);
+        }, 3900);
 
         let breadcrumbs = document.querySelectorAll( '.breadcrumb__link' );
         breadcrumbs.forEach((crumb) => {
@@ -421,5 +459,11 @@ You can learn more about this (and learn how to cleanly revert these changes) at
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NS9ZW7H"
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+
+<script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'package-protection.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'package-protection-extension.js' | asset_url }}" defer="defer"></script>
+
+<link rel="stylesheet" href="{{ 'package-protection.css' | asset_url }}">
 </body>
 </html>

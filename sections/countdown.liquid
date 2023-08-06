@@ -1,9 +1,10 @@
 {{ 'component-countdown.css' | asset_url | stylesheet_tag }}
 {{ 'component-countdown.js' | asset_url | script_tag }}
 
-<a href="{{ section.settings.countdown_url }}" id="countdown" class="countdown fix-direction" data-date="{{ section.settings.countdown_date }}">
+    {% if customer %}
+        <a href="{{ section.settings.countdown_url }}" id="countdown" class="countdown fix-direction" data-date="{{ section.settings.countdown_date }}">
     <div class="countdown-ctn flex">
-        <div class="announce-countdown">
+        <div class="announce-countdown flex">
             {% if section.settings.right_text %}
                 <div class="countdown-sale-description-ctn">
                     {{ section.settings.right_copy }}
@@ -31,6 +32,7 @@
         {% endif %}
     </div>
 </a>
+    {% endif %}
 
 {% schema %}
 {
@@ -79,7 +81,8 @@
             "name": "Countdown",
             "category": "Countdown",
             "settings": {
-                "countdown_date": "Sun Jul 23 2023 12:00:00 GMT+0300 (שעון ישראל (קיץ))"
+                "countdown_date": "Sun Jul 23 2023 12:00:00 GMT+0300 (שעון ישראל (קיץ))",
+              "countdown_url": "/"
             }
         }
     ]
