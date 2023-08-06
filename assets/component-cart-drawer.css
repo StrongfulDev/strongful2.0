@@ -608,8 +608,8 @@ cart-drawer-items.is-empty {
 }
 
 .gift-span {
-	animation: ease-in-out .4s flash;
-	animation-iteration-count: 2;
+	animation: ease-in-out 1.4s flash;
+	animation-iteration-count: infinite;
 }
 
 @keyframes flash {
@@ -617,7 +617,15 @@ cart-drawer-items.is-empty {
 		color: var(--gradient-background);
 	}
 
+	25% {
+		color: var(--gradient-background);
+	}
+
 	50% {
+		color: var(--cart-rewards-background);
+	}
+
+	75% {
 		color: var(--cart-rewards-background);
 	}
 

@@ -138,7 +138,7 @@
     "quick_add_text": "בחירת מידה",
     "quick_add_accessories_text": "הוספה לסל",
     "currency_code_enabled": true,
-    "show_upsell_card": true,
+    "show_upsell_card": false,
     "cart_type": "drawer",
     "show_vendor": true,
     "show_cart_note": false,
