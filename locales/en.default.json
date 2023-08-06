@@ -973,7 +973,9 @@
         "company_tracking_number": "מספר מעקב:",
         "login": "כניסה",
         "order_number_label": "מספר הזמנה",
-        "login_title": "התחברי למשתמש שלך ותוכלי לראות את כל פרטי ההזמנה."
+        "login_title": "התחברי למשתמש שלך ותוכלי לראות את כל פרטי ההזמנה.",
+        "non_shippable_title": "בוצע",
+        "login_description": "במידה ואין לך משתמש, את יכולה לראות את פרטי ההזמנה במייל אישור ההזמנה שנשלח אליך ברגעים אלה."
       },
       "processing": {
         "your_order_has_been_received_title": "תודה על ההזמנה",
@@ -1029,6 +1031,11 @@
     "order_details": {
       "order_details_skeleton_accessibility_label": "התחברי למשתמש שלך ותוכלי לראות את כל פרטי ההזמנה.",
       "login_to_view_all_order_details": "התחברי למשתמש שלך ותוכלי לראות את כל פרטי ההזמנה."
+    },
+    "orders": {
+      "order_status": {
+        "delivered_description_digital": "בוצע"
+      }
     }
   }
 }
