@@ -973,7 +973,8 @@
         "company_tracking_number": "מספר מעקב:",
         "login_title": "התחברי למשתמש בשביל לראות את פרטי ההזמנה המלאים",
         "login_description": "במידה ואין לך משתמש, את יכולה לראות את פרטי ההזמנה במייל אישור ההזמנה שנשלח אליך ברגעים אלה.",
-        "login": "כניסה"
+        "login": "כניסה",
+        "order_number_label": "מספר הזמנה"
       },
       "processing": {
         "your_order_has_been_received_title": "תודה על ההזמנה",
