@@ -970,7 +970,8 @@
         "cancelled_description": "ההזמנה שלך בוטלה ב {{ date }}. אם יש לך שאלות, נשמח שתפני אלינו.",
         "order_updates_submit_subscription": "בחירה",
         "confirmed_description": "קיבלנו את ההזמנה שלך, והיא תהיה מוכנה בקרוב!\nאת יכולה לחזור לעמוד הזה לקבלת עדכונים על המשלוח שלך.",
-        "company_tracking_number": "מספר מעקב:"
+        "company_tracking_number": "מספר מעקב:",
+        "login": "כניסה"
       },
       "processing": {
         "your_order_has_been_received_title": "תודה על ההזמנה",
@@ -1002,7 +1003,12 @@
       "payment_gateway": {
         "credit_card_label": "כרטיס אשראי",
         "bank_deposit_label": "העברה בנקאית",
-        "cash_on_delivery_label": "תשלום במזומן"
+        "cash_on_delivery_label": "תשלום במזומן",
+        "login_prompt": {
+          "no_access": {
+            "link": "כניסה"
+          }
+        }
       },
       "shipping_errors": {
         "shipping_method": "הסל שלך עודכן ושיטת המשלוח התעדכנה בהתאמה."
