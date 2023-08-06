@@ -277,7 +277,7 @@
                                                       </td>
                                                   {% endif %}
                                                   <td headers="ColumnProductImage" role="rowheader" scope="row" data-label="{{ 'customer.order.product_image' | t }}">
-                                                      <a href="{{ product.url }}" class="order-line-item-link">
+                                                      <{% if line_item.product.title contains 'משלוח' %}p{% else %}a href="{{ product.url }}"{% endif %} class="order-line-item-link">
                                                           <img
                                                                   srcset="
                                   {%- if line_item.product.featured_media.width >= 165 -%}{{ line_item.product.featured_media | image_url: width: 165 }} 165w,{%- endif -%}
@@ -298,7 +298,7 @@
                                                                   width="{{ line_item.product.featured_media.width }}"
                                                                   height="{{ line_item.product.featured_media.height }}"
                                                           >
-                                                      </a>
+                                                      </{% if line_item.product.title contains 'משלוח' %}p{% else %}a{% endif %}>
                                                   </td>
                                                   <td
                                                           id="Row{{ line_item.key }}"
@@ -309,7 +309,7 @@
                                                   >
                                                       <div>
                                                           {%- if line_item.url != blank -%}
-                                                              {% if line_item.product.tags contains 'מתנה' %}
+                                                              {% if line_item.product.tags contains 'מתנה' or line_item.product.title contains 'משלוח' %}
                                                                   <p>{{ line_item.title }}</p>
                                                               {% else %}
                                                                   <a href="{{ line_item.url }}">{{ line_item.title }} {{ line_item.vendor }}</a>
