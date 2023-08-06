@@ -472,8 +472,12 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 	align-items: center;
 }
 
-.reward-item + .reward-item {
+.reward-item+.reward-item {
 	margin-right: .5rem;
+}
+
+.reward-item.free_towel, .reward-item.free_hairties, .reward-item.free_hat {
+	display: none;
 }
 
 .rewards-section .track-progress {
