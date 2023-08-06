@@ -3782,6 +3782,11 @@ label .ReturnGO_ReturnItemProposition-module_open, .ReturnGO_ReturnItemPropositi
 	padding-top: 30px !important;
 }
 
+
+.ReturnGO_CheckBox-module_checkBox.ReturnGO_CheckBox-module_disabled.ReturnGO_CheckBox-module_shadowed {
+    display: none !important;
+}
+
 #returnGoAccountWidget {
 	display: none !important;
 }
