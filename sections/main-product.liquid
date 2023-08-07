@@ -439,7 +439,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                                                     role="list">
                                                                     {%- for product in recommendations.products limit: block.settings.products_per_page offset: continue -%}
                                                                         {% if isLiveTheme == 'true' %}
-                                                                            {% unless product.tags contains 'giftHide' or product.tags contains 'hidden' %}
+                                                                            {% unless product.tags contains 'giftHide' or product.tags contains 'hidden' or product.tags contains 'free-slippers' %}
                                                                                 <li>
                                                                                     {% render 'card-product',
                                                                                             card_product: product,

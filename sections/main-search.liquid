@@ -261,7 +261,7 @@ if content_for_header contains "previewBarInjector.init();"
                     {%- case item.object_type -%}
                       {%- when 'product' -%}
                           {% if isLiveTheme == 'true' %}
-                            {% unless item.tags contains 'giftHide' or item.tags contains 'hidden' %}
+                            {% unless item.tags contains 'giftHide' or item.tags contains 'hidden' or item.tags contains 'free-slippers' %}
                                 {%- capture product_settings -%}{%- if section.settings.product_show_vendor -%}vendor,{%- endif -%}title,price{%- endcapture -%}
                                 {% render 'card-product',
                                         card_product: item,

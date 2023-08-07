@@ -51,7 +51,8 @@ window.addEventListener('DOMContentLoaded', function(event) {
 			setTimeout(() => {
 				modal.hide();
 			}, 500);
-			modalOverlay.hide()
+			modalOverlay.hide();
+
 		})
 		modal.find('.quick_add_modal__close').on("click", () => {
 			modal.removeClass("active");

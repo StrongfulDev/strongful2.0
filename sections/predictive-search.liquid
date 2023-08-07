@@ -91,7 +91,7 @@
               <ul id="predictive-search-results-products-list" class="predictive-search__results-list list-unstyled" role="group" aria-labelledby="predictive-search-products">
                 {%- for product in predictive_search.resources.products limit:2 -%}
                     {% if isLiveTheme == 'true' %}
-                        {% unless product.tags contains 'giftHide' or product.tags contains 'hidden' %}
+                        {% unless product.tags contains 'giftHide' or product.tags contains 'hidden' or product.tags contains 'free-slippers' %}
                             <li id="predictive-search-option-product-{{ forloop.index }}" class="predictive-search__list-item" role="option" aria-selected="false">
                                 {% render 'card-product',
                                         card_product: product,

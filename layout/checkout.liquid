@@ -342,35 +342,32 @@
       // Global Variables
 	    let checkout = Shopify.Checkout;
 
-        setTimeout(() => {
+        sessionStorage.setItem('previousUrl', window.location.href);
+        let myUrl = sessionStorage.getItem('previousUrl');
 
-            sessionStorage.setItem('previousUrl', window.location.href);
-            let myUrl = sessionStorage.getItem('previousUrl');
-
-            // function for hiding the zip code field
-            const fieldContainers = document.querySelectorAll('.field');
-            fieldContainers.forEach(function(container) {
-                let data = container.dataset.addressField;
-                if (data === 'zip') {
-                    container.classList.add('hidden');
-                }
-                if (data === 'city') {
-                    container.classList.remove('field--half');
-                }
-            });
-
-						document.querySelector(".sidebar").classList.add(checkout.step);
-
-					if (checkout.step !== 'contact_information') {
-                      console.log(checkout)
-						document.querySelector(".notice--warning").style.display = "none";
-                    }
-
-            if (jQuery('.step').attr('data-step', 'contact_information') !== null) {
-              let backLink = jQuery('.step').attr('data-step', 'contact_information').find('.step__footer__previous-link');
-              backLink.attr('href', '/');
+        // function for hiding the zip code field
+        const fieldContainers = document.querySelectorAll('.field');
+        fieldContainers.forEach(function(container) {
+            let data = container.dataset.addressField;
+            if (data === 'zip') {
+                container.classList.add('hidden');
             }
-        }, 999);
+            if (data === 'city') {
+                container.classList.remove('field--half');
+            }
+        });
+
+                    document.querySelector(".sidebar").classList.add(checkout.step);
+
+                if (checkout.step !== 'contact_information') {
+                  console.log(checkout)
+                    document.querySelector(".notice--warning").style.display = "none";
+                }
+
+        if (jQuery('.step').attr('data-step', 'contact_information') !== null) {
+          let backLink = jQuery('.step').attr('data-step', 'contact_information').find('.step__footer__previous-link');
+          backLink.attr('href', '/');
+        }
 
         function checkCouponText() {
 	        let notice = document.querySelector('.notice__text');
@@ -395,61 +392,59 @@
 	        }
         }
 
-//				setInterval(checkCouponText, 3000);
+	    checkCouponText();
+	    setTimeout(checkCouponText, 3000); // fallback
 
-        setTimeout((yotpo) => {
+	    if (checkout.isOrderStatusPage === true) {
+		    $('.modal-dialog').css('direction', 'rtl');
+		    $('.modal-content').css('direction', 'rtl');
+	    } else {
+		    let orderSummary = document.querySelector('.order-summary');
+		    jQuery('.order-summary-toggle').removeClass('order-summary-toggle--show').addClass('order-summary-toggle--hide');
+		    orderSummary.classList.remove('order-summary--is-collapsed');
+		    orderSummary.classList.add('order-summary--is-expanded');
 
-            if (checkout.isOrderStatusPage === true) {
-                $('.modal-dialog').css('direction', 'rtl');
-                $('.modal-content').css('direction', 'rtl');
-            } else {
-                let orderSummary = document.querySelector('.order-summary');
-                jQuery('.order-summary-toggle').removeClass('order-summary-toggle--show').addClass('order-summary-toggle--hide');
-                orderSummary.classList.remove('order-summary--is-collapsed');
-                orderSummary.classList.add('order-summary--is-expanded');
+		    let step = checkout.step;
+		    if (step === 'contact_information') {
+			    document.getElementById("checkout_buyer_accepts_marketing").checked = true;
+			    document.getElementById("checkout_remember_me").checked = true;
+		    } else if (step === "thank_you") {
+			    document.getElementById("package-protection").style.display = "none";
+		    }
+	    }
 
-                let step = checkout.step;
-                if (step === 'contact_information') {
-                    document.getElementById("checkout_buyer_accepts_marketing").checked = true;
-                    document.getElementById("checkout_remember_me").checked = true;
-                } else if (step === "thank_you") {
-                  document.getElementById("package-protection").style.display = "none";
-                }
-            }
-            // preorder code start
-            //   if (document.querySelectorAll( '.regular-preorder' ) != null || document.querySelectorAll( '.regular-preorder' ) != undefined) {
-            //     if (Shopify.Checkout.step == 'shipping_method') {
-            //      if ($( '.radio__label__primary' ).data('shipping-method-label-title')) {
-            //          $( '.radio__label__primary' ).html( 'הזמנות הכוללות פריטים ממכירה מוקדמת יקלטו ויגיעו עד 3 ימי עסקים מיום השקת הקולקציה' );
-            //       }
-            //     }
+	    let breadcrumbs = document.querySelectorAll( '.breadcrumb__link' );
+	    breadcrumbs.forEach((crumb) => {
+		    if (crumb.innerText === 'עגלה') {
+			    crumb.innerText = 'חזרה';
+			    crumb.href = '/';
+		    }
+	    });
 
-            //     if (Shopify.Checkout.step == 'payment_method') {
-            //    document.getElementsByClassName( 'review-block__content' )[2].innerText = 'הזמנות הכוללות פריטים ממכירה מוקדמת יקלטו ויגיעו עד 3 ימי עסקים מיום השקת הקולקציה';
-            //     }
+        // preorder code start
+        //   if (document.querySelectorAll( '.regular-preorder' ) != null || document.querySelectorAll( '.regular-preorder' ) != undefined) {
+        //     if (Shopify.Checkout.step == 'shipping_method') {
+        //      if ($( '.radio__label__primary' ).data('shipping-method-label-title')) {
+        //          $( '.radio__label__primary' ).html( 'הזמנות הכוללות פריטים ממכירה מוקדמת יקלטו ויגיעו עד 3 ימי עסקים מיום השקת הקולקציה' );
+        //       }
+        //     }
 
-            // } else {
-            //   if (Shopify.Checkout.step == 'shipping_method') {
-            //   if ($( '.radio__label__primary' ).data('shipping-method-label-title')) {
-            //        $( '.radio__label__primary' ).html( 'משלוח אקספרס - 1-3 ימי עסקים' );
-            //       }
-            //   }
+        //     if (Shopify.Checkout.step == 'payment_method') {
+        //    document.getElementsByClassName( 'review-block__content' )[2].innerText = 'הזמנות הכוללות פריטים ממכירה מוקדמת יקלטו ויגיעו עד 3 ימי עסקים מיום השקת הקולקציה';
+        //     }
 
-            //   if (Shopify.Checkout.step == 'payment_method') {
-            //         document.getElementsByClassName( 'review-block__content' )[2].innerText = 'משלוח אקספרס - 1-3 ימי עסקים';
-            //   }
-            // }
-            // preorder code end
+        // } else {
+        //   if (Shopify.Checkout.step == 'shipping_method') {
+        //   if ($( '.radio__label__primary' ).data('shipping-method-label-title')) {
+        //        $( '.radio__label__primary' ).html( 'משלוח אקספרס - 1-3 ימי עסקים' );
+        //       }
+        //   }
 
-        }, 3900);
-
-        let breadcrumbs = document.querySelectorAll( '.breadcrumb__link' );
-        breadcrumbs.forEach((crumb) => {
-            if (crumb.innerText === 'עגלה') {
-                crumb.innerText = 'חזרה';
-                crumb.href = '/';
-            }
-        });
+        //   if (Shopify.Checkout.step == 'payment_method') {
+        //         document.getElementsByClassName( 'review-block__content' )[2].innerText = 'משלוח אקספרס - 1-3 ימי עסקים';
+        //   }
+        // }
+        // preorder code end
 
     });
 </script>

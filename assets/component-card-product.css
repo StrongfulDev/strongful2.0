@@ -183,6 +183,14 @@ div:not(.product-size-picker-container) .variant-button .size_variant_button:not
 	direction: rtl;
 }
 
+.cart-drawer .card .discount-price-container {
+	display: none;
+}
+
+.cart-drawer .card .price {
+	display: none;
+}
+
 .product_details__info .discount-price-container {
 	flex-direction: column;
 	align-items: flex-start;
