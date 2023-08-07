@@ -251,7 +251,7 @@
                         {% if card_product.compare_at_price > card_product.price %}
                             <div class="discount-price-container">
                                 <p class="rect-discount-tag">
-                                    {% if members_only %}
+                                    {% if members_only_sale %}
                                         {% if card_product.tags contains announcement_tag %}
                                             {{ 'products.product.members_only' | t }}
                                         {% else %}
