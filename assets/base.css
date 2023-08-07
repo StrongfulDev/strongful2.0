@@ -1154,7 +1154,7 @@ summary::-webkit-details-marker {
 }
 
 .cart-drawer .card .grid__item.slider__slide a {
-    pointer-events: none;
+    pointer-events: none !important;
 }
 
 @media screen and (max-width: 749px) {
