@@ -364,6 +364,7 @@ ul.default_variant_list {
 .disabled-variant-button label.product_size_picker__button__label,
 .disabled-variant-button .size_variant_button_container{
     background: var(--gradient-base-background-3);
+		pointer-events: none;
 }
 
 .product_size_picker__button__label .icon-checkmark {
