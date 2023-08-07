@@ -1,0 +1,43 @@
+{% liquid
+    assign members_only = false
+    if member_tag != blank
+        assign members_only = true
+    endif
+%}
+
+<div class="sale-banner-product-page">
+    {% if customer %}
+        <p>{{ block.settings.logged_in_text }}</p>
+    {% else %}
+        <p>{{ block.settings.logged_out_text }}</p>
+        <small class="">{{ block.settings.log_in }}</small>
+    {% endif %}
+</div>
+
+{% schema %}
+
+{
+    "name": "Member Login",
+    "settings": [
+        {
+            "type": "text",
+            "id": "logged_in_text",
+            "label": "Logged In Text",
+            "default": "You are logged in."
+        },
+        {
+            "type": "text",
+            "id": "logged_out_text",
+            "label": "Logged Out Text",
+            "default": "You are not logged in."
+        },
+        {
+            "type": "text",
+            "id": "log_in",
+            "label": "Log In Text",
+            "default": "Log In"
+        }
+    ]
+}
+
+{% endschema %}
