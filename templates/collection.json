@@ -57,6 +57,7 @@
         "filter_type": "vertical",
         "enable_sorting": true,
         "columns_mobile": "2",
+        "members_only_sale": true,
         "padding_top": 0,
         "padding_bottom": 44
       }
