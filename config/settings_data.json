@@ -245,7 +245,7 @@
           "show_peak": true,
           "pagination_type": "sides",
           "color_scheme": "background-1",
-          "image_ratio": "square",
+          "image_ratio": "low-rect",
           "show_secondary_image": false,
           "show_vendor": false,
           "show_rating": false,
