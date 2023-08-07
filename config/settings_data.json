@@ -228,7 +228,7 @@
         "settings": {
           "steps": 1,
           "title": "",
-          "heading_size": "h1",
+          "heading_size": "h2",
           "heading_type": "heading_type_default",
           "description": "",
           "show_description": false,
@@ -245,7 +245,7 @@
           "show_peak": true,
           "pagination_type": "sides",
           "color_scheme": "background-1",
-          "image_ratio": "adapt",
+          "image_ratio": "square",
           "show_secondary_image": false,
           "show_vendor": false,
           "show_rating": false,
