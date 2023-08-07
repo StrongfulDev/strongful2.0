@@ -5,11 +5,11 @@
     endif
 %}
 
-<div class="sale-banner-product-page">
+<div class="sale-banner-product-page fix-direction">
     {% if customer %}
         <p>{{ block.settings.logged_in_text }}</p>
     {% else %}
         <p>{{ block.settings.logged_out_text }}</p>
-        <small class="">{{ block.settings.log_in }}</small>
+        <small class="account-toggler-site-wide link">{{ block.settings.log_in }}</small>
     {% endif %}
 </div>

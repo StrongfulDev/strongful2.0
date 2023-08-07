@@ -2028,6 +2028,16 @@ product-recommendations .collection__title_heading, #product .collection__title_
 	margin-bottom: calc(var(--grid-desktop-horizontal-spacing) * 2);
 }
 
+.sale-banner-product-page {
+    background: var(--gradient-base-background-3);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.sale-banner-product-page p {
+    margin: 0;
+}
+
 /*  YOTPO REVIEWS BEGIN  */
 
 .yotpo-sum-reviews {
