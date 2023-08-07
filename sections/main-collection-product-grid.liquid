@@ -184,7 +184,7 @@
                                     endif
                                 -%}
                                 {% if isLiveTheme == 'true' %}
-                                    {% unless product.tags contains 'giftHide' or product.tags contains 'hidden' %}
+                                    {% unless product.tags contains 'giftHide' or product.tags contains 'hidden' or product.tags contains 'free-slippers' %}
                                         <li class="grid__item {{ isLiveTheme }}">
                                             {% render 'card-product',
                                                     card_product: product,
