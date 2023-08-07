@@ -251,7 +251,15 @@
                         {% if card_product.compare_at_price > card_product.price %}
                             <div class="discount-price-container">
                                 <p class="rect-discount-tag">
-                                    {{ card_product.compare_at_price | minus: card_product.price | times: 100.0 | divided_by: card_product.compare_at_price | ceil }}% OFF
+                                    {% if members_only %}
+                                        {% if card_product.tags contains announcement_tag %}
+                                            {{ 'products.product.members_only' | t }}
+                                        {% else %}
+                                            {{ card_product.compare_at_price | minus: card_product.price | times: 100.0 | divided_by: card_product.compare_at_price | ceil }}% OFF
+                                        {% endif %}
+                                    {% else %}
+                                        {{ card_product.compare_at_price | minus: card_product.price | times: 100.0 | divided_by: card_product.compare_at_price | ceil }}% OFF
+                                    {% endif %}
                                 </p>
                                 {% if card_product.tags contains 'OUTLET' or card_product.tags contains 'outlet' %}
                                     <p class="outlet-collection-tag upper h4">
