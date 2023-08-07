@@ -364,7 +364,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                         {%- when 'variant_picker' -%}
                             {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id, myBlock: myBlock %}
                         {%- when 'buy_buttons' -%}
-                            {%- render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true -%}
+                            {%- render 'buy-buttons', block: block, product: product, member_tag: members_only_tag, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true -%}
                         {%- when 'rating' -%}
                             {%- if product.metafields.reviews.rating.value != blank -%}
                                 {% liquid
@@ -2324,6 +2324,12 @@ You can learn more about this (and learn how to cleanly revert these changes) at
     {
       "type": "header",
       "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "text",
+      "id": "members_only_tag",
+      "label": "t:sections.main-product.settings.members_only_tag.label",
+        "info": "t:sections.main-product.settings.members_only_tag.info"
     },
     {
       "type": "range",

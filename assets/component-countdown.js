@@ -61,6 +61,8 @@ document.addEventListener('DOMContentLoaded', function() {
 			$("#countdownDisplay").text(count + " ORDER");
 		} else if (count > 0) {
 			setTimeout(updateCounter, 1000); // Update every second
+		} else {
+			$("#countdownDisplay").text("PRE ORDER OVER");
 		}
 	}
 
