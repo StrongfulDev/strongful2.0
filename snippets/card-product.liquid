@@ -42,7 +42,7 @@
             elsif card_product.featured_media and media_aspect_ratio == 'adapt'
                 assign ratio = card_product.featured_media.aspect_ratio
             elsif card_product.featured_media and media_aspect_ratio == 'low-rect'
-                assign ratio = 1.5
+                assign ratio = 1.25
             endif
             if ratio == 0 or ratio == null
                 assign ratio = 1
