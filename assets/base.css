@@ -1153,8 +1153,8 @@ summary::-webkit-details-marker {
     row-gap: 0;
 }
 
-.cart-drawer .card .grid__item.slider__slide .full-unstyled-link {
-    pointer-events: none !important;
+.cart-drawer .grid__item a {
+    pointer-events: none;
 }
 
 @media screen and (max-width: 749px) {
