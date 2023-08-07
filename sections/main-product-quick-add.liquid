@@ -2,6 +2,27 @@
 {{ 'main-product-quick-add.css' | asset_url | stylesheet_tag }}
 {{ 'main-product-quick-add.js' | asset_url | script_tag }}
 
+{%- liquid
+    assign members_only = false
+    assign check_against_inventory = true
+    if product.selected_or_first_available_variant.inventory_management != 'shopify' or product.selected_or_first_available_variant.inventory_policy == 'continue'
+        assign check_against_inventory = false
+    endif
+    if product.selected_or_first_available_variant.quantity_rule.min > product.selected_or_first_available_variant.inventory_quantity and check_against_inventory
+        assign quantity_rule_soldout = true
+    endif
+    if member_tag != blank
+        assign members_only = true
+    endif
+    if product.tags contains 'members_only'
+        if customer
+            assign members_only = false
+        else
+            assign members_only = true
+        endif
+    endif
+-%}
+
 <div class="sticky-cart-cta">
     <img
             srcset="
@@ -32,7 +53,20 @@
             {% render 'price' %}
             {% endunless %}
         </div>
-    <p class="sticky-add-to-cart-btn">הוספה לסל</p>
+
+    <p class="sticky-add-to-cart-btn"
+            {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
+                disabled
+            {% endif %}
+    >
+        {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
+            {{ 'products.product.sold_out' | t }}
+        {%- elsif members_only -%}
+            {{ 'products.product.members_only' | t }}
+        {%- else -%}
+            {{ 'products.product.add_to_cart' | t }}
+        {%- endif -%}
+    </p>
     <div class="product-size-picker">
         {% render 'product-size-picker',
                 product: product,

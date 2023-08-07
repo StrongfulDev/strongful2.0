@@ -71,14 +71,19 @@
                             type="submit"
                             name="add"
                             class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
-                            {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout or members_only %}
+                            {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
+                                disabled
+                            {% endif %}
+                            {% if product.tags contains member_tag and members_only %}
                                 disabled
                             {% endif %}
                     >
             <span>
-              {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout or members_only -%}
+              {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
                   {{ 'products.product.sold_out' | t }}
-              {%- else -%}
+              {%- elsif product.tags contains member_tag and members_only -%}
+                  {{ 'products.product.members_only' | t }}
+                {%- else -%}
                   {{ 'products.product.add_to_cart' | t }}
               {%- endif -%}
             </span>
