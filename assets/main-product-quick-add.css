@@ -57,6 +57,10 @@
 	margin: 0;
 }
 
+.sticky-add-to-cart-btn.members_only + .product-size-picker .product-size-picker {
+	pointer-events: none;
+}
+
 .sticky-cart-cta-overlay {
 	position: fixed;
 	top: 0;
