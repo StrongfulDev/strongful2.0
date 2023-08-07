@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	const startTime = new Date(data).getTime(); // GMT +0300
 	const endTime = startTime + (24 * 60 * 60 * 1000); // 24 hours later
-	const totalCount = 500;
+	const totalCount = 1000;
 
 	function getCurrentCount() {
 		const now = Date.now();

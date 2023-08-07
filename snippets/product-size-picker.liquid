@@ -17,7 +17,7 @@
 
     {% if is_modal %}
         <div class="variant_modal_overlay" id="{{ id | append: "-overlay" }}">&nbsp;</div>
-        <div class="variant_modal variant_selector submit_on_click"
+        <div class="variant_modal variant_selector members_only_quick_add_{{ members_only_sale }} submit_on_click"
              id="{{ id }}">
             <div class="quick-add-variant-modal mobile no-js-hidden"
                  id="quick_add_modal-{{ section.id }}-{{ card_product.id }}">
@@ -67,6 +67,16 @@
                                         </p>
                                     {% endif %}
                                 </div>
+                            {% endif %}
+                            {% if members_only_sale %}
+                                {% if product.tags contains announcement_tag %}
+                                    {% unless customer %}
+                                        <div>
+                                            <span>הזמנה מוקדמת לחברות מועדון בלבד</span>
+                                            <span class="account-toggler-site-wide link">התחברי / הרשמי</span>
+                                        </div>
+                                    {% endunless %}
+                                {% endif %}
                             {% endif %}
                         </div>
                     </div>

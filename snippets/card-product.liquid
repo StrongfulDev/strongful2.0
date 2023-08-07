@@ -331,7 +331,7 @@
                                 </p>
                             {%- endif -%}
 
-                            {% render 'price', product: card_product, price_class: '' %}
+                            {% render 'price', product: card_product, price_class: '', members_only_sale: members_only_sale, announcement_tag: announcement_tag %}
                         </div>
                     </div>
                     {%- if show_quick_add and quick_add_type == "button" -%}
@@ -469,7 +469,9 @@
                     id: quick_add_modal_id,
                     pick_size_text: pick_size_text,
                     quick_add_text: quick_add_text,
-                    quick_add_accessories_text: quick_add_accessories_text
+                    quick_add_accessories_text: quick_add_accessories_text,
+                    announcement_tag: announcement_tag,
+                    members_only_sale: members_only_sale
             %}
         {%- endif -%}
     {%- else -%}
