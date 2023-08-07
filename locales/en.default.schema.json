@@ -2366,6 +2366,10 @@
         },
         "image_count": {
           "label": "Number of images to show"
+        },
+        "members_only_sale": {
+          "label": "Members only",
+          "info": "Only customers with a customer account can see the collection."
         }
       }
     },
