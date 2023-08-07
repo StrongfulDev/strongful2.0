@@ -24,12 +24,12 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "20% OFF",
-            "sub_text": "על כל האתר (לא כולל אאוטלט)",
+            "main_text": "20% OFF PRE ORDER",
+            "sub_text": "מכירה מוקדמת רק לחברות מועדון",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "rtl",
-            "link": "shopify:\/\/collections\/20",
+            "link": "shopify:\/\/collections\/oasis",
             "color_scheme": "accent-1"
           }
         },
