@@ -297,7 +297,7 @@
         transition: transform var(--duration-short) ease-in-out;
     }
 
-    .card:hover .media.media--hover-effect > img:first-child:only-child,
+    .active-card:hover .media.media--hover-effect > img:first-child:only-child,
     .card-wrapper:hover .media.media--hover-effect > img:first-child:only-child {
         /* transform: scale(1.03); */
     }

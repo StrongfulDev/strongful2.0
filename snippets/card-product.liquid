@@ -59,6 +59,17 @@
         {% if extend_height %} card--extend-height{% endif %}
         {% if card_product.featured_media == nil and settings.card_style == 'card' %} ratio{% endif %}
         {% if horizontal_class %} card--horizontal{% endif %}
+        {% if members_only_sale %}
+            {% if card_product.tags contains announcement_tag %}
+                {% if customer %}
+                    active-card
+                {% endif %}
+            {% else %}
+                active-card
+            {% endif %}
+        {% else %}
+            active-card
+        {% endif %}
       "
                     style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
             >
