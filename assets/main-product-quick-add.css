@@ -87,7 +87,7 @@ product-recommendations .size_variant_button_container .loading-overlay {
 
 @media screen and (min-width: 990px) {
 	.sticky-cart-cta {
-		grid-template-columns: 2fr 24fr 4fr;
+		grid-template-columns: 2fr 24fr auto;
 		padding: 1em 18rem;
 		display: grid;
 		background: rgba(0,0,0,.9);
