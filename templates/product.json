@@ -147,6 +147,7 @@
       "type": "complete-look-products",
       "settings": {
         "heading": "SHOP THE LOOK",
+        "member_tag": "members_only",
         "heading_size": "h1"
       }
     },
