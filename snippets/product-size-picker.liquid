@@ -172,7 +172,7 @@
                                 {% for variant in product.variants %}
                                         {%- liquid
                                             assign product_disabled = false
-                                            if variant.available == false or members_only and variant.product.tags contains announcement_tag
+                                            if variant.available == false or members_only and variant.product.tags contains member_tag
                                                 assign product_disabled = true
                                             endif
                                         %}
@@ -206,13 +206,35 @@
                     <div class="add_to_cart_container product-form__buttons">
                         {% if product.tags contains 'fakeOutOfStock' %}
                             <button class="soldout-variant fakeOutOfStock">
-                                אזל המלאי
+                                {{ 'products.product.sold_out' | t }}
                             </button>
                         {% else %}
                             <button type="submit" name="add"
-                                    class="add_to_cart product-form__submit button button--full-width button--secondary">
-                                <span class="button-loader-text">הוספה</span>
-                                {% render 'loading-spinner' %}
+                                    class="add_to_cart product-form__submit button button--full-width button--secondary"
+                                    {% if product_disabled %}
+                                        disabled
+                                    {% endif %}
+                            >
+                                <span>
+                                  {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
+                                      {{ 'products.product.sold_out' | t }}
+                                  {%- elsif product.tags contains member_tag and members_only -%}
+                                      {{ 'products.product.unavailable' | t }}
+                                  {%- else -%}
+                                      {{ 'products.product.add_to_cart' | t }}
+                                  {%- endif -%}
+                                </span>
+                                <div class="loading-overlay__spinner hidden">
+                                    <svg
+                                            aria-hidden="true"
+                                            focusable="false"
+                                            class="spinner"
+                                            viewBox="0 0 66 66"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                    </svg>
+                                </div>
                             </button>
                         {% endif %}
                         <input type="submit" hidden="hidden"/>
