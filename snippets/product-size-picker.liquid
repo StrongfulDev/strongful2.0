@@ -150,6 +150,18 @@
             </div>
         </div>
     {% else %}
+        {% liquid
+            if member_tag != blank
+                assign members_only = true
+            endif
+            if members_only
+                if customer
+                    assign members_only = false
+                else
+                    assign members_only = true
+                endif
+            endif
+        %}
         <div id="{{ id }}"
              class="variant_selector{% if submit_on_click %} submit_on_click{% endif %} {{ wrapper_class }}">
             <product-form class="size-variant-product-form">
@@ -160,7 +172,7 @@
                                 {% for variant in product.variants %}
                                         {%- liquid
                                             assign product_disabled = false
-                                            if variant.available == false
+                                            if variant.available == false or members_only and variant.product.tags contains announcement_tag
                                                 assign product_disabled = true
                                             endif
                                         %}

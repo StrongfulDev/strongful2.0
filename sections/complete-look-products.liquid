@@ -74,7 +74,8 @@
                                             is_modal: false,
                                             quick_add_text: quick_add_text,
                                             pick_size_text: pick_size_text,
-                                            quick_add_accessories_text: quick_add_accessories_text
+                                            quick_add_accessories_text: quick_add_accessories_text,
+                                            member_tag: section.settings.member_tag
                                     %}
                                 </div>
                             </div>
@@ -105,6 +106,12 @@
       "default": "Shop the look",
       "label": "t:sections.complete-look-products.settings.heading.label"
     },
+      {
+        "type": "text",
+        "id": "member_tag",
+        "default": "Members",
+        "label": "Members Only Tag"
+      },
     {
       "type": "select",
       "id": "heading_size",
