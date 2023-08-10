@@ -405,7 +405,7 @@ a.product__text {
         font-size: 1.6rem;
     }
 
-    .product__info-container > *:first-child {
+    .product__info-container>*:first-child:not(.sale-banner-product-page) {
         margin-top: 0;
     }
 }
@@ -2215,6 +2215,11 @@ product-recommendations .collection__title_heading, #product .collection__title_
 /* YOTPO REVIEWS END */
 
 @media screen and (min-width: 990px) {
+
+    .sale-banner-product-page {
+        margin: var(--grid-desktop-vertical-spacing) 0;
+    }
+
 	.yotpo-filter-stars .yotpo-icon-star {
 		font-size: calc(var(--font-body-size-large) * 2) !important;
 	}
