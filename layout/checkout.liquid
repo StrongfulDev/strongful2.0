@@ -372,14 +372,15 @@
         function checkCouponText() {
 	        let notice = document.querySelector('.notice__text');
             let preorder = document.querySelector(".regular-preorder");
-            let checkoutTotal = document.querySelector(".order-summary__emphasis").getAttribute("data-checkout-subtotal-price-target");
+            console.log(preorder);
+            let checkoutTotal = parseInt(document.querySelector(".order-summary__emphasis").innerText.replace('₪', '').replace('.', '') / 100);
 	        console.log(checkoutTotal);
 	        if (notice !== null || true) {
-		        if (notice.innerHTML.toLocaleLowerCase().includes('welcome')) {
-			        notice.innerHTML = 'קוד הקופון <strong>WELCOME30</strong> תקף בקנייה מעל ₪200';
-		        } else if ((preorder !== null || preorder !== undefined) && (checkoutTotal > 20000)) {
+                if (preorder !== null && checkoutTotal > 200) {
                     notice.innerHTML = 'קודי קופון אינם תקפים על פריטים ממכירה מוקדמת';
-                } else if (notice.innerHTML.toLocaleLowerCase().includes("dian")) {
+                } else if (notice.innerHTML.toLocaleLowerCase().includes('welcome')) {
+			        notice.innerHTML = 'קוד הקופון <strong>WELCOME30</strong> תקף בקנייה מעל ₪200';
+		        } else if (notice.innerHTML.toLocaleLowerCase().includes("dian")) {
 			        notice.innerHTML = 'קוד הקופון <strong>DIAN</strong> תקף בקניית 3 מוצרים ומעלה';
 		        } else if (notice.innerHTML.toLocaleLowerCase().includes("corrin")) {
 			        notice.innerHTML = 'קוד הקופון <strong>CORRIN</strong> תקף בקניית 3 מוצרים ומעלה';
