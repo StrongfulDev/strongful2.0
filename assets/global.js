@@ -1202,70 +1202,6 @@ class ProductRecommendations extends HTMLElement {
 
 customElements.define('product-recommendations', ProductRecommendations);
 
-// account modal code start here
-
-const listItem = $(".multicolumn-list__item");
-const registerListItem = $(".multicolumn-list__item[data-account='login']");
-const customerOverlay = $(".custom-login-overlay");
-const borderPosition = $("#js-border-position");
-let cartDrawer = $(".drawer");
-let customerSection;
-let secondaryLogo;
-
-if (document.querySelector("#shopify-section-main-login") !== null) {
-  document.querySelector("#shopify-section-main-login").classList.add("hidden");
-}
-
-function openLoginModal() {
-  $(".custom-customer-account-container").addClass("active");
-  customerOverlay.removeClass("hidden");
-  animations(registerListItem);
-
-  if (cartDrawer.hasClass("active")) {
-    cartDrawer.removeClass("active");
-  }
-}
-
-// account toggler site-wide
-$(".account-toggler-site-wide").click(openLoginModal);
-
-$(".close-custom-account-container").click(closePopup);
-customerOverlay.click(closePopup);
-
-function closePopup() {
-  $(".custom-customer-account-container").removeClass("active");
-  customerOverlay.addClass("hidden");
-}
-
-function animations(element) {
-  secondaryLogo = document.querySelector(".header__heading-logo_secondary");
-  if (secondaryLogo !== null) {
-    if (element.attr('data-account') === 'login') {
-      secondaryLogo.classList.remove("hidden");
-    } else {
-      secondaryLogo.classList.add("hidden");
-    }
-  }
-  element.addClass("active");
-  element.siblings().removeClass("active");
-  let activeWidth = element.innerWidth();
-  let position = element.position();
-  borderPosition.css("width", activeWidth + "px");
-  borderPosition.css("left", position.left + "px");
-  customerSection = document.querySelector(`div[id$="${element.attr('data-account')}"]`);
-	if (customerSection === null) return;
-  customerSection.classList.remove("hidden");
-  $(customerSection).siblings('div[id^="shopify-section"]').addClass("hidden");
-}
-
-listItem.on("click", function() {
-  animations($(this));
-});
-
-animations(registerListItem);
-
-// account modal code ends here
-
 function removeDeadProduct() {
 	$("#product-grid").siblings("#AjaxinatePagination").find(".loading-overlay__spinner").removeClass("hidden");
 	let listItems = document.querySelectorAll('.grid__item');
@@ -1279,6 +1215,70 @@ function removeDeadProduct() {
 }
 
 window.addEventListener('DOMContentLoaded', function() {
+
+	// account modal code start here
+
+	const listItem = $(".multicolumn-list__item");
+	const registerListItem = $(".multicolumn-list__item[data-account='login']");
+	const customerOverlay = $(".custom-login-overlay");
+	const borderPosition = $("#js-border-position");
+	let cartDrawer = $(".drawer");
+	let customerSection;
+	let secondaryLogo;
+
+	if (document.querySelector("#shopify-section-main-login") !== null) {
+		document.querySelector("#shopify-section-main-login").classList.add("hidden");
+	}
+
+	function openLoginModal() {
+		$(".custom-customer-account-container").addClass("active");
+		customerOverlay.removeClass("hidden");
+		animations(registerListItem);
+
+		if (cartDrawer.hasClass("active")) {
+			cartDrawer.removeClass("active");
+		}
+	}
+
+// account toggler site-wide
+	$(".account-toggler-site-wide").click(openLoginModal);
+
+	$(".close-custom-account-container").click(closePopup);
+	customerOverlay.click(closePopup);
+
+	function closePopup() {
+		$(".custom-customer-account-container").removeClass("active");
+		customerOverlay.addClass("hidden");
+	}
+
+	function animations(element) {
+		secondaryLogo = document.querySelector(".header__heading-logo_secondary");
+		if (secondaryLogo !== null) {
+			if (element.attr('data-account') === 'login') {
+				secondaryLogo.classList.remove("hidden");
+			} else {
+				secondaryLogo.classList.add("hidden");
+			}
+		}
+		element.addClass("active");
+		element.siblings().removeClass("active");
+		let activeWidth = element.innerWidth();
+		let position = element.position();
+		borderPosition.css("width", activeWidth + "px");
+		borderPosition.css("left", position.left + "px");
+		customerSection = document.querySelector(`div[id$="${element.attr('data-account')}"]`);
+		if (customerSection === null) return;
+		customerSection.classList.remove("hidden");
+		$(customerSection).siblings('div[id^="shopify-section"]').addClass("hidden");
+	}
+
+	listItem.on("click", function() {
+		animations($(this));
+	});
+
+	animations(registerListItem);
+
+// account modal code ends here
 
 	const shopByColorLink = $("#page .section-collection-list:nth-child(3) .grid__item .card .full-unstyled-link");
 
