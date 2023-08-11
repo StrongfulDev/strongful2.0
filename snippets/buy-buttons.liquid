@@ -70,8 +70,11 @@
                             id="ProductSubmitButton-{{ section_id }}"
                             type="submit"
                             name="add"
-                            class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
+                            class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}{% if product.tags contains member_tag and members_only %} fake-disabled{% endif %}"
                             {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
+                                disabled
+                            {% endif %}
+                            {% if product.tags contains member_tag and members_only %}
                                 disabled
                             {% endif %}
                     >

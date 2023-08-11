@@ -284,6 +284,10 @@ fieldset.product-form__input .form__label {
 	transition: .1s;
 }
 
+button.product-form__submit.fake-disabled {
+	opacity: 1;
+}
+
 .product-form__submit .account-toggler-site-wide {
 	font-size: var(--font-body-size-medium);
 }
