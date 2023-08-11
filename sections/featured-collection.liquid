@@ -134,6 +134,7 @@
                                     class="grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}">
                                 {% render 'card-product',
                                         card_product: product,
+                                        card_banner_text: settings.custom_collection_announcement,
                                         media_aspect_ratio: section.settings.image_ratio,
                                         show_secondary_image: section.settings.show_secondary_image,
                                         show_vendor: section.settings.show_vendor,
@@ -145,7 +146,9 @@
                                         show_sale_badge: section.settings.show_sale_badge,
                                         quick_add_text: section.settings.quick_add_text,
                                         pick_size_text: section.settings.pick_size_text,
-                                        quick_add_accessories_text: section.settings.quick_add_accessories_text
+                                        quick_add_accessories_text: section.settings.quick_add_accessories_text,
+                                        announcement_tag: settings.announcement_tag,
+                                        members_only_sale: settings.members_only_sale
                                 %}
                                 </li>
                               {% endunless %}
@@ -155,6 +158,7 @@
                                     class="grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}">
                                 {% render 'card-product',
                                         card_product: product,
+                                        card_banner_text: settings.custom_collection_announcement,
                                         media_aspect_ratio: section.settings.image_ratio,
                                         show_secondary_image: section.settings.show_secondary_image,
                                         show_vendor: section.settings.show_vendor,
@@ -166,7 +170,9 @@
                                         show_sale_badge: section.settings.show_sale_badge,
                                         quick_add_text: section.settings.quick_add_text,
                                         pick_size_text: section.settings.pick_size_text,
-                                        quick_add_accessories_text: section.settings.quick_add_accessories_text
+                                        quick_add_accessories_text: section.settings.quick_add_accessories_text,
+                                        announcement_tag: settings.announcement_tag,
+                                        members_only_sale: settings.members_only_sale
                                 %}
                             </li>
                         {% endif %}
