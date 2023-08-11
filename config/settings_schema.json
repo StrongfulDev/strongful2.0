@@ -553,17 +553,6 @@
     "name": "t:settings_schema.cards.name",
     "settings": [
       {
-        "type": "checkbox",
-        "id": "members_only_sale",
-        "label": "t:settings_schema.cards.settings.members_only_sale.label",
-        "default": false
-      },
-      {
-        "type": "text",
-        "id": "announcement_tag",
-        "label": "t:sections.main-collection-product-grid.settings.announcement_tag.label"
-      },
-      {
         "type": "select",
         "id": "card_style",
         "options": [
