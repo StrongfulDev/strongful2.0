@@ -1252,6 +1252,7 @@ window.addEventListener('DOMContentLoaded', function() {
 	}
 
 	function animations(element) {
+		if (borderPosition === null || element === null || element.attr('data-account') === undefined) return;
 		secondaryLogo = document.querySelector(".header__heading-logo_secondary");
 		if (secondaryLogo !== null) {
 			if (element.attr('data-account') === 'login') {
