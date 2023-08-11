@@ -75,7 +75,8 @@
                 is_modal: true,
                 quick_add_text: section.settings.quick_add_text,
                 pick_size_text: section.settings.pick_size_text,
-                quick_add_accessories_text: section.settings.quick_add_accessories_text
+                quick_add_accessories_text: section.settings.quick_add_accessories_text,
+                members_only_sale: section.settings.members_only_sale
         %}
     </div>
 </div>
@@ -115,6 +116,12 @@
         "type": "text",
             "id": "quick_add_accessories_text",
             "label": "t:sections.main-collection-product-grid.settings.quick_add_accessories_text.label"
+        },
+        {
+            "type": "checkbox",
+            "id": "members_only_sale",
+            "default": false,
+            "label": "t:sections.main-collection-product-grid.settings.members_only_sale.label"
         }
     ],
     "presets": [
