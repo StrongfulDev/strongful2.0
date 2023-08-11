@@ -175,7 +175,7 @@
       },
       "share": "Share this product",
       "sold_out": "אזל מהמלאי",
-      "unavailable": "לא זמין",
+      "unavailable": "PRE ORDER",
       "vendor": "Vendor",
       "value_unavailable": "{{ option_value }} - Unavailable",
       "variant_sold_out_or_unavailable": "Variant sold out or unavailable",

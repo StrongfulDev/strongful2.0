@@ -131,7 +131,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                 {{- block.settings.text -}}
                             </p>
                         {%- when 'sale' -%}
-                        {% render 'sale-banner', product: product, member_tag: settings.announcement_tag, block: block, members_only_sale: settings.members_only_sale %}
+                        {% render 'sale-banner', product: product, announcement_tag: settings.announcement_tag, block: block, members_only_sale: settings.members_only_sale %}
                         {%- when 'title' -%}
                             <div class="product__title fix-direction" {{ block.shopify_attributes }} data-product-color="{{ product.vendor }}">
                                 <h1>{{ product.title | escape }}</h1>
