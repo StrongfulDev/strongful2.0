@@ -542,7 +542,7 @@ slider-component.slider-component-full-width {
 	}
 
 	.featured-collection .rect-discount-tag {
-		font-size: calc(var(--font-body-size-medium) * 0.65);
+		font-size: calc(var(--font-body-size-medium) * 0.6);
 	}
 }
 
