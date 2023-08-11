@@ -85,6 +85,15 @@ product-recommendations .size_variant_button_container .loading-overlay {
 	padding: 0;
 }
 
+.sticky-cart-cta .loading-overlay {
+	background: var(--gradient-background);
+	justify-content: flex-end;
+}
+
+.sticky-cart-cta .loading-overlay .loading-overlay__spinner .spinner circle {
+	stroke: var(--gradient-base-accent-1);
+}
+
 @media screen and (min-width: 990px) {
 	.sticky-cart-cta {
 		grid-template-columns: 2fr 24fr auto;
