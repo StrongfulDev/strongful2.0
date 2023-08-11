@@ -29,6 +29,10 @@
 	background-color: var(--gradient-background);
 }
 
+.model-switch-button span {
+	pointer-events: none;
+}
+
 .model-switch-button .icon-caret {
 	transform: rotate(-180deg);
 	margin-right: var(--grid-mobile-vertical-spacing);
