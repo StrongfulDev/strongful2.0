@@ -1202,19 +1202,26 @@ class ProductRecommendations extends HTMLElement {
 
 customElements.define('product-recommendations', ProductRecommendations);
 
+function removeDeadProduct() {
+	$("#product-grid").siblings("#AjaxinatePagination").find(".loading-overlay__spinner").removeClass("hidden");
+	let listItems = document.querySelectorAll('.grid__item');
+	listItems.forEach(item => {
+		if (item.childNodes.length === 1) {
+			item.remove();
+		}
+	});
+
+	$(".account-toggler-site-wide").click(function() {
+		$(".custom-customer-account-container").addClass("active");
+		$(".custom-login-overlay").removeClass("hidden");
+
+		if ($(".drawer").hasClass("active")) {
+			$(".drawer").removeClass("active");
+		}
+	});
+}
+
 window.addEventListener('DOMContentLoaded', function() {
-
-	function removeDeadProduct() {
-		$("#product-grid").siblings("#AjaxinatePagination").find(".loading-overlay__spinner").removeClass("hidden");
-		let listItems = document.querySelectorAll('.grid__item');
-		listItems.forEach(item => {
-			if (item.childNodes.length === 1) {
-				item.remove();
-			}
-		});
-
-		$(".account-toggler-site-wide").click(openLoginModal);
-	}
 
 	// account modal code start here
 

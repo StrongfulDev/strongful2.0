@@ -91,7 +91,6 @@ class CartRewards {
 
 		for (const item of this.cart.items) {
 			// Here we assume that a product with price 0 is a free product.
-			console.log(item);
 			if (item.price === 0 && !giftProductIds.includes(item.id.toString())) {
 				await this.removeProduct(item.id);
 			}
@@ -125,7 +124,8 @@ class CartRewards {
 			isConditionMet = (isRightQuantity || isRightQuantity === null) && (isAmountGreaterThan || isAmountLessThan);
 		} else if (rule.condition.type === "CustomerTags") {
 			if (customerTags.includes(rule.customer_tags) && this.cartTotalValue > rule.condition.value) {
-				isConditionMet = (isRightQuantity || isRightQuantity === null) && (isAmountGreaterThan || isAmountLessThan);
+				// isConditionMet = (isRightQuantity || isRightQuantity === null) && (isAmountGreaterThan || isAmountLessThan);
+				isConditionMet = false;
 			} else {
 				isConditionMet = false;
 			}
@@ -155,8 +155,6 @@ class CartRewards {
 		for (const productId of productIds) {
 			const productInCart = this.productsExistInCart([productId]);
 			const isRightQuantity = this.checkProductQuantity(rule, productId);
-
-			console.log(productId);
 
 			if (productInCart && (!isConditionMet || !isRightQuantity)) {
 				await this.removeProduct(productId)
