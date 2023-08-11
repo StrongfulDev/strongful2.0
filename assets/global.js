@@ -1252,8 +1252,8 @@ function animations(element) {
   let position = element.position();
   borderPosition.css("width", activeWidth + "px");
   borderPosition.css("left", position.left + "px");
-  // customerSection = document.querySelector("#shopify-section-main-" + element.attr('data-account'));
   customerSection = document.querySelector(`div[id$="${element.attr('data-account')}"]`);
+	if (customerSection === null) return;
   customerSection.classList.remove("hidden");
   $(customerSection).siblings('div[id^="shopify-section"]').addClass("hidden");
 }
