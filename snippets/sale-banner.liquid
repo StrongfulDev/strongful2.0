@@ -1,3 +1,16 @@
+{% comment %}
+  Renders product sale banner copywriting
+
+  Accepts:
+  - product: {Object} product object.
+  - block: {Object} block object.
+  - announcement_tag: {String} announcement tag.
+  - members_only_sale: {Boolean} is members only sale.
+
+  Usage:
+  {% render 'sale-banner', product: product, member_tag: settings.announcement_tag, block: block, members_only_sale: settings.members_only_sale %}
+{% endcomment %}
+
 {% liquid
     assign members_only = false
     if member_tag != blank
@@ -5,11 +18,13 @@
     endif
 %}
 
-<div class="sale-banner-product-page fix-direction">
-    {% if customer %}
-        <p>{{ block.settings.logged_in_text }}</p>
-    {% else %}
-        <p>{{ block.settings.logged_out_text }}</p>
-        <small class="account-toggler-site-wide link">{{ block.settings.log_in }}</small>
-    {% endif %}
-</div>
+{% if product.tags contains announcement_tag %}
+    <div class="sale-banner-product-page fix-direction">
+        {% if customer %}
+            <p>{{ block.settings.logged_in_text }}</p>
+        {% else %}
+            <p>{{ block.settings.logged_out_text }}</p>
+            <small class="account-toggler-site-wide link">{{ block.settings.log_in }}</small>
+        {% endif %}
+    </div>
+{% endif %}

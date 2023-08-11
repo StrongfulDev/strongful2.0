@@ -69,20 +69,25 @@
                                     {% endif %}
                                 </div>
                             {% endif %}
-                            {% if members_only_sale %}
-                                {% if product.tags contains announcement_tag %}
-                                    {% unless customer %}
-                                        <div>
-                                            <span>הזמנה מוקדמת לחברות מועדון בלבד</span>
-                                            <span class="account-toggler-site-wide link">התחברי / הרשמי</span>
-                                        </div>
-                                    {% endunless %}
-                                {% endif %}
-                            {% endif %}
                         </div>
                     </div>
                     {% unless product.has_only_default_variant %}
-                    <span class="product_size_picker__heading fix-direction">{{ pick_size_text }}</span>
+                        {% if members_only_sale %}
+                            {% if product.tags contains announcement_tag %}
+                                {% unless customer %}
+                                    <div class="members_only_container_inside_card">
+                                        <span>הזמנה מוקדמת לחברות מועדון בלבד</span>
+                                        <span class="account-toggler-site-wide link">התחברי / הרשמי</span>
+                                    </div>
+                                    {% else %}
+                                    <span class="product_size_picker__heading fix-direction">{{ pick_size_text }}</span>
+                                {% endunless %}
+                                {% else %}
+                                <span class="product_size_picker__heading fix-direction">{{ pick_size_text }}</span>
+                            {% endif %}
+                            {% else %}
+                            <span class="product_size_picker__heading fix-direction">{{ pick_size_text }}</span>
+                        {% endif %}
                         {% else %}
                         <span class="product_size_picker__heading fix-direction">{{ quick_add_accessories_text }}</span>
                     {% endunless %}

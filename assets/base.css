@@ -3941,15 +3941,24 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 	color: #b22222;
 	border: 1px firebrick solid;
 	padding: 0 7px;
-	width: fit-content;
+	text-align: center;
 }
 
 .card__information>.rect-discount-tag {
 	margin: 0 0 6px;
 }
 
-.featured-collection .rect-discount-tag {
-	width: 100%;
+.members_only_container_inside_card {
+	margin: -6px 0 12px;
+	align-self: baseline;
+	padding: 0 2rem 0 0;
+}
+
+.account-toggler-site-wide.link {
+	font-weight: var(--font-body-weight-bold);
+}
+
+.featured-collection .discount-price-container .rect-discount-tag {
 	text-align: center;
 }
 

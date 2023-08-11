@@ -284,6 +284,10 @@ fieldset.product-form__input .form__label {
 	transition: .1s;
 }
 
+.product-form__submit .link {
+	color: var(--gradient-background);
+}
+
 .product-form__submit:hover {
 	background: var(--cart-rewards-background);
 }
