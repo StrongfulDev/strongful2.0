@@ -1333,25 +1333,25 @@ window.addEventListener('DOMContentLoaded', function() {
 
 	$(".loader-wrapper").delay().fadeOut("slow");
 
-	let headerOverlay = document.querySelector('.header-overlay');
+	let headerOverlay = $('.header-overlay');
 	let menuDrawer = document.querySelector('header-drawer');
 
 	$(".header-block-list-element .closing-link").on('mouseenter', function(event) {
 		$("details.mega-menu").attr('open', false);
-		$(headerOverlay).addClass('hidden');
+		headerOverlay.addClass('hidden');
 	});
 
 	function closeHeader(event) {
 		$('html').removeClass(`overflow-hidden-${menuDrawer.dataset.breakpoint}`).removeClass('overflow-hidden');
 		$(".menu-drawer-container.menu-opening").attr('open', false).removeClass('menu-opening');
 		$("details.account-menu-details").attr('open', false);
-		$(headerOverlay).addClass('hidden');
+		headerOverlay.addClass('hidden');
 		$(".header-wrapper").removeClass("blackend");
 	}
 
 	$(".header-overlay").on('click', closeHeader);
 	if (window.innerWidth > 990) {
-		$(headerOverlay).on('mouseenter', function() {
+		headerOverlay.on('mouseenter', function() {
 			$(this).addClass('hidden');
 			$('.header__menu-item').attr('aria-expanded', false);
 			$('details.mega-menu').removeAttr('open');
