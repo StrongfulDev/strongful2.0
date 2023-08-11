@@ -1,7 +1,9 @@
-const arrowIcon = document.querySelector(".model-switch-button .icon-caret");
-
 window.addEventListener('DOMContentLoaded', function(e) {
+
 	setTimeout(() => {
+		$(".model-switcher").removeClass("hidden");
+
+		const arrowIcon = document.querySelector(".model-switch-button .icon-caret");
 		hideUnAvailableModels();
 
 		$('.model-switcher__item input').change(function () {
@@ -113,16 +115,17 @@ window.addEventListener('DOMContentLoaded', function(e) {
 			$(".model-switcher__list").addClass("hidden");
 			$(arrowIcon).removeClass('rotate-arrow');
 		});
-	}, 2000);
 
-	$(".model-switch-button").click(function(e) {
+		$(".model-switch-button").click(function(e) {
 
-		$(".model-switcher__list").toggleClass("hidden");
+			$(".model-switcher__list").toggleClass("hidden");
 
-		$(arrowIcon).toggleClass('rotate-arrow');
+			$(arrowIcon).toggleClass('rotate-arrow');
 
-		if ($(window).width() < 990) {
-			$(".model-switcher-overlay").toggleClass("hidden");
-		}
-	});
+			if ($(window).width() < 990) {
+				$(".model-switcher-overlay").toggleClass("hidden");
+			}
+		});
+	}, 2111);
+
 });
