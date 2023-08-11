@@ -14,9 +14,10 @@
 	font-size: calc(var(--font-body-size-small) * 1.2);
 }
 
-.product_details__info .new-product-span {
+.product_details__info>.new-product-span {
 	position: static;
 	width: fit-content;
+	padding: 0;
 }
 
 .active-card:hover .quick-add.hover {
