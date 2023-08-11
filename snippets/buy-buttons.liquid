@@ -74,9 +74,6 @@
                             {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
                                 disabled
                             {% endif %}
-                            {% if product.tags contains member_tag and members_only %}
-                                disabled
-                            {% endif %}
                     >
             <span {% if product.tags contains member_tag and members_only %}class="account-toggler-site-wide fix-direction"{% endif %}>
               {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
