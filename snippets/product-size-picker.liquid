@@ -34,7 +34,7 @@
                         {% render 'icon-close' %}
                     </div>
                 </div>
-                <div class="product-size-picker-container">
+                <div class="product-size-picker-container fix-direction">
                     <div class="product_details fix-direction">
                         <a href="{{ product.url | within: collection}}">
                             {%- assign height = product.featured_media.width | divided_by: product.featured_media.aspect_ratio | round -%}
