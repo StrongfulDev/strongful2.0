@@ -3948,6 +3948,11 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 	margin: 0 0 6px;
 }
 
+.featured-collection .rect-discount-tag {
+	width: 100%;
+	text-align: center;
+}
+
 .rect-discount-tag.colored-tag {
 	color: var(--gradient-base-accent-3);
 	border-color: var(--gradient-base-accent-3);
