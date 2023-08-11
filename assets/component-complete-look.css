@@ -94,7 +94,7 @@
 }
 
 .add_to_cart {
-    padding: 0 1.5rem;
+    padding: 0 1rem;
     width: fit-content;
     min-width: calc(8rem + var(--buttons-border-width) * 2);
     min-height: calc(2.5rem + var(--buttons-border-width) * 2)

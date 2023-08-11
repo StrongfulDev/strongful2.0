@@ -82,7 +82,7 @@
     margin-top: 2px;
     margin-bottom: 0;
 	border-radius: var(--inputs-radius);
-	font-size: var(--font-body-size-medium);
+	font-size: calc(var(--font-body-size-medium) * 0.9);
 }
 
 .product_variants ul {
