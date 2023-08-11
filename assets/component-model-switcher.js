@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', function(e) {
-	const arrowIcon = document.querySelector(".model-switch-button .icon-caret");
 
 	setTimeout(() => {
+		const arrowIcon = document.querySelector(".model-switch-button .icon-caret");
 		hideUnAvailableModels();
 
 		$('.model-switcher__item input').change(function () {
@@ -124,6 +124,6 @@ window.addEventListener('DOMContentLoaded', function(e) {
 				$(".model-switcher-overlay").toggleClass("hidden");
 			}
 		});
-	}, 1000);
+	}, 2000);
 
 });
