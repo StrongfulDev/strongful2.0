@@ -3943,6 +3943,10 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 	padding: 0 7px;
 }
 
+.card__information>.rect-discount-tag {
+	margin: 0 0 6px;
+}
+
 .rect-discount-tag.colored-tag {
 	color: var(--gradient-base-accent-3);
 	border-color: var(--gradient-base-accent-3);

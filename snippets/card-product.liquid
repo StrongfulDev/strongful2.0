@@ -279,6 +279,14 @@
                                     </p>
                                 {% endif %}
                             </div>
+                            {% else %}
+                            {% if members_only_sale %}
+                                {% if card_product.tags contains announcement_tag %}
+                                    <p class="rect-discount-tag">
+                                        {{ 'products.product.members_only' | t }}
+                                    </p>
+                                {% endif %}
+                            {% endif %}
                         {% endif %}
                         <p
                                 class="card__heading {{ card_header_size }}"
