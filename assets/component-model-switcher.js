@@ -1,6 +1,8 @@
 window.addEventListener('DOMContentLoaded', function(e) {
 
 	setTimeout(() => {
+		$(".model-switcher").removeClass("hidden");
+
 		const arrowIcon = document.querySelector(".model-switch-button .icon-caret");
 		hideUnAvailableModels();
 
@@ -124,6 +126,6 @@ window.addEventListener('DOMContentLoaded', function(e) {
 				$(".model-switcher-overlay").toggleClass("hidden");
 			}
 		});
-	}, 2000);
+	}, 2111);
 
 });
