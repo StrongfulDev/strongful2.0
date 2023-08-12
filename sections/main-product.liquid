@@ -358,7 +358,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                             %}
 
                         {%- when 'variant_picker' -%}
-                            {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id, myBlock: myBlock %}
+                            {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id, myBlock: myBlock, announcement_tag: settings.announcement_tag, members_only_sale: settings.members_only_sale %}
                         {%- when 'buy_buttons' -%}
                             {%- render 'buy-buttons', block: block, product: product, member_tag: section.settings.members_only_tag, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true -%}
                         {%- when 'rating' -%}

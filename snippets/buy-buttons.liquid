@@ -79,10 +79,10 @@
                             {% endif %}
                     >
             <span {% if product.tags contains member_tag and members_only %}class="account-toggler-site-wide fix-direction"{% endif %}>
-              {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
-                  {{ 'products.product.sold_out' | t }}
-              {%- elsif product.tags contains member_tag and members_only -%}
+              {%- if product.tags contains member_tag and members_only -%}
                   {{ 'products.product.members_only' | t }} <span class="link">התחברי / הרשמי</span>
+              {%- elsif product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
+                  {{ 'products.product.sold_out' | t }}
                 {%- else -%}
                   {{ 'products.product.add_to_cart' | t }}
               {%- endif -%}

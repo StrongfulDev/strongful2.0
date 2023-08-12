@@ -6,6 +6,9 @@
   - block: {Object} passing the block information.
   - product_form_id: {String} Id of the product form to which the variant picker is associated.
   - update_url: {Boolean} whether or not to update url when changing variants. If false, the url isn't updated. Default: true (optional).
+  - myBlock: {Object} passing the block information.
+  - announcement_tag: {String} tag to be used for announcement (optional).
+  - members_only_sale: {Boolean} whether or not the sale is members only (optional).
   Usage:
   {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
 {% endcomment %}
@@ -109,7 +112,14 @@
             {% endif %}
             </legend>
             {% endfor %}
-          {% render 'product-variant-options', product: product, option: option, block: block, myBlock: myBlock %}
+          {% render 'product-variant-options',
+                  product: product,
+                  option: option,
+                  block: block,
+                  myBlock: myBlock,
+                  announcement_tag: settings.announcement_tag,
+                  members_only_sale: settings.members_only_sale
+          %}
         </fieldset>
       {%- endfor -%}
         <div class="size-table-stock-container">

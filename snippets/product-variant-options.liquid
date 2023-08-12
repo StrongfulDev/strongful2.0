@@ -6,13 +6,19 @@
   - option: {Object} current product_option object.
   - block: {Object} block object.
   - picker_type: {String} Type of picker
+  - myBlock: {Object} block object.
+  - announcement_tag: {String} announcement tag.
+  - members_only_sale: {Boolean} members only sale.
 
 
   Usage:
   {% render 'product-variant-options',
     product: product,
     option: option,
-    block: block
+    block: block,
+    myBlock: myBlock,
+    announcement_tag: settings.announcement_tag,
+    members_only_sale: settings.members_only_sale
   %}
 {% endcomment %}
 {%- liquid
@@ -33,6 +39,17 @@
 {%- for value in option.values -%}
     {%- liquid
         assign option_disabled = true
+        assign members_only = false
+        if announcement_tag != blank
+            assign members_only = true
+        endif
+        if members_only
+            if customer
+                assign members_only = false
+            else
+                assign members_only = true
+            endif
+        endif
 
         for option1_name in variants_option1_arr
             case option.position
@@ -53,7 +70,7 @@
     -%}
     {%- if block.settings.picker_type == 'button' or picker_type == "button" -%}
         {% assign option_value = value %}
-        <span class="variant-button {% if option_disabled %}disabled-variant-button{% endif %} {{ option_value }}">
+        <span class="variant-button {% if option_disabled or members_only and product.tags contains announcement_tag %}disabled-variant-button{% endif %} {{ option_value }}">
             <input
                     type="radio"
                     id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
@@ -61,7 +78,10 @@
                     value="{{ value | escape }}"
                     form="{{ product_form_id }}"
                     data-variant-id="{{ variant_id }}"
-                    {% if option_disabled %}
+                    {% if members_only and product.tags contains announcement_tag %}
+                        disabled
+                        class="disabled disabled-variant-button"
+                    {% elsif option_disabled %}
                         {% comment %}disabled="disabled"{% endcomment %}
                         class="disabled disabled-variant-button"
                     {% endif %}
@@ -77,11 +97,11 @@
                     <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
                 </label>
             {% endif %}
-            {% if option_disabled %}
+            {% if option_disabled or members_only and product.tags contains announcement_tag %}
                 <svg class="soldout-variant-line"><line x1="0" y1="100%" x2="100%" y2="0" class="Styles__StrikethroughLine-sc-1hxn211-12 eJiSh"></line></svg>
                 {% endif %}
             {% for variant in product.variants %}
-                {% if option_value == variant.title and variant.inventory_quantity <= myBlock.settings.inventory_threshold %}
+                {% if option_value == variant.title and variant.inventory_quantity <= myBlock.settings.inventory_threshold and variant.inventory_quantity >= 0 %}
                     <p class="product__inventory no-js-hidden fix-direction {% if myBlock.settings.text_style == 'uppercase' %} caption-with-letter-spacing {% elsif myBlock.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"
                         {{ myBlock.shopify_attributes }}
                         id="Inventory-{{ section.id }}"
