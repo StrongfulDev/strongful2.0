@@ -71,16 +71,16 @@
 	padding: .15em;
 }
 
-.countdown #tiles > span:before, .tiles-time:before {
-	content: '';
-	position: absolute;
-	width: 100%;
-	top: 50%;
-	background: var(--gradient-base-accent-1);
-	height: 1px;
-	box-shadow: 0px 0px 3px rgb(255 255 255 / 80%);
-	transform: translateY(-50%);
-	left: 0;
+.countdown #tiles>span:before, .tiles-time:before {
+	/*content: '';*/
+	/*position: absolute;*/
+	/*width: 100%;*/
+	/*top: 50%;*/
+	/*background: var(--gradient-base-accent-1);*/
+	/*height: 1px;*/
+	/*box-shadow: 0px 0px 3px rgb(255 255 255 / 80%);*/
+	/*transform: translateY(-50%);*/
+	/*left: 0;*/
 }
 
 .countdown .labels-li {

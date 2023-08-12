@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	function updateCounter() {
 		const count = getCurrentCount();
-		$("#countdownDisplay").text(count + " ORDERS");
+		$("#countdownDisplay").text(count + " ORDERS LEFT");
 
 		if (count === 1) {
 			$("#countdownDisplay").text(count + " ORDER");
