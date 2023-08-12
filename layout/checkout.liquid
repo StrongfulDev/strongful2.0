@@ -339,6 +339,12 @@
 
     document.addEventListener('DOMContentLoaded', (e) => {
 
+        setTimeout(() => {
+            const notEnoughPoints = document.querySelector(".yotpo-not-enough-points-text");
+            notEnoughPoints.previousElementSibling.style.display = "none";
+            notEnoughPoints.style.textAlign = "right";
+        }, 2000);
+
       // Global Variables
 	    let checkout = Shopify.Checkout;
 
@@ -377,7 +383,7 @@
 	        console.log(checkoutTotal);
 	        if (notice !== null || true) {
                 if (preorder !== null && checkoutTotal > 200) {
-                    notice.innerHTML = 'קודי קופון אינם תקפים על פריטים ממכירה מוקדמת';
+                    notice.innerHTML = 'אין כפל הנחות/מבצעים על פריטים ממכירה מוקדמת';
                 } else if (notice.innerHTML.toLocaleLowerCase().includes('welcome')) {
 			        notice.innerHTML = 'קוד הקופון <strong>WELCOME30</strong> תקף בקנייה מעל ₪200';
 		        } else if (notice.innerHTML.toLocaleLowerCase().includes("dian")) {
