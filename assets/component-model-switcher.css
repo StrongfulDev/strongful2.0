@@ -102,7 +102,11 @@ summary .icon-caret {
 	margin-right: var(--grid-mobile-vertical-spacing);
 }
 
-summary .icon-caret.rotate-arrow {
+.model-switch-button .icon-caret {
+	transform: rotate(0deg);
+}
+
+.model-switch-button .icon-caret.rotate-arrow {
 	transform: rotate(180deg);
 }
 
@@ -128,13 +132,5 @@ summary .icon-caret.rotate-arrow {
 	.model-switch-button {
 		margin-top: 0;
 		margin-bottom: 1em;
-	}
-
-	.model-switch-button .icon-caret {
-		transform: rotate(0deg);
-	}
-
-	.model-switch-button .icon-caret.rotate-arrow {
-		transform: rotate(180deg);
 	}
 }
