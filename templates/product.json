@@ -3,14 +3,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "5e8b0a0c-96c1-4696-8242-34299375259e": {
-          "type": "sale",
-          "settings": {
-            "logged_in_text": "מכירה מוקדמת ב20% הנחה - רק ל1000 מזמינות ראשונות!",
-            "logged_out_text": "קולקציית OASIS ב20% הנחה במכירה מוקדמת",
-            "log_in": "התחברי \/ הרשמי"
-          }
-        },
         "7c99b889-3ad8-4802-a5c7-9802ab40f12c": {
           "type": "breadcrumb",
           "settings": {
@@ -108,7 +100,6 @@
         }
       },
       "block_order": [
-        "5e8b0a0c-96c1-4696-8242-34299375259e",
         "7c99b889-3ad8-4802-a5c7-9802ab40f12c",
         "title",
         "656bd184-5523-4c74-aee3-c2664a058063",
