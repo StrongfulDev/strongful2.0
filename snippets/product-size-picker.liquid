@@ -14,6 +14,7 @@
   - members_only_sale_active: {Boolean} is members only sale active.
   - announcement_tag: {String} announcement tag.
   - members_only_sale_over_text: {String} text for the quick add button when members only sale is over.
+  - announcement_text: {String} text for the quick add button when announcement tag is present.
 
   Usage:
   {% render 'product-size-picker', product: product %}
@@ -91,7 +92,7 @@
                                 {% endif %}
                             {% else %}
                                 {% if product.tags contains announcement_tag %}
-                                    <span class="product_size_picker__heading fix-direction">{{ members_only_sale_over_text }}</span>
+                                    <span class="product_size_picker__heading fix-direction">{{ announcement_text }}</span>
                                 {% else %}
                                     <span class="product_size_picker__heading fix-direction">{{ pick_size_text }}</span>
                                 {% endif %}
@@ -116,9 +117,13 @@
                                                         endif
                                                          if members_only_sale
                                                              if variant.product.tags contains announcement_tag
-                                                                 unless customer
-                                                                    assign product_disabled = true
-                                                                 endunless
+                                                                 if members_only_sale_active
+                                                                     unless customer
+                                                                         assign product_disabled = true
+                                                                     endunless
+                                                                 else
+                                                                     assign product_disabled = true
+                                                                 endif
                                                              endif
                                                          endif
                                                     %}
