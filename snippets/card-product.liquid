@@ -61,7 +61,7 @@
         {% if horizontal_class %} card--horizontal{% endif %}
         {% if members_only_sale %}
             {% if card_product.tags contains announcement_tag %}
-                {% if customer %}
+                {% if customer and members_only_sale_active %}
                     active-card
                 {% endif %}
             {% else %}
@@ -262,7 +262,7 @@
                         {% if card_product.compare_at_price > card_product.price %}
                             <div class="discount-price-container">
                                 <p class="rect-discount-tag">
-                                    {% if members_only_sale %}
+                                    {% if members_only_sale and members_only_sale_active %}
                                         {% if card_product.tags contains announcement_tag %}
                                             {{ 'products.product.members_only' | t }}
                                         {% else %}
@@ -280,7 +280,7 @@
                                 {% endif %}
                             </div>
                             {% else %}
-                            {% if members_only_sale %}
+                            {% if members_only_sale and members_only_sale_active %}
                                 {% if card_product.tags contains announcement_tag %}
                                     <p class="rect-discount-tag">
                                         {{ 'products.product.members_only' | t }}
@@ -358,7 +358,12 @@
                                 </p>
                             {%- endif -%}
 
-                            {% render 'price', product: card_product, price_class: '', members_only_sale: members_only_sale, announcement_tag: announcement_tag %}
+                            {% render 'price',
+                                    product: card_product,
+                                    price_class: '',
+                                    members_only_sale: members_only_sale,
+                                    announcement_tag: announcement_tag
+                            %}
                         </div>
                     </div>
                     {%- if show_quick_add and quick_add_type == "button" -%}
