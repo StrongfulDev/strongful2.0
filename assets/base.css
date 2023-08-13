@@ -4081,3 +4081,8 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 .special_ann {
 	width: 100% !important;
 }
+
+.form-errors-list {
+	padding: 0;
+	list-style: none;
+}

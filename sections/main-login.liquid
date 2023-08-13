@@ -91,6 +91,7 @@
     {%- endif -%}
     {%- form 'customer_login', novalidate: 'novalidate' -%}
       {%- if form.errors -%}
+          {% comment %}
         <h2 class="form__message" tabindex="-1" autofocus>
           <span class="visually-hidden">{{ 'accessibility.error' | t }} </span>
           <svg aria-hidden="true" focusable="false" viewBox="0 0 13 13">
@@ -102,6 +103,20 @@
           {{ 'templates.contact.form.error_heading' | t }}
         </h2>
         <p class="form__general-errors">{{ 'customer.register.form_errors.form' | t }}</p>
+        {% endcomment %}
+          <ul class="form-errors-list">
+              {%- for field in form.errors -%}
+                  <li>
+                      {%- if field == 'form' -%}
+                          {{ form.errors.messages[field] }}
+                      {%- else -%}
+                          <a href="#RegisterForm-{{ field }}">
+                              {{ 'customer.register.form_errors.' | append: field | t }}
+                          </a>
+                      {%- endif -%}
+                  </li>
+              {%- endfor -%}
+          </ul>
       {%- endif -%}
 
       <div class="field">
