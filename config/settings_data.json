@@ -138,7 +138,7 @@
     "quick_add_text": "בחירת מידה",
     "quick_add_accessories_text": "הוספה לסל",
     "members_only_sale": true,
-    "members_only_sale_active": true,
+    "members_only_sale_active": false,
     "currency_code_enabled": true,
     "show_upsell_card": true,
     "cart_type": "drawer",
