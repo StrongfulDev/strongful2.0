@@ -1756,7 +1756,7 @@
         "type": "checkbox",
         "id": "members_only_sale_active",
         "default": false,
-        "label": "Is members only sale over - Check if yes"
+        "label": "Is members only sale active or over - check if active (this is for in between a sale and the launch)"
       },
       {
         "type": "header",
