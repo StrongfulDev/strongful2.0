@@ -1011,6 +1011,11 @@
       "blank": "לא יכול להיות ריק",
       "reset_password_html": "כבר קיים משתמש עם האימייל הזה. אם שכחת את הסיסמה, את יכולה <a href=\"\/account\/login#recover\" class=\"error-recover\">לאפס את הסיסמה שלך כאן<\/a>",
       "verify_email": "ברגעים אלה נשלח מייל הפעלת משתמש אל {{ customer_email }} - עקבי אחרי השלבים במייל כדי להפעיל את המשתמש שלך."
+    },
+    "notices": {
+      "customer": {
+        "invalid_credentials": "מייל או סיסמה לא נכונים. אם שכחת סיסמה את יכולה לאפס אותה בעזרת כפתור ״שכחתי סיסמה״ למטה."
+      }
     }
   },
   "customer_accounts": {
