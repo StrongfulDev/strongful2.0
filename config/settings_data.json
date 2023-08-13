@@ -132,7 +132,7 @@
     "show_secondary_image": true,
     "announcement_tag": "members_only",
     "show_card_collection_announcement": true,
-    "custom_collection_announcement": "20% OFF PRE ORDER",
+    "custom_collection_announcement": "מכירה מוקדמת הסתיימה",
     "announcement_customizer_override": true,
     "enable_quick_add": true,
     "quick_add_text": "בחירת מידה",
