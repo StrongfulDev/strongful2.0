@@ -44,7 +44,7 @@
     {% if show_discount %}
         {% if product.compare_at_price > product.price %}
             <div class="discount-price-container">
-                <p class="rect-discount-tag {% if product.tags contains 'members_only' %}special_ann{% endif %}">
+                <p class="rect-discount-tag">
                     {{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | ceil }}% OFF
                 </p>
             </div>
