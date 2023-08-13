@@ -24,8 +24,8 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "20% OFF PRE ORDER",
-            "sub_text": "מכירה מוקדמת רק לחברות מועדון",
+            "main_text": "פריטים ב 10% הנחה",
+            "sub_text": "",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "rtl",
