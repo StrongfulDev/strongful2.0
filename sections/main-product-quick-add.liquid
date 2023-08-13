@@ -15,7 +15,7 @@
         assign members_only = true
     endif
     if product.tags contains 'members_only'
-        if customer
+        if customer and members_only_sale_active
             assign members_only = false
         else
             assign members_only = true
@@ -54,7 +54,7 @@
             {% endunless %}
         </div>
 
-    <p class="sticky-add-to-cart-btn {% if members_only %}members_only{% endif %}"
+    <p class="sticky-add-to-cart-btn {% if members_only %}members_only{% endif %} {% unless members_only_sale_active %}events-none{% endunless %}"
             {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
                 disabled
             {% endif %}
@@ -62,7 +62,11 @@
         {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
             {{ 'products.product.sold_out' | t }}
         {%- elsif members_only -%}
-            {{ 'products.product.members_only' | t }}
+            {% if members_only_sale_active %}
+                {{ 'products.product.members_only' | t }}
+            {% else %}
+                {{ 'products.product.launch_date' | t }}
+            {% endif %}
         {%- else -%}
             {{ 'products.product.add_to_cart' | t }}
         {%- endif -%}

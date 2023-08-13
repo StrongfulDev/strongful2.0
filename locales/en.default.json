@@ -116,6 +116,7 @@
   "products": {
     "product": {
       "add_to_cart": "הוספה לסל",
+      "launch_date": "זמין לרכישה ב 15.8",
       "members_only": "מכירה מוקדמת לחברות מועדון בלבד",
       "choose_options": "בחירת אפשרויות",
       "up_size_recommendation": "במוצר זה מומלץ לקחת מידה יותר",

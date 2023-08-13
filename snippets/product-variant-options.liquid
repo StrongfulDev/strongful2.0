@@ -44,7 +44,7 @@
             assign members_only = true
         endif
         if members_only
-            if customer
+            if customer and members_only_sale_active
                 assign members_only = false
             else
                 assign members_only = true
