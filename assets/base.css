@@ -4077,3 +4077,7 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 .cart-drawer .color-background-1.isolate.gradient {
     background: #000;
 }
+
+.special_ann {
+	width: 100% !important;
+}

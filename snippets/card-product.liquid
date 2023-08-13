@@ -261,7 +261,7 @@
                         {% endif %}
                         {% if card_product.compare_at_price > card_product.price %}
                             <div class="discount-price-container">
-                                <p class="rect-discount-tag">
+                                <p class="rect-discount-tag {% if card_product.tags contains announcement_tag %}special_ann{% endif %}">
                                     {% if members_only_sale %}
                                         {% if card_product.tags contains announcement_tag %}
                                             {{ 'products.product.members_only' | t }}
@@ -282,7 +282,7 @@
                             {% else %}
                             {% if members_only_sale %}
                                 {% if card_product.tags contains announcement_tag %}
-                                    <p class="rect-discount-tag">
+                                    <p class="rect-discount-tag {% if card_product.tags contains announcement_tag %}special_ann{% endif %}">
                                         {{ 'products.product.members_only' | t }}
                                     </p>
                                 {% endif %}
