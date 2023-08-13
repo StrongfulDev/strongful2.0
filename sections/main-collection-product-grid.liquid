@@ -173,13 +173,13 @@
                                     assign card_announcement = ""
                                     if section.settings.show_card_collection_announcement
                                         if section.settings.announcement_customizer_override and section.settings.custom_collection_announcement != blank
-                                            assign card_announcement = section.settings.custom_collection_announcement
+                                            assign card_announcement = settings.custom_collection_announcement
                                         elsif product.metafields.announcement.text != blank
                                             assign card_announcement = product.metafields.announcement.text
                                         elsif collection.metafields.announcement.text != blank
                                             assign card_announcement = collection.metafields.announcement.text
                                         elsif section.settings.custom_collection_announcement != blank
-                                            assign card_announcement = section.settings.custom_collection_announcement
+                                            assign card_announcement = settings.custom_collection_announcement
                                         endif
                                     endif
                                 -%}

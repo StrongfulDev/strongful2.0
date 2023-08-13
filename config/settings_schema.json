@@ -1793,6 +1793,12 @@
         "default": false
       },
       {
+        "type": "url",
+        "id": "empty_cart_collection_link",
+        "label": "Empty Cart Collection Link",
+        "info": "Link to a collection to show when the cart is empty"
+      },
+      {
         "type": "select",
         "id": "cart_type",
         "options": [
