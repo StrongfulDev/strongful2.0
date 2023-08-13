@@ -352,15 +352,15 @@
 
         // function for hiding the zip code field
         const fieldContainers = document.querySelectorAll('.field');
-        fieldContainers.forEach(function(container) {
-            let data = container.dataset.addressField;
-            if (data === 'zip') {
-                container.classList.add('hidden');
-            }
-            if (data === 'city') {
-                container.classList.remove('field--half');
-            }
-        });
+        // fieldContainers.forEach(function(container) {
+        //     let data = container.dataset.addressField;
+        //     if (data === 'zip') {
+        //         container.classList.add('hidden');
+        //     }
+        //     if (data === 'city') {
+        //         container.classList.remove('field--half');
+        //     }
+        // });
 
       document.querySelector(".sidebar").classList.add(checkout.step);
 
