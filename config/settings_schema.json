@@ -1753,6 +1753,12 @@
         "label": "t:sections.main-collection-product-grid.settings.members_only_sale.label"
       },
       {
+        "type": "checkbox",
+        "id": "members_only_sale_active",
+        "default": false,
+        "label": "Is members only sale active or over?"
+      },
+      {
         "type": "header",
         "content": "t:sections.all.padding.section_padding_heading"
       }
