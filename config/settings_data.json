@@ -141,6 +141,7 @@
     "members_only_sale_active": false,
     "currency_code_enabled": true,
     "show_upsell_card": true,
+    "empty_cart_collection_link": "shopify:\/\/collections\/סטים",
     "cart_type": "drawer",
     "show_vendor": true,
     "show_cart_note": false,
