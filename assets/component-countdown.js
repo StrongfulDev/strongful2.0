@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	const startTime = new Date(data).getTime(); // GMT +0300
 	const endTime = startTime + (24 * 60 * 60 * 1000); // 24 hours later
 	const totalCount = 1000;
+	const fastPhaseDuration = 3 * 60 * 60 * 1000; // 3 hours in milliseconds
 
 	function getCurrentCount() {
 		const now = Date.now();
@@ -48,18 +49,24 @@ document.addEventListener('DOMContentLoaded', function() {
 			return 0; // Countdown has ended
 		} else {
 			const elapsed = now - startTime;
-			const totalDuration = endTime - startTime;
-			return Math.round(totalCount - (elapsed / totalDuration) * totalCount);
+
+			if (elapsed <= fastPhaseDuration) {
+				// First 3 hours - from 1000 to 500
+				return Math.round(1000 - (elapsed / fastPhaseDuration) * 500);
+			} else {
+				// After first 3 hours - from 500 to 0 over the remaining 21 hours
+				const normalPhaseElapsed = elapsed - fastPhaseDuration;
+				const normalPhaseDuration = endTime - startTime - fastPhaseDuration;
+				return Math.round(500 - (normalPhaseElapsed / normalPhaseDuration) * 500);
+			}
 		}
 	}
 
 	function updateCounter() {
 		const count = getCurrentCount();
-		$("#countdownDisplay").text(count + " ORDERS LEFT");
+		$("#countdownDisplay").text(count + (count === 1 ? " ORDER" : " ORDERS LEFT"));
 
-		if (count === 1) {
-			$("#countdownDisplay").text(count + " ORDER");
-		} else if (count > 0) {
+		if (count > 0) {
 			setTimeout(updateCounter, 1000); // Update every second
 		} else {
 			$("#countdownDisplay").text("PRE ORDER OVER");
