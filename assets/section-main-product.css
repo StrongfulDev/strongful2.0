@@ -521,8 +521,8 @@ a.product__text {
     }
 
     .product__media-wrapper slider-component:not(.thumbnail-slider--no-slide) {
-        /*margin-left: -1rem;*/
-        /*margin-right: -1.5rem;*/
+        /*margin-left: 1.5rem;*/
+        /*margin-right: 1.5rem;*/
         margin: 0;
     }
 
@@ -1832,9 +1832,9 @@ variant-radios {
 	padding: 1rem 3rem;
 }
 
-li.grid--peek.slider .grid__item, li.product__media-item.grid__item.slider__slide {
-	margin-left: 1.5rem;
-}
+/*li.grid--peek.slider .grid__item, li.product__media-item.grid__item.slider__slide {*/
+/*	margin-left: 1.5rem;*/
+/*}*/
 
 .model-wears-size {
 	flex: 1 1 100%;
