@@ -134,6 +134,7 @@
     "show_card_collection_announcement": true,
     "custom_collection_announcement": "מכירה מוקדמת הסתיימה",
     "announcement_customizer_override": true,
+    "preorder_over_text": "מכירה מוקדמת הסתיימה. זמין לרכישה ב 15.8",
     "enable_quick_add": true,
     "quick_add_text": "בחירת מידה",
     "quick_add_accessories_text": "הוספה לסל",
