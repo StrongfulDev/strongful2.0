@@ -49,7 +49,8 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": false
+            "show_dynamic_checkout": false,
+            "members_only_sale_over_text": "זמין לרכישה ב 15.8"
           }
         },
         "5ae0b953-0e37-48c5-b5cc-e50d6004b25c": {
@@ -129,7 +130,7 @@
         "hide_variants": true,
         "enable_video_looping": true,
         "details_section_direction": "right",
-        "members_only_tag": "members_only",
+        "members_only_tag": "",
         "padding_top": 24,
         "padding_bottom": 80
       }
@@ -138,7 +139,7 @@
       "type": "complete-look-products",
       "settings": {
         "heading": "SHOP THE LOOK",
-        "member_tag": "members_only",
+        "member_tag": "",
         "heading_size": "h1"
       }
     },

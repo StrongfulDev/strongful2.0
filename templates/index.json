@@ -44,7 +44,7 @@
       "type": "featured-collection",
       "settings": {
         "steps": 4,
-        "title": "OASIS PRE ORDER",
+        "title": "NEW IN - OASIS COLLECTION",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
@@ -87,7 +87,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/0_c8de300c-7df8-4337-8d77-586293ee50dc.jpg",
             "alt": "",
-            "link": "OASIS COLLECTION",
+            "link": "NEW IN",
             "url": "shopify:\/\/collections\/oasis"
           }
         },
@@ -152,13 +152,13 @@
       ],
       "settings": {
         "steps": 4,
-        "title": "SELLING FAST",
+        "title": "10% OFF",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "selling-fast",
+        "collection": "july10",
         "products_to_show": 14,
         "columns_desktop": 5,
         "full_width": true,

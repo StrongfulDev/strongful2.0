@@ -41,10 +41,10 @@
         "card_header_size": "h2",
         "show_secondary_image": true,
         "show_vendor": true,
-        "announcement_tag": "members_only",
+        "announcement_tag": "",
         "show_rating": false,
-        "show_card_collection_announcement": true,
-        "custom_collection_announcement": "20% OFF PRE ORDER",
+        "show_card_collection_announcement": false,
+        "custom_collection_announcement": "",
         "announcement_customizer_override": true,
         "enable_quick_add": true,
         "quick_add_type": "hover",
@@ -57,7 +57,7 @@
         "filter_type": "vertical",
         "enable_sorting": true,
         "columns_mobile": "2",
-        "members_only_sale": true,
+        "members_only_sale": false,
         "padding_top": 0,
         "padding_bottom": 44
       }

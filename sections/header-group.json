@@ -24,12 +24,12 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "פריטים ב 10% הנחה",
-            "sub_text": "",
+            "main_text": "NEW IN",
+            "sub_text": "OASIS COLLECTION",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "rtl",
-            "link": "shopify:\/\/collections\/july10",
+            "link": "shopify:\/\/collections\/oasis",
             "color_scheme": "accent-1"
           }
         },
@@ -244,7 +244,7 @@
         "mobile_logo_position": "center",
         "mobile_top_image_1": "shopify:\/\/shop_images\/0_b829b5f1-88d5-4c33-8646-613ec1643eb5.jpg",
         "mobile_top_image_1_link": "shopify:\/\/collections\/oasis",
-        "mobile_top_image_1_title": "OASIS COLLECTION",
+        "mobile_top_image_1_title": "NEW IN",
         "mobile_top_image_2": "shopify:\/\/shop_images\/Artboard_4_4x-100-min.jpg",
         "mobile_top_image_2_link": "shopify:\/\/collections\/best-seller-internal-use",
         "mobile_top_image_2_title": "BEST SELLERS",
