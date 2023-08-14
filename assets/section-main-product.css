@@ -1659,6 +1659,10 @@ variant-radios fieldset {
     left: 0;
 }
 
+details[open] .accordion__title:after {
+		content: none;
+}
+
 .product-loyalty-link {
     position: relative;
     width: 100%;
@@ -1727,6 +1731,19 @@ variant-radios fieldset {
 	grid-template-columns: repeat(6,1fr);
 	margin: 1.2em 0 auto;
 	list-style: none;
+}
+
+.quick-add-modal__content-info .similiar,
+.quick-add-modal__content-info nav.breadcrumbs,
+.quick-add-modal__content-info button.product__media-toggle,
+.quick-add-modal__content-info .product__modal-opener:hover .product__media-icon,
+.quick-add-modal__content-info .product__modal-opener:focus .product__media-icon,
+.quick-add-modal__content-info .size-table-stock-container {
+	display: none !important;
+}
+
+.quick-add-modal__content-info .product.grid {
+	margin-top: 0;
 }
 
 .similiar li {
