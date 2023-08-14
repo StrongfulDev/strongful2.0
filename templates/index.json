@@ -68,7 +68,7 @@
         "show_rating": false,
         "show_sale_badge": false,
         "enable_quick_add": true,
-        "quick_add_type": "hover",
+        "quick_add_type": "button",
         "quick_add_type_mobile": "modal",
         "quick_add_text": "הוספה מהירה",
         "pick_size_text": "בחירת מידה",
