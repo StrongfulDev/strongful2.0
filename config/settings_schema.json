@@ -1662,6 +1662,11 @@
         "label": "t:sections.main-collection-product-grid.settings.announcement_customizer_override.label"
       },
       {
+        "type": "text",
+        "id": "preorder_over_text",
+        "label": "Quick add text when preorder is over"
+      },
+      {
         "type": "checkbox",
         "id": "enable_quick_add",
         "default": false,
