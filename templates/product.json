@@ -202,8 +202,8 @@
         "quick_add_text": "הוספה מהירה",
         "pick_size_text": "בחירת מידה",
         "quick_add_accessories_text": "הוספה מהירה",
-        "members_only_sale": true,
-        "announcement_tag": "members_only"
+        "members_only_sale": false,
+        "announcement_tag": ""
       }
     },
     "169020667538efe804": {
