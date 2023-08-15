@@ -54,7 +54,7 @@
             {% endunless %}
         </div>
 
-    <p class="sticky-add-to-cart-btn {% if members_only %}members_only{% endif %} {% unless members_only_sale_active %}events-none{% endunless %}"
+    <p class="sticky-add-to-cart-btn"
             {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
                 disabled
             {% endif %}
