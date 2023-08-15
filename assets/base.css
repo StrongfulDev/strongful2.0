@@ -2472,6 +2472,12 @@ quantity-input button.quantity__button {
         text-align: center;
     }
 
+	header > a.header__heading-link, .header__heading {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
     .header--mobile-left .header__heading,
     .header--mobile-left .header__heading-link {
         text-align: left;
@@ -3068,8 +3074,12 @@ details-disclosure > details {
         display: none;
     }
 
-	.header__icon--account span.desktop-customer-name {
-		display: none;
+	summary.header__icon--account span.desktop-customer-name {
+		/*display: none;*/
+		width: max-content;
+		align-self: end;
+		height: fit-content;
+		font-size: calc(var(--font-body-size-medium) * 0.9);
 	}
 }
 
@@ -3462,6 +3472,12 @@ details[open] .square {
 	height: fit-content;
 	width: fit-content;
 	padding: 0;
+}
+
+@media screen and (max-width: 989px) {
+	.header__icon.header__icon--account.header__menu-item {
+		flex-direction: row-reverse;
+	}
 }
 
 @media screen and (min-width: 990px) {
