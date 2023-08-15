@@ -150,6 +150,10 @@
 		gap: 1rem .5rem;
 	}
 
+	.cart-drawer .product_variants ul {
+		gap: 0 1rem;
+	}
+
 	.variant_selector {
 		transform: translateY(0);
 		border-top: none;
