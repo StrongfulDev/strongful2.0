@@ -441,6 +441,7 @@ div.about-us {
 
 	.help__absolute-for-hover a, .help__absolute-for-hover p {
 		justify-content: center;
+		color: var(--gradient-base-accent-1);
 	}
 
 	.list-social__item .icon {
