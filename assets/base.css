@@ -4102,3 +4102,12 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 	padding: 0;
 	list-style: none;
 }
+
+.page .image-with-text__text-item.grid__item {
+	display: none;
+}
+
+.page .image-with-text .grid .image-with-text__media-item--middle {
+	margin: auto;
+	width: 50px;
+}
