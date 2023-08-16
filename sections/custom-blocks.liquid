@@ -1,6 +1,6 @@
-<div>
+<div class="custom-blocks-links-container fix-direction page-width grid">
     {% for block in section.blocks %}
-        <div>
+        <div class="grid__item">
             {% if block.settings.url != blank %}
                 <a href="{{ block.settings.url }}">
                     {% if block.settings.image != blank %}
