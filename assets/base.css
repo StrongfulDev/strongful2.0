@@ -4107,6 +4107,10 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 	display: none;
 }
 
+.page .image-with-text__grid.grid {
+	display: block;
+}
+
 .page .image-with-text .grid .image-with-text__media-item--middle {
 	margin: auto;
 	width: 50px;
