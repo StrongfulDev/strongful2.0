@@ -2,12 +2,12 @@
 
 <div class="custom-blocks-links-container fix-direction page-width grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down">
     {% for block in section.blocks %}
-        <div class="grid__item">
+        <div class="custom-link-grid-item grid__item">
             {% if block.settings.url != blank %}
                 <a href="{{ block.settings.url }}" class="custom-blocks-links-url text-center">
                     {% render 'icon-faq-main', icon: block.settings.icon %}
                     {% if block.settings.text != blank %}
-                        <h4>{{ block.settings.text }}</h4>
+                        <h4 class="faq-square-link-text">{{ block.settings.text }}</h4>
                     {% endif %}
                 </a>
             {% endif %}

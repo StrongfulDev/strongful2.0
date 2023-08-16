@@ -1,9 +1,25 @@
 .custom-blocks-links-container {
 	margin-bottom: 0;
 	background: var(--gradient-base-background-3);
+	padding: 1.5rem;
+	gap: calc(var(--grid-desktop-vertical-spacing) * 2);
 }
 
 .icon-faq-main {
 	margin: auto;
 	display: block;
+}
+
+.custom-link-grid-item {
+	padding: 3rem 1rem;
+	background: var(--gradient-background);
+	border-radius: var(--inputs-radius);
+}
+
+div.custom-link-grid-item.grid__item {
+	width: calc(48% - var(--grid-mobile-horizontal-spacing) / 2);
+}
+
+.faq-square-link-text {
+	margin:  1rem 0 0;
 }
