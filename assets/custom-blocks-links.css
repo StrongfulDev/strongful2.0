@@ -1,3 +1,8 @@
+.custom-blocks-links-container {
+	margin-bottom: 0;
+	background: var(--gradient-base-background-3);
+}
+
 .icon-faq-main {
 	margin: auto;
 	display: block;
