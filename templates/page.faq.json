@@ -88,7 +88,7 @@
         "89f0d758-d1d3-4026-9768-790087b10b6b"
       ],
       "custom_css": [
-        "div {background: var(--gradient-base-background-3);}"
+
       ],
       "settings": {
         "columns_desktop": "4",
