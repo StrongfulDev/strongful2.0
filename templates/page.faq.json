@@ -39,12 +39,6 @@
         "padding_bottom": 52
       }
     },
-    "0170ceee-918a-4147-b229-aa63b972d2f8": {
-      "type": "menu",
-      "settings": {
-        "menu": "main-menu"
-      }
-    },
     "6539bbd9-86c9-4408-80b1-3e7e03ff7cae": {
       "type": "collapsible-content",
       "blocks": {
@@ -110,7 +104,6 @@
   "order": [
     "7e4a1385-2573-43fd-92c6-f80e5a94db9c",
     "b4b41c1d-4807-43b9-98c0-52dc4128b7cf",
-    "0170ceee-918a-4147-b229-aa63b972d2f8",
     "6539bbd9-86c9-4408-80b1-3e7e03ff7cae"
   ]
 }
