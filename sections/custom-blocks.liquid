@@ -4,7 +4,7 @@
             {% if block.settings.url != blank %}
                 <a href="{{ block.settings.url }}">
                     {% if block.settings.image != blank %}
-                        <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.text }}">
+                        <img src="{{ block.settings.image | img_url: block.settings.width }}" alt="{{ block.settings.text }}">
                     {% endif %}
                     {% if block.settings.text != blank %}
                         <h4>{{ block.settings.text }}</h4>
@@ -40,6 +40,15 @@
                     "type": "image_picker",
                     "id": "image",
                     "label": "Image"
+                },
+                {
+                    "type": "range",
+                    "id": "width",
+                    "label": "Width",
+                    "min": 0,
+                    "max": 100,
+                    "step": 10,
+                    "default": 100
                 }
             ]
         }
