@@ -7,18 +7,63 @@
         "padding_bottom": 28
       }
     },
-    "7dbf5cdc-df68-4869-b376-3819eb9a7700": {
-      "type": "custom-liquid",
+    "b4b41c1d-4807-43b9-98c0-52dc4128b7cf": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16015997108364__b4b41c1d-4807-43b9-98c0-52dc4128b7cf-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h1>{{ page.title }}<\/h1>",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--16015997108364__b4b41c1d-4807-43b9-98c0-52dc4128b7cf-heading-1"
+      ],
       "settings": {
-        "custom_liquid": "",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "background-1",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "0170ceee-918a-4147-b229-aa63b972d2f8": {
+      "type": "menu",
+      "settings": {
+        "menu": "main-menu"
+      }
+    },
+    "f5b3f5e2-b4f5-4dc2-a831-d8815fbbfb43": {
+      "type": "rich-text",
+      "blocks": {
+        "a00ffdfa-b35e-4978-b7a4-25ec5dec6ede": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h2>{{ page.title }}<\/h2>",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "a00ffdfa-b35e-4978-b7a4-25ec5dec6ede"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
   "order": [
     "main",
-    "7dbf5cdc-df68-4869-b376-3819eb9a7700"
+    "b4b41c1d-4807-43b9-98c0-52dc4128b7cf",
+    "0170ceee-918a-4147-b229-aa63b972d2f8",
+    "f5b3f5e2-b4f5-4dc2-a831-d8815fbbfb43"
   ]
 }
