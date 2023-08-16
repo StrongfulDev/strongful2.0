@@ -45,37 +45,33 @@
         "template--16015997108364__1ef8f7d0-06ea-48b5-9b95-6c8c299a8f84-block-1": {
           "type": "block",
           "settings": {
+            "icon": "faq",
             "text": "שאלות ותשובות",
-            "url": "https:\/\/strongful.co.il",
-            "image": "shopify:\/\/shop_images\/logo_43e8a990-4566-4a4b-b0cc-e5ffb93ad479.png",
-            "width": 40
+            "url": "https:\/\/strongful.co.il"
           }
         },
         "4b2953d1-fbea-4bab-999c-30e05398a79a": {
           "type": "block",
           "settings": {
+            "icon": "returns",
             "text": "מדיניות החזרות",
-            "url": "https:\/\/strongful.co.il",
-            "image": "shopify:\/\/shop_images\/product-return.svg",
-            "width": 40
+            "url": "https:\/\/strongful.co.il"
           }
         },
         "fe444ca8-e3cb-4330-976d-7be531b22d3a": {
           "type": "block",
           "settings": {
+            "icon": "faq",
             "text": "מועדון לקוחות",
-            "url": "https:\/\/strongful.co.il",
-            "image": "shopify:\/\/shop_images\/logo_43e8a990-4566-4a4b-b0cc-e5ffb93ad479.png",
-            "width": 40
+            "url": "https:\/\/strongful.co.il"
           }
         },
         "89f0d758-d1d3-4026-9768-790087b10b6b": {
           "type": "block",
           "settings": {
+            "icon": "faq",
             "text": "צרי קשר",
-            "url": "https:\/\/strongful.co.il",
-            "image": "shopify:\/\/shop_images\/logo_43e8a990-4566-4a4b-b0cc-e5ffb93ad479.png",
-            "width": 40
+            "url": "https:\/\/strongful.co.il"
           }
         }
       },
