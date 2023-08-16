@@ -36,27 +36,65 @@
         "menu": "main-menu"
       }
     },
-    "f5b3f5e2-b4f5-4dc2-a831-d8815fbbfb43": {
-      "type": "rich-text",
+    "6539bbd9-86c9-4408-80b1-3e7e03ff7cae": {
+      "type": "collapsible-content",
       "blocks": {
-        "a00ffdfa-b35e-4978-b7a4-25ec5dec6ede": {
-          "type": "heading",
+        "template--16015997108364__6539bbd9-86c9-4408-80b1-3e7e03ff7cae-collapsible_row-1": {
+          "type": "collapsible_row",
           "settings": {
-            "heading": "<h2>{{ page.title }}<\/h2>",
-            "heading_size": "h1"
+            "heading": "שאלה אחת",
+            "icon": "none",
+            "row_content": "<p>תשובה גדולה גדולה<\/p>",
+            "page": ""
+          }
+        },
+        "template--16015997108364__6539bbd9-86c9-4408-80b1-3e7e03ff7cae-collapsible_row-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "שאלה 2",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "template--16015997108364__6539bbd9-86c9-4408-80b1-3e7e03ff7cae-collapsible_row-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "שאלה 3",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "template--16015997108364__6539bbd9-86c9-4408-80b1-3e7e03ff7cae-collapsible_row-4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "שאלה 4",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
           }
         }
       },
       "block_order": [
-        "a00ffdfa-b35e-4978-b7a4-25ec5dec6ede"
+        "template--16015997108364__6539bbd9-86c9-4408-80b1-3e7e03ff7cae-collapsible_row-1",
+        "template--16015997108364__6539bbd9-86c9-4408-80b1-3e7e03ff7cae-collapsible_row-2",
+        "template--16015997108364__6539bbd9-86c9-4408-80b1-3e7e03ff7cae-collapsible_row-3",
+        "template--16015997108364__6539bbd9-86c9-4408-80b1-3e7e03ff7cae-collapsible_row-4"
       ],
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
+        "caption": "",
+        "heading": "{{ page.title }}",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
         "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
@@ -64,6 +102,6 @@
     "main",
     "b4b41c1d-4807-43b9-98c0-52dc4128b7cf",
     "0170ceee-918a-4147-b229-aa63b972d2f8",
-    "f5b3f5e2-b4f5-4dc2-a831-d8815fbbfb43"
+    "6539bbd9-86c9-4408-80b1-3e7e03ff7cae"
   ]
 }
