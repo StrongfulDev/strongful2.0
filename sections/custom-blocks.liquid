@@ -1,0 +1,65 @@
+<div>
+    {% for block in section.blocks %}
+        <div>
+            {% if block.settings.url != blank %}
+                <a href="{{ block.settings.url }}">
+                    {% if block.settings.image != blank %}
+                        <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.text }}">
+                    {% endif %}
+                    {% if block.settings.text != blank %}
+                        <h4>{{ block.settings.text }}</h4>
+                    {% endif %}
+                </a>
+            {% endif %}
+        </div>
+    {% endfor %}
+</div>
+
+{% schema %}
+
+{
+    "name": "Custom Blocks Links",
+    "class": "custom-blocks-links",
+    "blocks": [
+        {
+            "type": "block",
+            "name": "Link",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "text",
+                    "label": "Text",
+                    "default": "Link"
+                },
+                {
+                    "type": "url",
+                    "id": "url",
+                    "label": "URL"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Block",
+            "category": "Custom Blocks",
+            "blocks": [
+                {
+                    "type": "block",
+                    "settings": {
+                        "text": "Link",
+                        "url": "https://strongful.co.il",
+                        "image": ""
+                    }
+                }
+            ]
+        }
+    ]
+}
+
+{% endschema %}
