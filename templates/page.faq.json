@@ -31,7 +31,7 @@
         "template--16015997108364__b4b41c1d-4807-43b9-98c0-52dc4128b7cf-heading-1"
       ],
       "custom_css": [
-        ".isolate {background: var(--gradient-base-background-3);}"
+        ".isolate {background: var(--gradient-base-background-3) !important;}"
       ],
       "settings": {
         "desktop_content_position": "center",
