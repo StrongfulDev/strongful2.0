@@ -4115,3 +4115,12 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 	margin: auto;
 	width: 50px;
 }
+
+.page .collapsible-content {
+	direction: rtl;
+}
+
+.page summary .icon-caret {
+	left: 1.5rem;
+	right: auto;
+}
