@@ -30,6 +30,9 @@
       "block_order": [
         "template--16015997108364__b4b41c1d-4807-43b9-98c0-52dc4128b7cf-heading-1"
       ],
+      "custom_css": [
+        ".isolate {background: var(--gradient-base-background-3);}"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -81,6 +84,9 @@
         "fe444ca8-e3cb-4330-976d-7be531b22d3a",
         "89f0d758-d1d3-4026-9768-790087b10b6b"
       ],
+      "custom_css": [
+        "div {background: var(--gradient-base-background-3);}"
+      ],
       "settings": {
         "columns_desktop": "4",
         "columns_mobile": "2"
@@ -131,6 +137,9 @@
         "template--16015997108364__6539bbd9-86c9-4408-80b1-3e7e03ff7cae-collapsible_row-2",
         "template--16015997108364__6539bbd9-86c9-4408-80b1-3e7e03ff7cae-collapsible_row-3",
         "template--16015997108364__6539bbd9-86c9-4408-80b1-3e7e03ff7cae-collapsible_row-4"
+      ],
+      "custom_css": [
+        ".isolate {background: var(--gradient-base-background-3);}"
       ],
       "settings": {
         "caption": "",
