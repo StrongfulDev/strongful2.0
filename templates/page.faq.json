@@ -56,7 +56,7 @@
           "settings": {
             "text": "מדיניות החזרות",
             "url": "https:\/\/strongful.co.il",
-            "image": "shopify:\/\/shop_images\/logo_43e8a990-4566-4a4b-b0cc-e5ffb93ad479.png",
+            "image": "shopify:\/\/shop_images\/product-return.svg",
             "width": 40
           }
         },
@@ -86,6 +86,8 @@
         "89f0d758-d1d3-4026-9768-790087b10b6b"
       ],
       "settings": {
+        "columns_desktop": "4",
+        "columns_mobile": "2"
       }
     },
     "6539bbd9-86c9-4408-80b1-3e7e03ff7cae": {
