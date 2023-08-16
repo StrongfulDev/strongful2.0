@@ -61,7 +61,7 @@
         "fe444ca8-e3cb-4330-976d-7be531b22d3a": {
           "type": "block",
           "settings": {
-            "icon": "faq",
+            "icon": "returns",
             "text": "מועדון לקוחות",
             "url": "https:\/\/strongful.co.il"
           }
@@ -69,7 +69,7 @@
         "89f0d758-d1d3-4026-9768-790087b10b6b": {
           "type": "block",
           "settings": {
-            "icon": "faq",
+            "icon": "returns",
             "text": "צרי קשר",
             "url": "https:\/\/strongful.co.il"
           }
