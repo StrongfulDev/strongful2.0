@@ -4,7 +4,8 @@
             {% if block.settings.url != blank %}
                 <a href="{{ block.settings.url }}">
                     {% if block.settings.image != blank %}
-                        <img src="{{ block.settings.image | img_url: block.settings.width }}" alt="{{ block.settings.text }}">
+                        <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.text }}"
+                            width="{{ block.settings.width }}">
                     {% endif %}
                     {% if block.settings.text != blank %}
                         <h4>{{ block.settings.text }}</h4>
