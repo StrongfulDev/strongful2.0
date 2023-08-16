@@ -1,11 +1,14 @@
+{{ 'custom-blocks-links.css' | asset_url | stylesheet_tag }}
+
 <div class="custom-blocks-links-container fix-direction page-width grid">
     {% for block in section.blocks %}
         <div class="grid__item">
             {% if block.settings.url != blank %}
-                <a href="{{ block.settings.url }}">
+                <a href="{{ block.settings.url }}" class="custom-blocks-links-url text-center">
                     {% if block.settings.image != blank %}
                         <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.text }}"
-                            width="{{ block.settings.width }}">
+                            width="{{ block.settings.width }}"
+                            class="custom-blocks-link-image">
                     {% endif %}
                     {% if block.settings.text != blank %}
                         <h4>{{ block.settings.text }}</h4>
