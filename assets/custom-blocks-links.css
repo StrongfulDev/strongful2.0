@@ -46,6 +46,15 @@ div.custom-link-grid-item.grid__item {
 
 	div.custom-link-grid-item.grid__item {
 		width: calc(23% - var(--grid-mobile-horizontal-spacing) / 2);
+		padding: 5rem 1rem;
+	}
+
+	.custom-blocks-links-url {
+		text-decoration: none;
+	}
+
+	.faq-square-link-text {
+		margin: 2rem 0 0;
 	}
 
 	.custom-link-grid-item:hover {

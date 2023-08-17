@@ -36,3 +36,20 @@
 	width: 0.4em;
 	bottom: 1px;
 }
+
+@media screen and (min-width: 990px) {
+	.breadcrumbs__link {
+		font-size: calc(var(--font-body-size-medium) * 0.8);
+	}
+
+	.breadcrumbs__item:not(:last-child):after {
+		height: .3em;
+		width: .3em;
+		margin: 0 0 .3em;
+		bottom: -2px;
+	}
+
+	.breadcrumbs__list {
+		column-gap: var(--grid-desktop-horizontal-spacing);
+	}
+}

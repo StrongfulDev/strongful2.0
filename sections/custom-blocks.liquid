@@ -17,7 +17,7 @@
 
 <div class="custom-blocks-links-container fix-direction page-width grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down section-{{ section.id }}-padding">
     {% for block in section.blocks %}
-        <div class="custom-link-grid-item grid__item">
+        <div class="custom-link-grid-item grid__item pointer">
             {% if block.settings.url != blank %}
                 <a href="{{ block.settings.url }}" class="custom-blocks-links-url text-center">
                     {% render 'icon-faq-main', icon: block.settings.icon %}
