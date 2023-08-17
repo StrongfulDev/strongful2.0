@@ -4136,6 +4136,7 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 
 .page .accordion details {
 	background: var(--gradient-background);
+	border-radius: var(--inputs-radius);
 }
 
 .page .accordion summary {

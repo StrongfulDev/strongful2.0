@@ -59,4 +59,9 @@ div.custom-link-grid-item.grid__item {
 	.custom-link-grid-item:hover h4 {
 		color: var(--gradient-background);
 	}
+
+	.icon-faq-main {
+		width: 5rem;
+		height: 5rem;
+	}
 }

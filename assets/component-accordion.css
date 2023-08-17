@@ -99,10 +99,19 @@ h2.collapsible-content__heading.h1 {
 @media screen and (min-width: 990px) {
 	.page .collapsible-content-wrapper-narrow {
 		max-width: 90%;
+		padding: 0;
 	}
 
 	.collapsible-search {
 		margin-bottom: 3rem;
 		width: 30%;
+	}
+
+	.page .collapsible-content__grid--reverse {
+		flex-direction: column;
+	}
+
+	.collapsible-search+.grid__item {
+		width: 100%;
 	}
 }
