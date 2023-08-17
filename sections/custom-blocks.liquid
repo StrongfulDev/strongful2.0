@@ -15,7 +15,7 @@
     }
 {%- endstyle -%}
 
-<div class="custom-blocks-links-container fix-direction page-width grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down">
+<div class="custom-blocks-links-container fix-direction page-width grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down section-{{ section.id }}-padding">
     {% for block in section.blocks %}
         <div class="custom-link-grid-item grid__item">
             {% if block.settings.url != blank %}
