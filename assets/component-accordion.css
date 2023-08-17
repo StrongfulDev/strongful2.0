@@ -101,6 +101,11 @@ h2.collapsible-content__heading.h1 {
 	margin-bottom: 3rem;
 }
 
+.search-input__no-results {
+	text-align: center;
+	margin-top: 0;
+}
+
 @media screen and (min-width: 990px) {
 	.page .collapsible-content-wrapper-narrow {
 		max-width: 90%;
@@ -116,7 +121,7 @@ h2.collapsible-content__heading.h1 {
 		flex-direction: column;
 	}
 
-	.collapsible-search+.grid__item {
+	.collapsible-search~.grid__item {
 		width: 100%;
 	}
 

@@ -3737,6 +3737,12 @@
         "has_search": {
           "label": "Enable search"
         },
+        "search_placeholder": {
+          "label": "Search placeholder"
+        },
+        "empty_search_results": {
+          "label": "Show empty search results"
+        },
         "caption": {
           "label": "Caption"
         },

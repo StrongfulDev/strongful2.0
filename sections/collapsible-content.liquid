@@ -56,6 +56,7 @@
           {% endif %}
             {%- if section.settings.has_search -%}
                 <input type="text" id="search-input" placeholder="{{ section.settings.search_placeholder }}" class="collapsible-search">
+                <p class="search-input__no-results hidden">{{ section.settings.empty_search_results }}</p>
             {%- endif -%}
           <div class="grid__item">
             {%- for block in section.blocks -%}
@@ -115,6 +116,12 @@
       "id": "search_placeholder",
       "default": "חיפוש",
       "label": "t:sections.collapsible_content.settings.search_placeholder.label"
+    },
+    {
+        "type": "text",
+        "id": "empty_search_results",
+        "default": "לא נמצאו תוצאות",
+        "label": "t:sections.collapsible_content.settings.empty_search_results.label"
     },
     {
       "type": "text",
