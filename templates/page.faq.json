@@ -59,7 +59,7 @@
           "settings": {
             "icon": "faq",
             "text": "שאלות ותשובות",
-            "url": "https:\/\/strongful.co.il"
+            "url": "https:\/\/strongful.co.il\/pages\/faq"
           }
         },
         "4b2953d1-fbea-4bab-999c-30e05398a79a": {
@@ -75,7 +75,7 @@
           "settings": {
             "icon": "delivery",
             "text": "משלוחים",
-            "url": "https:\/\/strongful.co.il"
+            "url": "shopify:\/\/blogs\/policies\/מדיניות-המשלוחים-שלנו"
           }
         },
         "89f0d758-d1d3-4026-9768-790087b10b6b": {
@@ -245,6 +245,7 @@
       "settings": {
         "has_search": true,
         "search_placeholder": "חיפוש",
+        "empty_search_results": "לא נמצאו תוצאות",
         "caption": "",
         "heading": "{{ page.title }}",
         "heading_size": "h1",
