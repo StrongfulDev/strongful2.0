@@ -45,6 +45,12 @@
         "padding_bottom": 24
       }
     },
+    "fea3806d-5cd9-4614-b900-582d14b506cc": {
+      "type": "breadcrumbs-nav",
+      "settings": {
+        "show_on_mobile": false
+      }
+    },
     "1ef8f7d0-06ea-48b5-9b95-6c8c299a8f84": {
       "type": "custom-blocks",
       "blocks": {
@@ -146,6 +152,7 @@
       ],
       "settings": {
         "has_search": true,
+        "search_placeholder": "חיפוש",
         "caption": "",
         "heading": "{{ page.title }}",
         "heading_size": "h1",
@@ -164,6 +171,7 @@
   "order": [
     "7e4a1385-2573-43fd-92c6-f80e5a94db9c",
     "b4b41c1d-4807-43b9-98c0-52dc4128b7cf",
+    "fea3806d-5cd9-4614-b900-582d14b506cc",
     "1ef8f7d0-06ea-48b5-9b95-6c8c299a8f84",
     "6539bbd9-86c9-4408-80b1-3e7e03ff7cae"
   ]
