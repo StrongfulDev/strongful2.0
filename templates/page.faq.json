@@ -146,7 +146,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "האם אתם עושים משלוחים לכל הארץ?",
-            "icon": "check_mark",
+            "icon": "none",
             "row_content": "<p>ניתן לבצע משלוחים לכל חלקי הארץ עד 3 ימי עסקים מלבד איזורים מרוחקים עד 5 ימי עסקים.<\/p>",
             "page": ""
           }
@@ -155,7 +155,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "איך ניתן לבצע החלפה?",
-            "icon": "check_mark",
+            "icon": "none",
             "row_content": "<p>ניתן לבצע החלפה באמצעות <span style=\"text-decoration:underline\">פורטל ההחלפות<\/span>באתר. במידה ואת נתקלת בקושי מסוים תוכלי ליצור קשר עם מוקד שירות הלקוחות שלנו.<\/p>",
             "page": ""
           }
@@ -163,18 +163,27 @@
         "02b333b5-51d3-4e26-bfb6-0df3b5a46e67": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
+            "heading": "האם אני משלמת על משלוח חזרה אליכם?",
+            "icon": "none",
+            "row_content": "<p>ניתן לבצע החלפה ללא עלות עם שליח עד הבית לכל הזמנה \/ החזרה בעלות של 25₪ עם שליח.<\/p><p>ובנוסף ניתן לבצע החזרה באמצעות דואר ישראל ללא עלות.<\/p>",
             "page": ""
           }
         },
         "66e1af33-2846-4cf7-839a-4152950b132e": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
+            "heading": "תוך כמה זמן אפשר להחליף או להחזיר פריט?",
+            "icon": "none",
+            "row_content": "<p>ניתן להחליף \/ להחזיר פריט עד 30 יום מתאריך קבלת המוצר.<\/p>",
+            "page": ""
+          }
+        },
+        "5be0e8ca-983c-471c-97c7-01368583f05b": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "כמה זמן ייקח לכם לזכות אותי?",
+            "icon": "none",
+            "row_content": "<p>הפריטים שהחזרת מגיעים אלינו עד 14 ימי עסקים באמצעות דואר ישראל \/ עד 5 ימי עסקים באמצעות שליח.<\/p><p>הזיכוי מתבצע ביום הגעת החבילה ומופיע באמצעי התשלום עד 14 ימי עסקים.<\/p>",
             "page": ""
           }
         }
@@ -187,7 +196,8 @@
         "b406e619-6d43-474c-a42a-4171dae2dc86",
         "2b228f57-a7f2-47a6-9d20-c31d34aceb4a",
         "02b333b5-51d3-4e26-bfb6-0df3b5a46e67",
-        "66e1af33-2846-4cf7-839a-4152950b132e"
+        "66e1af33-2846-4cf7-839a-4152950b132e",
+        "5be0e8ca-983c-471c-97c7-01368583f05b"
       ],
       "custom_css": [
         ".isolate {background: var(--gradient-base-background-3);}"
