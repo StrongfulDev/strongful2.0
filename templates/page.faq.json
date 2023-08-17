@@ -109,35 +109,71 @@
         "template--16015997108364__6539bbd9-86c9-4408-80b1-3e7e03ff7cae-collapsible_row-1": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "שאלה אחת",
+            "heading": "איך אני יודעת איזו מידה אני?",
             "icon": "none",
-            "row_content": "<p>תשובה גדולה גדולה<\/p>",
+            "row_content": "<p>המידות באתר הינן סטנדרטיות ותואמות למידה שאת לוקחת בדרכ.<\/p><p>בכל פריט באתר ניתן למצוא טבלת מידות מפורטת לפי היקפים על מנת שתוכלי למדוד ולהשוות לגופך.<\/p><p>במידה ואת מתלבטת בין 2 מידות נמליץ לקחת את המידה הקטנה בניהן.<\/p><p>לכל התייעצות ניתן לפנות אלינו במוקד <span style=\"text-decoration:underline\">הטלפון \/ הוואטסאפ<\/span><\/p>",
             "page": ""
           }
         },
         "template--16015997108364__6539bbd9-86c9-4408-80b1-3e7e03ff7cae-collapsible_row-2": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "שאלה 2",
+            "heading": "חברה קנתה לי גיפטקארד - איך אני משתמשת בו?",
             "icon": "none",
-            "row_content": "",
+            "row_content": "<p>עם הרכישה של הכרטיס את תקבלי מייל ובו הקוד של כרטיס המתנה.<\/p><p>את הקוד עלייך להזין בשלב הצ׳ק אאוט באתר לאחר ״מעבר לתשלום״.<\/p>",
             "page": ""
           }
         },
         "template--16015997108364__6539bbd9-86c9-4408-80b1-3e7e03ff7cae-collapsible_row-3": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "שאלה 3",
+            "heading": "מה לעשות אם לא קיבלתי אישור הזמנה?",
             "icon": "none",
-            "row_content": "",
+            "row_content": "<p>במידה ולא קיבלת אישור הזמנה לדואר האלקטרוני האישי שלך עלייך לפנות ל<span style=\"text-decoration:underline\">מוקד שירות הלקוחות<\/span> שלנו.<\/p>",
             "page": ""
           }
         },
         "template--16015997108364__6539bbd9-86c9-4408-80b1-3e7e03ff7cae-collapsible_row-4": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "שאלה 4",
+            "heading": "תוך כמה זמן ניתן לבטל את ההזמנה?",
             "icon": "none",
+            "row_content": "<p>ניתן לבטל הזמנה בכל עת כל עוד ההזמנה אינה נארזה.<\/p><p>במידה והזמנתך נארזה ונשלחה, עלייך לבצע החזרה כמפורט <span style=\"text-decoration:underline\">במדיניות החזרות והחלפות<\/span> שלנו לאחר קבלת החבילה.<\/p>",
+            "page": ""
+          }
+        },
+        "b406e619-6d43-474c-a42a-4171dae2dc86": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "האם אתם עושים משלוחים לכל הארץ?",
+            "icon": "check_mark",
+            "row_content": "<p>ניתן לבצע משלוחים לכל חלקי הארץ עד 3 ימי עסקים מלבד איזורים מרוחקים עד 5 ימי עסקים.<\/p>",
+            "page": ""
+          }
+        },
+        "2b228f57-a7f2-47a6-9d20-c31d34aceb4a": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "איך ניתן לבצע החלפה?",
+            "icon": "check_mark",
+            "row_content": "<p>ניתן לבצע החלפה באמצעות <span style=\"text-decoration:underline\">פורטל ההחלפות<\/span>באתר. במידה ואת נתקלת בקושי מסוים תוכלי ליצור קשר עם מוקד שירות הלקוחות שלנו.<\/p>",
+            "page": ""
+          }
+        },
+        "02b333b5-51d3-4e26-bfb6-0df3b5a46e67": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "66e1af33-2846-4cf7-839a-4152950b132e": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
             "row_content": "",
             "page": ""
           }
@@ -147,7 +183,11 @@
         "template--16015997108364__6539bbd9-86c9-4408-80b1-3e7e03ff7cae-collapsible_row-1",
         "template--16015997108364__6539bbd9-86c9-4408-80b1-3e7e03ff7cae-collapsible_row-2",
         "template--16015997108364__6539bbd9-86c9-4408-80b1-3e7e03ff7cae-collapsible_row-3",
-        "template--16015997108364__6539bbd9-86c9-4408-80b1-3e7e03ff7cae-collapsible_row-4"
+        "template--16015997108364__6539bbd9-86c9-4408-80b1-3e7e03ff7cae-collapsible_row-4",
+        "b406e619-6d43-474c-a42a-4171dae2dc86",
+        "2b228f57-a7f2-47a6-9d20-c31d34aceb4a",
+        "02b333b5-51d3-4e26-bfb6-0df3b5a46e67",
+        "66e1af33-2846-4cf7-839a-4152950b132e"
       ],
       "custom_css": [
         ".isolate {background: var(--gradient-base-background-3);}"
