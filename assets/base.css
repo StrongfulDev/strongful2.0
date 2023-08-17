@@ -4124,3 +4124,24 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 	left: 1.5rem;
 	right: auto;
 }
+
+.page .accordion {
+	border: none;
+	margin-top: 1.5rem;
+}
+
+.page .accordion+.accordion {
+	margin-top: 1.5rem;
+}
+
+.page .accordion details {
+	background: var(--gradient-background);
+}
+
+.page .accordion summary {
+	padding: 1.5rem;
+}
+
+.page .accordion .accordion__content {
+	padding: 1.5rem;
+}

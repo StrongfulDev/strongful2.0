@@ -23,3 +23,16 @@ div.custom-link-grid-item.grid__item {
 .faq-square-link-text {
 	margin:  1rem 0 0;
 }
+
+.custom-link-grid-item.active {
+	background: var(--gradient-base-accent-1);
+	color: var(--gradient-background);
+}
+
+.custom-link-grid-item.active h4 {
+	color: var(--gradient-background);
+}
+
+.custom-link-grid-item.active .icon-faq-main {
+	fill: var(--gradient-background);
+}
