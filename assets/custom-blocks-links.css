@@ -1,7 +1,8 @@
 .custom-blocks-links-container {
 	margin-bottom: 0;
 	background: var(--gradient-base-background-3);
-	padding: 1.5rem;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
 	gap: calc(var(--grid-desktop-vertical-spacing) * 2);
 }
 
@@ -35,4 +36,15 @@ div.custom-link-grid-item.grid__item {
 
 .custom-link-grid-item.active .icon-faq-main {
 	fill: var(--gradient-background);
+}
+
+@media screen and (min-width: 990px) {
+	.custom-blocks-links-container {
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+
+	div.custom-link-grid-item.grid__item {
+		width: calc(23% - var(--grid-mobile-horizontal-spacing) / 2);
+	}
 }

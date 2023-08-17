@@ -13,11 +13,13 @@
 
 .breadcrumbs__link {
 	text-decoration: none;
-	color: var(--gradient-base-accent-1);
+	color: var(--gradient-base-background-4);
+	font-size: calc(var(--font-body-size-medium) * 0.9);
 }
 
 .breadcrumbs__link[aria-current="page"] {
 	font-weight: var(--font-body-weight-bold);
+	color: var(--gradient-base-accent-1);
 }
 
 .breadcrumbs__item:not(:last-child):after {

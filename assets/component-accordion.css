@@ -80,9 +80,28 @@ product__accordion .accordion__title {
 }
 
 .collapsible-search {
-	margin: auto;
+	margin: auto auto 1rem;
 	width: 80%;
 	border-radius: var(--inputs-radius);
 	border: none;
 	padding: 1rem;
+}
+
+.page .collapsible-content-wrapper-narrow {
+	max-width: inherit;
+}
+
+h2.collapsible-content__heading.h1 {
+	font-size: var(--font-body-size-large);
+}
+
+@media screen and (min-width: 990px) {
+	.page .collapsible-content-wrapper-narrow {
+		max-width: 90%;
+	}
+
+	.collapsible-search {
+		margin-bottom: 2rem;
+		width: 50%;
+	}
 }
