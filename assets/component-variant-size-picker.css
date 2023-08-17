@@ -186,8 +186,8 @@
 }
 
 .variant_modal .size_variant_button_add .icon {
-    width: 10px;
-    height: 10px;
+    width: 10px !important;
+    height: 10px !important;
 }
 
 .variant_modal .quick_add_modal__close {

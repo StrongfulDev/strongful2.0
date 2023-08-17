@@ -4104,6 +4104,11 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 	list-style: none;
 }
 
+#page .icon-close {
+	width: 1rem !important;
+	height: 1rem !important;
+}
+
 .page .image-with-text__text-item.grid__item {
 	display: none;
 }
