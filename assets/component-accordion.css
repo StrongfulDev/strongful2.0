@@ -114,4 +114,8 @@ h2.collapsible-content__heading.h1 {
 	.collapsible-search+.grid__item {
 		width: 100%;
 	}
+
+	.page .accordion details[open] summary {
+		background: rgba(var(--color-foreground),.04);
+	}
 }
