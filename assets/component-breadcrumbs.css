@@ -1,11 +1,14 @@
+.breadcrumbs-section {
+	background: var(--gradient-base-background-3);
+}
+
 .breadcrumbs__list {
 	padding: 0;
 	margin: 0;
 	list-style: none;
 	display: flex;
 	justify-content: center;
-	background: var(--gradient-base-background-3);
-	column-gap: var(--grid-desktop-horizontal-spacing);
+	column-gap: var(--grid-mobile-horizontal-spacing);
 }
 
 .breadcrumbs__link {
