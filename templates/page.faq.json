@@ -66,15 +66,15 @@
           "type": "block",
           "settings": {
             "icon": "returns",
-            "text": "מדיניות החזרות",
+            "text": "פורטל החלפות והחזרות",
             "url": "https:\/\/strongful.co.il"
           }
         },
         "fe444ca8-e3cb-4330-976d-7be531b22d3a": {
           "type": "block",
           "settings": {
-            "icon": "returns",
-            "text": "מועדון לקוחות",
+            "icon": "delivery",
+            "text": "משלוחים",
             "url": "https:\/\/strongful.co.il"
           }
         },
