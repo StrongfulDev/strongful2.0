@@ -1,8 +1,10 @@
+{{ 'component-breadcrumbs.css' | asset_url | stylesheet_tag }}
+
 {%- unless template == 'index' or template == 'cart' or template == 'list-collections' or template == '404' -%}
     {%- assign t = template | split: '.' | first -%}
 
-    <nav class="breadcrumbs {% unless section.settings.show_on_mobile %}desktop-only{% endunless %}" role="navigation" aria-label="breadcrumbs">
-        <ol class="breadcrumbs__list">
+    <nav class="breadcrumbs page-width fix-direction {% unless section.settings.show_on_mobile %}desktop-only{% endunless %}" role="navigation" aria-label="breadcrumbs">
+        <ul class="breadcrumbs__list">
             <li class="breadcrumbs__item">
                 <a class="breadcrumbs__link" href="/">{{ 'general.breadcrumbs.homepage' | t }}</a>
             </li>
@@ -60,7 +62,7 @@
                         <a class="breadcrumbs__link" href="{{ request.path }}" aria-current="page">{{ page_title }}</a>
                     </li>
             {%- endcase -%}
-        </ol>
+        </ul>
     </nav>
 {%- endunless -%}
 
