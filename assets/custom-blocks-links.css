@@ -47,4 +47,16 @@ div.custom-link-grid-item.grid__item {
 	div.custom-link-grid-item.grid__item {
 		width: calc(23% - var(--grid-mobile-horizontal-spacing) / 2);
 	}
+
+	.custom-link-grid-item:hover {
+		background: var(--gradient-base-accent-1);
+	}
+
+	.custom-link-grid-item:hover .icon-faq-main {
+		fill: var(--gradient-background);
+	}
+
+	.custom-link-grid-item:hover h4 {
+		color: var(--gradient-background);
+	}
 }
