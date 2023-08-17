@@ -35,8 +35,8 @@
 
 .spinner {
   animation: rotator 1.4s linear infinite;
-	width: 2rem !important;
-	height: 2rem !important;
+	width: auto !important;
+	height: auto !important;
 }
 
 @keyframes rotator {

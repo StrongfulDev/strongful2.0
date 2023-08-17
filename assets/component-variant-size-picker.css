@@ -372,8 +372,8 @@ ul.default_variant_list {
 	top: 50%;
 	bottom: 0;
 	left: 0;
-	width: 1.7rem;
-	height: 1.7rem;
+	width: 1.7rem !important;
+	height: 1.7rem !important;
 	padding: 0;
 	transform: translate(20%, -50%);
 	stroke: var(--color-foreground);
