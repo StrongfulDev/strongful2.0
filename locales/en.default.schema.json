@@ -3734,6 +3734,9 @@
     "collapsible_content": {
       "name": "Collapsible content",
       "settings": {
+        "has_search": {
+          "label": "Enable search"
+        },
         "caption": {
           "label": "Caption"
         },
