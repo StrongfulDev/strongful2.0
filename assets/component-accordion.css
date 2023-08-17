@@ -84,7 +84,7 @@ product__accordion .accordion__title {
 	width: 80%;
 	border-radius: var(--inputs-radius);
 	border: none;
-	padding: 1rem;
+	padding: 2rem;
 }
 
 .page .collapsible-content-wrapper-narrow {
@@ -92,7 +92,8 @@ product__accordion .accordion__title {
 }
 
 h2.collapsible-content__heading.h1 {
-	font-size: var(--font-body-size-large);
+	font-size: calc(var(--font-body-size-medium) * 1.1);
+	margin-bottom: 3rem;
 }
 
 @media screen and (min-width: 990px) {
@@ -101,7 +102,7 @@ h2.collapsible-content__heading.h1 {
 	}
 
 	.collapsible-search {
-		margin-bottom: 2rem;
+		margin-bottom: 3rem;
 		width: 50%;
 	}
 }
