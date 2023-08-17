@@ -81,9 +81,9 @@
         "89f0d758-d1d3-4026-9768-790087b10b6b": {
           "type": "block",
           "settings": {
-            "icon": "returns",
-            "text": "צרי קשר",
-            "url": "https:\/\/strongful.co.il"
+            "icon": "loyalty",
+            "text": "מועדון לקוחות",
+            "url": "shopify:\/\/pages\/a-list"
           }
         }
       },
