@@ -1,6 +1,7 @@
 {{ 'component-accordion.css' | asset_url | stylesheet_tag }}
 {{ 'collapsible-content.css' | asset_url | stylesheet_tag }}
 {{ 'component-rte.css' | asset_url | stylesheet_tag }}
+{{ 'component-accordion.js' | asset_url | script_tag }}
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -53,6 +54,9 @@
               </div>
             </div>
           {% endif %}
+            {%- if section.settings.has_search -%}
+                <input type="text" id="search-input" placeholder="{{ section.settings.search_placeholder }}" class="collapsible-search">
+            {%- endif -%}
           <div class="grid__item">
             {%- for block in section.blocks -%}
               <div
@@ -105,6 +109,12 @@
       "id": "has_search",
       "default": false,
       "label": "t:sections.collapsible_content.settings.has_search.label"
+    },
+    {
+      "type": "text",
+      "id": "search_placeholder",
+      "default": "חיפוש",
+      "label": "t:sections.collapsible_content.settings.search_placeholder.label"
     },
     {
       "type": "text",
