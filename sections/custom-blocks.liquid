@@ -1,4 +1,5 @@
 {{ 'custom-blocks-links.css' | asset_url | stylesheet_tag }}
+{{ 'custom-blocks-links.js' | asset_url | script_tag }}
 
 <div class="custom-blocks-links-container fix-direction page-width grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down">
     {% for block in section.blocks %}
