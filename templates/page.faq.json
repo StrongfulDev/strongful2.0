@@ -204,6 +204,15 @@
             "row_content": "<p>לא ניתן להחליף \/ להחזיר פריטים שנלבשו ועברו שימוש.<\/p>",
             "page": ""
           }
+        },
+        "582eae25-8c30-4bc9-8677-fb24c81a7b39": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "קיבלתי מוצר לא תקין מה אפשר לעשות?",
+            "icon": "none",
+            "row_content": "<p>במידה וקיבלת מוצר לא תקין עלייך לפנות ל<span style=\"text-decoration:underline\">מוקד שירות הלקוחות<\/span> שלנו יחד עם מספר הזמנה, שם מלא ופירוט המקרה.<\/p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -217,7 +226,8 @@
         "66e1af33-2846-4cf7-839a-4152950b132e",
         "5be0e8ca-983c-471c-97c7-01368583f05b",
         "6452def7-9eb1-4657-8785-aff9f59653ba",
-        "f1b29138-4b90-4e09-abd4-9fd77862275a"
+        "f1b29138-4b90-4e09-abd4-9fd77862275a",
+        "582eae25-8c30-4bc9-8677-fb24c81a7b39"
       ],
       "custom_css": [
         ".isolate {background: var(--gradient-base-background-3);}"
