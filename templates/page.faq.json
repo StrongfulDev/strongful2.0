@@ -48,7 +48,7 @@
     "fea3806d-5cd9-4614-b900-582d14b506cc": {
       "type": "breadcrumbs-nav",
       "settings": {
-        "show_on_mobile": false
+        "show_on_mobile": true
       }
     },
     "1ef8f7d0-06ea-48b5-9b95-6c8c299a8f84": {
