@@ -67,7 +67,7 @@
           "settings": {
             "icon": "returns",
             "text": "פורטל החלפות והחזרות",
-            "url": "https:\/\/strongful.co.il"
+            "url": "https:\/\/strongful.co.il\/a\/return"
           }
         },
         "fe444ca8-e3cb-4330-976d-7be531b22d3a": {
@@ -218,7 +218,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "איך אוכל להתעדכן בקולקציות חדשות?",
-            "icon": "check_mark",
+            "icon": "none",
             "row_content": "<p>חברות מועדון ורשומות דיוור מתעדכנות על כל קולקציה חדשה וקמפיין שעולים לאתר, ניתן להירשם בקלות ובחינם <span style=\"text-decoration:underline\">עמוד מועדון הלקוחות<\/span><\/p>",
             "page": ""
           }
