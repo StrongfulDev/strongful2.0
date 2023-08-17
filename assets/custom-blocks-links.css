@@ -23,6 +23,7 @@ div.custom-link-grid-item.grid__item {
 
 .faq-square-link-text {
 	margin:  1rem 0 0;
+	font-weight: var(--font-body-weight-bold);
 }
 
 .custom-link-grid-item.active {
