@@ -213,6 +213,15 @@
             "row_content": "<p>במידה וקיבלת מוצר לא תקין עלייך לפנות ל<span style=\"text-decoration:underline\">מוקד שירות הלקוחות<\/span> שלנו יחד עם מספר הזמנה, שם מלא ופירוט המקרה.<\/p>",
             "page": ""
           }
+        },
+        "b1ff9585-b5a1-4b3e-a910-0a2cd17c233e": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "איך אוכל להתעדכן בקולקציות חדשות?",
+            "icon": "check_mark",
+            "row_content": "<p>חברות מועדון ורשומות דיוור מתעדכנות על כל קולקציה חדשה וקמפיין שעולים לאתר, ניתן להירשם בקלות ובחינם <span style=\"text-decoration:underline\">עמוד מועדון הלקוחות<\/span><\/p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -227,7 +236,8 @@
         "5be0e8ca-983c-471c-97c7-01368583f05b",
         "6452def7-9eb1-4657-8785-aff9f59653ba",
         "f1b29138-4b90-4e09-abd4-9fd77862275a",
-        "582eae25-8c30-4bc9-8677-fb24c81a7b39"
+        "582eae25-8c30-4bc9-8677-fb24c81a7b39",
+        "b1ff9585-b5a1-4b3e-a910-0a2cd17c233e"
       ],
       "custom_css": [
         ".isolate {background: var(--gradient-base-background-3);}"
