@@ -6,7 +6,7 @@
         ".isolate {background: var(--gradient-base-background-3);}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/logo_43e8a990-4566-4a4b-b0cc-e5ffb93ad479.png",
+        "image": "shopify:\/\/shop_images\/question.svg",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "image_first",
