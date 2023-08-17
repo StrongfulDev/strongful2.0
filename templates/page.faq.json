@@ -145,6 +145,7 @@
         ".isolate {background: var(--gradient-base-background-3);}"
       ],
       "settings": {
+        "has_search": true,
         "caption": "",
         "heading": "{{ page.title }}",
         "heading_size": "h1",
