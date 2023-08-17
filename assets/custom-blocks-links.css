@@ -13,6 +13,11 @@
 	width: 3.5rem;
 }
 
+.icon-faq {
+	width: 3rem;
+	height: 3rem;
+}
+
 .custom-link-grid-item {
 	padding: 3rem 1rem;
 	background: var(--gradient-background);
@@ -59,5 +64,10 @@ div.custom-link-grid-item.grid__item {
 	.icon-faq-main {
 		width: 5rem;
 		height: 5rem;
+	}
+
+	.icon-faq {
+		width: 4.2rem;
+		height: 4.2rem;
 	}
 }
