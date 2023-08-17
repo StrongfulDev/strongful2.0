@@ -83,8 +83,13 @@ product__accordion .accordion__title {
 	margin: auto auto 2rem;
 	width: 80%;
 	border-radius: var(--inputs-radius);
-	border: none;
+	border: 2px solid var(--gradient-background);
 	padding: 1rem;
+}
+
+.collapsible-search:focus {
+	background: var(--gradient-base-background-4);
+	border: 2px solid var(--gradient-base-accent-1);
 }
 
 .page .collapsible-content-wrapper-narrow {

@@ -4146,7 +4146,7 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 }
 
 .page .accordion summary {
-	padding: 1.5rem;
+	padding: 2rem 1.5rem;
 }
 
 .page .accordion .accordion__content {

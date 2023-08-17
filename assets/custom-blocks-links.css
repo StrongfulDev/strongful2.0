@@ -14,6 +14,7 @@
 .custom-link-grid-item {
 	padding: 3rem 1rem;
 	background: var(--gradient-background);
+	border: 1px var(--gradient-background) solid;
 	border-radius: var(--inputs-radius);
 }
 
@@ -27,16 +28,11 @@ div.custom-link-grid-item.grid__item {
 }
 
 .custom-link-grid-item.active {
-	background: var(--gradient-base-accent-1);
-	color: var(--gradient-background);
+	border: 1px var(--gradient-base-accent-1) solid;
 }
 
-.custom-link-grid-item.active h4 {
-	color: var(--gradient-background);
-}
-
-.custom-link-grid-item.active .icon-faq-main {
-	fill: var(--gradient-background);
+.custom-blocks-links-url {
+	text-decoration: none;
 }
 
 @media screen and (min-width: 990px) {
@@ -50,24 +46,12 @@ div.custom-link-grid-item.grid__item {
 		padding: 5rem 1rem;
 	}
 
-	.custom-blocks-links-url {
-		text-decoration: none;
-	}
-
 	.faq-square-link-text {
 		margin: 2rem 0 0;
 	}
 
 	.custom-link-grid-item:hover {
-		background: var(--gradient-base-accent-1);
-	}
-
-	.custom-link-grid-item:hover .icon-faq-main {
-		fill: var(--gradient-background);
-	}
-
-	.custom-link-grid-item:hover h4 {
-		color: var(--gradient-background);
+		border: 1px var(--gradient-base-accent-1) solid;
 	}
 
 	.icon-faq-main {

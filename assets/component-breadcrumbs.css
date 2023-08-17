@@ -18,7 +18,6 @@
 }
 
 .breadcrumbs__link[aria-current="page"] {
-	font-weight: var(--font-body-weight-bold);
 	color: var(--gradient-base-accent-1);
 }
 
