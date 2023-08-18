@@ -117,6 +117,20 @@
 {
   "name": "t:sections.main-cart-footer.name",
   "class": "cart__footer-wrapper",
+    "settings": [
+        {
+            "type": "checkbox",
+            "id": "show_cart_note",
+            "label": "t:sections.main-cart-footer.settings.show_cart_note.label",
+            "default": false
+        },
+        {
+            "type": "checkbox",
+            "id": "show_tax_note",
+            "label": "t:sections.main-cart-footer.settings.show_tax_note.label",
+            "default": true
+        }
+    ],
   "blocks": [
     {
       "type": "subtotal",
@@ -131,6 +145,20 @@
     {
       "type": "@app"
     }
-  ]
+  ],
+    "presets": [
+        {
+            "name": "t:sections.main-cart-footer.presets.default.name",
+            "category": "t:sections.main-cart-footer.presets.default.category",
+            "blocks": [
+                {
+                  "type": "subtotal"
+                },
+                {
+                  "type": "buttons"
+                }
+            ]
+        }
+    ]
 }
 {% endschema %}
