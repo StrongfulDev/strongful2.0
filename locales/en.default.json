@@ -327,10 +327,10 @@
       "empty": "הסל שלך ריק",
       "empty_paragraph": "לחצי כאן לראות מה חדש",
       "cart_error": "אירעה שגיאה בעת טעינת הסל",
-      "cart_quantity_error_html": "You can only add {{ quantity }} of this item to your cart.",
-      "taxes_and_shipping_policy_at_checkout_html": "Taxes and <a href=\"{{ link }}\">shipping<\/a> calculated at checkout",
+      "cart_quantity_error_html": "ניתן להוסיף רק {{ quantity }} מפריט זה לסל הקניות.",
+      "taxes_and_shipping_policy_at_checkout_html": "<a href=\"{{ link }}\">משלוח<\/a> יחושב בשלבים הבאים.",
       "taxes_included_but_shipping_at_checkout": "מסים כלולים. משלוח יחושב בקופה",
-      "taxes_included_and_shipping_policy_html": "Tax included. <a href=\"{{ link }}\">Shipping<\/a> calculated at checkout.",
+      "taxes_included_and_shipping_policy_html": "<a href=\"{{ link }}\">משלוח<\/a> יחושב בשלבים הבאים.",
       "taxes_and_shipping_at_checkout": "מסים ומשלוח יחושבו בקופה",
       "headings": {
         "product": "מוצר",
