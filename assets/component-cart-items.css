@@ -5,7 +5,7 @@
 }
 
 .cart-items th {
-  text-align: left;
+  text-align: var(--text-alignment);
   padding-bottom: 1.8rem;
   opacity: 0.85;
   font-weight: normal;
@@ -359,6 +359,10 @@ cart-remove-button .icon-remove {
 
   .cart-items thead th:first-child {
     width: 60%;
+  }
+
+  #main-cart-items .cart-items tbody {
+	  display: table-row-group;
   }
 }
 
