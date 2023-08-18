@@ -210,7 +210,7 @@
           "settings": {
             "heading": "קיבלתי מוצר לא תקין מה אפשר לעשות?",
             "icon": "none",
-            "row_content": "<p>במידה וקיבלת מוצר לא תקין עלייך לפנות ל<span style=\"text-decoration:underline\">מוקד שירות הלקוחות<\/span> שלנו יחד עם מספר הזמנה, שם מלא ופירוט המקרה.<\/p>",
+            "row_content": "<p>במידה וקיבלת מוצר לא תקין עלייך לפנות ל<a href=\"https:\/\/wa.me\/972533076158\" title=\"https:\/\/wa.me\/972533076158\"><span style=\"text-decoration:underline\">מוקד שירות הלקוחות<\/span><\/a> שלנו יחד עם מספר הזמנה, שם מלא ופירוט המקרה.<\/p>",
             "page": ""
           }
         },
@@ -219,7 +219,7 @@
           "settings": {
             "heading": "איך אוכל להתעדכן בקולקציות חדשות?",
             "icon": "none",
-            "row_content": "<p>חברות מועדון ורשומות דיוור מתעדכנות על כל קולקציה חדשה וקמפיין שעולים לאתר, ניתן להירשם בקלות ובחינם <span style=\"text-decoration:underline\">עמוד מועדון הלקוחות<\/span><\/p>",
+            "row_content": "<p>חברות מועדון ורשומות דיוור מתעדכנות על כל קולקציה חדשה וקמפיין שעולים לאתר, ניתן להירשם בקלות ובחינם <a href=\"\/pages\/a-list\" title=\"A-LIST\"><span style=\"text-decoration:underline\">עמוד מועדון הלקוחות<\/span><\/a><\/p>",
             "page": ""
           }
         }
