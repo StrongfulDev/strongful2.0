@@ -290,24 +290,24 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                                 {% if section.settings.mobile_top_image_1 != nil %}
                                                 <{% if section.settings.mobile_top_image_1_link != "" %}a href="{{ section.settings.mobile_top_image_1_link }}" {% else %}div class="desktop_links_image_1_container"{% endif %}>
                                                     {%- assign height = section.settings.mobile_top_image_1.width | divided_by: section.settings.mobile_top_image_1.aspect_ratio | round -%}
-                                                    {{ section.settings.mobile_top_image_1 | image_url: width: 600 | image_tag:
+                                                    {{ section.settings.mobile_top_image_1 | image_url: width: 1000 | image_tag:
                                                     loading: 'lazy',
                                                     height: height,
                                                     class: "desktop_links_image_1",
                                                     sizes: "100vw",
-                                                    widths: '600'
+                                                    widths: '1000'
                                                     }}
                                                     </{% if section.settings.mobile_top_image_1_link != "" %}a{% else %}div{% endif %}>
                                                     {% endif %}
                                                     {% if section.settings.mobile_top_image_2 != nil %}
                                                     <{% if section.settings.mobile_top_image_2_link != "" %}a href="{{ section.settings.mobile_top_image_2_link }}" {% else %}div class="desktop_links_image_1_container"{% endif %}>
                                                         {%- assign height = section.settings.mobile_top_image_2.width | divided_by: section.settings.mobile_top_image_2.aspect_ratio | round -%}
-                                                        {{ section.settings.mobile_top_image_2 | image_url: width: 600 | image_tag:
+                                                        {{ section.settings.mobile_top_image_2 | image_url: width: 1000 | image_tag:
                                                         loading: 'lazy',
                                                         height: height,
                                                         class: "desktop_links_image_1",
                                                         sizes: "100vw",
-                                                        widths: '600'
+                                                        widths: '1000'
                                                         }}
                                                         </{% if section.settings.mobile_top_image_2_link != "" %}a{% else %}div{% endif %}>
                                                         {% endif %}
@@ -544,7 +544,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
 
                                             <div class="menu_images">
                                                 <a href="{{ section.settings.mobile_top_image_1_link }}" class="dropdown-image-container">
-                                                    <img src="{{ section.settings.mobile_top_image_1 | image_url: width: 700 }}" alt="{{ section.settings.mobile_top_image_1.alt | escape }}" class="motion-reduce">
+                                                    <img src="{{ section.settings.mobile_top_image_1 | image_url: width: 1000 }}" alt="{{ section.settings.mobile_top_image_1.alt | escape }}" class="motion-reduce">
                                                     <div class="desktop_links_image_1_title">
                                                             <span>
                                                                 {{ section.settings.mobile_top_image_1_title }}
@@ -556,7 +556,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                                 </a>
 
                                                 <a href="{{ section.settings.mobile_top_image_2_link }}" class="dropdown-image-container">
-                                                    <img src="{{ section.settings.mobile_top_image_2 | image_url: width: 700 }}" alt="{{ section.settings.mobile_top_image_2.alt | escape }}" class="motion-reduce">
+                                                    <img src="{{ section.settings.mobile_top_image_2 | image_url: width: 1000 }}" alt="{{ section.settings.mobile_top_image_2.alt | escape }}" class="motion-reduce">
                                                     <div class="desktop_links_image_1_title">
                                                             <span>
                                                                 {{ section.settings.mobile_top_image_2_title }}
