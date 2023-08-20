@@ -719,7 +719,6 @@ class SliderComponent extends HTMLElement {
 			this.progressBar.style.width = `${100 / this.totalPages}%`;
 		}
 	}
-
   update() {
     // Temporarily prevents unneeded updates resulting from variant changes
     // This should be refactored as part of https://github.com/Shopify/dawn/issues/2057
