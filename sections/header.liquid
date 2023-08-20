@@ -797,12 +797,12 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                                     {% if block.settings.desktop_links_image_1 != nil %}
                                                     <{% if block.settings.desktop_links_image_1_link != "" %}a href="{{ block.settings.desktop_links_image_1_link }}" {% else %}div class="desktop_links_image_1_container"{% endif %}>
                                                         {%- assign height = block.settings.desktop_links_image_1.width | divided_by: block.settings.desktop_links_image_1.aspect_ratio | round -%}
-                                                        {{ block.settings.desktop_links_image_1 | image_url: width: 600 | image_tag:
+                                                        {{ block.settings.desktop_links_image_1 | image_url: width: 1000 | image_tag:
                                                         loading: 'lazy',
                                                         height: height,
                                                         class: "desktop_links_image_1",
                                                         sizes: "100vw",
-                                                        widths: '600'
+                                                        widths: '1000'
                                                         }}
                                                         </{% if block.settings.desktop_links_image_1_link != "" %}a{% else %}div{% endif %}>
 
@@ -810,11 +810,11 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                                         {% if block.settings.desktop_links_image_2 != nil %}
                                                         <{% if block.settings.desktop_links_image_2_link != "" %}a href="{{ block.settings.desktop_links_image_2_link }}" {% else %}div class="desktop_links_image_2_container"{% endif %}>
                                                             {%- assign height = block.settings.desktop_links_image_2.width | divided_by: block.settings.desktop_links_image_2.aspect_ratio | round -%}
-                                                            {{ block.settings.desktop_links_image_2 | image_url: width: 600 | image_tag:
+                                                            {{ block.settings.desktop_links_image_2 | image_url: width: 1000 | image_tag:
                                                             loading: 'lazy',
                                                             height: height,
                                                             sizes: "100vw",
-                                                            widths: '600'
+                                                            widths: '1000'
                                                             }}
                                                             </{% if block.settings.desktop_links_image_2_link != "" %}a{% else %}div{% endif %}>
                                                             {% endif %}
@@ -877,12 +877,12 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                                     {% if block.settings.desktop_links_image_1 != nil %}
                                                     <{% if block.settings.desktop_links_image_1_link != "" %}a href="{{ block.settings.desktop_links_image_1_link }}" {% else %}div class="desktop_links_image_1_container"{% endif %}>
                                                         {%- assign height = block.settings.desktop_links_image_1.width | divided_by: block.settings.desktop_links_image_1.aspect_ratio | round -%}
-                                                        {{ block.settings.desktop_links_image_1 | image_url: width: 600 | image_tag:
+                                                        {{ block.settings.desktop_links_image_1 | image_url: width: 1000 | image_tag:
                                                         loading: 'lazy',
                                                         height: height,
                                                         class: "desktop_links_image_1",
                                                         sizes: "100vw",
-                                                        widths: '600'
+                                                        widths: '1000'
                                                         }}
                                                         </{% if block.settings.desktop_links_image_1_link != "" %}a{% else %}div{% endif %}>
 
@@ -890,11 +890,11 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                                         {% if block.settings.desktop_links_image_2 != nil %}
                                                         <{% if block.settings.desktop_links_image_2_link != "" %}a href="{{ block.settings.desktop_links_image_2_link }}" {% else %}div class="desktop_links_image_2_container"{% endif %}>
                                                             {%- assign height = block.settings.desktop_links_image_2.width | divided_by: block.settings.desktop_links_image_2.aspect_ratio | round -%}
-                                                            {{ block.settings.desktop_links_image_2 | image_url: width: 600 | image_tag:
+                                                            {{ block.settings.desktop_links_image_2 | image_url: width: 1000 | image_tag:
                                                             loading: 'lazy',
                                                             height: height,
                                                             sizes: "100vw",
-                                                            widths: '600'
+                                                            widths: '1000'
                                                             }}
                                                             </{% if block.settings.desktop_links_image_2_link != "" %}a{% else %}div{% endif %}>
                                                             {% endif %}
