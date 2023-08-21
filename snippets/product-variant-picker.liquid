@@ -124,6 +124,7 @@
         </fieldset>
       {%- endfor -%}
         <div class="size-table-stock-container">
+            <div id="KiwiSizingChart"></div>
             {% unless product.tags contains 'noSizeTable' %}
                 <p class="size-table-toggler pointer product-form__cart-submit">{{ 'products.product.size_table' | t }}</p>
                 {% unless product.tags contains 'dead-product' %}
