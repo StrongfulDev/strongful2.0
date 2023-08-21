@@ -1,17 +1,6 @@
-{%- comment -%}
-This file has been modified by the Yoast SEO for Shopify app.
-You can learn more about this (and learn how to cleanly revert these changes) at https://yoa.st/removing-theme-changes.
-{%- endcomment -%}
-{%- liquid
-	assign disabled_by_yoast_seo = true
-	if content_for_header contains 'yoast-active-script'
-		assign disabled_by_yoast_seo = false
-	endif
--%}
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
-  <head>{% render 'yoast-seo' %}
-
+  <head>
       <!-- Google Tag Manager -->
       <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -24,11 +13,8 @@ You can learn more about this (and learn how to cleanly revert these changes) at
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta name="theme-color" content="">
-    {%- comment -%}Auto-disabled. Yoast plugin is taking care of Meta Tags output.{%- endcomment -%}
-{%- if disabled_by_yoast_seo -%}
+
 <link rel="canonical" href="{{ canonical_url }}">
-{%- comment -%} End Yoast auto-disable. {%- endcomment -%}
-{%- endif -%}
     <link
       rel="preconnect"
       href="https://cdn.shopify.com"
@@ -51,8 +37,6 @@ You can learn more about this (and learn how to cleanly revert these changes) at
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    {%- comment -%}Auto-disabled. Yoast plugin is taking care of SEO output.{%- endcomment -%}
-{%- if disabled_by_yoast_seo -%}
 <title>
         {{ page_title }}
         {%- if current_tags %}
@@ -62,15 +46,9 @@ You can learn more about this (and learn how to cleanly revert these changes) at
         {%- unless page_title contains shop.name %}
             &ndash; {{ shop.name }}{% endunless -%}
     </title>
-{%- comment -%} End Yoast auto-disable. {%- endcomment -%}
-{%- endif -%}
 
     {% if page_description %}
-        {%- comment -%}Auto-disabled. Yoast plugin is taking care of Meta Tags output.{%- endcomment -%}
-{%- if disabled_by_yoast_seo -%}
-<meta name="description" content="{{ page_description | escape }}">
-{%- comment -%} End Yoast auto-disable. {%- endcomment -%}
-{%- endif -%}
+        <meta name="description" content="{{ page_description | escape }}">
     {% endif %}
 
     {% render 'meta-tags' %}
