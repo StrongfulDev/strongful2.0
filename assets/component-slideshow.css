@@ -238,7 +238,7 @@ button.slideshow__autoplay {
 }
 
 .slideshow__slide.grid__item.grid--1-col.slider__slide:nth-of-type(2) .slideshow__text.banner__box {
-	bottom: 37vh;
+	/*bottom: 37vh;*/
 	/*left: 12vw;*/
 	/*transform: translateX(0);*/
 }
