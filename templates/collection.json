@@ -19,8 +19,8 @@
         ".media > *:not(.zoom):not(.deferred-media__poster-button),.media model-viewer {position: static; object-fit: cover;}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/0_a8ba2f1c-ea0b-44ed-add6-e3a7adb507bc.jpg",
-        "mobile_image": "shopify:\/\/shop_images\/0_0413f91d-6ed4-473a-9eb3-2a141dcc482a.jpg",
+        "image": "shopify:\/\/shop_images\/0_a44ff495-26a1-4229-badf-f63eeadfef49.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/0_3d7a636c-e25e-4edd-9b49-259705d3b4d2.jpg",
         "image_overlay_opacity": 0,
         "image_height": "auto",
         "desktop_content_position": "middle-center",
