@@ -70,7 +70,7 @@
             "order": "",
             "small_font": false,
             "menu": "trending",
-            "menu_second": "",
+            "menu_second": "trending-without-10",
             "menu_third": "",
             "title": "COLLECTIONS",
             "item_class": "",
