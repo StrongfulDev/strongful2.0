@@ -470,6 +470,8 @@
                         <span>
                           {% if filter.label contains 'type' %}
                             {{ 'products.facets.product_type' | t }}
+                              {% elsif filter.label contains "filter" %}
+                              אחוז הנחה
                           {% else %}
                             {{ filter.label | escape }}
                           {% endif %}
