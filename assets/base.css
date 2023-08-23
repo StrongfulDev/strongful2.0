@@ -4154,6 +4154,6 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 	padding: 1.5rem;
 }
 
-.bis-reset {
+.bis-reset, #BIS_trigger {
 	display: none;
 }
