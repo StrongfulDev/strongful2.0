@@ -4157,3 +4157,13 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 .bis-reset.bis-rotate-90 {
 	display: none;
 }
+
+#BIS_trigger {
+	font-size: calc(var(--font-body-size-medium) * 1.1);
+	background: none;
+	border: none;
+	text-decoration: underline;
+	padding: 0;
+	margin: 0;
+	line-height: 0 !important;
+}
