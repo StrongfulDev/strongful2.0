@@ -270,7 +270,15 @@ ul.default_variant_list {
 	margin-bottom: 0;
 }
 
+.variant_modal .product_variants .size_variant_button_container label .BIS_trigger {
+	color: var(--gradient-base-accent-3)
+}
+
 @media screen and (min-width: 990px) {
+
+	.variant_modal .product_variants .size_variant_button_container label .BIS_trigger {
+		display: none;
+	}
 
 	.product-size-picker-container {
 		border-radius: 4px;
@@ -364,7 +372,7 @@ ul.default_variant_list {
 .disabled-variant-button label.product_size_picker__button__label,
 .disabled-variant-button .size_variant_button_container{
     background: var(--gradient-base-background-3);
-		pointer-events: none;
+		/*pointer-events: none;*/
 }
 
 .product_size_picker__button__label .icon-checkmark {

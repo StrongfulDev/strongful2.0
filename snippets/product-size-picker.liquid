@@ -143,17 +143,24 @@
 
                                                                    class="product_size_picker__button__label">
                                                                 <span class="product_size_picker__button__label-span">
-                                                                {% if product.has_only_default_variant %}
-                                                                    {{ 'products.product.variant.default_title' | t }}
+                                                                    {% if product.has_only_default_variant %}
+                                                                        {{ 'products.product.variant.default_title' | t }}
                                                                     {% else %}
                                                                         {{ variant.title | escape }}
                                                                         <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
                                                                     {% endif %}
                                                                 </span>
 
-                                                                <div class="size_variant_button_add">
-                                                                    {% render 'icon-plus' %}
-                                                                </div>
+                                                                {% if product_disabled %}
+                                                                    <a href="#" class="BIS_trigger" data-product-data="{{ product | json | escape }}">
+                                                                        עדכנו אותי שהמידה חוזרת
+                                                                    </a>
+                                                                {% else %}
+                                                                    <div class="size_variant_button_add">
+                                                                        {% render 'icon-plus' %}
+                                                                    </div>
+                                                                {% endif %}
+
                                                                 {% render "loading-spinner" %}
                                                                 {% render 'icon-checkmark' %}
                                                             </label>
