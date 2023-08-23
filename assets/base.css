@@ -4153,3 +4153,7 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 .page .accordion .accordion__content {
 	padding: 1.5rem;
 }
+
+.bis-reset {
+	display: none;
+}
