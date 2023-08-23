@@ -504,6 +504,8 @@
 	.header-block-list-element:first-child .mega-menu__content.fix-direction ul:nth-child(3) li:first-child a {
 		color: firebrick;
 		direction: ltr;
+		text-decoration: none;
+		font-weight: var(--font-body-weight-bold);
 	}
 
 	.header-block-list-element:first-child .mega-menu__content.fix-direction ul:nth-child(2) li a {
