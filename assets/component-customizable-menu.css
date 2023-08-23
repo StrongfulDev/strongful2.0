@@ -433,7 +433,11 @@
 		grid-template-columns: repeat(3, auto);
 	}
 
-	#MegaMenu-Content-2 {
+	/*#MegaMenu-Content-2 {*/
+	/*	grid-template-columns: 1fr 1.5fr;*/
+	/*}*/
+
+	#MegaMenu-Content-3 {
 		grid-template-columns: 1fr 1.5fr;
 	}
 

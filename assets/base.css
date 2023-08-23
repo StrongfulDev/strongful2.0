@@ -2402,7 +2402,8 @@ quantity-input button.quantity__button {
 
     .header--middle-left {
         grid-template-areas: 'heading navigation icons';
-        grid-template-columns: 1fr 3.5fr 1fr;
+        /*grid-template-columns: 1fr 3.5fr 1fr;*/
+	      grid-template-columns: 1fr 4fr 1fr;
         column-gap: 2rem;
     }
 

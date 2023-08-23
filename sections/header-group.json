@@ -70,7 +70,29 @@
             "order": "",
             "small_font": false,
             "menu": "discount-menu",
-            "menu_second": "trending-without-10",
+            "menu_second": "",
+            "menu_third": "",
+            "title": "פריטים עד 50% הנחה",
+            "item_class": "",
+            "title_link": "",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/copy0.jpg",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/up-to-50-off",
+            "desktop_links_image_2_link": "",
+            "mobile_title": "פריטים עד 50% הנחה",
+            "main_link": "",
+            "main_title": "",
+            "shop_all_link": "",
+            "shop_all_title": ""
+          }
+        },
+        "ba94928e-5cd1-47f5-9c0a-28ea47285f01": {
+          "type": "menu_item",
+          "settings": {
+            "show_on_mobile": true,
+            "order": "",
+            "small_font": false,
+            "menu": "trending-without-10",
+            "menu_second": "",
             "menu_third": "",
             "title": "COLLECTIONS",
             "item_class": "",
@@ -203,8 +225,7 @@
             "show_on_mobile": true,
             "small_font": true,
             "title": "GIFT CARD",
-            "title_link": "shopify:\/\/products\/strongful-giftcard",
-            "menu_link_image": "shopify:\/\/shop_images\/gift_card_hamburger_2.jpg"
+            "title_link": "shopify:\/\/products\/strongful-giftcard"
           }
         },
         "69313e8a-8818-485d-9c44-529f1b10ccdd": {
@@ -219,6 +240,7 @@
       },
       "block_order": [
         "f85aad60-e115-4a90-aa7e-0cf41538e5ef",
+        "ba94928e-5cd1-47f5-9c0a-28ea47285f01",
         "8878d4cf-d83f-42a2-90b9-ddebceb7501c",
         "03fa03f7-aac1-443b-acba-9a19fb5aa148",
         "fc929aa6-aab6-4c25-be13-8267425330c3",
