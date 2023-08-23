@@ -1032,6 +1032,8 @@
                                       <span class="mobile-facets__arrow-sorting-sibling">
                                           {%- if filter.label == "Product type" -%}
                                               {{ 'products.facets.product_type' | t }}
+                                          {%- if filter.label == "filter discount" -%}
+                                              אחוז הנחה
                                           {%- else -%}
                                               {{ filter.label | escape }}
                                           {%- endif -%}
