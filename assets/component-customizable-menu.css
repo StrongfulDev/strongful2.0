@@ -426,7 +426,7 @@
 
 	.mega-menu-grid-container.two-grid {
 		grid-template-columns: 1fr 1fr;
-		column-gap: 1rem;
+		column-gap: 5rem;
 	}
 
 	.mega-menu-grid-container.three-grid {
