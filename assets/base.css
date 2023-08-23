@@ -4167,3 +4167,7 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 	margin: 0;
 	line-height: 0 !important;
 }
+
+#BIS_trigger:hover {
+	cursor: pointer;
+}
