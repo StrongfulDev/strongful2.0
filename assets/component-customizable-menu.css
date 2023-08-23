@@ -426,7 +426,7 @@
 
 	.mega-menu-grid-container.two-grid {
 		grid-template-columns: 1fr 1fr;
-		column-gap: 5rem;
+		column-gap: 1rem;
 	}
 
 	.mega-menu-grid-container.three-grid {
@@ -501,7 +501,7 @@
 		text-decoration: none;
 	}
 
-	.header-block-list-element:first-child .mega-menu__content.fix-direction ul:nth-child(3) li:first-child a {
+	.header-block-list-element:first-child .mega-menu__content.fix-direction ul:nth-child(2) li:first-child a {
 		color: firebrick;
 		direction: ltr;
 		text-decoration: none;
