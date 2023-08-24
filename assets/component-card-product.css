@@ -1,5 +1,5 @@
 .quick-add.hover {
-    /*display: none;*/
+    display: none;
 }
 
 .new-product-span {
@@ -26,7 +26,7 @@
 
 @media screen and (max-width: 749px) {
     .active-card:hover .quick-add.hover {
-        /*display: none;*/
+        display: none;
     }
 }
 
