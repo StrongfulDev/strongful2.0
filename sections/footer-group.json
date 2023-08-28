@@ -39,6 +39,7 @@
         },
         "a9419717-a674-44cb-a84f-430ad3fe645f": {
           "type": "link_list",
+          "disabled": true,
           "settings": {
             "heading_align": "right",
             "heading": "יצירת קשר",
