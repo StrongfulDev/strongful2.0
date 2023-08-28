@@ -86,6 +86,11 @@ ul, ol {
 	margin: 5px 0;
 }
 
+.article-content ol {
+	list-style: auto;
+	padding: 0 1.5rem;
+}
+
 .article-ctn--third {
 	direction: rtl;
 	text-align: center;
