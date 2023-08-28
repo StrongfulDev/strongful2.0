@@ -361,6 +361,18 @@
         "social_vimeo_link": {
           "label": "Vimeo",
           "info": "https:\/\/vimeo.com\/shopify"
+        },
+        "social_email_link": {
+          "label": "Email",
+          "info": "https:\/\/email.com\/shopify"
+        },
+        "social_phone_link": {
+          "label": "Phone",
+          "info": "https:\/\/phone.com\/shopify"
+        },
+        "social_whatsapp_link": {
+          "label": "Whatsapp",
+          "info": "https:\/\/whatsapp.com\/shopify"
         }
       }
     },
