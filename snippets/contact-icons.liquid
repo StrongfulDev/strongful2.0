@@ -1,0 +1,26 @@
+<ul class="footer__list-social list-unstyled list-social list-contact">
+    {%- if settings.social_email_link != blank -%}
+        <li class="list-social__item">
+            <a href="{{ settings.social_email_link }}" class="link list-social__link" >
+                {%- render 'icon-email' -%}
+                <span class="visually-hidden">{{ 'general.social.links.email' | t }}</span>
+            </a>
+        </li>
+    {%- endif -%}
+    {%- if settings.social_phone_link != blank -%}
+        <li class="list-social__item">
+            <a href="{{ settings.social_phone_link }}" class="link list-social__link" >
+                {%- render 'icon-phone' -%}
+                <span class="visually-hidden">{{ 'general.social.links.phone' | t }}</span>
+            </a>
+        </li>
+    {%- endif -%}
+    {%- if settings.social_whatsapp_link != blank -%}
+        <li class="list-social__item">
+            <a href="{{ settings.social_whatsapp_link }}" class="link list-social__link" >
+                {%- render 'icon-whatsapp' -%}
+                <span class="visually-hidden">{{ 'general.social.links.whatsapp' | t }}</span>
+            </a>
+        </li>
+    {%- endif -%}
+</ul>
