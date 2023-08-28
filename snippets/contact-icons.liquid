@@ -1,7 +1,7 @@
 <ul class="footer__list-social list-unstyled list-social list-contact">
     {%- if settings.social_email_link != blank -%}
         <li class="list-social__item">
-            <a href="mailto:{{ settings.social_email_link }}" class="link list-social__link" >
+            <a href="mailto:{{ settings.social_email_link }}" class="link list-social__link" target="_blank">
                 {%- render 'icon-email' -%}
                 <span class="visually-hidden">{{ 'general.social.links.email' | t }}</span>
             </a>

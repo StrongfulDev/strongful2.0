@@ -859,7 +859,7 @@ noscript .localization-selector.link {
 }
 
 .list-contact li.list-social__item:not(:first-child) {
-    margin-right: var(--grid-desktop-horizontal-spacing);
+    margin-right: calc(var(--grid-desktop-horizontal-spacing) * 2);
 }
 
 @media screen and (min-width: 990px) {
