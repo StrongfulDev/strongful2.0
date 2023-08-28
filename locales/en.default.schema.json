@@ -364,15 +364,15 @@
         },
         "social_email_link": {
           "label": "Email",
-          "info": "https:\/\/email.com\/shopify"
+          "info": "Business Email"
         },
         "social_phone_link": {
           "label": "Phone",
-          "info": "https:\/\/phone.com\/shopify"
+          "info": "Business phone Number"
         },
         "social_whatsapp_link": {
           "label": "Whatsapp",
-          "info": "https:\/\/whatsapp.com\/shopify"
+          "info": "Business Whatsapp Number"
         }
       }
     },
