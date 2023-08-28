@@ -811,7 +811,8 @@ noscript .localization-selector.link {
 	margin: calc(var(--grid-desktop-horizontal-spacing) * 2) 0;
 }
 
-.footer-blockgrid__item.footer-block--menu {
+.footer-blockgrid__item.footer-block--menu,
+.footer-blockgrid__item.contact_icons {
 	margin: 0;
 }
 
