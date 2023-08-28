@@ -25,6 +25,11 @@
     flex-wrap: wrap;
     justify-content: flex-end;
   }
+
+  .list-contact {
+    justify-content: flex-start;
+    align-items: center;
+  }
 }
 
 /* Custom Styles - Yahav */

@@ -843,6 +843,24 @@ noscript .localization-selector.link {
     padding-bottom: 2rem;
 }
 
+.list-contact svg, .list-contact svg.icon {
+    width: 30px;
+    height: 30px;
+}
+
+.list-contact svg.icon-phone, .list-contact svg.icon-whatsapp {
+    width: 24px;
+    height: 24px;
+}
+
+.list-contact li.list-social__item {
+    margin: 0;
+}
+
+.list-contact li.list-social__item:not(:first-child) {
+    margin-right: var(--grid-desktop-horizontal-spacing);
+}
+
 @media screen and (min-width: 990px) {
 
     .footer {
@@ -852,7 +870,7 @@ noscript .localization-selector.link {
     .footer .grid {
         display: grid;
         /*grid-template-columns: repeat(7, 1fr) 3fr;*/
-	      grid-template-columns: auto auto auto 1.6fr 1fr 1fr 1fr 1fr 1fr 3fr;
+	      grid-template-columns: auto auto 1.5fr 1.6fr 1fr 1fr 1fr 1fr 1fr 3fr;
         row-gap: calc(var(--grid-desktop-vertical-spacing) * 3);
         column-gap: calc(var(--grid-desktop-horizontal-spacing) * 2);
     }
@@ -960,7 +978,7 @@ noscript .localization-selector.link {
     .list-social__item:not(:last-child) {
         margin-right: calc(var(--grid-desktop-vertical-spacing) * 2);
     }
-    
+
     .footer__payment {
         margin: 0;
     }
