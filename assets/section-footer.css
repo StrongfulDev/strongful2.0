@@ -844,22 +844,35 @@ noscript .localization-selector.link {
     padding-bottom: 2rem;
 }
 
-.list-contact svg, .list-contact svg.icon {
-    width: 30px;
-    height: 30px;
+.list-contact .icon.icon-email {
+    width: 22px;
+    height: 22px;
 }
 
 .list-contact svg.icon-phone, .list-contact svg.icon-whatsapp {
-    width: 24px;
-    height: 24px;
+    width: 16px;
+    height: 16px;
 }
 
 .list-contact li.list-social__item {
     margin: 0;
 }
 
-.list-contact li.list-social__item:not(:first-child) {
-    margin-right: calc(var(--grid-desktop-horizontal-spacing) * 2);
+.list-contact li.list-social__item:first-child {
+    padding-left: var(--grid-desktop-horizontal-spacing);
+}
+
+.list-contact li.list-social__item:nth-child(2) {
+    padding-left: var(--grid-desktop-horizontal-spacing);
+    padding-right: var(--grid-desktop-horizontal-spacing);
+}
+
+.list-contact li.list-social__item:not(:last-child) {
+    border-left: 1px var(--gradient-base-background-3) solid;
+}
+
+.list-contact li.list-social__item:last-child {
+    padding-right: var(--grid-desktop-horizontal-spacing);
 }
 
 @media screen and (min-width: 990px) {
@@ -887,6 +900,10 @@ noscript .localization-selector.link {
 	.footer-block__heading {
 		margin-bottom: 1rem;
 	}
+
+    .contact_icons .footer-block__heading {
+        text-align: center;
+    }
 
 	.footer-blockgrid__item.blog_and_newsletter, .list-payment, div.footer__column--info, .footer__content-bottom-wrapper, .footer__content-bottom {
 		grid-column: 5 / -1;
