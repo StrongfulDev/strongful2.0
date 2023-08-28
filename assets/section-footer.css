@@ -854,6 +854,7 @@ noscript .localization-selector.link {
         /*grid-template-columns: repeat(7, 1fr) 3fr;*/
 	      grid-template-columns: auto auto auto 1.6fr 1fr 1fr 1fr 1fr 1fr 3fr;
         row-gap: calc(var(--grid-desktop-vertical-spacing) * 3);
+        column-gap: calc(var(--grid-desktop-horizontal-spacing) * 2);
     }
 
 	.footer-blockgrid__item {
