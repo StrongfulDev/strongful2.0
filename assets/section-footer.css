@@ -882,6 +882,7 @@ noscript .localization-selector.link {
     }
 
     .footer .grid {
+
         display: grid;
 	      grid-template-columns: auto auto 2fr 1.6fr 1fr 1fr 1fr 1fr 1fr 3fr;
         row-gap: calc(var(--grid-desktop-vertical-spacing) * 3);
