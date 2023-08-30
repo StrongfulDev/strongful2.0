@@ -24,12 +24,12 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "UP TO 50% OFF",
-            "sub_text": "על פריטים נבחרים",
+            "main_text": "NEW IN",
+            "sub_text": "אקססוריז חדש נחת באתר",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "rtl",
-            "link": "shopify:\/\/collections\/up-to-50-off",
+            "link": "shopify:\/\/collections\/new-in",
             "color_scheme": "accent-1"
           }
         },
