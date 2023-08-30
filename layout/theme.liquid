@@ -513,48 +513,8 @@
 {%- endif -%}
 {{ 'ajaxinate.min.js' | asset_url | script_tag }}
 
-<script src="https://a.klaviyo.com/media/js/onsite/onsite.js"></script>
-<script>
-    var klaviyo = klaviyo || [];
-    klaviyo.init({
-        account: "W8QDSs",
-        list: 'Y57ZPW',
-        platform: "shopify"
-    });
-    klaviyo.enable("backinstock",{
-        trigger: {
-            product_page_text: "Notify Me When Available",
-            product_page_class: "product-form__submit",
-            product_page_text_align: "center",
-            product_page_margin: "0px",
-            replace_anchor: false
-        },
-        modal: {
-            headline: "{product_name}",
-            body_content: "בחרי את המידה הרצויה, השאירי כתובת מייל ונעדכן אותך ברגע שהפריט יחזור למלאי.",
-            email_field_label: "אימייל",
-            button_label: "עדכנו אותי כשהפריט חזר למלאי",
-            subscription_success_label: "הרשמתך התקבלה! נעדכן אותך כשהפריט חזר למלאי.",
-            newsletter_subscribe_label: "אני מאשר/ת קבלת חומרים פרסומיים במייל.",
-            subscribe_checked: true,
-            footer_content: '',
-            additional_styles: "@import url('https://fonts.googleapis.com/css?family=Arimo');  .klaviyo-bis-close.fadein p, .klaviyo-bis-close.fadein span , .klaviyo-bis-close.fadein div, .klaviyo-bis-close.fadein label { font-family: 'Arimo', sans-serif; }.klaviyo-bis-close.fadein {direction: rtl; font-family: 'Arimo', sans-serif; } .close { right: auto; left: 15px; } #container { position: fixed; top: 50%; transform: translateY(-50%); margin: 0; } a.klaviyo-bis-close { display: none; } body.fadein { display: block; } #subscribe_for_newsletter + label { margin-right: 10px; margin-left: 0; }  #email { font-size: 16px !important; }    @media (min-width: 990px) { #container { right: 50%; transform: translate(50%, -50%); } #klaviyo-bis-modal { max-width: 100%; height: 100%; } }  ",
-            drop_background_color: "#000",
-            background_color: "#fff",
-            text_color: "#000",
-            button_text_color: "#fff",
-            button_background_color: "#000",
-            close_button_color: "#ccc",
-            error_background_color: "#fcd6d7",
-            error_text_color: "#C72E2F",
-            success_background_color: "#ebebeb",
-            success_text_color: "#000"
-        }
-    });
-</script>
-
 {% if isLiveTheme == 'false' %}
-    <!-- Start of Glassix Chat Widget -->
+    <!--
     <script>
         var widgetOptions = {
             apiKey: "92452e08-8c79-4223-8094-082f06f67b6a",
@@ -563,7 +523,7 @@
 
         (function(n){var u=function(){GlassixWidgetClient&&typeof GlassixWidgetClient=="function"?(window.widgetClient=new GlassixWidgetClient(n),widgetClient.attach(),window.glassixWidgetScriptLoaded&&window.glassixWidgetScriptLoaded()):f()},f=function(){r.onload=u;r.src="https://cdn.glassix.net/clients/widget.1.2.min.js";i.parentNode.removeChild(t);i.parentNode.insertBefore(r,i)},i=document.getElementsByTagName("script")[0],t=document.createElement("script"),r;(t.async=!0,t.type="text/javascript",t.crossorigin="anonymous",t.id="glassix-widget-script",r=t.cloneNode(),t.onload=u,t.src="https://cdn.glassix.com/clients/widget.1.2.min.js",!document.getElementById(t.id)&&document.body)&&(i.parentNode.insertBefore(t,i),t.onerror=f)})(widgetOptions)
     </script>
-    <!-- End of Glassix Chat Widget -->
+     -->
 {% endif %}
 
 </body>
