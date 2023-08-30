@@ -135,8 +135,12 @@
 .variant_modal .product_variants ul {
     flex-direction: column;
     width: 100%;
-	padding-bottom: 4rem;
-	margin-top: 0;
+		padding-bottom: 4rem;
+		margin-top: 0;
+}
+
+.variant_modal .product_variants ul.default_variant_list {
+	padding-bottom: 7rem;
 }
 
 .variant_modal .product_variants li {
