@@ -40,17 +40,17 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
-    "eb9b530b-505b-48fb-8422-353660dfbaca": {
+    "ba7ba114-f569-44d1-a63d-3037d1ffdf34": {
       "type": "featured-collection",
       "settings": {
         "steps": 4,
-        "title": "NEW IN",
+        "title": "ON SALE",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "new-in",
+        "collection": "back-to-school",
         "products_to_show": 14,
         "columns_desktop": 5,
         "full_width": true,
@@ -79,17 +79,17 @@
         "padding_bottom": 24
       }
     },
-    "ba7ba114-f569-44d1-a63d-3037d1ffdf34": {
+    "eb9b530b-505b-48fb-8422-353660dfbaca": {
       "type": "featured-collection",
       "settings": {
         "steps": 4,
-        "title": "ON SALE",
+        "title": "SHOP ALL SETS",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "back-to-school",
+        "collection": "סטים",
         "products_to_show": 14,
         "columns_desktop": 5,
         "full_width": true,
@@ -240,8 +240,8 @@
   },
   "order": [
     "slideshow",
-    "eb9b530b-505b-48fb-8422-353660dfbaca",
     "ba7ba114-f569-44d1-a63d-3037d1ffdf34",
+    "eb9b530b-505b-48fb-8422-353660dfbaca",
     "our_collection_list",
     "ecf1e0a5-0973-4674-ac5b-b5370ff1bae1",
     "eb801099-3113-4348-8f97-119459011525"
