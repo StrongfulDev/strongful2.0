@@ -22,31 +22,10 @@
             "color_scheme": "inverse",
             "text_alignment_mobile": "center"
           }
-        },
-        "slideshow-block-0": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Artboard_1_2x-100_3cf1039d-3366-4891-8d1b-8f27f2eb5847.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/Artboard_1_2x-100_b428b135-5ec5-4f01-a7f6-e7f6c5a209b5.jpg",
-            "heading": "",
-            "whole_slide_link": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/oasis",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "inverse",
-            "text_alignment_mobile": "center"
-          }
         }
       },
       "block_order": [
-        "c3be10ed-2385-4b0b-aa25-3c5fd57ab30a",
-        "slideshow-block-0"
+        "c3be10ed-2385-4b0b-aa25-3c5fd57ab30a"
       ],
       "custom_css": [
 
@@ -55,13 +34,52 @@
         "layout": "full_bleed",
         "slide_height": "adapt_image",
         "slider_visual": "sides",
-        "auto_rotate": true,
+        "auto_rotate": false,
         "change_slides_speed": 9,
         "show_text_below": false,
         "accessibility_info": "Slideshow about our brand"
       }
     },
     "eb9b530b-505b-48fb-8422-353660dfbaca": {
+      "type": "featured-collection",
+      "settings": {
+        "steps": 4,
+        "title": "NEW IN",
+        "heading_size": "h1",
+        "heading_type": "heading_type_2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "new-in",
+        "products_to_show": 14,
+        "columns_desktop": 5,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_text": "SHOP ALL",
+        "view_all_style": "link",
+        "view_all_location": "top",
+        "enable_desktop_slider": true,
+        "show_peak": true,
+        "pagination_type": "sides",
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": false,
+        "show_sale_badge": false,
+        "enable_quick_add": true,
+        "quick_add_type": "hover",
+        "quick_add_type_mobile": "modal",
+        "quick_add_text": "הוספה מהירה",
+        "pick_size_text": "בחירת מידה",
+        "quick_add_accessories_text": "הוספה מהירה",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 52,
+        "padding_bottom": 24
+      }
+    },
+    "ba7ba114-f569-44d1-a63d-3037d1ffdf34": {
       "type": "featured-collection",
       "settings": {
         "steps": 4,
@@ -108,7 +126,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/18d6eb8bae16135e23b8ad8af3c3aa63.webp",
             "alt": "",
-            "link": "NEW IN",
+            "link": "SALE",
             "url": "shopify:\/\/collections\/back-to-school"
           }
         },
@@ -223,6 +241,7 @@
   "order": [
     "slideshow",
     "eb9b530b-505b-48fb-8422-353660dfbaca",
+    "ba7ba114-f569-44d1-a63d-3037d1ffdf34",
     "our_collection_list",
     "ecf1e0a5-0973-4674-ac5b-b5370ff1bae1",
     "eb801099-3113-4348-8f97-119459011525"
