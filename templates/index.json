@@ -6,14 +6,14 @@
         "c3be10ed-2385-4b0b-aa25-3c5fd57ab30a": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/b979dbf1119c72008405752831ed753d.gif",
-            "mobile_image": "shopify:\/\/shop_images\/6a9e4f8063e898706677c747217b26b1_ae57f9db-cf8a-4d5f-9bac-1d04e8533f41.gif",
+            "image": "shopify:\/\/shop_images\/4a83d7448aa98b1abc0fde6125f0f94b.webp",
+            "mobile_image": "shopify:\/\/shop_images\/8d265040a43c9c285612e4dbfed6a9cc.webp",
             "heading": "",
             "whole_slide_link": "",
             "heading_size": "h1",
             "subheading": "",
             "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/up-to-50-off",
+            "link": "shopify:\/\/collections\/back-to-school",
             "button_style_secondary": false,
             "box_align": "middle-center",
             "show_text_box": false,
@@ -106,10 +106,10 @@
         "b5e51ca0-c5c6-4207-bb06-c9a69adc91b6": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0737a51b2679a55d45d0d8f464335044_d7d474b1-c834-454a-bb1d-a0867aa7940a.jpg",
+            "image": "shopify:\/\/shop_images\/18d6eb8bae16135e23b8ad8af3c3aa63.webp",
             "alt": "",
-            "link": "UP TO 50% OFF",
-            "url": "shopify:\/\/collections\/up-to-50-off"
+            "link": "NEW IN",
+            "url": "shopify:\/\/collections\/back-to-school"
           }
         },
         "3603325c-8c6d-4a1e-b28e-fe94adadefb7": {
