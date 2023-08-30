@@ -51,7 +51,7 @@
         "show_description": false,
         "description_style": "body",
         "collection": "back-to-school",
-        "products_to_show": 14,
+        "products_to_show": 10,
         "columns_desktop": 5,
         "full_width": true,
         "show_view_all": true,
