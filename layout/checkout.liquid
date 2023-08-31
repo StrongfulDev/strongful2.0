@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="he-IL" dir="rtl" class="{{ checkout_html_classes }}">
 <head>
-{% include 'visually_io_sdk' %}
+    {% include 'visually_io_sdk' %}
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -18,274 +18,274 @@
 
     <style>
 
-        * {
-            direction: rtl;
-            padding-inline-start: 0;
-        }
+			* {
+				direction: rtl;
+				padding-inline-start: 0;
+			}
 
-        fieldset .radio-wrapper.content-box__row:nth-child(4) {
-            display: none;
-        }
+			fieldset .radio-wrapper.content-box__row:nth-child(4) {
+				display: none;
+			}
 
-        .yotpo-widget-checkout-redemptions-widget .yotpo-not-enough-points-text {
-            display: none !important;
-        }
+			.yotpo-widget-checkout-redemptions-widget .yotpo-not-enough-points-text {
+				display: none !important;
+			}
 
-        .hidden, .notice.notice--error.default-background {
-            display: none;
-        }
+			.hidden, .notice.notice--error.default-background {
+				display: none;
+			}
 
-        span.payment-due__price {
-            font-size: 1em;
-        }
+			span.payment-due__price {
+				font-size: 1em;
+			}
 
-        .product-table {
-          display: block;
-        }
+			.product-table {
+				display: block;
+			}
 
-        .product[data-product-id="7307408933004"] .product-thumbnail {
-            height: 0;
-          opacity: 0;
-        }
+			.product[data-product-id="7307408933004"] .product-thumbnail {
+				height: 0;
+				opacity: 0;
+			}
 
-        .product[data-product-id="7307408933004"] .product__image {
-          display: none;
-        }
+			.product[data-product-id="7307408933004"] .product__image {
+				display: none;
+			}
 
-        tbody[data-order-summary-section="line-items"] {
-          display: flex;
-          flex-direction: column;
-          width: 100%;
-        }
+			tbody[data-order-summary-section="line-items"] {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+			}
 
-        tbody[data-order-summary-section="line-items"] tr[data-product-id="7307408933004"] {
-            order: 19;
-          margin: .5rem 0 0;
-          padding: .5rem 0 0;
-          border-top: 1px solid #eaeaea;
-        }
+			tbody[data-order-summary-section="line-items"] tr[data-product-id="7307408933004"] {
+				order: 19;
+				margin: .5rem 0 0;
+				padding: .5rem 0 0;
+				border-top: 1px solid #eaeaea;
+			}
 
-        @media screen and (max-width: 1000px) {
-            .floating-labels .field__input-wrapper.field__input-wrapper--icon-right label.field__label {
-                padding-right: 0.9em !important;
-            }
-        }
+			@media screen and (max-width: 1000px) {
+				.floating-labels .field__input-wrapper.field__input-wrapper--icon-right label.field__label {
+					padding-right: 0.9em !important;
+				}
+			}
 
-        .policy-list__item {
-            float: right;
-            margin-left: 1.5rem;
-            margin-right: 0.5rem;
-        }
+			.policy-list__item {
+				float: right;
+				margin-left: 1.5rem;
+				margin-right: 0.5rem;
+			}
 
-        .tags-list .tag {
-            margin-right: 0;
-            margin-left: .8em;
-        }
+			.tags-list .tag {
+				margin-right: 0;
+				margin-left: .8em;
+			}
 
-        td, th, .total-line__price {
-            padding-left: 0;
-            padding-right: 1em;
-        }
+			td, th, .total-line__price {
+				padding-left: 0;
+				padding-right: 1em;
+			}
 
-        td:first-child, th:first-child, th.product__description, span.order-summary-toggle, span.order-summary-toggle__text {
-            text-align: right;
-        }
+			td:first-child, th:first-child, th.product__description, span.order-summary-toggle, span.order-summary-toggle__text {
+				text-align: right;
+			}
 
-        span.order-summary-toggle__icon-wrapper, .radio__input, .checkbox__input {
-            padding-right: 0;
-            padding-left: .75em;
-        }
+			span.order-summary-toggle__icon-wrapper, .radio__input, .checkbox__input {
+				padding-right: 0;
+				padding-left: .75em;
+			}
 
-        img.product-thumbnail__image {
-            margin: auto;
-        }
+			img.product-thumbnail__image {
+				margin: auto;
+			}
 
-        .step__footer__previous-link .previous-link__icon, #checkout_submit svg.icon-svg.btn__icon, .main .icon-svg--color-adaptive-light {
-            transform: rotate(180deg);
-        }
+			.step__footer__previous-link .previous-link__icon, #checkout_submit svg.icon-svg.btn__icon, .main .icon-svg--color-adaptive-light {
+				transform: rotate(180deg);
+			}
 
-        .anyflexbox button.field__input-btn {
-            margin-left: 0;
-            margin-right: 0.85em;
-        }
+			.anyflexbox button.field__input-btn {
+				margin-left: 0;
+				margin-right: 0.85em;
+			}
 
-        td:last-child, th:last-child {
-            text-align: left;
-        }
+			td:last-child, th:last-child {
+				text-align: left;
+			}
 
-        .floating-labels .field--show-floating-label .field__label, .floating-labels .field__input-wrapper--icon-right .field__label {
-            margin-left: auto;
-            margin-right: 1px;
-            text-align: right;
-            padding: 0 .9em !important;
-        }
+			.floating-labels .field--show-floating-label .field__label, .floating-labels .field__input-wrapper--icon-right .field__label {
+				margin-left: auto;
+				margin-right: 1px;
+				text-align: right;
+				padding: 0 .9em !important;
+			}
 
-        .field__input-wrapper--icon-right .field__input {
-            padding-right: 0.9em !important;
-        }
+			.field__input-wrapper--icon-right .field__input {
+				padding-right: 0.9em !important;
+			}
 
-        bdo {
-            direction: ltr;
-        }
+			bdo {
+				direction: ltr;
+			}
 
-        .review-block__label, .review-block__content {
-            padding-right: 0;
-        }
+			.review-block__label, .review-block__content {
+				padding-right: 0;
+			}
 
-        .field__caret {
-            right: auto;
-            left: 0;
-        }
+			.field__caret {
+				right: auto;
+				left: 0;
+			}
 
-        .floating-labels .field--show-floating-label .field__input {
-            padding-inline-end: 2em;
-            padding-inline-start: 0.78em;
-        }
+			.floating-labels .field--show-floating-label .field__input {
+				padding-inline-end: 2em;
+				padding-inline-start: 0.78em;
+			}
 
-        .order-summary-toggle__total-recap, .radio__label__accessory {
-            padding-left: 0;
-        }
+			.order-summary-toggle__total-recap, .radio__label__accessory {
+				padding-left: 0;
+			}
 
-        span.order-summary-toggle__icon-wrapper, .radio__label__accessory {
-            padding-right: .75em;
-        }
+			span.order-summary-toggle__icon-wrapper, .radio__label__accessory {
+				padding-right: .75em;
+			}
 
-        .logged-in-customer-information__avatar-wrapper {
-            padding-right: 0;
-            padding-left: 1em;
-        }
+			.logged-in-customer-information__avatar-wrapper {
+				padding-right: 0;
+				padding-left: 1em;
+			}
 
-        .field__input-wrapper--icon-right .field__icon {
-            right: auto;
-            left: 0;
-        }
+			.field__input-wrapper--icon-right .field__icon {
+				right: auto;
+				left: 0;
+			}
 
-        @media screen and (min-width: 1000px) {
-            body {
-                background-color: #fff !important;
-            }
+			@media screen and (min-width: 1000px) {
+				body {
+					background-color: #fff !important;
+				}
 
-            .wrap {
-                width: 100%;
-                max-width: 100%;
-                padding: 0;
-            }
+				.wrap {
+					width: 100%;
+					max-width: 100%;
+					padding: 0;
+				}
 
-            .main {
-                background-color: #fff;
-                padding-left: 6%;
-                padding-right: 16%;
-                width: 35%;
-            }
+				.main {
+					background-color: #fff;
+					padding-left: 6%;
+					padding-right: 16%;
+					width: 35%;
+				}
 
-            .sidebar {
-                padding-right: 4%;
-                width: 25%;
-                padding-left: 15%;
-            }
+				.sidebar {
+					padding-right: 4%;
+					width: 25%;
+					padding-left: 15%;
+				}
 
-            .floating-labels .field--half {
-                float: right;
-            }
-        }
+				.floating-labels .field--half {
+					float: right;
+				}
+			}
 
-        /*    Custom RTL End    */
-        .field__additional-info {
-            display: none;
-        }
+			/*    Custom RTL End    */
+			.field__additional-info {
+				display: none;
+			}
 
-        .yotpo-widget-redemption {
-            direction: rtl !important;
-        }
+			.yotpo-widget-redemption {
+				direction: rtl !important;
+			}
 
-        .tag__button svg {
-            pointer-events: none;
-        }
+			.tag__button svg {
+				pointer-events: none;
+			}
 
-        .sms-marketing-phone-description {
-            display: none;
-        }
+			.sms-marketing-phone-description {
+				display: none;
+			}
 
-        .icon-svg--center {
-            transform: translate(50%, -50%) !important;
-        }
+			.icon-svg--center {
+				transform: translate(50%, -50%) !important;
+			}
 
-        .yotpo-arrow-icon {
-            transform: rotate(180deg);
-        }
+			.yotpo-arrow-icon {
+				transform: rotate(180deg);
+			}
 
-        #vs1__listbox, #vs1__listbox li {
-            direction: rtl !important;
-            text-align: right;
-        }
+			#vs1__listbox, #vs1__listbox li {
+				direction: rtl !important;
+				text-align: right;
+			}
 
-        .payment-due__currency {
-            display: none !important;
-        }
+			.payment-due__currency {
+				display: none !important;
+			}
 
-        .swell-tab {
-            display: none !important;
-        }
+			.swell-tab {
+				display: none !important;
+			}
 
-        .yotpo-widget-checkout-redemptions-widget .yotpo-point-balance-text {
-            text-align: right !important;
-        }
+			.yotpo-widget-checkout-redemptions-widget .yotpo-point-balance-text {
+				text-align: right !important;
+			}
 
-        .yotpo-redemption-options-dropdown {
-            margin: 0 0 0 14px !important;
-        }
+			.yotpo-redemption-options-dropdown {
+				margin: 0 0 0 14px !important;
+			}
 
-        .yotpo-redeem-summary-container {
-            margin-top: 1.5em !important;
-        }
+			.yotpo-redeem-summary-container {
+				margin-top: 1.5em !important;
+			}
 
-        .yotpo-checkout-variable-widget .yotpo-slider {
-            margin: 1.5em 2em 0 !important;
-        }
+			.yotpo-checkout-variable-widget .yotpo-slider {
+				margin: 1.5em 2em 0 !important;
+			}
 
-        .section.section--contact-information .fieldset-description {
-            opacity: 0;
-        }
+			.section.section--contact-information .fieldset-description {
+				opacity: 0;
+			}
 
-        .shipping_method .notice--warning, .payment_method .notice--warning {
-            display: none;
-        }
+			.shipping_method .notice--warning, .payment_method .notice--warning {
+				display: none;
+			}
 
-        @media (min-width: 1000px) {
-            .order-summary__section--product-list {
-                min-height: 18em;
-            }
+			@media (min-width: 1000px) {
+				.order-summary__section--product-list {
+					min-height: 18em;
+				}
 
-            .yotpo-point-balance-text {
-                text-align: right !important;
-                padding: 0 1em;
-            }
+				.yotpo-point-balance-text {
+					text-align: right !important;
+					padding: 0 1em;
+				}
 
-            .yotpo-apply-redemption-options {
-                flex-direction: row-reverse;
-            }
+				.yotpo-apply-redemption-options {
+					flex-direction: row-reverse;
+				}
 
-            .yotpo-redemption-details-container {
-                direction: rtl !important;
-            }
-        }
+				.yotpo-redemption-details-container {
+					direction: rtl !important;
+				}
+			}
 
-        .payment-icon.payment-icon--american-express,
-        .payment-icon.payment-icon--jcb {
-            display: none !important;
-        }
+			.payment-icon.payment-icon--american-express,
+			.payment-icon.payment-icon--jcb {
+				display: none !important;
+			}
 
-        .lottery-tr {
-            text-align: center;
-            width: 100%;
-            text-align: right;
-            margin: auto;
-            padding: 0.5em 0 0;
-        }
+			.lottery-tr {
+				text-align: center;
+				width: 100%;
+				text-align: right;
+				margin: auto;
+				padding: 0.5em 0 0;
+			}
 
-        .none {
-            display: none;
-        }
+			.none {
+				display: none;
+			}
 
     </style>
 
@@ -297,7 +297,7 @@
 {{ skip_to_content_link }}
 
 {% for discount in checkout.discount_applications %}
-{% assign discount = discount %}
+    {% assign discount = discount %}
 {% endfor %}
 
 <header class="banner" data-header role="banner">
@@ -345,125 +345,127 @@
 {{ tracking_code }}
 <script type="text/javascript">
 
-    document.addEventListener('DOMContentLoaded', (e) => {
+	document.addEventListener('DOMContentLoaded', (e) => {
 
-        setTimeout(() => {
-            const notEnoughPoints = document.querySelector(".yotpo-not-enough-points-text");
-            notEnoughPoints.style.display = "none";
-        }, 2000);
+		setTimeout(() => {
+			const notEnoughPoints = document.querySelector(".yotpo-not-enough-points-text");
+			if (notEnoughPoints !== null) {
+				notEnoughPoints.style.display = "none";
+			}
+		}, 2000);
 
-      // Global Variables
-	    let checkout = Shopify.Checkout;
+		// Global Variables
+		let checkout = Shopify.Checkout;
 
-        sessionStorage.setItem('previousUrl', window.location.href);
-        let myUrl = sessionStorage.getItem('previousUrl');
+		sessionStorage.setItem('previousUrl', window.location.href);
+		let myUrl = sessionStorage.getItem('previousUrl');
 
-        // function for hiding the zip code field
-        const fieldContainers = document.querySelectorAll('.field');
-        // fieldContainers.forEach(function(container) {
-        //     let data = container.dataset.addressField;
-        //     if (data === 'zip') {
-        //         container.classList.add('hidden');
-        //     }
-        //     if (data === 'city') {
-        //         container.classList.remove('field--half');
-        //     }
-        // });
+		// function for hiding the zip code field
+		const fieldContainers = document.querySelectorAll('.field');
+		// fieldContainers.forEach(function(container) {
+		//     let data = container.dataset.addressField;
+		//     if (data === 'zip') {
+		//         container.classList.add('hidden');
+		//     }
+		//     if (data === 'city') {
+		//         container.classList.remove('field--half');
+		//     }
+		// });
 
-      document.querySelector(".sidebar").classList.add(checkout.step);
-	    console.log(checkout.step);
+		document.querySelector(".sidebar").classList.add(checkout.step);
+		console.log(checkout.step);
 
-        if (checkout.step === 'shipping_method' || checkout.step === 'payment_method') {
-            document.querySelector(".notice--warning").style.display = "none";
-        }
+		if (checkout.step === 'shipping_method' || checkout.step === 'payment_method') {
+			document.querySelector(".notice--warning").style.display = "none";
+		}
 
-        if (jQuery('.step').attr('data-step', 'contact_information') !== null) {
-          let backLink = jQuery('.step').attr('data-step', 'contact_information').find('.step__footer__previous-link');
-          backLink.attr('href', '/');
-        }
+		if (jQuery('.step').attr('data-step', 'contact_information') !== null) {
+			let backLink = jQuery('.step').attr('data-step', 'contact_information').find('.step__footer__previous-link');
+			backLink.attr('href', '/');
+		}
 
-        function checkCouponText() {
-	        let notice = document.querySelector('.notice__text');
-            let preorder = document.querySelector(".regular-preorder");
-            let checkoutTotal = parseInt(document.querySelector(".order-summary__emphasis").innerText.replace('₪', '').replace('.', '') / 100);
-	        if (notice !== null || true) {
-                if (preorder !== null && checkoutTotal > 200) {
-                    notice.innerHTML = 'אין כפל הנחות/מבצעים על פריטים ממכירה מוקדמת';
-                } else if (notice.innerHTML.toLocaleLowerCase().includes('welcome')) {
-			        notice.innerHTML = 'קוד הקופון <strong>WELCOME30</strong> תקף בקנייה מעל ₪200';
-		        } else if (notice.innerHTML.toLocaleLowerCase().includes("dian")) {
-			        notice.innerHTML = 'קוד הקופון <strong>DIAN</strong> תקף בקניית 3 מוצרים ומעלה';
-		        } else if (notice.innerHTML.toLocaleLowerCase().includes("corrin")) {
-			        notice.innerHTML = 'קוד הקופון <strong>CORRIN</strong> תקף בקניית 3 מוצרים ומעלה';
-		        } else if (notice.innerHTML.toLocaleLowerCase().includes("talia")) {
-			        notice.innerHTML = 'קוד הקופון <strong>TALIA</strong> תקף בקניית 3 מוצרים ומעלה';
-		        } else if (notice.innerHTML.toLocaleLowerCase().includes("barc")) {
-			        notice.innerHTML = 'קוד הקופון <strong>BARC</strong> תקף בקניית 3 מוצרים ומעלה';
-		        } else if (notice.innerHTML.toLocaleLowerCase().includes("liel")) {
-			        notice.innerHTML = 'קוד הקופון <strong>LIEL</strong> תקף בקניית 3 מוצרים ומעלה';
-		        } else if (notice.innerHTML.toLocaleLowerCase().includes("kc")) {
-			        notice.innerHTML = 'קוד הקופון <strong>KC</strong> תקף בקניית 3 מוצרים ומעלה';
-		        } else if (notice.innerHTML.toLocaleLowerCase().includes("daniella")) {
-			        notice.innerHTML = 'קוד הקופון <strong>DANIELLA</strong> תקף בקניית 3 מוצרים ומעלה';
-		        }
-	        }
-        }
+		function checkCouponText() {
+			let notice = document.querySelector('.notice__text');
+			let preorder = document.querySelector(".regular-preorder");
+			let checkoutTotal = parseInt(document.querySelector(".order-summary__emphasis").innerText.replace('₪', '').replace('.', '') / 100);
+			if (notice !== null || true) {
+				if (preorder !== null && checkoutTotal > 200) {
+					notice.innerHTML = 'אין כפל הנחות/מבצעים על פריטים ממכירה מוקדמת';
+				} else if (notice.innerHTML.toLocaleLowerCase().includes('welcome')) {
+					notice.innerHTML = 'קוד הקופון <strong>WELCOME30</strong> תקף בקנייה מעל ₪200';
+				} else if (notice.innerHTML.toLocaleLowerCase().includes("dian")) {
+					notice.innerHTML = 'קוד הקופון <strong>DIAN</strong> תקף בקניית 3 מוצרים ומעלה';
+				} else if (notice.innerHTML.toLocaleLowerCase().includes("corrin")) {
+					notice.innerHTML = 'קוד הקופון <strong>CORRIN</strong> תקף בקניית 3 מוצרים ומעלה';
+				} else if (notice.innerHTML.toLocaleLowerCase().includes("talia")) {
+					notice.innerHTML = 'קוד הקופון <strong>TALIA</strong> תקף בקניית 3 מוצרים ומעלה';
+				} else if (notice.innerHTML.toLocaleLowerCase().includes("barc")) {
+					notice.innerHTML = 'קוד הקופון <strong>BARC</strong> תקף בקניית 3 מוצרים ומעלה';
+				} else if (notice.innerHTML.toLocaleLowerCase().includes("liel")) {
+					notice.innerHTML = 'קוד הקופון <strong>LIEL</strong> תקף בקניית 3 מוצרים ומעלה';
+				} else if (notice.innerHTML.toLocaleLowerCase().includes("kc")) {
+					notice.innerHTML = 'קוד הקופון <strong>KC</strong> תקף בקניית 3 מוצרים ומעלה';
+				} else if (notice.innerHTML.toLocaleLowerCase().includes("daniella")) {
+					notice.innerHTML = 'קוד הקופון <strong>DANIELLA</strong> תקף בקניית 3 מוצרים ומעלה';
+				}
+			}
+		}
 
-	    checkCouponText();
-	    setTimeout(checkCouponText, 3000); // fallback
+		checkCouponText();
+		setTimeout(checkCouponText, 3000); // fallback
 
-	    if (checkout.isOrderStatusPage === true) {
-		    $('.modal-dialog').css('direction', 'rtl');
-		    $('.modal-content').css('direction', 'rtl');
-	    } else {
-		    let orderSummary = document.querySelector('.order-summary');
-		    jQuery('.order-summary-toggle').removeClass('order-summary-toggle--show').addClass('order-summary-toggle--hide');
-		    orderSummary.classList.remove('order-summary--is-collapsed');
-		    orderSummary.classList.add('order-summary--is-expanded');
+		if (checkout.isOrderStatusPage === true) {
+			$('.modal-dialog').css('direction', 'rtl');
+			$('.modal-content').css('direction', 'rtl');
+		} else {
+			let orderSummary = document.querySelector('.order-summary');
+			jQuery('.order-summary-toggle').removeClass('order-summary-toggle--show').addClass('order-summary-toggle--hide');
+			orderSummary.classList.remove('order-summary--is-collapsed');
+			orderSummary.classList.add('order-summary--is-expanded');
 
-		    let step = checkout.step;
-		    if (step === 'contact_information') {
-			    document.getElementById("checkout_buyer_accepts_marketing").checked = true;
-			    document.getElementById("checkout_remember_me").checked = true;
-		    } else if (step === "thank_you") {
-			    document.getElementById("package-protection").style.display = "none";
-		    }
-	    }
+			let step = checkout.step;
+			if (step === 'contact_information') {
+				document.getElementById("checkout_buyer_accepts_marketing").checked = true;
+				document.getElementById("checkout_remember_me").checked = true;
+			} else if (step === "thank_you") {
+				document.getElementById("package-protection").style.display = "none";
+			}
+		}
 
-	    let breadcrumbs = document.querySelectorAll( '.breadcrumb__link' );
-	    breadcrumbs.forEach((crumb) => {
-		    if (crumb.innerText === 'עגלה') {
-			    crumb.innerText = 'חזרה';
-			    crumb.href = '/';
-		    }
-	    });
+		let breadcrumbs = document.querySelectorAll( '.breadcrumb__link' );
+		breadcrumbs.forEach((crumb) => {
+			if (crumb.innerText === 'עגלה') {
+				crumb.innerText = 'חזרה';
+				crumb.href = '/';
+			}
+		});
 
-        // preorder code start
-        //   if (document.querySelectorAll( '.regular-preorder' ) != null || document.querySelectorAll( '.regular-preorder' ) != undefined) {
-        //     if (Shopify.Checkout.step == 'shipping_method') {
-        //      if ($( '.radio__label__primary' ).data('shipping-method-label-title')) {
-        //          $( '.radio__label__primary' ).html( 'הזמנות הכוללות פריטים ממכירה מוקדמת יקלטו ויגיעו עד 3 ימי עסקים מיום השקת הקולקציה' );
-        //       }
-        //     }
+		// preorder code start
+		//   if (document.querySelectorAll( '.regular-preorder' ) != null || document.querySelectorAll( '.regular-preorder' ) != undefined) {
+		//     if (Shopify.Checkout.step == 'shipping_method') {
+		//      if ($( '.radio__label__primary' ).data('shipping-method-label-title')) {
+		//          $( '.radio__label__primary' ).html( 'הזמנות הכוללות פריטים ממכירה מוקדמת יקלטו ויגיעו עד 3 ימי עסקים מיום השקת הקולקציה' );
+		//       }
+		//     }
 
-        //     if (Shopify.Checkout.step == 'payment_method') {
-        //    document.getElementsByClassName( 'review-block__content' )[2].innerText = 'הזמנות הכוללות פריטים ממכירה מוקדמת יקלטו ויגיעו עד 3 ימי עסקים מיום השקת הקולקציה';
-        //     }
+		//     if (Shopify.Checkout.step == 'payment_method') {
+		//    document.getElementsByClassName( 'review-block__content' )[2].innerText = 'הזמנות הכוללות פריטים ממכירה מוקדמת יקלטו ויגיעו עד 3 ימי עסקים מיום השקת הקולקציה';
+		//     }
 
-        // } else {
-        //   if (Shopify.Checkout.step == 'shipping_method') {
-        //   if ($( '.radio__label__primary' ).data('shipping-method-label-title')) {
-        //        $( '.radio__label__primary' ).html( 'משלוח אקספרס - 1-3 ימי עסקים' );
-        //       }
-        //   }
+		// } else {
+		//   if (Shopify.Checkout.step == 'shipping_method') {
+		//   if ($( '.radio__label__primary' ).data('shipping-method-label-title')) {
+		//        $( '.radio__label__primary' ).html( 'משלוח אקספרס - 1-3 ימי עסקים' );
+		//       }
+		//   }
 
-        //   if (Shopify.Checkout.step == 'payment_method') {
-        //         document.getElementsByClassName( 'review-block__content' )[2].innerText = 'משלוח אקספרס - 1-3 ימי עסקים';
-        //   }
-        // }
-        // preorder code end
+		//   if (Shopify.Checkout.step == 'payment_method') {
+		//         document.getElementsByClassName( 'review-block__content' )[2].innerText = 'משלוח אקספרס - 1-3 ימי עסקים';
+		//   }
+		// }
+		// preorder code end
 
-    });
+	});
 </script>
 
 <!-- Google Tag Manager (noscript) -->
