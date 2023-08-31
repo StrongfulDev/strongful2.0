@@ -371,9 +371,9 @@
         // });
 
       document.querySelector(".sidebar").classList.add(checkout.step);
+	    console.log(checkout.step);
 
-        if (checkout.step !== 'contact_information') {
-          console.log(checkout)
+        if (checkout.step === 'shipping_method' || checkout.step === 'payment_method') {
             document.querySelector(".notice--warning").style.display = "none";
         }
 
@@ -385,9 +385,7 @@
         function checkCouponText() {
 	        let notice = document.querySelector('.notice__text');
             let preorder = document.querySelector(".regular-preorder");
-            console.log(preorder);
             let checkoutTotal = parseInt(document.querySelector(".order-summary__emphasis").innerText.replace('₪', '').replace('.', '') / 100);
-	        console.log(checkoutTotal);
 	        if (notice !== null || true) {
                 if (preorder !== null && checkoutTotal > 200) {
                     notice.innerHTML = 'אין כפל הנחות/מבצעים על פריטים ממכירה מוקדמת';
