@@ -293,7 +293,7 @@
     <script>(function (w, d, s, l, i) {w[l] = w[l] || [];w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';j.async = true;j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j, f);})(window, document, 'script', 'dataLayer', 'GTM-NS9ZW7H');</script>
     <!-- End Google Tag Manager -->
 </head>
-<body>
+<body class="{{ checkout.order_id }}">
 {{ skip_to_content_link }}
 
 {% for discount in checkout.discount_applications %}
@@ -428,8 +428,6 @@
 			if (step === 'contact_information') {
 				document.getElementById("checkout_buyer_accepts_marketing").checked = true;
 				document.getElementById("checkout_remember_me").checked = true;
-			} else if (step === "thank_you") {
-				document.getElementById("package-protection").style.display = "none";
 			}
 		}
 
@@ -474,10 +472,11 @@
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
-<script src="{{ 'package-protection.js' | asset_url }}" defer="defer"></script>
-<script src="{{ 'package-protection-extension.js' | asset_url }}" defer="defer"></script>
-
-<link rel="stylesheet" href="{{ 'package-protection.css' | asset_url }}">
+{% unless checkout.order_id %}
+    <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'package-protection.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'package-protection-extension.js' | asset_url }}" defer="defer"></script>
+    <link rel="stylesheet" href="{{ 'package-protection.css' | asset_url }}">
+{% endunless %}
 </body>
 </html>
