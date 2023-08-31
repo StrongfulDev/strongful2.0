@@ -373,10 +373,11 @@
 		// });
 
 		document.querySelector(".sidebar").classList.add(checkout.step);
-		console.log(checkout.step);
 
 		if (checkout.step === 'shipping_method' || checkout.step === 'payment_method') {
-			document.querySelector(".notice--warning").style.display = "none";
+			if (document.querySelector(".notice--warning") !== null) {
+              document.querySelector(".notice--warning").style.display = "none";
+            }
 		}
 
 		if (jQuery('.step').attr('data-step', 'contact_information') !== null) {
@@ -388,7 +389,7 @@
 			let notice = document.querySelector('.notice__text');
 			let preorder = document.querySelector(".regular-preorder");
 			let checkoutTotal = parseInt(document.querySelector(".order-summary__emphasis").innerText.replace('₪', '').replace('.', '') / 100);
-			if (notice !== null || true) {
+			if (notice !== null) {
 				if (preorder !== null && checkoutTotal > 200) {
 					notice.innerHTML = 'אין כפל הנחות/מבצעים על פריטים ממכירה מוקדמת';
 				} else if (notice.innerHTML.toLocaleLowerCase().includes('welcome')) {
