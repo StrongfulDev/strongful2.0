@@ -23,6 +23,10 @@
 				padding-inline-start: 0;
 			}
 
+			.page--thank-you body {
+				opacity: 1 !important;
+			}
+
 			fieldset .radio-wrapper.content-box__row:nth-child(4) {
 				display: none;
 			}
@@ -376,8 +380,8 @@
 
 		if (checkout.step === 'shipping_method' || checkout.step === 'payment_method') {
 			if (document.querySelector(".notice--warning") !== null) {
-              document.querySelector(".notice--warning").style.display = "none";
-            }
+				document.querySelector(".notice--warning").style.display = "none";
+			}
 		}
 
 		if (jQuery('.step').attr('data-step', 'contact_information') !== null) {
