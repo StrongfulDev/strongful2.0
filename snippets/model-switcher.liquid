@@ -32,7 +32,7 @@
                                 | image_tag: loading: 'lazy', sizes: "400x600", widths: '400' }}
                             {% endif %}
                         {% endfor %}
-                        {% if model_product.type contains 'אוברול' %}
+                        {% if model_product.type contains 'אוברול' or model_product.type contains 'שמלה' %}
                             <div class="model-wears-content">
                                 <div class="model-wears-text">
                                     {{ 'products.product.model_switch.model_wears_one_product' | t }}
