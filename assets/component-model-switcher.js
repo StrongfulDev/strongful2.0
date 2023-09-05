@@ -11,8 +11,8 @@ window.addEventListener('DOMContentLoaded', function(e) {
 			if (modelSize) {
 				changeModel(modelSize);
 				updateVariantRadios(modelSize);
-				$(this).parents().removeClass("inactive");
-				$(this).parents().siblings().addClass("inactive");
+				$(this).parents().addClass("inactive");
+				$(this).parents().siblings().removeClass("inactive");
 			}
 		});
 
