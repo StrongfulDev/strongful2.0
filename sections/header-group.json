@@ -91,7 +91,7 @@
             "show_on_mobile": true,
             "order": "",
             "small_font": false,
-            "menu": "elara-sets-first",
+            "menu": "sets-menu-first",
             "menu_second": "elara-sets-second",
             "menu_third": "elara-sets-third",
             "title": "סטים",
