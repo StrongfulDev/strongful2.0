@@ -82,7 +82,7 @@
           "settings": {
             "heading": "תיאור מוצר",
             "product_content": "description",
-            "content": "<p>סוג בד: {{ product.metafields.global.material.value }}<\/p>",
+            "content": "<p>{{ product.metafields.global.material.value }}<\/p>",
             "page": "",
             "icon": "none"
           }
