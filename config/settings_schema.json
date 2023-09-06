@@ -703,6 +703,13 @@
         "unit": "px",
         "label": "t:settings_schema.global.settings.blur.label",
         "default": 0
+      },
+      {
+        "type": "text",
+        "id": "comes_with_matching_outfit",
+        "default": "Sample Product",
+        "label": "What comes with the matching outfit?",
+        "info": "Give more info about products that come with this product by default."
       }
     ]
   },
