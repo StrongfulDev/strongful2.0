@@ -47,7 +47,7 @@
                     %}
             {% endcase %}
             {% unless product.has_only_default_variant %}
-                {% if block.settings.content != blank or block.settings.content != 'סוג בד: ' %}
+                {% if block.settings.content != blank %}
                     <div class="extra-content">
                         {{ block.settings.content }}
                     </div>
