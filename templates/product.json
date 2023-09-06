@@ -14,6 +14,14 @@
           "settings": {
           }
         },
+        "5fa3ce9f-60f6-4aee-a0c4-c987fa5f3522": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.custom.comes_with_matching_clothing.value }}",
+            "is_vendor": false,
+            "text_style": "body"
+          }
+        },
         "656bd184-5523-4c74-aee3-c2664a058063": {
           "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
@@ -103,6 +111,7 @@
       "block_order": [
         "7c99b889-3ad8-4802-a5c7-9802ab40f12c",
         "title",
+        "5fa3ce9f-60f6-4aee-a0c4-c987fa5f3522",
         "656bd184-5523-4c74-aee3-c2664a058063",
         "price",
         "variant_picker",
