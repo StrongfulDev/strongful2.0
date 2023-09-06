@@ -708,7 +708,8 @@
         "type": "text",
         "id": "comes_with_matching_outfit",
         "label": "When you buy this item, you get a matching outfit",
-        "default": "When you buy this item, you get a matching outfit"
+        "default": "When you buy this item, you get a matching outfit",
+        "info": "The tag to recognize the product is currently 'astra dresses'"
       }
     ]
   },
