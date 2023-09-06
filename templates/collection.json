@@ -35,6 +35,7 @@
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
+        "comes_with_matching_outfit": "השמלה מגיעה עם שורט בצבע תואם",
         "products_per_page": 20,
         "columns_desktop": 4,
         "image_ratio": "adapt",

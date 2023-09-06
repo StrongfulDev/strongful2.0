@@ -703,6 +703,12 @@
         "unit": "px",
         "label": "t:settings_schema.global.settings.blur.label",
         "default": 0
+      },
+      {
+        "type": "text",
+        "id": "comes_with_matching_outfit",
+        "label": "When you buy this item, you get a matching outfit",
+        "default": "When you buy this item, you get a matching outfit"
       }
     ]
   },

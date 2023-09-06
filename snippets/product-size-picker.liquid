@@ -59,7 +59,9 @@
                             {% endif %}
                             <p class="product_details-titles product-title">{{ product.title }}</p>
                             {% if comes_with_matching_outfit != blank %}
-                                <p class="product_details-comes_with_matching_product">{{ comes_with_matching_outfit }}</p>
+                                {% if product.tags contains 'astra dresses' %}
+                                    <p class="product_details-comes_with_matching_product">{{ comes_with_matching_outfit }}</p>
+                                {% endif %}
                             {% endif %}
                             <p class="product_details-titles product-color">{{ product.vendor }}</p>
                             {% render "price", product: product %}
