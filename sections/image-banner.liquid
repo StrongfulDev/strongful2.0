@@ -68,7 +68,7 @@
            height: mobile_image_height,
            class: mobile_image_class,
            sizes: sizes,
-           widths: '375, 550, 750, 1500' }}
+           widths: '375, 550, 750, 1500, 2000, 2500' }}
       {% endif %}
     </div>
   {%- elsif section.settings.image_2 == blank -%}
@@ -107,14 +107,14 @@
       {% if section.settings.mobile_image_2 != blank %}
         {{
            section.settings.mobile_image_2
-           | image_url: width: 750
+           | image_url: width: 1000
            | image_tag:
            loading: 'lazy',
            width: section.settings.mobile_image_2.width,
            height: mobile_image_height_2,
            class: mobile_image_class_2,
            sizes: sizes,
-           widths: '375, 550, 750' }}
+           widths: '375, 550, 750, 1000, 1500, 2000' }}
       {% endif %}
     </div>
   {%- endif -%}

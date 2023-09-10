@@ -169,13 +169,12 @@
                         widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
                         }}
                         {% if block.settings.mobile_image != blank %}
-                            {{ block.settings.mobile_image | image_url: width: 750 | image_tag:
+                            {{ block.settings.mobile_image | image_url: width: 1000 | image_tag:
                             loading: 'lazy',
                             height: mobile_height,
                             sizes: "100vw",
                             class: "mobile_version",
-                            widths: '375, 550, 750'
-
+                            widths: '375, 550, 750, 1000'
                             }}
                         {%- endif -%}
                     {%- else -%}
