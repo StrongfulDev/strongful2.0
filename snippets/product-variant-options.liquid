@@ -40,7 +40,7 @@
     {%- liquid
         assign option_disabled = true
         assign members_only = false
-        if announcement_tag != blank
+        if announcement_tag != blank and members_only_sale_active == true
             assign members_only = true
         endif
         if members_only == true
