@@ -43,8 +43,8 @@
         if announcement_tag != blank
             assign members_only = true
         endif
-        if members_only
-            if customer and members_only_sale_active
+        if members_only == true
+            if customer and members_only_sale_active == true
                 assign members_only = false
             else
                 assign members_only = true
@@ -54,15 +54,15 @@
         for option1_name in variants_option1_arr
             case option.position
                 when 1
-                    if variants_option1_arr[forloop.index0] == value and variants_available_arr[forloop.index0]
+                    if variants_option1_arr[forloop.index0] == value and variants_available_arr[forloop.index0] or members_only == true and product.tags contains announcement_tag and members_only_sale_active == true
                         assign option_disabled = false
                     endif
                 when 2
-                    if option1_name == product.selected_or_first_available_variant.option1 and variants_option2_arr[forloop.index0] == value and variants_available_arr[forloop.index0]
+                    if option1_name == product.selected_or_first_available_variant.option1 and variants_option2_arr[forloop.index0] == value and variants_available_arr[forloop.index0] or members_only == true and product.tags contains announcement_tag and members_only_sale_active == true
                         assign option_disabled = false
                     endif
                 when 3
-                    if option1_name == product.selected_or_first_available_variant.option1 and variants_option2_arr[forloop.index0] == product.selected_or_first_available_variant.option2 and variants_option3_arr[forloop.index0] == value and variants_available_arr[forloop.index0]
+                    if option1_name == product.selected_or_first_available_variant.option1 and variants_option2_arr[forloop.index0] == product.selected_or_first_available_variant.option2 and variants_option3_arr[forloop.index0] == value and variants_available_arr[forloop.index0] or members_only == true and product.tags contains announcement_tag and members_only_sale_active == true
                         assign option_disabled = false
                     endif
             endcase
@@ -70,7 +70,7 @@
     -%}
     {%- if block.settings.picker_type == 'button' or picker_type == "button" -%}
         {% assign option_value = value %}
-        <span class="variant-button {% if option_disabled or members_only and product.tags contains announcement_tag %}disabled-variant-button{% endif %} {{ option_value }}">
+        <span class="variant-button {% if option_disabled %}disabled-variant-button{% endif %} {{ option_value }}">
             <input
                     type="radio"
                     id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
@@ -97,7 +97,7 @@
                     <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
                 </label>
             {% endif %}
-            {% if option_disabled or members_only and product.tags contains announcement_tag %}
+            {% if option_disabled %}
                 <svg class="soldout-variant-line"><line x1="0" y1="100%" x2="100%" y2="0" class="Styles__StrikethroughLine-sc-1hxn211-12 eJiSh"></line></svg>
                 {% endif %}
             {% for variant in product.variants %}

@@ -185,7 +185,7 @@
         </div>
     {% else %}
         {% liquid
-            if member_tag != blank
+            if member_tag != blank and members_only_sale_active == true
                 assign members_only = true
             endif
             if members_only
