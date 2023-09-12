@@ -81,8 +81,8 @@
                         </div>
                     </div>
                     {% unless product.has_only_default_variant %}
-                        {% if members_only_sale %}
-                            {% if members_only_sale_active %}
+                        {% if members_only_sale == true %}
+                            {% if members_only_sale_active == true %}
                                 {% if product.tags contains announcement_tag %}
                                     {% unless customer %}
                                         <div class="members_only_container_inside_card">
@@ -120,9 +120,9 @@
                                                         if variant.available == false
                                                             assign product_disabled = true
                                                         endif
-                                                         if members_only_sale
+                                                         if members_only_sale == true
                                                              if variant.product.tags contains announcement_tag
-                                                                 if members_only_sale_active
+                                                                 if members_only_sale_active == true
                                                                      unless customer
                                                                          assign product_disabled = true
                                                                      endunless
@@ -185,11 +185,12 @@
         </div>
     {% else %}
         {% liquid
-            if member_tag != blank and members_only_sale_active == true
+            assign members_only = false
+            if announcement_tag != blank and members_only_sale_active == true
                 assign members_only = true
             endif
             if members_only
-                if customer and members_only_sale_active
+                if customer and members_only_sale_active == true
                     assign members_only = false
                 else
                     assign members_only = true
@@ -206,7 +207,7 @@
                                 {% for variant in product.variants %}
                                         {%- liquid
                                             assign product_disabled = false
-                                            if variant.available == false or members_only and variant.product.tags contains member_tag
+                                            if variant.available == false or members_only == true and variant.product.tags contains announcement_tag
                                                 assign product_disabled = true
                                             endif
                                         %}
@@ -245,15 +246,15 @@
                         {% else %}
                             <button type="submit" name="add"
                                     class="add_to_cart product-form__submit button button--full-width button--secondary"
-                                    {% if product_disabled %}
-                                        disabled
-                                    {% endif %}
+                                    {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
+                                        disabled="disabled"
+                                    {%- endif -%}
                             >
                                 <span>
                                   {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
                                       {{ 'products.product.sold_out' | t }}
-                                  {%- elsif product.tags contains member_tag and members_only -%}
-                                      {% if members_only_sale_active %}
+                                  {%- elsif product.tags contains announcement_tag and members_only == true -%}
+                                      {% if members_only_sale_active == true %}
                                           {{ 'products.product.unavailable' | t }}
                                       {% else %}
                                           {{ 'products.product.launch_date' | t }}
