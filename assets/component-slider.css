@@ -518,6 +518,10 @@ slider-component.slider-component-full-width {
     max-width: unset;
 }
 
+.featured-collection-info .collection--full-width .collection__title {
+    margin-bottom: calc(var(--grid-desktop-vertical-spacing) * 2);
+}
+
 .collection--full-width .title-wrapper--self-padded-tablet-down {
     padding-left: 0;
     padding-right: 0;
