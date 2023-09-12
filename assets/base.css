@@ -1234,8 +1234,8 @@ summary::-webkit-details-marker {
     }
 
     .grid--4-col-desktop .grid__item {
-        width: calc(25% - var(--grid-desktop-horizontal-spacing) * 3 / 4);
-        max-width: calc(25% - var(--grid-desktop-horizontal-spacing) * 3 / 4);
+        width: calc(24% - var(--grid-desktop-horizontal-spacing) * 3 / 4);
+        max-width: calc(24% - var(--grid-desktop-horizontal-spacing) * 3 / 4);
     }
 
     .grid--3-col-desktop .grid__item {
