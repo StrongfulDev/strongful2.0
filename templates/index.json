@@ -40,6 +40,45 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
+    "2aed54db-0ae5-4355-9f65-792cc00b7659": {
+      "type": "featured-collection-info",
+      "settings": {
+        "steps": 4,
+        "title": "חודש המודעות לסרטן השד",
+        "heading_size": "h1",
+        "heading_type": "heading_type_default",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "חודש-המודעות-לסרטן-השד",
+        "products_to_show": 11,
+        "columns_desktop": 5,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_text": "View all",
+        "view_all_style": "solid",
+        "view_all_location": "bottom",
+        "enable_desktop_slider": true,
+        "show_peak": true,
+        "pagination_type": "sides",
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "show_sale_badge": false,
+        "enable_quick_add": false,
+        "quick_add_type": "hover",
+        "quick_add_type_mobile": "modal",
+        "quick_add_text": "בחירת מידה",
+        "pick_size_text": "בחירת מידה",
+        "quick_add_accessories_text": "Pick accessories",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "ba7ba114-f569-44d1-a63d-3037d1ffdf34": {
       "type": "featured-collection",
       "settings": {
@@ -240,6 +279,7 @@
   },
   "order": [
     "slideshow",
+    "2aed54db-0ae5-4355-9f65-792cc00b7659",
     "ba7ba114-f569-44d1-a63d-3037d1ffdf34",
     "eb9b530b-505b-48fb-8422-353660dfbaca",
     "our_collection_list",
