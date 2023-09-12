@@ -504,6 +504,11 @@ slider-component.slider-component-full-width {
 	flex-direction: column;
 }
 
+.collection__title_heading--info {
+    justify-content: center;
+    align-items: center;
+}
+
 .collection .slider-button[disabled="disabled"] {
     visibility: hidden;
 }
