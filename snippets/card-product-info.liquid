@@ -79,7 +79,7 @@
                 >
                     {%- if card_product.featured_media -%}
                         <div class="card__media">
-                            <div>
+                            <a href="{{ card_product.url }}">
                                 <div class="media media--transparent media--hover-effect">
                                     {% assign specialImage = card_product.metafields.custom.awareness_month_product_image %}
                                     <img
@@ -103,7 +103,7 @@
                                                     height="{{ specialImage.height }}"
                                             >
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     {%- endif -%}
                     <div class="card__content">
@@ -114,12 +114,15 @@
                                         id="title-{{ section_id }}-{{ card_product.id }}"
                                     {% endif %}
                             >
-                                <div
+                                <a
+                                        href="{{ card_product.url }}"
+                                        role="link"
                                         id="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }}"
                                         class="full-unstyled-link pointer"
+                                        aria-labelledby="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }} NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
                                 >
                                     {{ card_product.title | escape }}
-                                </div>
+                                </a>
                             </p>
                         </div>
                         {%- if show_quick_add and quick_add_type == "hover" -%}
@@ -169,7 +172,10 @@
                             {% liquid
                                 assign field = card_product.metafields.custom
                             %}
-                                <div id="CardLink-{{ section_id }}-{{ card_product.id }}" class="full-unstyled-link fix-direction text-center">
+                                <a id="CardLink-{{ section_id }}-{{ card_product.id }}"
+                                   class="full-unstyled-link fix-direction text-center"
+                                   href="{{ card_product.url }}"
+                                   aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}">
                                     <div class="card-product-info-text-container">
                                         <strong>{{ field.awareness_month_name }}, </strong>
                                         <strong>{{ field.awareness_month_age }}</strong>
@@ -177,7 +183,7 @@
                                     <div class="card-product-info-text-container">
                                         <strong>{{ is_over_cancer }}</strong>
                                     </div>
-                                </div>
+                                </a>
                         </div>
                         <div class="card-information">
 
