@@ -11,11 +11,11 @@
     if product.selected_or_first_available_variant.quantity_rule.min > product.selected_or_first_available_variant.inventory_quantity and check_against_inventory
         assign quantity_rule_soldout = true
     endif
-    if member_tag != blank
+    if settings.announcement_tag != blank and members_only_sale_active == true
         assign members_only = true
     endif
-    if product.tags contains 'members_only'
-        if customer and members_only_sale_active
+    if members_only == true
+        if customer and members_only_sale_active == true
             assign members_only = false
         else
             assign members_only = true
@@ -61,8 +61,8 @@
     >
         {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
             {{ 'products.product.sold_out' | t }}
-        {%- elsif members_only -%}
-            {% if members_only_sale_active %}
+        {%- elsif members_only == true -%}
+            {% if members_only_sale_active == true %}
                 {{ 'products.product.members_only' | t }}
             {% else %}
                 {{ 'products.product.launch_date' | t }}
@@ -124,12 +124,6 @@
         "type": "text",
             "id": "quick_add_accessories_text",
             "label": "t:sections.main-collection-product-grid.settings.quick_add_accessories_text.label"
-        },
-        {
-            "type": "checkbox",
-            "id": "members_only_sale",
-            "default": false,
-            "label": "t:sections.main-collection-product-grid.settings.members_only_sale.label"
         },
         {
             "type": "text",
