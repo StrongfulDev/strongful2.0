@@ -40,18 +40,18 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
-    "ba7ba114-f569-44d1-a63d-3037d1ffdf34": {
+    "eb9b530b-505b-48fb-8422-353660dfbaca": {
       "type": "featured-collection",
       "settings": {
         "steps": 4,
-        "title": "NEW IN",
+        "title": "BEST SELLERS",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "new-in",
-        "products_to_show": 10,
+        "collection": "סטים",
+        "products_to_show": 14,
         "columns_desktop": 5,
         "full_width": true,
         "show_view_all": true,
@@ -79,18 +79,18 @@
         "padding_bottom": 24
       }
     },
-    "eb9b530b-505b-48fb-8422-353660dfbaca": {
+    "ba7ba114-f569-44d1-a63d-3037d1ffdf34": {
       "type": "featured-collection",
       "settings": {
         "steps": 4,
-        "title": "ACCESSORIES",
+        "title": "NEW IN",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "accessories",
-        "products_to_show": 14,
+        "collection": "new-in",
+        "products_to_show": 10,
         "columns_desktop": 5,
         "full_width": true,
         "show_view_all": true,
@@ -240,8 +240,8 @@
   },
   "order": [
     "slideshow",
-    "ba7ba114-f569-44d1-a63d-3037d1ffdf34",
     "eb9b530b-505b-48fb-8422-353660dfbaca",
+    "ba7ba114-f569-44d1-a63d-3037d1ffdf34",
     "our_collection_list",
     "ecf1e0a5-0973-4674-ac5b-b5370ff1bae1",
     "eb801099-3113-4348-8f97-119459011525"
