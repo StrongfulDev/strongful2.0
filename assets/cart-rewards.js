@@ -43,16 +43,18 @@ class CartRewards {
 			const isRewardInCart = this.cartHasReward(rule);
 			const rewardItem = this.getRewardItemByRule(rule);
 
-			if (rule.condition.type == 'CustomerTags') {
-				const ruleVariantId = rule.reward.variantId;
+			if (rule.condition.type === 'CustomerTags') {
+				const ruleVariantId = parseInt(rule.reward.variantId);
 				const loyaltyText = rule.reward.loyaltyText;
 				const frontCartItems = document.querySelectorAll('.cart-item');
 				frontCartItems.forEach((item) => {
 					const itemId = parseInt(item.dataset.id);
+					console.log(itemId, ruleVariantId);
 					const loyaltyDiscount = $(item).find('.loyalty-reward-discount-text');
 
 					if (itemId === ruleVariantId) {
-						$(loyaltyDiscount).removeClass('hidden').text(loyaltyText);
+						$(loyaltyDiscount).removeClass('hidden');
+						$(loyaltyDiscount).html(loyaltyText);
 					}
 				});
 			}
@@ -124,8 +126,8 @@ class CartRewards {
 			isConditionMet = (isRightQuantity || isRightQuantity === null) && (isAmountGreaterThan || isAmountLessThan);
 		} else if (rule.condition.type === "CustomerTags") {
 			if (customerTags.includes(rule.customer_tags) && this.cartTotalValue > rule.condition.value) {
-				// isConditionMet = (isRightQuantity || isRightQuantity === null) && (isAmountGreaterThan || isAmountLessThan);
-				isConditionMet = false;
+				isConditionMet = (isRightQuantity || isRightQuantity === null) && (isAmountGreaterThan || isAmountLessThan);
+				// isConditionMet = false;
 			} else {
 				isConditionMet = false;
 			}
