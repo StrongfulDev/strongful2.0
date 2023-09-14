@@ -31,46 +31,73 @@
 
 <div id="Banner-{{ section.id }}" class="{{ template.name }} banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.stack_images_on_mobile and section.settings.image != blank and section.settings.image_2 != blank %} banner--stacked{% endif %}{% if section.settings.image_height == 'adapt' and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
   {%- if section.settings.image != blank -%}
-    <div class="banner__media media{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_2 != blank %} banner__media-half{% endif %}">
       {%- liquid
-                assign image_height = section.settings.image.width | divided_by: section.settings.image.aspect_ratio
-                assign mobile_image_height = section.settings.mobile_image.width | divided_by: section.settings.mobile_image.aspect_ratio
-                assign mobile_image_class = 'mobile_version'
-                if section.settings.image_2 != blank
-                    assign mobile_image_class = 'banner__media-image-half mobile_version'
-                    assign image_class = 'banner__media-image-half'
-                endif
-                if section.settings.image_2 != blank and section.settings.stack_images_on_mobile
-                    assign sizes = '(min-width: 750px) 50vw, 100vw'
-                elsif section.settings.image_2 != blank
-                    assign sizes = '50vw'
-                else
-                    assign sizes = '100vw'
-                endif
-            -%}
-      {{
-         section.settings.image
-         | image_url: width: 3840
-         | image_tag:
-         loading: 'lazy',
-         width: section.settings.image.width,
-         height: image_height,
-         class: image_class,
-         sizes: sizes,
-         widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840' }}
-      {% if section.settings.mobile_image != blank %}
-        {{
-           section.settings.mobile_image
-           | image_url: width: 1500
-           | image_tag:
-           loading: 'lazy',
-           width: section.settings.mobile_image.width,
-           height: mobile_image_height,
-           class: mobile_image_class,
-           sizes: sizes,
-           widths: '375, 550, 750, 1500, 2000, 2500' }}
-      {% endif %}
-    </div>
+          assign image_height = section.settings.image.width | divided_by: section.settings.image.aspect_ratio
+          assign mobile_image_height = section.settings.mobile_image.width | divided_by: section.settings.mobile_image.aspect_ratio
+          assign mobile_image_class = 'mobile_version'
+          if section.settings.image_2 != blank
+              assign mobile_image_class = 'banner__media-image-half mobile_version'
+              assign image_class = 'banner__media-image-half'
+          endif
+          if section.settings.image_2 != blank and section.settings.stack_images_on_mobile
+              assign sizes = '(min-width: 750px) 50vw, 100vw'
+          elsif section.settings.image_2 != blank
+              assign sizes = '50vw'
+          else
+              assign sizes = '100vw'
+          endif
+      -%}
+    {% if section.settings.override_image_from_metafield %}
+        <div class="banner__media media {{ collection.title }} {% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}">
+            {{
+            section.settings.image
+            | image_url: width: 3840
+            | image_tag:
+            loading: 'lazy',
+            width: section.settings.image.width,
+            height: image_height,
+            class: image_class,
+            sizes: sizes,
+            widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840' }}
+            {% if section.settings.mobile_image != blank %}
+                {{
+                section.settings.mobile_image
+                | image_url: width: 1500
+                | image_tag:
+                loading: 'lazy',
+                width: section.settings.mobile_image.width,
+                height: mobile_image_height,
+                class: mobile_image_class,
+                sizes: sizes,
+                widths: '375, 550, 750, 1500, 2000, 2500' }}
+            {% endif %}
+        </div>
+    {% else %}
+        <div class="banner__media media{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_2 != blank %} banner__media-half{% endif %}">
+            {{
+            section.settings.image
+            | image_url: width: 3840
+            | image_tag:
+            loading: 'lazy',
+            width: section.settings.image.width,
+            height: image_height,
+            class: image_class,
+            sizes: sizes,
+            widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840' }}
+            {% if section.settings.mobile_image != blank %}
+                {{
+                section.settings.mobile_image
+                | image_url: width: 1500
+                | image_tag:
+                loading: 'lazy',
+                width: section.settings.mobile_image.width,
+                height: mobile_image_height,
+                class: mobile_image_class,
+                sizes: sizes,
+                widths: '375, 550, 750, 1500, 2000, 2500' }}
+            {% endif %}
+        </div>
+    {% endif %}
   {%- elsif section.settings.image_2 == blank -%}
     <div class="banner__media media{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_2 != blank %} banner__media-half{% endif %}">
       {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
@@ -172,6 +199,12 @@
       "groups": ["header", "footer"]
     },
     "settings": [
+        {
+            "type": "checkbox",
+            "id": "override_image_from_metafield",
+            "default": false,
+            "label": "Override image from metafield"
+        },
       {
         "type": "image_picker",
         "id": "image",
