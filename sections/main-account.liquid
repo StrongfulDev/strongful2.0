@@ -69,6 +69,7 @@
                       {% render 'icon-caret' %}
                   </a>
 
+                  {% comment %}
                   {% form 'contact', class: 'delete-account-form' %}
                       {{ form.errors | default_errors }}
 
@@ -92,6 +93,7 @@
                             </div>
                         {% endif %}
                   {% endform %}
+                  {% endcomment %}
 
                   <div class="custom-orders-container mobile">
                 <div class="toggle-orders-button toggle-orders">
