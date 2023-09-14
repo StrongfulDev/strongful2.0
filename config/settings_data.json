@@ -307,6 +307,12 @@
         "settings": {
           "social_font": "enable"
         }
+      },
+      "17940372039816912135": {
+        "type": "shopify:\/\/apps\/visually-all-in-1-optimization\/blocks\/visually\/d08aba15-0b89-475b-9f75-9c4c0ca8c3c4",
+        "disabled": false,
+        "settings": {
+        }
       }
     }
   },
