@@ -97,9 +97,12 @@ window.addEventListener('DOMContentLoaded', () => {
 			$(".custom-orders-container.mobile").toggleClass("active");
 		});
 
+		$('.toggle-delete').click(function() {
+			$('.custom-delete-account').toggleClass('active');
+		});
+
 		let mainTitle = document.querySelector(".customer__title");
 		let mainTitleLength = mainTitle.innerHTML.length;
-		console.log(mainTitleLength)
 		mainTitle.innerHTML = mainTitle.innerHTML.slice(13, mainTitleLength);
 	} else {
 		$(".desktop-order-container-headers").click(function() {
