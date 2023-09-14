@@ -640,7 +640,8 @@
         },
         "checkout_context": {
           "step_one": "{{ shop_name}} - סטרונגפול"
-        }
+        },
+        "submit": "שליחה"
       },
       "contact": {
         "title": "מידע",
@@ -989,7 +990,10 @@
         "page_title": "תודה רבה!",
         "title": "תודה רבה!",
         "escape_confirmation": "ההזמנה שלך שולמה",
-        "escape_action": "הציגי את ההזמנה שלך"
+        "escape_action": "הציגי את ההזמנה שלך",
+        "components": {
+          "submit": "שליחה"
+        }
       },
       "failed_payment": {
         "return_to_cart_button_label": "חזרה לאתר"
@@ -1019,7 +1023,11 @@
       }
     },
     "challenge": {
-      "message": "על מנת להמשיך יש למלא את הטופס."
+      "message": "על מנת להמשיך יש למלא את הטופס.",
+      "submit_button_text": "שליחה"
+    },
+    "checkpoint": {
+      "submit_button_text": "שליחה"
     }
   },
   "customer_accounts": {
@@ -1032,8 +1040,12 @@
     },
     "orders": {
       "order_status": {
-        "preparing_for_shipping_label": "משלוח"
+        "preparing_for_shipping_label": "משלוח",
+        "submitted_label": "נשלח"
       }
+    },
+    "ui_components": {
+      "submit": "שליחה"
     }
   }
 }
