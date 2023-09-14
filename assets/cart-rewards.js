@@ -247,10 +247,10 @@ class CartRewards {
 
 	trackProgress() {
 		const progressPercentage = (this.cartTotalValue / this.allRewardsAmount) * 100;
-			$('.progress-value').animate({
-				width: `${progressPercentage}%`
-			})
-		}
+		$('.progress-value').animate({
+			width: `${progressPercentage}%`
+		})
+	}
 
 	toggleMessage(isConditionMet, rule, ruleIndex) {
 
@@ -329,10 +329,10 @@ class CartRewards {
 			return true;
 		}
 
-			const product = this.cart.items.find(item => item.id === parseInt(productIdsInCart[0]));
-			if (product) {
-				return product.quantity === acceptableQuantity;
-			}
+		const product = this.cart.items.find(item => item.id === parseInt(productIdsInCart[0]));
+		if (product) {
+			return product.quantity === acceptableQuantity;
+		}
 	}
 
 	productsExistInCart(productIds) {

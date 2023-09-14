@@ -69,6 +69,30 @@
                       {% render 'icon-caret' %}
                   </a>
 
+                  {% form 'contact', class: 'delete-account-form' %}
+                      {{ form.errors | default_errors }}
+
+                      <div class="email hidden">
+                          <input type="email" name="contact[email]" id="email" value="{{ customer.email }}" />
+                      </div>
+
+                      <div class="message hidden">
+                          <textarea name="contact[body]" id="message">אני מעוניינת למחוק את המשתמש שלי בבקשה, תודה.</textarea>
+                      </div>
+
+                      {% unless form.posted_successfully? %}
+                          <div class="submit">
+                              <input class="container-menu-item container-menu-item__delete-acount pointer" type="submit" value="הגשת בקשה למחיקת משתמש" />
+                          </div>
+                      {% endunless %}
+
+                      {% if form.posted_successfully? %}
+                            <div class="success-message">
+                                <p>הבקשה שלך למחיקת המשתמש נשלחה בהצלחה, תודה.</p>
+                            </div>
+                        {% endif %}
+                  {% endform %}
+
                   <div class="custom-orders-container mobile">
                 <div class="toggle-orders-button toggle-orders">
                     <div class="toggle-orders-button-content flex">

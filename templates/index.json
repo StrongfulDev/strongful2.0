@@ -13,7 +13,7 @@
             "heading_size": "h1",
             "subheading": "",
             "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/סטים",
+            "link": "shopify:\/\/collections\/sets",
             "button_style_secondary": false,
             "box_align": "middle-center",
             "show_text_box": false,
@@ -81,6 +81,46 @@
       }
     },
     "ba7ba114-f569-44d1-a63d-3037d1ffdf34": {
+    "eb9b530b-505b-48fb-8422-353660dfbaca": {
+      "type": "featured-collection",
+      "settings": {
+        "steps": 4,
+        "title": "BEST SELLERS",
+        "heading_size": "h1",
+        "heading_type": "heading_type_2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "sets",
+        "products_to_show": 14,
+        "columns_desktop": 5,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_text": "SHOP ALL",
+        "view_all_style": "link",
+        "view_all_location": "top",
+        "enable_desktop_slider": true,
+        "show_peak": true,
+        "pagination_type": "sides",
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": false,
+        "show_sale_badge": false,
+        "enable_quick_add": true,
+        "quick_add_type": "hover",
+        "quick_add_type_mobile": "modal",
+        "quick_add_text": "הוספה מהירה",
+        "pick_size_text": "בחירת מידה",
+        "quick_add_accessories_text": "הוספה מהירה",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 52,
+        "padding_bottom": 24
+      }
+    },
+    "ba7ba114-f569-44d1-a63d-3037d1ffdf34": {
       "type": "featured-collection",
       "settings": {
         "steps": 4,
@@ -119,45 +159,6 @@
         "padding_bottom": 24
       }
     },
-    "eb9b530b-505b-48fb-8422-353660dfbaca": {
-      "type": "featured-collection",
-      "settings": {
-        "steps": 4,
-        "title": "ACCESSORIES",
-        "heading_size": "h1",
-        "heading_type": "heading_type_2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "accessories",
-        "products_to_show": 14,
-        "columns_desktop": 5,
-        "full_width": true,
-        "show_view_all": true,
-        "view_all_text": "SHOP ALL",
-        "view_all_style": "link",
-        "view_all_location": "top",
-        "enable_desktop_slider": true,
-        "show_peak": true,
-        "pagination_type": "sides",
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": true,
-        "show_rating": false,
-        "show_sale_badge": false,
-        "enable_quick_add": true,
-        "quick_add_type": "hover",
-        "quick_add_type_mobile": "modal",
-        "quick_add_text": "הוספה מהירה",
-        "pick_size_text": "בחירת מידה",
-        "quick_add_accessories_text": "הוספה מהירה",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 52,
-        "padding_bottom": 24
-      }
-    },
     "our_collection_list": {
       "type": "our-collection-list",
       "blocks": {
@@ -167,7 +168,7 @@
             "image": "shopify:\/\/shop_images\/0_2525721a-1319-44d6-810a-25d2fd2d9222.jpg",
             "alt": "",
             "link": "סט שני ב 50% הנחה",
-            "url": "shopify:\/\/collections\/סטים"
+            "url": "shopify:\/\/collections\/sets"
           }
         },
         "3603325c-8c6d-4a1e-b28e-fe94adadefb7": {
@@ -281,8 +282,8 @@
   "order": [
     "slideshow",
     "2aed54db-0ae5-4355-9f65-792cc00b7659",
-    "ba7ba114-f569-44d1-a63d-3037d1ffdf34",
     "eb9b530b-505b-48fb-8422-353660dfbaca",
+    "ba7ba114-f569-44d1-a63d-3037d1ffdf34",
     "our_collection_list",
     "ecf1e0a5-0973-4674-ac5b-b5370ff1bae1",
     "eb801099-3113-4348-8f97-119459011525"
