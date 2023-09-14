@@ -19,6 +19,7 @@
         ".media > *:not(.zoom):not(.deferred-media__poster-button),.media model-viewer {position: static; object-fit: cover;}"
       ],
       "settings": {
+        "override_image_from_metafield": true,
         "image": "shopify:\/\/shop_images\/0_6b86737b-4c6b-4522-a009-72fcd5f27424.jpg",
         "mobile_image": "shopify:\/\/shop_images\/0_e82848cc-029b-488f-8a6d-c4db9c7644d4.jpg",
         "image_overlay_opacity": 0,
