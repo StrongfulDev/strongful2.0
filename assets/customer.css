@@ -1371,8 +1371,12 @@ p.customer-social-separator {
 }
 
 .container-menu-item.container-menu-item__delete-acount {
-	border: 0;
-	background: transparent;
+	border: 1px solid var(--gradient-base-accent-1);
+	background: var(--gradient-background);
+	border-radius: var(--inputs-radius);
+	padding: var(--grid-desktop-horizontal-spacing);
+	margin: auto;
+	display: block;
 }
 
 @media screen and (min-width: 990px) {
