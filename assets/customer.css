@@ -963,7 +963,7 @@ p.container-extra-info {
 	margin-top: var(--grid-desktop-horizontal-spacing);
 }
 
-.custom-orders-container {
+.custom-orders-container, .custom-delete-account {
 	position: fixed;
 	width: 100%;
 	z-index: 10;
@@ -978,7 +978,7 @@ p.container-extra-info {
 	transform: translateX(100%);
 }
 
-.custom-orders-container.active {
+.custom-orders-container.active, .custom-delete-account.active {
 	transform: translateX(0);
 }
 
@@ -1159,7 +1159,7 @@ td.table-data-images {
 	max-width: 100%;
 }
 
-.custom-orders-container a:not(.no-decoration) {
+.custom-orders-container a:not(.no-decoration), .custom-delete-account a:not(.no-decoration) {
 	text-decoration: underline;
 	display: block;
 }
@@ -1512,7 +1512,7 @@ p.customer-social-separator {
 		padding-left: 2rem;
 	}
 
-	.account-desktop-container > .custom-orders-container {
+	.account-desktop-container>.custom-orders-container, .account-desktop-container>.custom-delete-account {
 		position: static;
 		transform: translateX(0);
 		z-index: 2;
@@ -1617,7 +1617,8 @@ p.customer-social-separator {
 		padding-right: 1rem;
 	}
 
-	.custom-orders-container::-webkit-scrollbar, .custom-orders-container *::-webkit-scrollbar {
+	.custom-orders-container::-webkit-scrollbar, .custom-orders-container *::-webkit-scrollbar,
+	.custom-delete-account::-webkit-scrollbar, .custom-delete-account *::-webkit-scrollbar {
 		display: none;
 	}
 
