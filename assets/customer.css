@@ -1366,6 +1366,15 @@ p.customer-social-separator {
 	margin-top: 0;
 }
 
+.delete-account-form {
+	margin-top: 1rem;
+}
+
+.container-menu-item.container-menu-item__delete-acount {
+	border: 0;
+	background: transparent;
+}
+
 @media screen and (min-width: 990px) {
 
 
