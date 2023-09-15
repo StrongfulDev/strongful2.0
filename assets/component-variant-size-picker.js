@@ -12,8 +12,19 @@ window.addEventListener('DOMContentLoaded', function(event) {
 		// $(this).parents('.variant_selector').find('.add_to_cart').removeAttr("disabled");
 	})
 
+	function closeModal(element, elementOverlay) {
+		element.removeClass("active");
+		setTimeout(() => {
+			element.hide();
+		}, 500);
+		element.parents("section").removeClass('high-z-index');
+		elementOverlay.hide()
+	}
+
 	$("body")
 		.on("click", '.variant_selector.submit_on_click .size_variant_button:not(.disabled-variant-button)', function (e) {
+			let modal = $(".variant_modal") || $(".variant_selector");
+			let modalOverlay = $(".variant_modal_overlay");
 				$(this).find(".size_variant_button_add").hide();
 				$(this).find(".loading-overlay").css("display", "flex");
 				$(this).siblings().find(".loading-overlay").css("display", "none");
@@ -29,6 +40,7 @@ window.addEventListener('DOMContentLoaded', function(event) {
 				setTimeout(() => {
 					$(this).find(".icon-checkmark").hide();
 					$(this).find(".size_variant_button_add").show();
+					closeModal(modal, modalOverlay);
 				}, 2000);
 		})
 		.on("click", ".variant_modal__toggle_button, .variant_modal__toggle_button svg", openModal)
@@ -46,21 +58,10 @@ window.addEventListener('DOMContentLoaded', function(event) {
 		}, 10);
 		modalOverlay.show();
 		modalOverlay.on("click", () => {
-			modal.removeClass("active");
-			modal.parents("section").removeClass('high-z-index');
-			setTimeout(() => {
-				modal.hide();
-			}, 500);
-			modalOverlay.hide();
-
+			closeModal(modal, modalOverlay);
 		})
 		modal.find('.quick_add_modal__close').on("click", () => {
-			modal.removeClass("active");
-			setTimeout(() => {
-				modal.hide();
-			}, 500);
-			modal.parents("section").removeClass('high-z-index');
-			modalOverlay.hide()
-		})
+			closeModal(modal, modalOverlay);
+		});
 	}
 });
