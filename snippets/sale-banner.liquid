@@ -24,7 +24,9 @@
             <p>{{ block.settings.logged_in_text }}</p>
         {% else %}
             <p>{{ block.settings.logged_out_text }}</p>
-            <small class="account-toggler-site-wide link">{{ block.settings.log_in }}</small>
+            {% if block.settings.log_in != blank %}
+                <small class="account-toggler-site-wide link">{{ block.settings.log_in }}</small>
+            {% endif %}
         {% endif %}
     </div>
 {% endif %}
