@@ -28,5 +28,8 @@
                 <small class="account-toggler-site-wide link">{{ block.settings.log_in }}</small>
             {% endif %}
         {% endif %}
+        {% if block.settings.small_text != blank %}
+            <small class="">{{ block.settings.small_text }}</small>
+        {% endif %}
     </div>
 {% endif %}
