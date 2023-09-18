@@ -1386,13 +1386,13 @@ window.addEventListener('DOMContentLoaded', function(event) {
 
 });
 
-window.addEventListener('popstate', function(event) {
-	console.log(event);
-	let cartItemsInstance = new CartItems();
-	// let cartItemsInstance = document.querySelector('cart-items');
-	cartItemsInstance.onCartUpdate();
-
-});
+// window.addEventListener('popstate', function(event) {
+// 	console.log(event);
+// 	let cartItemsInstance = new CartItems();
+// 	// let cartItemsInstance = document.querySelector('cart-items');
+// 	cartItemsInstance.onCartUpdate();
+//
+// });
 
 // check the previous window url
 function checkUrl() {
