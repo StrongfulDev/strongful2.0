@@ -1376,13 +1376,21 @@ window.addEventListener('DOMContentLoaded', function(event) {
 	enableToolbarButton.appendChild(pill);
 	enableToolbarButton.appendChild(pillBorder);
 
-	let cartItemsInstance = new CartItems();
-	let historyTraversal = event.persisted || ( typeof window.performance != "undefined" && window.performance.navigation.type === 2 );
+	// let cartItemsInstance = new CartItems();
+	// let historyTraversal = event.persisted || ( typeof window.performance != "undefined" && window.performance.navigation.type === 2 );
+	//
+	// // re-render the cart if the user clicked the back button
+	// if (historyTraversal) {
+	// 	cartItemsInstance.onCartUpdate();
+	// }
 
-	// re-render the cart if the user clicked the back button
-	if (historyTraversal) {
-		cartItemsInstance.onCartUpdate();
-	}
+});
+
+window.addEventListener('popstate', function(event) {
+	console.log(event);
+	let cartItemsInstance = new CartItems();
+	// let cartItemsInstance = document.querySelector('cart-items');
+	cartItemsInstance.onCartUpdate();
 
 });
 
