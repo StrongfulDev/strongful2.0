@@ -49,7 +49,6 @@ class CartRewards {
 				const frontCartItems = document.querySelectorAll('.cart-item');
 				frontCartItems.forEach((item) => {
 					const itemId = parseInt(item.dataset.id);
-					console.log(itemId, ruleVariantId);
 					const loyaltyDiscount = $(item).find('.loyalty-reward-discount-text');
 
 					if (itemId === ruleVariantId) {
