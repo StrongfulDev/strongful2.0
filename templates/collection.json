@@ -45,7 +45,7 @@
         "announcement_tag": "setDiscount",
         "show_rating": false,
         "show_card_collection_announcement": true,
-        "custom_collection_announcement": "סט שני ב 50% הנחה",
+        "custom_collection_announcement": "USE CODE: NIGHT40",
         "announcement_customizer_override": true,
         "enable_quick_add": true,
         "quick_add_type": "hover",
