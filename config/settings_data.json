@@ -136,7 +136,7 @@
     "show_secondary_image": true,
     "announcement_tag": "setDiscount",
     "show_card_collection_announcement": true,
-    "custom_collection_announcement": "USE CODE: NIGHT40",
+    "custom_collection_announcement": "קוד קופון: NIGHT40",
     "announcement_customizer_override": true,
     "preorder_over_text": "",
     "enable_quick_add": true,
