@@ -276,11 +276,24 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "fd994e43-08ca-4a4f-91c3-16fe5efbfb38": {
+      "type": "countdown",
+      "settings": {
+        "show_days": false,
+        "countdown_date": "Wed Sep 20 2023 12:00:00 GMT+0300 (שעון ישראל (קיץ))",
+        "countdown_url": "\/",
+        "left_text": true,
+        "left_copy": "<p>NIGHT SALE - 40% OFF EVERYTHING<\/p>",
+        "right_text": false,
+        "right_copy": ""
+      }
     }
   },
   "order": [
     "announcement-bar",
     "header",
-    "7503b704-2110-400e-bc52-a2190d224c23"
+    "7503b704-2110-400e-bc52-a2190d224c23",
+    "fd994e43-08ca-4a4f-91c3-16fe5efbfb38"
   ]
 }
