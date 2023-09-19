@@ -24,11 +24,11 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "NIGHT SALE",
-            "sub_text": "40% OFF EVERYTHING",
+            "main_text": "NIGHT SALE - 40% OFF",
+            "sub_text": "בשימוש קוד הקופון: NIGHT40",
             "text_alignment": "center",
             "main_text_direction": "ltr",
-            "sub_text_direction": "ltr",
+            "sub_text_direction": "rtl",
             "link": "shopify:\/\/collections\/sets",
             "color_scheme": "accent-1"
           }
