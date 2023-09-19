@@ -24,11 +24,11 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "NIGHT SALE - 40% OFF",
-            "sub_text": "בשימוש קוד הקופון: NIGHT40",
+            "main_text": "SALE",
+            "sub_text": "25% OFF EVERYTHING",
             "text_alignment": "center",
             "main_text_direction": "ltr",
-            "sub_text_direction": "rtl",
+            "sub_text_direction": "ltr",
             "link": "shopify:\/\/collections\/sets",
             "color_scheme": "accent-1"
           }
@@ -276,24 +276,11 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
-    },
-    "fd994e43-08ca-4a4f-91c3-16fe5efbfb38": {
-      "type": "countdown",
-      "settings": {
-        "show_days": false,
-        "countdown_date": "Wed Sep 20 2023 08:00:00 GMT+0300 (שעון ישראל (קיץ))",
-        "countdown_url": "\/",
-        "left_text": false,
-        "left_copy": "",
-        "right_text": true,
-        "right_copy": "<p>40% הנחה בשימוש הקוד NIGHT40<\/p>"
-      }
     }
   },
   "order": [
     "announcement-bar",
     "header",
-    "7503b704-2110-400e-bc52-a2190d224c23",
-    "fd994e43-08ca-4a4f-91c3-16fe5efbfb38"
+    "7503b704-2110-400e-bc52-a2190d224c23"
   ]
 }
