@@ -171,14 +171,14 @@
 
 
                                     assign card_announcement = ""
-                                    if section.settings.show_card_collection_announcement
-                                        if section.settings.announcement_customizer_override and section.settings.custom_collection_announcement != blank
+                                    if settings.show_card_collection_announcement
+                                        if settings.announcement_customizer_override and settings.custom_collection_announcement != blank
                                             assign card_announcement = settings.custom_collection_announcement
                                         elsif product.metafields.announcement.text != blank
                                             assign card_announcement = product.metafields.announcement.text
                                         elsif collection.metafields.announcement.text != blank
                                             assign card_announcement = collection.metafields.announcement.text
-                                        elsif section.settings.custom_collection_announcement != blank
+                                        elsif settings.custom_collection_announcement != blank
                                             assign card_announcement = settings.custom_collection_announcement
                                         endif
                                     endif
@@ -335,34 +335,12 @@
       "default": false,
       "label": "t:sections.main-collection-product-grid.settings.show_vendor.label"
     },
-      {
-        "type": "text",
-        "id": "announcement_tag",
-        "label": "t:sections.main-collection-product-grid.settings.announcement_tag.label"
-      },
     {
       "type": "checkbox",
       "id": "show_rating",
       "default": false,
       "label": "t:sections.main-collection-product-grid.settings.show_rating.label",
       "info": "t:sections.main-collection-product-grid.settings.show_rating.info"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_card_collection_announcement",
-      "default": false,
-      "label": "t:sections.main-collection-product-grid.settings.show_card_collection_announcement.label"
-    },
-    {
-      "type": "text",
-      "id": "custom_collection_announcement",
-      "label": "t:sections.main-collection-product-grid.settings.custom_collection_announcement.label"
-    },
-    {
-      "type": "checkbox",
-      "id": "announcement_customizer_override",
-      "default": false,
-      "label": "t:sections.main-collection-product-grid.settings.announcement_customizer_override.label"
     },
     {
       "type": "checkbox",
