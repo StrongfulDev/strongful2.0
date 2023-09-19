@@ -281,7 +281,7 @@
       "type": "countdown",
       "settings": {
         "show_days": false,
-        "countdown_date": "Wed Sep 20 2023 12:00:00 GMT+0300 (שעון ישראל (קיץ))",
+        "countdown_date": "Wed Sep 20 2023 08:00:00 GMT+0300 (שעון ישראל (קיץ))",
         "countdown_url": "\/",
         "left_text": true,
         "left_copy": "<p>NIGHT SALE - 40% OFF EVERYTHING<\/p>",
