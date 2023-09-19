@@ -24,8 +24,8 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "HOLIDAY SALE",
-            "sub_text": "סט שני ב 50% הנחה",
+            "main_text": "NIGHT SALE",
+            "sub_text": "40% OFF EVERYTHING",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "rtl",
