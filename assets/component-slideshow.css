@@ -232,7 +232,7 @@ button.slideshow__autoplay {
     padding: 2rem 1.5rem;
     width: fit-content;
     position: absolute;
-    bottom: 30vh;
+    bottom: 32vh;
 	left: 50%;
 	transform: translateX(-50%);
 }
