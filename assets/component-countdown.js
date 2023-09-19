@@ -6,9 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	if (document.getElementById('tiles') != null) {
 
-		// getCountdown();
+		getCountdown();
 
-		// setInterval(() => { getCountdown(); }, 1000);
+		setInterval(() => { getCountdown(); }, 1000);
 
 		function getCountdown() {
 
@@ -73,6 +73,6 @@ document.addEventListener('DOMContentLoaded', function() {
 		}
 	}
 
-	updateCounter();
+	// updateCounter();
 
 });
