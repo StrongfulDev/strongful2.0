@@ -28,7 +28,7 @@
             "sub_text": "40% OFF EVERYTHING",
             "text_alignment": "center",
             "main_text_direction": "ltr",
-            "sub_text_direction": "rtl",
+            "sub_text_direction": "ltr",
             "link": "shopify:\/\/collections\/sets",
             "color_scheme": "accent-1"
           }
