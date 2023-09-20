@@ -9,6 +9,15 @@
             "show_mobile": false
           }
         },
+        "5ec0a264-e4fc-4a8d-92bc-f2f9223694f5": {
+          "type": "sale",
+          "settings": {
+            "logged_in_text": "לשעות בודדות בלבד - NIGHT SALE",
+            "logged_out_text": "לשעות בודדות בלבד - NIGHT SALE",
+            "log_in": "",
+            "small_text": "פריטים נבחרים רק ב₪99"
+          }
+        },
         "title": {
           "type": "title",
           "settings": {
@@ -110,6 +119,7 @@
       },
       "block_order": [
         "7c99b889-3ad8-4802-a5c7-9802ab40f12c",
+        "5ec0a264-e4fc-4a8d-92bc-f2f9223694f5",
         "title",
         "5fa3ce9f-60f6-4aee-a0c4-c987fa5f3522",
         "656bd184-5523-4c74-aee3-c2664a058063",

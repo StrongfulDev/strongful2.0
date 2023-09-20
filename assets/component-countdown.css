@@ -1,6 +1,6 @@
 .countdown-section {
 	position: sticky;
-	top: 64px;
+	top: 61px;
 	z-index: 4;
 }
 
@@ -40,6 +40,7 @@
 	font-size: .9em;
 	text-align: center;
 	line-height: 1.5rem;
+	direction: ltr;
 }
 
 .countdown-sale-description-ctn p:nth-child(2) {
@@ -58,14 +59,15 @@
 	z-index: 1;
 	height: 100%;
 	font-size: .9em;
+	padding: var(--grid-mobile-vertical-spacing);
 }
 
 .countdown #tiles>span, .tiles-time {
 	text-align: center;
 	color: var(--gradient-base-background-1);
 	position: relative;
-	font-size: var(--font-body-size-medium);
-	margin: 0 4px;
+	font-size: var(--font-body-size-large);
+	margin: 0;
 	font-weight: 600;
 	box-shadow: 0px 0px 6px 0px rgb(255 255 255 / 30%);
 	padding: .15em;
@@ -98,5 +100,9 @@
 
 	.countdown-sale-description {
 		font-size: 1.1em;
+	}
+
+	.countdown-section {
+		top: 66px;
 	}
 }

@@ -120,7 +120,7 @@
         {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
             <aside
                     aria-labelledby="verticalTitle"
-                    class="facets-wrapper{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
+                    class="facets-wrapper countdown-facet{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
                     id="main-collection-filters"
                     data-id="{{ section.id }}"
             >
@@ -171,14 +171,8 @@
 
 
                                     assign card_announcement = ""
-                                    if section.settings.show_card_collection_announcement
-                                        if section.settings.announcement_customizer_override and section.settings.custom_collection_announcement != blank
-                                            assign card_announcement = settings.custom_collection_announcement
-                                        elsif product.metafields.announcement.text != blank
-                                            assign card_announcement = product.metafields.announcement.text
-                                        elsif collection.metafields.announcement.text != blank
-                                            assign card_announcement = collection.metafields.announcement.text
-                                        elsif section.settings.custom_collection_announcement != blank
+                                    if settings.show_card_collection_announcement
+                                        if settings.custom_collection_announcement != blank
                                             assign card_announcement = settings.custom_collection_announcement
                                         endif
                                     endif
@@ -200,7 +194,7 @@
                                                     image_count: section.settings.image_count,
                                                     card_banner_text: card_announcement,
                                                     card_header_size: section.settings.card_header_size,
-                                                    announcement_tag: section.settings.announcement_tag,
+                                                    announcement_tag: settings.announcement_tag,
                                                     pick_size_text: section.settings.pick_size_text,
                                                     quick_add_text: section.settings.quick_add_text,
                                                     quick_add_accessories_text: section.settings.quick_add_accessories_text,
@@ -227,7 +221,7 @@
                                                     image_count: section.settings.image_count,
                                                     card_banner_text: card_announcement,
                                                     card_header_size: section.settings.card_header_size,
-                                                    announcement_tag: section.settings.announcement_tag,
+                                                    announcement_tag: settings.announcement_tag,
                                                     pick_size_text: section.settings.pick_size_text,
                                                     quick_add_text: section.settings.quick_add_text,
                                                     quick_add_accessories_text: section.settings.quick_add_accessories_text,
@@ -335,34 +329,12 @@
       "default": false,
       "label": "t:sections.main-collection-product-grid.settings.show_vendor.label"
     },
-      {
-        "type": "text",
-        "id": "announcement_tag",
-        "label": "t:sections.main-collection-product-grid.settings.announcement_tag.label"
-      },
     {
       "type": "checkbox",
       "id": "show_rating",
       "default": false,
       "label": "t:sections.main-collection-product-grid.settings.show_rating.label",
       "info": "t:sections.main-collection-product-grid.settings.show_rating.info"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_card_collection_announcement",
-      "default": false,
-      "label": "t:sections.main-collection-product-grid.settings.show_card_collection_announcement.label"
-    },
-    {
-      "type": "text",
-      "id": "custom_collection_announcement",
-      "label": "t:sections.main-collection-product-grid.settings.custom_collection_announcement.label"
-    },
-    {
-      "type": "checkbox",
-      "id": "announcement_customizer_override",
-      "default": false,
-      "label": "t:sections.main-collection-product-grid.settings.announcement_customizer_override.label"
     },
     {
       "type": "checkbox",

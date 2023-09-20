@@ -6,9 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	if (document.getElementById('tiles') != null) {
 
-		// getCountdown();
+		getCountdown();
 
-		// setInterval(() => { getCountdown(); }, 1000);
+		setInterval(() => { getCountdown(); }, 1000);
 
 		function getCountdown() {
 
@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', function() {
 			seconds = pad(parseInt(seconds_left % 60));
 
 			$('.tiles-time-days').html(days);
-			$('.tiles-time-hours').html(hours);
-			$('.tiles-time-minutes').html(minutes);
+			$('.tiles-time-hours').html(hours + '<span class="tiles-time-hours-small"> :</span>');
+			$('.tiles-time-minutes').html(minutes + '<span class="tiles-time-minutes-small"> :</span>');
 			$('.tiles-time-seconds').html(seconds);
 		}
 
@@ -73,6 +73,6 @@ document.addEventListener('DOMContentLoaded', function() {
 		}
 	}
 
-	updateCounter();
+	// updateCounter();
 
 });

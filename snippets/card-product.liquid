@@ -259,7 +259,7 @@
                 </div>
                 <div class="card__content">
                     <div class="card__information">
-                        {% if card_product.tags contains announcement_tag %}
+                        {% if card_product.tags contains announcement_tag and card_banner_text != blank %}
                             <span class="card_banner_text color-background-2">{{ card_banner_text }}</span>
                         {% endif %}
                         {% if card_product.compare_at_price > card_product.price %}

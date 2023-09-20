@@ -134,11 +134,11 @@
     "predictive_search_show_price": true,
     "image_ratio": "adapt",
     "show_secondary_image": true,
-    "announcement_tag": "setDiscount",
+    "announcement_tag": "night99",
     "show_card_collection_announcement": true,
-    "custom_collection_announcement": "סט שני ב 50% הנחה",
+    "custom_collection_announcement": "ONLY FOR ₪99",
     "announcement_customizer_override": true,
-    "preorder_over_text": "מכירה מוקדמת הסתיימה. זמין לרכישה ב 15.8",
+    "preorder_over_text": "",
     "enable_quick_add": true,
     "quick_add_text": "בחירת מידה",
     "quick_add_accessories_text": "הוספה לסל",
@@ -287,12 +287,6 @@
         "settings": {
         }
       },
-      "10570433277407501837": {
-        "type": "shopify:\/\/apps\/simprosys-google-shopping-feed\/blocks\/gsf-gcr\/1f0b859e-9fa6-4007-97e8-4513aff5ff3b",
-        "disabled": false,
-        "settings": {
-        }
-      },
       "8962992520437913685": {
         "type": "shopify:\/\/apps\/yotpo-loyalty-rewards\/blocks\/loader-app-embed-block\/2f9660df-5018-4e02-9868-ee1fb88d6ccd",
         "disabled": true,
@@ -306,6 +300,12 @@
         "disabled": false,
         "settings": {
           "social_font": "enable"
+        }
+      },
+      "17940372039816912135": {
+        "type": "shopify:\/\/apps\/visually-all-in-1-optimization\/blocks\/visually\/d08aba15-0b89-475b-9f75-9c4c0ca8c3c4",
+        "disabled": false,
+        "settings": {
         }
       }
     }

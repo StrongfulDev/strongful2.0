@@ -1221,7 +1221,7 @@ function removeDeadProduct() {
 	});
 }
 
-window.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('DOMContentLoaded', function(event) {
 
 	// account modal code start here
 
@@ -1376,7 +1376,23 @@ window.addEventListener('DOMContentLoaded', function() {
 	enableToolbarButton.appendChild(pill);
 	enableToolbarButton.appendChild(pillBorder);
 
+	// let cartItemsInstance = new CartItems();
+	// let historyTraversal = event.persisted || ( typeof window.performance != "undefined" && window.performance.navigation.type === 2 );
+	//
+	// // re-render the cart if the user clicked the back button
+	// if (historyTraversal) {
+	// 	cartItemsInstance.onCartUpdate();
+	// }
+
 });
+
+// window.addEventListener('popstate', function(event) {
+// 	console.log(event);
+// 	let cartItemsInstance = new CartItems();
+// 	// let cartItemsInstance = document.querySelector('cart-items');
+// 	cartItemsInstance.onCartUpdate();
+//
+// });
 
 // check the previous window url
 function checkUrl() {

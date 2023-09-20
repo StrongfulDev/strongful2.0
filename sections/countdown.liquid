@@ -1,15 +1,14 @@
 {{ 'component-countdown.css' | asset_url | stylesheet_tag }}
 {{ 'component-countdown.js' | asset_url | script_tag }}
 
-{% comment %}
    <a href="{{ section.settings.countdown_url }}" id="countdown" class="countdown fix-direction" data-date="{{ section.settings.countdown_date }}">
     <div class="countdown-ctn flex">
+        {% if section.settings.right_text %}
+            <div class="countdown-sale-description-ctn">
+                {{ section.settings.right_copy }}
+            </div>
+        {% endif %}
         <div class="announce-countdown flex">
-            {% if section.settings.right_text %}
-                <div class="countdown-sale-description-ctn">
-                    {{ section.settings.right_copy }}
-                </div>
-            {% endif %}
             <div id="tiles" class="flex ltr">
                 <div class="tiles-div tiles-div-days {% unless section.settings.show_days %}hidden{% endunless %}">
                     <p class="tiles-time tiles-time-days"></p>
@@ -32,8 +31,8 @@
         {% endif %}
     </div>
 </a>
-{% endcomment %}
 
+{% comment %}
 <a href="{{ section.settings.countdown_url }}" id="countdown" class="countdown fix-direction" data-date="{{ section.settings.countdown_date }}">
     <div class="countdown-ctn flex">
         <div class="announce-countdown flex">
@@ -56,6 +55,7 @@
         {% endif %}
     </div>
 </a>
+{% endcomment %}
 
 {% schema %}
 {

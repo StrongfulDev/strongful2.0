@@ -232,7 +232,7 @@ button.slideshow__autoplay {
     padding: 2rem 1.5rem;
     width: fit-content;
     position: absolute;
-    bottom: 9vh;
+    bottom: 14vh;
 	left: 50%;
 	transform: translateX(-50%);
 }
@@ -289,9 +289,7 @@ button.slideshow__autoplay {
     }
 
 	.slideshow__text.banner__box {
-      bottom: 10vw;
-      left: 4%;
-      transform: translate(0);
+      bottom: 5vw;
 	}
 
 	.slideshow__slide:first-of-type .slideshow__text-wrapper {
