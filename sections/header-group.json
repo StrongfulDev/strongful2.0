@@ -276,11 +276,24 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "c42a8db8-a1c7-4a5a-974b-faaece150e9f": {
+      "type": "countdown",
+      "settings": {
+        "show_days": false,
+        "countdown_date": "Thu Sep 21 2023 08:00:00 GMT+0300 (שעון ישראל (קיץ))",
+        "countdown_url": "shopify:\/\/collections\/sets",
+        "left_text": true,
+        "left_copy": "<p>NIGHT SALE - 99₪ ON SELECTED ITEMS<\/p>",
+        "right_text": false,
+        "right_copy": ""
+      }
     }
   },
   "order": [
     "announcement-bar",
     "header",
-    "7503b704-2110-400e-bc52-a2190d224c23"
+    "7503b704-2110-400e-bc52-a2190d224c23",
+    "c42a8db8-a1c7-4a5a-974b-faaece150e9f"
   ]
 }
