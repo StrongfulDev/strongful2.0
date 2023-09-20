@@ -137,7 +137,7 @@
     "announcement_tag": "night99",
     "show_card_collection_announcement": false,
     "custom_collection_announcement": "ONLY FOR ₪99",
-    "announcement_customizer_override": false,
+    "announcement_customizer_override": true,
     "preorder_over_text": "",
     "enable_quick_add": true,
     "quick_add_text": "בחירת מידה",
