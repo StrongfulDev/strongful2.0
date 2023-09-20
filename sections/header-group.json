@@ -24,8 +24,8 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "SALE",
-            "sub_text": "25% OFF EVERYTHING",
+            "main_text": "NIGHT SALE",
+            "sub_text": "פריטים נבחרים ב ₪99",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "ltr",
