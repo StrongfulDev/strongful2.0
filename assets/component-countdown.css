@@ -100,4 +100,8 @@
 	.countdown-sale-description {
 		font-size: 1.1em;
 	}
+
+	.countdown-section {
+		top: 66px;
+	}
 }
