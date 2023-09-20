@@ -283,10 +283,10 @@
         "show_days": false,
         "countdown_date": "Thu Sep 21 2023 08:00:00 GMT+0300 (שעון ישראל (קיץ))",
         "countdown_url": "shopify:\/\/collections\/sets",
-        "left_text": true,
-        "left_copy": "<p>NIGHT SALE - 99₪ ON SELECTED ITEMS<\/p>",
-        "right_text": false,
-        "right_copy": ""
+        "left_text": false,
+        "left_copy": "",
+        "right_text": true,
+        "right_copy": "<p>NIGHT SALE - פריטים נבחרים ב ₪99<\/p>"
       }
     }
   },
