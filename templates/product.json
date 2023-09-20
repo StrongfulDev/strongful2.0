@@ -12,8 +12,8 @@
         "5ec0a264-e4fc-4a8d-92bc-f2f9223694f5": {
           "type": "sale",
           "settings": {
-            "logged_in_text": "night sale! לשעות בודדות בלבד",
-            "logged_out_text": "night sale! לשעות בודדות בלבד",
+            "logged_in_text": "NIGHT SALE! לשעות בודדות בלבד",
+            "logged_out_text": "NIGHT SALE! לשעות בודדות בלבד",
             "log_in": "",
             "small_text": "פריטים נבחרים רק ב₪99"
           }
