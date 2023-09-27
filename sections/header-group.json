@@ -24,11 +24,11 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "NIGHT SALE",
-            "sub_text": "פריטים נבחרים ב ₪99",
+            "main_text": "חודש המודעות לסרטן השד",
+            "sub_text": "100% מהרווחים נתרמים לעמותת ׳אחת מתשע׳",
             "text_alignment": "center",
             "main_text_direction": "ltr",
-            "sub_text_direction": "ltr",
+            "sub_text_direction": "rtl",
             "link": "shopify:\/\/collections\/פריטים-ב-99",
             "color_scheme": "accent-1"
           }
