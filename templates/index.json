@@ -1,45 +1,5 @@
 {
   "sections": {
-    "1f60398a-2c8e-4929-982d-29a981f0bb34": {
-      "type": "featured-collection-info",
-      "settings": {
-        "steps": 4,
-        "title": "מחלימות מסרטן השד",
-        "heading_size": "h1",
-        "heading_type": "heading_type_default",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "חודש-המודעות-לסרטן-השד",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "full_width": true,
-        "show_view_all": false,
-        "view_all_text": "View all",
-        "view_all_style": "solid",
-        "view_all_location": "bottom",
-        "enable_desktop_slider": true,
-        "show_peak": true,
-        "pagination_type": "sides",
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "show_sale_badge": false,
-        "enable_quick_add": false,
-        "quick_add_type": "hover",
-        "quick_add_type_mobile": "modal",
-        "quick_add_text": "בחירת מידה",
-        "pick_size_text": "בחירת מידה",
-        "quick_add_accessories_text": "Pick accessories",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "is_over_cancer": "מחלימה מסרטן השד",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "slideshow": {
       "type": "slideshow",
       "blocks": {
@@ -78,6 +38,46 @@
         "change_slides_speed": 9,
         "show_text_below": false,
         "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "1f60398a-2c8e-4929-982d-29a981f0bb34": {
+      "type": "featured-collection-info",
+      "settings": {
+        "steps": 4,
+        "title": "מחלימות מסרטן השד",
+        "heading_size": "h1",
+        "heading_type": "heading_type_default",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "חודש-המודעות-לסרטן-השד",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": true,
+        "show_view_all": false,
+        "view_all_text": "View all",
+        "view_all_style": "solid",
+        "view_all_location": "bottom",
+        "enable_desktop_slider": true,
+        "show_peak": true,
+        "pagination_type": "sides",
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "show_sale_badge": false,
+        "enable_quick_add": false,
+        "quick_add_type": "hover",
+        "quick_add_type_mobile": "modal",
+        "quick_add_text": "בחירת מידה",
+        "pick_size_text": "בחירת מידה",
+        "quick_add_accessories_text": "Pick accessories",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "is_over_cancer": "מחלימה מסרטן השד",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "eb9b530b-505b-48fb-8422-353660dfbaca": {
@@ -279,8 +279,8 @@
     }
   },
   "order": [
-    "1f60398a-2c8e-4929-982d-29a981f0bb34",
     "slideshow",
+    "1f60398a-2c8e-4929-982d-29a981f0bb34",
     "eb9b530b-505b-48fb-8422-353660dfbaca",
     "ba7ba114-f569-44d1-a63d-3037d1ffdf34",
     "our_collection_list",
