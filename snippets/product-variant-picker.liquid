@@ -33,22 +33,13 @@
 
 
 {% unless product.tags contains 'noSimilar' %}
-<ul class="similiar
-        {% if product.tags contains 'special-edition-sibling' %}
-        {% unless product.title contains 'Lerato' %}
-        special-edition-product-list
-          {% endunless %}
-        {% elsif product.tags contains 'special-edition' %}
-        {% unless product.title contains 'Lerato' %}
-        special-edition-product
-          {% endunless %}
-        {% endif %}" id="scrollNoSize">
+<ul class="similar" id="scrollNoSize">
     {% for collection in collections %}
         {% if collection.title == similarParent or collection.title == similarParent.value %}
             {% for product in collection.products %}
                 {% if isLiveTheme == 'true' %}
                 {% unless product.tags contains 'hidden' %}
-                    <li class="relative-discount similiar-child {% if product.tags contains 'special-edition' %}special-edition{% elsif product.tags contains 'special-edition-family' %}special-edition-sibling{% endif %} {{ forloop.index0 }}">
+                    <li class="relative-discount similar-child {{ forloop.index0 }}">
                         <a href="{{ product.url }}" class="similar-a">
                             <img src="{{ product.featured_image | product_img_url: 'master' }}"
                                  srcset="{{ product.featured_image | product_img_url: '200x' }} 200w,
@@ -61,7 +52,7 @@
                     </li>
                 {% endunless %}
                 {% else %}
-                    <li class="relative-discount similiar-child {% if product.tags contains 'special-edition' %}special-edition{% elsif product.tags contains 'special-edition-family' %}special-edition-sibling{% endif %} {{ forloop.index0 }}">
+                    <li class="relative-discount similar-child {{ forloop.index0 }}">
                         <a href="{{ product.url }}" class="similar-a">
                             <img src="{{ product.featured_image | product_img_url: 'master' }}"
                                  srcset="{{ product.featured_image | product_img_url: '200x' }} 200w,
