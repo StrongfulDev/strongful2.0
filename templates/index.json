@@ -80,45 +80,6 @@
         "padding_bottom": 36
       }
     },
-    "eb9b530b-505b-48fb-8422-353660dfbaca": {
-      "type": "featured-collection",
-      "settings": {
-        "steps": 4,
-        "title": "פריטים ב- ₪99",
-        "heading_size": "h1",
-        "heading_type": "heading_type_2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "פריטים-ב-99",
-        "products_to_show": 14,
-        "columns_desktop": 5,
-        "full_width": true,
-        "show_view_all": true,
-        "view_all_text": "SHOP ALL",
-        "view_all_style": "link",
-        "view_all_location": "top",
-        "enable_desktop_slider": true,
-        "show_peak": true,
-        "pagination_type": "sides",
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": true,
-        "show_rating": false,
-        "show_sale_badge": false,
-        "enable_quick_add": true,
-        "quick_add_type": "hover",
-        "quick_add_type_mobile": "modal",
-        "quick_add_text": "הוספה מהירה",
-        "pick_size_text": "בחירת מידה",
-        "quick_add_accessories_text": "הוספה מהירה",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 52,
-        "padding_bottom": 24
-      }
-    },
     "ba7ba114-f569-44d1-a63d-3037d1ffdf34": {
       "type": "featured-collection",
       "settings": {
@@ -281,7 +242,6 @@
   "order": [
     "slideshow",
     "1f60398a-2c8e-4929-982d-29a981f0bb34",
-    "eb9b530b-505b-48fb-8422-353660dfbaca",
     "ba7ba114-f569-44d1-a63d-3037d1ffdf34",
     "our_collection_list",
     "ecf1e0a5-0973-4674-ac5b-b5370ff1bae1",
