@@ -102,7 +102,7 @@
             <span>{{ block.settings.heading | escape }}</span>
         </{{ block.settings.heading_size }}>
         {%- when 'text' -%}
-            <div class="banner__text {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
+            <div class="banner__text fix-direction {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
                 <span>{{ block.settings.text | escape }}</span>
             </div>
         {%- when 'buttons' -%}
