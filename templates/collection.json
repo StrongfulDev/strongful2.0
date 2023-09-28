@@ -9,10 +9,18 @@
             "heading": "{{ collection.title }}",
             "heading_size": "h1"
           }
+        },
+        "99799f5d-8c81-4afd-acfb-bba05e6ea21d": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "body"
+          }
         }
       },
       "block_order": [
-        "b12ab2ae-119f-4c68-9a4f-1e499db126b3"
+        "b12ab2ae-119f-4c68-9a4f-1e499db126b3",
+        "99799f5d-8c81-4afd-acfb-bba05e6ea21d"
       ],
       "custom_css": [
         "@media screen and (min-width: 990px) {.banner__media img {object-fit: contain; }}",
