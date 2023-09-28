@@ -11,6 +11,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	z-index: 0;
 }
 
 .announcement-bar__link {
@@ -63,12 +64,14 @@
 
 .announcement-bar.active {
     opacity: 1;
+	z-index: 1;
 }
 
 @media screen and (min-width: 990px) {
 	.announcement-bar, .announcement-bar.active + .announcement-bar, .announcement-bar.active + .announcement-bar + .announcement-bar {
         opacity: 1;
 		position: static;
+		z-index: 1;
     }
 
     .announcement-bar-container.container-columns {
