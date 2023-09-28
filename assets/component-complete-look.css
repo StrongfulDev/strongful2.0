@@ -154,6 +154,10 @@
 	margin: 0;
 }
 
+.complete_look__item .button.add_to_cart span {
+	font-size: calc(var(--font-body-size-medium) * 0.9);
+}
+
 @media screen and (min-width: 990px) {
 	.complete_look__slider {
 		padding: 0 5rem;
