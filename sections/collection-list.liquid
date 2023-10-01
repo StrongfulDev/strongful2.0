@@ -62,7 +62,8 @@
         {%- for block in section.blocks -%}
           <li
             id="Slide-{{ section.id }}-{{ forloop.index }}"
-            class="collection-list__item grid__item{% if show_mobile_slider %} slider__slide{% endif %}{% if block.settings.collection.featured_image == nil %} collection-list__item--no-media{% endif %}"
+            class="collection-list__item grid__item{% if show_mobile_slider %} slider__slide{% endif %}{% if block.settings.collection.featured_image == nil %} collection-list__item--no-media{% endif %}
+              {% if block.settings.show_on_desktop == false %} small-hide{% endif %}
             {{ block.shopify_attributes }}
           >
             {% render 'card-collection',
@@ -302,6 +303,12 @@
           "type": "collection",
           "id": "collection",
           "label": "t:sections.collection-list.blocks.featured_collection.settings.collection.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_on_desktop",
+          "default": true,
+          "label": "Whether to show this collection on desktop"
         }
       ]
     }
