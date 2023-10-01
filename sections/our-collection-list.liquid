@@ -73,7 +73,8 @@
         {%- for block in section.blocks -%}
           <li
             id="Slide-{{ section.id }}-{{ forloop.index }}"
-            class="collection-list__item grid__item{% if show_mobile_slider %} slider__slide{% endif %}{% if block.settings.collection.featured_image == nil %} collection-list__item--no-media{% endif %}">
+            class="collection-list__item grid__item{% if show_mobile_slider %} slider__slide{% endif %}{% if block.settings.collection.featured_image == nil %} collection-list__item--no-media{% endif %}
+                {% if block.settings.show_on_desktop == false %} small-hide{% endif %}">
             <a href="{{ block.settings.url }}" class="our-collections-list-link">
                 {%- if block.settings.image -%}
                   {{ block.settings.image | image_url: width: 1500 | image_tag:
