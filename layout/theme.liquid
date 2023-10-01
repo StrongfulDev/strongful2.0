@@ -513,9 +513,6 @@
 {%- endif -%}
 {{ 'ajaxinate.min.js' | asset_url | script_tag }}
 
-{% comment %}
-
-{% if isLiveTheme == 'false' %}
     {% liquid
         assign customerPhone = customer.phone | replace: '-', '' | replace: '+', '' | replace: ' ', ''
         unless customerPhone contains '972'
@@ -539,8 +536,6 @@
 
         (function(n){var u=function(){GlassixWidgetClient&&typeof GlassixWidgetClient=="function"?(window.widgetClient=new GlassixWidgetClient(n),widgetClient.attach(),window.glassixWidgetScriptLoaded&&window.glassixWidgetScriptLoaded()):f()},f=function(){r.onload=u;r.src="https://cdn.glassix.net/clients/widget.1.2.min.js";i.parentNode.removeChild(t);i.parentNode.insertBefore(r,i)},i=document.getElementsByTagName("script")[0],t=document.createElement("script"),r;(t.async=!0,t.type="text/javascript",t.crossorigin="anonymous",t.id="glassix-widget-script",r=t.cloneNode(),t.onload=u,t.src="https://cdn.glassix.com/clients/widget.1.2.min.js",!document.getElementById(t.id)&&document.body)&&(i.parentNode.insertBefore(t,i),t.onerror=f)})(widgetOptions)
     </script>
-{% endif %}
-{% endcomment %}
 
 </body>
 </html>
