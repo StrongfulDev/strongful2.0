@@ -21,9 +21,9 @@
 {% if product.tags contains announcement_tag %}
     <div class="sale-banner-product-page fix-direction">
         {% if customer %}
-            <p>{{ block.settings.logged_in_text }}</p>
+            <p>{{ block.settings.logged_in_text | newline_to_br }}</p>
         {% else %}
-            <p>{{ block.settings.logged_out_text }}</p>
+            <p>{{ block.settings.logged_out_text | newline_to_br }}</p>
             {% if block.settings.log_in != blank %}
                 <small class="account-toggler-site-wide link">{{ block.settings.log_in }}</small>
             {% endif %}
