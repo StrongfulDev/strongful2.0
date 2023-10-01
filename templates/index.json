@@ -208,7 +208,7 @@
             "alt": "",
             "link": "SALE",
             "url": "shopify:\/\/collections\/10-15-off",
-            "show_on_desktop": false
+            "show_on_desktop": true
           }
         }
       },
