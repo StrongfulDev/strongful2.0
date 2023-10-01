@@ -63,6 +63,15 @@
     "header": {
       "type": "header",
       "blocks": {
+        "1c8231d0-2dc4-450e-ae3d-c73407152ac1": {
+          "type": "url",
+          "settings": {
+            "show_on_mobile": true,
+            "small_font": false,
+            "title": "SALE",
+            "title_link": "shopify:\/\/collections\/10-15-off"
+          }
+        },
         "ba94928e-5cd1-47f5-9c0a-28ea47285f01": {
           "type": "menu_item",
           "settings": {
@@ -217,6 +226,7 @@
         }
       },
       "block_order": [
+        "1c8231d0-2dc4-450e-ae3d-c73407152ac1",
         "ba94928e-5cd1-47f5-9c0a-28ea47285f01",
         "8878d4cf-d83f-42a2-90b9-ddebceb7501c",
         "03fa03f7-aac1-443b-acba-9a19fb5aa148",
