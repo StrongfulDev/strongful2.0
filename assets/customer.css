@@ -1390,7 +1390,7 @@ p.customer-social-separator {
 	.sidebar-container {
 		display: flex;
 		justify-content: space-between;
-		height: 71vh;
+		/*height: 71vh;*/
 		flex-direction: column;
 	}
 
