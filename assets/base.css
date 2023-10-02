@@ -3341,7 +3341,7 @@ button.needsclick {
 /*	font-size: 14px !important;*/
 /*}*/
 
-.needsclick *, .needsclick {
+button.needsclick *, .needsclick {
 	line-height: 10px !important;
 }
 
@@ -3365,7 +3365,7 @@ div#glassix-widget-launcher-closed #customized-launcher {
 }
 
 @media screen and (min-width: 990px) {
-	.needsclick *, .needsclick {
+	button.needsclick *, .needsclick {
 		line-height: 1.5rem !important;
 	}
 
