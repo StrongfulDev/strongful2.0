@@ -8,6 +8,10 @@
 	color: inherit;
 }
 
+.simple-list-item:hover {
+	opacity: 0.75;
+}
+
 @media screen and (min-width: 990px) {
 	.simple-list-ul {
 		display: grid;
