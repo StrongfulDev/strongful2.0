@@ -3345,17 +3345,6 @@ button.needsclick {
 	line-height: 10px !important;
 }
 
-@media screen and (min-width: 990px) {
-	.needsclick *, .needsclick {
-		line-height: 1.5rem !important;
-	}
-
-	#glassix-widget-launcher-closed div.glassix-widget-icon-wrapper img {
-		width: 54px !important;
-		height: 54px !important;
-	}
-}
-
 #glassix-widget-launcher-closed div.glassix-widget-icon-wrapper img {
 	width: 44px !important;
 	height: 44px !important;
@@ -3373,6 +3362,17 @@ div#glassix-widget-launcher-container {
 div#glassix-widget-launcher-closed #customized-launcher {
 	width: 44px !important;
 	height: 44px !important;
+}
+
+@media screen and (min-width: 990px) {
+	.needsclick *, .needsclick {
+		line-height: 1.5rem !important;
+	}
+
+	#glassix-widget-launcher-closed div.glassix-widget-icon-wrapper img {
+		width: 54px !important;
+		height: 54px !important;
+	}
 }
 
 .collection__title_heading .title.heading_type_2:not(:only-child) {
