@@ -3345,9 +3345,34 @@ button.needsclick {
 	line-height: 10px !important;
 }
 
-#glassix-widget-launcher-container, #glassix-widget-launcher-closed .glassix-widget-icon-wrapper img {
-	width: 45px !important;
-	height: 45px !important;
+@media screen and (min-width: 990px) {
+	.needsclick *, .needsclick {
+		line-height: 1.5rem !important;
+	}
+
+	#glassix-widget-launcher-closed div.glassix-widget-icon-wrapper img {
+		width: 54px !important;
+		height: 54px !important;
+	}
+}
+
+#glassix-widget-launcher-closed div.glassix-widget-icon-wrapper img {
+	width: 44px !important;
+	height: 44px !important;
+	left: 0 !important;
+	right: auto !important;
+	bottom: 0 !important;
+	margin: 16px !important;
+}
+
+div#glassix-widget-launcher-container {
+	z-index: 3 !important;
+	display: flex !important;
+}
+
+div#glassix-widget-launcher-closed #customized-launcher {
+	width: 44px !important;
+	height: 44px !important;
 }
 
 .collection__title_heading .title.heading_type_2:not(:only-child) {
