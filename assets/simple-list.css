@@ -1,0 +1,16 @@
+.simple-list-ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.simple-list-item a {
+	color: inherit;
+}
+
+@media screen and (min-width: 990px) {
+	.simple-list-ul {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+}

@@ -1,0 +1,86 @@
+{{ 'simple-list.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+    .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+
+    @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+    }
+{%- endstyle -%}
+
+<div class="simple-list page-width fix-direction section-{{ section.id }}-padding">
+    <h2 class="simple-list-title">מאמרים</h2>
+    {%- paginate blogs.blog.articles by 50 -%}
+    <ul class="simple-list-ul">
+        {%- for article in blogs.blog.articles -%}
+            <li class="simple-list-item">
+                {{ article.title | link_to: article.url }}
+            </li>
+        {%- endfor -%}
+    </ul>
+    {%- endpaginate -%}
+    {%- paginate collections['all-clothes'].products by collections['all-clothes'].all_products_count -%}
+    <h2 class="simple-list-title">מוצרים</h2>
+    <ul class="simple-list-ul">
+        {%- for product in collections['all-clothes'].products -%}
+            {% unless product.tags contains 'hidden' %}
+                <li class="simple-list-item">
+                    {{ product.title | link_to: product.url }}
+                </li>
+            {% endunless %}
+        {%- endfor -%}
+    </ul>
+    {%- endpaginate -%}
+    <h2 class="simple-list-title">קולקציות</h2>
+    <ul class="simple-list-ul">
+        {% for collection in collections %}
+            {% if collection.all_products_count > 10 %}
+                <li class="simple-list-item">
+                    {{- collection.title | link_to: collection.url }}
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</div>
+
+{% schema %}
+{
+    "name": "Simple List",
+    "settings": [
+        {
+            "type": "range",
+            "id": "padding_top",
+            "label": "Padding Top",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "default": 20
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "label": "Padding Bottom",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "default": 20
+        }
+    ],
+    "presets": [
+        {
+            "name": "Simple List",
+            "category": "List",
+            "settings": {
+            "padding_top": 20,
+            "padding_bottom": 20
+          }
+        }
+    ]
+}
+{% endschema %}

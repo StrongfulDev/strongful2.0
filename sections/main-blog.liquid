@@ -2,8 +2,6 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
 
-{% assign utm = '?utm_source=blog&utm_medium=main&utm_campaign=main_blog_organic' %}
-
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
