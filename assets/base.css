@@ -3337,8 +3337,17 @@ button.needsclick {
 	left: auto !important;
 }
 
-button.needsclick p, button.needsclick span {
-	font-size: 14px !important;
+/*button.needsclick p, button.needsclick span {*/
+/*	font-size: 14px !important;*/
+/*}*/
+
+.needsclick *, .needsclick {
+	line-height: 10px !important;
+}
+
+#glassix-widget-launcher-container, #glassix-widget-launcher-closed .glassix-widget-icon-wrapper img {
+	width: 45px !important;
+	height: 45px !important;
 }
 
 .collection__title_heading .title.heading_type_2:not(:only-child) {
