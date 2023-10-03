@@ -15,16 +15,19 @@
 {%- endstyle -%}
 
 <div class="simple-list page-width fix-direction section-{{ section.id }}-padding">
-    <h2 class="simple-list-title">מאמרים</h2>
-    {%- paginate blogs.blog.articles by 50 -%}
+    <h1 class="title--primary">{{ page.title }}</h1>
+
+    <h2 class="simple-list-title">קולקציות</h2>
     <ul class="simple-list-ul">
-        {%- for article in blogs.blog.articles -%}
-            <li class="simple-list-item">
-                {{ article.title | link_to: article.url }}
-            </li>
-        {%- endfor -%}
+        {% for collection in collections %}
+            {% if collection.all_products_count > 20 %}
+                <li class="simple-list-item">
+                    {{- collection.title | link_to: collection.url }}
+                </li>
+            {% endif %}
+        {% endfor %}
     </ul>
-    {%- endpaginate -%}
+
     {%- paginate collections['all-clothes'].products by collections['all-clothes'].all_products_count -%}
     <h2 class="simple-list-title">מוצרים</h2>
     <ul class="simple-list-ul">
@@ -37,16 +40,28 @@
         {%- endfor -%}
     </ul>
     {%- endpaginate -%}
-    <h2 class="simple-list-title">קולקציות</h2>
-    <ul class="simple-list-ul">
-        {% for collection in collections %}
-            {% if collection.all_products_count > 20 %}
+
+    <h2 class="simple-list-title">עמודים</h2>
+    {%- paginate pages by 50 -%}
+        <ul class="simple-list-ul">
+            {%- for page in pages -%}
                 <li class="simple-list-item">
-                    {{- collection.title | link_to: collection.url }}
+                    {{ page.title | link_to: page.url }}
                 </li>
-            {% endif %}
-        {% endfor %}
-    </ul>
+            {%- endfor -%}
+        </ul>
+    {%- endpaginate -%}
+
+    <h2 class="simple-list-title">בלוג</h2>
+    {%- paginate blogs.blog.articles by 50 -%}
+        <ul class="simple-list-ul">
+            {%- for article in blogs.blog.articles -%}
+                <li class="simple-list-item">
+                    {{ article.title | link_to: article.url }}
+                </li>
+            {%- endfor -%}
+        </ul>
+    {%- endpaginate -%}
 </div>
 
 {% schema %}

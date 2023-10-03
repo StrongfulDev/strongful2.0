@@ -12,10 +12,15 @@
 	opacity: 0.5;
 }
 
+.simple-list-title {
+	font-size: var(--font-body-size-large);
+	font-weight: var(--font-body-weight-bold);
+}
+
 @media screen and (min-width: 990px) {
 	.simple-list-ul {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		row-gap: var(--grid-desktop-vertical-spacing);
+		grid-template-columns: repeat(4, 1fr);
+		gap: var(--grid-desktop-vertical-spacing);
 	}
 }
