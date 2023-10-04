@@ -1403,7 +1403,7 @@ p.customer-social-separator {
 }
 
 .details__data {
-	font-size: calc(var(--font-body-size-large) * 1.2);
+	font-size: var(--font-body-size-large);
 }
 
 @media screen and (min-width: 990px) {
