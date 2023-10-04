@@ -460,7 +460,8 @@
       "cancel": "ביטול",
       "edit": "עריכה",
       "delete": "מחיקה",
-      "delete_confirm": "למחוק את הכתובת?"
+      "delete_confirm": "למחוק את הכתובת?",
+      "email": "מייל"
     },
     "log_in": "כניסה",
     "log_out": "התנתק\/י",
