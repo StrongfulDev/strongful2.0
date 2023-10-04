@@ -401,6 +401,8 @@
       "greet": "היי {{ first_name }}",
       "title": "איזור אישי - {{ name }}",
       "sub_title": "איזור אישי",
+      "delete_title": "מחיקת משתמש",
+      "delete_description": "להגשת בקשה למחיקת המשתמש שלך מהאתר שלנו לחצי על הכפתור.",
       "details": "פרטי משתמש",
       "view_addresses": "הכתובות שלי",
       "exchange_portal": "פורטל החלפות \/ החזרות",
