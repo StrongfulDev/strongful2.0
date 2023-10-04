@@ -1384,9 +1384,10 @@ p.customer-social-separator {
 	margin-top: 0;
 }
 
-.delete-account-title {
+h2.delete-account-title {
 	font-weight: var(--font-body-weight-bold);
 	font-size: calc(var(--font-body-size-large) * 1.1);
+	margin-bottom: 2rem;
 }
 
 .account-details-single {
