@@ -1375,13 +1375,19 @@ p.customer-social-separator {
 	background: var(--gradient-background);
 	border-radius: var(--inputs-radius);
 	padding: var(--grid-desktop-horizontal-spacing);
-	margin: auto;
+	width: -webkit-fill-available;
 	display: block;
 }
 
+.customer .delete-account-form {
+	margin-top: 0;
+}
+
+.delete-account-title {
+	font-weight: var(--font-body-weight-bold);
+}
+
 @media screen and (min-width: 990px) {
-
-
 
 	.main-account-info-container.main-account-info-container--my-account {
 		border-bottom: 1px solid var(--gradient-base-background-3);
