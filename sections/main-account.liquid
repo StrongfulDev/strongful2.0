@@ -188,6 +188,32 @@
                       </div>
 
                       <div class="page-width">
+                          <div class="account-details-ctn">
+                              <h2 class="delete-account-title">{{ 'customer.account.my_details' | t }}</h2>
+                              <div class="account-details-rows">
+                                  <div class="account-details-single account-details-single-first_name">
+                                      <p class="account-details-label"></p>
+                                      <div class="account-details__details">
+                                          <span class="details__data">{{ customer.first_name }}</span>
+                                      </div>
+                                  </div>
+
+                                  <div class="account-details-single account-details-single-last_name">
+                                      <p class="account-details-label"></p>
+                                      <div class="account-details__details">
+                                          <span class="details__data">{{ customer.last_name }}</span>
+                                      </div>
+                                  </div>
+
+                                  <div class="account-details-single account-details-single-email">
+                                      <p class="account-details-label"></p>
+                                      <div class="account-details__details">
+                                          <span class="details__data">{{ customer.email }}</span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+
                           <h2 class="delete-account-title">{{ 'customer.account.delete_title' | t }}</h2>
                           <p class="delete-account-description">{{ 'customer.account.delete_description' | t }}</p>
                           {% form 'contact', class: 'delete-account-form' %}
