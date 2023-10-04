@@ -1388,6 +1388,23 @@ p.customer-social-separator {
 	font-weight: var(--font-body-weight-bold);
 }
 
+.account-details-single {
+	padding-bottom: var(--grid-desktop-vertical-spacing);
+	border-bottom: 1px solid var(--gradient-base-background-3);
+}
+
+.account-details-single_email {
+	border-bottom: none;
+}
+
+.account-details__details {
+	padding-top: var(--grid-mobile-vertical-spacing);
+}
+
+.details__data {
+	font-size: var(--font-body-size-large);
+}
+
 @media screen and (min-width: 990px) {
 
 	.main-account-info-container.main-account-info-container--my-account {
