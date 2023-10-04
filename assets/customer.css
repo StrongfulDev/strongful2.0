@@ -1399,6 +1399,11 @@ p.customer-social-separator {
 	border-bottom: none;
 }
 
+.account-details-label {
+	font-size: calc(var(--font-body-size-medium) * .9);
+	opacity: 0.6;
+}
+
 .account-details__details {
 	padding-top: var(--grid-mobile-vertical-spacing);
 }
