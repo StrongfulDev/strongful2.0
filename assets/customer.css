@@ -1390,7 +1390,8 @@ p.customer-social-separator {
 
 .account-details-single {
 	padding-bottom: var(--grid-desktop-vertical-spacing);
-	border-bottom: 1px solid var(--gradient-base-background-3);
+	border-bottom: 1px solid var(--gradient-base-background-4);
+	margin-bottom: calc(var(--grid-desktop-horizontal-spacing) * 2);
 }
 
 .account-details-single_email {
