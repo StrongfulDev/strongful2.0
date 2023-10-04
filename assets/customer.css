@@ -1377,7 +1377,7 @@ p.customer-social-separator {
 	padding: var(--grid-desktop-horizontal-spacing);
 	width: -webkit-fill-available;
 	display: block;
-
+	color: var(--gradient-base-accent-1);
 }
 
 .customer .delete-account-form {
