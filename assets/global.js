@@ -1202,6 +1202,8 @@ class ProductRecommendations extends HTMLElement {
 
 customElements.define('product-recommendations', ProductRecommendations);
 
+let contentToRender = document.getElementById("ProductGridContainer");
+
 function removeDeadProduct() {
 	$("#product-grid").siblings("#AjaxinatePagination").find(".loading-overlay__spinner").removeClass("hidden");
 	let listItems = document.querySelectorAll('.grid__item');
@@ -1219,6 +1221,32 @@ function removeDeadProduct() {
 			$(".drawer").removeClass("active");
 		}
 	});
+}
+
+window.addEventListener("beforeunload", function(event) {
+	localStorage.setItem("content", contentToRender.innerHTML);
+	localStorage.setItem("collectionHandle", window.location.href.split('collections/')[1]);
+});
+
+// check if on collection page
+if (contentToRender !== null) {
+
+	let previousCollectionHandle = localStorage.getItem("collectionHandle");
+
+	let currentURL = window.location.href;
+	let splitURL = currentURL.split("collections/");
+	let collectionHandle = splitURL[1];
+
+	console.log(collectionHandle);
+	console.log(previousCollectionHandle);
+
+	// set the HTML to the stored HTML
+	let updatedContent = localStorage.getItem("content");
+
+	// if there is stored HTML, update the page
+	if (updatedContent !== null && collectionHandle === previousCollectionHandle) {
+		contentToRender.innerHTML = updatedContent;
+	}
 }
 
 window.addEventListener('DOMContentLoaded', function(event) {
