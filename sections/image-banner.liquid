@@ -97,6 +97,8 @@
         <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
             {%- for block in section.blocks -%}
             {%- case block.type -%}
+            {%- when 'breadcrumbs' -%}
+            {% render 'breadcrumbs' %}
             {%- when 'heading' -%}
             <{{ block.settings.heading_size }} class="banner__heading {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
             <span>{{ block.settings.heading | escape }}</span>
@@ -235,12 +237,14 @@
             ],
             "default": "middle-center",
             "label": "t:sections.image-banner.settings.desktop_content_position.label"
-        }, {
+        },
+        {
             "type": "checkbox",
             "id": "show_text_box",
             "default": true,
             "label": "t:sections.image-banner.settings.show_text_box.label"
-        }, {
+        },
+        {
             "type": "select",
             "id": "desktop_content_alignment",
             "options": [
@@ -257,7 +261,8 @@
             ],
             "default": "center",
             "label": "t:sections.image-banner.settings.desktop_content_alignment.label"
-        }, {
+        },
+        {
             "type": "select",
             "id": "color_scheme",
             "options": [
@@ -284,10 +289,12 @@
             "default": "background-1",
             "label": "t:sections.all.colors.label",
             "info": "t:sections.image-banner.settings.color_scheme.info"
-        }, {
+        },
+        {
             "type": "header",
             "content": "t:sections.image-banner.settings.header.content"
-        }, {
+        },
+        {
             "type": "select",
             "id": "mobile_content_alignment",
             "options": [
@@ -304,12 +311,14 @@
             ],
             "default": "center",
             "label": "t:sections.image-banner.settings.mobile_content_alignment.label"
-        }, {
+        },
+        {
             "type": "checkbox",
             "id": "stack_images_on_mobile",
             "default": true,
             "label": "t:sections.image-banner.settings.stack_images_on_mobile.label"
-        }, {
+        },
+        {
             "type": "checkbox",
             "id": "show_text_below",
             "default": true,
@@ -317,6 +326,10 @@
         }
     ],
     "blocks": [
+        {
+          "type": "breadcrumbs",
+            "name": "t:sections.image-banner.blocks.breadcrumbs.name"
+        },
         {
             "type": "heading",
             "name": "t:sections.image-banner.blocks.heading.name",
