@@ -30,7 +30,7 @@
     .banner--content-align-left.banner--desktop-transparent .banner__box,
     .banner--content-align-right.banner--desktop-transparent .banner__box,
     .banner--medium.banner--desktop-transparent .banner__box {
-        max-width: 68rem;
+        /*max-width: 68rem;*/
     }
 }
 
@@ -391,14 +391,14 @@
 
 @media screen and (min-width: 990px) {
     .banner__box {
-        width: auto;
-        max-width: 71rem;
+        /*width: auto;*/
+        /*max-width: 71rem;*/
     }
 }
 
 @media screen and (min-width: 1400px) {
     .banner__box {
-        max-width: 90rem;
+        /*max-width: 90rem;*/
     }
 }
 

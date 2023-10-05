@@ -4209,10 +4209,15 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 	cursor: pointer;
 }
 
+.breadcrumbs {
+	text-align: right;
+}
+
 .breadcrumbs__list {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+	display: flex;
 }
 
 .breadcrumbs__item {

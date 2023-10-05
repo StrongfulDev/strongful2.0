@@ -3,6 +3,11 @@
     "745dda66-63ce-4705-8d8d-eff54d17367f": {
       "type": "image-banner",
       "blocks": {
+        "52591e14-5935-4a09-9297-23ce27e90b67": {
+          "type": "breadcrumbs",
+          "settings": {
+          }
+        },
         "b12ab2ae-119f-4c68-9a4f-1e499db126b3": {
           "type": "heading",
           "settings": {
@@ -19,6 +24,7 @@
         }
       },
       "block_order": [
+        "52591e14-5935-4a09-9297-23ce27e90b67",
         "b12ab2ae-119f-4c68-9a4f-1e499db126b3",
         "99799f5d-8c81-4afd-acfb-bba05e6ea21d"
       ],

@@ -22,6 +22,7 @@
         <span class="blog-black-line"></span>
         <h1 class="title--primary">{{ 'blogs.title' | t }}</h1>
     </div>
+      {% render 'breadcrumbs' %}
 
       <div class="blog-container-for-desktop fix-direction">
           <div class="blog-articles fix-direction {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">

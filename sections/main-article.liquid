@@ -46,6 +46,7 @@
                 <h3 class="title--primary">{{ 'blogs.title' | t }}</h3>
                 <span class="blog-black-line"></span>
             </div>
+            {% render 'breadcrumbs' %}
           <h1 class="article-template__title" itemprop="headline">{{ article.title | escape }}</h1>
           {%- if block.settings.blog_show_date -%}
               {% render 'black-block' %}
