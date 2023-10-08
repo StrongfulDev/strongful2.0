@@ -532,11 +532,12 @@
                                         </div>
 
                                         <div class="menu_images">
-                                            <a href="{{ section.settings.mobile_top_image_1_link }}" class="dropdown-image-container">
-                                                <img src="{{ section.settings.mobile_top_image_1 | image_url: width: 1000 }}" alt="{{ section.settings.mobile_top_image_1.alt | escape }}" class="motion-reduce">
+
+                                            <a href="{{ section.settings.mobile_top_image_temp_link }}" class="dropdown-image-container">
+                                                <img src="{{ section.settings.mobile_top_image_temp | image_url: width: 1000 }}" alt="{{ section.settings.mobile_top_image_temp.alt | escape }}" class="motion-reduce">
                                                 <div class="desktop_links_image_1_title">
                                                         <span>
-                                                            {{ section.settings.mobile_top_image_1_title }}
+                                                            {{ section.settings.mobile_top_image_temp_title }}
                                                         </span>
                                                     <div class="icon-container">
                                                         {% render 'icon-caret' %}
@@ -544,11 +545,11 @@
                                                 </div>
                                             </a>
 
-                                            <a href="{{ section.settings.mobile_top_image_temp_link }}" class="dropdown-image-container">
-                                                <img src="{{ section.settings.mobile_top_image_temp | image_url: width: 1000 }}" alt="{{ section.settings.mobile_top_image_temp.alt | escape }}" class="motion-reduce">
+                                            <a href="{{ section.settings.mobile_top_image_1_link }}" class="dropdown-image-container">
+                                                <img src="{{ section.settings.mobile_top_image_1 | image_url: width: 1000 }}" alt="{{ section.settings.mobile_top_image_1.alt | escape }}" class="motion-reduce">
                                                 <div class="desktop_links_image_1_title">
                                                         <span>
-                                                            {{ section.settings.mobile_top_image_temp_title }}
+                                                            {{ section.settings.mobile_top_image_1_title }}
                                                         </span>
                                                     <div class="icon-container">
                                                         {% render 'icon-caret' %}
