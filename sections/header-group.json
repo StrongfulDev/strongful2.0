@@ -76,12 +76,12 @@
             "item_class": "",
             "title_link": "",
             "desktop_links_image_1": "shopify:\/\/shop_images\/0.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/all-tops",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/all-products",
             "desktop_links_image_2_link": "",
             "mobile_title": "COLLECTIONS",
-            "main_link": "",
+            "main_link": "shopify:\/\/collections\/all-tops",
             "main_title": "",
-            "shop_all_link": "",
+            "shop_all_link": "shopify:\/\/collections\/all-products",
             "shop_all_title": "COLLECTIONS"
           }
         },
