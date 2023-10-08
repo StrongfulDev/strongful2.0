@@ -87,9 +87,9 @@
           "settings": {
             "show_on_mobile": true,
             "small_font": false,
-            "menu": "",
-            "menu_second": "",
-            "menu_third": "",
+            "menu": "header-sets-first",
+            "menu_second": "header-sets-second",
+            "menu_third": "header-sets-third",
             "title": "סטים",
             "desktop_links_image_1_link": "shopify:\/\/collections\/awareness-month",
             "desktop_links_image_2_link": "shopify:\/\/collections\/awareness-month",
