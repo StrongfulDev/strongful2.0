@@ -1182,7 +1182,10 @@
         {%- render 'cart-notification', color_scheme: section.settings.color_scheme -%}
     {%- endif -%}
 
-        <script type="application/ld+json">
+        {%- comment -%}Yoast SEO schema control block: start.{%- endcomment -%}
+{%- assign yoast_seo_settings = shop.metafields.yoast_seo.settings.value | default: shop.metafields.yoast_seo.settings -%}
+{%- if disabled_by_yoast_seo or yoast_seo_settings.schema.useTheme.schema or yoast_seo_settings.schema.useTheme.organization -%}
+<script type="application/ld+json">
   {
     "@context": "http://schema.org",
     "@type": "Organization",
@@ -1203,10 +1206,15 @@
     ],
     "url": {{ request.origin | append: page.url | json }}
   }
+{%- comment -%}Yoast SEO schema control block: end.{%- endcomment -%}
 </script>
+{%- endif -%}
 
     {%- if request.page_type == 'index' -%}
-            <script type="application/ld+json">
+            {%- comment -%}Yoast SEO schema control block: start.{%- endcomment -%}
+{%- assign yoast_seo_settings = shop.metafields.yoast_seo.settings.value | default: shop.metafields.yoast_seo.settings -%}
+{%- if disabled_by_yoast_seo or yoast_seo_settings.schema.useTheme.schema or yoast_seo_settings.schema.useTheme.website -%}
+<script type="application/ld+json">
     {
       "@context": "http://schema.org",
       "@type": "WebSite",
@@ -1218,7 +1226,9 @@
       },
       "url": {{ request.origin | append: page.url | json }}
     }
+{%- comment -%}Yoast SEO schema control block: end.{%- endcomment -%}
 </script>
+{%- endif -%}
         {%- endif -%}
 
     {% schema %}

@@ -16,7 +16,11 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta name="theme-color" content="">
 
+{%- comment -%}Auto-disabled. Yoast plugin is taking care of Meta Tags output.{%- endcomment -%}
+{%- if disabled_by_yoast_seo -%}
 <link rel="canonical" href="{{ canonical_url }}">
+{%- comment -%} End Yoast auto-disable. {%- endcomment -%}
+{%- endif -%}
     <link
       rel="preconnect"
       href="https://cdn.shopify.com"
@@ -39,6 +43,8 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+{%- comment -%}Auto-disabled. Yoast plugin is taking care of SEO output.{%- endcomment -%}
+{%- if disabled_by_yoast_seo -%}
 <title>
         {{ page_title }}
         {%- if current_tags %}
@@ -48,9 +54,15 @@
         {%- unless page_title contains shop.name %}
             &ndash; {{ shop.name }}{% endunless -%}
     </title>
+{%- comment -%} End Yoast auto-disable. {%- endcomment -%}
+{%- endif -%}
 
     {% if page_description %}
-        <meta name="description" content="{{ page_description | escape }}">
+        {%- comment -%}Auto-disabled. Yoast plugin is taking care of Meta Tags output.{%- endcomment -%}
+{%- if disabled_by_yoast_seo -%}
+<meta name="description" content="{{ page_description | escape }}">
+{%- comment -%} End Yoast auto-disable. {%- endcomment -%}
+{%- endif -%}
     {% endif %}
 
     {% render 'meta-tags' %}
