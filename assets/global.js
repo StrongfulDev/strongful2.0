@@ -1237,9 +1237,6 @@ if (contentToRender !== null) {
 	let splitURL = currentURL.split("collections/");
 	let collectionHandle = splitURL[1];
 
-	console.log(collectionHandle);
-	console.log(previousCollectionHandle);
-
 	// set the HTML to the stored HTML
 	let updatedContent = localStorage.getItem("content");
 
