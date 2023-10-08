@@ -122,16 +122,6 @@
     "our_collection_list": {
       "type": "our-collection-list",
       "blocks": {
-        "b5e51ca0-c5c6-4207-bb06-c9a69adc91b6": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/0_c3b18b81-64bc-42d6-87f7-3031d8f0d387.jpg",
-            "alt": "",
-            "link": "NEW IN",
-            "url": "shopify:\/\/collections\/awareness-month",
-            "show_on_desktop": true
-          }
-        },
         "dfad4ec5-c40b-4feb-90a9-341da374970d": {
           "type": "image",
           "settings": {
@@ -140,6 +130,16 @@
             "link": "SALE",
             "url": "shopify:\/\/collections\/sets",
             "show_on_desktop": false
+          }
+        },
+        "b5e51ca0-c5c6-4207-bb06-c9a69adc91b6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/0_c3b18b81-64bc-42d6-87f7-3031d8f0d387.jpg",
+            "alt": "",
+            "link": "NEW IN",
+            "url": "shopify:\/\/collections\/awareness-month",
+            "show_on_desktop": true
           }
         },
         "3603325c-8c6d-4a1e-b28e-fe94adadefb7": {
@@ -174,8 +174,8 @@
         }
       },
       "block_order": [
-        "b5e51ca0-c5c6-4207-bb06-c9a69adc91b6",
         "dfad4ec5-c40b-4feb-90a9-341da374970d",
+        "b5e51ca0-c5c6-4207-bb06-c9a69adc91b6",
         "3603325c-8c6d-4a1e-b28e-fe94adadefb7",
         "0ae2dc2c-e286-48f6-be64-4aa8bc8de568",
         "d4c24f14-7485-452d-a6c5-ab2dbbf11ee6"
