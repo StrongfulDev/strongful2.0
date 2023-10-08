@@ -132,6 +132,16 @@
             "show_on_desktop": true
           }
         },
+        "dfad4ec5-c40b-4feb-90a9-341da374970d": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Artboard_120_efc5f2c5-1099-4492-ba6b-421134fc64be.jpg",
+            "alt": "20% off sale",
+            "link": "SALE",
+            "url": "shopify:\/\/collections\/sets",
+            "show_on_desktop": false
+          }
+        },
         "3603325c-8c6d-4a1e-b28e-fe94adadefb7": {
           "type": "image",
           "settings": {
@@ -161,24 +171,14 @@
             "url": "shopify:\/\/pages\/a-list",
             "show_on_desktop": true
           }
-        },
-        "dfad4ec5-c40b-4feb-90a9-341da374970d": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Artboard_120_efc5f2c5-1099-4492-ba6b-421134fc64be.jpg",
-            "alt": "20% off sale",
-            "link": "SALE",
-            "url": "shopify:\/\/collections\/sets",
-            "show_on_desktop": false
-          }
         }
       },
       "block_order": [
         "b5e51ca0-c5c6-4207-bb06-c9a69adc91b6",
+        "dfad4ec5-c40b-4feb-90a9-341da374970d",
         "3603325c-8c6d-4a1e-b28e-fe94adadefb7",
         "0ae2dc2c-e286-48f6-be64-4aa8bc8de568",
-        "d4c24f14-7485-452d-a6c5-ab2dbbf11ee6",
-        "dfad4ec5-c40b-4feb-90a9-341da374970d"
+        "d4c24f14-7485-452d-a6c5-ab2dbbf11ee6"
       ],
       "settings": {
         "show_scrollbar": true,
