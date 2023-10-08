@@ -38,12 +38,12 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "החלפות חינם",
-            "sub_text": "עם שליח עד הבית חינם בכל הזמנה",
+            "main_text": "משלוח אקספרס עם שליח עד הבית",
+            "sub_text": "יתכנו עיכובים עקב המצב הבטחוני",
             "text_alignment": "center",
             "main_text_direction": "rtl",
             "sub_text_direction": "rtl",
-            "link": "shopify:\/\/blogs\/policies\/החזרות-והחלפות",
+            "link": "shopify:\/\/blogs\/policies\/מדיניות-המשלוחים-שלנו",
             "color_scheme": "accent-1"
           }
         }
