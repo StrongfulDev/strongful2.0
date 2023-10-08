@@ -4,11 +4,12 @@
    <a href="{{ section.settings.countdown_url }}" id="countdown" class="countdown fix-direction" data-date="{{ section.settings.countdown_date }}">
     <div class="countdown-ctn flex">
         {% if section.settings.right_text %}
-            <div class="countdown-sale-description-ctn">
+            <div class="countdown-sale-description-ctn fix-direction">
                 {{ section.settings.right_copy }}
             </div>
         {% endif %}
-        <div class="announce-countdown flex">
+        {% if section.settings.countdown_date != blank %}
+            <div class="announce-countdown flex">
             <div id="tiles" class="flex ltr">
                 <div class="tiles-div tiles-div-days {% unless section.settings.show_days %}hidden{% endunless %}">
                     <p class="tiles-time tiles-time-days"></p>
@@ -24,8 +25,9 @@
                 </div>
             </div>
         </div>
+        {% endif %}
         {% if section.settings.left_text %}
-            <div class="countdown-sale-description-ctn">
+            <div class="countdown-sale-description-ctn fix-direction">
                 {{ section.settings.left_copy }}
             </div>
         {% endif %}
