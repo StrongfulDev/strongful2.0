@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="he-IL" dir="rtl" class="{{ checkout_html_classes }}">
+<html lang="{{ locale }}" dir="{{ direction }}" class="{{ checkout_html_classes }}">
 <head>
-    {% include 'visually_io_sdk' %}
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -9,7 +8,6 @@
           content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0">
     <meta name="referrer" content="origin">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdn-widgetsrepository.yotpo.com/v1/loader/qGZpUcqW7-E2nBL0lvSZUA" async defer="defer"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     {{ content_for_header }}
@@ -349,7 +347,6 @@
             <div class="sidebar__content">
                 {{ content_for_order_summary }}
             </div>
-            <div class="yotpo-widget-instance" data-yotpo-instance-id="89434"></div>
         </aside>
     </div>
 </div>
@@ -397,40 +394,6 @@
 			backLink.attr('href', '/');
 		}
 
-		function checkCouponText() {
-			let notice = document.querySelector('.notice__text');
-			let preorder = document.querySelector(".regular-preorder");
-			let checkoutTotal = parseInt(document.querySelector(".order-summary__emphasis").innerText.replace('₪', '').replace('.', '') / 100);
-			if (notice !== null) {
-				if (preorder !== null && checkoutTotal > 200) {
-					notice.innerHTML = 'אין כפל הנחות/מבצעים על פריטים ממכירה מוקדמת';
-				} else if (notice.innerHTML.toLocaleLowerCase().includes('welcome')) {
-					notice.innerHTML = 'קוד הקופון <strong>WELCOME30</strong> תקף בקנייה מעל ₪200';
-				} else if (notice.innerHTML.toLocaleLowerCase().includes("dian")) {
-					notice.innerHTML = 'קוד הקופון <strong>DIAN</strong> תקף בקניית 3 מוצרים ומעלה';
-				} else if (notice.innerHTML.toLocaleLowerCase().includes("corrin")) {
-					notice.innerHTML = 'קוד הקופון <strong>CORRIN</strong> תקף בקניית 3 מוצרים ומעלה';
-				} else if (notice.innerHTML.toLocaleLowerCase().includes("talia")) {
-					notice.innerHTML = 'קוד הקופון <strong>TALIA</strong> תקף בקניית 3 מוצרים ומעלה';
-				} else if (notice.innerHTML.toLocaleLowerCase().includes("barc")) {
-					notice.innerHTML = 'קוד הקופון <strong>BARC</strong> תקף בקניית 3 מוצרים ומעלה';
-				} else if (notice.innerHTML.toLocaleLowerCase().includes("liel")) {
-					notice.innerHTML = 'קוד הקופון <strong>LIEL</strong> תקף בקניית 3 מוצרים ומעלה';
-				} else if (notice.innerHTML.toLocaleLowerCase().includes("kc")) {
-					notice.innerHTML = 'קוד הקופון <strong>KC</strong> תקף בקניית 3 מוצרים ומעלה';
-				} else if (notice.innerHTML.toLocaleLowerCase().includes("daniella")) {
-					notice.innerHTML = 'קוד הקופון <strong>DANIELLA</strong> תקף בקניית 3 מוצרים ומעלה';
-				}
-			}
-		}
-
-		checkCouponText();
-		setTimeout(checkCouponText, 3000); // fallback
-
-		if (checkout.isOrderStatusPage === true) {
-			$('.modal-dialog').css('direction', 'rtl');
-			$('.modal-content').css('direction', 'rtl');
-		} else {
 			let orderSummary = document.querySelector('.order-summary');
 			jQuery('.order-summary-toggle').removeClass('order-summary-toggle--show').addClass('order-summary-toggle--hide');
 			orderSummary.classList.remove('order-summary--is-collapsed');
@@ -441,41 +404,14 @@
 				document.getElementById("checkout_buyer_accepts_marketing").checked = true;
 				document.getElementById("checkout_remember_me").checked = true;
 			}
-		}
 
 		let breadcrumbs = document.querySelectorAll( '.breadcrumb__link' );
 		breadcrumbs.forEach((crumb) => {
 			if (crumb.innerText === 'עגלה') {
-				crumb.innerText = 'חזרה';
+
 				crumb.href = '/';
 			}
 		});
-
-		// preorder code start
-		//   if (document.querySelectorAll( '.regular-preorder' ) != null || document.querySelectorAll( '.regular-preorder' ) != undefined) {
-		//     if (Shopify.Checkout.step == 'shipping_method') {
-		//      if ($( '.radio__label__primary' ).data('shipping-method-label-title')) {
-		//          $( '.radio__label__primary' ).html( 'הזמנות הכוללות פריטים ממכירה מוקדמת יקלטו ויגיעו עד 3 ימי עסקים מיום השקת הקולקציה' );
-		//       }
-		//     }
-
-		//     if (Shopify.Checkout.step == 'payment_method') {
-		//    document.getElementsByClassName( 'review-block__content' )[2].innerText = 'הזמנות הכוללות פריטים ממכירה מוקדמת יקלטו ויגיעו עד 3 ימי עסקים מיום השקת הקולקציה';
-		//     }
-
-		// } else {
-		//   if (Shopify.Checkout.step == 'shipping_method') {
-		//   if ($( '.radio__label__primary' ).data('shipping-method-label-title')) {
-		//        $( '.radio__label__primary' ).html( 'משלוח אקספרס - 1-3 ימי עסקים' );
-		//       }
-		//   }
-
-		//   if (Shopify.Checkout.step == 'payment_method') {
-		//         document.getElementsByClassName( 'review-block__content' )[2].innerText = 'משלוח אקספרס - 1-3 ימי עסקים';
-		//   }
-		// }
-		// preorder code end
-
 	});
 </script>
 
