@@ -24,12 +24,12 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "חודש המודעות לסרטן השד",
-            "sub_text": "100% מהרווחים נתרמים לעמותת ׳אחת מתשע׳",
+            "main_text": "20% הנחה",
+            "sub_text": "עכשיו על כל הסטים באתר",
             "text_alignment": "center",
-            "main_text_direction": "ltr",
+            "main_text_direction": "rtl",
             "sub_text_direction": "rtl",
-            "link": "shopify:\/\/collections\/awareness-month",
+            "link": "shopify:\/\/collections\/sets",
             "color_scheme": "accent-1"
           }
         },
