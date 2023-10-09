@@ -134,7 +134,7 @@
     "predictive_search_show_price": true,
     "image_ratio": "adapt",
     "show_secondary_image": true,
-    "announcement_tag": "yesDiscount",
+    "announcement_tag": "set",
     "show_card_collection_announcement": true,
     "custom_collection_announcement": "20% OFF",
     "announcement_customizer_override": true,
