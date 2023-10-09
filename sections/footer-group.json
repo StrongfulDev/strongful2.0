@@ -58,9 +58,9 @@
             "blog_and_newsletter_subtitle": "",
             "alist_url": "shopify:\/\/pages\/a-list",
             "blog_url": "shopify:\/\/blogs\/blog",
-            "alist_text": "מועדון לקוחות",
-            "blog_text": "בלוג",
-            "newsletter_text": "הרשמה לדיוור",
+            "alist_text": "Loyalty",
+            "blog_text": "Blog",
+            "newsletter_text": "Newsletter",
             "image_width": 700,
             "image_height": 700
           }

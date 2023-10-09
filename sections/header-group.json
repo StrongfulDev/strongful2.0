@@ -63,6 +63,15 @@
     "header": {
       "type": "header",
       "blocks": {
+        "53391513-eaa6-4af1-a5d0-90776646273f": {
+          "type": "url",
+          "settings": {
+            "show_on_mobile": false,
+            "small_font": false,
+            "title": "SALE",
+            "title_link": "shopify:\/\/collections\/מוצרים-להנחה"
+          }
+        },
         "ba94928e-5cd1-47f5-9c0a-28ea47285f01": {
           "type": "menu_item",
           "settings": {
@@ -145,14 +154,15 @@
           "settings": {
             "show_on_mobile": true,
             "small_font": true,
-            "menu": "",
-            "menu_second": "",
+            "menu": "header-outlet",
+            "menu_second": "header-outlet-second",
             "menu_third": "",
             "title": "OUTLET",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/awareness-month",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/0.jpg",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/sets",
             "desktop_links_image_2_link": "",
             "mobile_title": "OUTLET - UP TO 50% OFF",
-            "main_link": "",
+            "main_link": "shopify:\/\/collections\/outlet",
             "main_title": "",
             "shop_all_link": "shopify:\/\/collections\/outlet",
             "shop_all_title": "OUTLET"
@@ -191,12 +201,13 @@
           "settings": {
             "show_on_mobile": false,
             "small_font": false,
-            "title": "מועדון לקוחות",
-            "title_link": "shopify:\/\/pages\/a-list"
+            "title": "LOYALTY",
+            "title_link": "shopify:\/\/pages\/contact"
           }
         }
       },
       "block_order": [
+        "53391513-eaa6-4af1-a5d0-90776646273f",
         "ba94928e-5cd1-47f5-9c0a-28ea47285f01",
         "8878d4cf-d83f-42a2-90b9-ddebceb7501c",
         "03fa03f7-aac1-443b-acba-9a19fb5aa148",
