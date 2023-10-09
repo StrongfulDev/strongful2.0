@@ -1651,14 +1651,14 @@ variant-radios fieldset {
 .accordion__title:after {
     height: 1.2rem;
     width: 0.2rem;
-    left: 0.5rem;
+    right: 0.5rem;
     transform: translateY(-0.5rem);
 }
 
 .accordion__title:before {
     width: 1.2rem;
     height: 0.2rem;
-    left: 0;
+    right: 0;
 }
 
 details[open] .accordion__title:after {
@@ -1837,6 +1837,7 @@ variant-radios {
 .swiper-slide-body {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 }
 
 .product-badge__text {
