@@ -4238,7 +4238,7 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 	height: 0.2em;
 	margin: 0 0.2em;
 	position: relative;
-	transform: rotate(225deg);
+	transform: rotate(45deg);
 	vertical-align: middle;
 	width: 0.2em;
 }

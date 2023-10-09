@@ -486,7 +486,7 @@
     }
 
     .shop-all-link {
-	    text-align: right;
+	    text-align: left;
 	    display: block;
 	    text-decoration: none;
 	    color: var(--color-icon);

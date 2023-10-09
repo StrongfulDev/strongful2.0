@@ -1949,7 +1949,6 @@ product-info > .product__inventory {
 	.breadcrumbs {
 		margin: 1.2em auto 5px;
 		width: 100%;
-		direction: rtl;
 		position: absolute;
 		top: -4rem;
 	}

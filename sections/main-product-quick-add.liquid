@@ -48,7 +48,7 @@
             <p class="sticky-product-title">{{ product.title | escape }}</p>
             {% unless product.title == 'גיפט קארד' %}
             <div class="sticky-add-to-cart-color">
-                צבע: <span class="vendor-span underline">{{ product.vendor }}</span>
+                Color: <span class="vendor-span underline">{{ product.vendor }}</span>
             </div>
             {% render 'price' %}
             {% endunless %}

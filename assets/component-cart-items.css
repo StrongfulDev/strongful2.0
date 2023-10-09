@@ -62,9 +62,9 @@
 }
 
 .cart-item__details div>dl {
-	border-right: 1px var(--gradient-base-background-4) solid;
-	padding-right: .5rem;
-	margin-right: .5rem;
+	border-left: 1px var(--gradient-base-background-4) solid;
+	padding-left: .5rem;
+	margin-left: .5rem;
 }
 
 .cart-item__details div>dl.cart-inline-dl {

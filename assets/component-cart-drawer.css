@@ -573,7 +573,6 @@ cart-drawer-items.is-empty {
 .quantity {
 	display: grid;
 	grid-template-columns: 1fr 2fr 1fr;
-	direction: rtl;
 }
 
 .quantity__button:not(:focus-visible):not(.focused) {
