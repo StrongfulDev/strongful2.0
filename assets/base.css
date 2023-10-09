@@ -1,6 +1,6 @@
 /* Text alignment */
 :root {
-    --text-alignment: right;
+    --text-alignment: left;
     --heading-type-2-margin: 1rem;
 }
 
@@ -3208,8 +3208,9 @@ details-disclosure > details {
     }
 }
 
-.rtl, .fix-direction, p.fix-direction, span.fix-direction {
-    direction: rtl;
+.fix-direction, p.fix-direction, span.fix-direction {
+    /*direction: rtl;*/
+	direction: ltr;
 }
 
 .ltr, .english-direction {
