@@ -104,8 +104,8 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "Shipping & Returns",
-            "product_content": "shipping_information",
-            "content": "",
+            "product_content": "none",
+            "content": "<p>Shipping information and prices<\/p>",
             "page": "",
             "icon": "none"
           }
