@@ -163,17 +163,18 @@
           "settings": {
             "show_on_mobile": true,
             "small_font": false,
-            "menu": "",
+            "menu": "header-accessories",
             "menu_second": "",
             "menu_third": "",
-            "title": "אקססוריז",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/awareness-month",
+            "title": "ACCESSORIES",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/0.jpg",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/all-products",
             "desktop_links_image_2_link": "",
             "mobile_title": "ACCESSORIES",
-            "main_link": "",
-            "main_title": "",
+            "main_link": "shopify:\/\/collections\/accessories",
+            "main_title": "Accessories",
             "shop_all_link": "shopify:\/\/collections\/accessories",
-            "shop_all_title": "אקססוריז"
+            "shop_all_title": "Accessories"
           }
         },
         "93921bbc-631f-46c2-a66b-9df086c3f7a0": {
