@@ -63,6 +63,15 @@
     "header": {
       "type": "header",
       "blocks": {
+        "53391513-eaa6-4af1-a5d0-90776646273f": {
+          "type": "url",
+          "settings": {
+            "show_on_mobile": false,
+            "small_font": false,
+            "title": "SALE",
+            "title_link": "shopify:\/\/collections\/מוצרים-להנחה"
+          }
+        },
         "ba94928e-5cd1-47f5-9c0a-28ea47285f01": {
           "type": "menu_item",
           "settings": {
@@ -198,6 +207,7 @@
         }
       },
       "block_order": [
+        "53391513-eaa6-4af1-a5d0-90776646273f",
         "ba94928e-5cd1-47f5-9c0a-28ea47285f01",
         "8878d4cf-d83f-42a2-90b9-ddebceb7501c",
         "03fa03f7-aac1-443b-acba-9a19fb5aa148",
