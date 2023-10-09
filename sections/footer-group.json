@@ -74,8 +74,8 @@
         "9210bee3-7850-4663-87e4-563005517c1a": {
           "type": "policies_link_list",
           "settings": {
-            "policies_text_align": "center",
-            "menu": ""
+            "policies_text_align": "left",
+            "menu": "footer"
           }
         }
       },
