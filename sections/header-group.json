@@ -90,14 +90,16 @@
             "menu": "header-sets-first",
             "menu_second": "header-sets-second",
             "menu_third": "header-sets-third",
-            "title": "סטים",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/awareness-month",
-            "desktop_links_image_2_link": "shopify:\/\/collections\/awareness-month",
-            "mobile_title": "סטים",
-            "main_link": "",
-            "main_title": "",
+            "title": "SETS",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/0_03ac76f6-be55-45b2-a06a-c81351ca9c2d.jpg",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/sets",
+            "desktop_links_image_2": "shopify:\/\/shop_images\/0_03ac76f6-be55-45b2-a06a-c81351ca9c2d.jpg",
+            "desktop_links_image_2_link": "shopify:\/\/collections\/sets",
+            "mobile_title": "SETS",
+            "main_link": "shopify:\/\/collections\/sets",
+            "main_title": "SETS",
             "shop_all_link": "shopify:\/\/collections\/sets",
-            "shop_all_title": "סטים"
+            "shop_all_title": "SETS"
           }
         },
         "03fa03f7-aac1-443b-acba-9a19fb5aa148": {
@@ -235,10 +237,11 @@
         "padding_top": 16,
         "padding_bottom": 16,
         "mobile_logo": "shopify:\/\/shop_images\/9ed861fba4dae099b0b04754bbc299cc.png",
+        "mobile_logo_secondary": "shopify:\/\/shop_images\/4d8bcf5ddfc54b462652f9aa258f0443_8c440c8d-c611-48b3-a7ed-b52de5e6bd63.webp",
         "mobile_logo_secondary_width": 60,
         "mobile_logo_link": "\/",
-        "shop_all_link": "",
-        "shop_all_title": ""
+        "shop_all_link": "shopify:\/\/collections\/sets",
+        "shop_all_title": "Sets"
       }
     },
     "7503b704-2110-400e-bc52-a2190d224c23": {
