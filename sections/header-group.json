@@ -126,17 +126,18 @@
           "settings": {
             "show_on_mobile": true,
             "small_font": false,
-            "menu": "",
+            "menu": "tops",
             "menu_second": "",
             "menu_third": "",
-            "title": "טופים",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/awareness-month",
+            "title": "TOPS",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/0.jpg",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/sets",
             "desktop_links_image_2_link": "",
-            "mobile_title": "טופים",
-            "main_link": "",
-            "main_title": "",
+            "mobile_title": "tops",
+            "main_link": "shopify:\/\/collections\/all-tops",
+            "main_title": "TOPS",
             "shop_all_link": "shopify:\/\/collections\/all-tops",
-            "shop_all_title": "טופים"
+            "shop_all_title": "Tops"
           }
         },
         "70af0289-2846-42bd-93c5-5598239a8ddc": {
