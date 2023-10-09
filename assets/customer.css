@@ -112,7 +112,7 @@ a.no-decoration {
 .customer .field input:not(:placeholder-shown) ~ label,
 .field__label {
 	top: -3rem;
-	right: 0;
+	left: 0;
 	font-size: 1.6rem;
 }
 

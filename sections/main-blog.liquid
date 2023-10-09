@@ -19,8 +19,8 @@
 {%- paginate blog.articles by 15 -%}
   <div class="main-blog page-width section-{{ section.id }}-padding">
     <div class="blog-title-container">
-        <span class="blog-black-line"></span>
         <h1 class="title--primary">{{ 'blogs.title' | t }}</h1>
+        <span class="blog-black-line"></span>
     </div>
       {% render 'breadcrumbs' %}
 
@@ -43,8 +43,8 @@
           <div class="blog-extras desktop-only">
               <div class="most-viewed-posts">
                   <div class="blog-title-container">
-                      <span class="blog-black-line"></span>
                       <h2>{{ 'blogs.most-viewed-posts.title' | t }}</h2>
+                      <span class="blog-black-line"></span>
                   </div>
                   <div class="featured-posts">
                       {% for article in blog.articles limit: 5 %}

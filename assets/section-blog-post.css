@@ -175,6 +175,7 @@
 .title--primary {
 	margin: 0 0 1rem;
 	font-weight: var(--font-body-weight-bold);
+	font-size: calc(var(--font-body-size-large) * 1.2);
 }
 
 .blog-black-line {
@@ -213,7 +214,6 @@ article .footer__list-social.list-social {
 	.most-viewed-posts .blog-title-container {
 		direction: ltr;
 		padding: 0;
-		grid-template-columns: 1fr auto;
 	}
 
 	.most-viewed-posts {

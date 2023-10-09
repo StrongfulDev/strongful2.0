@@ -49,7 +49,7 @@
 
 .blog-title-container {
 	display: grid;
-	grid-template-columns: 1fr auto;
+	grid-template-columns: auto 1fr;
 	align-items: center;
 	gap: 1em;
 	padding: 1.5em 0 var(--grid-desktop-vertical-spacing);
@@ -58,6 +58,7 @@
 .title--primary {
 	margin: 0 0 1rem;
 	font-weight: var(--font-body-weight-bold);
+	font-size: calc(var(--font-body-size-large) * 1.2);
 }
 
 .blog-black-line {
