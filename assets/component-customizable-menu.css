@@ -467,7 +467,6 @@
     }
 
     .list-menu--inline {
-        direction: rtl;
         column-gap: 3rem;
     }
 
