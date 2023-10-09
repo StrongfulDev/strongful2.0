@@ -1791,7 +1791,6 @@ variant-radios {
 .size-table-stock-container {
 	display: flex;
 	justify-content: space-between;
-	flex-direction: row-reverse;
 }
 
 .size-table-toggler {

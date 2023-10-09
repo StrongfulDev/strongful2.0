@@ -34,11 +34,11 @@
         <div class="product-meta-content none">
             <div class="modelsizedropdown">
                 <div class="div-block-460">
-                    <div class="model-size-text text-center">שם</div>
-                    <div class="model-size-text text-center">גובה</div>
-                    <div class="model-size-text text-center">חזה</div>
-                    <div class="model-size-text text-center">מותן</div>
-                    <div class="model-size-text text-center">אגן</div>
+                    <div class="model-size-text text-center">{{ 'products.product.model.name' | t }}</div>
+                    <div class="model-size-text text-center">{{ 'products.product.model.height' | t }}</div>
+                    <div class="model-size-text text-center">{{ 'products.product.model.bust' | t }}</div>
+                    <div class="model-size-text text-center">{{ 'products.product.model.waist' | t }}</div>
+                    <div class="model-size-text text-center">{{ 'products.product.model.hips' | t }}</div>
                     {% for modelName in product.metafields.model.names.value %}
                         {% assign model = shop.metaobjects.model[modelName] %}
                             <span class="size-span" data-model-size="{{ model.size_letter.value }}">{{ model.name }}</span>
