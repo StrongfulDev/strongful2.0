@@ -975,7 +975,7 @@ input.mobile-facets__checkbox {
 .mobile-facets__item .mobile-facets__label .icon-checkmark {
   position: absolute;
   top: 1.9rem;
-  left: 2.8rem;
+  left: 0;
   visibility: hidden;
 }
 
@@ -1296,22 +1296,21 @@ div.mobile-facets__label {
 }
 
 .mobile-facets__label > svg {
-  margin-right: 0;
-  margin-left: 1.2rem;
+  margin-left: 0;
+  margin-right: 1.2rem;
   align-items: center;
 }
 
 .mobile-facets__arrow, .mobile-facets__summary .icon-caret {
-  right: auto;
-  left: 1.5rem;
+  left: auto;
+  right: 1.5rem;
   height: 0.7rem;
   margin: 0;
 }
 
-.mobile-facets__label > input[type='checkbox']:checked ~ .icon-checkmark,
-.mobile-facets__label > input[type='radio']:checked ~ .icon-checkmark {
-  right: 3pt;
-  left: auto;
+.mobile-facets__label>input[type='checkbox']:checked~.icon-checkmark, .mobile-facets__label>input[type='radio']:checked~.icon-checkmark {
+  left: 3pt;
+  right: auto;
   background: #000;
   color: #fff;
   top: 50%;
@@ -1329,8 +1328,8 @@ div.mobile-facets__label {
 }
 
 input.mobile-facets__checkbox {
-  right: 0;
-  left: auto;
+  left: 0;
+  right: auto;
 }
 
 .color-round {
@@ -1502,7 +1501,7 @@ div.החדשיםביותר {
 		background: white;
 		padding: 1em;
 		width: 100vw;
-		margin-right: -1.5rem;
+		margin-left: -1.5rem;
 	}
 
   .facets-wrapper.countdown-facet {

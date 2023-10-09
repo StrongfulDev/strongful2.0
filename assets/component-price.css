@@ -124,6 +124,7 @@
 
 .price__container {
     display: flex;
+	column-gap: var(--grid-mobile-vertical-spacing);
 }
 
 .complete_look_variant_price .price__sale {
