@@ -150,7 +150,6 @@
       "type": "featured-collection",
       "custom_css": [
         ".button {width: 100%;}",
-        ".discount-price-container {direction: rtl;}",
         ".slider--tablet.grid--peek.grid--2-col-tablet-down .grid__item,.grid--peek .grid__item {width: calc(48% - var(--grid-mobile-horizontal-spacing) - 3rem);}",
         "@media screen and (min-width: 990px) {.slider--desktop.grid--peek.grid--5-col-desktop .grid__item {width: calc( (94% - var(--desktop-margin-left-first-item)) \/ 5 - var(--grid-desktop-horizontal-spacing) * 2 ); }}"
       ],
