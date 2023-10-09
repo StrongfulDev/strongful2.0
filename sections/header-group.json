@@ -13,8 +13,8 @@
             "main_text": "20% הנחה בהרשמה למועדון הלקוחות",
             "sub_text": "הירשמי עכשיו בחינם",
             "text_alignment": "center",
-            "main_text_direction": "rtl",
-            "sub_text_direction": "rtl",
+            "main_text_direction": "ltr",
+            "sub_text_direction": "ltr",
             "link": "shopify:\/\/pages\/a-list",
             "color_scheme": "accent-1"
           }
@@ -28,7 +28,7 @@
             "sub_text": "100% מהרווחים נתרמים לעמותת ׳אחת מתשע׳",
             "text_alignment": "center",
             "main_text_direction": "ltr",
-            "sub_text_direction": "rtl",
+            "sub_text_direction": "ltr",
             "link": "shopify:\/\/collections\/awareness-month",
             "color_scheme": "accent-1"
           }
@@ -41,8 +41,8 @@
             "main_text": "החלפות חינם",
             "sub_text": "עם שליח עד הבית חינם בכל הזמנה",
             "text_alignment": "center",
-            "main_text_direction": "rtl",
-            "sub_text_direction": "rtl",
+            "main_text_direction": "ltr",
+            "sub_text_direction": "ltr",
             "link": "shopify:\/\/blogs\/policies\/החזרות-והחלפות",
             "color_scheme": "accent-1"
           }
