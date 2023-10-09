@@ -1012,7 +1012,7 @@ noscript .localization-selector.link {
     }
 
     .footer__content-bottom-wrapper--center {
-        justify-content: flex-start;
+        justify-content: flex-end;
     }
 
     .blog_and_newsletter_image:hover {
@@ -1020,7 +1020,7 @@ noscript .localization-selector.link {
     }
 
 	.copyright__content, .footer_policy_link {
-		font-size: calc(var(--font-body-size-small) * 1.4);
+		font-size: calc(var(--font-body-size-small) * 1.15);
 	}
 
 	.footer-blockgrid__item.brand_information {
