@@ -6,7 +6,7 @@
         ".isolate {background: var(--gradient-base-background-3);}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/question.svg",
+        "image": "shopify:\/\/shop_images\/question.png",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "image_first",
