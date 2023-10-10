@@ -1239,7 +1239,6 @@ a.order-number-link .icon {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	direction: rtl;
 }
 
 .custom-login-overlay {

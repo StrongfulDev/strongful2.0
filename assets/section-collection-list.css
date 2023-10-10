@@ -153,7 +153,6 @@
 
  #page .section-collection-list .grid {
 	 gap: calc(var(--grid-desktop-vertical-spacing) * 2);
-	 direction: rtl;
  }
 
  #page .section-collection-list:nth-child(2) .grid {
