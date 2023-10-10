@@ -39,9 +39,9 @@
       "previous": "דף הקודם"
     },
     "search": {
-      "search": "חיפוש",
-      "reset": "איפוס",
-      "close": "סגירה"
+      "search": "Search",
+      "reset": "Clear",
+      "close": "Close"
     },
     "cart": {
       "view": "הצגת סל קניות ({{ count }})",
@@ -219,10 +219,10 @@
       "label": "Media gallery"
     },
     "facets": {
-      "apply": "אישור",
+      "apply": "Apply",
       "select_more_filters": "נא לבחור סינון",
-      "clear": "איפוס",
-      "clear_all": "איפוס",
+      "clear": "Clear",
+      "clear_all": "Clear",
       "from": "מ",
       "filter_and_sort": "סינון לפי",
       "filter_by_label": "פילטר:",
@@ -240,25 +240,24 @@
         "other": "{{ product_count }} מתוך {{ count }} מוצרים"
       },
       "product_count_simple": {
-        "one": "מוצר {{ count }}",
-        "other": "{{ count }} מוצרים"
+        "one": "Product {{ count }}",
+        "other": "{{ count }} Products"
       },
-      "reset": "איפוס",
+      "reset": "Reset",
       "sort_button": "מיון",
-      "sort_by_label": "סינון לפי",
-      "to": "עד",
-      "clear_filter": "איפוס סינון",
-      "product_type": "סוג מוצר",
+      "sort_by_label": "Sort by",
+      "to": "to",
+      "clear_filter": "Clear filter",
       "filters": {
-        "manual": "נבחרים",
-        "relevance": "רלוונטיות",
-        "best-selling": "הנמכרים ביותר",
-        "title-ascending": "מא׳ עד ת׳",
-        "title-descending": "מת׳ עד א׳",
-        "price-ascending": "מחיר, מהנמוך לגבוה",
-        "price-descending": "מחיר, מהגבוה לנמוך",
-        "created-ascending": "תאריך, מהישן לחדש",
-        "created-descending": "חדש ביותר"
+        "manual": "Featured",
+        "relevance": "Relevancy",
+        "best-selling": "Best selling",
+        "title-ascending": "From A to Z",
+        "title-descending": "From Z to A",
+        "price-ascending": "Price, low to high",
+        "price-descending": "Price, high to low",
+        "created-ascending": "Date, old to new",
+        "created-descending": "Newest"
       }
     }
   },
@@ -287,28 +286,28 @@
         "one": "נמצאה תוצאה אחת עבור {{ terms}}",
         "other": "{{ count }} תוצאות נמצאו עבור {{ terms }}"
       },
-      "title": "תוצאות חיפוש",
-      "search_for": "תוצאות חיפוש עבור {{ terms }}",
-      "suggestions": "קולקציות",
-      "pages": "בלוג"
+      "title": "Search results",
+      "search_for": "Search results for {{ terms }}",
+      "suggestions": "Collections",
+      "pages": "Pages & Articles"
     },
     "cart": {
-      "cart": "סל קניות"
+      "cart": "Shopping bag"
     },
     "contact": {
       "form": {
         "title": "יצירת קשר",
-        "name": "שם",
-        "email": "מייל",
-        "phone": "מספר פלאפון",
-        "comment": "תוכן ההודעה",
-        "send": "שליחה",
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone number",
+        "comment": "Your message",
+        "send": "Send",
         "post_success": "תודה על פנייתך! נחזור אליך בהקדם האפשרי.",
         "error_heading": "אירעה שגיאה"
       }
     },
     "404": {
-      "title": "דף לא נמצא",
+      "title": "Page not found",
       "subtext": "404"
     }
   },
@@ -316,28 +315,28 @@
     "header": {
       "announcement": "Announcement",
       "menu": "Menu",
-      "account_title": "המשתמש שלי",
+      "account_title": "My account",
       "cart_count": {
         "one": "{{ count }} item",
         "other": "{{ count }} items"
       },
       "dropdown": {
-        "login_or_register": "הרשמה \/ כניסה",
-        "you_have": "יש לך",
-        "points": "נקודות"
+        "login_or_register": "Login / Sign up",
+        "you_have": "You have",
+        "points": "points"
       }
     },
     "cart": {
-      "title": "סל קניות",
+      "title": "Shopping Bag",
       "caption": "Cart items",
       "remove_title": "Remove {{ title }}",
-      "subtotal": "סה״כ",
-      "benefits": "הטבות",
-      "benefits_announcement": "חסכת",
+      "subtotal": "Subtotal",
+      "benefits": "Rewards",
+      "benefits_announcement": "You saved",
       "new_subtotal": "New subtotal",
       "note": "Order special instructions",
-      "checkout": "מעבר לתשלום",
-      "empty": "הסל שלך ריק",
+      "checkout": "CHECKOUT",
+      "empty": "Your bag is empty",
       "empty_paragraph": "לחצי כאן לראות מה חדש",
       "cart_error": "אירעה שגיאה בעת טעינת הסל",
       "cart_quantity_error_html": "ניתן להוסיף רק {{ quantity }} מפריט זה לסל הקניות.",
