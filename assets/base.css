@@ -3423,7 +3423,7 @@ div#glassix-widget-launcher-closed #customized-launcher {
 	color: var(--gradient-base-accent-1);
 	text-decoration: none;
 	background: var(--gradient-background);
-	margin-right: var(--grid-desktop-vertical-spacing);
+	margin-left: var(--grid-desktop-vertical-spacing);
 }
 
 .relative {
@@ -4102,8 +4102,8 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 
 .button-loader-activator .loading-overlay {
 	top: 50%;
-	right: 50%;
-	transform: translate(50%, -50%);
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .button-loader-activator .spinner .path {
