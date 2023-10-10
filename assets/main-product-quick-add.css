@@ -78,8 +78,8 @@
 .sticky-cart-cta .size_variant_button_container .loading-overlay,
 product-recommendations .size_variant_button_container .loading-overlay {
 	top: 50%;
-	right: auto;
-	left: 0;
+	left: auto;
+	right: 0;
 	transform: translateY(-50%);
 	padding: 0;
 }
