@@ -1865,7 +1865,7 @@ variant-radios {
 
 .model-wears-size .bold {
 	font-weight: var(--font-body-weight-bold);
-	margin-right: var(--grid-mobile-vertical-spacing);
+	margin-left: var(--grid-mobile-vertical-spacing);
 }
 
 .variant_modal .product_size_picker__heading {

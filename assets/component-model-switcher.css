@@ -7,10 +7,11 @@
     bottom: 1.5em;
 	right: 1em;
 	z-index: 3;
+	direction: rtl;
 }
 
 .model-wears-content {
-	margin-right: 1rem;
+	margin-left: 1rem;
 }
 
 .model-wears-text {

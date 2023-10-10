@@ -10,7 +10,7 @@
 
 <div class="model-switcher-overlay hidden">&nbsp;</div>
 
-<div class="model-switcher fix-direction hidden">
+<div class="model-switcher hidden">
     <div id="model-switch">
         <div class="model-switch-button pointer">
             <span>
@@ -18,7 +18,7 @@
             </span>
             {% render 'icon-caret' %}
         </div>
-        <div class="model-switcher__list hidden">
+        <div class="model-switcher__list hidden fix-direction">
             {% for modelName in product.metafields.model.names.value %}
                 {% assign model = shop.metaobjects.model[modelName] %}
                 <div class="model-switcher__item" data-model-size="{{ model.size_letter.value }}">
@@ -32,7 +32,7 @@
                                 | image_tag: loading: 'lazy', sizes: "400x600", widths: '400' }}
                             {% endif %}
                         {% endfor %}
-                        {% if model_product.type contains 'אוברול' or model_product.type contains 'שמלה' %}
+                        {% if model_product.type contains 'Jumpsuit' or model_product.type contains 'Dress' %}
                             <div class="model-wears-content">
                                 <div class="model-wears-text">
                                     {{ 'products.product.model_switch.model_wears_one_product' | t }}
