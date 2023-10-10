@@ -557,17 +557,17 @@
       "summary": "סיכום"
     },
     "orders": {
-      "title": "ההזמנות שלי",
+      "title": "My Orders",
       "description": "כאן תוכלי לראות את כל המידע על ההזמנות \/ ההחלפות שלך.",
-      "order_number": "הזמנה",
-      "order_number_link": "הזמנה מספר {{ number }}",
-      "date": "תאריך",
-      "payment_status": "סטטוס תשלום",
-      "fulfillment_status": "סטטוס משלוח",
-      "total": "סה״כ",
+      "order_number": "Order",
+      "order_number_link": "Order {{ number }}",
+      "date": "Date",
+      "payment_status": "Payment Status",
+      "fulfillment_status": "Shipping Status",
+      "total": "Subtotal",
       "none": "You haven't placed any orders yet.",
       "refer": "חברה מביאה חברה",
-      "load_more": "טעינת הזמנות נוספות"
+      "load_more": "Load more"
     },
     "recover_password": {
       "title": "איפוס סיסמה",

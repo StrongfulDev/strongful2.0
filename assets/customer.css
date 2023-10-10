@@ -943,9 +943,9 @@ a.container-menu-item:last-child, span.container-menu-item:last-child, a.contain
 
 .container-menu-item .icon-caret {
 	position: absolute;
-	left: 0;
+	right: 0;
 	top: 55%;
-	transform: translateY(-50%) rotate(90deg);
+	transform: translateY(-50%) rotate(270deg);
 	margin: 0;
 }
 
@@ -963,6 +963,11 @@ p.container-extra-info {
 	margin-top: var(--grid-desktop-horizontal-spacing);
 }
 
+.empty-orders {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
 .custom-orders-container, .custom-delete-account {
 	position: fixed;
 	width: 100%;
@@ -975,7 +980,7 @@ p.container-extra-info {
 	overflow: hidden;
 	overflow-y: auto;
 	transition: .3s ease-in-out;
-	transform: translateX(100%);
+	transform: translateX(-100%);
 }
 
 .custom-orders-container.active, .custom-delete-account.active {
@@ -999,7 +1004,7 @@ p.container-extra-info {
 }
 
 .toggle-orders-button-content .icon {
-	transform: rotate(270deg);
+	transform: rotate(90deg);
 }
 
 .main-account-info-container--contact, .container-menu-item--logout {
