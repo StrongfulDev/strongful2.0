@@ -112,7 +112,7 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
 	box-shadow: 0 0 0 0.2rem rgba(var(--color-button), 0);
 	position: absolute;
 	top: 0;
-	left: 0;
+	right: 0;
 	color: rgb(var(--color-foreground));
 	background-color: transparent;
 	border: none;
@@ -472,11 +472,10 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 }
 
 .reward-item__title {
-	margin-right: var(--grid-mobile-vertical-spacing);
+	margin-left: var(--grid-mobile-vertical-spacing);
 }
 
 .rewards-section {
-	direction: rtl;
 	margin: 1rem 0;
 	padding: 1rem 0 0;
 	border-bottom: 1px solid rgba(var(--color-foreground), 0.1);
