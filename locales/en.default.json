@@ -115,10 +115,10 @@
   },
   "products": {
     "product": {
-      "add_to_cart": "הוספה לסל",
+      "add_to_cart": "ADD TO BAG",
       "launch_date": "זמין לרכישה ב 15.8",
       "members_only": "מכירה מוקדמת לחברות מועדון בלבד",
-      "choose_options": "הוספה מהירה",
+      "choose_options": "QUICK ADD",
       "up_size_recommendation": "במוצר זה מומלץ לקחת מידה יותר",
       "down_size_recommendation": "במוצר זה מומלץ לקחת מידה פחות",
       "coming_with_matching_shorts": "השמלה מגיעה עם שורט בצבע תואם",
@@ -190,17 +190,17 @@
       "shipping_sizes": "*כל המידות בס״מ",
       "size_table": "Size Guide",
       "variant": {
-        "default_title": "הוספה לסל"
+        "default_title": "ADD TO BAG"
       },
       "missing_size_toggler": "המידה שלך חסרה? לחצי כאן",
       "missing_size_explanation": "לחצי על המידה החסרה, השאירי מייל ואנחנו נעדכן אותך ברגע שהמידה תחזור למלאי",
       "model_switch": {
-        "button": "החלפת דוגמנית",
-        "model_wears_female": "הדוגמנית לובשת מידות:",
-        "model_wears_one_product": "הדוגמנית לובשת מידה",
-        "model_wears_only_female": "הדוגמנית לובשת",
-        "female_top_part": "חלק עליון:",
-        "female_bottom_part": "חלק תחתון:"
+        "button": "Switch Model",
+        "model_wears_female": "Model wears:",
+        "model_wears_one_product": "Model wears",
+        "model_wears_only_female": "Model wears",
+        "female_top_part": "Top:",
+        "female_bottom_part": "Bottom:"
       },
       "model": {
         "name": "Name",
@@ -224,12 +224,12 @@
       "clear": "Clear",
       "clear_all": "Clear",
       "from": "מ",
-      "filter_and_sort": "סינון לפי",
-      "filter_by_label": "פילטר:",
-      "filter_button": "סינון לפי",
+      "filter_and_sort": "FILTER",
+      "filter_by_label": "FILTER",
+      "filter_button": "FILTER",
       "filters_selected": {
-        "one": "{{ count }} סינונים פעילים",
-        "other": "{{ count }} סינונים פעילים"
+        "one": "{{ count }} Active count",
+        "other": "{{ count }} Active counts"
       },
       "filter_selected_accessibility": "{{ type }} ({{ count }} סינונים פעילים)",
       "show_more": "הצג עוד",
@@ -359,8 +359,8 @@
       },
       "rewards": {
         "title": "Earn rewards",
-        "free_shipping": "משלוח חינם",
-        "upsell_text": "בקבוק מתנה"
+        "free_shipping": "Free Shipping",
+        "upsell_text": "Free Bag"
       },
       "out_of_stock": "הפריט אזל מהמלאי"
     },
@@ -409,34 +409,34 @@
   },
   "customer": {
     "account": {
-      "greet": "היי {{ first_name }}",
-      "title": "איזור אישי - {{ name }}",
-      "sub_title": "איזור אישי",
-      "delete_title": "מחיקת משתמש",
+      "greet": "Hi {{ first_name }}",
+      "title": "My Account - {{ name }}",
+      "sub_title": "My Account",
+      "delete_title": "Delete account",
       "delete_description": "להגשת בקשה למחיקת המשתמש שלך מהאתר שלנו לחצי על הכפתור.",
-      "details": "פרטי משתמש",
-      "my_details": "הפרטים שלי",
-      "view_addresses": "הכתובות שלי",
+      "details": "Account details",
+      "my_details": "My details",
+      "view_addresses": "My addresses",
       "exchange_portal": "פורטל החלפות \/ החזרות",
-      "personal_area": "איזור אישי",
-      "return": "חזרה",
+      "personal_area": "My Account",
+      "return": "Back",
       "not_customer": "Not {{ name }}?",
       "support": {
-        "title": "תמיכה",
+        "title": "Support",
         "our-promise": "על סטרונגפול",
-        "terms": "תנאי השימוש",
-        "privacy-policy": "מדיניות פרטיות"
+        "terms": "Terms & Conditions",
+        "privacy-policy": "Privacy policy"
       },
       "loyalty": {
         "title": "STRONGFUL CLUB",
-        "sub_title": "מועדון לקוחות",
+        "sub_title": "Loyalty club",
         "earn_points": "צבירת נקודות קאשבק בכל קנייה"
       },
       "contact": {
         "title": "יש לך שאלה? צרי איתנו קשר",
-        "phone": "טלפון",
-        "email": "מייל",
-        "whatsapp": "וואטסאפ",
+        "phone": "Phone",
+        "email": "Email",
+        "whatsapp": "Whatsapp",
         "business-hours": "ימים ראשון עד חמישי בין השעות 09:00 עד 14:00"
       }
     },
@@ -474,19 +474,19 @@
       "delete_confirm": "למחוק את הכתובת?",
       "email": "מייל"
     },
-    "log_in": "כניסה",
-    "log_out": "התנתק\/י",
+    "log_in": "Login",
+    "log_out": "Logout",
     "login_page": {
-      "cancel": "ביטול",
-      "create_account": "הרשמה",
-      "email": "אימייל",
-      "forgot_password": "שכחתי סיסמה",
+      "cancel": "Cancel",
+      "create_account": "Sign up",
+      "email": "Email",
+      "forgot_password": "Forgot password?",
       "guest_continue": "המשך כאורחת",
       "guest_title": "המשיכי ללא משתמש",
-      "password": "סיסמה",
-      "title": "כניסה",
-      "sign_in": "כניסה",
-      "submit": "שליחה"
+      "password": "Password",
+      "title": "Login",
+      "sign_in": "Login",
+      "submit": "Submit"
     },
     "order": {
       "title": "הזמנה מספר {{ number }}",
@@ -576,18 +576,18 @@
     },
     "register": {
       "or": "או",
-      "link_text": "הרשמה",
-      "title": "הרשמה",
+      "link_text": "Sign up",
+      "title": "Sign up",
       "text": "הרשמי עכשיו וקבלי את כל ההטבות",
-      "first_name": "שם פרטי",
-      "last_name": "שם משפחה",
-      "email": "אימייל",
-      "password": "סיסמה",
-      "submit": "הרשמה",
+      "first_name": "First name",
+      "last_name": "Last name",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Sign up",
       "login_toggler": "כבר חברת מועדון? התחברי",
       "form_errors": {
-        "email": "כתובת המייל שהוזנה אינה תקינה",
-        "password": "סיסמה לא יכולה להיות ריקה",
+        "email": "Invalid email address",
+        "password": "Password can't be blank",
         "body": "אירעה שגיאה בעת שליחת הטופס. אנא נסי שוב.",
         "author": "שמך הפרטי חייב להיות באורך של 3 תווים לפחות",
         "form": "אירעה שגיאה בעת שליחת הטופס. אנא נסי שוב."
@@ -978,8 +978,8 @@
         "company_tracking_number": "מספר מעקב:",
         "login_title": "התחברי למשתמש בשביל לראות את פרטי ההזמנה המלאים",
         "login_description": "במידה ואין לך משתמש, את יכולה לראות את פרטי ההזמנה במייל אישור ההזמנה שנשלח אליך ברגעים אלה.",
-        "login": "כניסה",
-        "order_number_label": "מספר הזמנה",
+        "login": "Login",
+        "order_number_label": "Order number",
         "unfulfilled_items_description": "הפריטים יגיעו אליך בימים הקרובים.",
         "unfulfilled_items_title": "משלוח"
       },
