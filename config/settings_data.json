@@ -194,7 +194,7 @@
             "type": "column",
             "settings": {
               "data_account": "login",
-              "title": "כניסה",
+              "title": "Login",
               "text": "",
               "link_label": "",
               "link": ""
@@ -204,7 +204,7 @@
             "type": "column",
             "settings": {
               "data_account": "register",
-              "title": "הרשמה",
+              "title": "Sign up",
               "text": "",
               "link_label": "",
               "link": ""

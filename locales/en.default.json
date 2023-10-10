@@ -321,7 +321,7 @@
         "other": "{{ count }} items"
       },
       "dropdown": {
-        "login_or_register": "Login / Sign up",
+        "login_or_register": "Login \/ Sign up",
         "you_have": "You have",
         "points": "points"
       }
