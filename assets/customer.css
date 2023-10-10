@@ -767,7 +767,7 @@ label[for='AddressProvinceNew'] {
   list-style: none;
   padding-left: 0;
 	padding-right: 0;
-  text-align: right;
+  text-align: left;
 }
 
 li[data-address] {
@@ -1057,7 +1057,7 @@ div.contact-icon-child a svg {
 h1.address-main-title {
 	position: relative;
 	margin-top: revert;
-	text-align: right;
+	text-align: left;
 }
 
 a.address-back-link {
@@ -1086,7 +1086,7 @@ button.add-address-button {
 button.add-address-button:before, button.add-address-button:after {
 	content: none;
 	bottom: auto;
-	right: auto;
+	left: auto;
 	z-index: 1;
 }
 
@@ -1103,7 +1103,7 @@ button.add-address-button:before, button.add-address-button:after {
 button.add-address-button:before {
 	width: 1.2rem;
 	height: 0.2rem;
-	left: 2rem;
+	right: 2rem;
 }
 
 button.add-address-button.active:after {
@@ -1113,28 +1113,27 @@ button.add-address-button.active:after {
 button.add-address-button:after {
 	height: 1.2rem;
 	width: 0.2rem;
-	left: 2.5rem;
+	right: 2.5rem;
 	box-shadow: none;
 }
 
-.addresses li > button {
+.addresses li>button {
 	width: fit-content;
 	color: var(--gradient-base-accent-1);
 	background: var(--gradient-background);
 	border: 1px var(--gradient-base-background-3) solid;
 	padding: 0;
 	display: block;
-	margin-left: auto;
-	margin-right: 0;
+	margin-right: auto;
+	margin-left: 0;
 }
 
-.addresses li > button:after, .addresses li > button:before {
+.addresses li>button:after, .addresses li>button:before {
 	content: none;
 }
 
 .addresses form {
-	direction: rtl;
-	text-align: right;
+
 }
 
 .button:not([disabled]):hover::after, .shopify-challenge__button:hover::after, .customer button:hover::after, .shopify-payment-button__button--unbranded:hover::after {
@@ -1703,20 +1702,19 @@ h2.delete-account-title {
 		margin-top: 0;
 	}
 
-	.addresses form > div {
+	.addresses form>div {
 		width: 60%;
 	}
 
-	.addresses form > div:last-child {
+	.addresses form>div:last-child {
 		width: 35%;
-		margin-right: auto;
+		margin-left: auto;
 		display: flex;
-		flex-direction: row-reverse;
 		margin-top: 5rem;
 		column-gap: var(--grid-desktop-horizontal-spacing);
 	}
 
-	.addresses form > div:last-child button {
+	.addresses form>div:last-child button {
 		margin: 0;
 	}
 }

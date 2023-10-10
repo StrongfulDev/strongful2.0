@@ -421,7 +421,7 @@
       "exchange_portal": "פורטל החלפות \/ החזרות",
       "personal_area": "איזור אישי",
       "return": "חזרה",
-      "not_customer": "לא {{ name }}?",
+      "not_customer": "Not {{ name }}?",
       "support": {
         "title": "תמיכה",
         "our-promise": "על סטרונגפול",
