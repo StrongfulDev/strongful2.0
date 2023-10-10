@@ -630,7 +630,6 @@ blockquote {
 .select__select {
     font-size: 1.3rem;
     line-height: calc(1 / var(--font-body-scale));
-    /*letter-spacing: 0.04rem;*/
 }
 
 .color-foreground {
@@ -1927,7 +1926,7 @@ details[open] > .share-button__fallback {
 .field__input,
 .customer .field input {
     flex-grow: 1;
-    text-align: right;
+    text-align: left;
     padding: 1.5rem;
     margin: var(--inputs-border-width);
     transition: box-shadow var(--duration-short) ease;
@@ -1965,7 +1964,7 @@ details[open] > .share-button__fallback {
 .customer .field input:focus,
 .customer .field input:not(:placeholder-shown),
 .customer .field input:-webkit-autofill {
-    padding: 2.2rem 1.5rem 0.8rem 2rem;
+    padding: 2.2rem 2rem .8rem 1.5rem;
     margin: var(--inputs-border-width);
 }
 

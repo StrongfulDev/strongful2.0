@@ -114,6 +114,7 @@ a.no-decoration {
 	top: -3rem;
 	left: 0;
 	font-size: 1.6rem;
+	text-align: left;
 }
 
 /* Customer Table */
@@ -824,7 +825,6 @@ li[data-address] > h2 {
   padding: 1rem 1.5rem;
   max-width: 39rem;
   margin: 0 auto;
-  direction: rtl;
 }
 
 .multicolumn-list:not(.slider) {
@@ -1358,7 +1358,7 @@ td.more-returns-info {
 
 .accept-marketing-notice {
 	color: gray;
-	text-align: right;
+	text-align: left;
 }
 
 p.customer-social-separator {
