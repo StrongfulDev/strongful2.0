@@ -922,66 +922,66 @@
         }
       },
       "thank_you": {
-        "billing_address_title": "כתובת לחיוב",
-        "title": "תודה על הרכישה שבצעת!",
-        "page_title": "תודה {{ display_name }}",
-        "page_title_no_name": "תודה רבה!",
-        "cancelled_page_title": "הזמנה בוטלה",
-        "customer_information_title": "פרטי לקוחה",
-        "contact_information_title": "פרטים ליצירת קשר",
-        "shipping_address_title": "כתובת למשלוח",
-        "thank_you_title": "ההזמנה נקלטה ותשלח בקרוב!",
-        "thank_you_confirmed_order_with_email": "אימייל לאישור הזמנה יישלח אלייך בקרוב.",
-        "thank_you_confirmed_order_with_email_and_phone": "אימייל לאישור הזמנה יישלח אלייך בקרוב.",
+        "billing_address_title": "Billing address",
+        "title": "Thank you for your order!",
+        "page_title": "Thank you {{ display_name }}",
+        "page_title_no_name": "Thank you!",
+        "cancelled_page_title": "Order cancelled",
+        "customer_information_title": "Your information",
+        "contact_information_title": "Contact details",
+        "shipping_address_title": "Shipping address",
+        "thank_you_title": "Your order has been received.",
+        "thank_you_confirmed_order_with_email": "An email confirmation has been sent to {{ email }}.",
+        "thank_you_confirmed_order_with_email_and_phone": "An email confirmation has been sent to {{ email }} and a text message to {{ phone }}.",
         "login_reorder_link_text": {
           "one": "קני מוצר זה גם",
           "other": "קני מוצרים אלו גם"
         },
         "marker": {
-          "shipping": "כתובת למשלוח"
+          "shipping": "Shipping"
         },
         "fulfillment": {
-          "fulfilled_table_title": "פריטים שבמשלוח",
-          "unfulfilled_table_title": "פריטים בהכנה למשלוח",
-          "product_image_label": "תמונת מוצר",
-          "description_label": "תיאור",
-          "quantity_label": "כמות"
+          "fulfilled_table_title": "Fulfilled products",
+          "unfulfilled_table_title": "Unfulfilled products",
+          "product_image_label": "Product images",
+          "description_label": "Description",
+          "quantity_label": "Quantity"
         },
-        "order_status_confirmed_order_with_email": "ברגעים אלה נשלח אליך אימייל עם אישור ההזמנה, פרטי ההזמנה וחשבונית.",
-        "order_updates_title": "עדכונים לגבי ההזמנה שלך",
-        "payment_method_title": "שיטות תשלום",
-        "confirmation_email_sent_text": "אימייל לאישור נשלח ל {{ email }}",
-        "return_to_store_link_label": "לאתר",
-        "payment_information_title": "פרטי תשלום",
-        "shipping_information_title": "פרטי משלוח",
-        "shipping_method_title": "שיטת משלוח",
-        "tracking_number": "מספר מעקב:",
-        "estimated_arrival": "מספר ימי משלוח מוערך:",
-        "confirmed": "מאושר",
-        "gift_card_confirmation_by_email": "אימייל עם הגיפט קארד נשלח אלייך. אם לא הגיע אלייך אימייל נסי לשלוח שוב או צרי איתנו קשר.",
-        "gift_card_title": "גיפט קארד",
-        "resend_gift_cards": "שליחה מחדש של גיפט קארד",
-        "order_status_updates_with_email": "אימייל מעודכן לגבי פרטי המשלוח יישלח אלייך למייל",
-        "confirmed_title": "ההזמנה שלך הועברה לאישור",
-        "contact_us_html": "צריכה עזרה? <a href=\"\/pages\/contact-us\" target=\"_blank\">צרי איתנו קשר<\/a>",
-        "gift_card_sent_confirmation": "אימייל נשלח מחדש",
+        "order_status_confirmed_order_with_email": "An email confirmation has been sent to {{ email }}.",
+        "order_updates_title": "Order updates",
+        "payment_method_title": "Payment method",
+        "confirmation_email_sent_text": "An email confirmation has been sent to {{ email }}.",
+        "return_to_store_link_label": "Return to store",
+        "payment_information_title": "Payment details",
+        "shipping_information_title": "Shipping details",
+        "shipping_method_title": "Shipping method",
+        "tracking_number": "Tracking number",
+        "estimated_arrival": "Estimated arrival",
+        "confirmed": "Confirmed",
+        "gift_card_confirmation_by_email": "An email confirmation has been sent to {{ email }}.",
+        "gift_card_title": "Gift card",
+        "resend_gift_cards": "Resend gift cards",
+        "order_status_updates_with_email": "Order updates will be sent to {{ email }}.",
+        "confirmed_title": "Order confirmed",
+        "contact_us_html": "Need help? <a href=\"\/pages\/contact-us\" target=\"_blank\">Contact us<\/a>",
+        "gift_card_sent_confirmation": "Gift card sent to {{ email }}.",
         "order_updates_subscribe_to_phone_notifications": "לקבלת עדכון בסמס",
         "order_updates_subscribe_to_email_or_phone_notifications": "לקבלת עדכון באי-מייל או סמס",
-        "order_updates_subscribe_to_email_notifications": "לקבלת עדכון באי-מייל",
-        "cancelled_title": "ההזמנה שלך בוטלה",
-        "order_status_updates_with_phone": "עדכונים בהזמנה ובמשלוח יישלחו אליך בסמס",
-        "order_status_updates_with_email_and_phone": "עדכונים בהזמנה ובמשלוח יישלחו אליך בסמס ובמייל",
-        "order_status_updates_with_missing": "איך את מעדיפה להתעדכן בהזמנה?",
-        "cancelled_description": "ההזמנה שלך בוטלה ב {{ date }}. אם יש לך שאלות, נשמח שתפני אלינו.",
-        "order_updates_submit_subscription": "בחירה",
-        "confirmed_description": "קיבלנו את ההזמנה שלך, והיא תהיה מוכנה בקרוב!\nאת יכולה לחזור לעמוד הזה לקבלת עדכונים על המשלוח שלך.",
-        "company_tracking_number": "מספר מעקב:",
-        "login_title": "התחברי למשתמש בשביל לראות את פרטי ההזמנה המלאים",
-        "login_description": "במידה ואין לך משתמש, את יכולה לראות את פרטי ההזמנה במייל אישור ההזמנה שנשלח אליך ברגעים אלה.",
+        "order_updates_subscribe_to_email_notifications": "I would like to receive updates via email",
+        "cancelled_title": "Your order has been cancelled",
+        "order_status_updates_with_phone": "Order updates will be sent to {{ phone }}.",
+        "order_status_updates_with_email_and_phone": "Order updates will be sent to {{ email }} and {{ phone }}.",
+        "order_status_updates_with_missing": "How do you want to receive order updates?",
+        "cancelled_description": "Your order has been cancelled on {{ date }}. If you need help, please contact us.",
+        "order_updates_submit_subscription": "Subscribe",
+        "confirmed_description": "Your order has been confirmed on {{ date }}. If you need help, please contact us.",
+        "company_tracking_number": "Tracking number",
+        "login_title": "Login",
+        "login_description": "You can view your order status and history by logging into your account or in the email we sent you.",
         "login": "Login",
         "order_number_label": "Order number",
-        "unfulfilled_items_description": "הפריטים יגיעו אליך בימים הקרובים.",
-        "unfulfilled_items_title": "משלוח"
+        "unfulfilled_items_description": "The following products will ship to you soon.",
+        "unfulfilled_items_title": "Unfulfilled"
       },
       "processing": {
         "your_order_has_been_received_title": "תודה על ההזמנה",
@@ -992,30 +992,30 @@
           "no_auto_refresh_html": "אם את לא מועברת באופן אוטומטי, {{ link }}",
           "refresh_this_page": "תרענני את הדף"
         },
-        "redirecting_page_title": "טוען...",
-        "redirecting_title": "טוען...",
-        "redirecting_notice": "טוען...",
-        "complete_your_purchase_title": "השלימי את ההזמנה שלך",
-        "continue_to_payment_gateway_button_label_error": "עדכון פרטי תשלום"
+        "redirecting_page_title": "Loading...",
+        "redirecting_title": "Loading...",
+        "redirecting_notice": "Loading...",
+        "complete_your_purchase_title": "Complete your order",
+        "continue_to_payment_gateway_button_label_error": "Try again"
       },
       "tips": {
         "message": "תודה לך, אנחנו מעריכים את זה."
       },
       "post_purchase": {
-        "page_title": "תודה רבה!",
-        "title": "תודה רבה!",
-        "escape_confirmation": "ההזמנה שלך שולמה",
-        "escape_action": "הציגי את ההזמנה שלך",
+        "page_title": "Thank you!",
+        "title": "Thank you!",
+        "escape_confirmation": "Are you sure you want to leave this page?",
+        "escape_action": "Leave",
         "components": {
-          "submit": "שליחה"
+          "submit": "Submit"
         }
       },
       "failed_payment": {
-        "return_to_cart_button_label": "חזרה לאתר"
+        "return_to_cart_button_label": "Return to your bag"
       },
       "payment_gateway": {
         "credit_card_label": "Credit Card",
-        "bank_deposit_label": "העברה בנקאית",
+        "bank_deposit_label": "Bank transfer",
         "cash_on_delivery_label": "Cash on Delivery",
         "login_prompt": {
           "no_access": {
@@ -1024,37 +1024,37 @@
         }
       },
       "shipping_errors": {
-        "shipping_method": "הסל שלך עודכן ושיטת המשלוח התעדכנה בהתאמה."
+        "shipping_method": "Your shopping bag and shipping method have been updated."
       }
     },
     "errors": {
-      "blank": "לא יכול להיות ריק",
-      "reset_password_html": "כבר קיים משתמש עם האימייל הזה. אם שכחת את הסיסמה, את יכולה <a href=\"\/account\/login#recover\" class=\"error-recover\">לאפס את הסיסמה שלך כאן<\/a>",
-      "verify_email": "ברגעים אלה נשלח מייל הפעלת משתמש אל {{ customer_email }} - עקבי אחרי השלבים במייל כדי להפעיל את המשתמש שלך."
+      "blank": "Can't be blank",
+      "reset_password_html": "There is an account registered with this email address already. If you forgot your password, you can <a href=\"\/account\/login#recover\" class=\"error-recover\">reset your password<\/a>",
+      "verify_email": "An email has been sent to {{ customer_email }}. Please verify your email and account."
     },
     "notices": {
       "customer": {
-        "invalid_credentials": "מייל או סיסמה לא נכונים. אם שכחת סיסמה את יכולה לאפס אותה בעזרת כפתור ״שכחתי סיסמה״ למטה."
+        "invalid_credentials": "Invalid email or password"
       },
       "cart": {
-        "all_items_in_cart": "הוספת את הפריט האחרון ממוצר זה לסל."
+        "all_items_in_cart": "You added the last product to your bag."
       }
     },
     "challenge": {
-      "message": "על מנת להמשיך יש למלא את הטופס.",
-      "submit_button_text": "שליחה"
+      "message": "Verify you're human",
+      "submit_button_text": "Submit"
     },
     "checkpoint": {
-      "submit_button_text": "שליחה"
+      "submit_button_text": "Submit"
     }
   },
   "customer_accounts": {
     "errors": {
-      "retry_action_label": "נסי שוב"
+      "retry_action_label": "Try again"
     },
     "order_details": {
-      "order_details_skeleton_accessibility_label": "התחברי למשתמש בשביל לראות את פרטי ההזמנה המלאים",
-      "login_to_view_all_order_details": "התחברי למשתמש בשביל לראות את פרטי ההזמנה המלאים"
+      "order_details_skeleton_accessibility_label": "Login to your account to see the full order details",
+      "login_to_view_all_order_details": "Login to view all order details"
     },
     "orders": {
       "order_status": {
@@ -1063,7 +1063,7 @@
       }
     },
     "ui_components": {
-      "submit": "שליחה"
+      "submit": "Submit"
     }
   }
 }
