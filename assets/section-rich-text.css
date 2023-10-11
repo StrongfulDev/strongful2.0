@@ -23,21 +23,21 @@
   }
 
   .rich-text__wrapper--left {
-    justify-content: flex-start;
-  }
-
-  .rich-text__wrapper--right {
     justify-content: flex-end;
   }
 
+  .rich-text__wrapper--right {
+    justify-content: flex-start;
+  }
+
   .rich-text__blocks {
-    max-width: 50rem;
+    /*max-width: 50rem;*/
   }
 }
 
 @media screen and (min-width: 990px) {
   .rich-text__blocks {
-    max-width: 78rem;
+    /*max-width: 78rem;*/
   }
 }
 
