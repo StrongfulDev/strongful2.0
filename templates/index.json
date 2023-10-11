@@ -253,6 +253,28 @@
         "shop_instagram": "SHOP INSTAGRAM",
         "follow_us": "FOLLOW US"
       }
+    },
+    "4371b550-969b-4828-986d-71697fc53ef0": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16060343976076__4371b550-969b-4828-986d-71697fc53ef0-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>כשכל חליפות הספורט לנשים מחכות לך באתר אחד, החיים שלך הולכים להיות קלים.<br\/>אנו סטרונגפול, מותג בגדי ספורט לנשים אונליין המספק לך את בגדי האימון לנשים הכי איכותיים שיש.<br\/>כל בחורה צריכה סט ספורטיבי בארון, וכשהוא מסטרונגפול את יודעת שתוכלי לבחור את הגזרות, המידות והצבעים המדוייקים בשבילך שיגרמו לך להרגיש בשיא שלך.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16060343976076__4371b550-969b-4828-986d-71697fc53ef0-text-1"
+      ],
+      "settings": {
+        "desktop_content_position": "right",
+        "content_alignment": "right",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -261,6 +283,7 @@
     "283eeea1-79f9-42c2-8f34-dccf839b470b",
     "our_collection_list",
     "ecf1e0a5-0973-4674-ac5b-b5370ff1bae1",
-    "eb801099-3113-4348-8f97-119459011525"
+    "eb801099-3113-4348-8f97-119459011525",
+    "4371b550-969b-4828-986d-71697fc53ef0"
   ]
 }
