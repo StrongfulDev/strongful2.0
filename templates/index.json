@@ -42,6 +42,7 @@
     },
     "1f60398a-2c8e-4929-982d-29a981f0bb34": {
       "type": "featured-collection-info",
+      "disabled": true,
       "settings": {
         "steps": 4,
         "title": "Breast cancer awareness month",
@@ -115,8 +116,8 @@
         "quick_add_accessories_text": "הוספה מהירה",
         "columns_mobile": "2",
         "swipe_on_mobile": true,
-        "padding_top": 24,
-        "padding_bottom": 24
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "our_collection_list": {
