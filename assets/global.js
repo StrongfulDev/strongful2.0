@@ -987,14 +987,14 @@ class VariantSelects extends HTMLElement {
   updateMedia() {
     if (!this.currentVariant) return;
     if (!this.currentVariant.featured_media) return;
-	  console.log(this);
-	  console.log(this.currentVariant);
+	  console.log(this.currentVariant.public_title);
+
 		console.log(this.currentProduct);
 
     const mediaGalleries = document.querySelectorAll(`[id^="MediaGallery-${this.dataset.section}"]`);
     mediaGalleries.forEach((mediaGallery) => {
-	    console.log(mediaGallery);
 	    mediaGallery.setActiveMedia(`${this.dataset.section}-${this.currentVariant.featured_media.id}`, true);
+	    console.log(mediaGallery);
     });
 
     const modalContent = document.querySelector(`#ProductModal-${this.dataset.section} .product-media-modal__content`);
