@@ -1242,7 +1242,7 @@ if (contentToRender !== null) {
 
 	// if there is stored HTML, update the page
 	if (updatedContent !== null && collectionHandle === previousCollectionHandle) {
-		contentToRender.innerHTML = updatedContent;
+		 contentToRender.innerHTML = updatedContent;
 	}
 }
 
