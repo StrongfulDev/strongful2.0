@@ -4,7 +4,8 @@ if (!customElements.get('product-info')) {
       super();
       this.input = this.querySelector('.quantity__input');
       this.currentVariant = this.querySelector('.product-variant-id');
-      this.variantSelects = this.querySelector('variant-radios')
+			this.currentProduct = this.querySelector('.product-id');
+      this.variantSelects = this.querySelector('variant-radios');
       this.submitButton = this.querySelector('[type="submit"]');
     }
 

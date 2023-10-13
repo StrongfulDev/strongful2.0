@@ -122,6 +122,9 @@
       <script type="application/json">
         {{ product.variants | json }}
       </script>
+        <script id="productJsonScript" type="application/json">
+        {{ product | json }}
+      </script>
     </variant-radios>
   {%- else -%}
     <variant-selects

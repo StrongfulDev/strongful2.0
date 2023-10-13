@@ -948,6 +948,7 @@ class VariantSelects extends HTMLElement {
   }
 
   onVariantChange() {
+	  this.updateMasterProductData();
     this.updateOptions();
     this.updateMasterId();
     this.toggleAddButton(true, '', false);
@@ -959,7 +960,7 @@ class VariantSelects extends HTMLElement {
       this.toggleAddButton(true, '', true);
       this.setUnavailable();
     } else {
-			// this.updateMedia();
+			this.updateMedia();
       this.updateURL();
       this.updateVariantInput();
       this.renderProductInfo();
@@ -970,6 +971,10 @@ class VariantSelects extends HTMLElement {
   updateOptions() {
     this.options = Array.from(this.querySelectorAll('select'), (select) => select.value);
   }
+
+	updateMasterProductData() {
+		this.currentProduct = this.getProductData();
+	}
 
   updateMasterId() {
     this.currentVariant = this.getVariantData().find((variant) => {
@@ -982,9 +987,15 @@ class VariantSelects extends HTMLElement {
   updateMedia() {
     if (!this.currentVariant) return;
     if (!this.currentVariant.featured_media) return;
+	  console.log(this);
+	  console.log(this.currentVariant);
+		console.log(this.currentProduct);
 
     const mediaGalleries = document.querySelectorAll(`[id^="MediaGallery-${this.dataset.section}"]`);
-    mediaGalleries.forEach(mediaGallery => mediaGallery.setActiveMedia(`${this.dataset.section}-${this.currentVariant.featured_media.id}`, true));
+    mediaGalleries.forEach((mediaGallery) => {
+	    console.log(mediaGallery);
+	    mediaGallery.setActiveMedia(`${this.dataset.section}-${this.currentVariant.featured_media.id}`, true);
+    });
 
     const modalContent = document.querySelector(`#ProductModal-${this.dataset.section} .product-media-modal__content`);
     if (!modalContent) return;
@@ -1133,6 +1144,11 @@ class VariantSelects extends HTMLElement {
     this.variantData = this.variantData || JSON.parse(this.querySelector('[type="application/json"]').textContent);
     return this.variantData;
   }
+
+	getProductData() {
+		this.productData = this.productData || JSON.parse(this.querySelectorAll('[type="application/json"]')[1].textContent);
+		return this.productData;
+	}
 }
 
 customElements.define('variant-selects', VariantSelects);

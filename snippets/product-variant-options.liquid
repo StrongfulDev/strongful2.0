@@ -78,6 +78,7 @@
                     value="{{ value | escape }}"
                     form="{{ product_form_id }}"
                     data-variant-id="{{ variant_id }}"
+                    {% if forloop.first %}checked{% endif %}
                     {% if members_only and product.tags contains announcement_tag %}
                         disabled
                         class="disabled disabled-variant-button"
