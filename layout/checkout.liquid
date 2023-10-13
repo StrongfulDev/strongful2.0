@@ -387,8 +387,13 @@
 		document.querySelector(".sidebar").classList.add(checkout.step);
 
 		if (checkout.step === 'shipping_method' || checkout.step === 'payment_method') {
-			if (document.querySelector(".notice--warning") !== null) {
-				// document.querySelector(".notice--warning").style.display = "none";
+			if (document.querySelector(".radio__label__primary.content-box__emphasis") !== null) {
+                let elements = document.querySelectorAll(".radio__label__primary.content-box__emphasis");
+                elements.forEach((element) => {
+                    if (element.innerText.includes("credit card")) {
+                        element.innerText = 'כרטיס אשראי';
+                    }
+                });
 			}
 		}
 
