@@ -554,7 +554,6 @@
     </div>
 
     {% comment %}{% render 'product-media-modal', variant_images: variant_images, color_images: color_images %}{% endcomment %}
-    {% comment %}{% render 'product-media-gallery', variant_images: variant_images, color_images: color_images %}{% endcomment %}
 
     {% assign popups = section.blocks | where: 'type', 'popup' %}
     {%- for block in popups -%}
