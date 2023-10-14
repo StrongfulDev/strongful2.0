@@ -30,10 +30,6 @@
 
     assign product_form_id = 'product-form-' | append: section.id
 
-    if product.selected_or_first_available_variant
-        assign default_selected_variant = true
-    endif
-
     for variant in product.variants
         assign variant_id = variant.id
         endfor
@@ -85,7 +81,7 @@
                     value="{{ value | escape }}"
                     form="{{ product_form_id }}"
                     data-variant-id="{{ variant_id }}"
-                    {% if default_selected_variant == true %}checked{% endif %}
+                    {% if forloop.first %}checked{% endif %}
                     {% if members_only and product.tags contains announcement_tag %}
                         disabled
                         class="disabled disabled-variant-button"

@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', function(e) {
 			}
 		});
 
-		$('variant-radios input[name="Size"], variant-radios input[name="מידה"]').on('change', function () {
+		$('variant-radios input[name="Size"]').on('change', function (e) {
 			const modelSize = $(this).val();
 			changeModel(modelSize);
 			updateModelSwitch(modelSize);
@@ -24,11 +24,6 @@ window.addEventListener('DOMContentLoaded', function(e) {
 				showLowStock(this);
 			}
 		});
-
-		// const modelSize = localStorage.getItem('modelSize');
-		// if (modelSize) {
-		// 	changeModel(modelSize);
-		// }
 
 		function showLowStock(element) {
 			let lowStockText = $(element).siblings(".product__inventory");
@@ -62,11 +57,13 @@ window.addEventListener('DOMContentLoaded', function(e) {
 		}
 
 		function changeModel(modelSize) {
-			const list = $('.product__media-list');
+			const lists = document.querySelectorAll('.product__media-list');
 			const sizeTable = $('.div-block-460');
+			const selectedColorValue = document.querySelector('input[name="Color"]:checked').value;
+			let count = 0;
 
-			const imagesToHide = list.find(`.product__media-item:not([data-model-size="${modelSize}"])`);
-			const imagesToShow = list.find(`.product__media-item[data-model-size="${modelSize}"]`);
+			// const imagesToHide = lists.find(`.product__media-item:not([data-model-size="${modelSize}"])`);
+			// const imagesToShow = lists.find(`.product__media-item[data-model-size="${modelSize}"]`);
 
 			const divsToHide = sizeTable.find(`span:not([data-model-size="${modelSize}"])`);
 			const divsToShow = sizeTable.find(`span[data-model-size="${modelSize}"]`);
@@ -75,26 +72,35 @@ window.addEventListener('DOMContentLoaded', function(e) {
 			const modelWearsSizeParagraphsToHide = $(document).find(`.model-wears-size:not([data-model="${modelSize}"])`);
 
 			let progressBar = document.querySelector('.slider-component-progress-bar');
-			$(progressBar).css('width', `calc(100% / ${imagesToShow.length})`);
 
-			if (imagesToShow.length > 0) {
-				imagesToHide.hide();
-				imagesToShow.show();
-				divsToHide.hide();
-				divsToShow.show();
-				modelWearsSizeParagraphsToShow.show();
-				modelWearsSizeParagraphsToHide.hide();
+			for (let i = 0; i < lists.length; i++) {
+				let list = lists[i];
+				for (let j = 0; j < list.children.length; j++) {
+					let item = list.children[j];
+					if (item.dataset.modelSize === modelSize && item.dataset.alt === selectedColorValue) {
+						item.classList.remove('hidden');
+						count++;
+					} else {
+						item.classList.add('hidden');
+					}
+				}
 			}
+
+			$(progressBar).css('width', `calc(100% / ${count})`);
+
+				// imagesToHide.addClass('hidden');
+				// imagesToShow.removeClass('hidden');
+				divsToHide.addClass('hidden');
+				divsToShow.removeClass('hidden');
+				modelWearsSizeParagraphsToShow.removeClass('hidden');
+				modelWearsSizeParagraphsToHide.addClass('hidden');
 
 			$(".model-switcher__list").addClass("hidden");
 			$(".model-switcher-overlay").addClass("hidden");
 			$(arrowIcon).removeClass('rotate-arrow');
 
-			// localStorage.setItem('modelSize', modelSize);
-
 			const model = window.models[modelSize];
 
-			// $('.model-switch-button span').text(model ? `${model.name} (${modelSize})` : `${modelSize}`);
 		}
 
 		function updateVariantRadios(modelSize) {
@@ -126,6 +132,6 @@ window.addEventListener('DOMContentLoaded', function(e) {
 				$(".model-switcher-overlay").toggleClass("hidden");
 			}
 		});
-	}, 2111);
+	}, 3000);
 
 });

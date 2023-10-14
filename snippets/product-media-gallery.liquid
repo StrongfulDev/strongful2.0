@@ -75,21 +75,24 @@
                 {%- if product.selected_or_first_available_variant.featured_media != null -%}
                     {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
                     {% liquid
-                        assign alt_items_array = featured_media.alt | split: "| "
+                        assign alt_items_array = featured_media.alt | split: " | "
                         assign alt = alt_items_array[0]
                         assign image_model_size = alert_items_array[1]
                     %}
                     <li
                             id="Slide-{{ section.id }}-{{ featured_media.id }}{{ id_append }}"
                             data-alt="{{ alt }}"
-                            class="product__media-item grid__item slider__slide is-active{% if single_media_visible %} product__media-item--single{% endif %}{% if featured_media.media_type != 'image' %} product__media-item--full{% endif %}{% if section.settings.hide_variants and variant_images contains featured_media.src %} product__media-item--variant{% endif %}"
+                            class="product__media-item grid__item slider__slide is-active
+                            {% if single_media_visible %} product__media-item--single{% endif %}
+                            {% if featured_media.media_type != 'image' %} product__media-item--full{% endif %}
+                            {% if section.settings.hide_variants and variant_images contains featured_media.src %} product__media-item--variant{% endif %}
+                            {% if alt_items_array[1] contains 'L' and plusTag == '' %}
+                            hidden
+                            {% elsif alt_items_array[1] contains 'XS' and plusTag != '' %}
+                            hidden
+                            {% endif %}"
                             data-media-id="{{ section.id }}-{{ featured_media.id }}"
                             data-model-size="{{ alt_items_array[1] }}"
-                            {% if alt_items_array[1] contains 'L' and plusTag == '' %}
-                                style="display: none;"
-                            {% elsif alt_items_array[1] contains 'XS' and plusTag != '' %}
-                                style="display: none;"
-                            {% endif %}
                     >
                         {% if product.tags contains 'new' %}
                             <span class="new-product-span">
@@ -116,7 +119,7 @@
                 {%- endif -%}
                 {%- for media in product.media -%}
                         {% liquid
-                            assign alt_items_array = media.alt | split: "| "
+                            assign alt_items_array = media.alt | split: " | "
                             assign alt = alt_items_array[0]
                             assign image_model_size = alt_items_array[1]
                             assign alt_color_prepare = alt | split: " - " | join: " "
@@ -125,14 +128,18 @@
                         <li
                                 id="Slide-{{ section.id }}-{{ media.id }}{{ id_append }}"
                                 data-alt="{{ alt_color }}"
-                                class="product__media-item grid__item slider__slide{% if single_media_visible %} product__media-item--single{% endif %}{% if product.selected_or_first_available_variant.featured_media == null and forloop.index == 1 %} is-active{% endif %}{% if media.media_type != 'image' %} product__media-item--full{% endif %}{% if section.settings.hide_variants and variant_images contains media.src %} product__media-item--variant{% endif %}"
+                                class="product__media-item grid__item slider__slide
+                                    {% if single_media_visible %} product__media-item--single{% endif %}
+                                    {% if product.selected_or_first_available_variant.featured_media == null and forloop.index == 1 %} is-active{% endif %}
+                                    {% if media.media_type != 'image' %} product__media-item--full{% endif %}
+                                    {% if section.settings.hide_variants and variant_images contains media.src %} product__media-item--variant{% endif %}
+                                    {% if alt_items_array[1] contains 'L' and plusTag == '' %}
+                                    hidden
+                                    {% elsif alt_items_array[1] contains 'XS' and plusTag != '' %}
+                                    hidden
+                                    {% endif %}"
                                 data-media-id="{{ section.id }}-{{ media.id }}"
                                 data-model-size="{{ alt_items_array[1] }}"
-                                {% if alt_items_array[1] contains 'L' and plusTag == '' %}
-                                style="display: none;"
-                                    {% elsif alt_items_array[1] contains 'XS' and plusTag != '' %}
-                                    style="display: none;"
-                                {% endif %}
                         >
                             {%- liquid
                                 assign media_position = media_position | default: 0 | plus: 1

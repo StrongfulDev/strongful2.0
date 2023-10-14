@@ -1432,7 +1432,7 @@ window.addEventListener('DOMContentLoaded', function(event) {
 	const defaultSelectedColor = document.querySelector('input[name="Color"]:checked');
 	if (productImages !== null) {
 		productImages.forEach(image => {
-			if (image.dataset.alt.includes(defaultSelectedColor.value)) {
+			if (image.dataset.alt === defaultSelectedColor.value) {
 				image.classList.remove('hidden');
 			} else {
 				image.classList.add('hidden');
