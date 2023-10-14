@@ -987,7 +987,9 @@ class VariantSelects extends HTMLElement {
   updateMedia() {
     if (!this.currentVariant) return;
     if (!this.currentVariant.featured_media) return;
-	  console.log(this.currentVariant)
+
+		// check if there are enough options (for color swatches) and if not then exit the function
+	  if (this.currentVariant.option2 === null) return;
 
     const mediaGalleries = document.querySelectorAll(`[id^="MediaGallery-${this.dataset.section}"]`);
     mediaGalleries.forEach((mediaGallery) => {
