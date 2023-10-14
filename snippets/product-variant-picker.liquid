@@ -83,7 +83,10 @@
       {{ block.shopify_attributes }}
     >
       {%- for option in product.options_with_values -%}
-        <fieldset class="js product-form__input {% if product.title == 'גיפט קארד' %}gift-card-product-form__input{% endif %}">
+        <fieldset class="js product-form__input
+                {% if option.name == 'Color' %}color-option-fieldset{% endif %}
+                {% if product.title == 'Gift card' %}gift-card-product-form__input{% endif %}"
+        >
           <legend class="form__label">{{ option.name }}</legend>
             {% for modelName in product.metafields.model.names.value %}
                 {% assign model = shop.metaobjects.model[modelName] %}

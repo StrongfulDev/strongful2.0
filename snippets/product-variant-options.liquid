@@ -30,6 +30,10 @@
 
     assign product_form_id = 'product-form-' | append: section.id
 
+    if product.selected_or_first_available_variant
+        assign default_selected_variant = true
+    endif
+
     for variant in product.variants
         assign variant_id = variant.id
         endfor
@@ -70,7 +74,10 @@
     -%}
     {%- if block.settings.picker_type == 'button' or picker_type == "button" -%}
         {% assign option_value = value %}
-        <span class="variant-button {% if option_disabled %}disabled-variant-button{% endif %} {{ option_value }}">
+        <span class="variant-button
+            {% if option_disabled %}disabled-variant-button{% endif %}
+            {% if option.name == 'Color' %}color-swatch-button{% endif %}
+            {{ option_value }}">
             <input
                     type="radio"
                     id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
@@ -78,7 +85,7 @@
                     value="{{ value | escape }}"
                     form="{{ product_form_id }}"
                     data-variant-id="{{ variant_id }}"
-                    {% if forloop.first %}checked{% endif %}
+                    {% if default_selected_variant == true %}checked{% endif %}
                     {% if members_only and product.tags contains announcement_tag %}
                         disabled
                         class="disabled disabled-variant-button"
@@ -87,10 +94,10 @@
                         class="disabled disabled-variant-button"
                     {% endif %}
             >
-            {% if option.name == "Color" or option.name == "צבע" %}
+            {% if option.name == "Color" %}
                 <label class="no-background color-variant-tile"
                        for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
-                    <span style="background-color: {{ value }}">&nbsp;</span>
+                    <span class="color-swatch" data-color="{{ value }}">&nbsp;</span>
                 </label>
             {% else %}
                 <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">

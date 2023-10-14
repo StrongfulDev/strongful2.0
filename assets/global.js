@@ -987,6 +987,7 @@ class VariantSelects extends HTMLElement {
   updateMedia() {
     if (!this.currentVariant) return;
     if (!this.currentVariant.featured_media) return;
+	  console.log(this.currentVariant)
 
     const mediaGalleries = document.querySelectorAll(`[id^="MediaGallery-${this.dataset.section}"]`);
     mediaGalleries.forEach((mediaGallery) => {
@@ -994,7 +995,7 @@ class VariantSelects extends HTMLElement {
 
 			const mediaGalleryListItems = mediaGallery.querySelectorAll('.product__media-item');
 			mediaGalleryListItems.forEach((item) => {
-				if (item.dataset.alt.includes(this.currentVariant.option2)) {
+				if (item.dataset.alt === this.currentVariant.option2) {
 					item.classList.remove('hidden');
 				} else {
 					item.classList.add('hidden');
@@ -1425,13 +1426,77 @@ window.addEventListener('DOMContentLoaded', function(event) {
 	enableToolbarButton.appendChild(pill);
 	enableToolbarButton.appendChild(pillBorder);
 
-	// let cartItemsInstance = new CartItems();
-	// let historyTraversal = event.persisted || ( typeof window.performance != "undefined" && window.performance.navigation.type === 2 );
-	//
-	// // re-render the cart if the user clicked the back button
-	// if (historyTraversal) {
-	// 	cartItemsInstance.onCartUpdate();
-	// }
+	const productImages = document.querySelectorAll('.product__media-item');
+	const defaultSelectedColor = document.querySelector('input[name="Color"]:checked');
+	if (productImages !== null) {
+		productImages.forEach(image => {
+			if (image.dataset.alt.includes(defaultSelectedColor.value)) {
+				image.classList.remove('hidden');
+			} else {
+				image.classList.add('hidden');
+			}
+		});
+	}
+
+	const colorDictionary = {
+		"Black": "black",
+		"Black Gray": "Gray",
+		"Black White": "White",
+		"Blue": "blue",
+		"Blue Gray": "Gray",
+		"Blue White": "White",
+		"Blue-Purple": "blue",
+		"Bordeaux": "red",
+		"Brown": "brown",
+		"Cafe": "brown",
+		"Champagne": "yellow",
+		"Clay": "brown",
+		"Cream": "yellow",
+		"Dark Blue": "navy",
+		"Dark Gray": "darkgray",
+		"Dark Green": "darkgreen",
+		"DarkGreen": "darkgreen",
+		"Dark Purple": "darkpurple",
+		"Gray": "Gray",
+		"Gray Black": "Gray",
+		"Green": "green",
+		"Green Gray": "Gray",
+		"Light Blue": "blue",
+		"Light Gray": "Gray",
+		"Light Green": "green",
+		"Light Orange": "orange",
+		"Light Yellow": "yellow",
+		"Lilach": "purple",
+		"Lime": "green",
+		"Maroon": "red",
+		"Mint": "green",
+		"Mocha": "brown",
+		"Navy": "blue",
+		"Olive": "green",
+		"Orange": "orange",
+		"Pink": "pink",
+		"Purple": "purple",
+		"Red": "red",
+		"Mustard": "yellow",
+		"Nude": "yellow",
+		"Nude-Gray": "Gray",
+		"Old Pink": "pink",
+		"Olive Green": "green",
+		"Peach": "orange",
+		"Pistachio": "green",
+		"Plum": "purple",
+		"Turquoise": "blue",
+		"White": "white",
+		"White Black": "white",
+		"White Gray": "white",
+		"Yellow": "yellow"
+	}
+
+	const colorSwatches = document.querySelectorAll('.color-swatch');
+	colorSwatches.forEach(swatch => {
+		const color = swatch.dataset.color;
+		swatch.style.backgroundColor = colorDictionary[color];
+	});
 
 });
 

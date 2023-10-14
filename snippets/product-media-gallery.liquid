@@ -119,11 +119,13 @@
                         {% liquid
                             assign alt_items_array = media.alt | split: "| "
                             assign alt = alt_items_array[0]
+                            assign alt_color_prepare = alt | split: " - " | join: " "
+                            assign alt_color = alt_color_prepare | split: " " | last
                             assign image_model_size = alt_items_array[1]
                         %}
                         <li
                                 id="Slide-{{ section.id }}-{{ media.id }}{{ id_append }}"
-                                data-alt="{{ alt }}"
+                                data-alt="{{ alt_color }}"
                                 class="product__media-item grid__item slider__slide{% if single_media_visible %} product__media-item--single{% endif %}{% if product.selected_or_first_available_variant.featured_media == null and forloop.index == 1 %} is-active{% endif %}{% if media.media_type != 'image' %} product__media-item--full{% endif %}{% if section.settings.hide_variants and variant_images contains media.src %} product__media-item--variant{% endif %}"
                                 data-media-id="{{ section.id }}-{{ media.id }}"
                                 data-model-size="{{ alt_items_array[1] }}"

@@ -1537,23 +1537,27 @@ a.product__text {
     text-decoration: line-through;
 }
 
-.product-form__input input[type='radio'] + label.color-variant-tile.no-background {
+.product-form__input input[type='radio']+label.color-variant-tile.no-background {
     background-color: unset;
     padding: 0;
     transition: all .4s ease;
     border-radius: 100px;
     border: 1px solid silver;
+	display: flex;
+align-items: center;
+justify-content: center;
+	width: 30px;
+	height: 30px;
 }
 
-.product-form__input input[type='radio']:checked + label.color-variant-tile.no-background {
-    border: 2px solid rgb(var(--color-foreground));
-    transform: scale(1.1);
+.product-form__input input[type='radio']:checked+label.color-variant-tile.no-background {
+    border: 1px solid rgb(var(--color-foreground));
 }
 
 .color-variant-tile span {
     display: block;
-    height: 30px;
-    width: 30px;
+    height: 26px;
+    width: 26px;
     border-radius: 100px;
 }
 
@@ -1622,6 +1626,10 @@ variant-radios fieldset {
     column-gap: .8rem;
 }
 
+.product-form__input.color-option-fieldset {
+	justify-content: flex-start;
+}
+
 .product .price .badge {
     display: none;
 }
@@ -1637,6 +1645,11 @@ variant-radios fieldset {
     width: 100%;
 	flex: 1;
 	position: relative;
+}
+
+.variant-button.color-swatch-button {
+	width: auto;
+	flex: initial;
 }
 
 .accordion__title:after, .accordion__title:before {

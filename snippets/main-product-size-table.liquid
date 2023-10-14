@@ -1,9 +1,9 @@
 {{ 'size-table.css' | asset_url | stylesheet_tag }}
 {{ 'size-table.js' | asset_url | script_tag }}
 
-{% assign allSizesAreCm = '*כל המידות בטבלה הן בס"מ' %}
+{% assign allSizesAreCm = '* All measures are in feet and inches' %}
 
-{% if product.type == 'אוברול' %}
+{% if product.type == 'Jumpsuit' %}
 
     <div class="size-guide-modal size-pop-tops hidden fix-direction">
         <p class="StrongfulX">{% render 'icon-close' %}</p>
@@ -52,7 +52,7 @@
         <h6 class="cent-exp text-right rtl">{{ allSizesAreCm }}</h6>
     </div>
 
-{% elsif product.type == "טופ" or product.type == 'חולצה' or product.type == 'בגד גוף' or product.type == 'שמלה' or product.type == "ג׳קט" %}
+{% elsif product.type == 'Bra' or product.type == "Top" or product.type == 'Shirt' or product.type == 'Bodysuit' or product.type == 'Dress' or product.type == "Jacket" %}
     <div class="size-guide-modal size-pop-tops hidden fix-direction">
         <p class="StrongfulX">{% render 'icon-close' %}</p>
         <table class="size-table">
@@ -75,7 +75,7 @@
         </table>
         <h6 class="cent-exp text-right rtl">{{ allSizesAreCm }}</h6>
     </div>
-{% elsif product.type == 'שורטס' or product.type == 'טייץ' or product.type == 'בייקר' or product.type == 'מכנס' %}
+{% elsif product.type == 'Shorts' or product.type == 'Leggings' or product.type == 'Biker' or product.type == 'Pants' %}
     <div class="size-guide-modal size-pop-bikers hidden fix-direction">
         <p class="StrongfulX">{% render 'icon-close' %}</p>
         <table class="size-table">
@@ -102,7 +102,7 @@
         </table>
         <h6 class="cent-exp text-right rtl">{{ allSizesAreCm }}</h6>
     </div>
-{% elsif product.type == "קרופ טופ" %}
+{% elsif product.type == "Crop Top" %}
     {% unless product.title contains 'Juicy' or product.title contains 'Claire' %}
         <div class="size-guide-modal size-pop-tops hidden fix-direction">
             <p class="StrongfulX">{% render 'icon-close' %}</p>
@@ -152,34 +152,6 @@
             <h6 class="cent-exp text-right rtl">{{ allSizesAreCm }}</h6>
         </div>
     {% endunless %}
-{% elsif product.type == "סווטשירט" %}
-    <!--   Amber   -->
-    <div class="size-guide-modal size-pop-tops hidden fix-direction">
-        <p class="StrongfulX">{% render 'icon-close' %}</p>
-        <table class="size-table">
-            <thead>
-            <tr class="size-table-main-row five-grid">
-                <th>{{ 'product.size_modal.site_size' | t }}</th>
-                <th>{{ 'product.size_modal.shoulder_width' | t }}</th>
-                <th>{{ 'product.size_modal.bust' | t }}</th>
-                <th>{{ 'product.size_modal.sleeve_length' | t }}</th>
-                <th>{{ 'product.size_modal.shirt_length' | t }}</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% for variant in product.variants %}
-                <tr class="size-table-rows five-grid">
-                    <td>{{ variant.title }}</td>
-                    <td>{{ variant.metafields.my_fields.shoulder_width }}</td>
-                    <td>{{ variant.metafields.my_fields.bust }}</td>
-                    <td>{{ variant.metafields.my_fields.sleeve_length }}</td>
-                    <td>{{ variant.metafields.my_fields.shirt_length }}</td>
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>
-        <h6 class="cent-exp text-right rtl">{{ allSizesAreCm }}</h6>
-    </div>
 {% endif %}
 
 <div class="size-table-overlay hidden"></div>
