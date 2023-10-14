@@ -115,13 +115,12 @@
                     </li>
                 {%- endif -%}
                 {%- for media in product.media -%}
-                    {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
                         {% liquid
                             assign alt_items_array = media.alt | split: "| "
                             assign alt = alt_items_array[0]
+                            assign image_model_size = alt_items_array[1]
                             assign alt_color_prepare = alt | split: " - " | join: " "
                             assign alt_color = alt_color_prepare | split: " " | last
-                            assign image_model_size = alt_items_array[1]
                         %}
                         <li
                                 id="Slide-{{ section.id }}-{{ media.id }}{{ id_append }}"
@@ -158,7 +157,6 @@
                                     alt: alt
                             %}
                         </li>
-                    {%- endunless -%}
                 {%- endfor -%}
             </ul>
             {% if product.media.size > 1 %}
