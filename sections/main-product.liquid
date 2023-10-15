@@ -164,11 +164,6 @@
                             {%- if product.description != blank -%}
                                 <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
                                     {{ product.description }}
-                                    {% unless product.tags contains 'outlet' %}
-                                        <div>
-                                            סטרוגנפול משתפת פעולה ותורמת 100% מהרווחים לעמותת ״לתת״ וביחד ניתן מענה הומוניטרי לנפגעי המלחמה, כוחות הביטחון והאוכלוסיות המושפעות מהמלחמה. בכפוף לתקנון
-                                        </div>
-                                    {% endunless %}
                                 </div>
                             {%- endif -%}
                         {%- when 'loyalty' -%}
