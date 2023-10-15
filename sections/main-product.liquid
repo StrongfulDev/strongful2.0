@@ -1,3 +1,6 @@
+{{ 'component-model-switcher.css' | asset_url | stylesheet_tag }}
+{{ 'component-model-switcher.js' | asset_url | script_tag }}
+
 {%- liquid
     assign myBlock = section.blocks | where: 'id', 'e290d1ee-22d0-4ae8-9219-8d77d6585fae' | first
 -%}
@@ -28,9 +31,7 @@
     {{ 'component-rating.css' | asset_url | stylesheet_tag }}
     {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
     {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
-    {{ 'component-model-switcher.css' | asset_url | stylesheet_tag }}
     <script src="{{ 'component-swiper.js' | asset_url }}" defer="defer" async="async"></script>
-    <script src="{{ 'component-model-switcher.js' | asset_url }}" defer="defer" async="async"></script>
 
     {% unless product.tags contains 'noSimilar' %}
         {{ 'component-similar-items.js' | asset_url | script_tag }}
@@ -101,7 +102,7 @@
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
         <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
             {% comment %}{% render 'product-media-gallery', variant_images: variant_images, color_images: color_images %}{% endcomment %}
-            {% render 'product-media-gallery' %}
+            {% render 'product-media-gallery', is_mobile: true %}
         </div>
         <div class="product__info-wrapper {{ section.settings.details_section_direction }} grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}">
             <product-info

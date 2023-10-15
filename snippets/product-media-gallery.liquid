@@ -6,9 +6,10 @@
   - product: {Object} Product liquid object
   - variant_images: {Array} Product images associated with a variant
   - is_duplicate: {Boolean} Prevents rendering uneeded elements and duplicate ids for subsequent instances
+  - is_mobile: {Boolean} Whether or not the gallery is being rendered on a mobile device
 
   Usage:
-  {% render 'product-media-gallery', is_duplicate: true %}
+  {% render 'product-media-gallery' %}
 {% endcomment %}
 
 {%- liquid
@@ -69,7 +70,7 @@
             {%- endunless -%}
             <ul
                     id="Slider-Gallery-{{ section.id }}{{ id_append }}"
-                    class="product__media-list contains-media grid grid--peek list-unstyled slider slider--mobile {% if product.media.size < 2 %}single-image-media-list{% endif %}"
+                    class="product__media-list contains-media grid grid--peek list-unstyled slider {% if is_mobile %}slider--mobile{% endif %} {% if product.media.size < 2 %}single-image-media-list{% endif %}"
                     role="list"
             >
                 {%- if product.selected_or_first_available_variant.featured_media != null -%}

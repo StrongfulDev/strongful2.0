@@ -1,6 +1,5 @@
 window.addEventListener('DOMContentLoaded', function(e) {
 
-	setTimeout(() => {
 		$(".model-switcher").removeClass("hidden");
 
 		const arrowIcon = document.querySelector(".model-switch-button .icon-caret");
@@ -9,21 +8,22 @@ window.addEventListener('DOMContentLoaded', function(e) {
 		$('.model-switcher__item input').change(function () {
 			let modelSize = $(this).val();
 			if (modelSize) {
-				changeModel(modelSize);
 				updateVariantRadios(modelSize);
+				changeModel(modelSize);
+				updateModelSwitch(modelSize);
 				$(this).parents().addClass("inactive");
 				$(this).parents().siblings().removeClass("inactive");
 			}
 		});
 
-		$('variant-radios input[name="Size"]').on('change', function (e) {
-			const modelSize = $(this).val();
-			changeModel(modelSize);
-			updateModelSwitch(modelSize);
-			if (window.innerWidth < 990) {
-				showLowStock(this);
-			}
-		});
+		// $('variant-radios input[name="Size"]').on('change', function (e) {
+		// 	const modelSize = $(this).val();
+		// 	changeModel(modelSize);
+		// 	updateModelSwitch(modelSize);
+		// 	if (window.innerWidth < 990) {
+		// 		showLowStock(this);
+		// 	}
+		// });
 
 		function showLowStock(element) {
 			let lowStockText = $(element).siblings(".product__inventory");
@@ -57,13 +57,12 @@ window.addEventListener('DOMContentLoaded', function(e) {
 		}
 
 		function changeModel(modelSize) {
-			const lists = document.querySelectorAll('.product__media-list');
+			const productMediaList = $('.product__media-list');
 			const sizeTable = $('.div-block-460');
-			const selectedColorValue = document.querySelector('input[name="Color"]:checked').value;
-			let count = 0;
+			const selectedColorValue = $('input[name="Color"]:checked').val();
 
-			// const imagesToHide = lists.find(`.product__media-item:not([data-model-size="${modelSize}"])`);
-			// const imagesToShow = lists.find(`.product__media-item[data-model-size="${modelSize}"]`);
+			const imagesToHide = productMediaList.find(`.product__media-item:not([data-model-size="${modelSize}"]):not([data-alt="${selectedColorValue}"])`);
+			const imagesToShow = productMediaList.find(`.product__media-item[data-model-size="${modelSize}"][data-alt="${selectedColorValue}"]`);
 
 			const divsToHide = sizeTable.find(`span:not([data-model-size="${modelSize}"])`);
 			const divsToShow = sizeTable.find(`span[data-model-size="${modelSize}"]`);
@@ -71,29 +70,15 @@ window.addEventListener('DOMContentLoaded', function(e) {
 			const modelWearsSizeParagraphsToShow = $(document).find(`.model-wears-size[data-model="${modelSize}"]`);
 			const modelWearsSizeParagraphsToHide = $(document).find(`.model-wears-size:not([data-model="${modelSize}"])`);
 
-			let progressBar = document.querySelector('.slider-component-progress-bar');
+			let progressBar = $('.slider-component-progress-bar');
 
-			for (let i = 0; i < lists.length; i++) {
-				let list = lists[i];
-				for (let j = 0; j < list.children.length; j++) {
-					let item = list.children[j];
-					if (item.dataset.modelSize.includes(modelSize) && item.dataset.alt === selectedColorValue) {
-						item.classList.remove('hidden');
-						count++;
-					} else {
-						item.classList.add('hidden');
-					}
-				}
-			}
-
-			$(progressBar).css('width', `calc(100% / ${count})`);
-
-				// imagesToHide.addClass('hidden');
-				// imagesToShow.removeClass('hidden');
+				imagesToHide.hide();
+				imagesToShow.show();
 				divsToHide.addClass('hidden');
 				divsToShow.removeClass('hidden');
 				modelWearsSizeParagraphsToShow.removeClass('hidden');
 				modelWearsSizeParagraphsToHide.addClass('hidden');
+				progressBar.css('width', `calc(100% / ${imagesToShow.length})`);
 
 			$(".model-switcher__list").addClass("hidden");
 			$(".model-switcher-overlay").addClass("hidden");
@@ -104,7 +89,7 @@ window.addEventListener('DOMContentLoaded', function(e) {
 		}
 
 		function updateVariantRadios(modelSize) {
-			const button = $(`variant-radios input[name="Size"][value="${modelSize}"], variant-radios input[name="מידה"][value="${modelSize}"]`)
+			const button = $(`variant-radios input[name="Size"][value="${modelSize}"]`)
 			button.click();
 		}
 
@@ -132,6 +117,5 @@ window.addEventListener('DOMContentLoaded', function(e) {
 				$(".model-switcher-overlay").toggleClass("hidden");
 			}
 		});
-	}, 3000);
 
 });

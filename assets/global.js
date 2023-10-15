@@ -986,19 +986,17 @@ class VariantSelects extends HTMLElement {
 
   updateMedia() {
     if (!this.currentVariant) return;
-    if (!this.currentVariant.featured_media) return;
+    // if (!this.currentVariant.featured_media) return;
 
 		// check if there are enough options (for color swatches) and if not then exit the function
 	  if (!this.currentVariant.option2) return;
 
     const mediaGalleries = document.querySelectorAll(`[id^="MediaGallery-${this.dataset.section}"]`);
     mediaGalleries.forEach((mediaGallery) => {
-	    mediaGallery.setActiveMedia(`${this.dataset.section}-${this.currentVariant.featured_media.id}`, true);
+			// mediaGallery.setActiveMedia(`${this.dataset.section}-${this.currentVariant.featured_media.id}`, true);
 
 			const mediaGalleryListItems = mediaGallery.querySelectorAll('.product__media-item');
 			mediaGalleryListItems.forEach((item) => {
-				console.log(item.dataset.alt);
-				console.log(this.currentVariant.option2);
 				if (item.dataset.alt === this.currentVariant.option2) {
 					item.classList.remove('hidden');
 				} else {
