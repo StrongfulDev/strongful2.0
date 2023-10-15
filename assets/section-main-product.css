@@ -2030,7 +2030,7 @@ product-recommendations .collection__title_heading, #product .collection__title_
 
 .sale-banner-product-page {
     background: var(--gradient-base-background-3);
-    padding: 1rem 0;
+    padding: 1rem .5rem;
     text-align: center;
 }
 
