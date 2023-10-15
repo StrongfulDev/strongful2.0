@@ -8,15 +8,6 @@
     text-align: center;
 }
 
-.latet-title {
-	margin-bottom: 0;
-	font-size: calc(var(--font-body-size-medium) * 1.2);
-}
-
-.latet-text {
-	line-height: 2.2rem !important;
-}
-
 @media only screen and (max-width: 989px) {
     .banner--content-align-mobile-right .banner__box {
         text-align: right;
@@ -516,4 +507,18 @@
 	.collection .banner__content .banner__box {
 		padding: 0;
 	}
+}
+
+.latet-title {
+	margin-bottom: 0;
+	font-weight: var(--font-body-weight-bold);
+	font-size: calc(var(--font-body-size-large) * 1.6);
+}
+
+.latet-text {
+	line-height: 2.5rem !important;
+}
+
+.banner__text {
+	padding: 0 1rem;
 }
