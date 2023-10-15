@@ -15,7 +15,7 @@
             "heading_size": "h1"
           }
         },
-        "e8a5daaf-9ba2-4c00-9273-1da5c7ba1605": {
+        "3e3cbf77-a5dd-407c-ac11-ddbb5bbe70d0": {
           "type": "richtext",
           "settings": {
             "text": ""
@@ -25,7 +25,7 @@
       "block_order": [
         "52591e14-5935-4a09-9297-23ce27e90b67",
         "b12ab2ae-119f-4c68-9a4f-1e499db126b3",
-        "e8a5daaf-9ba2-4c00-9273-1da5c7ba1605"
+        "3e3cbf77-a5dd-407c-ac11-ddbb5bbe70d0"
       ],
       "custom_css": [
         "@media screen and (min-width: 990px) {.banner__media img {object-fit: contain; }}",
