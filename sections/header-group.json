@@ -24,8 +24,8 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "20% הנחה",
-            "sub_text": "עכשיו על כל הסטים באתר",
+            "main_text": "20% הנחה על כל האתר",
+            "sub_text": "100% מהרווחים יתרמו לעמותת ׳לתת׳",
             "text_alignment": "center",
             "main_text_direction": "rtl",
             "sub_text_direction": "rtl",
