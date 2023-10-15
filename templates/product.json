@@ -91,7 +91,7 @@
           "settings": {
             "heading": "תיאור מוצר",
             "product_content": "description",
-            "content": "<p>{{ product.metafields.global.material.value }}<\/p>",
+            "content": "<p>{{ product.metafields.global.material.value }}<\/p><p>סטרוגנפול משתפת פעולה ותורמת 100% מהרווחים לעמותת ״לתת״ וביחד ניתן מענה הומוניטרי לנפגעי המלחמה, כוחות הביטחון והאוכלוסיות המושפעות מהמלחמה. בכפוף לתקנון<\/p>",
             "page": "",
             "icon": "none"
           }

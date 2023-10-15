@@ -108,7 +108,7 @@
                 <span>{{ block.settings.text | escape }}</span>
             </div>
             {%- when 'richtext' -%}
-            <div class="banner__text fix-direction {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
+            <div class="banner__text fix-direction {{ collection.metafields.custom.text_for_discounted_collections }} {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
                 <h3 class="latet-title">Strongful משתפת פעולה יחד עם עמותת ׳לתת׳</h3>
                 <div class="latet-text">על מנת לסייע ולעזור בימים קשים אלו,</div>
                 <div class="latet-text">
