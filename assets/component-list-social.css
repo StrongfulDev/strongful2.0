@@ -8,6 +8,11 @@
   width: 1.8rem;
 }
 
+  .list-payment__item.list-social__item .icon {
+	  height: 3.5rem;
+	  width: 3.5rem;
+  }
+
 .list-social__link {
   align-items: center;
   display: flex;

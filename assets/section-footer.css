@@ -997,6 +997,10 @@ noscript .localization-selector.link {
         margin-right: calc(var(--grid-desktop-vertical-spacing) * 2);
     }
 
+	.list-payment__item.list-social__item:not(:last-child) {
+		margin-right: 0;
+	}
+
     .footer__payment {
         margin: 0;
     }

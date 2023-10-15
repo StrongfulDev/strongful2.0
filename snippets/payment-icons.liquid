@@ -1,30 +1,22 @@
 <ul class="list list-payment" role="list">
-    <li class="list-social__item">
+    <li class="list-payment__item list-social__item">
         {%- render 'icon-visa' -%}
         <span class="visually-hidden">{{ 'general.payments.visa' | t }}</span>
     </li>
-    <li class="list-social__item">
-            <span class="visually-hidden">{{ 'general.social.links.tiktok' | t }}</span>
+    <li class="list-payment__item list-social__item">
+        {%- render 'icon-mastercard' -%}
+        <span class="visually-hidden">{{ 'general.payments.mastercard' | t }}</span>
     </li>
-    <li class="list-social__item">
-            <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
+    <li class="list-payment__item list-social__item">
+        {%- render 'icon-american-express' -%}
+        <span class="visually-hidden">{{ 'general.payments.american' | t }}</span>
     </li>
-    <li class="list-social__item">
-            <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
+    <li class="list-payment__item list-social__item">
+        {%- render 'icon-googlepay' -%}
+        <span class="visually-hidden">{{ 'general.payments.googlepay' | t }}</span>
     </li>
-    <li class="list-social__item">
-            <span class="visually-hidden">{{ 'general.social.links.pinterest' | t }}</span>
-    </li>
-    <li class="list-social__item">
-            <span class="visually-hidden">{{ 'general.social.links.youtube' | t }}</span>
-    </li>
-    <li class="list-social__item">
-            <span class="visually-hidden">{{ 'general.social.links.snapchat' | t }}</span>
-    </li>
-    <li class="list-social__item">
-            <span class="visually-hidden">{{ 'general.social.links.tumblr' | t }}</span>
-    </li>
-    <li class="list-social__item">
-            <span class="visually-hidden">{{ 'general.social.links.vimeo' | t }}</span>
+    <li class="list-payment__item list-social__item">
+        {%- render 'icon-applepay' -%}
+        <span class="visually-hidden">{{ 'general.payments.applepay' | t }}</span>
     </li>
 </ul>
