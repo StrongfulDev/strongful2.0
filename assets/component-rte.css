@@ -8,7 +8,7 @@
 	margin-bottom: 0.5rem;
 }
 
-.rte p + p {
+.rte p+p {
 	margin: 0.5rem 0;
 }
 
@@ -79,4 +79,8 @@
 
 .rte blockquote > * {
   margin: -0.5rem 0 -0.5rem 0;
+}
+
+.rte .extra-content p {
+	line-height: 2.5rem !important;
 }
