@@ -5,6 +5,7 @@
   margin: -0.5rem 0;
   padding-top: 1rem;
   padding-left: 0;
+	list-style: none;
 }
 
 @media screen and (min-width: 750px) {

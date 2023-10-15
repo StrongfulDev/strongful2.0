@@ -396,6 +396,7 @@
                               {%- if section.settings.payment_enable -%}
                                   <div class="footer__payment">
                                       <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
+                                      {% comment %}
                                       <ul class="list list-payment" role="list">
                                           {%- for type in shop.enabled_payment_types -%}
                                               <li class="list-payment__item">
@@ -403,6 +404,8 @@
                                               </li>
                                           {%- endfor -%}
                                       </ul>
+                                      {% endcomment %}
+                                      {% render 'payment-icons' %}
                                   </div>
                               {%- endif -%}
                           </div>
