@@ -3,26 +3,6 @@
     "slideshow": {
       "type": "slideshow",
       "blocks": {
-        "c3be10ed-2385-4b0b-aa25-3c5fd57ab30a": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_cfe4bcd5-fc48-450d-baa3-1015a28e42b5.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/0_aed65999-5788-43d2-b844-b78a40807baf.jpg",
-            "heading": "",
-            "whole_slide_link": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/awareness-month",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-2",
-            "text_alignment_mobile": "center"
-          }
-        },
         "c7a39508-f907-4756-96f3-e837916f2798": {
           "type": "slide",
           "settings": {
@@ -45,7 +25,6 @@
         }
       },
       "block_order": [
-        "c3be10ed-2385-4b0b-aa25-3c5fd57ab30a",
         "c7a39508-f907-4756-96f3-e837916f2798"
       ],
       "custom_css": [
@@ -55,7 +34,7 @@
         "layout": "full_bleed",
         "slide_height": "adapt_image",
         "slider_visual": "sides",
-        "auto_rotate": true,
+        "auto_rotate": false,
         "change_slides_speed": 9,
         "show_text_below": false,
         "accessibility_info": "Slideshow about our brand"
@@ -151,16 +130,6 @@
             "alt": "20% off sale",
             "link": "SALE",
             "url": "shopify:\/\/collections\/sets",
-            "show_on_desktop": false
-          }
-        },
-        "b5e51ca0-c5c6-4207-bb06-c9a69adc91b6": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/0_c3b18b81-64bc-42d6-87f7-3031d8f0d387.jpg",
-            "alt": "",
-            "link": "NEW IN",
-            "url": "shopify:\/\/collections\/awareness-month",
             "show_on_desktop": true
           }
         },
@@ -197,7 +166,6 @@
       },
       "block_order": [
         "dfad4ec5-c40b-4feb-90a9-341da374970d",
-        "b5e51ca0-c5c6-4207-bb06-c9a69adc91b6",
         "3603325c-8c6d-4a1e-b28e-fe94adadefb7",
         "0ae2dc2c-e286-48f6-be64-4aa8bc8de568",
         "d4c24f14-7485-452d-a6c5-ab2dbbf11ee6"
