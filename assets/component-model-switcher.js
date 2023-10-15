@@ -77,7 +77,7 @@ window.addEventListener('DOMContentLoaded', function(e) {
 				let list = lists[i];
 				for (let j = 0; j < list.children.length; j++) {
 					let item = list.children[j];
-					if (item.dataset.modelSize === modelSize && item.dataset.alt === selectedColorValue) {
+					if (item.dataset.modelSize.includes(modelSize) && item.dataset.alt === selectedColorValue) {
 						item.classList.remove('hidden');
 						count++;
 					} else {

@@ -989,7 +989,7 @@ class VariantSelects extends HTMLElement {
     if (!this.currentVariant.featured_media) return;
 
 		// check if there are enough options (for color swatches) and if not then exit the function
-	  if (this.currentVariant.option2 === null) return;
+	  if (!this.currentVariant.option2) return;
 
     const mediaGalleries = document.querySelectorAll(`[id^="MediaGallery-${this.dataset.section}"]`);
     mediaGalleries.forEach((mediaGallery) => {
@@ -997,6 +997,8 @@ class VariantSelects extends HTMLElement {
 
 			const mediaGalleryListItems = mediaGallery.querySelectorAll('.product__media-item');
 			mediaGalleryListItems.forEach((item) => {
+				console.log(item.dataset.alt);
+				console.log(this.currentVariant.option2);
 				if (item.dataset.alt === this.currentVariant.option2) {
 					item.classList.remove('hidden');
 				} else {
