@@ -15,18 +15,17 @@
             "heading_size": "h1"
           }
         },
-        "99799f5d-8c81-4afd-acfb-bba05e6ea21d": {
-          "type": "text",
+        "e8a5daaf-9ba2-4c00-9273-1da5c7ba1605": {
+          "type": "richtext",
           "settings": {
-            "text": "{{ collection.metafields.custom.second_description.value }}",
-            "text_style": "body"
+            "text": "<p>סטרונגפול משתפת פעולה יחד עם עמותת ׳לתת׳<br\/>על מנת לסייע ולעזור בימים קשים אלו<br\/><br\/>100% מהרווחים יתרמו לעמותה וביחד ניתן מענה הומוניטרי וסיוע לכל האוכלוסיות המושפעות מהמלחמה.<br\/>מאחלות לכולנו ימים שקטים ורגועים יותר וחיזוקים מרחוק<\/p>"
           }
         }
       },
       "block_order": [
         "52591e14-5935-4a09-9297-23ce27e90b67",
         "b12ab2ae-119f-4c68-9a4f-1e499db126b3",
-        "99799f5d-8c81-4afd-acfb-bba05e6ea21d"
+        "e8a5daaf-9ba2-4c00-9273-1da5c7ba1605"
       ],
       "custom_css": [
         "@media screen and (min-width: 990px) {.banner__media img {object-fit: contain; }}",

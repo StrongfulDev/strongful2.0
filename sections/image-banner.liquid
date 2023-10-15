@@ -107,6 +107,16 @@
             <div class="banner__text fix-direction {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
                 <span>{{ block.settings.text | escape }}</span>
             </div>
+            {%- when 'richtext' -%}
+            <div class="banner__text fix-direction {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
+                <h3 class="latet-title">סטרונגפול משתפת פעולה יחד עם עמותת ׳לתת׳</h3>
+                <div class="latet-text">על מנת לסייע ולעזור בימים קשים אלו</div>
+                <div class="latet-text">
+                    <strong>100% מהרווחים</strong>
+                    יתרמו לעמותה וביחד ניתן מענה הומוניטרי וסיוע לכל האוכלוסיות המושפעות מהמלחמה.
+                </div>
+                <div class="latet-text">מאחלות לכולנו ימים שקטים ורגועים יותר וחיזוקים מרחוק</div>
+            </div>
         {%- when 'buttons' -%}
             <div class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}" {{ block.shopify_attributes }}>
                 {%- if block.settings.button_label_1 != blank -%}
@@ -326,6 +336,18 @@
         }
     ],
     "blocks": [
+        {
+            "type": "richtext",
+            "name": "Rich text",
+            "settings": [
+                {
+                    "type": "richtext",
+                    "id": "text",
+                    "default": "<h2>Heading</h2>\n<p>Give customers details about the banner image(s) or content on the template.</p>",
+                    "label": "Collection Rich Text"
+                }
+            ]
+        },
         {
           "type": "breadcrumbs",
             "name": "Breadcrumbs"

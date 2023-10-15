@@ -8,6 +8,15 @@
     text-align: center;
 }
 
+.latet-title {
+	margin-bottom: 0;
+	font-size: calc(var(--font-body-size-medium) * 1.2);
+}
+
+.latet-text {
+	line-height: 2.2rem !important;
+}
+
 @media only screen and (max-width: 989px) {
     .banner--content-align-mobile-right .banner__box {
         text-align: right;
