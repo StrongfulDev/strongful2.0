@@ -823,7 +823,7 @@
         "billing_address_description": "בחרי כתובת לחיוב שזהה לכתובת של הכרטיס שלך",
         "ends_with_label": "נגמר ב {{ last_digits }}",
         "pay_with_payment_method": "שולם עם {{ payment_method }}",
-        "offsite_gateway_redirect_hint": "תשלום בכרטיס אשראי",
+        "offsite_gateway_redirect_hint": "תשלום בכרטיס אשראי \/ Bit \/ Apple Pay \/ Google Pay",
         "no_method_error": "יש בעיה בביצוע התשלום אנא צרי איתנו קשר כדי להשלים את ההזמנה",
         "not_configured_error": "יש בעיה בביצוע התשלום אנא צרי איתנו קשר כדי להשלים את ההזמנה",
         "card_verification_value_placeholder": "3 ספרות בגב הכרטיס",
