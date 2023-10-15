@@ -6,6 +6,46 @@
         "c7a39508-f907-4756-96f3-e837916f2798": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Artboard_50_7fe56e6f-d9e7-46eb-8435-e7684477f343.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Artboard_60_173e475f-03eb-497c-a86f-52d157f36a98.jpg",
+            "heading": "",
+            "whole_slide_link": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "c7a39508-f907-4756-96f3-e837916f2798"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "sides",
+        "auto_rotate": false,
+        "change_slides_speed": 9,
+        "show_text_below": false,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "bf7c8475-03e5-4509-86d8-21c4c329bb00": {
+      "type": "slideshow",
+      "blocks": {
+        "b43423be-0745-47c7-be6a-84d0ee24d128": {
+          "type": "slide",
+          "settings": {
             "image": "shopify:\/\/shop_images\/9a9dc0dde049ee5ace5c55db571643bc_818c1ada-e749-4e92-8716-f4f9a4a490e2.jpg",
             "mobile_image": "shopify:\/\/shop_images\/214edec1954ea7a01a9312a3521501c1.jpg",
             "heading": "",
@@ -25,10 +65,7 @@
         }
       },
       "block_order": [
-        "c7a39508-f907-4756-96f3-e837916f2798"
-      ],
-      "custom_css": [
-
+        "b43423be-0745-47c7-be6a-84d0ee24d128"
       ],
       "settings": {
         "layout": "full_bleed",
@@ -268,6 +305,7 @@
   },
   "order": [
     "slideshow",
+    "bf7c8475-03e5-4509-86d8-21c4c329bb00",
     "1f60398a-2c8e-4929-982d-29a981f0bb34",
     "283eeea1-79f9-42c2-8f34-dccf839b470b",
     "our_collection_list",
