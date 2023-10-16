@@ -83,7 +83,8 @@
           "type": "swiper",
           "settings": {
             "swiper_preset": "shipping_returns",
-            "swiper_delay": 3
+            "swiper_delay": 3,
+            "show_payment_icons": true
           }
         },
         "679aaa7e-cf01-48c6-85e3-b35a4a905d19": {
