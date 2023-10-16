@@ -69,7 +69,14 @@
         endfor
     -%}
     {%- if block.settings.picker_type == 'button' or picker_type == "button" -%}
-        {% assign option_value = value %}
+        {% liquid
+            assign option_value = value
+            if value == 'XXS' or value == 'XS' or value == 'S' or value == 'M'
+                assign frontValue = 'XS'
+            elsif value == 'L' or value == 'XL' or value == 'XXL' or value == 'XXXL'
+                assign frontValue = 'L'
+            endif
+        %}
         <span class="variant-button
             {% if option_disabled %}disabled-variant-button{% endif %}
             {% if option.name == 'Color' %}color-swatch-button{% endif %}
@@ -80,6 +87,7 @@
                     name="{{ option.name }}"
                     value="{{ value | escape }}"
                     form="{{ product_form_id }}"
+                    data-front-value="{{ frontValue }}"
                     data-variant-id="{{ variant_id }}"
                     {% if option.name == 'Size' %}
                         {% if value == 'XS' %}

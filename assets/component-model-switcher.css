@@ -11,7 +11,9 @@
 }
 
 .model-wears-content {
-	margin-left: 1rem;
+	/*margin-left: 1rem;*/
+	position: relative;
+	left: 90px;
 }
 
 .model-wears-text {
@@ -71,14 +73,15 @@
 	width: 80px;
 	height: auto;
 	height: 120px;
-	position: relative;
+	position: absolute;
 	top: 0;
 	left: 0;
 	z-index: 1;
 	object-fit: cover;
 }
 
-.model-switcher__item img:first-child {
+.model-switcher__item img:first-child,
+.model-switcher__item img.higher-index {
 	z-index: 2;
 }
 
@@ -87,6 +90,7 @@
 	display: grid;
 	grid-template-columns: 1fr 2fr;
 	position: relative;
+	height: 120px;
 }
 
 .model-size-bold {

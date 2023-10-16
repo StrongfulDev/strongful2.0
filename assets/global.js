@@ -987,14 +987,14 @@ class VariantSelects extends HTMLElement {
   updateMedia() {
     if (!this.currentVariant) return;
     // if (!this.currentVariant.featured_media) return;
-
-		// check if there are enough options (for color swatches) and if not then exit the function
 	  if (!this.currentVariant.option2) return;
 
+		let desiredSize = $('input[name="Size"]:checked').data("front-value");
+
     // const mediaGalleries = $(`[id^="MediaGallery-${this.dataset.section}"]`);
-		const mediaGallerySizeItemsToHide = $(document).find(`.product__media-item:not([data-model-size="${this.currentVariant.option1}"])`);
+		const mediaGallerySizeItemsToHide = $(document).find(`.product__media-item:not([data-model-size="${desiredSize}"])`);
 	  const mediaGalleryColorItemsToHide = $(document).find(`.product__media-item:not([data-alt="${this.currentVariant.option2}"])`);
-		const mediaGalleryListItemsToShow = $(document).find(`.product__media-item[data-alt="${this.currentVariant.option2}"][data-model-size="${this.currentVariant.option1}"]`);
+		const mediaGalleryListItemsToShow = $(document).find(`.product__media-item[data-alt="${this.currentVariant.option2}"][data-model-size="${desiredSize}"]`);
 
 		const modelSwitcherColorItemsToHide = $(document).find(`.model-switcher__image:not([data-alt="${this.currentVariant.option2}"])`);
 		const modelSwitcherColorItemsToShow = $(document).find(`.model-switcher__image[data-alt="${this.currentVariant.option2}"]`);
@@ -1004,6 +1004,7 @@ class VariantSelects extends HTMLElement {
 		mediaGalleryListItemsToShow.removeClass('hidden');
 		modelSwitcherColorItemsToHide.addClass('hidden');
 		modelSwitcherColorItemsToShow.removeClass('hidden');
+	  modelSwitcherColorItemsToShow.eq(0).addClass('higher-index');
 
     const modalContent = document.querySelector(`#ProductModal-${this.dataset.section} .product-media-modal__content`);
     if (!modalContent) return;
