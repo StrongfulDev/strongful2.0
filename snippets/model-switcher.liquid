@@ -27,9 +27,23 @@
                     <label class="pointer" for="model-{{ model.size_letter.value }}">
                         {% for image in product.images %}
                             {% if image.alt contains model.size_letter.value %}
+                                {% liquid
+                                    assign alt_items_array = image.alt | split: " | "
+                                    assign alt = alt_items_array[0]
+                                    assign image_model_size = alt_items_array[1]
+                                    assign alt_color_prepare = alt | split: " - " | join: " "
+                                    assign alt_color = alt_color_prepare | split: " " | last
+                                %}
                                 {{ image
                                 | image_url: width: 600
-                                | image_tag: loading: 'lazy', sizes: "400x600", widths: '400' }}
+                                | image_tag:
+                                loading: 'lazy',
+                                sizes: "400x600",
+                                widths: '400',
+                                class: 'model-switcher__image',
+                                data-alt: alt_color,
+                                data-model-size: image_model_size
+                                }}
                             {% endif %}
                         {% endfor %}
                         {% if model_product.type contains 'Jumpsuit' or model_product.type contains 'Dress' %}

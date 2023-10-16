@@ -72,6 +72,9 @@ window.addEventListener('DOMContentLoaded', function(e) {
 			const sizeImagesToHide = $(document).find(`.product__media-item:not([data-model-size="${modelSize}"])`);
 			const imagesToShow = productMediaList.find(`.product__media-item[data-model-size="${modelSize}"][data-alt="${selectedColorValue}"]`);
 
+			const modelSwitcherColorImagesToHide = $(document).find(`.model-switcher__item:not([data-alt="${selectedColorValue}"])`);
+			const modelSwitcherImagesToShow = $(document).find(`.model-switcher__item[data-alt="${selectedColorValue}"]`);
+
 			const divsToHide = sizeTable.find(`span:not([data-model-size="${modelSize}"])`);
 			const divsToShow = sizeTable.find(`span[data-model-size="${modelSize}"]`);
 
@@ -80,6 +83,8 @@ window.addEventListener('DOMContentLoaded', function(e) {
 
 			let progressBar = $('.slider-component-progress-bar');
 
+			// modelSwitcherColorImagesToHide.addClass('hidden');
+			// modelSwitcherImagesToShow.removeClass('hidden');
 			sizeImagesToHide.addClass('hidden');
 			colorImagesToHide.addClass('hidden');
 			imagesToShow.removeClass('hidden');
