@@ -1,9 +1,17 @@
 window.addEventListener('DOMContentLoaded', function(e) {
 
+	setTimeout(function(event) {
+
 		$(".model-switcher").removeClass("hidden");
 
 		const arrowIcon = document.querySelector(".model-switch-button .icon-caret");
 		hideUnAvailableModels();
+
+		let defaultSize = $('input[name="Size"]:checked').val();
+		console.log(defaultSize)
+		updateVariantRadios(defaultSize);
+		changeModel(defaultSize);
+		updateModelSwitch(defaultSize);
 
 		$('.model-switcher__item input').change(function () {
 			let modelSize = $(this).val();
@@ -72,13 +80,13 @@ window.addEventListener('DOMContentLoaded', function(e) {
 
 			let progressBar = $('.slider-component-progress-bar');
 
-				imagesToHide.hide();
-				imagesToShow.show();
-				divsToHide.addClass('hidden');
-				divsToShow.removeClass('hidden');
-				modelWearsSizeParagraphsToShow.removeClass('hidden');
-				modelWearsSizeParagraphsToHide.addClass('hidden');
-				progressBar.css('width', `calc(100% / ${imagesToShow.length})`);
+			imagesToHide.hide();
+			imagesToShow.show();
+			divsToHide.addClass('hidden');
+			divsToShow.removeClass('hidden');
+			modelWearsSizeParagraphsToShow.removeClass('hidden');
+			modelWearsSizeParagraphsToHide.addClass('hidden');
+			progressBar.css('width', `calc(100% / ${imagesToShow.length})`);
 
 			$(".model-switcher__list").addClass("hidden");
 			$(".model-switcher-overlay").addClass("hidden");
@@ -117,5 +125,6 @@ window.addEventListener('DOMContentLoaded', function(e) {
 				$(".model-switcher-overlay").toggleClass("hidden");
 			}
 		});
+	}, 500);
 
 });

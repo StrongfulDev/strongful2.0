@@ -1,5 +1,4 @@
 {{ 'component-model-switcher.css' | asset_url | stylesheet_tag }}
-{{ 'component-model-switcher.js' | asset_url | script_tag }}
 
 {%- liquid
     assign myBlock = section.blocks | where: 'id', 'e290d1ee-22d0-4ae8-9219-8d77d6585fae' | first
@@ -31,7 +30,8 @@
     {{ 'component-rating.css' | asset_url | stylesheet_tag }}
     {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
     {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
-    <script src="{{ 'component-swiper.js' | asset_url }}" defer="defer" async="async"></script>
+    {{ 'component-model-switcher.js' | asset_url | script_tag }}
+    {{ 'component-swiper.js' | asset_url | script_tag }}
 
     {% unless product.tags contains 'noSimilar' %}
         {{ 'component-similar-items.js' | asset_url | script_tag }}

@@ -1430,15 +1430,15 @@ window.addEventListener('DOMContentLoaded', function(event) {
 
 	const productImages = document.querySelectorAll('.product__media-item');
 	const defaultSelectedColor = document.querySelector('input[name="Color"]:checked');
-	if (productImages !== null) {
-		productImages.forEach(image => {
-			if (image.dataset.alt === defaultSelectedColor.value) {
-				image.classList.remove('hidden');
-			} else {
-				image.classList.add('hidden');
-			}
-		});
-	}
+	// if (productImages !== null) {
+	// 	productImages.forEach(image => {
+	// 		if (image.dataset.alt !== defaultSelectedColor.value) {
+	// 			image.classList.add('hidden');
+	// 		} else {
+	// 			image.classList.remove('hidden');
+	// 		}
+	// 	});
+	// }
 
 	const colorDictionary = {
 		"Black": "black",
