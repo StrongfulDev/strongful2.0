@@ -992,7 +992,6 @@ class VariantSelects extends HTMLElement {
 	  if (!this.currentVariant.option2) return;
 
     // const mediaGalleries = $(`[id^="MediaGallery-${this.dataset.section}"]`);
-	  console.log(this.currentVariant.option1);
 		const mediaGallerySizeItemsToHide = $(document).find(`.product__media-item:not([data-model-size="${this.currentVariant.option1}"])`);
 	  const mediaGalleryColorItemsToHide = $(document).find(`.product__media-item:not([data-alt="${this.currentVariant.option2}"])`);
 		const mediaGalleryListItemsToShow = $(document).find(`.product__media-item[data-alt="${this.currentVariant.option2}"][data-model-size="${this.currentVariant.option1}"]`);
