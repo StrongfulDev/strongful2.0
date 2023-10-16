@@ -997,10 +997,6 @@ class VariantSelects extends HTMLElement {
 	  const mediaGalleryColorItemsToHide = $(document).find(`.product__media-item:not([data-alt="${this.currentVariant.option2}"])`);
 		const mediaGalleryListItemsToShow = $(document).find(`.product__media-item[data-alt="${this.currentVariant.option2}"][data-model-size="${this.currentVariant.option1}"]`);
 
-	  console.log(mediaGallerySizeItemsToHide);
-			  console.log(mediaGalleryColorItemsToHide);
-					  console.log(mediaGalleryListItemsToShow);
-
 	  mediaGallerySizeItemsToHide.addClass('hidden');
 	  mediaGalleryColorItemsToHide.addClass('hidden');
 		mediaGalleryListItemsToShow.removeClass('hidden');
