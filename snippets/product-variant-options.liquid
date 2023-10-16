@@ -81,7 +81,15 @@
                     value="{{ value | escape }}"
                     form="{{ product_form_id }}"
                     data-variant-id="{{ variant_id }}"
-                    {% if forloop.first %}checked{% endif %}
+                    {% if option.name == 'Size' %}
+                        {% if value == 'XS' %}
+                            checked
+                        {% endif %}
+                        {% else %}
+                        {% if forloop.first %}
+                            checked
+                        {% endif %}
+                    {% endif %}
                     {% if members_only and product.tags contains announcement_tag %}
                         disabled
                         class="disabled disabled-variant-button"

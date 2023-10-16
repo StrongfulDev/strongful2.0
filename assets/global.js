@@ -991,19 +991,19 @@ class VariantSelects extends HTMLElement {
 		// check if there are enough options (for color swatches) and if not then exit the function
 	  if (!this.currentVariant.option2) return;
 
-    const mediaGalleries = document.querySelectorAll(`[id^="MediaGallery-${this.dataset.section}"]`);
-    mediaGalleries.forEach((mediaGallery) => {
-			// mediaGallery.setActiveMedia(`${this.dataset.section}-${this.currentVariant.featured_media.id}`, true);
+    // const mediaGalleries = $(`[id^="MediaGallery-${this.dataset.section}"]`);
+	  console.log(this.currentVariant.option1);
+		const mediaGallerySizeItemsToHide = $(document).find(`.product__media-item:not([data-model-size="${this.currentVariant.option1}"])`);
+	  const mediaGalleryColorItemsToHide = $(document).find(`.product__media-item:not([data-alt="${this.currentVariant.option2}"])`);
+		const mediaGalleryListItemsToShow = $(document).find(`.product__media-item[data-alt="${this.currentVariant.option2}"][data-model-size="${this.currentVariant.option1}"]`);
 
-			const mediaGalleryListItems = mediaGallery.querySelectorAll('.product__media-item');
-			mediaGalleryListItems.forEach((item) => {
-				if (item.dataset.alt === this.currentVariant.option2) {
-					item.classList.remove('hidden');
-				} else {
-					item.classList.add('hidden');
-				}
-			});
-    });
+	  console.log(mediaGallerySizeItemsToHide);
+			  console.log(mediaGalleryColorItemsToHide);
+					  console.log(mediaGalleryListItemsToShow);
+
+	  mediaGallerySizeItemsToHide.addClass('hidden');
+	  mediaGalleryColorItemsToHide.addClass('hidden');
+		mediaGalleryListItemsToShow.removeClass('hidden');
 
     const modalContent = document.querySelector(`#ProductModal-${this.dataset.section} .product-media-modal__content`);
     if (!modalContent) return;

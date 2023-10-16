@@ -8,7 +8,6 @@ window.addEventListener('DOMContentLoaded', function(e) {
 		hideUnAvailableModels();
 
 		let defaultSize = $('input[name="Size"]:checked').val();
-		console.log(defaultSize)
 		updateVariantRadios(defaultSize);
 		changeModel(defaultSize);
 		updateModelSwitch(defaultSize);
@@ -69,7 +68,8 @@ window.addEventListener('DOMContentLoaded', function(e) {
 			const sizeTable = $('.div-block-460');
 			const selectedColorValue = $('input[name="Color"]:checked').val();
 
-			const imagesToHide = productMediaList.find(`.product__media-item:not([data-model-size="${modelSize}"]):not([data-alt="${selectedColorValue}"])`);
+			const colorImagesToHide = $(document).find(`.product__media-item:not([data-alt="${selectedColorValue}"])`);
+			const sizeImagesToHide = $(document).find(`.product__media-item:not([data-model-size="${modelSize}"])`);
 			const imagesToShow = productMediaList.find(`.product__media-item[data-model-size="${modelSize}"][data-alt="${selectedColorValue}"]`);
 
 			const divsToHide = sizeTable.find(`span:not([data-model-size="${modelSize}"])`);
@@ -80,8 +80,9 @@ window.addEventListener('DOMContentLoaded', function(e) {
 
 			let progressBar = $('.slider-component-progress-bar');
 
-			imagesToHide.hide();
-			imagesToShow.show();
+			sizeImagesToHide.addClass('hidden');
+			colorImagesToHide.addClass('hidden');
+			imagesToShow.removeClass('hidden');
 			divsToHide.addClass('hidden');
 			divsToShow.removeClass('hidden');
 			modelWearsSizeParagraphsToShow.removeClass('hidden');
