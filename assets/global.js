@@ -996,9 +996,14 @@ class VariantSelects extends HTMLElement {
 	  const mediaGalleryColorItemsToHide = $(document).find(`.product__media-item:not([data-alt="${this.currentVariant.option2}"])`);
 		const mediaGalleryListItemsToShow = $(document).find(`.product__media-item[data-alt="${this.currentVariant.option2}"][data-model-size="${this.currentVariant.option1}"]`);
 
+		const modelSwitcherColorItemsToHide = $(document).find(`.model-switcher__image:not([data-alt="${this.currentVariant.option2}"])`);
+		const modelSwitcherColorItemsToShow = $(document).find(`.model-switcher__image[data-alt="${this.currentVariant.option2}"]`);
+
 	  mediaGallerySizeItemsToHide.addClass('hidden');
 	  mediaGalleryColorItemsToHide.addClass('hidden');
 		mediaGalleryListItemsToShow.removeClass('hidden');
+		modelSwitcherColorItemsToHide.addClass('hidden');
+		modelSwitcherColorItemsToShow.removeClass('hidden');
 
     const modalContent = document.querySelector(`#ProductModal-${this.dataset.section} .product-media-modal__content`);
     if (!modalContent) return;
@@ -1423,17 +1428,12 @@ window.addEventListener('DOMContentLoaded', function(event) {
 	enableToolbarButton.appendChild(pill);
 	enableToolbarButton.appendChild(pillBorder);
 
-	const productImages = document.querySelectorAll('.product__media-item');
-	const defaultSelectedColor = document.querySelector('input[name="Color"]:checked');
-	// if (productImages !== null) {
-	// 	productImages.forEach(image => {
-	// 		if (image.dataset.alt !== defaultSelectedColor.value) {
-	// 			image.classList.add('hidden');
-	// 		} else {
-	// 			image.classList.remove('hidden');
-	// 		}
-	// 	});
-	// }
+	let checkedColorValue = $(".color-swatch-button input:checked").val();
+	let modelSwitcherColorImagesToHide = $(document).find(`.model-switcher__image:not([data-alt="${checkedColorValue}"])`);
+	let modelSwitcherColorImagesToShow = $(document).find(`.model-switcher__image[data-alt="${checkedColorValue}"]`);
+
+	modelSwitcherColorImagesToHide.addClass('hidden');
+	modelSwitcherColorImagesToShow.removeClass('hidden');
 
 	const colorDictionary = {
 		"Black": "black",

@@ -70,17 +70,23 @@
 .model-switcher__item img {
 	width: 80px;
 	height: auto;
+	height: 120px;
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 1;
 	object-fit: cover;
 }
 
-.model-switcher__item img:not(:first-child) {
-	display: none;
+.model-switcher__item img:first-child {
+	z-index: 2;
 }
 
 .model-switcher__item label {
 	width: 100%;
 	display: grid;
 	grid-template-columns: 1fr 2fr;
+	position: relative;
 }
 
 .model-size-bold {
