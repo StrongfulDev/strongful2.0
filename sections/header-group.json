@@ -38,8 +38,8 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "החלפות חינם",
-            "sub_text": "עם שליח עד הבית חינם בכל הזמנה",
+            "main_text": "Free exchanges",
+            "sub_text": "with courier",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "ltr",
