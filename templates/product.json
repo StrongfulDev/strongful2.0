@@ -170,7 +170,7 @@
 
       ],
       "settings": {
-        "steps": 4,
+        "steps": 1,
         "title": "SHOP THE LOOK",
         "heading_size": "h1",
         "heading_type": "heading_type_default",
@@ -178,7 +178,7 @@
         "show_description": false,
         "description_style": "body",
         "collection": "{{ product.metafields.global.new_shop_the_look.value }}",
-        "products_to_show": 15,
+        "products_to_show": 25,
         "columns_desktop": 4,
         "full_width": true,
         "show_view_all": true,
