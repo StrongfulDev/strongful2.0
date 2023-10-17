@@ -10,10 +10,16 @@
     "169756984509da9378": {
       "type": "apps",
       "blocks": {
-        "bb8efd71-6fa9-432e-a9a9-ef8910150b76": {
-          "type": "shopify:\/\/apps\/stamped-loyalty-referrals\/blocks\/page-earnings\/93b8fd18-14d4-464f-a49a-0093afb7e10a",
+        "101be653-dbf1-4da9-96d2-e548f2fcaa65": {
+          "type": "shopify:\/\/apps\/stamped-loyalty-referrals\/blocks\/page-summary\/93b8fd18-14d4-464f-a49a-0093afb7e10a",
           "settings": {
-            "label_title": "Ways to Earn Points"
+            "label_greeting_anonymous": "Hello there,",
+            "label_greeting_customer": "Hello {0},",
+            "label_greeting_description": "As a member, you’ll get closer to earning exclusive rewards everytime you shop.",
+            "label_signup": "Sign Up",
+            "label_signin": "Sign In",
+            "label_redeem": "Redeem Now",
+            "label_history": "Rewards History"
           }
         },
         "b716578f-bea1-49dd-933c-96431048581e": {
@@ -28,11 +34,25 @@
             "label_step_description_three": "Redeem points for exclusive discounts."
           }
         },
+        "0653973c-bdc7-4b40-8c2e-c9d22f9218a1": {
+          "type": "shopify:\/\/apps\/stamped-loyalty-referrals\/blocks\/rewards-activities\/93b8fd18-14d4-464f-a49a-0093afb7e10a",
+          "settings": {
+            "label_title": "",
+            "label_activity": "",
+            "label_date": ""
+          }
+        },
+        "bb8efd71-6fa9-432e-a9a9-ef8910150b76": {
+          "type": "shopify:\/\/apps\/stamped-loyalty-referrals\/blocks\/page-earnings\/93b8fd18-14d4-464f-a49a-0093afb7e10a",
+          "settings": {
+            "label_title": "Ways to Earn Points"
+          }
+        },
         "42e1d87f-842b-457d-8a86-8c195c431f4d": {
           "type": "shopify:\/\/apps\/stamped-loyalty-referrals\/blocks\/page-referral\/93b8fd18-14d4-464f-a49a-0093afb7e10a",
           "settings": {
             "label_subtitle": "Refer a Friend",
-            "label_title": "Give {0}, Get {1}",
+            "label_title": "Give 10% OFF, Get 200 Points",
             "label_description": "",
             "label_button": "Start referring now",
             "label_send": "Send",
@@ -47,35 +67,15 @@
             "label_title": "Redeem for Discounts",
             "label_description": ""
           }
-        },
-        "101be653-dbf1-4da9-96d2-e548f2fcaa65": {
-          "type": "shopify:\/\/apps\/stamped-loyalty-referrals\/blocks\/page-summary\/93b8fd18-14d4-464f-a49a-0093afb7e10a",
-          "settings": {
-            "label_greeting_anonymous": "Hello there,",
-            "label_greeting_customer": "Hello {0},",
-            "label_greeting_description": "As a member, you’ll get closer to earning exclusive rewards everytime you shop.",
-            "label_signup": "Sign Up",
-            "label_signin": "Sign In",
-            "label_redeem": "Redeem Now",
-            "label_history": "Rewards History"
-          }
-        },
-        "0653973c-bdc7-4b40-8c2e-c9d22f9218a1": {
-          "type": "shopify:\/\/apps\/stamped-loyalty-referrals\/blocks\/rewards-activities\/93b8fd18-14d4-464f-a49a-0093afb7e10a",
-          "settings": {
-            "label_title": "",
-            "label_activity": "",
-            "label_date": ""
-          }
         }
       },
       "block_order": [
-        "bb8efd71-6fa9-432e-a9a9-ef8910150b76",
-        "b716578f-bea1-49dd-933c-96431048581e",
-        "42e1d87f-842b-457d-8a86-8c195c431f4d",
-        "671f9265-a899-4792-9a94-b7364ad9f12a",
         "101be653-dbf1-4da9-96d2-e548f2fcaa65",
-        "0653973c-bdc7-4b40-8c2e-c9d22f9218a1"
+        "b716578f-bea1-49dd-933c-96431048581e",
+        "0653973c-bdc7-4b40-8c2e-c9d22f9218a1",
+        "bb8efd71-6fa9-432e-a9a9-ef8910150b76",
+        "42e1d87f-842b-457d-8a86-8c195c431f4d",
+        "671f9265-a899-4792-9a94-b7364ad9f12a"
       ],
       "settings": {
         "include_margins": true
