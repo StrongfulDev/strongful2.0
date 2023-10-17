@@ -284,7 +284,7 @@
       },
       "14549625726302301791": {
         "type": "shopify:\/\/apps\/stamped-loyalty-referrals\/blocks\/referral-modal\/93b8fd18-14d4-464f-a49a-0093afb7e10a",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "customer_email": "",
           "customer_first_name": "",
