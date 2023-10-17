@@ -179,7 +179,7 @@
         "description_style": "body",
         "collection": "{{ product.metafields.global.new_shop_the_look.value }}",
         "products_to_show": 25,
-        "columns_desktop": 5,
+        "columns_desktop": 4,
         "full_width": false,
         "show_view_all": true,
         "view_all_text": "",
