@@ -699,12 +699,13 @@ class SliderComponent extends HTMLElement {
   }
 
   initPages() {
-    this.sliderItemsToShow = Array.from(this.sliderItems).filter(element => element.clientWidth > 0);
+	  // this.totalPages = this.sliderItemsToShow.length;
+	  this.sliderItemsToShow = Array.from(this.sliderItems).filter(element => element.clientWidth > 0);
     if (this.sliderItemsToShow.length < 2) return;
     this.sliderItemOffset = this.sliderItemsToShow[1].offsetLeft - this.sliderItemsToShow[0].offsetLeft;
     this.slidesPerPage = Math.floor((this.slider.clientWidth - this.sliderItemsToShow[0].offsetLeft) / this.sliderItemOffset);
-    // this.totalPages = this.sliderItemsToShow.length - this.slidesPerPage + 1;
-	  this.totalPages = this.sliderItemsToShow.length - this.slidesPerPage;
+    this.totalPages = this.sliderItemsToShow.length - this.slidesPerPage + 1;
+	  // this.totalPages = this.sliderItemsToShow.length - this.slidesPerPage;
     this.update();
   }
 
@@ -715,8 +716,8 @@ class SliderComponent extends HTMLElement {
 
 	moveProgressBar() {
 		if (this.progressBar) {
-			this.progressBar.style.left = `${(this.currentPage - 1) * 100 / this.totalPages}%`;
-			this.progressBar.style.width = `${100 / this.totalPages}%`;
+			this.progressBar.style.left = `${(this.currentPage - 1) * 100 / (this.totalPages - 1)}%`;
+			this.progressBar.style.width = `${100 / (this.totalPages - 1)}%`;
 		}
 	}
   update() {
@@ -735,7 +736,7 @@ class SliderComponent extends HTMLElement {
       this.pageTotalElement.textContent = this.totalPages;
     }
 
-    if (this.currentPage != previousPage) {
+    if (this.currentPage !== previousPage) {
       this.dispatchEvent(new CustomEvent('slideChanged', { detail: {
         currentPage: this.currentPage,
         currentElement: this.sliderItemsToShow[this.currentPage - 1]
@@ -768,7 +769,6 @@ class SliderComponent extends HTMLElement {
 		this.slideScrollPosition = event.currentTarget.name === 'next' ?
 			this.slider.scrollLeft + (step * this.sliderItemOffset) :
 			this.slider.scrollLeft - (step * this.sliderItemOffset);
-		console.log(this.enableSliderLooping);
 
 		if (this.enableSliderLooping) {
 			if (this.slideScrollPosition < 0) {
@@ -780,7 +780,7 @@ class SliderComponent extends HTMLElement {
 
 		this.slider.scrollTo({
 			left: this.slideScrollPosition,
-			behavior: 'smooth' // Smooth scroll
+			behavior: 'smooth'
 		});
 	}
 }
