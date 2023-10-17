@@ -24,8 +24,8 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "חודש המודעות לסרטן השד",
-            "sub_text": "100% מהרווחים נתרמים לעמותת ׳אחת מתשע׳",
+            "main_text": "Announcement",
+            "sub_text": "subtext",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "ltr",
