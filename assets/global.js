@@ -768,6 +768,7 @@ class SliderComponent extends HTMLElement {
 		this.slideScrollPosition = event.currentTarget.name === 'next' ?
 			this.slider.scrollLeft + (step * this.sliderItemOffset) :
 			this.slider.scrollLeft - (step * this.sliderItemOffset);
+		console.log(this.enableSliderLooping);
 
 		if (this.enableSliderLooping) {
 			if (this.slideScrollPosition < 0) {
