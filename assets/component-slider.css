@@ -603,7 +603,7 @@ slider-component .discount-price-container * {
 	font-size: calc(var(--font-body-size-small) * 1.2);
 }
 
-#product .collection__title_heading .title, #product .collection__title_heading .title:not(:only-child) {
+#product .collection__title_heading .title:only-child {
 	margin: auto;
 }
 
