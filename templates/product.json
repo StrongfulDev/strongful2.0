@@ -166,6 +166,9 @@
     },
     "dddb59c7-1c96-4897-8735-d714c0d34c5d": {
       "type": "featured-collection",
+      "custom_css": [
+        ".collection__title_heading {flex-direction: row;}"
+      ],
       "settings": {
         "steps": 4,
         "title": "SHOP THE LOOK",
