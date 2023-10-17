@@ -673,94 +673,95 @@ class DeferredMedia extends HTMLElement {
 customElements.define('deferred-media', DeferredMedia);
 
 class SliderComponent extends HTMLElement {
-  constructor() {
-    super();
-    this.slider = this.querySelector('[id^="Slider-"]');
-    this.sliderItems = this.querySelectorAll('[id^="Slide-"]');
-    this.enableSliderLooping = true;
-    this.currentPageElement = this.querySelector('.slider-counter--current');
-    this.pageTotalElement = this.querySelector('.slider-counter--total');
-    this.prevButton = this.querySelector('button[name="previous"]');
-    this.nextButton = this.querySelector('button[name="next"]');
+	constructor() {
+		super();
+		this.slider = this.querySelector('[id^="Slider-"]');
+		this.sliderItems = this.querySelectorAll('[id^="Slide-"]');
+		this.enableSliderLooping = true;
+		this.currentPageElement = this.querySelector('.slider-counter--current');
+		this.pageTotalElement = this.querySelector('.slider-counter--total');
+		this.prevButton = this.querySelector('button[name="previous"]');
+		this.nextButton = this.querySelector('button[name="next"]');
 		if (this.querySelector('.slider-component-progress-bar') !== null) {
 			this.progressBar = this.querySelector('.slider-component-progress-bar');
 		}
 
-    if (!this.slider || !this.nextButton) return;
+		if (!this.slider || !this.nextButton) return;
 
-    this.initPages();
-	  this.moveProgressBar();
-    const resizeObserver = new ResizeObserver(entries => this.initPages());
-    resizeObserver.observe(this.slider);
+		this.initPages();
+		this.moveProgressBar();
+		const resizeObserver = new ResizeObserver(entries => this.initPages());
+		resizeObserver.observe(this.slider);
 
-    this.slider.addEventListener('scroll', this.update.bind(this));
-    this.prevButton.addEventListener('click', this.onButtonClick.bind(this));
-    this.nextButton.addEventListener('click', this.onButtonClick.bind(this));
-  }
+		this.slider.addEventListener('scroll', this.update.bind(this));
+		this.prevButton.addEventListener('click', this.onButtonClick.bind(this));
+		this.nextButton.addEventListener('click', this.onButtonClick.bind(this));
+	}
 
-  initPages() {
-    this.sliderItemsToShow = Array.from(this.sliderItems).filter(element => element.clientWidth > 0);
-    if (this.sliderItemsToShow.length < 2) return;
-    this.sliderItemOffset = this.sliderItemsToShow[1].offsetLeft - this.sliderItemsToShow[0].offsetLeft;
-    this.slidesPerPage = Math.floor((this.slider.clientWidth - this.sliderItemsToShow[0].offsetLeft) / this.sliderItemOffset);
-    // this.totalPages = this.sliderItemsToShow.length - this.slidesPerPage + 1;
-	  this.totalPages = this.sliderItemsToShow.length - this.slidesPerPage;
-    this.update();
-  }
+	initPages() {
+		// this.totalPages = this.sliderItemsToShow.length;
+		this.sliderItemsToShow = Array.from(this.sliderItems).filter(element => element.clientWidth > 0);
+		if (this.sliderItemsToShow.length < 2) return;
+		this.sliderItemOffset = this.sliderItemsToShow[1].offsetLeft - this.sliderItemsToShow[0].offsetLeft;
+		this.slidesPerPage = Math.floor((this.slider.clientWidth - this.sliderItemsToShow[0].offsetLeft) / this.sliderItemOffset);
+		this.totalPages = this.sliderItemsToShow.length - this.slidesPerPage + 1;
+		// this.totalPages = this.sliderItemsToShow.length - this.slidesPerPage;
+		this.update();
+	}
 
-  resetPages() {
-    this.sliderItems = this.querySelectorAll('[id^="Slide-"]');
-    this.initPages();
-  }
+	resetPages() {
+		this.sliderItems = this.querySelectorAll('[id^="Slide-"]');
+		this.initPages();
+	}
 
 	moveProgressBar() {
 		if (this.progressBar) {
-			this.progressBar.style.left = `${(this.currentPage - 1) * 100 / this.totalPages}%`;
-			this.progressBar.style.width = `${100 / this.totalPages}%`;
+			this.progressBar.style.left = `${(this.currentPage - 1) * 100 / (this.totalPages - 1)}%`;
+			this.progressBar.style.width = `${100 / (this.totalPages - 1)}%`;
 		}
 	}
-  update() {
-    // Temporarily prevents unneeded updates resulting from variant changes
-    // This should be refactored as part of https://github.com/Shopify/dawn/issues/2057
+	update() {
+		// Temporarily prevents unneeded updates resulting from variant changes
+		// This should be refactored as part of https://github.com/Shopify/dawn/issues/2057
 
-	  this.moveProgressBar();
+		this.moveProgressBar();
 
-    if (!this.slider || !this.nextButton) return;
+		if (!this.slider || !this.nextButton) return;
 
-    const previousPage = this.currentPage;
-    this.currentPage = Math.round(this.slider.scrollLeft / this.sliderItemOffset) + 1;
+		const previousPage = this.currentPage;
+		this.currentPage = Math.round(this.slider.scrollLeft / this.sliderItemOffset) + 1;
 
-    if (this.currentPageElement && this.pageTotalElement) {
-      this.currentPageElement.textContent = this.currentPage;
-      this.pageTotalElement.textContent = this.totalPages;
-    }
+		if (this.currentPageElement && this.pageTotalElement) {
+			this.currentPageElement.textContent = this.currentPage;
+			this.pageTotalElement.textContent = this.totalPages;
+		}
 
-    if (this.currentPage != previousPage) {
-      this.dispatchEvent(new CustomEvent('slideChanged', { detail: {
-        currentPage: this.currentPage,
-        currentElement: this.sliderItemsToShow[this.currentPage - 1]
-      }}));
-    }
+		if (this.currentPage !== previousPage) {
+			this.dispatchEvent(new CustomEvent('slideChanged', { detail: {
+					currentPage: this.currentPage,
+					currentElement: this.sliderItemsToShow[this.currentPage - 1]
+				}}));
+		}
 
-    if (this.enableSliderLooping) return;
+		if (this.enableSliderLooping) return;
 
-    if (this.isSlideVisible(this.sliderItemsToShow[0]) && this.slider.scrollLeft === 0) {
-      this.prevButton.setAttribute('disabled', 'disabled');
-    } else {
-      this.prevButton.removeAttribute('disabled');
-    }
+		if (this.isSlideVisible(this.sliderItemsToShow[0]) && this.slider.scrollLeft === 0) {
+			this.prevButton.setAttribute('disabled', 'disabled');
+		} else {
+			this.prevButton.removeAttribute('disabled');
+		}
 
-    if (this.isSlideVisible(this.sliderItemsToShow[this.sliderItemsToShow.length - 1])) {
-      this.nextButton.setAttribute('disabled', 'disabled');
-    } else {
-      this.nextButton.removeAttribute('disabled');
-    }
-  }
+		if (this.isSlideVisible(this.sliderItemsToShow[this.sliderItemsToShow.length - 1])) {
+			this.nextButton.setAttribute('disabled', 'disabled');
+		} else {
+			this.nextButton.removeAttribute('disabled');
+		}
+	}
 
-  isSlideVisible(element, offset = 0) {
-    const lastVisibleSlide = this.slider.clientWidth + this.slider.scrollLeft - offset;
-    return (element.offsetLeft + element.clientWidth) <= lastVisibleSlide && element.offsetLeft >= this.slider.scrollLeft;
-  }
+	isSlideVisible(element, offset = 0) {
+		const lastVisibleSlide = this.slider.clientWidth + this.slider.scrollLeft - offset;
+		return (element.offsetLeft + element.clientWidth) <= lastVisibleSlide && element.offsetLeft >= this.slider.scrollLeft;
+	}
 
 	onButtonClick(event) {
 		event.preventDefault();
@@ -779,7 +780,7 @@ class SliderComponent extends HTMLElement {
 
 		this.slider.scrollTo({
 			left: this.slideScrollPosition,
-			behavior: 'smooth' // Smooth scroll
+			behavior: 'smooth'
 		});
 	}
 }
