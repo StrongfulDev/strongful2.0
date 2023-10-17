@@ -10,8 +10,8 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "20% הנחה בהרשמה למועדון הלקוחות",
-            "sub_text": "הירשמי עכשיו בחינם",
+            "main_text": "20% on sign up",
+            "sub_text": "sign up now",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "ltr",
