@@ -666,3 +666,8 @@ cart-drawer-items.is-empty {
 		height: calc(var(--vh, 1vh) * 64);
 	}
 }
+
+.cart-drawer .list-payment__item.list-social__item .icon {
+	width: 1.5rem;
+	height: 1.5rem;
+}
