@@ -157,7 +157,6 @@
     },
     "complete-look-products": {
       "type": "complete-look-products",
-      "disabled": true,
       "settings": {
         "heading": "SHOP THE LOOK",
         "member_tag": "",
@@ -166,6 +165,7 @@
     },
     "dddb59c7-1c96-4897-8735-d714c0d34c5d": {
       "type": "featured-collection",
+      "disabled": true,
       "custom_css": [
 
       ],
