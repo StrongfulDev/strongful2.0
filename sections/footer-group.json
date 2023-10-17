@@ -56,7 +56,7 @@
           "type": "blog_and_newsletter",
           "settings": {
             "blog_and_newsletter_subtitle": "",
-            "alist_url": "shopify:\/\/pages\/a-list",
+            "alist_url": "shopify:\/\/pages\/loyalty",
             "blog_url": "shopify:\/\/blogs\/blog",
             "alist_text": "Loyalty",
             "blog_text": "Blog",
