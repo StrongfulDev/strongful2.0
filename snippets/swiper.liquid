@@ -36,9 +36,6 @@
 {% endstyle %}
 
 <div class="brand-badges fix-direction">
-    {% if show_payment_icons == true %}
-        {% render 'payment-icons' %}
-    {% endif %}
     {% case preset %}
         {% when "shipping_returns" %}
             <div class="swiper-container">
@@ -68,4 +65,7 @@
                 </div>
             </div>
     {% endcase %}
+    {% if show_payment_icons == true %}
+        {% render 'payment-icons' %}
+    {% endif %}
 </div>
