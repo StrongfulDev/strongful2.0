@@ -157,6 +157,7 @@
     },
     "complete-look-products": {
       "type": "complete-look-products",
+      "disabled": true,
       "settings": {
         "heading": "SHOP THE LOOK",
         "member_tag": "",
@@ -165,9 +166,8 @@
     },
     "dddb59c7-1c96-4897-8735-d714c0d34c5d": {
       "type": "featured-collection",
-      "disabled": true,
       "custom_css": [
-
+        "div.collection__title_heading .title {margin: 0 !important;}"
       ],
       "settings": {
         "steps": 1,
@@ -181,7 +181,7 @@
         "products_to_show": 15,
         "columns_desktop": 4,
         "full_width": true,
-        "show_view_all": true,
+        "show_view_all": false,
         "view_all_text": "",
         "view_all_style": "link",
         "view_all_location": "top",
