@@ -2241,6 +2241,7 @@ button.needsclick {
 
 	product-info .product__title {
 		order: 1;
+		margin-bottom: .5rem;
 	}
 
 	product-info .product__title+.product__text {
@@ -2254,6 +2255,7 @@ button.needsclick {
 	product-info .shopify-app-block {
 		order: 4;
 		margin-top: 0;
+		margin-bottom: 1rem;
 	}
 
 	product-info .grid__item.product__media-wrapper.medium-hide {
