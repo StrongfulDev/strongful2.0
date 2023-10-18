@@ -289,8 +289,7 @@ button.slideshow__autoplay {
     }
 
 	.slideshow__text.banner__box {
-      bottom: 8vw;
-      left: 2vw;
+      bottom: 3vw;
 	}
 
 	.slideshow__slide:first-of-type .slideshow__text-wrapper {
