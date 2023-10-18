@@ -533,6 +533,7 @@
 
                                         <div class="menu_images">
 
+                                            {% comment %}
                                             <a href="{{ section.settings.mobile_top_image_temp_link }}" class="dropdown-image-container">
                                                 <img src="{{ section.settings.mobile_top_image_temp | image_url: width: 1000 }}" alt="{{ section.settings.mobile_top_image_temp.alt | escape }}" class="motion-reduce">
                                                 <div class="desktop_links_image_1_title">
@@ -544,8 +545,8 @@
                                                     </div>
                                                 </div>
                                             </a>
+                                            {% endcomment %}
 
-                                            {% comment %}
                                             <a href="{{ section.settings.mobile_top_image_1_link }}" class="dropdown-image-container">
                                                 <img src="{{ section.settings.mobile_top_image_1 | image_url: width: 1000 }}" alt="{{ section.settings.mobile_top_image_1.alt | escape }}" class="motion-reduce">
                                                 <div class="desktop_links_image_1_title">
@@ -557,7 +558,6 @@
                                                     </div>
                                                 </div>
                                             </a>
-                                            {% endcomment %}
 
                                             <a href="{{ section.settings.mobile_top_image_2_link }}" class="dropdown-image-container">
                                                 <img src="{{ section.settings.mobile_top_image_2 | image_url: width: 1000 }}" alt="{{ section.settings.mobile_top_image_2.alt | escape }}" class="motion-reduce">
