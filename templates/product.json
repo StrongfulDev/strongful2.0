@@ -12,10 +12,10 @@
         "5ec0a264-e4fc-4a8d-92bc-f2f9223694f5": {
           "type": "sale",
           "settings": {
-            "logged_in_text": "<p>על מנת לסייע ולעזור בימים קשים אלו<\/p><p><br\/><strong>100% מהרווחים יתרמו לעמותה<\/strong> בכדי לתת מענה הומוניטרי וסיוע לכל האוכלוסיות המושפעות מהמלחמה.<\/p>",
-            "logged_out_text": "<p>על מנת לסייע ולעזור בימים קשים אלו<\/p><p><br\/><strong>100% מהרווחים יתרמו לעמותה<\/strong> בכדי לתת מענה הומוניטרי וסיוע לכל האוכלוסיות המושפעות מהמלחמה.<\/p>",
+            "logged_in_text": "<p>מבצע סוף עונה!<\/p>",
+            "logged_out_text": "<p>מבצע סוף עונה!<\/p>",
             "log_in": "",
-            "small_text": ""
+            "small_text": "פריטים נבחרים רק עד ₪119"
           }
         },
         "title": {
@@ -83,7 +83,8 @@
           "type": "swiper",
           "settings": {
             "swiper_preset": "shipping_returns",
-            "swiper_delay": 3
+            "swiper_delay": 3,
+            "show_payment_icons": false
           }
         },
         "679aaa7e-cf01-48c6-85e3-b35a4a905d19": {
