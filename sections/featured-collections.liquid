@@ -84,7 +84,13 @@
             {% endif %}
             <ul
                     id="Slider-{{ section.id }}"
-                    class="grid product-grid contains-card contains-card--product{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid--{{ section.settings.columns_desktop }}-col-desktop{% if section.settings.collection == blank %} grid--2-col-tablet-down{% else %} grid--{{ section.settings.columns_mobile }}-col-tablet-down{% endif %}{% if show_mobile_slider or show_desktop_slider %} slider{% if show_desktop_slider %} slider--desktop{% endif %}{% if show_mobile_slider %} slider--tablet {% endif %}{% if section.settings.show_peak %}grid--peek{% endif %}{% endif %}"
+                    class="grid product-grid contains-card contains-card--product
+                    {% if settings.card_style == 'standard' %} contains-card--standard{% endif %}
+                     grid--{{ section.settings.columns_desktop }}-col-desktop
+                     grid--{{ section.settings.columns_mobile }}-col-tablet-down
+                    {% if show_mobile_slider or show_desktop_slider %} slider{% if show_desktop_slider %} slider--desktop{% endif %}
+                    {% if show_mobile_slider %} slider--tablet {% endif %}
+                    {% if section.settings.show_peak %}grid--peek{% endif %}{% endif %}"
                     role="list"
                     aria-label="{{ 'general.slider.name' | t }}"
             >
@@ -93,7 +99,14 @@
                             id="Slide-{{ section.id }}-{{ forloop.index }}"
                             class="grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}"
                     >
-
+                        <a href="{{ block.settings.url }}">
+                            {{ block.settings.image | image_url: width: 500 | image_tag:
+                                class: 'collection_slider_image',
+                                widths: '50, 100, 150, 200, 250, 300, 400, 500',
+                                width: 300,
+                                alt: 'Strongful collection'
+                            }}
+                        </a>
                     </li>
                 {%- endfor -%}
             </ul>
@@ -164,11 +177,6 @@
             "step": 1,
             "default": 4,
             "label": "t:sections.featured-collection.settings.steps.label"
-        },
-        {
-            "type": "collection",
-            "id": "collection",
-            "label": "t:sections.featured-collection.settings.collection.label"
         },
         {
             "type": "range",
@@ -311,6 +319,24 @@
             "unit": "px",
             "label": "t:sections.all.padding.padding_bottom",
             "default": 36
+        }
+    ],
+    "blocks": [
+        {
+            "type": "collection",
+            "name": "Image picker",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image picker"
+                },
+                {
+                    "type": "url",
+                    "id": "url",
+                    "label": "URL"
+                }
+            ]
         }
     ],
     "presets": [
