@@ -82,10 +82,10 @@
         "dfad4ec5-c40b-4feb-90a9-341da374970d": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Artboard_120_efc5f2c5-1099-4492-ba6b-421134fc64be.jpg",
-            "alt": "20% off sale",
+            "image": "shopify:\/\/shop_images\/0737a51b2679a55d45d0d8f464335044_5a0810b4-a432-4546-84c8-e1d87e16d0fb.jpg",
+            "alt": "SALE",
             "link": "SALE",
-            "url": "shopify:\/\/collections\/sets",
+            "url": "shopify:\/\/collections\/sale-up-to-119",
             "show_on_desktop": true
           }
         },
