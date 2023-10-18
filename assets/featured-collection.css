@@ -9,3 +9,7 @@
 	object-fit: cover;
 }
 
+.grid.product-grid.grid--4-col-tablet-down li {
+	width: calc(25% - var(--grid-mobile-horizontal-spacing) - 3rem);
+}
+

@@ -45,7 +45,7 @@
         "full_width": true,
         "enable_desktop_slider": true,
         "show_peak": true,
-        "pagination_type": "none",
+        "pagination_type": "bottom",
         "image_ratio": "adapt",
         "columns_mobile": "4",
         "swipe_on_mobile": true,
