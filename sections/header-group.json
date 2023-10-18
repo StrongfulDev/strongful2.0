@@ -24,12 +24,12 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "20% הנחה על כל האתר",
-            "sub_text": "100% מהרווחים יתרמו לעמותת ׳לתת׳",
+            "main_text": "מבצע סוף עונה",
+            "sub_text": "פריטים נבחרים עד ₪119",
             "text_alignment": "center",
             "main_text_direction": "rtl",
             "sub_text_direction": "rtl",
-            "link": "shopify:\/\/collections\/sets",
+            "link": "shopify:\/\/collections\/sale-up-to-119",
             "color_scheme": "accent-1"
           }
         },
@@ -69,7 +69,7 @@
             "show_on_mobile": true,
             "small_font": false,
             "title": "SALE",
-            "title_link": "shopify:\/\/collections\/sets"
+            "title_link": "shopify:\/\/collections\/sale-up-to-119"
           }
         },
         "ba94928e-5cd1-47f5-9c0a-28ea47285f01": {
@@ -78,14 +78,14 @@
             "show_on_mobile": true,
             "order": "",
             "small_font": false,
-            "menu": "trending-without-10",
+            "menu": "trending",
             "menu_second": "",
             "menu_third": "",
             "title": "COLLECTIONS",
             "item_class": "",
             "title_link": "",
             "desktop_links_image_1": "shopify:\/\/shop_images\/0_f900f286-e9d1-4dd6-a66e-939b85170095.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/awareness-month",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/sale-up-to-119",
             "desktop_links_image_2_link": "",
             "mobile_title": "COLLECTIONS",
             "main_link": "",
