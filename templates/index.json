@@ -1,5 +1,58 @@
 {
   "sections": {
+    "d15d1520-a7b8-4f37-8a40-1c4c248719f9": {
+      "type": "featured-collections",
+      "blocks": {
+        "808cdebc-72af-4f6a-85d1-a8a5130f665b": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/NEW_IN.jpg",
+            "url": "shopify:\/\/collections\/new-in"
+          }
+        },
+        "8a5171fb-ca06-4e0e-861a-7305af42f301": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2G6A0724.jpg",
+            "url": "shopify:\/\/collections\/טייצים"
+          }
+        },
+        "e3fb16ae-904a-453a-82b3-78589fe48600": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2G6A1061.jpg",
+            "url": "shopify:\/\/collections\/yoga-and-pilates"
+          }
+        },
+        "d96cbf09-66fd-412d-b29f-6a0f9ff0afb8": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IMG_9950.jpg",
+            "url": "shopify:\/\/collections\/best-seller-internal-use"
+          }
+        }
+      },
+      "block_order": [
+        "808cdebc-72af-4f6a-85d1-a8a5130f665b",
+        "8a5171fb-ca06-4e0e-861a-7305af42f301",
+        "e3fb16ae-904a-453a-82b3-78589fe48600",
+        "d96cbf09-66fd-412d-b29f-6a0f9ff0afb8"
+      ],
+      "settings": {
+        "steps": 1,
+        "collections_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": true,
+        "enable_desktop_slider": true,
+        "show_peak": true,
+        "pagination_type": "none",
+        "image_ratio": "adapt",
+        "columns_mobile": "4",
+        "swipe_on_mobile": true,
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
     "slideshow": {
       "type": "slideshow",
       "blocks": {
@@ -304,6 +357,7 @@
     }
   },
   "order": [
+    "d15d1520-a7b8-4f37-8a40-1c4c248719f9",
     "slideshow",
     "bf7c8475-03e5-4509-86d8-21c4c329bb00",
     "1f60398a-2c8e-4929-982d-29a981f0bb34",
