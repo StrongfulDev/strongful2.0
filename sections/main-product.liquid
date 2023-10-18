@@ -230,7 +230,7 @@
                         {%- when 'collapsible_tab' -%}
                             {% render 'collapsible-tab', block: block, product: product %}
                         {%- when 'swiper' -%}
-                            {% render 'swiper', preset: block.settings.swiper_preset, delay: block.settings.swiper_delay %}
+                            {% render 'swiper', preset: block.settings.swiper_preset, delay: block.settings.swiper_delay, show_payment_icons: block.settings.show_payment_icons %}
                         {%- when 'quantity_selector' -%}
                             <div
                                     id="Quantity-Form-{{ section.id }}"

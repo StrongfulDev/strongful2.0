@@ -8,12 +8,20 @@
 	list-style: none;
 }
 
+.brand-badges .list-payment {
+	padding-bottom: 1rem;
+}
+
 @media screen and (min-width: 750px) {
   .list-payment {
     justify-content: flex-end;
     margin: -0.5rem;
     padding-top: 0;
   }
+
+	.brand-badges .list-payment {
+		justify-content: center;
+	}
 }
 
 .list-payment__item {

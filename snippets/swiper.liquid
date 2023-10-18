@@ -65,4 +65,7 @@
                 </div>
             </div>
     {% endcase %}
+    {% if show_payment_icons == true %}
+        {% render 'payment-icons' %}
+    {% endif %}
 </div>

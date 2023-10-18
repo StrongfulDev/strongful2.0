@@ -1,5 +1,17 @@
 <ul class="list list-payment" role="list">
     <li class="list-payment__item list-social__item">
+        {% render 'icon-bit' %}
+        <span class="visually-hidden">{{ 'general.payments.bit' | t }}</span>
+    </li>
+    <li class="list-payment__item list-social__item">
+        {%- render 'icon-applepay' -%}
+        <span class="visually-hidden">{{ 'general.payments.applepay' | t }}</span>
+    </li>
+    <li class="list-payment__item list-social__item">
+        {%- render 'icon-googlepay' -%}
+        <span class="visually-hidden">{{ 'general.payments.googlepay' | t }}</span>
+    </li>
+    <li class="list-payment__item list-social__item">
         {%- render 'icon-visa' -%}
         <span class="visually-hidden">{{ 'general.payments.visa' | t }}</span>
     </li>
@@ -10,13 +22,5 @@
     <li class="list-payment__item list-social__item">
         {%- render 'icon-american-express' -%}
         <span class="visually-hidden">{{ 'general.payments.american' | t }}</span>
-    </li>
-    <li class="list-payment__item list-social__item">
-        {%- render 'icon-googlepay' -%}
-        <span class="visually-hidden">{{ 'general.payments.googlepay' | t }}</span>
-    </li>
-    <li class="list-payment__item list-social__item">
-        {%- render 'icon-applepay' -%}
-        <span class="visually-hidden">{{ 'general.payments.applepay' | t }}</span>
     </li>
 </ul>
