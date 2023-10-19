@@ -5,11 +5,23 @@
 
 .collection_slider_image {
 	width: 100%;
-	height: 100%;
 	object-fit: cover;
+}
+
+.grid.product-grid.grid--3-col-tablet-down {
+	margin-bottom: 0;
+}
+
+.grid.product-grid.grid--3-col-tablet-down li {
+	width: calc(33% - var(--grid-mobile-horizontal-spacing) - 3rem);
+	min-width: 27%;
 }
 
 .grid.product-grid.grid--4-col-tablet-down li {
 	width: calc(25% - var(--grid-mobile-horizontal-spacing) - 3rem);
+}
+
+.featured-collections-link {
+	text-decoration: none;
 }
 

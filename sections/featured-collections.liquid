@@ -99,13 +99,16 @@
                             id="Slide-{{ section.id }}-{{ forloop.index }}"
                             class="grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}"
                     >
-                        <a href="{{ block.settings.url }}">
+                        <a href="{{ block.settings.url }}" class="link featured-collections-link">
                             {{ block.settings.image | image_url: width: 500 | image_tag:
                                 class: 'collection_slider_image',
                                 widths: '50, 100, 150, 200, 250, 300, 400, 500',
                                 width: 300,
                                 alt: 'Strongful collection'
                             }}
+                            <div class="featured-collections-col-title">
+                                {{ block.settings.collection_title }}
+                            </div>
                         </a>
                     </li>
                 {%- endfor -%}
@@ -185,7 +188,7 @@
             "max": 25,
             "step": 1,
             "default": 4,
-            "label": "t:sections.featured-collection.settings.collections_to_show.label"
+            "label": "Number Of Collection To Show"
         },
         {
             "type": "range",
@@ -335,6 +338,11 @@
                     "type": "url",
                     "id": "url",
                     "label": "URL"
+                },
+                {
+                    "type": "text",
+                    "id": "collection_title",
+                    "label": "Collection Title"
                 }
             ]
         }

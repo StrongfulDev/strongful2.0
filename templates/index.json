@@ -7,28 +7,32 @@
           "type": "collection",
           "settings": {
             "image": "shopify:\/\/shop_images\/NEW_IN.jpg",
-            "url": "shopify:\/\/collections\/new-in"
+            "url": "shopify:\/\/collections\/new-in",
+            "collection_title": "NEW IN"
           }
         },
         "8a5171fb-ca06-4e0e-861a-7305af42f301": {
           "type": "collection",
           "settings": {
             "image": "shopify:\/\/shop_images\/2G6A0724.jpg",
-            "url": "shopify:\/\/collections\/טייצים"
+            "url": "shopify:\/\/collections\/טייצים",
+            "collection_title": "LEGGINGS"
           }
         },
         "e3fb16ae-904a-453a-82b3-78589fe48600": {
           "type": "collection",
           "settings": {
             "image": "shopify:\/\/shop_images\/2G6A1061.jpg",
-            "url": "shopify:\/\/collections\/yoga-and-pilates"
+            "url": "shopify:\/\/collections\/yoga-and-pilates",
+            "collection_title": "YOGA"
           }
         },
         "d96cbf09-66fd-412d-b29f-6a0f9ff0afb8": {
           "type": "collection",
           "settings": {
             "image": "shopify:\/\/shop_images\/IMG_9950.jpg",
-            "url": "shopify:\/\/collections\/best-seller-internal-use"
+            "url": "shopify:\/\/collections\/best-seller-internal-use",
+            "collection_title": "BEST SELLERS"
           }
         }
       },
@@ -45,9 +49,9 @@
         "full_width": true,
         "enable_desktop_slider": true,
         "show_peak": true,
-        "pagination_type": "bottom",
+        "pagination_type": "sides",
         "image_ratio": "adapt",
-        "columns_mobile": "4",
+        "columns_mobile": "3",
         "swipe_on_mobile": true,
         "padding_top": 16,
         "padding_bottom": 16
