@@ -4246,6 +4246,13 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 
 /* Stamped Reviews */
 
-.stamped-widget-poweredby {
+.stamped-widget-poweredby,
+.stamped-thank-you p+p,
+.stamped-share-links,
+.stamped-review-share {
 	display: none !important;
+}
+
+.fa-star, .fa-star-checked, .fa-star-half-o, .fa-star-o, .stamped-fa-star, .stamped-fa-star-checked, .stamped-fa-star-half-o, .stamped-fa-star-o {
+	color: var(--gradient-base-accent-1) !important;
 }
