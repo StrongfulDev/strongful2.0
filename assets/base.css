@@ -4241,3 +4241,11 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 	vertical-align: middle;
 	width: 0.2em;
 }
+
+/* Apps Designs */
+
+/* Stamped Reviews */
+
+.stamped-widget-poweredby {
+	display: none !important;
+}
