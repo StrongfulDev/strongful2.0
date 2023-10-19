@@ -10,6 +10,7 @@
 
 .grid.product-grid.grid--3-col-tablet-down {
 	margin-bottom: 0;
+	gap: 0;
 }
 
 .grid.product-grid.grid--3-col-tablet-down li {
@@ -28,5 +29,11 @@
 
 ul.slider--tablet:after {
 	padding-left: 0;
+}
+
+@media screen and (min-width: 990px) {
+	.grid.grid--4-col-desktop li.grid__item {
+		min-width: 24%;
+	}
 }
 
