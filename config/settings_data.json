@@ -309,6 +309,33 @@
         "settings": {
           "social_font": "enable"
         }
+      },
+      "15912215999290715800": {
+        "type": "shopify:\/\/apps\/geolocation-orbe\/blocks\/app-embed-modal\/7cb09287-cd2b-4646-837c-f1f9b6ea703e",
+        "disabled": false,
+        "settings": {
+          "test_mode": false,
+          "modal_closeButton": true,
+          "option_flag_style": "none",
+          "option_currency_type": "none",
+          "option_language": true,
+          "title": "Are you in the right place?",
+          "text": "Please select your shipping country.",
+          "helper_text": "<p>Buy from the country of your choice. Remember that we can only ship your order to addresses located in the chosen country.<\/p>",
+          "cta_text": "Shop now",
+          "alignment_image": "right",
+          "style_corners": "square",
+          "style_dropdown": "outlined",
+          "modal_button_align": "right",
+          "title_font_size": 20,
+          "text_font_size": 14,
+          "show_blurred_background": false,
+          "style_colors_background": "#FFF",
+          "style_colors_closeButton": "#5C5F62",
+          "style_colors_cta_text": "#fff",
+          "style_colors_cta_button": "#000",
+          "style_colors_text": "#000"
+        }
       }
     }
   },
