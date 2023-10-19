@@ -314,11 +314,11 @@
         "type": "shopify:\/\/apps\/geolocation-orbe\/blocks\/app-embed-modal\/7cb09287-cd2b-4646-837c-f1f9b6ea703e",
         "disabled": false,
         "settings": {
-          "test_mode": false,
+          "test_mode": true,
           "modal_closeButton": true,
           "option_flag_style": "none",
           "option_currency_type": "none",
-          "option_language": true,
+          "option_language": false,
           "title": "Are you in the right place?",
           "text": "Please select your shipping country.",
           "helper_text": "<p>Buy from the country of your choice. Remember that we can only ship your order to addresses located in the chosen country.<\/p>",
