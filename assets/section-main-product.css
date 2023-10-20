@@ -2233,76 +2233,76 @@ button.needsclick {
 	z-index: 0 !important;
 }
 
-@media screen and (max-width: 990px) {
-	product-info {
-		display: flex;
-		flex-direction: column;
-	}
+/*@media screen and (max-width: 990px) {*/
+/*	product-info {*/
+/*		display: flex;*/
+/*		flex-direction: column;*/
+/*	}*/
 
-	product-info .product__title {
-		order: 1;
-		margin-bottom: .5rem;
-	}
+/*	product-info .product__title {*/
+/*		order: 1;*/
+/*		margin-bottom: .5rem;*/
+/*	}*/
 
-	product-info .product__title+.product__text {
-		order: 2;
-	}
+/*	product-info .product__title+.product__text {*/
+/*		order: 2;*/
+/*	}*/
 
-	product-info div[id^="price-"] {
-		order: 3;
-	}
+/*	product-info div[id^="price-"] {*/
+/*		order: 3;*/
+/*	}*/
 
-	product-info .shopify-app-block {
-		order: 4;
-		margin-top: 0;
-		margin-bottom: 1rem;
-	}
+/*	product-info .shopify-app-block {*/
+/*		order: 4;*/
+/*		margin-top: 0;*/
+/*		margin-bottom: 1rem;*/
+/*	}*/
 
-	product-info .grid__item.product__media-wrapper.medium-hide {
-		order: 5;
-	}
+/*	product-info .grid__item.product__media-wrapper.medium-hide {*/
+/*		order: 5;*/
+/*	}*/
 
-	product-info .breadcrumbs {
-		order: 6;
-	}
+/*	product-info .breadcrumbs {*/
+/*		order: 6;*/
+/*	}*/
 
-	product-info .sale-banner-product-page {
-		order: 7;
-	}
+/*	product-info .sale-banner-product-page {*/
+/*		order: 7;*/
+/*	}*/
 
-	product-info .product__tax {
-		order: 8;
-	}
+/*	product-info .product__tax {*/
+/*		order: 8;*/
+/*	}*/
 
-	product-info .products-product-size-picker {
-		order: 9;
-	}
+/*	product-info .products-product-size-picker {*/
+/*		order: 9;*/
+/*	}*/
 
-	product-info ul.similar {
-		order: 10;
-	}
+/*	product-info ul.similar {*/
+/*		order: 10;*/
+/*	}*/
 
-	product-info variant-radios {
-		order: 11;
-	}
+/*	product-info variant-radios {*/
+/*		order: 11;*/
+/*	}*/
 
-	product-info .product-buy-buttons {
-		order: 12;
-	}
+/*	product-info .product-buy-buttons {*/
+/*		order: 12;*/
+/*	}*/
 
-	product-info .brand-badges {
-		order: 13;
-	}
+/*	product-info .brand-badges {*/
+/*		order: 13;*/
+/*	}*/
 
-	product-info .description {
-		order: 14;
-	}
+/*	product-info .description {*/
+/*		order: 14;*/
+/*	}*/
 
-	product-info .sizing_table {
-		order: 15;
-	}
+/*	product-info .sizing_table {*/
+/*		order: 15;*/
+/*	}*/
 
-	product-info .shipping_information {
-		order: 16;
-	}
-}
+/*	product-info .shipping_information {*/
+/*		order: 16;*/
+/*	}*/
+/*}*/
