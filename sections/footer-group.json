@@ -75,7 +75,7 @@
           "type": "policies_link_list",
           "settings": {
             "policies_text_align": "left",
-            "menu": "footer"
+            "menu": "footer-legals"
           }
         }
       },
