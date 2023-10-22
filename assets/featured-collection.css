@@ -2,3 +2,44 @@
 .slider {
 	overflow-y: hidden;
 }
+
+.collection_slider_image {
+	width: 100%;
+	object-fit: cover;
+}
+
+.grid.product-grid.grid--3-col-tablet-down {
+	margin-bottom: 0;
+	gap: 0;
+}
+
+.grid.product-grid.grid--3-col-tablet-down li {
+	width: calc(33% - var(--grid-mobile-horizontal-spacing) - 3rem);
+	min-width: 27%;
+}
+
+.grid.product-grid.grid--4-col-tablet-down li {
+	width: calc(25% - var(--grid-mobile-horizontal-spacing) - 3rem);
+}
+
+.featured-collections-link {
+	text-decoration: none;
+	font-weight: var(--font-body-weight-bold);
+}
+
+ul.slider--tablet:after {
+	padding-left: 0;
+}
+
+@media screen and (min-width: 990px) {
+
+	.slider.slider--tablet.contains-card--standard:not(.slider--desktop) {
+		justify-content: space-between;
+	}
+
+	.slider.slider--tablet.contains-card--standard:not(.slider--desktop) li.grid__item.slider__slide:not(.collection-list__item--no-media) {
+		min-width: 24%;
+		margin-right: 0;
+	}
+}
+

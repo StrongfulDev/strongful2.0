@@ -1433,3 +1433,42 @@ function checkUrl() {
 if (window.performance && window.performance.navigation.type === window.performance.navigation.TYPE_BACK_FORWARD) {
 	checkUrl();
 }
+
+// let customerEmailForFlashy;
+//
+// document.addEventListener("hiko", (event) => {
+// 	console.log(event.detail);
+// 	if (event.detail.action === 'login' || event.detail.action === 'activate') {
+// 		customerEmailForFlashy = event.detail.email;
+// 		console.log(customerEmailForFlashy);
+//
+// 		// Your data that you want to send to the server
+// 		let data = {
+// 			"primary_key": "email",
+// 			"overwrite": true,
+// 			"contact": {
+// 				"email": customerEmailForFlashy,
+// 				"lists": {
+// 					"18665": true
+// 				}
+// 			}
+// 		};
+//
+// // Make a POST request
+// 		fetch(url, {
+// 			method: 'POST',
+// 			headers: {
+// 				'Content-Type': 'application/json',
+// 				'Authorization': 'orlfce2un3anaitjfzqqgh01ajnmvn7r'
+// 			},
+// 			body: JSON.stringify(data)
+// 		})
+// 			.then(response => response.json())
+// 			.then(data => {
+// 				console.log(data);
+// 			})
+// 			.catch(error => {
+// 				console.error('There was an error!', error);
+// 			});
+// 	}
+// });

@@ -89,9 +89,8 @@
     {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
 
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
-        <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
-            {% comment %}{% render 'product-media-gallery', variant_images: variant_images %}{% endcomment %}
-          {% render 'product-media-gallery', product: product %}
+        <div class="grid__item product__media-wrapper small-hide">
+            {% render 'product-media-gallery', product: product, is_duplicate: true %}
         </div>
         <div class="product__info-wrapper {{ section.settings.details_section_direction }} grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}">
             <product-info
@@ -106,6 +105,10 @@
                     {%- case block.type -%}
                         {%- when '@app' -%}
                             {% render block %}
+                        {%- when 'product_media' -%}
+                        <div class="grid__item product__media-wrapper medium-hide large-up-hide">
+                            {% render 'product-media-gallery', product: product %}
+                        </div>
                         {% when 'breadcrumb' %}
                             {% render 'breadcrumbs' %}
                         {%- when 'text' -%}
@@ -152,7 +155,7 @@
                                     {%- endif -%}
                                 </div>
                             {%- endif -%}
-                            <div {{ block.shopify_attributes }} class="products-product-size-picker">
+                            <div {{ block.shopify_attributes }} class="products-product-size-picker hidden">
                                 {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
                                 {%- form 'product', product, id: product_form_installment_id, class: 'installment caption-large' -%}
                                     <input type="hidden" name="id"
@@ -679,6 +682,10 @@
   "blocks": [
     {
       "type": "@app"
+    },
+    {
+        "type": "product_media",
+        "name": "Product media gallery"
     },
     {
       "type": "breadcrumb",

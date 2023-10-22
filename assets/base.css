@@ -460,6 +460,11 @@ body,
     overflow: hidden;
 }
 
+.skip-to-content-link {
+	position: absolute;
+	left: 0;
+}
+
 .skip-to-content-link:focus {
     z-index: 9999;
     position: inherit;
