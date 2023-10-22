@@ -3,6 +3,11 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "ea6d7033-4e56-497e-a4dd-623c0f24954e": {
+          "type": "product_media",
+          "settings": {
+          }
+        },
         "7c99b889-3ad8-4802-a5c7-9802ab40f12c": {
           "type": "breadcrumb",
           "settings": {
@@ -92,7 +97,7 @@
           "settings": {
             "heading": "תיאור מוצר",
             "product_content": "description",
-            "content": "<p>{{ product.metafields.global.material.value }}<\/p><p>סטרוגנפול משתפת פעולה ותורמת 100% מהרווחים לעמותת ״לתת״ וביחד ניתן מענה הומוניטרי לנפגעי המלחמה, כוחות הביטחון והאוכלוסיות המושפעות מהמלחמה. בכפוף לתקנון<\/p>",
+            "content": "<p>{{ product.metafields.global.material.value }}<\/p><p>סטרוגנפול משתפת פעולה ותורמת 100% מהרווחים לעמותת ״לתת״ וביחד ניתן מענה הומוניטרי לנפגעי המלחמה, כוחות הביטחון והאוכלוסיות המושפעות מהמלחמה בישראל. בכפוף לתקנון<\/p>",
             "page": "",
             "icon": "none"
           }
@@ -119,6 +124,7 @@
         }
       },
       "block_order": [
+        "ea6d7033-4e56-497e-a4dd-623c0f24954e",
         "7c99b889-3ad8-4802-a5c7-9802ab40f12c",
         "5ec0a264-e4fc-4a8d-92bc-f2f9223694f5",
         "title",
@@ -157,6 +163,7 @@
     },
     "complete-look-products": {
       "type": "complete-look-products",
+      "disabled": true,
       "settings": {
         "heading": "SHOP THE LOOK",
         "member_tag": "",
@@ -165,9 +172,8 @@
     },
     "dddb59c7-1c96-4897-8735-d714c0d34c5d": {
       "type": "featured-collection",
-      "disabled": true,
       "custom_css": [
-
+        "div.collection__title_heading .title {margin: 0 !important;}"
       ],
       "settings": {
         "steps": 1,
@@ -181,7 +187,7 @@
         "products_to_show": 15,
         "columns_desktop": 4,
         "full_width": true,
-        "show_view_all": true,
+        "show_view_all": false,
         "view_all_text": "",
         "view_all_style": "link",
         "view_all_location": "top",
@@ -244,8 +250,8 @@
         "quick_add_accessories_text": "הוספה מהירה",
         "columns_mobile": "2",
         "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 24,
+        "padding_bottom": 24
       }
     },
     "6a92001a-1714-49ba-a6c2-ab5ee898262d": {
