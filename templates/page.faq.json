@@ -244,8 +244,8 @@
       ],
       "settings": {
         "has_search": true,
-        "search_placeholder": "חיפוש",
-        "empty_search_results": "לא נמצאו תוצאות",
+        "search_placeholder": "Search",
+        "empty_search_results": "No results found",
         "caption": "",
         "heading": "{{ page.title }}",
         "heading_size": "h1",
