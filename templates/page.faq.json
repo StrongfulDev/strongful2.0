@@ -163,45 +163,45 @@
         "02b333b5-51d3-4e26-bfb6-0df3b5a46e67": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "האם אני משלמת על משלוח חזרה אליכם?",
+            "heading": "Do I need to pay when returning products?",
             "icon": "none",
-            "row_content": "<p>ניתן לבצע החלפה ללא עלות עם שליח עד הבית לכל הזמנה \/ החזרה בעלות של 25₪ עם שליח.<\/p><p>ובנוסף ניתן לבצע החזרה באמצעות דואר ישראל ללא עלות.<\/p>",
+            "row_content": "<p>The cost of returning a package is only $15.<\/p><p>In return, you will receive a site credit worth $15 for future orders.<\/p><p>The return cost will be deducted from the value of the credit you receive.<\/p><p>A DHL EXPRESS courier will come to your address to pick up the products you wish to return.<\/p>",
             "page": ""
           }
         },
         "66e1af33-2846-4cf7-839a-4152950b132e": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "תוך כמה זמן אפשר להחליף או להחזיר פריט?",
+            "heading": "How much time do I have to return my order?",
             "icon": "none",
-            "row_content": "<p>ניתן להחליף \/ להחזיר פריט עד 30 יום מתאריך קבלת המוצר.<\/p>",
+            "row_content": "<p>Once you receive your package, you have a 30 day window to return your products.<\/p><p>If your order contains an extended return window, you have 60 days instead of the initial 30 days.<\/p>",
             "page": ""
           }
         },
         "5be0e8ca-983c-471c-97c7-01368583f05b": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "כמה זמן ייקח לכם לזכות אותי?",
+            "heading": "When will I receive my refund?",
             "icon": "none",
-            "row_content": "<p>הפריטים שהחזרת מגיעים אלינו עד 14 ימי עסקים באמצעות דואר ישראל \/ עד 5 ימי עסקים באמצעות שליח.<\/p><p>הזיכוי מתבצע ביום הגעת החבילה ומופיע באמצעי התשלום עד 14 ימי עסקים.<\/p>",
+            "row_content": "<p>As soon as we receive the products you returned, after examining and approving them, we will create your refund immediately.<\/p><p>If you paid by credit card - it may take up to 14 business days for you to see your refund.<\/p><p>The time it takes for the refund to update depends on your credit company.<\/p>",
             "page": ""
           }
         },
         "6452def7-9eb1-4657-8785-aff9f59653ba": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "אפשר להחזיר מוצר אם שילמתי באמצעות גיפטקארד?",
+            "heading": "How do I return products if I paid with a gift card?",
             "icon": "none",
-            "row_content": "<p>ניתן להחזיר מוצר ששולם באמצעות גיפטקארד, הזיכוי בשווי העסקה יחזור לאמצעי התשלום ממנו בוצעה ההזמנה.<\/p>",
+            "row_content": "<p>If you return products paid with a gift card, the credit for the value of the transaction will return to the payment method from which the order was placed.<\/p>",
             "page": ""
           }
         },
         "f1b29138-4b90-4e09-abd4-9fd77862275a": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "האם אני יכולה להחזיר \/ להחליף פריט שנלבש?",
+            "heading": "Can I return an item if I wore \/ used it?",
             "icon": "none",
-            "row_content": "<p>לא ניתן להחליף \/ להחזיר פריטים שנלבשו ועברו שימוש.<\/p>",
+            "row_content": "<p>Items that have been worn and\/or used cannot be returned.<\/p>",
             "page": ""
           }
         },
