@@ -136,27 +136,27 @@
         "template--16015997108364__6539bbd9-86c9-4408-80b1-3e7e03ff7cae-collapsible_row-4": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "תוך כמה זמן ניתן לבטל את ההזמנה?",
+            "heading": "How soon can I cancel my order?",
             "icon": "none",
-            "row_content": "<p>ניתן לבטל הזמנה בכל עת כל עוד ההזמנה אינה נארזה.<\/p><p>במידה והזמנתך נארזה ונשלחה, עלייך לבצע החזרה כמפורט ב<a href=\"\/blogs\/policies\/החזרות-והחלפות\" title=\"החזרות והחלפות\"><span style=\"text-decoration:underline\">מדיניות החזרות והחלפות<\/span><\/a> שלנו לאחר קבלת החבילה.<\/p>",
+            "row_content": "<p>You can cancel your order at any time as long as the order is not packed.<\/p><p>If your order has been packed and shipped, you must make a return as detailed in our returns policy after receiving the package.<\/p>",
             "page": ""
           }
         },
         "b406e619-6d43-474c-a42a-4171dae2dc86": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "האם אתם עושים משלוחים לכל הארץ?",
+            "heading": "Do you ship worldwide?",
             "icon": "none",
-            "row_content": "<p>ניתן לבצע משלוחים לכל חלקי הארץ עד 3 ימי עסקים מלבד איזורים מרוחקים עד 5 ימי עסקים.<\/p>",
+            "row_content": "<p>No, we currently deliver packges to the entire US up to 3 business days in accordance with the shipping policy of the shipping company DHL EXPRESS.<\/p>",
             "page": ""
           }
         },
         "2b228f57-a7f2-47a6-9d20-c31d34aceb4a": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "איך ניתן לבצע החלפה?",
+            "heading": "How can i exchange a product i did not use?",
             "icon": "none",
-            "row_content": "<p>ניתן לבצע החלפה באמצעות <a href=\"https:\/\/strongful.co.il\/a\/return\" title=\"https:\/\/strongful.co.il\/a\/return\"><span style=\"text-decoration:underline\">פורטל ההחלפות<\/span><\/a><span style=\"text-decoration:underline\"> <\/span>באתר. במידה ואת נתקלת בקושי מסוים תוכלי ליצור קשר עם מוקד שירות הלקוחות שלנו.<\/p>",
+            "row_content": "<p>Currently, there is no option to exchange products.<\/p><p>You can create a return through our Return Portal.<\/p><p>If you encounter a particular difficulty, you can contact our customer support center through the chat bubble, email or message us directly on Instagram.<\/p>",
             "page": ""
           }
         },
