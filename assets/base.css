@@ -4155,8 +4155,8 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 }
 
 .page summary .icon-caret {
-	left: 1.5rem;
-	right: auto;
+	right: 1.5rem;
+	left: auto;
 }
 
 .page .accordion {
