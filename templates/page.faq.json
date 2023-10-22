@@ -58,15 +58,15 @@
           "type": "block",
           "settings": {
             "icon": "faq",
-            "text": "שאלות ותשובות",
-            "url": "https:\/\/strongful.co.il\/pages\/faq"
+            "text": "FAQs",
+            "url": "shopify:\/\/pages\/faqs"
           }
         },
         "4b2953d1-fbea-4bab-999c-30e05398a79a": {
           "type": "block",
           "settings": {
             "icon": "returns",
-            "text": "פורטל החלפות והחזרות",
+            "text": "Returns Portal",
             "url": "https:\/\/strongful.co.il\/a\/return"
           }
         },
@@ -74,7 +74,7 @@
           "type": "block",
           "settings": {
             "icon": "delivery",
-            "text": "משלוחים",
+            "text": "Delivery Information",
             "url": "shopify:\/\/blogs\/policies\/מדיניות-המשלוחים-שלנו"
           }
         },
@@ -82,8 +82,8 @@
           "type": "block",
           "settings": {
             "icon": "loyalty",
-            "text": "מועדון לקוחות",
-            "url": "shopify:\/\/pages\/a-list"
+            "text": "Loyalty Program",
+            "url": "shopify:\/\/pages\/loyalty"
           }
         }
       },
