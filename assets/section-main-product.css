@@ -2208,7 +2208,7 @@ product-recommendations .collection__title_heading {
 }
 
 .yotpo-sr-bottom-line-summary div  {
-	font-size: .9em !important;
+	font-size: .8em !important;
 	line-height: 1.5em !important;
 }
 
@@ -2233,76 +2233,98 @@ button.needsclick {
 	z-index: 0 !important;
 }
 
-@media screen and (max-width: 990px) {
-	product-info {
-		display: flex;
-		flex-direction: column;
-	}
+/*@media screen and (max-width: 990px) {*/
 
-	product-info .product__title {
-		order: 1;
-		margin-bottom: .5rem;
-	}
+/*    .product__title h1 {*/
+/*        font-size: calc(var(--font-body-size-large) * 0.9);*/
+/*    }*/
 
-	product-info .product__title+.product__text {
-		order: 2;
-	}
+/*	product-info {*/
+/*		display: flex;*/
+/*		flex-direction: column;*/
+/*	}*/
 
-	product-info div[id^="price-"] {
-		order: 3;
-	}
+/*	product-info .product__title {*/
+/*		order: 1;*/
+/*		margin-bottom: 0;*/
+/*	}*/
 
-	product-info .shopify-app-block {
-		order: 4;
-		margin-top: 0;
-		margin-bottom: 1rem;
-	}
+/*	product-info .product__title+.product__text {*/
+/*		order: 2;*/
+/*	}*/
 
-	product-info .grid__item.product__media-wrapper.medium-hide {
-		order: 5;
-	}
+/*	product-info div[id^="price-"] {*/
+/*		order: 3;*/
+/*      margin: 1rem 0;*/
+/*	}*/
 
-	product-info .breadcrumbs {
-		order: 6;
-	}
+/*  product-info .price {*/
+/*      display: flex;*/
+/*      align-items: baseline;*/
+/*      justify-content: end;*/
+/*      gap: var(--grid-desktop-vertical-spacing);*/
+/*  }*/
 
-	product-info .sale-banner-product-page {
-		order: 7;
-	}
+/*  product-info .discount-price-container {*/
+/*      position: relative;*/
+/*      bottom: 2px;*/
+/*  }*/
 
-	product-info .product__tax {
-		order: 8;
-	}
+/*  .product product-info div.discount-price-container, .product product-info div.price__container {*/
+/*      margin: 0;*/
+/*  }*/
 
-	product-info .products-product-size-picker {
-		order: 9;
-	}
+/*	product-info .shopify-app-block {*/
+/*		order: 4;*/
+/*		margin-top: 0;*/
+/*		margin-bottom: 1rem;*/
+/*	}*/
 
-	product-info ul.similar {
-		order: 10;
-	}
+/*	product-info .grid__item.product__media-wrapper.medium-hide {*/
+/*		order: 5;*/
+/*	}*/
 
-	product-info variant-radios {
-		order: 11;
-	}
+/*	product-info .breadcrumbs {*/
+/*		order: 6;*/
+/*	}*/
 
-	product-info .product-buy-buttons {
-		order: 12;
-	}
+/*	product-info .sale-banner-product-page {*/
+/*		order: 7;*/
+/*	}*/
 
-	product-info .brand-badges {
-		order: 13;
-	}
+/*	product-info .product__tax {*/
+/*		order: 8;*/
+/*	}*/
 
-	product-info .description {
-		order: 14;
-	}
+/*	product-info .products-product-size-picker {*/
+/*		order: 9;*/
+/*	}*/
 
-	product-info .sizing_table {
-		order: 15;
-	}
+/*	product-info ul.similar {*/
+/*		order: 10;*/
+/*	}*/
 
-	product-info .shipping_information {
-		order: 16;
-	}
-}
+/*	product-info variant-radios {*/
+/*		order: 11;*/
+/*	}*/
+
+/*	product-info .product-buy-buttons {*/
+/*		order: 12;*/
+/*	}*/
+
+/*	product-info .brand-badges {*/
+/*		order: 13;*/
+/*	}*/
+
+/*	product-info .description {*/
+/*		order: 14;*/
+/*	}*/
+
+/*	product-info .sizing_table {*/
+/*		order: 15;*/
+/*	}*/
+
+/*	product-info .shipping_information {*/
+/*		order: 16;*/
+/*	}*/
+/*}*/
