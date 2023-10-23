@@ -18,6 +18,7 @@
   - show_sale_badge: {Boolean} Shows a sale badge when relevant
   - image_count: {Number} Amount of images to show
   - card_banner_text: {String} Text to show under the image as banner
+  - custom_collection_second_announcement: {String} Secondary text to show under the image as banner
   - card_header_size: {String} Size of the card header. Values are "h1", "h2", etc.  (optional)
   - announcement_tag: {String} the tag to show on the card
   - pick_size_text: {String} the text that describes quick addition header of products with size variants
@@ -258,9 +259,11 @@
                     </div>
                 </div>
                 <div class="card__content">
-                    <div class="card__information">
+                    <div class="card__information {{ custom_collection_second_announcement }}">
                         {% if card_product.tags contains announcement_tag and card_banner_text != blank %}
                             <span class="card_banner_text color-background-2">{{ card_banner_text }}</span>
+                        {% elsif card_product.tags contains second_announcement_tag and custom_collection_second_announcement != blank %}
+                            <span class="card_banner_text color-background-2">{{ custom_collection_second_announcement }}</span>
                         {% endif %}
                         {% if card_product.compare_at_price > card_product.price %}
                             <div class="discount-price-container">
