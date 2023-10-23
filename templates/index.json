@@ -58,43 +58,6 @@
         "padding_bottom": 16
       }
     },
-    "ba1ce649-cd19-4010-975e-d5ad33c69070": {
-      "type": "slideshow",
-      "blocks": {
-        "5fee8a24-d649-4674-9c0b-1aa5e62d06fd": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_7aa8c6ed-d8e7-4c92-8994-d53f0135095f.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_1d365728-a44b-4b7a-a4c2-c15ade73549d.jpg",
-            "heading": "",
-            "whole_slide_link": "shopify:\/\/collections\/outlet",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-1",
-            "text_alignment_mobile": "center"
-          }
-        }
-      },
-      "block_order": [
-        "5fee8a24-d649-4674-9c0b-1aa5e62d06fd"
-      ],
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "adapt_image",
-        "slider_visual": "sides",
-        "auto_rotate": false,
-        "change_slides_speed": 9,
-        "show_text_below": false,
-        "accessibility_info": "Slideshow about our brand"
-      }
-    },
     "bf7c8475-03e5-4509-86d8-21c4c329bb00": {
       "type": "slideshow",
       "blocks": {
@@ -121,6 +84,43 @@
       },
       "block_order": [
         "b43423be-0745-47c7-be6a-84d0ee24d128"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "sides",
+        "auto_rotate": false,
+        "change_slides_speed": 9,
+        "show_text_below": false,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "ba1ce649-cd19-4010-975e-d5ad33c69070": {
+      "type": "slideshow",
+      "blocks": {
+        "5fee8a24-d649-4674-9c0b-1aa5e62d06fd": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_7aa8c6ed-d8e7-4c92-8994-d53f0135095f.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_1d365728-a44b-4b7a-a4c2-c15ade73549d.jpg",
+            "heading": "",
+            "whole_slide_link": "shopify:\/\/collections\/outlet",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "5fee8a24-d649-4674-9c0b-1aa5e62d06fd"
       ],
       "settings": {
         "layout": "full_bleed",
@@ -397,8 +397,8 @@
   },
   "order": [
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9",
-    "ba1ce649-cd19-4010-975e-d5ad33c69070",
     "bf7c8475-03e5-4509-86d8-21c4c329bb00",
+    "ba1ce649-cd19-4010-975e-d5ad33c69070",
     "283eeea1-79f9-42c2-8f34-dccf839b470b",
     "cc09a920-ac4d-4b5f-b8e6-9f990778086e",
     "4a9c7a0e-e0ec-415d-abde-a7481cc0f7b2",
