@@ -1663,6 +1663,11 @@
         "label": "t:sections.main-collection-product-grid.settings.announcement_tag.label"
       },
       {
+        "type": "text",
+        "id": "custom_collection_announcement",
+        "label": "t:sections.main-collection-product-grid.settings.custom_collection_announcement.label"
+      },
+      {
         "type": "checkbox",
         "id": "show_rating",
         "default": false,
@@ -1677,8 +1682,13 @@
       },
       {
         "type": "text",
-        "id": "custom_collection_announcement",
-        "label": "t:sections.main-collection-product-grid.settings.custom_collection_announcement.label"
+        "id": "second_announcement_tag",
+        "label": "Second announcement tag"
+      },
+      {
+        "type": "text",
+        "id": "custom_collection_second_announcement",
+        "label": "Secondary collection announcement text"
       },
       {
         "type": "checkbox",
