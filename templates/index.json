@@ -58,46 +58,6 @@
         "padding_bottom": 16
       }
     },
-    "slideshow": {
-      "type": "slideshow",
-      "blocks": {
-        "c7a39508-f907-4756-96f3-e837916f2798": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/IMG_9734.png",
-            "mobile_image": "shopify:\/\/shop_images\/IMG_9735.png",
-            "heading": "",
-            "whole_slide_link": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-1",
-            "text_alignment_mobile": "center"
-          }
-        }
-      },
-      "block_order": [
-        "c7a39508-f907-4756-96f3-e837916f2798"
-      ],
-      "custom_css": [
-
-      ],
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "adapt_image",
-        "slider_visual": "sides",
-        "auto_rotate": false,
-        "change_slides_speed": 9,
-        "show_text_below": false,
-        "accessibility_info": "Slideshow about our brand"
-      }
-    },
     "bf7c8475-03e5-4509-86d8-21c4c329bb00": {
       "type": "slideshow",
       "blocks": {
@@ -145,7 +105,7 @@
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "sets",
+        "collection": "winter-on-sale",
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,
@@ -184,7 +144,7 @@
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "sets",
+        "collection": "best-sellers-on-sale",
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,
@@ -223,7 +183,7 @@
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "sets",
+        "collection": "back-in-stock-on-sale",
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,
@@ -400,7 +360,6 @@
   },
   "order": [
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9",
-    "slideshow",
     "bf7c8475-03e5-4509-86d8-21c4c329bb00",
     "283eeea1-79f9-42c2-8f34-dccf839b470b",
     "cc09a920-ac4d-4b5f-b8e6-9f990778086e",
