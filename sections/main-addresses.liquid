@@ -183,15 +183,15 @@
                                         <p class="contact-text">{{ 'customer.account.contact.whatsapp' | t }}</p>
                                     </div>
                                 {% endif %}
-                                {% if shop.email != blank %}
+                                {% if settings.social_email_link != blank %}
                                     <div class="contact-icon-child">
-                                        <a href="mailto:{{ shop.email }}">
+                                        <a href="/pages/contact-us">
                                             {% render 'icon-email' %}
                                         </a>
                                         <p class="contact-text">{{ 'customer.account.contact.email' | t }}</p>
                                     </div>
                                 {% endif %}
-                                {% if shop.phone != blank %}
+                                {% if settings.social_phone_link != blank %}
                                     <div class="contact-icon-child">
                                         <a href="tel:{{ shop.phone }}">
                                             {% render 'icon-phone' %}
