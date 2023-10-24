@@ -283,10 +283,6 @@ a.no-decoration {
 		font-weight: var(--font-body-weight);
 	}
 
-	.contact-icon-child:first-child {
-		display: none;
-	}
-
 	thead {
 		display: none;
 	}
