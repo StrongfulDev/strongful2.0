@@ -175,24 +175,30 @@
                         <div class="main-account-info-container main-account-info-container--contact">
                             <p>{{ 'customer.account.contact.title' | t }}</p>
                             <div class="contact-icons-container">
-                                <div class="contact-icon-child">
-                                    <a href="https://wa.me/{{ settings.social_whatsapp_link }}" target="_blank">
-                                        {% render 'icon-whatsapp' %}
-                                    </a>
-                                    <p class="contact-text">{{ 'customer.account.contact.whatsapp' | t }}</p>
-                                </div>
-                                <div class="contact-icon-child">
-                                    <a href="mailto:{{ shop.email }}">
-                                        {% render 'icon-email' %}
-                                    </a>
-                                    <p class="contact-text">{{ 'customer.account.contact.email' | t }}</p>
-                                </div>
-                                <div class="contact-icon-child">
-                                    <a href="tel:{{ shop.phone }}">
-                                        {% render 'icon-phone' %}
-                                    </a>
-                                    <p class="contact-text">{{ 'customer.account.contact.phone' | t }}</p>
-                                </div>
+                                {% if settings.social_whatsapp_link != blank %}
+                                    <div class="contact-icon-child">
+                                        <a href="https://wa.me/{{ settings.social_whatsapp_link }}" target="_blank">
+                                            {% render 'icon-whatsapp' %}
+                                        </a>
+                                        <p class="contact-text">{{ 'customer.account.contact.whatsapp' | t }}</p>
+                                    </div>
+                                {% endif %}
+                                {% if shop.email != blank %}
+                                    <div class="contact-icon-child">
+                                        <a href="mailto:{{ shop.email }}">
+                                            {% render 'icon-email' %}
+                                        </a>
+                                        <p class="contact-text">{{ 'customer.account.contact.email' | t }}</p>
+                                    </div>
+                                {% endif %}
+                                {% if shop.phone != blank %}
+                                    <div class="contact-icon-child">
+                                        <a href="tel:{{ shop.phone }}">
+                                            {% render 'icon-phone' %}
+                                        </a>
+                                        <p class="contact-text">{{ 'customer.account.contact.phone' | t }}</p>
+                                    </div>
+                                {% endif %}
                             </div>
                         </div>
 
