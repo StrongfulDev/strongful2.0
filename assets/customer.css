@@ -1014,8 +1014,6 @@ p.container-extra-info {
 
 .contact-icons-container {
 	width: 100%;
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
 	border-top: 1px var(--gradient-base-background-3) solid;
 	border-bottom: 1px var(--gradient-base-background-3) solid;
 }
