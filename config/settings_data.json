@@ -309,12 +309,6 @@
         "settings": {
           "social_font": "enable"
         }
-      },
-      "18128612654622612671": {
-        "type": "shopify:\/\/apps\/selectors\/blocks\/app-embed\/a005a4a7-4aa2-4155-9c2b-0ab41acbf99c",
-        "disabled": false,
-        "settings": {
-        }
       }
     }
   },

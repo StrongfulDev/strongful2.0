@@ -80,15 +80,15 @@
             "menu": "header-collections",
             "menu_second": "",
             "menu_third": "",
-            "title": "COLLECTIONS",
+            "title": "SHOP BY",
             "desktop_links_image_1": "shopify:\/\/shop_images\/0.jpg",
             "desktop_links_image_1_link": "shopify:\/\/collections\/all-products",
             "desktop_links_image_2_link": "",
-            "mobile_title": "COLLECTIONS",
-            "main_link": "shopify:\/\/collections\/all-tops",
+            "mobile_title": "SHOP BY",
+            "main_link": "shopify:\/\/collections\/new-in",
             "main_title": "",
             "shop_all_link": "shopify:\/\/collections\/all-products",
-            "shop_all_title": "COLLECTIONS"
+            "shop_all_title": "SHOPBY"
           }
         },
         "8878d4cf-d83f-42a2-90b9-ddebceb7501c": {
