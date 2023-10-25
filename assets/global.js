@@ -1467,7 +1467,7 @@ window.addEventListener('DOMContentLoaded', function(event) {
 		"Black": "black",
 		"Black Gray": "Gray",
 		"Black White": "White",
-		"Blue": "blue",
+		"Blue": "#4d9cd7",
 		"Blue Gray": "Gray",
 		"Blue White": "White",
 		"Blue-Purple": "blue",
@@ -1495,17 +1495,17 @@ window.addEventListener('DOMContentLoaded', function(event) {
 		"Lime": "green",
 		"Maroon": "red",
 		"Mint": "green",
-		"Mocha": "brown",
-		"Navy": "blue",
+		"Mocha": "#af8970",
+		"Navy": "darkblue",
 		"Olive": "green",
-		"Orange": "orange",
+		"Orange": "#fda310",
 		"Pink": "pink",
 		"Purple": "purple",
-		"Red": "red",
+		"Red": "#d81e06",
 		"Mustard": "yellow",
 		"Nude": "yellow",
 		"Nude-Gray": "Gray",
-		"Old Pink": "pink",
+		"Old Pink": "#ff77a8",
 		"Olive Green": "green",
 		"Peach": "orange",
 		"Pistachio": "green",
@@ -1514,7 +1514,7 @@ window.addEventListener('DOMContentLoaded', function(event) {
 		"White": "white",
 		"White Black": "white",
 		"White Gray": "white",
-		"Yellow": "yellow"
+		"Yellow": "#f4e287"
 	}
 
 	const colorSwatches = document.querySelectorAll('.color-swatch');
