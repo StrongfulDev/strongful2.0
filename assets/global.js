@@ -1277,6 +1277,32 @@ if (contentToRender !== null) {
 
 window.addEventListener('DOMContentLoaded', function(event) {
 
+  // american size helper code
+
+  const allSizeHelpers = document.querySelectorAll(".dynamic_american_size");
+  allSizeHelpers.forEach((sizeHelper) => {
+    let variantTitle = sizeHelper.previousElementSibling.innerText;
+    switch (variantTitle) {
+      case "XXS":
+        sizeHelper.innerText = "0";
+        break;
+      case "XS":
+        sizeHelper.innerText = "0-2";
+        break;
+      case "S":
+        sizeHelper.innerText = "2-4";
+        break;
+      case "M":
+        sizeHelper.innerText = "4-6";
+        break;
+      case "L":
+        sizeHelper.innerText = "8-10";
+        break;
+      case "XL":
+        sizeHelper.innerText = "12-14";
+    }
+  });
+
 	// account modal code start here
 
 	const listItem = $(".multicolumn-list__item");

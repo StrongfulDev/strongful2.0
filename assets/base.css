@@ -4256,3 +4256,16 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 .summary-rating-bar-content {
 	background: var(--gradient-base-accent-1) !important;
 }
+
+.dynamic_american_size {
+    position: absolute;
+    bottom: 2px;
+    font-size: var(--font-body-size-small);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.product-form__input input[type=radio]:checked ~ .dynamic_american_size,
+.product-form__input input[type=radio]+label:hover+.dynamic_american_size {
+    color: var(--gradient-base-background-1);
+}
