@@ -62,9 +62,12 @@
                                 {{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})
                                 {% render 'icon-caret' %}
                             </a>
+
+                            {% comment %}
                             <a href="/pages/loyalty" class="container-menu-item container-menu-item-refer pointer">{{ 'customer.orders.refer' | t }}
                                 {% render 'icon-caret' %}
                             </a>
+                            {% endcomment %}
 
                             <div class="custom-orders-container mobile">
                                 <div class="toggle-orders-button toggle-orders">
