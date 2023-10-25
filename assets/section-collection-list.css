@@ -172,6 +172,7 @@
  #page .section-collection-list:nth-child(3) .grid__item .card {
 	 border-radius: var(--inputs-radius);
 	 border: 1px solid var(--gradient-base-background-3);
+	 align-items: center;
  }
 
  #page .section-collection-list:nth-child(3) .grid__item .card .full-unstyled-link:hover {
@@ -237,7 +238,7 @@
 	}
 
 	.collection-color-wrapper {
-		padding: 1rem 3rem 1rem 1rem;
+		padding: 1rem 1rem 1rem 3rem;
 	}
 
 	#page .section-collection-list:nth-child(3) .grid__item {
