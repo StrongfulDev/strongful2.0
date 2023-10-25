@@ -54,10 +54,10 @@
 
                         <div class="main-account-info-container main-account-info-container--my-account">
                             <h2 class="container-title">{{ 'customer.account.sub_title' | t }}</h2>
-                            <span class="container-menu-item container-menu-item-orders-toggler toggle-orders pointer">
-                      {{ 'customer.orders.title' | t }}
+                            <a href="{{ routes.account_url }}" class="container-menu-item container-menu-item-orders-toggler toggle-orders pointer">
+                                {{ 'customer.orders.title' | t }}
                                 {% render 'icon-caret' %}
-                  </span>
+                            </a>
                             <a href="{{ routes.account_addresses_url }}" class="container-menu-item container-menu-item--addresses pointer bold">
                                 {{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})
                                 {% render 'icon-caret' %}
