@@ -46,7 +46,9 @@
       {% if extend_height %} card--extend-height{% endif %}
       {% if card_collection.featured_image == nil and card_style == 'card' %} ratio{% endif %}
     "
+            {% if imageChecker != 'colors' %}
             style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
+            {% endif %}
     >
         {% if imageChecker != 'colors' %}
             <div

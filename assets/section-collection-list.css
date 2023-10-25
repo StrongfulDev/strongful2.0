@@ -166,6 +166,7 @@
 
  #page .section-collection-list:nth-child(3) .grid__item {
 	 max-width: calc(48% - var(--grid-mobile-horizontal-spacing) / 2);
+	 height: fit-content;
  }
 
  #page .section-collection-list:nth-child(3) .grid__item .card {
