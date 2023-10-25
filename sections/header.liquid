@@ -1146,9 +1146,11 @@
                             </div>
                         </div>
                     </details>
+                    {% comment %}
                     <a href="{{ section.settings.desktop_loyalty_link }}" class="header__icon--account desktop--only">
                         <span class="desktop-customer-name loyalty-tier">{{ vipTier }}</span>
                     </a>
+                    {% endcomment %}
                 {% endunless %}
             {%- endif -%}
 
