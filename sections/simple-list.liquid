@@ -20,7 +20,7 @@
     <h2 class="simple-list-title">קולקציות</h2>
     <ul class="simple-list-ul">
         {% for collection in collections %}
-            {% if collection.all_products_count > 20 %}
+            {% if collection.metafields.custom.show_on_site_map == true %}
                 <li class="simple-list-item">
                     {{- collection.title | link_to: collection.url }}
                 </li>
