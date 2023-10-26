@@ -1364,6 +1364,11 @@ summary::-webkit-details-marker {
 	left: 0;
 }
 
+.banner--auto .media > *:not(.zoom):not(.deferred-media__poster-button),
+.banner--auto .banner__media {
+    position: static;
+}
+
 .media > img {
     object-fit: cover;
     object-position: center center;
