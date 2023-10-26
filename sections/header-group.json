@@ -116,8 +116,8 @@
           "settings": {
             "show_on_mobile": true,
             "small_font": false,
-            "menu": "main-menu",
-            "menu_second": "",
+            "menu": "tops",
+            "menu_second": "bottoms",
             "menu_third": "",
             "title": "PRODUCTS",
             "desktop_links_image_1": "shopify:\/\/shop_images\/0.jpg",
