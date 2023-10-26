@@ -31,6 +31,10 @@ ul.slider--tablet:after {
 	padding-left: 0;
 }
 
+.featured-collections-col-title {
+	font-size: calc(var(--font-body-size-medium) * 0.9);
+}
+
 @media screen and (min-width: 990px) {
 
 	.slider.slider--tablet.contains-card--standard:not(.slider--desktop) {
