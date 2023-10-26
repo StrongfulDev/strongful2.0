@@ -782,7 +782,7 @@
                                                  class="mega-menu__content customizable fix-direction gradient motion-reduce global-settings-popup"
                                                  tabindex="-1">
                                                 <div class="mega-menu-grid-container {{ gridClass }}">
-                                                    <a href="{{ block.settings.shop_all_link }}" class="shop-all-link">
+                                                    <a href="{{ block.settings.above_shop_all_linkz }}" class="shop-all-link">
                                                         {{ block.settings.shop_all_title }}
                                                     </a>
                                                     {% render 'header-lists', childlinks: block.settings.menu.links, link_levels: link_levels %}
@@ -1579,6 +1579,11 @@
                 "type": "url",
                 "id": "mobile_logo_link",
                 "label": "t:sections.header.settings.mobile_logo_link.label"
+            },
+            {
+                "type": "url",
+                "id": "above_shop_all_link",
+                "label": "Above shop all link url"
             },
             {
                 "type": "url",
