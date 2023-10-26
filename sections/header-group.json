@@ -75,6 +75,7 @@
         "ba94928e-5cd1-47f5-9c0a-28ea47285f01": {
           "type": "menu_item",
           "settings": {
+            "above_shop_all_link": "shopify:\/\/collections\/sets",
             "show_on_mobile": true,
             "order": "",
             "small_font": false,
@@ -97,6 +98,7 @@
         "8878d4cf-d83f-42a2-90b9-ddebceb7501c": {
           "type": "menu_item",
           "settings": {
+            "above_shop_all_link": "shopify:\/\/collections\/sets",
             "show_on_mobile": true,
             "order": "",
             "small_font": false,
@@ -121,6 +123,7 @@
         "03fa03f7-aac1-443b-acba-9a19fb5aa148": {
           "type": "menu_item",
           "settings": {
+            "above_shop_all_link": "shopify:\/\/collections\/טייצים",
             "show_on_mobile": true,
             "order": "",
             "small_font": false,
@@ -143,6 +146,7 @@
         "fc929aa6-aab6-4c25-be13-8267425330c3": {
           "type": "menu_item",
           "settings": {
+            "above_shop_all_link": "shopify:\/\/collections\/טופים",
             "show_on_mobile": true,
             "order": "",
             "small_font": false,
@@ -165,6 +169,7 @@
         "70af0289-2846-42bd-93c5-5598239a8ddc": {
           "type": "menu_item",
           "settings": {
+            "above_shop_all_link": "shopify:\/\/collections\/outlet",
             "show_on_mobile": true,
             "order": "",
             "small_font": true,
@@ -187,6 +192,7 @@
         "4d0d7344-0f17-4600-86d8-3481f2a1c4a1": {
           "type": "menu_item",
           "settings": {
+            "above_shop_all_link": "shopify:\/\/collections\/accessories",
             "show_on_mobile": true,
             "order": "",
             "small_font": false,

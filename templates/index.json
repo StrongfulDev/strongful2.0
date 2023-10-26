@@ -337,6 +337,13 @@
     "4371b550-969b-4828-986d-71697fc53ef0": {
       "type": "rich-text",
       "blocks": {
+        "36985345-de63-48ea-9a11-c35e2034d466": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h3><strong>STRONGFUL - בגדי אקטיב לנשים<\/strong><\/h3>",
+            "heading_size": "h1"
+          }
+        },
         "template--16060343976076__4371b550-969b-4828-986d-71697fc53ef0-text-1": {
           "type": "text",
           "settings": {
@@ -345,7 +352,11 @@
         }
       },
       "block_order": [
+        "36985345-de63-48ea-9a11-c35e2034d466",
         "template--16060343976076__4371b550-969b-4828-986d-71697fc53ef0-text-1"
+      ],
+      "custom_css": [
+        "h3 {font-size: var(--font-body-size-large);}"
       ],
       "settings": {
         "desktop_content_position": "right",
