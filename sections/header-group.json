@@ -111,80 +111,23 @@
             "shop_all_title": "COLLECTIONS"
           }
         },
-        "03fa03f7-aac1-443b-acba-9a19fb5aa148": {
+        "2c661282-80c4-4403-a489-3d4c196de082": {
           "type": "menu_item",
           "settings": {
             "show_on_mobile": true,
             "small_font": false,
-            "menu": "bottoms",
+            "menu": "main-menu",
             "menu_second": "",
             "menu_third": "",
-            "title": "BOTTOMS",
+            "title": "PRODUCTS",
             "desktop_links_image_1": "shopify:\/\/shop_images\/0.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/all-products",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/sets",
             "desktop_links_image_2_link": "",
-            "mobile_title": "BOTTOMS",
-            "main_link": "",
+            "mobile_title": "PRODUCTS",
+            "main_link": "shopify:\/\/collections\/all-products",
             "main_title": "",
             "shop_all_link": "shopify:\/\/collections\/all-products",
-            "shop_all_title": "BOTTOMS"
-          }
-        },
-        "fc929aa6-aab6-4c25-be13-8267425330c3": {
-          "type": "menu_item",
-          "settings": {
-            "show_on_mobile": true,
-            "small_font": false,
-            "menu": "tops",
-            "menu_second": "",
-            "menu_third": "",
-            "title": "TOPS",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/0.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/sets",
-            "desktop_links_image_2_link": "",
-            "mobile_title": "TOPS",
-            "main_link": "shopify:\/\/collections\/all-tops",
-            "main_title": "TOPS",
-            "shop_all_link": "shopify:\/\/collections\/all-tops",
-            "shop_all_title": "Tops"
-          }
-        },
-        "70af0289-2846-42bd-93c5-5598239a8ddc": {
-          "type": "menu_item",
-          "settings": {
-            "show_on_mobile": true,
-            "small_font": true,
-            "menu": "header-outlet",
-            "menu_second": "header-outlet-second",
-            "menu_third": "",
-            "title": "OUTLET",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/0.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/sets",
-            "desktop_links_image_2_link": "",
-            "mobile_title": "OUTLET - UP TO 50% OFF",
-            "main_link": "shopify:\/\/collections\/outlet",
-            "main_title": "",
-            "shop_all_link": "shopify:\/\/collections\/outlet",
-            "shop_all_title": "OUTLET"
-          }
-        },
-        "4d0d7344-0f17-4600-86d8-3481f2a1c4a1": {
-          "type": "menu_item",
-          "settings": {
-            "show_on_mobile": true,
-            "small_font": false,
-            "menu": "header-accessories",
-            "menu_second": "",
-            "menu_third": "",
-            "title": "ACCESSORIES",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/0.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/all-products",
-            "desktop_links_image_2_link": "",
-            "mobile_title": "ACCESSORIES",
-            "main_link": "shopify:\/\/collections\/accessories",
-            "main_title": "Accessories",
-            "shop_all_link": "shopify:\/\/collections\/accessories",
-            "shop_all_title": "Accessories"
+            "shop_all_title": "ALL PRODUCTS"
           }
         },
         "93921bbc-631f-46c2-a66b-9df086c3f7a0": {
@@ -210,10 +153,7 @@
         "53391513-eaa6-4af1-a5d0-90776646273f",
         "ba94928e-5cd1-47f5-9c0a-28ea47285f01",
         "8878d4cf-d83f-42a2-90b9-ddebceb7501c",
-        "03fa03f7-aac1-443b-acba-9a19fb5aa148",
-        "fc929aa6-aab6-4c25-be13-8267425330c3",
-        "70af0289-2846-42bd-93c5-5598239a8ddc",
-        "4d0d7344-0f17-4600-86d8-3481f2a1c4a1",
+        "2c661282-80c4-4403-a489-3d4c196de082",
         "93921bbc-631f-46c2-a66b-9df086c3f7a0",
         "69313e8a-8818-485d-9c44-529f1b10ccdd"
       ],
