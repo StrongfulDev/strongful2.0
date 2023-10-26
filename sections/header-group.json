@@ -10,8 +10,8 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "20% on sign up",
-            "sub_text": "sign up now",
+            "main_text": "JOIN OUR LOYALTY CLUB",
+            "sub_text": "GET 20% OFF YOUR NEXT ORDER",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "ltr",
@@ -24,8 +24,8 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "Announcement",
-            "sub_text": "subtext",
+            "main_text": "LAUNCH SALE",
+            "sub_text": "50% OFF EVERY SECOND SET",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "ltr",
