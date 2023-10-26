@@ -66,7 +66,7 @@
     endif
 -%}
 
-<div class="color-{{ section.settings.color_scheme }} isolate gradient">
+<div class="color-{{ section.settings.color_scheme }} isolate gradient medium-hide large-up-hide">
     <div class="collection section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width  full-width-padding{% endif %} pagination_type_{{ section.settings.pagination_type }}">
         <slider-component
                 class="slider-mobile-gutter{% if section.settings.full_width %} slider-component-full-width {% endif %}{% if show_mobile_slider == false %} page-width{% endif %}{% if show_desktop_slider == false and section.settings.full_width == false %} page-width-desktop{% endif %}{% if show_desktop_slider %} slider-component-desktop{% endif %} pagination--{{ section.settings.pagination_type }}">
