@@ -45,9 +45,11 @@
     {%- paginate pages by 50 -%}
         <ul class="simple-list-ul">
             {%- for page in pages -%}
-                <li class="simple-list-item">
-                    {{ page.title | link_to: page.url }}
-                </li>
+                {% if page.metafields.custom.show_on_site_map == true %}
+                    <li class="simple-list-item">
+                        {{ page.title | link_to: page.url }}
+                    </li>
+                {% endif %}
             {%- endfor -%}
         </ul>
     {%- endpaginate -%}
