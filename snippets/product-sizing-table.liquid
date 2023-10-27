@@ -42,7 +42,7 @@
                     {% for modelName in product.metafields.model.names.value %}
                         {% assign model = shop.metaobjects.model[modelName] %}
                             <span class="size-span" data-model-size="{{ model.size_letter.value }}">{{ model.name }}</span>
-                            <span class="size-span" data-model-size="{{ model.size_letter.value }}">{{ model.height }}</span>
+                            <span class="size-span" data-model-size="{{ model.size_letter.value }}">{{ model.height_in_feet }}</span>
                             <span class="size-span" data-model-size="{{ model.size_letter.value }}">{{ model.bust }}</span>
                             <span class="size-span" data-model-size="{{ model.size_letter.value }}">{{ model.waist }}</span>
                             <span class="size-span" data-model-size="{{ model.size_letter.value }}">{{ model.hips }}</span>
