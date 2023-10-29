@@ -1284,22 +1284,22 @@ window.addEventListener('DOMContentLoaded', function(event) {
     let variantTitle = sizeHelper.previousElementSibling.innerText;
     switch (variantTitle) {
       case "XXS":
-        sizeHelper.innerText = "0";
+        sizeHelper.innerText = "(00-0)";
         break;
       case "XS":
-        sizeHelper.innerText = "0-2";
+        sizeHelper.innerText = "(0-2)";
         break;
       case "S":
-        sizeHelper.innerText = "2-4";
+        sizeHelper.innerText = "(2-4)";
         break;
       case "M":
-        sizeHelper.innerText = "4-6";
+        sizeHelper.innerText = "(4-6)";
         break;
       case "L":
-        sizeHelper.innerText = "8-10";
+        sizeHelper.innerText = "(8-10)";
         break;
       case "XL":
-        sizeHelper.innerText = "12-14";
+        sizeHelper.innerText = "(12-14)";
     }
   });
 

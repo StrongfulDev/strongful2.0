@@ -4256,7 +4256,7 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 }
 
 .dynamic_american_size {
-    font-size: var(--font-body-size-small);
+    font-size: calc(var(--font-body-size-small) * 1.2);
 }
 
 .product-form__input input[type=radio]:checked ~ .dynamic_american_size,
