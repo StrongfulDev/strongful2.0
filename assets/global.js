@@ -394,7 +394,9 @@ class MenuDrawer extends HTMLElement {
 			$(".header-overlay").removeClass("hidden");
 			$(".header-wrapper").addClass("blackend");
 			$(".account-menu-details").removeAttr("open");
-		}
+		} else {
+      USSizeHelper(document.querySelectorAll(".dynamic_american_size"));
+    }
 
 	  $(".mobile-facets__close").click(function() {
 		  $(".details.menu-opening").removeClass("menu-opening");
@@ -1275,33 +1277,34 @@ if (contentToRender !== null) {
 	}
 }
 
-window.addEventListener('DOMContentLoaded', function(event) {
-
-  // american size helper code
-
-  const allSizeHelpers = document.querySelectorAll(".dynamic_american_size");
-  allSizeHelpers.forEach((sizeHelper) => {
-    let variantTitle = sizeHelper.previousElementSibling.innerText;
+function USSizeHelper(nodeList) {
+  nodeList.forEach((childNode) => {
+    let variantTitle = childNode.previousElementSibling.innerText || childNode.previousElementSibling.innerHTML;
     switch (variantTitle) {
       case "XXS":
-        sizeHelper.innerText = "(00-0)";
+        childNode.innerText = "(00-0)";
         break;
       case "XS":
-        sizeHelper.innerText = "(0-2)";
+        childNode.innerText = "(0-2)";
         break;
       case "S":
-        sizeHelper.innerText = "(2-4)";
+        childNode.innerText = "(2-4)";
         break;
       case "M":
-        sizeHelper.innerText = "(4-6)";
+        childNode.innerText = "(4-6)";
         break;
       case "L":
-        sizeHelper.innerText = "(8-10)";
+        childNode.innerText = "(8-10)";
         break;
       case "XL":
-        sizeHelper.innerText = "(12-14)";
+        childNode.innerText = "(12-14)";
     }
   });
+}
+
+window.addEventListener('DOMContentLoaded', function(event) {
+
+  USSizeHelper(document.querySelectorAll(".dynamic_american_size"));
 
 	// account modal code start here
 
