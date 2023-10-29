@@ -155,7 +155,15 @@
               name="options[{{ option.name | escape }}]"
               form="{{ product_form_id }}"
             >
-              {% render 'product-variant-options', product: product, option: option, block: block %}
+                {% render 'product-variant-options',
+                        product: product,
+                        option: option,
+                        block: block,
+                        myBlock: myBlock,
+                        announcement_tag: settings.announcement_tag,
+                        members_only_sale: settings.members_only_sale,
+                        members_only_sale_active: settings.members_only_sale_active
+                %}
             </select>
             {% render 'icon-caret' %}
           </div>
@@ -206,10 +214,7 @@
               if variant.quantity_rule.max != null
                 echo 'products.product.quantity.maximum_of' | t: quantity: variant.quantity_rule.max | prepend: ' - '
               endif
-              # TODO: enable theme-check once `item_count_for_variant` is accepted as valid filter
-              # theme-check-disable
               assign cart_quantity = cart | item_count_for_variant: variant.id
-              # theme-check-enable
               if cart_quantity > 0
                 echo 'products.product.quantity.in_cart_html' | t: quantity: cart_quantity | prepend: ' - '
               endif

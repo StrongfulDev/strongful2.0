@@ -974,7 +974,7 @@ class VariantSelects extends HTMLElement {
   }
 
 	updateMasterProductData() {
-		this.currentProduct = this.getProductData();
+		// this.currentProduct = this.getProductData();
 	}
 
   updateMasterId() {
@@ -1155,10 +1155,10 @@ class VariantSelects extends HTMLElement {
     return this.variantData;
   }
 
-	getProductData() {
-		this.productData = this.productData || JSON.parse(this.querySelectorAll('[type="application/json"]')[1].textContent);
-		return this.productData;
-	}
+	// getProductData() {
+  //     this.productData = this.productData || JSON.parse(this.querySelectorAll('[type="application/json"]')[1].textContent);
+  //     return this.productData;
+	// }
 }
 
 customElements.define('variant-selects', VariantSelects);
