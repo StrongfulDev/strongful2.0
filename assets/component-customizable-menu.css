@@ -547,4 +547,8 @@
 		border-radius: var(--inputs-radius);
 		background: var(--gradient-base-background-3)
 	}
+
+	.mega-menu__content.ALL.PRODUCTS ul li:first-child a {
+		font-weight: var(--font-body-weight-bold);
+	}
 }
