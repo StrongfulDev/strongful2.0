@@ -47,23 +47,6 @@
         "show_text_below": true
       }
     },
-    "ed14566d-8bd2-48da-b1c0-a27d7b52bd42": {
-      "type": "image-banner",
-      "settings": {
-        "override_image_from_metafield": false,
-        "image": "shopify:\/\/shop_images\/Artboard_10_4c524a0d-b189-4200-98c4-98156b1a074c.jpg",
-        "mobile_image": "shopify:\/\/shop_images\/Mobile_5b35acb1-e0db-4ebe-9c51-3b01677264f1.jpg",
-        "image_overlay_opacity": 0,
-        "image_height": "auto",
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
-      }
-    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
@@ -101,7 +84,6 @@
   },
   "order": [
     "745dda66-63ce-4705-8d8d-eff54d17367f",
-    "ed14566d-8bd2-48da-b1c0-a27d7b52bd42",
     "product-grid",
     "banner"
   ]
