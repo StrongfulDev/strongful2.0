@@ -318,7 +318,7 @@
           "modal_closeButton": false,
           "option_flag_style": "none",
           "option_currency_type": "none",
-          "option_language": true,
+          "option_language": false,
           "title": "Are you in the right place?",
           "text": "Please select your shipping country.",
           "helper_text": "<p>Buy from the country of your choice. Remember that we can only ship your order to addresses located in the chosen country.<\/p>",
