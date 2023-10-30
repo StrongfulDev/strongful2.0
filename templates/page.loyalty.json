@@ -1,0 +1,67 @@
+{
+  "sections": {
+    "1f16aafe-142c-4069-baeb-0e1b18033b04": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"yotpo-widget-instance\" data-yotpo-instance-id=\"531592\"><\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "da8e932a-fd54-4625-8837-fd8fcd3f5543": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"yotpo-widget-instance\" data-yotpo-instance-id=\"531593\"><\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "0706a6dd-bd0b-4834-b2d3-5a5161da1115": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"yotpo-widget-instance\" data-yotpo-instance-id=\"531594\"><\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "cc6e6a8f-6d9c-4f3b-ba05-863a3d2d9407": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16149838790796__cc6e6a8f-6d9c-4f3b-ba05-863a3d2d9407-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p><strong>צבירה ומימוש נקודות Cashback<\/strong><\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "template--16149838790796__cc6e6a8f-6d9c-4f3b-ba05-863a3d2d9407-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>בכל קנייה תצטברי נקודה על כל שקל שרכשת.<\/p><p>כל 100 נקודות שצברת שוות ₪5 למימוש באתר.<\/p><p><\/p><p>רכשת בשווי ₪400 וצברת 400 נקודות בשווי ₪20 למימוש באתר ברכישות הבאות<\/p><p>*ניתן לממש מינימום 100 נקודות בכל רכישה.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16149838790796__cc6e6a8f-6d9c-4f3b-ba05-863a3d2d9407-heading-1",
+        "template--16149838790796__cc6e6a8f-6d9c-4f3b-ba05-863a3d2d9407-text-1"
+      ],
+      "settings": {
+        "desktop_content_position": "right",
+        "content_alignment": "right",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "1f16aafe-142c-4069-baeb-0e1b18033b04",
+    "da8e932a-fd54-4625-8837-fd8fcd3f5543",
+    "0706a6dd-bd0b-4834-b2d3-5a5161da1115",
+    "cc6e6a8f-6d9c-4f3b-ba05-863a3d2d9407"
+  ]
+}
