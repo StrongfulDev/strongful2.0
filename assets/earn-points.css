@@ -71,3 +71,35 @@
 .yotpo-widget-campaign-widget .yotpo-campaign-switcher-wrapper {
 	border: 1px solid var(--gradient-base-accent-3);
 }
+
+.yotpo-reward-steps-list, .yotpo-info {
+	direction: rtl;
+}
+
+.yotpo-widget-my-rewards-widget .yotpo-reward-steps-list {
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+.yotpo-widget-my-rewards-widget .yotpo-reward-steps-icon {
+	margin: 0 auto;
+}
+
+.yotpo-widget-my-rewards-widget .yotpo-reward-steps-item {
+	min-width: auto;
+}
+
+.yotpo-widget-my-rewards-widget .yotpo-is-mobile .yotpo-reward-steps-item {
+	padding: var(--grid-desktop-vertical-spacing);
+}
+
+.yotpo-widget-my-rewards-widget .yotpo-reward-steps-title {
+	margin-top: 5px;
+	font-weight: var(--font-body-weight-bold);
+}
+
+.yotpo-widget-campaign-widget .yotpo-is-mobile .yotpo-widget-campaign-widget-icon-container {
+	margin-bottom: 0;
+	position: absolute;
+	top: 1em;
+}
