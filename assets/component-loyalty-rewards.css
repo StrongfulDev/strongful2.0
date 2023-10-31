@@ -1,11 +1,52 @@
 .loyalty-rewards-container {
 	display: grid;
 	grid-template-columns: auto repeat(4, 1fr);
-	justify-items: center;
 	text-align: center;
 	width: 100%;
 }
 
 .loyalty_eligibility {
-	font-size: calc(var(--font-body-size-medium) * 0.75);
+	font-size: calc(var(--font-body-size-medium) * 0.65);
+	direction: ltr;
+	padding: 1rem 0;
+}
+
+.vip-item.td {
+	height: 5rem;
+	border-top: 1px solid var(--gradient-base-background-3);
+	display: flex;
+	align-items: center;
+	font-size: calc(var(--font-body-size-medium) * .8);
+}
+
+.vip-item.td:last-child {
+	border-bottom: 1px solid var(--gradient-base-background-3);
+}
+
+.tier-container {
+	position: relative;
+}
+
+.tier-container.active:after {
+	content: '';
+	position: absolute;
+	border: 1px solid #000;
+	height: 110%;
+	width: 100%;
+	top: -8%;
+	left: 0;
+	right: 0;
+	border-radius: 33px;
+}
+
+.tier-container:not(:first-child) .vip-item.td {
+	justify-content: center;
+}
+
+.round-black {
+	background: var(--gradient-base-accent-1);
+	border-radius: 50%;
+	height: 1rem;
+	width: 1rem;
+	display: flex;
 }

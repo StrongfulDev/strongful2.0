@@ -18,36 +18,69 @@
     <div class="loyalty-rewards-container">
         {% assign loyaltyRewards = shop.metaobjects.loyalty_rewards.values | sort: 'order' %}
         {% for reward in loyaltyRewards %}
-            <div class="tier-container">
-                <div class="vip-item loyalty_name">
+            {% assign customerTag = reward.customer_vip_tier_tag %}
+            <div class="tier-container{% if customer.tags contains customerTag %} active{% endif %}">
+                <div class="vip-item loyalty_name tr">
                     {{ reward.name }}
                 </div>
-                <div class="vip-item loyalty_eligibility">
+                <div class="vip-item loyalty_eligibility tr">
                     {{ reward.eligibility }}
                 </div>
-                <div class="vip-item loyalty_join_reward">
+                <div class="vip-item loyalty_join_reward td">
                     {{ reward.join_reward }}
                 </div>
-                <div class="vip-item loyalty_birthday_reward">
+                <div class="vip-item loyalty_birthday_reward td">
                     {{ reward.birthday_reward }}
                 </div>
-                <div class="vip-item loyalty_cashback_earned">
+                <div class="vip-item loyalty_cashback_earned td">
                     {{ reward.cashback_earned }}
                 </div>
 
                 {% if forloop.first %}
-                    <div class="vip-item loyalty_first_updates_text">
+                    <div class="vip-item loyalty_first_updates_text td">
                         {{ reward.first_updates_text }}
                     </div>
+                    <div class="vip-item loyalty_presale_text td">
+                        {{ reward.presale_text }}
+                    </div>
+                    <div class="vip-item loyalty_bonus_points_text td">
+                        {{ reward.bonus_points_text }}
+                    </div>
+                    <div class="vip-item loyalty_special_events_text td">
+                        {{ reward.special_events_text }}
+                    </div>
                 {% else %}
+
                     {% if reward.first_updates == true %}
-                        <div class="true">
+                        <div class="vip-item true td">
                             <span class="round-black"></span>
                         </div>
                     {% else %}
-                        <div class="false">
+                        <div class="vip-item false td">&nbsp;</div>
+                    {% endif %}
 
+                    {% if reward.presale == true %}
+                        <div class="vip-item true td">
+                            <span class="round-black"></span>
                         </div>
+                    {% else %}
+                        <div class="vip-item false td">&nbsp;</div>
+                    {% endif %}
+
+                    {% if reward.bonus_points == true %}
+                        <div class="vip-item true td">
+                            <span class="round-black"></span>
+                        </div>
+                    {% else %}
+                        <div class="vip-item false td">&nbsp;</div>
+                    {% endif %}
+
+                    {% if reward.special_events == true %}
+                        <div class="vip-item true td">
+                            <span class="round-black"></span>
+                        </div>
+                    {% else %}
+                        <div class="vip-item false td">&nbsp;</div>
                     {% endif %}
                 {% endif %}
             </div>
