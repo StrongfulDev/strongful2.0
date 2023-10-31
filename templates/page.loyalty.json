@@ -56,12 +56,20 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "352fb3a1-66f8-47e2-a6cb-b7199588ec07": {
+      "type": "component-loyalty-rewards",
+      "settings": {
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "1f16aafe-142c-4069-baeb-0e1b18033b04",
     "da8e932a-fd54-4625-8837-fd8fcd3f5543",
     "0706a6dd-bd0b-4834-b2d3-5a5161da1115",
-    "cc6e6a8f-6d9c-4f3b-ba05-863a3d2d9407"
+    "cc6e6a8f-6d9c-4f3b-ba05-863a3d2d9407",
+    "352fb3a1-66f8-47e2-a6cb-b7199588ec07"
   ]
 }
