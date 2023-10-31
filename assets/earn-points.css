@@ -126,6 +126,10 @@
 	padding-bottom: 3rem;
 }
 
+.yotpo-input-example {
+	display: none;
+}
+
 @media screen and (min-width: 990px) {
 	.yotpo-widget-hero-section .yotpo-text-on-background {
 		min-height: 430px;
@@ -156,7 +160,12 @@
 		margin: 0;
 	}
 
-	.yotpo-screen-customer_email {
+	.yotpo-screen-customer_email, .yotpo-screen-friends_emails {
 		padding: 0 30rem;
+	}
+
+	.yotpo-widget-campaign-widget .yotpo-completed-tile {
+		position: absolute;
+		top: 0;
 	}
 }
