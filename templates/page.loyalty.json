@@ -97,9 +97,9 @@
         "template--16150424486028__736446b1-a875-40d9-b2ea-8202bbd8ab22-collapsible_row-3": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "איך אני משתמשת בנקודות שצברתי?",
             "icon": "none",
-            "row_content": "",
+            "row_content": "<p>כבר בעמוד הראשון של שלב הצ'ק אאוט תוכלי לבחור כמה נקודות את רוצה לממש.<\/p><p>ניתן לממש עד 1,000 נקודות בכל הזמנה.<\/p>",
             "page": ""
           }
         },
