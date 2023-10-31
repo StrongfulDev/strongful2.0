@@ -1,0 +1,11 @@
+.loyalty-rewards-container {
+	display: grid;
+	grid-template-columns: auto repeat(4, 1fr);
+	justify-items: center;
+	text-align: center;
+	width: 100%;
+}
+
+.loyalty_eligibility {
+	font-size: calc(var(--font-body-size-medium) * 0.75);
+}

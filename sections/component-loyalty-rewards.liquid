@@ -14,15 +14,45 @@
     }
 {%- endstyle -%}
 
-<div class="loyalty-rewards-container section-{{ section.id }}-padding">
-    <div class="rewards-titles">
+<div class="page-width fix-direction section-{{ section.id }}-padding">
+    <div class="loyalty-rewards-container">
+        {% assign loyaltyRewards = shop.metaobjects.loyalty_rewards.values | sort: 'order' %}
+        {% for reward in loyaltyRewards %}
+            <div class="tier-container">
+                <div class="vip-item loyalty_name">
+                    {{ reward.name }}
+                </div>
+                <div class="vip-item loyalty_eligibility">
+                    {{ reward.eligibility }}
+                </div>
+                <div class="vip-item loyalty_join_reward">
+                    {{ reward.join_reward }}
+                </div>
+                <div class="vip-item loyalty_birthday_reward">
+                    {{ reward.birthday_reward }}
+                </div>
+                <div class="vip-item loyalty_cashback_earned">
+                    {{ reward.cashback_earned }}
+                </div>
 
+                {% if forloop.first %}
+                    <div class="vip-item loyalty_first_updates_text">
+                        {{ reward.first_updates_text }}
+                    </div>
+                {% else %}
+                    {% if reward.first_updates == true %}
+                        <div class="true">
+                            <span class="round-black"></span>
+                        </div>
+                    {% else %}
+                        <div class="false">
+
+                        </div>
+                    {% endif %}
+                {% endif %}
+            </div>
+        {% endfor %}
     </div>
-    {% for reward in shop.metaobjects.loyalty_rewards.values %}
-        <div>
-
-        </div>
-    {% endfor %}
 </div>
 
 {% schema %}
