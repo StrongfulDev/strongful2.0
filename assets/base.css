@@ -1208,6 +1208,10 @@ summary::-webkit-details-marker {
     .grid--2-col-tablet .grid__item {
         width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
     }
+
+    .grid--2-col-tablet .grid__item:only-child {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 989px) {

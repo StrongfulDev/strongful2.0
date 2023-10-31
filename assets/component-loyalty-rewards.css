@@ -50,3 +50,13 @@
 	width: 1rem;
 	display: flex;
 }
+
+@media screen and (min-width: 990px) {
+	.vip-item.td {
+		font-size: var(--font-body-size-medium);
+	}
+
+	.loyalty_eligibility {
+		font-size: calc(var(--font-body-size-medium) * 0.9);
+	}
+}
