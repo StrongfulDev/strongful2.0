@@ -30,7 +30,7 @@
     {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
     {{ 'component-model-switcher.css' | asset_url | stylesheet_tag }}
     <script src="{{ 'component-swiper.js' | asset_url }}" defer="defer" async="async"></script>
-    <script src="{{ 'component-model-switcher.js' | asset_url }}" defer="defer" async="async"></script>
+    {{ 'component-model-switcher.js' | asset_url | script_tag }}
 
     {% unless product.tags contains 'noSimilar' %}
         {{ 'component-similar-items.js' | asset_url | script_tag }}
