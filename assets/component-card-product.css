@@ -121,7 +121,7 @@
 .card_banner_text {
 	width: 100%;
 	display: block;
-	padding: var(--grid-desktop-vertical-spacing) 4px;
+	padding: var(--grid-desktop-vertical-spacing) calc(var(--grid-mobile-vertical-spacing) * 0.5);
 	margin-bottom: 8px;
 	text-align: center;
 	font-size: calc(var(--font-body-size-medium) * 0.8);
