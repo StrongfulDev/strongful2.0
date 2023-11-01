@@ -245,7 +245,7 @@
       "settings": {
         "header_footer_menu": "header_footer_menu",
         "account": "account",
-        "desktop_loyalty_link": "shopify:\/\/pages\/a-list",
+        "desktop_loyalty_link": "shopify:\/\/pages\/loyalty",
         "color_scheme": "background-1",
         "menu_position": "center",
         "toggle_socials": false,
@@ -269,7 +269,7 @@
         "mobile_top_image_3_link": "shopify:\/\/collections\/outlet",
         "mobile_top_image_3_title": "OUTLET - up to 50% off",
         "mobile_top_image_4": "shopify:\/\/shop_images\/Artboard_2_4x-100-min.jpg",
-        "mobile_top_image_4_link": "shopify:\/\/pages\/a-list",
+        "mobile_top_image_4_link": "shopify:\/\/pages\/loyalty",
         "mobile_top_image_4_title": "מועדון לקוחות",
         "slider_menu": "dropdown-banners",
         "margin_bottom": 0,
