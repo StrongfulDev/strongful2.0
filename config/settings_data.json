@@ -135,7 +135,7 @@
     "image_ratio": "adapt",
     "show_secondary_image": true,
     "announcement_tag": "setDiscount",
-    "custom_collection_announcement": "COUPON CODE : EXTRA10",
+    "custom_collection_announcement": "COUPON CODE: EXTRA10",
     "show_card_collection_announcement": true,
     "second_announcement_tag": "",
     "custom_collection_second_announcement": "",
