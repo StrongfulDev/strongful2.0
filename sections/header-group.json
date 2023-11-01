@@ -24,11 +24,11 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "20% הנחה",
-            "sub_text": "על כל האתר",
+            "main_text": "NOVEMBER SALE",
+            "sub_text": "25% OFF + EXTRA 10%",
             "text_alignment": "center",
             "main_text_direction": "rtl",
-            "sub_text_direction": "rtl",
+            "sub_text_direction": "ltr",
             "link": "shopify:\/\/collections\/sets",
             "color_scheme": "accent-1"
           }
@@ -259,7 +259,7 @@
         "mobile_top_image_1": "shopify:\/\/shop_images\/0737a51b2679a55d45d0d8f464335044_887c3259-5dc7-4b17-ae8f-6007d372e708.jpg",
         "mobile_top_image_1_link": "shopify:\/\/collections\/outlet",
         "mobile_top_image_1_title": "סוף עונה",
-        "mobile_top_image_temp": "shopify:\/\/shop_images\/copy0_a41bb633-db66-4b57-8848-db338c999782.jpg",
+        "mobile_top_image_temp": "shopify:\/\/shop_images\/0_6d44e5c2-eb57-45fa-90c8-2fa702665e16.jpg",
         "mobile_top_image_temp_link": "shopify:\/\/collections\/sets",
         "mobile_top_image_temp_title": "SALE",
         "mobile_top_image_2": "shopify:\/\/shop_images\/Artboard_4_4x-100-min.jpg",
