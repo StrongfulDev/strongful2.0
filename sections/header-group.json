@@ -307,12 +307,29 @@
         "right_text": false,
         "right_copy": ""
       }
+    },
+    "1698844453e0f25aa3": {
+      "type": "apps",
+      "blocks": {
+        "b0c57d7a-a929-4637-ac13-3c17b4c5870a": {
+          "type": "shopify:\/\/apps\/we-stand-with-israel\/blocks\/israel_flag_solidarity\/0007fb1f-efa9-4a63-8caa-a89fd0a1e2ef",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "b0c57d7a-a929-4637-ac13-3c17b4c5870a"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "announcement-bar",
     "header",
     "7503b704-2110-400e-bc52-a2190d224c23",
-    "f06dd403-62fd-4002-9e0e-20caab56606e"
+    "f06dd403-62fd-4002-9e0e-20caab56606e",
+    "1698844453e0f25aa3"
   ]
 }
