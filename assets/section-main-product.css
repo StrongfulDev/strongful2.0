@@ -363,6 +363,9 @@ a.product__text {
 .product__title {
     word-break: break-word;
     margin-bottom: 1.5rem;
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
 }
 
 .product__title h1 {
@@ -1906,7 +1909,7 @@ product-info > .product__inventory {
 		margin: auto;
 	}
 
-	.product__title {
+	.product__title.fix-direction {
 		margin-top: 0;
 	}
 
@@ -1947,11 +1950,11 @@ product-info > .product__inventory {
 	}
 
 	.breadcrumbs {
-		margin: 1.2em auto 5px;
+		margin: 1.2em auto calc(var(--grid-desktop-vertical-spacing));
 		width: 100%;
 		direction: rtl;
 		position: absolute;
-		top: -4rem;
+		top: -5rem;
 	}
 
     .product.grid {
@@ -2328,3 +2331,12 @@ button.needsclick {
 /*		order: 16;*/
 /*	}*/
 /*}*/
+
+.outlet-collection-tag {
+	font-size: calc(var(--font-body-size-medium) * 0.9);
+}
+
+.outlet-collection-tag .discount-tag {
+	width: 10px;
+	height: 10px;
+}

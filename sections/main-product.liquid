@@ -133,6 +133,12 @@
                                         {{ product.title | escape }}
                                     </h2>
                                 </a>
+                                {% if product.tags contains 'outlet' or product.tags contains 'OUTLET' %}
+                                    <div class="outlet-collection-tag upper h4">
+                                        <span>{{- 'products.product.outlet' | t -}}</span>
+                                        <i>{% render 'icon-discount-tag' %}</i>
+                                    </div>
+                                {% endif %}
                             </div>
                         {%- when 'price' -%}
                             <div class="no-js-hidden" id="price-{{ section.id }}"

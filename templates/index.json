@@ -8,7 +8,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/BEST_SELLERS.1.jpg",
             "url": "shopify:\/\/collections\/best-seller-internal-use",
-            "collection_title": "BEST SELLERS"
+            "collection_title": "הכי נמכרים"
           }
         },
         "e3fb16ae-904a-453a-82b3-78589fe48600": {
@@ -16,7 +16,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/PILATES_2.jpg",
             "url": "shopify:\/\/collections\/yoga-and-pilates",
-            "collection_title": "PILATES"
+            "collection_title": "יוגה ופילאטיס"
           }
         },
         "8a5171fb-ca06-4e0e-861a-7305af42f301": {
@@ -24,7 +24,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/LEGGINGS_3.jpg",
             "url": "shopify:\/\/collections\/טייצים",
-            "collection_title": "LEGGINGS"
+            "collection_title": "טייצים"
           }
         },
         "5a2781d9-24e2-4b76-b56b-278a3d010146": {
@@ -32,7 +32,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/TOPS_4.jpg",
             "url": "shopify:\/\/collections\/טופים",
-            "collection_title": "TOPS"
+            "collection_title": "טופים"
           }
         },
         "808cdebc-72af-4f6a-85d1-a8a5130f665b": {
@@ -40,7 +40,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/NEW_5.jpg",
             "url": "shopify:\/\/collections\/new-in",
-            "collection_title": "NEW IN"
+            "collection_title": "חדש"
           }
         },
         "2731fb5f-d7bf-4146-82de-23679dd66b31": {
@@ -48,7 +48,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/ACCESSORIES_6.jpg",
             "url": "shopify:\/\/collections\/accessories",
-            "collection_title": "ACCESSORIES"
+            "collection_title": "אקססוריז"
           }
         },
         "1b2bf1cd-119b-42a3-bfe0-daa060f63526": {
@@ -56,7 +56,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/JUMPSUITS_7.jpg",
             "url": "shopify:\/\/collections\/jumpsuits",
-            "collection_title": "JUMPSUITS"
+            "collection_title": "אוברולים"
           }
         },
         "ccf69b36-ff3a-4d31-a10c-d0b9ba072029": {
@@ -64,7 +64,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/OUTLET_8.jpg",
             "url": "shopify:\/\/collections\/outlet",
-            "collection_title": "OUTLET"
+            "collection_title": "אאוטלט"
           }
         }
       },
