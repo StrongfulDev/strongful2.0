@@ -115,7 +115,7 @@
 .price__sale .price-item.price-item--sale {
     color: firebrick;
     font-weight: 600;
-    margin-right: 5px;
+    margin-left: 5px;
 }
 
 .price {
