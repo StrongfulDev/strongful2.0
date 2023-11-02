@@ -136,3 +136,17 @@
 	font-size: .8em;
 	padding: var(--grid-desktop-vertical-spacing);
 }
+
+product-info .price {
+	display: flex;
+	justify-content: end;
+	gap: var(--grid-desktop-horizontal-spacing);
+}
+
+product-info .discount-price-container {
+	margin: 0;
+}
+
+.product product-info .price__container {
+	margin: 0;
+}
