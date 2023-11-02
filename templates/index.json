@@ -3,44 +3,80 @@
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9": {
       "type": "featured-collections",
       "blocks": {
-        "808cdebc-72af-4f6a-85d1-a8a5130f665b": {
+        "d96cbf09-66fd-412d-b29f-6a0f9ff0afb8": {
           "type": "collection",
           "settings": {
-            "image": "shopify:\/\/shop_images\/NEW_IN.jpg",
-            "url": "shopify:\/\/collections\/new-in",
-            "collection_title": "NEW IN"
-          }
-        },
-        "8a5171fb-ca06-4e0e-861a-7305af42f301": {
-          "type": "collection",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/2G6A0724.jpg",
-            "url": "shopify:\/\/collections\/טייצים",
-            "collection_title": "LEGGINGS"
+            "image": "shopify:\/\/shop_images\/BEST_SELLERS.1.jpg",
+            "url": "shopify:\/\/collections\/best-seller-internal-use",
+            "collection_title": "BEST SELLERS"
           }
         },
         "e3fb16ae-904a-453a-82b3-78589fe48600": {
           "type": "collection",
           "settings": {
-            "image": "shopify:\/\/shop_images\/2G6A1061.jpg",
+            "image": "shopify:\/\/shop_images\/PILATES_2.jpg",
             "url": "shopify:\/\/collections\/yoga-and-pilates",
-            "collection_title": "YOGA"
+            "collection_title": "PILATES"
           }
         },
-        "d96cbf09-66fd-412d-b29f-6a0f9ff0afb8": {
+        "8a5171fb-ca06-4e0e-861a-7305af42f301": {
           "type": "collection",
           "settings": {
-            "image": "shopify:\/\/shop_images\/IMG_9950.jpg",
-            "url": "shopify:\/\/collections\/best-seller-internal-use",
-            "collection_title": "BEST SELLERS"
+            "image": "shopify:\/\/shop_images\/LEGGINGS_3.jpg",
+            "url": "shopify:\/\/collections\/טייצים",
+            "collection_title": "LEGGINGS"
+          }
+        },
+        "5a2781d9-24e2-4b76-b56b-278a3d010146": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/TOPS_4.jpg",
+            "url": "shopify:\/\/collections\/טופים",
+            "collection_title": "TOPS"
+          }
+        },
+        "808cdebc-72af-4f6a-85d1-a8a5130f665b": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/NEW_5.jpg",
+            "url": "shopify:\/\/collections\/new-in",
+            "collection_title": "NEW IN"
+          }
+        },
+        "2731fb5f-d7bf-4146-82de-23679dd66b31": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ACCESSORIES_6.jpg",
+            "url": "shopify:\/\/collections\/accessories",
+            "collection_title": "ACCESSORIES"
+          }
+        },
+        "1b2bf1cd-119b-42a3-bfe0-daa060f63526": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/JUMPSUITS_7.jpg",
+            "url": "shopify:\/\/collections\/jumpsuits",
+            "collection_title": "JUMPSUITS"
+          }
+        },
+        "ccf69b36-ff3a-4d31-a10c-d0b9ba072029": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/OUTLET_8.jpg",
+            "url": "shopify:\/\/collections\/outlet",
+            "collection_title": "OUTLET"
           }
         }
       },
       "block_order": [
-        "808cdebc-72af-4f6a-85d1-a8a5130f665b",
-        "8a5171fb-ca06-4e0e-861a-7305af42f301",
+        "d96cbf09-66fd-412d-b29f-6a0f9ff0afb8",
         "e3fb16ae-904a-453a-82b3-78589fe48600",
-        "d96cbf09-66fd-412d-b29f-6a0f9ff0afb8"
+        "8a5171fb-ca06-4e0e-861a-7305af42f301",
+        "5a2781d9-24e2-4b76-b56b-278a3d010146",
+        "808cdebc-72af-4f6a-85d1-a8a5130f665b",
+        "2731fb5f-d7bf-4146-82de-23679dd66b31",
+        "1b2bf1cd-119b-42a3-bfe0-daa060f63526",
+        "ccf69b36-ff3a-4d31-a10c-d0b9ba072029"
       ],
       "settings": {
         "steps": 1,
