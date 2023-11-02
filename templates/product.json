@@ -57,8 +57,8 @@
           "type": "inventory",
           "settings": {
             "text_style": "body",
-            "inventory_threshold": 20,
-            "minimum_inventory_to_show": 20,
+            "inventory_threshold": 10,
+            "minimum_inventory_to_show": 10,
             "show_inventory_quantity": true
           }
         },
