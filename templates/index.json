@@ -94,17 +94,17 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
-    "283eeea1-79f9-42c2-8f34-dccf839b470b": {
+    "cc09a920-ac4d-4b5f-b8e6-9f990778086e": {
       "type": "featured-collection",
       "settings": {
         "steps": 4,
-        "title": "WINTER ON SALE",
+        "title": "BEST SELLERS ON SALE",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "winter-on-sale",
+        "collection": "best-sellers-on-sale",
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,
@@ -133,17 +133,17 @@
         "padding_bottom": 40
       }
     },
-    "cc09a920-ac4d-4b5f-b8e6-9f990778086e": {
+    "283eeea1-79f9-42c2-8f34-dccf839b470b": {
       "type": "featured-collection",
       "settings": {
         "steps": 4,
-        "title": "BEST SELLERS ON SALE",
+        "title": "WINTER ON SALE",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "best-sellers-on-sale",
+        "collection": "winter-on-sale",
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,
@@ -371,8 +371,8 @@
   "order": [
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9",
     "bf7c8475-03e5-4509-86d8-21c4c329bb00",
-    "283eeea1-79f9-42c2-8f34-dccf839b470b",
     "cc09a920-ac4d-4b5f-b8e6-9f990778086e",
+    "283eeea1-79f9-42c2-8f34-dccf839b470b",
     "4a9c7a0e-e0ec-415d-abde-a7481cc0f7b2",
     "our_collection_list",
     "ecf1e0a5-0973-4674-ac5b-b5370ff1bae1",
