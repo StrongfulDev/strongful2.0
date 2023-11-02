@@ -24,11 +24,11 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "20% הנחה",
-            "sub_text": "על כל האתר",
+            "main_text": "NOVEMBER SALE",
+            "sub_text": "25% OFF + EXTRA 10%",
             "text_alignment": "center",
             "main_text_direction": "rtl",
-            "sub_text_direction": "rtl",
+            "sub_text_direction": "ltr",
             "link": "shopify:\/\/collections\/sets",
             "color_scheme": "accent-1"
           }
@@ -79,13 +79,13 @@
             "show_on_mobile": true,
             "order": "",
             "small_font": false,
-            "menu": "trending-third-copy-backup",
+            "menu": "trending",
             "menu_second": "",
             "menu_third": "",
             "title": "COLLECTIONS",
             "item_class": "",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/copy0_a241f1a9-a727-4fad-9124-be6cbaa2cba6.jpg",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/0_43eea7de-fd16-4c5c-9290-818be6fd830b.jpg",
             "desktop_links_image_1_link": "shopify:\/\/collections\/sets",
             "desktop_links_image_2_link": "",
             "mobile_title": "COLLECTIONS",
@@ -108,7 +108,7 @@
             "title": "סטים",
             "item_class": "סטים | SETS",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/copy0_1d6169ba-1710-4210-8c83-c8a974f7f547.jpg",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/0_da3f493e-6d4e-4734-9c4e-695a828c31f2.jpg",
             "desktop_links_image_1_link": "shopify:\/\/collections\/sets",
             "desktop_links_image_2": "shopify:\/\/shop_images\/7ff08d51abffc0cfdf69f878b50b58d6_ae3a6a1d-f65c-448b-b367-d4f4fc965355.jpg",
             "desktop_links_image_2_link": "shopify:\/\/collections\/outlet",
@@ -133,7 +133,7 @@
             "title": "טייצים",
             "item_class": "סטים | SETS",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/copy0_a241f1a9-a727-4fad-9124-be6cbaa2cba6.jpg",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/0_7a8165e8-7e7e-42e2-b712-8fe52dbc3f77.jpg",
             "desktop_links_image_1_link": "shopify:\/\/collections\/sets",
             "desktop_links_image_2_link": "",
             "mobile_title": "טייצים",
@@ -156,7 +156,7 @@
             "title": "טופים",
             "item_class": "סטים | SETS",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/copy0_a241f1a9-a727-4fad-9124-be6cbaa2cba6.jpg",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/0_7efc3f06-de47-4774-b529-c973d4f375a3.jpg",
             "desktop_links_image_1_link": "shopify:\/\/collections\/sets",
             "desktop_links_image_2_link": "",
             "mobile_title": "טופים",
@@ -179,7 +179,7 @@
             "title": "OUTLET",
             "item_class": "OUTLET",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/copy0_a241f1a9-a727-4fad-9124-be6cbaa2cba6.jpg",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/0_0a85e30a-264d-4281-aeb9-38f95dc2f8bc.jpg",
             "desktop_links_image_1_link": "shopify:\/\/collections\/sets",
             "desktop_links_image_2_link": "",
             "mobile_title": "OUTLET - UP TO 50% OFF",
@@ -202,7 +202,7 @@
             "title": "אקססוריז",
             "item_class": "סטים | SETS",
             "title_link": "קולקציית אקססוריז",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/copy0_a241f1a9-a727-4fad-9124-be6cbaa2cba6.jpg",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/0_158b2a4a-3655-4476-90ff-4105e8915efe.jpg",
             "desktop_links_image_1_link": "shopify:\/\/collections\/sets",
             "desktop_links_image_2_link": "",
             "mobile_title": "ACCESSORIES",
@@ -259,7 +259,7 @@
         "mobile_top_image_1": "shopify:\/\/shop_images\/0737a51b2679a55d45d0d8f464335044_887c3259-5dc7-4b17-ae8f-6007d372e708.jpg",
         "mobile_top_image_1_link": "shopify:\/\/collections\/outlet",
         "mobile_top_image_1_title": "סוף עונה",
-        "mobile_top_image_temp": "shopify:\/\/shop_images\/copy0_a41bb633-db66-4b57-8848-db338c999782.jpg",
+        "mobile_top_image_temp": "shopify:\/\/shop_images\/0_1.jpg",
         "mobile_top_image_temp_link": "shopify:\/\/collections\/sets",
         "mobile_top_image_temp_title": "SALE",
         "mobile_top_image_2": "shopify:\/\/shop_images\/Artboard_4_4x-100-min.jpg",
@@ -296,14 +296,14 @@
         "padding_bottom": 0
       }
     },
-    "f06dd403-62fd-4002-9e0e-20caab56606e": {
+    "3087c4ed-6422-428a-97e6-654aa0fd93c5": {
       "type": "countdown",
       "settings": {
         "show_days": false,
         "countdown_date": "",
         "countdown_url": "shopify:\/\/collections\/sets",
         "left_text": true,
-        "left_copy": "<p>  SHOP NOW   ‎‎‎ ‎‎ כל האתר ב 20% הנחה<\/p>",
+        "left_copy": "<p>10% הנחה נוספים בשימוש הקוד: EXTRA10<\/p>",
         "right_text": false,
         "right_copy": ""
       }
@@ -313,6 +313,6 @@
     "announcement-bar",
     "header",
     "7503b704-2110-400e-bc52-a2190d224c23",
-    "f06dd403-62fd-4002-9e0e-20caab56606e"
+    "3087c4ed-6422-428a-97e6-654aa0fd93c5"
   ]
 }

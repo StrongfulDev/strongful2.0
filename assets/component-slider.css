@@ -551,7 +551,7 @@ slider-component.slider-component-full-width {
     }
 
 	.featured-collection .card_banner_text {
-		font-size: calc(var(--font-body-size-medium) * 0.8);
+		font-size: calc(var(--font-body-size-medium) * 0.7);
 	}
 
 	.featured-collection .rect-discount-tag {

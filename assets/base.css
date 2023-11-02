@@ -4259,3 +4259,9 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 	vertical-align: middle;
 	width: 0.2em;
 }
+
+.israel-solidarity-flag-container {
+	position: relative;
+	right: var(--grid-mobile-vertical-spacing);
+	top: 1px;
+}

@@ -30,7 +30,7 @@
     {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
     {{ 'component-model-switcher.css' | asset_url | stylesheet_tag }}
     <script src="{{ 'component-swiper.js' | asset_url }}" defer="defer" async="async"></script>
-    <script src="{{ 'component-model-switcher.js' | asset_url }}" defer="defer" async="async"></script>
+    {{ 'component-model-switcher.js' | asset_url | script_tag }}
 
     {% unless product.tags contains 'noSimilar' %}
         {{ 'component-similar-items.js' | asset_url | script_tag }}
@@ -133,6 +133,12 @@
                                         {{ product.title | escape }}
                                     </h2>
                                 </a>
+                                {% if product.tags contains 'outlet' or product.tags contains 'OUTLET' %}
+                                    <div class="outlet-collection-tag upper h4">
+                                        <span>{{- 'products.product.outlet' | t -}}</span>
+                                        <i>{% render 'icon-discount-tag' %}</i>
+                                    </div>
+                                {% endif %}
                             </div>
                         {%- when 'price' -%}
                             <div class="no-js-hidden" id="price-{{ section.id }}"

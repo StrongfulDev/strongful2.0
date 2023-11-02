@@ -18,7 +18,6 @@
     endif
 %}
 
-{% comment %}
 {% if product.tags contains announcement_tag %}
     <div class="sale-banner-product-page fix-direction">
         {% if customer %}
@@ -34,8 +33,8 @@
         {% endif %}
     </div>
 {% endif %}
-{% endcomment %}
 
+{% comment %}
 {% if product.tags contains announcement_tag or product.tags contains 'outlet' or product.tags contains 'OUTLET' %}
     <div class="sale-banner-product-page fix-direction">
         {% if product.tags contains 'outlet' or product.tags contains 'OUTLET' %}
@@ -51,3 +50,4 @@
         {% endif %}
     </div>
 {% endif %}
+    {% endcomment %}

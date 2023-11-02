@@ -3,44 +3,80 @@
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9": {
       "type": "featured-collections",
       "blocks": {
-        "808cdebc-72af-4f6a-85d1-a8a5130f665b": {
+        "d96cbf09-66fd-412d-b29f-6a0f9ff0afb8": {
           "type": "collection",
           "settings": {
-            "image": "shopify:\/\/shop_images\/NEW_IN.jpg",
-            "url": "shopify:\/\/collections\/new-in",
-            "collection_title": "NEW IN"
-          }
-        },
-        "8a5171fb-ca06-4e0e-861a-7305af42f301": {
-          "type": "collection",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/2G6A0724.jpg",
-            "url": "shopify:\/\/collections\/טייצים",
-            "collection_title": "LEGGINGS"
+            "image": "shopify:\/\/shop_images\/BEST_SELLERS.1.jpg",
+            "url": "shopify:\/\/collections\/best-seller-internal-use",
+            "collection_title": "הכי נמכרים"
           }
         },
         "e3fb16ae-904a-453a-82b3-78589fe48600": {
           "type": "collection",
           "settings": {
-            "image": "shopify:\/\/shop_images\/2G6A1061.jpg",
+            "image": "shopify:\/\/shop_images\/PILATES_2.jpg",
             "url": "shopify:\/\/collections\/yoga-and-pilates",
-            "collection_title": "YOGA"
+            "collection_title": "יוגה ופילאטיס"
           }
         },
-        "d96cbf09-66fd-412d-b29f-6a0f9ff0afb8": {
+        "8a5171fb-ca06-4e0e-861a-7305af42f301": {
           "type": "collection",
           "settings": {
-            "image": "shopify:\/\/shop_images\/IMG_9950.jpg",
-            "url": "shopify:\/\/collections\/best-seller-internal-use",
-            "collection_title": "BEST SELLERS"
+            "image": "shopify:\/\/shop_images\/LEGGINGS_3.jpg",
+            "url": "shopify:\/\/collections\/טייצים",
+            "collection_title": "טייצים"
+          }
+        },
+        "5a2781d9-24e2-4b76-b56b-278a3d010146": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/TOPS_4.jpg",
+            "url": "shopify:\/\/collections\/טופים",
+            "collection_title": "טופים"
+          }
+        },
+        "808cdebc-72af-4f6a-85d1-a8a5130f665b": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/NEW_5.jpg",
+            "url": "shopify:\/\/collections\/new-in",
+            "collection_title": "חדש"
+          }
+        },
+        "2731fb5f-d7bf-4146-82de-23679dd66b31": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ACCESSORIES_6.jpg",
+            "url": "shopify:\/\/collections\/accessories",
+            "collection_title": "אקססוריז"
+          }
+        },
+        "1b2bf1cd-119b-42a3-bfe0-daa060f63526": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/JUMPSUITS_7.jpg",
+            "url": "shopify:\/\/collections\/jumpsuits",
+            "collection_title": "אוברולים"
+          }
+        },
+        "ccf69b36-ff3a-4d31-a10c-d0b9ba072029": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/OUTLET_8.jpg",
+            "url": "shopify:\/\/collections\/outlet",
+            "collection_title": "אאוטלט"
           }
         }
       },
       "block_order": [
-        "808cdebc-72af-4f6a-85d1-a8a5130f665b",
-        "8a5171fb-ca06-4e0e-861a-7305af42f301",
+        "d96cbf09-66fd-412d-b29f-6a0f9ff0afb8",
         "e3fb16ae-904a-453a-82b3-78589fe48600",
-        "d96cbf09-66fd-412d-b29f-6a0f9ff0afb8"
+        "8a5171fb-ca06-4e0e-861a-7305af42f301",
+        "5a2781d9-24e2-4b76-b56b-278a3d010146",
+        "808cdebc-72af-4f6a-85d1-a8a5130f665b",
+        "2731fb5f-d7bf-4146-82de-23679dd66b31",
+        "1b2bf1cd-119b-42a3-bfe0-daa060f63526",
+        "ccf69b36-ff3a-4d31-a10c-d0b9ba072029"
       ],
       "settings": {
         "steps": 1,
@@ -63,8 +99,8 @@
         "b43423be-0745-47c7-be6a-84d0ee24d128": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/copy0_7931438d-b310-4670-ac3b-c8f9746a9e57.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/copy0_f9b30958-1a19-4f32-9859-829247703c06.jpg",
+            "image": "shopify:\/\/shop_images\/0_8e578d37-b3ae-4e5e-997a-33794c27d5f6.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Artboard_1_copy_20.jpg",
             "heading": "",
             "whole_slide_link": "shopify:\/\/collections\/sets",
             "heading_size": "h1",
@@ -94,17 +130,17 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
-    "283eeea1-79f9-42c2-8f34-dccf839b470b": {
+    "cc09a920-ac4d-4b5f-b8e6-9f990778086e": {
       "type": "featured-collection",
       "settings": {
         "steps": 4,
-        "title": "WINTER ON SALE",
+        "title": "BEST SELLERS ON SALE",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "winter-on-sale",
+        "collection": "best-sellers-on-sale",
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,
@@ -133,17 +169,17 @@
         "padding_bottom": 40
       }
     },
-    "cc09a920-ac4d-4b5f-b8e6-9f990778086e": {
+    "283eeea1-79f9-42c2-8f34-dccf839b470b": {
       "type": "featured-collection",
       "settings": {
         "steps": 4,
-        "title": "BEST SELLERS ON SALE",
+        "title": "WINTER ON SALE",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "best-sellers-on-sale",
+        "collection": "winter-on-sale",
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,
@@ -217,8 +253,8 @@
         "dfad4ec5-c40b-4feb-90a9-341da374970d": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/copy0_a41bb633-db66-4b57-8848-db338c999782.jpg",
-            "alt": "20% off sale",
+            "image": "shopify:\/\/shop_images\/0_1_faa60998-f5be-42a7-8824-796b211e1012.jpg",
+            "alt": "SHOPPING IL BANNER",
             "link": "SALE",
             "url": "shopify:\/\/collections\/sets",
             "show_on_desktop": true
@@ -371,8 +407,8 @@
   "order": [
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9",
     "bf7c8475-03e5-4509-86d8-21c4c329bb00",
-    "283eeea1-79f9-42c2-8f34-dccf839b470b",
     "cc09a920-ac4d-4b5f-b8e6-9f990778086e",
+    "283eeea1-79f9-42c2-8f34-dccf839b470b",
     "4a9c7a0e-e0ec-415d-abde-a7481cc0f7b2",
     "our_collection_list",
     "ecf1e0a5-0973-4674-ac5b-b5370ff1bae1",
