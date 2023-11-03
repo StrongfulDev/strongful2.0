@@ -377,7 +377,7 @@
       {% assign isLiveTheme = 'true' %}
   {% endif %}
 
-<body class="gradient {{ isLiveTheme }}" id="{{ template.name }}">
+<body class="gradient {{ isLiveTheme }} {{ template.suffix }}" id="{{ template.name }}">
 
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NS9ZW7H"
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

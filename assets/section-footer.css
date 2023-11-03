@@ -1032,5 +1032,10 @@ noscript .localization-selector.link {
 		padding: 2rem 0;
 	}
 
+	.footer__content-top.page-width {
+		max-width: var(--page-width);
+		padding: 0 5rem;
+	}
+
 }
 
