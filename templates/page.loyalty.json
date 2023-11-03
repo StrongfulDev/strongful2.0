@@ -27,6 +27,15 @@
         "padding_bottom": 0
       }
     },
+    "a735941f-e503-4200-b424-344dca33e5f2": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"yotpo-widget-instance\" data-yotpo-instance-id=\"531596\"><\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "cc6e6a8f-6d9c-4f3b-ba05-863a3d2d9407": {
       "type": "rich-text",
       "blocks": {
@@ -192,6 +201,7 @@
     "1f16aafe-142c-4069-baeb-0e1b18033b04",
     "da8e932a-fd54-4625-8837-fd8fcd3f5543",
     "0706a6dd-bd0b-4834-b2d3-5a5161da1115",
+    "a735941f-e503-4200-b424-344dca33e5f2",
     "cc6e6a8f-6d9c-4f3b-ba05-863a3d2d9407",
     "352fb3a1-66f8-47e2-a6cb-b7199588ec07",
     "ba0b3320-1ac5-4b54-9053-ab41128e3e2b",
