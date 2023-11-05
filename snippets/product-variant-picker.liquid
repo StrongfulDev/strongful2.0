@@ -73,11 +73,12 @@
 
 {%- unless product.has_only_default_variant -%}
   {%- if block.settings.picker_type == 'button' -%}
+      {% assign newProductUrl = product.url | within: collection %}
     <variant-radios
       id="variant-radios-{{ section.id }}"
       class="no-js-hidden"
       data-section="{{ section.id }}"
-      data-url="{{ product.url }}"
+      data-url="{{ newProductUrl }}"
       {% if update_url == false %}
         data-update-url="false"
       {% endif %}

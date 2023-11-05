@@ -79,7 +79,7 @@
                 >
                     {%- if card_product.featured_media -%}
                         <div class="card__media">
-                            <a href="{{ card_product.url }}">
+                            <a href="{{ card_product.url }}?color={{ colorName }}">
                                 {% unless card_product.tags contains 'plusSizeProduct' %}
                                     <div class="media media--transparent media--hover-effect">
                                         {% if image_count <= 2 or true -%}
@@ -191,7 +191,7 @@
                                     {% endif %}
                             >
                                 <a
-                                        href="{{ card_product.url }}"
+                                        href="{{ card_product.url }}?color={{ colorName }}"
                                         id="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }}"
                                         class="full-unstyled-link pointer"
                                         aria-labelledby="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }} NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
@@ -299,7 +299,7 @@
                         >
                             {% if template.name == 'collection' %}
                                 <a
-                                        href="/collections/{{ collection.handle }}{{ card_product.url }}"
+                                        href="/collections/{{ collection.handle }}{{ card_product.url }}?color={{ colorName }}"
                                         id="CardLink-{{ section_id }}-{{ card_product.id }}"
                                         class="full-unstyled-link pointer fix-direction"
                                         aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}"
@@ -308,7 +308,7 @@
                                 </a>
                             {% else %}
                                 <a
-                                        href="{{ card_product.url }}"
+                                        href="{{ card_product.url }}?color={{ colorName }}"
                                         id="CardLink-{{ section_id }}-{{ card_product.id }}"
                                         class="full-unstyled-link pointer fix-direction"
                                         aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}"
@@ -320,7 +320,7 @@
                         <div class="card-information">
                             {%- if show_vendor -%}
                                 <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
-                                <div class="h3 light">{{ card_product.vendor }}</div>
+                                <div class="h3 light">{{ colorName }}</div>
                             {%- endif -%}
 
                             <span class="caption-large light">{{ block.settings.description | escape }}</span>

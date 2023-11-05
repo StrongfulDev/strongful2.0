@@ -964,7 +964,7 @@ class VariantSelects extends HTMLElement {
       this.setUnavailable();
     } else {
 			this.updateMedia();
-      this.updateURL();
+      this.updateURL(event);
       this.updateVariantInput();
       this.renderProductInfo();
       this.updateShareUrl();
@@ -1015,9 +1015,12 @@ class VariantSelects extends HTMLElement {
     modalContent.prepend(newMediaModal);
   }
 
-  updateURL() {
+  updateURL(event) {
     if (!this.currentVariant || this.dataset.updateUrl === 'false') return;
-    window.history.replaceState({ }, '', `${this.dataset.url}?variant=${this.currentVariant.id}`);
+    let colorName = event.target.value;
+    console.log(colorName);
+    console.log(this.dataset.url);
+    window.history.replaceState({ }, '', `${this.dataset.url}?color=${colorName}&variant=${this.currentVariant.id}`);
   }
 
   updateShareUrl() {
@@ -1251,31 +1254,31 @@ function removeDeadProduct() {
 	});
 }
 
-window.addEventListener("beforeunload", function(event) {
-	localStorage.setItem("content", contentToRender.innerHTML);
-	localStorage.setItem("collectionHandle", window.location.href.split('collections/')[1]);
-});
+// window.addEventListener("beforeunload", function(event) {
+// 	localStorage.setItem("content", contentToRender.innerHTML);
+// 	localStorage.setItem("collectionHandle", window.location.href.split('collections/')[1]);
+// });
 
 // check if on collection page
-if (contentToRender !== null) {
-
-	let previousCollectionHandle = localStorage.getItem("collectionHandle");
-
-	let currentURL = window.location.href;
-	let splitURL = currentURL.split("collections/");
-	let collectionHandle = splitURL[1];
-
-	console.log(collectionHandle);
-	console.log(previousCollectionHandle);
-
-	// set the HTML to the stored HTML
-	let updatedContent = localStorage.getItem("content");
-
-	// if there is stored HTML, update the page
-	if (updatedContent !== null && collectionHandle === previousCollectionHandle) {
-		contentToRender.innerHTML = updatedContent;
-	}
-}
+// if (contentToRender !== null) {
+//
+// 	let previousCollectionHandle = localStorage.getItem("collectionHandle");
+//
+// 	let currentURL = window.location.href;
+// 	let splitURL = currentURL.split("collections/");
+// 	let collectionHandle = splitURL[1];
+//
+// 	console.log(collectionHandle);
+// 	console.log(previousCollectionHandle);
+//
+// 	// set the HTML to the stored HTML
+// 	let updatedContent = localStorage.getItem("content");
+//
+// 	// if there is stored HTML, update the page
+// 	if (updatedContent !== null && collectionHandle === previousCollectionHandle) {
+// 		contentToRender.innerHTML = updatedContent;
+// 	}
+// }
 
 function USSizeHelper(nodeList) {
   nodeList.forEach((childNode) => {
@@ -1422,7 +1425,7 @@ window.addEventListener('DOMContentLoaded', function(event) {
 
 	removeDeadProduct();
 
-	$(".loader-wrapper").delay().fadeOut("slow");
+	$(".loader-wrapper").delay(2000).fadeOut("slow");
 
 	let headerOverlay = $('.header-overlay');
 	let menuDrawer = document.querySelector('header-drawer');
@@ -1525,6 +1528,15 @@ window.addEventListener('DOMContentLoaded', function(event) {
 		const color = swatch.dataset.color;
 		swatch.style.backgroundColor = colorDictionary[color];
 	});
+
+  // Your URL
+  const productURL = window.location.href;
+  const parsedUrl = new URL(productURL);
+  const params = new URLSearchParams(parsedUrl.search);
+  const colorValue = params.get('color');
+  console.log(colorValue);
+
+  $(`input[type="radio"][value="${colorValue}"]`).prop('checked', true);
 
 });
 
