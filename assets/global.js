@@ -1249,6 +1249,62 @@ function removeDeadProduct() {
 
 window.addEventListener('DOMContentLoaded', function(event) {
 
+  // ReturnGo functions
+
+  if (window.location.href.includes('a/return')) {
+
+    // Select the node that will be observed for mutations
+    const targetNode = document.body; // You can choose a more specific parent if you want
+
+// Options for the observer (which mutations to observe)
+    const config = { childList: true, subtree: true };
+
+// Callback function to execute when mutations are observed
+    const callback = function(mutationsList, observer) {
+      for(let mutation of mutationsList) {
+        if (mutation.type === 'childList') {
+          const element = document.querySelector('.ReturnGO_ShadowedBlock-module_shadowedBlock');
+          if (element) {
+            // Now we have the element, stop watching for mutations
+            observer.disconnect();
+
+            // Create an IntersectionObserver to observe this element
+            const intersectionObserver = new IntersectionObserver(entries => {
+              entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                  console.log(element);
+
+                  // Do something with the element
+                  const returnLink = document.createElement('a');
+                  returnLink.classList.add('return-policy-link');
+                  returnLink.href = '/blogs/policies/החזרות-והחלפות#doarIsrael';
+                  returnLink.innerText = 'החזרה חינם דרך דואר ישראל';
+                  element.appendChild(returnLink);
+
+
+                  // Optionally, stop observing if it's a one-time thing
+                  intersectionObserver.unobserve(element);
+                }
+              });
+            });
+
+            // Start observing
+            intersectionObserver.observe(element);
+          }
+        }
+      }
+    };
+
+// Create an instance of MutationObserver with the callback
+    const mutationObserver = new MutationObserver(callback);
+
+// Start observing the target node for configured mutations
+    mutationObserver.observe(targetNode, config);
+
+  }
+
+  // ReturnGo functions end
+
 	// account modal code start here
 
 	const listItem = $(".multicolumn-list__item");
