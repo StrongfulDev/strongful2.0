@@ -19,7 +19,7 @@
         locale: "{{localization.language.iso_code}}",
         operatedCountries: ["AW"],
         allowedCountries: [{% for country in localization.available_countries %}{ code: '{{ country.iso_code }}', name: '{{ country.name }}' }, {% endfor %}],
-        c1Enabled:"False",
+        c1Enabled:"true",
         siteId: "7ce243a1e1a2",
         isTokenEnabled: "true",
 };
