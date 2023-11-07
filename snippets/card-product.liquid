@@ -262,6 +262,8 @@
                     <div class="card__information {{ custom_collection_second_announcement }}">
                         {% if card_product.tags contains announcement_tag and card_banner_text != blank %}
                             <span class="card_banner_text fix-direction color-background-2">{{ card_banner_text }}</span>
+                        {% elsif card_product.tags contains second_announcement_tag and custom_collection_second_announcement != blank %}
+                            <span class="card_banner_text fix-direction color-background-2">{{ custom_collection_second_announcement }}</span>
                         {% endif %}
                         {% if card_product.compare_at_price > card_product.price %}
                             <div class="discount-price-container">
