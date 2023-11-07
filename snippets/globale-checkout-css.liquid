@@ -1,0 +1,23 @@
+
+{% assign tagsToCheck = "" | downcase | split: "," %}
+{% assign checkout_customer_tags = checkout.customer.tags | downcase %}
+{% assign found = false %}
+{% for item in tagsToCheck %}
+  {% if checkout_customer_tags contains item %}
+    {% assign found = true %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+{% if found %}
+{% else %}
+    {% if checkout.shipping_address.country_code != blank %}    
+        {% assign shipping_country_code = checkout.shipping_address.country_code %}  
+    {% else if checkout.billing_address.country_code != blank %}    
+        {% assign shipping_country_code = checkout.billing_address.country_code %}  
+    {% else %}    
+        {% assign shipping_country_code =  localization.country.iso_code %}  
+    {% endif %}  
+
+    <link rel="stylesheet" type="text/css" href="https://crossborder-integration.global-e.com/resources/css/10001652/{{shipping_country_code}}"/>
+    <link rel="stylesheet" type="text/css" href="https://web.global-e.com/platforms/shopify/checkout/styles/10001652/{{shipping_country_code}}"/>
+{% endif %}
