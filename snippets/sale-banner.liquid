@@ -18,6 +18,7 @@
     endif
 %}
 
+{% comment %}
 {% if product.tags contains announcement_tag %}
     <div class="sale-banner-product-page fix-direction">
         {% if customer %}
@@ -33,11 +34,11 @@
         {% endif %}
     </div>
 {% endif %}
+{% endcomment %}
 
-{% comment %}
 {% if product.tags contains announcement_tag or product.tags contains 'outlet' or product.tags contains 'OUTLET' %}
     <div class="sale-banner-product-page fix-direction">
-        {% if product.tags contains 'outlet' or product.tags contains 'OUTLET' %}
+        {% if product.tags contains 'outlet' or product.tags contains 'OUTLET' or product.tags contains 'noDiscount' %}
             <p>{{ block.settings.logged_in_text | newline_to_br }}</p>
         {% else %}
             <p>{{ block.settings.logged_out_text | newline_to_br }}</p>
@@ -50,4 +51,3 @@
         {% endif %}
     </div>
 {% endif %}
-    {% endcomment %}
