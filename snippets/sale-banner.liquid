@@ -36,9 +36,9 @@
 {% endif %}
 {% endcomment %}
 
-{% if product.tags contains announcement_tag or product.tags contains 'outlet' or product.tags contains 'OUTLET' %}
+{% if product.tags contains announcement_tag or product.tags contains settings.second_announcement_tag %}
     <div class="sale-banner-product-page fix-direction">
-        {% if product.tags contains 'outlet' or product.tags contains 'OUTLET' or product.tags contains 'noDiscount' %}
+        {% if product.tags contains settings.second_announcement_tag %}
             <p>{{ block.settings.logged_in_text | newline_to_br }}</p>
         {% else %}
             <p>{{ block.settings.logged_out_text | newline_to_br }}</p>
