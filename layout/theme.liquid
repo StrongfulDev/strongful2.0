@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>
-{% include 'visually_io_sdk' %}
+
 
       <!-- Google Tag Manager -->
       <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -535,6 +535,7 @@
             assign customerPhone = customerPhone | remove_first: '0' | prepend: '972'
         endunless
     %}
+
     <script>
         var widgetOptions = {
             apiKey: "92452e08-8c79-4223-8094-082f06f67b6a",

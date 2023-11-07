@@ -3561,6 +3561,19 @@ body:not(.enable-toolbar-RTL) #enable-reader, body:not(.enable-toolbar-RTL) #ena
 
 /*   ReturnGO Styling start     */
 
+.return-policy-link {
+    margin-inline-start: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    opacity: 0.8;
+    color: #242B33;
+    text-decoration: none;
+}
+
+.return-policy-link:not(:first-of-type) {
+    display: none;
+}
+
 #ReturngoPortalEmbedding, #ReturngoPortalEmbedding div {
 	direction: rtl !important;
 }
