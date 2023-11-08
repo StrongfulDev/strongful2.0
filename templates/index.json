@@ -210,6 +210,7 @@
     },
     "4a9c7a0e-e0ec-415d-abde-a7481cc0f7b2": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "steps": 4,
         "title": "BACK IN STOCK ON SALE",
