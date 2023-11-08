@@ -1266,7 +1266,7 @@ window.addEventListener('DOMContentLoaded', function(event) {
           const element = document.querySelector('.ReturnGO_ShadowedBlock-module_shadowedBlock');
           if (element) {
             // Now we have the element, stop watching for mutations
-            // observer.disconnect();
+            observer.disconnect();
 
             // Create an IntersectionObserver to observe this element
             const intersectionObserver = new IntersectionObserver(entries => {
