@@ -57,7 +57,7 @@
         "show_secondary_image": true,
         "show_vendor": true,
         "show_rating": false,
-        "enable_quick_add": true,
+        "enable_quick_add": false,
         "quick_add_type": "button",
         "quick_add_type_mobile": "button",
         "quick_add_text": "Quick Add",
