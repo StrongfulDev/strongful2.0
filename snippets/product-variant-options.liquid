@@ -91,11 +91,7 @@
                     data-variant-id="{{ variant_id }}"
                     {% if option.name == 'Size' %}
                         {% if value == 'XS' %}
-                            checked
-                        {% endif %}
-                        {% else %}
-                        {% if forloop.first %}
-                            checked
+                            checked="checked"
                         {% endif %}
                     {% endif %}
                     {% if members_only and product.tags contains announcement_tag %}

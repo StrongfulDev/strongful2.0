@@ -989,25 +989,26 @@ class VariantSelects extends HTMLElement {
 
   updateMedia() {
     if (!this.currentVariant) return;
-    // if (!this.currentVariant.featured_media) return;
 	  if (!this.currentVariant.option2) return;
 
 		let desiredSize = $('input[name="Size"]:checked').data("front-value");
+    let desiredColor = $('input[name="Color"]:checked').val();
+    console.log(desiredColor);
 
     // const mediaGalleries = $(`[id^="MediaGallery-${this.dataset.section}"]`);
 		const mediaGallerySizeItemsToHide = $(document).find(`.product__media-item:not([data-model-size="${desiredSize}"])`);
 	  const mediaGalleryColorItemsToHide = $(document).find(`.product__media-item:not([data-alt="${this.currentVariant.option2}"])`);
 		const mediaGalleryListItemsToShow = $(document).find(`.product__media-item[data-alt="${this.currentVariant.option2}"][data-model-size="${desiredSize}"]`);
 
-		const modelSwitcherColorItemsToHide = $(document).find(`.model-switcher__image:not([data-alt="${this.currentVariant.option2}"])`);
-		const modelSwitcherColorItemsToShow = $(document).find(`.model-switcher__image[data-alt="${this.currentVariant.option2}"]`);
+		const modelSwitcherColorItemsToHide = $(document).find(`.model-switcher__image:not([data-alt="${desiredColor}"])`);
+		const modelSwitcherColorItemsToShow = $(document).find(`.model-switcher__image[data-alt="${desiredColor}"]`);
 
 	  mediaGallerySizeItemsToHide.addClass('hidden');
 	  mediaGalleryColorItemsToHide.addClass('hidden');
 		mediaGalleryListItemsToShow.removeClass('hidden');
 		modelSwitcherColorItemsToHide.addClass('hidden');
 		modelSwitcherColorItemsToShow.removeClass('hidden');
-	  modelSwitcherColorItemsToShow.eq(0).addClass('higher-index');
+	  // modelSwitcherColorItemsToShow.eq(0).addClass('higher-index');
 
     const modalContent = document.querySelector(`#ProductModal-${this.dataset.section} .product-media-modal__content`);
     if (!modalContent) return;
@@ -1017,10 +1018,13 @@ class VariantSelects extends HTMLElement {
 
   updateURL(event) {
     if (!this.currentVariant || this.dataset.updateUrl === 'false') return;
-    let colorName = event.target.value;
-    console.log(colorName);
-    console.log(this.dataset.url);
-    window.history.replaceState({ }, '', `${this.dataset.url}?color=${colorName}&variant=${this.currentVariant.id}`);
+    console.log(event.target.getAttribute('name'));
+    if (event.target.getAttribute('name') === 'Color') {
+      let colorName = event.target.value;
+      window.history.replaceState({ }, '', `${this.dataset.url}?color=${colorName}&variant=${this.currentVariant.id}`);
+    } else {
+      window.history.replaceState({ }, '', `${this.dataset.url}?variant=${this.currentVariant.id}`);
+    }
   }
 
   updateShareUrl() {
@@ -1159,11 +1163,6 @@ class VariantSelects extends HTMLElement {
     this.variantData = this.variantData || JSON.parse(this.querySelector('[type="application/json"]').textContent);
     return this.variantData;
   }
-
-	// getProductData() {
-  //     this.productData = this.productData || JSON.parse(this.querySelectorAll('[type="application/json"]')[1].textContent);
-  //     return this.productData;
-	// }
 }
 
 customElements.define('variant-selects', VariantSelects);
@@ -1462,13 +1461,6 @@ window.addEventListener('DOMContentLoaded', function(event) {
 	enableToolbarButton.appendChild(pill);
 	enableToolbarButton.appendChild(pillBorder);
 
-	let checkedColorValue = $(".color-swatch-button input:checked").val();
-	let modelSwitcherColorImagesToHide = $(document).find(`.model-switcher__image:not([data-alt="${checkedColorValue}"])`);
-	let modelSwitcherColorImagesToShow = $(document).find(`.model-switcher__image[data-alt="${checkedColorValue}"]`);
-
-	modelSwitcherColorImagesToHide.addClass('hidden');
-	modelSwitcherColorImagesToShow.removeClass('hidden');
-
 	const colorDictionary = {
 		"Black": "black",
 		"Black Gray": "Gray",
@@ -1537,6 +1529,13 @@ window.addEventListener('DOMContentLoaded', function(event) {
   console.log(colorValue);
 
   $(`input[type="radio"][value="${colorValue}"]`).prop('checked', true);
+
+  let checkedColorValue = $(".color-swatch-button input:checked").val();
+  let modelSwitcherColorImagesToHide = $(document).find(`.model-switcher__image:not([data-alt="${checkedColorValue}"])`);
+  let modelSwitcherColorImagesToShow = $(document).find(`.model-switcher__image[data-alt="${checkedColorValue}"]`);
+
+  modelSwitcherColorImagesToHide.addClass('hidden');
+  modelSwitcherColorImagesToShow.removeClass('hidden');
 
 });
 
