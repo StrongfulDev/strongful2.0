@@ -3641,7 +3641,6 @@ body:not(.enable-toolbar-RTL) #enable-reader, body:not(.enable-toolbar-RTL) #ena
 
 .ReturnGO_ButtonContainer-module_buttonContainer {
 	flex-direction: column-reverse !important;
-
 }
 
 #ReturngoPortalEmbedding {
@@ -3686,10 +3685,7 @@ body:not(.enable-toolbar-RTL) #enable-reader, body:not(.enable-toolbar-RTL) #ena
 }
 
 .ReturnGO_ReturnItemProposition-module_radioContent {
-	padding: 15px 15px 180px 15px !important;
-	order: 2 !important;
-	position: relative;
-	pointer-events: none !important;
+
 }
 
 label .ReturnGO_ReturnItemProposition-module_open, .ReturnGO_ReturnItemProposition-module_costs {
@@ -3710,30 +3706,6 @@ label .ReturnGO_ReturnItemProposition-module_open, .ReturnGO_ReturnItemPropositi
 	font-size: 1em !important;
 }
 
-/*     here */
-
-.ReturnGO_ReturnItemProposition-module_radioContent::after {
-	content: 'במידה ותצטרכי להוסיף תשלום עבור החלפה - דרישת תשלום מפורטת תישלח אלייך במייל';
-	pointer-events: none !important;
-	position: absolute;
-	display: block;
-	visibility: visible;
-	right: 15px;
-	top: 3em;
-	font-size: .7em;
-}
-
-.ReturnGO_ReturnItemProposition-module_radioContent::before {
-	content: 'במידה ותהיי זכאית לזיכוי בעקבות הפרשי מחירים בהחלפתך - יישלח במייל גיפט קארד לאחר אישור בקשת החלפתך';
-	pointer-events: none !important;
-	position: absolute;
-	display: block;
-	visibility: visible;
-	right: 15px;
-	top: 7em;
-	font-size: .7em;
-}
-
 .ReturnGO_ReturnItemProposition-module_costs {
 	position: relative !important;
 	width: 100% !important;
@@ -3744,46 +3716,8 @@ label .ReturnGO_ReturnItemProposition-module_open, .ReturnGO_ReturnItemPropositi
 	direction: rtl !important;
 }
 
-.ReturnGO_ReturnItemProposition-module_costs::before {
-	content: 'במידה וביקשת החזרה עם שליח לצורך זיכוי כספי - הזיכוי יתבצע בניכוי 5% כחוק, לאמצעי התשלום ממנו ביצעת את ההזמנה';
-	pointer-events: none !important;
-	position: absolute;
-	display: block;
-	visibility: visible;
-	right: 0;
-	top: 11em;
-	font-size: .7em;
-	color: #242b33cc;
-}
-
-.ReturnGO_ReturnItemProposition-module_shipping {
-	order: 1 !important;
-}
-
-.ReturnGO_ReturnItemProposition-module_description {
-	order: 3 !important;
-}
-
 #returnGoAssistant .rtl .ReturnGO_ReturnItemProposition-module_returnItemProposition .ReturnGO_ReturnItemProposition-module_content .ReturnGO_ReturnItemProposition-module_solution .ReturnGO_ReturnItemProposition-module_offers .ReturnGO_ReturnItemProposition-module_radio .ReturnGO_ReturnItemProposition-module_radioContent .ReturnGO_ReturnItemProposition-module_costs, #returnGoCartWidget .rtl .ReturnGO_ReturnItemProposition-module_returnItemProposition .ReturnGO_ReturnItemProposition-module_content .ReturnGO_ReturnItemProposition-module_solution .ReturnGO_ReturnItemProposition-module_offers .ReturnGO_ReturnItemProposition-module_radio .ReturnGO_ReturnItemProposition-module_radioContent .ReturnGO_ReturnItemProposition-module_costs, #returnGoAccountWidget .rtl .ReturnGO_ReturnItemProposition-module_returnItemProposition .ReturnGO_ReturnItemProposition-module_content .ReturnGO_ReturnItemProposition-module_solution .ReturnGO_ReturnItemProposition-module_offers .ReturnGO_ReturnItemProposition-module_radio .ReturnGO_ReturnItemProposition-module_radioContent .ReturnGO_ReturnItemProposition-module_costs {
 	padding-top: 0 !important;
-}
-
-
-.ReturnGO_ReturnItemProposition-module_description .ReturnGO_Text-module_text.ReturnGO_Text-module_light.ReturnGO_Text-module_sm.ReturnGO_Text-module_normal:nth-child(2) span {
-	position: relative !important;
-	visibility: hidden !important;
-	display: block !important;
-	width: 100%;
-}
-
-.ReturnGO_ReturnItemProposition-module_description .ReturnGO_Text-module_text.ReturnGO_Text-module_light.ReturnGO_Text-module_sm.ReturnGO_Text-module_normal:nth-child(2) span::after {
-	visibility: visible !important;
-	width: 100%;
-	display: block !important;
-	content: 'שליח עד הבית (1-5 ימי עסקים)';
-	position: absolute !important;
-	top: 0 !important;
-	right: 0 !important;
 }
 
 .ReturnGO_ReturnItemProposition-module_taxDisclaimer:last-child p span {
@@ -3793,14 +3727,12 @@ label .ReturnGO_ReturnItemProposition-module_open, .ReturnGO_ReturnItemPropositi
 	width: 100%;
 }
 
-.ReturnGO_ReturnItemProposition-module_taxDisclaimer:last-child p span::after {
-	visibility: visible !important;
-	width: 100%;
-	display: block !important;
-	content: 'החלפה ראשונה חינם בכל הזמנה, במידה ויידרשו עלויות נוספות, עם אישור ההחלפה יישלח מייל עם דרישת תשלום.';
-	position: absolute !important;
-	top: 0 !important;
-	right: 0 !important;
+.ReturnGO_ReturnItemProposition-module_description {
+    max-height: fit-content !important;
+}
+
+.ReturnGO_ReturnItemProposition-module_description > p:not(:nth-child(4)) {
+    display: none !important;
 }
 
 /*      .ReturnGO_ReturnItemProposition-module_legend    */
@@ -3836,18 +3768,6 @@ label .ReturnGO_ReturnItemProposition-module_open, .ReturnGO_ReturnItemPropositi
 	position: relative;
 }
 
-.ReturnGO_UploadImages-module_uploadImages::after {
-	position: absolute;
-	bottom: -1.5em;
-	visibility: visible;
-	display: block;
-	transform: translateX(50%);
-	content: 'תמונה לא ברורה עלולה לגרום לדחיית הבקשה';
-	text-align: center;
-	right: 50%;
-	width: max-content;
-}
-
 #returnGoAssistant .rtl .ReturnGO_ItemContent-module_badge.ReturnGO_ItemContent-module_returned {
 	background: #000 !important;
 }
@@ -3877,11 +3797,6 @@ label .ReturnGO_ReturnItemProposition-module_open, .ReturnGO_ReturnItemPropositi
 	padding-top: 30px !important;
 }
 
-
-/*.ReturnGO_CheckBox-module_checkBox.ReturnGO_CheckBox-module_disabled.ReturnGO_CheckBox-module_shadowed {*/
-/*    display: none !important;*/
-/*}*/
-
 #returnGoAccountWidget {
 	display: none !important;
 }
@@ -3894,22 +3809,9 @@ label .ReturnGO_ReturnItemProposition-module_open, .ReturnGO_ReturnItemPropositi
 	width: auto !important;
 }
 
-
 .ReturnGO_Button-module_button.ReturnGO_Button-module_link.ReturnGO_Button-module_md {
 	position: relative;
 	visibility: hidden;
-}
-
-.ReturnGO_Button-module_button.ReturnGO_Button-module_link.ReturnGO_Button-module_md:after {
-	position: absolute;
-	visibility: visible;
-	display: block;
-	content: 'שלב קודם';
-	top: 50%;
-	right: 50%;
-	transform: translate(50%, -50%);
-	width: max-content;
-	font-weight: 600;
 }
 
 .ReturnGO_Footer-module_footer .ReturnGO_SnippetWrapper-module_snippetWrapper {
