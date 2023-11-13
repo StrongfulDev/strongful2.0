@@ -991,7 +991,6 @@ class VariantSelects extends HTMLElement {
 
 		let desiredSize = $('input[name="מידה"]:checked').data("front-value");
     let desiredColor = $('input[name="צבע"]:checked').val();
-    console.log(desiredColor);
 
     // const mediaGalleries = $(`[id^="MediaGallery-${this.dataset.section}"]`);
 		const mediaGallerySizeItemsToHide = $(document).find(`.product__media-item:not([data-model-size="${desiredSize}"])`);
@@ -1016,7 +1015,6 @@ class VariantSelects extends HTMLElement {
 
   updateURL(event) {
     if (!this.currentVariant || this.dataset.updateUrl === 'false') return;
-    console.log(event.target.getAttribute('name'));
     if (event.target.getAttribute('name') === 'צבע') {
       let colorName = event.target.value;
       window.history.replaceState({ }, '', `${this.dataset.url}?color=${colorName}&variant=${this.currentVariant.id}`);
@@ -1277,31 +1275,6 @@ function removeDeadProduct() {
 // 	}
 // }
 
-function USSizeHelper(nodeList) {
-  nodeList.forEach((childNode) => {
-    let variantTitle = childNode.previousElementSibling.innerText || childNode.previousElementSibling.innerHTML;
-    switch (variantTitle) {
-      case "XXS":
-        childNode.innerText = "(00-0)";
-        break;
-      case "XS":
-        childNode.innerText = "(0-2)";
-        break;
-      case "S":
-        childNode.innerText = "(2-4)";
-        break;
-      case "M":
-        childNode.innerText = "(4-6)";
-        break;
-      case "L":
-        childNode.innerText = "(8-10)";
-        break;
-      case "XL":
-        childNode.innerText = "(12-14)";
-    }
-  });
-}
-
 window.addEventListener('DOMContentLoaded', function(event) {
 
 	// account modal code start here
@@ -1518,7 +1491,6 @@ window.addEventListener('DOMContentLoaded', function(event) {
   const parsedUrl = new URL(productURL);
   const params = new URLSearchParams(parsedUrl.search);
   const colorValue = params.get('color');
-  console.log(colorValue);
 
   $(`input[type="radio"][value="${colorValue}"]`).prop('checked', true);
 
@@ -1530,14 +1502,6 @@ window.addEventListener('DOMContentLoaded', function(event) {
   modelSwitcherColorImagesToShow.removeClass('hidden');
 
 });
-
-// window.addEventListener('popstate', function(event) {
-// 	console.log(event);
-// 	let cartItemsInstance = new CartItems();
-// 	// let cartItemsInstance = document.querySelector('cart-items');
-// 	cartItemsInstance.onCartUpdate();
-//
-// });
 
 // check the previous window url
 function checkUrl() {
