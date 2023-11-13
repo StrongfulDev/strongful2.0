@@ -3688,7 +3688,7 @@ body:not(.enable-toolbar-RTL) #enable-reader, body:not(.enable-toolbar-RTL) #ena
     text-align: left;
 }
 
-div.ReturnGO_ReturnItemProposition-module_shipping:nth-child(2) {
+div.ReturnGO_ReturnItemProposition-module_shipping:nth-child(2), .ReturnGO_ReturnItemProposition-module_taxDisclaimer {
     display: none !important;
 }
 
@@ -3781,9 +3781,8 @@ label .ReturnGO_ReturnItemProposition-module_open, .ReturnGO_ReturnItemPropositi
 	margin: 0 !important;
 }
 
-.ReturnGO_InputField-module_inputField + .ReturnGO_Error-module_error,
-.ReturnGO_LoaderScreen-module_loaderScreen .ReturnGO_LoaderScreen-module_stepBlock,
-.ReturnGO_SnippetWrapper-module_snippetWrapper span div:last-child {
+.ReturnGO_InputField-module_inputField+.ReturnGO_Error-module_error,
+.ReturnGO_LoaderScreen-module_loaderScreen .ReturnGO_LoaderScreen-module_stepBlock {
 	display: none !important;
 }
 
