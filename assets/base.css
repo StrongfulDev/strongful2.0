@@ -3679,13 +3679,17 @@ body:not(.enable-toolbar-RTL) #enable-reader, body:not(.enable-toolbar-RTL) #ena
 .ReturnGO_RadioButton-module_radioButton.ReturnGO_RadioButton-module_checked.ReturnGO_RadioButton-module_boxed.ReturnGO_ReturnItemProposition-module_radio .ReturnGO_RadioButton-module_checkmark,
 .ReturnGO_RadioButton-module_radioButton.ReturnGO_RadioButton-module_checked.ReturnGO_RadioButton-module_boxed.ReturnGO_ReturnItemProposition-module_radio .ReturnGO_ReturnItemProposition-module_titles,
 .ReturnGO_RadioButton-module_radioButton.ReturnGO_RadioButton-module_checked.ReturnGO_RadioButton-module_boxed.ReturnGO_ReturnItemProposition-module_radio .ReturnGO_RadioButton-module_checkmark {
-	display: none !important;
-	opacity: 0 !important;
-	visibility: hidden !important;
+	/*display: none !important;*/
+	/*opacity: 0 !important;*/
+	/*visibility: hidden !important;*/
 }
 
-.ReturnGO_ReturnItemProposition-module_radioContent {
+.ReturnGO_ReturnItemProposition-module_costs p {
+    text-align: left;
+}
 
+div.ReturnGO_ReturnItemProposition-module_shipping:nth-child(2) {
+    display: none !important;
 }
 
 label .ReturnGO_ReturnItemProposition-module_open, .ReturnGO_ReturnItemProposition-module_costs {
