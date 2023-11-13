@@ -179,7 +179,7 @@
                                 -%}
 
                                 {% for option in product.options_with_values %}
-                                    {% if option.name == 'Color' %}
+                                    {% if option.name == 'צבע' %}
                                         {% for value in option.values %}
                                             {% if isLiveTheme == 'true' %}
                                                 {% unless product.tags contains 'hidden' or product.tags contains 'free-slippers' %}
@@ -200,8 +200,8 @@
                                                                 card_banner_text: card_announcement,
                                                                 card_header_size: section.settings.card_header_size,
                                                                 announcement_tag: settings.announcement_tag,
-                                                    second_announcement_tag: settings.second_announcement_tag,
-                                                    custom_collection_second_announcement: settings.custom_collection_second_announcement,
+                                                                second_announcement_tag: settings.second_announcement_tag,
+                                                                custom_collection_second_announcement: settings.custom_collection_second_announcement,
                                                                 pick_size_text: section.settings.pick_size_text,
                                                                 quick_add_text: section.settings.quick_add_text,
                                                                 quick_add_accessories_text: section.settings.quick_add_accessories_text,
@@ -229,8 +229,8 @@
                                                             card_banner_text: card_announcement,
                                                             card_header_size: section.settings.card_header_size,
                                                             announcement_tag: settings.announcement_tag,
-                                                    second_announcement_tag: settings.second_announcement_tag,
-                                                    custom_collection_second_announcement: settings.custom_collection_second_announcement,
+                                                            second_announcement_tag: settings.second_announcement_tag,
+                                                            custom_collection_second_announcement: settings.custom_collection_second_announcement,
                                                             pick_size_text: section.settings.pick_size_text,
                                                             quick_add_text: section.settings.quick_add_text,
                                                             quick_add_accessories_text: section.settings.quick_add_accessories_text,
