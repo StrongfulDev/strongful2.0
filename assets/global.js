@@ -1438,7 +1438,6 @@ window.addEventListener('DOMContentLoaded', function(event) {
 		"כחול אפור": "Gray",
 		"Blue White": "White",
 		"Blue-Purple": "blue",
-		"אדום": "red",
 		"חום": "brown",
 		"קפה": "brown",
 		"שמפניה": "yellow",
