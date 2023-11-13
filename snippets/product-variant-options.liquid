@@ -79,7 +79,7 @@
         %}
         <span class="variant-button
             {% if option_disabled %}disabled-variant-button{% endif %}
-            {% if option.name == 'Color' %}color-swatch-button{% endif %}
+            {% if option.name == 'צבע' %}color-swatch-button{% endif %}
             {{ option_value }}">
             <input
                     type="radio"
@@ -89,7 +89,7 @@
                     form="{{ product_form_id }}"
                     data-front-value="{{ frontValue }}"
                     data-variant-id="{{ variant_id }}"
-                    {% if option.name == 'Size' %}
+                    {% if option.name == 'מידה' %}
                         {% if value == 'XS' %}
                             checked="checked"
                         {% endif %}
@@ -102,7 +102,7 @@
                         class="disabled disabled-variant-button"
                     {% endif %}
             >
-            {% if option.name == "Color" %}
+            {% if option.name == "צבע" %}
                 <label class="no-background color-variant-tile"
                        for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
                     <span class="color-swatch" data-color="{{ value }}"></span>

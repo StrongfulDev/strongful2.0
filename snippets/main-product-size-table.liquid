@@ -3,7 +3,7 @@
 
 {% assign allSizesAreCm = '* All measures are in feet and inches' %}
 
-{% if product.type == 'Jumpsuit' %}
+{% if product.type == 'אוברול' %}
 
     <div class="size-guide-modal size-pop-tops hidden fix-direction">
         <p class="StrongfulX">{% render 'icon-close' %}</p>
@@ -52,7 +52,7 @@
         <h6 class="cent-exp text-right rtl">{{ allSizesAreCm }}</h6>
     </div>
 
-{% elsif product.type == 'Bra' or product.type == "Top" or product.type == 'Shirt' or product.type == 'Bodysuit' or product.type == 'Dress' or product.type == "Jacket" %}
+{% elsif product.type == 'טופ' or product.type == 'חולצה' or product.type == 'בגד גוף' or product.type == 'שמלה' or product.type == "ג׳קט" %}
     <div class="size-guide-modal size-pop-tops hidden fix-direction">
         <p class="StrongfulX">{% render 'icon-close' %}</p>
         <table class="size-table">
@@ -75,7 +75,7 @@
         </table>
         <h6 class="cent-exp text-right rtl">{{ allSizesAreCm }}</h6>
     </div>
-{% elsif product.type == 'Shorts' or product.type == 'Leggings' or product.type == 'Biker' or product.type == 'Pants' %}
+{% elsif product.type == 'שורטס' or product.type == 'טייץ' or product.type == 'בייקר' or product.type == 'מכנס' %}
     <div class="size-guide-modal size-pop-bikers hidden fix-direction">
         <p class="StrongfulX">{% render 'icon-close' %}</p>
         <table class="size-table">
@@ -102,7 +102,7 @@
         </table>
         <h6 class="cent-exp text-right rtl">{{ allSizesAreCm }}</h6>
     </div>
-{% elsif product.type == "Crop Top" %}
+{% elsif product.type == "קרופ טופ" %}
     {% unless product.title contains 'Juicy' or product.title contains 'Claire' %}
         <div class="size-guide-modal size-pop-tops hidden fix-direction">
             <p class="StrongfulX">{% render 'icon-close' %}</p>
