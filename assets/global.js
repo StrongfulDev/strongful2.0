@@ -673,46 +673,46 @@ class DeferredMedia extends HTMLElement {
 customElements.define('deferred-media', DeferredMedia);
 
 class SliderComponent extends HTMLElement {
-  constructor() {
-    super();
-    this.slider = this.querySelector('[id^="Slider-"]');
-    this.sliderItems = this.querySelectorAll('[id^="Slide-"]');
-    this.enableSliderLooping = true;
-    this.currentPageElement = this.querySelector('.slider-counter--current');
-    this.pageTotalElement = this.querySelector('.slider-counter--total');
-    this.prevButton = this.querySelector('button[name="previous"]');
-    this.nextButton = this.querySelector('button[name="next"]');
+	constructor() {
+		super();
+		this.slider = this.querySelector('[id^="Slider-"]');
+		this.sliderItems = this.querySelectorAll('[id^="Slide-"]');
+		this.enableSliderLooping = true;
+		this.currentPageElement = this.querySelector('.slider-counter--current');
+		this.pageTotalElement = this.querySelector('.slider-counter--total');
+		this.prevButton = this.querySelector('button[name="previous"]');
+		this.nextButton = this.querySelector('button[name="next"]');
 		if (this.querySelector('.slider-component-progress-bar') !== null) {
 			this.progressBar = this.querySelector('.slider-component-progress-bar');
 		}
 
-    if (!this.slider || !this.nextButton) return;
+		if (!this.slider || !this.nextButton) return;
 
-    this.initPages();
-	  this.moveProgressBar();
-    const resizeObserver = new ResizeObserver(entries => this.initPages());
-    resizeObserver.observe(this.slider);
+		this.initPages();
+		this.moveProgressBar();
+		const resizeObserver = new ResizeObserver(entries => this.initPages());
+		resizeObserver.observe(this.slider);
 
-    this.slider.addEventListener('scroll', this.update.bind(this));
-    this.prevButton.addEventListener('click', this.onButtonClick.bind(this));
-    this.nextButton.addEventListener('click', this.onButtonClick.bind(this));
-  }
+		this.slider.addEventListener('scroll', this.update.bind(this));
+		this.prevButton.addEventListener('click', this.onButtonClick.bind(this));
+		this.nextButton.addEventListener('click', this.onButtonClick.bind(this));
+	}
 
-  initPages() {
-	  // this.totalPages = this.sliderItemsToShow.length;
-	  this.sliderItemsToShow = Array.from(this.sliderItems).filter(element => element.clientWidth > 0);
-    if (this.sliderItemsToShow.length < 2) return;
-    this.sliderItemOffset = this.sliderItemsToShow[1].offsetLeft - this.sliderItemsToShow[0].offsetLeft;
-    this.slidesPerPage = Math.floor((this.slider.clientWidth - this.sliderItemsToShow[0].offsetLeft) / this.sliderItemOffset);
-    this.totalPages = this.sliderItemsToShow.length - this.slidesPerPage + 1;
-	  // this.totalPages = this.sliderItemsToShow.length - this.slidesPerPage;
-    this.update();
-  }
+	initPages() {
+		// this.totalPages = this.sliderItemsToShow.length;
+		this.sliderItemsToShow = Array.from(this.sliderItems).filter(element => element.clientWidth > 0);
+		if (this.sliderItemsToShow.length < 2) return;
+		this.sliderItemOffset = this.sliderItemsToShow[1].offsetLeft - this.sliderItemsToShow[0].offsetLeft;
+		this.slidesPerPage = Math.floor((this.slider.clientWidth - this.sliderItemsToShow[0].offsetLeft) / this.sliderItemOffset);
+		this.totalPages = this.sliderItemsToShow.length - this.slidesPerPage + 1;
+		// this.totalPages = this.sliderItemsToShow.length - this.slidesPerPage;
+		this.update();
+	}
 
-  resetPages() {
-    this.sliderItems = this.querySelectorAll('[id^="Slide-"]');
-    this.initPages();
-  }
+	resetPages() {
+		this.sliderItems = this.querySelectorAll('[id^="Slide-"]');
+		this.initPages();
+	}
 
 	moveProgressBar() {
 		if (this.progressBar) {
@@ -720,48 +720,48 @@ class SliderComponent extends HTMLElement {
 			this.progressBar.style.width = `${100 / (this.totalPages - 1)}%`;
 		}
 	}
-  update() {
-    // Temporarily prevents unneeded updates resulting from variant changes
-    // This should be refactored as part of https://github.com/Shopify/dawn/issues/2057
+	update() {
+		// Temporarily prevents unneeded updates resulting from variant changes
+		// This should be refactored as part of https://github.com/Shopify/dawn/issues/2057
 
-	  this.moveProgressBar();
+		this.moveProgressBar();
 
-    if (!this.slider || !this.nextButton) return;
+		if (!this.slider || !this.nextButton) return;
 
-    const previousPage = this.currentPage;
-    this.currentPage = Math.round(this.slider.scrollLeft / this.sliderItemOffset) + 1;
+		const previousPage = this.currentPage;
+		this.currentPage = Math.round(this.slider.scrollLeft / this.sliderItemOffset) + 1;
 
-    if (this.currentPageElement && this.pageTotalElement) {
-      this.currentPageElement.textContent = this.currentPage;
-      this.pageTotalElement.textContent = this.totalPages;
-    }
+		if (this.currentPageElement && this.pageTotalElement) {
+			this.currentPageElement.textContent = this.currentPage;
+			this.pageTotalElement.textContent = this.totalPages;
+		}
 
-    if (this.currentPage !== previousPage) {
-      this.dispatchEvent(new CustomEvent('slideChanged', { detail: {
-        currentPage: this.currentPage,
-        currentElement: this.sliderItemsToShow[this.currentPage - 1]
-      }}));
-    }
+		if (this.currentPage !== previousPage) {
+			this.dispatchEvent(new CustomEvent('slideChanged', { detail: {
+					currentPage: this.currentPage,
+					currentElement: this.sliderItemsToShow[this.currentPage - 1]
+				}}));
+		}
 
-    if (this.enableSliderLooping) return;
+		if (this.enableSliderLooping) return;
 
-    if (this.isSlideVisible(this.sliderItemsToShow[0]) && this.slider.scrollLeft === 0) {
-      this.prevButton.setAttribute('disabled', 'disabled');
-    } else {
-      this.prevButton.removeAttribute('disabled');
-    }
+		if (this.isSlideVisible(this.sliderItemsToShow[0]) && this.slider.scrollLeft === 0) {
+			this.prevButton.setAttribute('disabled', 'disabled');
+		} else {
+			this.prevButton.removeAttribute('disabled');
+		}
 
-    if (this.isSlideVisible(this.sliderItemsToShow[this.sliderItemsToShow.length - 1])) {
-      this.nextButton.setAttribute('disabled', 'disabled');
-    } else {
-      this.nextButton.removeAttribute('disabled');
-    }
-  }
+		if (this.isSlideVisible(this.sliderItemsToShow[this.sliderItemsToShow.length - 1])) {
+			this.nextButton.setAttribute('disabled', 'disabled');
+		} else {
+			this.nextButton.removeAttribute('disabled');
+		}
+	}
 
-  isSlideVisible(element, offset = 0) {
-    const lastVisibleSlide = this.slider.clientWidth + this.slider.scrollLeft - offset;
-    return (element.offsetLeft + element.clientWidth) <= lastVisibleSlide && element.offsetLeft >= this.slider.scrollLeft;
-  }
+	isSlideVisible(element, offset = 0) {
+		const lastVisibleSlide = this.slider.clientWidth + this.slider.scrollLeft - offset;
+		return (element.offsetLeft + element.clientWidth) <= lastVisibleSlide && element.offsetLeft >= this.slider.scrollLeft;
+	}
 
 	onButtonClick(event) {
 		event.preventDefault();
@@ -949,6 +949,7 @@ class VariantSelects extends HTMLElement {
   }
 
   onVariantChange() {
+	  this.updateMasterProductData();
     this.updateOptions();
     this.updateMasterId();
     this.toggleAddButton(true, '', false);
@@ -960,8 +961,8 @@ class VariantSelects extends HTMLElement {
       this.toggleAddButton(true, '', true);
       this.setUnavailable();
     } else {
-			// this.updateMedia();
-      this.updateURL();
+			this.updateMedia();
+      this.updateURL(event);
       this.updateVariantInput();
       this.renderProductInfo();
       this.updateShareUrl();
@@ -971,6 +972,10 @@ class VariantSelects extends HTMLElement {
   updateOptions() {
     this.options = Array.from(this.querySelectorAll('select'), (select) => select.value);
   }
+
+	updateMasterProductData() {
+		// this.currentProduct = this.getProductData();
+	}
 
   updateMasterId() {
     this.currentVariant = this.getVariantData().find((variant) => {
@@ -982,10 +987,26 @@ class VariantSelects extends HTMLElement {
 
   updateMedia() {
     if (!this.currentVariant) return;
-    if (!this.currentVariant.featured_media) return;
+	  if (!this.currentVariant.option2) return;
 
-    const mediaGalleries = document.querySelectorAll(`[id^="MediaGallery-${this.dataset.section}"]`);
-    mediaGalleries.forEach(mediaGallery => mediaGallery.setActiveMedia(`${this.dataset.section}-${this.currentVariant.featured_media.id}`, true));
+		let desiredSize = $('input[name="מידה"]:checked').data("front-value");
+    let desiredColor = $('input[name="צבע"]:checked').val();
+    console.log(desiredColor);
+
+    // const mediaGalleries = $(`[id^="MediaGallery-${this.dataset.section}"]`);
+		const mediaGallerySizeItemsToHide = $(document).find(`.product__media-item:not([data-model-size="${desiredSize}"])`);
+	  const mediaGalleryColorItemsToHide = $(document).find(`.product__media-item:not([data-alt="${this.currentVariant.option2}"])`);
+		const mediaGalleryListItemsToShow = $(document).find(`.product__media-item[data-alt="${this.currentVariant.option2}"][data-model-size="${desiredSize}"]`);
+
+		const modelSwitcherColorItemsToHide = $(document).find(`.model-switcher__image:not([data-alt="${desiredColor}"])`);
+		const modelSwitcherColorItemsToShow = $(document).find(`.model-switcher__image[data-alt="${desiredColor}"]`);
+
+	  mediaGallerySizeItemsToHide.addClass('hidden');
+	  mediaGalleryColorItemsToHide.addClass('hidden');
+		mediaGalleryListItemsToShow.removeClass('hidden');
+		modelSwitcherColorItemsToHide.addClass('hidden');
+		modelSwitcherColorItemsToShow.removeClass('hidden');
+	  // modelSwitcherColorItemsToShow.eq(0).addClass('higher-index');
 
     const modalContent = document.querySelector(`#ProductModal-${this.dataset.section} .product-media-modal__content`);
     if (!modalContent) return;
@@ -993,9 +1014,15 @@ class VariantSelects extends HTMLElement {
     modalContent.prepend(newMediaModal);
   }
 
-  updateURL() {
+  updateURL(event) {
     if (!this.currentVariant || this.dataset.updateUrl === 'false') return;
-    window.history.replaceState({ }, '', `${this.dataset.url}?variant=${this.currentVariant.id}`);
+    console.log(event.target.getAttribute('name'));
+    if (event.target.getAttribute('name') === 'צבע') {
+      let colorName = event.target.value;
+      window.history.replaceState({ }, '', `${this.dataset.url}?color=${colorName}&variant=${this.currentVariant.id}`);
+    } else {
+      window.history.replaceState({ }, '', `${this.dataset.url}?variant=${this.currentVariant.id}`);
+    }
   }
 
   updateShareUrl() {
@@ -1228,8 +1255,8 @@ function removeDeadProduct() {
 // 	localStorage.setItem("content", contentToRender.innerHTML);
 // 	localStorage.setItem("collectionHandle", window.location.href.split('collections/')[1]);
 // });
-//
-// // check if on collection page
+
+// check if on collection page
 // if (contentToRender !== null) {
 //
 // 	let previousCollectionHandle = localStorage.getItem("collectionHandle");
@@ -1238,72 +1265,44 @@ function removeDeadProduct() {
 // 	let splitURL = currentURL.split("collections/");
 // 	let collectionHandle = splitURL[1];
 //
+// 	console.log(collectionHandle);
+// 	console.log(previousCollectionHandle);
+//
 // 	// set the HTML to the stored HTML
 // 	let updatedContent = localStorage.getItem("content");
 //
 // 	// if there is stored HTML, update the page
 // 	if (updatedContent !== null && collectionHandle === previousCollectionHandle) {
-// 		 contentToRender.innerHTML = updatedContent;
+// 		contentToRender.innerHTML = updatedContent;
 // 	}
 // }
 
+function USSizeHelper(nodeList) {
+  nodeList.forEach((childNode) => {
+    let variantTitle = childNode.previousElementSibling.innerText || childNode.previousElementSibling.innerHTML;
+    switch (variantTitle) {
+      case "XXS":
+        childNode.innerText = "(00-0)";
+        break;
+      case "XS":
+        childNode.innerText = "(0-2)";
+        break;
+      case "S":
+        childNode.innerText = "(2-4)";
+        break;
+      case "M":
+        childNode.innerText = "(4-6)";
+        break;
+      case "L":
+        childNode.innerText = "(8-10)";
+        break;
+      case "XL":
+        childNode.innerText = "(12-14)";
+    }
+  });
+}
+
 window.addEventListener('DOMContentLoaded', function(event) {
-
-  // ReturnGo functions
-
-  if (window.location.href.includes('a/return')) {
-
-    // Select the node that will be observed for mutations
-    const targetNode = document.body; // You can choose a more specific parent if you want
-
-// Options for the observer (which mutations to observe)
-    const config = { childList: true, subtree: true };
-
-// Callback function to execute when mutations are observed
-    const callback = function(mutationsList, observer) {
-      for(let mutation of mutationsList) {
-        if (mutation.type === 'childList') {
-          const element = document.querySelector('.ReturnGO_ShadowedBlock-module_shadowedBlock');
-          if (element) {
-            // Now we have the element, stop watching for mutations
-            observer.disconnect();
-
-            // Create an IntersectionObserver to observe this element
-            const intersectionObserver = new IntersectionObserver(entries => {
-              entries.forEach(entry => {
-                if(entry.isIntersecting) {
-                  console.log(element);
-
-                  // Do something with the element
-                  const returnLink = document.createElement('a');
-                  returnLink.classList.add('return-policy-link');
-                  returnLink.href = '/blogs/policies/החזרות-והחלפות#doarIsrael';
-                  returnLink.innerText = 'החזרה חינם דרך דואר ישראל';
-                  element.appendChild(returnLink);
-
-
-                  // Optionally, stop observing if it's a one-time thing
-                  intersectionObserver.unobserve(element);
-                }
-              });
-            });
-
-            // Start observing
-            intersectionObserver.observe(element);
-          }
-        }
-      }
-    };
-
-// Create an instance of MutationObserver with the callback
-    const mutationObserver = new MutationObserver(callback);
-
-// Start observing the target node for configured mutations
-    mutationObserver.observe(targetNode, config);
-
-  }
-
-  // ReturnGo functions end
 
 	// account modal code start here
 
@@ -1421,7 +1420,7 @@ window.addEventListener('DOMContentLoaded', function(event) {
 
 	removeDeadProduct();
 
-	$(".loader-wrapper").delay().fadeOut("slow");
+	$(".loader-wrapper").delay(2000).fadeOut("slow");
 
 	let headerOverlay = $('.header-overlay');
 	let menuDrawer = document.querySelector('header-drawer');
@@ -1458,13 +1457,81 @@ window.addEventListener('DOMContentLoaded', function(event) {
 	enableToolbarButton.appendChild(pill);
 	enableToolbarButton.appendChild(pillBorder);
 
-	// let cartItemsInstance = new CartItems();
-	// let historyTraversal = event.persisted || ( typeof window.performance != "undefined" && window.performance.navigation.type === 2 );
-	//
-	// // re-render the cart if the user clicked the back button
-	// if (historyTraversal) {
-	// 	cartItemsInstance.onCartUpdate();
-	// }
+	const colorDictionary = {
+		"Black": "black",
+		"Black Gray": "Gray",
+		"Black White": "White",
+		"Blue": "#4d9cd7",
+		"Blue Gray": "Gray",
+		"Blue White": "White",
+		"Blue-Purple": "blue",
+		"Bordeaux": "red",
+		"Brown": "brown",
+		"Cafe": "brown",
+		"Champagne": "yellow",
+		"Clay": "brown",
+		"Cream": "yellow",
+		"Dark Blue": "navy",
+		"Dark Gray": "darkgray",
+		"Dark Green": "darkgreen",
+		"DarkGreen": "darkgreen",
+		"Dark Purple": "darkpurple",
+		"Gray": "Gray",
+		"Gray Black": "Gray",
+		"Green": "green",
+		"Green Gray": "Gray",
+		"Light Blue": "blue",
+		"Light Gray": "Gray",
+		"Light Green": "green",
+		"Light Orange": "orange",
+		"Light Yellow": "yellow",
+		"Lilach": "purple",
+		"Lime": "green",
+		"Maroon": "red",
+		"Mint": "green",
+		"Mocha": "#af8970",
+		"Navy": "darkblue",
+		"Olive": "green",
+		"Orange": "#fda310",
+		"Pink": "pink",
+		"Purple": "purple",
+		"Red": "#d81e06",
+		"Mustard": "yellow",
+		"Nude": "yellow",
+		"Nude-Gray": "Gray",
+		"Old Pink": "#ff77a8",
+		"Olive Green": "green",
+		"Peach": "orange",
+		"Pistachio": "green",
+		"Plum": "purple",
+		"Turquoise": "blue",
+		"White": "white",
+		"White Black": "white",
+		"White Gray": "white",
+		"Yellow": "#f4e287"
+	}
+
+	const colorSwatches = document.querySelectorAll('.color-swatch');
+	colorSwatches.forEach(swatch => {
+		const color = swatch.dataset.color;
+		swatch.style.backgroundColor = colorDictionary[color];
+	});
+
+  // Your URL
+  const productURL = window.location.href;
+  const parsedUrl = new URL(productURL);
+  const params = new URLSearchParams(parsedUrl.search);
+  const colorValue = params.get('color');
+  console.log(colorValue);
+
+  $(`input[type="radio"][value="${colorValue}"]`).prop('checked', true);
+
+  let checkedColorValue = $(".color-swatch-button input:checked").val();
+  let modelSwitcherColorImagesToHide = $(document).find(`.model-switcher__image:not([data-alt="${checkedColorValue}"])`);
+  let modelSwitcherColorImagesToShow = $(document).find(`.model-switcher__image[data-alt="${checkedColorValue}"]`);
+
+  modelSwitcherColorImagesToHide.addClass('hidden');
+  modelSwitcherColorImagesToShow.removeClass('hidden');
 
 });
 

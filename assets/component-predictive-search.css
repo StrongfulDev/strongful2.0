@@ -146,7 +146,7 @@ predictive-search[loading]
 .predictive-search__item {
   display: flex;
   padding: 1rem 2rem;
-  text-align: right;
+  text-align: left;
   text-decoration: none;
   width: 100%;
 }
@@ -296,7 +296,7 @@ predictive-search[loading]
 		position: relative;
 	}
 
-	details[open] > .search-modal {
+	details[open]>.search-modal {
 		width: 69vw;
 		right: 0;
 		padding-right: 1rem;
@@ -307,7 +307,7 @@ predictive-search[loading]
 	.header__search details[open] .modal-overlay:after {
 		top: 6rem;
 		width: 120vw;
-		right: -14vw;
+		left: -25vw;
 	}
 
 	.modal__close-button.link {
@@ -317,5 +317,6 @@ predictive-search[loading]
 
 	.search-modal__content {
 		justify-content: space-between;
+		direction: rtl;
 	}
 }

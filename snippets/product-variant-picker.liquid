@@ -31,78 +31,45 @@
     {% assign isLiveTheme = 'true' %}
 {% endif %}
 
-
-{% unless product.tags contains 'noSimilar' %}
-<ul class="similar" id="scrollNoSize">
-    {% for collection in collections %}
-        {% if collection.title == similarParent or collection.title == similarParent.value %}
-            {% for product in collection.products %}
-                {% if isLiveTheme == 'true' %}
-                {% unless product.tags contains 'hidden' %}
-                    <li class="relative-discount similar-child {{ forloop.index0 }}">
-                        <a href="{{ product.url }}" class="similar-a">
-                            <img src="{{ product.featured_image | product_img_url: 'master' }}"
-                                 srcset="{{ product.featured_image | product_img_url: '200x' }} 200w,
-                    {{ product.featured_image | product_img_url: '300x' }} 300w,
-                    {{ product.featured_image | product_img_url: '400x' }} 400w,
-                    {{ product.featured_image | product_img_url: '600x' }} 600w"
-                                 alt="{{ product.title | escape }}" class="similar-child-img" loading="lazy"/>
-                        </a>
-                        <p class="productVendor">{{ product.vendor }}</p>
-                    </li>
-                {% endunless %}
-                {% else %}
-                    <li class="relative-discount similar-child {{ forloop.index0 }}">
-                        <a href="{{ product.url }}" class="similar-a">
-                            <img src="{{ product.featured_image | product_img_url: 'master' }}"
-                                 srcset="{{ product.featured_image | product_img_url: '200x' }} 200w,
-                    {{ product.featured_image | product_img_url: '300x' }} 300w,
-                    {{ product.featured_image | product_img_url: '400x' }} 400w,
-                    {{ product.featured_image | product_img_url: '600x' }} 600w"
-                                 alt="{{ product.title | escape }}" class="similar-child-img" loading="lazy"/>
-                        </a>
-                        <p class="productVendor">{{ product.vendor }}</p>
-                    </li>
-                {% endif %}
-            {% endfor %}
-        {% endif %}
-    {% endfor %}
-</ul>
-{% endunless %}
-
 {%- unless product.has_only_default_variant -%}
   {%- if block.settings.picker_type == 'button' -%}
+      {% assign newProductUrl = product.url | within: collection %}
     <variant-radios
       id="variant-radios-{{ section.id }}"
       class="no-js-hidden"
       data-section="{{ section.id }}"
-      data-url="{{ product.url }}"
+      data-url="{{ newProductUrl }}"
       {% if update_url == false %}
         data-update-url="false"
       {% endif %}
       {{ block.shopify_attributes }}
     >
       {%- for option in product.options_with_values -%}
-        <fieldset class="js product-form__input {% if product.title == 'גיפט קארד' %}gift-card-product-form__input{% endif %}">
+        <fieldset class="js product-form__input
+                {% if option.name == 'Color' %}color-option-fieldset{% endif %}
+                {% if product.title == 'Gift card' %}gift-card-product-form__input{% endif %}"
+        >
           <legend class="form__label">{{ option.name }}</legend>
-            {% for modelName in product.metafields.model.names.value %}
-                {% assign model = shop.metaobjects.model[modelName] %}
-            <legend class="model-wears-size fix-direction"
-                    data-model="{{ model.size_letter.value }}"
-            {% if plusProduct and model.size_letter.value == 'XS' %}
-                style="display: none"
-            {% elsif plusProduct == false and model.size_letter.value == 'L' %}
-                style="display: none"
-                    {% endif %}>
-                {{ 'products.product.model_switch.model_wears_only_female' | t }}
-                <span class="bold">{{ option.name }}: {{ model.size_letter.value }}</span>
-                {% if product.tags contains 'up-size-recommendation' %}
-                    <span class="small">{{ 'products.product.up_size_recommendation' | t }}</span>
-                {% elsif product.tags contains 'down-size-recommendation' %}
-                    <span class="small">{{ 'products.product.down_size_recommendation' | t }}</span>
-                {% endif %}
-            </legend>
-            {% endfor %}
+            {% if option.name == 'Size' %}
+                {% for modelName in product.metafields.model.names.value %}
+                    {% assign model = shop.metaobjects.model[modelName] %}
+                        <legend class="model-wears-size fix-direction"
+                                data-model="{{ model.size_letter.value }}"
+                        {% if plusProduct and model.size_letter.value == 'XS' %}
+                            style="display: none"
+                        {% elsif plusProduct == false and model.size_letter.value == 'L' %}
+                            style="display: none"
+                        {% endif %}>
+                            {{ 'products.product.model_switch.model_wears_only_female' | t }}
+                            <span class="bold">{{ option.name }}: {{ model.size_letter.value }}</span>
+                            {% if product.tags contains 'up-size-recommendation' %}
+                                <span class="small">{{ 'products.product.up_size_recommendation' | t }}</span>
+                            {% elsif product.tags contains 'down-size-recommendation' %}
+                                <span class="small">{{ 'products.product.down_size_recommendation' | t }}</span>
+                            {% endif %}
+                        </legend>
+                {% endfor %}
+            {% endif %}
           {% render 'product-variant-options',
                   product: product,
                   option: option,
@@ -121,6 +88,9 @@
         </div>
       <script type="application/json">
         {{ product.variants | json }}
+      </script>
+        <script id="productJsonScript" type="application/json">
+        {{ product | json }}
       </script>
     </variant-radios>
   {%- else -%}
@@ -146,7 +116,15 @@
               name="options[{{ option.name | escape }}]"
               form="{{ product_form_id }}"
             >
-              {% render 'product-variant-options', product: product, option: option, block: block %}
+                {% render 'product-variant-options',
+                        product: product,
+                        option: option,
+                        block: block,
+                        myBlock: myBlock,
+                        announcement_tag: settings.announcement_tag,
+                        members_only_sale: settings.members_only_sale,
+                        members_only_sale_active: settings.members_only_sale_active
+                %}
             </select>
             {% render 'icon-caret' %}
           </div>
@@ -197,10 +175,7 @@
               if variant.quantity_rule.max != null
                 echo 'products.product.quantity.maximum_of' | t: quantity: variant.quantity_rule.max | prepend: ' - '
               endif
-              # TODO: enable theme-check once `item_count_for_variant` is accepted as valid filter
-              # theme-check-disable
               assign cart_quantity = cart | item_count_for_variant: variant.id
-              # theme-check-enable
               if cart_quantity > 0
                 echo 'products.product.quantity.in_cart_html' | t: quantity: cart_quantity | prepend: ' - '
               endif

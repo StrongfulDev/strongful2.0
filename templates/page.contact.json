@@ -7,7 +7,7 @@
       ],
       "settings": {
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 52
       }
     },
     "form": {
@@ -29,7 +29,7 @@
         "template--15943402913932__76986691-a06f-4db0-920f-b327814260aa-1684414591620f5600-0": {
           "type": "heading",
           "settings": {
-            "heading": "<p>דרכים נוספות ליצירת קשר<\/p>",
+            "heading": "<p>Additional ways to contact us<\/p>",
             "heading_size": "h1"
           }
         }
@@ -50,18 +50,18 @@
       "type": "social-icons-section",
       "settings": {
         "facebook": true,
-        "twitter": true,
+        "twitter": false,
         "instagram": true,
         "pinterest": true,
         "youtube": true,
-        "google": true,
-        "tumblr": true,
-        "linkedin": true,
-        "flickr": true,
-        "vimeo": true,
-        "dribbble": true,
-        "behance": true,
-        "rss": true,
+        "google": false,
+        "tumblr": false,
+        "linkedin": false,
+        "flickr": false,
+        "vimeo": false,
+        "dribbble": false,
+        "behance": false,
+        "rss": false,
         "email": true
       }
     },

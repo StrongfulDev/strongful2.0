@@ -3,6 +3,7 @@
   <head>
 
 
+
       <!-- Google Tag Manager -->
       <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -366,6 +367,8 @@
       {% include 'favicons' %}
 
   <script src="https://cdn-widgetsrepository.yotpo.com/v1/loader/qGZpUcqW7-E2nBL0lvSZUA" async></script>
+
+  {% include "globale-js" %}
 </head>
 
   {% assign isLiveTheme = 'false' %}
@@ -557,5 +560,9 @@
     </script>
     {% endcomment %}
 
+
+<!-- Back in Stock helper snippet -->
+{% render 'back-in-stock-helper' %}
+<!-- End Back in Stock helper snippet -->
 </body>
 </html>

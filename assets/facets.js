@@ -384,6 +384,7 @@ function sizeRounds(dom) {
 
 function hideInStockFacet() {
   let links = document.querySelectorAll('.active-facets__button');
+	console.log(links);
 	for (let i = 0; i < links.length; i++) {
 		if (links[i].href.includes("availability")) {
 			links[i].closest("facet-remove").style.display = "none";

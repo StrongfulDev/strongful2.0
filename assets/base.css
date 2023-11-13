@@ -635,7 +635,6 @@ blockquote {
 .select__select {
     font-size: 1.3rem;
     line-height: calc(1 / var(--font-body-scale));
-    /*letter-spacing: 0.04rem;*/
 }
 
 .color-foreground {

@@ -232,10 +232,10 @@
                                                 <div class="mobile-menu-customer-container fix-direction">
                                                     <div class="main-account-info-container main-account-info-container--loyalty">
                                                         <h4 class="container-title">מועדון הלקוחות שלי</h4>
-                                                        <a href="/pages/a-list" class="container-menu-item">ALIST <span>{{ vipTier }}</span>
+                                                        <a href="/pages/loyalty" class="container-menu-item">ALIST <span>{{ vipTier }}</span>
                                                             {% render 'icon-caret' %}
                                                         </a>
-                                                        <p class="container-extra-info">צבירת נקודות בכל קנייה</p>
+                                                        <p class="container-extra-info">{{ 'customer.loyalty.earn_points' }}</p>
                                                     </div>
                                                     <div class="main-account-info-container main-account-info-container--loyalty">
                                                         <h4 class="container-title">{{ "sections.header.account_title" | t }}</h4>
@@ -454,7 +454,7 @@
                                                                 <form action="{{ routes.search_url }}" method="get"
                                                                       role="search" class="search search-modal__form">
                                                                     <div class="field">
-                                                                        <input class="search__input field__input"
+                                                                        <input class="search__input field__input fix-direction"
                                                                                id="Search-In-Modal"
                                                                                type="search"
                                                                                name="q"
@@ -691,7 +691,7 @@
                                                 <div class="mobile-menu-customer-container fix-direction">
                                                     <div class="main-account-info-container main-account-info-container--loyalty">
                                                         <h4 class="container-title">מועדון הלקוחות שלי</h4>
-                                                        <a href="/pages/a-list" class="container-menu-item">ALIST <span>{{ vipTier }}</span>
+                                                        <a href="/pages/loyalty" class="container-menu-item">ALIST <span>{{ vipTier }}</span>
                                                             {% render 'icon-caret' %}
                                                         </a>
                                                         <p class="container-extra-info">צבירת נקודות בכל קנייה</p>
@@ -713,16 +713,6 @@
                                         </div>
                                     {%- endif -%}
                                 </div>
-                                {% comment %}
-                                <div class="header--footer fix-direction">
-                                    <h4></h4>
-                                    <ul class="header--footer-linklist">
-                                        {% for link in section.settings.header_footer_menu.links %}
-                                        {{ link.title | link_to: link.url, class: 'header--footer-link link focus-inset' }}
-                                        {% endfor %}
-                                    </ul>
-                                </div>
-                                {%endcomment%}
                             </div>
                         </div>
                     </div>
@@ -781,7 +771,7 @@
                                                 <a href="{{ block.settings.shop_all_link }}" class="{{ section.settings.menu_type_desktop }}-header__menu-item">{{ block.settings.title | escape }}</a>
                                             </summary>
                                             <div id="MegaMenu-Content-{{ forloop.index }}"
-                                                 class="mega-menu__content customizable fix-direction gradient motion-reduce global-settings-popup"
+                                                 class="mega-menu__content customizable fix-direction gradient motion-reduce global-settings-popup {{ block.settings.shop_all_title }}"
                                                  tabindex="-1">
                                                 <div class="mega-menu-grid-container {{ gridClass }}">
                                                     <a href="{{ block.settings.above_shop_all_linkz }}" class="shop-all-link">
@@ -861,7 +851,7 @@
                                                 <a href="{{ block.settings.shop_all_link }}" {%- if link_child_active %} class="header__active-menu-item"{% endif %}>{{ block.settings.title | escape }}</a>
                                             </summary>
                                             <div id="MegaMenu-Content-{{ forloop.index }}"
-                                                 class="mega-menu__content customizable fix-direction gradient motion-reduce global-settings-popup"
+                                                 class="mega-menu__content customizable fix-direction gradient motion-reduce global-settings-popup {{ block.settings.shop_all_title }}"
                                                  tabindex="-1">
                                                 <div class="mega-menu-grid-container {{ gridClass }}">
                                                     <a href="{{ block.settings.shop_all_link }}" class="shop-all-link">
@@ -1033,7 +1023,7 @@
                                     <form action="{{ routes.search_url }}" method="get"
                                           role="search" class="search search-modal__form">
                                         <div class="field">
-                                            <input class="search__input field__input"
+                                            <input class="search__input field__input fix-direction"
                                                    id="Search-In-Modal"
                                                    type="search"
                                                    name="q"
@@ -1146,7 +1136,6 @@
                                                 <span class="desktop-customer-name loyalty-tier">{{ vipTier }}</span>
                                             {% endif %}
                                         </div>
-                                        {% comment %}{% render 'icon-caret' %}{% endcomment %}
                                     </a>
                                 {% endfor %}
                                 <div class="account-menu-buttons">
@@ -1161,9 +1150,11 @@
                             </div>
                         </div>
                     </details>
+                    {% comment %}
                     <a href="{{ section.settings.desktop_loyalty_link }}" class="header__icon--account desktop--only">
                         <span class="desktop-customer-name loyalty-tier">{{ vipTier }}</span>
                     </a>
+                    {% endcomment %}
                 {% endunless %}
             {%- endif -%}
 
@@ -1242,20 +1233,14 @@
         "settings":[
             {
                 "type": "link_list",
-                "id": "header_footer_menu",
-                "label": "t:sections.header.header_footer_menu.label",
-                "info": "t:sections.header.header_footer_menu.info"
-            },
-            {
-                "type": "link_list",
                 "id": "account",
-                "label": "t:sections.header.account.label",
-                "info": "t:sections.header.account.info"
+                "label": "Account menu",
+                "info": "Account menu links"
             },
             {
                 "type": "url",
                 "id": "desktop_loyalty_link",
-                "label": "t:sections.header.desktop_loyalty_link.label"
+                "label": "Loyalty Page Link"
             },
             {
                 "type":"select",
@@ -1612,11 +1597,6 @@
                         "label": "t:sections.header.blocks.menu_item.settings.show_on_mobile.label"
                     },
                     {
-                        "type": "text",
-                        "id": "order",
-                        "label": "t:sections.header.blocks.text.order.label"
-                    },
-                    {
                         "type": "checkbox",
                         "id": "small_font",
                         "default": false,
@@ -1643,18 +1623,6 @@
                         "id":"title",
                         "label":"t:sections.header.blocks.menu_item.settings.title.label",
                         "info":"t:sections.header.blocks.menu_item.settings.title.info"
-                    },
-                    {
-                        "type":"text",
-                        "id":"item_class",
-                        "label":"t:sections.header.blocks.menu_item.settings.item_class.label",
-                        "info":"t:sections.header.blocks.menu_item.settings.item_class.info"
-                    },
-                    {
-                        "type":"text",
-                        "id":"title_link",
-                        "label":"t:sections.header.blocks.menu_item.settings.title_link.label",
-                        "info":"t:sections.header.blocks.menu_item.settings.title_link.info"
                     },
                     {
                         "type":"header",

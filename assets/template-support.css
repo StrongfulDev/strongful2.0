@@ -9,11 +9,11 @@ a {
 
 ul, ol {
 	list-style: inside;
-	padding-right: 0;
+	padding-left: 1rem;
 }
 
 .supportful__articles-select-ctn {
-	text-align: right;
+	text-align: left;
 	padding: 1em 2em;
 	background: #ebebeb;
 	font-size: 1.1em;
@@ -22,7 +22,6 @@ ul, ol {
 .supportful__flex-blog {
 	display: grid;
 	grid-template-columns: 1fr 20px;
-	direction: rtl;
 	align-items: center;
 }
 
@@ -36,7 +35,7 @@ ul, ol {
 .supportful__flex-blog .icon-caret {
 	float: none;
 	margin: 0;
-	transform: rotate(90deg);
+	transform: rotate(270deg);
 	width: 12px;
 }
 
@@ -62,9 +61,7 @@ ul, ol {
 }
 
 .article-ctn--second {
-	text-align: right;
 	padding: 1em;
-	direction: rtl;
 }
 
 .back-to-where {
@@ -102,6 +99,11 @@ ul, ol {
 	justify-content: center;
 	gap: 10px;
 	align-items: center;
+}
+
+.all-contact .icon {
+	width: 3rem;
+	height: 3rem;
 }
 
 .supportful__article-ul {

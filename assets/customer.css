@@ -112,8 +112,9 @@ a.no-decoration {
 .customer .field input:not(:placeholder-shown) ~ label,
 .field__label {
 	top: -3rem;
-	right: 0;
+	left: 0;
 	font-size: 1.6rem;
+	text-align: left;
 }
 
 /* Customer Table */
@@ -280,10 +281,6 @@ a.no-decoration {
 
 	.container-menu-item {
 		font-weight: var(--font-body-weight);
-	}
-
-	.contact-icon-child:first-child {
-		display: none;
 	}
 
 	thead {
@@ -766,7 +763,7 @@ label[for='AddressProvinceNew'] {
   list-style: none;
   padding-left: 0;
 	padding-right: 0;
-  text-align: right;
+  text-align: left;
 }
 
 li[data-address] {
@@ -824,7 +821,6 @@ li[data-address] > h2 {
   padding: 1rem 1.5rem;
   max-width: 39rem;
   margin: 0 auto;
-  direction: rtl;
 }
 
 .multicolumn-list:not(.slider) {
@@ -943,9 +939,9 @@ a.container-menu-item:last-child, span.container-menu-item:last-child, a.contain
 
 .container-menu-item .icon-caret {
 	position: absolute;
-	left: 0;
+	right: 0;
 	top: 55%;
-	transform: translateY(-50%) rotate(90deg);
+	transform: translateY(-50%) rotate(270deg);
 	margin: 0;
 }
 
@@ -963,6 +959,11 @@ p.container-extra-info {
 	margin-top: var(--grid-desktop-horizontal-spacing);
 }
 
+.empty-orders {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
 .custom-orders-container, .custom-delete-account {
 	position: fixed;
 	width: 100%;
@@ -975,7 +976,7 @@ p.container-extra-info {
 	overflow: hidden;
 	overflow-y: auto;
 	transition: .3s ease-in-out;
-	transform: translateX(100%);
+	transform: translateX(-100%);
 }
 
 .custom-orders-container.active, .custom-delete-account.active {
@@ -999,7 +1000,7 @@ p.container-extra-info {
 }
 
 .toggle-orders-button-content .icon {
-	transform: rotate(270deg);
+	transform: rotate(90deg);
 }
 
 .main-account-info-container--contact, .container-menu-item--logout {
@@ -1013,13 +1014,11 @@ p.container-extra-info {
 
 .contact-icons-container {
 	width: 100%;
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
 	border-top: 1px var(--gradient-base-background-3) solid;
 	border-bottom: 1px var(--gradient-base-background-3) solid;
 }
 
-.contact-icon-child:not(:last-child) {
+.contact-icon-child:not(:first-child) {
 	border-left: 1px var(--gradient-base-background-3) solid;
 }
 
@@ -1057,7 +1056,7 @@ div.contact-icon-child a svg {
 h1.address-main-title {
 	position: relative;
 	margin-top: revert;
-	text-align: right;
+	text-align: left;
 }
 
 a.address-back-link {
@@ -1086,7 +1085,7 @@ button.add-address-button {
 button.add-address-button:before, button.add-address-button:after {
 	content: none;
 	bottom: auto;
-	right: auto;
+	left: auto;
 	z-index: 1;
 }
 
@@ -1103,7 +1102,7 @@ button.add-address-button:before, button.add-address-button:after {
 button.add-address-button:before {
 	width: 1.2rem;
 	height: 0.2rem;
-	left: 2rem;
+	right: 2rem;
 }
 
 button.add-address-button.active:after {
@@ -1113,28 +1112,27 @@ button.add-address-button.active:after {
 button.add-address-button:after {
 	height: 1.2rem;
 	width: 0.2rem;
-	left: 2.5rem;
+	right: 2.5rem;
 	box-shadow: none;
 }
 
-.addresses li > button {
+.addresses li>button {
 	width: fit-content;
 	color: var(--gradient-base-accent-1);
 	background: var(--gradient-background);
 	border: 1px var(--gradient-base-background-3) solid;
 	padding: 0;
 	display: block;
-	margin-left: auto;
-	margin-right: 0;
+	margin-right: auto;
+	margin-left: 0;
 }
 
-.addresses li > button:after, .addresses li > button:before {
+.addresses li>button:after, .addresses li>button:before {
 	content: none;
 }
 
 .addresses form {
-	direction: rtl;
-	text-align: right;
+
 }
 
 .button:not([disabled]):hover::after, .shopify-challenge__button:hover::after, .customer button:hover::after, .shopify-payment-button__button--unbranded:hover::after {
@@ -1239,7 +1237,6 @@ a.order-number-link .icon {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	direction: rtl;
 }
 
 .custom-login-overlay {
@@ -1359,7 +1356,7 @@ td.more-returns-info {
 
 .accept-marketing-notice {
 	color: gray;
-	text-align: right;
+	text-align: left;
 }
 
 p.customer-social-separator {
@@ -1427,7 +1424,7 @@ h2.delete-account-title {
 	}
 
 	.main-account-info-container--contact {
-		margin: 3rem 0 1rem auto;
+		margin: 3rem auto 1rem 0;
 		width: 70%;
 	}
 
@@ -1438,12 +1435,11 @@ h2.delete-account-title {
 	.contact-icons-container {
 		border-top: 0;
 		border-bottom: 0;
-		grid-template-columns: repeat(3, 1fr);
 	}
 
 	.container-menu-item.container-menu-item--logout {
 		width: 70%;
-		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.accept-marketing-notice {
@@ -1704,20 +1700,19 @@ h2.delete-account-title {
 		margin-top: 0;
 	}
 
-	.addresses form > div {
+	.addresses form>div {
 		width: 60%;
 	}
 
-	.addresses form > div:last-child {
+	.addresses form>div:last-child {
 		width: 35%;
-		margin-right: auto;
+		margin-left: auto;
 		display: flex;
-		flex-direction: row-reverse;
 		margin-top: 5rem;
 		column-gap: var(--grid-desktop-horizontal-spacing);
 	}
 
-	.addresses form > div:last-child button {
+	.addresses form>div:last-child button {
 		margin: 0;
 	}
 }

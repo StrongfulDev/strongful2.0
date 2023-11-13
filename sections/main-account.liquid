@@ -44,7 +44,10 @@
                   <h2 class="container-title bold">{{ 'customer.account.loyalty.sub_title' | t }}</h2>
                   <h4>{{ 'customer.account.loyalty.title' | t }}</h4>
               </div>
-              <a href="/pages/a-list" class="container-menu-item pointer">ALIST <span>{{ vipTier }}</span>
+              <a href="/pages/loyalty" class="container-menu-item pointer">ALIST
+                  {% comment %}
+                  <span>{{ vipTier }}</span>
+                  {% endcomment %}
                   {% render 'icon-caret' %}
               </a>
               <p class="container-extra-info">{{ 'customer.account.loyalty.earn_points' | t }}</p>
@@ -77,9 +80,11 @@
                           </div>
                       {% endif %}
                   {% endform %}
-                  <a href="/pages/a-list#refer" class="container-menu-item container-menu-item-refer pointer">{{ 'customer.orders.refer' | t }}
+                  {% comment %}
+                  <a href="/pages/loyalty" class="container-menu-item container-menu-item-refer pointer">{{ 'customer.orders.refer' | t }}
                       {% render 'icon-caret' %}
                   </a>
+                  {% endcomment %}
 
               <div class="custom-orders-container mobile">
                 <div class="toggle-orders-button toggle-orders">
@@ -254,24 +259,30 @@
                   <div class="main-account-info-container main-account-info-container--contact">
                       <p>{{ 'customer.account.contact.title' | t }}</p>
                       <div class="contact-icons-container">
-                          <div class="contact-icon-child">
-                              <a href="https://wa.me/{{ settings.social_whatsapp_link }}" target="_blank">
-                                  {% render 'icon-whatsapp' %}
-                              </a>
-                              <p class="contact-text">{{ 'customer.account.contact.whatsapp' | t }}</p>
-                          </div>
-                          <div class="contact-icon-child">
-                              <a href="mailto:{{ shop.email }}">
-                                  {% render 'icon-email' %}
-                              </a>
-                              <p class="contact-text">{{ 'customer.account.contact.email' | t }}</p>
-                          </div>
-                          <div class="contact-icon-child">
-                              <a href="tel:{{ shop.phone }}">
-                                  {% render 'icon-phone' %}
-                              </a>
-                              <p class="contact-text">{{ 'customer.account.contact.phone' | t }}</p>
-                          </div>
+                          {% if settings.social_whatsapp_link != blank %}
+                              <div class="contact-icon-child">
+                                  <a href="https://wa.me/{{ settings.social_whatsapp_link }}" target="_blank">
+                                      {% render 'icon-whatsapp' %}
+                                  </a>
+                                  <p class="contact-text">{{ 'customer.account.contact.whatsapp' | t }}</p>
+                              </div>
+                          {% endif %}
+                          {% if settings.social_email_link != blank %}
+                              <div class="contact-icon-child">
+                                  <a href="/pages/contact-us">
+                                      {% render 'icon-email' %}
+                                  </a>
+                                  <p class="contact-text">{{ 'customer.account.contact.email' | t }}</p>
+                              </div>
+                          {% endif %}
+                          {% if settings.social_phone_link != blank %}
+                              <div class="contact-icon-child">
+                                  <a href="tel:{{ shop.phone }}">
+                                      {% render 'icon-phone' %}
+                                  </a>
+                                  <p class="contact-text">{{ 'customer.account.contact.phone' | t }}</p>
+                              </div>
+                          {% endif %}
                       </div>
                   </div>
 

@@ -341,25 +341,13 @@
                                                     headers="CartDrawer-ColumnQuantity">
                                                     <div class="cart-item__quantity-wrapper">
 
-                                                        <cart-remove-button
-                                                                id="CartDrawer-Remove-{{ item.index | plus: 1 }}"
-                                                                data-index="{{ item.index | plus: 1 }}"
-                                                        >
-                                                            <button
-                                                                    type="button"
-                                                                    class="button button--tertiary"
-                                                                    aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}"
-                                                            >
-                                                                {% render 'icon-remove' %}
-                                                            </button>
-                                                        </cart-remove-button>
                                                         {% if item.final_line_price > 0 %}
                                                         <quantity-input class="quantity cart-quantity {{ item.title }}">
                                                             <button class="quantity__button no-js-hidden" name="minus"
                                                                     type="button">
-                                <span class="visually-hidden">
-                                  {{- 'products.product.quantity.decrease' | t: product: item.product.title | escape -}}
-                                </span>
+                                                                    <span class="visually-hidden">
+                                                                      {{- 'products.product.quantity.decrease' | t: product: item.product.title | escape -}}
+                                                                    </span>
                                                                 {% render 'icon-minus' %}
                                                             </button>
                                                             <input
@@ -389,6 +377,19 @@
                                                             </button>
                                                         </quantity-input>
                                                         {% endif %}
+
+                                                        <cart-remove-button
+                                                                id="CartDrawer-Remove-{{ item.index | plus: 1 }}"
+                                                                data-index="{{ item.index | plus: 1 }}"
+                                                        >
+                                                            <button
+                                                                    type="button"
+                                                                    class="button button--tertiary"
+                                                                    aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}"
+                                                            >
+                                                                {% render 'icon-remove' %}
+                                                            </button>
+                                                        </cart-remove-button>
                                                     </div>
 
                                                     <div

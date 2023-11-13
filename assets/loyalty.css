@@ -1,0 +1,10 @@
+div[data-widget-type="rewards-summary"],
+div[data-widget-type="rewards-how-it-works"] .stamped-rewards-widget-how-it-works {
+	padding-top: 26px;
+	padding-bottom: 26px;
+}
+
+#stamped-rewards-widget li div.stamped-rewards-widget-item-content {
+	min-width: auto;
+	min-height: auto;
+}

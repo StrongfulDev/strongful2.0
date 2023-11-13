@@ -5,29 +5,30 @@ window.addEventListener('DOMContentLoaded', function(e) {
 	const arrowIcon = document.querySelector(".model-switch-button .icon-caret");
 	hideUnAvailableModels();
 
+		let defaultSize = $('input[name="מידה"]:checked').val();
+		updateVariantRadios(defaultSize);
+		changeModel(defaultSize);
+		updateModelSwitch(defaultSize);
+
 	$('.model-switcher__item input').change(function () {
 		let modelSize = $(this).val();
 		if (modelSize) {
+				updateVariantRadios(modelSize);
 			changeModel(modelSize);
-			updateVariantRadios(modelSize);
+				updateModelSwitch(modelSize);
 			$(this).parents().addClass("inactive");
 			$(this).parents().siblings().removeClass("inactive");
 		}
 	});
 
-	$('variant-radios input[name="Size"], variant-radios input[name="מידה"]').on('change', function () {
-		const modelSize = $(this).val();
-		changeModel(modelSize);
-		updateModelSwitch(modelSize);
-		if (window.innerWidth < 990) {
-			showLowStock(this);
-		}
-	});
-
-	// const modelSize = localStorage.getItem('modelSize');
-	// if (modelSize) {
+		// $('variant-radios input[name="Size"]').on('change', function (e) {
+		// 	const modelSize = $(this).val();
 	// 	changeModel(modelSize);
+		// 	updateModelSwitch(modelSize);
+		// 	if (window.innerWidth < 990) {
+		// 		showLowStock(this);
 	// }
+		// });
 
 	function showLowStock(element) {
 		let lowStockText = $(element).siblings(".product__inventory");
@@ -61,11 +62,13 @@ window.addEventListener('DOMContentLoaded', function(e) {
 	}
 
 	function changeModel(modelSize) {
-		const list = $('.product__media-list');
+			const productMediaList = $('.product__media-list');
 		const sizeTable = $('.div-block-460');
+			const selectedColorValue = $('input[name="צבע"]:checked').val();
 
-		const imagesToHide = list.find(`.product__media-item:not([data-model-size="${modelSize}"])`);
-		const imagesToShow = list.find(`.product__media-item[data-model-size="${modelSize}"]`);
+			const colorImagesToHide = $(document).find(`.product__media-item:not([data-alt="${selectedColorValue}"])`);
+			const sizeImagesToHide = $(document).find(`.product__media-item:not([data-model-size="${modelSize}"])`);
+			const imagesToShow = productMediaList.find(`.product__media-item[data-model-size="${modelSize}"][data-alt="${selectedColorValue}"]`);
 
 		const divsToHide = sizeTable.find(`span:not([data-model-size="${modelSize}"])`);
 		const divsToShow = sizeTable.find(`span[data-model-size="${modelSize}"]`);
@@ -73,31 +76,27 @@ window.addEventListener('DOMContentLoaded', function(e) {
 		const modelWearsSizeParagraphsToShow = $(document).find(`.model-wears-size[data-model="${modelSize}"]`);
 		const modelWearsSizeParagraphsToHide = $(document).find(`.model-wears-size:not([data-model="${modelSize}"])`);
 
-		let progressBar = document.querySelector('.slider-component-progress-bar');
-		$(progressBar).css('width', `calc(100% / ${imagesToShow.length})`);
+			let progressBar = $('.slider-component-progress-bar');
 
-		if (imagesToShow.length > 0) {
-			imagesToHide.hide();
-			imagesToShow.show();
-			divsToHide.hide();
-			divsToShow.show();
-			modelWearsSizeParagraphsToShow.show();
-			modelWearsSizeParagraphsToHide.hide();
-		}
+			sizeImagesToHide.addClass('hidden');
+			colorImagesToHide.addClass('hidden');
+			imagesToShow.removeClass('hidden');
+			divsToHide.addClass('hidden');
+			divsToShow.removeClass('hidden');
+			modelWearsSizeParagraphsToShow.removeClass('hidden');
+			modelWearsSizeParagraphsToHide.addClass('hidden');
+			progressBar.css('width', `calc(100% / ${imagesToShow.length})`);
 
 		$(".model-switcher__list").addClass("hidden");
 		$(".model-switcher-overlay").addClass("hidden");
 		$(arrowIcon).removeClass('rotate-arrow');
 
-		// localStorage.setItem('modelSize', modelSize);
-
 		const model = window.models[modelSize];
 
-		// $('.model-switch-button span').text(model ? `${model.name} (${modelSize})` : `${modelSize}`);
 	}
 
 	function updateVariantRadios(modelSize) {
-		const button = $(`variant-radios input[name="Size"][value="${modelSize}"], variant-radios input[name="מידה"][value="${modelSize}"]`)
+			const button = $(`variant-radios input[name="מידה"][value="${modelSize}"]`)
 		button.click();
 	}
 

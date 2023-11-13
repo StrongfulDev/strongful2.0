@@ -46,6 +46,11 @@
 	padding-right: 0;
 }
 
+.rte[id^="ProductAccordion"] ul {
+	list-style: disc;
+	padding-left: 2rem;
+}
+
 .rte ol {
 	padding-left: 0;
 	padding-right: 0;

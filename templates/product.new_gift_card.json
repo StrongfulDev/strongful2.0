@@ -11,21 +11,22 @@
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
-            "picker_type": "button"
+            "picker_type": "dropdown"
           }
         },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": false
+            "show_dynamic_checkout": false,
+            "members_only_sale_over_text": "זמין לרכישה ב 15.8"
           }
         },
         "679aaa7e-cf01-48c6-85e3-b35a4a905d19": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "תיאור מוצר",
+            "heading": "Description",
             "product_content": "description",
-            "content": "",
+            "content": "<p>Digital gift card for use on site<\/p>",
             "page": "",
             "icon": "none"
           }
@@ -33,7 +34,7 @@
         "6bb9c7f3-70b8-4986-9a85-148874103e99": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "איך משתמשים",
+            "heading": "Gift Card Usage",
             "product_content": "gift_card_usage",
             "content": "",
             "page": "",
@@ -71,6 +72,7 @@
         "hide_variants": true,
         "enable_video_looping": true,
         "details_section_direction": "right",
+        "members_only_tag": "",
         "padding_top": 36,
         "padding_bottom": 52
       }
@@ -98,7 +100,7 @@
       "type": "related-products-slider",
       "settings": {
         "steps": 1,
-        "title": "קניות נפוצות בגיפט קארד",
+        "title": "USUALLY GOES WITH",
         "heading_size": "h1",
         "heading_type": "heading_type_default",
         "description": "",

@@ -10,7 +10,7 @@
 
 <div class="model-switcher-overlay hidden">&nbsp;</div>
 
-<div class="model-switcher fix-direction hidden">
+<div class="model-switcher hidden">
     <div id="model-switch">
         <div class="model-switch-button pointer">
             <span>
@@ -18,7 +18,7 @@
             </span>
             {% render 'icon-caret' %}
         </div>
-        <div class="model-switcher__list hidden">
+        <div class="model-switcher__list hidden fix-direction">
             {% for modelName in product.metafields.model.names.value %}
                 {% assign model = shop.metaobjects.model[modelName] %}
                 <div class="model-switcher__item" data-model-size="{{ model.size_letter.value }}">
@@ -27,12 +27,25 @@
                     <label class="pointer" for="model-{{ model.size_letter.value }}">
                         {% for image in product.images %}
                             {% if image.alt contains model.size_letter.value %}
+                                {% liquid
+                                    assign alt_items_array = image.alt | split: " | "
+                                    assign alt = alt_items_array[0]
+                                    assign alt_color = alt_items_array[1]
+                                    assign image_model_size = alt_items_array[2]
+                                %}
                                 {{ image
                                 | image_url: width: 600
-                                | image_tag: loading: 'lazy', sizes: "400x600", widths: '400' }}
+                                | image_tag:
+                                loading: 'lazy',
+                                sizes: "400x600",
+                                widths: '400',
+                                class: 'model-switcher__image',
+                                data-alt: alt_color,
+                                data-model-size: image_model_size
+                                }}
                             {% endif %}
                         {% endfor %}
-                        {% if model_product.type contains 'אוברול' or model_product.type contains 'שמלה' %}
+                        {% if model_product.type contains 'Jumpsuit' or model_product.type contains 'Dress' %}
                             <div class="model-wears-content">
                                 <div class="model-wears-text">
                                     {{ 'products.product.model_switch.model_wears_one_product' | t }}

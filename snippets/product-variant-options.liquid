@@ -69,15 +69,31 @@
         endfor
     -%}
     {%- if block.settings.picker_type == 'button' or picker_type == "button" -%}
-        {% assign option_value = value %}
-        <span class="variant-button {% if option_disabled %}disabled-variant-button{% endif %} {{ option_value }}">
+        {% liquid
+            assign option_value = value
+            if value == 'XXS' or value == 'XS' or value == 'S' or value == 'M'
+                assign frontValue = 'XS'
+            elsif value == 'L' or value == 'XL' or value == 'XXL' or value == 'XXXL'
+                assign frontValue = 'L'
+            endif
+        %}
+        <span class="variant-button
+            {% if option_disabled %}disabled-variant-button{% endif %}
+            {% if option.name == 'Color' %}color-swatch-button{% endif %}
+            {{ option_value }}">
             <input
                     type="radio"
                     id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
                     name="{{ option.name }}"
                     value="{{ value | escape }}"
                     form="{{ product_form_id }}"
+                    data-front-value="{{ frontValue }}"
                     data-variant-id="{{ variant_id }}"
+                    {% if option.name == 'Size' %}
+                        {% if value == 'XS' %}
+                            checked="checked"
+                        {% endif %}
+                    {% endif %}
                     {% if members_only and product.tags contains announcement_tag %}
                         disabled
                         class="disabled disabled-variant-button"
@@ -86,14 +102,15 @@
                         class="disabled disabled-variant-button"
                     {% endif %}
             >
-            {% if option.name == "Color" or option.name == "צבע" %}
+            {% if option.name == "Color" %}
                 <label class="no-background color-variant-tile"
                        for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
-                    <span style="background-color: {{ value }}">&nbsp;</span>
+                    <span class="color-swatch" data-color="{{ value }}"></span>
                 </label>
             {% else %}
                 <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
-                    {{ value -}}
+                    <span>{{ value }}</span>
+                    <span class="dynamic_american_size"></span>
                     <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
                 </label>
             {% endif %}
