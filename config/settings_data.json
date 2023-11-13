@@ -141,7 +141,7 @@
     "custom_collection_second_announcement": "פריט זה אינו משתתף במבצע SHOPPING IL",
     "announcement_customizer_override": true,
     "preorder_over_text": "",
-    "enable_quick_add": true,
+    "enable_quick_add": false,
     "quick_add_text": "בחירת מידה",
     "quick_add_accessories_text": "הוספה לסל",
     "members_only_sale": false,
