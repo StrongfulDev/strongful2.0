@@ -255,9 +255,9 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/0737a51b2679a55d45d0d8f464335044_60032ed3-0d4e-4b01-b0ab-3860d7eff8ad.jpg",
-            "alt": "SHOPPING IL BANNER",
+            "alt": "פריטים ב 30% הנחה",
             "link": "SALE",
-            "url": "shopify:\/\/collections\/sets",
+            "url": "shopify:\/\/collections\/30",
             "show_on_desktop": true
           }
         },
