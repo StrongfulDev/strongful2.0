@@ -3688,8 +3688,22 @@ body:not(.enable-toolbar-RTL) #enable-reader, body:not(.enable-toolbar-RTL) #ena
     text-align: left;
 }
 
-div.ReturnGO_ReturnItemProposition-module_shipping:nth-child(2), .ReturnGO_ReturnItemProposition-module_taxDisclaimer {
+div.ReturnGO_ReturnItemProposition-module_shipping:nth-child(2), .ReturnGO_ReturnItemProposition-module_taxDisclaimer,
+.ReturnGO_ReturnItemProposition-module_titles>div:last-child,
+#returnGoAssistant .ReturnGO_ReturnItemProposition-module_returnItemProposition .ReturnGO_ReturnItemProposition-module_radioBlock .ReturnGO_ReturnItemProposition-module_creditBadge, #returnGoCartWidget .ReturnGO_ReturnItemProposition-module_returnItemProposition .ReturnGO_ReturnItemProposition-module_radioBlock .ReturnGO_ReturnItemProposition-module_creditBadge, #returnGoAccountWidget .ReturnGO_ReturnItemProposition-module_returnItemProposition .ReturnGO_ReturnItemProposition-module_radioBlock .ReturnGO_ReturnItemProposition-module_creditBadge {
     display: none !important;
+}
+
+#returnGoAssistant .rtl .ReturnGO_ReturnItemProposition-module_returnItemProposition .ReturnGO_ReturnItemProposition-module_content .ReturnGO_ReturnItemProposition-module_solution .ReturnGO_ReturnItemProposition-module_offers .ReturnGO_ReturnItemProposition-module_radio>span, #returnGoCartWidget .rtl .ReturnGO_ReturnItemProposition-module_returnItemProposition .ReturnGO_ReturnItemProposition-module_content .ReturnGO_ReturnItemProposition-module_solution .ReturnGO_ReturnItemProposition-module_offers .ReturnGO_ReturnItemProposition-module_radio>span, #returnGoAccountWidget .rtl .ReturnGO_ReturnItemProposition-module_returnItemProposition .ReturnGO_ReturnItemProposition-module_content .ReturnGO_ReturnItemProposition-module_solution .ReturnGO_ReturnItemProposition-module_offers .ReturnGO_ReturnItemProposition-module_radio>span {
+    top: 13px !important;
+}
+
+#returnGoAssistant .rtl .ReturnGO_ReturnItemProposition-module_returnItemProposition .ReturnGO_ReturnItemProposition-module_content .ReturnGO_ReturnItemProposition-module_solution .ReturnGO_ReturnItemProposition-module_offers .ReturnGO_ReturnItemProposition-module_radio>span:nth-child(3), #returnGoCartWidget .rtl .ReturnGO_ReturnItemProposition-module_returnItemProposition .ReturnGO_ReturnItemProposition-module_content .ReturnGO_ReturnItemProposition-module_solution .ReturnGO_ReturnItemProposition-module_offers .ReturnGO_ReturnItemProposition-module_radio>span:nth-child(3), #returnGoAccountWidget .rtl .ReturnGO_ReturnItemProposition-module_returnItemProposition .ReturnGO_ReturnItemProposition-module_content .ReturnGO_ReturnItemProposition-module_solution .ReturnGO_ReturnItemProposition-module_offers .ReturnGO_ReturnItemProposition-module_radio>span:nth-child(3) {
+    top: 19px !important;
+}
+
+.ReturnGO_ReturnItemProposition-module_titleWithLabel.ReturnGO_ReturnItemProposition-module_withoutMethod {
+    padding-top: 0 !important;
 }
 
 label .ReturnGO_ReturnItemProposition-module_open, .ReturnGO_ReturnItemProposition-module_costs {
@@ -3735,9 +3749,9 @@ label .ReturnGO_ReturnItemProposition-module_open, .ReturnGO_ReturnItemPropositi
     max-height: fit-content !important;
 }
 
-.ReturnGO_ReturnItemProposition-module_description > p:not(:nth-child(4)) {
-    display: none !important;
-}
+/*.ReturnGO_ReturnItemProposition-module_description>p:not(:nth-child(2)) {*/
+/*    display: none !important;*/
+/*}*/
 
 /*      .ReturnGO_ReturnItemProposition-module_legend    */
 
