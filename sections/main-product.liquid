@@ -545,9 +545,7 @@
             </product-info>
         </div>
         {%- if section.settings.media_position == 'right' -%}
-            {% comment %} Duplicate gallery to display after product content on tablet/desktop breakpoint {% endcomment %}
             <div class="grid__item product__media-wrapper small-hide">
-                {% comment %}{% render 'product-media-gallery', variant_images: variant_images, is_duplicate: true, color_images: color_images %}{% endcomment %}
                 {% render 'product-media-gallery' %}
             </div>
         {%- endif -%}
