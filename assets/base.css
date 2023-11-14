@@ -3747,11 +3747,12 @@ label .ReturnGO_ReturnItemProposition-module_open, .ReturnGO_ReturnItemPropositi
 
 .ReturnGO_ReturnItemProposition-module_description {
     max-height: fit-content !important;
+    padding-bottom: 10px !important;
 }
 
-/*.ReturnGO_ReturnItemProposition-module_description>p:not(:nth-child(2)) {*/
-/*    display: none !important;*/
-/*}*/
+.ReturnGO_ReturnItemProposition-module_description>p:first-child, .ReturnGO_ReturnItemProposition-module_description>p:nth-child(3) {
+    display: none !important;
+}
 
 /*      .ReturnGO_ReturnItemProposition-module_legend    */
 
