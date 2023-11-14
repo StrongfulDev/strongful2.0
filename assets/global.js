@@ -1008,9 +1008,9 @@ class VariantSelects extends HTMLElement {
 	  // modelSwitcherColorItemsToShow.eq(0).addClass('higher-index');
 
     const modalContent = document.querySelector(`#ProductModal-${this.dataset.section} .product-media-modal__content`);
-    if (!modalContent) return;
-    const newMediaModal = modalContent.querySelector( `[data-media-id="${this.currentVariant.featured_media.id}"]`);
-    modalContent.prepend(newMediaModal);
+    // if (!modalContent) return;
+    // const newMediaModal = modalContent.querySelector(`[data-media-id="${this.dataset.section}-${this.currentVariant.featured_media.id}"]`);
+    // modalContent.prepend(newMediaModal);
   }
 
   updateURL(event) {

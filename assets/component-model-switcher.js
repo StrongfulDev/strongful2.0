@@ -126,6 +126,6 @@ window.addEventListener('DOMContentLoaded', function(e) {
 				$(".model-switcher-overlay").toggleClass("hidden");
 			}
 		});
-	}, 500);
+	}, 1500);
 
 });
