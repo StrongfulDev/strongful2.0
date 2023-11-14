@@ -22,7 +22,6 @@
         class="page-width section-{{ section.id }}-padding"
         data-section="{{ section.id }}"
 >
-    {{ 'component-model-switcher.js' | asset_url | script_tag }}
     {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
     {{ 'component-accordion.css' | asset_url | stylesheet_tag }}
     {{ 'component-price.css' | asset_url | stylesheet_tag }}
@@ -32,10 +31,7 @@
     {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
     {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
     {{ 'component-swiper.js' | asset_url | script_tag }}
-
-    {% unless product.tags contains 'noSimilar' %}
-        {{ 'component-similar-items.js' | asset_url | script_tag }}
-    {% endunless %}
+    {{ 'component-model-switcher.js' | asset_url | script_tag }}
     {{ 'product-collapsible.js' | asset_url | script_tag }}
 
     {%- style -%}

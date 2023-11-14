@@ -490,7 +490,7 @@
     }
 
     .shop-all-link {
-	    text-align: left;
+	    text-align: right;
 	    display: block;
 	    text-decoration: none;
 	    color: var(--color-icon);

@@ -925,7 +925,7 @@ noscript .localization-selector.link {
 
     .blog_and_newsletter-ctn {
         width: 74%;
-        margin-left: auto;
+        margin-right: auto;
     }
 
     .blog_and_newsletter-subtitle {
@@ -1016,7 +1016,7 @@ noscript .localization-selector.link {
     }
 
     .footer__content-bottom-wrapper--center {
-        justify-content: flex-end;
+        justify-content: flex-start;
     }
 
     .blog_and_newsletter_image:hover {

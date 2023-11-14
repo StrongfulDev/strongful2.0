@@ -2057,7 +2057,7 @@ input[type='checkbox'] {
 
 .customer .field .form__message {
     font-size: 1.4rem;
-    text-align: left;
+    text-align: right;
 }
 
 .form__message .icon,
