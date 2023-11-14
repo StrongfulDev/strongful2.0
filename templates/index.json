@@ -152,7 +152,7 @@
         "show_peak": true,
         "pagination_type": "sides",
         "color_scheme": "background-1",
-        "image_ratio": "adapt",
+        "image_ratio": "square",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
