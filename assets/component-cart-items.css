@@ -61,12 +61,6 @@
 	align-items: center;
 }
 
-.cart-item__details div>dl {
-	border-left: 1px var(--gradient-base-background-4) solid;
-	padding-left: .5rem;
-	margin-left: .5rem;
-}
-
 .cart-item__details div>dl.cart-inline-dl {
 	display: inline-block;
 	font-size: calc(var(--font-body-size-medium) * 0.9);
@@ -202,12 +196,8 @@ cart-remove-button .icon-remove {
   margin-right: 0.7rem;
 }
 
-.cart-item__error-text:empty + svg {
+.cart-item__error-text:empty+svg {
   display: none;
-}
-
-.product-option + .product-option {
-  margin-top: 0.4rem;
 }
 
 .product-option * {
