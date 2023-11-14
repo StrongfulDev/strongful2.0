@@ -3674,14 +3674,8 @@ body:not(.enable-toolbar-RTL) #enable-reader, body:not(.enable-toolbar-RTL) #ena
 	direction: rtl !important;
 }
 
-
-.ReturnGO_RadioButton-module_radioButton.ReturnGO_RadioButton-module_checked.ReturnGO_RadioButton-module_boxed.ReturnGO_ReturnItemProposition-module_radio .ReturnGO_RadioButton-module_checkmarkChecked,
-.ReturnGO_RadioButton-module_radioButton.ReturnGO_RadioButton-module_checked.ReturnGO_RadioButton-module_boxed.ReturnGO_ReturnItemProposition-module_radio .ReturnGO_RadioButton-module_checkmark,
-.ReturnGO_RadioButton-module_radioButton.ReturnGO_RadioButton-module_checked.ReturnGO_RadioButton-module_boxed.ReturnGO_ReturnItemProposition-module_radio .ReturnGO_ReturnItemProposition-module_titles,
-.ReturnGO_RadioButton-module_radioButton.ReturnGO_RadioButton-module_checked.ReturnGO_RadioButton-module_boxed.ReturnGO_ReturnItemProposition-module_radio .ReturnGO_RadioButton-module_checkmark {
-	/*display: none !important;*/
-	/*opacity: 0 !important;*/
-	/*visibility: hidden !important;*/
+.ReturnGO_ReturnItemProposition-module_titles {
+    width: max-content;
 }
 
 .ReturnGO_ReturnItemProposition-module_costs p {
