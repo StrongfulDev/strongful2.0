@@ -29,7 +29,7 @@
                 {% when "description" %}
                     {{ product.content }}
                 {% when "sizing_table" %}
-                {% unless product.tags contains 'אקססוריז' %}
+                {% unless product.tags contains 'אקססוריז' or product.title contains 'תרומה' %}
                     {% render 'product-sizing-table',
                             product: product,
                             block: block
