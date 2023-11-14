@@ -1808,6 +1808,8 @@ variant-radios {
 .size-table-stock-container {
 	display: flex;
 	justify-content: space-between;
+    margin: 2rem 0 1.5rem;
+    width: 100%;
 }
 
 .size-table-toggler {
@@ -1881,7 +1883,7 @@ variant-radios {
 
 .model-wears-size .bold {
 	font-weight: var(--font-body-weight-bold);
-	margin-left: var(--grid-mobile-vertical-spacing);
+	margin-right: var(--grid-mobile-vertical-spacing);
 }
 
 .variant_modal .product_size_picker__heading {

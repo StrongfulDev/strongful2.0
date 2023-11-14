@@ -115,6 +115,13 @@
   },
   "products": {
     "product": {
+      "model": {
+        "name": "שם",
+        "height": "גובה",
+        "bust": "חזה",
+        "waist": "מותניים",
+        "hips": "אגן"
+      },
       "add_to_cart": "הוספה לסל",
       "launch_date": "זמין לרכישה ב 15.8",
       "members_only": "מכירה מוקדמת לחברות מועדון בלבד",

@@ -79,13 +79,15 @@
                   members_only_sale: settings.members_only_sale,
                   members_only_sale_active: settings.members_only_sale_active
           %}
+            {% if option.name == 'מידה' %}
+                {% unless product.tags contains 'noSizeTable' %}
+                    <div class="size-table-stock-container">
+                        <p class="size-table-toggler pointer">{{ 'products.product.size_table' | t }}</p>
+                    </div>
+                {% endunless %}
+            {% endif %}
         </fieldset>
       {%- endfor -%}
-        <div class="size-table-stock-container">
-            {% unless product.tags contains 'noSizeTable' %}
-                <p class="size-table-toggler pointer">{{ 'products.product.size_table' | t }}</p>
-            {% endunless %}
-        </div>
       <script type="application/json">
         {{ product.variants | json }}
       </script>
