@@ -2033,7 +2033,7 @@ product-recommendations .collection__title_heading {
 
 .sale-banner-product-page {
     background: var(--gradient-base-background-3);
-    padding: 1rem;
+    padding: 1rem 1rem;
     text-align: center;
 }
 
