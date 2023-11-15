@@ -2033,7 +2033,7 @@ product-recommendations .collection__title_heading {
 
 .sale-banner-product-page {
     background: var(--gradient-base-background-3);
-    padding: 1rem .5rem;
+    padding: 1rem;
     text-align: center;
 }
 
@@ -2339,4 +2339,8 @@ button.needsclick {
 .outlet-collection-tag .discount-tag {
 	width: 10px;
 	height: 10px;
+}
+
+.sale-banner-product-page .money {
+    font-weight: var(--font-body-weight-bold);
 }

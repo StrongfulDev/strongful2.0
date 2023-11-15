@@ -12,7 +12,7 @@
 {% endcomment %}
 
 <div class="product__accordion accordion quick-add-hidden fix-direction {{ block.settings.product_content }}" {{ block.shopify_attributes }}>
-    <details id="Details-{{ block.id }}-{{ section.id }}">
+    <details id="Details-{{ block.id }}-{{ section.id }}" {% if product.title contains 'מארז תרומה' %} open {% endif %}>
         <summary class="footer--summary">
             <div class="summary__title">
                 {% if block.settings.icon != blank %}
