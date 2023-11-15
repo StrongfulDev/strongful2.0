@@ -3685,6 +3685,10 @@ body:not(.enable-toolbar-RTL) #enable-reader, body:not(.enable-toolbar-RTL) #ena
 	visibility: hidden !important;
 }
 
+#returnGoAssistant .ReturnGO_Popup-module_popup svg, #returnGoCartWidget .ReturnGO_Popup-module_popup svg, #returnGoAccountWidget .ReturnGO_Popup-module_popup svg {
+    transform: rotate(180deg) !important;
+}
+
 .ReturnGO_ReturnItemProposition-module_radioContent {
 	padding: 15px 15px 180px 15px !important;
 	order: 2 !important;
