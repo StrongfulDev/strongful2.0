@@ -264,8 +264,6 @@
                             <span class="card_banner_text color-background-2">{{ card_banner_text }}</span>
                         {% elsif card_product.tags contains 'donation' %}
                             <span class="card_banner_text color-background-2">מארז תרומה לארגון ׳לתת׳</span>
-                        {% else %}
-                            <span class="card_banner_text fix-direction color-background-2">{{ custom_collection_second_announcement }}</span>
                         {% endif %}
                         {% if card_product.compare_at_price > card_product.price %}
                             <div class="discount-price-container">
