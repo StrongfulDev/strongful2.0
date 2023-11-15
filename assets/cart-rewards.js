@@ -11,7 +11,6 @@ class CartRewards {
 	allRewardsAmount = 0;
 	activeRewards = 0;
 	cartTotalValue = 0;
-	requiresShippingCartValue = 0;
 	lastCartTotalValue = 0;
 
 	async init() {
@@ -79,8 +78,11 @@ class CartRewards {
 				rewardItem.removeClass("active-reward");
 			}
 
-			if (this.cartTotalValue < 30) {
+			if (this.cartTotalValue < 10) {
 				this.removePackageProtection();
+			}
+
+			if (this.cart.items.length === 0) {
 				this.clearCart();
 			}
 		});
