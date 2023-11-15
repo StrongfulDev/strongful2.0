@@ -3685,8 +3685,13 @@ body:not(.enable-toolbar-RTL) #enable-reader, body:not(.enable-toolbar-RTL) #ena
 	visibility: hidden !important;
 }
 
-#returnGoAssistant .ReturnGO_Popup-module_popup svg, #returnGoCartWidget .ReturnGO_Popup-module_popup svg, #returnGoAccountWidget .ReturnGO_Popup-module_popup svg {
+.ReturnGO_ActionsDropdown-module_selectedAction svg, .ReturnGO_ActionsDropdown-module_buttonArrowShort svg {
     transform: rotate(180deg) !important;
+}
+
+.ReturnGO_ActionsDropdown-module_actionsList li {
+    padding-top: var(--grid-desktop-vertical-spacing) !important;
+    padding-bottom: var(--grid-desktop-vertical-spacing) !important;
 }
 
 .ReturnGO_ReturnItemProposition-module_radioContent {
