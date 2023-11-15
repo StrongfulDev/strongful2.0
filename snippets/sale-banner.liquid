@@ -40,7 +40,7 @@
     {% if product.tags contains announcement_tag %}
         <p>{{ block.settings.logged_out_text | newline_to_br }}</p>
     {% elsif product.tags contains 'donation' %}
-        <p>מארז תרומה לארגון ׳לתת׳</p>
+        <p>מארז תרומה הכולל בגדים חדשים עבור ארגון ״לתת״, המסייע למפונות ומוקדי האירוח השונים בישראל.</p>
     {% else %}
         <p>{{ block.settings.logged_in_text | newline_to_br }}</p>
     {% endif %}
