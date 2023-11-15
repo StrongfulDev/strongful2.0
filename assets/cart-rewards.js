@@ -35,14 +35,13 @@ class CartRewards {
 
 		this.lastCartTotalValue = this.cartTotalValue;
 		this.cart = await this.getCart();
-		console.log(this.cart);
 		this.cart.items.forEach((item) => {
-			if (item.requires_shipping === true) {
-				this.requiresShippingCartValue += item.price * item.quantity;
+			if (item.requires_shipping === false) {
+				this.cart.total_price -= item.price * item.quantity;
 			}
 		});
-		// this.cartTotalValue = this.cart.total_price / 100;
-		this.cartTotalValue = this.requiresShippingCartValue / 100;
+		this.cartTotalValue = this.cart.total_price / 100;
+		console.log(this.cartTotalValue);
 		this.activeRewards = 0
 
 		this.rules.forEach((rule, index) => {
