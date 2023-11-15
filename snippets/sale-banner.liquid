@@ -36,15 +36,14 @@
 {% endif %}
 {% endcomment %}
 
-<div class="sale-banner-product-page fix-direction">
-    {% if product.tags contains announcement_tag %}
+{% assign donationPrice = product.price | times: 3 %}
+
+{% if product.tags contains announcement_tag %}
+    <div class="sale-banner-product-page fix-direction">
         <p>{{ block.settings.logged_out_text | newline_to_br }}</p>
-    {% elsif product.tags contains 'donation' %}
-        <p>מארז תרומה הכולל בגדים חדשים עבור ארגון ״לתת״, המסייע למפונות ומוקדי האירוח השונים בישראל.</p>
-    {% else %}
-        <p>{{ block.settings.logged_in_text | newline_to_br }}</p>
-    {% endif %}
-    {% if block.settings.small_text != blank %}
-        <small class="">{{ block.settings.small_text }}</small>
-    {% endif %}
-</div>
+    </div>
+{% elsif product.tags contains 'donation' %}
+    <div class="sale-banner-product-page fix-direction">
+        <p>מארז תרומה הכולל בגדים חדשים בשווי {{ donationPrice | money_without_trailing_zeros }} עבור ארגון ״לתת״, המסייע למפונות ומוקדי האירוח השונים בישראל.</p>
+    </div>
+{% endif %}
