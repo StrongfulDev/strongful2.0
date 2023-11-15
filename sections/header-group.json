@@ -10,12 +10,12 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "מבצע סוף עונה",
-            "sub_text": "פריטים נבחרים עד 50%",
+            "main_text": "מארזי תרומה",
+            "sub_text": "מארזי תרומה עבור ארגון ״לתת״",
             "text_alignment": "center",
             "main_text_direction": "rtl",
             "sub_text_direction": "rtl",
-            "link": "shopify:\/\/collections\/outlet",
+            "link": "shopify:\/\/collections\/מארזי-תרומות",
             "color_scheme": "accent-1"
           }
         },
