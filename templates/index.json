@@ -142,7 +142,7 @@
         "description_style": "body",
         "collection": "מארזי-תרומות",
         "products_to_show": 15,
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "full_width": true,
         "show_view_all": false,
         "view_all_text": "SHOP ALL",
