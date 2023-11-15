@@ -3674,7 +3674,7 @@ body:not(.enable-toolbar-RTL) #enable-reader, body:not(.enable-toolbar-RTL) #ena
 	direction: rtl !important;
 }
 
-.ReturnGO_ReturnItemProposition-module_titles {
+.ReturnGO_ReturnItemProposition-module_titles, .ReturnGO_ReturnItemProposition-module_titles p, .ReturnGO_ReturnItemProposition-module_titles div {
     width: max-content;
 }
 
