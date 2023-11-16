@@ -3682,6 +3682,10 @@ body:not(.enable-toolbar-RTL) #enable-reader, body:not(.enable-toolbar-RTL) #ena
     text-align: left;
 }
 
+.ReturnGO_ActionsDropdown-module_selectedAction svg, .ReturnGO_ActionsDropdown-module_buttonArrowShort svg {
+    transform: rotate(180deg) !important;
+}
+
 div.ReturnGO_ReturnItemProposition-module_shipping:nth-child(2), .ReturnGO_ReturnItemProposition-module_taxDisclaimer,
 .ReturnGO_ReturnItemProposition-module_titles>div:last-child,
 #returnGoAssistant .ReturnGO_ReturnItemProposition-module_returnItemProposition .ReturnGO_ReturnItemProposition-module_radioBlock .ReturnGO_ReturnItemProposition-module_creditBadge, #returnGoCartWidget .ReturnGO_ReturnItemProposition-module_returnItemProposition .ReturnGO_ReturnItemProposition-module_radioBlock .ReturnGO_ReturnItemProposition-module_creditBadge, #returnGoAccountWidget .ReturnGO_ReturnItemProposition-module_returnItemProposition .ReturnGO_ReturnItemProposition-module_radioBlock .ReturnGO_ReturnItemProposition-module_creditBadge {
