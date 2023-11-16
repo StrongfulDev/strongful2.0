@@ -3791,6 +3791,10 @@ label .ReturnGO_ReturnItemProposition-module_open, .ReturnGO_ReturnItemPropositi
     height: auto !important;
 }
 
+.ReturnGO_ReturnItemProposition-module_feeData {
+    display: none !important;
+}
+
 #returnGoAssistant .ReturnGO_ReturnItemProposition-module_returnItemProposition .ReturnGO_ReturnItemProposition-module_alternativeItemLabel, #returnGoCartWidget .ReturnGO_ReturnItemProposition-module_returnItemProposition .ReturnGO_ReturnItemProposition-module_alternativeItemLabel, #returnGoAccountWidget .ReturnGO_ReturnItemProposition-module_returnItemProposition .ReturnGO_ReturnItemProposition-module_alternativeItemLabel {
     max-width: max-content !important;
 }
