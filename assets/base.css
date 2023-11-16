@@ -3682,8 +3682,9 @@ body:not(.enable-toolbar-RTL) #enable-reader, body:not(.enable-toolbar-RTL) #ena
     text-align: left;
 }
 
-.ReturnGO_ActionsDropdown-module_selectedAction svg, .ReturnGO_ActionsDropdown-module_buttonArrowShort svg {
-    transform: rotate(180deg) !important;
+.ReturnGO_ActionsDropdown-module_selectedAction svg, .ReturnGO_ActionsDropdown-module_buttonArrowShort svg,
+#returnGoAssistant .ReturnGO_ActionsDropdown-module_actionsContainer .ReturnGO_ActionsDropdown-module_buttonArrowShort.ReturnGO_ActionsDropdown-module_open, #returnGoCartWidget .ReturnGO_ActionsDropdown-module_actionsContainer .ReturnGO_ActionsDropdown-module_buttonArrowShort.ReturnGO_ActionsDropdown-module_open, #returnGoAccountWidget .ReturnGO_ActionsDropdown-module_actionsContainer .ReturnGO_ActionsDropdown-module_buttonArrowShort.ReturnGO_ActionsDropdown-module_open {
+    transform: rotate(90deg) !important;
 }
 
 div.ReturnGO_ReturnItemProposition-module_shipping:nth-child(2), .ReturnGO_ReturnItemProposition-module_taxDisclaimer,
@@ -3787,6 +3788,15 @@ label .ReturnGO_ReturnItemProposition-module_open, .ReturnGO_ReturnItemPropositi
 
 #returnGoAssistant .rtl .ReturnGO_ItemContent-module_badge.ReturnGO_ItemContent-module_returned {
 	background: #000 !important;
+    height: auto !important;
+}
+
+#returnGoAssistant .ReturnGO_ReturnItemProposition-module_returnItemProposition .ReturnGO_ReturnItemProposition-module_alternativeItemLabel, #returnGoCartWidget .ReturnGO_ReturnItemProposition-module_returnItemProposition .ReturnGO_ReturnItemProposition-module_alternativeItemLabel, #returnGoAccountWidget .ReturnGO_ReturnItemProposition-module_returnItemProposition .ReturnGO_ReturnItemProposition-module_alternativeItemLabel {
+    max-width: max-content !important;
+}
+
+.ReturnGO_SearchLayout-module_resultsContainer img[alt="back"] {
+    transform: rotate(180deg);
 }
 
 .ReturnGO_Footer-module_footer {
