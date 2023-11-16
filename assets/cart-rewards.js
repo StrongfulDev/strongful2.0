@@ -34,7 +34,13 @@ class CartRewards {
 
 		this.lastCartTotalValue = this.cartTotalValue;
 		this.cart = await this.getCart();
+		this.cart.items.forEach((item) => {
+			if (item.requires_shipping === false) {
+				this.cart.total_price -= item.price * item.quantity;
+			}
+		});
 		this.cartTotalValue = this.cart.total_price / 100;
+		console.log(this.cartTotalValue);
 		this.activeRewards = 0
 
 		this.rules.forEach((rule, index) => {
@@ -72,8 +78,11 @@ class CartRewards {
 				rewardItem.removeClass("active-reward");
 			}
 
-			if (this.cartTotalValue < 30) {
+			if (this.cartTotalValue < 10) {
 				this.removePackageProtection();
+			}
+
+			if (this.cart.items.length === 0) {
 				this.clearCart();
 			}
 		});
