@@ -3688,7 +3688,7 @@ body:not(.enable-toolbar-RTL) #enable-reader, body:not(.enable-toolbar-RTL) #ena
 }
 
 .ReturnGO_ActionsDropdown-module_actionsList li {
-    padding-top: 10px !important;
+    padding: 10px 10px 1px !important;
 }
 
 div.ReturnGO_ReturnItemProposition-module_shipping:nth-child(2), .ReturnGO_ReturnItemProposition-module_taxDisclaimer,
