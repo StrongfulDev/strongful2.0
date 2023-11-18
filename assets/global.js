@@ -1019,7 +1019,8 @@ class VariantSelects extends HTMLElement {
       let colorName = event.target.value;
       window.history.replaceState({ }, '', `${this.dataset.url}?color=${colorName}&variant=${this.currentVariant.id}`);
     } else {
-      window.history.replaceState({ }, '', `${this.dataset.url}?variant=${this.currentVariant.id}`);
+      // window.history.replaceState({ }, '', `${this.dataset.url}?variant=${this.currentVariant.id}`);
+      window.history.replaceState({ }, '', `${this.dataset.url}?color=${colorName}&variant=${this.currentVariant.id}`);
     }
   }
 

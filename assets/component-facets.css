@@ -1570,8 +1570,8 @@ summary .icon-caret {
 @media screen and (min-width: 990px) {
 
   .facets-vertical .facets-wrapper {
-    padding-left: 0;
-    padding-right: 3rem;
+    padding-right: 0;
+    padding-left: 3rem;
   }
 
 	.facets-vertical .facets-wrapper::-webkit-scrollbar {
@@ -1583,13 +1583,13 @@ summary .icon-caret {
   }
 
   .facets-vertical .facets__summary {
-    padding-left: 0;
-    padding-right: 1.75rem;
+    padding-right: 0;
+    padding-left: 1.75rem;
   }
 
   .facets__summary .icon-caret {
-    left: auto;
-    right: 1.5rem;
+    right: auto;
+    left: 1.5rem;
 	  height: 1.5rem;
 	  width: 1.5rem;
 	  top: 50%;
@@ -1604,8 +1604,8 @@ summary .icon-caret {
   }
 
   .facet-checkbox>svg {
-    margin-left: 0;
-    margin-right: 1.2rem;
+    margin-right: 0;
+    margin-left: 1.2rem;
 	  width: 2rem;
 	  height: 2rem;
   }
@@ -1616,7 +1616,7 @@ summary .icon-caret {
   }
 
   .facet-checkbox {
-    padding: .8rem 1.6rem 1rem 0;
+    padding: .8rem 0 1rem 1.6rem;
     align-items: center;
   }
 
@@ -1664,8 +1664,8 @@ summary .icon-caret {
   }
 
   .facet-checkbox .icon-checkmark {
-    left: 2px;
-    right: auto;
+    right: 2px;
+    left: auto;
     top: 50%;
 	  width: 1.6rem;
 	  height: 1.6rem;

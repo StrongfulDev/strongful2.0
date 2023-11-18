@@ -93,12 +93,15 @@
                         {% if value == 'XS' %}
                             checked="checked"
                         {% endif %}
+                    {% else %}
+                        {% if forloop.first %}
+                            checked="checked"
+                        {% endif %}
                     {% endif %}
                     {% if members_only and product.tags contains announcement_tag %}
                         disabled
                         class="disabled disabled-variant-button"
                     {% elsif option_disabled %}
-                        {% comment %}disabled="disabled"{% endcomment %}
                         class="disabled disabled-variant-button"
                     {% endif %}
             >
