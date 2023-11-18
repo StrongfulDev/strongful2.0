@@ -12,7 +12,7 @@
 {% endcomment %}
 
 <div class="product__accordion accordion quick-add-hidden fix-direction {{ block.settings.product_content }}" {{ block.shopify_attributes }}>
-    <details id="Details-{{ block.id }}-{{ section.id }}">
+    <details id="Details-{{ block.id }}-{{ section.id }}" {% if product.title contains 'מארז תרומה' %} open {% endif %}>
         <summary class="footer--summary">
             <div class="summary__title">
                 {% if block.settings.icon != blank %}
@@ -29,17 +29,19 @@
                 {% when "description" %}
                     {{ product.content }}
                 {% when "sizing_table" %}
-                {% unless product.tags contains 'אקססוריז' %}
+                {% unless product.tags contains 'אקססוריז' or product.tags contains 'donation' %}
                     {% render 'product-sizing-table',
                             product: product,
                             block: block
                     %}
                 {% endunless %}
                 {% when "shipping_information" %}
-                    {% render 'product-shipping-information',
-                            product: product,
-                            block: block
-                    %}
+                    {% unless product.tags contains 'no-shipping' %}
+                        {% render 'product-shipping-information',
+                                product: product,
+                                block: block
+                        %}
+                    {% endunless %}
                 {% when "gift_card_usage" %}
                     {% render 'product-gift-card-usage',
                             product: product,

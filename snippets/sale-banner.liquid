@@ -36,18 +36,14 @@
 {% endif %}
 {% endcomment %}
 
-{% if product.tags contains announcement_tag or product.tags contains settings.second_announcement_tag %}
+{% assign donationPrice = product.price | times: 3 %}
+
+{% if product.tags contains announcement_tag %}
     <div class="sale-banner-product-page fix-direction">
-        {% if product.tags contains settings.second_announcement_tag %}
-            <p>{{ block.settings.logged_in_text | newline_to_br }}</p>
-        {% else %}
-            <p>{{ block.settings.logged_out_text | newline_to_br }}</p>
-            {% if block.settings.log_in != blank %}
-                <small class="account-toggler-site-wide link">{{ block.settings.log_in }}</small>
-            {% endif %}
-        {% endif %}
-        {% if block.settings.small_text != blank %}
-            <small class="">{{ block.settings.small_text }}</small>
-        {% endif %}
+        <p>{{ block.settings.logged_out_text | newline_to_br }}</p>
+    </div>
+{% elsif product.tags contains 'donation' %}
+    <div class="sale-banner-product-page fix-direction">
+        <p>מארז תרומה הכולל בגדים חדשים בשווי {{ donationPrice | money_without_trailing_zeros }} עבור ארגון ״לתת״, המסייע למפונות ומוקדי האירוח השונים בישראל.</p>
     </div>
 {% endif %}

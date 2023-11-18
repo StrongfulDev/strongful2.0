@@ -41,9 +41,18 @@ ul.slider--tablet:after {
 		justify-content: space-between;
 	}
 
+	ul.grid.product-grid.contains-card.contains-card--product.contains-card--standard.grid--3-col-desktop {
+		column-gap: 5rem;
+	}
+
 	.slider.slider--tablet.contains-card--standard:not(.slider--desktop) li.grid__item.slider__slide:not(.collection-list__item--no-media) {
 		min-width: 24%;
 		margin-right: 0;
+	}
+
+	.slider.slider--tablet.contains-card--standard:not(.slider--desktop).grid--3-col-desktop li.grid__item.slider__slide:not(.collection-list__item--no-media) {
+		min-width: 30%;
+		width: 30%;
 	}
 }
 
