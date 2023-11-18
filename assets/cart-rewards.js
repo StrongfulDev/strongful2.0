@@ -40,7 +40,6 @@ class CartRewards {
 			}
 		});
 		this.cartTotalValue = this.cart.total_price / 100;
-		console.log(this.cartTotalValue);
 		this.activeRewards = 0
 
 		this.rules.forEach((rule, index) => {
