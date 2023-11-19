@@ -18,7 +18,6 @@
     endif
 %}
 
-{% comment %}
 {% if product.tags contains announcement_tag %}
     <div class="sale-banner-product-page fix-direction">
         {% if customer %}
@@ -34,7 +33,8 @@
         {% endif %}
     </div>
 {% endif %}
-{% endcomment %}
+
+{% comment %}
 
 {% assign donationPrice = product.price | times: 3 %}
 
@@ -47,3 +47,4 @@
         <p>מארז תרומה הכולל בגדים חדשים בשווי {{ donationPrice | money_without_trailing_zeros }} עבור ארגון ״לתת״, המסייע למפונות ומוקדי האירוח השונים בישראל.</p>
     </div>
 {% endif %}
+    {% endcomment %}

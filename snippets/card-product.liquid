@@ -260,7 +260,7 @@
                 </div>
                 <div class="card__content">
                     <div class="card__information {{ custom_collection_second_announcement }}">
-                        {% if card_product.tags contains announcement_tag %}
+                        {% if card_product.tags contains announcement_tag and card_banner_text != blank %}
                             <span class="card_banner_text color-background-2">{{ card_banner_text }}</span>
                         {% elsif card_product.tags contains 'donation' %}
                             <span class="card_banner_text color-background-2">מארז תרומה לארגון ׳לתת׳</span>
