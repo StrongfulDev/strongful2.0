@@ -216,8 +216,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/0_01870ee2-e4da-4f34-b810-907e4ee08522.jpg",
             "alt": "פריטים ב 30% הנחה",
-            "link": "PRE ORDER",
-            "url": "shopify:\/\/collections\/30",
+            "link": "20% OFF PRE ORDER",
+            "url": "shopify:\/\/collections\/vivid-pure-2-0",
             "show_on_desktop": true
           }
         },
