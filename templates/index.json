@@ -99,8 +99,8 @@
         "b43423be-0745-47c7-be6a-84d0ee24d128": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0_e4db2d0b-fe8e-40fe-8867-e5772dc67157.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/0_1_53111888-4caa-42a5-8eb3-c5a35fd2c152.jpg",
+            "image": "shopify:\/\/shop_images\/0_75e62fea-008b-48d8-8eb9-11fd055759e8.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/0_dc70c7c2-ac04-4293-ac01-55a2015a9a8a.jpg",
             "heading": "",
             "whole_slide_link": "shopify:\/\/collections\/30",
             "heading_size": "h1",
@@ -214,9 +214,9 @@
         "dfad4ec5-c40b-4feb-90a9-341da374970d": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0737a51b2679a55d45d0d8f464335044_60032ed3-0d4e-4b01-b0ab-3860d7eff8ad.jpg",
+            "image": "shopify:\/\/shop_images\/0_01870ee2-e4da-4f34-b810-907e4ee08522.jpg",
             "alt": "פריטים ב 30% הנחה",
-            "link": "SALE",
+            "link": "PRE ORDER",
             "url": "shopify:\/\/collections\/30",
             "show_on_desktop": true
           }
