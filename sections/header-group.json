@@ -301,7 +301,7 @@
       "settings": {
         "show_days": false,
         "countdown_date": "Mon Nov 20 2023 12:00:00 GMT+0300 (שעון ישראל (קיץ))",
-        "countdown_url": "\/",
+        "countdown_url": "shopify:\/\/collections\/vivid-pure-2-0",
         "left_text": true,
         "left_copy": "<p>מכירה מוקדמת ל1000 חברות מועדון בלבד<\/p>",
         "right_text": false,
