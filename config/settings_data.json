@@ -137,7 +137,7 @@
     "announcement_tag": "new-vivid-pure",
     "custom_collection_announcement": "",
     "show_card_collection_announcement": true,
-    "second_announcement_tag": "noSale",
+    "second_announcement_tag": "",
     "custom_collection_second_announcement": "פריט זה אינו משתתף במבצע",
     "announcement_customizer_override": true,
     "preorder_over_text": "",
