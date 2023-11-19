@@ -112,7 +112,7 @@
                       </div>
                     {%- else -%}
                       <div class="product-option">
-                        {{ item.original_price | money }}
+                        <div class="pn-price-item" data-id="{{ item.key }}">{{ item.original_price | money }}</div>
                       </div>
                     {%- endif -%}
 
@@ -183,7 +183,7 @@
                           </dt>
                           <dd>
                             <s class="cart-item__old-price price price--end">
-                              {{ item.original_line_price | money }}
+                              <div class="pn-total-line-item" data-id="{{ item.key }}">{{ item.original_line_price | money }}</div>
                             </s>
                           </dd>
                           <dt class="visually-hidden">
@@ -195,7 +195,7 @@
                         </dl>
                       {%- else -%}
                         <span class="price price--end">
-                          {{ item.original_line_price | money }}
+                          <div class="pn-total-line-item" data-id="{{ item.key }}">{{ item.original_line_price | money }}</div>
                         </span>
                       {%- endif -%}
 
@@ -307,7 +307,7 @@
                           </dt>
                           <dd>
                             <s class="cart-item__old-price price price--end">
-                              {{ item.original_line_price | money }}
+                              <div class="pn-total-line-item" data-id="{{ item.key }}">{{ item.original_line_price | money }}</div>
                             </s>
                           </dd>
                           <dt class="visually-hidden">
@@ -319,7 +319,7 @@
                         </dl>
                       {%- else -%}
                         <span class="price price--end">
-                          {{ item.original_line_price | money }}
+                          <div class="pn-total-line-item" data-id="{{ item.key }}">{{ item.original_line_price | money }}</div>
                         </span>
                       {%- endif -%}
 
