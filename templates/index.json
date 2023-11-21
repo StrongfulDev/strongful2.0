@@ -215,20 +215,10 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/0737a51b2679a55d45d0d8f464335044_37d7eb8c-6405-42b4-b6a2-6c1ff61d2108.jpg",
-            "alt": "פריטים ב 30% הנחה",
-            "link": "20% OFF PRE ORDER",
+            "alt": "PRE BLUE FRIDAY",
+            "link": "PRE BLUE FRIDAY",
             "url": "shopify:\/\/collections\/vivid-pure-2-0",
             "show_on_desktop": true
-          }
-        },
-        "48e75dd4-6ab0-41d6-b7dc-15a74cf6e4e8": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Artboard_230_4fc605a7-13d0-4f0c-9c4b-6248b2b6a463.jpg",
-            "alt": "",
-            "link": "מארזי תרומה לארגון ״לתת״",
-            "url": "shopify:\/\/collections\/מארזי-תרומות",
-            "show_on_desktop": false
           }
         },
         "3603325c-8c6d-4a1e-b28e-fe94adadefb7": {
@@ -264,7 +254,6 @@
       },
       "block_order": [
         "dfad4ec5-c40b-4feb-90a9-341da374970d",
-        "48e75dd4-6ab0-41d6-b7dc-15a74cf6e4e8",
         "3603325c-8c6d-4a1e-b28e-fe94adadefb7",
         "0ae2dc2c-e286-48f6-be64-4aa8bc8de568",
         "d4c24f14-7485-452d-a6c5-ab2dbbf11ee6"
