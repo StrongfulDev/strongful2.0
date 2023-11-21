@@ -24,11 +24,11 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "20% OFF PRE ORDER",
-            "sub_text": "מכירה מוקדמת רק לחברות מועדון",
+            "main_text": "50% OFF PRE BLUE FRIDAY",
+            "sub_text": "VIVID \/ PURE 2.0",
             "text_alignment": "center",
             "main_text_direction": "ltr",
-            "sub_text_direction": "rtl",
+            "sub_text_direction": "ltr",
             "link": "shopify:\/\/collections\/vivid-pure-2-0",
             "color_scheme": "accent-1"
           }
