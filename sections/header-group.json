@@ -295,24 +295,11 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
-    },
-    "7444bcc5-82c0-4ee3-8ec1-b39735b8ecb4": {
-      "type": "countdown",
-      "settings": {
-        "show_days": false,
-        "countdown_date": "Mon Nov 20 2023 12:00:00 GMT+0300 (שעון ישראל (קיץ))",
-        "countdown_url": "shopify:\/\/collections\/vivid-pure-2-0",
-        "left_text": true,
-        "left_copy": "<p>מכירה מוקדמת ל1000 חברות מועדון בלבד<\/p>",
-        "right_text": false,
-        "right_copy": ""
-      }
     }
   },
   "order": [
     "announcement-bar",
     "header",
-    "7503b704-2110-400e-bc52-a2190d224c23",
-    "7444bcc5-82c0-4ee3-8ec1-b39735b8ecb4"
+    "7503b704-2110-400e-bc52-a2190d224c23"
   ]
 }
