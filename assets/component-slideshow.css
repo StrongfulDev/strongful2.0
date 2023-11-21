@@ -232,8 +232,8 @@ button.slideshow__autoplay {
     padding: 2rem 1.5rem;
     width: fit-content;
     position: absolute;
-    bottom: 15vh;
-	left: 50%;
+    bottom: 13vh;
+	left: 30%;
 	transform: translateX(-50%);
 }
 
