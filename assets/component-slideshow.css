@@ -301,6 +301,5 @@ button.slideshow__autoplay {
 
 	.slideshow__slide.grid__item.grid--1-col.slider__slide:nth-of-type(2) .slideshow__text.banner__box {
 		bottom: 10vw;
-		/*left: 28%;*/
 	}
 }
