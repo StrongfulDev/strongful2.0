@@ -102,11 +102,11 @@
             "image": "shopify:\/\/shop_images\/copy0_43fcbbbc-ba4e-485d-9d25-4505696c9de8.jpg",
             "mobile_image": "shopify:\/\/shop_images\/copy0_d4af5d8a-b142-4b0d-a6b0-5328b97485bf.jpg",
             "heading": "",
-            "whole_slide_link": "shopify:\/\/collections\/vivid-pure-2-0",
+            "whole_slide_link": "shopify:\/\/collections\/sets",
             "heading_size": "h1",
             "subheading": "",
             "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/vivid-pure-2-0",
+            "link": "shopify:\/\/collections\/sets",
             "button_style_secondary": false,
             "box_align": "middle-center",
             "show_text_box": false,
@@ -178,7 +178,7 @@
             "image": "shopify:\/\/shop_images\/copy0_44be06b3-a58a-4e9d-92ee-8e438f30ca82.jpg",
             "alt": "BLUE FRIDAY",
             "link": "BLUE FRIDAY",
-            "url": "shopify:\/\/collections\/vivid-pure-2-0",
+            "url": "shopify:\/\/collections\/sets",
             "show_on_desktop": true
           }
         },
