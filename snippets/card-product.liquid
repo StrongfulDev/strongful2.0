@@ -60,11 +60,10 @@
         {% if extend_height %} card--extend-height{% endif %}
         {% if card_product.featured_media == nil and settings.card_style == 'card' %} ratio{% endif %}
         {% if horizontal_class %} card--horizontal{% endif %}
-        {% if members_only_sale %}
+        {% if members_only_sale == true %}
             {% if card_product.tags contains announcement_tag %}
-                {% if customer and members_only_sale_active %}
+                {% if customer and members_only_sale_active == true %}
                     active-card
-                {% endif %}
             {% else %}
                 active-card
             {% endif %}
@@ -259,14 +258,14 @@
                     </div>
                 </div>
                 <div class="card__content">
-                    <div class="card__information {{ custom_collection_second_announcement }}">
+                    <div class="card__information">
                         {% if card_product.tags contains announcement_tag and card_banner_text != blank %}
                             <span class="card_banner_text color-background-2">{{ card_banner_text }}</span>
                         {% endif %}
                         {% if card_product.compare_at_price > card_product.price %}
                             <div class="discount-price-container">
                                 <p class="rect-discount-tag {% if card_product.tags contains announcement_tag %}special_ann{% endif %}">
-                                    {% if members_only_sale and members_only_sale_active %}
+                                    {% if members_only_sale == true and members_only_sale_active == true %}
                                         {% if card_product.tags contains announcement_tag %}
                                             {{ 'products.product.members_only' | t }}
                                         {% else %}
@@ -284,7 +283,7 @@
                                 {% endif %}
                             </div>
                             {% else %}
-                            {% if members_only_sale and members_only_sale_active %}
+                            {% if members_only_sale == true and members_only_sale_active == true %}
                                 {% if card_product.tags contains announcement_tag %}
                                     <p class="rect-discount-tag {% if card_product.tags contains announcement_tag %}special_ann{% endif %}">
                                         {{ 'products.product.members_only' | t }}
