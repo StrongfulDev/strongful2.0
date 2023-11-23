@@ -24,11 +24,11 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "50% OFF PRE BLUE FRIDAY",
-            "sub_text": "VIVID \/ PURE 2.0",
+            "main_text": "BLUE FRIDAY",
+            "sub_text": "₪99 על כל האתר",
             "text_alignment": "center",
             "main_text_direction": "ltr",
-            "sub_text_direction": "ltr",
+            "sub_text_direction": "rtl",
             "link": "shopify:\/\/collections\/sets",
             "color_scheme": "accent-1"
           }
