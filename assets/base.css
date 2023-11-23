@@ -2,6 +2,7 @@
 :root {
     --text-alignment: right;
     --heading-type-2-margin: 1rem;
+    --blue-friday-accent-1: #214D8E;
 }
 
 * {
@@ -4210,4 +4211,15 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 	position: relative;
 	right: var(--grid-mobile-vertical-spacing);
 	top: 1px;
+}
+
+/* Black Friday */
+
+.card_banner_text {
+    color: var(--blue-friday-accent-1);
+}
+
+.menu-drawer__menu li:nth-child(2) ul li:first-child a,
+.header-block-list-element:nth-child(2) ul li:first-child a {
+    color: var(--blue-friday-accent-1) !important;
 }
