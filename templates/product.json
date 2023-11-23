@@ -17,9 +17,9 @@
         "5ec0a264-e4fc-4a8d-92bc-f2f9223694f5": {
           "type": "sale",
           "settings": {
-            "logged_in_text": "<p>מכירה מוקדמת ב50% הנחה - לחברות מועדון בלבד<\/p>",
-            "logged_out_text": "<p>50% הנחה מכירה מוקדמת לחברות מועדון בלבד<\/p>",
-            "log_in": "הירשמי \/ התחברי",
+            "logged_in_text": "<p>BLUE FRIDAY SALE - EVERYTHING FOR ₪99<\/p>",
+            "logged_out_text": "<p>BLUE FRIDAY SALE - EVERYTHING FOR ₪99<\/p>",
+            "log_in": "",
             "small_text": ""
           }
         },
