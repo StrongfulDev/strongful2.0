@@ -41,7 +41,7 @@
                         if product.selected_or_first_available_variant.quantity_rule.min > product.selected_or_first_available_variant.inventory_quantity and check_against_inventory
                             assign quantity_rule_soldout = true
                         endif
-                        if member_tag != blank
+                        if member_tag != blank and members_only_sale_active == true
                             assign members_only = true
                         endif
                         if members_only == true
@@ -60,11 +60,11 @@
                             {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
                                 disabled
                             {% endif %}
-                            {% if product.tags contains member_tag and members_only %}
+                            {% if product.tags contains member_tag and members_only == true %}
                                 disabled
                             {% endif %}
                     >
-            <span class="{% if product.tags contains member_tag and members_only == true and members_only_sale_active %}account-toggler-site-wide{% endif %} fix-direction">
+            <span class="{% if product.tags contains member_tag and members_only == true and members_only_sale_active == true %}account-toggler-site-wide{% endif %} fix-direction">
               {%- if product.tags contains member_tag and members_only == true -%}
                   {% if members_only_sale_active == true %}
                         {{ 'products.product.members_only' | t }} <span class="link">התחברי / הרשמי</span>
