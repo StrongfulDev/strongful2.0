@@ -4223,3 +4223,7 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 .header-block-list-element:nth-child(2) ul li:first-child a {
     color: var(--blue-friday-accent-1) !important;
 }
+
+#product #glassix-container {
+    display: none !important;
+}
