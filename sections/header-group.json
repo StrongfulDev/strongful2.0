@@ -295,11 +295,24 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "3242e479-ab64-4c65-8a5e-3ceb6e821c27": {
+      "type": "countdown",
+      "settings": {
+        "show_days": true,
+        "countdown_date": "Sun Mon 27 2023 00:00:00 GMT+0300 (שעון ישראל (קיץ))",
+        "countdown_url": "shopify:\/\/collections\/sets",
+        "left_text": true,
+        "left_copy": "<p>BLUE FRIDAY SALE<\/p>",
+        "right_text": true,
+        "right_copy": "<p>כל האתר עד ₪99<\/p>"
+      }
     }
   },
   "order": [
     "announcement-bar",
     "header",
-    "7503b704-2110-400e-bc52-a2190d224c23"
+    "7503b704-2110-400e-bc52-a2190d224c23",
+    "3242e479-ab64-4c65-8a5e-3ceb6e821c27"
   ]
 }
