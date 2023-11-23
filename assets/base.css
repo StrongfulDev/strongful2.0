@@ -3380,6 +3380,10 @@ div#glassix-widget-launcher-closed #customized-launcher {
 		line-height: 1.5rem !important;
 	}
 
+    #glassix-widget-launcher-container {
+        right: 20px !important;
+    }
+
 	#glassix-widget-launcher-closed div.glassix-widget-icon-wrapper img {
 		margin: 0 0 -5px 0px !important;
 		height: 54px !important;
