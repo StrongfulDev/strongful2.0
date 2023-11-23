@@ -18,7 +18,7 @@
           "type": "sale",
           "settings": {
             "logged_in_text": "<p>BLUE FRIDAY SALE - EVERYTHING FOR ₪99<\/p>",
-            "logged_out_text": "<p>BLUE FRIDAY SALE - EVERYTHING FOR ₪99<\/p>",
+            "logged_out_text": "<p>BLUE FRIDAY SALE<\/p>",
             "log_in": "",
             "small_text": ""
           }
