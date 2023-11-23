@@ -230,10 +230,10 @@ button.slideshow__autoplay {
 .slideshow__text.banner__box {
     max-width: none;
     padding: 2rem 1.5rem;
-    width: fit-content;
+    width: max-content;
     position: absolute;
-    bottom: 13vh;
-	left: 30%;
+    bottom: 12vh;
+	left: 69%;
 	transform: translateX(-50%);
 }
 
