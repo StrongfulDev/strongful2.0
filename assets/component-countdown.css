@@ -1,235 +1,95 @@
-/*.countdown-section {*/
-/*	position: sticky;*/
-/*	top: 61px;*/
-/*	z-index: 4;*/
-/*}*/
+.countdown-section {
+	position: sticky;
+	top: 61px;
+	z-index: 4;
+}
 
-/*.announce-countdown {*/
-/*	column-gap: var(--grid-mobile-vertical-spacing);*/
-/*	border: 1px solid var(--gradient-background);*/
-/*}*/
+.announce-countdown {
+	column-gap: var(--grid-mobile-vertical-spacing);
+	border: 1px solid var(--gradient-background);
+}
 
-/*.countdown {*/
-/*	display: block;*/
-/*	width: 100%;*/
-/*	padding: 0.6em 0;*/
-/*	background: var(--gradient-base-accent-1);*/
-/*	color: rgb(var(--color-base-text));*/
-/*}*/
+.countdown {
+	display: block;
+	width: 100%;
+	padding: 0.6em 0;
+	background: var(--gradient-base-accent-1);
+	color: rgb(var(--color-base-text));
+}
 
-/*.headerLink-countdown {*/
-/*	padding: 10px 10px 0;*/
-/*}*/
+.headerLink-countdown {
+	padding: 10px 10px 0;
+}
 
-/*.countdown-ctn {*/
-/*	justify-content: center;*/
-/*	column-gap: 1rem;*/
-/*	align-items: center;*/
-/*	width: 100%;*/
-/*	margin: auto;*/
-/*}*/
+.countdown-ctn {
+	justify-content: center;
+	column-gap: 1rem;
+	align-items: center;
+	width: 100%;
+	margin: auto;
+}
 
-/*.countdown-sale-description-ctn {*/
-/*	width: max-content;*/
-/*}*/
+.countdown-sale-description-ctn {
+	width: max-content;
+}
 
-/*.countdown-sale-description-ctn p {*/
-/*	color: rgb(var(--color-base-background-1));*/
-/*	font-weight: 600;*/
-/*	margin: 0;*/
-/*	font-size: .9em;*/
-/*	text-align: center;*/
-/*	line-height: 1.5rem;*/
-/*}*/
-
-/*.countdown-sale-description-ctn p:nth-child(2) {*/
-/*	font-size: .6em;*/
-/*	font-weight: var(--font-body-weight);*/
-/*}*/
-
-/*.countdown-sale-description:first-child {*/
-/*	direction: ltr;*/
-/*}*/
-
-/*.countdown #tiles {*/
-/*	position: relative;*/
-/*	justify-content: center;*/
-/*	align-items: center;*/
-/*	z-index: 1;*/
-/*	height: 100%;*/
-/*	font-size: .9em;*/
-/*	padding: var(--grid-mobile-vertical-spacing);*/
-/*}*/
-
-/*.countdown #tiles>span, .tiles-time {*/
-/*	text-align: center;*/
-/*	color: var(--gradient-base-background-1);*/
-/*	position: relative;*/
-/*	font-size: calc(var(--font-body-size-large) * .7);*/
-/*	margin: 0;*/
-/*	font-weight: 600;*/
-/*	box-shadow: 0px 0px 6px 0px rgb(255 255 255 / 30%);*/
-/*	padding: .15em;*/
-/*}*/
-
-/*.countdown .labels-li {*/
-/*	font-size: .9em;*/
-/*	margin: .6em auto 0;*/
-/*	text-align: center;*/
-/*	color: rgb(var(--color-base-background-1));*/
-/*}*/
-
-/*@media screen and (min-width: 990px) {*/
-/*	.countdown-ctn {*/
-/*		justify-content: center;*/
-/*		column-gap: 1.5em;*/
-/*	}*/
-
-/*	.countdown-sale-description {*/
-/*		font-size: 1.1em;*/
-/*	}*/
-
-/*	.countdown-section {*/
-/*		top: 66px;*/
-/*	}*/
-/*}*/
-
-.flip-clock {
+.countdown-sale-description-ctn p {
+	color: rgb(var(--color-base-background-1));
+	font-weight: 600;
+	margin: 0;
+	font-size: .9em;
 	text-align: center;
-	perspective: 400px;
-	margin: 20px auto;
+	line-height: 1.5rem;
 }
-.flip-clock__piece {
-	display: inline-block;
-	margin: 0 5px;
+
+.countdown-sale-description-ctn p:nth-child(2) {
+	font-size: .6em;
+	font-weight: var(--font-body-weight);
 }
-.flip-clock__slot {
-	font-size: 2vw;
+
+.countdown-sale-description:first-child {
+	direction: ltr;
 }
-.card {
-	display: block;
+
+.countdown #tiles {
 	position: relative;
-	padding-bottom: 0.72em;
-	font-size: 9vw;
-	line-height: 0.95;
-}
-.card__top,
-.card__bottom,
-.card__back::before,
-.card__back::after {
-	display: block;
-	height: 0.72em;
-	color: #ccc;
-	background: #222;
-	padding: 0.25em 0.25em;
-	border-radius: 0.15em 0.15em 0 0;
-	backface-visiblity: hidden;
-	transform-style: preserve-3d;
-	width: 1.8em;
-	transform: translateZ(0);
-}
-.card__bottom {
-	color: #FFF;
-	position: absolute;
-	top: 50%;
-	left: 0;
-	border-top: solid 1px #000;
-	background: #393939;
-	border-radius: 0 0 0.15em 0.15em;
-	pointer-events: none;
-	overflow: hidden;
-}
-.card__bottom::after {
-	display: block;
-	margin-top: -0.72em;
-}
-.card__back::before,
-.card__bottom::after {
-	content: attr(data-value);
-}
-.card__back {
-	position: absolute;
-	top: 0;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
 	height: 100%;
-	left: 0%;
-	pointer-events: none;
+	font-size: .9em;
+	padding: var(--grid-mobile-vertical-spacing);
 }
-.card__back::before {
+
+.countdown #tiles>span, .tiles-time {
+	text-align: center;
+	color: var(--gradient-base-background-1);
 	position: relative;
-	z-index: -1;
-	overflow: hidden;
+	font-size: calc(var(--font-body-size-large) * .7);
+	margin: 0;
+	font-weight: 600;
+	box-shadow: 0px 0px 6px 0px rgb(255 255 255 / 30%);
+	padding: .15em;
 }
-.flip .card__back::before {
-	-webkit-animation: flipTop 0.3s cubic-bezier(0.37, 0.01, 0.94, 0.35);
-	animation: flipTop 0.3s cubic-bezier(0.37, 0.01, 0.94, 0.35);
-	-webkit-animation-fill-mode: both;
-	animation-fill-mode: both;
-	transform-origin: center bottom;
+
+.countdown .labels-li {
+	font-size: .9em;
+	margin: .6em auto 0;
+	text-align: center;
+	color: rgb(var(--color-base-background-1));
 }
-.flip .card__back .card__bottom {
-	transform-origin: center top;
-	-webkit-animation-fill-mode: both;
-	animation-fill-mode: both;
-	-webkit-animation: flipBottom 0.6s cubic-bezier(0.15, 0.45, 0.28, 1);
-	animation: flipBottom 0.6s cubic-bezier(0.15, 0.45, 0.28, 1);
-}
-@-webkit-keyframes flipTop {
-	0% {
-		transform: rotateX(0deg);
-		z-index: 2;
+
+@media screen and (min-width: 990px) {
+	.countdown-ctn {
+		justify-content: center;
+		column-gap: 1.5em;
 	}
-	0%,
-	99% {
-		opacity: 0.99;
+
+	.countdown-sale-description {
+		font-size: 1.1em;
 	}
-	100% {
-		transform: rotateX(-90deg);
-		opacity: 0;
-	}
-}
-@keyframes flipTop {
-	0% {
-		transform: rotateX(0deg);
-		z-index: 2;
-	}
-	0%,
-	99% {
-		opacity: 0.99;
-	}
-	100% {
-		transform: rotateX(-90deg);
-		opacity: 0;
-	}
-}
-@-webkit-keyframes flipBottom {
-	0%,
-	50% {
-		z-index: -1;
-		transform: rotateX(90deg);
-		opacity: 0;
-	}
-	51% {
-		opacity: 0.99;
-	}
-	100% {
-		opacity: 0.99;
-		transform: rotateX(0deg);
-		z-index: 5;
-	}
-}
-@keyframes flipBottom {
-	0%,
-	50% {
-		z-index: -1;
-		transform: rotateX(90deg);
-		opacity: 0;
-	}
-	51% {
-		opacity: 0.99;
-	}
-	100% {
-		opacity: 0.99;
-		transform: rotateX(0deg);
-		z-index: 5;
+
+	.countdown-section {
+		top: 66px;
 	}
 }
