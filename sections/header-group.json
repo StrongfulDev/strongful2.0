@@ -295,11 +295,24 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "e7af858c-481e-4eab-ba36-63834e657eb1": {
+      "type": "countdown",
+      "settings": {
+        "show_days": true,
+        "countdown_date": "Thu Nov 30 2023 10:00:00 GMT+0200 (שעון ישראל (קיץ))",
+        "countdown_url": "shopify:\/\/collections\/sets",
+        "left_text": true,
+        "left_copy": "<p>CYBER MONDAY<\/p>",
+        "right_text": true,
+        "right_copy": "<p>עד 60% הנחה על כל האתר<\/p>"
+      }
     }
   },
   "order": [
     "announcement-bar",
     "header",
-    "7503b704-2110-400e-bc52-a2190d224c23"
+    "7503b704-2110-400e-bc52-a2190d224c23",
+    "e7af858c-481e-4eab-ba36-63834e657eb1"
   ]
 }
