@@ -38,7 +38,7 @@
 
 {% if product.tags contains announcement_tag %}
     <div class="sale-banner-product-page fix-direction">
-        {% if product.tags contains 'yahav' %}
+        {% if customer %}
             <p>{{ block.settings.logged_in_text | newline_to_br }}</p>
         {% else %}
             <p>{{ block.settings.logged_out_text | newline_to_br }}</p>
