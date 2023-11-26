@@ -18,9 +18,9 @@
           "type": "sale",
           "settings": {
             "logged_in_text": "",
-            "logged_out_text": "<p>30% הנחה על דגמים נבחרים!<\/p>",
+            "logged_out_text": "<p>CYBER MONDAY<\/p>",
             "log_in": "",
-            "small_text": ""
+            "small_text": "עד 60% הנחה על כל האתר"
           }
         },
         "title": {
