@@ -4219,14 +4219,14 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 
 /* Black Friday */
 
-.card_banner_text {
-    color: var(--blue-friday-accent-1);
-}
+/*.card_banner_text {*/
+/*    color: var(--blue-friday-accent-1);*/
+/*}*/
 
-.menu-drawer__menu li:nth-child(2) ul li:first-child a,
-.header-block-list-element:nth-child(2) ul li:first-child a {
-    color: var(--blue-friday-accent-1) !important;
-}
+/*.menu-drawer__menu li:nth-child(2) ul li:first-child a,*/
+/*.header-block-list-element:nth-child(2) ul li:first-child a {*/
+/*    color: var(--blue-friday-accent-1) !important;*/
+/*}*/
 
 #product #glassix-container {
     display: none !important;
