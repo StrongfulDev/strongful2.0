@@ -300,7 +300,7 @@
       "type": "countdown",
       "settings": {
         "show_days": true,
-        "countdown_date": "Thu Nov 30 2023 10:00:00 GMT+0200 (שעון ישראל (קיץ))",
+        "countdown_date": "November 30 2023 10:00:00 GMT+0200",
         "countdown_url": "shopify:\/\/collections\/sets",
         "left_text": true,
         "left_copy": "<p>CYBER MONDAY<\/p>",
