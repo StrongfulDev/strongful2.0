@@ -529,8 +529,6 @@
 {%- endif -%}
 {{ 'ajaxinate.min.js' | asset_url | script_tag }}
 
-{% comment %}
-
     {% liquid
         assign customerPhone = customer.phone | replace: '-', '' | replace: '+', '' | replace: ' ', ''
         unless customerPhone contains '972'

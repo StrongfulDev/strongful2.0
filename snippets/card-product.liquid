@@ -260,10 +260,8 @@
                 </div>
                 <div class="card__content">
                     <div class="card__information {{ custom_collection_second_announcement }}">
-                        {% if card_product.tags contains announcement_tag %}
+                        {% if card_product.tags contains announcement_tag and card_banner_text != blank %}
                             <span class="card_banner_text color-background-2">{{ card_banner_text }}</span>
-                        {% elsif card_product.tags contains 'donation' %}
-                            <span class="card_banner_text color-background-2">מארז תרומה לארגון ׳לתת׳</span>
                         {% endif %}
                         {% if card_product.compare_at_price > card_product.price %}
                             <div class="discount-price-container">
@@ -285,8 +283,14 @@
                                     </p>
                                 {% endif %}
                             </div>
-                            {% else %}
-                            {% if members_only_sale and members_only_sale_active %}
+                        {% else %}
+                            {% if card_product.tags contains 'OUTLET' or card_product.tags contains 'outlet' %}
+                                <p class="outlet-collection-tag upper h4">
+                                    <span>{{- 'products.product.outlet' | t -}}</span>
+                                    <i>{% render 'icon-discount-tag' %}</i>
+                                </p>
+                            {% endif %}
+                            {% if members_only_sale == true and members_only_sale_active == true %}
                                 {% if card_product.tags contains announcement_tag %}
                                     <p class="rect-discount-tag {% if card_product.tags contains announcement_tag %}special_ann{% endif %}">
                                         {{ 'products.product.members_only' | t }}

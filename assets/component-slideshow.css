@@ -230,10 +230,10 @@ button.slideshow__autoplay {
 .slideshow__text.banner__box {
     max-width: none;
     padding: 2rem 1.5rem;
-    width: fit-content;
+    width: max-content;
     position: absolute;
-    bottom: 15vh;
-	left: 50%;
+    bottom: 12vh;
+	left: 68%;
 	transform: translateX(-50%);
 }
 
@@ -289,7 +289,8 @@ button.slideshow__autoplay {
     }
 
 	.slideshow__text.banner__box {
-		bottom: 4vw;
+		bottom: 3vw;
+      left: 79%;
 		width: max-content;
 	}
 
@@ -300,6 +301,5 @@ button.slideshow__autoplay {
 
 	.slideshow__slide.grid__item.grid--1-col.slider__slide:nth-of-type(2) .slideshow__text.banner__box {
 		bottom: 10vw;
-		/*left: 28%;*/
 	}
 }
