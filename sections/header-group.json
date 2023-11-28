@@ -303,9 +303,9 @@
         "countdown_date": "Thu Nov 30 2023 10:00:00 GMT+0200 (שעון ישראל (קיץ))",
         "countdown_url": "shopify:\/\/collections\/sets",
         "left_text": true,
-        "left_copy": "<p>CYBER MONDAY<\/p>",
-        "right_text": true,
-        "right_copy": "<p>עד 60% הנחה על כל האתר<\/p>"
+        "left_copy": "<p> עד 60% הנחה על כל האתר - CYBER MONDAY<\/p>",
+        "right_text": false,
+        "right_copy": ""
       }
     }
   },
