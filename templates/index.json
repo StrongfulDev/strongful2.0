@@ -99,14 +99,14 @@
         "b43423be-0745-47c7-be6a-84d0ee24d128": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_895f26f8-3e04-4a7a-b335-5597ad69b07b.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_ae732499-25a3-4b83-a687-87e976db48de.jpg",
+            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_c7c144db-b526-4efd-a81b-f6ec902f7210.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_c85d5a9d-e601-46d9-887b-871813ac9291.jpg",
             "heading": "",
-            "whole_slide_link": "shopify:\/\/collections\/sets",
+            "whole_slide_link": "shopify:\/\/collections\/aura-x-oasis-winter-collection",
             "heading_size": "h1",
             "subheading": "",
             "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/sets",
+            "link": "shopify:\/\/collections\/aura-x-oasis-winter-collection",
             "button_style_secondary": false,
             "box_align": "middle-center",
             "show_text_box": false,
@@ -134,13 +134,13 @@
       "type": "featured-collection",
       "settings": {
         "steps": 4,
-        "title": "CYBER MONDAY SALE",
+        "title": "NEW IN",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "sets",
+        "collection": "aura-x-oasis-winter-collection",
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,
@@ -175,10 +175,10 @@
         "dfad4ec5-c40b-4feb-90a9-341da374970d": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0737a51b2679a55d45d0d8f464335044_ca7e20de-ccc2-46f7-b96c-c9133210665e.jpg",
-            "alt": "סייבר מאנדיי",
-            "link": "CYBER MONDAY",
-            "url": "shopify:\/\/collections\/sets",
+            "image": "shopify:\/\/shop_images\/0_88c8a491-89f0-4d55-9f37-147ec4cfcea1.jpg",
+            "alt": "NEW IN",
+            "link": "NEW IN",
+            "url": "shopify:\/\/collections\/aura-x-oasis-winter-collection",
             "show_on_desktop": true
           }
         },

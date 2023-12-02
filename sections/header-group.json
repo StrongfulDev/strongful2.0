@@ -24,12 +24,12 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "CYBER MONDAY",
-            "sub_text": "UP TO 60% OFF",
+            "main_text": "WINTER COLLECTION",
+            "sub_text": "קולקציית חורף נחתה באתר!",
             "text_alignment": "center",
             "main_text_direction": "ltr",
-            "sub_text_direction": "ltr",
-            "link": "shopify:\/\/collections\/sets",
+            "sub_text_direction": "rtl",
+            "link": "shopify:\/\/collections\/aura-x-oasis-winter-collection",
             "color_scheme": "accent-1"
           }
         },
@@ -85,8 +85,8 @@
             "title": "COLLECTIONS",
             "item_class": "",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/bd9a4cbcb5a8c5865a0499b4fa42b489_0f11a311-c61a-4517-8f7e-f31b4ee5841a.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/sets",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/0_74d97014-bffa-4e8e-85d5-e98c52c77291.jpg",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/aura-x-oasis-winter-collection",
             "desktop_links_image_2_link": "",
             "mobile_title": "COLLECTIONS",
             "main_link": "",
@@ -108,8 +108,8 @@
             "title": "סטים",
             "item_class": "סטים | SETS",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/7ff08d51abffc0cfdf69f878b50b58d6_053345c1-6506-43a5-8e2a-d9798a2823ef.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/sets",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/0_58434940-9724-4212-afad-360ce2264c35.jpg",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/aura-x-oasis-winter-collection",
             "desktop_links_image_2": "shopify:\/\/shop_images\/cf9a796193234b11e66646c08299f827_12f7e9fe-ca2d-4337-af96-470752b83127.gif",
             "desktop_links_image_2_link": "shopify:\/\/collections\/vivid-pure-2-0",
             "mobile_cover_image": "shopify:\/\/shop_images\/20e5c3f719da92dc7bfd0c70c57f7186.jpg",
@@ -133,8 +133,8 @@
             "title": "טייצים",
             "item_class": "סטים | SETS",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/bd9a4cbcb5a8c5865a0499b4fa42b489_b1055cae-e729-4df1-a6e8-21b279b80714.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/sets",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/0_dea115a1-23a6-4c7b-95a5-5b388e3c5945.jpg",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/aura-x-oasis-winter-collection",
             "desktop_links_image_2_link": "",
             "mobile_title": "טייצים",
             "main_link": "",
@@ -156,8 +156,8 @@
             "title": "טופים",
             "item_class": "סטים | SETS",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/bd9a4cbcb5a8c5865a0499b4fa42b489_7963c8a6-e652-4b1c-8dc2-d88829d3664b.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/sets",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/0_ddb92525-122e-4221-877b-0487be4b5dfa.jpg",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/aura-x-oasis-winter-collection",
             "desktop_links_image_2_link": "",
             "mobile_title": "טופים",
             "main_link": "",
@@ -179,8 +179,8 @@
             "title": "OUTLET",
             "item_class": "OUTLET",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/bd9a4cbcb5a8c5865a0499b4fa42b489_ed3d9e5e-b4a7-43f1-a302-69255e18611f.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/sets",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/0_d18bf4ee-4b1f-4d7f-a1b1-1e203bfc68b5.jpg",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/aura-x-oasis-winter-collection",
             "desktop_links_image_2_link": "",
             "mobile_title": "OUTLET - UP TO 50% OFF",
             "main_link": "",
@@ -202,8 +202,8 @@
             "title": "אקססוריז",
             "item_class": "סטים | SETS",
             "title_link": "קולקציית אקססוריז",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/bd9a4cbcb5a8c5865a0499b4fa42b489_c3e9fdae-2e39-4b1f-91e1-3ad02b8eccb9.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/sets",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/0_35579ce7-b16b-4e91-b90b-789ae538b4e8.jpg",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/aura-x-oasis-winter-collection",
             "desktop_links_image_2_link": "",
             "mobile_title": "ACCESSORIES",
             "main_link": "",
@@ -259,9 +259,9 @@
         "mobile_top_image_1": "shopify:\/\/shop_images\/Artboard_230.jpg",
         "mobile_top_image_1_link": "shopify:\/\/collections\/מארזי-תרומות",
         "mobile_top_image_1_title": "מארזי תרומה לארגון ״לתת״",
-        "mobile_top_image_temp": "shopify:\/\/shop_images\/0737a51b2679a55d45d0d8f464335044_a565fd00-d205-47f1-9dcd-2ecf56f0ce7a.jpg",
-        "mobile_top_image_temp_link": "shopify:\/\/collections\/sets",
-        "mobile_top_image_temp_title": "CYBER MONDAY",
+        "mobile_top_image_temp": "shopify:\/\/shop_images\/0_36d0c368-cc81-4430-bfcf-f68899e4ffe2.jpg",
+        "mobile_top_image_temp_link": "shopify:\/\/collections\/aura-x-oasis-winter-collection",
+        "mobile_top_image_temp_title": "NEW IN",
         "mobile_top_image_2": "shopify:\/\/shop_images\/Artboard_4_4x-100-min.jpg",
         "mobile_top_image_2_link": "shopify:\/\/collections\/best-seller-internal-use",
         "mobile_top_image_2_title": "BEST SELLERS",
@@ -295,24 +295,11 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
-    },
-    "e7af858c-481e-4eab-ba36-63834e657eb1": {
-      "type": "countdown",
-      "settings": {
-        "show_days": true,
-        "countdown_date": "Thu Nov 30 2023 10:00:00 GMT+0200 (שעון ישראל (קיץ))",
-        "countdown_url": "shopify:\/\/collections\/sets",
-        "left_text": true,
-        "left_copy": "<p> עד 60% הנחה על כל האתר - CYBER MONDAY<\/p>",
-        "right_text": false,
-        "right_copy": ""
-      }
     }
   },
   "order": [
     "announcement-bar",
     "header",
-    "7503b704-2110-400e-bc52-a2190d224c23",
-    "e7af858c-481e-4eab-ba36-63834e657eb1"
+    "7503b704-2110-400e-bc52-a2190d224c23"
   ]
 }
