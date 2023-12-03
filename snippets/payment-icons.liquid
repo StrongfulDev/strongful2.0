@@ -1,8 +1,10 @@
 <ul class="list list-payment" role="list">
+    {% comment %}
     <li class="list-payment__item list-social__item">
         {% render 'icon-bit' %}
         <span class="visually-hidden">{{ 'general.payments.bit' | t }}</span>
     </li>
+    {% endcomment %}
     <li class="list-payment__item list-social__item">
         {%- render 'icon-applepay' -%}
         <span class="visually-hidden">{{ 'general.payments.applepay' | t }}</span>
