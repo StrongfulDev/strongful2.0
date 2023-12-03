@@ -75,7 +75,7 @@
         <div class="{{ article.metafields.custom.hidemenu }}">&nbsp;</div>
         <section class="article-ctn article-ctn--third " {% if article.metafields.custom.hidemenu == 'none' %}style="grid-column: 1/3;"{% endif %}>
             <p class="hear-from-you">אם יש לך שאלות נוספות, נשמח לשמוע ממך:</p>
-            {% render 'contact-icons' %}
+            {% render 'contact-icons', show_phone: false %}
         </section>
     </div>
 

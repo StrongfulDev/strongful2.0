@@ -15,7 +15,7 @@
             </a>
         </li>
     {%- endif -%}
-    {%- if settings.social_phone_link != blank -%}
+    {%- if settings.social_phone_link != blank and show_phone != false -%}
     <li class="list-social__item">
         <a href="tel:{{ shop.phone }}" class="link list-social__link" >
             {%- render 'icon-phone' -%}
