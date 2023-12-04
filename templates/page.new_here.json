@@ -74,7 +74,49 @@
         "title": "המוצרים הכי מומלצים להתחיל מהם",
         "heading_size": "h1",
         "heading_type": "heading_type_default",
-        "description": "<p>איגדנו עבורך את המוצרים הכי נמכרים ומומלצים לקחת בפעם הראשונה.<\/p>",
+        "description": "<p>איגדנו עבורך את המוצרים הכי נמכרים ומומלצים לקחת בפעם הראשונה<\/p>",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "best-seller-internal-use",
+        "products_to_show": 8,
+        "columns_desktop": 5,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_text": "SHOP ALL",
+        "view_all_style": "link",
+        "view_all_location": "top",
+        "enable_desktop_slider": true,
+        "show_peak": true,
+        "pagination_type": "sides",
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": false,
+        "show_sale_badge": false,
+        "enable_quick_add": true,
+        "quick_add_type": "hover",
+        "quick_add_type_mobile": "modal",
+        "quick_add_text": "הוספה מהירה",
+        "pick_size_text": "בחירת מידה",
+        "quick_add_accessories_text": "הוספה מהירה",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "fe784ac0-d944-4f26-a0ba-a6ce3290f657": {
+      "type": "featured-collection",
+      "custom_css": [
+        ".collection__title.title-wrapper {direction: rtl;}"
+      ],
+      "settings": {
+        "steps": 4,
+        "title": "מוצרים עם דירוג הכי גבוה",
+        "heading_size": "h1",
+        "heading_type": "heading_type_default",
+        "description": "<p>אלו המוצרים שהלקוחות שלנו דרגו כמוצרים האהובים ביותר<\/p>",
         "show_description": false,
         "description_style": "body",
         "collection": "best-seller-internal-use",
@@ -111,6 +153,7 @@
     "main",
     "06fed3d1-3c4a-4aea-891b-8df69b821f6a",
     "b5934d86-8c22-47a5-aafc-a9bdd354734d",
-    "4e2b2ac3-368d-40d6-9dc5-dd1166d18666"
+    "4e2b2ac3-368d-40d6-9dc5-dd1166d18666",
+    "fe784ac0-d944-4f26-a0ba-a6ce3290f657"
   ]
 }
