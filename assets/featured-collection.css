@@ -37,7 +37,9 @@ ul.slider--tablet:after {
 
 /* New here page designs */
 
-
+.collection__description.rte {
+	margin-bottom: calc(var(--grid-desktop-vertical-spacing) * 2);
+}
 
 @media screen and (min-width: 990px) {
 
