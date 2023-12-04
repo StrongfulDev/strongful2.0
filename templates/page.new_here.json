@@ -56,8 +56,8 @@
         "template--16298423025804__b5934d86-8c22-47a5-aafc-a9bdd354734d-text-1"
       ],
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
+        "desktop_content_position": "right",
+        "content_alignment": "right",
         "color_scheme": "background-1",
         "full_width": true,
         "padding_top": 40,
