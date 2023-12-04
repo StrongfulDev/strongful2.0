@@ -35,6 +35,10 @@ ul.slider--tablet:after {
 	text-align: right;
 }
 
+/* New here page designs */
+
+
+
 @media screen and (min-width: 990px) {
 
 	.slider.slider--tablet.contains-card--standard:not(.slider--desktop) {
