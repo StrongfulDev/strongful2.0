@@ -66,6 +66,9 @@
     },
     "4e2b2ac3-368d-40d6-9dc5-dd1166d18666": {
       "type": "featured-collection",
+      "custom_css": [
+        ".collection__title.title-wrapper {direction: rtl;}"
+      ],
       "settings": {
         "steps": 4,
         "title": "המוצרים הכי מומלצים להתחיל מהם",
