@@ -41,10 +41,73 @@
         "show_text_below": false,
         "accessibility_info": "Slideshow about our brand"
       }
+    },
+    "b5934d86-8c22-47a5-aafc-a9bdd354734d": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16298423025804__b5934d86-8c22-47a5-aafc-a9bdd354734d-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>הכירי את STRONGFUL<\/p><p>כשכל חליפות הספורט לנשים מחכות לך באתר אחד, החיים שלך הולכים להיות קלים.<\/p><p>אנו סטרונגפול, מותג בגדי ספורט לנשים אונליין המספק לך את בגדי האימון לנשים הכי איכותיים שיש.<\/p><p>כל בחורה צריכה סט ספורטיבי בארון, וכשהוא מסטרונגפול את יודעת שתוכלי לבחור את הגזרות, המידות והצבעים המדוייקים בשבילך שיגרמו לך להרגיש בשיא שלך.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16298423025804__b5934d86-8c22-47a5-aafc-a9bdd354734d-text-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "4e2b2ac3-368d-40d6-9dc5-dd1166d18666": {
+      "type": "featured-collection",
+      "settings": {
+        "steps": 4,
+        "title": "Featured collection",
+        "heading_size": "h1",
+        "heading_type": "heading_type_default",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_text": "View all",
+        "view_all_style": "solid",
+        "view_all_location": "bottom",
+        "enable_desktop_slider": false,
+        "show_peak": false,
+        "pagination_type": "sides",
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "show_sale_badge": false,
+        "enable_quick_add": false,
+        "quick_add_type": "hover",
+        "quick_add_type_mobile": "modal",
+        "quick_add_text": "בחירת מידה",
+        "pick_size_text": "בחירת מידה",
+        "quick_add_accessories_text": "Pick accessories",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
-    "06fed3d1-3c4a-4aea-891b-8df69b821f6a"
+    "06fed3d1-3c4a-4aea-891b-8df69b821f6a",
+    "b5934d86-8c22-47a5-aafc-a9bdd354734d",
+    "4e2b2ac3-368d-40d6-9dc5-dd1166d18666"
   ]
 }
