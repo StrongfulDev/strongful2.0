@@ -164,43 +164,24 @@
         "template--16298423025804__f4549e43-6be8-40ce-a3c9-125057016f4f-image-2": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/seamless_collection_1.jpg",
             "alt": "",
-            "link": "",
-            "url": "",
-            "show_on_desktop": true
-          }
-        },
-        "template--16298423025804__f4549e43-6be8-40ce-a3c9-125057016f4f-image-3": {
-          "type": "image",
-          "settings": {
-            "alt": "",
-            "link": "",
-            "url": "",
-            "show_on_desktop": true
-          }
-        },
-        "285a760c-b8a1-421d-9f36-a10112934cb4": {
-          "type": "image",
-          "settings": {
-            "alt": "",
-            "link": "",
-            "url": "",
+            "link": "תמיכה גבוהה",
+            "url": "shopify:\/\/collections\/accessories",
             "show_on_desktop": true
           }
         }
       },
       "block_order": [
         "template--16298423025804__f4549e43-6be8-40ce-a3c9-125057016f4f-image-1",
-        "template--16298423025804__f4549e43-6be8-40ce-a3c9-125057016f4f-image-2",
-        "template--16298423025804__f4549e43-6be8-40ce-a3c9-125057016f4f-image-3",
-        "285a760c-b8a1-421d-9f36-a10112934cb4"
+        "template--16298423025804__f4549e43-6be8-40ce-a3c9-125057016f4f-image-2"
       ],
       "settings": {
         "show_scrollbar": true,
         "title": "קני לפי קטגוריות",
         "heading_size": "h1",
         "heading_type": "heading_type_default",
-        "image_ratio": "adapt",
+        "image_ratio": "portrait",
         "columns_desktop": 4,
         "color_scheme": "background-1",
         "is_full_width": true,
