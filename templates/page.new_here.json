@@ -76,7 +76,7 @@
         "description_style": "body",
         "collection": "best-seller-internal-use",
         "products_to_show": 8,
-        "columns_desktop": 4,
+        "columns_desktop": 5,
         "full_width": true,
         "show_view_all": true,
         "view_all_text": "SHOP ALL",
