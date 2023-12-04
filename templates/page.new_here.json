@@ -154,9 +154,10 @@
         "template--16298423025804__f4549e43-6be8-40ce-a3c9-125057016f4f-image-1": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/seamless_collection_1.jpg",
             "alt": "",
-            "link": "",
-            "url": "",
+            "link": "Seamless",
+            "url": "shopify:\/\/collections\/seamless",
             "show_on_desktop": true
           }
         },
