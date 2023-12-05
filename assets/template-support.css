@@ -12,6 +12,10 @@ ul, ol {
 	padding-left: 1rem;
 }
 
+.article-ctn .footer__list-social {
+	align-items: center;
+}
+
 .supportful__articles-select-ctn {
 	text-align: left;
 	padding: 1em 2em;

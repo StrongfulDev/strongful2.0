@@ -531,7 +531,7 @@
       "change_address": "אם ברצונך לשנות את כתובת המשלוח של ההזמנה שלך, את יכולה לעשות זאת לפני שהיא נארזת",
       "fulfillment_statuses": {
         "Fulfilled": "נשלח",
-        "Partial": "נשלח חלקית",
+        "Partial": "טרם נשלח",
         "Restocked": "מחזיר מלאי",
         "Unfulfilled": "טרם נשלח"
       },

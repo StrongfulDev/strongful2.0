@@ -250,7 +250,7 @@
                   <div class="flex">
                       <p>{{ 'customer.order.items' | t }}: <b>{{ order.line_items.size }}</b></p>
                       {% if order.fulfillment_status == 'fulfilled' %}
-                          <a href="/a/return?email={{ order.email }}&orderId={{ order.name }}" class="underlined-link">
+                          <a href="/blogs/policies/החזרות-והחלפות" class="underlined-link">
                               {{ 'customer.order.returns_and_exchanges' | t }}
                           </a>
                       {% endif %}

@@ -11,11 +11,11 @@
     if product.selected_or_first_available_variant.quantity_rule.min > product.selected_or_first_available_variant.inventory_quantity and check_against_inventory
         assign quantity_rule_soldout = true
     endif
-    if settings.announcement_tag != blank and members_only_sale_active == true
+    if settings.announcement_tag != blank and settings.members_only_sale_active == true
         assign members_only = true
     endif
     if members_only == true
-        if customer and members_only_sale_active == true
+        if customer and settings.members_only_sale_active == true
             assign members_only = false
         else
             assign members_only = true
@@ -58,11 +58,14 @@
             {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
                 disabled
             {% endif %}
+            {% if members_only and settings.members_only_sale_active == true %}
+            style="pointer-events: none"
+            {% endif %}
     >
         {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
             {{ 'products.product.sold_out' | t }}
         {%- elsif members_only == true -%}
-            {% if members_only_sale_active == true %}
+            {% if settings.members_only_sale_active == true %}
                 {{ 'products.product.members_only' | t }}
             {% else %}
                 {{ 'products.product.launch_date' | t }}

@@ -2,6 +2,7 @@
 :root {
     --text-alignment: right;
     --heading-type-2-margin: 1rem;
+    --blue-friday-accent-1: #214D8E;
 }
 
 * {
@@ -1228,7 +1229,7 @@ summary::-webkit-details-marker {
 
 @media screen and (min-width: 990px) {
     .grid--6-col-desktop .grid__item {
-        width: calc(16.66% - var(--grid-desktop-horizontal-spacing) * 5 / 6);
+        width: calc(16% - var(--grid-desktop-horizontal-spacing) * 5 / 6);
         max-width: calc(16.66% - var(--grid-desktop-horizontal-spacing) * 5 / 6);
     }
 
@@ -3378,6 +3379,10 @@ div#glassix-widget-launcher-closed #customized-launcher {
 		line-height: 1.5rem !important;
 	}
 
+    #glassix-widget-launcher-container {
+        right: 30px !important;
+    }
+
 	#glassix-widget-launcher-closed div.glassix-widget-icon-wrapper img {
 		margin: 0 0 -5px 0px !important;
 		height: 54px !important;
@@ -4209,4 +4214,19 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 	position: relative;
 	right: var(--grid-mobile-vertical-spacing);
 	top: 1px;
+}
+
+/* Black Friday */
+
+/*.card_banner_text {*/
+/*    color: var(--blue-friday-accent-1);*/
+/*}*/
+
+/*.menu-drawer__menu li:nth-child(2) ul li:first-child a,*/
+/*.header-block-list-element:nth-child(2) ul li:first-child a {*/
+/*    color: var(--blue-friday-accent-1) !important;*/
+/*}*/
+
+#product #glassix-container {
+    display: none !important;
 }
