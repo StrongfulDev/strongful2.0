@@ -266,7 +266,11 @@
                     >
                       <div>
                         <span>
-                            {{ filter.label | escape }}
+                            {% if filter.label == 'Product type' %}
+                                {{ 'products.facets.product_type' | t }}
+                            {% else %}
+                                {{ filter.label | escape }}
+                            {% endif %}
                               {%- if filter_type == 'vertical' -%}
                                 <span class="facets__selected no-js-hidden{% if filter.active_values.size == 0 %} hidden{% endif %}">
                                   ({{ filter.active_values.size }})
