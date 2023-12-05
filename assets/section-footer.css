@@ -859,7 +859,7 @@ noscript .localization-selector.link {
 }
 
 .list-contact li.list-social__item:first-child {
-    padding-right: var(--grid-desktop-horizontal-spacing);
+    padding-left: var(--grid-desktop-horizontal-spacing);
 }
 
 .list-contact li.list-social__item:nth-child(2) {
@@ -867,12 +867,12 @@ noscript .localization-selector.link {
     padding-right: var(--grid-desktop-horizontal-spacing);
 }
 
-.list-contact li.list-social__item:not(:first-child) {
+.list-contact li.list-social__item:not(:last-child) {
     border-left: 1px var(--gradient-base-background-3) solid;
 }
 
 .list-contact li.list-social__item:last-child {
-    padding-left: var(--grid-desktop-horizontal-spacing);
+    padding-right: var(--grid-desktop-horizontal-spacing);
 }
 
 @media screen and (min-width: 990px) {
