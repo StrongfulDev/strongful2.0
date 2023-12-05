@@ -824,7 +824,11 @@
                               <div>
                                   <div class="filter-title-container">
                                       <span class="mobile-facets__arrow-sorting-sibling">
-                                          {{ filter.label | escape }}
+                                          {% if filter.label == 'Product type' %}
+                                            {{ 'products.facets.product_type' | t }}
+                                          {% else %}
+                                            {{ filter.label | escape }}
+                                          {% endif %}
                                       </span>
                                       <span class="facets__selected no-js-hidden{% if filter.active_values.size == 0 %} hidden{% endif %}">
                                           ({{ filter.active_values.size }})
