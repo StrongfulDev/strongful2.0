@@ -67,7 +67,7 @@
 }
 
 .article-card .card__heading {
-  margin-bottom: 0.6rem;
+  margin: var(--grid-desktop-vertical-spacing) 0;
 	font-size: var(--font-body-size-large);
 	font-weight: var(--font-body-weight-bold);
 }
