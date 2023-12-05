@@ -743,13 +743,13 @@ noscript .localization-selector.link {
 .footer-block__heading:before {
     width: 1.2rem;
     height: 0.2rem;
-    right: 0;
+    left: 0;
 }
 
 .footer-block__heading:after {
     height: 1.2rem;
     width: 0.2rem;
-    right: 0.5rem;
+    left: 0.5rem;
     transform: translateY(-0.5rem);
     display: block;
 }
