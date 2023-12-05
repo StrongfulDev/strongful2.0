@@ -4198,7 +4198,7 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 
 .breadcrumbs__item:not(:last-child):after {
 	border-style: solid;
-	border-width: 0.1em 0.1em 0 0;
+	border-width: 0.1em 0 0 0.1em;
 	border-color: var(--gradient-base-background-4);
 	content: "";
 	display: inline-block;

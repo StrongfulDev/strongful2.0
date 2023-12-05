@@ -34,12 +34,13 @@ ul, ol {
 	text-decoration: underline;
 	font-weight: 600;
 	font-size: 1.1em;
+	text-align: right;
 }
 
 .supportful__flex-blog .icon-caret {
 	float: none;
 	margin: 0;
-	transform: rotate(270deg);
+	transform: rotate(90deg);
 	width: 12px;
 }
 
