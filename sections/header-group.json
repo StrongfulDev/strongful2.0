@@ -146,7 +146,7 @@
         "fc929aa6-aab6-4c25-be13-8267425330c3": {
           "type": "menu_item",
           "settings": {
-            "above_shop_all_link": "shopify:\/\/collections\/טופים",
+            "above_shop_all_link": "https:\/\/strongful.co.il\/collections\/טופים",
             "show_on_mobile": true,
             "order": "",
             "small_font": false,
@@ -160,7 +160,7 @@
             "desktop_links_image_1_link": "shopify:\/\/collections\/aura-x-oasis-winter-collection",
             "desktop_links_image_2_link": "",
             "mobile_title": "טופים",
-            "main_link": "",
+            "main_link": "https:\/\/strongful.co.il\/collections\/טופים",
             "main_title": "",
             "shop_all_link": "shopify:\/\/collections\/all-tops",
             "shop_all_title": "טופים"
