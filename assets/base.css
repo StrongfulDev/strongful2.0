@@ -4231,3 +4231,11 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 #product #glassix-container {
     display: none !important;
 }
+
+.ReturnGO_SubtotalBlockWrapper-module_SubtotalBlockWrapper {
+	display: none !important;
+}
+
+.ReturnGO_ReturnItemProposition-module_costs {
+	display: none !important;
+}
