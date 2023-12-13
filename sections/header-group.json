@@ -24,12 +24,12 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "AURA X OASIS",
-            "sub_text": "קולקציית חורף נחתה באתר!",
+            "main_text": "NEW IN: BLACK ONYX",
+            "sub_text": "קולקציית ONYX חדשה נחתה באתר!",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "rtl",
-            "link": "shopify:\/\/collections\/aura-x-oasis-winter-collection",
+            "link": "shopify:\/\/collections\/onyx",
             "color_scheme": "accent-1"
           }
         },
