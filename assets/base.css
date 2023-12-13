@@ -4236,6 +4236,7 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 	display: none !important;
 }
 
-.ReturnGO_ReturnItemProposition-module_costs {
+.ReturnGO_ReturnItemProposition-module_costs,
+.ReturnGO_RequestStatus-module_requestStatusContainer.ReturnGO_RequestStatus-module_noShippingInstruction ~ .ReturnGO_TextContainer-module_textContainer:nth-child(6) {
 	display: none !important;
 }
