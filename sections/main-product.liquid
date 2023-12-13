@@ -17,7 +17,12 @@
 
 <section
         id="MainProduct-{{ section.id }}"
-        class="page-width section-{{ section.id }}-padding"
+        class="page-width section-{{ section.id }}-padding
+        {% if isLiveTheme == 'true' %}
+            {% if product.tags contains 'hidden' %}
+                hidden
+            {% endif %}
+        {% endif %}"
         data-section="{{ section.id }}"
 >
     {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
