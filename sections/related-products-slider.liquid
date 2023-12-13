@@ -97,36 +97,95 @@
                     role="list"
                     aria-label="{{ 'general.slider.name' | t }}"
             >
-                {% for recommendation in recommendations.products %}
-                    <li
-                            data-product="{{ recommendation.title }}"
-                            id="Slide-{{ section.id }}-{{ forloop.index }}"
-                            class="grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}
-                            {% if recommendation.tags contains 'giftHide' or recommendation.title == 'Gift Card' %} hidden{% endif %}"
-                    >
-                        {% render 'card-product',
-                                card_product: recommendation,
-                                media_aspect_ratio: section.settings.image_ratio,
-                                show_secondary_image: section.settings.show_secondary_image,
-                                show_vendor: settings.show_vendor,
-                                show_rating: section.settings.show_rating,
-                                show_quick_add: settings.enable_quick_add,
-                                quick_add_type: settings.quick_add_type,
-                                quick_add_type_mobile: settings.quick_add_type_mobile,
-                                section_id: section.id,
-                                lazy_load: lazy_load,
-                                show_sale_badge: section.settings.show_sale_badge,
-                                pick_size_text: settings.pick_size_text,
-                                quick_add_text: settings.quick_add_text,
-                                quick_add_accessories_text: settings.quick_add_accessories_text,
-                                members_only_sale: settings.members_only_sale,
-                                announcement_tag: settings.announcement_tag,
-                                card_banner_text: settings.custom_collection_announcement,
-                                second_announcement_tag: settings.second_announcement_tag,
-                                custom_collection_second_announcement: settings.custom_collection_second_announcement,
-                                comes_with_matching_outfit: settings.comes_with_matching_outfit
-                        %}
-                    </li>
+
+                {%- for recommendation in recommendations.products -%}
+                    {%- liquid
+                        assign lazy_load = false
+                        if forloop.index > 2
+                            assign lazy_load = true
+                        endif
+
+
+                        assign card_announcement = ""
+                        if settings.show_card_collection_announcement
+                            if settings.custom_collection_announcement != blank
+                                assign card_announcement = settings.custom_collection_announcement
+                            endif
+                        endif
+                    -%}
+
+                    {% for option in recommendation.options_with_values %}
+                        {% if option.name == 'צבע' %}
+                            {% for value in option.values %}
+                                {% if isLiveTheme == 'true' %}
+                                    {% unless recommendation.tags contains 'hidden' or recommendation.tags contains 'free-slippers' %}
+                                        <li
+                                                data-product="{{ recommendation.title }}"
+                                                id="Slide-{{ section.id }}-{{ forloop.index }}"
+                                                class="grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}
+                                                {% if recommendation.tags contains 'giftHide' or recommendation.title == 'Gift Card' %} hidden{% endif %}"
+                                        >
+                                            {% render 'card-product',
+                                                    card_product: recommendation,
+                                                    media_aspect_ratio: section.settings.image_ratio,
+                                                    show_secondary_image: section.settings.show_secondary_image,
+                                                    show_vendor: settings.show_vendor,
+                                                    show_rating: section.settings.show_rating,
+                                                    show_quick_add: settings.enable_quick_add,
+                                                    quick_add_type: settings.quick_add_type,
+                                                    quick_add_type_mobile: settings.quick_add_type_mobile,
+                                                    section_id: section.id,
+                                                    lazy_load: lazy_load,
+                                                    show_sale_badge: section.settings.show_sale_badge,
+                                                    pick_size_text: settings.pick_size_text,
+                                                    quick_add_text: settings.quick_add_text,
+                                                    quick_add_accessories_text: settings.quick_add_accessories_text,
+                                                    members_only_sale: settings.members_only_sale,
+                                                    announcement_tag: settings.announcement_tag,
+                                                    card_banner_text: settings.custom_collection_announcement,
+                                                    second_announcement_tag: settings.second_announcement_tag,
+                                                    custom_collection_second_announcement: settings.custom_collection_second_announcement,
+                                                    colorName: value,
+                                                    comes_with_matching_outfit: settings.comes_with_matching_outfit
+                                            %}
+                                        </li>
+                                    {% endunless %}
+                                {% else %}
+                                    <li
+                                            data-product="{{ recommendation.title }}"
+                                            id="Slide-{{ section.id }}-{{ forloop.index }}"
+                                            class="grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}
+                                            {% if recommendation.tags contains 'giftHide' or recommendation.title == 'Gift Card' %} hidden{% endif %}"
+                                    >
+                                        {% render 'card-product',
+                                                card_product: recommendation,
+                                                media_aspect_ratio: section.settings.image_ratio,
+                                                show_secondary_image: section.settings.show_secondary_image,
+                                                show_vendor: settings.show_vendor,
+                                                show_rating: section.settings.show_rating,
+                                                show_quick_add: settings.enable_quick_add,
+                                                quick_add_type: settings.quick_add_type,
+                                                quick_add_type_mobile: settings.quick_add_type_mobile,
+                                                colorName: value,
+                                                section_id: section.id,
+                                                lazy_load: lazy_load,
+                                                show_sale_badge: section.settings.show_sale_badge,
+                                                pick_size_text: settings.pick_size_text,
+                                                quick_add_text: settings.quick_add_text,
+                                                quick_add_accessories_text: settings.quick_add_accessories_text,
+                                                members_only_sale: settings.members_only_sale,
+                                                announcement_tag: settings.announcement_tag,
+                                                card_banner_text: settings.custom_collection_announcement,
+                                                second_announcement_tag: settings.second_announcement_tag,
+                                                custom_collection_second_announcement: settings.custom_collection_second_announcement,
+                                                comes_with_matching_outfit: settings.comes_with_matching_outfit
+                                        %}
+                                    </li>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                    {% endfor %}
+
                 {%- endfor -%}
             </ul>
             {%- if show_side_arrows -%}
