@@ -948,7 +948,7 @@ class VariantSelects extends HTMLElement {
     this.addEventListener('change', this.onVariantChange);
   }
 
-  onVariantChange() {
+  onVariantChange(event) {
 	  this.updateMasterProductData();
     this.updateOptions();
     this.updateMasterId();
@@ -1014,14 +1014,14 @@ class VariantSelects extends HTMLElement {
   }
 
   updateURL(event) {
+	  console.log(event.target.name);
     if (!this.currentVariant || this.dataset.updateUrl === 'false') return;
-    if (event.target.getAttribute('name') === 'צבע') {
-      let colorName = event.target.value;
-      window.history.replaceState({ }, '', `${this.dataset.url}?color=${colorName}&variant=${this.currentVariant.id}`);
-    } else {
-      // window.history.replaceState({ }, '', `${this.dataset.url}?variant=${this.currentVariant.id}`);
-      window.history.replaceState({ }, '', `${this.dataset.url}?color=${colorName}&variant=${this.currentVariant.id}`);
-    }
+		if (event.target.name === 'צבע') {
+			let colorName = event.target.value;
+			window.history.replaceState({ }, '', `${this.dataset.url}?color=${colorName}&variant=${this.currentVariant.id}`);
+		} else {
+			window.history.pushState({ }, '', `${this.dataset.url}?variant=${this.currentVariant.id}`);
+		}
   }
 
   updateShareUrl() {
@@ -1459,7 +1459,7 @@ window.addEventListener('DOMContentLoaded', function(event) {
 		"צהוב בהיר": "yellow",
 		"לילך": "purple",
 		"צהוב ירוק": "green",
-		"בורדו": "#5A2B33",
+		"בורדו": "#68252E",
 		"מנטה": "green",
 		"מוקה": "#af8970",
 		"ירוק זית": "green",
