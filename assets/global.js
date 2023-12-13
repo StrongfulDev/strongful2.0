@@ -1459,7 +1459,7 @@ window.addEventListener('DOMContentLoaded', function(event) {
 		"צהוב בהיר": "yellow",
 		"לילך": "purple",
 		"צהוב ירוק": "green",
-		"בורדו": "red",
+		"בורדו": "#5A2B33",
 		"מנטה": "green",
 		"מוקה": "#af8970",
 		"ירוק זית": "green",
@@ -1468,7 +1468,7 @@ window.addEventListener('DOMContentLoaded', function(event) {
 		"סגול": "purple",
 		"אדום": "#d81e06",
 		"צהוב חרדל": "yellow",
-		"ניוד": "yellow",
+		"ניוד": "#D3C2B6",
 		"ורוד עתיק": "#ff77a8",
 		"ניוד-אפור": "Gray",
 		"אפרסק": "orange",
@@ -1477,6 +1477,7 @@ window.addEventListener('DOMContentLoaded', function(event) {
 		"לבן": "white",
 		"White Black": "white",
 		"White Gray": "white",
+		"אפור-שחור": "#43383F",
 		"צהוב": "#f4e287"
 	}
 
