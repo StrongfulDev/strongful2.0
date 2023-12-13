@@ -99,14 +99,14 @@
         "b43423be-0745-47c7-be6a-84d0ee24d128": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_c7c144db-b526-4efd-a81b-f6ec902f7210.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_c85d5a9d-e601-46d9-887b-871813ac9291.jpg",
+            "image": "shopify:\/\/shop_images\/0_22d6cd11-ff9b-4034-b491-db5e6e47615e.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/0_e1d0ac06-1001-414a-8127-8afd7a13cf8a.jpg",
             "heading": "",
-            "whole_slide_link": "shopify:\/\/collections\/aura-x-oasis-winter-collection",
+            "whole_slide_link": "shopify:\/\/collections\/onyx",
             "heading_size": "h1",
             "subheading": "",
             "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/aura-x-oasis-winter-collection",
+            "link": "shopify:\/\/collections\/onyx",
             "button_style_secondary": false,
             "box_align": "middle-center",
             "show_text_box": false,
@@ -175,10 +175,10 @@
         "dfad4ec5-c40b-4feb-90a9-341da374970d": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0_88c8a491-89f0-4d55-9f37-147ec4cfcea1.jpg",
-            "alt": "NEW IN",
+            "image": "shopify:\/\/shop_images\/0_5f55dba3-2a8c-4331-80b6-23aa90f8a0d1.jpg",
+            "alt": "New black onyx banner",
             "link": "NEW IN",
-            "url": "shopify:\/\/collections\/aura-x-oasis-winter-collection",
+            "url": "shopify:\/\/collections\/onyx",
             "show_on_desktop": true
           }
         },
