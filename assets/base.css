@@ -4226,6 +4226,8 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 }
 
 .ReturnGO_ReturnItemProposition-module_costs,
-.ReturnGO_TextContainer-module_textContainer:nth-child(6) {
+.ReturnGO_TextContainer-module_textContainer:nth-child(6),
+.ReturnGO_TotalSummary-module_totalSummary,
+.ReturnGO_ItemContent-module_badge.ReturnGO_ItemContent-module_not-eligible {
 	display: none !important;
 }
