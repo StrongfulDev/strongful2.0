@@ -11,14 +11,14 @@
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
-            "picker_type": "dropdown"
+            "picker_type": "button"
           }
         },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": false,
-            "members_only_sale_over_text": "זמין לרכישה ב 15.8"
+            "members_only_sale_over_text": ""
           }
         },
         "679aaa7e-cf01-48c6-85e3-b35a4a905d19": {
@@ -26,7 +26,7 @@
           "settings": {
             "heading": "Description",
             "product_content": "description",
-            "content": "<p>Digital gift card for use on site<\/p>",
+            "content": "",
             "page": "",
             "icon": "none"
           }
@@ -34,7 +34,7 @@
         "6bb9c7f3-70b8-4986-9a85-148874103e99": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Gift Card Usage",
+            "heading": "איך משתמשים",
             "product_content": "gift_card_usage",
             "content": "",
             "page": "",
@@ -45,7 +45,8 @@
           "type": "swiper",
           "settings": {
             "swiper_preset": "shipping_returns",
-            "swiper_delay": 3
+            "swiper_delay": 3,
+            "show_payment_icons": false
           }
         }
       },
