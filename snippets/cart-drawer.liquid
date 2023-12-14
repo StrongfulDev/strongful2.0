@@ -158,8 +158,8 @@
                                                             {% endif %}
                                                         <img
                                                                 class="cart-item__image"
-                                                                src="{{ item.variant.image | image_url: width: 300 }}"
-                                                                alt="{{ item.variant.image.alt | escape }}"
+                                                                src="{{ item.image | image_url: width: 300 }}"
+                                                                alt="{{ item.image.alt | escape }}"
                                                                 loading="lazy"
                                                                 width="150"
                                                                 height="{{ 150 | divided_by: item.image.aspect_ratio | ceil }}"

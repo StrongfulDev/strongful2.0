@@ -188,6 +188,10 @@ div:not(.product-size-picker-container) .variant-button .size_variant_button:not
 	margin: 0 0 6px;
 }
 
+product-recommendations .discount-price-container {
+	direction: rtl;
+}
+
 .cart-drawer .card .discount-price-container {
 	display: none;
 }
