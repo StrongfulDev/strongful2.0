@@ -81,10 +81,16 @@
                     {%- if card_product.featured_media -%}
                         <div class="card__media">
                             <a href="{{ card_product.url }}?color={{ colorName }}">
-                                    {% assign cardProductTitle = card_product.title %}
-                                    {% assign altCompare = cardProductTitle | append: ' | ' | append: colorName | append: ' | XS' %}
-                                    {% assign newImagesArray = card_product.images | where: "alt", altCompare %}
-                                    <div class="media media--transparent media--hover-effect {{ altCompare }}">
+                                {% liquid
+                                    assign cardProductTitle = card_product.title
+                                    assign placeholder = ''
+                                    if card_product.options.size > 1
+                                        assign placeholder = ' | XS'
+                                    endif
+                                    assign altCompare = cardProductTitle | append: ' | ' | append: colorName | append: placeholder
+                                    assign newImagesArray = card_product.images | where: "alt", altCompare
+                                %}
+                                    <div class="media media--transparent media--hover-effect {{ altCompare }} {% if card_product.options.size > 1 %}many-options{% endif %}">
                                         {% if image_count <= 2 or true -%}
                                             {% for image in newImagesArray limit: 2 %}
                                                     <img

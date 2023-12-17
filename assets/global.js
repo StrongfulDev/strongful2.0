@@ -987,30 +987,33 @@ class VariantSelects extends HTMLElement {
 
   updateMedia() {
     if (!this.currentVariant) return;
-	  if (!this.currentVariant.option2) return;
+	  // if (!this.currentVariant.option2) return;
+	  console.log(this.currentVariant);
 
-		let desiredSize = $('input[name="מידה"]:checked').data("front-value");
-    let desiredColor = $('input[name="צבע"]:checked').val();
+		if (this.currentVariant.options2) {
+			let desiredSize = $('input[name="מידה"]:checked').data("front-value");
+			let desiredColor = $('input[name="צבע"]:checked').val();
 
-    // const mediaGalleries = $(`[id^="MediaGallery-${this.dataset.section}"]`);
-		const mediaGallerySizeItemsToHide = $(document).find(`.product__media-item:not([data-model-size="${desiredSize}"])`);
-	  const mediaGalleryColorItemsToHide = $(document).find(`.product__media-item:not([data-alt="${this.currentVariant.option2}"])`);
-		const mediaGalleryListItemsToShow = $(document).find(`.product__media-item[data-alt="${this.currentVariant.option2}"][data-model-size="${desiredSize}"]`);
+			// const mediaGalleries = $(`[id^="MediaGallery-${this.dataset.section}"]`);
+			const mediaGallerySizeItemsToHide = $(document).find(`.product__media-item:not([data-model-size="${desiredSize}"])`);
+			const mediaGalleryColorItemsToHide = $(document).find(`.product__media-item:not([data-alt="${this.currentVariant.option2}"])`);
+			const mediaGalleryListItemsToShow = $(document).find(`.product__media-item[data-alt="${this.currentVariant.option2}"][data-model-size="${desiredSize}"]`);
 
-		const modelSwitcherColorItemsToHide = $(document).find(`.model-switcher__image:not([data-alt="${desiredColor}"])`);
-		const modelSwitcherColorItemsToShow = $(document).find(`.model-switcher__image[data-alt="${desiredColor}"]`);
+			const modelSwitcherColorItemsToHide = $(document).find(`.model-switcher__image:not([data-alt="${desiredColor}"])`);
+			const modelSwitcherColorItemsToShow = $(document).find(`.model-switcher__image[data-alt="${desiredColor}"]`);
 
-	  mediaGallerySizeItemsToHide.addClass('hidden');
-	  mediaGalleryColorItemsToHide.addClass('hidden');
-		mediaGalleryListItemsToShow.removeClass('hidden');
-		modelSwitcherColorItemsToHide.addClass('hidden');
-		modelSwitcherColorItemsToShow.removeClass('hidden');
-	  // modelSwitcherColorItemsToShow.eq(0).addClass('higher-index');
+			mediaGallerySizeItemsToHide.addClass('hidden');
+			mediaGalleryColorItemsToHide.addClass('hidden');
+			mediaGalleryListItemsToShow.removeClass('hidden');
+			modelSwitcherColorItemsToHide.addClass('hidden');
+			modelSwitcherColorItemsToShow.removeClass('hidden');
+		} else {
+			const mediaGalleryColorItemsToHide = $(document).find(`.product__media-item:not([data-alt="${this.currentVariant.option1}"])`);
+			const mediaGalleryListItemsToShow = $(document).find(`.product__media-item[data-alt="${this.currentVariant.option1}"]`);
 
-    const modalContent = document.querySelector(`#ProductModal-${this.dataset.section} .product-media-modal__content`);
-    // if (!modalContent) return;
-    // const newMediaModal = modalContent.querySelector(`[data-media-id="${this.dataset.section}-${this.currentVariant.featured_media.id}"]`);
-    // modalContent.prepend(newMediaModal);
+			mediaGalleryColorItemsToHide.addClass('hidden');
+			mediaGalleryListItemsToShow.removeClass('hidden');
+		}
   }
 
   updateURL(event) {

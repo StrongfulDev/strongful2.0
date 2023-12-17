@@ -88,10 +88,12 @@
                                     {% if product.selected_or_first_available_variant.featured_media == null and forloop.index == 1 %} is-active{% endif %}
                                     {% if media.media_type != 'image' %} product__media-item--full{% endif %}
                                     {% if section.settings.hide_variants and variant_images contains media.src %} product__media-item--variant{% endif %}
-                                    {% if alt_items_array[2] contains 'L' and plusTag == '' %}
-                                    hidden
-                                    {% elsif alt_items_array[2] contains 'XS' and plusTag != '' %}
-                                    hidden
+                                    {% if alt_items_array[2] != blank %}
+                                        {% if alt_items_array[2] contains 'L' and plusTag == '' %}
+                                        hidden
+                                        {% elsif alt_items_array[2] contains 'XS' and plusTag != '' %}
+                                        hidden
+                                        {% endif %}
                                     {% endif %}"
                                 data-media-id="{{ section.id }}-{{ media.id }}"
                                 data-model-size="{{ alt_items_array[2] }}"
