@@ -1,7 +1,7 @@
 {% if product.tags contains 'TEMP' %}
 {{ 'component-model-switcher.css' | asset_url | stylesheet_tag }}
-{{ 'component-model-switcher.js' | asset_url | script_tag }}
 {% endif %}
+{{ 'component-model-switcher.js' | asset_url | script_tag }}
 
 {%- liquid
     assign myBlock = section.blocks | where: 'id', 'e290d1ee-22d0-4ae8-9219-8d77d6585fae' | first
