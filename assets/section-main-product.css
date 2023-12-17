@@ -1630,7 +1630,7 @@ variant-radios fieldset {
 }
 
 .product-form__input.color-option-fieldset {
-	justify-content: flex-start;
+	justify-content: flex-end;
 }
 
 .product .price .badge {

@@ -44,7 +44,7 @@
       {% endif %}
       {{ block.shopify_attributes }}
     >
-      {%- for option in product.options_with_values -%}
+      {%- for option in product.options_with_values reversed -%}
         <fieldset class="js product-form__input
                 {% if option.name == 'צבע' %}color-option-fieldset{% endif %}
                 {% if product.title == 'גיפט קארד' %}gift-card-product-form__input{% endif %}"
