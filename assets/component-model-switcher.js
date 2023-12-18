@@ -70,6 +70,7 @@ window.addEventListener('DOMContentLoaded', function(e) {
 				progressBar.css('width', `calc(100% / ${imagesToShow.length})`);
 
 			} else {
+
 				let sizeTable = $('.div-block-460');
 				let sizeImagesToHide = $(document).find(`.product__media-item:not([data-model-size="${modelSize}"])`);
 				let imagesToShow = productMediaList.find(`.product__media-item[data-model-size="${modelSize}"][data-alt="${selectedColorValue}"]`);
@@ -86,6 +87,7 @@ window.addEventListener('DOMContentLoaded', function(e) {
 				modelWearsSizeParagraphsToShow.removeClass('hidden');
 				modelWearsSizeParagraphsToHide.addClass('hidden');
 				progressBar.css('width', `calc(100% / ${imagesToShow.length})`);
+
 			}
 
 			$(".model-switcher__list").addClass("hidden");

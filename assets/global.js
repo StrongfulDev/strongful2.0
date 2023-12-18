@@ -948,8 +948,7 @@ class VariantSelects extends HTMLElement {
     this.addEventListener('change', this.onVariantChange);
   }
 
-  onVariantChange(event) {
-	  this.updateMasterProductData();
+  onVariantChange() {
     this.updateOptions();
     this.updateMasterId();
     this.toggleAddButton(true, '', false);
@@ -973,10 +972,6 @@ class VariantSelects extends HTMLElement {
     this.options = Array.from(this.querySelectorAll('select'), (select) => select.value);
   }
 
-	updateMasterProductData() {
-		// this.currentProduct = this.getProductData();
-	}
-
   updateMasterId() {
     this.currentVariant = this.getVariantData().find((variant) => {
       return !variant.options.map((option, index) => {
@@ -987,17 +982,15 @@ class VariantSelects extends HTMLElement {
 
   updateMedia() {
     if (!this.currentVariant) return;
-	  // if (!this.currentVariant.option2) return;
-	  console.log(this.currentVariant);
 
-		if (this.currentVariant.options2) {
+		if (this.children.length > 3) {
+
 			let desiredSize = $('input[name="מידה"]:checked').data("front-value");
 			let desiredColor = $('input[name="צבע"]:checked').val();
 
-			// const mediaGalleries = $(`[id^="MediaGallery-${this.dataset.section}"]`);
 			const mediaGallerySizeItemsToHide = $(document).find(`.product__media-item:not([data-model-size="${desiredSize}"])`);
-			const mediaGalleryColorItemsToHide = $(document).find(`.product__media-item:not([data-alt="${this.currentVariant.option2}"])`);
-			const mediaGalleryListItemsToShow = $(document).find(`.product__media-item[data-alt="${this.currentVariant.option2}"][data-model-size="${desiredSize}"]`);
+			const mediaGalleryColorItemsToHide = $(document).find(`.product__media-item:not([data-alt="${this.currentVariant.option1}"])`);
+			const mediaGalleryListItemsToShow = $(document).find(`.product__media-item[data-alt="${this.currentVariant.option1}"][data-model-size="${desiredSize}"]`);
 
 			const modelSwitcherColorItemsToHide = $(document).find(`.model-switcher__image:not([data-alt="${desiredColor}"])`);
 			const modelSwitcherColorItemsToShow = $(document).find(`.model-switcher__image[data-alt="${desiredColor}"]`);
@@ -1007,6 +1000,7 @@ class VariantSelects extends HTMLElement {
 			mediaGalleryListItemsToShow.removeClass('hidden');
 			modelSwitcherColorItemsToHide.addClass('hidden');
 			modelSwitcherColorItemsToShow.removeClass('hidden');
+
 		} else {
 			const mediaGalleryColorItemsToHide = $(document).find(`.product__media-item:not([data-alt="${this.currentVariant.option1}"])`);
 			const mediaGalleryListItemsToShow = $(document).find(`.product__media-item[data-alt="${this.currentVariant.option1}"]`);
@@ -1017,7 +1011,6 @@ class VariantSelects extends HTMLElement {
   }
 
   updateURL(event) {
-	  console.log(event.target.name);
     if (!this.currentVariant || this.dataset.updateUrl === 'false') return;
 		if (event.target.name === 'צבע') {
 			let colorName = event.target.value;
