@@ -100,9 +100,9 @@
                     {% endif %}
                     {% if members_only and product.tags contains announcement_tag %}
                         disabled
-                        class="disabled disabled-variant-button"
+                        class="disabled-variant-button"
                     {% elsif option_disabled %}
-                        class="disabled disabled-variant-button"
+                        class="disabled-variant-button"
                     {% endif %}
             >
             {% if option.name == "צבע" %}
@@ -113,7 +113,6 @@
             {% else %}
                 <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
                     <span>{{ value }}</span>
-                    <span class="dynamic_american_size"></span>
                     <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
                 </label>
             {% endif %}

@@ -1566,10 +1566,6 @@ summary .icon-caret {
 	padding-bottom: 1.5rem;
 }
 
-.dynamic_american_size {
-  margin-left: var(--grid-desktop-vertical-spacing);
-}
-
 @media screen and (min-width: 990px) {
 
   .facets-vertical .facets-wrapper {
