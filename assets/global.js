@@ -990,7 +990,7 @@ class VariantSelects extends HTMLElement {
 
 			const mediaGallerySizeItemsToHide = $(document).find(`.product__media-item:not([data-model-size="${desiredSize}"])`);
 			const mediaGalleryColorItemsToHide = $(document).find(`.product__media-item:not([data-alt="${this.currentVariant.option1}"])`);
-			const mediaGalleryListItemsToShow = $(document).find(`.product__media-item[data-alt="${this.currentVariant.option1}"][data-model-size="${desiredSize}"]`);
+			const mediaGalleryListItemsToShow = $(document).find(`.product__media-item[data-alt="${this.currentVariant.option1}"]`);
 
 			const modelSwitcherColorItemsToHide = $(document).find(`.model-switcher__image:not([data-alt="${desiredColor}"])`);
 			const modelSwitcherColorItemsToShow = $(document).find(`.model-switcher__image[data-alt="${desiredColor}"]`);
@@ -1000,6 +1000,15 @@ class VariantSelects extends HTMLElement {
 			mediaGalleryListItemsToShow.removeClass('hidden');
 			modelSwitcherColorItemsToHide.addClass('hidden');
 			modelSwitcherColorItemsToShow.removeClass('hidden');
+
+			// check how many hidden modelSwitcherColorItemsToHide are left
+			let allModelSwitcherColorItems = $(document).find(`.model-switcher__item:last-child .model-switcher__image`);
+			let hiddenModelSwitcherColorItems = $(document).find(`.model-switcher__item:last-child .model-switcher__image.hidden`);
+			if (allModelSwitcherColorItems.length === hiddenModelSwitcherColorItems.length) {
+				$(document).find(`.model-switcher`).addClass('hidden');
+			} else {
+				$(document).find(`.model-switcher`).removeClass('hidden');
+			}
 
 		} else {
 			const mediaGalleryColorItemsToHide = $(document).find(`.product__media-item:not([data-alt="${this.currentVariant.option1}"])`);
