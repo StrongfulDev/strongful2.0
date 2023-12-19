@@ -185,7 +185,7 @@ fieldset.product-form__input .form__label {
 	font-weight: var(--font-body-weight-bold);
 }
 
-.product-form__input input[type='radio'] {
+.product-form__input input[type=radio] {
     clip: rect(0, 0, 0, 0);
     overflow: hidden;
     position: absolute;
@@ -193,7 +193,7 @@ fieldset.product-form__input .form__label {
     width: 1px;
 }
 
-.product-form__input input[type='radio'] + label {
+.product-form__input input[type=radio] + label {
     border: var(--variant-pills-border-width) solid rgba(var(--color-foreground), var(--variant-pills-border-opacity));
     background-color: rgb(var(--color-background));
     color: rgba(var(--color-foreground));
@@ -211,7 +211,7 @@ fieldset.product-form__input .form__label {
     position: relative;
 }
 
-.product-form__input input[type='radio'] + label:before {
+.product-form__input input[type=radio]+label:before {
     content: '';
     position: absolute;
     top: calc(var(--variant-pills-border-width) * -1);
@@ -223,20 +223,26 @@ fieldset.product-form__input .form__label {
     box-shadow: var(--variant-pills-shadow-horizontal-offset) var(--variant-pills-shadow-vertical-offset) var(--variant-pills-shadow-blur-radius) rgba(var(--color-shadow), var(--variant-pills-shadow-opacity));
 }
 
-.product-form__input input[type='radio'] + label:hover {
+.product-form__input input[type=radio]+label:hover {
     border-color: rgb(var(--color-foreground));
 }
 
-.product-form__input input[type='radio'] + label:hover + .product__inventory {
+.product-form__input input[type=radio]+label:hover+.product__inventory {
 	display: block;
 }
 
-.product-form__input input[type='radio']:checked + label {
+.product-form__input input[type=radio]:checked+label {
     background-color: rgb(var(--color-foreground));
     color: rgb(var(--color-background));
 }
 
-.product-form__input input[type='radio']:not(.disabled) + label > .visually-hidden {
+.product-form__input input.disabled[type=radio]:checked+label,
+.product-form__input input.disabled-variant-button[type=radio]:checked+label {
+	background-color: rgb(var(--color-background));
+		color: rgba(var(--color-foreground), 0.6);
+}
+
+.product-form__input input[type=radio]:not(.disabled)+label>.visually-hidden {
     display: none;
 }
 
@@ -246,29 +252,29 @@ fieldset.product-form__input .form__label {
     }
 }
 
-.product-form__input input[type='radio']:checked + label::selection {
+.product-form__input input[type=radio]:checked+label::selection {
     background-color: rgba(var(--color-background), 0.3);
 }
 
-.product-form__input input[type='radio'].disabled:checked + label,
-.product-form__input input[type='radio']:disabled:checked + label {
+.product-form__input input[type=radio].disabled:checked+label,
+.product-form__input input[type=radio].disabled-variant-button:checked+label {
     color: rgba(var(--color-background), 0.6);
 }
 
-.product-form__input input[type='radio']:focus-visible + label {
+.product-form__input input[type=radio]:focus-visible+label {
     box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
     0 0 0 0.5rem rgba(var(--color-foreground), 0.55);
 }
 
 /* Fallback */
-.product-form__input input[type='radio'].focused + label,
+.product-form__input input[type=radio].focused+label,
 .no-js .shopify-payment-button__button [role="button"]:focus + label {
     box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
     0 0 0 0.5rem rgba(var(--color-foreground), 0.55);
 }
 
 /* No outline when focus-visible is available in the browser */
-.no-js .product-form__input input[type='radio']:focus:not(:focus-visible) + label {
+.no-js .product-form__input input[type=radio]:focus:not(:focus-visible)+label {
     box-shadow: none;
 }
 
@@ -1538,7 +1544,7 @@ a.product__text {
 /*    color: rgba(var(--color-foreground), 0.6);*/
 /*}*/
 
-.product-form__input input[type='radio']+label.color-variant-tile.no-background {
+.product-form__input input[type=radio]+label.color-variant-tile.no-background {
     background-color: unset;
     padding: 0;
     transition: all .4s ease;
@@ -1551,7 +1557,7 @@ justify-content: center;
 	height: 30px;
 }
 
-.product-form__input input[type='radio']:checked+label.color-variant-tile.no-background {
+.product-form__input input[type=radio]:checked+label.color-variant-tile.no-background {
     border: 1px solid rgb(var(--color-foreground));
 }
 
@@ -1643,10 +1649,31 @@ variant-radios fieldset {
 	font-weight: var(--font-body-weight-bold);
 }
 
+.product-form__input input.disabled-variant-button[type=radio]+label,
+.product-form__input input.disabled[type=radio]+label {
+	background: var(--gradient-base-background-3) !important;
+	color: rgba(var(--color-foreground),.5) !important;
+	border: none;
+}
+
 .variant-button {
     width: 100%;
 	flex: 1;
 	position: relative;
+}
+
+.product-form__input input[type=radio] ~ .soldout-variant-line {
+	display: none;
+}
+
+.product-form__input input.disabled-variant-button[type=radio] ~ .soldout-variant-line,
+.product-form__input input.disabled[type=radio] ~ .soldout-variant-line {
+	display: block;
+}
+
+.disabled label {
+	color: rgba(var(--color-foreground),.5)!important;
+	border: 0;
 }
 
 .variant-button.color-swatch-button {

@@ -38,7 +38,7 @@
 
 {%- for value in option.values -%}
     {%- liquid
-        assign option_disabled = true
+
         assign members_only = false
         if announcement_tag != blank and members_only_sale_active == true
             assign members_only = true
@@ -51,6 +51,9 @@
             endif
         endif
 
+        assign option_disabled = true
+
+        comment
         for option1_name in variants_option1_arr
             case option.position
                 when 1
@@ -65,6 +68,23 @@
                     if option1_name == product.selected_or_first_available_variant.option1 and variants_option2_arr[forloop.index0] == product.selected_or_first_available_variant.option2 and variants_option3_arr[forloop.index0] == value and variants_available_arr[forloop.index0] or members_only == true and product.tags contains announcement_tag and members_only_sale_active == true
                         assign option_disabled = false
                     endif
+            endcase
+        endfor
+        endcomment
+
+        assign option_disabled = true
+
+        for option1_name in variants_option1_arr
+            case option.position
+                when 1
+                    if variants_option1_arr[forloop.index0] == value and variants_available_arr[forloop.index0] or members_only == true and product.tags contains announcement_tag and members_only_sale_active == true
+                        assign option_disabled = false
+                    endif
+                when 2
+                    if option1_name == product.selected_or_first_available_variant.option1 and variants_option2_arr[forloop.index0] == value and variants_available_arr[forloop.index0] or members_only == true and product.tags contains announcement_tag and members_only_sale_active == true
+                        assign option_disabled = false
+                    endif
+                    break
             endcase
         endfor
     -%}
@@ -98,7 +118,7 @@
                             checked="checked"
                         {% endif %}
                     {% endif %}
-                    {% if members_only and product.tags contains announcement_tag %}
+                    {% if members_only == true and product.tags contains announcement_tag %}
                         disabled
                         class="disabled-variant-button"
                     {% elsif option_disabled %}
@@ -116,9 +136,7 @@
                     <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
                 </label>
             {% endif %}
-            {% if option_disabled %}
-                <svg class="soldout-variant-line"><line x1="0" y1="100%" x2="100%" y2="0" class="Styles__StrikethroughLine-sc-1hxn211-12 eJiSh"></line></svg>
-                {% endif %}
+            <svg class="soldout-variant-line"><line x1="0" y1="100%" x2="100%" y2="0" class="Styles__StrikethroughLine-sc-1hxn211-12 eJiSh"></line></svg>
             {% for variant in product.variants %}
                 {% if option_value == variant.title and variant.inventory_quantity <= myBlock.settings.inventory_threshold and variant.inventory_quantity >= 0 %}
                     <p class="product__inventory no-js-hidden fix-direction {% if myBlock.settings.text_style == 'uppercase' %} caption-with-letter-spacing {% elsif myBlock.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"
