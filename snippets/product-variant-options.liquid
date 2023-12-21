@@ -121,10 +121,6 @@
                         {% if value == 'XS' %}
                             checked="checked"
                         {% endif %}
-                    {% else %}
-                        {% if forloop.first %}
-                            checked="checked"
-                        {% endif %}
                     {% endif %}
                     {% if members_only == true and product.tags contains announcement_tag %}
                         disabled

@@ -948,7 +948,8 @@ class VariantSelects extends HTMLElement {
     this.addEventListener('change', this.onVariantChange);
   }
 
-  onVariantChange() {
+  onVariantChange(event) {
+	  console.log(event);
     this.updateOptions();
     this.updateMasterId();
     this.toggleAddButton(true, '', false);
@@ -1506,6 +1507,18 @@ window.addEventListener('DOMContentLoaded', function(event) {
 
   modelSwitcherColorImagesToHide.addClass('hidden');
   modelSwitcherColorImagesToShow.removeClass('hidden');
+
+	// test code
+		let myEvent = new Event('click');
+
+		let fieldSet = document.querySelectorAll('fieldset.js.product-form__input')[1];
+		if (fieldSet) {
+			let input = fieldSet.querySelector('.variant-button:not(.disabled-variant-button)').querySelector('label');
+			console.log(input);
+			setTimeout(() => {
+				input.click();
+			}, 2000);
+		}
 
 });
 
