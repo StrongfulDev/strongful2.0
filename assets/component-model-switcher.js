@@ -72,8 +72,8 @@ window.addEventListener('DOMContentLoaded', function(e) {
 			} else {
 
 				let sizeTable = $('.div-block-460');
-				let sizeImagesToHide = $(document).find(`.product__media-item:not([data-model-size="${modelSize}"])`);
-				let imagesToShow = productMediaList.find(`.product__media-item[data-model-size="${modelSize}"][data-alt="${selectedColorValue}"]`);
+				let sizeImagesToHide = productMediaList.find(`.product__media-item:not([data-model-size="${modelSize}"])`);
+				let imagesToShow = productMediaList.find(`.product__media-item[data-alt="${selectedColorValue}"][data-model-size="${modelSize}"]`);
 				const divsToHide = sizeTable.find(`span:not([data-model-size="${modelSize}"])`);
 				const divsToShow = sizeTable.find(`span[data-model-size="${modelSize}"]`);
 				const modelWearsSizeParagraphsToShow = $(document).find(`.model-wears-size[data-model="${modelSize}"]`);

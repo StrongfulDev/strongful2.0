@@ -990,10 +990,13 @@ class VariantSelects extends HTMLElement {
 
 			const mediaGallerySizeItemsToHide = $(document).find(`.product__media-item:not([data-model-size="${desiredSize}"])`);
 			const mediaGalleryColorItemsToHide = $(document).find(`.product__media-item:not([data-alt="${this.currentVariant.option1}"])`);
-			const mediaGalleryListItemsToShow = $(document).find(`.product__media-item[data-alt="${this.currentVariant.option1}"]`);
+			const mediaGalleryListItemsToShow = $(document).find(`.product__media-item[data-alt="${this.currentVariant.option1}"][data-model-size="${desiredSize}"]`);
 
 			const modelSwitcherColorItemsToHide = $(document).find(`.model-switcher__image:not([data-alt="${desiredColor}"])`);
 			const modelSwitcherColorItemsToShow = $(document).find(`.model-switcher__image[data-alt="${desiredColor}"]`);
+
+			console.log(desiredSize);
+			console.log(mediaGallerySizeItemsToHide);
 
 			mediaGallerySizeItemsToHide.addClass('hidden');
 			mediaGalleryColorItemsToHide.addClass('hidden');
