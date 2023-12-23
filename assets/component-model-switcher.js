@@ -60,8 +60,6 @@ window.addEventListener('DOMContentLoaded', function(e) {
 			const colorImagesToHide = $(document).find(`.product__media-item:not([data-alt="${selectedColorValue}"])`);
 			let progressBar = $('.slider-component-progress-bar');
 
-			console.log(modelSize);
-
 			if (modelSize === undefined) {
 				let imagesToShow = productMediaList.find(`.product__media-item[data-alt="${selectedColorValue}"]`);
 
@@ -99,7 +97,7 @@ window.addEventListener('DOMContentLoaded', function(e) {
 		}
 
 		function updateVariantRadios(modelSize) {
-			const button = $(`variant-radios input[name="מידה"][value="${modelSize}"]`)
+			const button = $(`variant-radios input[name="מידה"][value="${modelSize}"]`);
 			button.click();
 		}
 
@@ -128,5 +126,14 @@ window.addEventListener('DOMContentLoaded', function(e) {
 			}
 		});
 	}, 1500);
+
+	let fieldSet = document.querySelectorAll('fieldset.js.product-form__input')[1];
+	if (fieldSet) {
+		let input = fieldSet.querySelector('.variant-button:not(.disabled-variant-button)').querySelector('label');
+		console.log(input);
+		setTimeout(() => {
+			input.click();
+		}, 2000);
+	}
 
 });
