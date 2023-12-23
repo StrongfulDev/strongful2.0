@@ -985,6 +985,8 @@ class VariantSelects extends HTMLElement {
     if (!this.currentVariant) return;
 
 	  let progressBar = $('.slider-component-progress-bar');
+	  console.log(this.currentVariant.option1);
+		$("#colorName").html(': ' + this.currentVariant.option1);
 
 		if (this.children.length > 3) {
 
