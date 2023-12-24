@@ -27,7 +27,7 @@
         </div>
         {% endif %}
         {% if section.settings.left_text %}
-            <div class="countdown-sale-description-ctn {% if section.settings.text_direction == 'rtl' %}fix-direction{% endif %}">
+            <div class="countdown-sale-description-ctn {% if section.settings.text_direction == 'rtl' %}fix-direction{% else %}ltr{% endif %}">
                 {{ section.settings.left_copy }}
             </div>
         {% endif %}
