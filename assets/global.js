@@ -1301,6 +1301,36 @@ function removeDeadProduct() {
 
 window.addEventListener('DOMContentLoaded', function(event) {
 
+	function removeDuplicates(elements) {
+		// Check if there are elements with the class
+		if (elements.length > 1) {
+			// Start from the second element, since we want to keep the first one
+			for (let i = 1; i < elements.length; i++) {
+				elements[i].parentNode.removeChild(elements[i]);
+			}
+		}
+	}
+
+	const xxxs = document.querySelectorAll('.size-table-rows.XXXS');
+	const xxs = document.querySelectorAll('.size-table-rows.XXS');
+	const xs = document.querySelectorAll('.size-table-rows.XS');
+	const s = document.querySelectorAll('.size-table-rows.S');
+	const m = document.querySelectorAll('.size-table-rows.M');
+	const l = document.querySelectorAll('.size-table-rows.L');
+	const xl = document.querySelectorAll('.size-table-rows.XL');
+	const xxl = document.querySelectorAll('.size-table-rows.XXL');
+	const xxxl = document.querySelectorAll('.size-table-rows.XXXL');
+
+	removeDuplicates(xxxs);
+	removeDuplicates(xxs);
+	removeDuplicates(xs);
+	removeDuplicates(s);
+	removeDuplicates(m);
+	removeDuplicates(l);
+	removeDuplicates(xl);
+	removeDuplicates(xxl);
+	removeDuplicates(xxxl);
+
 	// account modal code start here
 
 	const listItem = $(".multicolumn-list__item");

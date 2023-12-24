@@ -1,7 +1,7 @@
 {{ 'size-table.css' | asset_url | stylesheet_tag }}
 {{ 'size-table.js' | asset_url | script_tag }}
 
-{% assign allSizesAreCm = '* All measures are in feet and inches' %}
+{% assign allSizesAreCm = '* כל המידות בטבלה הינן בס״מ' %}
 
 {% if product.type == 'אוברול' %}
 
@@ -65,8 +65,8 @@
             </thead>
             <tbody>
             {% for variant in product.variants %}
-                <tr class="size-table-rows three-grid">
-                    <td>{{ variant.title }}</td>
+                <tr class="size-table-rows three-grid {{ variant.option2 }}">
+                    <td>{{ variant.option2 }}</td>
                     <td>{{ variant.metafields.my_fields.size_modal_bust }}</td>
                     <td>{{ variant.metafields.my_fields.bra_size }}</td>
                 </tr>
