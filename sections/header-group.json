@@ -295,11 +295,24 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "ec80528e-58ec-4045-943a-e1476439215a": {
+      "type": "countdown",
+      "settings": {
+        "show_days": true,
+        "countdown_date": "Mon Jan 04 2024 12:00:00 GMT+0300 (שעון ישראל (קיץ))",
+        "countdown_url": "\/",
+        "left_text": true,
+        "left_copy": "<p>23% OFF EVERYTHING<\/p>",
+        "right_text": true,
+        "right_copy": "<p>OUR BIRTHDAY PARTY<\/p>"
+      }
     }
   },
   "order": [
     "announcement-bar",
     "header",
-    "7503b704-2110-400e-bc52-a2190d224c23"
+    "7503b704-2110-400e-bc52-a2190d224c23",
+    "ec80528e-58ec-4045-943a-e1476439215a"
   ]
 }
