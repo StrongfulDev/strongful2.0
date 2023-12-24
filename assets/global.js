@@ -705,7 +705,6 @@ class SliderComponent extends HTMLElement {
 		this.sliderItemOffset = this.sliderItemsToShow[1].offsetLeft - this.sliderItemsToShow[0].offsetLeft;
 		this.slidesPerPage = Math.floor((this.slider.clientWidth - this.sliderItemsToShow[0].offsetLeft) / this.sliderItemOffset);
 		this.totalPages = this.sliderItemsToShow.length - this.slidesPerPage;
-		console.log(this.totalPages);
 		this.update();
 	}
 
@@ -1014,6 +1013,8 @@ class VariantSelects extends HTMLElement {
 			// check how many hidden modelSwitcherColorItemsToHide are left
 			let allModelSwitcherColorItems = $(document).find(`.model-switcher__item:last-child .model-switcher__image`);
 			let hiddenModelSwitcherColorItems = $(document).find(`.model-switcher__item:last-child .model-switcher__image.hidden`);
+			console.log(allModelSwitcherColorItems.length);
+			console.log(hiddenModelSwitcherColorItems.length);
 			if (allModelSwitcherColorItems.length === hiddenModelSwitcherColorItems.length) {
 				$(document).find(`.model-switcher`).addClass('hidden');
 			} else {

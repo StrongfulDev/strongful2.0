@@ -130,7 +130,6 @@ window.addEventListener('DOMContentLoaded', function(e) {
 	let fieldSet = document.querySelectorAll('fieldset.js.product-form__input')[1];
 	if (fieldSet) {
 		let input = fieldSet.querySelector('.variant-button:not(.disabled-variant-button)').querySelector('label');
-		console.log(input);
 		setTimeout(() => {
 			input.click();
 		}, 2000);
