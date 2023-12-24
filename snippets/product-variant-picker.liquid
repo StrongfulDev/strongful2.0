@@ -49,7 +49,7 @@
                 {% if option.name == 'צבע' %}color-option-fieldset{% endif %}
                 {% if product.title == 'גיפט קארד' %}gift-card-product-form__input{% endif %}"
         >
-          <legend class="form__label">{{ option.name }}{% if option.name == 'צבע' %}<span id="colorName"></span>{% endif %}</legend>
+          <legend class="form__label fix-direction">{{ option.name }}:{% if option.name == 'צבע' %} <span id="colorName"></span>{% else %} <span id="sizeName"></span>{% endif %}</legend>
             {% if option.name == 'מידה' %}
                 {% for modelName in product.metafields.model.names.value %}
                     {% assign model = shop.metaobjects.model[modelName] %}
