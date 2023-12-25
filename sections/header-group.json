@@ -24,12 +24,12 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "NEW IN: BLACK ONYX",
-            "sub_text": "קולקציית ONYX חדשה נחתה באתר!",
+            "main_text": "STRONGFUL'S 3RD BIRTHDAY",
+            "sub_text": "23% OFF EVERYTHING",
             "text_alignment": "center",
             "main_text_direction": "ltr",
-            "sub_text_direction": "rtl",
-            "link": "shopify:\/\/collections\/onyx",
+            "sub_text_direction": "ltr",
+            "link": "shopify:\/\/collections\/sets",
             "color_scheme": "accent-1"
           }
         },
@@ -110,8 +110,8 @@
             "title_link": "",
             "desktop_links_image_1": "shopify:\/\/shop_images\/0_a76ed885-d867-4e84-b91f-353bbfc6c6fc.jpg",
             "desktop_links_image_1_link": "shopify:\/\/collections\/onyx",
-            "desktop_links_image_2": "shopify:\/\/shop_images\/0_b7cf9a5b-aa26-4013-a117-ead5cebc877e.jpg",
-            "desktop_links_image_2_link": "shopify:\/\/collections\/10-15-off",
+            "desktop_links_image_2": "shopify:\/\/shop_images\/0_bcaa2cf8-451a-440d-97ef-0c07bb00ac43.jpg",
+            "desktop_links_image_2_link": "shopify:\/\/collections\/sets",
             "mobile_cover_image": "shopify:\/\/shop_images\/20e5c3f719da92dc7bfd0c70c57f7186.jpg",
             "mobile_title": "סטים",
             "main_link": "",
@@ -260,8 +260,8 @@
         "mobile_top_image_1_link": "shopify:\/\/collections\/מארזי-תרומות",
         "mobile_top_image_1_title": "מארזי תרומה לארגון ״לתת״",
         "mobile_top_image_temp": "shopify:\/\/shop_images\/0_b66ed963-ad5e-4015-add6-9cd4c2c13d16.jpg",
-        "mobile_top_image_temp_link": "shopify:\/\/collections\/onyx",
-        "mobile_top_image_temp_title": "NEW IN",
+        "mobile_top_image_temp_link": "shopify:\/\/collections\/sets",
+        "mobile_top_image_temp_title": "BIRTHDAY SALE",
         "mobile_top_image_2": "shopify:\/\/shop_images\/Artboard_4_4x-100-min.jpg",
         "mobile_top_image_2_link": "shopify:\/\/collections\/best-seller-internal-use",
         "mobile_top_image_2_title": "BEST SELLERS",
@@ -304,6 +304,7 @@
         "countdown_url": "\/",
         "left_text": true,
         "left_copy": "<p>23% OFF EVERYTHING<\/p>",
+        "text_direction": "ltr",
         "right_text": true,
         "right_copy": "<p>OUR BIRTHDAY PARTY<\/p>"
       }
