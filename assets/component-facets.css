@@ -1311,9 +1311,9 @@ div.mobile-facets__label {
 	transform: translateY(-50%);
 }
 
-.mobile-facets__label>input[type='checkbox']:checked~.icon-checkmark, .mobile-facets__label>input[type='radio']:checked~.icon-checkmark {
-  left: 3pt;
-  right: auto;
+.mobile-facets__label>input[type=checkbox]:checked~.icon-checkmark, .mobile-facets__label>input[type=radio]:checked~.icon-checkmark {
+  right: 3pt;
+  left: auto;
   background: #000;
   color: #fff;
   top: 50%;
