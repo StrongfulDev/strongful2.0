@@ -79,7 +79,7 @@
             "show_on_mobile": true,
             "order": "",
             "small_font": false,
-            "menu": "trending",
+            "menu": "trending-without-10",
             "menu_second": "",
             "menu_third": "",
             "title": "COLLECTIONS",
@@ -301,10 +301,11 @@
       "settings": {
         "show_days": true,
         "countdown_date": "Mon Jan 04 2024 12:00:00 GMT+0300 (שעון ישראל (קיץ))",
-        "countdown_url": "\/",
+        "countdown_url": "shopify:\/\/collections\/sets",
         "left_text": true,
         "left_copy": "<p>OUR BIRTHDAY PARTY<\/p>",
-        "text_direction": "ltr",
+        "right_text_direction": "ltr",
+        "left_text_direction": "ltr",
         "right_text": true,
         "right_copy": "<p>23% OFF EVERYTHING<\/p>"
       }
