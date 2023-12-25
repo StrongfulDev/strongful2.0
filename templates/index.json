@@ -215,9 +215,9 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/0_5f55dba3-2a8c-4331-80b6-23aa90f8a0d1.jpg",
-            "alt": "New black onyx banner",
-            "link": "NEW IN",
-            "url": "shopify:\/\/collections\/onyx",
+            "alt": "קולקציית סטים ראשית יום הולדת",
+            "link": "BIRTHDAY SALE",
+            "url": "shopify:\/\/collections\/sets",
             "show_on_desktop": true
           }
         },
