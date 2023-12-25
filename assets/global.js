@@ -1302,6 +1302,9 @@ function removeDeadProduct() {
 window.addEventListener('DOMContentLoaded', function(event) {
 
 	function removeDuplicates(elements) {
+
+		if (elements.length === 0) return;
+
 		// Check if there are elements with the class
 		if (elements.length > 1) {
 			// Start from the second element, since we want to keep the first one
