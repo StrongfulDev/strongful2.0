@@ -4047,7 +4047,8 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-color: #000;
+	/*background-color: #000;*/
+	background: rgba(255, 255, 255, 0.7);
 	display: flex;
 	justify-content: center;
 	align-items: center;

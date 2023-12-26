@@ -383,8 +383,19 @@
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="loader-wrapper">
-    <img src="https://cdn.shopify.com/s/files/1/0574/2995/0671/files/logo_white.png?v=1636381426"
-         class="loader"  alt="Strongful Logo" loading="lazy"/>
+    {%- if settings.logo != blank -%}
+        {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
+        {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
+        {{ settings.logo | image_url: width: 500 | image_tag:
+        class: 'loader motion-reduce',
+        widths: '50, 100, 150, 200, 250, 300, 400, 500',
+        height: logo_height,
+        width: settings.logo_width,
+        alt: logo_alt
+        }}
+    {%- else -%}
+        <span class="h2">{{ shop.name }}</span>
+    {%- endif -%}
 </div>
 
 <a class="skip-to-content-link button visually-hidden" href="#MainContent">
