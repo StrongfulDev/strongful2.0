@@ -594,6 +594,7 @@ cart-drawer-items.is-empty {
 
 .totals__value {
 	align-items: center;
+	flex-direction: row-reverse;
 }
 
 .totals:not(:first-child) {
