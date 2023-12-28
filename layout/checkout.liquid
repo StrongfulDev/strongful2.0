@@ -336,17 +336,19 @@
         </div>
         <aside class="sidebar {{ discount.type }}" role="complementary">
 
-            {% for line_item in checkout.line_items %}
-                {% if line_item.product.tags contains 'preorder' %}
-                    <span class="regular-preorder none" style="display: none;">Preorder</span>
-                {% endif %}
-            {% endfor %}
-
             <div class="sidebar__header">
                 {{ content_for_logo }}
             </div>
             <div class="sidebar__content">
                 {{ content_for_order_summary }}
+
+                {% for line_item in checkout.line_items %}
+                    {% if line_item.product.tags contains 'preorder' %}
+                        <span class="regular-preorder none" style="display: none;">Preorder</span>
+                    {% elsif line_item.product.tags contains 'outlet' or line_item.product.tags contains 'OUTLET' %}
+                        <span class="outlet-tag hidden none" id="{{ line_item.product.id }}">OUTLET</span>
+                    {% endif %}
+                {% endfor %}
             </div>
             <div class="yotpo-widget-instance" data-yotpo-instance-id="89434"></div>
         </aside>

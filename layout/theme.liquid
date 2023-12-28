@@ -1,6 +1,6 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
-  <head>
+  <head>{% render 'yoast-seo' %}
 
 
       <!-- Google Tag Manager -->
@@ -383,8 +383,19 @@
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="loader-wrapper">
-    <img src="https://cdn.shopify.com/s/files/1/0574/2995/0671/files/logo_white.png?v=1636381426"
-         class="loader"  alt="Strongful Logo" loading="lazy"/>
+    {%- if settings.logo != blank -%}
+        {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
+        {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
+        {{ settings.logo | image_url: width: 500 | image_tag:
+        class: 'loader',
+        widths: '50, 100, 150, 200, 250, 300, 400, 500',
+        height: logo_height,
+        width: settings.logo_width,
+        alt: logo_alt
+        }}
+    {%- else -%}
+        <span class="h2">{{ shop.name }}</span>
+    {%- endif -%}
 </div>
 
 <a class="skip-to-content-link button visually-hidden" href="#MainContent">
@@ -529,6 +540,8 @@
 {%- endif -%}
 {{ 'ajaxinate.min.js' | asset_url | script_tag }}
 
+{% comment %}
+
     {% liquid
         assign customerPhone = customer.phone | replace: '-', '' | replace: '+', '' | replace: ' ', ''
         unless customerPhone contains '972'
@@ -554,5 +567,7 @@
         (function(n){var u=function(){GlassixWidgetClient&&typeof GlassixWidgetClient=="function"?(window.widgetClient=new GlassixWidgetClient(n),widgetClient.attach(),window.glassixWidgetScriptLoaded&&window.glassixWidgetScriptLoaded()):f()},f=function(){r.onload=u;r.src="https://cdn.glassix.net/clients/widget.1.2.min.js";i.parentNode.removeChild(t);i.parentNode.insertBefore(r,i)},i=document.getElementsByTagName("script")[0],t=document.createElement("script"),r;(t.async=!0,t.type="text/javascript",t.crossorigin="anonymous",t.id="glassix-widget-script",r=t.cloneNode(),t.onload=u,t.src="https://cdn.glassix.com/clients/widget.1.2.min.js",!document.getElementById(t.id)&&document.body)&&(i.parentNode.insertBefore(t,i),t.onerror=f)})(widgetOptions)
     </script>
 
-</body>
+    {% endcomment %}
+
+  </body>
 </html>

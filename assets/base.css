@@ -2,6 +2,7 @@
 :root {
     --text-alignment: right;
     --heading-type-2-margin: 1rem;
+    --blue-friday-accent-1: #214D8E;
 }
 
 * {
@@ -1233,7 +1234,7 @@ summary::-webkit-details-marker {
 
 @media screen and (min-width: 990px) {
     .grid--6-col-desktop .grid__item {
-        width: calc(16.66% - var(--grid-desktop-horizontal-spacing) * 5 / 6);
+        width: calc(16% - var(--grid-desktop-horizontal-spacing) * 5 / 6);
         max-width: calc(16.66% - var(--grid-desktop-horizontal-spacing) * 5 / 6);
     }
 
@@ -3383,6 +3384,10 @@ div#glassix-widget-launcher-closed #customized-launcher {
 		line-height: 1.5rem !important;
 	}
 
+    #glassix-widget-launcher-container {
+        right: 30px !important;
+    }
+
 	#glassix-widget-launcher-closed div.glassix-widget-icon-wrapper img {
 		margin: 0 0 -5px 0px !important;
 		height: 54px !important;
@@ -3645,7 +3650,6 @@ body:not(.enable-toolbar-RTL) #enable-reader, body:not(.enable-toolbar-RTL) #ena
 
 .ReturnGO_ButtonContainer-module_buttonContainer {
 	flex-direction: column-reverse !important;
-
 }
 
 #ReturngoPortalEmbedding {
@@ -3679,21 +3683,39 @@ body:not(.enable-toolbar-RTL) #enable-reader, body:not(.enable-toolbar-RTL) #ena
 	direction: rtl !important;
 }
 
-
-.ReturnGO_RadioButton-module_radioButton.ReturnGO_RadioButton-module_checked.ReturnGO_RadioButton-module_boxed.ReturnGO_ReturnItemProposition-module_radio .ReturnGO_RadioButton-module_checkmarkChecked,
-.ReturnGO_RadioButton-module_radioButton.ReturnGO_RadioButton-module_checked.ReturnGO_RadioButton-module_boxed.ReturnGO_ReturnItemProposition-module_radio .ReturnGO_RadioButton-module_checkmark,
-.ReturnGO_RadioButton-module_radioButton.ReturnGO_RadioButton-module_checked.ReturnGO_RadioButton-module_boxed.ReturnGO_ReturnItemProposition-module_radio .ReturnGO_ReturnItemProposition-module_titles,
-.ReturnGO_RadioButton-module_radioButton.ReturnGO_RadioButton-module_checked.ReturnGO_RadioButton-module_boxed.ReturnGO_ReturnItemProposition-module_radio .ReturnGO_RadioButton-module_checkmark {
-	display: none !important;
-	opacity: 0 !important;
-	visibility: hidden !important;
+.ReturnGO_ReturnItemProposition-module_titles, .ReturnGO_ReturnItemProposition-module_titles p, .ReturnGO_ReturnItemProposition-module_titles div {
+    width: max-content;
 }
 
-.ReturnGO_ReturnItemProposition-module_radioContent {
-	padding: 15px 15px 180px 15px !important;
-	order: 2 !important;
-	position: relative;
-	pointer-events: none !important;
+.ReturnGO_ReturnItemProposition-module_costs p {
+    text-align: left;
+}
+
+.ReturnGO_ActionsDropdown-module_selectedAction svg, .ReturnGO_ActionsDropdown-module_buttonArrowShort svg,
+#returnGoAssistant .ReturnGO_ActionsDropdown-module_actionsContainer .ReturnGO_ActionsDropdown-module_buttonArrowShort.ReturnGO_ActionsDropdown-module_open, #returnGoCartWidget .ReturnGO_ActionsDropdown-module_actionsContainer .ReturnGO_ActionsDropdown-module_buttonArrowShort.ReturnGO_ActionsDropdown-module_open, #returnGoAccountWidget .ReturnGO_ActionsDropdown-module_actionsContainer .ReturnGO_ActionsDropdown-module_buttonArrowShort.ReturnGO_ActionsDropdown-module_open {
+    transform: rotate(90deg) !important;
+}
+
+.ReturnGO_ActionsDropdown-module_actionsList li {
+    padding: 10px 10px 1px !important;
+}
+
+div.ReturnGO_ReturnItemProposition-module_shipping:nth-child(2), .ReturnGO_ReturnItemProposition-module_taxDisclaimer,
+.ReturnGO_ReturnItemProposition-module_titles>div:last-child,
+#returnGoAssistant .ReturnGO_ReturnItemProposition-module_returnItemProposition .ReturnGO_ReturnItemProposition-module_radioBlock .ReturnGO_ReturnItemProposition-module_creditBadge, #returnGoCartWidget .ReturnGO_ReturnItemProposition-module_returnItemProposition .ReturnGO_ReturnItemProposition-module_radioBlock .ReturnGO_ReturnItemProposition-module_creditBadge, #returnGoAccountWidget .ReturnGO_ReturnItemProposition-module_returnItemProposition .ReturnGO_ReturnItemProposition-module_radioBlock .ReturnGO_ReturnItemProposition-module_creditBadge {
+    display: none !important;
+}
+
+#returnGoAssistant .rtl .ReturnGO_ReturnItemProposition-module_returnItemProposition .ReturnGO_ReturnItemProposition-module_content .ReturnGO_ReturnItemProposition-module_solution .ReturnGO_ReturnItemProposition-module_offers .ReturnGO_ReturnItemProposition-module_radio>span, #returnGoCartWidget .rtl .ReturnGO_ReturnItemProposition-module_returnItemProposition .ReturnGO_ReturnItemProposition-module_content .ReturnGO_ReturnItemProposition-module_solution .ReturnGO_ReturnItemProposition-module_offers .ReturnGO_ReturnItemProposition-module_radio>span, #returnGoAccountWidget .rtl .ReturnGO_ReturnItemProposition-module_returnItemProposition .ReturnGO_ReturnItemProposition-module_content .ReturnGO_ReturnItemProposition-module_solution .ReturnGO_ReturnItemProposition-module_offers .ReturnGO_ReturnItemProposition-module_radio>span {
+    top: 13px !important;
+}
+
+#returnGoAssistant .rtl .ReturnGO_ReturnItemProposition-module_returnItemProposition .ReturnGO_ReturnItemProposition-module_content .ReturnGO_ReturnItemProposition-module_solution .ReturnGO_ReturnItemProposition-module_offers .ReturnGO_ReturnItemProposition-module_radio>span:nth-child(3), #returnGoCartWidget .rtl .ReturnGO_ReturnItemProposition-module_returnItemProposition .ReturnGO_ReturnItemProposition-module_content .ReturnGO_ReturnItemProposition-module_solution .ReturnGO_ReturnItemProposition-module_offers .ReturnGO_ReturnItemProposition-module_radio>span:nth-child(3), #returnGoAccountWidget .rtl .ReturnGO_ReturnItemProposition-module_returnItemProposition .ReturnGO_ReturnItemProposition-module_content .ReturnGO_ReturnItemProposition-module_solution .ReturnGO_ReturnItemProposition-module_offers .ReturnGO_ReturnItemProposition-module_radio>span:nth-child(3) {
+    top: 19px !important;
+}
+
+.ReturnGO_ReturnItemProposition-module_titleWithLabel.ReturnGO_ReturnItemProposition-module_withoutMethod {
+    padding-top: 0 !important;
 }
 
 label .ReturnGO_ReturnItemProposition-module_open, .ReturnGO_ReturnItemProposition-module_costs {
@@ -3714,30 +3736,6 @@ label .ReturnGO_ReturnItemProposition-module_open, .ReturnGO_ReturnItemPropositi
 	font-size: 1em !important;
 }
 
-/*     here */
-
-.ReturnGO_ReturnItemProposition-module_radioContent::after {
-	content: 'במידה ותצטרכי להוסיף תשלום עבור החלפה - דרישת תשלום מפורטת תישלח אלייך במייל';
-	pointer-events: none !important;
-	position: absolute;
-	display: block;
-	visibility: visible;
-	right: 15px;
-	top: 3em;
-	font-size: .7em;
-}
-
-.ReturnGO_ReturnItemProposition-module_radioContent::before {
-	content: 'במידה ותהיי זכאית לזיכוי בעקבות הפרשי מחירים בהחלפתך - יישלח במייל גיפט קארד לאחר אישור בקשת החלפתך';
-	pointer-events: none !important;
-	position: absolute;
-	display: block;
-	visibility: visible;
-	right: 15px;
-	top: 7em;
-	font-size: .7em;
-}
-
 .ReturnGO_ReturnItemProposition-module_costs {
 	position: relative !important;
 	width: 100% !important;
@@ -3748,46 +3746,8 @@ label .ReturnGO_ReturnItemProposition-module_open, .ReturnGO_ReturnItemPropositi
 	direction: rtl !important;
 }
 
-.ReturnGO_ReturnItemProposition-module_costs::before {
-	content: 'במידה וביקשת החזרה עם שליח לצורך זיכוי כספי - הזיכוי יתבצע בניכוי 5% כחוק, לאמצעי התשלום ממנו ביצעת את ההזמנה';
-	pointer-events: none !important;
-	position: absolute;
-	display: block;
-	visibility: visible;
-	right: 0;
-	top: 11em;
-	font-size: .7em;
-	color: #242b33cc;
-}
-
-.ReturnGO_ReturnItemProposition-module_shipping {
-	order: 1 !important;
-}
-
-.ReturnGO_ReturnItemProposition-module_description {
-	order: 3 !important;
-}
-
 #returnGoAssistant .rtl .ReturnGO_ReturnItemProposition-module_returnItemProposition .ReturnGO_ReturnItemProposition-module_content .ReturnGO_ReturnItemProposition-module_solution .ReturnGO_ReturnItemProposition-module_offers .ReturnGO_ReturnItemProposition-module_radio .ReturnGO_ReturnItemProposition-module_radioContent .ReturnGO_ReturnItemProposition-module_costs, #returnGoCartWidget .rtl .ReturnGO_ReturnItemProposition-module_returnItemProposition .ReturnGO_ReturnItemProposition-module_content .ReturnGO_ReturnItemProposition-module_solution .ReturnGO_ReturnItemProposition-module_offers .ReturnGO_ReturnItemProposition-module_radio .ReturnGO_ReturnItemProposition-module_radioContent .ReturnGO_ReturnItemProposition-module_costs, #returnGoAccountWidget .rtl .ReturnGO_ReturnItemProposition-module_returnItemProposition .ReturnGO_ReturnItemProposition-module_content .ReturnGO_ReturnItemProposition-module_solution .ReturnGO_ReturnItemProposition-module_offers .ReturnGO_ReturnItemProposition-module_radio .ReturnGO_ReturnItemProposition-module_radioContent .ReturnGO_ReturnItemProposition-module_costs {
 	padding-top: 0 !important;
-}
-
-
-.ReturnGO_ReturnItemProposition-module_description .ReturnGO_Text-module_text.ReturnGO_Text-module_light.ReturnGO_Text-module_sm.ReturnGO_Text-module_normal:nth-child(2) span {
-	position: relative !important;
-	visibility: hidden !important;
-	display: block !important;
-	width: 100%;
-}
-
-.ReturnGO_ReturnItemProposition-module_description .ReturnGO_Text-module_text.ReturnGO_Text-module_light.ReturnGO_Text-module_sm.ReturnGO_Text-module_normal:nth-child(2) span::after {
-	visibility: visible !important;
-	width: 100%;
-	display: block !important;
-	content: 'שליח עד הבית (1-5 ימי עסקים)';
-	position: absolute !important;
-	top: 0 !important;
-	right: 0 !important;
 }
 
 .ReturnGO_ReturnItemProposition-module_taxDisclaimer:last-child p span {
@@ -3797,14 +3757,13 @@ label .ReturnGO_ReturnItemProposition-module_open, .ReturnGO_ReturnItemPropositi
 	width: 100%;
 }
 
-.ReturnGO_ReturnItemProposition-module_taxDisclaimer:last-child p span::after {
-	visibility: visible !important;
-	width: 100%;
-	display: block !important;
-	content: 'החלפה ראשונה חינם בכל הזמנה, במידה ויידרשו עלויות נוספות, עם אישור ההחלפה יישלח מייל עם דרישת תשלום.';
-	position: absolute !important;
-	top: 0 !important;
-	right: 0 !important;
+.ReturnGO_ReturnItemProposition-module_description {
+    max-height: fit-content !important;
+    padding-bottom: 10px !important;
+}
+
+.ReturnGO_ReturnItemProposition-module_description>p:first-child, .ReturnGO_ReturnItemProposition-module_description>p:nth-child(3) {
+    display: none !important;
 }
 
 /*      .ReturnGO_ReturnItemProposition-module_legend    */
@@ -3840,20 +3799,21 @@ label .ReturnGO_ReturnItemProposition-module_open, .ReturnGO_ReturnItemPropositi
 	position: relative;
 }
 
-.ReturnGO_UploadImages-module_uploadImages::after {
-	position: absolute;
-	bottom: -1.5em;
-	visibility: visible;
-	display: block;
-	transform: translateX(50%);
-	content: 'תמונה לא ברורה עלולה לגרום לדחיית הבקשה';
-	text-align: center;
-	right: 50%;
-	width: max-content;
-}
-
 #returnGoAssistant .rtl .ReturnGO_ItemContent-module_badge.ReturnGO_ItemContent-module_returned {
 	background: #000 !important;
+    height: auto !important;
+}
+
+.ReturnGO_ReturnItemProposition-module_feeData {
+    display: none !important;
+}
+
+#returnGoAssistant .ReturnGO_ReturnItemProposition-module_returnItemProposition .ReturnGO_ReturnItemProposition-module_alternativeItemLabel, #returnGoCartWidget .ReturnGO_ReturnItemProposition-module_returnItemProposition .ReturnGO_ReturnItemProposition-module_alternativeItemLabel, #returnGoAccountWidget .ReturnGO_ReturnItemProposition-module_returnItemProposition .ReturnGO_ReturnItemProposition-module_alternativeItemLabel {
+    max-width: max-content !important;
+}
+
+.ReturnGO_SearchLayout-module_resultsContainer img[alt="back"] {
+    transform: rotate(180deg);
 }
 
 .ReturnGO_Footer-module_footer {
@@ -3861,9 +3821,9 @@ label .ReturnGO_ReturnItemProposition-module_open, .ReturnGO_ReturnItemPropositi
 	margin: 0 !important;
 }
 
-.ReturnGO_InputField-module_inputField + .ReturnGO_Error-module_error,
+.ReturnGO_InputField-module_inputField+.ReturnGO_Error-module_error,
 .ReturnGO_LoaderScreen-module_loaderScreen .ReturnGO_LoaderScreen-module_stepBlock,
-.ReturnGO_SnippetWrapper-module_snippetWrapper span div:last-child {
+.ReturnGO_ReturnItemProposition-module_description hr {
 	display: none !important;
 }
 
@@ -3881,11 +3841,6 @@ label .ReturnGO_ReturnItemProposition-module_open, .ReturnGO_ReturnItemPropositi
 	padding-top: 30px !important;
 }
 
-
-/*.ReturnGO_CheckBox-module_checkBox.ReturnGO_CheckBox-module_disabled.ReturnGO_CheckBox-module_shadowed {*/
-/*    display: none !important;*/
-/*}*/
-
 #returnGoAccountWidget {
 	display: none !important;
 }
@@ -3898,22 +3853,9 @@ label .ReturnGO_ReturnItemProposition-module_open, .ReturnGO_ReturnItemPropositi
 	width: auto !important;
 }
 
-
 .ReturnGO_Button-module_button.ReturnGO_Button-module_link.ReturnGO_Button-module_md {
 	position: relative;
 	visibility: hidden;
-}
-
-.ReturnGO_Button-module_button.ReturnGO_Button-module_link.ReturnGO_Button-module_md:after {
-	position: absolute;
-	visibility: visible;
-	display: block;
-	content: 'שלב קודם';
-	top: 50%;
-	right: 50%;
-	transform: translate(50%, -50%);
-	width: max-content;
-	font-weight: 600;
 }
 
 .ReturnGO_Footer-module_footer .ReturnGO_SnippetWrapper-module_snippetWrapper {
@@ -4109,7 +4051,8 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-color: #000;
+	/*background-color: #000;*/
+	background: rgba(255, 255, 255, 0.9);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -4277,4 +4220,19 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 	position: relative;
 	right: var(--grid-mobile-vertical-spacing);
 	top: 1px;
+}
+
+#product #glassix-container {
+    display: none !important;
+}
+
+.ReturnGO_SubtotalBlockWrapper-module_SubtotalBlockWrapper {
+	display: none !important;
+}
+
+.ReturnGO_ReturnItemProposition-module_costs,
+.ReturnGO_TextContainer-module_textContainer:nth-child(6),
+.ReturnGO_TotalSummary-module_totalSummary,
+.ReturnGO_ItemContent-module_badge.ReturnGO_ItemContent-module_not-eligible {
+	display: none !important;
 }

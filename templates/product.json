@@ -17,10 +17,10 @@
         "5ec0a264-e4fc-4a8d-92bc-f2f9223694f5": {
           "type": "sale",
           "settings": {
-            "logged_in_text": "<p>25% הנחה על כל האתר<\/p><p><\/p>",
-            "logged_out_text": "<p>25% הנחה על כל האתר<\/p>",
+            "logged_in_text": "<p>23% הנחה על כל האתר!<\/p>",
+            "logged_out_text": "<p>23% הנחה על כל האתר!<\/p>",
             "log_in": "",
-            "small_text": "+ 10% הנחה בשימוש הקוד EXTRA10"
+            "small_text": "STRONGFUL'S 3RD BIRTHDAY PARTY"
           }
         },
         "title": {

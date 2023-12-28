@@ -35,15 +35,30 @@ ul.slider--tablet:after {
 	text-align: right;
 }
 
+/* New here page designs */
+
+.collection__description.rte {
+	margin-bottom: calc(var(--grid-desktop-vertical-spacing) * 2);
+}
+
 @media screen and (min-width: 990px) {
 
 	.slider.slider--tablet.contains-card--standard:not(.slider--desktop) {
 		justify-content: space-between;
 	}
 
+	ul.grid.product-grid.contains-card.contains-card--product.contains-card--standard.grid--3-col-desktop {
+		column-gap: 5rem;
+	}
+
 	.slider.slider--tablet.contains-card--standard:not(.slider--desktop) li.grid__item.slider__slide:not(.collection-list__item--no-media) {
 		min-width: 24%;
 		margin-right: 0;
+	}
+
+	.slider.slider--tablet.contains-card--standard:not(.slider--desktop).grid--3-col-desktop li.grid__item.slider__slide:not(.collection-list__item--no-media) {
+		min-width: 30%;
+		width: 30%;
 	}
 }
 

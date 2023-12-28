@@ -4,7 +4,7 @@
    <a href="{{ section.settings.countdown_url }}" id="countdown" class="countdown fix-direction" data-date="{{ section.settings.countdown_date }}">
     <div class="countdown-ctn flex">
         {% if section.settings.right_text %}
-            <div class="countdown-sale-description-ctn fix-direction">
+            <div class="countdown-sale-description-ctn fix-direction {% if section.settings.right_text_direction == 'rtl' %}fix-direction{% else %}ltr{% endif %}">
                 {{ section.settings.right_copy }}
             </div>
         {% endif %}
@@ -27,7 +27,7 @@
         </div>
         {% endif %}
         {% if section.settings.left_text %}
-            <div class="countdown-sale-description-ctn fix-direction">
+            <div class="countdown-sale-description-ctn {% if section.settings.left_text_direction == 'rtl' %}fix-direction{% else %}ltr{% endif %}">
                 {{ section.settings.left_copy }}
             </div>
         {% endif %}
@@ -35,6 +35,7 @@
 </a>
 
 {% comment %}
+
 <a href="{{ section.settings.countdown_url }}" id="countdown" class="countdown fix-direction" data-date="{{ section.settings.countdown_date }}">
     <div class="countdown-ctn flex">
         <div class="announce-countdown flex">
@@ -89,6 +90,36 @@
             "type": "richtext",
             "id": "left_copy",
             "label": "Left text content"
+        },
+        {
+            "type": "select",
+            "id": "right_text_direction",
+            "label": "Text direction",
+            "options": [
+                {
+                    "value": "ltr",
+                    "label": "Left to right"
+                },
+                {
+                    "value": "rtl",
+                    "label": "Right to left"
+                }
+            ]
+        },
+        {
+          "type": "select",
+            "id": "left_text_direction",
+            "label": "Text direction",
+            "options": [
+                {
+                    "value": "ltr",
+                    "label": "Left to right"
+                },
+                {
+                    "value": "rtl",
+                    "label": "Right to left"
+                }
+            ]
         },
         {
             "type": "checkbox",

@@ -17,7 +17,12 @@
 
 <section
         id="MainProduct-{{ section.id }}"
-        class="page-width section-{{ section.id }}-padding"
+        class="page-width section-{{ section.id }}-padding
+        {% if isLiveTheme == 'true' %}
+            {% if product.tags contains 'hidden' %}
+                hidden
+            {% endif %}
+        {% endif %}"
         data-section="{{ section.id }}"
 >
     {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
@@ -38,13 +43,6 @@
     {{ 'product-collapsible.js' | asset_url | script_tag }}
 
     {%- style -%}
-      {% comment %}
-        .section-{{ section.id }}-padding {
-        padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-        padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-        }
-      {% endcomment %}
-
         @media screen and (min-width: 750px) {
         .section-{{ section.id }}-padding {
         padding-top: {{ section.settings.padding_top }}px;
@@ -366,7 +364,15 @@
                                     members_only_sale: settings.members_only_sale,
                                     members_only_sale_active: settings.members_only_sale_active %}
                         {%- when 'buy_buttons' -%}
-                            {%- render 'buy-buttons', block: block, product: product, member_tag: section.settings.members_only_tag, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true -%}
+                            {%- render 'buy-buttons',
+                                    block: block,
+                                    product: product,
+                                    product_form_id: product_form_id,
+                                    section_id: section.id,
+                                    show_pickup_availability: true,
+                                    member_tag: settings.announcement_tag,
+                                    members_only_sale_active: settings.members_only_sale_active
+                            -%}
                         {%- when 'rating' -%}
                             {%- if product.metafields.reviews.rating.value != blank -%}
                                 {% liquid

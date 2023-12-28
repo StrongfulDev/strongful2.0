@@ -535,7 +535,7 @@
 
                                             <a href="{{ section.settings.mobile_top_image_temp_link }}" class="dropdown-image-container">
                                                 <img src="{{ section.settings.mobile_top_image_temp | image_url: width: 1000 }}" alt="{{ section.settings.mobile_top_image_temp.alt | escape }}" class="motion-reduce">
-                                                <div class="desktop_links_image_1_title">
+                                                <div class="desktop_links_image_1_title what">
                                                         <span>
                                                             {{ section.settings.mobile_top_image_temp_title }}
                                                         </span>
@@ -784,7 +784,7 @@
                                                  class="mega-menu__content customizable fix-direction gradient motion-reduce global-settings-popup"
                                                  tabindex="-1">
                                                 <div class="mega-menu-grid-container {{ gridClass }}">
-                                                    <a href="{{ block.settings.above_shop_all_linkz }}" class="shop-all-link">
+                                                    <a href="{{ block.settings.above_shop_all_link }}" class="shop-all-link">
                                                         {{ block.settings.shop_all_title }}
                                                     </a>
                                                     {% render 'header-lists', childlinks: block.settings.menu.links, link_levels: link_levels %}

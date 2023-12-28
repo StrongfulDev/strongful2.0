@@ -578,7 +578,7 @@ slider-component.slider-component-full-width {
 .product__media-list li.product__media-item.grid__item.slider__slide:only-child {
 	width: -webkit-fill-available;
   /*  width: 100%;*/
-  /*  margin: 0;*/
+    margin: 0;
 }
 
 .product__media-list li.product__media-item.grid__item.slider__slide:only-child .product-media-container {

@@ -1,0 +1,68 @@
+<script type="text/javascript">
+  {% if cart %}
+    window.pn.cart = {};
+  	window.pn.cart = {{cart | json}}
+    window.pn.cart.items = [];
+
+    {% for item in cart.items %}
+      var cart_item = {{item | json}};
+      cart_item["collection_ids"] = [];
+      {% for c in item.product.collections %}
+        cart_item["collection_ids"].push({{c.id}})
+        {% endfor %}
+      window.pn.cart.items.push(cart_item);
+    {% endfor %}
+
+    if (typeof window.pn.cart.items == "object") {
+      for (var i=0; i<window.pn.cart.items.length; i++) {
+        ["sku", "vendor", "url", "image", "handle", "product_type", "product_description"].map(function(a) {
+          delete window.pn.cart.items[i][a]
+        })
+      }
+    }
+  {% endif %}
+</script>
+
+{% raw %}
+<script>
+if(typeof pn === "undefined"){
+  pn = {};
+}
+if(typeof pn.settings === "undefined"){
+  pn.settings = {};
+}
+pn.settings.defaultSetting={"id":40426857,"a":"Preorder Now","b":true,"c":null,"d":"Out of stock","e":false,"f":"Only {{qty}} remaining","g":"","h":"below","i":false,"j":null,"k":null,"l":null,"m":"default","n":null,"o":true,"handle":null,"p":null,"y":null,"q":false,"r":true,"s":null,"t":null,"u":1,"v":false,"w":"ribbon","tag":null,"x":null,"z":"no_discount","aa":"0.0","ab":0,"price":"0.0","compare_at_price":"0.0","partial_payment_z":"no_partial_discount","partial_payment_aa":"0.0","partial_payment_ab":0,"selling_plan_group_id":null,"selling_plan_group_name":null,"partial_payment_charge_date":null};
+pn.settings.singleProductSettings=[{"id":40449415,"a":"הוספה לסל","b":true,"c":10,"d":"Out of stock","e":false,"f":"Only {{qty}} remaining","g":"","h":"below","i":false,"j":null,"k":null,"l":null,"m":"variant","n":"41876727890060","o":false,"handle":"aura-bodysuit","p":"7426560098444","y":"https://cdn.shopify.com/s/files/1/0340/7986/7020/products/2G6A3894_171a97bd-9bb8-4595-91cd-6308a0bf3c0e.jpg?v=1699888788","q":true,"r":false,"s":0,"t":null,"u":1,"v":true,"w":"ribbon","tag":null,"x":"","z":"no_discount","aa":"0.0","ab":0,"price":"0.0","compare_at_price":"0.0","partial_payment_z":"no_partial_discount","partial_payment_aa":"0.0","partial_payment_ab":0,"selling_plan_group_id":null,"selling_plan_group_name":null,"partial_payment_charge_date":null}];
+pn.settings.tagSettings=[];
+</script>
+<style type="text/css">
+  .pn-original-subtotal{
+    text-decoration: line-through;
+    display:inline-block;
+  }
+  .pn-discounted-subtotal{
+    font-weight:bold;
+    margin-left:20px;
+    display:inline-block;
+    font-size: 1.3em;
+  }
+
+  .pn-line-item-original-price {
+    text-decoration: line-through;
+  }
+
+  .pn-line-item-discounted-price {
+    font-size: 1.2em;
+    margin-left: 8px;
+  }
+</style>
+{% endraw %}
+
+
+<div id="pn-mixed-cart-warning" class="pn-modal">
+  <div id="pn-mixed-cart-warning-content">
+    <span id="pn-modal-close-btn">x</span>
+    <p class="pn-mixed-cart-heading" id="pn-mixed-cart-warning-title"></p>
+    <div id="pn-mixed-cart-warning-text"></div>
+  </div>
+</div>
