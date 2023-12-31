@@ -402,6 +402,17 @@
         const popup = document.querySelector('.excluded-shipping-cities-popup');
         const closeIcon = document.querySelector('.icon.icon-close');
         const cityInput = document.getElementById('checkout_shipping_address_city');
+
+        function checkCity() {
+            if (excludedShippingCities.indexOf(cityInput.value) !== -1) {
+                popup.classList.remove('hidden');
+                popupOverlay.classList.remove('hidden');
+                cityInput.value = '';
+            }
+        }
+
+        checkCity();
+
         cityInput.addEventListener('change', (e) => {
             if (excludedShippingCities.indexOf(e.target.value) !== -1) {
                 popup.classList.remove('hidden');
