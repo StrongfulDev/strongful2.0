@@ -136,6 +136,7 @@ ul, ol {
 
 .article-content li a {
 	text-decoration: underline;
+	color: var(--gradient-base-accent-2);
 }
 
 @media screen and (min-width: 990px) {
