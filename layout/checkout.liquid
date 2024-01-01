@@ -42,10 +42,15 @@
                 background-color: #fff;
                 padding: 1em;
                 z-index: 3;
+                direction: ltr;
             }
 
             .icon.icon-close {
-                width: 1rem;
+                width: .8rem;
+            }
+
+            .icon.icon-close:hover {
+                cursor: pointer;
             }
 
             .tooltip {
@@ -369,7 +374,7 @@
                 <div class="excluded-shipping-cities-popup-overlay hidden"></div>
                 <div class="excluded-shipping-cities-popup hidden">
                     {% render 'icon-close' %}
-                    <p class="excluded-shipping-cities-popup-text">עקב המצב הבטחוני - לא ניתן לשלוח לכתובת שבחרת - יש לבחור כתובת בעיר אחרת.</p>
+                    <p class="excluded-shipping-cities-popup-text">עקב המצב הבטחוני חברות המשלוחים לא מגיעות לישוב/עיר שבחרת. נא לבחור ישוב/עיר אחרת.</p>
                 </div>
             </main>
             <footer class="main__footer" role="contentinfo">
