@@ -415,13 +415,9 @@
 
         function checkCity() {
             if (excludedShippingCities.indexOf(cityInput.value) !== -1) {
-                console.log($('.step__footer__continue-btn.btn'));
                 popup.classList.remove('hidden');
                 popupOverlay.classList.remove('hidden');
                 cityInput.value = '';
-                document.getElementById('continue_button').setAttribute('disabled', 'disabled');
-            } else {
-                document.getElementById('continue_button').removeAttribute('disabled');
             }
         }
 
