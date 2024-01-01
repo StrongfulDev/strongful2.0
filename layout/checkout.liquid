@@ -204,6 +204,11 @@
 			}
 
 			@media screen and (min-width: 1000px) {
+
+                .excluded-shipping-cities-popup {
+                    width: max-content;
+                }
+
 				body {
 					background-color: #fff !important;
 				}
@@ -364,7 +369,7 @@
                 <div class="excluded-shipping-cities-popup-overlay hidden"></div>
                 <div class="excluded-shipping-cities-popup hidden">
                     {% render 'icon-close' %}
-                    <p class="excluded-shipping-cities-popup-text">לא ניתן לשלוח לכתובת שבחרת - יש לבחור כתובת בעיר אחרת.</p>
+                    <p class="excluded-shipping-cities-popup-text">עקב המצב הבטחוני - לא ניתן לשלוח לכתובת שבחרת - יש לבחור כתובת בעיר אחרת.</p>
                 </div>
             </main>
             <footer class="main__footer" role="contentinfo">
