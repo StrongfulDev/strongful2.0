@@ -23,9 +23,49 @@
 				padding-inline-start: 0;
 			}
 
-            /*.radio-wrapper.content-box__row.content-box__row--secondary:nth-child(2) {*/
-            /*    display: none;*/
-            /*}*/
+            .excluded-shipping-cities-popup-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgb(0 0 0 / 50%);
+                z-index: 2;
+            }
+
+            .excluded-shipping-cities-popup {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                width: 80%;
+                transform: translate(-50%, -50%);
+                background-color: #fff;
+                padding: 1em;
+                z-index: 3;
+                direction: ltr;
+            }
+
+            .icon.icon-close {
+                width: .8rem;
+            }
+
+            .icon.icon-close:hover {
+                cursor: pointer;
+            }
+
+            .tooltip {
+                right: auto;
+                left: 10%;
+            }
+
+            .tooltip:after {
+                right: auto;
+                left: 18px;
+            }
+
+            #continue_button:disabled {
+                background: rgba(0, 0, 0, 0.25);
+            }
 
             .blank-slate__icon {
                 display: none;
@@ -173,6 +213,11 @@
 			}
 
 			@media screen and (min-width: 1000px) {
+
+                .excluded-shipping-cities-popup {
+                    width: max-content;
+                }
+
 				body {
 					background-color: #fff !important;
 				}
@@ -329,6 +374,12 @@
             </header>
             <main class="main__content" role="main">
                 {{ content_for_layout }}
+
+                <div class="excluded-shipping-cities-popup-overlay hidden"></div>
+                <div class="excluded-shipping-cities-popup hidden">
+                    {% render 'icon-close' %}
+                    <p class="excluded-shipping-cities-popup-text">עקב המצב הבטחוני חברות המשלוחים לא מגיעות לישוב/עיר שבחרת. נא לבחור ישוב/עיר אחרת.</p>
+                </div>
             </main>
             <footer class="main__footer" role="contentinfo">
                 {{ content_for_footer }}
@@ -360,6 +411,49 @@
 
 	document.addEventListener('DOMContentLoaded', (e) => {
 
+        const excludedShippingCities = ['שדרות', 'ניר עם', 'ניר עוז', 'מבקיעים', 'סעד', 'דקל', 'כפר עזה', 'בארי', 'גבים', 'מפלסים', 'סופה', 'שדה ניצן', 'אור הנר', 'פרי גן', 'נתיב העשרה', 'רעים', 'זיקים', 'חוליות', 'גבולות', 'צוחר', 'אורים', 'כרמיה', 'ישע', 'יד מרדכי', 'צאלים', 'ניר יצחק', 'מבטחים מועצה אזורית אשכול', 'מגן', 'עמיעוז', 'אוהד', 'עין הבשור', 'תלמי אליהו', 'תלמי יוסף', 'שדי אברהם', 'יתד', 'אבשלום', 'שלומית', 'יבול', 'נווה', 'כרם שלום', 'עלומים', 'גברעם', 'נחל עוז', 'ארז', 'עין השלושה', 'כיסופים', 'נירים', 'קרית שמונה', 'מטולה', 'יפתח', 'דישון', 'דפנה', 'בית הלל', 'חצור הגלילית', 'הגושרים', 'שאר ישוב', 'כפר סאלד', 'סאסא', 'אביבים', 'יראון', 'דובב', 'ברעם', 'שלומי', 'שלומית', 'ראש הנקרה', 'מתת', 'גורן', 'יערה', 'גרנות הגליל', 'איילון', 'עראשמה', 'אדמית', 'מצובה', 'מנות', 'עבדון', 'שתולה', 'שומרה', 'זרעית', 'אבן מנחם', 'נטועה'];
+        const popupOverlay = document.querySelector('.excluded-shipping-cities-popup-overlay');
+        const popup = document.querySelector('.excluded-shipping-cities-popup');
+        const closeIcon = document.querySelector('.icon.icon-close');
+        const cityInput = document.getElementById('checkout_shipping_address_city');
+        const continueBtn = document.getElementById('continue_button');
+        const continuteBtnText = continueBtn.querySelector('span');
+
+        function checkCity() {
+            if (excludedShippingCities.indexOf(cityInput.value) !== -1) {
+                continueBtn.setAttribute('disabled', 'disabled');
+                continuteBtnText.innerText = 'אין אפשרות למשלוח לישוב זה';
+                popup.classList.remove('hidden');
+                popupOverlay.classList.remove('hidden');
+                cityInput.value = '';
+            } else {
+                continueBtn.removeAttribute('disabled');
+                continuteBtnText.innerText = 'המשך למשלוח';
+            }
+        }
+
+        checkCity();
+
+        cityInput.addEventListener('change', (e) => {
+            if (excludedShippingCities.indexOf(e.target.value) !== -1) {
+                continueBtn.setAttribute('disabled', 'disabled');
+                continuteBtnText.innerText = 'אין אפשרות למשלוח לישוב זה';
+                popup.classList.remove('hidden');
+                popupOverlay.classList.remove('hidden');
+                e.target.value = '';
+            } else {
+                continueBtn.removeAttribute('disabled');
+                continuteBtnText.innerText = 'המשך למשלוח';
+            }
+        });
+
+        function closePopup() {
+            popup.classList.add('hidden');
+            popupOverlay.classList.add('hidden');
+        }
+
+        closeIcon.addEventListener('click', closePopup);
+
 		setTimeout(() => {
 			const notEnoughPoints = document.querySelector(".yotpo-not-enough-points-text");
 			if (notEnoughPoints !== null) {
@@ -372,18 +466,6 @@
 
 		sessionStorage.setItem('previousUrl', window.location.href);
 		let myUrl = sessionStorage.getItem('previousUrl');
-
-		// function for hiding the zip code field
-		const fieldContainers = document.querySelectorAll('.field');
-		// fieldContainers.forEach(function(container) {
-		//     let data = container.dataset.addressField;
-		//     if (data === 'zip') {
-		//         container.classList.add('hidden');
-		//     }
-		//     if (data === 'city') {
-		//         container.classList.remove('field--half');
-		//     }
-		// });
 
 		document.querySelector(".sidebar").classList.add(checkout.step);
 
