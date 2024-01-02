@@ -1,5 +1,5 @@
 
-.loyalty .page-width, .page .collapsible-content-wrapper-narrow {
+.page .collapsible-content-wrapper-narrow {
 	max-width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
@@ -103,7 +103,7 @@
 }
 
 .yotpo-widget-my-rewards-widget .yotpo-reward-steps-title {
-	margin-top: 5px;
+	margin: 1em 0;
 	font-weight: var(--font-body-weight-bold);
 }
 
@@ -136,6 +136,19 @@
 
 .yotpo-input-example {
 	display: none;
+}
+
+.yotpo-widget-campaign-widget .yotpo-is-mobile .yotpo-widget-campaign-widget-icon-container {
+	width: 2.2rem;
+	height: 2.2rem;
+}
+
+.loyalty .rich-text__blocks strong {
+	font-size: calc(var(--font-body-size-medium) * 1.4);
+}
+
+.loyalty h2.collapsible-content__heading.h1 {
+	padding: 0 1.5rem;
 }
 
 @media screen and (min-width: 990px) {
