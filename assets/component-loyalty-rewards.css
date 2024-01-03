@@ -54,6 +54,7 @@
 @media screen and (min-width: 990px) {
 	.vip-item.td {
 		font-size: calc(var(--font-body-size-medium) * 1.2);
+		height: 7rem;
 	}
 
 	.loyalty_eligibility {
@@ -62,5 +63,21 @@
 
 	.vip-item.loyalty_name.tr {
 		font-size: calc(var(--font-body-size-medium) * 1.1);
+	}
+
+	.yotpo-widget-campaign-widget-container .flexified-wrapper {
+		flex-wrap: nowrap;
+		direction: rtl;
+		overflow-x: auto;
+		column-gap: 1em;
+	}
+
+	.yotpo-widget-campaign-widget .yotpo-container-headline {
+		text-align: right;
+		padding: 0 14px 14px;
+	}
+
+	.yotpo-widget-campaign-widget-container .flexified-wrapper:not(.flexified-mobile).flexified-items-odd .flexified-child {
+		min-width: calc(25% - var(--flexified-padding)*.66);
 	}
 }
