@@ -195,8 +195,8 @@
 		top: 0;
 	}
 
-	.yotpo-widget-referral-widget .yotpo-tile-wrapper, .yotpo-widget-referral-widget .yotpo-tile {
+	div.yotpo-widget-referral-widget div.yotpo-tile-wrapper, div.yotpo-widget-referral-widget div.yotpo-tile {
 		height: 100%;
-		background: var(--gradient-base-background-3);
+		background-color: var(--gradient-base-background-3) !important;
 	}
 }
