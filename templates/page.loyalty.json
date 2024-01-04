@@ -68,6 +68,7 @@
     },
     "cceb943b-5449-420c-845f-e2ea77543f77": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "custom_liquid": "<div class=\"yotpo-widget-instance\" data-yotpo-instance-id=\"215525\"><\/div>",
         "color_scheme": "background-1",
