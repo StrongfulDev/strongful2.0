@@ -197,7 +197,21 @@
 	}
 
 	.yotpo-screen-customer_email, .yotpo-screen-friends_emails {
-		padding: 0 30rem;
+		padding: 0 26rem;
+		background: var(--gradient-base-background-3);
+	}
+
+	.yotpo-widget-referral-widget .yotpo-background.yotpo-left-align-background, .yotpo-widget-referral-widget .yotpo-background .yotpo-left-align-image {
+		height: 80vh !important;
+		background: var(--gradient-base-background-3);
+	}
+
+	.yotpo-widget-referral-widget .yotpo-left-align-background .yotpo-tile-box {
+		width: 100%;
+	}
+
+	.yotpo-widget-referral-widget .yotpo-background .yotpo-left-align-image {
+		padding-right: 9vw;
 	}
 
 	.yotpo-widget-campaign-widget .yotpo-completed-tile {

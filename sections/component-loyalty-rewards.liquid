@@ -42,12 +42,16 @@
                     </div>
                     <div class="vip-item loyalty_presale_text td">
                         {{ reward.presale_text }}
-                        {% if reward.presale_conditions != blank %}
-                            {{ reward.presale_conditions }}
-                        {% endif %}
                     </div>
                     <div class="vip-item loyalty_bonus_points_text td">
-                        {{ reward.bonus_points_text }}
+                        <span>
+                            {{ reward.bonus_points_text }}
+                        </span>
+                        {% if reward.presale_conditions != blank %}
+                            <div class="small-loyalty-text">
+                                {{ reward.presale_conditions }}
+                            </div>
+                        {% endif %}
                     </div>
                     <div class="vip-item loyalty_special_events_text td">
                         {{ reward.special_events_text }}

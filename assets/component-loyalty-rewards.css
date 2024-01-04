@@ -19,6 +19,17 @@
 	font-size: calc(var(--font-body-size-medium) * .8);
 }
 
+.vip-item.loyalty_bonus_points_text.td {
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.small-loyalty-text {
+	padding-top: var(--grid-desktop-vertical-spacing);
+	font-size: calc(var(--font-body-size-medium) * .9);
+}
+
 .vip-item.td:last-child {
 	border-bottom: 1px solid var(--gradient-base-background-3);
 }
@@ -28,15 +39,15 @@
 }
 
 .tier-container.active:after {
-	content: '';
 	position: absolute;
 	border: 1px solid #000;
-	height: 110%;
-	width: 100%;
-	top: -8%;
-	left: 0;
-	right: 0;
-	border-radius: 33px;
+	height: 120%;
+	width: 40%;
+	top: -11%;
+	content: '';
+	right: 50%;
+	border-radius: 64px;
+	transform: translateX(50%);
 }
 
 .tier-container:not(:first-child) .vip-item.td {
