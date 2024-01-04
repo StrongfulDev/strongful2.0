@@ -75,10 +75,20 @@
 .yotpo-widget-campaign-widget .yotpo-tile, .yotpo-widget-campaign-widget .yotpo-tile-wrapper {
 	position: relative;
 	direction: rtl;
+	border-radius: var(--inputs-radius);
+}
+
+.yotpo-overlay-tile {
+	border-radius: var(--inputs-radius);
 }
 
 .yotpo-widget-campaign-widget .yotpo-campaign-switcher-wrapper {
 	border: 1px solid var(--gradient-base-accent-3);
+	border-radius: var(--inputs-radius);
+}
+
+.flexified-wrapper:not(.flexified-mobile).flexified-items-even .flexified-child {
+	border-radius: var(--inputs-radius);
 }
 
 .yotpo-reward-steps-list, .yotpo-info {
@@ -151,14 +161,18 @@
 	padding: 0 1.5rem;
 }
 
+.yotpo-widget-campaign-widget .flexified-wrapper {
+	direction: rtl;
+}
+
 @media screen and (min-width: 990px) {
 	.yotpo-widget-hero-section .yotpo-text-on-background {
-		min-height: 430px;
+		min-height: 37vw;
 		position: relative;
 	}
 
 	.yotpo-widget-hero-section .yotpo-text-on-background .yotpo-text-container {
-		top: 250px;
+		top: 23vw;
 	}
 
 	.yotpo-widget-hero-section .yotpo-customer-logged-out-buttons .yotpo-action-button-widget .yotpo-button-standard-size {
@@ -182,10 +196,6 @@
 		height: 35px;
 	}
 
-	.yotpo-widget-campaign-widget .yotpo-title-text {
-		font-size: calc(var(--font-body-size-medium) * 1.4);
-	}
-
 	.yotpo-screen-customer_email, .yotpo-screen-friends_emails {
 		padding: 0 30rem;
 	}
@@ -198,5 +208,16 @@
 	div.yotpo-widget-referral-widget div.yotpo-tile-wrapper, div.yotpo-widget-referral-widget div.yotpo-tile {
 		height: 100%;
 		background-color: var(--gradient-base-background-3) !important;
+	}
+
+	.yotpo-widget-campaign-widget .yotpo-widget-campaign-widget-container {
+		max-width: 100vw;
+		padding: 65px 10vw;
+		margin: 0;
+		width: 100%;
+	}
+
+	.yotpo-widget-campaign-widget.yotpo-widget-override-css.yotpo-widget-clear {
+		display: flex;
 	}
 }
