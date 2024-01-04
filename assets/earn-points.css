@@ -188,6 +188,16 @@
 	height: 3px;
 }
 
+.yotpo-container-action-tile, .yotpo-message-already-completed, .yotpo-message-tile {
+	border-radius: var(--inputs-radius);
+	background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.yotpo-container-action-tile button, .yotpo-message-tile button {
+	border-radius: var(--inputs-radius);
+	outline: none;
+}
+
 .yotpo-vip-tiers-progress-bar-tier-status {
 	margin-right: auto;
 	margin-left: auto;
