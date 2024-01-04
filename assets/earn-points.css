@@ -193,7 +193,7 @@
 		top: 1em;
 		right: 1em;
 		margin: 0;
-		height: 35px;
+		height: 30px;
 	}
 
 	.yotpo-screen-customer_email, .yotpo-screen-friends_emails {
@@ -212,12 +212,16 @@
 
 	.yotpo-widget-campaign-widget .yotpo-widget-campaign-widget-container {
 		max-width: 100vw;
-		padding: 65px 10vw;
+		padding: 65px 16vw;
 		margin: 0;
 		width: 100%;
 	}
 
 	.yotpo-widget-campaign-widget.yotpo-widget-override-css.yotpo-widget-clear {
 		display: flex;
+	}
+
+	.flexified-wrapper:not(.flexified-mobile).flexified-items-even .flexified-child {
+		max-height: 250px;
 	}
 }
