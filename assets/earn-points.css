@@ -82,7 +82,7 @@
 }
 
 .flexified-wrapper.flexified-mobile .flexified-child:last-child {
-	margin: 0;
+	margin: 0 0 0 calc(var(--grid-desktop-vertical-spacing) * 3);
 }
 
 .yotpo-widget-campaign-widget .yotpo-tile, .yotpo-widget-campaign-widget .yotpo-tile-wrapper {
