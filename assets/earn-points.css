@@ -11,6 +11,15 @@
 	min-height: auto;
 }
 
+.yotpo-widget-hero-section .yotpo-text-on-background.yotpo-is-mobile .yotpo-background-text-mobile,
+.yotpo-widget-my-rewards-widget .yotpo-is-mobile .yotpo-headline {
+	margin-bottom: 0 !important;
+}
+
+.yotpo-widget-my-rewards-widget .yotpo-is-mobile .yotpo-info {
+	margin-bottom: 4rem !important;
+}
+
 .yotpo-widget-hero-section .yotpo-text-on-background.yotpo-is-mobile .yotpo-text-and-buttons {
 	position: absolute;
 	bottom: 0;
@@ -59,8 +68,8 @@
 
 .flexified-wrapper.flexified-mobile .flexified-child,
 .flexified-wrapper.flexified-mobile.flexified-items-odd.flexified-wide-last-item .flexified-child:last-child {
-	width: 150px;
-	margin: 0 0 0 calc(var(--grid-desktop-vertical-spacing) * 2);
+	width: 140px;
+	margin: 0 0 0 calc(var(--grid-desktop-vertical-spacing) * 1.6);
 	border: 1px solid var(--gradient-base-accent-3);
 }
 
@@ -70,6 +79,10 @@
 
 .flexified-wrapper.flexified-mobile .flexified-child:nth-child(2n) {
 	margin: 0 0 0 calc(var(--grid-desktop-vertical-spacing) * 2);
+}
+
+.flexified-wrapper.flexified-mobile .flexified-child:last-child {
+	margin: 0;
 }
 
 .yotpo-widget-campaign-widget .yotpo-tile, .yotpo-widget-campaign-widget .yotpo-tile-wrapper {
