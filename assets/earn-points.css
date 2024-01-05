@@ -80,6 +80,7 @@
 
 .yotpo-overlay-tile {
 	border-radius: var(--inputs-radius);
+	background: rgba(0, 0, 0, 0.8) !important;
 }
 
 .yotpo-widget-campaign-widget .yotpo-campaign-switcher-wrapper {
@@ -218,8 +219,8 @@
 		top: 23vw;
 	}
 
-	.yotpo-widget-hero-section .yotpo-customer-logged-out-buttons .yotpo-action-button-widget .yotpo-button-standard-size {
-		border-radius: var(--inputs-radius);
+	.yotpo-widget-hero-section .yotpo-customer-logged-out-buttons .yotpo-action-button-widget .yotpo-button-standard-size, .yotpo-rectangular-btn-type {
+		border-radius: var(--inputs-radius) !important;
 	}
 
 	.yotpo-sign-in-button {
