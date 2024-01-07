@@ -177,7 +177,7 @@
 }
 
 .loyalty .rich-text__blocks strong {
-	font-size: calc(var(--font-body-size-medium) * 1.4);
+	font-size: calc(var(--font-body-size-medium) * 1.7);
 }
 
 .loyalty h2.collapsible-content__heading.h1 {
