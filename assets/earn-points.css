@@ -251,6 +251,19 @@
 	font-size: var(--font-body-size-medium);
 }
 
+.click-to-submit {
+	position: absolute;
+	font-size: var(--font-body-size-medium);
+	bottom: 1em;
+	width: max-content;
+	right: 50%;
+	transform: translateX(50%);
+	background: var(--gradient-base-accent-1);
+	color: var(--gradient-background);
+	border-radius: var(--inputs-radius);
+	padding: var(--grid-desktop-horizontal-spacing) calc(var(--grid-desktop-horizontal-spacing) * 2);
+}
+
 @media screen and (min-width: 990px) {
 	.yotpo-widget-hero-section .yotpo-text-on-background {
 		min-height: 37vw;
