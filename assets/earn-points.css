@@ -44,13 +44,18 @@
 }
 
 .yotpo-widget-campaign-widget .yotpo-widget-campaign-widget-container {
-	background: var(--gradient-base-background-3);
+	/*background: var(--gradient-base-background-3);*/
+	background-image: url("https://cdn.shopify.com/s/files/1/0340/7986/7020/files/Unsplash_black_sand_background_1.jpg?v=1704641870");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 .yotpo-widget-campaign-widget .yotpo-is-mobile .yotpo-container-headline {
 	text-align: right;
 	padding-right: 1.5rem;
 	padding-left: 1.5rem;
+	color: white !important;
 }
 
 .flexified-wrapper.flexified-mobile {
@@ -71,6 +76,10 @@
 	width: 140px;
 	margin: 0 0 0 calc(var(--grid-desktop-vertical-spacing) * 1.6);
 	border: 1px solid var(--gradient-base-accent-3);
+}
+
+.flexified-wrapper.flexified-mobile .flexified-child {
+	border: none !important;
 }
 
 .flexified-wrapper.flexified-mobile.flexified-items-odd.flexified-wide-last-item .flexified-child:last-child {
