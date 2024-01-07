@@ -180,6 +180,10 @@
 	font-size: calc(var(--font-body-size-medium) * 1.7);
 }
 
+.loyalty .rte ul {
+	list-style: disc;
+}
+
 .loyalty h2.collapsible-content__heading.h1 {
 	padding: 0 1.5rem;
 }

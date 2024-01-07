@@ -26,12 +26,19 @@
 }
 
 .small-loyalty-text {
-	padding-top: var(--grid-desktop-vertical-spacing);
-	font-size: calc(var(--font-body-size-medium) * .9);
+	padding-top: var(--grid-mobile-vertical-spacing);
+	font-size: calc(var(--font-body-size-medium) * .8);
+	color: var(--gradient-base-accent-3);
+	/*font-size: calc(var(--font-body-size-medium) * .9);*/
 }
 
 .vip-item.td:last-child {
 	border-bottom: 1px solid var(--gradient-base-background-3);
+}
+
+.tier-container:first-child .td {
+	max-width: 22vw;
+	text-align: right;
 }
 
 .tier-container {
