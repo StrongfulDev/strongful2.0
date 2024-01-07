@@ -41,13 +41,12 @@
 .tier-container.active:after {
 	position: absolute;
 	border: 1px solid #000;
-	height: 120%;
-	width: 40%;
-	top: -11%;
+	height: 110%;
+	width: 100%;
+	top: -5%;
 	content: '';
-	right: 50%;
 	border-radius: 64px;
-	transform: translateX(50%);
+	right: 0;
 }
 
 .tier-container:not(:first-child) .vip-item.td {
@@ -63,6 +62,15 @@
 }
 
 @media screen and (min-width: 990px) {
+
+	.tier-container.active:after {
+		height: 120%;
+		width: 40%;
+		top: -11%;
+		right: 50%;
+		transform: translateX(50%);
+	}
+
 	.vip-item.td {
 		font-size: calc(var(--font-body-size-medium) * 1.2);
 		height: 7rem;
