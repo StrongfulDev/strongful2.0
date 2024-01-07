@@ -253,7 +253,7 @@
 
 .click-to-submit {
 	position: absolute;
-	font-size: var(--font-body-size-medium);
+	font-size: calc(var(--font-body-size-medium) * 0.9);
 	bottom: 1em;
 	width: max-content;
 	right: 50%;
