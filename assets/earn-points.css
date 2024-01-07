@@ -180,8 +180,8 @@
 	font-size: calc(var(--font-body-size-medium) * 1.7);
 }
 
-.loyalty .rte ul {
-	list-style: disc;
+.loyalty .rte>p:last-child {
+	font-size: calc(var(--font-body-size-medium) * 0.85);
 }
 
 .loyalty h2.collapsible-content__heading.h1 {
@@ -242,6 +242,12 @@
 
 .yotpo-widget-referral-widget .yotpo-action-button-widget .yotpo-button-small-size {
 	width: 100% !important;
+}
+
+.tier-container:not(:first-child) .vip-item.loyalty_join_reward.td,
+.tier-container:not(:first-child) .vip-item.loyalty_birthday_reward.td,
+.tier-container:not(:first-child) .vip-item.loyalty_cashback_earned.td {
+	font-size: var(--font-body-size-medium);
 }
 
 @media screen and (min-width: 990px) {
