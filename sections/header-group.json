@@ -295,11 +295,26 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "abb7e13d-ba2d-439f-af5c-33c2d1c155e5": {
+      "type": "countdown",
+      "settings": {
+        "show_days": false,
+        "countdown_date": "",
+        "countdown_url": "shopify:\/\/pages\/loyalty",
+        "left_text": true,
+        "left_copy": "<p>מועדון לקוחות חדש<\/p>",
+        "right_text_direction": "ltr",
+        "left_text_direction": "ltr",
+        "right_text": false,
+        "right_copy": ""
+      }
     }
   },
   "order": [
     "announcement-bar",
     "header",
-    "7503b704-2110-400e-bc52-a2190d224c23"
+    "7503b704-2110-400e-bc52-a2190d224c23",
+    "abb7e13d-ba2d-439f-af5c-33c2d1c155e5"
   ]
 }
