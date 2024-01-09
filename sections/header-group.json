@@ -24,12 +24,12 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "STRONGFUL'S 3RD BIRTHDAY",
-            "sub_text": "23% OFF EVERYTHING",
+            "main_text": "SELECTED ITEMS ARE ON SALE",
+            "sub_text": "דגמים נבחרים עד 15% הנחה!",
             "text_alignment": "center",
             "main_text_direction": "ltr",
-            "sub_text_direction": "ltr",
-            "link": "shopify:\/\/collections\/sets",
+            "sub_text_direction": "rtl",
+            "link": "shopify:\/\/collections\/10-15-off",
             "color_scheme": "accent-1"
           }
         },
