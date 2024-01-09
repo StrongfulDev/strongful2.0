@@ -140,7 +140,7 @@
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "sets",
+        "collection": "10-15-off",
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,
