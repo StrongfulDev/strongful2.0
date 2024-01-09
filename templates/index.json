@@ -214,10 +214,10 @@
         "dfad4ec5-c40b-4feb-90a9-341da374970d": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0_266a5f55-7c8f-48e2-ad4c-e156572b559c.jpg",
-            "alt": "קולקציית סטים ראשית יום הולדת",
-            "link": "BIRTHDAY SALE",
-            "url": "shopify:\/\/collections\/sets",
+            "image": "shopify:\/\/shop_images\/0_63fcd19f-812c-4999-9d4a-b7323ca30ae9.jpg",
+            "alt": "",
+            "link": "SALE",
+            "url": "shopify:\/\/collections\/10-15-off",
             "show_on_desktop": true
           }
         },
