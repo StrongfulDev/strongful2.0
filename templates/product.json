@@ -17,10 +17,10 @@
         "5ec0a264-e4fc-4a8d-92bc-f2f9223694f5": {
           "type": "sale",
           "settings": {
-            "logged_in_text": "<p>בסט סלרס ודגמים נבחרים עכשיו ב 10-15% הנחה!<\/p>",
-            "logged_out_text": "<p>בסט סלרס ודגמים נבחרים עכשיו ב 10-15% הנחה!<\/p>",
+            "logged_in_text": "<p>THE ICONIC SWEATSHIRT DROP<\/p>",
+            "logged_out_text": "<p>THE ICONIC SWEATSHIRT DROP<\/p>",
             "log_in": "",
-            "small_text": ""
+            "small_text": "הסווטשירט הכי אייקוני נחת עכשיו באתר!"
           }
         },
         "title": {
