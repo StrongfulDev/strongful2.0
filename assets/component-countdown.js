@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
 				// First 2 hours - from 500 to 250
 				return Math.round(500 - (elapsed / fastPhaseDuration) * 250);
 			} else {
-				// After first 2 hours - from 500 to 0 over the remaining hours
+				// After first 2 hours - from 250 to 0 over the remaining hours
 				const normalPhaseElapsed = elapsed - fastPhaseDuration;
 				const normalPhaseDuration = endTime - startTime - fastPhaseDuration;
 				return Math.round(250 - (normalPhaseElapsed / normalPhaseDuration) * 250);
