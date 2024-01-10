@@ -37,9 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 
 	const startTime = new Date(data).getTime(); // GMT +0300
-	const endTime = startTime + (24 * 60 * 60 * 1000); // 24 hours later
+	const endTime = startTime + (30 * 60 * 60 * 1000); // 24 hours later
 	const totalCount = 500;
-	const fastPhaseDuration = 30 * 60 * 60 * 1000; // 30 hours in milliseconds
+	const fastPhaseDuration = 2 * 60 * 60 * 1000; // 2 hours in milliseconds
 
 	function getCurrentCount() {
 		const now = Date.now();
