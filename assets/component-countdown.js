@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (count > 0) {
 			setTimeout(updateCounter, 1000); // Update every second
 		} else {
-			$("#countdownDisplay").text("PRE ORDER OVER");
+			$("#countdownDisplay").text("SOLDOUT");
 		}
 	}
 
