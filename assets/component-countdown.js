@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 
 	const startTime = new Date(data).getTime(); // GMT +0300
-	const endTime = startTime + (30 * 60 * 60 * 1000); // 24 hours later
+	const endTime = startTime + (30 * 60 * 60 * 1000); // 30 hours later
 	const totalCount = 500;
 	const fastPhaseDuration = 2 * 60 * 60 * 1000; // 2 hours in milliseconds
 
@@ -51,13 +51,13 @@ document.addEventListener('DOMContentLoaded', function() {
 			const elapsed = now - startTime;
 
 			if (elapsed <= fastPhaseDuration) {
-				// First 3 hours - from 1000 to 500
-				return Math.round(1000 - (elapsed / fastPhaseDuration) * 500);
+				// First 2 hours - from 500 to 250
+				return Math.round(500 - (elapsed / fastPhaseDuration) * 250);
 			} else {
-				// After first 3 hours - from 500 to 0 over the remaining 21 hours
+				// After first 2 hours - from 500 to 0 over the remaining hours
 				const normalPhaseElapsed = elapsed - fastPhaseDuration;
 				const normalPhaseDuration = endTime - startTime - fastPhaseDuration;
-				return Math.round(500 - (normalPhaseElapsed / normalPhaseDuration) * 500);
+				return Math.round(250 - (normalPhaseElapsed / normalPhaseDuration) * 250);
 			}
 		}
 	}
