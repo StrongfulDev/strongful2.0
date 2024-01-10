@@ -64,7 +64,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	function updateCounter() {
 		const count = getCurrentCount();
-		$("#countdownDisplay").text(count + (count === 1 ? " ORDER LEFT" : " ORDERS LEFT"));
+		// $("#countdownDisplay").text(count + (count === 1 ? " ORDER LEFT" : " ORDERS LEFT"));
+		if (count > 1) {
+			$("#countdownDisplay").text("מהדורה מוגבלת - נותרו " + count + " יחידות");
+		} else if (count === 1) {
+			$("#countdownDisplay").text("מהדורה מוגבלת - נותרה יחידה אחת");
+		}
 
 		if (count > 0) {
 			setTimeout(updateCounter, 1000); // Update every second
