@@ -41,6 +41,18 @@
                                     </span>
                                 </div>
                             </div>
+                            {% elsif model_product.title == 'Iconic סווטשירט' %}
+                            <div class="model-wears-content">
+                                <p class="model-wears-text">{{ 'products.product.model_switch.model_wears_female' | t }}</p>
+                                <p class="model-wears-text">
+                                    {{ 'products.product.model_switch.female_top_part' | t }}
+                                    <span class="model-size-bold">OS</span>
+                                </p>
+                                <p class="model-wears-text">
+                                    {{ 'products.product.model_switch.female_bottom_part' | t }}
+                                    <span class="model-size-bold">OS</span>
+                                </p>
+                            </div>
                         {% else %}
                             <div class="model-wears-content">
                                 <p class="model-wears-text">{{ 'products.product.model_switch.model_wears_female' | t }}</p>
