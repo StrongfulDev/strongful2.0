@@ -52,12 +52,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 			if (elapsed <= fastPhaseDuration) {
 				// First 2 hours - from 500 to 250
-				return Math.round(500 - (elapsed / fastPhaseDuration) * 250);
+				return Math.round(500 - (elapsed / fastPhaseDuration) * 150);
 			} else {
 				// After first 2 hours - from 250 to 0 over the remaining hours
 				const normalPhaseElapsed = elapsed - fastPhaseDuration;
 				const normalPhaseDuration = endTime - startTime - fastPhaseDuration;
-				return Math.round(250 - (normalPhaseElapsed / normalPhaseDuration) * 250);
+				return Math.round(150 - (normalPhaseElapsed / normalPhaseDuration) * 150);
 			}
 		}
 	}
