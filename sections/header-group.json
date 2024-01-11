@@ -300,7 +300,7 @@
       "type": "countdown",
       "settings": {
         "show_days": false,
-        "countdown_date": "Thu Jan 11 2024 12:00:00 GMT+0200 (שעון ישראל (קיץ))",
+        "countdown_date": "Thu Jan 11 2024 10:00:00 GMT+0200 (שעון ישראל (קיץ))",
         "countdown_url": "shopify:\/\/collections\/new-in",
         "left_text": false,
         "left_copy": "",
