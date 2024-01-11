@@ -6,7 +6,7 @@
 
 .announce-countdown {
 	column-gap: var(--grid-mobile-vertical-spacing);
-	border: 1px solid var(--gradient-background);
+	/*border: 1px solid var(--gradient-background);*/
 }
 
 .countdown {
@@ -65,7 +65,7 @@
 	text-align: center;
 	color: var(--gradient-base-background-1);
 	position: relative;
-	font-size: calc(var(--font-body-size-large) * .6);
+	font-size: calc(var(--font-body-size-large) * .8);
 	margin: 0;
 	font-weight: 600;
 	box-shadow: 0px 0px 6px 0px rgb(255 255 255 / 30%);
