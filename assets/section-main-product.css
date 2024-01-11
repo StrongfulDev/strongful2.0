@@ -1642,6 +1642,15 @@ variant-radios fieldset {
 	position: relative;
 }
 
+.variant-button.OS {
+	flex: none;
+	width: 16%;
+}
+
+.product-form__input.os-sweat {
+	direction: rtl;
+}
+
 .accordion__title:after, .accordion__title:before {
     position: absolute;
     content: "";
