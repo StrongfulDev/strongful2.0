@@ -63,7 +63,8 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 
 	function updateCounter() {
-		const count = getCurrentCount();
+		// const count = getCurrentCount();
+		const count = 0;
 		// $("#countdownDisplay").text(count + (count === 1 ? " ORDER LEFT" : " ORDERS LEFT"));
 		if (count > 1) {
 			$("#countdownDisplay").text("מהדורה מוגבלת - נותרו " + count + " יחידות");
@@ -74,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (count > 0) {
 			setTimeout(updateCounter, 1000); // Update every second
 		} else {
-			$("#countdownDisplay").text("SOLDOUT");
+			$("#countdownDisplay").text("מהדורה מוגבלת - המלאי אזל");
 		}
 	}
 
