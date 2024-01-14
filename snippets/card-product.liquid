@@ -80,7 +80,7 @@
                 >
                     {%- if card_product.featured_media -%}
                         <div class="card__media">
-                            <a href="{{ card_product.url }}?color={{ colorName }}">
+                            <a href="{{ card_product.url }}{% if card_product.url contains '?' %}&{% else %}?{% endif %}color={{ colorName }}">
                                 {% liquid
                                     assign cardProductTitle = card_product.title
                                     assign placeholder = ''
@@ -132,7 +132,7 @@
                                     {% endif %}
                             >
                                 <a
-                                        href="{{ card_product.url }}?color={{ colorName }}"
+                                        href="{{ card_product.url }}{% if card_product.url contains '?' %}&{% else %}?{% endif %}color={{ colorName }}"
                                         id="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }}"
                                         class="full-unstyled-link pointer"
                                         aria-labelledby="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }} NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
@@ -246,7 +246,7 @@
                         >
                             {% if template.name == 'collection' %}
                                 <a
-                                        href="/collections/{{ collection.handle }}{{ card_product.url }}?color={{ colorName }}"
+                                        href="/collections/{{ collection.handle }}{{ card_product.url }}{% if card_product.url contains '?' %}&{% else %}?{% endif %}color={{ colorName }}"
                                         id="CardLink-{{ section_id }}-{{ card_product.id }}"
                                         class="full-unstyled-link pointer fix-direction"
                                         aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}"
@@ -255,7 +255,7 @@
                                 </a>
                             {% else %}
                                 <a
-                                        href="{{ card_product.url }}?color={{ colorName }}"
+                                        href="{{ card_product.url }}{% if card_product.url contains '?' %}&{% else %}?{% endif %}color={{ colorName }}"
                                         id="CardLink-{{ section_id }}-{{ card_product.id }}"
                                         class="full-unstyled-link pointer fix-direction"
                                         aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}"
