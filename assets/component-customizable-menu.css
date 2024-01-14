@@ -253,7 +253,7 @@
 }
 
 .dropdown .submenu-open ul.menu-drawer__menu li:first-child a {
-	font-weight: var(--font-body-weight);
+	font-weight: var(--font-body-weight-bold);
 }
 
 .menu-drawer-container.customizable .menu-drawer__menu li + li {
