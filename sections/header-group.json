@@ -24,12 +24,12 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "THE ICONIC SWEATSHIRT DROP",
-            "sub_text": "הדרופ האייקוני נחת באתר!",
+            "main_text": "NIGHT SALE",
+            "sub_text": "40% OFF SELECTED ITEMS",
             "text_alignment": "center",
             "main_text_direction": "ltr",
-            "sub_text_direction": "rtl",
-            "link": "shopify:\/\/collections\/new-in",
+            "sub_text_direction": "ltr",
+            "link": "shopify:\/\/collections\/night-sale",
             "color_scheme": "accent-1"
           }
         },
