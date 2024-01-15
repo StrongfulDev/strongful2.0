@@ -295,26 +295,11 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
-    },
-    "d645b7f0-6713-46db-9d75-7bb319fec176": {
-      "type": "countdown",
-      "settings": {
-        "show_days": false,
-        "countdown_date": "Wed Jan 17 2024 01:00:00 GMT+0200 (שעון ישראל (קיץ))",
-        "countdown_url": "shopify:\/\/collections\/night-sale",
-        "left_text": true,
-        "left_copy": "<p>40% הנחה על פריטים נבחרים<\/p>",
-        "right_text_direction": "rtl",
-        "left_text_direction": "rtl",
-        "right_text": true,
-        "right_copy": "<p>חברות מועדון בלבד<\/p>"
-      }
     }
   },
   "order": [
     "announcement-bar",
     "header",
-    "7503b704-2110-400e-bc52-a2190d224c23",
-    "d645b7f0-6713-46db-9d75-7bb319fec176"
+    "7503b704-2110-400e-bc52-a2190d224c23"
   ]
 }
