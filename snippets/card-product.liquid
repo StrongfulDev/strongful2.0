@@ -18,6 +18,7 @@
   - show_sale_badge: {Boolean} Shows a sale badge when relevant
   - image_count: {Number} Amount of images to show
   - card_banner_text: {String} Text to show under the image as banner
+  - members_banner_text: {String} Text to show under the image as banner for members only sale
   - custom_collection_second_announcement: {String} Secondary text to show under the image as banner
   - card_header_size: {String} Size of the card header. Values are "h1", "h2", etc.  (optional)
   - announcement_tag: {String} the tag to show on the card
@@ -258,20 +259,16 @@
             <div class="card__content">
                 <div class="card__information {{ custom_collection_second_announcement }}">
                     {% if card_product.tags contains announcement_tag and card_banner_text != blank %}
-                        <span class="card_banner_text color-background-2">{{ card_banner_text }}</span>
+                        {% if members_only_sale == true and members_only_sale_active == true %}
+                            <span class="card_banner_text color-background-2">{{ members_banner_text }}</span>
+                        {% else %}
+                            <span class="card_banner_text color-background-2">{{ card_banner_text }}</span>
+                        {% endif %}
                     {% endif %}
                     {% if card_product.compare_at_price > card_product.price %}
                         <div class="discount-price-container">
                             <p class="rect-discount-tag">
-                                {% if members_only_sale == true and members_only_sale_active == true %}
-                                    {% if card_product.tags contains announcement_tag %}
-                                        {{ 'products.product.members_only' | t }}
-                                    {% else %}
-                                        {{ card_product.compare_at_price | minus: card_product.price | times: 100.0 | divided_by: card_product.compare_at_price | ceil }}% OFF
-                                    {% endif %}
-                                {% else %}
-                                    {{ card_product.compare_at_price | minus: card_product.price | times: 100.0 | divided_by: card_product.compare_at_price | ceil }}% OFF
-                                {% endif %}
+                                {{ card_product.compare_at_price | minus: card_product.price | times: 100.0 | divided_by: card_product.compare_at_price | ceil }}% OFF
                             </p>
                             {% if card_product.tags contains 'OUTLET' or card_product.tags contains 'outlet' %}
                                 <p class="outlet-collection-tag upper h4">
@@ -286,13 +283,6 @@
                                 <span>{{- 'products.product.outlet' | t -}}</span>
                                 <i>{% render 'icon-discount-tag' %}</i>
                             </p>
-                        {% endif %}
-                        {% if members_only_sale == true and members_only_sale_active == true %}
-                            {% if card_product.tags contains announcement_tag %}
-                                <p class="rect-discount-tag">
-                                    {{ 'products.product.members_only' | t }}
-                                </p>
-                            {% endif %}
                         {% endif %}
                     {% endif %}
                     <p

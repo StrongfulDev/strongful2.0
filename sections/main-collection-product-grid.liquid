@@ -175,6 +175,10 @@
                                         if settings.custom_collection_announcement != blank
                                             assign card_announcement = settings.custom_collection_announcement
                                         endif
+
+                                        if settings.members_only_announcement != blank
+                                            assign members_announcement = settings.members_only_announcement
+                                        endif
                                     endif
                                 -%}
                                 {% if isLiveTheme == 'true' %}
@@ -193,6 +197,7 @@
                                                     section_id: section.id,
                                                     image_count: section.settings.image_count,
                                                     card_banner_text: card_announcement,
+                                                    members_banner_text: members_announcement,
                                                     card_header_size: section.settings.card_header_size,
                                                     announcement_tag: settings.announcement_tag,
                                                     second_announcement_tag: settings.second_announcement_tag,
@@ -222,6 +227,7 @@
                                                     section_id: section.id,
                                                     image_count: section.settings.image_count,
                                                     card_banner_text: card_announcement,
+                                                    members_banner_text: members_announcement,
                                                     card_header_size: section.settings.card_header_size,
                                                     announcement_tag: settings.announcement_tag,
                                                     second_announcement_tag: settings.second_announcement_tag,
