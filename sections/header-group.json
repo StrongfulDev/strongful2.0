@@ -301,7 +301,7 @@
       "settings": {
         "show_days": false,
         "countdown_date": "Wed Jan 17 2024 01:00:00 GMT+0200 (שעון ישראל (קיץ))",
-        "countdown_url": "shopify:\/\/collections\/new-in",
+        "countdown_url": "shopify:\/\/collections\/night-sale",
         "left_text": true,
         "left_copy": "<p>40% הנחה על פריטים נבחרים<\/p>",
         "right_text_direction": "rtl",
