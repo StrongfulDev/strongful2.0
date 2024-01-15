@@ -263,7 +263,7 @@
                     {% if card_product.compare_at_price > card_product.price %}
                         <div class="discount-price-container">
                             <p class="rect-discount-tag">
-                                {% if members_only_sale and members_only_sale_active %}
+                                {% if members_only_sale == true and members_only_sale_active == true %}
                                     {% if card_product.tags contains announcement_tag %}
                                         {{ 'products.product.members_only' | t }}
                                     {% else %}
