@@ -3964,6 +3964,7 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 	border: 1px firebrick solid;
 	padding: 0 7px;
 	text-align: center;
+	width: fit-content;
 }
 
 .card__information>.rect-discount-tag {
