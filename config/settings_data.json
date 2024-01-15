@@ -136,6 +136,7 @@
     "show_secondary_image": true,
     "announcement_tag": "NIGHT SALE",
     "custom_collection_announcement": "NIGHT SALE",
+    "members_only_announcement": "חברות מועדון בלבד",
     "show_card_collection_announcement": true,
     "second_announcement_tag": "",
     "custom_collection_second_announcement": "",
