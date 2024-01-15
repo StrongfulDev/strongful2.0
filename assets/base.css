@@ -3223,6 +3223,10 @@ details-disclosure > details {
     direction: rtl;
 }
 
+small.fix-direction {
+	display: block;
+}
+
 .ltr, .english-direction {
     direction: ltr;
 }

@@ -37,17 +37,17 @@
 {% endcomment %}
 
 {% if product.tags contains announcement_tag %}
-    <div class="sale-banner-product-page fix-direction">
+    <div class="sale-banner-product-page">
         {% if customer %}
             <p>{{ block.settings.logged_in_text | newline_to_br }}</p>
         {% else %}
             <p>{{ block.settings.logged_out_text | newline_to_br }}</p>
             {% if block.settings.log_in != blank %}
-                <small class="account-toggler-site-wide link">{{ block.settings.log_in }}</small>
+                <small class="account-toggler-site-wide link fix-direction">{{ block.settings.log_in }}</small>
             {% endif %}
         {% endif %}
         {% if block.settings.small_text != blank %}
-            <small class="">{{ block.settings.small_text }}</small>
+            <small class="fix-direction">{{ block.settings.small_text }}</small>
         {% endif %}
     </div>
 {% endif %}
