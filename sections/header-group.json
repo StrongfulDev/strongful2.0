@@ -24,12 +24,12 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "NIGHT SALE",
-            "sub_text": "40% OFF SELECTED ITEMS",
+            "main_text": "WINTER SALE",
+            "sub_text": "דגמים נבחרים עד 50% הנחה",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "ltr",
-            "link": "shopify:\/\/collections\/night-sale",
+            "link": "shopify:\/\/collections\/winter-sale",
             "color_scheme": "accent-1"
           }
         },
@@ -69,7 +69,7 @@
             "show_on_mobile": true,
             "small_font": false,
             "title": "SALE",
-            "title_link": "shopify:\/\/collections\/night-sale"
+            "title_link": "shopify:\/\/collections\/winter-sale"
           }
         },
         "ba94928e-5cd1-47f5-9c0a-28ea47285f01": {
@@ -86,7 +86,7 @@
             "item_class": "",
             "title_link": "",
             "desktop_links_image_1": "shopify:\/\/shop_images\/80.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/night-sale",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/winter-sale",
             "desktop_links_image_2_link": "",
             "mobile_title": "COLLECTIONS",
             "main_link": "",
@@ -111,7 +111,7 @@
             "desktop_links_image_1": "shopify:\/\/shop_images\/0_36163333-042c-43ef-9d7c-eab7bfb3f975.jpg",
             "desktop_links_image_1_link": "shopify:\/\/collections\/strongful-iconic-סווטשירט",
             "desktop_links_image_2": "shopify:\/\/shop_images\/0_198db924-9400-435c-8557-86487e729d9a.jpg",
-            "desktop_links_image_2_link": "shopify:\/\/collections\/night-sale",
+            "desktop_links_image_2_link": "shopify:\/\/collections\/winter-sale",
             "mobile_cover_image": "shopify:\/\/shop_images\/20e5c3f719da92dc7bfd0c70c57f7186.jpg",
             "mobile_title": "סטים",
             "main_link": "",
@@ -134,7 +134,7 @@
             "item_class": "",
             "title_link": "",
             "desktop_links_image_1": "shopify:\/\/shop_images\/80_f1d3feff-cb67-414f-81c7-3047fda5e199.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/night-sale",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/winter-sale",
             "desktop_links_image_2_link": "",
             "mobile_title": "טייצים",
             "main_link": "https:\/\/strongful.co.il\/collections\/טייצים",
@@ -157,7 +157,7 @@
             "item_class": "",
             "title_link": "",
             "desktop_links_image_1": "shopify:\/\/shop_images\/80_f5442af5-ce91-4cf3-b9f6-6e755db67841.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/night-sale",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/winter-sale",
             "desktop_links_image_2_link": "",
             "mobile_title": "טופים",
             "main_link": "https:\/\/strongful.co.il\/collections\/טופים",
@@ -180,7 +180,7 @@
             "item_class": "",
             "title_link": "",
             "desktop_links_image_1": "shopify:\/\/shop_images\/80_0a37726f-0c91-45a4-a27c-beab34e5c75d.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/night-sale",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/winter-sale",
             "desktop_links_image_2_link": "",
             "mobile_title": "OUTLET - UP TO 50% OFF",
             "main_link": "",
@@ -203,7 +203,7 @@
             "item_class": "",
             "title_link": "",
             "desktop_links_image_1": "shopify:\/\/shop_images\/80_cb78fc88-9874-42fa-82df-f208c97214b4.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/night-sale",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/winter-sale",
             "desktop_links_image_2_link": "",
             "mobile_title": "ACCESSORIES",
             "main_link": "",
