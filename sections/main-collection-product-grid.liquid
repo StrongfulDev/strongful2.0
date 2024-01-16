@@ -114,7 +114,7 @@
         </facet-filters-form>
     {%- endif -%}
 
-    <div class="{% if section.settings.filter_type == 'vertical' %} facets-vertical page-width fix-direction countdown-facet{% endif %}">
+    <div class="{% if section.settings.filter_type == 'vertical' %} facets-vertical page-width fix-direction{% endif %}">
         {{ 'component-facets.css' | asset_url | stylesheet_tag }}
         <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
         {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
