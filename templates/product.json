@@ -89,7 +89,7 @@
             "button_show_text": true,
             "button_show_icon": true,
             "icon_size": 18,
-            "icon_stroke_width": 1.2,
+            "icon_stroke_width": 2,
             "icon_offset_vertical": -1
           }
         },
