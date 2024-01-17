@@ -77,6 +77,7 @@
         },
         "wishlist_king_wishlist_button_block_fxtbYK": {
           "type": "shopify:\/\/apps\/wishlist-king\/blocks\/wishlist-button-block\/194f5011-a43c-4b22-b12e-eaf20dc4506a",
+          "disabled": true,
           "settings": {
             "button_style": "plain_accent_1",
             "button_alignment": "center",
