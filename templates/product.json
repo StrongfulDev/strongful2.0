@@ -75,6 +75,24 @@
             "members_only_sale_over_text": "זמין לרכישה ב 15.8"
           }
         },
+        "wishlist_king_wishlist_button_block_fxtbYK": {
+          "type": "shopify:\/\/apps\/wishlist-king\/blocks\/wishlist-button-block\/194f5011-a43c-4b22-b12e-eaf20dc4506a",
+          "settings": {
+            "button_style": "plain_accent_1",
+            "button_alignment": "center",
+            "button_content_alignment": "center",
+            "button_margin_top": 0,
+            "button_margin_bottom": 0,
+            "button_max_width": 0,
+            "button_padding_horizontal": 15,
+            "button_full_width": true,
+            "button_show_text": true,
+            "button_show_icon": true,
+            "icon_size": 18,
+            "icon_stroke_width": 1.2,
+            "icon_offset_vertical": 0
+          }
+        },
         "5ae0b953-0e37-48c5-b5cc-e50d6004b25c": {
           "type": "loyalty",
           "settings": {
@@ -135,6 +153,7 @@
         "e290d1ee-22d0-4ae8-9219-8d77d6585fae",
         "quantity_selector",
         "buy_buttons",
+        "wishlist_king_wishlist_button_block_fxtbYK",
         "5ae0b953-0e37-48c5-b5cc-e50d6004b25c",
         "1b30499f-a9b2-4f41-bbad-151626bae3d0",
         "679aaa7e-cf01-48c6-85e3-b35a4a905d19",
