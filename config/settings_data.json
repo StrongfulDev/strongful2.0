@@ -319,15 +319,15 @@
       },
       "14197025361042770389": {
         "type": "shopify:\/\/apps\/wishlist-king\/blocks\/app-settings-main\/194f5011-a43c-4b22-b12e-eaf20dc4506a",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "theme_preset": "dawn",
           "color_accent_1": "#000000",
           "color_accent_2": "#000000",
-          "color_solid_button_label": "#FFFFFF",
+          "color_solid_button_label": "#ffffff",
           "color_outline_button_label": "#000000",
-          "color_background_1": "#FFFFFF",
-          "color_background_2": "#FFFFFF",
+          "color_background_1": "#ffffff",
+          "color_background_2": "#ffffff",
           "color_text": "#000000",
           "button_min_height": 45,
           "button_border_width": 1,
@@ -348,7 +348,7 @@
       },
       "4139971114690857691": {
         "type": "shopify:\/\/apps\/wishlist-king\/blocks\/wishlist-button-collection\/194f5011-a43c-4b22-b12e-eaf20dc4506a",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "button_style": "plain_accent_1",
           "button_placement": "top-end",
@@ -366,16 +366,9 @@
           "floating_reference_js": ""
         }
       },
-      "13655089695959051254": {
-        "type": "shopify:\/\/apps\/wishlist-king\/blocks\/code-access\/194f5011-a43c-4b22-b12e-eaf20dc4506a",
-        "disabled": false,
-        "settings": {
-          "version": "main"
-        }
-      },
       "6680288666557934739": {
         "type": "shopify:\/\/apps\/wishlist-king\/blocks\/wishlist-page\/194f5011-a43c-4b22-b12e-eaf20dc4506a",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "column_width": "md",
           "wishlist_empty_link": "shopify:\/\/collections\/all",
@@ -397,6 +390,13 @@
           "show_product_title": true,
           "show_price": true,
           "show_variant_input_label": false
+        }
+      },
+      "13655089695959051254": {
+        "type": "shopify:\/\/apps\/wishlist-king\/blocks\/code-access\/194f5011-a43c-4b22-b12e-eaf20dc4506a",
+        "disabled": true,
+        "settings": {
+          "version": "main"
         }
       }
     }
