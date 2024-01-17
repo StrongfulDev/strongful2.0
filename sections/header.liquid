@@ -997,7 +997,9 @@
         {%- endif -%}
 
         <div class="header__icons">
-            {% render 'israel-flag' %}
+            {% comment %}
+                {% render 'israel-flag' %}
+            {% endcomment %}
             <details-modal class="header__search">
                 <details>
                     <summary
