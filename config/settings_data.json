@@ -366,6 +366,13 @@
           "floating_reference_js": ""
         }
       },
+      "13655089695959051254": {
+        "type": "shopify:\/\/apps\/wishlist-king\/blocks\/code-access\/194f5011-a43c-4b22-b12e-eaf20dc4506a",
+        "disabled": false,
+        "settings": {
+          "version": "main"
+        }
+      },
       "6680288666557934739": {
         "type": "shopify:\/\/apps\/wishlist-king\/blocks\/wishlist-page\/194f5011-a43c-4b22-b12e-eaf20dc4506a",
         "disabled": false,
@@ -384,19 +391,12 @@
           "cta_button": "add_to_cart",
           "cta_button_style": "solid_accent_1",
           "alignment": "center",
-          "image_aspect_ratio": "1\/1",
+          "image_aspect_ratio": "720\/1079",
           "image_object_fit": "cover",
           "show_vendor": false,
           "show_product_title": true,
           "show_price": true,
           "show_variant_input_label": false
-        }
-      },
-      "13655089695959051254": {
-        "type": "shopify:\/\/apps\/wishlist-king\/blocks\/code-access\/194f5011-a43c-4b22-b12e-eaf20dc4506a",
-        "disabled": false,
-        "settings": {
-          "version": "main"
         }
       }
     }
