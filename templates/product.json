@@ -90,7 +90,7 @@
             "button_show_icon": true,
             "icon_size": 18,
             "icon_stroke_width": 1.2,
-            "icon_offset_vertical": 0
+            "icon_offset_vertical": -1
           }
         },
         "5ae0b953-0e37-48c5-b5cc-e50d6004b25c": {
