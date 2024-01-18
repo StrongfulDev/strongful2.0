@@ -102,7 +102,7 @@
             "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_be11a8ed-c878-490a-a188-a571e656a934.jpg",
             "mobile_image": "shopify:\/\/shop_images\/copy_20_7e47becc-742f-4d4d-be1b-a50401647f3b.jpg",
             "heading": "",
-            "whole_slide_link": "shopify:\/\/collections\/winter-sale",
+            "whole_slide_link": "",
             "heading_size": "h1",
             "subheading": "",
             "button_label": "SHOP NOW",
@@ -119,6 +119,43 @@
       },
       "block_order": [
         "b43423be-0745-47c7-be6a-84d0ee24d128"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "sides",
+        "auto_rotate": false,
+        "change_slides_speed": 9,
+        "show_text_below": false,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "slideshow_FBBBjz": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_Tk9P88": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_e4ba562a-6ae7-4387-a7ba-7749029eecba.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/1_e32ecf9b-0d7f-46ec-9ea3-66d7d69e3a1d.jpg",
+            "heading": "",
+            "whole_slide_link": "shopify:\/\/collections\/new-in",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "SHOP NOW",
+            "link": "shopify:\/\/collections\/new-in",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "inverse",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_Tk9P88"
       ],
       "settings": {
         "layout": "full_bleed",
@@ -368,6 +405,7 @@
   "order": [
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9",
     "bf7c8475-03e5-4509-86d8-21c4c329bb00",
+    "slideshow_FBBBjz",
     "283eeea1-79f9-42c2-8f34-dccf839b470b",
     "ff8d8d77-e0dc-42f4-8ec6-54fb434b711b",
     "our_collection_list",

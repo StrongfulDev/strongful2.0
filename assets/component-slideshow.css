@@ -246,7 +246,13 @@ button.slideshow__autoplay {
 .whole-slide-link {
 	display: block;
 	width: 100%;
+	position: absolute;
+	height: 100%;
 	/*margin-bottom: calc(var(--grid-desktop-horizontal-spacing) * 2);*/
+}
+
+.whole-slide-link + div .banner__buttons {
+	display: none;
 }
 
 
