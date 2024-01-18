@@ -255,6 +255,9 @@ button.slideshow__autoplay {
 	display: none;
 }
 
+.index .section:nth-child(3) {
+	margin-top: calc(var(--grid-desktop-horizontal-spacing) * 4);
+}
 
 @media screen and (max-width: 749px) {
     .slideshow__media img:not(.mobile_version) + .mobile_version {
