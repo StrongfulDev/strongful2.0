@@ -169,6 +169,43 @@
         "padding_bottom": 40
       }
     },
+    "slideshow_aEtp7U": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_4eFecx": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_cb9e3cbe-abbd-42db-94f3-aa749e07ff1c.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_a6bdf203-e21b-4d9d-8ae8-c98bea1f41f5.jpg",
+            "heading": "",
+            "whole_slide_link": "shopify:\/\/collections\/new-in",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "SHOP NOW",
+            "link": "shopify:\/\/collections\/new-in",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "inverse",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_4eFecx"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "sides",
+        "auto_rotate": false,
+        "change_slides_speed": 9,
+        "show_text_below": false,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
     "ff8d8d77-e0dc-42f4-8ec6-54fb434b711b": {
       "type": "featured-collection",
       "settings": {
@@ -369,6 +406,7 @@
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9",
     "bf7c8475-03e5-4509-86d8-21c4c329bb00",
     "283eeea1-79f9-42c2-8f34-dccf839b470b",
+    "slideshow_aEtp7U",
     "ff8d8d77-e0dc-42f4-8ec6-54fb434b711b",
     "our_collection_list",
     "ecf1e0a5-0973-4674-ac5b-b5370ff1bae1",
