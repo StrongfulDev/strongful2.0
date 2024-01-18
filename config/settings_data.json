@@ -311,12 +311,6 @@
         "settings": {
         }
       },
-      "yoast-seo-metatags": {
-        "type": "shopify:\/\/apps\/yoast-seo-seo-for-everyone\/blocks\/metatags\/7c777011-bc88-4743-a24e-64336e1e5b46",
-        "disabled": false,
-        "settings": {
-        }
-      },
       "14197025361042770389": {
         "type": "shopify:\/\/apps\/wishlist-king\/blocks\/app-settings-main\/194f5011-a43c-4b22-b12e-eaf20dc4506a",
         "disabled": true,
@@ -397,6 +391,12 @@
         "disabled": true,
         "settings": {
           "version": "main"
+        }
+      },
+      "yoast-seo-metatags": {
+        "type": "shopify:\/\/apps\/yoast-seo-seo-for-everyone\/blocks\/metatags\/7c777011-bc88-4743-a24e-64336e1e5b46",
+        "disabled": false,
+        "settings": {
         }
       }
     }
