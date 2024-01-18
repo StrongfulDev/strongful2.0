@@ -1,4 +1,5 @@
 {{ 'customer.css' | asset_url | stylesheet_tag }}
+{{ 'register_data_layer.js' | asset_url | script_tag }}
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -30,7 +31,7 @@
     {% if template.name == 'register' or template.name == 'login' %}
       <h1>{{ 'customer.register.title' | t }}</h1>
     {% endif %}
-  {%- form 'create_customer', novalidate: 'novalidate' -%}
+  {%- form 'create_customer', novalidate: 'novalidate', id: 'create_customer_custom_form' -%}
     {%- if form.errors -%}
       <h2 class="form__message" tabindex="-1" autofocus>
         <svg aria-hidden="true" focusable="false">
@@ -145,6 +146,7 @@
           <input type="checkbox" name="customer[accepts_marketing]" checked="checked" hidden="hidden" id="marketing" value="true" class="hidden" />
           <div class="accept-marketing-notice">בהרשמה לאתר את\ה מאשרת את <a href="https://strongful.co.il/blogs/%D7%AA%D7%A7%D7%A0%D7%95%D7%A0%D7%99%D7%9D/%D7%AA%D7%A7%D7%A0%D7%95%D7%9F-%D7%94%D7%90%D7%AA%D7%A8" class="inline link-underline">תקנון האתר ומדיניות הפרטיות,</a> וקבלת מיילים שיווקיים.</div>
       </div>
+
   {%- endform -%}
     <div class="form-toggler pointer">
         {% if template.name == 'ALIST' %}
