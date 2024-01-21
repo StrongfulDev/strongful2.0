@@ -256,7 +256,7 @@ button.slideshow__autoplay {
 }
 
 .index .section:nth-child(3) {
-	margin-top: calc(var(--grid-desktop-horizontal-spacing) * 4);
+	/*margin-top: calc(var(--grid-desktop-horizontal-spacing) * 4);*/
 }
 
 @media screen and (max-width: 749px) {
