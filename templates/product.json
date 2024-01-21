@@ -20,7 +20,9 @@
             "logged_in_text": "<p>WINTER SALE<\/p>",
             "logged_out_text": "<p>WINTER SALE<\/p>",
             "log_in": "",
-            "small_text": "פריטים נבחרים עד 40% הנחה!"
+            "small_text": "פריטים נבחרים עד 40% הנחה!",
+            "second_announcement_regular_text": "OASIS X AURA BACK IN STOCK",
+            "second_small_text": "קולקציית החורף שלנו חזרה למלאי!"
           }
         },
         "title": {
