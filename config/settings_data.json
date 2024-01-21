@@ -138,7 +138,7 @@
     "custom_collection_announcement": "",
     "members_only_announcement": "",
     "show_card_collection_announcement": false,
-    "second_announcement_tag": "",
+    "second_announcement_tag": "aura-oasis-back-in-stock",
     "custom_collection_second_announcement": "",
     "announcement_customizer_override": true,
     "preorder_over_text": "",
