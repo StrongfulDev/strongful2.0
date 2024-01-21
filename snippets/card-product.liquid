@@ -246,6 +246,10 @@
                         <span class="new-product-span">
                                 {{ 'products.product.new' | t }}
                             </span>
+                        {% elsif card_product.tags contains settings.second_announcement_tag %}
+                        <span class="new-product-span">
+                                {{ 'products.product.selling_fast' | t }}
+                            </span>
                     {% endif %}
                     {%- if show_quick_add and quick_add_type_mobile == "modal" -%}
                         {% assign quick_add_modal_id = "quick_add_modal-" | append: section.id | append: "-" | append: card_product.id %}
