@@ -95,7 +95,7 @@
     z-index: 0;
 }
 
-.card--standard:not(.card--horizontal) > .card__content .card__badge {
+.card--standard:not(.card--horizontal)>.card__content .card__badge {
     display: block;
     position: absolute;
     top: 0;
@@ -129,6 +129,11 @@
 }
 
 @media screen and (min-width: 990px) {
+
+	.card--standard:not(.card--horizontal)>.card__content .card__badge {
+		right: 0;
+		width: fit-content;
+	}
 
 	.cart-drawer .product_size_picker__heading {
 		margin-bottom: 0;
