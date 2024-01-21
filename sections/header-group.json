@@ -24,12 +24,12 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "WINTER SALE",
-            "sub_text": "דגמים נבחרים עד 40% הנחה",
+            "main_text": "AURA X OASIS",
+            "sub_text": "BACK IN STOCK",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "ltr",
-            "link": "shopify:\/\/collections\/winter-sale",
+            "link": "shopify:\/\/collections\/aura-x-oasis-winter-collection",
             "color_scheme": "accent-1"
           }
         },
@@ -79,7 +79,7 @@
             "show_on_mobile": true,
             "order": "",
             "small_font": false,
-            "menu": "trending-without-10",
+            "menu": "trending",
             "menu_second": "",
             "menu_third": "",
             "title": "COLLECTIONS",
