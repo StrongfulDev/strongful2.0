@@ -160,7 +160,7 @@
                                                         </summary>
                                                         <div class="accordion__content rte"
                                                              id="MenuAccordion-{{ block.id }}-{{ section.id }}">
-                                                            {% render 'contact-icons' %}
+                                                            {% render 'contact-icons', show_phone: false %}
                                                         </div>
                                                     </details>
                                                 </div>
@@ -168,7 +168,7 @@
                                                     {%- if block.settings.heading != blank -%}
                                                         <h2 class="footer-block__heading">{{- block.settings.heading | escape -}}</h2>
                                                     {%- endif -%}
-                                                    {% render 'contact-icons' %}
+                                                    {% render 'contact-icons', show_phone: false %}
                                                 </div>
                                             </div>
                                     {%- when 'brand_information' -%}
