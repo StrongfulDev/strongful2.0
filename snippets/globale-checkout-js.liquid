@@ -1,5 +1,5 @@
 
-{% comment %} PLEASE do not change this file {% endcomment %}   
+{% comment %} Since 31 Jan 2024 content of this file is no longer used by Global-e scripts. Feel free to exclude it from checkout.liquid and remove the file itself. {% endcomment %}   
 {% assign shipping_country_code = localization.country.iso_code %} 
 {% assign shipping_state_code = blank %}
 {% assign billing_country_code = localization.country.iso_code %}
@@ -51,7 +51,5 @@
     };     
     </script> 
 
-    {% if "AW" contains shipping_country_code %} 
-    <script src = "https://webservices.global-e.com/scripts/platforms/shopify/checkout.js" ></script>  
-    {% endif %}
+    
 {% endif %}
