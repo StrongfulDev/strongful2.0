@@ -216,8 +216,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/0737a51b2679a55d45d0d8f464335044_e3d029ad-7838-4cc1-a30f-ea91d8db1076.jpg",
             "alt": "",
-            "link": "RESTOCK",
-            "url": "shopify:\/\/collections\/aura-x-oasis-winter-collection",
+            "link": "NEW COLLECTION",
+            "url": "shopify:\/\/collections\/comfort",
             "show_on_desktop": true
           }
         },
@@ -234,7 +234,7 @@
         "0ae2dc2c-e286-48f6-be64-4aa8bc8de568": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Artboard_3_4x-100-min.jpg",
+            "image": "shopify:\/\/shop_images\/Eirad2089-R1-21-23_2.jpg",
             "alt": "",
             "link": "OUTLET - up to 50% off",
             "url": "shopify:\/\/collections\/outlet",
