@@ -24,12 +24,12 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "AURA X OASIS",
-            "sub_text": "BACK IN STOCK",
+            "main_text": "NEW IN",
+            "sub_text": "COMFORT COLLECTION",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "ltr",
-            "link": "shopify:\/\/collections\/aura-x-oasis-winter-collection",
+            "link": "shopify:\/\/collections\/comfort",
             "color_scheme": "accent-1"
           }
         },
@@ -79,7 +79,7 @@
             "show_on_mobile": true,
             "order": "",
             "small_font": false,
-            "menu": "trending",
+            "menu": "trending-without-10",
             "menu_second": "",
             "menu_third": "",
             "title": "COLLECTIONS",
