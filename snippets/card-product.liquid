@@ -265,10 +265,14 @@
                     {% if card_product.tags contains announcement_tag %}
                         {% if members_only_sale == true and members_only_sale_active == true %}
                             {% unless customer %}
-                                <span class="card_banner_text color-background-2">{{ members_banner_text }}</span>
+                                {% if members_banner_text != blank %}
+                                    <span class="card_banner_text color-background-2">{{ members_banner_text }}</span>
+                                {% endif %}
                             {% endunless %}
                         {% else %}
-                            <span class="card_banner_text color-background-2">{{ card_banner_text }}</span>
+                            {% if card_banner_text != blank %}
+                                <span class="card_banner_text color-background-2">{{ card_banner_text }}</span>
+                            {% endif %}
                         {% endif %}
                     {% endif %}
                     {% if card_product.compare_at_price > card_product.price %}
