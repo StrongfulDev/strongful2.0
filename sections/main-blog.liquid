@@ -59,9 +59,14 @@
                   </div>
               </div>
               <a href="{{ section.settings.tile_image_one_link }}" class="blog-featured-ad-link">
-                  <img class="blog-featured-ad-image" alt="תמונת פרסומת לקולקציה חדשה של סטרונגפול בדף הבלוג" loading="lazy"
-                       src="{{ section.settings.tile_image_one }}">
+                  {{ section.settings.tile_image_one | image_url: width: 1000 | image_tag:
+                  loading: 'lazy',
+                  class: "blog-featured-ad-image",
+                  sizes: "100vw",
+                  widths: '1000'
+                  }}
               </a>
+
               <a href="{{ section.settings.tile_image_two_link }}" class="blog-featured-ad-link">
                   <img class="blog-featured-ad-image" alt="תמונת פרסומת לקולקציה חדשה של סטרונגפול בדף הבלוג" loading="lazy"
                        src="{{ section.settings.tile_image_two }}">
