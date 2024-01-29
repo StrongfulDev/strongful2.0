@@ -4,7 +4,9 @@
       "type": "main-blog",
       "settings": {
         "tile_image_one": "shopify:\/\/shop_images\/7ff08d51abffc0cfdf69f878b50b58d6_4ec0f4a4-f85d-4e24-8c71-9efb834afbdd.jpg",
+        "tile_image_one_link": "shopify:\/\/collections\/comfort",
         "tile_image_two": "shopify:\/\/shop_images\/0_517266c8-b8bf-464a-ad36-1c93d78ab1dc.webp",
+        "tile_image_two_link": "shopify:\/\/collections\/winter-sale",
         "layout": "grid",
         "show_image": true,
         "image_height": "adapt",
