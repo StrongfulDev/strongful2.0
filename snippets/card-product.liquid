@@ -132,7 +132,7 @@
                                 <div class="media media--transparent media--hover-effect">
                                     {% for image in card_product.images %}
                                         {{ image.variants.first.title }}
-                                        {% if image.variants.title contains 'L' %}
+                                        {% if image.variants.first.title == 'L' %}
                                             <img srcset="
                                                           {%- if image.width >= 165 -%}{{ image | image_url: width: 165 }} 165w,{%- endif -%}
                                                           {%- if image.width >= 360 -%}{{ image | image_url: width: 360 }} 360w,{%- endif -%}
@@ -156,7 +156,7 @@
 
                                     {%- if show_secondary_image -%}
                                         {% for image in card_product.images %}
-                                            {% if image.variants.first.title contains 'L' %}
+                                            {% if image.variants.first.title == 'XL' %}
                                                 <img srcset="
                                                 {%- if image.width >= 165 -%}{{ image | image_url: width: 165 }} 165w,{%- endif -%}
                                                 {%- if image.width >= 360 -%}{{ image | image_url: width: 360 }} 360w,{%- endif -%}
