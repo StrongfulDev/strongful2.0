@@ -384,7 +384,7 @@
         "disabled": false,
         "settings": {
           "button_style": "plain_text",
-          "button_placement": "top-end",
+          "button_placement": "bottom-end",
           "button_offset_horizontal": 0,
           "button_offset_vertical": 0,
           "button_background_opacity": 85,
@@ -395,8 +395,8 @@
           "icon_size": 18,
           "icon_stroke_width": 1.2,
           "app_integration_preset": "none",
-          "product_link_selector": "",
-          "floating_reference_js": "target.closest(\".card\").find(\".full-unstyled-link\")"
+          "product_link_selector": ".card .card__heading > .full-unstyled-link[href*=\"\/products\/\"]",
+          "floating_reference_js": ".card .card__heading > .full-unstyled-link[href*=\"\/products\/\"]"
         }
       }
     }
