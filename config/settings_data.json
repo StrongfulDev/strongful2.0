@@ -377,7 +377,7 @@
         "type": "shopify:\/\/apps\/wishlist-king\/blocks\/wishlist-page\/194f5011-a43c-4b22-b12e-eaf20dc4506a",
         "disabled": false,
         "settings": {
-          "column_width": "md",
+          "column_width": "sm",
           "wishlist_empty_link": "shopify:\/\/collections\/sets",
           "page_max_width": 1200,
           "page_padding_top": 30,
@@ -390,7 +390,7 @@
           "product_options": "dropdowns",
           "cta_button": "add_to_cart",
           "cta_button_style": "solid_accent_1",
-          "alignment": "center",
+          "alignment": "right",
           "image_aspect_ratio": "1000\/1500",
           "image_object_fit": "cover",
           "show_vendor": true,
