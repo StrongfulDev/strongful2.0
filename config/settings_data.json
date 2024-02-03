@@ -395,8 +395,8 @@
           "icon_size": 18,
           "icon_stroke_width": 1.2,
           "app_integration_preset": "none",
-          "product_link_selector": ".card .full-unstyled-link[href*=\"\/products\/\"]",
-          "floating_reference_js": ".card .full-unstyled-link[href*=\"\/products\/\"]"
+          "product_link_selector": "",
+          "floating_reference_js": ""
         }
       }
     }
