@@ -383,7 +383,7 @@
         "type": "shopify:\/\/apps\/wishlist-king\/blocks\/wishlist-button-collection\/194f5011-a43c-4b22-b12e-eaf20dc4506a",
         "disabled": false,
         "settings": {
-          "button_style": "outline_accent_1",
+          "button_style": "plain_text",
           "button_placement": "top-end",
           "button_offset_horizontal": 0,
           "button_offset_vertical": 0,
@@ -396,7 +396,7 @@
           "icon_stroke_width": 1.2,
           "app_integration_preset": "none",
           "product_link_selector": "",
-          "floating_reference_js": ""
+          "floating_reference_js": "target.closest(\".card\").find(\".full-unstyled-link\")"
         }
       }
     }
