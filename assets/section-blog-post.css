@@ -253,6 +253,7 @@ article .footer__list-social.list-social {
 		width: 100%;
 		display: block;
 		max-width: 500px;
+		height: auto;
 	}
 
 	.blog-extras.desktop-only {

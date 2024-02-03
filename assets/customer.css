@@ -283,7 +283,7 @@ a.no-decoration {
 	}
 
 	.contact-icon-child:first-child {
-		display: none;
+		/*display: none;*/
 	}
 
 	thead {

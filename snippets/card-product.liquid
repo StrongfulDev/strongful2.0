@@ -132,7 +132,7 @@
                                 <div class="media media--transparent media--hover-effect">
                                     {% for image in card_product.images %}
                                         {{ image.variants.first.title }}
-                                        {% if image.variants.title contains 'L' %}
+                                        {% if image.variants.first.title == 'L' %}
                                             <img srcset="
                                                           {%- if image.width >= 165 -%}{{ image | image_url: width: 165 }} 165w,{%- endif -%}
                                                           {%- if image.width >= 360 -%}{{ image | image_url: width: 360 }} 360w,{%- endif -%}
@@ -156,7 +156,7 @@
 
                                     {%- if show_secondary_image -%}
                                         {% for image in card_product.images %}
-                                            {% if image.variants.first.title contains 'L' %}
+                                            {% if image.variants.first.title == 'XL' %}
                                                 <img srcset="
                                                 {%- if image.width >= 165 -%}{{ image | image_url: width: 165 }} 165w,{%- endif -%}
                                                 {%- if image.width >= 360 -%}{{ image | image_url: width: 360 }} 360w,{%- endif -%}
@@ -261,12 +261,18 @@
                 </div>
             </div>
             <div class="card__content">
-                <div class="card__information {{ custom_collection_second_announcement }}">
-                    {% if card_product.tags contains announcement_tag and card_banner_text != blank %}
+                <div class="card__information">
+                    {% if card_product.tags contains announcement_tag %}
                         {% if members_only_sale == true and members_only_sale_active == true %}
-                            <span class="card_banner_text color-background-2">{{ members_banner_text }}</span>
+                            {% unless customer %}
+                                {% if members_banner_text != blank %}
+                                    <span class="card_banner_text color-background-2">{{ members_banner_text }}</span>
+                                {% endif %}
+                            {% endunless %}
                         {% else %}
-                            <span class="card_banner_text color-background-2">{{ card_banner_text }}</span>
+                            {% if card_banner_text != blank %}
+                                <span class="card_banner_text color-background-2">{{ card_banner_text }}</span>
+                            {% endif %}
                         {% endif %}
                     {% endif %}
                     {% if card_product.compare_at_price > card_product.price %}
