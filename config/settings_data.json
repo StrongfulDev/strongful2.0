@@ -394,7 +394,7 @@
       },
       "13655089695959051254": {
         "type": "shopify:\/\/apps\/wishlist-king\/blocks\/code-access\/194f5011-a43c-4b22-b12e-eaf20dc4506a",
-        "disabled": true,
+        "disabled": false,
         "settings": {
           "version": "main"
         }
