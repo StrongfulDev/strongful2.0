@@ -37,7 +37,7 @@
 {% endcomment %}
 
 {% if product.tags contains announcement_tag %}
-    <div class="sale-banner-product-page">
+    <div class="sale-banner-product-page fix-direction">
         {% if block.settings.small_text != blank %}
             <small class="fix-direction">{{ block.settings.small_text }}</small>
         {% endif %}
