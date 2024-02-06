@@ -346,13 +346,6 @@
           "money_show_currency_code": true
         }
       },
-      "13655089695959051254": {
-        "type": "shopify:\/\/apps\/wishlist-king\/blocks\/code-access\/194f5011-a43c-4b22-b12e-eaf20dc4506a",
-        "disabled": false,
-        "settings": {
-          "version": "main"
-        }
-      },
       "4139971114690857691": {
         "type": "shopify:\/\/apps\/wishlist-king\/blocks\/wishlist-button-collection\/194f5011-a43c-4b22-b12e-eaf20dc4506a",
         "disabled": false,
@@ -397,6 +390,13 @@
           "show_product_title": true,
           "show_price": true,
           "show_variant_input_label": true
+        }
+      },
+      "13655089695959051254": {
+        "type": "shopify:\/\/apps\/wishlist-king\/blocks\/code-access\/194f5011-a43c-4b22-b12e-eaf20dc4506a",
+        "disabled": true,
+        "settings": {
+          "version": "main"
         }
       }
     }
