@@ -17,12 +17,12 @@
         "5ec0a264-e4fc-4a8d-92bc-f2f9223694f5": {
           "type": "sale",
           "settings": {
-            "logged_in_text": "<p>Our new Comfort collection<\/p>",
-            "logged_out_text": "<p>Our new Comfort collection<\/p>",
+            "logged_in_text": "<p>BUY MORE AND PAY LESS<\/p>",
+            "logged_out_text": "<p>BUY MORE AND PAY LESS<\/p>",
             "log_in": "",
-            "small_text": "קולקציית החורף החדשה שלנו נחתה באתר!",
-            "second_announcement_regular_text": "WINTER SALE",
-            "second_small_text": "פריטים נבחרים עד 40% הנחה!"
+            "small_text": "קני ב ₪500 ושלמי רק ₪350!",
+            "second_announcement_regular_text": "",
+            "second_small_text": ""
           }
         },
         "title": {
