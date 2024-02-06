@@ -126,6 +126,7 @@
 	text-align: center;
 	font-size: calc(var(--font-body-size-medium) * 0.8);
 	direction: ltr;
+	color: firebrick;
 }
 
 @media screen and (min-width: 990px) {

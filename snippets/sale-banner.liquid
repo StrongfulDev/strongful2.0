@@ -38,6 +38,9 @@
 
 {% if product.tags contains announcement_tag %}
     <div class="sale-banner-product-page">
+        {% if block.settings.small_text != blank %}
+            <small class="fix-direction">{{ block.settings.small_text }}</small>
+        {% endif %}
         {% if customer %}
             <p>{{ block.settings.logged_in_text | newline_to_br }}</p>
         {% else %}
@@ -45,9 +48,6 @@
             {% if block.settings.log_in != blank %}
                 <small class="account-toggler-site-wide link fix-direction">{{ block.settings.log_in }}</small>
             {% endif %}
-        {% endif %}
-        {% if block.settings.small_text != blank %}
-            <small class="fix-direction">{{ block.settings.small_text }}</small>
         {% endif %}
     </div>
 {% elsif product.tags contains settings.second_announcement_tag %}
