@@ -256,6 +256,10 @@
 	font-weight: var(--font-body-weight-bold);
 }
 
+.dropdown .submenu-open li:nth-child(2) ul.menu-drawer__menu li:first-child a {
+	color: firebrick;
+}
+
 .menu-drawer-container.customizable .menu-drawer__menu li + li {
     margin-top: 20px;
 }
