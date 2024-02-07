@@ -183,7 +183,7 @@
                                 -%}
                                 {% if isLiveTheme == 'true' %}
                                     {% unless product.tags contains 'giftHide' or product.tags contains 'hidden' or product.tags contains 'free-slippers' %}
-                                        <li class="grid__item {{ isLiveTheme }}">
+                                        <li class="grid__item {{ isLiveTheme }} {% if product.available == false and product.tags contains 'outlet' %}hidden{% endif %}">
                                             {% render 'card-product',
                                                     card_product: product,
                                                     media_aspect_ratio: section.settings.image_ratio,
