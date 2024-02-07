@@ -397,6 +397,7 @@ class MenuDrawer extends HTMLElement {
 		}
 
 	  $(".mobile-facets__close").click(function() {
+		  $('html').removeClass('overflow-hidden');
 		  $(".details.menu-opening").removeClass("menu-opening");
 			$(".mobile-facets__disclosure.menu-opening").removeAttr("open");
 	  });
