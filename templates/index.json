@@ -214,10 +214,10 @@
         "dfad4ec5-c40b-4feb-90a9-341da374970d": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0_6b6e2a92-30ba-4313-af9e-215d5106f662.jpg",
+            "image": "shopify:\/\/shop_images\/0_7589f971-1edb-4e00-88c4-49cc9354313b.jpg",
             "alt": "",
-            "link": "SALE",
-            "url": "shopify:\/\/collections\/קני-ב-500-שלמי-350",
+            "link": "RESTOCK",
+            "url": "shopify:\/\/collections\/restock",
             "show_on_desktop": true
           }
         },
