@@ -3,8 +3,8 @@
 }
 
 .discounts__discount {
-  display: flex;
-	/*display: none;*/
+  /*display: flex;*/
+	display: none;
   align-items: center;
   line-height: calc(1 + 0.5 / var(--font-body-scale));
 	color: #b22222;
