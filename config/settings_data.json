@@ -138,7 +138,7 @@
     "custom_collection_announcement": "BUY 500 PAY 350",
     "members_only_announcement": "",
     "show_card_collection_announcement": true,
-    "second_announcement_tag": "",
+    "second_announcement_tag": "restock",
     "custom_collection_second_announcement": "",
     "announcement_customizer_override": true,
     "preorder_over_text": "",
