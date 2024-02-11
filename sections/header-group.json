@@ -24,12 +24,12 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "SALE",
-            "sub_text": "קני ב ₪500 שלמי ₪350",
+            "main_text": "BACK IN STOCK",
+            "sub_text": "דגמים נבחרים חזרו למלאי",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "ltr",
-            "link": "shopify:\/\/collections\/קני-ב-500-שלמי-350",
+            "link": "shopify:\/\/collections\/restock",
             "color_scheme": "accent-1"
           }
         },
