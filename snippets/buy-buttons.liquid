@@ -60,22 +60,32 @@
                             {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
                                 disabled
                             {% endif %}
-                            {% if product.tags contains member_tag and members_only == true %}
-                                disabled
-                            {% endif %}
+                            {% comment %}
+                                {% if product.tags contains member_tag and members_only == true %}
+                                    disabled
+                                {% endif %}
+                            {% endcomment %}
                     >
             <span class="{% if product.tags contains member_tag and members_only == true and members_only_sale_active == true %}account-toggler-site-wide{% endif %} fix-direction">
+                {% comment %}
               {%- if product.tags contains member_tag and members_only == true -%}
-                  {% if members_only_sale_active == true %}
-                        {{ 'products.product.members_only' | t }} <span class="link">התחברי / הרשמי</span>
-                    {% else %}
-                        {{ block.settings.members_only_sale_over_text }}
-                    {% endif %}
+                      {% if members_only_sale_active == true %}
+                            {{ 'products.product.members_only' | t }} <span class="link">התחברי / הרשמי</span>
+                        {% else %}
+                            {{ block.settings.members_only_sale_over_text }}
+                        {% endif %}
               {%- elsif product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
                   {{ 'products.product.sold_out' | t }}
                 {%- else -%}
                   {{ 'products.product.add_to_cart' | t }}
               {%- endif -%}
+              {% endcomment %}
+
+                {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
+                    {{ 'products.product.sold_out' | t }}
+                {%- else -%}
+                    {{ 'products.product.add_to_cart' | t }}
+                {%- endif -%}
             </span>
                         <div class="loading-overlay__spinner hidden">
                             <svg
