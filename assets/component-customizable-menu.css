@@ -258,8 +258,8 @@
 
 .dropdown .submenu-open li:nth-child(2) ul.menu-drawer__menu li:first-child a,
 .dropdown .submenu-open li:nth-child(2) ul.menu-drawer__menu li:nth-child(2) a {
-	color: firebrick;
-	font-weight: var(--font-body-weight-bold);
+	/*color: firebrick;*/
+	/*font-weight: var(--font-body-weight-bold);*/
 }
 
 .menu-drawer-container.customizable .menu-drawer__menu li + li {

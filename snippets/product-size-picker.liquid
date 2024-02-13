@@ -83,6 +83,7 @@
                     {% unless product.has_only_default_variant %}
                         {% if members_only_sale == true %}
                             {% if members_only_sale_active == true %}
+                                {% comment %}
                                 {% if product.tags contains announcement_tag %}
                                     {% unless customer %}
                                         <div class="members_only_container_inside_card">
@@ -95,6 +96,7 @@
                                 {% else %}
                                     <span class="product_size_picker__heading fix-direction">{{ pick_size_text }}</span>
                                 {% endif %}
+                                {% endcomment %}
                             {% else %}
                                 {% if product.tags contains announcement_tag %}
                                     <span class="product_size_picker__heading fix-direction">{{ preorder_over_text }}</span>
@@ -120,6 +122,7 @@
                                                         if variant.available == false
                                                             assign product_disabled = true
                                                         endif
+                                                        comment
                                                          if members_only_sale == true
                                                              if variant.product.tags contains announcement_tag
                                                                  if members_only_sale_active == true
@@ -131,6 +134,7 @@
                                                                  endif
                                                              endif
                                                          endif
+                                                         endcomment
                                                     %}
 
                                                     <li class="size_variant_button fix-direction{% if product.has_only_default_variant %} default_size_variant_button{% endif %}{% if product_disabled %} disabled-variant-button{% endif %}">
