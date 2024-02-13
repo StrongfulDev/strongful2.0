@@ -24,12 +24,12 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "BACK IN STOCK",
-            "sub_text": "דגמים נבחרים חזרו למלאי",
+            "main_text": "VALENTINE'S SALE - 30% OFF",
+            "sub_text": "בקניית 3 פריטים ומעלה",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "ltr",
-            "link": "shopify:\/\/collections\/restock",
+            "link": "shopify:\/\/collections\/valentines",
             "color_scheme": "accent-1"
           }
         },
@@ -111,7 +111,7 @@
             "desktop_links_image_1": "shopify:\/\/shop_images\/0_749288fb-4bf4-498a-a1e8-9b17e82e70d3.jpg",
             "desktop_links_image_1_link": "shopify:\/\/collections\/restock",
             "desktop_links_image_2": "shopify:\/\/shop_images\/0_a5c81fc5-b94b-4755-9b04-f0dfacd61dd2.jpg",
-            "desktop_links_image_2_link": "shopify:\/\/collections\/קני-ב-500-שלמי-350",
+            "desktop_links_image_2_link": "shopify:\/\/collections\/valentines",
             "mobile_cover_image": "shopify:\/\/shop_images\/20e5c3f719da92dc7bfd0c70c57f7186.jpg",
             "mobile_title": "סטים",
             "main_link": "",
