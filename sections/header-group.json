@@ -25,10 +25,10 @@
             "toggle_main_font": false,
             "toggle_sub_font": false,
             "main_text": "VALENTINE'S SALE - 30% OFF",
-            "sub_text": "בקניית 3 פריטים ומעלה",
+            "sub_text": "בשימוש הקוד: STFLOVE30",
             "text_alignment": "center",
             "main_text_direction": "ltr",
-            "sub_text_direction": "ltr",
+            "sub_text_direction": "rtl",
             "link": "shopify:\/\/collections\/valentines",
             "color_scheme": "accent-1"
           }
