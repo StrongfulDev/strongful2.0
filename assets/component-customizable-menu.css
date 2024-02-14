@@ -515,10 +515,9 @@
 		text-decoration: none;
 	}
 
-	#MegaMenu-Content-2.fix-direction ul:nth-child(2) li:first-child a,
-	#MegaMenu-Content-2.fix-direction ul:nth-child(2) li:nth-child(2) a {
-		font-weight: bold;
-		color: firebrick;
+	#MegaMenu-Content-2.fix-direction ul:nth-child(2) li:first-child a, #MegaMenu-Content-2.fix-direction ul:nth-child(2) li:nth-child(2) a {
+		/*font-weight: bold;*/
+		/*color: firebrick;*/
 	}
 
 	.header-block-list-element:first-child .mega-menu__content.fix-direction ul:nth-child(2) li:first-child a {
