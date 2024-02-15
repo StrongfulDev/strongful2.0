@@ -99,14 +99,14 @@
         "b43423be-0745-47c7-be6a-84d0ee24d128": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1_20bc3240-a49f-438f-bafe-18068ca5e97d.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/copy_20_0358b818-86b9-45cc-b44e-518660ff9b44.jpg",
+            "image": "shopify:\/\/shop_images\/24_8f5c6d94-18c7-4f05-8abb-87720dba87fd.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/240.jpg",
             "heading": "",
             "whole_slide_link": "",
             "heading_size": "h1",
             "subheading": "",
             "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/קני-ב-500-שלמי-350",
+            "link": "shopify:\/\/collections\/shell",
             "button_style_secondary": false,
             "box_align": "middle-center",
             "show_text_box": false,
@@ -134,13 +134,13 @@
       "type": "featured-collection",
       "settings": {
         "steps": 4,
-        "title": "BUY 500 PAY 350",
+        "title": "NEW IN",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "קני-ב-500-שלמי-350",
+        "collection": "shell",
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,
@@ -173,13 +173,13 @@
       "type": "featured-collection",
       "settings": {
         "steps": 4,
-        "title": "SELLING FAST",
+        "title": "BEST SELLERS",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "selling-fast",
+        "collection": "best-seller-internal-use",
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,
@@ -205,7 +205,7 @@
         "columns_mobile": "2",
         "swipe_on_mobile": true,
         "padding_top": 60,
-        "padding_bottom": 0
+        "padding_bottom": 36
       }
     },
     "our_collection_list": {
@@ -214,10 +214,10 @@
         "dfad4ec5-c40b-4feb-90a9-341da374970d": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0_6b6e2a92-30ba-4313-af9e-215d5106f662.jpg",
+            "image": "shopify:\/\/shop_images\/0_8f121a9e-3365-4f99-a84d-cfc4d596c345.jpg",
             "alt": "",
-            "link": "SALE",
-            "url": "shopify:\/\/collections\/קני-ב-500-שלמי-350",
+            "link": "NEW IN",
+            "url": "shopify:\/\/collections\/shell",
             "show_on_desktop": true
           }
         },

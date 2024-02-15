@@ -24,12 +24,12 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "SALE",
-            "sub_text": "קני ב ₪500 שלמי ₪350",
+            "main_text": "NEW IN: SHELL COLLECTION",
+            "sub_text": "קולקציה חדשה נחתה באתר",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "ltr",
-            "link": "shopify:\/\/collections\/קני-ב-500-שלמי-350",
+            "link": "shopify:\/\/collections\/shell",
             "color_scheme": "accent-1"
           }
         },
@@ -68,8 +68,8 @@
           "settings": {
             "show_on_mobile": true,
             "small_font": false,
-            "title": "SALE",
-            "title_link": "shopify:\/\/collections\/קני-ב-500-שלמי-350"
+            "title": "NEW IN",
+            "title_link": "shopify:\/\/collections\/shell"
           }
         },
         "ba94928e-5cd1-47f5-9c0a-28ea47285f01": {
@@ -79,14 +79,14 @@
             "show_on_mobile": true,
             "order": "",
             "small_font": false,
-            "menu": "trending",
+            "menu": "trending-without-10",
             "menu_second": "",
             "menu_third": "",
             "title": "COLLECTIONS",
             "item_class": "",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/0_d3ea73d6-ad55-403e-a816-a81e0212b445.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/קני-ב-500-שלמי-350",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/0_5a14740a-0ff8-42c7-8a8c-1c5a750041ba.jpg",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/shell",
             "desktop_links_image_2_link": "",
             "mobile_title": "COLLECTIONS",
             "main_link": "",
@@ -110,8 +110,8 @@
             "title_link": "",
             "desktop_links_image_1": "shopify:\/\/shop_images\/7ff08d51abffc0cfdf69f878b50b58d6_4ec0f4a4-f85d-4e24-8c71-9efb834afbdd.jpg",
             "desktop_links_image_1_link": "shopify:\/\/collections\/comfort",
-            "desktop_links_image_2": "shopify:\/\/shop_images\/0_a5c81fc5-b94b-4755-9b04-f0dfacd61dd2.jpg",
-            "desktop_links_image_2_link": "shopify:\/\/collections\/קני-ב-500-שלמי-350",
+            "desktop_links_image_2": "shopify:\/\/shop_images\/7ff08d51abffc0cfdf69f878b50b58d6_40c26f30-1449-4422-adf1-1e1cbd6f3be8.jpg",
+            "desktop_links_image_2_link": "shopify:\/\/collections\/shell",
             "mobile_cover_image": "shopify:\/\/shop_images\/20e5c3f719da92dc7bfd0c70c57f7186.jpg",
             "mobile_title": "סטים",
             "main_link": "",
@@ -133,8 +133,8 @@
             "title": "טייצים",
             "item_class": "",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/0_d3ea73d6-ad55-403e-a816-a81e0212b445.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/קני-ב-500-שלמי-350",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/0_5a14740a-0ff8-42c7-8a8c-1c5a750041ba.jpg",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/shell",
             "desktop_links_image_2_link": "",
             "mobile_title": "טייצים",
             "main_link": "https:\/\/strongful.co.il\/collections\/טייצים",
@@ -156,8 +156,8 @@
             "title": "טופים",
             "item_class": "",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/0_d3ea73d6-ad55-403e-a816-a81e0212b445.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/קני-ב-500-שלמי-350",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/0_5a14740a-0ff8-42c7-8a8c-1c5a750041ba.jpg",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/shell",
             "desktop_links_image_2_link": "",
             "mobile_title": "טופים",
             "main_link": "https:\/\/strongful.co.il\/collections\/טופים",
@@ -179,8 +179,8 @@
             "title": "OUTLET",
             "item_class": "",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/0_d3ea73d6-ad55-403e-a816-a81e0212b445.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/קני-ב-500-שלמי-350",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/0_5a14740a-0ff8-42c7-8a8c-1c5a750041ba.jpg",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/shell",
             "desktop_links_image_2_link": "",
             "mobile_title": "OUTLET - UP TO 50% OFF",
             "main_link": "",
@@ -202,8 +202,8 @@
             "title": "אקססוריז",
             "item_class": "",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/0_d3ea73d6-ad55-403e-a816-a81e0212b445.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/קני-ב-500-שלמי-350",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/0_5a14740a-0ff8-42c7-8a8c-1c5a750041ba.jpg",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/shell",
             "desktop_links_image_2_link": "",
             "mobile_title": "ACCESSORIES",
             "main_link": "",
@@ -259,9 +259,9 @@
         "mobile_top_image_1": "shopify:\/\/shop_images\/0_63fcd19f-812c-4999-9d4a-b7323ca30ae9.jpg",
         "mobile_top_image_1_link": "shopify:\/\/collections\/10-15-off",
         "mobile_top_image_1_title": "SALE",
-        "mobile_top_image_temp": "shopify:\/\/shop_images\/0_6b6e2a92-30ba-4313-af9e-215d5106f662.jpg",
-        "mobile_top_image_temp_link": "shopify:\/\/collections\/קני-ב-500-שלמי-350",
-        "mobile_top_image_temp_title": "SALE",
+        "mobile_top_image_temp": "shopify:\/\/shop_images\/0_8f121a9e-3365-4f99-a84d-cfc4d596c345.jpg",
+        "mobile_top_image_temp_link": "shopify:\/\/collections\/shell",
+        "mobile_top_image_temp_title": "NEW IN",
         "mobile_top_image_2": "shopify:\/\/shop_images\/Artboard_4_4x-100-min.jpg",
         "mobile_top_image_2_link": "shopify:\/\/collections\/best-seller-internal-use",
         "mobile_top_image_2_title": "BEST SELLERS",
@@ -295,11 +295,26 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "countdown_yedbVb": {
+      "type": "countdown",
+      "settings": {
+        "show_days": false,
+        "countdown_date": "Mon Feb 19 2024 12:00:00 GMT+0200 (שעון ישראל (קיץ))",
+        "countdown_url": "shopify:\/\/collections\/shell",
+        "left_text": false,
+        "left_copy": "",
+        "right_text_direction": "ltr",
+        "left_text_direction": "ltr",
+        "right_text": true,
+        "right_copy": "<p>FOR CLUB MEMBERS ONLY<\/p>"
+      }
     }
   },
   "order": [
     "announcement-bar",
     "header",
-    "7503b704-2110-400e-bc52-a2190d224c23"
+    "7503b704-2110-400e-bc52-a2190d224c23",
+    "countdown_yedbVb"
   ]
 }
