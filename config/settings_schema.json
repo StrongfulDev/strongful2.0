@@ -1659,7 +1659,7 @@
       },
       {
         "type": "text",
-        "id": "seo_alt_tag",
+        "id": "seo_alt_text",
         "label": "Alt text for SEO",
         "info": "Provided by our current SEO expert"
       },

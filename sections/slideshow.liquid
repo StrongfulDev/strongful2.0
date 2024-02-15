@@ -166,7 +166,8 @@
                         loading: 'lazy',
                         height: height,
                         sizes: "100vw",
-                        widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+                        widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                        alt: settings.seo_alt_text
                         }}
                         {% if block.settings.mobile_image != blank %}
                             {{ block.settings.mobile_image | image_url: width: 1000 | image_tag:
