@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			minutes = pad(parseInt(seconds_left / 60));
 			seconds = pad(parseInt(seconds_left % 60));
 
-			$('.tiles-time-days').html(days);
+			$('.tiles-time-days').html(days + '<span class="tiles-time-days-small"> :</span>');
 			$('.tiles-time-hours').html(hours + '<span class="tiles-time-hours-small"> :</span>');
 			$('.tiles-time-minutes').html(minutes + '<span class="tiles-time-minutes-small"> :</span>');
 			$('.tiles-time-seconds').html(seconds);
