@@ -20,8 +20,7 @@ class CartRewards {
 		}));
 
 		subscribe(PUB_SUB_EVENTS.cartUpdate, (event) => {
-            console.log("cart update", event);
-			if (event.source === 'cart-rewards') return;
+            if (event.source === 'cart-rewards') return;
 			this.checkRules();
 		});
 
