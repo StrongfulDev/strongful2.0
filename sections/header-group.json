@@ -295,26 +295,11 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
-    },
-    "countdown_yedbVb": {
-      "type": "countdown",
-      "settings": {
-        "show_days": false,
-        "countdown_date": "Mon Feb 19 2024 12:00:00 GMT+0200 (שעון ישראל (קיץ))",
-        "countdown_url": "shopify:\/\/collections\/shell",
-        "left_text": false,
-        "left_copy": "",
-        "right_text_direction": "ltr",
-        "left_text_direction": "ltr",
-        "right_text": true,
-        "right_copy": "<p>FOR CLUB MEMBERS ONLY<\/p>"
-      }
     }
   },
   "order": [
     "announcement-bar",
     "header",
-    "7503b704-2110-400e-bc52-a2190d224c23",
-    "countdown_yedbVb"
+    "7503b704-2110-400e-bc52-a2190d224c23"
   ]
 }
