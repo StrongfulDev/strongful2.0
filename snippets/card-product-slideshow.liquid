@@ -6,7 +6,6 @@
   Usage:
   {% render 'card-collection' %}
 {% endcomment %}
-{% comment %} TODO: Complete Slideshow {% endcomment %}
 
 {% if false %}
     <slideshow-component
@@ -30,7 +29,8 @@
                         loading: 'lazy',
                         height: height,
                         sizes: "100vw",
-                        widths: '375, 550, 750'
+                        widths: '375, 550, 750',
+                        alt: settings.seo_alt_text
                         }}
                     </div>
                 </div>

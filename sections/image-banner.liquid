@@ -41,51 +41,59 @@
     {% if section.settings.override_image_from_metafield and customMobileImage != blank or section.settings.override_image_from_metafield and customDesktopImage != blank %}
         <div class="banner__media media">
             {{
-            customDesktopImage
-            | image_url: width: 3840
-            | image_tag:
-            loading: 'lazy',
-            width: section.settings.image.width,
-            height: image_height,
-            class: image_class,
-            sizes: sizes,
-            widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840' }}
-            {% if customMobileImage != blank %}
-                {{
-                customMobileImage
-                | image_url: width: 1500
+                customDesktopImage
+                | image_url: width: 3840
                 | image_tag:
                 loading: 'lazy',
-                width: section.settings.mobile_image.width,
-                height: mobile_image_height,
-                class: mobile_image_class,
+                width: section.settings.image.width,
+                height: image_height,
+                class: image_class,
                 sizes: sizes,
-                widths: '375, 550, 750, 1500, 2000, 2500' }}
+                widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                alt: settings.seo_alt_text
+            }}
+            {% if customMobileImage != blank %}
+                {{
+                    customMobileImage
+                    | image_url: width: 1500
+                    | image_tag:
+                    loading: 'lazy',
+                    width: section.settings.mobile_image.width,
+                    height: mobile_image_height,
+                    class: mobile_image_class,
+                    sizes: sizes,
+                    widths: '375, 550, 750, 1500, 2000, 2500',
+                    alt: settings.seo_alt_text
+                }}
             {% endif %}
         </div>
     {% else %}
         <div class="banner__media media{% if section.settings.image == blank %} placeholder{% endif %}">
             {{
-            section.settings.image
-            | image_url: width: 3840
-            | image_tag:
-            loading: 'lazy',
-            width: section.settings.image.width,
-            height: image_height,
-            class: image_class,
-            sizes: sizes,
-            widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840' }}
-            {% if section.settings.mobile_image != blank %}
-                {{
-                section.settings.mobile_image
-                | image_url: width: 1500
+                section.settings.image
+                | image_url: width: 3840
                 | image_tag:
                 loading: 'lazy',
-                width: section.settings.mobile_image.width,
-                height: mobile_image_height,
-                class: mobile_image_class,
+                width: section.settings.image.width,
+                height: image_height,
+                class: image_class,
                 sizes: sizes,
-                widths: '375, 550, 750, 1500, 2000, 2500' }}
+                widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                alt: settings.seo_alt_text
+            }}
+            {% if section.settings.mobile_image != blank %}
+                {{
+                    section.settings.mobile_image
+                    | image_url: width: 1500
+                    | image_tag:
+                    loading: 'lazy',
+                    width: section.settings.mobile_image.width,
+                    height: mobile_image_height,
+                    class: mobile_image_class,
+                    sizes: sizes,
+                    widths: '375, 550, 750, 1500, 2000, 2500',
+                    alt: settings.seo_alt_text
+                }}
             {% endif %}
         </div>
     {% endif %}
@@ -103,16 +111,6 @@
         {%- when 'text' -%}
             <div class="banner__text fix-direction {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
                 <span>{{ block.settings.text | escape }}</span>
-            </div>
-            {%- when 'richtext' -%}
-            <div class="banner__text fix-direction {{ collection.metafields.custom.text_for_discounted_collections }} {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
-                <h3 class="latet-title">Strongful משתפת פעולה יחד עם עמותת ׳לתת׳</h3>
-                <div class="latet-text">על מנת לסייע ולעזור בימים קשים אלו,</div>
-                <div class="latet-text">
-                    <strong>100% מהרווחים</strong>
-                    יתרמו לעמותה וביחד ניתן מענה הומוניטרי וסיוע לכל האוכלוסיות המושפעות מהמלחמה.
-                </div>
-                <div class="latet-text">מאחלות לכולנו ימים שקטים ורגועים יותר וחיזוקים מרחוק!</div>
             </div>
         {%- when 'buttons' -%}
             <div class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}" {{ block.shopify_attributes }}>

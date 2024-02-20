@@ -58,13 +58,13 @@
             {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
                 disabled
             {% endif %}
-            {% if members_only and settings.members_only_sale_active == true %}
+            {% if members_only and settings.members_only_sale_active == true and product.tags contains settings.announcement_tag %}
             style="pointer-events: none"
             {% endif %}
     >
         {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
             {{ 'products.product.sold_out' | t }}
-        {%- elsif members_only == true -%}
+        {%- elsif members_only == true and product.tags contains settings.announcement_tag -%}
             {% if settings.members_only_sale_active == true %}
                 {{ 'products.product.members_only' | t }}
             {% else %}
