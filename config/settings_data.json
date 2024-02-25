@@ -135,7 +135,7 @@
     "image_ratio": "adapt",
     "show_secondary_image": true,
     "seo_alt_text": "קולקציה חדשה",
-    "announcement_tag": "",
+    "announcement_tag": "setDiscount",
     "custom_collection_announcement": "",
     "members_only_announcement": "",
     "show_card_collection_announcement": false,
