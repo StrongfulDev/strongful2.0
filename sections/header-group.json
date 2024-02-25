@@ -301,7 +301,7 @@
       "settings": {
         "show_days": false,
         "countdown_date": "Wed Feb 28 2024 00:00:00 GMT+0200 (שעון ישראל (קיץ))",
-        "countdown_url": "\/",
+        "countdown_url": "shopify:\/\/collections\/election-day",
         "left_text": true,
         "left_copy": "<p>sale ends in<\/p>",
         "right_text_direction": "ltr",
