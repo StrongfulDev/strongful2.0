@@ -218,19 +218,19 @@ div.about-us {
 }
 
 .vip-benefits-table {
-	border: 1px #ebebeb solid;
+	border: 1px var(--gradient-base-background-3) solid;
 	width: 100%;
 	margin: 1em 0 0;
 }
 
 .vip-benefits-list-th {
-	background: #E8DBC9;
+	background: var(--gradient-base-background-3);
 	padding: 1em;
 	color: #000;
 }
 
 .on-each-order {
-	border-bottom: 2px #e8d8c9 solid;
+	border-bottom: 2px var(--gradient-base-background-3) solid;
 }
 
 .legendary {
@@ -241,7 +241,7 @@ div.about-us {
 	position: absolute;
 	content: '';
 	display: block;
-	background: #e8d8c9;
+	background: var(--gradient-base-background-3);
 }
 
 .vip-benefits-list-th.active {
@@ -302,6 +302,10 @@ div.about-us {
 	height: 20px !important;
 }
 
+.vip-benefit-get svg path {
+	fill: var(--gradient-base-background-4);
+}
+
 .vip-tiers-pumpup {
 	font-weight: 600;
 	font-size: .9em;
@@ -316,7 +320,7 @@ div.about-us {
 
 .yotpo-logged-out-text {
 	padding: 3em;
-	background: #e8d8c9;
+	background: var(--gradient-base-background-3);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -520,7 +524,7 @@ div.about-us {
 
 	.vip-benefits-list-td {
 		width: 100%;
-		border-top: 3px #EADECD solid;
+		border-top: 3px var(--gradient-base-background-3) solid;
 	}
 
 	.vip-benefits-list-td:before {
