@@ -17,10 +17,10 @@
         "5ec0a264-e4fc-4a8d-92bc-f2f9223694f5": {
           "type": "sale",
           "settings": {
-            "logged_in_text": "<p>24% הנחה על כל האתר<\/p>",
-            "logged_out_text": "<p>24%  הנחה על כל האתר<\/p>",
+            "logged_in_text": "<p>Happy Women’s Day<\/p>",
+            "logged_out_text": "<p>Happy Women’s Day<\/p>",
             "log_in": "",
-            "small_text": "Election day sale",
+            "small_text": "רכשי את הסטים שיגרמו לך להרגיש חזקה יותר מתמיד!",
             "second_announcement_regular_text": "",
             "second_small_text": ""
           }
@@ -39,7 +39,7 @@
           }
         },
         "656bd184-5523-4c74-aee3-c2664a058063": {
-          "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "type": "shopify:\/\/apps\/yotpo-product-reviews-ugc\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
             "product": "{{product}}"
           }
@@ -300,7 +300,7 @@
       "type": "apps",
       "blocks": {
         "408ca3e0-76ac-430f-a568-98a94142ff8b": {
-          "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "type": "shopify:\/\/apps\/yotpo-product-reviews-ugc\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
             "product": "{{product}}"
           }
