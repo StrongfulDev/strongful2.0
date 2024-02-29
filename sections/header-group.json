@@ -24,12 +24,12 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "Election day sale  24%",
-            "sub_text": "הנחה על כל האתר",
+            "main_text": "Happy Women’s Day",
+            "sub_text": "הסטים שיגרמו לך להרגיש חזקה מתמיד",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "ltr",
-            "link": "shopify:\/\/collections\/election-day",
+            "link": "shopify:\/\/collections\/women-s-day-collection",
             "color_scheme": "accent-1"
           }
         },
