@@ -17,10 +17,10 @@
         "5ec0a264-e4fc-4a8d-92bc-f2f9223694f5": {
           "type": "sale",
           "settings": {
-            "logged_in_text": "<p>Happy Women’s Day<\/p>",
-            "logged_out_text": "<p>Happy Women’s Day<\/p>",
+            "logged_in_text": "<p>רכשי את הסטים שיגרמו לך להרגיש חזקה יותר מתמיד!<\/p>",
+            "logged_out_text": "<p>רכשי את הסטים שיגרמו לך להרגיש חזקה יותר מתמיד!<\/p>",
             "log_in": "",
-            "small_text": "רכשי את הסטים שיגרמו לך להרגיש חזקה יותר מתמיד!",
+            "small_text": "Happy Women’s Day",
             "second_announcement_regular_text": "",
             "second_small_text": ""
           }
