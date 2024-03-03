@@ -69,7 +69,8 @@
             "show_on_mobile": true,
             "small_font": false,
             "title": "NEW IN",
-            "title_link": "shopify:\/\/collections\/new-in"
+            "title_link": "shopify:\/\/collections\/new-in",
+            "menu_link_image": "shopify:\/\/shop_images\/bd9a4cbcb5a8c5865a0499b4fa42b489_2eec2b34-f01a-43a3-9fe2-6fdf61dedc5a.jpg"
           }
         },
         "ba94928e-5cd1-47f5-9c0a-28ea47285f01": {
@@ -133,7 +134,7 @@
             "title": "טייצים",
             "item_class": "",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/bd9a4cbcb5a8c5865a0499b4fa42b489_251153a1-a9bb-45aa-91c8-5f485e16093f.jpg",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/bd9a4cbcb5a8c5865a0499b4fa42b489_5dc7e12a-afc6-4000-9b81-3c8aa909dabb.jpg",
             "desktop_links_image_1_link": "shopify:\/\/collections\/women-s-day-collection",
             "desktop_links_image_2_link": "",
             "mobile_title": "טייצים",
@@ -156,7 +157,7 @@
             "title": "טופים",
             "item_class": "",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/bd9a4cbcb5a8c5865a0499b4fa42b489_4ede7f5c-42db-4dfc-ad45-3870272f553f.jpg",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/bd9a4cbcb5a8c5865a0499b4fa42b489_a5f6911a-a4f4-4eb4-ab26-195a1148fbdf.jpg",
             "desktop_links_image_1_link": "shopify:\/\/collections\/women-s-day-collection",
             "desktop_links_image_2_link": "",
             "mobile_title": "טופים",
@@ -179,7 +180,7 @@
             "title": "OUTLET",
             "item_class": "",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/bd9a4cbcb5a8c5865a0499b4fa42b489_65c1aa97-f422-4aed-920d-dc1e74234506.jpg",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/bd9a4cbcb5a8c5865a0499b4fa42b489_b2252ca9-3b99-4957-8a2b-0b45a07fee09.jpg",
             "desktop_links_image_1_link": "shopify:\/\/collections\/women-s-day-collection",
             "desktop_links_image_2_link": "",
             "mobile_title": "OUTLET - UP TO 50% OFF",
@@ -202,7 +203,7 @@
             "title": "אקססוריז",
             "item_class": "",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/bd9a4cbcb5a8c5865a0499b4fa42b489_67b380c8-6384-4ac6-b794-1a5d902ec729.jpg",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/bd9a4cbcb5a8c5865a0499b4fa42b489_344f518e-7d0c-4da6-a1ca-8bef56991b50.jpg",
             "desktop_links_image_1_link": "shopify:\/\/collections\/women-s-day-collection",
             "desktop_links_image_2_link": "",
             "mobile_title": "ACCESSORIES",
