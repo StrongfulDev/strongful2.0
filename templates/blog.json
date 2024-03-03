@@ -3,8 +3,8 @@
     "main": {
       "type": "main-blog",
       "settings": {
-        "tile_image_one": "shopify:\/\/shop_images\/0_a913d02b-1175-44d6-bbb7-f69269461153.jpg",
-        "tile_image_one_link": "shopify:\/\/collections\/best-seller-internal-use",
+        "tile_image_one": "shopify:\/\/shop_images\/7ff08d51abffc0cfdf69f878b50b58d6_633ad477-6e86-45cf-abd0-cd6e985b31dd.jpg",
+        "tile_image_one_link": "shopify:\/\/collections\/outlet",
         "tile_image_two": "shopify:\/\/shop_images\/7ff08d51abffc0cfdf69f878b50b58d6_18370c43-f10f-4169-8748-bf5d85eed380.jpg",
         "tile_image_two_link": "shopify:\/\/collections\/10-15-off",
         "layout": "grid",
