@@ -330,6 +330,10 @@ button.product-form__submit.fake-disabled {
 
 /* Product info */
 
+.product__info-container.product__column-sticky {
+	position: relative;
+}
+
 .product__info-container > * + * {
     margin: 1.5rem 0;
 }
