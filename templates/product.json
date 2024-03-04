@@ -25,11 +25,6 @@
             "second_small_text": ""
           }
         },
-        "title": {
-          "type": "title",
-          "settings": {
-          }
-        },
         "wishlist_king_wishlist_button_block_fxtbYK": {
           "type": "shopify:\/\/apps\/wishlist-king\/blocks\/wishlist-button-block\/194f5011-a43c-4b22-b12e-eaf20dc4506a",
           "settings": {
@@ -46,6 +41,11 @@
             "icon_size": 18,
             "icon_stroke_width": 2,
             "icon_offset_vertical": -1
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
           }
         },
         "5fa3ce9f-60f6-4aee-a0c4-c987fa5f3522": {
@@ -147,8 +147,8 @@
         "ea6d7033-4e56-497e-a4dd-623c0f24954e",
         "7c99b889-3ad8-4802-a5c7-9802ab40f12c",
         "5ec0a264-e4fc-4a8d-92bc-f2f9223694f5",
-        "title",
         "wishlist_king_wishlist_button_block_fxtbYK",
+        "title",
         "5fa3ce9f-60f6-4aee-a0c4-c987fa5f3522",
         "656bd184-5523-4c74-aee3-c2664a058063",
         "price",
