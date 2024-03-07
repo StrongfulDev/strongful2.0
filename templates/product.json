@@ -17,10 +17,10 @@
         "5ec0a264-e4fc-4a8d-92bc-f2f9223694f5": {
           "type": "sale",
           "settings": {
-            "logged_in_text": "<p>The new Yoga collection<\/p>",
-            "logged_out_text": "<p>The new Yoga collection<\/p>",
+            "logged_in_text": "<p>קולקצית היוגה החדשה שלנו נחתה באתר! <\/p>",
+            "logged_out_text": "<p>קולקצית היוגה החדשה שלנו נחתה באתר! <\/p>",
             "log_in": "",
-            "small_text": "קולקצית היוגה החדשה שלנו נחתה באתר!",
+            "small_text": "The new Yoga collection",
             "second_announcement_regular_text": "",
             "second_small_text": ""
           }
