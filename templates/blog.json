@@ -5,8 +5,8 @@
       "settings": {
         "tile_image_one": "shopify:\/\/shop_images\/7ff08d51abffc0cfdf69f878b50b58d6_633ad477-6e86-45cf-abd0-cd6e985b31dd.jpg",
         "tile_image_one_link": "shopify:\/\/collections\/outlet",
-        "tile_image_two": "shopify:\/\/shop_images\/7ff08d51abffc0cfdf69f878b50b58d6_80332e97-6148-4f77-95ea-d42d2b585907.jpg",
-        "tile_image_two_link": "shopify:\/\/collections\/new-in",
+        "tile_image_two": "shopify:\/\/shop_images\/7ff08d51abffc0cfdf69f878b50b58d6_57d55124-9194-4e23-a7ac-9d324f800123.jpg",
+        "tile_image_two_link": "shopify:\/\/collections\/horizon",
         "layout": "grid",
         "show_image": true,
         "image_height": "adapt",
