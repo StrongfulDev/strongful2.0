@@ -99,14 +99,14 @@
         "b43423be-0745-47c7-be6a-84d0ee24d128": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_e6929436-360b-4617-8b82-1addaab06fac.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_83733d2e-ea9d-420b-8988-d56322a597ee.jpg",
+            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_de094a70-1c27-4634-8b36-b76609878038.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_1ff4a1f0-57f7-4bb4-9288-b8dc2680c855.jpg",
             "heading": "",
             "whole_slide_link": "",
             "heading_size": "h1",
             "subheading": "",
             "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/new-in",
+            "link": "shopify:\/\/collections\/horizon",
             "button_style_secondary": false,
             "box_align": "middle-center",
             "show_text_box": false,
@@ -214,10 +214,10 @@
         "dfad4ec5-c40b-4feb-90a9-341da374970d": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0737a51b2679a55d45d0d8f464335044_ef277068-fc2b-440c-b769-6750ff3a6389.jpg",
+            "image": "shopify:\/\/shop_images\/0737a51b2679a55d45d0d8f464335044_e93f61af-5125-47fa-88a5-8b1ad459e5d2.jpg",
             "alt": "",
             "link": "NEW IN",
-            "url": "shopify:\/\/collections\/new-in",
+            "url": "shopify:\/\/collections\/horizon",
             "show_on_desktop": true
           }
         },
