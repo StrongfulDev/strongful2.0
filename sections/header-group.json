@@ -68,8 +68,8 @@
           "settings": {
             "show_on_mobile": true,
             "small_font": false,
-            "title": "SALE",
-            "title_link": "shopify:\/\/collections\/10-15-off",
+            "title": "NEW IN",
+            "title_link": "shopify:\/\/collections\/new-in",
             "menu_link_image": "shopify:\/\/shop_images\/bd9a4cbcb5a8c5865a0499b4fa42b489_49977976-93ba-4072-b939-29f491386af6.jpg"
           }
         },
