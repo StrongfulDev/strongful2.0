@@ -216,8 +216,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/0737a51b2679a55d45d0d8f464335044_ef277068-fc2b-440c-b769-6750ff3a6389.jpg",
             "alt": "",
-            "link": "10-15% OFF",
-            "url": "shopify:\/\/collections\/10-15-off",
+            "link": "NEW IN",
+            "url": "shopify:\/\/collections\/new-in",
             "show_on_desktop": true
           }
         },
