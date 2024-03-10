@@ -508,7 +508,7 @@
 		text-decoration: none;
 	}
 
-	.mega-menu__content.fix-direction ul:nth-child(2) li:first-child a, #MegaMenu-Content-2 li:nth-child(2) a {
+	.mega-menu__content.fix-direction ul:nth-child(2) li:first-child a {
 		font-weight: var(--font-body-weight-bold);
 		text-decoration: none;
 	}
