@@ -1267,8 +1267,8 @@ window.addEventListener('DOMContentLoaded', function(event) {
 	if (document.querySelector("main.register") !== null) {
 		let registerMain = document.querySelector("main.register");
 		console.log(registerMain.children);
-		registerMain.children[1].classList.add("hidden");
-		registerMain.children[2].classList.remove("hidden");
+		registerMain.children[1].classList.remove("hidden");
+		registerMain.children[2].classList.add("hidden");
 	}
 
 	function openLoginModal() {
