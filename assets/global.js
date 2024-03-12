@@ -1264,6 +1264,13 @@ window.addEventListener('DOMContentLoaded', function(event) {
 		document.querySelector("#shopify-section-main-login").classList.add("hidden");
 	}
 
+	if (document.querySelector("main.register") !== null) {
+		let registerMain = document.querySelector("main.register");
+		console.log(registerMain.children);
+		registerMain.children[1].classList.add("hidden");
+		registerMain.children[2].classList.remove("hidden");
+	}
+
 	function openLoginModal() {
 		$(".custom-customer-account-container").addClass("active");
 		customerOverlay.removeClass("hidden");
