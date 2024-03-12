@@ -97,7 +97,7 @@ product__accordion .accordion__title {
 }
 
 .loyalty .collapsible-search:focus {
-	background: var(--gradient-base-background-3);
+	background-color: var(--gradient-base-background-3);
 }
 
 .page .collapsible-content-wrapper-narrow {
