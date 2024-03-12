@@ -1,19 +1,12 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
-      "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
-      }
-    },
     "custom_liquid_NKRGNW": {
       "type": "custom-liquid",
       "settings": {
         "custom_liquid": "<div class=\"yotpo-widget-instance\" data-yotpo-instance-id=\"636548\"><\/div>",
         "color_scheme": "background-1",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "custom_liquid_73WDpE": {
@@ -21,8 +14,8 @@
       "settings": {
         "custom_liquid": "<div class=\"yotpo-widget-instance\" data-yotpo-instance-id=\"636549\"><\/div>",
         "color_scheme": "background-1",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "custom_liquid_3c8bRT": {
@@ -30,16 +23,16 @@
       "settings": {
         "custom_liquid": "<!-- Earning Points Section -->\n<div class=\"image-and-earning-container\">\n    <div class=\"image-near-earning-container desktop-only\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0340\/7986\/7020\/files\/1_70df829c-4e74-4246-9ae3-438c0eef219f.jpg?v=1708858958\" alt=\"\" class=\"image-near-earning\" loading=\"lazy\">\n    <\/div>\n    <div class=\"yotpo-widget-instance\" data-yotpo-instance-id=\"636550\"><\/div>\n<\/div>",
         "color_scheme": "background-1",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "component_vip_tiers_current_Mce8HQ": {
       "type": "component-vip-tiers-current",
       "settings": {
         "yotpo_instance_id": "636551",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 0,
+        "padding_bottom": 4
       }
     },
     "custom_liquid_gEXGtn": {
@@ -47,16 +40,16 @@
       "settings": {
         "custom_liquid": "<!-- Redeem Points (read only) Section -->\n<div class=\"yotpo-widget-instance\" data-yotpo-instance-id=\"636552\"><\/div>",
         "color_scheme": "background-1",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "refer_current_QF49Xr": {
       "type": "refer-current",
       "settings": {
         "yotpo_instance_id": "636553",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "collapsible_content_RLWQbU": {
@@ -175,7 +168,6 @@
     }
   },
   "order": [
-    "main",
     "custom_liquid_NKRGNW",
     "custom_liquid_73WDpE",
     "custom_liquid_3c8bRT",
