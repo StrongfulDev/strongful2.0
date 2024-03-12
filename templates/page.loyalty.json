@@ -24,11 +24,21 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "custom_liquid_3c8bRT": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<!-- Earning Points Section -->\n<div class=\"image-and-earning-container\">\n    <div class=\"image-near-earning-container desktop-only\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0340\/7986\/7020\/files\/1_70df829c-4e74-4246-9ae3-438c0eef219f.jpg?v=1708858958\" alt=\"\" class=\"image-near-earning\" loading=\"lazy\">\n    <\/div>\n    <div class=\"yotpo-widget-instance\" data-yotpo-instance-id=\"636550\"><\/div>\n<\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "main",
     "custom_liquid_NKRGNW",
-    "custom_liquid_73WDpE"
+    "custom_liquid_73WDpE",
+    "custom_liquid_3c8bRT"
   ]
 }
