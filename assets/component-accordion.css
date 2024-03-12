@@ -87,6 +87,10 @@ product__accordion .accordion__title {
 	padding: 1rem;
 }
 
+.loyalty .collapsible-search {
+	border: 2px solid var(--gradient-base-background-4);
+}
+
 .collapsible-search:focus {
 	background: var(--gradient-base-background-4);
 	border: 2px solid var(--gradient-base-accent-1);
