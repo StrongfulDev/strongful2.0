@@ -412,7 +412,9 @@
         id="MainContent"
         class="content-for-layout focus-none {{ template.name }} {{ template.suffix }}"
         role="main"
-        tabindex="-1">
+        tabindex="-1"
+        data-template="{{ template.name }}"
+>
     {{ content_for_layout }}
 
     {% render 'pill' %}
