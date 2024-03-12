@@ -50,6 +50,14 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "refer_current_QF49Xr": {
+      "type": "refer-current",
+      "settings": {
+        "yotpo_instance_id": "636553",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -58,6 +66,7 @@
     "custom_liquid_73WDpE",
     "custom_liquid_3c8bRT",
     "component_vip_tiers_current_Mce8HQ",
-    "custom_liquid_gEXGtn"
+    "custom_liquid_gEXGtn",
+    "refer_current_QF49Xr"
   ]
 }
