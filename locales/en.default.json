@@ -855,7 +855,8 @@
           "one": "יום עסקים אחד",
           "other": "{{ count }} ימי עסקים."
         },
-        "waiting_on_rate_notice": "טוען שיטות משלוח..."
+        "waiting_on_rate_notice": "טוען שיטות משלוח...",
+        "address2_add_label": "אם ברצונך להוסיף מספר דירה"
       },
       "payment_summary": {
         "gift_card_current_balance_notice": "יתרת הגיפט קארד {{ amount }} ",
