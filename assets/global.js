@@ -1254,8 +1254,7 @@ window.addEventListener('DOMContentLoaded', function(event) {
 
 	const listItem = $(".multicolumn-list__item");
 	const itemIsLoginOrRegister = document.querySelector("main").dataset.template;
-	console.log(itemIsLoginOrRegister);
-	const registerListItem = $(`.multicolumn-list__item[data-account="${itemIsLoginOrRegister ? 'register' : 'login'}"]`);
+	const registerListItem = $(`.multicolumn-list__item[data-account="${itemIsLoginOrRegister}"]`);
 	const customerOverlay = $(".custom-login-overlay");
 	const borderPosition = $("#js-border-position");
 	let cartDrawer = $(".drawer");
@@ -1264,13 +1263,6 @@ window.addEventListener('DOMContentLoaded', function(event) {
 
 	if (document.querySelector("#shopify-section-main-login") !== null) {
 		document.querySelector("#shopify-section-main-login").classList.add("hidden");
-	}
-
-	if (document.querySelector("main.register") !== null) {
-		let registerMain = document.querySelector("main.register");
-		console.log(registerMain.childNodes);
-		$(registerMain).children('div[id^="register"]').removeClass("hidden");
-		$(registerMain).children('div[id^="login"]').addClass("hidden");
 	}
 
 	function openLoginModal() {
