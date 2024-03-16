@@ -44,6 +44,14 @@
         "padding_bottom": 0
       }
     },
+    "custom_loyalty_form_section_TtpmFX": {
+      "type": "custom-loyalty-form-section",
+      "settings": {
+        "desktop_image": "shopify:\/\/shop_images\/2_4bfbe089-9873-4a5a-9d25-edda6d1f6fe8.jpg",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "refer_current_QF49Xr": {
       "type": "refer-current",
       "settings": {
@@ -173,6 +181,7 @@
     "custom_liquid_3c8bRT",
     "component_vip_tiers_current_Mce8HQ",
     "custom_liquid_gEXGtn",
+    "custom_loyalty_form_section_TtpmFX",
     "refer_current_QF49Xr",
     "collapsible_content_RLWQbU"
   ]
