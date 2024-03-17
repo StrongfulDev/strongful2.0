@@ -302,8 +302,12 @@ div.about-us {
 	height: 20px !important;
 }
 
-.vip-benefit-get svg path {
+.alist-vip-benefit-not-get path {
 	fill: var(--gradient-base-background-4);
+}
+
+.alist-vip-benefit-get path {
+	fill: var(--gradient-base-accent-1);
 }
 
 .vip-tiers-pumpup {

@@ -75,7 +75,7 @@
                 {%- if product.selected_or_first_available_variant.featured_media != null -%}
                     {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
                     {% liquid
-                        assign alt_items_array = featured_media.alt | split: " | "
+                        assign alt_items_array = featured_media.alt | replace: " | ", "| " | split: "| "
                         assign alt = alt_items_array[0]
                         assign image_model_size = alert_items_array[1]
                     %}
@@ -85,7 +85,7 @@
                             class="product__media-item grid__item slider__slide is-active{% if single_media_visible %} product__media-item--single{% endif %}{% if featured_media.media_type != 'image' %} product__media-item--full{% endif %}{% if section.settings.hide_variants and variant_images contains featured_media.src %} product__media-item--variant{% endif %}"
                             data-media-id="{{ section.id }}-{{ featured_media.id }}"
                             data-model-size="{{ alt_items_array[1] }}"
-                            {% if alt_items_array[1] == 'L' and plusTag == '' %}
+                            {% if alt_items_array[1] == 'L' and plusTag == '' or alt_items_array[1] == 'XL' and plusTag == '' %}
                                 style="display: none;"
                             {% elsif alt_items_array[1] == 'XS' and plusTag != '' %}
                                 style="display: none;"
@@ -122,7 +122,7 @@
                 {%- for media in product.media -%}
                     {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
                         {% liquid
-                            assign alt_items_array = media.alt | split: " | "
+                            assign alt_items_array = media.alt | replace: " | ", "| " | split: "| "
                             assign alt = alt_items_array[0]
                             assign image_model_size = alt_items_array[1]
                         %}
@@ -132,7 +132,7 @@
                                 class="product__media-item grid__item slider__slide{% if single_media_visible %} product__media-item--single{% endif %}{% if product.selected_or_first_available_variant.featured_media == null and forloop.index == 1 %} is-active{% endif %}{% if media.media_type != 'image' %} product__media-item--full{% endif %}{% if section.settings.hide_variants and variant_images contains media.src %} product__media-item--variant{% endif %}"
                                 data-media-id="{{ section.id }}-{{ media.id }}"
                                 data-model-size="{{ alt_items_array[1] }}"
-                                {% if alt_items_array[1] == 'L' and plusTag == '' %}
+                                {% if alt_items_array[1] == 'L' and plusTag == '' or alt_items_array[1] == 'XL' and plusTag == '' %}
                                 style="display: none;"
                                     {% elsif alt_items_array[1] == 'XS' and plusTag != '' %}
                                     style="display: none;"
