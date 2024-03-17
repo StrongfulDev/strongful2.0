@@ -1250,6 +1250,14 @@ function removeDeadProduct() {
 
 window.addEventListener('DOMContentLoaded', function(event) {
 
+	if (document.querySelector('#countdown') !== null) {
+		$('facets-container').addClass('countdown-facet');
+		$('facets-wrapper').addClass('countdown-facet');
+	} else {
+		$('facets-container').removeClass('countdown-facet');
+		$('facets-wrapper').removeClass('countdown-facet');
+	}
+
 	// account modal code start here
 
 	const listItem = $(".multicolumn-list__item");
