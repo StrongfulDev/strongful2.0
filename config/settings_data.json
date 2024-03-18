@@ -397,7 +397,7 @@
           "icon_stroke_width": 1.2,
           "app_integration_preset": "none",
           "product_link_selector": "",
-          "floating_reference_js": ""
+          "floating_reference_js": ".card"
         }
       }
     }
