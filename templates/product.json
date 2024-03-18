@@ -17,7 +17,7 @@
         "custom_liquid_Gdtymd": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"gymshark-container\">\n\n<div class=\"yotpo-widget-instance\" data-yotpo-instance-id=\"424007\" data-yotpo-product-id=\"{{product.id}}\" data-yotpo-cart-product-id=\"{{item.product.id}}\" data-yotpo-section-id=\"{{template.name}}\"><\/div>\n\n<div class=\"gray-hover\">\n{% render 'upload' %}\n<\/div>\n<\/div>"
+            "custom_liquid": "<div class=\"gymshark-container\">\n\n<div class=\"yotpo-widget-instance\" data-yotpo-instance-id=\"424007\" data-yotpo-product-id=\"{{product.id}}\" data-yotpo-cart-product-id=\"{{item.product.id}}\" data-yotpo-section-id=\"{{template.name}}\"><\/div>\n\n<div class=\"gray-hover gray-hover-padding\">\n{% render 'upload' %}\n<\/div>\n<\/div>"
           }
         },
         "5ec0a264-e4fc-4a8d-92bc-f2f9223694f5": {
