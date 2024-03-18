@@ -2231,6 +2231,8 @@ product-recommendations .collection__title_heading {
 .gymshark-container {
 	display: flex;
 	justify-content: space-evenly;
+	padding-top: 1.5rem;
+	margin-bottom: 3rem;
 }
 
 /* YOTPO REVIEWS END */
