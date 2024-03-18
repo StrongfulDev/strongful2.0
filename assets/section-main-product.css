@@ -2230,6 +2230,7 @@ product-recommendations .collection__title_heading {
 
 .gymshark-container {
 	display: flex;
+	justify-content: space-evenly;
 }
 
 /* YOTPO REVIEWS END */
