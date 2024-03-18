@@ -2236,6 +2236,10 @@ product-recommendations .collection__title_heading {
 	align-items: center;
 }
 
+.gymshark-container .icon-upload {
+	pointer-events: none;
+}
+
 /* YOTPO REVIEWS END */
 
 @media screen and (min-width: 990px) {

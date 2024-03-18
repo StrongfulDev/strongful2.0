@@ -1250,6 +1250,16 @@ function removeDeadProduct() {
 
 window.addEventListener('DOMContentLoaded', function(event) {
 
+	// copy current URL to clipboard functionality
+	function copyToClipboard() {
+		window.navigator.clipboard.writeText(window.location.href)
+			.then(() => {
+				
+			});
+	}
+
+	$('.copy-to-clipboard').on('click', copyToClipboard);
+
 	if (document.querySelector('#countdown') !== null) {
 		$('facets-container').addClass('countdown-facet');
 		$('facets-wrapper').addClass('countdown-facet');
