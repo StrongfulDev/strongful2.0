@@ -1257,7 +1257,7 @@ window.addEventListener('DOMContentLoaded', function(event) {
 				if (document.querySelector('.share_link') !== null) {
 					document.querySelector('.share_link').style.opacity = '1';
 					setTimeout(() => {
-						$('.share_link').fadeOut();
+						$('.share_link').fadeOut('slow');
 					}, 2000);
 				}
 			});
