@@ -17,7 +17,7 @@
         "custom_liquid_Gdtymd": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"gymshark-container\">\n\n<div class=\"yotpo-widget-instance\" data-yotpo-instance-id=\"424007\" data-yotpo-product-id=\"{{product.id}}\" data-yotpo-cart-product-id=\"{{item.product.id}}\" data-yotpo-section-id=\"{{template.name}}\"><\/div>\n\n<div class=\"gray-hover gray-hover-padding copy-to-clipboard\">\n{% render 'upload' %}\n<\/div>\n<\/div>"
+            "custom_liquid": "<div class=\"gymshark-container\">\n\n<div class=\"yotpo-widget-instance\" data-yotpo-instance-id=\"424007\" data-yotpo-product-id=\"{{product.id}}\" data-yotpo-cart-product-id=\"{{item.product.id}}\" data-yotpo-section-id=\"{{template.name}}\"><\/div>\n\n<div class=\"gray-hover gray-hover-padding copy-to-clipboard\">\n<div class=\"share_link__QkcPW\"><div class=\"tool-tip-icon_container__mSNZK\"><div class=\"tool-tip-icon_bubble__AsbrP\">הקישור הועתק<\/div><svg class=\"tool-tip-icon_arrow__tKddR\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"44\" height=\"10\" viewBox=\"0 0 44 10\" fill=\"none\"><path d=\"M11 0L18.8437 7.09035C19.981 8.11837 20.5496 8.63239 21.1932 8.82724C21.76 8.99887 22.365 8.99887 22.9318 8.82724C23.5754 8.63239 24.144 8.11837 25.2813 7.09035L33.125 0H22.0625H11Z\" fill=\"black\"><\/path><\/svg><\/div><\/div>\n{% render 'upload' %}\n<\/div>\n<\/div>"
           }
         },
         "5ec0a264-e4fc-4a8d-92bc-f2f9223694f5": {
