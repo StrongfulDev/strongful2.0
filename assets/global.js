@@ -1254,7 +1254,12 @@ window.addEventListener('DOMContentLoaded', function(event) {
 	function copyToClipboard() {
 		window.navigator.clipboard.writeText(window.location.href)
 			.then(() => {
-				
+				if (document.querySelector('.share_link') !== null) {
+					document.querySelector('.share_link').style.opacity = '1';
+					setTimeout(() => {
+						$('.share_link').fadeOut();
+					}, 2000);
+				}
 			});
 	}
 
