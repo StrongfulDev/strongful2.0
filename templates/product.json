@@ -17,8 +17,8 @@
         "5ec0a264-e4fc-4a8d-92bc-f2f9223694f5": {
           "type": "sale",
           "settings": {
-            "logged_in_text": "<p>30% OFF EVERYTHING<\/p>",
-            "logged_out_text": "<p>30% OFF EVERYTHING<\/p>",
+            "logged_in_text": "<p>EVERYTHING  30% OFF<\/p>",
+            "logged_out_text": "<p>EVERYTHING  30% OFF<\/p>",
             "log_in": "",
             "small_text": "ברכישת 3 פריטים ומעלה",
             "second_announcement_regular_text": "",
