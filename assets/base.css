@@ -3327,6 +3327,11 @@ fieldset {
 
 .header__icon:hover, .header__icon--account:hover, .gray-hover:hover {
 	background: var(--gradient-base-background-3);
+	cursor: pointer;
+}
+
+.gray-hover-padding {
+	padding: var(--grid-desktop-vertical-spacing);
 }
 
 .header__icon--account span.desktop-customer-name {
