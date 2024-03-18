@@ -345,6 +345,32 @@
           "version": "main"
         }
       },
+      "855628211100114053": {
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": true,
+        "settings": {
+        }
+      },
+      "4139971114690857691": {
+        "type": "shopify:\/\/apps\/wishlist-king\/blocks\/wishlist-button-collection\/194f5011-a43c-4b22-b12e-eaf20dc4506a",
+        "disabled": false,
+        "settings": {
+          "button_style": "outline_accent_1",
+          "button_placement": "top-end",
+          "button_offset_horizontal": -25,
+          "button_offset_vertical": -20,
+          "button_background_opacity": 85,
+          "button_background_size": 34,
+          "button_background_border_radius": 24,
+          "button_border_width": 0,
+          "show_shadow": true,
+          "icon_size": 18,
+          "icon_stroke_width": 1.2,
+          "app_integration_preset": "none",
+          "product_link_selector": "",
+          "floating_reference_js": ".card"
+        }
+      },
       "14197025361042770389": {
         "type": "shopify:\/\/apps\/wishlist-king\/blocks\/app-settings-main\/194f5011-a43c-4b22-b12e-eaf20dc4506a",
         "disabled": false,
@@ -372,32 +398,6 @@
           "wishlist_mode": "PRODUCT",
           "wishlist_path": "\/pages\/wishlist",
           "money_show_currency_code": true
-        }
-      },
-      "855628211100114053": {
-        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
-        "disabled": true,
-        "settings": {
-        }
-      },
-      "4139971114690857691": {
-        "type": "shopify:\/\/apps\/wishlist-king\/blocks\/wishlist-button-collection\/194f5011-a43c-4b22-b12e-eaf20dc4506a",
-        "disabled": false,
-        "settings": {
-          "button_style": "outline_accent_1",
-          "button_placement": "top-end",
-          "button_offset_horizontal": -25,
-          "button_offset_vertical": -20,
-          "button_background_opacity": 85,
-          "button_background_size": 34,
-          "button_background_border_radius": 24,
-          "button_border_width": 0,
-          "show_shadow": true,
-          "icon_size": 18,
-          "icon_stroke_width": 1.2,
-          "app_integration_preset": "none",
-          "product_link_selector": "",
-          "floating_reference_js": ".card"
         }
       }
     }
