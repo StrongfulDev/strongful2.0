@@ -2228,6 +2228,10 @@ product-recommendations .collection__title_heading {
 	line-height: 1.5em !important;
 }
 
+.gymshark-container {
+	display: flex;
+}
+
 /* YOTPO REVIEWS END */
 
 @media screen and (min-width: 990px) {
