@@ -106,7 +106,7 @@
             "heading_size": "h1",
             "subheading": "",
             "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/מבצע-לילה",
+            "link": "shopify:\/\/collections\/30off",
             "button_style_secondary": false,
             "box_align": "middle-center",
             "show_text_box": false,
@@ -140,7 +140,7 @@
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "מבצע-לילה",
+        "collection": "30off",
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,
@@ -217,7 +217,7 @@
             "image": "shopify:\/\/shop_images\/0737a51b2679a55d45d0d8f464335044_b6a382c4-8f51-4006-b043-1d5b7434f992.jpg",
             "alt": "",
             "link": "SALE",
-            "url": "shopify:\/\/collections\/מבצע-לילה",
+            "url": "shopify:\/\/collections\/30off",
             "show_on_desktop": true
           }
         },
