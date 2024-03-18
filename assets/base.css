@@ -3325,8 +3325,8 @@ fieldset {
 	display: flex;
 }
 
-.header__icon:hover, .header__icon--account:hover {
-	background: var(--gradient-base-background-3)
+.header__icon:hover, .header__icon--account:hover, .gray-hover:hover {
+	background: var(--gradient-base-background-3);
 }
 
 .header__icon--account span.desktop-customer-name {
