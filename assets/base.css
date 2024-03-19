@@ -2853,7 +2853,7 @@ transform: translateX(-300%);
     }
 
     .header--middle-left .header__inline-menu {
-        margin-left: 0;
+        margin: auto;
     }
 }
 
