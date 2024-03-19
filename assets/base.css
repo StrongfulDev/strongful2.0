@@ -2485,10 +2485,10 @@ quantity-input button.quantity__button {
         text-align: center;
     }
 
-	header > a.header__heading-link, .header__heading {
+	header>a.header__heading-link, .header__heading {
 		position: absolute;
-		left: 50%;
-		transform: translateX(-50%);
+		left: 13%;
+		/*transform: translateX(-50%);*/
 	}
 
     .header--mobile-left .header__heading,

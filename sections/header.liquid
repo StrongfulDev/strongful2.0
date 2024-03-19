@@ -258,9 +258,9 @@
                                     <div class="nav_top">
                                         <div class="nav_top--logo-container">
                                             <div class="nav_top--mobile-logo">
-                                                {% if section.settings.mobile_logo %}
-                                                    <img src="{{ section.settings.mobile_logo | img_url: 'master' }}" alt="{{ shop.name }}"
-                                                         class="logo menu-drawer__logo" style="width: {{ section.settings.mobile_logo_width }}px">
+                                                {% if section.settings.mobile_logo_secondary %}
+                                                    <img src="{{ section.settings.mobile_logo_secondary | img_url: 'master' }}" alt="{{ shop.name }}"
+                                                         class="logo menu-drawer__logo" style="width: {{ section.settings.mobile_logo_secondary_width }}px">
                                                 {% endif %}
                                                 <button class="mobile-header-closer">
                                                     {% render 'icon-close' %}
@@ -996,7 +996,7 @@
             {% comment %}
                 {% render 'israel-flag' %}
             {% endcomment %}
-            <details-modal class="header__search">
+            <details-modal class="header__search small-hide">
                 <details>
                     <summary
                             class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle"
