@@ -42,9 +42,13 @@
             <small class="fix-direction">{{ block.settings.small_text }}</small>
         {% endif %}
         {% if customer %}
-            <div class="{% if block.settings.paragraph_direction == 'Right To Left' %}fix-direction{% endif %}">{{ block.settings.logged_in_text | newline_to_br }}</div>
+            <div class="{% if block.settings.paragraph_direction == 'Right To Left' %}fix-direction{% endif %}">
+                {{ block.settings.logged_in_text | newline_to_br }}
+            </div>
         {% else %}
-            <div class="{% if block.settings.paragraph_direction == 'Right To Left' %}fix-direction{% endif %}">{{ block.settings.logged_out_text | newline_to_br }}</div>
+            <div class="{% if block.settings.paragraph_direction == 'Right To Left' %}fix-direction{% endif %}">
+                {{ block.settings.logged_out_text | newline_to_br }}
+            </div>
             {% if block.settings.log_in != blank %}
                 <small class="account-toggler-site-wide link fix-direction">{{ block.settings.log_in }}</small>
             {% endif %}
