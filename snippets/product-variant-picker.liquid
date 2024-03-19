@@ -104,6 +104,8 @@
                     <span class="small">{{ 'products.product.up_size_recommendation' | t }}</span>
                 {% elsif product.tags contains 'down-size-recommendation' %}
                     <span class="small">{{ 'products.product.down_size_recommendation' | t }}</span>
+                {% elsif product.tags contains 'no_cups_bra' %}
+                    <span class="small">במוצר זה אין ריפודיות נשלפות</span>
                 {% endif %}
             </legend>
             {% endfor %}
