@@ -99,6 +99,10 @@
         "b43423be-0745-47c7-be6a-84d0ee24d128": {
           "type": "slide",
           "settings": {
+            "top_pos": 50,
+            "left_pos": 50,
+            "mobile_top_pos": 68,
+            "mobile_left_pos": 50,
             "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_ac251ba8-7d30-4640-87a7-4b56c19e6ac9.jpg",
             "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_c7801a64-d7f5-42c6-ba16-974a9c199474.jpg",
             "heading": "",
