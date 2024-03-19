@@ -6,14 +6,14 @@
 {%- style -%}
 
     .banner__box {
-        left: {{ block.settings.mobile_left_pos }};
-        top: {{ block.settings.mobile_top_pos }};
+        left: {{ 1 | divided_by: block.settings.mobile_left_pos }}%;
+        top: {{ 1 | divided_by: block.settings.mobile_top_pos }}%;
     }
 
     @media screen and (min-width: 990px) {
         .banner__box {
-            left: {{ block.settings.left_pos }};
-            top: {{ block.settings.top_pos }};
+            left: {{ block.settings.left_pos }}%;
+            top: {{ block.settings.top_pos }}%;
         }
     }
 
@@ -367,7 +367,6 @@
                 "min": 0,
                 "max": 100,
                 "step": 1,
-                "unit": "%",
                 "label": "Desktop Button Distance From Top",
                 "default": 50
           },
@@ -377,7 +376,6 @@
                     "min": 0,
                     "max": 100,
                     "step": 1,
-                    "unit": "%",
                     "label": "Desktop Button Distance From Left",
                     "default": 50
             },
@@ -387,7 +385,6 @@
                     "min": 0,
                     "max": 100,
                     "step": 1,
-                    "unit": "%",
                     "label": "Mobile Button Distance From Top",
                     "default": 50
             },
@@ -397,7 +394,6 @@
                     "min": 0,
                     "max": 100,
                     "step": 1,
-                    "unit": "%",
                     "label": "Mobile Button Distance From Left",
                     "default": 50
             },
