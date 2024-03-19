@@ -713,16 +713,6 @@
                                         </div>
                                     {%- endif -%}
                                 </div>
-                                {% comment %}
-                                <div class="header--footer fix-direction">
-                                    <h4></h4>
-                                    <ul class="header--footer-linklist">
-                                        {% for link in section.settings.header_footer_menu.links %}
-                                        {{ link.title | link_to: link.url, class: 'header--footer-link link focus-inset' }}
-                                        {% endfor %}
-                                    </ul>
-                                </div>
-                                {%endcomment%}
                             </div>
                         </div>
                     </div>
@@ -1244,12 +1234,6 @@
         "name":"t:sections.header.name",
         "class":"section-header",
         "settings":[
-            {
-                "type": "link_list",
-                "id": "header_footer_menu",
-                "label": "t:sections.header.header_footer_menu.label",
-                "info": "t:sections.header.header_footer_menu.info"
-            },
             {
                 "type": "link_list",
                 "id": "account",
