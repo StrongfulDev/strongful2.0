@@ -3,6 +3,22 @@
 {{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
 
 
+{%- style -%}
+
+    .banner__box {
+        left: {{ block.settings.mobile_left_pos }};
+        top: {{ block.settings.mobile_top_pos }};
+    }
+
+    @media screen and (min-width: 990px) {
+        .banner__box {
+            left: {{ block.settings.left_pos }};
+            top: {{ block.settings.top_pos }};
+        }
+    }
+
+{%- endstyle -%}
+
 {%- if section.settings.slide_height == 'adapt_image' and section.blocks.first.settings.image != blank -%}
     {%- style -%}
         @media screen and (max-width: 749px) {
@@ -183,7 +199,11 @@
                     {%- endif -%}
                 </div>
                 <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
-                    <div class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}">
+                    <div class="slideshow__text banner__box content-container content-container--full-width-mobile
+                                color-{{ block.settings.color_scheme }}
+                                gradient slideshow__text--{{ block.settings.text_alignment }}
+                                slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}"
+                    >
                         {%- if block.settings.heading != blank -%}
                             <h2 class="banner__heading {{ block.settings.heading_size }}">{{ block.settings.heading | escape }}</h2>
                         {%- endif -%}
@@ -341,6 +361,46 @@
       "name": "t:sections.slideshow.blocks.slide.name",
       "limit": 5,
       "settings": [
+          {
+              "type": "range",
+                "id": "top_pos",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "%",
+                "label": "Desktop Button Distance From Top",
+                "default": 50
+          },
+            {
+                "type": "range",
+                    "id": "left_pos",
+                    "min": 0,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "%",
+                    "label": "Desktop Button Distance From Left",
+                    "default": 50
+            },
+            {
+                "type": "range",
+                    "id": "mobile_top_pos",
+                    "min": 0,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "%",
+                    "label": "Mobile Button Distance From Top",
+                    "default": 50
+            },
+            {
+                "type": "range",
+                    "id": "mobile_left_pos",
+                    "min": 0,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "%",
+                    "label": "Mobile Button Distance From Left",
+                    "default": 50
+            },
         {
           "type": "image_picker",
           "id": "image",
