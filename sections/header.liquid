@@ -989,9 +989,9 @@
         {%- endif -%}
 
         <div class="header__icons">
-            {% comment %}
-                {% render 'israel-flag' %}
-            {% endcomment %}
+
+            {% render 'icon-war' %}
+
             <details-modal class="header__search small-hide">
                 <details>
                     <summary
@@ -1094,8 +1094,6 @@
                     </div>
                 </details>
             </details-modal>
-
-            {% render 'icon-war' %}
 
             {%- if shop.customer_accounts_enabled -%}
                 {% unless customer %}
