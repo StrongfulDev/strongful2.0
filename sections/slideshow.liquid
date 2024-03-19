@@ -2,23 +2,6 @@
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 {{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
 
-
-{%- style -%}
-
-    .banner__box {
-        left: {{ 1 | divided_by: block.settings.mobile_left_pos }}%;
-        top: {{ 1 | divided_by: block.settings.mobile_top_pos }}%;
-    }
-
-    @media screen and (min-width: 990px) {
-        .banner__box {
-            left: {{ block.settings.left_pos }}%;
-            top: {{ block.settings.top_pos }}%;
-        }
-    }
-
-{%- endstyle -%}
-
 {%- if section.settings.slide_height == 'adapt_image' and section.blocks.first.settings.image != blank -%}
     {%- style -%}
         @media screen and (max-width: 749px) {
@@ -61,6 +44,23 @@
                 {%- else -%}
                     <div class="slideshow__control-wrapper">
                         {%- for block in section.blocks -%}
+
+                            {%- style -%}
+
+                                .banner__box {
+                                left: {{ block.settings.mobile_left_pos }}%;
+                                top: {{ block.settings.mobile_top_pos }}%;
+                                }
+
+                                @media screen and (min-width: 990px) {
+                                .banner__box {
+                                left: {{ block.settings.left_pos }}%;
+                                top: {{ block.settings.top_pos }}%;
+                                }
+                                }
+
+                            {%- endstyle -%}
+
                             <button class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link"
                                     aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
                                     aria-controls="Slider-{{ section.id }}">
@@ -162,6 +162,19 @@
                 #Slide-{{ section.id }}-{{ forloop.index }} .banner__media::after {
                     opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }};
                 }
+
+                .banner__box {
+                    left: {{ block.settings.mobile_left_pos }}%;
+                    top: {{ block.settings.mobile_top_pos }}%;
+                }
+
+                @media screen and (min-width: 990px) {
+                    .banner__box {
+                        left: {{ block.settings.left_pos }}%;
+                        top: {{ block.settings.top_pos }}%;
+                    }
+                }
+
             </style>
             {% if block.settings.whole_slide_link != blank %}
                 <a href="{{ block.settings.whole_slide_link }}" class="whole-slide-link">
