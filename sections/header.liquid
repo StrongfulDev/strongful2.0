@@ -533,12 +533,12 @@
 
                                         <div class="menu_images">
 
-                                            {% if section.settings.show_second_image == true %}
-                                                <a href="{{ section.settings.mobile_top_image_temp_link }}" class="dropdown-image-container">
-                                                    <img src="{{ section.settings.mobile_top_image_temp | image_url: width: 1000 }}" alt="{{ section.settings.mobile_top_image_temp.alt | escape }}" class="motion-reduce">
-                                                    <div class="desktop_links_image_1_title what">
+                                            {% if section.settings.show_first_image == true %}
+                                                <a href="{{ section.settings.mobile_top_image_1_link }}" class="dropdown-image-container">
+                                                    <img src="{{ section.settings.mobile_top_image_1 | image_url: width: 1000 }}" alt="{{ section.settings.mobile_top_image_1.alt | escape }}" class="motion-reduce">
+                                                    <div class="desktop_links_image_1_title">
                                                             <span>
-                                                                {{ section.settings.mobile_top_image_temp_title }}
+                                                                {{ section.settings.mobile_top_image_1_title }}
                                                             </span>
                                                         <div class="icon-container">
                                                             {% render 'icon-caret' %}
@@ -547,12 +547,12 @@
                                                 </a>
                                             {% endif %}
 
-                                            {% if section.settings.show_first_image == true %}
-                                                <a href="{{ section.settings.mobile_top_image_1_link }}" class="dropdown-image-container">
-                                                    <img src="{{ section.settings.mobile_top_image_1 | image_url: width: 1000 }}" alt="{{ section.settings.mobile_top_image_1.alt | escape }}" class="motion-reduce">
-                                                    <div class="desktop_links_image_1_title">
+                                            {% if section.settings.show_second_image == true %}
+                                                <a href="{{ section.settings.mobile_top_image_temp_link }}" class="dropdown-image-container">
+                                                    <img src="{{ section.settings.mobile_top_image_temp | image_url: width: 1000 }}" alt="{{ section.settings.mobile_top_image_temp.alt | escape }}" class="motion-reduce">
+                                                    <div class="desktop_links_image_1_title what">
                                                             <span>
-                                                                {{ section.settings.mobile_top_image_1_title }}
+                                                                {{ section.settings.mobile_top_image_temp_title }}
                                                             </span>
                                                         <div class="icon-container">
                                                             {% render 'icon-caret' %}
