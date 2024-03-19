@@ -2475,7 +2475,6 @@ quantity-input button.quantity__button {
 
 .header__heading-logo {
     height: auto;
-    width: 100%;
     transition: width 0.3s cubic-bezier(0.52, 0, 0.61, 0.99);
 }
 

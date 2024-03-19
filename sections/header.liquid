@@ -63,10 +63,6 @@
         column-gap: var(--grid-desktop-horizontal-spacing);
     }
 
-    .header__heading-logo {
-        max-width: {{ settings.logo_width }}px;
-    }
-
     {%- if section.settings.sticky_header_type == 'reduce-logo-size' -%}
     .scrolled-past-header .header__heading-logo {
         width: 75%;
@@ -1098,6 +1094,9 @@
                     </div>
                 </details>
             </details-modal>
+
+            {% render 'icon-war' %}
+
             {%- if shop.customer_accounts_enabled -%}
                 {% unless customer %}
                     <summary class="header__icon header__icon--account link focus-inset account-toggler-site-wide">
