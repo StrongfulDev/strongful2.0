@@ -533,67 +533,75 @@
 
                                         <div class="menu_images">
 
-                                            <a href="{{ section.settings.mobile_top_image_temp_link }}" class="dropdown-image-container">
-                                                <img src="{{ section.settings.mobile_top_image_temp | image_url: width: 1000 }}" alt="{{ section.settings.mobile_top_image_temp.alt | escape }}" class="motion-reduce">
-                                                <div class="desktop_links_image_1_title what">
-                                                        <span>
-                                                            {{ section.settings.mobile_top_image_temp_title }}
-                                                        </span>
-                                                    <div class="icon-container">
-                                                        {% render 'icon-caret' %}
+                                            {% if section.settings.show_second_image == true %}
+                                                <a href="{{ section.settings.mobile_top_image_temp_link }}" class="dropdown-image-container">
+                                                    <img src="{{ section.settings.mobile_top_image_temp | image_url: width: 1000 }}" alt="{{ section.settings.mobile_top_image_temp.alt | escape }}" class="motion-reduce">
+                                                    <div class="desktop_links_image_1_title what">
+                                                            <span>
+                                                                {{ section.settings.mobile_top_image_temp_title }}
+                                                            </span>
+                                                        <div class="icon-container">
+                                                            {% render 'icon-caret' %}
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </a>
+                                                </a>
+                                            {% endif %}
 
-                                            {% comment %}
-                                            <a href="{{ section.settings.mobile_top_image_1_link }}" class="dropdown-image-container">
-                                                <img src="{{ section.settings.mobile_top_image_1 | image_url: width: 1000 }}" alt="{{ section.settings.mobile_top_image_1.alt | escape }}" class="motion-reduce">
-                                                <div class="desktop_links_image_1_title">
-                                                        <span>
-                                                            {{ section.settings.mobile_top_image_1_title }}
-                                                        </span>
-                                                    <div class="icon-container">
-                                                        {% render 'icon-caret' %}
+                                            {% if section.settings.show_first_image == true %}
+                                                <a href="{{ section.settings.mobile_top_image_1_link }}" class="dropdown-image-container">
+                                                    <img src="{{ section.settings.mobile_top_image_1 | image_url: width: 1000 }}" alt="{{ section.settings.mobile_top_image_1.alt | escape }}" class="motion-reduce">
+                                                    <div class="desktop_links_image_1_title">
+                                                            <span>
+                                                                {{ section.settings.mobile_top_image_1_title }}
+                                                            </span>
+                                                        <div class="icon-container">
+                                                            {% render 'icon-caret' %}
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </a>
-                                            {% endcomment %}
+                                                </a>
+                                            {% endif %}
 
-                                            <a href="{{ section.settings.mobile_top_image_2_link }}" class="dropdown-image-container">
-                                                <img src="{{ section.settings.mobile_top_image_2 | image_url: width: 1000 }}" alt="{{ section.settings.mobile_top_image_2.alt | escape }}" class="motion-reduce">
-                                                <div class="desktop_links_image_1_title">
-                                                        <span>
-                                                            {{ section.settings.mobile_top_image_2_title }}
-                                                        </span>
-                                                    <div class="icon-container">
-                                                        {% render 'icon-caret' %}
+                                            {% if section.settings.show_third_image == true %}
+                                                <a href="{{ section.settings.mobile_top_image_2_link }}" class="dropdown-image-container">
+                                                    <img src="{{ section.settings.mobile_top_image_2 | image_url: width: 1000 }}" alt="{{ section.settings.mobile_top_image_2.alt | escape }}" class="motion-reduce">
+                                                    <div class="desktop_links_image_1_title">
+                                                            <span>
+                                                                {{ section.settings.mobile_top_image_2_title }}
+                                                            </span>
+                                                        <div class="icon-container">
+                                                            {% render 'icon-caret' %}
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </a>
+                                                </a>
+                                            {% endif %}
 
-                                            <a href="{{ section.settings.mobile_top_image_3_link }}" class="dropdown-image-container">
-                                                <img src="{{ section.settings.mobile_top_image_3 | image_url: width: 700 }}" alt="{{ section.settings.mobile_top_image_3.alt | escape }}" class="motion-reduce">
-                                                <div class="desktop_links_image_1_title">
-                                                        <span>
-                                                            {{ section.settings.mobile_top_image_3_title }}
-                                                        </span>
-                                                    <div class="icon-container">
-                                                        {% render 'icon-caret' %}
+                                            {% if section.settings.show_fourth_image == true %}
+                                                <a href="{{ section.settings.mobile_top_image_3_link }}" class="dropdown-image-container">
+                                                    <img src="{{ section.settings.mobile_top_image_3 | image_url: width: 700 }}" alt="{{ section.settings.mobile_top_image_3.alt | escape }}" class="motion-reduce">
+                                                    <div class="desktop_links_image_1_title">
+                                                            <span>
+                                                                {{ section.settings.mobile_top_image_3_title }}
+                                                            </span>
+                                                        <div class="icon-container">
+                                                            {% render 'icon-caret' %}
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </a>
+                                                </a>
+                                            {% endif %}
 
-                                            <a href="{{ section.settings.mobile_top_image_4_link }}" class="dropdown-image-container">
-                                                <img src="{{ section.settings.mobile_top_image_4 | image_url: width: 700 }}" alt="{{ section.settings.mobile_top_image_4.alt | escape }}" class="motion-reduce">
-                                                <div class="desktop_links_image_1_title">
-                                                        <span>
-                                                            {{ section.settings.mobile_top_image_4_title }}
-                                                        </span>
-                                                    <div class="icon-container">
-                                                        {% render 'icon-caret' %}
+                                            {% if section.settings.show_fifth_image == true %}
+                                                <a href="{{ section.settings.mobile_top_image_4_link }}" class="dropdown-image-container">
+                                                    <img src="{{ section.settings.mobile_top_image_4 | image_url: width: 700 }}" alt="{{ section.settings.mobile_top_image_4.alt | escape }}" class="motion-reduce">
+                                                    <div class="desktop_links_image_1_title">
+                                                            <span>
+                                                                {{ section.settings.mobile_top_image_4_title }}
+                                                            </span>
+                                                        <div class="icon-container">
+                                                            {% render 'icon-caret' %}
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </a>
+                                                </a>
+                                            {% endif %}
                                         </div>
                                     </div>
                                     <ul class="menu-drawer__menu has-submenu list-menu"
@@ -1279,12 +1287,6 @@
                 "label":"t:sections.all.colors.label"
             },
             {
-                "type": "checkbox",
-                "id": "toggle_socials",
-                "default": true,
-                "label": "Show social icons"
-            },
-            {
                 "type":"header",
                 "content":"t:sections.header.settings.logo_header.content"
             },
@@ -1399,6 +1401,16 @@
                 "label":"t:sections.header.settings.mobile_logo_position.label"
             },
             {
+                "type": "header",
+                "content": "Carousel Images On Mobile Only"
+            },
+            {
+              "type": "checkbox",
+                "id": "show_first_image",
+                "default": true,
+                "label": "Show first image"
+            },
+            {
                 "type":"image_picker",
                 "id":"mobile_top_image_1",
                 "label":"t:sections.header.settings.mobile_top_section.image__1.label",
@@ -1413,6 +1425,12 @@
               "type": "text",
                 "id": "mobile_top_image_1_title",
                 "label": "t:sections.header.settings.mobile_top_section.image__1.title.label"
+            },
+            {
+                "type": "checkbox",
+                "id": "show_second_image",
+                "default": true,
+                "label": "Show second image"
             },
             {
                 "type":"image_picker",
@@ -1431,6 +1449,12 @@
                 "label": "t:sections.header.settings.mobile_top_section.image__temp.title.label"
             },
             {
+                "type": "checkbox",
+                "id": "show_third_image",
+                "default": true,
+                "label": "Show third image"
+            },
+            {
                 "type":"image_picker",
                 "id":"mobile_top_image_2",
                 "label":"t:sections.header.settings.mobile_top_section.image__2.label",
@@ -1447,6 +1471,12 @@
                 "label": "t:sections.header.settings.mobile_top_section.image__2.title.label"
             },
             {
+                "type": "checkbox",
+                "id": "show_fourth_image",
+                "default": true,
+                "label": "Show fourth image"
+            },
+            {
                 "type":"image_picker",
                 "id":"mobile_top_image_3",
                 "label":"t:sections.header.settings.mobile_top_section.image__3.label",
@@ -1461,6 +1491,12 @@
                 "type": "text",
                 "id": "mobile_top_image_3_title",
                 "label": "t:sections.header.settings.mobile_top_section.image__3.title.label"
+            },
+            {
+                "type": "checkbox",
+                "id": "show_fifth_image",
+                "default": true,
+                "label": "Show fifth image"
             },
             {
                 "type":"image_picker",
@@ -1482,6 +1518,12 @@
                 "type": "link_list",
                 "id": "slider_menu",
                 "label": "t:sections.header.settings.slider_menu.label"
+            },
+            {
+                "type": "checkbox",
+                "id": "toggle_socials",
+                "default": true,
+                "label": "Show social icons"
             },
             {
                 "type":"header",
