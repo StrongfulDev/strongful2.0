@@ -89,10 +89,10 @@
                 {% assign model = shop.metaobjects.model[modelName] %}
             <legend class="model-wears-size fix-direction"
                     data-model="{{ model.size_letter.value }}"
-            {% if plusProduct and model.size_letter.value == 'XS' %}
-                style="display: none"
-            {% elsif plusProduct == false and model.size_letter.value == 'L' %}
-                style="display: none"
+                {% if plusProduct and model.size_letter.value == 'XS' %}
+                    style="display: none"
+                {% elsif plusProduct == false and model.size_letter.value == 'L' %}
+                    style="display: none"
                     {% endif %}>
                 {{ 'products.product.model_switch.model_wears_only_female' | t }}
                 {% if product.title == 'Iconic סווטשירט' %}
