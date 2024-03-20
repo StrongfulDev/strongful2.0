@@ -1250,6 +1250,18 @@ function removeDeadProduct() {
 
 window.addEventListener('DOMContentLoaded', function(event) {
 
+	setTimeout(() => {
+		console.log('DOM fully loaded and parsed');
+		$(".account-toggler-site-wide").click(function() {
+			$(".custom-customer-account-container").addClass("active");
+			$(".custom-login-overlay").removeClass("hidden");
+
+			if ($(".drawer").hasClass("active")) {
+				$(".drawer").removeClass("active");
+			}
+		});
+	}, 1000);
+
 	// copy current URL to clipboard functionality
 	function copyToClipboard() {
 		window.navigator.clipboard.writeText(window.location.href)
