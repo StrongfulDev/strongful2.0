@@ -3415,6 +3415,13 @@ div#glassix-widget-launcher-closed #customized-launcher {
 	transform: translateX(-50%);
 }
 
+.custom-customer-account-container .header__heading-logo_secondary {
+	position: static;
+	transform: none;
+	margin: auto auto 1rem;
+	display: block;
+}
+
 .account-menu-buttons {
 	padding: 1.5rem;
 	display: flex;
