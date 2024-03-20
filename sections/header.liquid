@@ -745,12 +745,12 @@
                class="header__heading-link link link--text focus-inset small-hide">
                 {%- if section.settings.mobile_logo != blank -%}
                     {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
-                    {%- assign logo_height = section.settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
+                    {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
                     {{ section.settings.mobile_logo | image_url: width: 500 | image_tag:
                     class: 'header__heading-logo motion-reduce',
                     widths: '50, 100, 150, 200, 250, 300, 400, 500',
                     height: logo_height,
-                    width: section.settings.mobile_logo_width,
+                    width: settings.logo_width,
                     alt: logo_alt
                     }}
                 {%- else -%}
