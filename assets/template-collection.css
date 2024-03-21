@@ -13,7 +13,13 @@
 	.cart-drawer .collection .slider.slider--tablet {
 		margin: 0;
 		column-gap: var(--grid-desktop-vertical-spacing);
+		grid-template-columns: 3fr;
+		display: grid;
 	}
+}
+
+.cart-drawer .collection .slider .full-unstyled-link {
+	display: none;
 }
 
 .collection > .loading-overlay {
