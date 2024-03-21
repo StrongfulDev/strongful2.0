@@ -245,7 +245,7 @@
           "description": "",
           "show_description": false,
           "description_style": "body",
-          "collection": "free-slippers",
+          "collection": "underwear-upsell",
           "products_to_show": 10,
           "columns_desktop": 3,
           "full_width": true,
