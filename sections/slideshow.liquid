@@ -146,13 +146,13 @@
                     opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }};
                 }
 
-                .banner__box {
+                .banner__box--{{ forloop.index }} {
                     left: {{ block.settings.mobile_left_pos }}%;
                     top: {{ block.settings.mobile_top_pos }}%;
                 }
 
                 @media screen and (min-width: 990px) {
-                    .banner__box {
+                    .banner__box--{{ forloop.index }} {
                         left: {{ block.settings.left_pos }}%;
                         top: {{ block.settings.top_pos }}%;
                     }
@@ -196,6 +196,7 @@
                 </div>
                 <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
                     <div class="slideshow__text banner__box content-container content-container--full-width-mobile
+                                banner__box--{{ forloop.index }}
                                 color-{{ block.settings.color_scheme }}
                                 gradient slideshow__text--{{ block.settings.text_alignment }}
                                 slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}"
