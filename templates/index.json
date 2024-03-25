@@ -99,18 +99,18 @@
         "b43423be-0745-47c7-be6a-84d0ee24d128": {
           "type": "slide",
           "settings": {
-            "top_pos": 50,
+            "top_pos": 55,
             "left_pos": 50,
             "mobile_top_pos": 68,
             "mobile_left_pos": 50,
-            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_ac251ba8-7d30-4640-87a7-4b56c19e6ac9.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_c7801a64-d7f5-42c6-ba16-974a9c199474.jpg",
+            "image": "shopify:\/\/shop_images\/0_a7461550-e068-4289-827f-190a6bda26ea.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/0_0abba09c-e839-4464-a166-ca6e39de425a.jpg",
             "heading": "",
             "whole_slide_link": "",
             "heading_size": "h1",
             "subheading": "",
             "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/30off",
+            "link": "shopify:\/\/collections\/15-1",
             "button_style_secondary": false,
             "box_align": "middle-center",
             "show_text_box": false,
@@ -119,10 +119,35 @@
             "color_scheme": "inverse",
             "text_alignment_mobile": "center"
           }
+        },
+        "slide_XPFE8H": {
+          "type": "slide",
+          "settings": {
+            "top_pos": 50,
+            "left_pos": 50,
+            "mobile_top_pos": 50,
+            "mobile_left_pos": 50,
+            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_35fd2330-cab5-46b8-a7db-bcd7973ad6d8.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_4f8ba114-6cb4-4f38-a792-c3b06101ec51.jpg",
+            "heading": "Image slide",
+            "whole_slide_link": "",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
         }
       },
       "block_order": [
-        "b43423be-0745-47c7-be6a-84d0ee24d128"
+        "b43423be-0745-47c7-be6a-84d0ee24d128",
+        "slide_XPFE8H"
       ],
       "settings": {
         "layout": "full_bleed",
@@ -138,13 +163,13 @@
       "type": "featured-collection",
       "settings": {
         "steps": 4,
-        "title": "30% OFF",
+        "title": "15% OFF",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "30off",
+        "collection": "15-1",
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,
@@ -218,10 +243,10 @@
         "dfad4ec5-c40b-4feb-90a9-341da374970d": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1_a9a5d27b-1f1d-47c6-8474-f5d1d4ca5a10.jpg",
+            "image": "shopify:\/\/shop_images\/0_caade8b7-b9f2-4480-be91-b0aeda8050c1.jpg",
             "alt": "",
             "link": "SALE",
-            "url": "shopify:\/\/collections\/30off",
+            "url": "shopify:\/\/collections\/15-1",
             "show_on_desktop": true
           }
         },
