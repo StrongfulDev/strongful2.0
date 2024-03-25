@@ -17,10 +17,10 @@
         "5ec0a264-e4fc-4a8d-92bc-f2f9223694f5": {
           "type": "sale",
           "settings": {
-            "logged_in_text": "<p>30% OFF EVERYTHING<\/p>",
-            "logged_out_text": "<p>30% OFF EVERYTHING<\/p>",
+            "logged_in_text": "<p>15% OFF EVERYTHING <\/p>",
+            "logged_out_text": "<p>15% OFF EVERYTHING <\/p>",
             "log_in": "",
-            "small_text": "ברכישת 3 פריטים ומעלה בשימוש הקוד: 30OFF",
+            "small_text": "כל האתר ב 15% הנחה",
             "second_announcement_regular_text": "",
             "second_small_text": "",
             "paragraph_direction": "Left To Right"
