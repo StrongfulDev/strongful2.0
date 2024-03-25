@@ -123,8 +123,8 @@
         "slide_XPFE8H": {
           "type": "slide",
           "settings": {
-            "top_pos": 50,
-            "left_pos": 50,
+            "top_pos": 65,
+            "left_pos": 96,
             "mobile_top_pos": 50,
             "mobile_left_pos": 50,
             "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_35fd2330-cab5-46b8-a7db-bcd7973ad6d8.jpg",
@@ -153,7 +153,7 @@
         "layout": "full_bleed",
         "slide_height": "adapt_image",
         "slider_visual": "sides",
-        "auto_rotate": true,
+        "auto_rotate": false,
         "change_slides_speed": 9,
         "show_text_below": false,
         "accessibility_info": "Slideshow about our brand"
