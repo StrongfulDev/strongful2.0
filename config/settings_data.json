@@ -138,7 +138,7 @@
     "announcement_tag": "30%",
     "custom_collection_announcement": "USE CODE: 30OFF",
     "members_only_announcement": "",
-    "show_card_collection_announcement": true,
+    "show_card_collection_announcement": false,
     "second_announcement_tag": "",
     "custom_collection_second_announcement": "",
     "announcement_customizer_override": true,
