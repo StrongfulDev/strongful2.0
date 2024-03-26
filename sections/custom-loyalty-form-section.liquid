@@ -15,7 +15,6 @@
 {%- endstyle -%}
 
 {% unless customer %}
-    {{ 'register_data_layer.js' | asset_url | script_tag }}
     <div class="loyalty-form-container fix-direction section-{{ section.id }}-padding" id="registerHere">
         <div class="loyalty-form loyalty-form-register">
             <div class="customer register fix-direction">
