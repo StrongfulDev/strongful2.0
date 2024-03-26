@@ -44,23 +44,6 @@
                 {%- else -%}
                     <div class="slideshow__control-wrapper">
                         {%- for block in section.blocks -%}
-
-                            {%- style -%}
-
-                                .banner__box {
-                                left: {{ block.settings.mobile_left_pos }}%;
-                                top: {{ block.settings.mobile_top_pos }}%;
-                                }
-
-                                @media screen and (min-width: 990px) {
-                                .banner__box {
-                                left: {{ block.settings.left_pos }}%;
-                                top: {{ block.settings.top_pos }}%;
-                                }
-                                }
-
-                            {%- endstyle -%}
-
                             <button class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link"
                                     aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
                                     aria-controls="Slider-{{ section.id }}">
@@ -163,13 +146,13 @@
                     opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }};
                 }
 
-                .banner__box {
+                .banner__box--{{ forloop.index }} {
                     left: {{ block.settings.mobile_left_pos }}%;
                     top: {{ block.settings.mobile_top_pos }}%;
                 }
 
                 @media screen and (min-width: 990px) {
-                    .banner__box {
+                    .banner__box--{{ forloop.index }} {
                         left: {{ block.settings.left_pos }}%;
                         top: {{ block.settings.top_pos }}%;
                     }
@@ -213,18 +196,24 @@
                 </div>
                 <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
                     <div class="slideshow__text banner__box content-container content-container--full-width-mobile
+                                banner__box--{{ forloop.index }}
                                 color-{{ block.settings.color_scheme }}
                                 gradient slideshow__text--{{ block.settings.text_alignment }}
                                 slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}"
                     >
+                        {% comment %}
                         {%- if block.settings.heading != blank -%}
                             <h2 class="banner__heading {{ block.settings.heading_size }}">{{ block.settings.heading | escape }}</h2>
                         {%- endif -%}
+
                         {%- if block.settings.subheading != blank -%}
                             <div class="banner__text" {{ block.shopify_attributes }}>
                                 <span>{{ block.settings.subheading | escape }}</span>
                             </div>
                         {%- endif -%}
+
+                        {% endcomment %}
+
                         {%- if block.settings.button_label != blank -%}
                             <div class="banner__buttons">
                                 <a{% if block.settings.link %} href="{{ block.settings.link }}"{% else %} role="link" aria-disabled="true"{% endif %}
@@ -413,49 +402,12 @@
         {
           "type": "image_picker",
           "id": "image",
-          "label": "t:sections.slideshow.blocks.slide.settings.image.label"
+          "label": "Desktop / Big screen image"
         },
         {
           "type": "image_picker",
           "id": "mobile_image",
           "label": "t:sections.slideshow.blocks.slide.settings.mobile_image.label"
-        },
-        {
-          "type": "text",
-          "id": "heading",
-          "default": "Image slide",
-          "label": "t:sections.slideshow.blocks.slide.settings.heading.label"
-        },
-        {
-          "type": "url",
-          "id": "whole_slide_link",
-          "label": "t:sections.slideshow.blocks.slide.settings.whole_slide_link.label"
-        },
-        {
-          "type": "select",
-          "id": "heading_size",
-          "options": [
-            {
-              "value": "h2",
-              "label": "t:sections.all.heading_size.options__1.label"
-            },
-            {
-              "value": "h1",
-              "label": "t:sections.all.heading_size.options__2.label"
-            },
-            {
-              "value": "h0",
-              "label": "t:sections.all.heading_size.options__3.label"
-            }
-          ],
-          "default": "h1",
-          "label": "t:sections.all.heading_size.label"
-        },
-        {
-          "type": "text",
-          "id": "subheading",
-          "default": "Tell your brand's story through images",
-          "label": "t:sections.slideshow.blocks.slide.settings.subheading.label"
         },
         {
           "type": "text",
@@ -471,61 +423,100 @@
         },
         {
           "type": "checkbox",
-          "id": "button_style_secondary",
-          "label": "t:sections.slideshow.blocks.slide.settings.secondary_style.label",
-          "default": false
-        },
-        {
-          "type": "select",
-          "id": "box_align",
-          "options": [
-            {
-              "value": "top-left",
-              "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__1.label"
-            },
-            {
-              "value": "top-center",
-              "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__2.label"
-            },
-            {
-              "value": "top-right",
-              "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__3.label"
-            },
-            {
-              "value": "middle-left",
-              "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__4.label"
-            },
-            {
-              "value": "middle-center",
-              "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__5.label"
-            },
-            {
-              "value": "middle-right",
-              "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__6.label"
-            },
-            {
-              "value": "bottom-left",
-              "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__7.label"
-            },
-            {
-              "value": "bottom-center",
-              "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__8.label"
-            },
-            {
-              "value": "bottom-right",
-              "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__9.label"
-            }
-          ],
-          "default": "middle-center",
-          "label": "t:sections.slideshow.blocks.slide.settings.box_align.label",
-          "info": "t:sections.slideshow.blocks.slide.settings.box_align.info"
-        },
-        {
-          "type": "checkbox",
           "id": "show_text_box",
           "label": "t:sections.slideshow.blocks.slide.settings.show_text_box.label",
           "default": true
         },
+          {
+              "type": "select",
+              "id": "color_scheme",
+              "options": [
+                  {
+                      "value": "accent-1",
+                      "label": "t:sections.all.colors.accent_1.label"
+                  },
+                  {
+                      "value": "accent-2",
+                      "label": "t:sections.all.colors.accent_2.label"
+                  },
+                  {
+                      "value": "background-1",
+                      "label": "t:sections.all.colors.background_1.label"
+                  },
+                  {
+                      "value": "background-2",
+                      "label": "t:sections.all.colors.background_2.label"
+                  },
+                  {
+                      "value": "inverse",
+                      "label": "t:sections.all.colors.inverse.label"
+                  }
+              ],
+              "default": "background-1",
+              "label": "t:sections.all.colors.label",
+              "info": "Color scheme of the button - usually use Inverse"
+          },
+          {
+            "type": "header",
+            "content": "LESS FREQUENTLY USED SETTINGS"
+          },
+          {
+              "type": "url",
+              "id": "whole_slide_link",
+              "label": "Whole Screen Link",
+              "info": "Link to the whole slide if there is no button and the whole slide is supposed to be clickable"
+          },
+          {
+              "type": "checkbox",
+              "id": "button_style_secondary",
+              "label": "t:sections.slideshow.blocks.slide.settings.secondary_style.label",
+              "default": false
+          },
+          {
+              "type": "select",
+              "id": "box_align",
+              "options": [
+                  {
+                      "value": "top-left",
+                      "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__1.label"
+                  },
+                  {
+                      "value": "top-center",
+                      "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__2.label"
+                  },
+                  {
+                      "value": "top-right",
+                      "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__3.label"
+                  },
+                  {
+                      "value": "middle-left",
+                      "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__4.label"
+                  },
+                  {
+                      "value": "middle-center",
+                      "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__5.label"
+                  },
+                  {
+                      "value": "middle-right",
+                      "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__6.label"
+                  },
+                  {
+                      "value": "bottom-left",
+                      "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__7.label"
+                  },
+                  {
+                      "value": "bottom-center",
+                      "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__8.label"
+                  },
+                  {
+                      "value": "bottom-right",
+                      "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__9.label"
+                  }
+              ],
+              "default": "middle-center",
+              "label": "t:sections.slideshow.blocks.slide.settings.box_align.label",
+              "info": "t:sections.slideshow.blocks.slide.settings.box_align.info"
+          },
         {
           "type": "select",
           "id": "text_alignment",
@@ -555,35 +546,6 @@
           "unit": "%",
           "label": "t:sections.slideshow.blocks.slide.settings.image_overlay_opacity.label",
           "default": 0
-        },
-        {
-          "type": "select",
-          "id": "color_scheme",
-          "options": [
-            {
-              "value": "accent-1",
-              "label": "t:sections.all.colors.accent_1.label"
-            },
-            {
-              "value": "accent-2",
-              "label": "t:sections.all.colors.accent_2.label"
-            },
-            {
-              "value": "background-1",
-              "label": "t:sections.all.colors.background_1.label"
-            },
-            {
-              "value": "background-2",
-              "label": "t:sections.all.colors.background_2.label"
-            },
-            {
-              "value": "inverse",
-              "label": "t:sections.all.colors.inverse.label"
-            }
-          ],
-          "default": "background-1",
-          "label": "t:sections.all.colors.label",
-          "info": "t:sections.slideshow.blocks.slide.settings.color_scheme.info"
         },
         {
           "type": "header",
