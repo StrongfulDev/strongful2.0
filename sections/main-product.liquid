@@ -237,7 +237,7 @@
                         {%- when 'collapsible_tab' -%}
                             {% render 'collapsible-tab', block: block, product: product %}
                         {%- when 'swiper' -%}
-                            {% render 'swiper', preset: block.settings.swiper_preset, show_payment_icons: block.settings.show_payment_icons %}
+                            {% render 'swiper', preset: block.settings.swiper_preset, show_payment_icons: block.settings.show_payment_icons, deliveryText: block.settings.delivery_days_text %}
                         {%- when 'quantity_selector' -%}
                             <div
                                     id="Quantity-Form-{{ section.id }}"
@@ -1087,6 +1087,12 @@
               "id": "show_payment_icons",
               "label": "Show payment icons",
               "default": false
+          },
+          {
+              "type": "text",
+              "id": "delivery_days_text",
+              "label": "Delivery days text",
+              "default": "משלוח אקספרס עם שליח עד הבית תוך 1-5 ימי עסקים. ייתכנו עיכובים נוספים עקב המצב הביטחוני."
           }
       ]
     },
