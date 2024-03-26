@@ -827,7 +827,7 @@
                                 {%- else -%}
                                     {% assign link_current = false %}
                                     <a href="{{ block.settings.title_link }}"
-                                       class="header__menu-item closing-link list-menu__item link link--text focus-inset"{% if link_current %} aria-current="page"{% endif %}>
+                                       class="header__menu-item closing-link list-menu__item link link--text focus-inset {% if block.settings.link_text_direction == 'Left To Right' %}ltr{% endif %}"{% if link_current %} aria-current="page"{% endif %}>
                                         <span {%- if link_current %} class="header__active-menu-item"{% endif %}>{{ block.settings.title | escape }}</span>
                                     </a>
                                 {%- endif -%}
@@ -907,7 +907,7 @@
                                 {%- else -%}
                                     {% assign link_current = false %}
                                     <a href="{{ block.settings.title_link }}"
-                                       class="header__menu-item closing-link list-menu__item link link--text focus-inset"{% if link_current %} aria-current="page"{% endif %}>
+                                       class="header__menu-item closing-link list-menu__item link link--text focus-inset {% if block.settings.link_text_direction == 'Left To Right' %}ltr{% endif %}"{% if link_current %} aria-current="page"{% endif %}>
                                         <span {%- if link_current %} class="header__active-menu-item"{% endif %}>{{ block.settings.title | escape }}</span>
                                     </a>
                                 {%- endif -%}
