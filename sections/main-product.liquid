@@ -237,7 +237,7 @@
                         {%- when 'collapsible_tab' -%}
                             {% render 'collapsible-tab', block: block, product: product %}
                         {%- when 'swiper' -%}
-                            {% render 'swiper', preset: block.settings.swiper_preset, delay: block.settings.swiper_delay, show_payment_icons: block.settings.show_payment_icons %}
+                            {% render 'swiper', preset: block.settings.swiper_preset, show_payment_icons: block.settings.show_payment_icons %}
                         {%- when 'quantity_selector' -%}
                             <div
                                     id="Quantity-Form-{{ section.id }}"
@@ -1081,16 +1081,6 @@
           "default": "shipping_returns",
           "label": "t:sections.main-product.blocks.swiper.settings.swiper_preset.label",
           "info": "t:sections.main-product.blocks.swiper.settings.swiper_preset.info"
-        },
-        {
-          "type": "range",
-          "id": "swiper_delay",
-          "label": "t:sections.main-product.blocks.swiper.settings.swiper_delay.label",
-          "info": "t:sections.main-product.blocks.swiper.settings.swiper_delay.info",
-          "default": 3,
-          "min": 1,
-          "max": 20,
-          "step": 1
         },
           {
               "type": "checkbox",
