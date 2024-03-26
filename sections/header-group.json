@@ -25,10 +25,10 @@
             "toggle_main_font": false,
             "toggle_sub_font": false,
             "main_text": "15% OFF EVERYTHING",
-            "sub_text": "כל האתר ב 15% הנחה",
+            "sub_text": "15 % הנחה על כל האתר",
             "text_alignment": "center",
-            "main_text_direction": "ltr",
-            "sub_text_direction": "ltr",
+            "main_text_direction": "rtl",
+            "sub_text_direction": "rtl",
             "link": "shopify:\/\/collections\/15-1",
             "color_scheme": "accent-1"
           }
