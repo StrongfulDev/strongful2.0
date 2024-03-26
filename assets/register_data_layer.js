@@ -1,7 +1,6 @@
 
-const customForm = document.querySelector('#create_customer_custom_form');
+let customForm = document.querySelector('#create_customer_custom_form');
 
-console.log(customForm);
 customForm.addEventListener('submit', (e) => {
 	e.preventDefault();
 
