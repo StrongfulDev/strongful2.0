@@ -237,7 +237,10 @@
                         {%- when 'collapsible_tab' -%}
                             {% render 'collapsible-tab', block: block, product: product %}
                         {%- when 'swiper' -%}
-                            {% render 'swiper', preset: block.settings.swiper_preset, show_payment_icons: block.settings.show_payment_icons, deliveryText: block.settings.delivery_days_text %}
+                            {% render 'swiper',
+                                    preset: block.settings.swiper_preset,
+                                    show_payment_icons: block.settings.show_payment_icons,
+                                    deliveryText: block.settings.delivery_days_text %}
                         {%- when 'quantity_selector' -%}
                             <div
                                     id="Quantity-Form-{{ section.id }}"
