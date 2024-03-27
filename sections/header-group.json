@@ -66,6 +66,7 @@
         "bd053c52-574f-435e-be3a-a4a74c72b169": {
           "type": "url",
           "settings": {
+            "link_text_direction": "Left To Right",
             "show_on_mobile": true,
             "small_font": false,
             "title": "15% OFF",
@@ -216,6 +217,7 @@
         "93921bbc-631f-46c2-a66b-9df086c3f7a0": {
           "type": "url",
           "settings": {
+            "link_text_direction": "Left To Right",
             "show_on_mobile": true,
             "small_font": true,
             "title": "GIFT CARD",
@@ -225,6 +227,7 @@
         "69313e8a-8818-485d-9c44-529f1b10ccdd": {
           "type": "url",
           "settings": {
+            "link_text_direction": "Left To Right",
             "show_on_mobile": false,
             "small_font": false,
             "title": "מועדון לקוחות",
@@ -298,11 +301,26 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "countdown_V6qrnR": {
+      "type": "countdown",
+      "settings": {
+        "show_days": true,
+        "countdown_date": "Mon Mar 30 2024 20:00:00 GMT+0200 (שעון ישראל (קיץ))",
+        "countdown_url": "\/",
+        "left_text": false,
+        "left_copy": "<p>SALE ENDS IN <\/p>",
+        "right_text_direction": "ltr",
+        "left_text_direction": "ltr",
+        "right_text": false,
+        "right_copy": ""
+      }
     }
   },
   "order": [
     "announcement-bar",
     "header",
-    "7503b704-2110-400e-bc52-a2190d224c23"
+    "7503b704-2110-400e-bc52-a2190d224c23",
+    "countdown_V6qrnR"
   ]
 }
