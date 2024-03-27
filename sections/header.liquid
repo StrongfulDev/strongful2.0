@@ -355,7 +355,7 @@
                                                 </li>
                                             {% else %}
                                                 <li class="{% if block.settings.show_on_mobile == false %}desktop-only{% endif %}">
-                                                    <a href="{{ block.settings.title_link }}" class="mobile_link_header">
+                                                    <a href="{{ block.settings.title_link }}" class="mobile_link_header {% if block.settings.link_text_direction == 'Left To Right' %}ltr{% else %}fix-direction{% endif %}">
                                                         {{ block.settings.menu_link_image | image_url: width: 700 | image_tag:
                                                         loading: 'lazy',
                                                         class: "mobile_link_header_image"
@@ -642,7 +642,7 @@
                                                 </li>
                                             {% else %}
                                                 <li class="{% if block.settings.show_on_mobile == false %}desktop-only{% endif %}">
-                                                    <a href="{{ block.settings.title_link }}" class="mobile_link_header">
+                                                    <a href="{{ block.settings.title_link }}" class="mobile_link_header {% if block.settings.link_text_direction == 'Left To Right' %}ltr{% else %}fix-direction{% endif %}">
                                                         <span class="bold">{{ block.settings.title }}</span>
                                                     </a>
                                                 </li>
@@ -836,7 +836,7 @@
                                 {%- else -%}
                                     {% assign link_current = false %}
                                     <a href="{{ block.settings.title_link }}"
-                                       class="header__menu-item closing-link list-menu__item link link--text focus-inset"{% if link_current %} aria-current="page"{% endif %}>
+                                       class="header__menu-item closing-link list-menu__item link link--text focus-inset {% if block.settings.link_text_direction == 'Left To Right' %}ltr{% endif %}"{% if link_current %} aria-current="page"{% endif %}>
                                         <span {%- if link_current %} class="header__active-menu-item"{% endif %}>{{ block.settings.title | escape }}</span>
                                     </a>
                                 {%- endif -%}
@@ -916,7 +916,7 @@
                                 {%- else -%}
                                     {% assign link_current = false %}
                                     <a href="{{ block.settings.title_link }}"
-                                       class="header__menu-item closing-link list-menu__item link link--text focus-inset"{% if link_current %} aria-current="page"{% endif %}>
+                                       class="header__menu-item closing-link list-menu__item link link--text focus-inset {% if block.settings.link_text_direction == 'Left To Right' %}ltr{% endif %}"{% if link_current %} aria-current="page"{% endif %}>
                                         <span {%- if link_current %} class="header__active-menu-item"{% endif %}>{{ block.settings.title | escape }}</span>
                                     </a>
                                 {%- endif -%}
@@ -1728,6 +1728,22 @@
                 "type": "url",
                 "name": "t:sections.header.blocks.url.name",
                 "settings": [
+                    {
+                        "type":"select",
+                        "id":"link_text_direction",
+                        "options":[
+                            {
+                                "value":"Right To Left",
+                                "label":"Right To Left"
+                            },
+                            {
+                                "value":"Left To Right",
+                                "label":"Left To Right"
+                            }
+                        ],
+                        "default":"Left To Right",
+                        "label":"Link Text Direction"
+                    },
                     {
                         "type": "checkbox",
                         "id": "show_on_mobile",
