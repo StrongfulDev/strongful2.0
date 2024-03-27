@@ -1272,7 +1272,7 @@ window.addEventListener('DOMContentLoaded', function(event) {
 					shareLink.style.opacity = '1';
 					shareLink.style.display = 'block';
 					setTimeout(() => {
-						$('.share_link').fadeOut('slow');
+						$('.share_link').fadeOut();
 					}, 2000);
 				}
 			});
