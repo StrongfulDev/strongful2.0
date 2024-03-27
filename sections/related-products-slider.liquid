@@ -93,7 +93,7 @@
             {% endif %}
             <ul
                     id="Slider-{{ section.id }}"
-                    class="grid product-grid contains-card contains-card--product{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid--{{ section.settings.columns_desktop }}-col-desktop{% if section.settings.collection == blank %} grid--2-col-tablet-down{% else %} grid--{{ section.settings.columns_mobile }}-col-tablet-down{% endif %}{% if show_mobile_slider or show_desktop_slider %} slider{% if show_desktop_slider %} slider--desktop{% endif %}{% if show_mobile_slider %} slider--tablet {% endif %}{% if section.settings.show_peak %}grid--peek{% endif %}{% endif %}"
+                    class="grid product-grid contains-card contains-card--product{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down{% if show_mobile_slider or show_desktop_slider %} slider{% if show_desktop_slider %} slider--desktop{% endif %}{% if show_mobile_slider %} slider--tablet {% endif %}{% if section.settings.show_peak %}grid--peek{% endif %}{% endif %}"
                     role="list"
                     aria-label="{{ 'general.slider.name' | t }}"
             >

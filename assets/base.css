@@ -1307,7 +1307,7 @@ summary::-webkit-details-marker {
 
     .slider--tablet.grid--peek.grid--1-col-tablet-down .grid__item,
     .slider--mobile.grid--peek.grid--1-col-tablet-down .grid__item {
-        width: calc(70% - var(--grid-mobile-horizontal-spacing) - 3rem);
+        width: calc(80% - var(--grid-mobile-horizontal-spacing) - 3rem);
     }
 }
 
