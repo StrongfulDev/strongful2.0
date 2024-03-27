@@ -2244,6 +2244,10 @@ product-recommendations .collection__title_heading {
 	position: relative;
 }
 
+.product-copy-to-clipboard .gray-hover.gray-hover-padding {
+	pointer-events: none;
+}
+
 .share_link {
 	opacity: 0;
 	position: absolute;
