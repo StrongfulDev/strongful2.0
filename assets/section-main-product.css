@@ -2268,6 +2268,7 @@ product-recommendations .collection__title_heading {
 	justify-self: end;
 	align-self: end;
 	margin-top: -0.2rem;
+	pointer-events: none;
 }
 
 /* YOTPO REVIEWS END */
