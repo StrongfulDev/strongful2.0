@@ -2487,6 +2487,8 @@ quantity-input button.quantity__button {
 	header>a.header__heading-link, .header__heading {
 		position: absolute;
 		left: 13%;
+		top: 50%;
+		transform: translateY(-50%);
 		/*transform: translateX(-50%);*/
 	}
 
