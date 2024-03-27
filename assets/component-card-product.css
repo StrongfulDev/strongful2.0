@@ -98,7 +98,17 @@
 .card--standard:not(.card--horizontal)>.card__content .card__badge {
     display: block;
     position: absolute;
-    top: 0;
+    bottom: 19%;
+		right: 0;
+}
+
+@media screen and (min-width: 990px) {
+	.card--standard:not(.card--horizontal)>.card__content .card__badge {
+		top: 0;
+		bottom: auto;
+		left: 0;
+		right: auto;
+	}
 }
 
 .card--standard:not(.card--horizontal) > .card__content .card__badge:has(> .badge.color-custom-red) {
