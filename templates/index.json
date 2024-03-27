@@ -106,7 +106,7 @@
             "image": "shopify:\/\/shop_images\/0_44158f47-2ddd-49cb-87fb-5ee3317f5ad7.jpg",
             "mobile_image": "shopify:\/\/shop_images\/0_af2bbb96-50d3-48cc-be34-695aae6ec372.jpg",
             "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/15-1",
+            "link": "shopify:\/\/collections\/back-in-stock",
             "show_text_box": false,
             "color_scheme": "inverse",
             "whole_slide_link": "",
@@ -218,7 +218,7 @@
             "image": "shopify:\/\/shop_images\/0_caade8b7-b9f2-4480-be91-b0aeda8050c1.jpg",
             "alt": "",
             "link": "RESTOCK",
-            "url": "shopify:\/\/collections\/15-1",
+            "url": "shopify:\/\/collections\/back-in-stock",
             "show_on_desktop": true
           }
         },
