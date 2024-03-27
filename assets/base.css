@@ -2488,7 +2488,7 @@ quantity-input button.quantity__button {
 		position: absolute;
 		left: 13%;
 		top: 50%;
-		transform: translateY(-50%);
+		transform: translateY(-45%);
 		/*transform: translateX(-50%);*/
 	}
 
