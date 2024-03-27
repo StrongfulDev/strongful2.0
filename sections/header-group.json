@@ -29,7 +29,7 @@
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "rtl",
-            "link": "shopify:\/\/collections\/15-1",
+            "link": "shopify:\/\/collections\/back-in-stock",
             "color_scheme": "accent-1"
           }
         },
@@ -70,7 +70,7 @@
             "show_on_mobile": true,
             "small_font": false,
             "title": "BACK IN STOCK",
-            "title_link": "shopify:\/\/collections\/15-1",
+            "title_link": "shopify:\/\/collections\/back-in-stock",
             "menu_link_image": "shopify:\/\/shop_images\/0_6ff8914a-9daa-4b2e-8374-8322fc89fcd5.jpg"
           }
         },
