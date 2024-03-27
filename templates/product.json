@@ -28,7 +28,8 @@
             "log_in": "",
             "small_text": "בשימוש הקוד: TOPS20",
             "second_announcement_regular_text": "",
-            "second_small_text": ""
+            "second_small_text": "",
+            "paragraph_direction": "Right To Left"
           }
         },
         "title": {
@@ -208,7 +209,7 @@
         "quick_add_text": "בחירת מידה",
         "pick_size_text": "בחירת מידה",
         "quick_add_accessories_text": "Pick accessories",
-        "columns_mobile": "2",
+        "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 60,
         "padding_bottom": 0
@@ -250,7 +251,7 @@
         "quick_add_text": "הוספה מהירה",
         "pick_size_text": "בחירת מידה",
         "quick_add_accessories_text": "הוספה מהירה",
-        "columns_mobile": "2",
+        "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 24,
         "padding_bottom": 24
