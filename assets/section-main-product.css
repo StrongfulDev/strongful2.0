@@ -2254,6 +2254,7 @@ product-recommendations .collection__title_heading {
 	margin-top: -4rem;
 	margin-left: -8.4rem;
 	min-width: 12.4rem;
+	z-index: 1;
 }
 
 .tool-tip-icon_bubble {
@@ -2261,6 +2262,7 @@ product-recommendations .collection__title_heading {
 	background: var(--gradient-base-accent-1);
 	border-radius: var(--inputs-radius);
 	color: var(--gradient-background);
+	pointer-events: none;
 }
 
 .tool-tip-icon_container {
@@ -2278,6 +2280,10 @@ product-recommendations .collection__title_heading {
 /* YOTPO REVIEWS END */
 
 @media screen and (min-width: 990px) {
+
+	.share_link {
+		margin-top: -6rem;
+	}
 
     .sale-banner-product-page {
         margin: 0 0 var(--grid-desktop-vertical-spacing);

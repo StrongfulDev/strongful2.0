@@ -3333,6 +3333,9 @@ fieldset {
 
 .gray-hover-padding {
 	padding: var(--grid-desktop-vertical-spacing);
+	border-radius: var(--inputs-radius);
+	position: relative;
+	z-index: 2;
 }
 
 .header__icon--account span.desktop-customer-name {

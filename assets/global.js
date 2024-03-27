@@ -1267,7 +1267,10 @@ window.addEventListener('DOMContentLoaded', function(event) {
 		window.navigator.clipboard.writeText(window.location.href)
 			.then(() => {
 				if (document.querySelector('.share_link') !== null) {
-					document.querySelector('.share_link').style.opacity = '1';
+					let shareLink = document.querySelector('.share_link');
+					shareLink.style.zIndex = '3';
+					shareLink.style.opacity = '1';
+					shareLink.style.display = 'block';
 					setTimeout(() => {
 						$('.share_link').fadeOut('slow');
 					}, 2000);
