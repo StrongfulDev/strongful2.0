@@ -2245,7 +2245,7 @@ product-recommendations .collection__title_heading {
 }
 
 .product-copy-to-clipboard .gray-hover.gray-hover-padding {
-	pointer-events: none;
+	/*pointer-events: none;*/
 }
 
 .share_link {
