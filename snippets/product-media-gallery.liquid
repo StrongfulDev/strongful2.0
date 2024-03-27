@@ -95,6 +95,10 @@
                             <span class="new-product-span">
                                 {{ 'products.product.new' | t }}
                             </span>
+                            {% elsif product.tags contains 'restock' or product.tags contains 'RESTOCK' %}
+                            <span class="new-product-span">
+                                RESTOCK
+                            </span>
                         {% elsif product.tags contains settings.second_announcement_tag %}
                             <span class="new-product-span">
                                 {{ 'products.product.selling_fast' | t }}
