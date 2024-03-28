@@ -106,7 +106,7 @@
             "image": "shopify:\/\/shop_images\/0_44158f47-2ddd-49cb-87fb-5ee3317f5ad7.jpg",
             "mobile_image": "shopify:\/\/shop_images\/0_af2bbb96-50d3-48cc-be34-695aae6ec372.jpg",
             "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/15-1",
+            "link": "shopify:\/\/collections\/sets",
             "show_text_box": false,
             "color_scheme": "inverse",
             "whole_slide_link": "",
@@ -119,6 +119,7 @@
         },
         "slide_XPFE8H": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "top_pos": 65,
             "left_pos": 96,
@@ -157,13 +158,13 @@
       "type": "featured-collection",
       "settings": {
         "steps": 4,
-        "title": "MUST HAVE",
+        "title": "BEST SELLERS",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "must-have-1",
+        "collection": "sets",
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,
@@ -196,7 +197,7 @@
       "type": "featured-collection",
       "settings": {
         "steps": 4,
-        "title": "BACK IN STOCK",
+        "title": "RESTOCK PRE ORDER",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
