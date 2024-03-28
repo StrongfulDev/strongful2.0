@@ -103,8 +103,8 @@
             "left_pos": 50,
             "mobile_top_pos": 42,
             "mobile_left_pos": 50,
-            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_8ba697d2-d573-4805-8656-2788efea1495.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_a3919b85-7592-4b54-9f3e-f152244dc68d.jpg",
+            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_847fd7cb-c397-45dd-bc75-aeeedac33f9a.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/copy_b618b2d9-56a5-4e75-8e87-2fc7894294ac.jpg",
             "button_label": "SHOP NOW",
             "link": "shopify:\/\/collections\/back-in-stock",
             "show_text_box": false,
@@ -215,7 +215,7 @@
         "dfad4ec5-c40b-4feb-90a9-341da374970d": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0737a51b2679a55d45d0d8f464335044_243dbef4-e9cb-407d-867b-07937491ef1c.jpg",
+            "image": "shopify:\/\/shop_images\/0737a51b2679a55d45d0d8f464335044_5f558c8b-8b79-4d31-91df-fa8282285e90.jpg",
             "alt": "",
             "link": "RESTOCK",
             "url": "shopify:\/\/collections\/back-in-stock",
