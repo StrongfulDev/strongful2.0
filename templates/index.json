@@ -163,7 +163,7 @@
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "must-have",
+        "collection": "must-have-1",
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,
