@@ -66,6 +66,7 @@
         "bd053c52-574f-435e-be3a-a4a74c72b169": {
           "type": "url",
           "settings": {
+            "link_text_direction": "Left To Right",
             "show_on_mobile": true,
             "small_font": false,
             "title": "15% OFF",
@@ -80,7 +81,7 @@
             "show_on_mobile": true,
             "order": "",
             "small_font": false,
-            "menu": "trending",
+            "menu": "trending-third-copy-backup",
             "menu_second": "",
             "menu_third": "",
             "title": "COLLECTIONS",
@@ -216,6 +217,7 @@
         "93921bbc-631f-46c2-a66b-9df086c3f7a0": {
           "type": "url",
           "settings": {
+            "link_text_direction": "Left To Right",
             "show_on_mobile": true,
             "small_font": true,
             "title": "GIFT CARD",
@@ -225,6 +227,7 @@
         "69313e8a-8818-485d-9c44-529f1b10ccdd": {
           "type": "url",
           "settings": {
+            "link_text_direction": "Left To Right",
             "show_on_mobile": false,
             "small_font": false,
             "title": "מועדון לקוחות",
