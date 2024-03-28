@@ -103,8 +103,8 @@
             "left_pos": 50,
             "mobile_top_pos": 42,
             "mobile_left_pos": 50,
-            "image": "shopify:\/\/shop_images\/0_44158f47-2ddd-49cb-87fb-5ee3317f5ad7.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/0_af2bbb96-50d3-48cc-be34-695aae6ec372.jpg",
+            "image": "shopify:\/\/shop_images\/0_f84d905c-9301-4da2-afb8-66ddb532ec23.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/0_37c703ac-cbaa-4f82-a48a-1c5bc0380b44.jpg",
             "button_label": "SHOP NOW",
             "link": "shopify:\/\/collections\/sets",
             "show_text_box": false,
@@ -238,10 +238,10 @@
         "dfad4ec5-c40b-4feb-90a9-341da374970d": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0_caade8b7-b9f2-4480-be91-b0aeda8050c1.jpg",
+            "image": "shopify:\/\/shop_images\/0_ec526ff7-f277-46fe-aa33-b8d799bdeecf.jpg",
             "alt": "",
             "link": "MOVE X STRONGFUL",
-            "url": "shopify:\/\/collections\/must-have",
+            "url": "shopify:\/\/collections\/sets",
             "show_on_desktop": true
           }
         },
