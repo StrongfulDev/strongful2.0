@@ -33,7 +33,7 @@
         ".media > *:not(.zoom):not(.deferred-media__poster-button),.media model-viewer {position: static; object-fit: cover;}"
       ],
       "settings": {
-        "override_image_from_metafield": false,
+        "override_image_from_metafield": true,
         "image": "shopify:\/\/shop_images\/0_30dc31ff-07aa-4b3e-99da-c5964781dfc0.jpg",
         "mobile_image": "shopify:\/\/shop_images\/0_b7365dd0-0a0a-4ccc-918d-1c19c17f9b9d.jpg",
         "image_overlay_opacity": 0,
