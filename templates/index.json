@@ -106,7 +106,7 @@
             "image": "shopify:\/\/shop_images\/0.png",
             "mobile_image": "shopify:\/\/shop_images\/0_4a55271c-7cb1-4f26-ae69-8b90d2402af0.jpg",
             "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/sets",
+            "link": "shopify:\/\/collections\/move",
             "show_text_box": false,
             "color_scheme": "inverse",
             "whole_slide_link": "",
@@ -164,7 +164,7 @@
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "sets",
+        "collection": "move",
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,
@@ -241,7 +241,7 @@
             "image": "shopify:\/\/shop_images\/0_ec526ff7-f277-46fe-aa33-b8d799bdeecf.jpg",
             "alt": "",
             "link": "MOVE X STRONGFUL",
-            "url": "shopify:\/\/collections\/sets",
+            "url": "shopify:\/\/collections\/move",
             "show_on_desktop": true
           }
         },
