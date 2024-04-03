@@ -149,7 +149,7 @@
     "members_only_sale": false,
     "members_only_sale_active": false,
     "currency_code_enabled": true,
-    "show_upsell_card": true,
+    "show_upsell_card": false,
     "empty_cart_collection_link": "shopify:\/\/collections\/sets",
     "cart_type": "drawer",
     "show_vendor": true,
