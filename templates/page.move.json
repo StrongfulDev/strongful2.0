@@ -109,8 +109,8 @@
         "padding_bottom": 52
       }
     },
-    "related_products_slider_QcwCVc": {
-      "type": "related-products-slider",
+    "featured_collection_gFKkbX": {
+      "type": "featured-collection",
       "settings": {
         "steps": 4,
         "title": "BEST SELLERS",
@@ -120,8 +120,8 @@
         "show_description": false,
         "description_style": "body",
         "collection": "best-seller-internal-use",
-        "products_to_show": 18,
-        "columns_desktop": 4,
+        "products_to_show": 17,
+        "columns_desktop": 5,
         "full_width": true,
         "show_view_all": true,
         "view_all_text": "SHOP ALL",
@@ -154,6 +154,6 @@
     "slideshow_nTPDCf",
     "rich_text_TBbLAd",
     "rich_text_WbKz8J",
-    "related_products_slider_QcwCVc"
+    "featured_collection_gFKkbX"
   ]
 }
