@@ -45,9 +45,21 @@
   overflow-wrap: break-word;
 }
 
-.rich-text__blocks > * {
+.rich-text__blocks>* {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.rich-text__blocks h2 {
+	font-size: calc(var(--font-heading-scale) * 2rem);
+}
+
+.rich-text__blocks .h0 {
+	font-size: calc(var(--font-heading-scale) * 4rem);
+}
+
+.page.move ul {
+	list-style: disc;
 }
 
 .rich-text__blocks > * + * {
