@@ -2,13 +2,84 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "slideshow_nTPDCf": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_DfNBVx": {
+          "type": "slide",
+          "settings": {
+            "top_pos": 50,
+            "left_pos": 50,
+            "mobile_top_pos": 50,
+            "mobile_left_pos": 50,
+            "image": "shopify:\/\/shop_images\/0_240fe06c-c1a7-4ce6-8d59-cf392ef8ddd4.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/0_21efd0c2-e088-42e8-8372-8d53f5d7e9fe.jpg",
+            "button_label": "",
+            "link": "",
+            "show_text_box": false,
+            "color_scheme": "background-1",
+            "whole_slide_link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_DfNBVx"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "sides",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": false,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "rich_text_TBbLAd": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_ej7TpC": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p><strong>Let's Move<\/strong><\/p>",
+            "heading_size": "h0"
+          }
+        },
+        "text_GFkgMT": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>אז מה זה בעצם move?<\/strong> בואו תכירו את האפליקציה שתשנה לכן את כל שגרת האימונים!<\/p><p>מעל ל1,800 מתחמי פיטנס ו-וולנס המשלבים בתוכם פילאטיס, ספא, יוגה, חדר כושר, דיקור סיני, קאנטרי, אמבטיית קרח ועוד אלפי פעילויות המחכות רק לכן.<\/p><p>קרדיטים זה ה'מטבע' של move, כל אימון או פעילות עולה כמות קרדיטים שונה בהתאם. כשבוחרים איזה פעילות לעשות היום - בעצם ״משלמים״ בעזרת הקרדיטים, לפי השווי של הפעילות.<\/p><p><\/p><p><strong>אז מה עלייך לעשות?<\/strong><\/p><p><\/p><p>מלאי סל בשווי 600₪<\/p><p>בצעי רכישה באתר <\/p><p>וקבלי במייל לאחר ההזמנה את הקריטים <\/p><p>הזיני את הקוד באפליקציית מוב ותוכלי להנות מההטבה!<\/p><p>כל הקרדיטים הינם בתוקף עד ה30.8.24 והינם כפופים לתקנון מוב באפליקציה שלהם.<\/p><p>ההטבה הינה חד פעמית לכל לקוחה<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_ej7TpC",
+        "text_GFkgMT"
+      ],
+      "settings": {
+        "desktop_content_position": "right",
+        "content_alignment": "right",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "slideshow_nTPDCf",
+    "rich_text_TBbLAd"
   ]
 }
