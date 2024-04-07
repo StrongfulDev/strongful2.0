@@ -238,7 +238,7 @@ button.slideshow__autoplay {
 .whole-slide-link {
 	display: block;
 	width: 100%;
-	position: absolute;
+	/*position: absolute;*/
 	height: 100%;
 	/*margin-bottom: calc(var(--grid-desktop-horizontal-spacing) * 2);*/
 }
