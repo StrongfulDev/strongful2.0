@@ -68,7 +68,7 @@
         "text_GFkgMT"
       ],
       "custom_css": [
-        "p:empty {display: block;}"
+        "p:empty {display: block !important; padding: 0.5rem 0;}"
       ],
       "settings": {
         "desktop_content_position": "right",
