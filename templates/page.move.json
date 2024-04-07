@@ -67,6 +67,9 @@
         "heading_ej7TpC",
         "text_GFkgMT"
       ],
+      "custom_css": [
+        "p:empty {display: block;}"
+      ],
       "settings": {
         "desktop_content_position": "right",
         "content_alignment": "right",
