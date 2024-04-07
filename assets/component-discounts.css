@@ -3,13 +3,14 @@
 }
 
 .discounts__discount {
-  /*display: flex;*/
-	display: none;
+  display: flex;
+	/*display: none;*/
   align-items: center;
   line-height: calc(1 + 0.5 / var(--font-body-scale));
 	color: #b22222;
 	border: 1px firebrick solid;
 	padding: 2pt 7px;
+	width: fit-content;
 }
 
 .discounts__discount + .discounts__discount {
