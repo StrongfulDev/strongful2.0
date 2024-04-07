@@ -116,39 +116,16 @@
             "image_overlay_opacity": 0,
             "text_alignment_mobile": "center"
           }
-        },
-        "slide_XPFE8H": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "top_pos": 65,
-            "left_pos": 96,
-            "mobile_top_pos": 30,
-            "mobile_left_pos": 68,
-            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_35fd2330-cab5-46b8-a7db-bcd7973ad6d8.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_4f8ba114-6cb4-4f38-a792-c3b06101ec51.jpg",
-            "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/all-tops",
-            "show_text_box": false,
-            "color_scheme": "inverse",
-            "whole_slide_link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "text_alignment_mobile": "center"
-          }
         }
       },
       "block_order": [
-        "b43423be-0745-47c7-be6a-84d0ee24d128",
-        "slide_XPFE8H"
+        "b43423be-0745-47c7-be6a-84d0ee24d128"
       ],
       "settings": {
         "layout": "full_bleed",
         "slide_height": "adapt_image",
         "slider_visual": "sides",
-        "auto_rotate": true,
+        "auto_rotate": false,
         "change_slides_speed": 5,
         "show_text_below": false,
         "accessibility_info": "Slideshow about our brand"
@@ -177,33 +154,10 @@
             "image_overlay_opacity": 0,
             "text_alignment_mobile": "center"
           }
-        },
-        "slide_CHkerd": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "top_pos": 65,
-            "left_pos": 96,
-            "mobile_top_pos": 30,
-            "mobile_left_pos": 68,
-            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_35fd2330-cab5-46b8-a7db-bcd7973ad6d8.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_4f8ba114-6cb4-4f38-a792-c3b06101ec51.jpg",
-            "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/all-tops",
-            "show_text_box": false,
-            "color_scheme": "inverse",
-            "whole_slide_link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "text_alignment_mobile": "center"
-          }
         }
       },
       "block_order": [
-        "slide_kjjiJz",
-        "slide_CHkerd"
+        "slide_kjjiJz"
       ],
       "settings": {
         "layout": "full_bleed",
