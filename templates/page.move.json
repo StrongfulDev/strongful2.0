@@ -1,13 +1,5 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
-      "disabled": true,
-      "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
-      }
-    },
     "slideshow_nTPDCf": {
       "type": "slideshow",
       "blocks": {
@@ -150,7 +142,6 @@
     }
   },
   "order": [
-    "main",
     "slideshow_nTPDCf",
     "rich_text_TBbLAd",
     "rich_text_WbKz8J",
