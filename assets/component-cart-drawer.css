@@ -507,12 +507,14 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 	border: 1px solid rgba(var(--color-foreground), 0.1);
 	border-radius: 25px;
 	margin: 1rem 0;
-	display: flex;
+	/*display: flex;*/
+	display: none;
 	background: rgba(222,205,205,.26);
 }
 
 .rewards-section .reward-text {
-	display: flex;
+	/*display: flex;*/
+	display: none;
 	flex-direction: column;
 }
 
