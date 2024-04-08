@@ -181,6 +181,16 @@
                                         endif
                                     endif
                                 -%}
+                                {% if forloop.index0 == 8 %}
+                                <li>
+                                    {{ section.settings.ad_image | image_url: width: 1000 | image_tag:
+                                        loading: 'lazy',
+                                        sizes: "100vw",
+                                        class: "mobile_version",
+                                        widths: '375, 550, 750, 1000'
+                                        }}
+                                </li>
+                                {% endif %}
                                 {% if isLiveTheme == 'true' %}
                                     {% unless product.tags contains 'giftHide' or product.tags contains 'hidden' or product.tags contains 'free-slippers' %}
                                         <li class="grid__item {{ isLiveTheme }} {% if product.available == false and product.tags contains 'outlet' %}hidden{% endif %}">
@@ -261,6 +271,11 @@
   "name": "t:sections.main-collection-product-grid.name",
   "class": "section",
   "settings": [
+      {
+          "type": "image_picker",
+          "id": "ad_image",
+          "label": "Ad Image"
+      },
     {
       "type": "range",
       "id": "products_per_page",
