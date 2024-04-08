@@ -112,6 +112,14 @@
 	content: none;
 }
 
+.ad-image-link {
+	display: block;
+}
+
+.collection-ad-image {
+	max-width: 100%;
+}
+
 @media screen and (min-width: 990px) {
 	.collection__title--desktop-slider .title {
 		margin-bottom: 2.5rem;

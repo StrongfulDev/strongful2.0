@@ -184,13 +184,22 @@
                                 {% if forloop.index0 == 8 or forloop.index0 == 16 or forloop.index0 == 24 %}
                                     {% if section.settings.ad_image != blank %}
                                         <li class="grid__item">
-                                            <a href="{{ section.settings.ad_link }}">
-                                                {{ section.settings.ad_image | image_url: width: 1000 | image_tag:
-                                                loading: 'lazy',
-                                                sizes: "100vw",
-                                                class: "mobile_version",
-                                                widths: '375, 550, 750, 1000'
-                                                }}
+                                            <a href="{{ section.settings.ad_link }}" class="ad-image-link">
+                                                <img
+                                                        srcset="
+                  {%- if section.settings.ad_image.width >= 165 -%}{{ section.settings.ad_image | image_url: width: 165 }} 165w,{%- endif -%}
+                  {%- if section.settings.ad_image.width >= 360 -%}{{ section.settings.ad_image | image_url: width: 360 }} 360w,{%- endif -%}
+                  {%- if section.settings.ad_image.width >= 533 -%}{{ section.settings.ad_image | image_url: width: 533 }} 533w,{%- endif -%}
+                  {{ section.settings.ad_image | image_url }} {{ section.settings.ad_image.width }}w
+                "
+                                                        src="{{ section.settings.ad_image | image_url: width: 533 }}"
+                                                        sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                                                        alt="פרסומת"
+                                                        class="motion-reduce collection-ad-image"
+                                                        {% unless lazy_load == false %}
+                                                            loading="lazy"
+                                                        {% endunless %}
+                                                >
                                             </a>
                                         </li>
                                     {% endif %}
