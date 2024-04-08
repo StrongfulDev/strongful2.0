@@ -103,8 +103,8 @@
             "left_pos": 50,
             "mobile_top_pos": 72,
             "mobile_left_pos": 50,
-            "image": "shopify:\/\/shop_images\/0_e482adef-b3dd-49fd-978b-aaed8dd9c0cf.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/copy_20_248716f5-dba4-4b6e-9b41-bc89ce0dab25.jpg",
+            "image": "shopify:\/\/shop_images\/0_7deb9c9f-7a13-4a19-9d04-6673240b1815.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/copy_20_a8c5ca4e-82bb-481b-8070-e9c826895ff1.jpg",
             "button_label": "SHOP NOW",
             "link": "shopify:\/\/collections\/holidaysale",
             "show_text_box": false,
@@ -256,7 +256,7 @@
             "image": "shopify:\/\/shop_images\/0_ec526ff7-f277-46fe-aa33-b8d799bdeecf.jpg",
             "alt": "",
             "link": "MOVE X STRONGFUL",
-            "url": "shopify:\/\/collections\/holidaysale",
+            "url": "shopify:\/\/pages\/lets-move",
             "show_on_desktop": true
           }
         },
