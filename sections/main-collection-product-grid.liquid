@@ -183,13 +183,15 @@
                                 -%}
                                 {% if forloop.index0 == 8 or forloop.index0 == 16 or forloop.index0 == 24 %}
                                     {% if section.settings.ad_image != blank %}
-                                        <li>
-                                        {{ section.settings.ad_image | image_url: width: 1000 | image_tag:
-                                            loading: 'lazy',
-                                            sizes: "100vw",
-                                            class: "mobile_version",
-                                            widths: '375, 550, 750, 1000'
-                                            }}
+                                        <li class="grid__item">
+                                            <a href="{{ section.settings.ad_link }}">
+                                                {{ section.settings.ad_image | image_url: width: 1000 | image_tag:
+                                                loading: 'lazy',
+                                                sizes: "100vw",
+                                                class: "mobile_version",
+                                                widths: '375, 550, 750, 1000'
+                                                }}
+                                            </a>
                                         </li>
                                     {% endif %}
                                 {% endif %}
@@ -277,6 +279,11 @@
           "type": "image_picker",
           "id": "ad_image",
           "label": "Ad Image"
+      },
+      {
+        "type": "url",
+        "id": "ad_link",
+        "label": "Ad Link"
       },
     {
       "type": "range",
