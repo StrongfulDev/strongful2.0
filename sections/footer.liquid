@@ -238,13 +238,15 @@
                                                   class="blog_and_newsletter_image"
                                                 />
                                               </a>
-                                              <img
-                                                            srcset="{{ block.settings.newsletter_image | image_url: width: block.settings.image_width }}, {{ block.settings.newsletter_image | image_url: width: block.settings.image_width }} 2x"
-                                                            src="{{ block.settings.newsletter_image | image_url: width: 760 }}"
-                                                            alt="{{ block.settings.newsletter_text | escape }}"
-                                                            loading="lazy" width="{{ block.settings.image_width }}" height="{{ block.settings.image_height }}"
-                                                            class="blog_and_newsletter_image newsletter-image"
-                                                    >
+                                                <a href="{{ block.settings.newsletter_url }}" class="blog-link">
+                                                  <img
+                                                                srcset="{{ block.settings.newsletter_image | image_url: width: block.settings.image_width }}, {{ block.settings.newsletter_image | image_url: width: block.settings.image_width }} 2x"
+                                                                src="{{ block.settings.newsletter_image | image_url: width: 760 }}"
+                                                                alt="{{ block.settings.newsletter_text | escape }}"
+                                                                loading="lazy" width="{{ block.settings.image_width }}" height="{{ block.settings.image_height }}"
+                                                                class="blog_and_newsletter_image newsletter-image"
+                                                        >
+                                                </a>
                                               <a href="{{ block.settings.blog_url }}" class="blog-link desktop--only">
                                                 <img
                                                   srcset="{{ block.settings.blog_image | image_url: width: block.settings.image_width }}, {{ block.settings.blog_image | image_url: width: block.settings.image_width }} 2x"
@@ -672,6 +674,11 @@ customElements.define('localization-form', LocalizationForm);
           "id": "alist_url",
           "label": "t:sections.footer.blocks.blog_and_newsletter.settings.alist_url.label"
         },
+          {
+              "type": "url",
+              "id": "newsletter_url",
+              "label": "Newsletter URL"
+          },
         {
           "type": "url",
           "id": "blog_url",
