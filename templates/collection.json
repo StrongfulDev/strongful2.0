@@ -50,6 +50,7 @@
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
+        "ad_image": "shopify:\/\/shop_images\/0_6230bebc-b611-464b-b484-301ee373fda0.jpg",
         "products_per_page": 20,
         "columns_desktop": 4,
         "image_ratio": "adapt",
