@@ -181,15 +181,17 @@
                                         endif
                                     endif
                                 -%}
-                                {% if forloop.index0 == 8 %}
-                                <li>
-                                    {{ section.settings.ad_image | image_url: width: 1000 | image_tag:
-                                        loading: 'lazy',
-                                        sizes: "100vw",
-                                        class: "mobile_version",
-                                        widths: '375, 550, 750, 1000'
-                                        }}
-                                </li>
+                                {% if forloop.index0 == 8 or forloop.index0 == 16 or forloop.index0 == 24 %}
+                                    {% if section.settings.ad_image != blank %}
+                                        <li>
+                                        {{ section.settings.ad_image | image_url: width: 1000 | image_tag:
+                                            loading: 'lazy',
+                                            sizes: "100vw",
+                                            class: "mobile_version",
+                                            widths: '375, 550, 750, 1000'
+                                            }}
+                                        </li>
+                                    {% endif %}
                                 {% endif %}
                                 {% if isLiveTheme == 'true' %}
                                     {% unless product.tags contains 'giftHide' or product.tags contains 'hidden' or product.tags contains 'free-slippers' %}
