@@ -308,7 +308,7 @@
         "show_days": true,
         "countdown_date": "Mon APR 11 2024 12:00:00 GMT+0200 (שעון ישראל (קיץ))",
         "countdown_url": "\/",
-        "left_text": false,
+        "left_text": true,
         "left_copy": "<p>FOR CLUB MEMBERS ONLY<\/p>",
         "right_text_direction": "ltr",
         "left_text_direction": "ltr",
