@@ -24,6 +24,9 @@
             <div class="{% if block.settings.paragraph_direction == 'Right To Left' %}fix-direction{% endif %}">
                 {{ block.settings.logged_in_text | newline_to_br }}
             </div>
+            {% if block.settings.small_logged_in_text != blank %}
+                <small class="fix-direction">{{ block.settings.small_logged_in_text }}</small>
+            {% endif %}
         {% else %}
             <div class="{% if block.settings.paragraph_direction == 'Right To Left' %}fix-direction{% endif %}">
                 {{ block.settings.logged_out_text | newline_to_br }}
