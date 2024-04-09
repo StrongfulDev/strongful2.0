@@ -253,6 +253,10 @@ details[open].menu-opening > .menu-drawer__submenu {
 	border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.1);
 }
 
+.js .dropdown .menu-drawer__menu>li:first-child {
+	color: firebrick;
+}
+
 .js .dropdown .menu-drawer__menu>li:last-child, .js .dropdown .menu-drawer__menu.has-submenu>li:nth-last-child(2) {
 	border-bottom: none;
 }

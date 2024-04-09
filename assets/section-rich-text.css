@@ -58,7 +58,7 @@
 	font-size: calc(var(--font-heading-scale) * 4rem);
 }
 
-.page.move ul {
+.page.move .rich-text__text ul {
 	list-style: disc;
 }
 
