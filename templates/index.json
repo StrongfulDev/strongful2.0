@@ -116,10 +116,32 @@
             "image_overlay_opacity": 0,
             "text_alignment_mobile": "center"
           }
+        },
+        "slide_RYWdeV": {
+          "type": "slide",
+          "settings": {
+            "top_pos": 77,
+            "left_pos": 50,
+            "mobile_top_pos": 68,
+            "mobile_left_pos": 50,
+            "image": "shopify:\/\/shop_images\/0_c28fe063-8cdc-4324-8b1a-8f7d955162c8.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/copy_20_36c410e5-953b-4176-9941-7b38a7ee8ea3.jpg",
+            "button_label": "SHOP NOW",
+            "link": "shopify:\/\/collections\/holidaysale",
+            "show_text_box": true,
+            "color_scheme": "inverse",
+            "whole_slide_link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center"
+          }
         }
       },
       "block_order": [
-        "b43423be-0745-47c7-be6a-84d0ee24d128"
+        "b43423be-0745-47c7-be6a-84d0ee24d128",
+        "slide_RYWdeV"
       ],
       "settings": {
         "layout": "full_bleed",
