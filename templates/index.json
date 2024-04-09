@@ -244,7 +244,7 @@
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "best-seller-internal-use",
+        "collection": "holidaysale",
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,
@@ -281,8 +281,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/copy_13c1647a-168a-4c59-a5ec-7ad506aaf959.jpg",
             "alt": "",
-            "link": "move X STRONGFUL",
-            "url": "shopify:\/\/pages\/lets-move",
+            "link": "NEW IN",
+            "url": "shopify:\/\/collections\/new-colors",
             "show_on_desktop": true
           }
         },
