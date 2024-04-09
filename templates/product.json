@@ -17,8 +17,8 @@
         "5ec0a264-e4fc-4a8d-92bc-f2f9223694f5": {
           "type": "sale",
           "settings": {
-            "logged_in_text": "<p>MOVE X STRONGFUL <\/p>",
-            "logged_out_text": "<p>MOVE X STRONGFUL <\/p>",
+            "logged_in_text": "<p>move X STRONGFUL <\/p>",
+            "logged_out_text": "<p>move X STRONGFUL <\/p>",
             "log_in": "",
             "small_text": "10  קרדיטים מתנה למימוש באפליקציה בקנייה מעל 600₪",
             "second_announcement_regular_text": "",
