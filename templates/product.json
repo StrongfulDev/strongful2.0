@@ -17,8 +17,8 @@
         "5ec0a264-e4fc-4a8d-92bc-f2f9223694f5": {
           "type": "sale",
           "settings": {
-            "logged_in_text": "<p>משהו כשלקוחה מחוברת<\/p>",
-            "logged_out_text": "<p>משהו כשלקוחה לא מחוברת<\/p>",
+            "logged_in_text": "<p>NEW IN: NEW COLORS<\/p>",
+            "logged_out_text": "<p>המכירה לחברות מועדון בלבד<\/p>",
             "log_in": "הרשמי \/ התחברי",
             "small_text": "",
             "second_announcement_regular_text": "",
