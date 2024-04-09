@@ -2875,6 +2875,10 @@ transform: translateX(-300%);
     color: rgb(var(--color-foreground));
 }
 
+.header-block-list-element:first-child .header__menu-item span {
+		color: firebrick;
+}
+
 .header__menu-item span {
     transition: text-decoration var(--duration-short) ease;
     pointer-events: none;
