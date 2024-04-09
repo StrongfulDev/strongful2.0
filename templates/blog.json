@@ -3,8 +3,8 @@
     "main": {
       "type": "main-blog",
       "settings": {
-        "tile_image_one": "shopify:\/\/shop_images\/STRO8636_99677a13-139e-409b-9570-fe88dcfbf934.jpg",
-        "tile_image_one_link": "shopify:\/\/collections\/outlet",
+        "tile_image_one": "shopify:\/\/shop_images\/0_f6a40de5-f7be-4cee-b766-69b38a5035fd.jpg",
+        "tile_image_one_link": "shopify:\/\/pages\/lets-move",
         "tile_image_two": "shopify:\/\/shop_images\/0_e596aafe-329a-421a-8036-a8c420783595.jpg",
         "tile_image_two_link": "shopify:\/\/collections\/holidaysale",
         "layout": "grid",
