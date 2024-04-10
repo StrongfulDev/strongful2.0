@@ -18,7 +18,7 @@
   }
 {%- endstyle -%}
 
-<div class="page-width section-{{ section.id }}-padding {{ page.handle }} {% if section.settings.section_direction == true %}fix-direction{% endif %}">
+<div class="page-width section-{{ section.id }}-padding {{ page.handle }}">
   <h1 class="main-page-title page-title h0 hidden bold">
     {{ page.title | escape }}
   </h1>
@@ -33,12 +33,6 @@
   "tag": "section",
   "class": "section",
   "settings": [
-    {
-        "type": "checkbox",
-        "id": "section_direction",
-        "label": "Text direction of the section - CHECK if RTL",
-        "default": false
-    },
     {
       "type": "header",
       "content": "t:sections.all.padding.section_padding_heading"
