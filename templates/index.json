@@ -289,20 +289,20 @@
         "3603325c-8c6d-4a1e-b28e-fe94adadefb7": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Artboard_20_5bc5141d-57b1-4063-8303-f791f13ffcc7.jpg",
+            "image": "shopify:\/\/shop_images\/copy_8428ad1c-f591-4cc0-9bff-c25a6cc1d093.jpg",
             "alt": "",
             "link": "BEST SELLERS",
-            "url": "shopify:\/\/collections\/best-seller-internal-use",
+            "url": "shopify:\/\/collections\/holidaysale",
             "show_on_desktop": true
           }
         },
         "0ae2dc2c-e286-48f6-be64-4aa8bc8de568": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Eirad2089-R1-21-23_2.jpg",
+            "image": "shopify:\/\/shop_images\/0_4_d9f09047-1292-4449-9dfc-3ecb53416ffe.jpg",
             "alt": "",
-            "link": "NEW IN OUTLET",
-            "url": "shopify:\/\/collections\/outlet",
+            "link": "move X STRONGFUL",
+            "url": "shopify:\/\/pages\/lets-move",
             "show_on_desktop": true
           }
         },
