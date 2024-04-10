@@ -308,12 +308,12 @@
         "show_days": true,
         "countdown_date": "Wed APR 11 2024 12:00:00 GMT+0300 (שעון ישראל (קיץ))",
         "countdown_url": "shopify:\/\/collections\/new-colors",
-        "left_text": true,
-        "left_copy": "<p>קולקציה חדשה לחברות מועדון בלבד<\/p>",
+        "left_text": false,
+        "left_copy": "",
         "right_text_direction": "ltr",
         "left_text_direction": "ltr",
-        "right_text": false,
-        "right_copy": ""
+        "right_text": true,
+        "right_copy": "<p>קולקציה חדשה לחברות מועדון בלבד<\/p>"
       }
     }
   },
