@@ -20,13 +20,13 @@
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
   <div class="page-width section-{{ section.id }}-padding {% if section.settings.section_direction == true %}fix-direction{% endif %}">
-    <h2 class="page-title {{ section.settings.heading_size }}">
+    <h1 class="page-title {{ section.settings.heading_size }} bold">
       {%- if section.settings.page.title != blank -%}
         {{ section.settings.page.title | escape }}
       {%- else -%}
         {{ 'sections.page.title' | t }}
       {%- endif -%}
-    </h2>
+    </h1>
     <div class="rte">
       {%- if section.settings.page.content != blank -%}
         {{ section.settings.page.content }}
