@@ -17,10 +17,10 @@
         "5ec0a264-e4fc-4a8d-92bc-f2f9223694f5": {
           "type": "sale",
           "settings": {
-            "logged_in_text": "<p>NEW IN: NEW COLORS<\/p><p>זמין לרכישה לחברות מועדון בלבד<\/p>",
-            "logged_out_text": "<p>המכירה לחברות מועדון בלבד<\/p>",
-            "log_in": "הרשמי \/ התחברי",
-            "small_text": "",
+            "logged_in_text": "<p>NEW IN: NEW COLORS<\/p>",
+            "logged_out_text": "<p>NEW IN: NEW COLORS<\/p>",
+            "log_in": "",
+            "small_text": "דגמי בסט סלרס בצבעים חדשים",
             "small_logged_in_text": "",
             "second_announcement_regular_text": "",
             "second_small_text": "",
