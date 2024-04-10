@@ -6,10 +6,6 @@
         "slide_DfNBVx": {
           "type": "slide",
           "settings": {
-            "top_pos": 50,
-            "left_pos": 50,
-            "mobile_top_pos": 50,
-            "mobile_left_pos": 50,
             "image": "shopify:\/\/shop_images\/0_1387b1f3-a968-4b89-b28c-13d09702a699.jpg",
             "mobile_image": "shopify:\/\/shop_images\/0_1683e548-4d18-43a7-ad42-2206049d5fa2.jpg",
             "button_label": "",
@@ -37,6 +33,16 @@
         "show_text_below": false,
         "accessibility_info": "Slideshow about our brand",
         "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "page_9z6jVU": {
+      "type": "page",
+      "settings": {
+        "page": "lets-move",
+        "heading_size": "h1",
+        "color_scheme": "background-1",
+        "padding_top": 36,
         "padding_bottom": 36
       }
     },
@@ -145,6 +151,7 @@
   },
   "order": [
     "slideshow_nTPDCf",
+    "page_9z6jVU",
     "rich_text_TBbLAd",
     "rich_text_WbKz8J",
     "featured_collection_gFKkbX"
