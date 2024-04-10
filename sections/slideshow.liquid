@@ -156,18 +156,6 @@
                     opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }};
                 }
 
-                .banner__box--{{ forloop.index }} {
-                    left: {{ block.settings.mobile_left_pos }}%;
-                    top: {{ block.settings.mobile_top_pos }}%;
-                }
-
-                @media screen and (min-width: 990px) {
-                    .banner__box--{{ forloop.index }} {
-                        left: {{ block.settings.left_pos }}%;
-                        top: {{ block.settings.top_pos }}%;
-                    }
-                }
-
             </style>
             {% if block.settings.whole_slide_link != blank %}
                 <a href="{{ block.settings.whole_slide_link }}" class="whole-slide-link">
@@ -397,42 +385,6 @@
       "name": "t:sections.slideshow.blocks.slide.name",
       "limit": 5,
       "settings": [
-          {
-              "type": "range",
-                "id": "top_pos",
-                "min": 0,
-                "max": 100,
-                "step": 2,
-                "label": "Desktop Button Distance From Top",
-                "default": 48
-          },
-            {
-                "type": "range",
-                    "id": "left_pos",
-                    "min": 0,
-                    "max": 100,
-                    "step": 2,
-                    "label": "Desktop Button Distance From Left",
-                    "default": 50
-            },
-            {
-                "type": "range",
-                    "id": "mobile_top_pos",
-                    "min": 0,
-                    "max": 100,
-                    "step": 2,
-                    "label": "Mobile Button Distance From Top",
-                    "default": 50
-            },
-            {
-                "type": "range",
-                    "id": "mobile_left_pos",
-                    "min": 0,
-                    "max": 100,
-                    "step": 2,
-                    "label": "Mobile Button Distance From Left",
-                    "default": 50
-            },
         {
           "type": "image_picker",
           "id": "image",
