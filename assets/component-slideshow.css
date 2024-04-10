@@ -241,7 +241,8 @@ button.slideshow__autoplay {
 }
 
 .slideshow__slide--1 .slideshow__text.banner__box {
-	bottom: 0;
+	bottom: 20%;
+	left: 50%;
 }
 
 .whole-slide-link {
