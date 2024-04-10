@@ -417,8 +417,8 @@
 	}
 
 	.mega-menu__content {
-		width: 110%;
-		margin: 0 auto 0 -5%;
+		width: 130%;
+		margin: 0 auto 0 -15%;
 		padding: 2rem;
 	}
 
@@ -446,7 +446,11 @@
 	}
 
 	#MegaMenu-Content-3 {
-		grid-template-columns: 1fr 1.5fr;
+		/*grid-template-columns: 1fr 1.5fr;*/
+	}
+
+	#MegaMenu-Content-3 .mega-menu__list li:first-child a {
+		font-weight: var(--font-body-weight-bold);
 	}
 
 	.mega-menu__content li a {
@@ -505,7 +509,7 @@
     }
 
 	.mega-menu__content.fix-direction li:first-child {
-		text-decoration: none;
+		/*text-decoration: none;*/
 	}
 
 	.mega-menu__content.fix-direction ul:nth-child(2) li:first-child a {
