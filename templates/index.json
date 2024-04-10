@@ -99,10 +99,6 @@
         "b43423be-0745-47c7-be6a-84d0ee24d128": {
           "type": "slide",
           "settings": {
-            "top_pos": 77,
-            "left_pos": 50,
-            "mobile_top_pos": 98,
-            "mobile_left_pos": 50,
             "image": "shopify:\/\/shop_images\/copy_b1d979f9-a10f-421d-991e-8007e77ad696.jpg",
             "mobile_image": "shopify:\/\/shop_images\/copy_e94cdfef-9834-4f13-a470-d4127ad0e428.jpg",
             "button_label": "SHOP NOW",
@@ -120,10 +116,6 @@
         "slide_RYWdeV": {
           "type": "slide",
           "settings": {
-            "top_pos": 77,
-            "left_pos": 50,
-            "mobile_top_pos": 68,
-            "mobile_left_pos": 50,
             "image": "shopify:\/\/shop_images\/0_c28fe063-8cdc-4324-8b1a-8f7d955162c8.jpg",
             "mobile_image": "shopify:\/\/shop_images\/copy_20_36c410e5-953b-4176-9941-7b38a7ee8ea3.jpg",
             "button_label": "SHOP NOW",
@@ -147,7 +139,7 @@
         "layout": "full_bleed",
         "slide_height": "adapt_image",
         "slider_visual": "sides",
-        "auto_rotate": true,
+        "auto_rotate": false,
         "change_slides_speed": 5,
         "show_text_below": false,
         "accessibility_info": "Slideshow about our brand",
@@ -161,10 +153,6 @@
         "slide_kjjiJz": {
           "type": "slide",
           "settings": {
-            "top_pos": 77,
-            "left_pos": 50,
-            "mobile_top_pos": 72,
-            "mobile_left_pos": 50,
             "image": "shopify:\/\/shop_images\/0_3f6540d6-3ade-4374-9eb5-bec5add85d2e.jpg",
             "mobile_image": "shopify:\/\/shop_images\/0_fc4e4087-9c89-47aa-9eda-a2920c3fccd0.jpg",
             "button_label": "",
