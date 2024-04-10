@@ -233,6 +233,15 @@ button.slideshow__autoplay {
     width: max-content;
     position: absolute;
 	transform: translateX(-50%);
+	left: 50%;
+}
+
+.slideshow__slide--0 .slideshow__text.banner__box {
+	bottom: 10%;
+}
+
+.slideshow__slide--1 .slideshow__text.banner__box {
+	bottom: 20%;
 }
 
 .whole-slide-link {
