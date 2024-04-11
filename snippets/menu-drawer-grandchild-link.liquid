@@ -1,7 +1,13 @@
 <li class="menu-drawer__menu-list-item">
     {%- if childlink.links == blank -%}
+        {% assign escapedTitle = childlink.title | escape %}
         <a href="{{ childlink.url }}"
-           class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if childlink.current %} menu-drawer__menu-item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+           class="menu-drawer__menu-item link link--text list-menu__item focus-inset
+                {% if childlink.current %} menu-drawer__menu-item--active{% endif %}
+                {% if escapedTitle == 'טייצים' or escapedTitle == 'סטים' %}
+                    bold
+                {% endif %}"
+        {% if childlink.current %} aria-current="page"{% endif %}>
             {{ childlink.title | escape }}
             {% if menu_type == 'customizable' %}
                 {% for collection in collections %}
@@ -21,7 +27,7 @@
         <details
                 id="Details-menu-drawer-submenu-{{ forloop.index }}">
             <summary
-                    class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
+                    class="menu-drawer__menu-item link link--text list-menu__item focus-inset {% if childlink.title contains 'טייצים' %}bold{% endif %}">
                 {{ childlink.title | escape }}
                 {% render 'icon-caret' %}
             </summary>
@@ -38,7 +44,11 @@
                     {%- for grandchildlink in childlink.links -%}
                         <li>
                             <a href="{{ grandchildlink.url }}"
-                               class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if grandchildlink.current %} menu-drawer__menu-item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
+                               class="menu-drawer__menu-item link link--text list-menu__item focus-inset
+                                    {% if grandchildlink.current %}
+                                        menu-drawer__menu-item--active
+                                    {% endif %}"
+                                {% if grandchildlink.current %} aria-current="page"{% endif %}>
                                 {{ grandchildlink.title | escape }}
                             </a>
                         </li>
