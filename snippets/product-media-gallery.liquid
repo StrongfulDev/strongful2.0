@@ -352,7 +352,7 @@
             </slider-component>
         {%- endif -%}
     </media-gallery>
-    {% if product.tags contains 'TEMP' %}
-    {% render 'model-switcher', model_product: product %}
+    {% if product.tags contains 'hasMoreModels' %}
+        {% render 'model-switcher', model_product: product %}
     {% endif %}
 </div>
