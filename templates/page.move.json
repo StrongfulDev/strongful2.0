@@ -6,10 +6,6 @@
         "slide_DfNBVx": {
           "type": "slide",
           "settings": {
-            "top_pos": 50,
-            "left_pos": 50,
-            "mobile_top_pos": 50,
-            "mobile_left_pos": 50,
             "image": "shopify:\/\/shop_images\/0_1387b1f3-a968-4b89-b28c-13d09702a699.jpg",
             "mobile_image": "shopify:\/\/shop_images\/0_1683e548-4d18-43a7-ad42-2206049d5fa2.jpg",
             "button_label": "",
@@ -40,67 +36,15 @@
         "padding_bottom": 36
       }
     },
-    "rich_text_TBbLAd": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_ej7TpC": {
-          "type": "heading",
-          "settings": {
-            "heading": "<h1><strong>Let's move<\/strong><\/h1>",
-            "heading_size": "h0"
-          }
-        },
-        "text_GFkgMT": {
-          "type": "text",
-          "settings": {
-            "text": "<p><strong>אז מה זה בעצם move?<\/strong> בואו תכירו את האפליקציה שתשנה לכן את כל שגרת האימונים!<\/p><p><\/p><p>מעל ל1,800 מתחמי פיטנס ו-wellness המשלבים בתוכם פילאטיס, ספא, יוגה, חדר כושר, דיקור סיני, קאנטרי, אמבטיית קרח ועוד אלפי פעילויות המחכות רק לכן.<\/p><p><\/p><p>קרדיטים זה ה'מטבע' של move, כל אימון או פעילות עולה כמות קרדיטים שונה בהתאם. כשבוחרים איזה פעילות לעשות היום - בעצם ״משלמים״ בעזרת הקרדיטים, לפי השווי של הפעילות.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_ej7TpC",
-        "text_GFkgMT"
-      ],
-      "custom_css": [
-        "p:empty {display: block !important; padding: 0.5rem 0;}"
-      ],
+    "page_9z6jVU": {
+      "type": "page",
       "settings": {
-        "desktop_content_position": "right",
-        "content_alignment": "right",
+        "page": "lets-move",
+        "section_direction": true,
+        "heading_size": "h1",
         "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "rich_text_WbKz8J": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_q7hXmj": {
-          "type": "heading",
-          "settings": {
-            "heading": "<h2><strong>אז מה עלייך לעשות?<\/strong><\/h2>",
-            "heading_size": "h1"
-          }
-        },
-        "text_ghRemJ": {
-          "type": "text",
-          "settings": {
-            "text": "<ul><li>מלאי סל בשווי 600₪.<\/li><\/ul><p><\/p><ul><li>בצעי רכישה באתר.<\/li><\/ul><p><\/p><ul><li>קבלי במייל לאחר ההזמנה את הקרדיטים.<\/li><\/ul><p><\/p><ul><li>הזיני את הקוד באפליקציית מוב ותוכלי להנות מההטבה!<\/li><\/ul><p><\/p><ul><li>כל הקרדיטים הינם בתוקף עד ה31.8.24 והינם כפופים <a href=\"https:\/\/www.move-club.co.il\/terms\" target=\"_blank\" title=\"https:\/\/www.move-club.co.il\/terms\">לתקנון מוב באפליקציה שלהם.<\/a><\/li><\/ul><p><\/p><ul><li>ההטבה הינה חד פעמית לכל לקוחה.<br\/><\/li><\/ul><p><\/p><ul><li>ההטבה לא תקפה על רכישת מוצר ״גיפט קארד״.<\/li><\/ul>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_q7hXmj",
-        "text_ghRemJ"
-      ],
-      "settings": {
-        "desktop_content_position": "right",
-        "content_alignment": "right",
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 52
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "featured_collection_gFKkbX": {
@@ -145,8 +89,7 @@
   },
   "order": [
     "slideshow_nTPDCf",
-    "rich_text_TBbLAd",
-    "rich_text_WbKz8J",
+    "page_9z6jVU",
     "featured_collection_gFKkbX"
   ]
 }

@@ -46,6 +46,10 @@
 	padding-right: 0;
 }
 
+.move .rte ul {
+	list-style: inside;
+}
+
 .rte ol {
 	padding-left: 0;
 	padding-right: 0;

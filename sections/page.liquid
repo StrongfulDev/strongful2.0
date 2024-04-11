@@ -19,14 +19,14 @@
 {%- endstyle -%}
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
-  <div class="page-width section-{{ section.id }}-padding">
-    <h2 class="page-title {{ section.settings.heading_size }}">
+  <div class="page-width section-{{ section.id }}-padding {% if section.settings.section_direction == true %}fix-direction{% endif %}">
+    <h1 class="page-title {{ section.settings.heading_size }} bold">
       {%- if section.settings.page.title != blank -%}
         {{ section.settings.page.title | escape }}
       {%- else -%}
         {{ 'sections.page.title' | t }}
       {%- endif -%}
-    </h2>
+    </h1>
     <div class="rte">
       {%- if section.settings.page.content != blank -%}
         {{ section.settings.page.content }}
@@ -52,6 +52,12 @@
       "type": "page",
       "id": "page",
       "label": "t:sections.page.settings.page.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "section_direction",
+      "label": "Text direction of the section - CHECK if RTL",
+      "default": false
     },
     {
       "type": "select",
