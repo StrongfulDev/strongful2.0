@@ -407,6 +407,10 @@
 
 @media screen and (min-width: 990px) {
 
+	#MegaMenu-Content-4 ul:nth-child(2) li:first-child {
+		display: none;
+	}
+
 	.loyalty-tier {
 		color: var(--loyalty-title-color);
 	}
