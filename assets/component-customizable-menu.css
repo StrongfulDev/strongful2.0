@@ -407,7 +407,7 @@
 
 @media screen and (min-width: 990px) {
 
-	#MegaMenu-Content-4 ul:nth-child(2) li:first-child {
+	#MegaMenu-Content-4 ul:nth-child(2) li:first-child, #MegaMenu-Content-5 ul:nth-child(2) li:first-child {
 		display: none;
 	}
 
