@@ -1,0 +1,148 @@
+{{ 'component-visual-ugc.css' | asset_url | stylesheet_tag }}
+
+<div class="instagram-ugc-main">
+    <div class="instagram-ugc-ctn page-width full-width-padding">
+        <div>
+            {% render 'icon-instagram' %}
+            <h4 class="instagram-ugc-brand-name upper ltr">@{{ shop.name }}_co</h4>
+        </div>
+        <div class="yotpo-ugc-container">
+            <div class="yotpo yotpo-pictures-widget" data-gallery-id="{{ section.settings.yotpo_widget_id }}"></div>
+        </div>
+        <div>
+            <p class="ugc-text">{{ section.settings.ugc_text }}</p>
+            <div class="instagram-buttons">
+                <a href="{{ section.settings.instagram_collection_url }}" class="instagram-ugc-btn">{{ section.settings.shop_instagram }}</a>
+                <a href="{{ settings.social_instagram_link }}" class="instagram-ugc-btn">{{ section.settings.follow_us }}</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+	@keyframes yotpoNodeInserted {
+		from {
+			outline-color: #fff;
+		}
+
+		to {
+			outline-color: #000;
+		}
+	}
+
+	body > .yotpo.yotpo-display-wrapper.yotpo-variants-popup .yotpo-add-to-cart-button {
+		animation-duration: 0.01s;
+		animation-name: yotpoNodeInserted;
+	}
+</style>
+
+<script type="text/javascript">
+
+	function yotpoGetSectionInnerHTML(html, selector) {
+		return new DOMParser()
+			.parseFromString(html, "text/html")
+			.querySelector(selector).innerHTML;
+	}
+
+	function yotpoDealWithEmpty() {
+		document.querySelector("cart-drawer").classList.contains("is-empty") &&
+		document.querySelector("cart-drawer").classList.remove("is-empty");
+	}
+
+	function yotpoRefreshCart() {
+		setTimeout(function () {
+			let yotpoxhr = new XMLHttpRequest();
+			let currentDomain = window.location.hostname;
+			let url = "//" + currentDomain + "?sections=cart-icon-bubble,cart-drawer";
+			let bubbleSelector = "cart-icon-bubble";
+			let drawerSelector = "CartDrawer";
+			yotpoxhr.open("GET", url, true);
+			yotpoxhr.onload = function () {
+				if (yotpoxhr.status === 200) {
+					let response = JSON.parse(yotpoxhr.responseText);
+
+					let bubbleToReplace = document.getElementById(bubbleSelector);
+					let drawerToReplace = document.getElementById(drawerSelector).querySelector('.drawer__inner__content');
+
+					if (bubbleToReplace) {
+						bubbleToReplace.innerHTML = response["cart-icon-bubble"];
+					} else {
+						console.error("Element with ID not found.");
+					}
+
+					if (drawerToReplace) {
+						// Adjust cart-drawer to only drawer inner to prevent reward reset
+						drawerinner = yotpoGetSectionInnerHTML(response["cart-drawer"], '.drawer__inner__content');
+						drawerToReplace.innerHTML = drawerinner;
+					} else {
+						console.error("Element with ID not found.");
+					}
+					yotpoDealWithEmpty();
+					console.log('Refreshed Cart');
+					if (typeof publish !== ''){
+						publish(PUB_SUB_EVENTS.cartUpdate, { source: 'cart-items' });
+					}
+
+				} else {
+					console.error("Request failed with status: " + yotpoxhr.status);
+				}
+			};
+			yotpoxhr.send();
+		}, 1337);
+	}
+
+	document.addEventListener('animationstart', function (event) {
+		if (event.animationName == 'yotpoNodeInserted') {
+			document.querySelectorAll('body > .yotpo.yotpo-display-wrapper.yotpo-variants-popup .yotpo-add-to-cart-button').forEach(addToCartButton => {
+				addToCartButton.addEventListener("click", yotpoRefreshCart, { once: true });
+			})
+		}
+	}, true);
+
+</script>
+
+{% schema %}
+
+{
+    "name": "Yotpo",
+    "settings": [
+        {
+            "type": "text",
+            "id": "yotpo_widget_id",
+            "label": "Yotpo Widget ID",
+            "default": "643511ba2ed1151bb3dcb2ae",
+            "info": "Enter your Yotpo Widget ID"
+        },
+        {
+            "type": "url",
+            "id": "instagram_collection_url",
+            "label": "Instagram Collection URL"
+        },
+        {
+            "type": "text",
+            "id": "ugc_text",
+            "label": "UGC Text"
+        },
+        {
+            "type": "text",
+            "id": "shop_instagram",
+            "label": "Shop Instagram"
+        },
+        {
+            "type": "text",
+            "id": "follow_us",
+            "label": "Follow Us"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Yotpo",
+            "category": "Social media",
+            "settings": {
+                "yotpo_widget_id": "643511ba2ed1151bb3dcb2ae"
+            }
+        }
+    ]
+}
+
+{% endschema %}

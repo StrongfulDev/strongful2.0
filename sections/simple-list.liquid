@@ -1,0 +1,103 @@
+{{ 'simple-list.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+    .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+
+    @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+    }
+{%- endstyle -%}
+
+<div class="simple-list page-width fix-direction section-{{ section.id }}-padding">
+    <h1 class="title--primary">{{ page.title }}</h1>
+
+    <h2 class="simple-list-title">קולקציות</h2>
+    <ul class="simple-list-ul">
+        {% for collection in collections %}
+            {% if collection.metafields.custom.show_on_site_map == true %}
+                <li class="simple-list-item">
+                    {{- collection.title | link_to: collection.url }}
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+
+    {%- paginate collections['all-clothes'].products by collections['all-clothes'].all_products_count -%}
+    <h2 class="simple-list-title">מוצרים</h2>
+    <ul class="simple-list-ul">
+        {%- for product in collections['all-clothes'].products -%}
+            {% unless product.tags contains 'hidden' %}
+                <li class="simple-list-item">
+                    {{ product.title | link_to: product.url }}
+                </li>
+            {% endunless %}
+        {%- endfor -%}
+    </ul>
+    {%- endpaginate -%}
+
+    <h2 class="simple-list-title">עמודים</h2>
+    {%- paginate pages by 50 -%}
+        <ul class="simple-list-ul">
+            {%- for page in pages -%}
+                {% if page.metafields.custom.show_on_site_map == true %}
+                    <li class="simple-list-item">
+                        {{ page.title | link_to: page.url }}
+                    </li>
+                {% endif %}
+            {%- endfor -%}
+        </ul>
+    {%- endpaginate -%}
+
+    <h2 class="simple-list-title">בלוג</h2>
+    {%- paginate blogs.blog.articles by 50 -%}
+        <ul class="simple-list-ul">
+            {%- for article in blogs.blog.articles -%}
+                <li class="simple-list-item">
+                    {{ article.title | link_to: article.url }}
+                </li>
+            {%- endfor -%}
+        </ul>
+    {%- endpaginate -%}
+</div>
+
+{% schema %}
+{
+    "name": "Simple List",
+    "settings": [
+        {
+            "type": "range",
+            "id": "padding_top",
+            "label": "Padding Top",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "default": 20
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "label": "Padding Bottom",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "default": 20
+        }
+    ],
+    "presets": [
+        {
+            "name": "Simple List",
+            "category": "List",
+            "settings": {
+            "padding_top": 20,
+            "padding_bottom": 20
+          }
+        }
+    ]
+}
+{% endschema %}
