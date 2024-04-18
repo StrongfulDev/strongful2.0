@@ -99,6 +99,10 @@
                             <span class="new-product-span">
                                 RESTOCK
                             </span>
+                        {% elsif card_product.tags contains 'sale' %}
+                            <span class="new-product-span">
+                                SALE
+                            </span>
                         {% elsif product.tags contains settings.second_announcement_tag %}
                             <span class="new-product-span">
                                 SALE
