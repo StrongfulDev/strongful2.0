@@ -246,17 +246,13 @@
                         <span class="new-product-span">
                                 {{ 'products.product.new' | t }}
                             </span>
+                    {% elsif card_product.tags contains settings.announcement_tag %}
+                        <span class="new-product-span">
+                                SALE
+                            </span>
                         {% elsif card_product.tags contains 'restock' or card_product.tags contains 'RESTOCK' %}
                             <span class="new-product-span">
                                 RESTOCK
-                            </span>
-                        {% elsif card_product.tags contains 'sale' %}
-                        <span class="new-product-span">
-                                SALE
-                            </span>
-                        {% elsif card_product.tags contains settings.second_announcement_tag %}
-                        <span class="new-product-span">
-                                SALE
                             </span>
                     {% endif %}
                     {%- if show_quick_add and quick_add_type_mobile == "modal" -%}

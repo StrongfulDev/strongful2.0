@@ -95,13 +95,13 @@
                             <span class="new-product-span">
                                 {{ 'products.product.new' | t }}
                             </span>
+                        {% elsif product.tags contains settings.announcement_tag %}
+                            <span class="new-product-span">
+                                SALE
+                            </span>
                             {% elsif product.tags contains 'restock' or product.tags contains 'RESTOCK' %}
                             <span class="new-product-span">
                                 RESTOCK
-                            </span>
-                        {% elsif card_product.tags contains settings.announcement_tag %}
-                            <span class="new-product-span">
-                                SALE
                             </span>
                         {% endif %}
                         {%- assign media_position = 1 -%}
