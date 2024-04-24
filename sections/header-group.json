@@ -69,8 +69,8 @@
             "link_text_direction": "Left To Right",
             "show_on_mobile": true,
             "small_font": false,
-            "title": "20% OFF",
-            "title_link": "shopify:\/\/collections\/new-holiday-sale",
+            "title": "NEW IN",
+            "title_link": "shopify:\/\/collections\/new-in",
             "menu_link_image": "shopify:\/\/shop_images\/0_800c8dac-c7ae-44c1-9187-cf236cf98e60.jpg"
           }
         },
@@ -81,7 +81,7 @@
             "show_on_mobile": true,
             "order": "",
             "small_font": false,
-            "menu": "trending",
+            "menu": "trending-without-10",
             "menu_second": "",
             "menu_third": "",
             "title": "קני לפי",
