@@ -251,8 +251,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/0_70b82bda-9fb4-48e6-a54a-4eccc559883f.jpg",
             "alt": "",
-            "link": "SALE",
-            "url": "shopify:\/\/collections\/new-holiday-sale",
+            "link": "NEW IN",
+            "url": "shopify:\/\/collections\/new-in",
             "show_on_desktop": true
           }
         },

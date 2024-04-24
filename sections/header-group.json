@@ -24,12 +24,12 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "HOLIDAY SALE",
-            "sub_text": "20% הנחה על כל האתר",
+            "main_text": "THE NEW BLUE",
+            "sub_text": "צבע חדש נחת באתר",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "rtl",
-            "link": "shopify:\/\/collections\/new-holiday-sale",
+            "link": "shopify:\/\/collections\/new-in",
             "color_scheme": "accent-1"
           }
         },
@@ -239,8 +239,8 @@
         "mobile_top_image_1_title": "MOVE X STRONGFUL",
         "show_second_image": true,
         "mobile_top_image_temp": "shopify:\/\/shop_images\/0_bd209748-11e6-4e95-9838-0175986d97e4.jpg",
-        "mobile_top_image_temp_link": "shopify:\/\/collections\/new-holiday-sale",
-        "mobile_top_image_temp_title": "SALE",
+        "mobile_top_image_temp_link": "shopify:\/\/collections\/new-in",
+        "mobile_top_image_temp_title": "NEW IN",
         "show_third_image": true,
         "mobile_top_image_2": "shopify:\/\/shop_images\/0737a51b2679a55d45d0d8f464335044_0614e362-45e4-4400-9265-c76cd09ec69d.jpg",
         "mobile_top_image_2_link": "shopify:\/\/collections\/new-colors",
