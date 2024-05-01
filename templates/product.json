@@ -16,6 +16,7 @@
         },
         "5ec0a264-e4fc-4a8d-92bc-f2f9223694f5": {
           "type": "sale",
+          "disabled": true,
           "settings": {
             "logged_in_text": "<p>THE NEW BLUE<\/p>",
             "logged_out_text": "<p>THE NEW BLUE<\/p>",
