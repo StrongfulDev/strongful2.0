@@ -4250,6 +4250,10 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 }
 
 .reward-items {
+	/*display: none;*/
+}
+
+.reward-item.free_bottle {
 	display: none;
 }
 
