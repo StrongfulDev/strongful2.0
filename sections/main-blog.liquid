@@ -16,7 +16,7 @@
   }
 {%- endstyle -%}
 
-{%- paginate blog.articles by 15 -%}
+{%- paginate blog.articles by blog.articles.size -%}
   <div class="main-blog page-width section-{{ section.id }}-padding">
     <div class="blog-title-container">
         <span class="blog-black-line"></span>
