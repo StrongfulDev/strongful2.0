@@ -8,6 +8,22 @@
     var alias = store.replace(".myshopify.com", "").replaceAll("-", "_").toUpperCase();
     var jitsuKey =  "js.{{ shop.id }}";
     window.loomi_ctx = {...(window.loomi_ctx || {}),storeAlias:alias,jitsuKey,env};
+    
+	{% if product %}
+	(()=>{
+	var product = {};
+	var variants = [];
+	{% for v in product.variants %}
+	variants.push({id:{{ v.id }},policy:"{{v.inventory_policy }}",price:{{v.price}},iq:{{ v.inventory_quantity }}});
+	{% endfor %}
+	product.variants = variants;
+	product.oos = !{{product.available}};
+	product.price = {{ product.price }} ;
+	window.loomi_ctx.current_product=product;
+	window.loomi_ctx.productId={{product.id}};
+	window.loomi_ctx.variantId={{ product.selected_or_first_available_variant.id }};
+	})()
+	{% endif %}
 </script>
 <link href="https://sdk.loomi-prod.xyz/widgets/vsly-preact.min.js?k=js.34079867020&e=2&s=STRONGFULCLOTHING" rel="preload" as="script">
 <script type="text/javascript" src="https://sdk.loomi-prod.xyz/widgets/vsly-preact.min.js?k=js.34079867020&e=2&s=STRONGFULCLOTHING"></script>
