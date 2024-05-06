@@ -24,8 +24,8 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "THE NEW BLUE",
-            "sub_text": "צבע חדש נחת באתר",
+            "main_text": "NEW IN: BOTTLES",
+            "sub_text": "בקבוקים חדשים נחתו באתר!",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "rtl",
@@ -70,7 +70,7 @@
             "show_on_mobile": true,
             "small_font": false,
             "title": "NEW IN",
-            "title_link": "shopify:\/\/collections\/hype-set",
+            "title_link": "shopify:\/\/collections\/new-in",
             "menu_link_image": "shopify:\/\/shop_images\/bd9a4cbcb5a8c5865a0499b4fa42b489_d7b802ef-ac70-48d6-aa26-9aa44164aa66.jpg"
           }
         },
