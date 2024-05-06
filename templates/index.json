@@ -256,6 +256,16 @@
             "show_on_desktop": true
           }
         },
+        "image_6XTpXy": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/0737a51b2679a55d45d0d8f464335044_afb52e71-8f11-466f-a20a-ece6dec74fe5.jpg",
+            "alt": "",
+            "link": "NEW IN",
+            "url": "shopify:\/\/collections\/hype-set",
+            "show_on_desktop": false
+          }
+        },
         "3603325c-8c6d-4a1e-b28e-fe94adadefb7": {
           "type": "image",
           "settings": {
@@ -289,6 +299,7 @@
       },
       "block_order": [
         "dfad4ec5-c40b-4feb-90a9-341da374970d",
+        "image_6XTpXy",
         "3603325c-8c6d-4a1e-b28e-fe94adadefb7",
         "0ae2dc2c-e286-48f6-be64-4aa8bc8de568",
         "d4c24f14-7485-452d-a6c5-ab2dbbf11ee6"
