@@ -106,24 +106,9 @@
             "button_label": "SIGN UP",
             "login_button_label": "SHOP NOW",
             "link": "",
+            "login_link": "shopify:\/\/collections\/25-off-everything",
             "show_text_box": true,
             "color_scheme": "accent-1",
-            "whole_slide_link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_fbjVqR": {
-          "type": "slide",
-          "settings": {
-            "button_label": "Button label",
-            "login_button_label": "SHOP NOW",
-            "link": "",
-            "show_text_box": true,
-            "color_scheme": "background-1",
             "whole_slide_link": "",
             "button_style_secondary": false,
             "box_align": "middle-center",
@@ -134,8 +119,7 @@
         }
       },
       "block_order": [
-        "slide_UG9xgt",
-        "slide_fbjVqR"
+        "slide_UG9xgt"
       ],
       "settings": {
         "layout": "full_bleed",
