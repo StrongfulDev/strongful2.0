@@ -160,6 +160,9 @@
             {% if block.settings.whole_slide_link != blank %}
                 <a href="{{ block.settings.whole_slide_link }}" class="whole-slide-link">
             {% endif %}
+
+            {% unless customer %}
+
             <div class="slideshow__slide grid__item grid--1-col slider__slide slideshow__slide--{{ forloop.index0 }}"
                  id="Slide-{{ section.id }}-{{ forloop.index }}"
                     {{ block.shopify_attributes }}
@@ -168,30 +171,30 @@
                  aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
                  tabindex="-1"
             >
-                <div class="slideshow__media banner__media media{% if block.settings.image == blank %} placeholder{% endif %}">
-                    {%- if block.settings.image -%}
-                        {%- assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round -%}
-                        {%- assign mobile_height = block.settings.mobile_image.width | divided_by: block.settings.mobile_image.aspect_ratio | round -%}
-                        {{ block.settings.image | image_url: width: 3840 | image_tag:
-                        loading: 'lazy',
-                        height: height,
-                        sizes: "100vw",
-                        widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
-                        alt: settings.seo_alt_text
-                        }}
-                        {% if block.settings.mobile_image != blank %}
-                            {{ block.settings.mobile_image | image_url: width: 1000 | image_tag:
+                    <div class="slideshow__media banner__media media{% if block.settings.image == blank %} placeholder{% endif %}">
+                        {%- if block.settings.image -%}
+                            {%- assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round -%}
+                            {%- assign mobile_height = block.settings.mobile_image.width | divided_by: block.settings.mobile_image.aspect_ratio | round -%}
+                            {{ block.settings.image | image_url: width: 3840 | image_tag:
                             loading: 'lazy',
-                            height: mobile_height,
+                            height: height,
                             sizes: "100vw",
-                            class: "mobile_version",
-                            widths: '375, 550, 750, 1000'
+                            widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                            alt: settings.seo_alt_text
                             }}
+                            {% if block.settings.mobile_image != blank %}
+                                {{ block.settings.mobile_image | image_url: width: 1000 | image_tag:
+                                loading: 'lazy',
+                                height: mobile_height,
+                                sizes: "100vw",
+                                class: "mobile_version",
+                                widths: '375, 550, 750, 1000'
+                                }}
+                            {%- endif -%}
+                        {%- else -%}
+                            {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
                         {%- endif -%}
-                    {%- else -%}
-                        {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
-                    {%- endif -%}
-                </div>
+                    </div>
                 <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
                     <div class="slideshow__text banner__box content-container content-container--full-width-mobile
                                 banner__box--{{ forloop.index }}
@@ -199,28 +202,72 @@
                                 gradient slideshow__text--{{ block.settings.text_alignment }}
                                 slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}"
                     >
-                        {% comment %}
-                        {%- if block.settings.heading != blank -%}
-                            <h2 class="banner__heading {{ block.settings.heading_size }}">{{ block.settings.heading | escape }}</h2>
-                        {%- endif -%}
-
-                        {%- if block.settings.subheading != blank -%}
-                            <div class="banner__text" {{ block.shopify_attributes }}>
-                                <span>{{ block.settings.subheading | escape }}</span>
-                            </div>
-                        {%- endif -%}
-
-                        {% endcomment %}
 
                         {%- if block.settings.button_label != blank -%}
                             <div class="banner__buttons">
-                                <a{% if block.settings.link %} href="{{ block.settings.link }}"{% else %} role="link" aria-disabled="true"{% endif %}
-                                        class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}">{{ block.settings.button_label | escape }}</a>
+                                <div class="button account-toggler-site-wide {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}">
+                                    {{ block.settings.button_label | escape }}
+                                </div>
                             </div>
                         {%- endif -%}
                     </div>
                 </div>
             </div>
+
+                    {% else %}
+
+                <div class="slideshow__slide grid__item grid--1-col slider__slide slideshow__slide--{{ forloop.index0 }}"
+                     id="Slide-{{ section.id }}-{{ forloop.index }}"
+                        {{ block.shopify_attributes }}
+                     role="group"
+                     aria-roledescription="{{ 'sections.slideshow.slide' | t }}"
+                     aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+                     tabindex="-1"
+                >
+                    <div class="slideshow__media banner__media media{% if block.settings.image == blank %} placeholder{% endif %}">
+                        {%- if block.settings.login_desktop_image -%}
+                            {%- assign height = block.settings.login_desktop_image.width | divided_by: block.settings.login_desktop_image.aspect_ratio | round -%}
+                            {%- assign mobile_height = block.settings.login_mobile_image.width | divided_by: block.settings.login_mobile_image.aspect_ratio | round -%}
+                            {{ block.settings.login_desktop_image | image_url: width: 3840 | image_tag:
+                            loading: 'lazy',
+                            height: height,
+                            sizes: "100vw",
+                            widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                            alt: settings.seo_alt_text
+                            }}
+                            {% if block.settings.login_mobile_image != blank %}
+                                {{ block.settings.login_mobile_image | image_url: width: 1000 | image_tag:
+                                loading: 'lazy',
+                                height: mobile_height,
+                                sizes: "100vw",
+                                class: "mobile_version",
+                                widths: '375, 550, 750, 1000'
+                                }}
+                            {%- endif -%}
+                        {%- else -%}
+                            {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+                        {%- endif -%}
+                    </div>
+                    <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
+                        <div class="slideshow__text banner__box content-container content-container--full-width-mobile
+                                banner__box--{{ forloop.index }}
+                                color-{{ block.settings.color_scheme }}
+                                gradient slideshow__text--{{ block.settings.text_alignment }}
+                                slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}"
+                        >
+
+                            {%- if block.settings.login_button_label != blank -%}
+                                <div class="banner__buttons">
+                                    <a{% if block.settings.login_link %} href="{{ block.settings.login_link }}"{% else %} role="link" aria-disabled="true"{% endif %}
+                                            class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}">{{ block.settings.login_button_label | escape }}</a>
+                                </div>
+                            {%- endif -%}
+                        </div>
+                    </div>
+                </div>
+
+                {% endunless %}
+
             {% if block.settings.whole_slide_link != blank %}
                 </a>
             {% endif %}
@@ -423,6 +470,11 @@
                     "type": "url",
                     "id": "link",
                     "label": "t:sections.slideshow.blocks.slide.settings.link.label"
+                },
+                {
+                    "type": "url",
+                    "id": "login_link",
+                    "label": "Logged In Link"
                 },
                 {
                     "type": "checkbox",

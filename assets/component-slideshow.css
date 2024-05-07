@@ -234,6 +234,7 @@ button.slideshow__autoplay {
     position: absolute;
 	transform: translateX(-50%);
 	left: 50%;
+	border-radius: var(--inputs-radius);
 }
 
 .slideshow__slide--0 .slideshow__text.banner__box {
@@ -298,7 +299,6 @@ button.slideshow__autoplay {
 
 	.slideshow__slide--0 .slideshow__text.banner__box {
 		bottom: 30%;
-		left: 85%;
 	}
 
 	.slideshow__slide:first-of-type .slideshow__text-wrapper {

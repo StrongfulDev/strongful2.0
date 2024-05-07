@@ -415,6 +415,7 @@
     flex-wrap: wrap;
     max-width: 45rem;
     word-break: break-word;
+	border-radius: var(--inputs-radius);
 }
 
 @media screen and (max-width: 989px) {
@@ -459,7 +460,8 @@
 }
 
 .banner__media+.banner__content .banner__box {
-		padding: calc(var(--grid-desktop-horizontal-spacing) * 2) 0 0;
+		/*padding: calc(var(--grid-desktop-horizontal-spacing) * 2) 0 0;*/
+	padding: 0;
 }
 
 .button--primary {
