@@ -3,10 +3,10 @@
     "main": {
       "type": "main-blog",
       "settings": {
-        "tile_image_one": "shopify:\/\/shop_images\/7ff08d51abffc0cfdf69f878b50b58d6_7eb72cbc-5ecc-4c64-87b6-f62da9dbd981.jpg",
-        "tile_image_one_link": "shopify:\/\/collections\/new-holiday-sale",
-        "tile_image_two": "shopify:\/\/shop_images\/7ff08d51abffc0cfdf69f878b50b58d6_91cdf8a7-27aa-41ea-aab9-09608d7c4223.jpg",
-        "tile_image_two_link": "shopify:\/\/collections\/new-colors",
+        "tile_image_one": "shopify:\/\/shop_images\/0_3482e554-991c-4910-93a2-768b111fa77f.jpg",
+        "tile_image_one_link": "shopify:\/\/collections\/25-off-everything",
+        "tile_image_two": "shopify:\/\/shop_images\/7ff08d51abffc0cfdf69f878b50b58d6_641bc7eb-5246-4096-8d22-49fcb0ff3ec6.jpg",
+        "tile_image_two_link": "shopify:\/\/collections\/new-in",
         "layout": "grid",
         "show_image": true,
         "image_height": "adapt",
