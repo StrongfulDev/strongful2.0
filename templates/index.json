@@ -93,18 +93,18 @@
         "padding_bottom": 16
       }
     },
-    "bf7c8475-03e5-4509-86d8-21c4c329bb00": {
-      "type": "slideshow",
+    "customer_slideshow_cBac6J": {
+      "type": "customer-slideshow",
       "blocks": {
-        "b43423be-0745-47c7-be6a-84d0ee24d128": {
+        "slide_UG9xgt": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/copy_f0aa1858-6b06-4676-9112-c0a4d9aef27e.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_5ce22894-912d-4da6-82f4-b702727f3e54.jpg",
-            "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/hype-set",
-            "show_text_box": false,
-            "color_scheme": "inverse",
+            "image": "shopify:\/\/shop_images\/cac753787b8c3103235ea2ae03f3615d.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/ae9a4793364edac68789e700ef4fd0d1.jpg",
+            "button_label": "SIGN UP",
+            "link": "",
+            "show_text_box": true,
+            "color_scheme": "accent-1",
             "whole_slide_link": "",
             "button_style_secondary": false,
             "box_align": "middle-center",
@@ -115,7 +115,7 @@
         }
       },
       "block_order": [
-        "b43423be-0745-47c7-be6a-84d0ee24d128"
+        "slide_UG9xgt"
       ],
       "settings": {
         "layout": "full_bleed",
@@ -123,7 +123,7 @@
         "slider_visual": "sides",
         "auto_rotate": false,
         "change_slides_speed": 5,
-        "show_text_below": false,
+        "show_text_below": true,
         "accessibility_info": "Slideshow about our brand",
         "padding_top": 0,
         "padding_bottom": 36
@@ -357,7 +357,7 @@
   },
   "order": [
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9",
-    "bf7c8475-03e5-4509-86d8-21c4c329bb00",
+    "customer_slideshow_cBac6J",
     "slideshow_dtfFDm",
     "featured_collection_4JBk4Y",
     "ff8d8d77-e0dc-42f4-8ec6-54fb434b711b",
