@@ -24,12 +24,12 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "NEW IN: BOTTLES",
-            "sub_text": "בקבוקים חדשים נחתו באתר!",
+            "main_text": "FOR CLUB MEMBERS ONLY",
+            "sub_text": "25% הנחה ברכישת 3 פריטים ומעלה!",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "rtl",
-            "link": "shopify:\/\/collections\/new-in",
+            "link": "shopify:\/\/collections\/25-off-everything",
             "color_scheme": "accent-1"
           }
         },
