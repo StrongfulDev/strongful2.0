@@ -24,10 +24,10 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "FOR CLUB MEMBERS ONLY",
-            "sub_text": "25% הנחה ברכישת 3 פריטים ומעלה!",
+            "main_text": "25% הנחה ברכישת 3 פריטים ומעלה",
+            "sub_text": "CLUB MEMBERS ONLY",
             "text_alignment": "center",
-            "main_text_direction": "ltr",
+            "main_text_direction": "rtl",
             "sub_text_direction": "rtl",
             "link": "shopify:\/\/collections\/25-off-everything",
             "color_scheme": "accent-1"
