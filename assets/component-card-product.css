@@ -125,7 +125,8 @@
 	margin-bottom: 8px;
 	text-align: center;
 	font-size: calc(var(--font-body-size-medium) * 0.8);
-	direction: ltr;
+	/*direction: ltr;*/
+	direction: rtl;
 	color: firebrick;
 }
 
