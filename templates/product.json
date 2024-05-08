@@ -18,9 +18,9 @@
           "type": "sale",
           "settings": {
             "logged_in_text": "<p>CLUB MEMBERS ONLY<\/p><p>25% הנחה ברכישת 3 פריטים ומעלה!<\/p>",
-            "logged_out_text": "<p>25% הנחה ברכישת 3 פריטים ומעלה<\/p>",
-            "log_in": "לחברות מועדון בלבד",
-            "small_text": "",
+            "logged_out_text": "<p>CLUB MEMBERS ONLY<\/p><p>25% הנחה ברכישת 3 פריטים ומעלה!<\/p>",
+            "log_in": "",
+            "small_text": "בשימוש הקוד MEMBER25",
             "small_logged_in_text": "בשימוש הקוד MEMBER25",
             "second_announcement_regular_text": "",
             "second_small_text": "",

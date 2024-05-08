@@ -93,22 +93,18 @@
         "padding_bottom": 16
       }
     },
-    "customer_slideshow_cBac6J": {
-      "type": "customer-slideshow",
+    "slideshow_Bn9kRq": {
+      "type": "slideshow",
       "blocks": {
-        "slide_UG9xgt": {
+        "slide_qE7mg9": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/cac753787b8c3103235ea2ae03f3615d.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/ae9a4793364edac68789e700ef4fd0d1.jpg",
-            "login_desktop_image": "shopify:\/\/shop_images\/50a025ec42f8f1ac3a95e0929900442d.jpg",
-            "login_mobile_image": "shopify:\/\/shop_images\/9b79d3812f76b7ce9c44cdad72cf4688.jpg",
-            "button_label": "הרשמה \/ התחברות",
-            "login_button_label": "SHOP NOW",
-            "link": "",
-            "login_link": "shopify:\/\/collections\/25-off-everything",
+            "image": "shopify:\/\/shop_images\/0_2732a9e8-3b16-426d-9e18-c9f4fd9027ea.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/0_b6fbc9cd-1b2e-47e6-8541-552ae8cb3b68.jpg",
+            "button_label": "SHOP NOW",
+            "link": "shopify:\/\/collections\/25-off-everything",
             "show_text_box": true,
-            "color_scheme": "accent-1",
+            "color_scheme": "background-1",
             "whole_slide_link": "",
             "button_style_secondary": false,
             "box_align": "middle-center",
@@ -119,12 +115,12 @@
         }
       },
       "block_order": [
-        "slide_UG9xgt"
+        "slide_qE7mg9"
       ],
       "settings": {
         "layout": "full_bleed",
         "slide_height": "adapt_image",
-        "slider_visual": "sides",
+        "slider_visual": "counter",
         "auto_rotate": false,
         "change_slides_speed": 5,
         "show_text_below": true,
@@ -361,7 +357,7 @@
   },
   "order": [
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9",
-    "customer_slideshow_cBac6J",
+    "slideshow_Bn9kRq",
     "slideshow_dtfFDm",
     "featured_collection_4JBk4Y",
     "ff8d8d77-e0dc-42f4-8ec6-54fb434b711b",
