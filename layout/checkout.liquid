@@ -491,30 +491,25 @@
 
 		function checkCouponText() {
 			let notice = document.querySelector('.notice__text');
-			let preorder = document.querySelector(".regular-preorder");
-			let checkoutTotal = parseInt(document.querySelector(".order-summary__emphasis").innerText.replace('₪', '').replace('.', '') / 100);
+            console.log(notice);
 			if (notice !== null) {
-				if (preorder !== null && checkoutTotal > 200) {
-					notice.innerHTML = 'אין כפל הנחות/מבצעים על פריטים ממכירה מוקדמת';
-				} else if (notice.innerHTML.toLocaleLowerCase().includes('welcome')) {
+				 if (notice.innerHTML.toLocaleLowerCase().includes('welcome')) {
 					notice.innerHTML = 'קוד הקופון <strong>WELCOME30</strong> תקף בקנייה מעל ₪200';
-				} else if (notice.innerHTML.toLocaleLowerCase().includes("dian")) {
-					notice.innerHTML = 'קוד הקופון <strong>DIAN</strong> תקף בקניית 3 מוצרים ומעלה';
-				} else if (notice.innerHTML.toLocaleLowerCase().includes("corrin")) {
-					notice.innerHTML = 'קוד הקופון <strong>CORRIN</strong> תקף בקניית 3 מוצרים ומעלה';
-				} else if (notice.innerHTML.toLocaleLowerCase().includes("talia")) {
-					notice.innerHTML = 'קוד הקופון <strong>TALIA</strong> תקף בקניית 3 מוצרים ומעלה';
-				} else if (notice.innerHTML.toLocaleLowerCase().includes("barc")) {
-					notice.innerHTML = 'קוד הקופון <strong>BARC</strong> תקף בקניית 3 מוצרים ומעלה';
-				} else if (notice.innerHTML.toLocaleLowerCase().includes("liel")) {
-					notice.innerHTML = 'קוד הקופון <strong>LIEL</strong> תקף בקניית 3 מוצרים ומעלה';
-				} else if (notice.innerHTML.toLocaleLowerCase().includes("kc")) {
-					notice.innerHTML = 'קוד הקופון <strong>KC</strong> תקף בקניית 3 מוצרים ומעלה';
-				} else if (notice.innerHTML.toLocaleLowerCase().includes("daniella")) {
-					notice.innerHTML = 'קוד הקופון <strong>DANIELLA</strong> תקף בקניית 3 מוצרים ומעלה';
+				} else if (notice.innerHTML.toLocaleLowerCase().includes("member")) {
+					notice.innerHTML = 'קוד הקופון תקף בקניית 3 מוצרים ומעלה, לחברות מועדון בלבד';
 				}
 			}
+
+            console.log('checkCouponText function ran');
 		}
+
+        let couponSubmit = document.querySelector("#checkout_submit");
+        let couponSubmitSVG = couponSubmit.querySelectorAll("svg");
+        couponSubmitSVG.forEach((svg) => {
+            svg.addEventListener('click', function() {
+                setTimeout(checkCouponText, 3500);
+            });
+        });
 
 		checkCouponText();
 		setTimeout(checkCouponText, 3000); // fallback
