@@ -99,8 +99,8 @@
         "slide_qE7mg9": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0_2732a9e8-3b16-426d-9e18-c9f4fd9027ea.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/0_b6fbc9cd-1b2e-47e6-8541-552ae8cb3b68.jpg",
+            "image": "shopify:\/\/shop_images\/0_1_89379147-ac2f-40fc-aec0-ef2d2e07fc9d.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/0_1_dae71cb9-98b0-46b6-bbc4-b866509591fb.jpg",
             "button_label": "SHOP NOW",
             "link": "shopify:\/\/collections\/25-off-everything",
             "show_text_box": true,
@@ -251,7 +251,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/0_77ce6ba9-d471-48d7-915f-af41c89052a4.jpg",
             "alt": "",
-            "link": "חברות מועדון בלבד",
+            "link": "SALE",
             "url": "shopify:\/\/collections\/25-off-everything",
             "show_on_desktop": true
           }
