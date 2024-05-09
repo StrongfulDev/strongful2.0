@@ -495,7 +495,7 @@
 			if (notice !== null) {
 				 if (notice.innerHTML.toLocaleLowerCase().includes('welcome')) {
 					notice.innerHTML = 'קוד הקופון <strong>WELCOME30</strong> תקף בקנייה מעל ₪200';
-				} else if (notice.innerHTML.toLocaleLowerCase().includes("member")) {
+				} else if (notice.innerHTML.toLocaleLowerCase().includes("member") || notice.innerHTML.includes('MEMBER')) {
 					notice.innerHTML = 'קוד הקופון תקף בקניית 3 מוצרים ומעלה, לחברות מועדון בלבד';
 				}
 			}
