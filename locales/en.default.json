@@ -746,7 +746,7 @@
         "gift_card_has_been_applied": "גיפט קארד נקלט",
         "gift_card_has_been_removed": "גיפט קארד הוסר",
         "discount_already_applied": "להזמנה זאת יש הנחה האחת תקפה, לא ניתן להוסיף עוד אחת.",
-        "cart_does_not_meet_discount_requirements_notice": "קוד הקופון אינו תקף על הפריטים שבחרת.",
+        "cart_does_not_meet_discount_requirements_notice": "קוד הקופון {{ code }} אינו תקף על הפריטים שבחרת.",
         "discount_requires_customer_notice": "יופעל <strong>{{ code }}<\/strong> הזיני כתובת למשלוח כדי שקוד הקופון ",
         "customer_does_not_meet_discount_requirements_notice": "קוד הקופון אינו תקף.",
         "customer_already_used_once_per_customer_discount_notice": "השתמשת בקוד הקופון {{ code }} בעבר",
