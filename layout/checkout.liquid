@@ -504,6 +504,9 @@
 		}
 
         let couponSubmit = document.querySelector("#checkout_submit");
+        couponSubmit.addEventListener('click', function() {
+            setTimeout(checkCouponText, 3500);
+        });
         let couponSubmitSVG = couponSubmit.querySelectorAll("svg");
         couponSubmitSVG.forEach((svg) => {
             svg.addEventListener('click', function() {
