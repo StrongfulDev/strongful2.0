@@ -277,19 +277,23 @@
           "type": "featured_collection",
           "settings": {
             "collection": "טייצים-ארוכים",
-            "collection_image": "shopify:\/\/shop_images\/e49d5146bbe6c24c893549732826f3dd.png"
+            "collection_image": "shopify:\/\/shop_images\/e49d5146bbe6c24c893549732826f3dd.png",
+            "show_collection_title": false
           }
         },
         "featured_collection_DdnqiN": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "שורטים",
+            "collection_image": "shopify:\/\/shop_images\/97303b963b18fe7d5fea4a55dadffa66.png",
+            "show_collection_title": false
           }
         },
         "featured_collection_XzPPyM": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "",
+            "show_collection_title": true
           }
         }
       },
