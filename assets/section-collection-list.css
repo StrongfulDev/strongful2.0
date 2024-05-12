@@ -1,6 +1,7 @@
  #index .collection-list {
   margin-top: 0;
   margin-bottom: 0;
+	 width: 100%;
 }
 
  #index .collection-list-title {
@@ -34,7 +35,7 @@
 	}
 
 	#index .section-collection-list .grid--2-col-tablet-down .grid__item:last-child {
-		padding-right: 1.5rem;
+		/*padding-right: 1.5rem;*/
 	}
 }
  #index .section-collection-list .collection-list:not(.slider) {
@@ -44,8 +45,8 @@
 }
 
  #index .section-collection-list .grid--2-col-tablet-down .grid__item {
-	width: 91%;
-	max-width: inherit;
+	/*width: 91%;*/
+	/*max-width: inherit;*/
 }
 
  #index .collection-list__item:only-child {
@@ -115,8 +116,8 @@
   }
 
 	#index .section-collection-list .grid--2-col-tablet-down .grid__item {
-		width: 100%;
-		max-width: fit-content;
+		/*width: 100%;*/
+		/*max-width: fit-content;*/
 	}
 }
 
