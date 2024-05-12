@@ -25,6 +25,11 @@
     assign show_mobile_slider = true
   endif
 
+    assign show_desktop_slider = false
+    if section.settings.enable_desktop_slider == true
+        assign show_desktop_slider = true
+    endif
+
     assign show_side_arrows = false
     if section.settings.pagination_type == "sides" and show_desktop_slider
         assign show_side_arrows = true
