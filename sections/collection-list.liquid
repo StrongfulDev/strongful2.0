@@ -70,7 +70,8 @@
               media_aspect_ratio: section.settings.image_ratio,
               columns: columns,
                 color: card_collection.metafields.global.collection_color,
-                imageChecker: section.settings.images_or_colors
+                imageChecker: section.settings.images_or_colors,
+                    collection_image: block.settings.collection_image
             %}
           </li>
         {%- endfor -%}
@@ -302,7 +303,13 @@
           "type": "collection",
           "id": "collection",
           "label": "t:sections.collection-list.blocks.featured_collection.settings.collection.label"
-        }
+        },
+          {
+              "type": "image_picker",
+                "id": "collection_image",
+                "label": "Collection Image",
+                "info": "Select an image to display for this collection. If no image is selected, the collection's featured image will be used."
+          }
       ]
     }
   ],
