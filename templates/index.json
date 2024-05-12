@@ -204,6 +204,72 @@
         "padding_bottom": 36
       }
     },
+    "our_collection_list_v2_mK6kUx": {
+      "type": "our-collection-list-v2",
+      "blocks": {
+        "image_JnihJ6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/best_sellers_mobile.png",
+            "desktop_image": "shopify:\/\/shop_images\/desk_1.jpg",
+            "alt": "",
+            "link": "",
+            "url": "shopify:\/\/collections\/best-seller-internal-use",
+            "show_on_desktop": true
+          }
+        },
+        "image_3PJtne": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2nd_mobile.png",
+            "desktop_image": "shopify:\/\/shop_images\/desk2.jpg",
+            "alt": "",
+            "link": "",
+            "url": "shopify:\/\/collections\/outlet",
+            "show_on_desktop": true
+          }
+        },
+        "image_a4f9L6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mobile_3.png",
+            "desktop_image": "shopify:\/\/shop_images\/desk_3.jpg",
+            "alt": "",
+            "link": "",
+            "url": "shopify:\/\/collections\/new-in",
+            "show_on_desktop": true
+          }
+        },
+        "image_ydbCwA": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mobile_4.png",
+            "desktop_image": "shopify:\/\/shop_images\/desk_4.jpg",
+            "alt": "",
+            "link": "",
+            "url": "shopify:\/\/collections\/yoga-and-pilates",
+            "show_on_desktop": true
+          }
+        }
+      },
+      "block_order": [
+        "image_JnihJ6",
+        "image_3PJtne",
+        "image_a4f9L6",
+        "image_ydbCwA"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "heading_type": "heading_type_default",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "color_scheme": "background-1",
+        "is_full_width": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "ff8d8d77-e0dc-42f4-8ec6-54fb434b711b": {
       "type": "featured-collection",
       "settings": {
@@ -360,6 +426,7 @@
     "slideshow_Bn9kRq",
     "slideshow_dtfFDm",
     "featured_collection_4JBk4Y",
+    "our_collection_list_v2_mK6kUx",
     "ff8d8d77-e0dc-42f4-8ec6-54fb434b711b",
     "our_collection_list",
     "eb801099-3113-4348-8f97-119459011525",

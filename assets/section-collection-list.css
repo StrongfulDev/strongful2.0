@@ -70,6 +70,11 @@
  }
 
 @media screen and (max-width: 749px) {
+
+	.our-collections-list-image__img--desktop--new {
+		display: none;
+	}
+
 	#index .slider.collection-list--1-items {
     padding-bottom: 0;
   }
@@ -85,6 +90,11 @@
 }
 
 @media screen and (min-width: 750px) {
+
+	.our-collections-list-image__img--new {
+		display: none;
+	}
+
 	#index .collection-list__item a:hover {
     box-shadow: none;
   }
@@ -190,6 +200,10 @@
 	padding-right: 0;
 	padding-left: 0;
 }
+
+ img.our-collections-list-image__img--new, img.our-collections-list-image__img--desktop--new {
+	 border-radius: 0;
+ }
 
 @media screen and (min-width: 990px) {
 
