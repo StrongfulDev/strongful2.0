@@ -122,10 +122,8 @@
                                 {% endif %}
                                 class="full-unstyled-link pointer"
                         >
-                            {%- if card_collection.title != blank -%}
+                            {%- if card_collection.title != blank and show_collection_title == true -%}
                                 {{- card_collection.title | escape -}}
-                            {%- else -%}
-                                {{ 'onboarding.collection_title' | t }}
                             {%- endif -%}
                             {% if card_collection.description != blank %}
                                 <div class="desktop--only">
