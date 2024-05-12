@@ -276,16 +276,16 @@
         "featured_collection_QiJdhe": {
           "type": "featured_collection",
           "settings": {
-            "collection": "טייצים-ארוכים",
-            "collection_image": "shopify:\/\/shop_images\/e49d5146bbe6c24c893549732826f3dd.png",
+            "collection": "טופים",
+            "collection_image": "shopify:\/\/shop_images\/7418f2b310a2425ecc7169338a32c0e5_3468405d-373a-4851-b530-a7da086a821b.jpg",
             "show_collection_title": false
           }
         },
         "featured_collection_DdnqiN": {
           "type": "featured_collection",
           "settings": {
-            "collection": "שורטים",
-            "collection_image": "shopify:\/\/shop_images\/97303b963b18fe7d5fea4a55dadffa66.png",
+            "collection": "בגד-גוף",
+            "collection_image": "shopify:\/\/shop_images\/59524930135a991dcbb7a7b212b31a1a_5ee81bd6-5779-4bde-af47-78f6eb29de8c.jpg",
             "show_collection_title": false
           }
         },
@@ -311,6 +311,62 @@
         "featured_collection_DdnqiN",
         "featured_collection_XzPPyM",
         "featured_collection_bmLBxp"
+      ],
+      "settings": {
+        "images_or_colors": "images",
+        "title": "LEGGINGS",
+        "heading_size": "h1",
+        "image_ratio": "adapt",
+        "columns_desktop": 5,
+        "color_scheme": "background-1",
+        "show_view_all": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collection_list_w4D6TE": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_rpBKdE": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "טייצים-ארוכים",
+            "collection_image": "shopify:\/\/shop_images\/e49d5146bbe6c24c893549732826f3dd.png",
+            "show_collection_title": false
+          }
+        },
+        "featured_collection_n3Aag6": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "שורטים",
+            "collection_image": "shopify:\/\/shop_images\/97303b963b18fe7d5fea4a55dadffa66.png",
+            "show_collection_title": false
+          }
+        },
+        "featured_collection_9c9fAw": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "בייקרים",
+            "collection_image": "shopify:\/\/shop_images\/d1101950858e3011306a9f3313398353.png",
+            "show_collection_title": false
+          }
+        },
+        "featured_collection_CyY976": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "טייץ-7-8",
+            "collection_image": "shopify:\/\/shop_images\/7_8.jpg",
+            "show_collection_title": false
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_rpBKdE",
+        "featured_collection_n3Aag6",
+        "featured_collection_9c9fAw",
+        "featured_collection_CyY976"
       ],
       "settings": {
         "images_or_colors": "images",
@@ -484,6 +540,7 @@
     "featured_collection_4JBk4Y",
     "our_collection_list_v2_mK6kUx",
     "collection_list_QrC4z9",
+    "collection_list_w4D6TE",
     "ff8d8d77-e0dc-42f4-8ec6-54fb434b711b",
     "our_collection_list",
     "eb801099-3113-4348-8f97-119459011525",
