@@ -56,7 +56,7 @@
                 <a
                         class="card__inner {% if card_style == 'standard' %}color-{{ card_color_scheme }} gradient{% endif %}{% if card_collection.featured_image or card_style == 'standard' %} ratio{% endif %}"
                         style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
-                href="{{ collection.url }}">
+                href="{{ card_collection.url }}">
                     {% if collection_image != blank %}
                         <div class="card__media {{ value }}">
                             <div class="media media--transparent media--hover-effect">
