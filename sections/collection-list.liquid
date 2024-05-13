@@ -37,8 +37,7 @@
 -%}
 
 <div class="color-{{ section.settings.color_scheme }} gradient collection-list-parent">
-  <div class="collection-list-wrapper page-width isolate
-        {% if show_mobile_slider %} page-width-desktop{% endif %}
+  <div class="collection-list-wrapper isolate
         {% if section.settings.title == blank %} no-heading{% endif %}
         {% if section.settings.show_view_all == false or section.blocks.size > collections.size %}
          no-mobile-link
