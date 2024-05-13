@@ -157,13 +157,10 @@
                 }
 
             </style>
-            {% if block.settings.whole_slide_link != blank %}
-                <a href="{{ block.settings.whole_slide_link }}" class="whole-slide-link">
-            {% endif %}
 
             {% unless customer %}
 
-            <div class="slideshow__slide grid__item grid--1-col slider__slide slideshow__slide--{{ forloop.index0 }}"
+            <div class="slideshow__slide grid__item grid--1-col slider__slide slideshow__slide--{{ forloop.index0 }} account-toggler-site-wide pointer"
                  id="Slide-{{ section.id }}-{{ forloop.index }}"
                     {{ block.shopify_attributes }}
                  role="group"
@@ -216,6 +213,10 @@
 
                     {% else %}
 
+                {% if block.settings.whole_slide_link != blank %}
+                    <a href="{{ block.settings.whole_slide_link }}" class="whole-slide-link">
+                {% endif %}
+
                 <div class="slideshow__slide grid__item grid--1-col slider__slide slideshow__slide--{{ forloop.index0 }}"
                      id="Slide-{{ section.id }}-{{ forloop.index }}"
                         {{ block.shopify_attributes }}
@@ -266,11 +267,12 @@
                     </div>
                 </div>
 
+                {% if block.settings.whole_slide_link != blank %}
+                    </a>
+                {% endif %}
+
                 {% endunless %}
 
-            {% if block.settings.whole_slide_link != blank %}
-                </a>
-            {% endif %}
         {%- endfor -%}
     </div>
     {% if section.settings.auto_rotate == true %}
