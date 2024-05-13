@@ -47,20 +47,32 @@
         {% if section.settings.full_width %} collection--full-width  full-width-padding{% endif %}
          pagination_type_{{ section.settings.pagination_type }}">
     {%- unless section.settings.title == blank -%}
-      <div class="title-wrapper-with-link{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %} title-wrapper--no-top-margin">
+      <div class="title-wrapper-with-link
+        {% if show_mobile_slider %}
+        title-wrapper--self-padded-tablet-down
+        {% endif %}
+        {% if section.settings.show_view_all %}
+        collection__title_heading
+        {% endif %}
+       title-wrapper--no-top-margin">
         <h2 id="SectionHeading-{{ section.id }}" class="collection-list-title {{ section.settings.heading_size }}">
           {{ section.settings.title | escape }}
         </h2>
 
         {%- if section.settings.show_view_all and show_mobile_slider -%}
-          <a
-            href="{{ routes.collections_url }}"
-            id="ViewAll-{{ section.id }}"
-            class="link underlined-link large-up-hide"
-            aria-labelledby="ViewAll-{{ section.id }} SectionHeading-{{ section.id }}"
-          >
-            {{- 'sections.collection_list.view_all' | t -}}
-          </a>
+            {%- liquid
+                assign view_all_wrapper = "top"
+                if section.settings.view_all_location == "desktop_top_tablet_bottom"
+                    assign view_all_wrapper = "top show-desktop"
+                endif
+            %}
+            {% render 'collection-view-all',
+                    collection_url: section.settings.collection.url,
+                    collection_title: section.settings.collection.title,
+                    style: section.settings.view_all_style,
+                    class_wrapper: view_all_wrapper,
+                    view_all_text: section.settings.view_all_text
+            %}
         {%- endif -%}
       </div>
     {%- endunless -%}
@@ -155,29 +167,6 @@
             </div>
         {%- endif -%}
     </slider-component>
-
-    {%- if section.settings.show_view_all -%}
-        {%- liquid
-            assign style = section.settings.view_all_style
-            if section.settings.view_all_location == "desktop_top_tablet_bottom"
-                assign style = "outline"
-            endif
-
-            assign view_all_wrapper = "bottom"
-            if section.settings.view_all_location == "desktop_top_tablet_bottom"
-                assign view_all_wrapper = "bottom show-mobile"
-            endif
-        %}
-      <div class="center collection-list-view-all{% if show_mobile_slider %} small-hide medium-hide{% endif %}">
-          {% render 'collection-view-all',
-                  collection_url: section.settings.collection.url,
-                  collection_title: section.settings.collection.title,
-                  style: section.settings.view_all_style,
-                  class_wrapper: view_all_wrapper,
-                  view_all_text: section.settings.view_all_text
-          %}
-      </div>
-    {%- endif -%}
   </div>
 </div>
 
