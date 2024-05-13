@@ -3,8 +3,8 @@
     "main": {
       "type": "main-blog",
       "settings": {
-        "tile_image_one": "shopify:\/\/shop_images\/0_b6df9389-d8b4-4f37-bbfb-5477143559af.jpg",
-        "tile_image_one_link": "shopify:\/\/collections\/25-off-everything",
+        "tile_image_one": "shopify:\/\/shop_images\/7ff08d51abffc0cfdf69f878b50b58d6_42a82374-c3b2-45d1-9d27-5493d13e4f4c.jpg",
+        "tile_image_one_link": "shopify:\/\/collections\/astra",
         "tile_image_two": "shopify:\/\/shop_images\/7ff08d51abffc0cfdf69f878b50b58d6_641bc7eb-5246-4096-8d22-49fcb0ff3ec6.jpg",
         "tile_image_two_link": "shopify:\/\/collections\/new-in",
         "layout": "grid",
