@@ -277,6 +277,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "allbottoms",
+            "collection_image": "shopify:\/\/shop_images\/a136772298ec22f7807bac8aaf885df7.jpg",
             "show_collection_title": false
           }
         },
@@ -284,7 +285,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "טייצים-ארוכים",
-            "collection_image": "shopify:\/\/shop_images\/e49d5146bbe6c24c893549732826f3dd.png",
+            "collection_image": "shopify:\/\/shop_images\/b7db6d57aa17b4f0d67f91271d380c4b.jpg",
             "show_collection_title": false
           }
         },
@@ -292,7 +293,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "שורטים",
-            "collection_image": "shopify:\/\/shop_images\/97303b963b18fe7d5fea4a55dadffa66.png",
+            "collection_image": "shopify:\/\/shop_images\/27270f897d7aeb43e9528eda6f9de78e.jpg",
             "show_collection_title": false
           }
         },
@@ -300,7 +301,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "בייקרים",
-            "collection_image": "shopify:\/\/shop_images\/d1101950858e3011306a9f3313398353.png",
+            "collection_image": "shopify:\/\/shop_images\/898694b0ab677159752c43c6922132e6.jpg",
             "show_collection_title": false
           }
         },
@@ -308,7 +309,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "טייץ-7-8",
-            "collection_image": "shopify:\/\/shop_images\/7_8.jpg",
+            "collection_image": "shopify:\/\/shop_images\/7_8_1.jpg",
             "show_collection_title": false
           }
         }
@@ -389,6 +390,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "all-tops",
+            "collection_image": "shopify:\/\/shop_images\/34a9cfe415fad4e35e8677bc45f824c6.jpg",
             "show_collection_title": false
           }
         },
@@ -396,7 +398,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "טופים",
-            "collection_image": "shopify:\/\/shop_images\/7418f2b310a2425ecc7169338a32c0e5_3468405d-373a-4851-b530-a7da086a821b.jpg",
+            "collection_image": "shopify:\/\/shop_images\/1_290ff1ac-da27-4acf-b7ac-78a97efd8a2f.jpg",
             "show_collection_title": false
           }
         },
@@ -404,7 +406,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "בגד-גוף",
-            "collection_image": "shopify:\/\/shop_images\/59524930135a991dcbb7a7b212b31a1a_5ee81bd6-5779-4bde-af47-78f6eb29de8c.jpg",
+            "collection_image": "shopify:\/\/shop_images\/1_cab68ad6-fe28-4f09-bd96-505703d38150.jpg",
             "show_collection_title": false
           }
         },
@@ -412,7 +414,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "אוברולים",
-            "collection_image": "shopify:\/\/shop_images\/1e370b1b932764c53374d6f38aff0bc7.jpg",
+            "collection_image": "shopify:\/\/shop_images\/1_d8b54626-2c55-43b6-84cb-6f48b09c926f.jpg",
             "show_collection_title": false
           }
         },
@@ -420,7 +422,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "חולצות",
-            "collection_image": "shopify:\/\/shop_images\/ebbe013753078205a1a448f1f2566e0c.jpg",
+            "collection_image": "shopify:\/\/shop_images\/1_87ca5c71-5a98-445d-9587-558935011140.jpg",
             "show_collection_title": false
           }
         },
@@ -428,7 +430,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "גופיית-ספורט",
-            "collection_image": "shopify:\/\/shop_images\/ef14cbad28863b6736b91cf7eb80ebe1.jpg",
+            "collection_image": "shopify:\/\/shop_images\/1_e842b228-9c60-494f-8e16-0354ea2a3c6f.jpg",
             "show_collection_title": false
           }
         },
@@ -436,7 +438,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "ג-קטים",
-            "collection_image": "shopify:\/\/shop_images\/1_2d7ee282-ec29-4634-a866-92d9d0740f27.jpg",
+            "collection_image": "shopify:\/\/shop_images\/2_e2d9ac19-5962-452d-bf69-1628432ffe29.jpg",
             "show_collection_title": false
           }
         },
@@ -444,6 +446,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "קרופ-טופים",
+            "collection_image": "shopify:\/\/shop_images\/1_adba1759-0ddd-4923-b028-08322ebc3bef.jpg",
             "show_collection_title": false
           }
         }
