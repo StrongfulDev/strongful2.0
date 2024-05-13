@@ -17,10 +17,10 @@
         "5ec0a264-e4fc-4a8d-92bc-f2f9223694f5": {
           "type": "sale",
           "settings": {
-            "logged_in_text": "<p>25% הנחה על כל האתר<\/p><p>ברכישת 3 פריטים ומעלה<\/p>",
-            "logged_out_text": "<p>25% הנחה על כל האתר<\/p><p>ברכישת 3 פריטים ומעלה<\/p>",
+            "logged_in_text": "<p>JUST LANDED: OUR NEW COLLECTION<\/p>",
+            "logged_out_text": "<p>JUST LANDED: OUR NEW COLLECTION<\/p>",
             "log_in": "",
-            "small_text": "בשימוש הקוד MEMBER25",
+            "small_text": "קולקציית ASTRA נחתה באתר",
             "small_logged_in_text": "",
             "second_announcement_regular_text": "",
             "second_small_text": "",

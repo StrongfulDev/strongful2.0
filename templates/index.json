@@ -99,10 +99,10 @@
         "slide_qE7mg9": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0_2_d31fab03-076c-4f10-ab7a-6e7ef6b581e8.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/0_2_e2f97722-d837-48e2-8cd7-6d7e7724c6c0.jpg",
+            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_506c4a2d-7162-4897-b3f0-586548e24ab7.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_03fcf75a-ca95-461b-9e69-8445dac59851.jpg",
             "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/25-off-everything",
+            "link": "shopify:\/\/collections\/astra",
             "show_text_box": true,
             "color_scheme": "background-1",
             "whole_slide_link": "",
@@ -175,7 +175,7 @@
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "new-in",
+        "collection": "astra",
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,
