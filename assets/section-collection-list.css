@@ -253,8 +253,8 @@
   }
 
 	#index .collection-list-wrapper {
-		padding-right: 11vw;
-		padding-left: 11vw;
+		/*padding-right: 11vw;*/
+		/*padding-left: 11vw;*/
 	}
 
 	#page .collection-list__item a.full-unstyled-link:hover {
