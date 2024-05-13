@@ -56,6 +56,10 @@ ul.slider--tablet:after {
 		margin-right: 0;
 	}
 
+	.slider.slider--tablet.grid--5-col-desktop.contains-card--standard:not(.slider--desktop) li.grid__item.slider__slide:not(.collection-list__item--no-media) {
+		min-width: 16%;
+	}
+
 	.slider.slider--tablet.contains-card--standard:not(.slider--desktop).grid--3-col-desktop li.grid__item.slider__slide:not(.collection-list__item--no-media) {
 		min-width: 30%;
 		width: 30%;
