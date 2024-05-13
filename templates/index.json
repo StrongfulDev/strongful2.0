@@ -334,43 +334,44 @@
         "padding_bottom": 36
       }
     },
-    "ff8d8d77-e0dc-42f4-8ec6-54fb434b711b": {
-      "type": "featured-collection",
+    "customer_slideshow_wFcfK7": {
+      "type": "customer-slideshow",
+      "blocks": {
+        "slide_KdxH44": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/jpg_3edd6456-e0f3-4c63-a0c6-30a51bfeee4e.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/jpg_d3c7c1b0-c7bb-436e-97fd-9839a11f39f4.jpg",
+            "login_desktop_image": "shopify:\/\/shop_images\/7e408f30e6e469320ee1736cfbd12e86.jpg",
+            "login_mobile_image": "shopify:\/\/shop_images\/jpg_82e2a474-73bd-4007-b212-2408ca3ffefb.jpg",
+            "button_label": "",
+            "login_button_label": "",
+            "link": "",
+            "login_link": "",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "whole_slide_link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_KdxH44"
+      ],
       "settings": {
-        "steps": 4,
-        "title": "SELLING FAST",
-        "heading_size": "h1",
-        "heading_type": "heading_type_2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "best-seller-internal-use",
-        "products_to_show": 15,
-        "columns_desktop": 5,
-        "full_width": true,
-        "show_view_all": true,
-        "view_all_text": "SHOP ALL",
-        "view_all_style": "link",
-        "view_all_location": "top",
-        "enable_desktop_slider": true,
-        "show_peak": true,
-        "pagination_type": "sides",
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": true,
-        "show_rating": false,
-        "show_sale_badge": false,
-        "enable_quick_add": true,
-        "quick_add_type": "hover",
-        "quick_add_type_mobile": "modal",
-        "quick_add_text": "הוספה מהירה",
-        "pick_size_text": "בחירת מידה",
-        "quick_add_accessories_text": "הוספה מהירה",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 40,
-        "padding_bottom": 60
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "sides",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand",
+        "padding_top": 0,
+        "padding_bottom": 36
       }
     },
     "collection_list_QrC4z9": {
@@ -496,7 +497,7 @@
     "featured_collection_4JBk4Y",
     "our_collection_list_v2_mK6kUx",
     "collection_list_w4D6TE",
-    "ff8d8d77-e0dc-42f4-8ec6-54fb434b711b",
+    "customer_slideshow_wFcfK7",
     "collection_list_QrC4z9",
     "4371b550-969b-4828-986d-71697fc53ef0"
   ]
