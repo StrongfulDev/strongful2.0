@@ -1568,7 +1568,7 @@ summary .icon-caret {
 	list-style: none;
 	padding: 1rem 0;
 	display: flex;
-	width: max-content;
+	width: 100%;
 	overflow-x: scroll;
 	gap: var(--grid-desktop-horizontal-spacing);
 }

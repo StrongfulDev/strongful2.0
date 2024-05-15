@@ -55,7 +55,7 @@
         </div>
     </div>
 
-    {% if results.title == 'טופים' and tops_menu != blank %}
+    {% if results.title == 'טופים' or results.title == 'כל הטופים' or results.title == 'חזזית ספורט' or results.title == 'גופיית ספורט' or results.title == 'בגד גוף' or results.title == 'חולצות ספורט' or results.title == 'קרופ טופ' or results.title == 'ג׳קטים' or results.title == 'אוברולים' or results.title == 'סווטשירט' %}
         <ul class="filter-links">
             {% for link in tops_menu.links %}
                 <li class="filter-link">
