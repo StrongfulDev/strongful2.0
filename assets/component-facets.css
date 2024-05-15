@@ -1578,6 +1578,10 @@ summary .icon-caret {
 	border-left: solid 1px var(--gradient-base-accent-1);
 }
 
+.tops-menu-link {
+	width: 100%;
+}
+
 @media screen and (min-width: 990px) {
 
   .facets-vertical .facets-wrapper {
