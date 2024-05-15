@@ -59,7 +59,7 @@
         <ul class="filter-links">
             {% for link in tops_menu.links %}
                 <li class="filter-link">
-                    <a href="{{ link.url }}" class="tops-menu-link {% if link.current %}list-menu__item--active{% endif %}">{{ link.title }}</a>
+                    <a href="{{ link.url | url_decode }}" class="tops-menu-link {% if link.current %}list-menu__item--active{% endif %}">{{ link.title }}</a>
                 </li>
             {% endfor %}
         </ul>
