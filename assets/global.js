@@ -1251,7 +1251,15 @@ function removeDeadProduct() {
 window.addEventListener('DOMContentLoaded', function(event) {
 
 	if (document.querySelector('.filter-links') !== null) {
+		let filterLinks = document.querySelectorAll('.filter-link');
+		let windowWidth = window.innerWidth;
+		if (windowWidth < 750) {
+			filterLinks.forEach(link => {
+				if (link.classList.contains('list-menu__item--active')) {
 
+				}
+			});
+		}
 	}
 
 	if (document.querySelector('#countdown') !== null) {
