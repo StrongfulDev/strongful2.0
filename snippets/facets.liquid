@@ -54,6 +54,17 @@
             </svg>
         </div>
     </div>
+
+    {% if results.title == 'טופים' and tops_menu != blank %}
+        <ul class="filter-links">
+            {% for link in tops_menu.links %}
+                <li class="filter-link">
+                    <a href="{{ link.url }}" class="tops-menu-link">{{ link.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
   {%- if filter_type == 'vertical' or filter_type == 'horizontal' -%}
 
     <facet-filters-form class="facets small-hide">

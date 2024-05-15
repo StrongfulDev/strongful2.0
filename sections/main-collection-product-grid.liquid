@@ -128,7 +128,9 @@
                         results: collection,
                         enable_filtering: section.settings.enable_filtering,
                         enable_sorting: section.settings.enable_sorting,
-                        filter_type: section.settings.filter_type
+                        filter_type: section.settings.filter_type,
+                        tops_menu: section.settings.tops_menu,
+                        bottoms_menu: section.settings.bottoms_menu
                 %}
             </aside>
         {%- endif -%}
@@ -284,6 +286,18 @@
   "name": "t:sections.main-collection-product-grid.name",
   "class": "section",
   "settings": [
+      {
+          "type":"link_list",
+          "id":"tops_menu",
+          "default":"main-menu",
+          "label":"t:sections.header.settings.menu.label"
+      },
+      {
+          "type":"link_list",
+          "id":"bottoms_menu",
+          "default":"main-menu",
+          "label":"t:sections.header.settings.menu.label"
+      },
       {
           "type": "image_picker",
           "id": "ad_image",
