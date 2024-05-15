@@ -1580,6 +1580,11 @@ summary .icon-caret {
 	min-width: max-content;
 }
 
+.filter-link:last-child {
+	border-left: 0;
+	padding-left: 0;
+}
+
 .tops-menu-link {
 	width: 100%;
 	display: block;
