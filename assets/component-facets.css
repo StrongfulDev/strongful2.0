@@ -1592,6 +1592,10 @@ summary .icon-caret {
 	color: var(--gradient-base-accent-1);
 }
 
+.tops-menu-link:hover {
+	text-decoration: underline;
+}
+
 .tops-menu-link.list-menu__item--active {
 	font-weight: var(--font-body-weight-bold);
 }
