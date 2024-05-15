@@ -1596,7 +1596,24 @@ summary .icon-caret {
 	font-weight: var(--font-body-weight-bold);
 }
 
+.new-filter-menu-desktop {
+	display: none;
+}
+
 @media screen and (min-width: 990px) {
+
+	.new-filter-menu-mobile {
+		display: none;
+	}
+
+	.filter-links {
+		justify-content: center;
+		direction: rtl;
+	}
+
+	.new-filter-menu-desktop {
+		display: block;
+	}
 
   .facets-vertical .facets-wrapper {
     padding-right: 0;
