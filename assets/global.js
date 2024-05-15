@@ -1250,6 +1250,10 @@ function removeDeadProduct() {
 
 window.addEventListener('DOMContentLoaded', function(event) {
 
+	if (document.querySelector('.filter-links') !== null) {
+
+	}
+
 	if (document.querySelector('#countdown') !== null) {
 		$('facets-container').addClass('countdown-facet');
 		$('facets-wrapper').addClass('countdown-facet');
