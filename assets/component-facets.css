@@ -1576,10 +1576,15 @@ summary .icon-caret {
 .filter-link {
 	padding-left: var(--grid-desktop-horizontal-spacing);
 	border-left: solid 1px var(--gradient-base-accent-1);
+	width: max-content;
+	min-width: max-content;
 }
 
 .tops-menu-link {
 	width: 100%;
+	display: block;
+	text-decoration: none;
+	color: var(--gradient-base-accent-1);
 }
 
 @media screen and (min-width: 990px) {
