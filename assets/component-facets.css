@@ -1575,7 +1575,7 @@ summary .icon-caret {
 
 .filter-link {
 	padding-left: var(--grid-desktop-horizontal-spacing);
-	border-left: solid 1px var(--gradient-base-accent-1);
+	border-left: solid 2px var(--gradient-base-accent-1);
 	width: max-content;
 	min-width: max-content;
 }
@@ -1590,6 +1590,10 @@ summary .icon-caret {
 	display: block;
 	text-decoration: none;
 	color: var(--gradient-base-accent-1);
+}
+
+.tops-menu-link.list-menu__item--active {
+	font-weight: var(--font-body-weight-bold);
 }
 
 @media screen and (min-width: 990px) {

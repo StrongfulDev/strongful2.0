@@ -1255,8 +1255,9 @@ window.addEventListener('DOMContentLoaded', function(event) {
 		let windowWidth = window.innerWidth;
 		if (windowWidth < 750) {
 			filterLinks.forEach(link => {
-				if (link.classList.contains('list-menu__item--active')) {
-
+				if (link.classList.contains('current-link')) {
+					console.log(link);
+					link.scrollIntoView();
 				}
 			});
 		}
