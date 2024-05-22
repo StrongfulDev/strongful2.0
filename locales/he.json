@@ -128,7 +128,7 @@
       "inventory_in_stock": "במלאי",
       "inventory_in_stock_show_count": "נשאר {{ quantity }} מפריט זה",
       "inventory_low_stock": "מלאי נמוך",
-      "inventory_low_stock_show_count": "נשארו {{ quantity }} במלאי",
+      "inventory_low_stock_show_count": "{{ quantity }} במלאי",
       "inventory_out_of_stock": "אזל מהמלאי",
       "inventory_out_of_stock_continue_selling": "מוצר זה אזל מהמלאי, אך עדיין ניתן להזמין אותו והוא יגיע בהקדם",
       "sku": "SKU",
