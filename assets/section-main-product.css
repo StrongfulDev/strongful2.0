@@ -1335,14 +1335,15 @@ a.product__text {
     gap: 0.5rem;
 	position: absolute;
 	bottom: 85%;
-	background: var(--gradient-background);
-	border: 1px solid var(--color-icon);
+	background: firebrick;
+	border: 1px solid firebrick;
 	border-radius: .5rem;
 	text-align: center;
 	padding: 0.5rem;
 	width: inherit;
 	left: 50%;
 	transform: translateX(-50%);
+	color: var(--gradient-background);
 }
 
 .product__inventory:after {
@@ -1352,11 +1353,11 @@ a.product__text {
 	left: 50%;
 	width: 0;
 	height: 0;
-	border: 20px solid transparent;
-	border-top-color: var(--gradient-background);
+	border: 11px solid transparent;
+	border-top-color: firebrick;
 	border-bottom: 0;
-	margin-left: -20px;
-	margin-bottom: -20px;
+	margin-left: -11px;
+	margin-bottom: -12px;
 }
 
 .product--no-media .product__inventory {
