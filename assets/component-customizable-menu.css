@@ -249,11 +249,11 @@
 }
 
 .submenu-open ul.menu-drawer__menu li:first-child a {
-	font-weight: bold;
+	/*font-weight: bold;*/
 }
 
 .dropdown .submenu-open ul.menu-drawer__menu li:first-child a {
-	font-weight: var(--font-body-weight-bold);
+	/*font-weight: var(--font-body-weight-bold);*/
 }
 
 .dropdown .submenu-open li:nth-child(2) ul.menu-drawer__menu li:first-child a {
@@ -455,7 +455,7 @@
 	}
 
 	#MegaMenu-Content-3 .mega-menu__list li:first-child a {
-		font-weight: var(--font-body-weight-bold);
+		/*font-weight: var(--font-body-weight-bold);*/
 	}
 
 	.mega-menu__content li a {
@@ -518,7 +518,7 @@
 	}
 
 	.mega-menu__content.fix-direction ul:nth-child(2) li:first-child a {
-		font-weight: var(--font-body-weight-bold);
+		/*font-weight: var(--font-body-weight-bold);*/
 		text-decoration: none;
 	}
 
