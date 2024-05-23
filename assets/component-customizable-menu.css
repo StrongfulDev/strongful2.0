@@ -519,7 +519,7 @@
 
 	.mega-menu__content.fix-direction ul:nth-child(2) li:first-child a {
 		/*font-weight: var(--font-body-weight-bold);*/
-		text-decoration: none;
+		/*text-decoration: none;*/
 	}
 
 	.header-block-list-element:first-child .mega-menu__content.fix-direction ul:nth-child(2) li:first-child a {
