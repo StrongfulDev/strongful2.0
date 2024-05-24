@@ -28,10 +28,54 @@
         "content"
       ],
       "settings": {
+        "tile_image_one": "shopify:\/\/shop_images\/7ff08d51abffc0cfdf69f878b50b58d6_42a82374-c3b2-45d1-9d27-5493d13e4f4c.jpg",
+        "tile_image_one_link": "shopify:\/\/collections\/astra",
+        "tile_image_two": "shopify:\/\/shop_images\/7ff08d51abffc0cfdf69f878b50b58d6_641bc7eb-5246-4096-8d22-49fcb0ff3ec6.jpg",
+        "tile_image_two_link": "shopify:\/\/collections\/new-in"
+      }
+    },
+    "featured_collection_efYKQY": {
+      "type": "featured-collection",
+      "settings": {
+        "steps": 4,
+        "title": "{{ section.settings.collection.title }}",
+        "heading_size": "h1",
+        "heading_type": "heading_type_default",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "{{ article.metafields.custom.collection_for_article.value }}",
+        "products_to_show": 15,
+        "columns_desktop": 5,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_text": "SHOP ALL",
+        "view_all_style": "link",
+        "view_all_location": "top",
+        "enable_desktop_slider": true,
+        "show_peak": true,
+        "pagination_type": "sides",
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": false,
+        "show_sale_badge": false,
+        "enable_quick_add": true,
+        "quick_add_type": "hover",
+        "quick_add_type_mobile": "modal",
+        "quick_add_text": "הוספה מהירה",
+        "pick_size_text": "בחירת מידה",
+        "quick_add_accessories_text": "הוספה מהירה",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 60,
+        "padding_bottom": 0
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "featured_collection_efYKQY"
   ]
 }

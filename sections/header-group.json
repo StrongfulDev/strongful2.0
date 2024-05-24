@@ -24,12 +24,12 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "STRONGFUL'S 3RD BIRTHDAY",
-            "sub_text": "23% OFF EVERYTHING",
+            "main_text": "ASTRA COLLECTION",
+            "sub_text": "קולקציה חדשה נחתה באתר",
             "text_alignment": "center",
             "main_text_direction": "ltr",
-            "sub_text_direction": "ltr",
-            "link": "shopify:\/\/collections\/sets",
+            "sub_text_direction": "rtl",
+            "link": "shopify:\/\/collections\/astra",
             "color_scheme": "accent-1"
           }
         },
@@ -39,7 +39,7 @@
             "toggle_main_font": false,
             "toggle_sub_font": false,
             "main_text": "משלוח אקספרס עם שליח עד הבית",
-            "sub_text": "1-3 ימי עסקים",
+            "sub_text": "1-5 ימי עסקים",
             "text_alignment": "center",
             "main_text_direction": "rtl",
             "sub_text_direction": "rtl",
@@ -66,10 +66,12 @@
         "bd053c52-574f-435e-be3a-a4a74c72b169": {
           "type": "url",
           "settings": {
+            "link_text_direction": "Left To Right",
             "show_on_mobile": true,
             "small_font": false,
-            "title": "SALE",
-            "title_link": "shopify:\/\/collections\/sets"
+            "title": "NEW IN",
+            "title_link": "shopify:\/\/collections\/new-in",
+            "menu_link_image": "shopify:\/\/shop_images\/bd9a4cbcb5a8c5865a0499b4fa42b489_cd2482ff-d6d8-43e2-bac7-a3be68ec81c4.jpg"
           }
         },
         "ba94928e-5cd1-47f5-9c0a-28ea47285f01": {
@@ -79,20 +81,20 @@
             "show_on_mobile": true,
             "order": "",
             "small_font": false,
-            "menu": "trending-without-10",
+            "menu": "trending",
             "menu_second": "",
             "menu_third": "",
-            "title": "COLLECTIONS",
+            "title": "קני לפי",
             "item_class": "",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/0_6317b2ff-9090-421b-a439-d49f281369f2.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/sets",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/bd9a4cbcb5a8c5865a0499b4fa42b489_fe4b9670-7efb-4fe3-ba83-cddf50ac8d0f.jpg",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/astra",
             "desktop_links_image_2_link": "",
-            "mobile_title": "COLLECTIONS",
+            "mobile_title": "קני לפי",
             "main_link": "",
             "main_title": "",
             "shop_all_link": "",
-            "shop_all_title": "COLLECTIONS"
+            "shop_all_title": ""
           }
         },
         "8878d4cf-d83f-42a2-90b9-ddebceb7501c": {
@@ -102,91 +104,45 @@
             "show_on_mobile": true,
             "order": "",
             "small_font": false,
-            "menu": "blue-friday-first-sets-menu",
-            "menu_second": "blue-friday-second-sets-menu",
-            "menu_third": "blue-friday-third-sets-menu",
-            "title": "סטים",
-            "item_class": "",
-            "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/24e61184b02d5d6f16eff6d9d6a6036e.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/onyx",
-            "desktop_links_image_2": "shopify:\/\/shop_images\/Artboard_160_864f7778-cc09-422f-b7e3-4c9cf72e724c.jpg",
-            "desktop_links_image_2_link": "shopify:\/\/collections\/sets",
-            "mobile_cover_image": "shopify:\/\/shop_images\/20e5c3f719da92dc7bfd0c70c57f7186.jpg",
-            "mobile_title": "סטים",
-            "main_link": "",
-            "main_title": "",
-            "shop_all_link": "shopify:\/\/collections\/sets",
-            "shop_all_title": "סטים"
-          }
-        },
-        "03fa03f7-aac1-443b-acba-9a19fb5aa148": {
-          "type": "menu_item",
-          "settings": {
-            "above_shop_all_link": "https:\/\/strongful.co.il\/collections\/טייצים",
-            "show_on_mobile": true,
-            "order": "",
-            "small_font": false,
             "menu": "dropdown-bottoms",
             "menu_second": "",
             "menu_third": "",
-            "title": "טייצים",
+            "title": "מוצרים",
             "item_class": "",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/0_2a2eb7d5-e3ba-485c-91a7-a3f7e4434949.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/sets",
-            "desktop_links_image_2_link": "",
-            "mobile_title": "טייצים",
-            "main_link": "https:\/\/strongful.co.il\/collections\/טייצים",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/7ff08d51abffc0cfdf69f878b50b58d6_42a82374-c3b2-45d1-9d27-5493d13e4f4c.jpg",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/astra",
+            "desktop_links_image_2": "shopify:\/\/shop_images\/7ff08d51abffc0cfdf69f878b50b58d6_641bc7eb-5246-4096-8d22-49fcb0ff3ec6.jpg",
+            "desktop_links_image_2_link": "shopify:\/\/collections\/בקבוקים",
+            "mobile_cover_image": "shopify:\/\/shop_images\/20e5c3f719da92dc7bfd0c70c57f7186.jpg",
+            "mobile_title": "מוצרים",
+            "main_link": "",
             "main_title": "",
-            "shop_all_link": "shopify:\/\/collections\/allbottoms",
-            "shop_all_title": "טייצים"
+            "shop_all_link": "",
+            "shop_all_title": ""
           }
         },
         "fc929aa6-aab6-4c25-be13-8267425330c3": {
           "type": "menu_item",
           "settings": {
-            "above_shop_all_link": "https:\/\/strongful.co.il\/collections\/טופים",
+            "above_shop_all_link": "shopify:\/\/collections\/sets",
             "show_on_mobile": true,
             "order": "",
             "small_font": false,
-            "menu": "dropdown-tops",
-            "menu_second": "",
-            "menu_third": "",
-            "title": "טופים",
+            "menu": "blue-friday-first-sets-menu",
+            "menu_second": "blue-friday-second-sets-menu",
+            "menu_third": "blue-friday-third-sets-menu",
+            "title": "קולקציות",
             "item_class": "",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/0_8c487462-b6fe-4d2f-98e5-fa7efbab4818.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/sets",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/bd9a4cbcb5a8c5865a0499b4fa42b489_ac1dce4c-6b4e-4956-9fd1-c06380042fda.jpg",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/astra",
             "desktop_links_image_2_link": "",
-            "mobile_title": "טופים",
-            "main_link": "https:\/\/strongful.co.il\/collections\/טופים",
+            "mobile_title": "קולקציות",
+            "main_link": "shopify:\/\/collections\/sets",
             "main_title": "",
-            "shop_all_link": "shopify:\/\/collections\/all-tops",
-            "shop_all_title": "טופים"
-          }
-        },
-        "70af0289-2846-42bd-93c5-5598239a8ddc": {
-          "type": "menu_item",
-          "settings": {
-            "above_shop_all_link": "shopify:\/\/collections\/outlet",
-            "show_on_mobile": true,
-            "order": "",
-            "small_font": true,
-            "menu": "outlet-menu-main",
-            "menu_second": "outlet-menu-sub",
-            "menu_third": "",
-            "title": "OUTLET",
-            "item_class": "",
-            "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/0_ef5e33ea-9d97-4770-bdf0-7e1d4a33ab89.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/sets",
-            "desktop_links_image_2_link": "",
-            "mobile_title": "OUTLET - UP TO 50% OFF",
-            "main_link": "",
-            "main_title": "",
-            "shop_all_link": "shopify:\/\/collections\/outlet",
-            "shop_all_title": "OUTLET"
+            "shop_all_link": "shopify:\/\/collections\/sets",
+            "shop_all_title": "Shop all sets"
           }
         },
         "4d0d7344-0f17-4600-86d8-3481f2a1c4a1": {
@@ -202,32 +158,57 @@
             "title": "אקססוריז",
             "item_class": "",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/0_4775c9b5-7a37-4e16-8eb8-73284540c36a.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/sets",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/bd9a4cbcb5a8c5865a0499b4fa42b489_5b131680-bf4f-4a81-ac6d-074c8499ce0d.jpg",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/astra",
             "desktop_links_image_2_link": "",
-            "mobile_title": "ACCESSORIES",
+            "mobile_title": "אקססוריז",
             "main_link": "",
             "main_title": "",
             "shop_all_link": "shopify:\/\/collections\/accessories",
-            "shop_all_title": "אקססוריז"
+            "shop_all_title": ""
+          }
+        },
+        "70af0289-2846-42bd-93c5-5598239a8ddc": {
+          "type": "menu_item",
+          "settings": {
+            "above_shop_all_link": "shopify:\/\/collections\/outlet",
+            "show_on_mobile": true,
+            "order": "",
+            "small_font": true,
+            "menu": "outlet-menu-main",
+            "menu_second": "",
+            "menu_third": "",
+            "title": "אאוטלט",
+            "item_class": "",
+            "title_link": "",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/bd9a4cbcb5a8c5865a0499b4fa42b489_a6ddca5b-6fbd-4240-912d-e6f770bc468e.jpg",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/astra",
+            "desktop_links_image_2_link": "",
+            "mobile_title": "אאוטלט",
+            "main_link": "",
+            "main_title": "",
+            "shop_all_link": "shopify:\/\/collections\/outlet",
+            "shop_all_title": "אאוטלט"
           }
         },
         "93921bbc-631f-46c2-a66b-9df086c3f7a0": {
           "type": "url",
           "settings": {
+            "link_text_direction": "Left To Right",
             "show_on_mobile": true,
             "small_font": true,
-            "title": "GIFT CARD",
+            "title": "גיפט קארד",
             "title_link": "shopify:\/\/products\/strongful-giftcard"
           }
         },
         "69313e8a-8818-485d-9c44-529f1b10ccdd": {
           "type": "url",
           "settings": {
+            "link_text_direction": "Left To Right",
             "show_on_mobile": false,
             "small_font": false,
             "title": "מועדון לקוחות",
-            "title_link": "shopify:\/\/pages\/loyalty"
+            "title_link": "shopify:\/\/pages\/a-list"
           }
         }
       },
@@ -235,20 +216,16 @@
         "bd053c52-574f-435e-be3a-a4a74c72b169",
         "ba94928e-5cd1-47f5-9c0a-28ea47285f01",
         "8878d4cf-d83f-42a2-90b9-ddebceb7501c",
-        "03fa03f7-aac1-443b-acba-9a19fb5aa148",
         "fc929aa6-aab6-4c25-be13-8267425330c3",
-        "70af0289-2846-42bd-93c5-5598239a8ddc",
         "4d0d7344-0f17-4600-86d8-3481f2a1c4a1",
+        "70af0289-2846-42bd-93c5-5598239a8ddc",
         "93921bbc-631f-46c2-a66b-9df086c3f7a0",
         "69313e8a-8818-485d-9c44-529f1b10ccdd"
       ],
       "settings": {
-        "header_footer_menu": "",
         "account": "account",
-        "desktop_loyalty_link": "shopify:\/\/pages\/loyalty",
+        "desktop_loyalty_link": "shopify:\/\/pages\/a-list",
         "color_scheme": "background-1",
-        "menu_position": "center",
-        "toggle_socials": false,
         "logo_position": "middle-left",
         "menu": "elara-sets-first",
         "menu_type_desktop": "dropdown",
@@ -256,22 +233,27 @@
         "show_line_separator": true,
         "mobile_menu": "",
         "mobile_logo_position": "center",
-        "mobile_top_image_1": "shopify:\/\/shop_images\/Artboard_230.jpg",
-        "mobile_top_image_1_link": "shopify:\/\/collections\/מארזי-תרומות",
-        "mobile_top_image_1_title": "מארזי תרומה לארגון ״לתת״",
-        "mobile_top_image_temp": "shopify:\/\/shop_images\/0737a51b2679a55d45d0d8f464335044_018ab32f-8b05-4a19-b78f-9d3c23c5737a.jpg",
-        "mobile_top_image_temp_link": "shopify:\/\/collections\/sets",
-        "mobile_top_image_temp_title": "BIRTHDAY SALE",
-        "mobile_top_image_2": "shopify:\/\/shop_images\/Artboard_4_4x-100-min.jpg",
-        "mobile_top_image_2_link": "shopify:\/\/collections\/best-seller-internal-use",
-        "mobile_top_image_2_title": "BEST SELLERS",
-        "mobile_top_image_3": "shopify:\/\/shop_images\/Artboard_3_4x-100-min.jpg",
-        "mobile_top_image_3_link": "shopify:\/\/collections\/outlet",
-        "mobile_top_image_3_title": "OUTLET - up to 50% off",
-        "mobile_top_image_4": "shopify:\/\/shop_images\/Artboard_2_4x-100-min.jpg",
-        "mobile_top_image_4_link": "shopify:\/\/pages\/loyalty",
+        "show_first_image": false,
+        "mobile_top_image_1": "shopify:\/\/shop_images\/0_2_38d243ab-3cb6-44b2-a20d-e46fb1a9b3d5.jpg",
+        "mobile_top_image_1_link": "shopify:\/\/pages\/lets-move",
+        "mobile_top_image_1_title": "MOVE X STRONGFUL",
+        "show_second_image": true,
+        "mobile_top_image_temp": "shopify:\/\/shop_images\/0_f90d4b8d-5e9f-4788-a429-2036750e981e.jpg",
+        "mobile_top_image_temp_link": "shopify:\/\/collections\/בקבוקים",
+        "mobile_top_image_temp_title": "NEW IN",
+        "show_third_image": true,
+        "mobile_top_image_2": "shopify:\/\/shop_images\/0737a51b2679a55d45d0d8f464335044_65f7468b-9c84-402a-a2bd-56e38814213e.jpg",
+        "mobile_top_image_2_link": "shopify:\/\/collections\/astra",
+        "mobile_top_image_2_title": "NEW IN",
+        "show_fourth_image": true,
+        "mobile_top_image_3": "shopify:\/\/shop_images\/0_4.jpg",
+        "mobile_top_image_3_link": "shopify:\/\/pages\/lets-move",
+        "mobile_top_image_3_title": "move X STRONGFUL",
+        "show_fifth_image": true,
+        "mobile_top_image_4": "shopify:\/\/shop_images\/0737a51b2679a55d45d0d8f464335044_a56cfdc0-29aa-47a0-b9f7-d9978db22a70.jpg",
+        "mobile_top_image_4_link": "shopify:\/\/pages\/a-list",
         "mobile_top_image_4_title": "מועדון לקוחות",
-        "slider_menu": "dropdown-banners",
+        "toggle_socials": false,
         "margin_bottom": 0,
         "mobile_logo_width": 20,
         "padding_top": 16,
@@ -295,26 +277,11 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
-    },
-    "abb7e13d-ba2d-439f-af5c-33c2d1c155e5": {
-      "type": "countdown",
-      "settings": {
-        "show_days": false,
-        "countdown_date": "",
-        "countdown_url": "shopify:\/\/pages\/loyalty",
-        "left_text": true,
-        "left_copy": "<p>מועדון לקוחות חדש<\/p>",
-        "right_text_direction": "ltr",
-        "left_text_direction": "ltr",
-        "right_text": false,
-        "right_copy": ""
-      }
     }
   },
   "order": [
     "announcement-bar",
     "header",
-    "7503b704-2110-400e-bc52-a2190d224c23",
-    "abb7e13d-ba2d-439f-af5c-33c2d1c155e5"
+    "7503b704-2110-400e-bc52-a2190d224c23"
   ]
 }

@@ -54,6 +54,27 @@
             </svg>
         </div>
     </div>
+
+    <div class="new-filter-menu-mobile">
+        {% if results.title == 'טופים' or results.title == 'כל הטופים' or results.title == 'חזיות ספורט' or results.title == 'גופיית ספורט' or results.title == 'בגד גוף' or results.title == 'חולצות ספורט' or results.title == 'קרופ טופ' or results.title == 'ג׳קטים' or results.title == 'אוברולים' or results.title == 'סווטשירט' %}
+            <ul class="filter-links">
+                {% for link in tops_menu.links %}
+                    <li class="filter-link {% if link.current %}current-link{% endif %}">
+                        <a href="{{ link.url | url_decode }}" class="tops-menu-link {% if link.current %}list-menu__item--active{% endif %}">{{ link.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% elsif results.title == 'טייצים' or results.title == 'טייצים ארוכים' or results.title == 'שורט - טייץ קצר' or results.title == 'טייץ בייקר' or results.title == 'טייץ 7/8' or results.title == 'מכנסיים' %}
+            <ul class="filter-links">
+                {% for link in bottoms_menu.links %}
+                    <li class="filter-link {% if link.current %}current-link{% endif %}">
+                        <a href="{{ link.url | url_decode }}" class="tops-menu-link {% if link.current %}list-menu__item--active{% endif %}">{{ link.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+
   {%- if filter_type == 'vertical' or filter_type == 'horizontal' -%}
 
     <facet-filters-form class="facets small-hide">

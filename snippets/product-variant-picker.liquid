@@ -83,23 +83,29 @@
       {{ block.shopify_attributes }}
     >
       {%- for option in product.options_with_values -%}
-        <fieldset class="js product-form__input {% if product.title == 'גיפט קארד' %}gift-card-product-form__input{% endif %}">
+        <fieldset class="js product-form__input {% if product.title == 'גיפט קארד' %}gift-card-product-form__input{% elsif product.title == 'Iconic סווטשירט' %}os-sweat fix-direction{% endif %}">
           <legend class="form__label">{{ option.name }}</legend>
             {% for modelName in product.metafields.model.names.value %}
                 {% assign model = shop.metaobjects.model[modelName] %}
             <legend class="model-wears-size fix-direction"
                     data-model="{{ model.size_letter.value }}"
-            {% if plusProduct and model.size_letter.value == 'XS' %}
-                style="display: none"
-            {% elsif plusProduct == false and model.size_letter.value == 'L' %}
-                style="display: none"
+                {% if plusProduct and model.size_letter.value == 'XS' %}
+                    style="display: none"
+                {% elsif plusProduct == false and model.size_letter.value == 'L' %}
+                    style="display: none"
                     {% endif %}>
                 {{ 'products.product.model_switch.model_wears_only_female' | t }}
+                {% if product.title == 'Iconic סווטשירט' %}
+                    <span class="bold">{{ option.name }}: OS</span>
+                {% else %}
                 <span class="bold">{{ option.name }}: {{ model.size_letter.value }}</span>
+                    {% endif %}
                 {% if product.tags contains 'up-size-recommendation' %}
                     <span class="small">{{ 'products.product.up_size_recommendation' | t }}</span>
                 {% elsif product.tags contains 'down-size-recommendation' %}
                     <span class="small">{{ 'products.product.down_size_recommendation' | t }}</span>
+                {% elsif product.tags contains 'no_cups_bra' %}
+                    <span class="small">במוצר זה אין ריפודיות נשלפות</span>
                 {% endif %}
             </legend>
             {% endfor %}

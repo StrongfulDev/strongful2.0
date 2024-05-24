@@ -12,11 +12,11 @@
 	margin: 0.5rem 0;
 }
 
-.rte > p:first-child {
-  margin-top: 0;
+.rte>p:first-child {
+  /*margin-top: 0;*/
 }
 
-.rte > p:last-child {
+.rte>p:last-child {
   margin-bottom: 0;
 }
 
@@ -44,6 +44,10 @@
   list-style: none;
   padding-left: 0;
 	padding-right: 0;
+}
+
+.move .rte ul {
+	list-style: inside;
 }
 
 .rte ol {

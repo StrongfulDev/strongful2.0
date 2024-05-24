@@ -214,6 +214,10 @@
 
 			@media screen and (min-width: 1000px) {
 
+                .order-summary__sections {
+                    height: max-content;
+                }
+
                 .excluded-shipping-cities-popup {
                     width: max-content;
                 }
@@ -411,7 +415,7 @@
 
 	document.addEventListener('DOMContentLoaded', (e) => {
 
-        const excludedShippingCities = ['שדרות', 'ניר עם', 'ניר עוז', 'מבקיעים', 'סעד', 'דקל', 'כפר עזה', 'בארי', 'גבים', 'מפלסים', 'סופה', 'שדה ניצן', 'אור הנר', 'פרי גן', 'נתיב העשרה', 'רעים', 'זיקים', 'חוליות', 'גבולות', 'צוחר', 'אורים', 'כרמיה', 'ישע', 'יד מרדכי', 'צאלים', 'ניר יצחק', 'מבטחים מועצה אזורית אשכול', 'מגן', 'עמיעוז', 'אוהד', 'עין הבשור', 'תלמי אליהו', 'תלמי יוסף', 'שדי אברהם', 'יתד', 'אבשלום', 'שלומית', 'יבול', 'נווה', 'כרם שלום', 'עלומים', 'גברעם', 'נחל עוז', 'ארז', 'עין השלושה', 'כיסופים', 'נירים', 'קרית שמונה', 'מטולה', 'יפתח', 'דישון', 'דפנה', 'בית הלל', 'חצור הגלילית', 'הגושרים', 'שאר ישוב', 'כפר סאלד', 'סאסא', 'אביבים', 'יראון', 'דובב', 'ברעם', 'שלומי', 'שלומית', 'ראש הנקרה', 'מתת', 'גורן', 'יערה', 'גרנות הגליל', 'איילון', 'עראשמה', 'אדמית', 'מצובה', 'מנות', 'עבדון', 'שתולה', 'שומרה', 'זרעית', 'אבן מנחם', 'נטועה'];
+        const excludedShippingCities = ['קרית שמונה', 'מטולה', 'יפתח', 'דישון', 'דפנה', 'בית הלל', 'הגושרים', 'שאר ישוב', 'כפר סאלד', 'סאסא', 'אביבים', 'יראון', 'דובב', 'ברעם', 'שלומי', 'שלומית', 'ראש הנקרה', 'מתת', 'גורן', 'יערה', 'גרנות הגליל', 'איילון', 'עראשמה', 'אדמית', 'מצובה', 'מנות', 'עבדון', 'שתולה', 'שומרה', 'זרעית', 'אבן מנחם', 'נטועה'];
         const popupOverlay = document.querySelector('.excluded-shipping-cities-popup-overlay');
         const popup = document.querySelector('.excluded-shipping-cities-popup');
         const closeIcon = document.querySelector('.icon.icon-close');
@@ -487,30 +491,28 @@
 
 		function checkCouponText() {
 			let notice = document.querySelector('.notice__text');
-			let preorder = document.querySelector(".regular-preorder");
-			let checkoutTotal = parseInt(document.querySelector(".order-summary__emphasis").innerText.replace('₪', '').replace('.', '') / 100);
+            console.log(notice);
 			if (notice !== null) {
-				if (preorder !== null && checkoutTotal > 200) {
-					notice.innerHTML = 'אין כפל הנחות/מבצעים על פריטים ממכירה מוקדמת';
-				} else if (notice.innerHTML.toLocaleLowerCase().includes('welcome')) {
+				 if (notice.innerHTML.toLocaleLowerCase().includes('welcome')) {
 					notice.innerHTML = 'קוד הקופון <strong>WELCOME30</strong> תקף בקנייה מעל ₪200';
-				} else if (notice.innerHTML.toLocaleLowerCase().includes("dian")) {
-					notice.innerHTML = 'קוד הקופון <strong>DIAN</strong> תקף בקניית 3 מוצרים ומעלה';
-				} else if (notice.innerHTML.toLocaleLowerCase().includes("corrin")) {
-					notice.innerHTML = 'קוד הקופון <strong>CORRIN</strong> תקף בקניית 3 מוצרים ומעלה';
-				} else if (notice.innerHTML.toLocaleLowerCase().includes("talia")) {
-					notice.innerHTML = 'קוד הקופון <strong>TALIA</strong> תקף בקניית 3 מוצרים ומעלה';
-				} else if (notice.innerHTML.toLocaleLowerCase().includes("barc")) {
-					notice.innerHTML = 'קוד הקופון <strong>BARC</strong> תקף בקניית 3 מוצרים ומעלה';
-				} else if (notice.innerHTML.toLocaleLowerCase().includes("liel")) {
-					notice.innerHTML = 'קוד הקופון <strong>LIEL</strong> תקף בקניית 3 מוצרים ומעלה';
-				} else if (notice.innerHTML.toLocaleLowerCase().includes("kc")) {
-					notice.innerHTML = 'קוד הקופון <strong>KC</strong> תקף בקניית 3 מוצרים ומעלה';
-				} else if (notice.innerHTML.toLocaleLowerCase().includes("daniella")) {
-					notice.innerHTML = 'קוד הקופון <strong>DANIELLA</strong> תקף בקניית 3 מוצרים ומעלה';
+				} else if (notice.innerHTML.toLocaleLowerCase().includes("member") || notice.innerHTML.includes('MEMBER')) {
+					notice.innerHTML = 'קוד הקופון תקף בקניית 3 מוצרים ומעלה';
 				}
 			}
+
+            console.log('checkCouponText function ran');
 		}
+
+        let couponSubmit = document.querySelector("#checkout_submit");
+        couponSubmit.addEventListener('click', function() {
+            setTimeout(checkCouponText, 3500);
+        });
+        let couponSubmitSVG = couponSubmit.querySelectorAll("svg");
+        couponSubmitSVG.forEach((svg) => {
+            svg.addEventListener('click', function() {
+                setTimeout(checkCouponText, 3500);
+            });
+        });
 
 		checkCouponText();
 		setTimeout(checkCouponText, 3000); // fallback

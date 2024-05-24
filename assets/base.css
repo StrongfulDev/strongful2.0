@@ -2857,7 +2857,7 @@ transform: translateX(-300%);
     }
 
     .header--middle-left .header__inline-menu {
-        margin-left: 0;
+        margin: auto;
     }
 }
 
@@ -2877,6 +2877,10 @@ transform: translateX(-300%);
 
 .header__menu-item:hover {
     color: rgb(var(--color-foreground));
+}
+
+.header-block-list-element:first-child .header__menu-item span {
+		color: firebrick;
 }
 
 .header__menu-item span {
@@ -3227,6 +3231,10 @@ details-disclosure > details {
     direction: rtl;
 }
 
+small.fix-direction {
+	display: block;
+}
+
 .ltr, .english-direction {
     direction: ltr;
 }
@@ -3413,6 +3421,13 @@ div#glassix-widget-launcher-closed #customized-launcher {
 	bottom: 3rem;
 	left: 50%;
 	transform: translateX(-50%);
+}
+
+.custom-customer-account-container .header__heading-logo_secondary {
+	position: static;
+	transform: none;
+	margin: auto auto 1rem;
+	display: block;
 }
 
 .account-menu-buttons {
@@ -3964,6 +3979,7 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 	border: 1px firebrick solid;
 	padding: 0 7px;
 	text-align: center;
+	width: fit-content;
 }
 
 .card__information>.rect-discount-tag {
@@ -4234,5 +4250,17 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 .ReturnGO_TextContainer-module_textContainer:nth-child(6),
 .ReturnGO_TotalSummary-module_totalSummary,
 .ReturnGO_ItemContent-module_badge.ReturnGO_ItemContent-module_not-eligible {
+	display: none !important;
+}
+
+.reward-items {
+	/*display: none;*/
+}
+
+.reward-item.free_bottle {
+	display: none;
+}
+
+.yotpo-review-votes-wrapper.top-margin {
 	display: none !important;
 }

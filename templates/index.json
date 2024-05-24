@@ -3,80 +3,80 @@
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9": {
       "type": "featured-collections",
       "blocks": {
-        "d96cbf09-66fd-412d-b29f-6a0f9ff0afb8": {
-          "type": "collection",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/BEST_SELLERS.1.jpg",
-            "url": "shopify:\/\/collections\/best-seller-internal-use",
-            "collection_title": "הכי נמכרים"
-          }
-        },
-        "e3fb16ae-904a-453a-82b3-78589fe48600": {
-          "type": "collection",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/PILATES_2.jpg",
-            "url": "shopify:\/\/collections\/yoga-and-pilates",
-            "collection_title": "יוגה ופילאטיס"
-          }
-        },
         "8a5171fb-ca06-4e0e-861a-7305af42f301": {
           "type": "collection",
           "settings": {
-            "image": "shopify:\/\/shop_images\/LEGGINGS_3.jpg",
+            "image": "shopify:\/\/shop_images\/2x_2dc17381-c919-4838-8979-bc6d62e63b5f.jpg",
             "url": "shopify:\/\/collections\/טייצים",
             "collection_title": "טייצים"
-          }
-        },
-        "5a2781d9-24e2-4b76-b56b-278a3d010146": {
-          "type": "collection",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/TOPS_4.jpg",
-            "url": "shopify:\/\/collections\/טופים",
-            "collection_title": "טופים"
-          }
-        },
-        "808cdebc-72af-4f6a-85d1-a8a5130f665b": {
-          "type": "collection",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/NEW_5.jpg",
-            "url": "shopify:\/\/collections\/new-in",
-            "collection_title": "חדש"
-          }
-        },
-        "2731fb5f-d7bf-4146-82de-23679dd66b31": {
-          "type": "collection",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/ACCESSORIES_6.jpg",
-            "url": "shopify:\/\/collections\/accessories",
-            "collection_title": "אקססוריז"
           }
         },
         "1b2bf1cd-119b-42a3-bfe0-daa060f63526": {
           "type": "collection",
           "settings": {
-            "image": "shopify:\/\/shop_images\/JUMPSUITS_7.jpg",
+            "image": "shopify:\/\/shop_images\/2x_6500d617-ec14-4ba9-bd30-7564bb22788c.jpg",
             "url": "shopify:\/\/collections\/jumpsuits",
             "collection_title": "אוברולים"
+          }
+        },
+        "e3fb16ae-904a-453a-82b3-78589fe48600": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2x_05a18019-27c6-438a-83b8-ab4b94df6796.jpg",
+            "url": "shopify:\/\/collections\/yoga-and-pilates",
+            "collection_title": "יוגה ופילאטיס"
+          }
+        },
+        "808cdebc-72af-4f6a-85d1-a8a5130f665b": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2x_12a758c2-24f0-48f1-8a83-a53816fa4015.jpg",
+            "url": "shopify:\/\/collections\/new-in",
+            "collection_title": "חדש"
+          }
+        },
+        "5a2781d9-24e2-4b76-b56b-278a3d010146": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2x_ed775b1b-ce3f-4733-812d-9a983d00a543.jpg",
+            "url": "shopify:\/\/collections\/טופים",
+            "collection_title": "טופים"
+          }
+        },
+        "d96cbf09-66fd-412d-b29f-6a0f9ff0afb8": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2x_c9f962a1-535c-4144-8f6d-03b7d68a2b07.jpg",
+            "url": "shopify:\/\/collections\/best-seller-internal-use",
+            "collection_title": "הכי נמכרים"
           }
         },
         "ccf69b36-ff3a-4d31-a10c-d0b9ba072029": {
           "type": "collection",
           "settings": {
-            "image": "shopify:\/\/shop_images\/OUTLET_8.jpg",
+            "image": "shopify:\/\/shop_images\/2x_201a589d-d511-4d9f-a1a4-d0ba9338e704.jpg",
             "url": "shopify:\/\/collections\/outlet",
             "collection_title": "אאוטלט"
+          }
+        },
+        "2731fb5f-d7bf-4146-82de-23679dd66b31": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2x_81e111d3-5e64-4b0d-9d9e-1d1758bbba2f.jpg",
+            "url": "shopify:\/\/collections\/accessories",
+            "collection_title": "אקססוריז"
           }
         }
       },
       "block_order": [
-        "d96cbf09-66fd-412d-b29f-6a0f9ff0afb8",
-        "e3fb16ae-904a-453a-82b3-78589fe48600",
         "8a5171fb-ca06-4e0e-861a-7305af42f301",
-        "5a2781d9-24e2-4b76-b56b-278a3d010146",
-        "808cdebc-72af-4f6a-85d1-a8a5130f665b",
-        "2731fb5f-d7bf-4146-82de-23679dd66b31",
         "1b2bf1cd-119b-42a3-bfe0-daa060f63526",
-        "ccf69b36-ff3a-4d31-a10c-d0b9ba072029"
+        "e3fb16ae-904a-453a-82b3-78589fe48600",
+        "808cdebc-72af-4f6a-85d1-a8a5130f665b",
+        "5a2781d9-24e2-4b76-b56b-278a3d010146",
+        "d96cbf09-66fd-412d-b29f-6a0f9ff0afb8",
+        "ccf69b36-ff3a-4d31-a10c-d0b9ba072029",
+        "2731fb5f-d7bf-4146-82de-23679dd66b31"
       ],
       "settings": {
         "steps": 1,
@@ -93,93 +93,89 @@
         "padding_bottom": 16
       }
     },
-    "bf7c8475-03e5-4509-86d8-21c4c329bb00": {
+    "slideshow_Bn9kRq": {
       "type": "slideshow",
       "blocks": {
-        "b43423be-0745-47c7-be6a-84d0ee24d128": {
+        "slide_qE7mg9": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0_ede7c160-9c9f-4401-80ec-079194e680ae.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/copy0_910ff36b-2dea-4a5b-9df5-5c8dacdfe7c0.jpg",
-            "heading": "",
-            "whole_slide_link": "shopify:\/\/collections\/sets",
-            "heading_size": "h1",
-            "subheading": "",
+            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_506c4a2d-7162-4897-b3f0-586548e24ab7.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_03fcf75a-ca95-461b-9e69-8445dac59851.jpg",
             "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/sets",
+            "link": "shopify:\/\/collections\/astra",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "whole_slide_link": "",
             "button_style_secondary": false,
             "box_align": "middle-center",
-            "show_text_box": false,
             "text_alignment": "center",
             "image_overlay_opacity": 0,
-            "color_scheme": "inverse",
             "text_alignment_mobile": "center"
           }
         }
       },
       "block_order": [
-        "b43423be-0745-47c7-be6a-84d0ee24d128"
+        "slide_qE7mg9"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "slideshow_dtfFDm": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_kjjiJz": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/0_3f6540d6-3ade-4374-9eb5-bec5add85d2e.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/0_fc4e4087-9c89-47aa-9eda-a2920c3fccd0.jpg",
+            "button_label": "",
+            "link": "shopify:\/\/pages\/lets-move",
+            "show_text_box": false,
+            "color_scheme": "inverse",
+            "whole_slide_link": "shopify:\/\/pages\/lets-move",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_kjjiJz"
       ],
       "settings": {
         "layout": "full_bleed",
         "slide_height": "adapt_image",
         "slider_visual": "sides",
         "auto_rotate": false,
-        "change_slides_speed": 9,
+        "change_slides_speed": 5,
         "show_text_below": false,
-        "accessibility_info": "Slideshow about our brand"
+        "accessibility_info": "Slideshow about our brand",
+        "padding_top": 0,
+        "padding_bottom": 36
       }
     },
-    "283eeea1-79f9-42c2-8f34-dccf839b470b": {
+    "featured_collection_4JBk4Y": {
       "type": "featured-collection",
       "settings": {
         "steps": 4,
-        "title": "NOW ON SALE",
+        "title": "NEW IN",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "sets",
-        "products_to_show": 15,
-        "columns_desktop": 5,
-        "full_width": true,
-        "show_view_all": true,
-        "view_all_text": "SHOP ALL",
-        "view_all_style": "link",
-        "view_all_location": "top",
-        "enable_desktop_slider": true,
-        "show_peak": true,
-        "pagination_type": "sides",
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": true,
-        "show_rating": false,
-        "show_sale_badge": false,
-        "enable_quick_add": true,
-        "quick_add_type": "hover",
-        "quick_add_type_mobile": "modal",
-        "quick_add_text": "הוספה מהירה",
-        "pick_size_text": "בחירת מידה",
-        "quick_add_accessories_text": "הוספה מהירה",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 68,
-        "padding_bottom": 40
-      }
-    },
-    "ff8d8d77-e0dc-42f4-8ec6-54fb434b711b": {
-      "type": "featured-collection",
-      "settings": {
-        "steps": 4,
-        "title": "ALMOST GONE",
-        "heading_size": "h1",
-        "heading_type": "heading_type_2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "almost-gone",
+        "collection": "astra",
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,
@@ -205,96 +201,276 @@
         "columns_mobile": "2",
         "swipe_on_mobile": true,
         "padding_top": 40,
-        "padding_bottom": 40
+        "padding_bottom": 16
       }
     },
-    "our_collection_list": {
-      "type": "our-collection-list",
+    "our_collection_list_v2_mK6kUx": {
+      "type": "our-collection-list-v2",
       "blocks": {
-        "dfad4ec5-c40b-4feb-90a9-341da374970d": {
+        "image_JnihJ6": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0_266a5f55-7c8f-48e2-ad4c-e156572b559c.jpg",
-            "alt": "קולקציית סטים ראשית יום הולדת",
-            "link": "BIRTHDAY SALE",
-            "url": "shopify:\/\/collections\/sets",
-            "show_on_desktop": true
-          }
-        },
-        "3603325c-8c6d-4a1e-b28e-fe94adadefb7": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Artboard_4_4x-100-min.jpg",
+            "image": "shopify:\/\/shop_images\/best_sellers_mobile.png",
+            "desktop_image": "shopify:\/\/shop_images\/desk_1.jpg",
             "alt": "",
-            "link": "BEST SELLERS",
+            "link": "",
             "url": "shopify:\/\/collections\/best-seller-internal-use",
             "show_on_desktop": true
           }
         },
-        "0ae2dc2c-e286-48f6-be64-4aa8bc8de568": {
+        "image_3PJtne": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Artboard_3_4x-100-min.jpg",
+            "image": "shopify:\/\/shop_images\/2nd_mobile.png",
+            "desktop_image": "shopify:\/\/shop_images\/desk2.jpg",
             "alt": "",
-            "link": "OUTLET - up to 50% off",
+            "link": "",
             "url": "shopify:\/\/collections\/outlet",
             "show_on_desktop": true
           }
         },
-        "d4c24f14-7485-452d-a6c5-ab2dbbf11ee6": {
+        "image_a4f9L6": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Artboard_2_4x-100-min.jpg",
+            "image": "shopify:\/\/shop_images\/NEW_IN_9c7717a9-d203-4fbe-b163-ff034527720a.jpg",
+            "desktop_image": "shopify:\/\/shop_images\/NEW_IN_7b60a275-2687-41bd-8116-2d3b68b80cbb.jpg",
             "alt": "",
-            "link": "מועדון לקוחות",
-            "url": "shopify:\/\/pages\/loyalty",
+            "link": "",
+            "url": "shopify:\/\/collections\/new-in",
+            "show_on_desktop": true
+          }
+        },
+        "image_ydbCwA": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mobile_4.png",
+            "desktop_image": "shopify:\/\/shop_images\/desk_4.jpg",
+            "alt": "",
+            "link": "",
+            "url": "shopify:\/\/collections\/yoga-and-pilates",
             "show_on_desktop": true
           }
         }
       },
       "block_order": [
-        "dfad4ec5-c40b-4feb-90a9-341da374970d",
-        "3603325c-8c6d-4a1e-b28e-fe94adadefb7",
-        "0ae2dc2c-e286-48f6-be64-4aa8bc8de568",
-        "d4c24f14-7485-452d-a6c5-ab2dbbf11ee6"
+        "image_JnihJ6",
+        "image_3PJtne",
+        "image_a4f9L6",
+        "image_ydbCwA"
       ],
       "settings": {
-        "show_scrollbar": true,
-        "title": "COLLECTIONS",
+        "title": "",
         "heading_size": "h1",
-        "heading_type": "heading_type_2",
-        "image_ratio": "portrait",
-        "columns_desktop": 4,
+        "heading_type": "heading_type_default",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
         "color_scheme": "background-1",
         "is_full_width": true,
-        "is_heading_overlay": true,
-        "show_view_all": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
         "padding_top": 36,
-        "padding_bottom": 64
+        "padding_bottom": 36
       }
     },
-    "ecf1e0a5-0973-4674-ac5b-b5370ff1bae1": {
-      "type": "featured-collection",
-      "custom_css": [
-        ".button {width: 100%;}",
-        ".discount-price-container {direction: rtl;}",
-        ".slider--tablet.grid--peek.grid--2-col-tablet-down .grid__item,.grid--peek .grid__item {width: calc(48% - var(--grid-mobile-horizontal-spacing) - 3rem);}",
-        "@media screen and (min-width: 990px) {.slider--desktop.grid--peek.grid--5-col-desktop .grid__item {width: calc( (94% - var(--desktop-margin-left-first-item)) \/ 5 - var(--grid-desktop-horizontal-spacing) * 2 ); }}"
+    "collection_list_w4D6TE": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_DRHGAB": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "allbottoms",
+            "collection_image": "shopify:\/\/shop_images\/a136772298ec22f7807bac8aaf885df7.jpg",
+            "show_collection_title": false
+          }
+        },
+        "featured_collection_rpBKdE": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "טייצים-ארוכים",
+            "collection_image": "shopify:\/\/shop_images\/b7db6d57aa17b4f0d67f91271d380c4b.jpg",
+            "show_collection_title": false
+          }
+        },
+        "featured_collection_n3Aag6": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "שורטים",
+            "collection_image": "shopify:\/\/shop_images\/27270f897d7aeb43e9528eda6f9de78e.jpg",
+            "show_collection_title": false
+          }
+        },
+        "featured_collection_9c9fAw": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "בייקרים",
+            "collection_image": "shopify:\/\/shop_images\/898694b0ab677159752c43c6922132e6.jpg",
+            "show_collection_title": false
+          }
+        },
+        "featured_collection_CyY976": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "טייץ-7-8",
+            "collection_image": "shopify:\/\/shop_images\/7_8_1.jpg",
+            "show_collection_title": false
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_DRHGAB",
+        "featured_collection_rpBKdE",
+        "featured_collection_n3Aag6",
+        "featured_collection_9c9fAw",
+        "featured_collection_CyY976"
       ],
       "settings": {
-        "steps": 4,
-        "title": "SELLING FAST",
+        "images_or_colors": "images",
+        "title": "LEGGINGS",
         "heading_size": "h1",
-        "heading_type": "heading_type_2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "selling-fast",
-        "products_to_show": 14,
+        "image_ratio": "adapt",
         "columns_desktop": 5,
+        "color_scheme": "background-2",
+        "products_to_show": 4,
         "full_width": true,
+        "collection": "allbottoms",
+        "show_view_all": true,
+        "view_all_text": "SHOP ALL",
+        "view_all_style": "link",
+        "view_all_location": "top",
+        "enable_desktop_slider": false,
+        "show_peak": true,
+        "pagination_type": "dots",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "customer_slideshow_wFcfK7": {
+      "type": "customer-slideshow",
+      "blocks": {
+        "slide_KdxH44": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/jpg_3edd6456-e0f3-4c63-a0c6-30a51bfeee4e.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/jpg_d3c7c1b0-c7bb-436e-97fd-9839a11f39f4.jpg",
+            "login_desktop_image": "shopify:\/\/shop_images\/7e408f30e6e469320ee1736cfbd12e86.jpg",
+            "login_mobile_image": "shopify:\/\/shop_images\/jpg_82e2a474-73bd-4007-b212-2408ca3ffefb.jpg",
+            "button_label": "",
+            "login_button_label": "",
+            "link": "",
+            "login_link": "",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "whole_slide_link": "shopify:\/\/pages\/a-list",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_KdxH44"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "sides",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand",
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
+    "collection_list_QrC4z9": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_Fmt3wN": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "all-tops",
+            "collection_image": "shopify:\/\/shop_images\/34a9cfe415fad4e35e8677bc45f824c6.jpg",
+            "show_collection_title": false
+          }
+        },
+        "featured_collection_QiJdhe": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "טופים",
+            "collection_image": "shopify:\/\/shop_images\/1_290ff1ac-da27-4acf-b7ac-78a97efd8a2f.jpg",
+            "show_collection_title": false
+          }
+        },
+        "featured_collection_DdnqiN": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "בגד-גוף",
+            "collection_image": "shopify:\/\/shop_images\/1_cab68ad6-fe28-4f09-bd96-505703d38150.jpg",
+            "show_collection_title": false
+          }
+        },
+        "featured_collection_n7jV8L": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "אוברולים",
+            "collection_image": "shopify:\/\/shop_images\/1_d8b54626-2c55-43b6-84cb-6f48b09c926f.jpg",
+            "show_collection_title": false
+          }
+        },
+        "featured_collection_XzPPyM": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "חולצות",
+            "collection_image": "shopify:\/\/shop_images\/1_87ca5c71-5a98-445d-9587-558935011140.jpg",
+            "show_collection_title": false
+          }
+        },
+        "featured_collection_bmLBxp": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "גופיית-ספורט",
+            "collection_image": "shopify:\/\/shop_images\/1_e842b228-9c60-494f-8e16-0354ea2a3c6f.jpg",
+            "show_collection_title": false
+          }
+        },
+        "featured_collection_pfKQkV": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "ג-קטים",
+            "collection_image": "shopify:\/\/shop_images\/2_e2d9ac19-5962-452d-bf69-1628432ffe29.jpg",
+            "show_collection_title": false
+          }
+        },
+        "featured_collection_gzaAQe": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "קרופ-טופים",
+            "collection_image": "shopify:\/\/shop_images\/1_adba1759-0ddd-4923-b028-08322ebc3bef.jpg",
+            "show_collection_title": false
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_Fmt3wN",
+        "featured_collection_QiJdhe",
+        "featured_collection_DdnqiN",
+        "featured_collection_n7jV8L",
+        "featured_collection_XzPPyM",
+        "featured_collection_bmLBxp",
+        "featured_collection_pfKQkV",
+        "featured_collection_gzaAQe"
+      ],
+      "settings": {
+        "images_or_colors": "images",
+        "title": "TOPS",
+        "heading_size": "h1",
+        "image_ratio": "adapt",
+        "columns_desktop": 5,
+        "color_scheme": "background-2",
+        "products_to_show": 4,
+        "full_width": true,
+        "collection": "all-tops",
         "show_view_all": true,
         "view_all_text": "SHOP ALL",
         "view_all_style": "link",
@@ -302,33 +478,9 @@
         "enable_desktop_slider": true,
         "show_peak": true,
         "pagination_type": "sides",
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": true,
-        "show_rating": false,
-        "show_sale_badge": false,
-        "enable_quick_add": true,
-        "quick_add_type": "hover",
-        "quick_add_type_mobile": "modal",
-        "quick_add_text": "הוספה מהירה",
-        "pick_size_text": "בחירת מידה",
-        "quick_add_accessories_text": "הוספה מהירה",
-        "columns_mobile": "2",
         "swipe_on_mobile": true,
-        "padding_top": 52,
-        "padding_bottom": 24
-      }
-    },
-    "eb801099-3113-4348-8f97-119459011525": {
-      "type": "visual-ugc",
-      "disabled": true,
-      "settings": {
-        "yotpo_widget_id": "643511ba2ed1151bb3dcb2ae",
-        "instagram_collection_url": "shopify:\/\/collections\/10",
-        "ugc_text": "מחפשת השראה ללוקים? כנסי עכשיו לעמוד האינסטגרם שלנו",
-        "shop_instagram": "SHOP INSTAGRAM",
-        "follow_us": "FOLLOW US"
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "4371b550-969b-4828-986d-71697fc53ef0": {
@@ -367,12 +519,13 @@
   },
   "order": [
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9",
-    "bf7c8475-03e5-4509-86d8-21c4c329bb00",
-    "283eeea1-79f9-42c2-8f34-dccf839b470b",
-    "ff8d8d77-e0dc-42f4-8ec6-54fb434b711b",
-    "our_collection_list",
-    "ecf1e0a5-0973-4674-ac5b-b5370ff1bae1",
-    "eb801099-3113-4348-8f97-119459011525",
+    "slideshow_Bn9kRq",
+    "slideshow_dtfFDm",
+    "featured_collection_4JBk4Y",
+    "our_collection_list_v2_mK6kUx",
+    "collection_list_w4D6TE",
+    "customer_slideshow_wFcfK7",
+    "collection_list_QrC4z9",
     "4371b550-969b-4828-986d-71697fc53ef0"
   ]
 }

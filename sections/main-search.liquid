@@ -230,7 +230,7 @@ if content_for_header contains "previewBarInjector.init();"
     <div{% if section.settings.filter_type == 'vertical' %} class="facets-vertical page-width"{% endif %}>
       {%- if search.filters != empty -%}
         {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
-          <aside aria-labelledby="verticalTitle" class="facets-wrapper{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}" id="main-search-filters" data-id="{{ section.id }}">
+          <aside aria-labelledby="verticalTitle" class="facets-wrapper {% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}" id="main-search-filters" data-id="{{ section.id }}">
             {% render 'facets', results: search, enable_filtering: section.settings.enable_filtering, enable_sorting: section.settings.enable_sorting, filter_type: section.settings.filter_type %}
           </aside>
         {%- endif -%}
@@ -283,7 +283,10 @@ if content_for_header contains "previewBarInjector.init();"
                                         second_announcement_tag: settings.second_announcement_tag,
                                         custom_collection_second_announcement: settings.custom_collection_second_announcement,
                                         quick_add_accessories_text: section.settings.quick_add_accessories_text,
-                                        comes_with_matching_outfit: settings.comes_with_matching_outfit
+                                        comes_with_matching_outfit: settings.comes_with_matching_outfit,
+                                        members_only_sale: settings.members_only_sale,
+                                        members_only_sale_active: settings.members_only_sale_active,
+                                        members_banner_text: settings.members_only_announcement
                                 %}
                                 {% endunless %}
                                 {% else %}
@@ -309,7 +312,10 @@ if content_for_header contains "previewBarInjector.init();"
                                         pick_size_text: section.settings.pick_size_text,
                                         quick_add_text: section.settings.quick_add_text,
                                         quick_add_accessories_text: section.settings.quick_add_accessories_text,
-                                        comes_with_matching_outfit: settings.comes_with_matching_outfit
+                                        comes_with_matching_outfit: settings.comes_with_matching_outfit,
+                                        members_only_sale: settings.members_only_sale,
+                                        members_only_sale_active: settings.members_only_sale_active,
+                                        members_banner_text: settings.members_only_announcement
                                 %}
                                 {% endunless %}
                             {% endif %}

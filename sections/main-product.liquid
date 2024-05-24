@@ -237,7 +237,10 @@
                         {%- when 'collapsible_tab' -%}
                             {% render 'collapsible-tab', block: block, product: product %}
                         {%- when 'swiper' -%}
-                            {% render 'swiper', preset: block.settings.swiper_preset, delay: block.settings.swiper_delay, show_payment_icons: block.settings.show_payment_icons %}
+                            {% render 'swiper',
+                                    preset: block.settings.swiper_preset,
+                                    show_payment_icons: block.settings.show_payment_icons,
+                                    deliveryText: block.settings.delivery_days_text %}
                         {%- when 'quantity_selector' -%}
                             <div
                                     id="Quantity-Form-{{ section.id }}"
@@ -463,7 +466,10 @@
                                                                                             pick_size_text: section.settings.pick_size_text,
                                                                                             quick_add_text: section.settings.quick_add_text,
                                                                                             quick_add_accessories_text: section.settings.quick_add_accessories_text,
-                                                                                            comes_with_matching_outfit: settings.comes_with_matching_outfit
+                                                                                            comes_with_matching_outfit: settings.comes_with_matching_outfit,
+                                                                                            members_only_sale: settings.members_only_sale,
+                                                                                            members_only_sale_active: settings.members_only_sale_active,
+                                                                                            members_banner_text: settings.members_only_announcement
                                                                                     %}
                                                                                 </li>
                                                                             {% endunless %}
@@ -484,7 +490,10 @@
                                                                                             pick_size_text: section.settings.pick_size_text,
                                                                                             quick_add_text: section.settings.quick_add_text,
                                                                                             quick_add_accessories_text: section.settings.quick_add_accessories_text,
-                                                                                            comes_with_matching_outfit: settings.comes_with_matching_outfit
+                                                                                            comes_with_matching_outfit: settings.comes_with_matching_outfit,
+                                                                                            members_only_sale: settings.members_only_sale,
+                                                                                            members_only_sale_active: settings.members_only_sale_active,
+                                                                                            members_banner_text: settings.members_only_announcement
                                                                                     %}
                                                                                 </li>
                                                                             {% endunless %}
@@ -742,7 +751,40 @@
             "id": "small_text",
             "label": "Small Text",
             "default": "Small Text"
-        }
+        },
+          {
+              "type": "text",
+                "id": "small_logged_in_text",
+                "label": "Small Logged In Text"
+          },
+        {
+            "type": "text",
+            "id": "second_announcement_regular_text",
+            "label": "Second Announcement Regular Text",
+            "default": "Second Announcement Regular Text"
+        },
+        {
+            "type": "text",
+            "id": "second_small_text",
+            "label": "Secondary Small Text",
+            "default": "Secondary Small Text"
+        },
+          {
+              "type": "select",
+              "id": "paragraph_direction",
+                "label": "Paragraph Direction",
+                "options": [
+                    {
+                        "value": "Left To Right",
+                        "label": "Left to Right"
+                    },
+                    {
+                        "value": "Right To Left",
+                        "label": "Right to Left"
+                    }
+                ],
+                "default": "Right To Left"
+          }
       ]
     },
     {
@@ -1048,21 +1090,17 @@
           "label": "t:sections.main-product.blocks.swiper.settings.swiper_preset.label",
           "info": "t:sections.main-product.blocks.swiper.settings.swiper_preset.info"
         },
-        {
-          "type": "range",
-          "id": "swiper_delay",
-          "label": "t:sections.main-product.blocks.swiper.settings.swiper_delay.label",
-          "info": "t:sections.main-product.blocks.swiper.settings.swiper_delay.info",
-          "default": 3,
-          "min": 1,
-          "max": 20,
-          "step": 1
-        },
           {
               "type": "checkbox",
               "id": "show_payment_icons",
               "label": "Show payment icons",
               "default": false
+          },
+          {
+              "type": "text",
+              "id": "delivery_days_text",
+              "label": "Delivery days text",
+              "default": "משלוח אקספרס עם שליח עד הבית תוך 1-5 ימי עסקים. ייתכנו עיכובים נוספים עקב המצב הביטחוני."
           }
       ]
     },

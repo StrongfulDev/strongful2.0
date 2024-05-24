@@ -92,6 +92,14 @@ product__accordion .accordion__title {
 	border: 2px solid var(--gradient-base-accent-1);
 }
 
+.loyalty .collapsible-search {
+	border: 2px solid var(--gradient-base-background-4);
+}
+
+.loyalty .collapsible-search:focus {
+	background-color: var(--gradient-base-background-3);
+}
+
 .page .collapsible-content-wrapper-narrow {
 	max-width: inherit;
 }

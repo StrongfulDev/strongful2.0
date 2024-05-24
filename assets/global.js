@@ -397,6 +397,7 @@ class MenuDrawer extends HTMLElement {
 		}
 
 	  $(".mobile-facets__close").click(function() {
+		  $('html').removeClass('overflow-hidden');
 		  $(".details.menu-opening").removeClass("menu-opening");
 			$(".mobile-facets__disclosure.menu-opening").removeAttr("open");
 	  });
@@ -1249,10 +1250,32 @@ function removeDeadProduct() {
 
 window.addEventListener('DOMContentLoaded', function(event) {
 
+	if (document.querySelector('.filter-links') !== null) {
+		let filterLinks = document.querySelectorAll('.filter-link');
+		let windowWidth = window.innerWidth;
+		if (windowWidth < 750) {
+			filterLinks.forEach(link => {
+				if (link.classList.contains('current-link')) {
+					console.log(link);
+					link.scrollIntoView();
+				}
+			});
+		}
+	}
+
+	if (document.querySelector('#countdown') !== null) {
+		$('facets-container').addClass('countdown-facet');
+		$('facets-wrapper').addClass('countdown-facet');
+	} else {
+		$('facets-container').removeClass('countdown-facet');
+		$('facets-wrapper').removeClass('countdown-facet');
+	}
+
 	// account modal code start here
 
 	const listItem = $(".multicolumn-list__item");
-	const registerListItem = $(".multicolumn-list__item[data-account='login']");
+	const itemIsLoginOrRegister = document.querySelector("main").dataset.template;
+	const registerListItem = $(`.multicolumn-list__item[data-account="${itemIsLoginOrRegister}"]`);
 	const customerOverlay = $(".custom-login-overlay");
 	const borderPosition = $("#js-border-position");
 	let cartDrawer = $(".drawer");

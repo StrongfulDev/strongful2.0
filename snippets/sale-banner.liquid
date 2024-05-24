@@ -18,36 +18,32 @@
     endif
 %}
 
-{% comment %}
 {% if product.tags contains announcement_tag %}
-    <div class="sale-banner-product-page fix-direction">
+    <div class="sale-banner-product-page">
         {% if customer %}
-            <p>{{ block.settings.logged_in_text | newline_to_br }}</p>
+            <div class="{% if block.settings.paragraph_direction == 'Right To Left' %}fix-direction{% endif %}">
+                {{ block.settings.logged_in_text | newline_to_br }}
+            </div>
+            {% if block.settings.small_logged_in_text != blank %}
+                <small class="fix-direction">{{ block.settings.small_logged_in_text }}</small>
+            {% endif %}
         {% else %}
-            <p>{{ block.settings.logged_out_text | newline_to_br }}</p>
+            <div class="{% if block.settings.paragraph_direction == 'Right To Left' %}fix-direction{% endif %}">
+                {{ block.settings.logged_out_text | newline_to_br }}
+            </div>
             {% if block.settings.log_in != blank %}
-                <small class="account-toggler-site-wide link">{{ block.settings.log_in }}</small>
+                <small class="account-toggler-site-wide link fix-direction">{{ block.settings.log_in }}</small>
             {% endif %}
         {% endif %}
         {% if block.settings.small_text != blank %}
-            <small class="">{{ block.settings.small_text }}</small>
+            <small class="fix-direction">{{ block.settings.small_text }}</small>
         {% endif %}
     </div>
-{% endif %}
-{% endcomment %}
-
-{% if product.tags contains announcement_tag %}
-    <div class="sale-banner-product-page fix-direction">
-        {% if customer %}
-            <p>{{ block.settings.logged_in_text | newline_to_br }}</p>
-        {% else %}
-            <p>{{ block.settings.logged_out_text | newline_to_br }}</p>
-            {% if block.settings.log_in != blank %}
-                <small class="account-toggler-site-wide link">{{ block.settings.log_in }}</small>
-            {% endif %}
-        {% endif %}
-        {% if block.settings.small_text != blank %}
-            <small class="">{{ block.settings.small_text }}</small>
+{% elsif product.tags contains settings.second_announcement_tag %}
+    <div class="sale-banner-product-page">
+        <p>{{ block.settings.second_announcement_regular_text | newline_to_br }}</p>
+        {% if block.settings.second_small_text != blank %}
+            <small class="fix-direction">{{ block.settings.second_small_text }}</small>
         {% endif %}
     </div>
 {% endif %}

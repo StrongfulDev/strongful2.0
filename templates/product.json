@@ -17,10 +17,14 @@
         "5ec0a264-e4fc-4a8d-92bc-f2f9223694f5": {
           "type": "sale",
           "settings": {
-            "logged_in_text": "<p>23% הנחה על כל האתר!<\/p>",
-            "logged_out_text": "<p>23% הנחה על כל האתר!<\/p>",
+            "logged_in_text": "<p>10% הנחה ברכישת 4 פריטים ומעלה<\/p>",
+            "logged_out_text": "<p>10% הנחה ברכישת 4 פריטים ומעלה<\/p>",
             "log_in": "",
-            "small_text": "STRONGFUL'S 3RD BIRTHDAY PARTY"
+            "small_text": "",
+            "small_logged_in_text": "",
+            "second_announcement_regular_text": "",
+            "second_small_text": "",
+            "paragraph_direction": "Right To Left"
           }
         },
         "title": {
@@ -37,7 +41,7 @@
           }
         },
         "656bd184-5523-4c74-aee3-c2664a058063": {
-          "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "type": "shopify:\/\/apps\/yotpo-product-reviews-ugc\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
             "product": "{{product}}"
           }
@@ -75,6 +79,25 @@
             "members_only_sale_over_text": "זמין לרכישה ב 15.8"
           }
         },
+        "wishlist_king_wishlist_button_block_fxtbYK": {
+          "type": "shopify:\/\/apps\/wishlist-king\/blocks\/wishlist-button-block\/194f5011-a43c-4b22-b12e-eaf20dc4506a",
+          "disabled": true,
+          "settings": {
+            "button_style": "plain_accent_1",
+            "button_alignment": "center",
+            "button_content_alignment": "center",
+            "button_margin_top": 0,
+            "button_margin_bottom": 0,
+            "button_max_width": 0,
+            "button_padding_horizontal": 15,
+            "button_full_width": true,
+            "button_show_text": true,
+            "button_show_icon": true,
+            "icon_size": 18,
+            "icon_stroke_width": 2,
+            "icon_offset_vertical": -1
+          }
+        },
         "5ae0b953-0e37-48c5-b5cc-e50d6004b25c": {
           "type": "loyalty",
           "settings": {
@@ -88,8 +111,8 @@
           "type": "swiper",
           "settings": {
             "swiper_preset": "shipping_returns",
-            "swiper_delay": 3,
-            "show_payment_icons": true
+            "show_payment_icons": true,
+            "delivery_days_text": "משלוח אקספרס עם שליח עד הבית תוך 1-5 ימי עסקים. ייתכנו עיכובים נוספים עקב המצב הביטחוני."
           }
         },
         "679aaa7e-cf01-48c6-85e3-b35a4a905d19": {
@@ -116,8 +139,8 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "משלוחים",
-            "product_content": "shipping_information",
-            "content": "",
+            "product_content": "none",
+            "content": "<p>הסבר על משלוחים והחזרות<\/p><ul><li>משלוח אקספרס חינם בהזמנה מעל ₪210<\/li><li>משלוחי אקספרס בעלות 10 ש\"ח בהזמנה עד ₪210<\/li><li>משלוחי אקספרס בעלות 25 ש\"ח בהזמנה עד ₪100<\/li><li>משלוח אקספרס הינו עד הבית תוך 1-5 ימי עסקים, לא כולל את יום קליטת ההזמנה, לכל חלקי הארץ<br\/>מלבד ישובים מרוחקים תוך 1-5 ימי עסקים<\/li><li><a href=\"https:\/\/strongfulclothing.myshopify.com\/blogs\/policies\/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%9E%D7%A9%D7%9C%D7%95%D7%97%D7%99%D7%9D-%D7%A9%D7%9C%D7%A0%D7%95\" target=\"_blank\">למידע נוסף על זמני המשלוח<\/a><\/li><li>החלפות חינם עד הבית (עם שליח) - <a href=\"https:\/\/strongfulclothing.myshopify.com\/blogs\/policies\/%D7%94%D7%97%D7%96%D7%A8%D7%95%D7%AA-%D7%95%D7%94%D7%97%D7%9C%D7%A4%D7%95%D7%AA\" target=\"_blank\">למידע נוסף<\/a><\/li><\/ul><p>מומלץ להסתכל במדריך מידות<\/p>",
             "page": "",
             "icon": "none"
           }
@@ -135,6 +158,7 @@
         "e290d1ee-22d0-4ae8-9219-8d77d6585fae",
         "quantity_selector",
         "buy_buttons",
+        "wishlist_king_wishlist_button_block_fxtbYK",
         "5ae0b953-0e37-48c5-b5cc-e50d6004b25c",
         "1b30499f-a9b2-4f41-bbad-151626bae3d0",
         "679aaa7e-cf01-48c6-85e3-b35a4a905d19",
@@ -278,7 +302,7 @@
       "type": "apps",
       "blocks": {
         "408ca3e0-76ac-430f-a568-98a94142ff8b": {
-          "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "type": "shopify:\/\/apps\/yotpo-product-reviews-ugc\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
             "product": "{{product}}"
           }

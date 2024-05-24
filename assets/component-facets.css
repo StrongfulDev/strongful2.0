@@ -1564,7 +1564,60 @@ summary .icon-caret {
 	padding-bottom: 1.5rem;
 }
 
+.filter-links {
+	list-style: none;
+	padding: 1rem 0;
+	display: flex;
+	width: 100%;
+	overflow-x: scroll;
+	gap: var(--grid-desktop-horizontal-spacing);
+}
+
+.filter-link {
+	padding-left: var(--grid-desktop-horizontal-spacing);
+	border-left: solid 2px var(--gradient-base-accent-1);
+	width: max-content;
+	min-width: max-content;
+}
+
+.filter-link:last-child {
+	border-left: 0;
+	padding-left: 0;
+}
+
+.tops-menu-link {
+	width: 100%;
+	display: block;
+	text-decoration: none;
+	color: var(--gradient-base-accent-1);
+}
+
+.tops-menu-link:hover {
+	text-decoration: underline;
+}
+
+.tops-menu-link.list-menu__item--active {
+	font-weight: var(--font-body-weight-bold);
+}
+
+.new-filter-menu-desktop {
+	display: none;
+}
+
 @media screen and (min-width: 990px) {
+
+	.new-filter-menu-mobile {
+		display: none;
+	}
+
+	.filter-links {
+		justify-content: center;
+		direction: rtl;
+	}
+
+	.new-filter-menu-desktop {
+		display: block;
+	}
 
   .facets-vertical .facets-wrapper {
     padding-right: 0;

@@ -115,6 +115,7 @@
   },
   "products": {
     "product": {
+      "selling_fast": "SELLING FAST",
       "add_to_cart": "הוספה לסל",
       "launch_date": "זמין לרכישה ב 15.8",
       "members_only": "מכירה מוקדמת לחברות מועדון בלבד",
@@ -127,7 +128,7 @@
       "inventory_in_stock": "במלאי",
       "inventory_in_stock_show_count": "נשאר {{ quantity }} מפריט זה",
       "inventory_low_stock": "מלאי נמוך",
-      "inventory_low_stock_show_count": "נשארו {{ quantity }} במלאי",
+      "inventory_low_stock_show_count": "{{ quantity }} במלאי",
       "inventory_out_of_stock": "אזל מהמלאי",
       "inventory_out_of_stock_continue_selling": "מוצר זה אזל מהמלאי, אך עדיין ניתן להזמין אותו והוא יגיע בהקדם",
       "sku": "SKU",
@@ -745,9 +746,9 @@
         "gift_card_has_been_applied": "גיפט קארד נקלט",
         "gift_card_has_been_removed": "גיפט קארד הוסר",
         "discount_already_applied": "להזמנה זאת יש הנחה האחת תקפה, לא ניתן להוסיף עוד אחת.",
-        "cart_does_not_meet_discount_requirements_notice": "קוד הקופון אינו תקף על הפריטים שבחרת.",
+        "cart_does_not_meet_discount_requirements_notice": "קוד הקופון {{ code }} אינו תקף על הפריטים שבחרת.",
         "discount_requires_customer_notice": "יופעל <strong>{{ code }}<\/strong> הזיני כתובת למשלוח כדי שקוד הקופון ",
-        "customer_does_not_meet_discount_requirements_notice": "קוד הקופון אינו תקף.",
+        "customer_does_not_meet_discount_requirements_notice": "קוד הקופון {{ code }} אינו תקף על הפריטים שבחרת.",
         "customer_already_used_once_per_customer_discount_notice": "השתמשת בקוד הקופון {{ code }} בעבר",
         "subtotal_label": "סיכום ביניים",
         "shipping_label": "משלוח",
@@ -854,7 +855,8 @@
           "one": "יום עסקים אחד",
           "other": "{{ count }} ימי עסקים."
         },
-        "waiting_on_rate_notice": "טוען שיטות משלוח..."
+        "waiting_on_rate_notice": "טוען שיטות משלוח...",
+        "address2_add_label": "אם ברצונך להוסיף מספר דירה"
       },
       "payment_summary": {
         "gift_card_current_balance_notice": "יתרת הגיפט קארד {{ amount }} ",

@@ -114,6 +114,26 @@
         </facet-filters-form>
     {%- endif -%}
 
+    <div class="new-filter-menu-desktop">
+        {% if collection.title == 'טופים' or collection.title == 'כל הטופים' or collection.title == 'חזיות ספורט' or collection.title == 'גופיית ספורט' or collection.title == 'בגד גוף' or collection.title == 'חולצות ספורט' or collection.title == 'קרופ טופ' or collection.title == 'ג׳קטים' or collection.title == 'אוברולים' or collection.title == 'סווטשירט' %}
+            <ul class="filter-links">
+                {% for link in section.settings.tops_menu.links %}
+                    <li class="filter-link {% if link.current %}current-link{% endif %}">
+                        <a href="{{ link.url | url_decode }}" class="tops-menu-link {% if link.current %}list-menu__item--active{% endif %}">{{ link.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% elsif collection.title == 'טייצים' or collection.title == 'טייצים ארוכים' or collection.title == 'שורט - טייץ קצר' or collection.title == 'טייץ בייקר' or collection.title == 'טייץ 7/8' or collection.title == 'מכנסיים' %}
+            <ul class="filter-links">
+                {% for link in section.settings.bottoms_menu.links %}
+                    <li class="filter-link {% if link.current %}current-link{% endif %}">
+                        <a href="{{ link.url | url_decode }}" class="tops-menu-link {% if link.current %}list-menu__item--active{% endif %}">{{ link.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+
     <div class="{% if section.settings.filter_type == 'vertical' %} facets-vertical page-width fix-direction{% endif %}">
         {{ 'component-facets.css' | asset_url | stylesheet_tag }}
         <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
@@ -128,7 +148,9 @@
                         results: collection,
                         enable_filtering: section.settings.enable_filtering,
                         enable_sorting: section.settings.enable_sorting,
-                        filter_type: section.settings.filter_type
+                        filter_type: section.settings.filter_type,
+                        tops_menu: section.settings.tops_menu,
+                        bottoms_menu: section.settings.bottoms_menu
                 %}
             </aside>
         {%- endif -%}
@@ -175,11 +197,38 @@
                                         if settings.custom_collection_announcement != blank
                                             assign card_announcement = settings.custom_collection_announcement
                                         endif
+
+                                        if settings.members_only_announcement != blank
+                                            assign members_announcement = settings.members_only_announcement
+                                        endif
                                     endif
                                 -%}
+                                {% if forloop.index0 == 8 or forloop.index0 == 20 or forloop.index0 == 34 or forloop.index0 == 60 %}
+                                    {% if section.settings.ad_image != blank %}
+                                        <li class="grid__item">
+                                            <a href="{{ section.settings.ad_link }}" class="ad-image-link">
+                                                <img
+                                                        srcset="
+                  {%- if section.settings.ad_image.width >= 165 -%}{{ section.settings.ad_image | image_url: width: 165 }} 165w,{%- endif -%}
+                  {%- if section.settings.ad_image.width >= 360 -%}{{ section.settings.ad_image | image_url: width: 360 }} 360w,{%- endif -%}
+                  {%- if section.settings.ad_image.width >= 533 -%}{{ section.settings.ad_image | image_url: width: 533 }} 533w,{%- endif -%}
+                  {{ section.settings.ad_image | image_url }} {{ section.settings.ad_image.width }}w
+                "
+                                                        src="{{ section.settings.ad_image | image_url: width: 533 }}"
+                                                        sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                                                        alt="פרסומת"
+                                                        class="motion-reduce collection-ad-image"
+                                                        {% unless lazy_load == false %}
+                                                            loading="lazy"
+                                                        {% endunless %}
+                                                >
+                                            </a>
+                                        </li>
+                                    {% endif %}
+                                {% endif %}
                                 {% if isLiveTheme == 'true' %}
                                     {% unless product.tags contains 'giftHide' or product.tags contains 'hidden' or product.tags contains 'free-slippers' %}
-                                        <li class="grid__item {{ isLiveTheme }}">
+                                        <li class="grid__item {{ isLiveTheme }} {% if product.available == false and product.tags contains 'outlet' %}hidden{% endif %}">
                                             {% render 'card-product',
                                                     card_product: product,
                                                     media_aspect_ratio: section.settings.image_ratio,
@@ -202,6 +251,7 @@
                                                     quick_add_accessories_text: section.settings.quick_add_accessories_text,
                                                     members_only_sale: settings.members_only_sale,
                                                     members_only_sale_active: settings.members_only_sale_active,
+                                                    members_banner_text: settings.members_only_announcement,
                                                     comes_with_matching_outfit: settings.comes_with_matching_outfit
                                             %}
                                         </li>
@@ -222,6 +272,7 @@
                                                     section_id: section.id,
                                                     image_count: section.settings.image_count,
                                                     card_banner_text: card_announcement,
+                                                    members_banner_text: members_announcement,
                                                     card_header_size: section.settings.card_header_size,
                                                     announcement_tag: settings.announcement_tag,
                                                     second_announcement_tag: settings.second_announcement_tag,
@@ -255,6 +306,28 @@
   "name": "t:sections.main-collection-product-grid.name",
   "class": "section",
   "settings": [
+      {
+          "type":"link_list",
+          "id":"tops_menu",
+          "default":"main-menu",
+          "label":"Tops Menu"
+      },
+      {
+          "type":"link_list",
+          "id":"bottoms_menu",
+          "default":"main-menu",
+          "label":"Bottoms Menu"
+      },
+      {
+          "type": "image_picker",
+          "id": "ad_image",
+          "label": "Ad Image"
+      },
+      {
+        "type": "url",
+        "id": "ad_link",
+        "label": "Ad Link"
+      },
     {
       "type": "range",
       "id": "products_per_page",

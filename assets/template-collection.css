@@ -13,7 +13,13 @@
 	.cart-drawer .collection .slider.slider--tablet {
 		margin: 0;
 		column-gap: var(--grid-desktop-vertical-spacing);
+		grid-template-columns: 3fr;
+		display: grid;
 	}
+}
+
+.cart-drawer .collection .slider .full-unstyled-link {
+	display: none;
 }
 
 .collection > .loading-overlay {
@@ -104,6 +110,14 @@
 
 .collection__view-all a:not(.link):before, .collection__view-all a:not(.link):after {
 	content: none;
+}
+
+.ad-image-link {
+	display: block;
+}
+
+.collection-ad-image {
+	max-width: 100%;
 }
 
 @media screen and (min-width: 990px) {

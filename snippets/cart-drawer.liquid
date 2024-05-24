@@ -276,7 +276,11 @@
                                                                 {{ discount.title }}
                                                             </li>
                                                         {%- endfor -%}
-                                                            <li class="discounts__discount loyalty-reward-discount-text hidden"></li>
+                                                        {% if item.product.title == '10 קרדיטים move' %}
+                                                            <li class="discounts__discount loyalty-reward-discount-text">
+                                                                הקוד יישלח במייל נפרד
+                                                            </li>
+                                                        {% endif %}
                                                     </ul>
                                                 </td>
 
