@@ -23,7 +23,14 @@
     <!-- VIP Tiers Section -->
     <div class="yotpo-widget-instance" data-yotpo-instance-id="{{ section.settings.yotpo_instance_id }}"></div>
     <div class="our-vip-tiers">
-
+        {% assign tiers = shop.metaobjects.new_vip_tiers.values | sort: "order" %}
+        {% for tier in tiers %}
+            <div>
+                <h4>{{ tier.name }}</h4>
+                {{ tier.icon }}
+                {{ tier.information }}
+            </div>
+        {% endfor %}
     </div>
 </div>
 
