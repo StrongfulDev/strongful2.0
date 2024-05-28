@@ -44,12 +44,10 @@
 }
 
 .yotpo-widget-campaign-widget .yotpo-widget-campaign-widget-container {
-	/*background: var(--gradient-base-background-3);*/
-	/*background-image: url("https://cdn.shopify.com/s/files/1/0340/7986/7020/files/mathias-reding-3P9QzN5uF5Q-unsplash.jpg?v=1704642156");*/
-	background-image: url("https://cdn.shopify.com/s/files/1/0340/7986/7020/files/fabrizio-conti-KheSdBdMa2Y-unsplash.jpg?v=1704644729");
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
+	/*background-image: url("https://cdn.shopify.com/s/files/1/0340/7986/7020/files/fabrizio-conti-KheSdBdMa2Y-unsplash.jpg?v=1704644729");*/
+	/*background-size: cover;*/
+	/*background-position: center;*/
+	/*background-repeat: no-repeat;*/
 }
 
 .yotpo-widget-campaign-widget .yotpo-is-mobile .yotpo-container-headline {
