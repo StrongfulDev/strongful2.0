@@ -18,6 +18,14 @@
         "padding_bottom": 0
       }
     },
+    "component_vip_tiers_new_RaUJGw": {
+      "type": "component-vip-tiers-new",
+      "settings": {
+        "yotpo_instance_id": "636553",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "custom_liquid_gEXGtn": {
       "type": "custom-liquid",
       "settings": {
@@ -153,6 +161,7 @@
   "order": [
     "custom_liquid_NKRGNW",
     "custom_liquid_3c8bRT",
+    "component_vip_tiers_new_RaUJGw",
     "custom_liquid_gEXGtn",
     "collapsible_content_RLWQbU",
     "custom_loyalty_form_section_TtpmFX"
