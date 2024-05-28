@@ -123,7 +123,7 @@
                     </li>
                 {% endfor %}
             </ul>
-        {% elsif collection.title == 'טייצים' or collection.title == 'טייצים ארוכים' or collection.title == 'שורט - טייץ קצר' or collection.title == 'טייץ בייקר' or collection.title == 'טייץ 7/8' or collection.title == 'מכנסיים' %}
+        {% elsif collection.title == 'כל המכנסיים' or collection.title == 'טייצים' or collection.title == 'טייצים ארוכים' or collection.title == 'שורט - טייץ קצר' or collection.title == 'טייץ בייקר' or collection.title == 'טייץ 7/8' or collection.title == 'מכנסיים' %}
             <ul class="filter-links">
                 {% for link in section.settings.bottoms_menu.links %}
                     <li class="filter-link {% if link.current %}current-link{% endif %}">
