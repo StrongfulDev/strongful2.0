@@ -27,8 +27,13 @@
         {% for tier in tiers %}
             <div>
                 <h4>{{ tier.name }}</h4>
-                {{ tier.icon }}
-                {{ tier.information }}
+                {{ tier.icon | img_url: '50x50'}}
+                <ul>
+                    <li>{{ tier.first_info }}</li>
+                    <li>{{ tier.second_info }}</li>
+                    <li>{{ tier.third_info }}</li>
+                    <li>{{ tier.fourth_info }}</li>
+                </ul>
             </div>
         {% endfor %}
     </div>
