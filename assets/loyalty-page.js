@@ -6,6 +6,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
 			let tierData = toggler.nextElementSibling;
 			toggler.addEventListener('click', (e) => {
 				$(tierData).toggle();
+				if (toggler.style.marginBottom === '0') {
+					toggler.style.marginBottom = '10px';
+				} else {
+					toggler.style.marginBottom = 0;
+				}
 			});
 		});
 	}
