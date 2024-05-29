@@ -451,7 +451,7 @@
 	}
 
 	#MegaMenu-Content-3 {
-		/*grid-template-columns: 1fr 1.5fr;*/
+		grid-template-columns: 1fr 1.5fr;
 	}
 
 	#MegaMenu-Content-3 .mega-menu__list li:first-child a {
