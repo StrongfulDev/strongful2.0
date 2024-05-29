@@ -194,9 +194,12 @@ div.about-us {
 	color: darkblue;
 }
 
+.vip-tiers-main-title {
+	text-decoration: underline;
+}
+
 .our-vip-tiers {
 	direction: rtl;
-	padding: 3em 2em;
 }
 
 .vip-tiers-pumpup-title {
@@ -453,10 +456,6 @@ div.about-us {
 
 @media screen and (min-width: 990px) {
 
-	.vip-tier-data {
-		display: block;
-	}
-
 	.covid__notice {
 		padding: 8.6rem 50rem 6.5rem;
 	}
@@ -525,10 +524,23 @@ div.about-us {
 		width: auto;
 	}
 
+	.vip-tiers-main-title {
+		text-align: center;
+	}
+
 	.our-vip-tiers {
-		padding-top: 4em;
-		padding-bottom: 4em;
-		display: flex;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		padding: 2rem 17rem 0;
+	}
+
+	.vip-tier-data {
+		display: block;
+		background: revert;
+	}
+
+	.vip-tier-data-toggle {
+		display: none;
 	}
 
 	.vip-benefits-list-th, .vip-benefits-list-th.active {
