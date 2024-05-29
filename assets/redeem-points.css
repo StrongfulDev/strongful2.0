@@ -29,3 +29,24 @@
 .redeem--info-child p:nth-child(3) {
 	margin: 0 5px;
 }
+
+@media screen and (min-width: 990px) {
+	.redeem--info {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		margin-top: 3rem;
+		padding: 0 25vw;
+	}
+
+	.redeem--info-child .icon {
+		margin-left: 0;
+	}
+
+	.redeem--info-child {
+		flex-direction: column;
+	}
+
+	.redeem--info-child p {
+		font-size: var(--font-body-size-large);
+	}
+}
