@@ -26,6 +26,13 @@
         "padding_bottom": 24
       }
     },
+    "loyalty_redeem_points_VQqQ4q": {
+      "type": "loyalty-redeem-points",
+      "settings": {
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "collapsible_content_RLWQbU": {
       "type": "collapsible-content",
       "blocks": {
@@ -153,6 +160,7 @@
     "custom_liquid_NKRGNW",
     "custom_liquid_3c8bRT",
     "component_vip_tiers_new_RaUJGw",
+    "loyalty_redeem_points_VQqQ4q",
     "collapsible_content_RLWQbU",
     "custom_loyalty_form_section_TtpmFX"
   ]
