@@ -21,13 +21,14 @@
 
 <div class="page-width fix-direction section-{{ section.id }}-padding">
     <!-- VIP Tiers Section -->
-    <div class="yotpo-widget-instance" data-yotpo-instance-id="{{ section.settings.yotpo_instance_id }}"></div>
+    {% comment %}<div class="yotpo-widget-instance" data-yotpo-instance-id="{{ section.settings.yotpo_instance_id }}"></div>{% endcomment %}
     <div class="our-vip-tiers">
         {% assign tiers = shop.metaobjects.new_vip_tiers.values | sort: "order" %}
         {% for tier in tiers %}
+            {% assign icon = tier.icon %}
             <div>
                 <h4>{{ tier.name }}</h4>
-                {{ tier.icon | img_url: '50x50'}}
+                {% render icon %}
                 <ul>
                     <li>{{ tier.first_info }}</li>
                     <li>{{ tier.second_info }}</li>
