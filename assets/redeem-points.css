@@ -3,6 +3,19 @@
 	text-align: center;
 }
 
+.redeem--titles h2 {
+	font-size: calc(var(--font-body-size-large) * 1.2);
+	margin-top: 0;
+}
+
+.redeem--titles h6 {
+	width: fit-content;
+	margin: 0 auto;
+	padding: var(--grid-mobile-horizontal-spacing) var(--grid-desktop-horizontal-spacing);
+	border: 1px solid var(--gradient-base-background-4);
+	border-radius: var(--inputs-radius);
+}
+
 .redeem--info-child {
 	display: flex;
 	justify-content: center;

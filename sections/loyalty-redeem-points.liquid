@@ -14,37 +14,35 @@
     }
 {%- endstyle -%}
 
-<div class="fix-direction section-{{ section.id }}-padding">
-    <div class="redeem-points-container">
-        <div class="redeem--titles">
-            <h2>מימוש נקודות</h2>
-            <h4>השתמשי בנקודות שלך בשביל לשלם פחות!</h4>
-            <h6>אופן מימוש הנקודות ישתנה ב 5.6</h6>
+<div class="redeem-points-container fix-direction section-{{ section.id }}-padding">
+    <div class="redeem--titles">
+        <h2>מימוש נקודות</h2>
+        <h4>השתמשי בנקודות שלך בשביל לשלם פחות!</h4>
+        <h6>אופן מימוש הנקודות ישתנה ב 5.6</h6>
+    </div>
+    <div class="redeem--info">
+        {% comment %}First Child{% endcomment %}
+        <div class="redeem--info-child">
+            {% render 'redeem-icon-first' %}
+            <p>כל שקל שרכשת</p>
+            <p>=</p>
+            <p>נקודה</p>
         </div>
-        <div class="redeem--info">
-            {% comment %}First Child{% endcomment %}
-            <div class="redeem--info-child">
-                {% render 'redeem-icon-first' %}
-                <p>כל שקל שרכשת</p>
-                <p>=</p>
-                <p>נקודה</p>
-            </div>
 
-            {% comment %}Second Child{% endcomment %}
-            <div class="redeem--info-child">
-                {% render 'redeem-icon-second' %}
-                <p>100 נק</p>
-                <p>=</p>
-                <p>5 שקלים למימוש</p>
-            </div>
+        {% comment %}Second Child{% endcomment %}
+        <div class="redeem--info-child">
+            {% render 'redeem-icon-second' %}
+            <p>100 נק</p>
+            <p>=</p>
+            <p>5 שקלים למימוש</p>
+        </div>
 
-            {% comment %}Third Child{% endcomment %}
-            <div class="redeem--info-child">
-                {% render 'redeem-icon-third' %}
-                <p>1,000 נק</p>
-                <p>=</p>
-                <p>50 שקלים למימוש</p>
-            </div>
+        {% comment %}Third Child{% endcomment %}
+        <div class="redeem--info-child">
+            {% render 'redeem-icon-third' %}
+            <p>1,000 נק</p>
+            <p>=</p>
+            <p>50 שקלים למימוש</p>
         </div>
     </div>
 </div>
