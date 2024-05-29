@@ -128,10 +128,6 @@ div.about-us {
 	position: absolute !important;
 }
 
-.flexified-wrapper.flexified-mobile .flexified-child {
-	width: 100% !important;
-}
-
 .new-dynamics {
 	margin: 0 0 1em;
 	text-align: center;
@@ -430,13 +426,27 @@ div.about-us {
 }
 
 .vip-tier-data-toggle {
-	margin: 0;
-	padding: 1rem 0;
+	padding: 1rem;
 	background: var(--gradient-base-background-3);
+	text-decoration: underline;
+}
+
+.vip-tier-big-title {
+	margin-top: 0;
+	font-size: calc(var(--font-body-size-large) * 1.5);
 }
 
 .vip-tier-data {
 	display: none;
+	text-align: center;
+	background: var(--gradient-base-background-3);
+}
+
+.vip-tier-data ul {
+	padding: 0;
+	text-align: right;
+	width: 75%;
+	margin-right: 30%;
 }
 
 @media screen and (min-width: 990px) {
