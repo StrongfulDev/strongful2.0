@@ -49,4 +49,8 @@
 	.redeem--info-child p {
 		font-size: var(--font-body-size-large);
 	}
+
+	.redeem--info-child p:nth-child(2), .redeem--info-child p:last-child {
+		margin: var(--grid-desktop-vertical-spacing);
+	}
 }
