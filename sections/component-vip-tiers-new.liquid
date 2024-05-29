@@ -21,22 +21,37 @@
 
 <div class="page-width fix-direction section-{{ section.id }}-padding">
     <!-- VIP Tiers Section -->
-    {% comment %}<div class="yotpo-widget-instance" data-yotpo-instance-id="{{ section.settings.yotpo_instance_id }}"></div>{% endcomment %}
     <div class="our-vip-tiers">
-        {% assign tiers = shop.metaobjects.new_vip_tiers.values | sort: "order" %}
-        {% for tier in tiers %}
-            {% assign icon = tier.icon %}
-            <div>
-                <h4>{{ tier.name }}</h4>
-                {% render icon %}
+
+        <!-- BASIC -->
+        <div class="vip-tier-new">
+            <h6 class="vip-tier-data-toggle">BASIC</h6>
+            <div class="vip-tier-data">
+                <h4>BASIC</h4>
+                {% render 'icon-loyalty-star-one' %}
                 <ul>
-                    <li>{{ tier.first_info }}</li>
-                    <li>{{ tier.second_info }}</li>
-                    <li>{{ tier.third_info }}</li>
-                    <li>{{ tier.fourth_info }}</li>
+                    <li>הצטרפות למועדון לקוחות</li>
+                    <li>5% צבירת נקודות</li>
+                    <li>20% הטבת הצטרפות</li>
+                    <li>25% הטבת יום הולדת</li>
                 </ul>
             </div>
-        {% endfor %}
+        </div>
+
+        <!-- PLUS -->
+        <div class="vip-tier-new">
+            <h6 class="vip-tier-data-toggle">PLUS</h6>
+            <div class="vip-tier-data">
+                <h4>PLUS</h4>
+                {% render 'icon-loyalty-star-two' %}
+                <ul>
+                    <li>רכישה ב ₪800-₪1,400</li>
+                    <li>6% צבירת נקודות</li>
+                    <li>25% הטבת הצטרפות</li>
+                    <li>1+1 על מוצרי OUTLET</li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
 
