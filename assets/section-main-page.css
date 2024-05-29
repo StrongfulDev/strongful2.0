@@ -119,14 +119,6 @@ div.about-us {
 	font-family: 'Arimo', sans-serif !important;
 }
 
-.flexified-wrapper.flexified-mobile {
-	display: grid !important;
-	flex-wrap: nowrap !important;
-	place-items: center;
-	grid-gap: 30px;
-	grid-template-columns: 1fr 1fr;
-}
-
 .yotpo-overlay-tile.yotpo-is-mobile {
 	height: 100% !important;
 	width: 100% !important;
@@ -437,7 +429,21 @@ div.about-us {
 	padding: 4rem 2rem 1rem;
 }
 
+.vip-tier-data-toggle {
+	margin: 0;
+	padding: 1rem 0;
+	background: var(--gradient-base-background-3);
+}
+
+.vip-tier-data {
+	display: none;
+}
+
 @media screen and (min-width: 990px) {
+
+	.vip-tier-data {
+		display: block;
+	}
 
 	.covid__notice {
 		padding: 8.6rem 50rem 6.5rem;

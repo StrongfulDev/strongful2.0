@@ -1,4 +1,15 @@
 window.addEventListener('DOMContentLoaded', (event) => {
+
+	if ($(window).width() < 950) {
+		const mobileVIPTierTogglers = document.querySelectorAll('.vip-tier-data-toggle');
+		mobileVIPTierTogglers.forEach((toggler) => {
+			let tierData = toggler.nextElementSibling;
+			toggler.addEventListener('click', (e) => {
+				$(tierData).toggle();
+			});
+		});
+	}
+
 	let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
 
 	$("#create_customer button").click((clickEvent) => {
