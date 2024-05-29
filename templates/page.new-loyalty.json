@@ -26,15 +26,6 @@
         "padding_bottom": 24
       }
     },
-    "custom_liquid_gEXGtn": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<!-- Redeem Points (read only) Section -->\n<div class=\"yotpo-widget-instance\" data-yotpo-instance-id=\"636552\"><\/div>",
-        "color_scheme": "background-1",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "collapsible_content_RLWQbU": {
       "type": "collapsible-content",
       "blocks": {
@@ -162,7 +153,6 @@
     "custom_liquid_NKRGNW",
     "custom_liquid_3c8bRT",
     "component_vip_tiers_new_RaUJGw",
-    "custom_liquid_gEXGtn",
     "collapsible_content_RLWQbU",
     "custom_loyalty_form_section_TtpmFX"
   ]
