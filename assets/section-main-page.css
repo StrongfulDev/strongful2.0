@@ -433,6 +433,7 @@ div.about-us {
 
 .vip-tier-big-title {
 	margin-top: 0;
+	margin-bottom: 1rem;
 	font-size: calc(var(--font-body-size-large) * 1.5);
 }
 
@@ -440,12 +441,13 @@ div.about-us {
 	display: none;
 	text-align: center;
 	background: var(--gradient-base-background-3);
+	padding-bottom: 1rem;
 }
 
 .vip-tier-data ul {
 	padding: 0;
 	text-align: right;
-	width: 75%;
+	width: 69%;
 	margin-right: 30%;
 }
 
