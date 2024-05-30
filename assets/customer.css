@@ -61,6 +61,21 @@ a.no-decoration {
   margin-top: 4rem;
 }
 
+.loyalty-form-container h2 {
+	color: var(--gradient-background);
+	margin: 0 0 5rem;
+	font-size: calc(var(--font-heading-scale) * 2.2rem);
+	font-weight: var(--font-body-weight-bold);
+}
+
+.loyalty-form-container .accept-marketing-notice {
+	color: var(--gradient-background);
+}
+
+.loyalty-form-container .customer a.inline {
+	color: var(--gradient-background);
+}
+
 .loyalty-form-container .customer form {
 	margin-top: 0;
 }
