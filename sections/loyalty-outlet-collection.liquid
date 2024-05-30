@@ -77,6 +77,10 @@
             <div class="collection section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width  full-width-padding{% endif %} pagination_type_{{ section.settings.pagination_type }}">
                 <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
                     <div class="collection__title_heading">
+                        {%- if section.settings.sub_title != blank -%}
+                            <h4 class="sub_title">{{ section.settings.sub_title | escape }}</h4>
+                        {%- endif -%}
+
                         {%- if section.settings.title != blank -%}
                             <h2 class="title {{ section.settings.heading_size }} {{ section.settings.heading_type }}">{{ section.settings.title | escape }}</h2>
                         {%- endif -%}
@@ -218,6 +222,12 @@
             "type": "text",
             "id": "title",
             "default": "Featured collection",
+            "label": "t:sections.featured-collection.settings.title.label"
+        },
+        {
+            "type": "text",
+            "id": "sub_title",
+            "default": "מוצרי OUTLET",
             "label": "t:sections.featured-collection.settings.title.label"
         },
         {
