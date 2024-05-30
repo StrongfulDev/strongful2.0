@@ -41,8 +41,20 @@ ul.slider--tablet:after {
 	margin-bottom: calc(var(--grid-desktop-vertical-spacing) * 2);
 }
 
-.grid__item.slider__slide.card-product-overlay {
+.slider.slider--tablet.contains-card--standard .slider__slide.loyalty__slide:not(.collection-list__item--no-media) {
+	position: relative;
+}
 
+div.card-product-overlay {
+	background-color: rgba(0, 0, 0, 0.5);
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	z-index: 9;
 }
 
 @media screen and (min-width: 990px) {

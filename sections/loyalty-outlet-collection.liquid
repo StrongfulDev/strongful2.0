@@ -108,8 +108,7 @@
                             <li
                                     id="Slide-{{ section.id }}-{{ forloop.index }}"
                                     class="grid__item
-                                        {% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}
-                                        {% if loggedIn == false %}card-product-overlay{% endif %}">
+                                        {% if show_mobile_slider or show_desktop_slider %} slider__slide loyalty__slide{% endif %}">
                                 {% render 'card-product',
                                         card_product: product,
                                         card_banner_text: settings.custom_collection_announcement,
