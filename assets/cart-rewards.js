@@ -105,7 +105,7 @@ class CartRewards {
 				await this.removeProduct(item.id);
 			}
 
-			if (item.id === 42413007896716 && this.cartTotalValue < 10) {
+			if (item.id === 42413007896716) {
 				await this.removeProduct(item.id);
 				console.log('removed Move');
 			}
