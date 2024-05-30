@@ -61,6 +61,23 @@ a.no-decoration {
   margin-top: 4rem;
 }
 
+.loyalty-form-container .customer form {
+	margin-top: 0;
+}
+
+.loyalty-form-container .customer .field input {
+	background: transparent;
+	padding: 0;
+	border-bottom: 1px solid var(--gradient-background);
+	border-radius: 0;
+	height: auto;
+}
+
+.loyalty-form-container .customer .field label {
+	top: 0;
+	color: var(--gradient-background);
+}
+
 .customer button {
   margin: 2rem 0 1.5rem;
 	padding: 1.8rem;
