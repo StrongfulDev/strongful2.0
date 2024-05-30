@@ -57,6 +57,20 @@ div.card-product-overlay {
 	z-index: 9;
 }
 
+.loyalty-collection__outlet .collection__title_heading {
+	display: block;
+	text-align: center;
+}
+
+.loyalty-collection__outlet .collection__title_heading .title,
+.loyalty-collection__outlet .collection__title_heading .title:not(:only-child) {
+	margin: 0 0 2rem;
+}
+
+.loyalty-collection__outlet .sub_title {
+	margin: 0;
+}
+
 @media screen and (min-width: 990px) {
 
 	.slider.slider--tablet.contains-card--standard:not(.slider--desktop) {

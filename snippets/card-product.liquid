@@ -48,7 +48,12 @@
         endif
     -%}
 
-    <div class="{% if loggedIn == false %}card-product-overlay{% endif %}"></div>
+    {% if loggedIn == false %}
+        <div class="card-product-overlay">
+            {% render 'icon-lock' %}
+            <p class="members-only"></p>
+        </div>
+    {% endif %}
 
     <div class="card-wrapper product-card-wrapper underline-links-hover">
         <div
