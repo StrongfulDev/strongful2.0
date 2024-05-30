@@ -41,6 +41,10 @@ ul.slider--tablet:after {
 	margin-bottom: calc(var(--grid-desktop-vertical-spacing) * 2);
 }
 
+.grid__item.slider__slide.card-product-overlay {
+
+}
+
 @media screen and (min-width: 990px) {
 
 	.slider.slider--tablet.contains-card--standard:not(.slider--desktop) {
