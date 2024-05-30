@@ -50,8 +50,10 @@
 
     {% if loggedIn == false %}
         <div class="card-product-overlay">
-            {% render 'icon-lock' %}
-            <p class="members-only"></p>
+            <div class="lock-and-text">
+                {% render 'icon-white-lock' %}
+                <p class="members-only">לחברות מועדון בלבד</p>
+            </div>
         </div>
     {% endif %}
 

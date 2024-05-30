@@ -43,6 +43,15 @@ ul.slider--tablet:after {
 
 .slider.slider--tablet.contains-card--standard .slider__slide.loyalty__slide:not(.collection-list__item--no-media) {
 	position: relative;
+	padding: 0;
+}
+
+.card-product-overlay+div .variant_modal__toggle_button {
+	display: none;
+}
+
+.card-product-overlay+div {
+	pointer-events: none;
 }
 
 div.card-product-overlay {
@@ -69,6 +78,18 @@ div.card-product-overlay {
 
 .loyalty-collection__outlet .sub_title {
 	margin: 0;
+}
+
+.lock-and-text {
+	position: absolute;
+	bottom: 1rem;
+	text-align: center;
+	width: 100%;
+}
+
+.members-only {
+	color: var(--gradient-background);
+	font-size: calc(var(--font-body-size-small) * 1.2);
 }
 
 @media screen and (min-width: 990px) {
