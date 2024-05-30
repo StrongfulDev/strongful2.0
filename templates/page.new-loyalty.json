@@ -38,6 +38,7 @@
       "settings": {
         "steps": 4,
         "title": "רק לחברות מועדון",
+        "sub_title": "מוצרי OUTLET",
         "heading_size": "h1",
         "heading_type": "heading_type_default",
         "description": "",
@@ -45,9 +46,6 @@
         "products_to_show": 9,
         "columns_desktop": 5,
         "full_width": true,
-        "view_all_text": "View all",
-        "view_all_style": "solid",
-        "view_all_location": "bottom",
         "enable_desktop_slider": true,
         "show_peak": true,
         "pagination_type": "sides",
@@ -186,7 +184,8 @@
     "custom_loyalty_form_section_TtpmFX": {
       "type": "custom-loyalty-form-section",
       "settings": {
-        "desktop_image": "shopify:\/\/shop_images\/2_4bfbe089-9873-4a5a-9d25-edda6d1f6fe8.jpg",
+        "desktop_image": "shopify:\/\/shop_images\/Custom_loyalty_login_desktop.png",
+        "mobile_image": "shopify:\/\/shop_images\/Custom_loyalty_login_mobile.png",
         "padding_top": 0,
         "padding_bottom": 0
       }
