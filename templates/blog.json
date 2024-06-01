@@ -3,8 +3,8 @@
     "main": {
       "type": "main-blog",
       "settings": {
-        "tile_image_one": "shopify:\/\/shop_images\/7ff08d51abffc0cfdf69f878b50b58d6_42a82374-c3b2-45d1-9d27-5493d13e4f4c.jpg",
-        "tile_image_one_link": "shopify:\/\/collections\/astra",
+        "tile_image_one": "shopify:\/\/shop_images\/7ff08d51abffc0cfdf69f878b50b58d6_b5963f14-1749-49ce-9d6c-7086e8cfae3f.jpg",
+        "tile_image_one_link": "shopify:\/\/collections\/comfort",
         "tile_image_two": "shopify:\/\/shop_images\/2_76793ef7-88c8-47de-b64e-3ba974b73174.jpg",
         "tile_image_two_link": "shopify:\/\/collections\/best-seller-internal-use",
         "layout": "grid",
