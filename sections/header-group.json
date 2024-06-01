@@ -24,12 +24,12 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "ASTRA COLLECTION",
-            "sub_text": "קולקציה חדשה נחתה באתר",
+            "main_text": "NEW IN: COMFORT COLLECTiON",
+            "sub_text": "לחברות מועדון בלבד",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "rtl",
-            "link": "shopify:\/\/collections\/astra",
+            "link": "shopify:\/\/collections\/comfort",
             "color_scheme": "accent-1"
           }
         },
