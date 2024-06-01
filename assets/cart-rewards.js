@@ -104,11 +104,6 @@ class CartRewards {
 			if (item.price === 0 && !giftProductIds.includes(item.id.toString()) && item.id !== 42413007896716) {
 				await this.removeProduct(item.id);
 			}
-
-			if (item.id === 42413007896716) {
-				await this.removeProduct(item.id);
-				console.log('removed Move');
-			}
 		}
 	}
 
