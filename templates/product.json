@@ -17,10 +17,10 @@
         "5ec0a264-e4fc-4a8d-92bc-f2f9223694f5": {
           "type": "sale",
           "settings": {
-            "logged_in_text": "<p>10% הנחה ברכישת 4 פריטים ומעלה<\/p>",
-            "logged_out_text": "<p>10% הנחה ברכישת 4 פריטים ומעלה<\/p>",
+            "logged_in_text": "<p>NEW IN: COMFORT COLLECTION<\/p>",
+            "logged_out_text": "<p>NEW IN: COMFORT COLLECTION<\/p>",
             "log_in": "",
-            "small_text": "(מתבצע אוטומטית בסל)",
+            "small_text": "24 שעות רק לחברות מועדון",
             "small_logged_in_text": "",
             "second_announcement_regular_text": "",
             "second_small_text": "",
