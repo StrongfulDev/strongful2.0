@@ -14,9 +14,7 @@
 
 <div class="section-{{ section.id }}-padding">
     <video autoplay muted loop playsinline>
-        <source src="{{ section.settings.video_url_mp4 }}" type="video/mp4">
-        <source src="{{ section.settings.video_url_webm }}" type="video/webm">
-        Your browser does not support the video tag.
+        <source src="{{ section.settings.video_url_mp4 | video_tag }}" type="video/mp4">
     </video>
 </div>
 
@@ -37,10 +35,16 @@
             "info": "Upload a video in mp4 format."
         },
         {
-            "type": "video",
-            "id": "video_url_webm",
-            "label": "Video in webm format",
-            "info": "Upload a video in webm format."
+            "type": "text",
+            "id": "button_label",
+            "default": "Button label",
+            "label": "t:sections.slideshow.blocks.slide.settings.button_label.label",
+            "info": "t:sections.slideshow.blocks.slide.settings.button_label.info"
+        },
+        {
+            "type": "url",
+            "id": "link",
+            "label": "t:sections.slideshow.blocks.slide.settings.link.label"
         },
         {
             "type": "header",
