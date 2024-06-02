@@ -13,9 +13,7 @@
 {%- endstyle -%}
 
 <div class="section-{{ section.id }}-padding">
-    <video autoplay muted loop playsinline>
-        <source src="{{ section.settings.video_url_mp4 | video_tag }}" type="video/mp4">
-    </video>
+    {{ section.settings.video_url_mp4 | video_tag: autoplay: true, loop: true, muted: true, playsinline: true }}
 </div>
 
 {% schema %}
