@@ -1,3 +1,5 @@
+{{ 'video-simple.css' | asset_url | stylesheet_tag }}
+
 {%- style -%}
     .section-{{ section.id }}-padding {
         padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -12,8 +14,8 @@
     }
 {%- endstyle -%}
 
-<div class="section-{{ section.id }}-padding">
-    {{ section.settings.video_url_mp4 | video_tag: autoplay: true, loop: true, muted: true, playsinline: true }}
+<div class="section-{{ section.id }}-padding video-section">
+    {{ section.settings.video_url_mp4 | video_tag: autoplay: true, loop: true, muted: true, playsinline: true, class: 'banner--video' }}
 </div>
 
 {% schema %}
