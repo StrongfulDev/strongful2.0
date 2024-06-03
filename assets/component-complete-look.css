@@ -117,7 +117,9 @@
 }
 
 .complete_look__item .product_variants .size_variant_button:not(.disabled-variant-button) .size_variant_button_container label:hover,
-.complete_look__item .product_variants .size_variant_button:not(.disabled-variant-button) .size_variant_button_container input:checked + label {
+.complete_look__item .product_variants .size_variant_button:not(.disabled-variant-button) .size_variant_button_container input:checked + label,
+.complete_look__item .product_variants .size_variant_button:not(.disabled-variant-button-new) .size_variant_button_container label:hover,
+.complete_look__item .product_variants .size_variant_button:not(.disabled-variant-button-new) .size_variant_button_container input:checked + label {
 	background: var(--gradient-base-accent-1);
 	color: var(--gradient-base-background-1);
 }

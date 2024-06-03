@@ -125,15 +125,24 @@
                                                                  if members_only_sale_active == true
                                                                      unless customer
                                                                          assign product_disabled = true
+                                                                             assign annProduct = true
                                                                      endunless
                                                                  else
                                                                      assign product_disabled = true
                                                                  endif
+                                                                 else
+                                                                 assign annProduct = false
                                                              endif
                                                          endif
                                                     %}
 
-                                                    <li class="size_variant_button fix-direction{% if product.has_only_default_variant %} default_size_variant_button{% endif %}{% if product_disabled %} disabled-variant-button{% endif %}">
+                                                    <li class="size_variant_button fix-direction
+                                                        {% if product.has_only_default_variant %} default_size_variant_button{% endif %}
+                                                        {% if product_disabled and annProduct == true %}
+                                                            disabled-variant-button
+                                                            {% elsif product_disabled and annProduct == false %}
+                                                            disabled-variant-button-new
+                                                        {% endif %}">
                                                         <div class="size_variant_button_container">
                                                             <input type="radio"
                                                                    data-variant-id="{{ variant.id }}"
