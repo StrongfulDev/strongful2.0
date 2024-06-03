@@ -157,11 +157,17 @@
                                                                 </span>
 
                                                                 {% if product_disabled %}
-                                                                    {% unless product.tags contains announcement_tag %}
+                                                                    {% if settings.members_only_sale == true and settings.members_only_sale_active == true %}
+                                                                        {% unless product.tags contains announcement_tag %}
+                                                                            <a href="#" class="BIS_trigger" data-product-data="{{ product | json | escape }}">
+                                                                                עדכנו אותי שהמידה חוזרת
+                                                                            </a>
+                                                                        {% endunless %}
+                                                                        {% else %}
                                                                         <a href="#" class="BIS_trigger" data-product-data="{{ product | json | escape }}">
                                                                             עדכנו אותי שהמידה חוזרת
                                                                         </a>
-                                                                    {% endunless %}
+                                                                    {% endif %}
                                                                 {% else %}
                                                                     <div class="size_variant_button_add">
                                                                         {% render 'icon-plus' %}
