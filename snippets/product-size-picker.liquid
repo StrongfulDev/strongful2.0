@@ -157,9 +157,11 @@
                                                                 </span>
 
                                                                 {% if product_disabled %}
-                                                                    <a href="#" class="BIS_trigger" data-product-data="{{ product | json | escape }}">
-                                                                        עדכנו אותי שהמידה חוזרת
-                                                                    </a>
+                                                                    {% unless product.tags contains announcement_tag %}
+                                                                        <a href="#" class="BIS_trigger" data-product-data="{{ product | json | escape }}">
+                                                                            עדכנו אותי שהמידה חוזרת
+                                                                        </a>
+                                                                    {% endunless %}
                                                                 {% else %}
                                                                     <div class="size_variant_button_add">
                                                                         {% render 'icon-plus' %}
