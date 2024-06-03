@@ -4260,3 +4260,7 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 .yotpo-review-votes-wrapper.top-margin {
 	display: none !important;
 }
+
+.disabled-variant-button input {
+	pointer-events: none !important;
+}

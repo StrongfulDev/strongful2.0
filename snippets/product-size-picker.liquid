@@ -162,6 +162,10 @@
                                                                             <a href="#" class="BIS_trigger" data-product-data="{{ product | json | escape }}">
                                                                                 עדכנו אותי שהמידה חוזרת
                                                                             </a>
+                                                                            {% else %}
+                                                                            <a href="#" class="BIS_trigger">
+                                                                                לחברות מועדון בלבד
+                                                                            </a>
                                                                         {% endunless %}
                                                                         {% else %}
                                                                         <a href="#" class="BIS_trigger" data-product-data="{{ product | json | escape }}">
