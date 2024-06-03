@@ -284,12 +284,12 @@
         "show_days": false,
         "countdown_date": "Tue Jun 04 2024 21:00:00 GMT+0300 (שעון ישראל (קיץ))",
         "countdown_url": "shopify:\/\/collections\/comfort",
-        "left_text": true,
-        "left_copy": "<p>For club members only<\/p>",
+        "left_text": false,
+        "left_copy": "",
         "right_text_direction": "ltr",
-        "left_text_direction": "ltr",
-        "right_text": false,
-        "right_copy": ""
+        "left_text_direction": "rtl",
+        "right_text": true,
+        "right_copy": "<p>לחברות מועדון בלבד<\/p>"
       }
     }
   },
