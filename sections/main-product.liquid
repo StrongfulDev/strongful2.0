@@ -239,6 +239,7 @@
                         {%- when 'swiper' -%}
                             {% render 'swiper',
                                     preset: block.settings.swiper_preset,
+                                    product: product,
                                     show_payment_icons: block.settings.show_payment_icons,
                                     deliveryText: block.settings.delivery_days_text %}
                         {%- when 'quantity_selector' -%}
