@@ -4261,6 +4261,7 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 	display: none !important;
 }
 
-.disabled-variant-button input {
+.disabled-variant-button input,
+.disabled-variant-button label {
 	pointer-events: none !important;
 }
