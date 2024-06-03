@@ -103,6 +103,8 @@ class CartRewards {
 			// Here we assume that a product with price 0 is a free product.
 			if (item.price === 0 && !giftProductIds.includes(item.id.toString()) && item.id !== 42413007896716) {
 				await this.removeProduct(item.id);
+			} else if (item.id === 42413007896716 && this.cartTotalValue < 600) {
+				await this.removeProduct(item.id);
 			}
 		}
 	}
