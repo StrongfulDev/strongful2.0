@@ -129,19 +129,23 @@
         "padding_bottom": 36
       }
     },
-    "slideshow_dtfFDm": {
-      "type": "slideshow",
+    "customer_slideshow_wFcfK7": {
+      "type": "customer-slideshow",
       "blocks": {
-        "slide_kjjiJz": {
+        "slide_KdxH44": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0_3f6540d6-3ade-4374-9eb5-bec5add85d2e.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/0_fc4e4087-9c89-47aa-9eda-a2920c3fccd0.jpg",
+            "image": "shopify:\/\/shop_images\/jpg_3edd6456-e0f3-4c63-a0c6-30a51bfeee4e.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/jpg_d3c7c1b0-c7bb-436e-97fd-9839a11f39f4.jpg",
+            "login_desktop_image": "shopify:\/\/shop_images\/7e408f30e6e469320ee1736cfbd12e86.jpg",
+            "login_mobile_image": "shopify:\/\/shop_images\/jpg_82e2a474-73bd-4007-b212-2408ca3ffefb.jpg",
             "button_label": "",
-            "link": "shopify:\/\/pages\/lets-move",
-            "show_text_box": false,
-            "color_scheme": "inverse",
-            "whole_slide_link": "shopify:\/\/pages\/lets-move",
+            "login_button_label": "",
+            "link": "",
+            "login_link": "",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "whole_slide_link": "shopify:\/\/pages\/a-list",
             "button_style_secondary": false,
             "box_align": "middle-center",
             "text_alignment": "center",
@@ -151,7 +155,7 @@
         }
       },
       "block_order": [
-        "slide_kjjiJz"
+        "slide_KdxH44"
       ],
       "settings": {
         "layout": "full_bleed",
@@ -159,10 +163,10 @@
         "slider_visual": "sides",
         "auto_rotate": false,
         "change_slides_speed": 5,
-        "show_text_below": false,
+        "show_text_below": true,
         "accessibility_info": "Slideshow about our brand",
-        "padding_top": 0,
-        "padding_bottom": 36
+        "padding_top": 16,
+        "padding_bottom": 16
       }
     },
     "featured_collection_4JBk4Y": {
@@ -343,23 +347,19 @@
         "padding_bottom": 36
       }
     },
-    "customer_slideshow_wFcfK7": {
-      "type": "customer-slideshow",
+    "slideshow_dtfFDm": {
+      "type": "slideshow",
       "blocks": {
-        "slide_KdxH44": {
+        "slide_kjjiJz": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/jpg_3edd6456-e0f3-4c63-a0c6-30a51bfeee4e.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/jpg_d3c7c1b0-c7bb-436e-97fd-9839a11f39f4.jpg",
-            "login_desktop_image": "shopify:\/\/shop_images\/7e408f30e6e469320ee1736cfbd12e86.jpg",
-            "login_mobile_image": "shopify:\/\/shop_images\/jpg_82e2a474-73bd-4007-b212-2408ca3ffefb.jpg",
+            "image": "shopify:\/\/shop_images\/0_3f6540d6-3ade-4374-9eb5-bec5add85d2e.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/0_fc4e4087-9c89-47aa-9eda-a2920c3fccd0.jpg",
             "button_label": "",
-            "login_button_label": "",
-            "link": "",
-            "login_link": "",
-            "show_text_box": true,
-            "color_scheme": "background-1",
-            "whole_slide_link": "shopify:\/\/pages\/a-list",
+            "link": "shopify:\/\/pages\/lets-move",
+            "show_text_box": false,
+            "color_scheme": "inverse",
+            "whole_slide_link": "shopify:\/\/pages\/lets-move",
             "button_style_secondary": false,
             "box_align": "middle-center",
             "text_alignment": "center",
@@ -369,7 +369,7 @@
         }
       },
       "block_order": [
-        "slide_KdxH44"
+        "slide_kjjiJz"
       ],
       "settings": {
         "layout": "full_bleed",
@@ -377,10 +377,10 @@
         "slider_visual": "sides",
         "auto_rotate": false,
         "change_slides_speed": 5,
-        "show_text_below": true,
+        "show_text_below": false,
         "accessibility_info": "Slideshow about our brand",
-        "padding_top": 16,
-        "padding_bottom": 16
+        "padding_top": 0,
+        "padding_bottom": 36
       }
     },
     "collection_list_QrC4z9": {
@@ -520,11 +520,11 @@
   "order": [
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9",
     "slideshow_Bn9kRq",
-    "slideshow_dtfFDm",
+    "customer_slideshow_wFcfK7",
     "featured_collection_4JBk4Y",
     "our_collection_list_v2_mK6kUx",
     "collection_list_w4D6TE",
-    "customer_slideshow_wFcfK7",
+    "slideshow_dtfFDm",
     "collection_list_QrC4z9",
     "4371b550-969b-4828-986d-71697fc53ef0"
   ]
