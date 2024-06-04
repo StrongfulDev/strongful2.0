@@ -1,9 +1,21 @@
+.video-section {
+	position: relative;
+}
+
 .banner--video {
 	width: 100%;
 }
 
 .banner--video__desktop {
 	display: none;
+}
+
+.video-section .content-container:after {
+	content: none;
+}
+
+.video-section .slideshow__text.banner__box {
+	padding: 0;
 }
 
 @media screen and (min-width: 990px) {
