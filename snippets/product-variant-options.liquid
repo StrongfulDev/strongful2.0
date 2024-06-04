@@ -67,6 +67,10 @@
                     endif
             endcase
         endfor
+
+        if product.tags contains settings.second_announcement_tag
+            assign option_disabled = true
+        endif
     -%}
     {%- if block.settings.picker_type == 'button' or picker_type == "button" -%}
         {% assign option_value = value %}
