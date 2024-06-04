@@ -110,8 +110,8 @@
             "title": "מוצרים",
             "item_class": "",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/7ff08d51abffc0cfdf69f878b50b58d6_a6fe5328-62ec-439d-a3c8-5c14e24ee6bd.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/comfort",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/1_d022e5a4-0b97-4c77-9470-429a3a1f488f.jpg",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/outlet",
             "desktop_links_image_2": "shopify:\/\/shop_images\/2_f49de3c6-1cb8-40ec-b33b-603add60dcb7.jpg",
             "desktop_links_image_2_link": "shopify:\/\/collections\/best-seller-internal-use",
             "mobile_cover_image": "shopify:\/\/shop_images\/20e5c3f719da92dc7bfd0c70c57f7186.jpg",
@@ -277,26 +277,11 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
-    },
-    "countdown_PW8fjr": {
-      "type": "countdown",
-      "settings": {
-        "show_days": false,
-        "countdown_date": "Tue Jun 04 2024 21:00:00 GMT+0300 (שעון ישראל (קיץ))",
-        "countdown_url": "shopify:\/\/collections\/comfort",
-        "left_text": false,
-        "left_copy": "",
-        "right_text_direction": "ltr",
-        "left_text_direction": "rtl",
-        "right_text": true,
-        "right_copy": "<p>לחברות מועדון בלבד<\/p>"
-      }
     }
   },
   "order": [
     "announcement-bar",
     "header",
-    "7503b704-2110-400e-bc52-a2190d224c23",
-    "countdown_PW8fjr"
+    "7503b704-2110-400e-bc52-a2190d224c23"
   ]
 }
