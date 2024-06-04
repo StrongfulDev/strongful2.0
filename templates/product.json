@@ -19,6 +19,7 @@
           "settings": {
             "logged_in_text": "<p>10% OFF<\/p>",
             "logged_out_text": "<p>10% OFF<\/p>",
+            "logged_in_text_second": "<p>השקה רשמית ב 9.6<\/p>",
             "log_in": "",
             "small_text": "ברכישת 4 פריטים ומעלה",
             "small_logged_in_text": "",
