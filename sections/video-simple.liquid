@@ -15,7 +15,8 @@
 {%- endstyle -%}
 
 <div class="section-{{ section.id }}-padding video-section">
-    {{ section.settings.video_url_mp4 | video_tag: autoplay: true, loop: true, muted: true, playsinline: true, class: 'banner--video' }}
+    {{ section.settings.video_url_mp4 | video_tag: autoplay: true, loop: true, muted: true, playsinline: true, class: 'banner--video banner--video__mobile' }}
+    {{ section.settings.desktop_video_url_mp4 | video_tag: autoplay: true, loop: true, muted: true, playsinline: true, class: 'banner--video banner--video__desktop' }}
 </div>
 
 {% schema %}
@@ -32,7 +33,13 @@
             "type": "video",
             "id": "video_url_mp4",
             "label": "Video in mp4 format",
-            "info": "Upload a video in mp4 format."
+            "info": "Upload a video in mp4 format for mobile."
+        },
+        {
+            "type": "video",
+            "id": "desktop_video_url_mp4",
+            "label": "Video in mp4 format",
+            "info": "Upload a video in mp4 format for desktop."
         },
         {
             "type": "text",

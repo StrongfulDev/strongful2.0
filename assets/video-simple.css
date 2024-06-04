@@ -1,3 +1,17 @@
 .banner--video {
 	width: 100%;
 }
+
+.banner--video__desktop {
+	display: none;
+}
+
+@media screen and (min-width: 990px) {
+	.banner--video__desktop {
+		display: block;
+	}
+
+	.banner--video__mobile {
+		display: none;
+	}
+}
