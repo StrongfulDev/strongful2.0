@@ -96,6 +96,7 @@
     "video_simple_q7mBLf": {
       "type": "video-simple",
       "settings": {
+        "video_url_mp4": "shopify:\/\/files\/videos\/MOBILE.mp4",
         "desktop_video_url_mp4": "shopify:\/\/files\/videos\/Strongful_Hasoot WEB.mp4",
         "color_scheme": "background-1",
         "text_alignment": "center",
