@@ -17,10 +17,17 @@
 <div class="section-{{ section.id }}-padding video-section">
     {{ section.settings.video_url_mp4 | video_tag: autoplay: true, loop: true, muted: true, playsinline: true, class: 'banner--video banner--video__mobile' }}
     {{ section.settings.desktop_video_url_mp4 | video_tag: autoplay: true, loop: true, muted: true, playsinline: true, class: 'banner--video banner--video__desktop' }}
-    <div class="video--action_container">
-        <a href="{{ section.settings.url }}" class="video--call_to_action">
-            {{ section.settings.button_label }}
-        </a>
+    <div class="slideshow__text banner__box content-container content-container--full-width-mobile
+                                banner__box--0
+                                color-{{ section.settings.color_scheme }}
+                                gradient slideshow__text--{{ section.settings.text_alignment }}"
+    >
+        {%- if section.settings.button_label != blank -%}
+            <div class="banner__buttons">
+                <a{% if section.settings.link %} href="{{ section.settings.link }}"{% else %} role="link" aria-disabled="true"{% endif %}
+                        class="button button--primary">{{ section.settings.button_label | escape }}</a>
+            </div>
+        {%- endif -%}
     </div>
 </div>
 
@@ -45,6 +52,55 @@
             "id": "desktop_video_url_mp4",
             "label": "Video in mp4 format",
             "info": "Upload a video in mp4 format for desktop."
+        },
+        {
+            "type": "select",
+            "id": "color_scheme",
+            "options": [
+                {
+                    "value": "accent-1",
+                    "label": "t:sections.all.colors.accent_1.label"
+                },
+                {
+                    "value": "accent-2",
+                    "label": "t:sections.all.colors.accent_2.label"
+                },
+                {
+                    "value": "background-1",
+                    "label": "t:sections.all.colors.background_1.label"
+                },
+                {
+                    "value": "background-2",
+                    "label": "t:sections.all.colors.background_2.label"
+                },
+                {
+                    "value": "inverse",
+                    "label": "t:sections.all.colors.inverse.label"
+                }
+            ],
+            "default": "background-1",
+            "label": "t:sections.all.colors.label",
+            "info": "Color scheme of the button - usually use Inverse"
+        },
+        {
+            "type": "select",
+            "id": "text_alignment",
+            "options": [
+                {
+                    "value": "left",
+                    "label": "t:sections.slideshow.blocks.slide.settings.text_alignment.option_1.label"
+                },
+                {
+                    "value": "center",
+                    "label": "t:sections.slideshow.blocks.slide.settings.text_alignment.option_2.label"
+                },
+                {
+                    "value": "right",
+                    "label": "t:sections.slideshow.blocks.slide.settings.text_alignment.option_3.label"
+                }
+            ],
+            "default": "center",
+            "label": "t:sections.slideshow.blocks.slide.settings.text_alignment.label"
         },
         {
             "type": "text",
