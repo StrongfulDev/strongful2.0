@@ -40,13 +40,13 @@
                 <small class="fix-direction">{{ block.settings.small_text }}</small>
             {% endif %}
         </div>
-    {% endunless %}
-{% elsif product.tags contains settings.second_announcement_tag %}
-    <div class="sale-banner-product-page">
-        <div class="{% if block.settings.paragraph_direction == 'Right To Left' %}fix-direction{% endif %}">
-            {{ block.settings.logged_in_text | newline_to_br }}
+        {% else %}
+        <div class="sale-banner-product-page">
+            <div class="{% if block.settings.paragraph_direction == 'Right To Left' %}fix-direction{% endif %}">
+                {{ block.settings.logged_in_text_second | newline_to_br }}
+            </div>
         </div>
-    </div>
+    {% endunless %}
 {% endif %}
 
 {% comment %}
