@@ -17,6 +17,11 @@
 <div class="section-{{ section.id }}-padding video-section">
     {{ section.settings.video_url_mp4 | video_tag: autoplay: true, loop: true, muted: true, playsinline: true, class: 'banner--video banner--video__mobile' }}
     {{ section.settings.desktop_video_url_mp4 | video_tag: autoplay: true, loop: true, muted: true, playsinline: true, class: 'banner--video banner--video__desktop' }}
+    <div class="video--action_container">
+        <a href="{{ section.settings.url }}" class="video--call_to_action">
+            {{ section.settings.button_label }}
+        </a>
+    </div>
 </div>
 
 {% schema %}
