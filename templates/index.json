@@ -93,6 +93,16 @@
         "padding_bottom": 16
       }
     },
+    "video_simple_q7mBLf": {
+      "type": "video-simple",
+      "settings": {
+        "desktop_video_url_mp4": "shopify:\/\/files\/videos\/Strongful_Hasoot WEB.mp4",
+        "button_label": "SHOP NOW",
+        "link": "shopify:\/\/collections\/sets",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "slideshow_Bn9kRq": {
       "type": "slideshow",
       "blocks": {
@@ -117,6 +127,7 @@
       "block_order": [
         "slide_qE7mg9"
       ],
+      "disabled": true,
       "settings": {
         "layout": "full_bleed",
         "slide_height": "adapt_image",
@@ -519,6 +530,7 @@
   },
   "order": [
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9",
+    "video_simple_q7mBLf",
     "slideshow_Bn9kRq",
     "customer_slideshow_wFcfK7",
     "featured_collection_4JBk4Y",
