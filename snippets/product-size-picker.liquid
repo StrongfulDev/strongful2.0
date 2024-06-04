@@ -117,7 +117,7 @@
                                             {% for variant in product.variants %}
                                                     {%- liquid
                                                         assign product_disabled = false
-                                                        if variant.available == false
+                                                        if variant.available == false or variant.product.tags contains settings.second_announcement_tag
                                                             assign product_disabled = true
                                                         endif
                                                          if members_only_sale == true
@@ -125,23 +125,18 @@
                                                                  if members_only_sale_active == true
                                                                      unless customer
                                                                          assign product_disabled = true
-                                                                             assign annProduct = true
                                                                      endunless
                                                                  else
                                                                      assign product_disabled = true
                                                                  endif
-                                                                 else
-                                                                 assign annProduct = false
                                                              endif
                                                          endif
                                                     %}
 
                                                     <li class="size_variant_button fix-direction
                                                         {% if product.has_only_default_variant %} default_size_variant_button{% endif %}
-                                                        {% if product_disabled and annProduct == true %}
+                                                        {% if product_disabled %}
                                                             disabled-variant-button
-                                                            {% elsif product_disabled and annProduct == false %}
-                                                            disabled-variant-button-new
                                                         {% endif %}">
                                                         <div class="size_variant_button_container">
                                                             <input type="radio"
@@ -228,7 +223,7 @@
                                 {% for variant in product.variants %}
                                         {%- liquid
                                             assign product_disabled = false
-                                            if variant.available == false or members_only == true and variant.product.tags contains announcement_tag
+                                            if variant.available == false or variant.product.tags contains settings.second_announcement_tag
                                                 assign product_disabled = true
                                             endif
                                         %}
