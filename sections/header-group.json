@@ -24,12 +24,12 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "NEW IN: COMFORT COLLECTiON",
-            "sub_text": "לחברות מועדון בלבד",
+            "main_text": "10% OFF",
+            "sub_text": "ברכישת 4 פריטים ומעלה",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "rtl",
-            "link": "shopify:\/\/collections\/comfort",
+            "link": "shopify:\/\/collections\/best-seller-internal-use",
             "color_scheme": "accent-1"
           }
         },
