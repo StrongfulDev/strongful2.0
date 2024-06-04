@@ -138,7 +138,7 @@
     "announcement_tag": "yesDiscount",
     "custom_collection_announcement": "",
     "members_only_announcement": "",
-    "show_card_collection_announcement": false,
+    "show_card_collection_announcement": true,
     "second_announcement_tag": "fake-out",
     "custom_collection_second_announcement": "",
     "announcement_customizer_override": true,
