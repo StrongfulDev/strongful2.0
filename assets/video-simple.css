@@ -16,6 +16,7 @@
 
 .video-section .slideshow__text.banner__box {
 	padding: 0;
+	bottom: 15%;
 }
 
 @media screen and (min-width: 990px) {
