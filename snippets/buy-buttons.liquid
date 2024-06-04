@@ -63,6 +63,9 @@
                             {% if product.tags contains member_tag and members_only == true %}
                                 disabled
                             {% endif %}
+                            {% if product.tags contains settings.second_announcement_tag %}
+                                disabled
+                            {% endif %}
                     >
             <span class="{% if product.tags contains member_tag and members_only == true and members_only_sale_active == true %}account-toggler-site-wide{% endif %} fix-direction">
               {%- if product.tags contains member_tag and members_only == true -%}
