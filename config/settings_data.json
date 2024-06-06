@@ -299,13 +299,6 @@
           "inject_sdk_loader": true
         }
       },
-      "8776485610325655785": {
-        "type": "shopify:\/\/apps\/hiko-social-login\/blocks\/hiko-auth\/3832d7e1-5bcd-4b72-91da-236b57feef8f",
-        "disabled": false,
-        "settings": {
-          "social_font": "enable"
-        }
-      },
       "17940372039816912135": {
         "type": "shopify:\/\/apps\/visually-all-in-1-optimization\/blocks\/visually\/d08aba15-0b89-475b-9f75-9c4c0ca8c3c4",
         "disabled": false,
