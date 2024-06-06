@@ -19,34 +19,26 @@
 %}
 
 {% if product.tags contains announcement_tag %}
-    {% unless product.tags contains settings.second_announcement_tag %}
-        <div class="sale-banner-product-page">
-            {% if customer %}
-                <div class="{% if block.settings.paragraph_direction == 'Right To Left' %}fix-direction{% endif %}">
-                    {{ block.settings.logged_in_text | newline_to_br }}
-                </div>
-                {% if block.settings.small_logged_in_text != blank %}
-                    <small class="fix-direction">{{ block.settings.small_logged_in_text }}</small>
-                {% endif %}
-            {% else %}
-                <div class="{% if block.settings.paragraph_direction == 'Right To Left' %}fix-direction{% endif %}">
-                    {{ block.settings.logged_out_text | newline_to_br }}
-                </div>
-                {% if block.settings.log_in != blank %}
-                    <small class="account-toggler-site-wide link fix-direction">{{ block.settings.log_in }}</small>
-                {% endif %}
-            {% endif %}
-            {% if block.settings.small_text != blank %}
-                <small class="fix-direction">{{ block.settings.small_text }}</small>
-            {% endif %}
-        </div>
-        {% else %}
-        <div class="sale-banner-product-page">
+    <div class="sale-banner-product-page">
+        {% if customer %}
             <div class="{% if block.settings.paragraph_direction == 'Right To Left' %}fix-direction{% endif %}">
-                {{ block.settings.logged_in_text_second | newline_to_br }}
+                {{ block.settings.logged_in_text | newline_to_br }}
             </div>
-        </div>
-    {% endunless %}
+            {% if block.settings.small_logged_in_text != blank %}
+                <small class="fix-direction">{{ block.settings.small_logged_in_text }}</small>
+            {% endif %}
+        {% else %}
+            <div class="{% if block.settings.paragraph_direction == 'Right To Left' %}fix-direction{% endif %}">
+                {{ block.settings.logged_out_text | newline_to_br }}
+            </div>
+            {% if block.settings.log_in != blank %}
+                <small class="account-toggler-site-wide link fix-direction">{{ block.settings.log_in }}</small>
+            {% endif %}
+        {% endif %}
+        {% if block.settings.small_text != blank %}
+            <small class="fix-direction">{{ block.settings.small_text }}</small>
+        {% endif %}
+    </div>
 {% endif %}
 
 {% comment %}
