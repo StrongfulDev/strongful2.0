@@ -139,7 +139,7 @@
     "custom_collection_announcement": "",
     "members_only_announcement": "",
     "show_card_collection_announcement": true,
-    "second_announcement_tag": "fake-out",
+    "second_announcement_tag": "",
     "custom_collection_second_announcement": "השקה רשמית ב 9.6",
     "announcement_customizer_override": true,
     "preorder_over_text": "",
