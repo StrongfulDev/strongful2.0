@@ -138,9 +138,9 @@
     "announcement_tag": "yesDiscount",
     "custom_collection_announcement": "",
     "members_only_announcement": "",
-    "show_card_collection_announcement": false,
+    "show_card_collection_announcement": true,
     "second_announcement_tag": "",
-    "custom_collection_second_announcement": "",
+    "custom_collection_second_announcement": "השקה רשמית ב 9.6",
     "announcement_customizer_override": true,
     "preorder_over_text": "",
     "enable_quick_add": true,
@@ -299,13 +299,6 @@
           "inject_sdk_loader": true
         }
       },
-      "8776485610325655785": {
-        "type": "shopify:\/\/apps\/hiko-social-login\/blocks\/hiko-auth\/3832d7e1-5bcd-4b72-91da-236b57feef8f",
-        "disabled": false,
-        "settings": {
-          "social_font": "enable"
-        }
-      },
       "17940372039816912135": {
         "type": "shopify:\/\/apps\/visually-all-in-1-optimization\/blocks\/visually\/d08aba15-0b89-475b-9f75-9c4c0ca8c3c4",
         "disabled": false,
@@ -398,6 +391,15 @@
         "type": "shopify:\/\/apps\/yoast-seo-seo-for-everyone\/blocks\/metatags\/7c777011-bc88-4743-a24e-64336e1e5b46",
         "disabled": false,
         "settings": {
+        }
+      },
+      "8776485610325655785": {
+        "type": "shopify:\/\/apps\/hiko-social-login\/blocks\/hiko-auth\/3832d7e1-5bcd-4b72-91da-236b57feef8f",
+        "disabled": false,
+        "settings": {
+          "social_font": "enable",
+          "spinner_top": 50,
+          "spinner_left": 50
         }
       }
     }

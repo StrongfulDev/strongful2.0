@@ -1,0 +1,7 @@
+
+
+@media screen and (min-width: 990px) {
+	div.slideshow__slide:first-of-type .slideshow__text-wrapper {
+		width: 100%;
+	}
+}

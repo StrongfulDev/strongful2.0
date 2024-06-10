@@ -172,7 +172,8 @@
     width: 100%;
 }
 
-div:not(.product-size-picker-container) .variant-button .size_variant_button:not(.disabled-variant-button) .size_variant_button_container label:hover {
+div:not(.product-size-picker-container) .variant-button .size_variant_button:not(.disabled-variant-button) .size_variant_button_container label:hover,
+div:not(.product-size-picker-container) .variant-button .size_variant_button:not(.disabled-variant-button-new) .size_variant_button_container label:hover {
     background: #000;
     color: #fff;
 }
@@ -248,7 +249,8 @@ div:not(.product-size-picker-container) .variant-button .size_variant_button:not
 		padding: 1rem 0 0;
 	}
 
-	.product_variants div:not(.product-size-picker-container) .size_variant_button:not(.disabled-variant-button) label:hover {
+	.product_variants div:not(.product-size-picker-container) .size_variant_button:not(.disabled-variant-button) label:hover,
+	.product_variants div:not(.product-size-picker-container) .size_variant_button:not(.disabled-variant-button-new) label:hover {
 		background: var(--color-icon);
 		color: var(--gradient-base-background-1);
 	}

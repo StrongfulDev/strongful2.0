@@ -257,7 +257,8 @@
 }
 
 .dropdown .submenu-open li:nth-child(2) ul.menu-drawer__menu li:first-child a {
-	/*color: firebrick;*/
+	color: firebrick;
+	font-weight: var(--font-body-weight-bold);
 	direction: rtl;
 }
 
@@ -448,6 +449,8 @@
 
 	#MegaMenu-Content-2 li:first-child a {
 		/*direction: ltr;*/
+		color: firebrick;
+		font-weight: var(--font-body-weight-bold);
 	}
 
 	#MegaMenu-Content-3 {

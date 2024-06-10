@@ -88,6 +88,7 @@ div.size-table-overlay {
 		left: 50%;
 		transform: translate(-50%,50%);
 		overflow-y: scroll;
+		max-height: 98vh;
 	}
 
 	.size-table tbody tr td, .size-table thead th {

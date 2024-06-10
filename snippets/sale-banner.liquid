@@ -39,13 +39,6 @@
             <small class="fix-direction">{{ block.settings.small_text }}</small>
         {% endif %}
     </div>
-{% elsif product.tags contains settings.second_announcement_tag %}
-    <div class="sale-banner-product-page">
-        <p>{{ block.settings.second_announcement_regular_text | newline_to_br }}</p>
-        {% if block.settings.second_small_text != blank %}
-            <small class="fix-direction">{{ block.settings.second_small_text }}</small>
-        {% endif %}
-    </div>
 {% endif %}
 
 {% comment %}

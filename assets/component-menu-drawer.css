@@ -102,6 +102,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 
 .dropdown-image-container img {
 	width: 80vw;
+	max-width: max-content;
 	border-radius: var(--inputs-radius);
 	height: 21rem;
 	object-fit: cover;

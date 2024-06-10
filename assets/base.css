@@ -3295,11 +3295,12 @@ fieldset {
     }
 }
 
-.variant-button.disabled-variant-button {
+.variant-button.disabled-variant-button, .variant-button.disabled-variant-button-new {
 	position: relative;
 }
 
-.disabled-variant-button label {
+.disabled-variant-button label,
+.disabled-variant-button-new label {
     background: linear-gradient(to top left,
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 0) calc(50% - 1.5px),
@@ -4264,3 +4265,8 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 .yotpo-review-votes-wrapper.top-margin {
 	display: none !important;
 }
+
+/*.disabled-variant-button input,*/
+/*.disabled-variant-button label {*/
+/*	pointer-events: none !important;*/
+/*}*/

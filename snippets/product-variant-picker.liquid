@@ -38,19 +38,19 @@
         {% if collection.title == similarParent or collection.title == similarParent.value %}
             {% for product in collection.products %}
                 {% if isLiveTheme == 'true' %}
-                {% unless product.tags contains 'hidden' %}
-                    <li class="relative-discount similar-child {{ forloop.index0 }}">
-                        <a href="{{ product.url }}" class="similar-a">
-                            <img src="{{ product.featured_image | product_img_url: 'master' }}"
-                                 srcset="{{ product.featured_image | product_img_url: '200x' }} 200w,
-                    {{ product.featured_image | product_img_url: '300x' }} 300w,
-                    {{ product.featured_image | product_img_url: '400x' }} 400w,
-                    {{ product.featured_image | product_img_url: '600x' }} 600w"
-                                 alt="{{ product.title | escape }}" class="similar-child-img" loading="lazy"/>
-                        </a>
-                        <p class="productVendor">{{ product.vendor }}</p>
-                    </li>
-                {% endunless %}
+                    {% unless product.tags contains 'hidden' %}
+                        <li class="relative-discount similar-child {{ forloop.index0 }}">
+                            <a href="{{ product.url }}" class="similar-a">
+                                <img src="{{ product.featured_image | product_img_url: 'master' }}"
+                                     srcset="{{ product.featured_image | product_img_url: '200x' }} 200w,
+                        {{ product.featured_image | product_img_url: '300x' }} 300w,
+                        {{ product.featured_image | product_img_url: '400x' }} 400w,
+                        {{ product.featured_image | product_img_url: '600x' }} 600w"
+                                     alt="{{ product.title | escape }}" class="similar-child-img" loading="lazy"/>
+                            </a>
+                            <p class="productVendor">{{ product.vendor }}</p>
+                        </li>
+                    {% endunless %}
                 {% else %}
                     <li class="relative-discount similar-child {{ forloop.index0 }}">
                         <a href="{{ product.url }}" class="similar-a">

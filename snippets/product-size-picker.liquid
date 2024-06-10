@@ -117,7 +117,7 @@
                                             {% for variant in product.variants %}
                                                     {%- liquid
                                                         assign product_disabled = false
-                                                        if variant.available == false
+                                                        if variant.available == false or variant.product.tags contains settings.second_announcement_tag
                                                             assign product_disabled = true
                                                         endif
                                                          if members_only_sale == true
@@ -133,7 +133,11 @@
                                                          endif
                                                     %}
 
-                                                    <li class="size_variant_button fix-direction{% if product.has_only_default_variant %} default_size_variant_button{% endif %}{% if product_disabled %} disabled-variant-button{% endif %}">
+                                                    <li class="size_variant_button fix-direction
+                                                        {% if product.has_only_default_variant %} default_size_variant_button{% endif %}
+                                                        {% if product_disabled %}
+                                                            disabled-variant-button
+                                                        {% endif %}">
                                                         <div class="size_variant_button_container">
                                                             <input type="radio"
                                                                    data-variant-id="{{ variant.id }}"
@@ -157,9 +161,21 @@
                                                                 </span>
 
                                                                 {% if product_disabled %}
-                                                                    <a href="#" class="BIS_trigger" data-product-data="{{ product | json | escape }}">
-                                                                        עדכנו אותי שהמידה חוזרת
-                                                                    </a>
+                                                                    {% if settings.members_only_sale == true and settings.members_only_sale_active == true %}
+                                                                        {% unless product.tags contains announcement_tag %}
+                                                                            <a href="#" class="BIS_trigger" data-product-data="{{ product | json | escape }}">
+                                                                                עדכנו אותי שהמידה חוזרת
+                                                                            </a>
+                                                                            {% else %}
+                                                                            <a href="#" class="BIS_trigger account-toggler-site-wide">
+                                                                                לחברות מועדון בלבד
+                                                                            </a>
+                                                                        {% endunless %}
+                                                                        {% else %}
+                                                                        <a href="#" class="BIS_trigger" data-product-data="{{ product | json | escape }}">
+                                                                            עדכנו אותי שהמידה חוזרת
+                                                                        </a>
+                                                                    {% endif %}
                                                                 {% else %}
                                                                     <div class="size_variant_button_add">
                                                                         {% render 'icon-plus' %}
@@ -207,7 +223,7 @@
                                 {% for variant in product.variants %}
                                         {%- liquid
                                             assign product_disabled = false
-                                            if variant.available == false or members_only == true and variant.product.tags contains announcement_tag
+                                            if variant.available == false or variant.product.tags contains settings.second_announcement_tag
                                                 assign product_disabled = true
                                             endif
                                         %}

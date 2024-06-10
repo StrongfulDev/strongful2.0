@@ -30,7 +30,7 @@
         "808cdebc-72af-4f6a-85d1-a8a5130f665b": {
           "type": "collection",
           "settings": {
-            "image": "shopify:\/\/shop_images\/2x_12a758c2-24f0-48f1-8a83-a53816fa4015.jpg",
+            "image": "shopify:\/\/shop_images\/77ea7aadfb0551e90af211a2f94aa327.jpg",
             "url": "shopify:\/\/collections\/new-in",
             "collection_title": "חדש"
           }
@@ -93,16 +93,30 @@
         "padding_bottom": 16
       }
     },
+    "video_simple_q7mBLf": {
+      "type": "video-simple",
+      "disabled": true,
+      "settings": {
+        "video_url_mp4": "shopify:\/\/files\/videos\/MOBILE.mp4",
+        "desktop_video_url_mp4": "shopify:\/\/files\/videos\/Strongful_Hasoot WEB.mp4",
+        "color_scheme": "background-1",
+        "text_alignment": "center",
+        "button_label": "SHOP NOW",
+        "link": "shopify:\/\/collections\/best-seller-internal-use",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
     "slideshow_Bn9kRq": {
       "type": "slideshow",
       "blocks": {
         "slide_qE7mg9": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_506c4a2d-7162-4897-b3f0-586548e24ab7.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_03fcf75a-ca95-461b-9e69-8445dac59851.jpg",
+            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_490efc95-f2cc-4352-bd9d-8ba0e8b8273e.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_0b5e4277-34c9-4c19-9151-494bced685fd.jpg",
             "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/astra",
+            "link": "shopify:\/\/collections\/comfort",
             "show_text_box": true,
             "color_scheme": "background-1",
             "whole_slide_link": "",
@@ -129,19 +143,23 @@
         "padding_bottom": 36
       }
     },
-    "slideshow_dtfFDm": {
-      "type": "slideshow",
+    "customer_slideshow_wFcfK7": {
+      "type": "customer-slideshow",
       "blocks": {
-        "slide_kjjiJz": {
+        "slide_KdxH44": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0_3f6540d6-3ade-4374-9eb5-bec5add85d2e.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/0_fc4e4087-9c89-47aa-9eda-a2920c3fccd0.jpg",
+            "image": "shopify:\/\/shop_images\/jpg_3edd6456-e0f3-4c63-a0c6-30a51bfeee4e.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/jpg_d3c7c1b0-c7bb-436e-97fd-9839a11f39f4.jpg",
+            "login_desktop_image": "shopify:\/\/shop_images\/7e408f30e6e469320ee1736cfbd12e86.jpg",
+            "login_mobile_image": "shopify:\/\/shop_images\/jpg_82e2a474-73bd-4007-b212-2408ca3ffefb.jpg",
             "button_label": "",
-            "link": "shopify:\/\/pages\/lets-move",
-            "show_text_box": false,
-            "color_scheme": "inverse",
-            "whole_slide_link": "shopify:\/\/pages\/lets-move",
+            "login_button_label": "",
+            "link": "",
+            "login_link": "",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "whole_slide_link": "shopify:\/\/pages\/a-list",
             "button_style_secondary": false,
             "box_align": "middle-center",
             "text_alignment": "center",
@@ -151,7 +169,7 @@
         }
       },
       "block_order": [
-        "slide_kjjiJz"
+        "slide_KdxH44"
       ],
       "settings": {
         "layout": "full_bleed",
@@ -159,23 +177,23 @@
         "slider_visual": "sides",
         "auto_rotate": false,
         "change_slides_speed": 5,
-        "show_text_below": false,
+        "show_text_below": true,
         "accessibility_info": "Slideshow about our brand",
-        "padding_top": 0,
-        "padding_bottom": 36
+        "padding_top": 16,
+        "padding_bottom": 16
       }
     },
     "featured_collection_4JBk4Y": {
       "type": "featured-collection",
       "settings": {
         "steps": 4,
-        "title": "NEW IN",
+        "title": "JUST LANDED",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "astra",
+        "collection": "comfort",
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,
@@ -207,6 +225,17 @@
     "our_collection_list_v2_mK6kUx": {
       "type": "our-collection-list-v2",
       "blocks": {
+        "image_a4f9L6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3a643fe090944a084d316daab9ffed6e_0f514d6b-8051-487c-bc7b-80b55fe7f22f.jpg",
+            "desktop_image": "shopify:\/\/shop_images\/copy_ee5461cf-1a04-4fb9-af28-429dc975514e.jpg",
+            "alt": "",
+            "link": "",
+            "url": "shopify:\/\/collections\/new-in",
+            "show_on_desktop": true
+          }
+        },
         "image_JnihJ6": {
           "type": "image",
           "settings": {
@@ -229,17 +258,6 @@
             "show_on_desktop": true
           }
         },
-        "image_a4f9L6": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/NEW_IN_9c7717a9-d203-4fbe-b163-ff034527720a.jpg",
-            "desktop_image": "shopify:\/\/shop_images\/NEW_IN_7b60a275-2687-41bd-8116-2d3b68b80cbb.jpg",
-            "alt": "",
-            "link": "",
-            "url": "shopify:\/\/collections\/new-in",
-            "show_on_desktop": true
-          }
-        },
         "image_ydbCwA": {
           "type": "image",
           "settings": {
@@ -253,9 +271,9 @@
         }
       },
       "block_order": [
+        "image_a4f9L6",
         "image_JnihJ6",
         "image_3PJtne",
-        "image_a4f9L6",
         "image_ydbCwA"
       ],
       "settings": {
@@ -343,23 +361,19 @@
         "padding_bottom": 36
       }
     },
-    "customer_slideshow_wFcfK7": {
-      "type": "customer-slideshow",
+    "slideshow_dtfFDm": {
+      "type": "slideshow",
       "blocks": {
-        "slide_KdxH44": {
+        "slide_kjjiJz": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/jpg_3edd6456-e0f3-4c63-a0c6-30a51bfeee4e.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/jpg_d3c7c1b0-c7bb-436e-97fd-9839a11f39f4.jpg",
-            "login_desktop_image": "shopify:\/\/shop_images\/7e408f30e6e469320ee1736cfbd12e86.jpg",
-            "login_mobile_image": "shopify:\/\/shop_images\/jpg_82e2a474-73bd-4007-b212-2408ca3ffefb.jpg",
+            "image": "shopify:\/\/shop_images\/0_3f6540d6-3ade-4374-9eb5-bec5add85d2e.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/0_fc4e4087-9c89-47aa-9eda-a2920c3fccd0.jpg",
             "button_label": "",
-            "login_button_label": "",
-            "link": "",
-            "login_link": "",
-            "show_text_box": true,
-            "color_scheme": "background-1",
-            "whole_slide_link": "shopify:\/\/pages\/a-list",
+            "link": "shopify:\/\/pages\/lets-move",
+            "show_text_box": false,
+            "color_scheme": "inverse",
+            "whole_slide_link": "shopify:\/\/pages\/lets-move",
             "button_style_secondary": false,
             "box_align": "middle-center",
             "text_alignment": "center",
@@ -369,7 +383,7 @@
         }
       },
       "block_order": [
-        "slide_KdxH44"
+        "slide_kjjiJz"
       ],
       "settings": {
         "layout": "full_bleed",
@@ -377,10 +391,10 @@
         "slider_visual": "sides",
         "auto_rotate": false,
         "change_slides_speed": 5,
-        "show_text_below": true,
+        "show_text_below": false,
         "accessibility_info": "Slideshow about our brand",
-        "padding_top": 16,
-        "padding_bottom": 16
+        "padding_top": 0,
+        "padding_bottom": 36
       }
     },
     "collection_list_QrC4z9": {
@@ -391,6 +405,22 @@
           "settings": {
             "collection": "all-tops",
             "collection_image": "shopify:\/\/shop_images\/34a9cfe415fad4e35e8677bc45f824c6.jpg",
+            "show_collection_title": false
+          }
+        },
+        "featured_collection_n7jV8L": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "אוברולים",
+            "collection_image": "shopify:\/\/shop_images\/1_d8b54626-2c55-43b6-84cb-6f48b09c926f.jpg",
+            "show_collection_title": false
+          }
+        },
+        "featured_collection_bmLBxp": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "גופיית-ספורט",
+            "collection_image": "shopify:\/\/shop_images\/1_e842b228-9c60-494f-8e16-0354ea2a3c6f.jpg",
             "show_collection_title": false
           }
         },
@@ -410,27 +440,11 @@
             "show_collection_title": false
           }
         },
-        "featured_collection_n7jV8L": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "אוברולים",
-            "collection_image": "shopify:\/\/shop_images\/1_d8b54626-2c55-43b6-84cb-6f48b09c926f.jpg",
-            "show_collection_title": false
-          }
-        },
         "featured_collection_XzPPyM": {
           "type": "featured_collection",
           "settings": {
             "collection": "חולצות",
             "collection_image": "shopify:\/\/shop_images\/1_87ca5c71-5a98-445d-9587-558935011140.jpg",
-            "show_collection_title": false
-          }
-        },
-        "featured_collection_bmLBxp": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "גופיית-ספורט",
-            "collection_image": "shopify:\/\/shop_images\/1_e842b228-9c60-494f-8e16-0354ea2a3c6f.jpg",
             "show_collection_title": false
           }
         },
@@ -453,11 +467,11 @@
       },
       "block_order": [
         "featured_collection_Fmt3wN",
+        "featured_collection_n7jV8L",
+        "featured_collection_bmLBxp",
         "featured_collection_QiJdhe",
         "featured_collection_DdnqiN",
-        "featured_collection_n7jV8L",
         "featured_collection_XzPPyM",
-        "featured_collection_bmLBxp",
         "featured_collection_pfKQkV",
         "featured_collection_gzaAQe"
       ],
@@ -519,12 +533,13 @@
   },
   "order": [
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9",
+    "video_simple_q7mBLf",
     "slideshow_Bn9kRq",
-    "slideshow_dtfFDm",
+    "customer_slideshow_wFcfK7",
     "featured_collection_4JBk4Y",
     "our_collection_list_v2_mK6kUx",
     "collection_list_w4D6TE",
-    "customer_slideshow_wFcfK7",
+    "slideshow_dtfFDm",
     "collection_list_QrC4z9",
     "4371b550-969b-4828-986d-71697fc53ef0"
   ]

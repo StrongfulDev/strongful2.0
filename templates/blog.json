@@ -3,10 +3,10 @@
     "main": {
       "type": "main-blog",
       "settings": {
-        "tile_image_one": "shopify:\/\/shop_images\/7ff08d51abffc0cfdf69f878b50b58d6_42a82374-c3b2-45d1-9d27-5493d13e4f4c.jpg",
-        "tile_image_one_link": "shopify:\/\/collections\/astra",
-        "tile_image_two": "shopify:\/\/shop_images\/7ff08d51abffc0cfdf69f878b50b58d6_641bc7eb-5246-4096-8d22-49fcb0ff3ec6.jpg",
-        "tile_image_two_link": "shopify:\/\/collections\/new-in",
+        "tile_image_one": "shopify:\/\/shop_images\/1_bb79b20f-fcac-499e-9c1c-b9a4fcf2d37e.jpg",
+        "tile_image_one_link": "shopify:\/\/collections\/outlet",
+        "tile_image_two": "shopify:\/\/shop_images\/5f0372e6de55ad96111e9f8ab9d2897f_a96760f3-522a-4ef2-b060-6f9205833178.jpg",
+        "tile_image_two_link": "shopify:\/\/collections\/comfort",
         "layout": "grid",
         "show_image": true,
         "image_height": "adapt",

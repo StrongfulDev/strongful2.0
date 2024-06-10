@@ -1242,6 +1242,8 @@ a.order-number-link .icon {
 .custom-customer-account-container.active {
 	transform: translateX(0);
 	transition: 0.3s ease-in-out;
+	max-height: 98vh;
+	overflow-y: auto;
 }
 
 .custom-customer-account-container.active .multicolumn {
@@ -1379,6 +1381,7 @@ td.more-returns-info {
 .custom-customer-popup-main-title {
 	font-size: var(--font-body-size-large);
 	font-weight: var(--font-body-weight-bold);
+	margin-bottom: 1.2rem;
 }
 
 .custom-customer-account-container .multicolumn-list h3 {

@@ -259,6 +259,10 @@
                             <span class="new-product-span">
                                 RESTOCK
                             </span>
+                        {% elsif card_product.tags contains 'selling-fast' %}
+                        <span class="new-product-span">
+                                SELLING FAST
+                            </span>
                     {% endif %}
                     {%- if show_quick_add and quick_add_type_mobile == "modal" -%}
                         {% assign quick_add_modal_id = "quick_add_modal-" | append: section.id | append: "-" | append: card_product.id %}
@@ -273,18 +277,6 @@
                 <div class="card__information">
                     {% if card_product.tags contains announcement_tag %}
 
-                        {% comment %}
-                        {% unless customer %}
-                            {% if members_banner_text != blank %}
-                                <span class="card_banner_text color-background-2">{{ members_banner_text }}</span>
-                            {% endif %}
-                        {% else %}
-                            {% if card_banner_text != blank %}
-                                <span class="card_banner_text color-background-2">{{ card_banner_text }}</span>
-                            {% endif %}
-                        {% endunless %}
-                        {% endcomment %}
-
                         {% if members_only_sale == true and members_only_sale_active == true %}
                             {% unless customer %}
                                 {% if members_banner_text != blank %}
@@ -296,6 +288,9 @@
                                 <span class="card_banner_text color-background-2">{{ card_banner_text }}</span>
                             {% endif %}
                         {% endif %}
+
+                        {% elsif card_product.tags contains 'fake-out' %}
+                        <span class="card_banner_text color-background-2">{{ custom_collection_second_announcement }}</span>
 
                     {% endif %}
                     {% if card_product.compare_at_price > card_product.price %}

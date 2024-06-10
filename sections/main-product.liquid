@@ -239,6 +239,7 @@
                         {%- when 'swiper' -%}
                             {% render 'swiper',
                                     preset: block.settings.swiper_preset,
+                                    product: product,
                                     show_payment_icons: block.settings.show_payment_icons,
                                     deliveryText: block.settings.delivery_days_text %}
                         {%- when 'quantity_selector' -%}
@@ -739,6 +740,12 @@
           "id": "logged_out_text",
           "label": "Logged Out Text",
             "default": "<p>You are not logged in.</p>"
+        },
+        {
+          "type": "richtext",
+          "id": "logged_in_text_second",
+          "label": "Second text for second products",
+          "default": "<p>You are logged in.</p>"
         },
         {
           "type": "text",
