@@ -160,7 +160,10 @@
 
             {% unless customer %}
 
-            <div class="slideshow__slide grid__item grid--1-col slider__slide slideshow__slide--{{ forloop.index0 }} account-toggler-site-wide pointer"
+            <div class="slideshow__slide grid__item grid--1-col slider__slide slideshow__slide--{{ forloop.index0 }}
+             {%- if block.settings.button_label == blank -%}
+                account-toggler-site-wide pointer
+             {% endif %}"
                  id="Slide-{{ section.id }}-{{ forloop.index }}"
                     {{ block.shopify_attributes }}
                  role="group"
@@ -202,9 +205,9 @@
 
                         {%- if block.settings.button_label != blank -%}
                             <div class="banner__buttons">
-                                <div class="button account-toggler-site-wide {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}">
+                                <button class="button account-toggler-site-wide {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}">
                                     {{ block.settings.button_label | escape }}
-                                </div>
+                                </button>
                             </div>
                         {%- endif -%}
                     </div>

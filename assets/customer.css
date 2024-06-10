@@ -1210,6 +1210,8 @@ a.order-number-link .icon {
 .custom-customer-account-container.active {
 	transform: translateX(0);
 	transition: 0.3s ease-in-out;
+	max-height: 98vh;
+	overflow-y: auto;
 }
 
 .custom-customer-account-container.active .multicolumn {
