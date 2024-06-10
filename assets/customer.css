@@ -1349,6 +1349,7 @@ td.more-returns-info {
 .custom-customer-popup-main-title {
 	font-size: var(--font-body-size-large);
 	font-weight: var(--font-body-weight-bold);
+	margin-bottom: 1.2rem;
 }
 
 .custom-customer-account-container .multicolumn-list h3 {
