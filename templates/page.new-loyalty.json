@@ -1,14 +1,5 @@
 {
   "sections": {
-    "custom_liquid_NKRGNW": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<div class=\"yotpo-widget-instance\" data-yotpo-instance-id=\"636548\"><\/div>",
-        "color_scheme": "background-1",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "custom_liquid_3c8bRT": {
       "type": "custom-liquid",
       "settings": {
@@ -184,6 +175,7 @@
     "custom_loyalty_form_section_TtpmFX": {
       "type": "custom-loyalty-form-section",
       "settings": {
+        "sign_up_title": "הרשמה למועדון הלקוחות",
         "desktop_image": "shopify:\/\/shop_images\/Custom_loyalty_login_desktop.png",
         "mobile_image": "shopify:\/\/shop_images\/Custom_loyalty_login_mobile.png",
         "padding_top": 36,
@@ -192,7 +184,6 @@
     }
   },
   "order": [
-    "custom_liquid_NKRGNW",
     "custom_liquid_3c8bRT",
     "component_vip_tiers_new_RaUJGw",
     "loyalty_redeem_points_VQqQ4q",
