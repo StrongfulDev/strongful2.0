@@ -1,5 +1,45 @@
 {
   "sections": {
+    "customer_slideshow_jteert": {
+      "type": "customer-slideshow",
+      "blocks": {
+        "slide_XebKXz": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/945737d22937f2e82e32fa399e605c9c_3c873d7e-5238-4a60-9d17-db0749f6ce65.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/9d63a6479f865f7ca538a9134e161774.jpg",
+            "login_desktop_image": "shopify:\/\/shop_images\/945737d22937f2e82e32fa399e605c9c_3c873d7e-5238-4a60-9d17-db0749f6ce65.jpg",
+            "login_mobile_image": "shopify:\/\/shop_images\/9d63a6479f865f7ca538a9134e161774_fcf018e0-b015-4c52-93bd-b71b78073e60.jpg",
+            "button_label": "הרשמה \/ כניסה",
+            "login_button_label": "",
+            "link": "",
+            "login_link": "",
+            "show_text_box": true,
+            "color_scheme": "inverse",
+            "whole_slide_link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_XebKXz"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
     "custom_liquid_3c8bRT": {
       "type": "custom-liquid",
       "settings": {
@@ -184,6 +224,7 @@
     }
   },
   "order": [
+    "customer_slideshow_jteert",
     "custom_liquid_3c8bRT",
     "component_vip_tiers_new_RaUJGw",
     "loyalty_redeem_points_VQqQ4q",
