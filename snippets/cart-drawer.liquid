@@ -436,10 +436,10 @@
                     {%- if settings.show_cart_note -%}
                         <details id="Details-CartDrawer">
                             <summary>
-              <span class="summary__title">
-                {{ 'sections.cart.note' | t }}
-                  {% render 'icon-caret' %}
-              </span>
+                              <span class="summary__title">
+                                {{ 'sections.cart.note' | t }}
+                                  {% render 'icon-caret' %}
+                              </span>
                             </summary>
                             <cart-note class="cart__note field">
                                 <label class="visually-hidden"
@@ -453,6 +453,12 @@
                             </cart-note>
                         </details>
                     {%- endif -%}
+
+                    <div class="shavuot-discount">
+                        <p class="shavuot-discount__title">
+                            ₪50 הנחה בקנייה מעל ₪299 בשימוש הקוד: holiday50
+                        </p>
+                    </div>
 
                     <!-- Start blocks -->
                     <!-- Subtotals -->
