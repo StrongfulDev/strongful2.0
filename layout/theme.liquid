@@ -3,7 +3,20 @@
   <head>{% render 'yoast-seo' %}
 {% render 'visually_io_sdk' %}
 
+      <script>
+          (function() {
+              let currentUrl = window.location.pathname;
+              let hePrefix = "/he";
 
+              console.log(currentUrl);
+
+              if (currentUrl.startsWith(hePrefix)) { // if the url after the strongful.co.il starts with /he
+                  let newUrl = currentUrl.replace(hePrefix, "");
+                  let fixedURL = window.location.origin + newUrl;
+                  window.location.replace(fixedURL);
+              }
+          })();
+      </script>
 
       <!-- Google Tag Manager -->
       <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
