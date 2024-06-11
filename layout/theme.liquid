@@ -3,7 +3,19 @@
   <head>{% render 'yoast-seo' %}
 {% render 'visually_io_sdk' %}
 
+      <script>
+          (function() {
+              let currentUrl = window.location.pathname;
+              let hePrefix = "/he";
 
+              console.log(currentUrl);
+
+              if (currentUrl.startsWith(hePrefix)) {
+                  let newUrl = currentUrl.replace(hePrefix, "/");
+                  window.location.replace(newUrl);
+              }
+          })();
+      </script>
 
       <!-- Google Tag Manager -->
       <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
