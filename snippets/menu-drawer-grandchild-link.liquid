@@ -3,10 +3,7 @@
         {% assign escapedTitle = childlink.title | escape %}
         <a href="{{ childlink.url }}"
            class="menu-drawer__menu-item link link--text list-menu__item focus-inset
-                {% if childlink.current %} menu-drawer__menu-item--active{% endif %}
-                {% if escapedTitle == 'כל הטופים' or escapedTitle == 'כל הסטים' %}
-                    bold
-                {% endif %}"
+                {% if childlink.current %} menu-drawer__menu-item--active{% endif %}"
         {% if childlink.current %} aria-current="page"{% endif %}>
             {{ childlink.title | escape }}
             {% if menu_type == 'customizable' %}
