@@ -4266,7 +4266,14 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 	display: none !important;
 }
 
-/*.disabled-variant-button input,*/
-/*.disabled-variant-button label {*/
-/*	pointer-events: none !important;*/
-/*}*/
+.shavuot-discount {
+	text-align: center;
+	background: var(--gradient-base-background-3);
+	padding: var(--grid-mobile-horizontal-spacing);
+	margin-bottom: 1.5rem;
+}
+
+.shavuot-discount__title {
+	margin: var(--grid-desktop-horizontal-spacing) 0;
+	color: firebrick;
+}
