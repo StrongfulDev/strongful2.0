@@ -531,7 +531,7 @@ div.about-us {
 	.our-vip-tiers {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
-		padding: 2rem 17rem 0;
+		padding: 2rem 11rem 0;
 	}
 
 	.vip-tier-data {
