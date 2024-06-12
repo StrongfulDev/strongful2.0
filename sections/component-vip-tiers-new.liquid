@@ -1,10 +1,6 @@
 {{ 'section-main-page.css' | asset_url | stylesheet_tag }}
 {{ 'loyalty-page.js' | asset_url | script_tag }}
 
-{% assign plusStart = 80000 %}
-{% assign premiumStart = 140000 %}
-{% assign legendStart = 300000 %}
-
 {%- style -%}
     .section-{{ section.id }}-padding {
     padding-top: calc({{ section.settings.padding_top }}px * 0.75);
@@ -20,6 +16,11 @@
 {%- endstyle -%}
 
 <div class="page-width fix-direction section-{{ section.id }}-padding">
+
+    {% if customer %}
+        <div class="yotpo-widget-instance" data-yotpo-instance-id="746027"></div>
+    {% endif %}
+
     <h2 class="vip-tiers-main-title">פירוט דרגות</h2>
     <!-- VIP Tiers Section -->
     <div class="our-vip-tiers">
