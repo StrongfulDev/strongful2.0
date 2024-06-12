@@ -8,8 +8,6 @@
               let currentUrl = window.location.pathname;
               let hePrefix = "/he";
 
-              console.log(currentUrl);
-
               if (currentUrl.startsWith(hePrefix)) { // if the url after the strongful.co.il starts with /he
                   let newUrl = currentUrl.replace(hePrefix, "");
                   let fixedURL = window.location.origin + newUrl;

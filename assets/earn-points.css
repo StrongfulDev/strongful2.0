@@ -262,6 +262,11 @@
 	padding: var(--grid-desktop-horizontal-spacing) calc(var(--grid-desktop-horizontal-spacing) * 2);
 }
 
+.yotpo-widget-campaign-widget-special-reward-header {
+	bottom: 1rem;
+	top: auto;
+}
+
 @media screen and (min-width: 990px) {
 	.yotpo-widget-hero-section .yotpo-text-on-background {
 		min-height: 37vw;
