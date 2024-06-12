@@ -1770,21 +1770,29 @@ h2.delete-account-title {
 	color: var(--gradient-base-accent-1);
 }
 
+.hdivider {
+	color: var(--gradient-background);
+}
+
 @media screen and (min-width: 990px) {
 	.loyalty-form-container .customer form {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		column-gap: 2rem;
+		column-gap: 3rem;
 	}
 
 	.loyalty-form-container .customer:not(.account):not(.order):not(.addresses) {
-		max-width: 60rem;
+		max-width: 70rem;
 	}
 
 	.loyalty-form-container .button-loader-activator,
 	.loyalty-form-container #accepts_marketing_checkbox,
 	.loyalty-form-container div:last-child {
 		grid-column: 1 / -1;
+	}
+
+	.loyalty-form-container .button-loader-activator {
+		margin: 4rem 0 3rem;
 	}
 
 	.loyalty-form-container .customer .field:first-of-type {
