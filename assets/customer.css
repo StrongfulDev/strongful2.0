@@ -83,9 +83,15 @@ a.no-decoration {
 .loyalty-form-container .customer .field input {
 	background: transparent;
 	padding: 0;
+	color: var(--gradient-background);
 	border-bottom: 1px solid var(--gradient-background);
 	border-radius: 0;
 	height: auto;
+}
+
+.loyalty-form-container .customer .field:before, .loyalty-form-container .customer .field:after {
+	display: none;
+	content: none;
 }
 
 .loyalty-form-container .customer .field label {
@@ -1758,3 +1764,31 @@ h2.delete-account-title {
 }
 
 /* End Addresses */
+
+.loyalty-form-container .button-loader-activator {
+	background: var(--gradient-background);
+	color: var(--gradient-base-accent-1);
+}
+
+@media screen and (min-width: 990px) {
+	.loyalty-form-container .customer form {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 2rem;
+	}
+
+	.loyalty-form-container .customer:not(.account):not(.order):not(.addresses) {
+		max-width: 60rem;
+	}
+
+	.loyalty-form-container .button-loader-activator,
+	.loyalty-form-container #accepts_marketing_checkbox,
+	.loyalty-form-container div:last-child {
+		grid-column: 1 / -1;
+	}
+
+	.loyalty-form-container .customer .field:first-of-type {
+		margin-top: 4rem;
+		height: fit-content;
+	}
+}

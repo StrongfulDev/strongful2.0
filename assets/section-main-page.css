@@ -636,14 +636,6 @@ div.about-us {
 		display: block;
 	}
 
-	.loyalty-form-container {
-		display: grid;
-		grid-template-columns: 1fr 1.4fr;
-		column-gap: 5em;
-		margin: 5em auto;
-		width: 81%;
-	}
-
 	.help__blogs__ul {
 		display: grid;
 		width: 100%;
