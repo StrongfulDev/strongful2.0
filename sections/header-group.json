@@ -224,7 +224,7 @@
       ],
       "settings": {
         "account": "account",
-        "desktop_loyalty_link": "shopify:\/\/pages\/a-list",
+        "desktop_loyalty_link": "shopify:\/\/pages\/loyalty",
         "color_scheme": "background-1",
         "logo_position": "middle-left",
         "menu": "elara-sets-first",
@@ -251,7 +251,7 @@
         "mobile_top_image_3_title": "move X STRONGFUL",
         "show_fifth_image": true,
         "mobile_top_image_4": "shopify:\/\/shop_images\/0737a51b2679a55d45d0d8f464335044_a56cfdc0-29aa-47a0-b9f7-d9978db22a70.jpg",
-        "mobile_top_image_4_link": "shopify:\/\/pages\/a-list",
+        "mobile_top_image_4_link": "shopify:\/\/pages\/loyalty",
         "mobile_top_image_4_title": "מועדון לקוחות",
         "toggle_socials": false,
         "margin_bottom": 0,
