@@ -214,11 +214,11 @@
         "image_a4f9L6": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/3a643fe090944a084d316daab9ffed6e_0f514d6b-8051-487c-bc7b-80b55fe7f22f.jpg",
-            "desktop_image": "shopify:\/\/shop_images\/copy_ee5461cf-1a04-4fb9-af28-429dc975514e.jpg",
+            "image": "shopify:\/\/shop_images\/3a643fe090944a084d316daab9ffed6e_c99a9269-6a0b-4593-ac8d-5a2d346db7e1.jpg",
+            "desktop_image": "shopify:\/\/shop_images\/copy_a90c9dc0-e5b3-409d-8073-07756cd53bea.jpg",
             "alt": "",
             "link": "",
-            "url": "shopify:\/\/collections\/new-in",
+            "url": "shopify:\/\/collections\/summersale",
             "show_on_desktop": true
           }
         },
