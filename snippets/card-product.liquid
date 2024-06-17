@@ -242,11 +242,11 @@
                             </div>
                         </div>
                     {%- endif -%}
-                    {% if card_product.tags contains 'new' or card_product.tags contains 'NEW' %}
+                    {% if card_product.tags contains 'badge__new' %}
                         <span class="new-product-span">
                                 {{ 'products.product.new' | t }}
                             </span>
-                        {% elsif card_product.tags contains 'restock' or card_product.tags contains 'RESTOCK' %}
+                        {% elsif card_product.tags contains 'badge__restock' %}
                             <span class="new-product-span">
                                 RESTOCK
                             </span>
