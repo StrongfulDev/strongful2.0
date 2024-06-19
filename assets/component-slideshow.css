@@ -241,6 +241,10 @@ button.slideshow__autoplay {
 	bottom: 50%;
 }
 
+.slideshow__slide--0 .slideshow__text.customer-banner__box {
+	bottom: 15%;
+}
+
 .slideshow__slide--1 .slideshow__text.banner__box {
 	bottom: 20%;
 }
