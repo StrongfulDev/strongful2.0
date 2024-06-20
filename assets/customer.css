@@ -46,10 +46,20 @@ a.no-decoration {
 	height: fit-content;
 }
 
+.loyalty-form .customer:not(.account):not(.order):not(.addresses) {
+	padding-top: 3rem;
+	padding-bottom: 1rem;
+}
+
 @media screen and (min-width: 750px) {
   .customer:not(.account):not(.order) {
     max-width: var(--page-width);
   }
+
+	.loyalty-form .customer:not(.account):not(.order):not(.addresses) {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
 }
 
 .customer > h1,
