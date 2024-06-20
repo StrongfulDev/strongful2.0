@@ -96,6 +96,10 @@ a.no-decoration {
   .customer h2.form__message {
     font-size: calc(var(--font-heading-scale) * 2.2rem);
   }
+
+	.customer form {
+		margin-bottom: 0;
+	}
 }
 
 .customer .field {
