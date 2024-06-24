@@ -68,7 +68,7 @@
 
 {% if section.settings.collection != blank %}
     {% unless product.tags contains 'noShopTheLook' %}
-        <div class="color-{{ section.settings.color_scheme }} isolate gradient">
+        <div class="color-{{ section.settings.color_scheme }} isolate gradient large-up-hide">
             <div class="collection section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width  full-width-padding{% endif %} pagination_type_{{ section.settings.pagination_type }}">
                 <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
                     <div class="collection__title_heading">
