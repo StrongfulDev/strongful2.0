@@ -75,22 +75,6 @@
                         {%- if section.settings.title != blank -%}
                             <h2 class="title {{ section.settings.heading_size }} {{ section.settings.heading_type }}">{{ section.settings.title | escape }}</h2>
                         {%- endif -%}
-
-                        {%- if section.settings.show_view_all and more_in_collection and section.settings.view_all_location == "top" or section.settings.view_all_location == "desktop_top_tablet_bottom" -%}
-                            {%- liquid
-                                assign view_all_wrapper = "top"
-                                if section.settings.view_all_location == "desktop_top_tablet_bottom"
-                                    assign view_all_wrapper = "top show-desktop"
-                                endif
-                            %}
-                            {% render 'collection-view-all',
-                                    collection_url: section.settings.collection.url,
-                                    collection_title: section.settings.collection.title,
-                                    style: section.settings.view_all_style,
-                                    class_wrapper: view_all_wrapper,
-                                    view_all_text: section.settings.view_all_text
-                            %}
-                        {%- endif -%}
                     </div>
                     {%- if section.settings.description != blank
                     or section.settings.show_description
@@ -157,6 +141,33 @@
                                                     comes_with_matching_outfit: settings.comes_with_matching_outfit
                                             %}
                                         </li>
+
+                                        <li
+                                                id="Slide-{{ section.id }}-{{ forloop.index }}"
+                                                class="grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}">
+                                            {% render 'card-product-video',
+                                                    card_product: product,
+                                                    card_banner_text: settings.custom_collection_announcement,
+                                                    media_aspect_ratio: section.settings.image_ratio,
+                                                    show_vendor: section.settings.show_vendor,
+                                                    show_rating: section.settings.show_rating,
+                                                    show_quick_add: section.settings.enable_quick_add,
+                                                    quick_add_type: section.settings.quick_add_type,
+                                                    quick_add_type_mobile: section.settings.quick_add_type_mobile,
+                                                    section_id: section.id,
+                                                    show_sale_badge: section.settings.show_sale_badge,
+                                                    quick_add_text: section.settings.quick_add_text,
+                                                    pick_size_text: section.settings.pick_size_text,
+                                                    quick_add_accessories_text: section.settings.quick_add_accessories_text,
+                                                    announcement_tag: settings.announcement_tag,
+                                                    second_announcement_tag: settings.second_announcement_tag,
+                                                    custom_collection_second_announcement: settings.custom_collection_second_announcement,
+                                                    members_only_sale: settings.members_only_sale,
+                                                    members_only_sale_active: settings.members_only_sale_active,
+                                                    members_banner_text: settings.members_only_announcement,
+                                                    comes_with_matching_outfit: settings.comes_with_matching_outfit
+                                            %}
+                                        </li>
                                     {% endunless %}
                                 {% else %}
                                     <li
@@ -167,6 +178,33 @@
                                                 card_banner_text: settings.custom_collection_announcement,
                                                 media_aspect_ratio: section.settings.image_ratio,
                                                 show_secondary_image: section.settings.show_secondary_image,
+                                                show_vendor: section.settings.show_vendor,
+                                                show_rating: section.settings.show_rating,
+                                                show_quick_add: section.settings.enable_quick_add,
+                                                quick_add_type: section.settings.quick_add_type,
+                                                quick_add_type_mobile: section.settings.quick_add_type_mobile,
+                                                section_id: section.id,
+                                                show_sale_badge: section.settings.show_sale_badge,
+                                                quick_add_text: section.settings.quick_add_text,
+                                                pick_size_text: section.settings.pick_size_text,
+                                                quick_add_accessories_text: section.settings.quick_add_accessories_text,
+                                                announcement_tag: settings.announcement_tag,
+                                                second_announcement_tag: settings.second_announcement_tag,
+                                                custom_collection_second_announcement: settings.custom_collection_second_announcement,
+                                                members_only_sale: settings.members_only_sale,
+                                                members_only_sale_active: settings.members_only_sale_active,
+                                                members_banner_text: settings.members_only_announcement,
+                                                comes_with_matching_outfit: settings.comes_with_matching_outfit
+                                        %}
+                                    </li>
+
+                                    <li
+                                            id="Slide-{{ section.id }}-{{ forloop.index }}"
+                                            class="grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}">
+                                        {% render 'card-product-video',
+                                                card_product: product,
+                                                card_banner_text: settings.custom_collection_announcement,
+                                                media_aspect_ratio: section.settings.image_ratio,
                                                 show_vendor: section.settings.show_vendor,
                                                 show_rating: section.settings.show_rating,
                                                 show_quick_add: section.settings.enable_quick_add,
@@ -242,27 +280,6 @@
                         </div>
                     {%- endif -%}
                 </slider-component>
-
-                {%- if section.settings.show_view_all and more_in_collection and section.settings.view_all_location == "bottom" or section.settings.view_all_location == "desktop_top_tablet_bottom" -%}
-                    {%- liquid
-                        assign style = section.settings.view_all_style
-                        if section.settings.view_all_location == "desktop_top_tablet_bottom"
-                            assign style = "outline"
-                        endif
-
-                        assign view_all_wrapper = "bottom"
-                        if section.settings.view_all_location == "desktop_top_tablet_bottom"
-                            assign view_all_wrapper = "bottom show-mobile"
-                        endif
-                    %}
-                    {% render 'collection-view-all',
-                            collection_url: section.settings.collection.url,
-                            collection_title: section.settings.collection.title,
-                            style: style,
-                            class_wrapper: view_all_wrapper,
-                            view_all_text: section.settings.view_all_text
-                    %}
-                {%- endif -%}
             </div>
         </div>
     {% endunless %}
