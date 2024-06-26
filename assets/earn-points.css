@@ -347,4 +347,8 @@
 		width: calc(24% - var(--flexified-padding)*0.75) !important;
 		margin-bottom: 28px !important;
 	}
+
+	.flexified-wrapper:not(.flexified-mobile).flexified-items-odd .flexified-child {
+		width: calc(16.33333% - var(--flexified-padding)*0.66) !important;
+	}
 }

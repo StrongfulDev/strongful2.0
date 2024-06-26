@@ -102,8 +102,4 @@
 		text-align: right;
 		padding: 0 14px 14px;
 	}
-
-	/*.yotpo-widget-campaign-widget-container .flexified-wrapper:not(.flexified-mobile).flexified-items-odd .flexified-child {*/
-	/*	min-width: calc(25% - var(--flexified-padding)*.66);*/
-	/*}*/
 }
