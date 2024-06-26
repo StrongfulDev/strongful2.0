@@ -454,6 +454,7 @@ div.about-us {
 	background: var(--gradient-base-background-3);
 	padding-bottom: 1rem;
 	margin-bottom: 1rem;
+	margin-top: -1rem;
 }
 
 .vip-tier-data ul {
@@ -562,6 +563,7 @@ div.about-us {
 	.vip-tier-data {
 		display: block;
 		background: revert;
+		margin-top: 0;
 	}
 
 	.vip-tier-data-toggle {

@@ -9,11 +9,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 				$(icon).toggleClass('rotated');
 				$(tierData).toggle();
 				$('.vip-tier-data').not(tierData).hide();
-				if (tierData.style.display == 'block') {
-					$(toggler).css('margin-bottom', '0');
-				} else {
-					$(toggler).css('margin-bottom', '1rem');
-				}
+				$('.icon-caret').not(icon).removeClass('rotated');
 			});
 		});
 	}
