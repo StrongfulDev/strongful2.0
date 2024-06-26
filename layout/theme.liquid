@@ -157,6 +157,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
         :root  {
         --font-body-family: {{ body_font_family }}, {{ settings.type_body_font.fallback_families }};
         --font-body-style: {{ settings.type_body_font.style }};
+        --font-body-weight-light: {{ settings.type_body_font.weight | minus: 300 | at_least: 100 }};
         --font-body-weight: {{ settings.type_body_font.weight }};
         --font-body-weight-bold: {{ settings.type_body_font.weight | plus: 300 | at_most: 1000 }};
         --font-body-size-large: 2rem;

@@ -659,6 +659,10 @@ div.about-us {
 		margin-right: 0;
 		padding-right: 4rem;
 	}
+
+	.vip-tier-data ul li {
+		font-weight: var(--font-body-weight-light);
+	}
 }
 
 img {

@@ -397,6 +397,9 @@
     "update_language": "Update language",
     "update_country": "Update country\/region"
   },
+  "loyalty": {
+    "points_reset": "הנקודות יתאפסו במידה ולא תתבצע רכישה \nבמשך 6 חודשים רציפים"
+  },
   "customer": {
     "account": {
       "greet": "היי {{ first_name }}",
