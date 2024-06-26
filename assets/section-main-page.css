@@ -649,6 +649,16 @@ div.about-us {
 		padding: 0;
 		row-gap: calc(var(--grid-desktop-horizontal-spacing) * 2);
 	}
+
+	.vip-tier-new:not(:last-child) {
+		border-left: 1px solid var(--gradient-base-background-4);
+	}
+
+	.vip-tier-data ul {
+		width: 100%;
+		margin-right: 0;
+		padding-right: 4rem;
+	}
 }
 
 img {

@@ -291,7 +291,7 @@
 	}
 
 	.flexified-wrapper:not(.flexified-mobile).flexified-items-odd .flexified-child {
-		width: calc(25% - var(--flexified-padding)*0.66);
+		/*width: calc(25% - var(--flexified-padding)*0.66);*/
 	}
 
 	.yotpo-widget-campaign-widget-icon-container {
@@ -300,6 +300,7 @@
 		right: 1em;
 		margin: 0;
 		height: 30px;
+		display: none;
 	}
 
 	.yotpo-screen-customer_email, .yotpo-screen-friends_emails {
