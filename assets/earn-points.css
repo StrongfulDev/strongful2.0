@@ -143,6 +143,7 @@
 	margin-bottom: 0;
 	position: absolute;
 	top: 1em;
+	display: none;
 }
 
 .yotpo-widget-referral-widget .yotpo-left-align-background .yotpo-email-view,
