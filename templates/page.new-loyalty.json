@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "customer_slideshow_jteert": {
@@ -94,6 +103,16 @@
         "quick_add_accessories_text": "Pick accessories",
         "columns_mobile": "2",
         "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_loyalty_form_section_TtpmFX": {
+      "type": "custom-loyalty-form-section",
+      "settings": {
+        "sign_up_title": "הרשמה למועדון הלקוחות",
+        "desktop_image": "shopify:\/\/shop_images\/Custom_loyalty_login_desktop.png",
+        "mobile_image": "shopify:\/\/shop_images\/Custom_loyalty_login_mobile.png",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -211,16 +230,6 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "custom_loyalty_form_section_TtpmFX": {
-      "type": "custom-loyalty-form-section",
-      "settings": {
-        "sign_up_title": "הרשמה למועדון הלקוחות",
-        "desktop_image": "shopify:\/\/shop_images\/Custom_loyalty_login_desktop.png",
-        "mobile_image": "shopify:\/\/shop_images\/Custom_loyalty_login_mobile.png",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
@@ -229,7 +238,7 @@
     "component_vip_tiers_new_RaUJGw",
     "loyalty_redeem_points_VQqQ4q",
     "loyalty_outlet_collection_ryXgaG",
-    "collapsible_content_RLWQbU",
-    "custom_loyalty_form_section_TtpmFX"
+    "custom_loyalty_form_section_TtpmFX",
+    "collapsible_content_RLWQbU"
   ]
 }
