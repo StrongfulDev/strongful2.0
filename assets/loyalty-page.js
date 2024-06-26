@@ -6,6 +6,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 			let tierData = toggler.nextElementSibling;
 			toggler.addEventListener('click', (e) => {
 				$(tierData).toggle();
+				$('.vip-tier-data').not(tierData).hide();
 				if (toggler.style.marginBottom === '0') {
 					toggler.style.marginBottom = '10px';
 				} else {
