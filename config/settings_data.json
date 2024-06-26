@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "current": {
     "logo": "shopify:\/\/shop_images\/9ed861fba4dae099b0b04754bbc299cc.png",
@@ -387,12 +396,6 @@
           "version": "main"
         }
       },
-      "yoast-seo-metatags": {
-        "type": "shopify:\/\/apps\/yoast-seo-seo-for-everyone\/blocks\/metatags\/7c777011-bc88-4743-a24e-64336e1e5b46",
-        "disabled": false,
-        "settings": {
-        }
-      },
       "8776485610325655785": {
         "type": "shopify:\/\/apps\/hiko-social-login\/blocks\/hiko-auth\/3832d7e1-5bcd-4b72-91da-236b57feef8f",
         "disabled": false,
@@ -400,6 +403,12 @@
           "social_font": "enable",
           "spinner_top": 50,
           "spinner_left": 50
+        }
+      },
+      "yoast-seo-metatags": {
+        "type": "shopify:\/\/apps\/yoast-seo-seo-for-everyone\/blocks\/metatags\/7c777011-bc88-4743-a24e-64336e1e5b46",
+        "disabled": false,
+        "settings": {
         }
       }
     }

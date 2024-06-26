@@ -238,6 +238,10 @@ button.slideshow__autoplay {
 }
 
 .slideshow__slide--0 .slideshow__text.banner__box {
+	bottom: 50%;
+}
+
+.slideshow__slide--0 .slideshow__text.customer-banner__box {
 	bottom: 15%;
 }
 
@@ -298,7 +302,7 @@ button.slideshow__autoplay {
 	}
 
 	.slideshow__slide--0 .slideshow__text.banner__box {
-
+		bottom: 15%;
 	}
 
 	.slideshow__slide:first-of-type .slideshow__text-wrapper {

@@ -46,10 +46,20 @@ a.no-decoration {
 	height: fit-content;
 }
 
+.loyalty-form .customer:not(.account):not(.order):not(.addresses) {
+	padding-top: 3rem;
+	padding-bottom: 1rem;
+}
+
 @media screen and (min-width: 750px) {
   .customer:not(.account):not(.order) {
     max-width: var(--page-width);
   }
+
+	.loyalty-form .customer:not(.account):not(.order):not(.addresses) {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
 }
 
 .customer > h1,
@@ -58,7 +68,7 @@ a.no-decoration {
 }
 
 .customer form {
-  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 .loyalty-form-container h2 {
@@ -134,6 +144,10 @@ a.no-decoration {
   .customer h2.form__message {
     font-size: calc(var(--font-heading-scale) * 2.2rem);
   }
+
+	.customer form {
+		margin-bottom: 0;
+	}
 }
 
 .customer .field {
