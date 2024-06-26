@@ -4,13 +4,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
 		const mobileVIPTierTogglers = document.querySelectorAll('.vip-tier-data-toggle');
 		mobileVIPTierTogglers.forEach((toggler) => {
 			let tierData = toggler.nextElementSibling;
+			let icon = toggler.querySelector('.icon');
 			toggler.addEventListener('click', (e) => {
+				$(icon).toggleClass('rotated');
 				$(tierData).toggle();
 				$('.vip-tier-data').not(tierData).hide();
-				if (toggler.style.marginBottom === '0') {
-					toggler.style.marginBottom = '10px';
+				if (tierData.style.display == 'block') {
+					$(toggler).css('margin-bottom', '0');
 				} else {
-					toggler.style.marginBottom = 0;
+					$(toggler).css('margin-bottom', '1rem');
 				}
 			});
 		});

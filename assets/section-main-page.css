@@ -432,6 +432,14 @@ div.about-us {
 	padding: 1rem;
 	background: var(--gradient-base-background-3);
 	text-decoration: underline;
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	margin-bottom: 1rem;
+}
+
+.vip-tier-data-toggle h6 {
+	margin: 0;
 }
 
 .vip-tier-big-title {
@@ -445,6 +453,7 @@ div.about-us {
 	text-align: center;
 	background: var(--gradient-base-background-3);
 	padding-bottom: 1rem;
+	margin-bottom: 1rem;
 }
 
 .vip-tier-data ul {
@@ -454,7 +463,15 @@ div.about-us {
 	margin-right: 30%;
 }
 
+.vip-tier-data-toggle .icon-caret.rotated {
+	transform: rotate(180deg);
+}
+
 @media screen and (min-width: 990px) {
+
+	.vip-tier-data-toggle .icon-caret {
+		display: none;
+	}
 
 	.covid__notice {
 		padding: 8.6rem 50rem 6.5rem;
