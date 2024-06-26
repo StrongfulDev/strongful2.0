@@ -469,6 +469,14 @@ div.about-us {
 
 @media screen and (min-width: 990px) {
 
+	.yotpo-campaign-tile-freetextcampaign {
+		pointer-events: none !important;
+	}
+
+	.yotpo-message-tile-text, div.yotpo-action-tile .yotpo-tile-text {
+		color: white !important;
+	}
+
 	.vip-tier-data-toggle .icon-caret {
 		display: none;
 	}
