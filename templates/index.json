@@ -99,8 +99,8 @@
         "slide_qE7mg9": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_91d4c166-ca9c-41aa-b1cf-8bdd4d517efe.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_466a7c32-6f07-459e-86fa-5314a65b1267.jpg",
+            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_5cf80910-0f1c-4d98-8ed7-3026a270585a.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_1d4b7e08-9969-4025-b552-6fc823e93fc7.jpg",
             "button_label": "SHOP NOW",
             "link": "shopify:\/\/collections\/summersale",
             "show_text_box": true,
@@ -117,7 +117,6 @@
       "block_order": [
         "slide_qE7mg9"
       ],
-      "disabled": true,
       "settings": {
         "layout": "full_bleed",
         "slide_height": "adapt_image",
@@ -132,6 +131,7 @@
     },
     "video_simple_ifQmW7": {
       "type": "video-simple",
+      "disabled": true,
       "settings": {
         "video_url_mp4": "shopify:\/\/files\/videos\/מובייל.mp4",
         "desktop_video_url_mp4": "shopify:\/\/files\/videos\/דסק.mp4",
@@ -267,8 +267,8 @@
         "image_a4f9L6": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/3a643fe090944a084d316daab9ffed6e_c99a9269-6a0b-4593-ac8d-5a2d346db7e1.jpg",
-            "desktop_image": "shopify:\/\/shop_images\/copy_a90c9dc0-e5b3-409d-8073-07756cd53bea.jpg",
+            "image": "shopify:\/\/shop_images\/8581186dc5c55c7e5315d45d713a6e2a.jpg",
+            "desktop_image": "shopify:\/\/shop_images\/165dcbeef659f263775b98d43f6de649.jpg",
             "alt": "",
             "link": "",
             "url": "shopify:\/\/collections\/summersale",
