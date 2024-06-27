@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "name": "t:sections.header.name",
   "type": "header",
@@ -24,10 +33,10 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "The big summer sale",
-            "sub_text": "extra 20% off using code: summer20",
+            "main_text": "20% הנחה נוספים בשימוש הקוד:",
+            "sub_text": "summer20",
             "text_alignment": "center",
-            "main_text_direction": "ltr",
+            "main_text_direction": "rtl",
             "sub_text_direction": "rtl",
             "link": "shopify:\/\/collections\/summersale",
             "color_scheme": "accent-1"
