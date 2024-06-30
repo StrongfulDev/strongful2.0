@@ -143,7 +143,6 @@
 	margin-bottom: 0;
 	position: absolute;
 	top: 1em;
-	display: none;
 }
 
 .yotpo-widget-referral-widget .yotpo-left-align-background .yotpo-email-view,
@@ -300,7 +299,6 @@
 		right: 1em;
 		margin: 0;
 		height: 30px;
-		display: none;
 	}
 
 	.yotpo-screen-customer_email, .yotpo-screen-friends_emails {
