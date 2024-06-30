@@ -8,14 +8,16 @@
 {% comment %}{{ 'component-slider.css' | asset_url | stylesheet_tag }}{% endcomment %}
 {% comment %}{{ 'component-slideshow.css' | asset_url | stylesheet_tag }}{% endcomment %}
 
-{% assign isLiveTheme = 'false' %}
-{% if content_for_header contains "previewBarInjector.init();" %}
-    {% assign isLiveTheme = 'false' %}
-{% elsif content_for_header contains "Shopify.designMode" %}
-    {% assign isLiveTheme = 'false' %}
-{% else %}
-    {% assign isLiveTheme = 'true' %}
-{% endif %}
+{% liquid
+    assign isLiveTheme = 'false'
+    if content_for_header contains "previewBarInjector.init();"
+        assign isLiveTheme = 'false'
+    elsif content_for_header contains "Shopify.designMode"
+        assign isLiveTheme = 'false'
+    else
+        assign isLiveTheme = 'true'
+    endif
+%}
 
 <link
         rel="preload"
@@ -191,6 +193,12 @@
                                         assign lazy_load = true
                                     endif
 
+                                    if product.tags contains 'loyalty-only'
+                                        assign loggedIn = false
+                                        if customer
+                                            assign loggedIn = true
+                                        endif
+                                    endif
 
                                     assign card_announcement = ""
                                     if settings.show_card_collection_announcement
@@ -228,9 +236,10 @@
                                 {% endif %}
                                 {% if isLiveTheme == 'true' %}
                                     {% unless product.tags contains 'giftHide' or product.tags contains 'hidden' or product.tags contains 'free-slippers' %}
-                                        <li class="grid__item {{ isLiveTheme }} {% if product.available == false and product.tags contains 'outlet' %}hidden{% endif %}">
+                                        <li class="grid__item {{ isLiveTheme }} loyalty__slide {% if product.available == false and product.tags contains 'outlet' %}hidden{% endif %}">
                                             {% render 'card-product',
                                                     card_product: product,
+                                                    loggedIn: loggedIn,
                                                     media_aspect_ratio: section.settings.image_ratio,
                                                     show_secondary_image: section.settings.show_secondary_image,
                                                     show_vendor: section.settings.show_vendor,
@@ -258,9 +267,10 @@
                                     {% endunless %}
                                 {% else %}
                                     {% unless product.tags contains 'giftHide' %}
-                                        <li class="grid__item {{ isLiveTheme }}">
+                                        <li class="grid__item {{ isLiveTheme }} loyalty__slide">
                                             {% render 'card-product',
                                                     card_product: product,
+                                                    loggedIn: loggedIn,
                                                     media_aspect_ratio: section.settings.image_ratio,
                                                     show_secondary_image: section.settings.show_secondary_image,
                                                     show_vendor: section.settings.show_vendor,

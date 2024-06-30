@@ -46,26 +46,6 @@ ul.slider--tablet:after {
 	padding: 0;
 }
 
-.card-product-overlay+div .variant_modal__toggle_button {
-	display: none;
-}
-
-.card-product-overlay+div {
-	pointer-events: none;
-}
-
-div.card-product-overlay {
-	background-color: rgba(0, 0, 0, 0.5);
-	pointer-events: none;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	display: block;
-	z-index: 9;
-}
-
 .loyalty-collection__outlet .collection__title_heading {
 	display: block;
 	text-align: center;
@@ -78,18 +58,6 @@ div.card-product-overlay {
 
 .loyalty-collection__outlet .sub_title {
 	margin: 0;
-}
-
-.lock-and-text {
-	position: absolute;
-	bottom: 1rem;
-	text-align: center;
-	width: 100%;
-}
-
-.members-only {
-	color: var(--gradient-background);
-	font-size: calc(var(--font-body-size-small) * 1.2);
 }
 
 @media screen and (min-width: 990px) {
