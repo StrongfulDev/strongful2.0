@@ -207,9 +207,16 @@
 
                         {%- if block.settings.button_label != blank -%}
                             <div class="banner__buttons">
-                                <button class="button account-toggler-site-wide {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}">
-                                    {{ block.settings.button_label | escape }}
-                                </button>
+                                <a{% if block.settings.link %} href="{{ block.settings.link }}"{% endif %}
+                                        class="button
+                                        {% unless block.settings.link %}
+                                        account-toggler-site-wide
+                                        {% endunless %}
+                                        {% if block.settings.button_style_secondary %}
+                                        button--secondary
+                                        {% else %}
+                                        button--primary
+                                        {% endif %}">{{ block.settings.button_label | escape }}</a>
                             </div>
                         {%- endif -%}
                     </div>
