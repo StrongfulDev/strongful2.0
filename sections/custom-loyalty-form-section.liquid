@@ -4,14 +4,12 @@
     .section-{{ section.id }}-padding {
         padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
         padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-        background-image: url({{ section.settings.mobile_image | img_url: 'master' }});
     }
 
     @media screen and (min-width: 750px) {
         .section-{{ section.id }}-padding {
             padding-top: {{ section.settings.padding_top | times: 3 | round: 0 }}px;
             padding-bottom: {{ section.settings.padding_bottom | times: 3 | round: 0 }}px;
-            background-image: url({{ section.settings.desktop_image | img_url: 'master' }});
         }
     }
 {%- endstyle -%}

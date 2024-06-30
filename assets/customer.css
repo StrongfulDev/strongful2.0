@@ -71,6 +71,10 @@ a.no-decoration {
   margin-bottom: 4rem;
 }
 
+.loyalty-form-container {
+	background: rgba(0, 0, 0, 0.9);
+}
+
 .loyalty-form-container h2 {
 	color: var(--gradient-background);
 	margin: 0 0 5rem;
