@@ -65,7 +65,10 @@
 @media screen and (min-width: 750px) {
   .predictive-search {
     border-top: none;
-    width: calc(100% + 0.2rem);
+	  width: 100vw;
+	  left: 0;
+	  position: fixed;
+	  top: 130px;
   }
 
   .header predictive-search {
@@ -319,3 +322,27 @@ predictive-search[loading]
 		justify-content: space-between;
 	}
 }
+
+/* Searchandise app designs */
+
+.snize-ac-results.snize-new-design {
+	direction: rtl;
+	width: 100vw;
+	max-width: 100vw;
+	right: 0;
+	left: 0 !important;
+	position: fixed !important;
+}
+
+.snize-ac-results.snize-ac-results-mobile .snize-mobile-top-panel .snize-close-button {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.snize-ac-results.snize-ac-results-mobile .snize-mobile-top-panel form {
+	flex-direction: row-reverse;
+}
+
+/* Searchandise app designs end */
