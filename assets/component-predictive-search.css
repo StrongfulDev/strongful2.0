@@ -345,4 +345,8 @@ predictive-search[loading]
 	flex-direction: row-reverse;
 }
 
+.snize-ac-results-arrow {
+	transform: rotate(180deg);
+}
+
 /* Searchandise app designs end */
