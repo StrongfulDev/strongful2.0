@@ -14,8 +14,8 @@
       "settings": {
         "tile_image_one": "shopify:\/\/shop_images\/1_bb79b20f-fcac-499e-9c1c-b9a4fcf2d37e.jpg",
         "tile_image_one_link": "shopify:\/\/collections\/outlet",
-        "tile_image_two": "shopify:\/\/shop_images\/7ff08d51abffc0cfdf69f878b50b58d6_8f9d4ed5-c6e6-43ee-8bfc-350df7e02fed.jpg",
-        "tile_image_two_link": "shopify:\/\/collections\/summersale",
+        "tile_image_two": "shopify:\/\/shop_images\/0_c119e311-835e-4ba0-bc0d-671160742a9b.jpg",
+        "tile_image_two_link": "shopify:\/\/pages\/loyalty",
         "layout": "grid",
         "show_image": true,
         "image_height": "adapt",
