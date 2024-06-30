@@ -102,16 +102,18 @@
         "padding_bottom": 16
       }
     },
-    "slideshow_Bn9kRq": {
-      "type": "slideshow",
+    "customer_slideshow_iAkrLp": {
+      "type": "customer-slideshow",
       "blocks": {
-        "slide_qE7mg9": {
+        "slide_XUGLkP": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_5cf80910-0f1c-4d98-8ed7-3026a270585a.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_1d4b7e08-9969-4025-b552-6fc823e93fc7.jpg",
-            "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/summersale",
+            "image": "shopify:\/\/shop_images\/21f7ff3988a6d0c803fb8fc676395719_f409f668-d4c5-4dd7-a8b6-4f0b4bbbfb2a.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/7217fb8e77a6ca48df75b43f82e4a989_7efc8060-285a-48aa-b052-b7f6b01cfc02.jpg",
+            "button_label": "הרשמי \/ התחברי",
+            "login_button_label": "SHOP NOW",
+            "link": "",
+            "login_link": "",
             "show_text_box": true,
             "color_scheme": "background-1",
             "whole_slide_link": "",
@@ -124,7 +126,7 @@
         }
       },
       "block_order": [
-        "slide_qE7mg9"
+        "slide_XUGLkP"
       ],
       "settings": {
         "layout": "full_bleed",
@@ -560,7 +562,7 @@
   },
   "order": [
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9",
-    "slideshow_Bn9kRq",
+    "customer_slideshow_iAkrLp",
     "featured_collection_4JBk4Y",
     "featured_product_v2_FjnCqj",
     "customer_slideshow_wFcfK7",
