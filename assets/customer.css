@@ -1788,11 +1788,16 @@ h2.delete-account-title {
 	color: var(--gradient-background);
 }
 
+.loyalty-form-container .hdivider {
+	display: none;
+}
+
 @media screen and (min-width: 990px) {
 	.loyalty-form-container .customer form {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		column-gap: 3rem;
+		place-items: center;
 	}
 
 	.loyalty-form-container .customer form div:first-child {
