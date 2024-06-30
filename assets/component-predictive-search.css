@@ -339,9 +339,14 @@ predictive-search[loading]
 	font-weight: var(--font-body-weight-bold);
 }
 
-div.snize-thumbnail {
+.snize-ac-results.snize-ac-results-mobile div.snize-thumbnail {
 	margin-right: 0;
 	margin-left: 16px;
+	max-height: fit-content;
+}
+
+.snize-ac-results.snize-ac-results-mobile img.snize-item-image {
+	max-height: fit-content;
 }
 
 .snize-ac-results.snize-ac-results-mobile .snize-mobile-top-panel .snize-close-button {
