@@ -33,12 +33,12 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "20% הנחה נוספים",
-            "sub_text": "בשימוש בקוד: summer20",
+            "main_text": "STRONGFUL CLUB",
+            "sub_text": "הצטרפי עכשיו בחינם למועדון הלקוחות",
             "text_alignment": "center",
             "main_text_direction": "rtl",
             "sub_text_direction": "rtl",
-            "link": "shopify:\/\/collections\/summersale",
+            "link": "shopify:\/\/pages\/loyalty",
             "color_scheme": "accent-1"
           }
         },
