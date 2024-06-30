@@ -115,7 +115,7 @@
             "button_label": "הירשמי \/ התחברי",
             "login_button_label": "SHOP NOW",
             "link": "shopify:\/\/pages\/loyalty",
-            "login_link": "",
+            "login_link": "shopify:\/\/collections\/sets",
             "show_text_box": true,
             "color_scheme": "background-1",
             "whole_slide_link": "",
