@@ -334,6 +334,16 @@ predictive-search[loading]
 	position: fixed !important;
 }
 
+.snize-ac-results li.snize-label {
+	border-bottom: none;
+	font-weight: var(--font-body-weight-bold);
+}
+
+div.snize-thumbnail {
+	margin-right: 0;
+	margin-left: 16px;
+}
+
 .snize-ac-results.snize-ac-results-mobile .snize-mobile-top-panel .snize-close-button {
 	position: absolute;
 	left: 0;
@@ -347,6 +357,33 @@ predictive-search[loading]
 
 .snize-ac-results-arrow {
 	transform: rotate(180deg);
+}
+
+.snize-category.snize-view-all-categories.snize-ac-odd {
+	display: none !important;
+}
+
+.snize-ac-results.snize-ac-results-mobile .snize-ac-results-content ul.snize-ac-results-list {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	overflow-x: auto;
+	position: relative;
+}
+
+.snize-ac-results.snize-ac-results-mobile .snize-ac-results-content ul.snize-ac-results-list .snize-label {
+	grid-row: 1 / 2;
+	position: absolute;
+}
+
+.snize-ac-results.snize-ac-results-mobile .snize-ac-results-content ul.snize-ac-results-list .snize-category {
+	grid-row: 2 / 3;
+	margin-top: 6rem;
+	border: 1px solid var(--gradient-base-accent-1);
+	border-radius: 20px;
+}
+
+.snize-ac-results.snize-ac-results-mobile .snize-ac-results-content ul.snize-ac-results-list .snize-category:not(:nth-child(7)) {
+	margin-left: 1em;
 }
 
 /* Searchandise app designs end */
