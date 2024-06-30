@@ -114,7 +114,7 @@
             "login_mobile_image": "shopify:\/\/shop_images\/865a33fcfd9406425ebb872510750fd9_b4cf3949-c14c-49c4-8e85-40083a43a30f.jpg",
             "button_label": "הירשמי \/ התחברי",
             "login_button_label": "SHOP NOW",
-            "link": "",
+            "link": "shopify:\/\/pages\/loyalty",
             "login_link": "",
             "show_text_box": true,
             "color_scheme": "background-1",
