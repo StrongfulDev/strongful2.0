@@ -203,11 +203,6 @@ div.card-product-overlay {
 	font-size: calc(var(--font-body-size-small) * 1.2);
 }
 
-.card-product-overlay+div .variant_modal__toggle_button,
-.card-product-overlay+div div div .card__content {
-	display: none;
-}
-
-.card-product-overlay+div {
+.loyalty__slide--false, .loyalty__slide--false * {
 	pointer-events: none;
 }
