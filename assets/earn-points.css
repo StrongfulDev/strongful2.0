@@ -1,4 +1,10 @@
 
+@media (max-width: 750px) {
+	.yotpo-widget-campaign-widget .yotpo-completed-tile {
+		display: none !important;
+	}
+}
+
 .page .collapsible-content-wrapper-narrow {
 	max-width: 1200px;
 	margin-left: auto;
