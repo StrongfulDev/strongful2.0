@@ -269,7 +269,7 @@
 @media screen and (min-width: 990px) {
 
 	.yotpo-widget-campaign-widget .yotpo-campaign-switcher-wrapper {
-		pointer-events: none;
+		/*pointer-events: none;*/
 	}
 
 	.yotpo-widget-hero-section .yotpo-text-on-background {
