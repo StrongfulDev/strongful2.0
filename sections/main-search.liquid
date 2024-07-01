@@ -252,12 +252,21 @@ if content_for_header contains "previewBarInjector.init();"
               {% comment %}<div class="loading-overlay gradient"></div>{% endcomment %}
               <ul class="grid product-grid  grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop" role="list">
                 {%- for item in search.results -%}
-                  {% assign lazy_load = false %}
-                  {%- if forloop.index > 2 -%}
-                    {%- assign lazy_load = true -%}
-                  {%- endif -%}
+                    {% liquid
+                        if item.object_type == 'product' and item.tags contains 'loyalty-only'
+                            assign loggedIn = false
+                            if customer
+                                assign loggedIn = true
+                            endif
+                        endif
 
-                  <li class="grid__item">
+                        assign lazy_load = false
+                        if forloop.index > 2
+                            assign lazy_load = true
+                        endif
+                    %}
+
+                  <li class="grid__item loyalty__slide loyalty__slide--{{ loggedIn }}">
                     {%- case item.object_type -%}
                       {%- when 'product' -%}
                           {% if isLiveTheme == 'true' %}
@@ -286,7 +295,8 @@ if content_for_header contains "previewBarInjector.init();"
                                         comes_with_matching_outfit: settings.comes_with_matching_outfit,
                                         members_only_sale: settings.members_only_sale,
                                         members_only_sale_active: settings.members_only_sale_active,
-                                        members_banner_text: settings.members_only_announcement
+                                        members_banner_text: settings.members_only_announcement,
+                                        loggedIn: loggedIn
                                 %}
                                 {% endunless %}
                                 {% else %}
@@ -315,7 +325,8 @@ if content_for_header contains "previewBarInjector.init();"
                                         comes_with_matching_outfit: settings.comes_with_matching_outfit,
                                         members_only_sale: settings.members_only_sale,
                                         members_only_sale_active: settings.members_only_sale_active,
-                                        members_banner_text: settings.members_only_announcement
+                                        members_banner_text: settings.members_only_announcement,
+                                        loggedIn: loggedIn
                                 %}
                                 {% endunless %}
                             {% endif %}

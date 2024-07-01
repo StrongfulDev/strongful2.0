@@ -454,9 +454,19 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                                                 <ul class="list-unstyled"
                                                                     role="list">
                                                                     {%- for product in recommendations.products limit: block.settings.products_per_page offset: continue -%}
+
+                                                                        {% liquid
+                                                                            if product.tags contains 'loyalty-only'
+                                                                                assign loggedIn = false
+                                                                                if customer
+                                                                                    assign loggedIn = true
+                                                                                endif
+                                                                            endif
+                                                                        %}
+
                                                                         {% if isLiveTheme == 'true' %}
                                                                             {% unless product.tags contains 'giftHide' or product.tags contains 'hidden' or product.tags contains 'free-slippers' %}
-                                                                                <li>
+                                                                                <li class="loyalty__slide loyalty__slide--{{ loggedIn }}">
                                                                                     {% render 'card-product',
                                                                                             card_product: product,
                                                                                             media_aspect_ratio: block.settings.image_ratio,
@@ -474,13 +484,14 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                                                                             comes_with_matching_outfit: settings.comes_with_matching_outfit,
                                                                                             members_only_sale: settings.members_only_sale,
                                                                                             members_only_sale_active: settings.members_only_sale_active,
-                                                                                            members_banner_text: settings.members_only_announcement
+                                                                                            members_banner_text: settings.members_only_announcement,
+                                                                                            loggedIn: loggedIn
                                                                                     %}
                                                                                 </li>
                                                                             {% endunless %}
                                                                         {% else %}
                                                                             {% unless product.tags contains 'giftHide' %}
-                                                                                <li>
+                                                                                <li class="loyalty__slide loyalty__slide--{{ loggedIn }}">
                                                                                     {% render 'card-product',
                                                                                             card_product: product,
                                                                                             media_aspect_ratio: block.settings.image_ratio,
@@ -498,7 +509,8 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                                                                             comes_with_matching_outfit: settings.comes_with_matching_outfit,
                                                                                             members_only_sale: settings.members_only_sale,
                                                                                             members_only_sale_active: settings.members_only_sale_active,
-                                                                                            members_banner_text: settings.members_only_announcement
+                                                                                            members_banner_text: settings.members_only_announcement,
+                                                                                            loggedIn: loggedIn
                                                                                     %}
                                                                                 </li>
                                                                             {% endunless %}
