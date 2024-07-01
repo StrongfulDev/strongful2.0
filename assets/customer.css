@@ -1497,7 +1497,6 @@ h2.delete-account-title {
 	.contact-icons-container {
 		border-top: 0;
 		border-bottom: 0;
-		grid-template-columns: repeat(3, 1fr);
 	}
 
 	.container-menu-item.container-menu-item--logout {
