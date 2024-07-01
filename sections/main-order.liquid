@@ -56,7 +56,7 @@
           <div>
               <div class="main-account-info-container main-account-info-container--loyalty">
                   <h4 class="container-title bold">מועדון הלקוחות שלי</h4>
-                  <a href="/pages/a-list" class="container-menu-item">ALIST <span>{{ vipTier }}</span>
+                  <a href="/pages/loyalty" class="container-menu-item">ALIST <span>{{ vipTier }}</span>
                       {% render 'icon-caret' %}
                   </a>
                   <p class="container-extra-info">צבירת נקודות בכל קנייה</p>
@@ -71,9 +71,6 @@
                   </a>
                       <a href="{{ routes.account_addresses_url }}" class="container-menu-item container-menu-item--addresses">
                           {{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})
-                          {% render 'icon-caret' %}
-                      </a>
-                      <a href="/pages/a-list#refer" class="container-menu-item container-menu-item-refer">{{ 'customer.orders.refer' | t }}
                           {% render 'icon-caret' %}
                       </a>
 
