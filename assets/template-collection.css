@@ -206,3 +206,7 @@ div.card-product-overlay {
 .loyalty__slide--false, .loyalty__slide--false * {
 	pointer-events: none;
 }
+
+.loyalty__slide--false .variant_selector {
+	display: none;
+}
