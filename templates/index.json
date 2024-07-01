@@ -416,6 +416,7 @@
       "block_order": [
         "slide_kjjiJz"
       ],
+      "disabled": true,
       "settings": {
         "layout": "full_bleed",
         "slide_height": "adapt_image",
