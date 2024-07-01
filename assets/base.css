@@ -753,6 +753,10 @@ a:not([href]) {
     cursor: not-allowed;
 }
 
+a.button.account-toggler-site-wide {
+		cursor: pointer;
+}
+
 .circle-divider::after {
     content: '\2022';
     margin: 0 1.3rem 0 1.5rem;
