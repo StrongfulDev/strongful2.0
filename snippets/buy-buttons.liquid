@@ -80,7 +80,7 @@
             <span class="{% if product.tags contains member_tag and members_only == true and members_only_sale_active == true %}account-toggler-site-wide{% endif %} fix-direction">
               {%- if product.tags contains member_tag and members_only == true -%}
                   {% if members_only_sale_active == true %}
-                        {{ 'products.product.members_only' | t }} <span class="link">התחברי / הרשמי</span>
+                        {{ 'products.product.members_only' | t }} <span class="link account-toggler-site-wide">התחברי / הרשמי</span>
                     {% else %}
                         {{ block.settings.members_only_sale_over_text }}
                     {% endif %}
@@ -88,7 +88,7 @@
                   {{ 'products.product.sold_out' | t }}
                 {%- else -%}
                   {% if loggedIn == false %}
-                      {{ 'products.product.outlet_members_only' | t }} <span class="link">התחברי / הרשמי</span>
+                      {{ 'products.product.outlet_members_only' | t }} <span class="link account-toggler-site-wide">התחברי / הרשמי</span>
                     {% else %}
                         {{ 'products.product.add_to_cart' | t }}
                     {% endif %}
