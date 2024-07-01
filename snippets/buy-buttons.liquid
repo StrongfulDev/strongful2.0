@@ -10,6 +10,16 @@
   Usage:
   {% render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, show_pickup_availability: true %}
 {% endcomment %}
+
+{% liquid
+    if product.tags contains 'loyalty-only'
+        assign loggedIn = false
+        if customer
+            assign loggedIn = true
+        endif
+    endif
+%}
+
 <div {{ block.shopify_attributes }} class="product-buy-buttons">
     {%- if product != blank -%}
         <product-form class="product-form">
@@ -63,7 +73,7 @@
                             {% if product.tags contains member_tag and members_only == true %}
                                 disabled
                             {% endif %}
-                            {% if product.tags contains settings.second_announcement_tag %}
+                            {% if loggedIn == false %}
                                 disabled
                             {% endif %}
                     >
@@ -77,7 +87,11 @@
               {%- elsif product.selected_or_first_available_variant.available == false or quantity_rule_soldout or product.tags contains settings.second_announcement_tag -%}
                   {{ 'products.product.sold_out' | t }}
                 {%- else -%}
-                  {{ 'products.product.add_to_cart' | t }}
+                  {% if loggedIn == false %}
+                      {{ 'products.product.outlet_members_only' | t }} <span class="link">התחברי / הרשמי</span>
+                    {% else %}
+                        {{ 'products.product.add_to_cart' | t }}
+                    {% endif %}
               {%- endif -%}
             </span>
                         <div class="loading-overlay__spinner hidden">
