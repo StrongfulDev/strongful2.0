@@ -253,7 +253,7 @@
         "mobile_top_image_2": "shopify:\/\/shop_images\/8553a92a08d732ae191edec0b79fec65.jpg",
         "mobile_top_image_2_link": "shopify:\/\/pages\/loyalty",
         "mobile_top_image_2_title": "STRONGFUL CLUB",
-        "show_fourth_image": true,
+        "show_fourth_image": false,
         "mobile_top_image_3_link": "",
         "mobile_top_image_3_title": "",
         "show_fifth_image": true,
