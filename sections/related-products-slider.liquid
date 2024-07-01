@@ -98,10 +98,19 @@
                     aria-label="{{ 'general.slider.name' | t }}"
             >
                 {% for recommendation in recommendations.products %}
+                    {% liquid
+                        if recommendation.tags contains 'loyalty-only'
+                            assign loggedIn = false
+                            if customer
+                                assign loggedIn = true
+                            endif
+                        endif
+                    %}
                     <li
                             data-product="{{ recommendation.title }}"
                             id="Slide-{{ section.id }}-{{ forloop.index }}"
                             class="grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}
+                            loyalty__slide loyalty__slide--{{ loggedIn }}
                             {% if recommendation.tags contains 'giftHide' or recommendation.title == 'Gift Card' %} hidden{% endif %}"
                     >
                         {% render 'card-product',
@@ -126,7 +135,8 @@
                                 card_banner_text: settings.custom_collection_announcement,
                                 second_announcement_tag: settings.second_announcement_tag,
                                 custom_collection_second_announcement: settings.custom_collection_second_announcement,
-                                comes_with_matching_outfit: settings.comes_with_matching_outfit
+                                comes_with_matching_outfit: settings.comes_with_matching_outfit,
+                                loggedIn: loggedIn
                         %}
                     </li>
                 {%- endfor -%}
