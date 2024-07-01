@@ -305,6 +305,11 @@ button.slideshow__autoplay {
 		bottom: 15%;
 	}
 
+	.slideshow__slide--0 .slideshow__text.banner__box.logged-in-banner__box {
+		bottom: 25%;
+		left: 75%;
+	}
+
 	.slideshow__slide:first-of-type .slideshow__text-wrapper {
 		padding: 0;
 		width: 60vw;
