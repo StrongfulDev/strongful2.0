@@ -268,7 +268,7 @@
                     <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
                         <div class="slideshow__text banner__box logged-in-banner__box content-container content-container--full-width-mobile
                                 banner__box--{{ forloop.index }}
-                                color-{{ block.settings.color_scheme }}
+                                color-{{ block.settings.logged_in_color_scheme }}
                                 gradient slideshow__text--{{ block.settings.text_alignment }}
                                 slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}"
                         >
@@ -527,6 +527,35 @@
                     ],
                     "default": "background-1",
                     "label": "t:sections.all.colors.label",
+                    "info": "Color scheme of the button - usually use Inverse"
+                },
+                {
+                    "type": "select",
+                    "id": "logged_in_color_scheme",
+                    "options": [
+                        {
+                            "value": "accent-1",
+                            "label": "t:sections.all.colors.accent_1.label"
+                        },
+                        {
+                            "value": "accent-2",
+                            "label": "t:sections.all.colors.accent_2.label"
+                        },
+                        {
+                            "value": "background-1",
+                            "label": "t:sections.all.colors.background_1.label"
+                        },
+                        {
+                            "value": "background-2",
+                            "label": "t:sections.all.colors.background_2.label"
+                        },
+                        {
+                            "value": "inverse",
+                            "label": "t:sections.all.colors.inverse.label"
+                        }
+                    ],
+                    "default": "background-1",
+                    "label": "Logged in button color scheme",
                     "info": "Color scheme of the button - usually use Inverse"
                 },
                 {
