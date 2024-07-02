@@ -66,11 +66,10 @@
           "settings": {
             "blog_and_newsletter_subtitle": "",
             "alist_image": "shopify:\/\/shop_images\/dd7103cf71ef5f8420d4b4ce90fca1ef.jpg",
-            "blog_image": "shopify:\/\/shop_images\/72ea535abdfcdef0931a6ea1e1915440_bd0c8528-3be1-4eb0-a105-ef6a686f8167.jpg",
+            "blog_image": "shopify:\/\/shop_images\/StrongBlog.jpg",
             "alist_url": "shopify:\/\/pages\/loyalty",
-            "newsletter_url": "shopify:\/\/pages\/lets-move",
+            "newsletter_url": "",
             "blog_url": "shopify:\/\/blogs\/blog",
-            "newsletter_image": "shopify:\/\/shop_images\/copy_20_e9a25326-5a42-44b2-ac45-83138ced0a05.jpg",
             "alist_text": "מועדון לקוחות",
             "blog_text": "בלוג",
             "newsletter_text": "move",
