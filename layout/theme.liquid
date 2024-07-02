@@ -11,9 +11,14 @@ You can learn more about this (and learn how to cleanly revert these changes) at
           (function() {
               let currentUrl = window.location.pathname;
               let hePrefix = "/he";
+              console.log(currentUrl);
 
               if (currentUrl.startsWith(hePrefix)) { // if the url after the strongful.co.il starts with /he
                   let newUrl = currentUrl.replace(hePrefix, "");
+                  let fixedURL = window.location.origin + newUrl;
+                  window.location.replace(fixedURL);
+              } else if (currentUrl.startsWith('/pages/a-list')) {
+                  let newUrl = currentUrl.replace('/pages/a-list', '/pages/loyalty');
                   let fixedURL = window.location.origin + newUrl;
                   window.location.replace(fixedURL);
               }
