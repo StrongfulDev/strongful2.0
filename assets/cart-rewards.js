@@ -39,8 +39,9 @@ class CartRewards {
 				this.cart.total_price -= item.price * item.quantity;
 			}
 		});
+
 		this.cartTotalValue = this.cart.total_price / 100;
-		this.activeRewards = 0
+		this.activeRewards = 0;
 
 		this.rules.forEach((rule, index) => {
 
