@@ -4284,12 +4284,10 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 
 /* SMS Bump css provided by tal */
 
-
 .yotpo-smsbump-modal__content {
 	direction: rtl;
 	width: 550px;
 }
-
 
 .yotpo-smsbump-modal__content .popup-text-section {
 	padding: 0;
@@ -4312,7 +4310,6 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 	position: relative;
 	min-width: 480px;
 }
-
 
 .yotpo-smsbump-modal__content input#yotpo-smsbump-email-input__field, input#yotpo-.yotpo-smsbump-modal__content smsbump-phone-input__field {
 	text-align: right !important;
@@ -4395,7 +4392,6 @@ input#yotpo-smsbump-phone-input__field::placeholder {
 	.yotpo-smsbump-modal__content.yotpo-smsbump-modal__step-2 .yotpo-smsbump-subtitle p {
 		font-size: 40px;
 	}
-
 }
 
 /* SMS Bump css provided by Tal - End */
