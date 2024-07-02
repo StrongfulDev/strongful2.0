@@ -4258,14 +4258,6 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 	display: none !important;
 }
 
-.reward-items {
-	/*display: none;*/
-}
-
-.reward-item.free_bottle {
-	display: none;
-}
-
 .yotpo-review-votes-wrapper.top-margin {
 	display: none !important;
 }
