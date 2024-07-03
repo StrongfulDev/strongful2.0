@@ -1,0 +1,105 @@
+.loyalty-rewards-container {
+	display: grid;
+	grid-template-columns: auto repeat(4, 1fr);
+	text-align: center;
+	width: 100%;
+}
+
+.loyalty_eligibility {
+	font-size: calc(var(--font-body-size-medium) * 0.75);
+	direction: ltr;
+	padding: 1rem 0;
+}
+
+.vip-item.td {
+	height: 5rem;
+	border-top: 1px solid var(--gradient-base-background-3);
+	display: flex;
+	align-items: center;
+	font-size: calc(var(--font-body-size-medium) * .8);
+}
+
+.vip-item.loyalty_bonus_points_text.td {
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.small-loyalty-text {
+	padding-top: var(--grid-mobile-vertical-spacing);
+	font-size: calc(var(--font-body-size-medium) * .7);
+	color: var(--gradient-base-accent-3);
+	/*font-size: calc(var(--font-body-size-medium) * .9);*/
+}
+
+.vip-item.td:last-child {
+	border-bottom: 1px solid var(--gradient-base-background-3);
+}
+
+.tier-container:first-child .td {
+	max-width: 22vw;
+	text-align: right;
+}
+
+.tier-container {
+	position: relative;
+}
+
+.tier-container.active:after {
+	position: absolute;
+	border: 1px solid #000;
+	height: 110%;
+	width: 100%;
+	top: -5%;
+	content: '';
+	border-radius: 64px;
+	right: 0;
+}
+
+.tier-container:not(:first-child) .vip-item.td {
+	justify-content: center;
+}
+
+.round-black {
+	background: var(--gradient-base-accent-1);
+	border-radius: 50%;
+	height: calc(var(--grid-mobile-horizontal-spacing) * 1.5);
+	width: calc(var(--grid-mobile-horizontal-spacing) * 1.5);
+	display: flex;
+}
+
+@media screen and (min-width: 990px) {
+
+	.tier-container.active:after {
+		height: 120%;
+		width: 40%;
+		top: -11%;
+		right: 50%;
+		transform: translateX(50%);
+	}
+
+	.vip-item.td {
+		font-size: calc(var(--font-body-size-medium) * 1.2);
+		height: 7rem;
+	}
+
+	.loyalty_eligibility {
+		font-size: calc(var(--font-body-size-medium) * 1);
+	}
+
+	.vip-item.loyalty_name.tr {
+		font-size: calc(var(--font-body-size-medium) * 1.1);
+	}
+
+	/*.yotpo-widget-campaign-widget-container .flexified-wrapper {*/
+	/*	flex-wrap: nowrap;*/
+	/*	direction: rtl;*/
+	/*	overflow-x: auto;*/
+	/*	column-gap: 1em;*/
+	/*}*/
+
+	.yotpo-widget-campaign-widget .yotpo-container-headline {
+		text-align: right;
+		padding: 0 14px 14px;
+	}
+}

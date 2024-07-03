@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin language editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "general": {
     "breadcrumbs": {
@@ -119,6 +128,7 @@
       "add_to_cart": "הוספה לסל",
       "launch_date": "זמין לרכישה ב 15.8",
       "members_only": "מכירה מוקדמת לחברות מועדון בלבד",
+      "outlet_members_only": "מוצר אאוטלט רק לחברות מועדון",
       "choose_options": "הוספה מהירה",
       "up_size_recommendation": "במוצר זה מומלץ לקחת מידה יותר",
       "down_size_recommendation": "במוצר זה מומלץ לקחת מידה פחות",
@@ -396,6 +406,9 @@
     "language_label": "Language",
     "update_language": "Update language",
     "update_country": "Update country\/region"
+  },
+  "loyalty": {
+    "points_reset": "הנקודות יתאפסו במידה ולא תתבצע רכישה \nבמשך 6 חודשים רציפים"
   },
   "customer": {
     "account": {

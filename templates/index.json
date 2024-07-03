@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9": {
@@ -93,18 +102,23 @@
         "padding_bottom": 16
       }
     },
-    "slideshow_Bn9kRq": {
-      "type": "slideshow",
+    "customer_slideshow_iAkrLp": {
+      "type": "customer-slideshow",
       "blocks": {
-        "slide_qE7mg9": {
+        "slide_XUGLkP": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_5cf80910-0f1c-4d98-8ed7-3026a270585a.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_1d4b7e08-9969-4025-b552-6fc823e93fc7.jpg",
-            "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/summersale",
+            "image": "shopify:\/\/shop_images\/21f7ff3988a6d0c803fb8fc676395719_f409f668-d4c5-4dd7-a8b6-4f0b4bbbfb2a.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/74aa96ff8350ced1e8354467e0517aac.jpg",
+            "login_desktop_image": "shopify:\/\/shop_images\/dc2cc262b6d7d041a0a9a55d6b05de5b.jpg",
+            "login_mobile_image": "shopify:\/\/shop_images\/7a82aba44c95031144161ced63d20ed5.jpg",
+            "button_label": "הירשמי \/ התחברי",
+            "login_button_label": "SHOP NOW",
+            "link": "shopify:\/\/pages\/loyalty",
+            "login_link": "shopify:\/\/collections\/sets",
             "show_text_box": true,
             "color_scheme": "background-1",
+            "logged_in_color_scheme": "inverse",
             "whole_slide_link": "",
             "button_style_secondary": false,
             "box_align": "middle-center",
@@ -115,7 +129,7 @@
         }
       },
       "block_order": [
-        "slide_qE7mg9"
+        "slide_XUGLkP"
       ],
       "settings": {
         "layout": "full_bleed",
@@ -133,13 +147,13 @@
       "type": "featured-collection",
       "settings": {
         "steps": 4,
-        "title": "17% OFF",
+        "title": "SELLING FAST",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "summersale",
+        "collection": "sets",
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,
@@ -213,17 +227,18 @@
         "slide_KdxH44": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/jpg_3edd6456-e0f3-4c63-a0c6-30a51bfeee4e.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/jpg_d3c7c1b0-c7bb-436e-97fd-9839a11f39f4.jpg",
-            "login_desktop_image": "shopify:\/\/shop_images\/7e408f30e6e469320ee1736cfbd12e86.jpg",
-            "login_mobile_image": "shopify:\/\/shop_images\/jpg_82e2a474-73bd-4007-b212-2408ca3ffefb.jpg",
+            "image": "shopify:\/\/shop_images\/fccf2d9258f52f19baf79181902e158a.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/b916a25152ac2b27dc530853d5eb6c77.jpg",
+            "login_desktop_image": "shopify:\/\/shop_images\/fccf2d9258f52f19baf79181902e158a_e22d6bca-8310-4ad8-8e65-d7392e6af88e.jpg",
+            "login_mobile_image": "shopify:\/\/shop_images\/b916a25152ac2b27dc530853d5eb6c77_635ec1be-f6a2-48e3-b279-eeb2ccd3ed00.jpg",
             "button_label": "",
             "login_button_label": "",
             "link": "",
             "login_link": "",
             "show_text_box": true,
             "color_scheme": "background-1",
-            "whole_slide_link": "shopify:\/\/pages\/a-list",
+            "logged_in_color_scheme": "background-1",
+            "whole_slide_link": "shopify:\/\/pages\/loyalty",
             "button_style_secondary": false,
             "box_align": "middle-center",
             "text_alignment": "center",
@@ -253,10 +268,10 @@
         "image_a4f9L6": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/17_OFF.jpg",
+            "image": "shopify:\/\/shop_images\/4bcf7a6e6cdb48ac8cec1f38ee3c38f9.jpg",
             "alt": "",
-            "link": "17% OFF",
-            "url": "shopify:\/\/collections\/summersale"
+            "link": "NEW IN",
+            "url": "shopify:\/\/collections\/new-in"
           }
         },
         "image_JnihJ6": {
@@ -403,6 +418,7 @@
       "block_order": [
         "slide_kjjiJz"
       ],
+      "disabled": true,
       "settings": {
         "layout": "full_bleed",
         "slide_height": "adapt_image",
@@ -551,7 +567,7 @@
   },
   "order": [
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9",
-    "slideshow_Bn9kRq",
+    "customer_slideshow_iAkrLp",
     "featured_collection_4JBk4Y",
     "featured_product_v2_FjnCqj",
     "customer_slideshow_wFcfK7",

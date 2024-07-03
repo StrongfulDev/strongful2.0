@@ -173,3 +173,45 @@ ul.featured-product-grid li.grid__item {
 		color: var(--gradient-base-background-4);
 	}
 }
+
+div.card-product-overlay {
+	background-color: rgba(0, 0, 0, 0.5);
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	z-index: 2;
+}
+
+.loyalty__slide {
+	position: relative;
+	padding: 0;
+}
+
+.lock-and-text {
+	position: absolute;
+	bottom: 1rem;
+	text-align: center;
+	width: 100%;
+}
+
+.members-only {
+	color: var(--gradient-background);
+	font-size: calc(var(--font-body-size-small) * 1.2);
+}
+
+.loyalty__slide--false, .loyalty__slide--false * {
+	pointer-events: none;
+}
+
+.loyalty__slide--false div.card-product-overlay {
+	pointer-events: auto;
+	cursor: pointer;
+}
+
+.loyalty__slide--false .variant_modal__toggle_button, .loyalty__slide--false .active-card:hover .quick-add.hover {
+	display: none;
+}

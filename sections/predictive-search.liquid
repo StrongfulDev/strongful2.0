@@ -90,9 +90,17 @@
               </h2>
               <ul id="predictive-search-results-products-list" class="predictive-search__results-list list-unstyled" role="group" aria-labelledby="predictive-search-products">
                 {%- for product in predictive_search.resources.products limit:2 -%}
+                    {% liquid
+                        if product.tags contains 'loyalty-only'
+                            assign loggedIn = false
+                            if customer
+                                assign loggedIn = true
+                            endif
+                        endif
+                    %}
                     {% if isLiveTheme == 'true' %}
                         {% unless product.tags contains 'giftHide' or product.tags contains 'hidden' or product.tags contains 'free-slippers' %}
-                            <li id="predictive-search-option-product-{{ forloop.index }}" class="predictive-search__list-item" role="option" aria-selected="false">
+                            <li id="predictive-search-option-product-{{ forloop.index }}" class="predictive-search__list-item loyalty__slide loyalty__slide--{{ loggedIn }}" role="option" aria-selected="false">
                                 {% render 'card-product',
                                         card_product: product,
                                         media_aspect_ratio: settings.image_ratio,
@@ -114,13 +122,14 @@
                                         members_only_sale: settings.members_only_sale,
                                         members_only_sale_active: settings.members_only_sale_active,
                                         comes_with_matching_outfit: settings.comes_with_matching_outfit,
-                                        members_banner_text: settings.members_only_announcement
+                                        members_banner_text: settings.members_only_announcement,
+                                        loggedIn: loggedIn
                                 %}
                             </li>
                         {% endunless %}
                     {% else %}
                         {% unless product.tags contains 'giftHide' %}
-                            <li id="predictive-search-option-product-{{ forloop.index }}" class="predictive-search__list-item" role="option" aria-selected="false">
+                            <li id="predictive-search-option-product-{{ forloop.index }}" class="predictive-search__list-item loyalty__slide loyalty__slide--{{ loggedIn }}" role="option" aria-selected="false">
                                 {% render 'card-product',
                                         card_product: product,
                                         media_aspect_ratio: settings.image_ratio,
@@ -142,7 +151,8 @@
                                         members_only_sale: settings.members_only_sale,
                                         members_only_sale_active: settings.members_only_sale_active,
                                         members_banner_text: settings.members_only_announcement,
-                                        comes_with_matching_outfit: settings.comes_with_matching_outfit
+                                        comes_with_matching_outfit: settings.comes_with_matching_outfit,
+                                        loggedIn: loggedIn
                                 %}
                             </li>
                         {% endunless %}

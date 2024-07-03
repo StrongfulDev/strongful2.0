@@ -119,14 +119,6 @@ div.about-us {
 	font-family: 'Arimo', sans-serif !important;
 }
 
-.flexified-wrapper.flexified-mobile {
-	display: grid !important;
-	flex-wrap: nowrap !important;
-	place-items: center;
-	grid-gap: 30px;
-	grid-template-columns: 1fr 1fr;
-}
-
 .yotpo-overlay-tile.yotpo-is-mobile {
 	height: 100% !important;
 	width: 100% !important;
@@ -134,10 +126,6 @@ div.about-us {
 	top: 0 !important;
 	left: 0 !important;
 	position: absolute !important;
-}
-
-.flexified-wrapper.flexified-mobile .flexified-child {
-	width: 100% !important;
 }
 
 .new-dynamics {
@@ -206,9 +194,12 @@ div.about-us {
 	color: darkblue;
 }
 
+.vip-tiers-main-title {
+	text-decoration: underline;
+}
+
 .our-vip-tiers {
 	direction: rtl;
-	padding: 3em 2em;
 }
 
 .vip-tiers-pumpup-title {
@@ -437,7 +428,59 @@ div.about-us {
 	padding: 4rem 2rem 1rem;
 }
 
+.vip-tier-data-toggle {
+	padding: 1rem;
+	background: var(--gradient-base-background-3);
+	text-decoration: underline;
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	margin-bottom: 1rem;
+}
+
+.vip-tier-data-toggle h6 {
+	margin: 0;
+}
+
+.vip-tier-big-title {
+	margin-top: 0;
+	margin-bottom: 1rem;
+	font-size: calc(var(--font-body-size-large) * 1.5);
+}
+
+.vip-tier-data {
+	display: none;
+	text-align: center;
+	background: var(--gradient-base-background-3);
+	padding-bottom: 1rem;
+	margin-bottom: 1rem;
+	margin-top: -1rem;
+}
+
+.vip-tier-data ul {
+	padding: 0;
+	text-align: right;
+	width: 69%;
+	margin-right: 30%;
+}
+
+.vip-tier-data-toggle .icon-caret.rotated {
+	transform: rotate(180deg);
+}
+
 @media screen and (min-width: 990px) {
+
+	.yotpo-campaign-tile-freetextcampaign {
+		pointer-events: none !important;
+	}
+
+	.yotpo-message-tile-text, div.yotpo-action-tile .yotpo-tile-text {
+		color: white !important;
+	}
+
+	.vip-tier-data-toggle .icon-caret {
+		display: none;
+	}
 
 	.covid__notice {
 		padding: 8.6rem 50rem 6.5rem;
@@ -507,8 +550,24 @@ div.about-us {
 		width: auto;
 	}
 
+	.vip-tiers-main-title {
+		text-align: center;
+	}
+
 	.our-vip-tiers {
-		padding: 4em 15%;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		padding: 2rem 11rem 0;
+	}
+
+	.vip-tier-data {
+		display: block;
+		background: revert;
+		margin-top: 0;
+	}
+
+	.vip-tier-data-toggle {
+		display: none;
 	}
 
 	.vip-benefits-list-th, .vip-benefits-list-th.active {
@@ -604,14 +663,6 @@ div.about-us {
 		display: block;
 	}
 
-	.loyalty-form-container {
-		display: grid;
-		grid-template-columns: 1fr 1.4fr;
-		column-gap: 5em;
-		margin: 5em auto;
-		width: 81%;
-	}
-
 	.help__blogs__ul {
 		display: grid;
 		width: 100%;
@@ -624,6 +675,20 @@ div.about-us {
 		flex-direction: column;
 		padding: 0;
 		row-gap: calc(var(--grid-desktop-horizontal-spacing) * 2);
+	}
+
+	.vip-tier-new:not(:last-child) {
+		border-left: 1px solid var(--gradient-base-background-4);
+	}
+
+	.vip-tier-data ul {
+		width: 100%;
+		margin-right: 0;
+		padding-right: 4rem;
+	}
+
+	.vip-tier-data ul li {
+		font-weight: var(--font-body-weight-light);
 	}
 }
 

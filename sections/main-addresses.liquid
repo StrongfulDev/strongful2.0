@@ -42,7 +42,7 @@
                             <h2 class="container-title bold">{{ 'customer.account.loyalty.sub_title' | t }}</h2>
                             <h4>{{ 'customer.account.loyalty.title' | t }}</h4>
                         </div>
-                        <a href="/pages/a-list" class="container-menu-item pointer">ALIST <span>{{ vipTier }}</span>
+                        <a href="/pages/loyalty" class="container-menu-item pointer">ALIST <span>{{ vipTier }}</span>
                             {% render 'icon-caret' %}
                         </a>
                         <p class="container-extra-info">{{ 'customer.account.loyalty.earn_points' | t }}</p>
@@ -57,9 +57,6 @@
                   </span>
                             <a href="{{ routes.account_addresses_url }}" class="container-menu-item container-menu-item--addresses pointer bold">
                                 {{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})
-                                {% render 'icon-caret' %}
-                            </a>
-                            <a href="/pages/a-list#refer" class="container-menu-item container-menu-item-refer pointer">{{ 'customer.orders.refer' | t }}
                                 {% render 'icon-caret' %}
                             </a>
 
@@ -183,12 +180,6 @@
                                         {% render 'icon-email' %}
                                     </a>
                                     <p class="contact-text">{{ 'customer.account.contact.email' | t }}</p>
-                                </div>
-                                <div class="contact-icon-child">
-                                    <a href="tel:{{ shop.phone }}">
-                                        {% render 'icon-phone' %}
-                                    </a>
-                                    <p class="contact-text">{{ 'customer.account.contact.phone' | t }}</p>
                                 </div>
                             </div>
                         </div>

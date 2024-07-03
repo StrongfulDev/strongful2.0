@@ -90,7 +90,7 @@
 }
 
 .collapsible-row-layout .accordion .accordion__content {
-  padding-top: 0;
+  /*padding-top: 0;*/
 }
 
 .collapsible-content summary:hover {

@@ -71,6 +71,48 @@ a.no-decoration {
   margin-bottom: 4rem;
 }
 
+.loyalty-form-container {
+	background: rgba(0, 0, 0, 0.9);
+}
+
+.loyalty-form-container h2 {
+	color: var(--gradient-background);
+	margin: 0 0 5rem;
+	font-size: calc(var(--font-heading-scale) * 2.2rem);
+	font-weight: var(--font-body-weight-bold);
+}
+
+.loyalty-form-container .accept-marketing-notice {
+	color: var(--gradient-background);
+}
+
+.loyalty-form-container .customer a.inline {
+	color: var(--gradient-background);
+}
+
+.loyalty-form-container .customer form {
+	margin-top: 0;
+}
+
+.loyalty-form-container .customer .field input {
+	background: transparent;
+	padding: 0;
+	color: var(--gradient-background);
+	border-bottom: 1px solid var(--gradient-background);
+	border-radius: 0;
+	height: auto;
+}
+
+.loyalty-form-container .customer .field:before, .loyalty-form-container .customer .field:after {
+	display: none;
+	content: none;
+}
+
+.loyalty-form-container .customer .field label {
+	top: 0;
+	color: var(--gradient-background);
+}
+
 .customer button {
   margin: 2rem 0 1.5rem;
 	padding: 1.8rem;
@@ -1455,7 +1497,6 @@ h2.delete-account-title {
 	.contact-icons-container {
 		border-top: 0;
 		border-bottom: 0;
-		grid-template-columns: repeat(3, 1fr);
 	}
 
 	.container-menu-item.container-menu-item--logout {
@@ -1740,3 +1781,53 @@ h2.delete-account-title {
 }
 
 /* End Addresses */
+
+.loyalty-form-container .button-loader-activator {
+	background: var(--gradient-background);
+	color: var(--gradient-base-accent-1);
+}
+
+.hdivider {
+	color: var(--gradient-background);
+}
+
+.loyalty-form-container .hdivider {
+	display: none;
+}
+
+@media screen and (min-width: 990px) {
+	.loyalty-form-container .customer form {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 3rem;
+		place-items: center;
+	}
+
+	.loyalty-form-container .customer form div:first-child {
+		grid-column: 2 / -1;
+	}
+
+	.loyalty-form-container .customer form div:last-child {
+		grid-column: 1 / 2;
+		grid-row: 1;
+	}
+
+	.loyalty-form-container .customer:not(.account):not(.order):not(.addresses) {
+		max-width: 70rem;
+	}
+
+	.loyalty-form-container .button-loader-activator,
+	.loyalty-form-container #accepts_marketing_checkbox,
+	.loyalty-form-container div:last-child {
+		/*grid-column: 1 / -1;*/
+	}
+
+	.loyalty-form-container .button-loader-activator {
+		margin: 4rem 0 3rem;
+	}
+
+	.loyalty-form-container .customer .field:first-of-type {
+		margin-top: 4rem;
+		height: fit-content;
+	}
+}

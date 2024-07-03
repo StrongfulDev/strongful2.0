@@ -127,12 +127,23 @@
                     aria-label="{{ 'general.slider.name' | t }}"
             >
                 {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
+
+                    {% liquid
+                        if product.tags contains 'loyalty-only'
+                            assign loggedIn = false
+                            if customer
+                                assign loggedIn = true
+                            endif
+                        endif
+                    %}
+
                     {% unless product.tags contains 'giftHide' %}
                         {% if isLiveTheme == 'true' %}
                             {% unless product.tags contains 'hidden' %}
                                 <li
                                     id="Slide-{{ section.id }}-{{ forloop.index }}"
-                                    class="grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}">
+                                    class="grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}
+                                            loyalty__slide loyalty__slide--{{ loggedIn }}">
                                 {% render 'card-product',
                                         card_product: product,
                                         card_banner_text: settings.custom_collection_announcement,
@@ -154,14 +165,16 @@
                                         members_only_sale: settings.members_only_sale,
                                         members_only_sale_active: settings.members_only_sale_active,
                                         members_banner_text: settings.members_only_announcement,
-                                        comes_with_matching_outfit: settings.comes_with_matching_outfit
+                                        comes_with_matching_outfit: settings.comes_with_matching_outfit,
+                                        loggedIn: loggedIn
                                 %}
                                 </li>
                               {% endunless %}
                         {% else %}
                             <li
                                     id="Slide-{{ section.id }}-{{ forloop.index }}"
-                                    class="grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}">
+                                    class="grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}
+                                    loyalty__slide loyalty__slide--{{ loggedIn }}">
                                 {% render 'card-product',
                                         card_product: product,
                                         card_banner_text: settings.custom_collection_announcement,
@@ -183,7 +196,8 @@
                                         members_only_sale: settings.members_only_sale,
                                         members_only_sale_active: settings.members_only_sale_active,
                                         members_banner_text: settings.members_only_announcement,
-                                        comes_with_matching_outfit: settings.comes_with_matching_outfit
+                                        comes_with_matching_outfit: settings.comes_with_matching_outfit,
+                                        loggedIn: loggedIn
                                 %}
                             </li>
                         {% endif %}

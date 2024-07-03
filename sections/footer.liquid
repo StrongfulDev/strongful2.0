@@ -238,27 +238,33 @@
                                                   class="blog_and_newsletter_image"
                                                 />
                                               </a>
-                                                <a href="{{ block.settings.newsletter_url }}" class="blog-link">
-                                                  <img
-                                                                srcset="{{ block.settings.newsletter_image | image_url: width: block.settings.image_width }}, {{ block.settings.newsletter_image | image_url: width: block.settings.image_width }} 2x"
-                                                                src="{{ block.settings.newsletter_image | image_url: width: 760 }}"
-                                                                alt="{{ block.settings.newsletter_text | escape }}"
-                                                                loading="lazy" width="{{ block.settings.image_width }}" height="{{ block.settings.image_height }}"
-                                                                class="blog_and_newsletter_image newsletter-image"
-                                                        >
-                                                </a>
-                                              <a href="{{ block.settings.blog_url }}" class="blog-link desktop--only">
+                                                {% if block.settings.newsletter_url != blank %}
+                                                    <a href="{{ block.settings.newsletter_url }}" class="blog-link">
+                                                        {% if block.settings.newsletter_image != blank %}
+                                                          <img
+                                                                        srcset="{{ block.settings.newsletter_image | image_url: width: block.settings.image_width }}, {{ block.settings.newsletter_image | image_url: width: block.settings.image_width }} 2x"
+                                                                        src="{{ block.settings.newsletter_image | image_url: width: 760 }}"
+                                                                        alt="{{ block.settings.newsletter_text | escape }}"
+                                                                        loading="lazy" width="{{ block.settings.image_width }}" height="{{ block.settings.image_height }}"
+                                                                        class="blog_and_newsletter_image newsletter-image"
+                                                                >
+                                                        {% endif %}
+                                                    </a>
+                                                {% endif %}
+                                              <a href="{{ block.settings.blog_url }}" class="blog-link">
                                                 <img
                                                   srcset="{{ block.settings.blog_image | image_url: width: block.settings.image_width }}, {{ block.settings.blog_image | image_url: width: block.settings.image_width }} 2x"
                                                   src="{{ block.settings.blog_image | image_url: width: 760 }}"
                                                   alt="{{ block.settings.blog_text | escape }}"
                                                   loading="lazy" width="{{ block.settings.image_width }}" height="{{ block.settings.image_height }}"
-                                                  class="blog_and_newsletter_image desktop--only"
+                                                  class="blog_and_newsletter_image"
                                                 />
                                               </a>
                                               <p class="blog_and_newsletter_text alist_text">{{ block.settings.alist_text }}</p>
-                                              <p class="blog_and_newsletter_text newsletter_text">{{ block.settings.newsletter_text }}</p>
-                                              <p class="blog_and_newsletter_text blog_text desktop--only">{{ block.settings.blog_text }}</p>
+                                                {% if block.settings.newsletter_text != blank %}
+                                                    <p class="blog_and_newsletter_text newsletter_text">{{ block.settings.newsletter_text }}</p>
+                                                {% endif %}
+                                              <p class="blog_and_newsletter_text blog_text">{{ block.settings.blog_text }}</p>
                                             </div>
                                           </div>
                                     {%- when 'policies_link_list' -%}

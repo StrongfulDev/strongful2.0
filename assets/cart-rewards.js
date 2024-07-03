@@ -39,30 +39,15 @@ class CartRewards {
 				this.cart.total_price -= item.price * item.quantity;
 			}
 		});
+
 		this.cartTotalValue = this.cart.total_price / 100;
-		console.log(this.cartTotalValue);
-		this.activeRewards = 0
+		this.activeRewards = 0;
 
 		this.rules.forEach((rule, index) => {
 
 			const isConditionMet = this.checkCondition(rule);
 			const isRewardInCart = this.cartHasReward(rule);
 			const rewardItem = this.getRewardItemByRule(rule);
-
-			if (rule.condition.type === 'CustomerTags') {
-				const ruleVariantId = parseInt(rule.reward.variantId);
-				const loyaltyText = rule.reward.loyaltyText;
-				const frontCartItems = document.querySelectorAll('.cart-item');
-				frontCartItems.forEach((item) => {
-					const itemId = parseInt(item.dataset.id);
-					const loyaltyDiscount = $(item).find('.loyalty-reward-discount-text');
-
-					if (itemId === ruleVariantId) {
-						$(loyaltyDiscount).removeClass('hidden');
-						$(loyaltyDiscount).html(loyaltyText);
-					}
-				});
-			}
 
 			// If the state changed
 			if (isRewardInCart !== isConditionMet) {
@@ -101,9 +86,7 @@ class CartRewards {
 
 		for (const item of this.cart.items) {
 			// Here we assume that a product with price 0 is a free product.
-			if (item.price === 0 && !giftProductIds.includes(item.id.toString()) && item.id !== 42413007896716) {
-				await this.removeProduct(item.id);
-			} else if (item.id === 42413007896716 && this.cartTotalValue < 600) {
+			if (item.price === 0 && !giftProductIds.includes(item.id.toString())) {
 				await this.removeProduct(item.id);
 			}
 		}
@@ -134,13 +117,6 @@ class CartRewards {
 
 		if (rule.condition.type === "CartAmount") {
 			isConditionMet = (isRightQuantity || isRightQuantity === null) && (isAmountGreaterThan || isAmountLessThan);
-		} else if (rule.condition.type === "CustomerTags") {
-			if (customerTags.includes(rule.customer_tags) && this.cartTotalValue > rule.condition.value) {
-				isConditionMet = (isRightQuantity || isRightQuantity === null) && (isAmountGreaterThan || isAmountLessThan);
-				// isConditionMet = false;
-			} else {
-				isConditionMet = false;
-			}
 		}
 
 		return isConditionMet;
@@ -161,6 +137,8 @@ class CartRewards {
 	}
 
 	async handleGiftReward(rule, isConditionMet) {
+		const oldCardTotalValue = this.lastCartTotalValue;
+		console.log("oldCardTotalValue", oldCardTotalValue)
 		const productIds = this.getProductIdsFromRule(rule)
 		const isJustOne = rule.reward.product_method === "Just one that's available";
 
@@ -173,7 +151,7 @@ class CartRewards {
 				continue;
 			}
 
-			if (!productInCart && isConditionMet && rule.reward.giftMethod === 'automatic') {
+			if (!productInCart && isConditionMet && rule.reward.giftMethod === 'automatic' && this.cartTotalValue > oldCardTotalValue) {
 				const res = await this.addProduct(productId)
 				if (isJustOne && res?.items?.length > 0) {
 					return;

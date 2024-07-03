@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "745dda66-63ce-4705-8d8d-eff54d17367f": {
@@ -34,8 +43,8 @@
       ],
       "settings": {
         "override_image_from_metafield": true,
-        "image": "shopify:\/\/shop_images\/a69c6a81427c80862b80cf76175bd315_0fffd026-17b8-4692-9190-0c88dfbc1ede.jpg",
-        "mobile_image": "shopify:\/\/shop_images\/91e3d41e83d2cacce11e5279cf256f0c_7953764d-111f-459b-87b1-c59cf2d17879.jpg",
+        "image": "shopify:\/\/shop_images\/0_2e100ebe-36e6-4c64-a2d2-8f4c6f01d279.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/0_9065e331-9d7a-45df-b140-3b3c089620c2.jpg",
         "image_overlay_opacity": 0,
         "image_height": "auto",
         "desktop_content_position": "middle-center",
@@ -52,8 +61,7 @@
       "settings": {
         "tops_menu": "dropdown-tops",
         "bottoms_menu": "bottoms-filter-links",
-        "ad_image": "shopify:\/\/shop_images\/0_1_6b645c48-250e-44a5-aa52-2c6c0b476371.jpg",
-        "ad_link": "shopify:\/\/pages\/lets-move",
+        "ad_link": "",
         "products_per_page": 20,
         "columns_desktop": 4,
         "image_ratio": "adapt",

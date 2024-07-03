@@ -925,7 +925,7 @@ noscript .localization-selector.link {
     }
 
     .blog_and_newsletter-ctn {
-        width: 74%;
+        width: 50%;
         margin-right: auto;
     }
 
@@ -953,7 +953,6 @@ noscript .localization-selector.link {
     }
 
     .blog_and_newsletter-grid {
-        grid-template-columns: repeat(3, 1fr);
 	    column-gap: calc(var(--grid-desktop-vertical-spacing) * 1.5);
     }
 
@@ -1030,6 +1029,11 @@ noscript .localization-selector.link {
 
 	.footer-blockgrid__item.brand_information {
 		padding: 2rem 0;
+	}
+
+	.footer__content-top.page-width {
+		max-width: var(--page-width);
+		padding: 0 5rem;
 	}
 
 }

@@ -1,4 +1,19 @@
 window.addEventListener('DOMContentLoaded', (event) => {
+
+	if ($(window).width() < 950) {
+		const mobileVIPTierTogglers = document.querySelectorAll('.vip-tier-data-toggle');
+		mobileVIPTierTogglers.forEach((toggler) => {
+			let tierData = toggler.nextElementSibling;
+			let icon = toggler.querySelector('.icon');
+			toggler.addEventListener('click', (e) => {
+				$(icon).toggleClass('rotated');
+				$(tierData).toggle();
+				$('.vip-tier-data').not(tierData).hide();
+				$('.icon-caret').not(icon).removeClass('rotated');
+			});
+		});
+	}
+
 	let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
 
 	$("#create_customer button").click((clickEvent) => {

@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -30,8 +39,8 @@
       "settings": {
         "tile_image_one": "shopify:\/\/shop_images\/1_4ffa17cc-f87a-4c26-b8e8-1c30f6060ccd.jpg",
         "tile_image_one_link": "shopify:\/\/collections\/outlet",
-        "tile_image_two": "shopify:\/\/shop_images\/7ff08d51abffc0cfdf69f878b50b58d6_eee5b86e-43f6-4ac4-8808-0bd69e465df8.jpg",
-        "tile_image_two_link": "shopify:\/\/collections\/summersale"
+        "tile_image_two": "shopify:\/\/shop_images\/0_c119e311-835e-4ba0-bc0d-671160742a9b.jpg",
+        "tile_image_two_link": "shopify:\/\/pages\/loyalty"
       }
     },
     "featured_collection_efYKQY": {
