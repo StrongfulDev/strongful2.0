@@ -4400,6 +4400,8 @@ input#yotpo-smsbump-phone-input__field::placeholder {
  .yotpo-smsbump-modal__content form {
     display: flex;
     flex-wrap: wrap;
+    column-gap: 10px;
+    justify-content: center;
 }
 
   .yotpo-smsbump-modal__content .form-zone-element {
@@ -4410,12 +4412,6 @@ input#yotpo-smsbump-phone-input__field::placeholder {
 }
 
 
-  form.sc-1absc7o-2.kcotZO {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 10px;
-    justify-content: center;
-}
   
 }
 
