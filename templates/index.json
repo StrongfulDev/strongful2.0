@@ -1,12 +1,3 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9": {
@@ -108,10 +99,10 @@
         "slide_YnXTNV": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/cbe64d3fcb72b48c2a2a2445b73c7ac8_6c3b02ee-11c3-4b28-ab29-5fcb69b8cd75.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/3349a4dee385d004d26a9a2c0ab2c8b8_c5196190-d528-41e4-a10b-38ad9a47e735.jpg",
+            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_c84e7501-7119-438f-94d5-fe92d1864fd1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_3475266e-e27d-4a88-b860-78696a62d04e.jpg",
             "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/sets",
+            "link": "shopify:\/\/collections\/shell",
             "show_text_box": true,
             "color_scheme": "background-1",
             "whole_slide_link": "",
@@ -142,13 +133,13 @@
       "type": "featured-collection",
       "settings": {
         "steps": 4,
-        "title": "SELLING FAST",
+        "title": "RESTOCK",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "sets",
+        "collection": "shell",
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,

@@ -1,12 +1,3 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "name": "t:sections.header.name",
   "type": "header",
@@ -78,9 +69,9 @@
             "link_text_direction": "Left To Right",
             "show_on_mobile": true,
             "small_font": false,
-            "title": "ALWAYS ON",
-            "title_link": "shopify:\/\/collections\/sets",
-            "menu_link_image": "shopify:\/\/shop_images\/bd9a4cbcb5a8c5865a0499b4fa42b489_46b33f2e-0993-4385-a493-7dba95b51a3d.jpg"
+            "title": "RESTOCK",
+            "title_link": "shopify:\/\/collections\/shell",
+            "menu_link_image": "shopify:\/\/shop_images\/1_056138c3-864a-48fb-aabd-819e2d3fb413.jpg"
           }
         },
         "ba94928e-5cd1-47f5-9c0a-28ea47285f01": {
@@ -90,14 +81,14 @@
             "show_on_mobile": true,
             "order": "",
             "small_font": false,
-            "menu": "trending",
+            "menu": "trending-without-10",
             "menu_second": "",
             "menu_third": "",
             "title": "קני לפי",
             "item_class": "",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/bd9a4cbcb5a8c5865a0499b4fa42b489_e9e158cf-ea20-4c8b-a350-5a5531d3697f.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/sets",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/1_2ebd405d-850a-49b8-bf13-dcb5c84aaaf2.jpg",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/shell",
             "desktop_links_image_2_link": "",
             "mobile_title": "קני לפי",
             "main_link": "",
@@ -121,8 +112,8 @@
             "title_link": "",
             "desktop_links_image_1": "shopify:\/\/shop_images\/7ff08d51abffc0cfdf69f878b50b58d6_edcddd9f-c7bd-4b38-ac8c-34db14d57ded.jpg",
             "desktop_links_image_1_link": "shopify:\/\/collections\/best-seller-internal-use",
-            "desktop_links_image_2": "shopify:\/\/shop_images\/7ff08d51abffc0cfdf69f878b50b58d6_feef2dd0-48c5-4c1d-ab09-15bd0ea94667.jpg",
-            "desktop_links_image_2_link": "shopify:\/\/collections\/sets",
+            "desktop_links_image_2": "shopify:\/\/shop_images\/1_4110d980-117c-41d0-b954-5b74bce8f435.jpg",
+            "desktop_links_image_2_link": "shopify:\/\/collections\/shell",
             "mobile_cover_image": "shopify:\/\/shop_images\/20e5c3f719da92dc7bfd0c70c57f7186.jpg",
             "mobile_title": "מוצרים",
             "main_link": "",
@@ -144,8 +135,8 @@
             "title": "קולקציות",
             "item_class": "",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/bd9a4cbcb5a8c5865a0499b4fa42b489_e9e158cf-ea20-4c8b-a350-5a5531d3697f.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/sets",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/1_056138c3-864a-48fb-aabd-819e2d3fb413.jpg",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/shell",
             "desktop_links_image_2_link": "",
             "mobile_title": "קולקציות",
             "main_link": "shopify:\/\/collections\/sets",
@@ -167,8 +158,8 @@
             "title": "אקססוריז",
             "item_class": "",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/bd9a4cbcb5a8c5865a0499b4fa42b489_e9e158cf-ea20-4c8b-a350-5a5531d3697f.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/sets",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/1_056138c3-864a-48fb-aabd-819e2d3fb413.jpg",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/shell",
             "desktop_links_image_2_link": "",
             "mobile_title": "אקססוריז",
             "main_link": "",
@@ -190,8 +181,8 @@
             "title": "אאוטלט",
             "item_class": "",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/bd9a4cbcb5a8c5865a0499b4fa42b489_e9e158cf-ea20-4c8b-a350-5a5531d3697f.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/sets",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/1_056138c3-864a-48fb-aabd-819e2d3fb413.jpg",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/shell",
             "desktop_links_image_2_link": "",
             "mobile_title": "אאוטלט",
             "main_link": "",
@@ -250,9 +241,9 @@
         "mobile_top_image_temp_link": "shopify:\/\/collections\/best-seller-internal-use",
         "mobile_top_image_temp_title": "BEST SELLERS",
         "show_third_image": true,
-        "mobile_top_image_2": "shopify:\/\/shop_images\/8553a92a08d732ae191edec0b79fec65.jpg",
-        "mobile_top_image_2_link": "shopify:\/\/pages\/loyalty",
-        "mobile_top_image_2_title": "STRONGFUL CLUB",
+        "mobile_top_image_2": "shopify:\/\/shop_images\/0737a51b2679a55d45d0d8f464335044_6df2c4c5-b9ab-4ce4-b57b-18493bda3cee.jpg",
+        "mobile_top_image_2_link": "shopify:\/\/collections\/shell",
+        "mobile_top_image_2_title": "BACK IN STOCK",
         "show_fourth_image": true,
         "mobile_top_image_3": "shopify:\/\/shop_images\/NEW_IN_aa625a28-a143-4884-8bc1-d1c6a587c14c.jpg",
         "mobile_top_image_3_link": "shopify:\/\/collections\/new-in",
