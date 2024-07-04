@@ -4396,6 +4396,11 @@ input#yotpo-smsbump-phone-input__field::placeholder {
         direction: rtl;
         width: 85%;
     }
+
+ .yotpo-smsbump-modal__content form {
+    display: flex;
+    flex-wrap: wrap;
+}
 }
 
 /* SMS Bump css provided by Tal - End */
