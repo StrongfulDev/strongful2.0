@@ -4405,7 +4405,7 @@ input#yotpo-smsbump-phone-input__field::placeholder {
   .yotpo-smsbump-modal__content .form-zone-element {
     margin-top: 16px !important;
     margin-bottom: 16px !important;
-    width: 50%;
+    width: calc(50% - 10px);
     padding: 0;
 }
 
