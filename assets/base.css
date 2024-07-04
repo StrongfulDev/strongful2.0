@@ -4385,9 +4385,16 @@ input#yotpo-smsbump-phone-input__field::placeholder {
 		font-size: 40px;
 	}
 
+  /*new*/
+
       .yotpo-smsbump-modal__content>div {
         position: relative;
         min-width: unset !important;
+    }
+
+      .yotpo-smsbump-modal__content {
+        direction: rtl;
+        width: 85%;
     }
 }
 
