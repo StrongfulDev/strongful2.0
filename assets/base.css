@@ -4385,7 +4385,7 @@ input#yotpo-smsbump-phone-input__field::placeholder {
 		font-size: 40px;
 	}
 
-  /*new*/
+  /*added Jul 4*/
 
       .yotpo-smsbump-modal__content>div {
         position: relative;
@@ -4409,6 +4409,13 @@ input#yotpo-smsbump-phone-input__field::placeholder {
     padding: 0;
 }
 
+
+  form.sc-1absc7o-2.kcotZO {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    justify-content: center;
+}
   
 }
 
