@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9": {
@@ -168,45 +177,6 @@
         "padding_bottom": 16
       }
     },
-    "featured_product_v2_FjnCqj": {
-      "type": "featured-product-v2",
-      "settings": {
-        "steps": 1,
-        "title": "",
-        "heading_size": "h1",
-        "heading_type": "heading_type_default",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "אוברול-קומפורט-ניוד-ורוד",
-        "products_to_show": 2,
-        "columns_desktop": 2,
-        "full_width": true,
-        "show_view_all": false,
-        "view_all_text": "",
-        "view_all_style": "solid",
-        "view_all_location": "bottom",
-        "enable_desktop_slider": true,
-        "show_peak": true,
-        "pagination_type": "sides",
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": true,
-        "show_rating": false,
-        "show_sale_badge": false,
-        "enable_quick_add": true,
-        "quick_add_type": "hover",
-        "quick_add_type_mobile": "modal",
-        "quick_add_text": "הוספה מהירה",
-        "pick_size_text": "בחירת מידה",
-        "quick_add_accessories_text": "הוספה מהירה",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "customer_slideshow_wFcfK7": {
       "type": "customer-slideshow",
       "blocks": {
@@ -246,6 +216,45 @@
         "accessibility_info": "Slideshow about our brand",
         "padding_top": 16,
         "padding_bottom": 16
+      }
+    },
+    "featured_product_v2_FjnCqj": {
+      "type": "featured-product-v2",
+      "settings": {
+        "steps": 1,
+        "title": "",
+        "heading_size": "h1",
+        "heading_type": "heading_type_default",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "אוברול-קומפורט-ניוד-ורוד",
+        "products_to_show": 2,
+        "columns_desktop": 2,
+        "full_width": true,
+        "show_view_all": false,
+        "view_all_text": "",
+        "view_all_style": "solid",
+        "view_all_location": "bottom",
+        "enable_desktop_slider": true,
+        "show_peak": true,
+        "pagination_type": "sides",
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": false,
+        "show_sale_badge": false,
+        "enable_quick_add": true,
+        "quick_add_type": "hover",
+        "quick_add_type_mobile": "modal",
+        "quick_add_text": "הוספה מהירה",
+        "pick_size_text": "בחירת מידה",
+        "quick_add_accessories_text": "הוספה מהירה",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "our_collection_list_v2_mK6kUx": {
@@ -555,8 +564,8 @@
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9",
     "slideshow_gwXDrF",
     "featured_collection_4JBk4Y",
-    "featured_product_v2_FjnCqj",
     "customer_slideshow_wFcfK7",
+    "featured_product_v2_FjnCqj",
     "our_collection_list_v2_mK6kUx",
     "collection_list_w4D6TE",
     "slideshow_dtfFDm",
