@@ -257,7 +257,7 @@
                         <span class="new-product-span">
                                 {{ 'products.product.new' | t }}
                             </span>
-                        {% elsif card_product.tags contains 'badge__restock' %}
+                        {% elsif card_product.tags contains settings.restock_badge_tag %}
                             <span class="new-product-span">
                                 RESTOCK
                             </span>
