@@ -4384,6 +4384,11 @@ input#yotpo-smsbump-phone-input__field::placeholder {
 	.yotpo-smsbump-modal__content.yotpo-smsbump-modal__step-2 .yotpo-smsbump-subtitle p {
 		font-size: 40px;
 	}
+
+      .yotpo-smsbump-modal__content>div {
+        position: relative;
+        min-width: unset !important;
+    }
 }
 
 /* SMS Bump css provided by Tal - End */
