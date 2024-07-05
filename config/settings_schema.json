@@ -1702,6 +1702,12 @@
         "label": "Secondary collection announcement text"
       },
       {
+        "type": "text",
+        "id": "restock_badge_tag",
+        "label": "Restock badge tag",
+        "info": "Theme specific tag for restock badge - use whatever you wish"
+      },
+      {
         "type": "checkbox",
         "id": "announcement_customizer_override",
         "default": false,

@@ -1,12 +1,3 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9": {
@@ -102,23 +93,18 @@
         "padding_bottom": 16
       }
     },
-    "customer_slideshow_iAkrLp": {
-      "type": "customer-slideshow",
+    "slideshow_gwXDrF": {
+      "type": "slideshow",
       "blocks": {
-        "slide_XUGLkP": {
+        "slide_YnXTNV": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/21f7ff3988a6d0c803fb8fc676395719_f409f668-d4c5-4dd7-a8b6-4f0b4bbbfb2a.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/74aa96ff8350ced1e8354467e0517aac.jpg",
-            "login_desktop_image": "shopify:\/\/shop_images\/dc2cc262b6d7d041a0a9a55d6b05de5b.jpg",
-            "login_mobile_image": "shopify:\/\/shop_images\/7a82aba44c95031144161ced63d20ed5.jpg",
-            "button_label": "הירשמי \/ התחברי",
-            "login_button_label": "SHOP NOW",
-            "link": "shopify:\/\/pages\/loyalty",
-            "login_link": "shopify:\/\/collections\/sets",
+            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_c84e7501-7119-438f-94d5-fe92d1864fd1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_3475266e-e27d-4a88-b860-78696a62d04e.jpg",
+            "button_label": "SHOP NOW",
+            "link": "shopify:\/\/collections\/shell",
             "show_text_box": true,
             "color_scheme": "background-1",
-            "logged_in_color_scheme": "inverse",
             "whole_slide_link": "",
             "button_style_secondary": false,
             "box_align": "middle-center",
@@ -129,7 +115,7 @@
         }
       },
       "block_order": [
-        "slide_XUGLkP"
+        "slide_YnXTNV"
       ],
       "settings": {
         "layout": "full_bleed",
@@ -147,13 +133,13 @@
       "type": "featured-collection",
       "settings": {
         "steps": 4,
-        "title": "SELLING FAST",
+        "title": "RESTOCK",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "sets",
+        "collection": "shell",
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,
@@ -179,6 +165,47 @@
         "columns_mobile": "2",
         "swipe_on_mobile": true,
         "padding_top": 40,
+        "padding_bottom": 16
+      }
+    },
+    "customer_slideshow_wFcfK7": {
+      "type": "customer-slideshow",
+      "blocks": {
+        "slide_KdxH44": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ffa30f6d495ac44a37c40c1ac3101c84.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/b916a25152ac2b27dc530853d5eb6c77_b40103b9-e60a-48f5-af51-0b22917005aa.jpg",
+            "login_desktop_image": "shopify:\/\/shop_images\/fccf2d9258f52f19baf79181902e158a_e22d6bca-8310-4ad8-8e65-d7392e6af88e.jpg",
+            "login_mobile_image": "shopify:\/\/shop_images\/b916a25152ac2b27dc530853d5eb6c77_635ec1be-f6a2-48e3-b279-eeb2ccd3ed00.jpg",
+            "button_label": "",
+            "login_button_label": "",
+            "link": "",
+            "login_link": "",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "logged_in_color_scheme": "background-1",
+            "whole_slide_link": "shopify:\/\/pages\/loyalty",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_KdxH44"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "sides",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand",
+        "padding_top": 16,
         "padding_bottom": 16
       }
     },
@@ -219,47 +246,6 @@
         "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "customer_slideshow_wFcfK7": {
-      "type": "customer-slideshow",
-      "blocks": {
-        "slide_KdxH44": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/fccf2d9258f52f19baf79181902e158a.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/b916a25152ac2b27dc530853d5eb6c77.jpg",
-            "login_desktop_image": "shopify:\/\/shop_images\/fccf2d9258f52f19baf79181902e158a_e22d6bca-8310-4ad8-8e65-d7392e6af88e.jpg",
-            "login_mobile_image": "shopify:\/\/shop_images\/b916a25152ac2b27dc530853d5eb6c77_635ec1be-f6a2-48e3-b279-eeb2ccd3ed00.jpg",
-            "button_label": "",
-            "login_button_label": "",
-            "link": "",
-            "login_link": "",
-            "show_text_box": true,
-            "color_scheme": "background-1",
-            "logged_in_color_scheme": "background-1",
-            "whole_slide_link": "shopify:\/\/pages\/loyalty",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "text_alignment_mobile": "center"
-          }
-        }
-      },
-      "block_order": [
-        "slide_KdxH44"
-      ],
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "adapt_image",
-        "slider_visual": "sides",
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand",
-        "padding_top": 16,
-        "padding_bottom": 16
       }
     },
     "our_collection_list_v2_mK6kUx": {
@@ -567,10 +553,10 @@
   },
   "order": [
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9",
-    "customer_slideshow_iAkrLp",
+    "slideshow_gwXDrF",
     "featured_collection_4JBk4Y",
-    "featured_product_v2_FjnCqj",
     "customer_slideshow_wFcfK7",
+    "featured_product_v2_FjnCqj",
     "our_collection_list_v2_mK6kUx",
     "collection_list_w4D6TE",
     "slideshow_dtfFDm",
