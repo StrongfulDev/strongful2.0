@@ -113,7 +113,7 @@
             "button_label": "SHOP NOW",
             "link": "shopify:\/\/collections\/shell",
             "show_text_box": true,
-            "color_scheme": "background-1",
+            "color_scheme": "inverse",
             "whole_slide_link": "",
             "button_style_secondary": false,
             "box_align": "middle-center",
