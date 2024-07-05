@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "name": "t:sections.header.name",
   "type": "header",
@@ -245,9 +254,9 @@
         "mobile_top_image_2_link": "shopify:\/\/collections\/shell",
         "mobile_top_image_2_title": "BACK IN STOCK",
         "show_fourth_image": true,
-        "mobile_top_image_3": "shopify:\/\/shop_images\/NEW_IN_aa625a28-a143-4884-8bc1-d1c6a587c14c.jpg",
-        "mobile_top_image_3_link": "shopify:\/\/collections\/new-in",
-        "mobile_top_image_3_title": "NEW IN",
+        "mobile_top_image_3": "shopify:\/\/shop_images\/8553a92a08d732ae191edec0b79fec65_d934bceb-8847-456f-a0c7-ba10abb897fc.jpg",
+        "mobile_top_image_3_link": "shopify:\/\/pages\/loyalty",
+        "mobile_top_image_3_title": "STRONGFUL CLUB",
         "show_fifth_image": true,
         "mobile_top_image_4": "shopify:\/\/shop_images\/OUTLET_1fe429bc-ff70-41d0-bfdc-83d9d6f79436.jpg",
         "mobile_top_image_4_link": "shopify:\/\/collections\/outlet",
