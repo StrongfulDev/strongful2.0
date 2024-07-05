@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9": {
@@ -251,19 +260,19 @@
     "our_collection_list_v2_mK6kUx": {
       "type": "our-collection-list-v2",
       "blocks": {
-        "image_a4f9L6": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/4bcf7a6e6cdb48ac8cec1f38ee3c38f9.jpg",
-            "alt": "",
-            "link": "NEW IN",
-            "url": "shopify:\/\/collections\/new-in"
-          }
-        },
         "image_JnihJ6": {
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/BEST_SELLERS.jpg",
+            "alt": "",
+            "link": "NEW IN",
+            "url": "shopify:\/\/collections\/shell"
+          }
+        },
+        "image_a4f9L6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/4bcf7a6e6cdb48ac8cec1f38ee3c38f9.jpg",
             "alt": "",
             "link": "BEST SELLERS",
             "url": "shopify:\/\/collections\/best-seller-internal-use"
@@ -289,8 +298,8 @@
         }
       },
       "block_order": [
-        "image_a4f9L6",
         "image_JnihJ6",
+        "image_a4f9L6",
         "image_3PJtne",
         "image_ydbCwA"
       ],
