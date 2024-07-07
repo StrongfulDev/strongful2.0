@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9": {
@@ -99,28 +108,10 @@
         "slide_YnXTNV": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_c84e7501-7119-438f-94d5-fe92d1864fd1.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_3475266e-e27d-4a88-b860-78696a62d04e.jpg",
+            "image": "shopify:\/\/shop_images\/copy_8e1041a4-035e-4fde-b612-b7bf38ef82cd.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_7d5ab436-09f3-4f1a-bbf3-5d3e60a9c3c2.jpg",
             "show_lock": false,
             "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/shell",
-            "show_text_box": true,
-            "color_scheme": "inverse",
-            "whole_slide_link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_VC8XTJ": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/copy_32a459b4-06e5-4c12-8b49-5d8c301141a2.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/copy_cdf29bb5-2f24-49b6-bea4-11f707b910a5.jpg",
-            "show_lock": false,
-            "button_label": "הכנסי לראות",
             "link": "shopify:\/\/collections\/shell-2-0",
             "show_text_box": true,
             "color_scheme": "inverse",
@@ -134,8 +125,7 @@
         }
       },
       "block_order": [
-        "slide_YnXTNV",
-        "slide_VC8XTJ"
+        "slide_YnXTNV"
       ],
       "settings": {
         "layout": "full_bleed",
