@@ -207,7 +207,7 @@ div.card-product-overlay {
 	pointer-events: none;
 }
 
-.loyalty__slide--false div.card-product-overlay {
+.loyalty__slide--false div.card-product-overlay, .loyalty__slide--false a.allow-click {
 	pointer-events: auto;
 	cursor: pointer;
 }
