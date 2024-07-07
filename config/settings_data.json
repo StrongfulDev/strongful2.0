@@ -1,12 +1,3 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "current": {
     "logo": "shopify:\/\/shop_images\/9ed861fba4dae099b0b04754bbc299cc.png",
@@ -148,7 +139,7 @@
     "custom_collection_announcement": "",
     "members_only_announcement": "",
     "show_card_collection_announcement": false,
-    "second_announcement_tag": "",
+    "second_announcement_tag": "shell-2.0",
     "custom_collection_second_announcement": "",
     "restock_badge_tag": "badge__restock",
     "announcement_customizer_override": true,

@@ -212,6 +212,7 @@ div.card-product-overlay {
 	cursor: pointer;
 }
 
-.loyalty__slide--false .variant_modal__toggle_button, .loyalty__slide--false .active-card:hover .quick-add.hover {
+.loyalty__slide--false .variant_modal__toggle_button, .loyalty__slide--false .active-card:hover .quick-add.hover,
+.loyalty__slide--false .card--standard:not(.card--horizontal) div.card__content>div.card__badge {
 	display: none;
 }

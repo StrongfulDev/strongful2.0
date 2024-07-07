@@ -39,19 +39,13 @@
             <small class="fix-direction">{{ block.settings.small_text }}</small>
         {% endif %}
     </div>
-{% endif %}
 
-{% comment %}
+{% elsif product.tags contains settings.second_announcement_tag %}
 
-{% assign donationPrice = product.price | times: 3 %}
-
-{% if product.tags contains announcement_tag %}
-    <div class="sale-banner-product-page fix-direction">
-        <p>{{ block.settings.logged_out_text | newline_to_br }}</p>
+    <div class="sale-banner-product-page">
+        <div class="{% if block.settings.paragraph_direction == 'Right To Left' %}fix-direction{% endif %}">
+            {{ block.settings.logged_in_text_second | newline_to_br }}
+        </div>
     </div>
-{% elsif product.tags contains 'donation' %}
-    <div class="sale-banner-product-page fix-direction">
-        <p>מארז תרומה הכולל בגדים חדשים בשווי {{ donationPrice | money_without_trailing_zeros }} עבור ארגון ״לתת״, המסייע למפונות ומוקדי האירוח השונים בישראל.</p>
-    </div>
+
 {% endif %}
-    {% endcomment %}
