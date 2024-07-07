@@ -122,10 +122,29 @@
             "image_overlay_opacity": 0,
             "text_alignment_mobile": "center"
           }
+        },
+        "slide_Mry78U": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_aff1d158-beda-4504-b288-131007fbd02f.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/1_671be2a1-6900-4445-b154-6601ab94b83b.jpg",
+            "show_lock": false,
+            "button_label": "SHOP NOW",
+            "link": "shopify:\/\/collections\/shell",
+            "show_text_box": true,
+            "color_scheme": "inverse",
+            "whole_slide_link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center"
+          }
         }
       },
       "block_order": [
-        "slide_YnXTNV"
+        "slide_YnXTNV",
+        "slide_Mry78U"
       ],
       "settings": {
         "layout": "full_bleed",
