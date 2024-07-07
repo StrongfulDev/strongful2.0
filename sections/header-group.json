@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "name": "t:sections.header.name",
   "type": "header",
@@ -241,9 +250,9 @@
         "mobile_top_image_temp_link": "shopify:\/\/collections\/best-seller-internal-use",
         "mobile_top_image_temp_title": "BEST SELLERS",
         "show_third_image": true,
-        "mobile_top_image_2": "shopify:\/\/shop_images\/0737a51b2679a55d45d0d8f464335044_6df2c4c5-b9ab-4ce4-b57b-18493bda3cee.jpg",
-        "mobile_top_image_2_link": "shopify:\/\/collections\/shell",
-        "mobile_top_image_2_title": "BACK IN STOCK",
+        "mobile_top_image_2": "shopify:\/\/shop_images\/0737a51b2679a55d45d0d8f464335044_c1dc5620-7876-48db-b7d0-42283933ccd6.jpg",
+        "mobile_top_image_2_link": "shopify:\/\/collections\/shell-2-0",
+        "mobile_top_image_2_title": "NEW IN",
         "show_fourth_image": true,
         "mobile_top_image_3": "shopify:\/\/shop_images\/8553a92a08d732ae191edec0b79fec65_d934bceb-8847-456f-a0c7-ba10abb897fc.jpg",
         "mobile_top_image_3_link": "shopify:\/\/pages\/loyalty",
