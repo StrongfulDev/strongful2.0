@@ -101,6 +101,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_c84e7501-7119-438f-94d5-fe92d1864fd1.jpg",
             "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_3475266e-e27d-4a88-b860-78696a62d04e.jpg",
+            "show_lock": false,
             "button_label": "SHOP NOW",
             "link": "shopify:\/\/collections\/shell",
             "show_text_box": true,
@@ -118,6 +119,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/copy_1_2c01c2ff-a7e2-42da-8305-aec653ef3f22.jpg",
             "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_be3df463-6ce9-4507-9527-10f929793a76.jpg",
+            "show_lock": true,
             "button_label": "SHOP NOW",
             "link": "shopify:\/\/collections\/shell-2-0",
             "show_text_box": true,
@@ -139,7 +141,7 @@
         "layout": "full_bleed",
         "slide_height": "adapt_image",
         "slider_visual": "sides",
-        "auto_rotate": true,
+        "auto_rotate": false,
         "change_slides_speed": 5,
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand",
@@ -406,6 +408,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/0_3f6540d6-3ade-4374-9eb5-bec5add85d2e.jpg",
             "mobile_image": "shopify:\/\/shop_images\/0_fc4e4087-9c89-47aa-9eda-a2920c3fccd0.jpg",
+            "show_lock": false,
             "button_label": "",
             "link": "shopify:\/\/pages\/lets-move",
             "show_text_box": false,
