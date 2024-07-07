@@ -285,26 +285,11 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
-    },
-    "countdown_BYLxDr": {
-      "type": "countdown",
-      "settings": {
-        "show_days": false,
-        "countdown_date": "Tue Jul 09 2024 12:00:00 GMT+0300 (שעון ישראל (קיץ))",
-        "countdown_url": "shopify:\/\/collections\/shell-2-0",
-        "left_text": true,
-        "left_copy": "<p>Shell 2.0 launches in<\/p>",
-        "right_text_direction": "ltr",
-        "left_text_direction": "ltr",
-        "right_text": false,
-        "right_copy": ""
-      }
     }
   },
   "order": [
     "announcement-bar",
     "header",
-    "7503b704-2110-400e-bc52-a2190d224c23",
-    "countdown_BYLxDr"
+    "7503b704-2110-400e-bc52-a2190d224c23"
   ]
 }
