@@ -489,6 +489,10 @@
 		color: var(--gradient-base-accent-1);
 	}
 
+	.banner__box--2 .button--primary:hover svg path {
+		fill: var(--gradient-base-accent-1);
+	}
+
 	.collection.banner {
 		flex-direction: column;
 	}
