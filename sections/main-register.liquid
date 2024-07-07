@@ -137,6 +137,17 @@
         {{ 'customer.register.form_errors.password' | t }}
       </span>
     {%- endif -%}
+      <div class="field" id="birthday-wrapper">
+          <input
+                  type="date"
+                  name="customer[note][birthday]"
+                  id="RegisterForm-birthday"
+                  placeholder="{{ 'customer.register.birthday' | t }}"
+          >
+          <label for="RegisterForm-birthday">
+              {{ 'customer.register.birthday' | t }}
+          </label>
+      </div>
     <button class="button-loader-activator">
       <span class="button-loader-text">{{ 'customer.register.submit' | t }}</span>
         {% render 'loading-spinner' %}
