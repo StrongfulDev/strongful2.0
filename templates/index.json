@@ -117,13 +117,13 @@
         "slide_VC8XTJ": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/copy_1_2c01c2ff-a7e2-42da-8305-aec653ef3f22.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_be3df463-6ce9-4507-9527-10f929793a76.jpg",
-            "show_lock": true,
-            "button_label": "SHOP NOW",
+            "image": "shopify:\/\/shop_images\/copy_32a459b4-06e5-4c12-8b49-5d8c301141a2.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/copy_cdf29bb5-2f24-49b6-bea4-11f707b910a5.jpg",
+            "show_lock": false,
+            "button_label": "הכנסי לראות",
             "link": "shopify:\/\/collections\/shell-2-0",
             "show_text_box": true,
-            "color_scheme": "background-1",
+            "color_scheme": "inverse",
             "whole_slide_link": "",
             "button_style_secondary": false,
             "box_align": "middle-center",
