@@ -1185,7 +1185,8 @@ class ProductRecommendations extends HTMLElement {
             this.innerHTML = recommendations.innerHTML;
           }
 
-          if (!this.querySelector('slideshow-component') && this.classList.contains('complementary-products')) {
+          if (!this.querySelector('slideshow-component') && this.classList.contains('complementary-products')
+          || recommendations.innerHTML.trim().length < 2500) {
             this.remove();
           }
 
