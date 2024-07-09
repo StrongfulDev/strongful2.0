@@ -4385,34 +4385,48 @@ input#yotpo-smsbump-phone-input__field::placeholder {
 		font-size: 40px;
 	}
 
-  /*added Jul 4*/
+	/*added Jul 4*/
 
-      .yotpo-smsbump-modal__content>div {
-        position: relative;
-        min-width: unset !important;
-    }
+	.yotpo-smsbump-modal__content>div {
+		position: relative;
+		min-width: unset !important;
+	}
 
-      .yotpo-smsbump-modal__content {
-        direction: rtl;
-        width: 85%;
-    }
+	.yotpo-smsbump-modal__backdrop .yotpo-smsbump-modal__content {
+		width: 85% !important;
+	}
 
- .yotpo-smsbump-modal__content form {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 10px;
-    justify-content: center;
+	.yotpo-smsbump-modal__content form {
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: 10px;
+		justify-content: center;
+		width: 95%;
+	}
+
+	.yotpo-smsbump-modal__content .form-zone-element:nth-child(-n+4) {
+		margin-top: 16px !important;
+		margin-bottom: 16px !important;
+		width: calc(50% - 10px);
+		padding: 0;
+	}
+
+	.yotpo-smsbump-modal__content .yotpo-smsbump-phone-input__field {
+		padding-right: 10px !important;
+	}
+
 }
 
-  .yotpo-smsbump-modal__content .form-zone-element {
-    margin-top: 16px !important;
-    margin-bottom: 16px !important;
-    width: calc(50% - 10px);
-    padding: 0;
-}
+@media (min-width: 990px) {
+	.yotpo-smsbump-modal__content {
+		direction: rtl;
+		width: 470px;
+	}
 
-
-  
+	.yotpo-smsbump-modal__content > div {
+		position: relative;
+		min-width: 470px;
+	}
 }
 
 /* SMS Bump css provided by Tal - End */
