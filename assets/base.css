@@ -4373,6 +4373,10 @@ div.yotpo-smsbump-floating-button button.bVTgvf.bVTgvf {
 	text-align: center !important;
 }
 
+.bVTgvf.bVTgvf {
+	min-height: 73px !important;
+}
+
 @media only screen and (max-width: 500px) {
 	.yotpo-smsbump-modal__content {
 		width: 100%;
