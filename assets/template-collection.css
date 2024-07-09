@@ -216,3 +216,7 @@ div.card-product-overlay {
 .loyalty__slide--false .card--standard:not(.card--horizontal) div.card__content>div.card__badge {
 	display: none;
 }
+
+main-search {
+	display: none;
+}

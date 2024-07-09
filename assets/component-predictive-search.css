@@ -364,7 +364,8 @@ predictive-search[loading]
 	transform: rotate(180deg);
 }
 
-.snize-category.snize-view-all-categories.snize-ac-odd {
+.snize-category.snize-view-all-categories.snize-ac-odd, .snize-ac-results-arrow,
+.snize-category.snize-view-all-categories {
 	display: none !important;
 }
 
@@ -401,7 +402,34 @@ predictive-search[loading]
 	font-weight: var(--font-body-weight);
 }
 
+.snize-ac-results-multicolumn-list .snize-title {
+	text-align: right;
+}
+
+div.snize-ac-results div.snize-price-list {
+	display: flex;
+	align-items: baseline;
+	gap: 1rem;
+}
+
+.snize-ac-results .snize-item-image, .snize-ac-results .snize-thumbnail {
+	max-height: none !important;
+	height: auto !important;
+}
+
+.snize-ac-results .snize-view-all-link {
+	width: 100%;
+}
+
+.snize-ac-results-multicolumn-list .snize-product {
+	flex: 0 0 50%;
+	width: 100%;
+	max-width: max-content;
+	padding: 0;
+}
+
 @media (min-width: 750px) {
+
 	div.snize-ac-results-content {
 		width: 100%;
 		max-width: none;
@@ -414,20 +442,6 @@ predictive-search[loading]
 		flex: 0 0 22% !important;
 	}
 
-	.snize-ac-results-multicolumn-list .snize-title {
-		text-align: right;
-	}
-
-	div.snize-ac-results div.snize-price-list {
-		display: flex;
-		align-items: baseline;
-		gap: 1rem;
-	}
-
-	.snize-ac-results .snize-item-image, .snize-ac-results .snize-thumbnail {
-		max-height: none !important;
-		height: auto !important;
-	}
 }
 
 /* Searchandise app designs end */
