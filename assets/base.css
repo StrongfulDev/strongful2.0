@@ -4374,10 +4374,15 @@ div.yotpo-smsbump-floating-button button.bVTgvf.bVTgvf {
 }
 
 .bVTgvf.bVTgvf {
-	min-height: 79px !important;
+	min-height: 76px !important;
 }
 
 @media only screen and (max-width: 500px) {
+
+	.bVTgvf.bVTgvf {
+		min-height: 79px !important;
+	}
+
 	.yotpo-smsbump-modal__content {
 		width: 100%;
 	}
