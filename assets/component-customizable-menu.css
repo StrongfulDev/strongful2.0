@@ -451,9 +451,8 @@
 	/*	grid-template-columns: 1fr 1.5fr;*/
 	/*}*/
 
-	#MegaMenu-Content-2 li:first-child a {
+	#MegaMenu-Content-2 li:first-child a, #MegaMenu-Content-2 li:first-child+li a {
 		direction: ltr;
-		color: firebrick;
 		font-weight: var(--font-body-weight-bold);
 	}
 
