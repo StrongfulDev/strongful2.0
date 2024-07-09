@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9": {
@@ -99,12 +108,31 @@
         "slide_YnXTNV": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_c84e7501-7119-438f-94d5-fe92d1864fd1.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_3475266e-e27d-4a88-b860-78696a62d04e.jpg",
+            "image": "shopify:\/\/shop_images\/copy_8e1041a4-035e-4fde-b612-b7bf38ef82cd.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_7d5ab436-09f3-4f1a-bbf3-5d3e60a9c3c2.jpg",
+            "show_lock": false,
+            "button_label": "SHOP NOW",
+            "link": "shopify:\/\/collections\/shell-2-0",
+            "show_text_box": true,
+            "color_scheme": "inverse",
+            "whole_slide_link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_Mry78U": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_aff1d158-beda-4504-b288-131007fbd02f.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/1_671be2a1-6900-4445-b154-6601ab94b83b.jpg",
+            "show_lock": false,
             "button_label": "SHOP NOW",
             "link": "shopify:\/\/collections\/shell",
             "show_text_box": true,
-            "color_scheme": "background-1",
+            "color_scheme": "inverse",
             "whole_slide_link": "",
             "button_style_secondary": false,
             "box_align": "middle-center",
@@ -115,18 +143,58 @@
         }
       },
       "block_order": [
-        "slide_YnXTNV"
+        "slide_YnXTNV",
+        "slide_Mry78U"
       ],
       "settings": {
         "layout": "full_bleed",
         "slide_height": "adapt_image",
-        "slider_visual": "counter",
-        "auto_rotate": false,
+        "slider_visual": "sides",
+        "auto_rotate": true,
         "change_slides_speed": 5,
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand",
         "padding_top": 0,
         "padding_bottom": 36
+      }
+    },
+    "featured_collection_WfxYLm": {
+      "type": "featured-collection",
+      "settings": {
+        "steps": 4,
+        "title": "NEW IN",
+        "heading_size": "h1",
+        "heading_type": "heading_type_2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "shell-2-0",
+        "products_to_show": 15,
+        "columns_desktop": 5,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_text": "SHOP ALL",
+        "view_all_style": "link",
+        "view_all_location": "top",
+        "enable_desktop_slider": true,
+        "show_peak": true,
+        "pagination_type": "sides",
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": false,
+        "show_sale_badge": false,
+        "enable_quick_add": true,
+        "quick_add_type": "hover",
+        "quick_add_type_mobile": "modal",
+        "quick_add_text": "הוספה מהירה",
+        "pick_size_text": "בחירת מידה",
+        "quick_add_accessories_text": "הוספה מהירה",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 40,
+        "padding_bottom": 16
       }
     },
     "featured_collection_4JBk4Y": {
@@ -251,19 +319,19 @@
     "our_collection_list_v2_mK6kUx": {
       "type": "our-collection-list-v2",
       "blocks": {
+        "image_JnihJ6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ea1a2bdf65aa90984b4afc1efe4900e9.jpg",
+            "alt": "",
+            "link": "NEW IN",
+            "url": "shopify:\/\/collections\/shell-2-0"
+          }
+        },
         "image_a4f9L6": {
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/4bcf7a6e6cdb48ac8cec1f38ee3c38f9.jpg",
-            "alt": "",
-            "link": "NEW IN",
-            "url": "shopify:\/\/collections\/new-in"
-          }
-        },
-        "image_JnihJ6": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/BEST_SELLERS.jpg",
             "alt": "",
             "link": "BEST SELLERS",
             "url": "shopify:\/\/collections\/best-seller-internal-use"
@@ -289,8 +357,8 @@
         }
       },
       "block_order": [
-        "image_a4f9L6",
         "image_JnihJ6",
+        "image_a4f9L6",
         "image_3PJtne",
         "image_ydbCwA"
       ],
@@ -388,6 +456,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/0_3f6540d6-3ade-4374-9eb5-bec5add85d2e.jpg",
             "mobile_image": "shopify:\/\/shop_images\/0_fc4e4087-9c89-47aa-9eda-a2920c3fccd0.jpg",
+            "show_lock": false,
             "button_label": "",
             "link": "shopify:\/\/pages\/lets-move",
             "show_text_box": false,
@@ -554,6 +623,7 @@
   "order": [
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9",
     "slideshow_gwXDrF",
+    "featured_collection_WfxYLm",
     "featured_collection_4JBk4Y",
     "customer_slideshow_wFcfK7",
     "featured_product_v2_FjnCqj",

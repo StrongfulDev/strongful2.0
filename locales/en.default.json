@@ -586,6 +586,7 @@
       "last_name": "שם משפחה",
       "email": "אימייל",
       "password": "סיסמה",
+      "birthday": "תאריך לידה",
       "submit": "הרשמה",
       "login_toggler": "כבר חברת מועדון? התחברי",
       "form_errors": {

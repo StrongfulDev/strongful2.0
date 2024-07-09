@@ -81,15 +81,22 @@
                     <div class="card__media">
 
                         {% if loggedIn == false %}
-                            <div class="card-product-overlay account-toggler-site-wide">
+                            <div class="card-product-overlay
+                                    {% if card_product.tags contains 'outlet' %}
+                                    account-toggler-site-wide
+                                    {% endif %}">
                                 <div class="lock-and-text">
                                     {% render 'icon-white-lock' %}
+                            {% if card_product.tags contains 'outlet' %}
                                     <p class="members-only">לחברות מועדון בלבד</p>
+                                {% else %}
+                                <p class="members-only">ההשקה הרשמית מחר ב 12:00</p>
+                                {% endif %}
                                 </div>
                             </div>
                         {% endif %}
 
-                        <a href="{{ card_product.url }}">
+                        <a {% unless card_product.tags contains 'outlet' %}class="allow-click"{% endunless %} href="{{ card_product.url }}">
                             {% unless card_product.tags contains 'plusSizeProduct' %}
                                 <div class="media media--transparent media--hover-effect">
                                     {% if image_count <= 2 or true -%}
@@ -203,7 +210,7 @@
                             <a
                                     href="{{ card_product.url }}"
                                     id="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }}"
-                                    class="full-unstyled-link pointer"
+                                    class="full-unstyled-link pointer {% unless card_product.tags contains 'outlet' %}allow-click{% endunless %}"
                                     aria-labelledby="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }} NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
                             >
                                 {{ card_product.title | escape }}
@@ -330,7 +337,7 @@
                         <a
                                 href="/collections/{{ collection.handle }}{{ card_product.url }}"
                                 id="CardLink-{{ section_id }}-{{ card_product.id }}"
-                                class="full-unstyled-link pointer fix-direction"
+                                class="full-unstyled-link pointer fix-direction {% unless card_product.tags contains 'outlet' %}allow-click{% endunless %}"
                                 aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}"
                         >
                             {{ card_product.title | escape }}

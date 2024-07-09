@@ -88,7 +88,7 @@
                   {{ 'products.product.sold_out' | t }}
                 {%- else -%}
                   {% if loggedIn == false %}
-                      {{ 'products.product.outlet_members_only' | t }} <span class="link account-toggler-site-wide">התחברי / הרשמי</span>
+                        {{ 'products.product.outlet_members_only' | t }} <span class="link account-toggler-site-wide">התחברי / הרשמי</span>
                     {% else %}
                         {{ 'products.product.add_to_cart' | t }}
                     {% endif %}

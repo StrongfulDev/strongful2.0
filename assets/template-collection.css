@@ -207,11 +207,12 @@ div.card-product-overlay {
 	pointer-events: none;
 }
 
-.loyalty__slide--false div.card-product-overlay {
+.loyalty__slide--false div.card-product-overlay, .loyalty__slide--false a.allow-click {
 	pointer-events: auto;
 	cursor: pointer;
 }
 
-.loyalty__slide--false .variant_modal__toggle_button, .loyalty__slide--false .active-card:hover .quick-add.hover {
+.loyalty__slide--false .variant_modal__toggle_button, .loyalty__slide--false .active-card:hover .quick-add.hover,
+.loyalty__slide--false .card--standard:not(.card--horizontal) div.card__content>div.card__badge {
 	display: none;
 }

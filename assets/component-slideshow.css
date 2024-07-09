@@ -216,7 +216,7 @@ button.slideshow__autoplay {
 .sides_navigation .slideshow__controls {
     position: absolute;
     transform: translate(0, -50%);
-    z-index: 2;
+    z-index: 3;
     top: 50%;
     width: 100%;
     border: none;
@@ -302,8 +302,7 @@ button.slideshow__autoplay {
 	}
 
 	.slideshow__slide--0 .slideshow__text.banner__box {
-		bottom: 55%;
-		left: 76%;
+		bottom: 25%;
 	}
 
 	.slideshow__slide--0 .slideshow__text.banner__box.logged-in-banner__box {
