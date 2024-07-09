@@ -421,7 +421,7 @@ div.snize-ac-results div.snize-price-list {
 	width: 100%;
 }
 
-.snize-ac-results-multicolumn-list .snize-product {
+.snize-ac-results-multicolumn-list li.snize-product {
 	flex: 0 0 50%;
 	width: 100%;
 	max-width: max-content;
