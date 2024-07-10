@@ -1,12 +1,3 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9": {
@@ -126,11 +117,11 @@
         "slide_Mry78U": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_aff1d158-beda-4504-b288-131007fbd02f.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/1_671be2a1-6900-4445-b154-6601ab94b83b.jpg",
+            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_1bb1f861-bff2-44c0-94f9-6d1b6d65fc38.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_6b12f494-293b-4271-876b-0b8efa1b9fc3.jpg",
             "show_lock": false,
             "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/shell",
+            "link": "shopify:\/\/collections\/best-seller-internal-use",
             "show_text_box": true,
             "color_scheme": "inverse",
             "whole_slide_link": "",
@@ -201,13 +192,13 @@
       "type": "featured-collection",
       "settings": {
         "steps": 4,
-        "title": "RESTOCK",
+        "title": "TOP RATED PRODUCTS",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "shell",
+        "collection": "best-seller-internal-use",
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,
