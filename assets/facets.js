@@ -343,7 +343,7 @@ customElements.define('facet-remove', FacetRemove);
           siblingRound.style.backgroundColor = "#664975";
         } else if (colorLabels[i].innerHTML.includes("ורוד")) {
           siblingRound.style.backgroundColor = "#ff77a8";
-        } else if (colorLabels[i].innerHTML.includes("חום")) {
+        } else if (colorLabels[i].innerHTML.includes("חום") || colorLabels[i].innerHTML.includes("מוקה")) {
           siblingRound.style.backgroundColor = "#472311";
         } else if (colorLabels[i].innerHTML.includes("אפור")) {
           siblingRound.style.backgroundColor = "#a3a8a3";

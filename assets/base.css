@@ -4298,7 +4298,7 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 	max-width: unset;
 }
 
-.yotpo-smsbump-modal__content > div {
+.yotpo-smsbump-modal__content>div {
 	position: relative;
 	min-width: 480px;
 }
@@ -4330,6 +4330,7 @@ input#yotpo-smsbump-phone-input__field::placeholder {
 .yotpo-smsbump-modal__content > div > div:first-child,
 .isoStg {
 	padding: 0 !important;
+	min-width: auto !important;
 }
 
 .yotpo-smsbump-modal__content strong {
@@ -4350,7 +4351,38 @@ input#yotpo-smsbump-phone-input__field::placeholder {
 	right: 15px !important;
 }
 
+div.yotpo-smsbump-modal__content.yotpo-smsbump-modal__step-3,
+.yotpo-smsbump-modal__content.yotpo-smsbump-modal__step-3>div {
+	width: 70px !important;
+	min-width: auto !important;
+}
+
+.yotpo-smsbump-modal__content .yotpo-smsbump-close-button {
+	display: none !important;
+}
+
+.yotpo-smsbump-modal__content .yotpo-smsbump-main-image+.yotpo-smsbump-close-button {
+	display: block !important;
+}
+
+div.yotpo-smsbump-floating-button button.bVTgvf.bVTgvf {
+	border-radius: 50% !important;
+}
+
+.yotpo-smsbump-floating-button p {
+	text-align: center !important;
+}
+
+.bVTgvf.bVTgvf {
+	min-height: 76px !important;
+}
+
 @media only screen and (max-width: 500px) {
+
+	.bVTgvf.bVTgvf {
+		min-height: 79px !important;
+	}
+
 	.yotpo-smsbump-modal__content {
 		width: 100%;
 	}
