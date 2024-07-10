@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "745dda66-63ce-4705-8d8d-eff54d17367f": {
@@ -52,8 +61,7 @@
       "settings": {
         "tops_menu": "dropdown-tops",
         "bottoms_menu": "bottoms-filter-links",
-        "ad_image": "shopify:\/\/shop_images\/cf9a796193234b11e66646c08299f827_3b1a2819-fc70-4d51-8a9c-a07730e20e8e.gif",
-        "ad_link": "shopify:\/\/collections\/best-seller-internal-use",
+        "ad_link": "",
         "products_per_page": 20,
         "columns_desktop": 4,
         "image_ratio": "adapt",
