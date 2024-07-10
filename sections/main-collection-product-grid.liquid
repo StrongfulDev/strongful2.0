@@ -212,7 +212,6 @@
                                     endif
                                 -%}
 
-                                {% comment %}
                                 {% if forloop.index0 == 8 or forloop.index0 == 20 or forloop.index0 == 34 or forloop.index0 == 60 %}
                                     {% if section.settings.ad_image != blank %}
                                         <li class="grid__item">
@@ -236,7 +235,6 @@
                                         </li>
                                     {% endif %}
                                 {% endif %}
-                                {% endcomment %}
 
                                 {% if isLiveTheme == 'true' %}
                                     {% unless product.tags contains 'giftHide' or product.tags contains 'hidden' or product.tags contains 'free-slippers' %}
