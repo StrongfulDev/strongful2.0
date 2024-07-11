@@ -29,6 +29,9 @@
      event.target.closest('details').hasAttribute('open')
        ? this.close()
        : this.open(event);
+	   if (event.target.classList.contains('icon-search')) {
+		   this.parentNode.querySelector('input.search__input').click();
+	   }
    }
 
    onBodyClick(event) {
