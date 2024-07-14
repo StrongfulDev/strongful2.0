@@ -264,7 +264,6 @@
 
 .dropdown .submenu-open li:nth-child(2) ul.menu-drawer__menu li:nth-child(2) a {
 	direction: rtl;
-	color: firebrick;
 	font-weight: var(--font-body-weight-bold);
 }
 
@@ -460,7 +459,6 @@
 	}
 
 	#MegaMenu-Content-2 li:first-child+li a {
-		color: firebrick;
 		font-weight: var(--font-body-weight-bold);
 	}
 
