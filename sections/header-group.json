@@ -24,12 +24,12 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "JUST LANDED",
-            "sub_text": "SHELL COLLECTION",
+            "main_text": "THE CRAZY SALE",
+            "sub_text": "3 פריטים ב ₪300",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "ltr",
-            "link": "shopify:\/\/collections\/shell-2-0",
+            "link": "shopify:\/\/collections\/3-for-300",
             "color_scheme": "accent-1"
           }
         },
