@@ -99,11 +99,11 @@
         "slide_YnXTNV": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/copy_8e1041a4-035e-4fde-b612-b7bf38ef82cd.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_7d5ab436-09f3-4f1a-bbf3-5d3e60a9c3c2.jpg",
+            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_25efdf28-6086-4c8a-9b97-ad9a58fe2de6.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_83e3389f-7825-41b8-8244-673bc07ca971.jpg",
             "show_lock": false,
             "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/shell-2-0",
+            "link": "shopify:\/\/collections\/3-for-300",
             "show_text_box": true,
             "color_scheme": "inverse",
             "whole_slide_link": "",
@@ -313,10 +313,10 @@
         "image_JnihJ6": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/ea1a2bdf65aa90984b4afc1efe4900e9.jpg",
+            "image": "shopify:\/\/shop_images\/copy_cdc09106-0fb7-4452-a007-2aaa9ba99833.jpg",
             "alt": "",
-            "link": "NEW IN",
-            "url": "shopify:\/\/collections\/shell-2-0"
+            "link": "SALE",
+            "url": "shopify:\/\/collections\/3-for-300"
           }
         },
         "image_a4f9L6": {
