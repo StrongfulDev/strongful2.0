@@ -117,7 +117,7 @@
                                             {% for variant in product.variants %}
                                                     {%- liquid
                                                         assign product_disabled = false
-                                                        if variant.available == false or variant.product.tags contains settings.second_announcement_tag
+                                                        if variant.available == false
                                                             assign product_disabled = true
                                                         endif
                                                          if members_only_sale == true
@@ -223,7 +223,7 @@
                                 {% for variant in product.variants %}
                                         {%- liquid
                                             assign product_disabled = false
-                                            if variant.available == false or variant.product.tags contains settings.second_announcement_tag
+                                            if variant.available == false
                                                 assign product_disabled = true
                                             endif
                                         %}
