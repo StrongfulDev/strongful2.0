@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "name": "t:sections.header.name",
   "type": "header",
@@ -237,9 +246,9 @@
         "mobile_top_image_1_link": "",
         "mobile_top_image_1_title": "",
         "show_second_image": true,
-        "mobile_top_image_temp": "shopify:\/\/shop_images\/0737a51b2679a55d45d0d8f464335044_e05288c4-5c05-4477-a1a3-5b7f61fee3b6.jpg",
-        "mobile_top_image_temp_link": "shopify:\/\/collections\/best-seller-internal-use",
-        "mobile_top_image_temp_title": "BEST SELLERS",
+        "mobile_top_image_temp": "shopify:\/\/shop_images\/1_5fcd400a-8e66-4940-b3bc-65c6431a5fd8.jpg",
+        "mobile_top_image_temp_link": "shopify:\/\/collections\/3-פריטים-ב-300",
+        "mobile_top_image_temp_title": "SALE",
         "show_third_image": true,
         "mobile_top_image_2": "shopify:\/\/shop_images\/0737a51b2679a55d45d0d8f464335044_54ebbeac-d35f-4caf-8cb5-e90279f95c5f.jpg",
         "mobile_top_image_2_link": "shopify:\/\/collections\/אוברולים",
