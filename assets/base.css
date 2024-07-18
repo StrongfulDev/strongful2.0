@@ -3575,6 +3575,15 @@ body:not(.enable-toolbar-RTL) #enable-reader, body:not(.enable-toolbar-RTL) #ena
 	direction: rtl !important;
 }
 
+#enable-toolbar-trigger svg .a {
+	fill: #000 !important;
+}
+
+.icon.icon-pill-border #Icon,
+.icon.icon-pill #Icon {
+	fill: var(--gradient-background) !important;
+}
+
 .header-overlay {
 	position: fixed;
 	background: rgba(var(--color-shadow), 0.5);
@@ -3933,8 +3942,8 @@ div#enable-toolbar div#enable-toolbar-content, div#enable-toolbar {
 }
 
 body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcut, body.trigger-color-blue #enable-toolbar-trigger svg .enable-trigger-check, body.trigger-color-blue #enable-toolbar-trigger svg .enable-trigger-circle {
-	fill: var(--gradient-base-accent-1) !important;
 	color: var(--gradient-base-accent-1) !important;
+	fill: var(--gradient-base-accent-1) !important;
 }
 
 #enable-toolbar-trigger svg {
@@ -3956,8 +3965,8 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 
 #enable-toolbar-trigger .icon-pill-border {
 	z-index: 1;
-	stroke: var(--gradient-base-accent-1);
-	fill: var(--gradient-background);
+	fill: var(--gradient-base-accent-1);
+	stroke: var(--gradient-background);
 	height: 50px!important;
 	width: 40px!important;
 	top: -11px !important;
