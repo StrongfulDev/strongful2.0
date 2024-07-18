@@ -314,9 +314,11 @@
                     <span class="card_banner_text color-background-2">{{ custom_collection_second_announcement }}</span>
 
                     {% else %}
+                    {% if card_banner_text != blank %}
                         <span class="card_banner_text color-background-2">
                             {{ custom_collection_second_announcement }}
                         </span>
+                        {% endif %}
 
                 {% endif %}
                 {% if card_product.compare_at_price > card_product.price %}

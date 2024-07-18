@@ -105,7 +105,7 @@
             {%- when 'breadcrumbs' -%}
             {% render 'breadcrumbs' %}
             {%- when 'heading' -%}
-            <{{ block.settings.heading_size }} class="banner__heading {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
+            <{{ block.settings.heading_size }} class="banner__heading {% if block.settings.heading == '3 פריטים ב ₪300' %}fix-direction{% endif %} {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
             <span>{{ block.settings.heading | escape }}</span>
         </{{ block.settings.heading_size }}>
         {%- when 'text' -%}
