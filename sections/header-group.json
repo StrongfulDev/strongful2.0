@@ -24,12 +24,12 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "THE CRAZY SALE",
-            "sub_text": "3 פריטים ב ₪300",
+            "main_text": "JUMPSUIT SEASON",
+            "sub_text": "האוברולים שכל אחת חייבת בארון",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "rtl",
-            "link": "shopify:\/\/collections\/3-for-300",
+            "link": "shopify:\/\/collections\/אוברולים",
             "color_scheme": "accent-1"
           }
         },
