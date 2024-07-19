@@ -895,7 +895,9 @@
         "address2_add_label": "אם ברצונך להוסיף מספר דירה",
         "shipping_address_title": "כתובת למשלוח",
         "add_address": "הוספת כתובת אחרת",
-        "delivery_title": "כתובת למשלוח"
+        "delivery_title": "כתובת למשלוח",
+        "edit": "עריכה",
+        "address_edit": "עריכת כתובת"
       },
       "payment_summary": {
         "gift_card_current_balance_notice": "יתרת הגיפט קארד {{ amount }} ",
