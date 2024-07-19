@@ -897,7 +897,10 @@
         "add_address": "הוספת כתובת אחרת",
         "delivery_title": "כתובת למשלוח",
         "edit": "עריכה",
-        "address_edit": "עריכת כתובת"
+        "address_edit": "עריכת כתובת",
+        "delete": "מחיקה",
+        "address_delete": "מחיקת כתובת",
+        "address_confirm": "האם למחוק כתובת זו?"
       },
       "payment_summary": {
         "gift_card_current_balance_notice": "יתרת הגיפט קארד {{ amount }} ",
