@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin language editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "general": {
     "breadcrumbs": {
@@ -119,6 +128,7 @@
       "add_to_cart": "הוספה לסל",
       "launch_date": "זמין לרכישה ב 15.8",
       "members_only": "מכירה מוקדמת לחברות מועדון בלבד",
+      "outlet_members_only": "מוצר אאוטלט רק לחברות מועדון",
       "choose_options": "הוספה מהירה",
       "up_size_recommendation": "במוצר זה מומלץ לקחת מידה יותר",
       "down_size_recommendation": "במוצר זה מומלץ לקחת מידה פחות",
@@ -397,6 +407,9 @@
     "update_language": "Update language",
     "update_country": "Update country\/region"
   },
+  "loyalty": {
+    "points_reset": "הנקודות יתאפסו במידה ולא תתבצע רכישה \nבמשך 6 חודשים רציפים"
+  },
   "customer": {
     "account": {
       "greet": "היי {{ first_name }}",
@@ -573,6 +586,7 @@
       "last_name": "שם משפחה",
       "email": "אימייל",
       "password": "סיסמה",
+      "birthday": "תאריך לידה",
       "submit": "הרשמה",
       "login_toggler": "כבר חברת מועדון? התחברי",
       "form_errors": {
@@ -746,9 +760,9 @@
         "gift_card_has_been_applied": "גיפט קארד נקלט",
         "gift_card_has_been_removed": "גיפט קארד הוסר",
         "discount_already_applied": "להזמנה זאת יש הנחה האחת תקפה, לא ניתן להוסיף עוד אחת.",
-        "cart_does_not_meet_discount_requirements_notice": "קוד הקופון אינו תקף על הפריטים שבחרת.",
+        "cart_does_not_meet_discount_requirements_notice": "קוד הקופון {{ code }} אינו תקף על הפריטים שבחרת.",
         "discount_requires_customer_notice": "יופעל <strong>{{ code }}<\/strong> הזיני כתובת למשלוח כדי שקוד הקופון ",
-        "customer_does_not_meet_discount_requirements_notice": "קוד הקופון אינו תקף.",
+        "customer_does_not_meet_discount_requirements_notice": "קוד הקופון {{ code }} אינו תקף על הפריטים שבחרת.",
         "customer_already_used_once_per_customer_discount_notice": "השתמשת בקוד הקופון {{ code }} בעבר",
         "subtotal_label": "סיכום ביניים",
         "shipping_label": "משלוח",
@@ -855,7 +869,8 @@
           "one": "יום עסקים אחד",
           "other": "{{ count }} ימי עסקים."
         },
-        "waiting_on_rate_notice": "טוען שיטות משלוח..."
+        "waiting_on_rate_notice": "טוען שיטות משלוח...",
+        "address2_add_label": "אם ברצונך להוסיף מספר דירה"
       },
       "payment_summary": {
         "gift_card_current_balance_notice": "יתרת הגיפט קארד {{ amount }} ",

@@ -87,11 +87,9 @@
                                     {% endif %}">
                                 <div class="lock-and-text">
                                     {% render 'icon-white-lock' %}
-                            {% if card_product.tags contains 'outlet' %}
-                                    <p class="members-only">לחברות מועדון בלבד</p>
-                                {% else %}
-                                <p class="members-only">ההשקה הרשמית מחר ב 12:00</p>
-                                {% endif %}
+                                    {% if card_product.tags contains 'outlet' %}
+                                        <p class="members-only">לחברות מועדון בלבד</p>
+                                    {% endif %}
                                 </div>
                             </div>
                         {% endif %}
@@ -264,6 +262,10 @@
                         <span class="new-product-span">
                                 {{ 'products.product.new' | t }}
                             </span>
+                    {% elsif card_product.tags contains announcement_tag %}
+                        <span class="new-product-span fix-direction">
+                                3 ב ₪300
+                            </span>
                         {% elsif card_product.tags contains settings.restock_badge_tag %}
                             <span class="new-product-span">
                                 RESTOCK
@@ -290,7 +292,6 @@
             <div class="card__content">
             <div class="card__information">
                 {% if card_product.tags contains announcement_tag %}
-
                     {% if members_only_sale == true and members_only_sale_active == true %}
                         {% unless customer %}
                             {% if members_banner_text != blank %}
@@ -305,6 +306,11 @@
 
                     {% elsif card_product.tags contains 'fake-out' %}
                     <span class="card_banner_text color-background-2">{{ custom_collection_second_announcement }}</span>
+
+                    {% else %}
+                        <span class="card_banner_text color-background-2">
+                            {{ custom_collection_second_announcement }}
+                        </span>
 
                 {% endif %}
                 {% if card_product.compare_at_price > card_product.price %}
