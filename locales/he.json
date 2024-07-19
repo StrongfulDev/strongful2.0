@@ -795,7 +795,8 @@
         "gift_card_ending": "גיפט קארד שנגמר ב {{last_characters}}",
         "total_updated_label": "סך הכל מעודכן",
         "order_total_updated_label": "סך הכל מעודכן",
-        "calculating": "מחשב..."
+        "calculating": "מחשב...",
+        "total_savings": "חסכת"
       },
       "marketing": {
         "accept_marketing_checkbox_label": "השאר אותי מעודכנת לגבי מבצעים והצעות מיוחדות",
