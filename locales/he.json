@@ -719,7 +719,8 @@
         "have_an_account_label": "חברת מועדון?",
         "sign_in_link_label": "התחברי",
         "sign_out_link_label": "ליציאה",
-        "save_my_information_label": "שמירת פרטים לפעם הבאה"
+        "save_my_information_label": "שמירת פרטים לפעם הבאה",
+        "rollup_label": "משתמש"
       },
       "stock": {
         "page_title": "בעיה במלאי",
