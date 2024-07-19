@@ -4483,7 +4483,7 @@ body.trigger-position-left #enable-toolbar-trigger {
 	right: 5px !important;
 }
 
-span.snize-description {
+span.snize-description, .cart-item__quantity--package-protection-1 {
 	display: none !important;
 }
 

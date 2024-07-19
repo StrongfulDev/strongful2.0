@@ -65,6 +65,16 @@ class CartRewards {
 
 			if (this.cartTotalValue < 10) {
 				this.removePackageProtection();
+			} else {
+				let drawerItemsAdded = document.querySelector('cart-drawer-items');
+
+				const packageProtectionAdded = this.cart.items.find(item => item.id === 41547480268940);
+				const packageProtectionIndexAdded = $(`.cart-item[data-id="41547480268940"]`).data('index');
+
+				if (!packageProtectionAdded) {
+					this.addProduct(41547480268940);
+					// drawerItemsAdded.updateQuantity(packageProtectionIndexAdded, 0);
+				}
 			}
 
 			if (this.cart.items.length === 0) {
