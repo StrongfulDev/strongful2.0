@@ -4486,3 +4486,7 @@ body.trigger-position-left #enable-toolbar-trigger {
 span.snize-description {
 	display: none !important;
 }
+
+.snize-ac-results .snize-nothing-found {
+	direction: rtl !important;
+}
