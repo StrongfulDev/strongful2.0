@@ -877,7 +877,8 @@
         },
         "waiting_on_rate_notice": "טוען שיטות משלוח...",
         "address2_add_label": "אם ברצונך להוסיף מספר דירה",
-        "shipping_address_title": "כתובת למשלוח"
+        "shipping_address_title": "כתובת למשלוח",
+        "add_address": "הוספת כתובת אחרת"
       },
       "payment_summary": {
         "gift_card_current_balance_notice": "יתרת הגיפט קארד {{ amount }} ",
@@ -1037,6 +1038,9 @@
       },
       "shipping_errors": {
         "shipping_method": "הסל שלך עודכן ושיטת המשלוח התעדכנה בהתאמה."
+      },
+      "billing": {
+        "add_address": "הוספת כתובת אחרת"
       }
     },
     "errors": {
