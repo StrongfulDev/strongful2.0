@@ -1054,6 +1054,11 @@
     },
     "checkpoint": {
       "submit_button_text": "שליחה"
+    },
+    "page_titles": {
+      "account": "משתמש",
+      "create_account": "הרשמה",
+      "reset_account": "איפוס משתמש"
     }
   },
   "customer_accounts": {
