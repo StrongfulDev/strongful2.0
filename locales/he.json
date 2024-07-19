@@ -705,14 +705,16 @@
         "postal_code_label": "מיקוד",
         "postcode_label": "מיקוד",
         "pincode_label": "PIN קוד",
-        "optional_first_name_label": "שם פרטי"
+        "optional_first_name_label": "שם פרטי",
+        "different_shipping_address_label": "משלוח לכתובת אחרת"
       },
       "delivery_options": {
         "free_total_label": "חינם",
         "ship": "משלוח",
         "shipping_address": "כתובת למשלוח",
         "pick_up": "איסוף עצמי",
-        "pick_up_locations": "כתובת לאיסוף"
+        "pick_up_locations": "כתובת לאיסוף",
+        "ship_to_address": "כתובת למשלוח"
       },
       "customer_account": {
         "not_user_label": "לא {{ name}}?",
@@ -873,7 +875,8 @@
           "other": "{{ count }} ימי עסקים."
         },
         "waiting_on_rate_notice": "טוען שיטות משלוח...",
-        "address2_add_label": "אם ברצונך להוסיף מספר דירה"
+        "address2_add_label": "אם ברצונך להוסיף מספר דירה",
+        "shipping_address_title": "כתובת למשלוח"
       },
       "payment_summary": {
         "gift_card_current_balance_notice": "יתרת הגיפט קארד {{ amount }} ",
