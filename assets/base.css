@@ -4477,3 +4477,8 @@ div.yotpo-smsbump-floating-button button.bVTgvf.bVTgvf {
 }
 
 /* SMS Bump css provided by Tal - End */
+
+body.trigger-position-left #enable-toolbar-trigger {
+	left: auto !important;
+	right: 5px !important;
+}
