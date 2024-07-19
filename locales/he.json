@@ -800,7 +800,8 @@
         "order_total_updated_label": "סך הכל מעודכן",
         "calculating": "מחשב...",
         "total_savings": "חסכת",
-        "collapse_order_summary_short": "פחות פרטים"
+        "collapse_order_summary_short": "פחות פרטים",
+        "expand_order_summary_short": "יותר פרטים"
       },
       "marketing": {
         "accept_marketing_checkbox_label": "השאר אותי מעודכנת לגבי מבצעים והצעות מיוחדות",
