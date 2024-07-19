@@ -751,7 +751,8 @@
         },
         "out_of_stock": {
           "items_unavailable": "הפריטים האלו אזלו מהמלאי והוסרו מסל הקניות שלך."
-        }
+        },
+        "continue_cta_label": "להמשך הרכישה"
       },
       "order_summary": {
         "title": "סיכום",
