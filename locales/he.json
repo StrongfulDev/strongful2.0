@@ -709,7 +709,8 @@
         "optional_first_name_label": "שם פרטי",
         "different_shipping_address_label": "משלוח לכתובת אחרת",
         "optional_postal_code_label": "מיקוד (לא חובה)",
-        "postal_code_placeholder": "מיקוד"
+        "postal_code_placeholder": "מיקוד",
+        "civic_number_warning": "הוסיפי מספר בית"
       },
       "delivery_options": {
         "free_total_label": "חינם",
