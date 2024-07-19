@@ -65,7 +65,10 @@
 @media screen and (min-width: 750px) {
   .predictive-search {
     border-top: none;
-    width: calc(100% + 0.2rem);
+	  width: 100vw;
+	  left: 0;
+	  position: fixed;
+	  top: 130px;
   }
 
   .header predictive-search {
@@ -306,8 +309,8 @@ predictive-search[loading]
 
 	.header__search details[open] .modal-overlay:after {
 		top: 6rem;
-		width: 120vw;
-		right: -14vw;
+		width: 124vw;
+		right: -16vw;
 	}
 
 	.modal__close-button.link {
@@ -319,3 +322,162 @@ predictive-search[loading]
 		justify-content: space-between;
 	}
 }
+
+/* Searchandise app designs */
+
+.snize-ac-results.snize-new-design {
+	direction: rtl;
+	width: 100vw !important;
+	max-width: 100vw;
+	right: 0;
+	left: 0 !important;
+	position: fixed !important;
+}
+
+.snize-ac-results li.snize-label {
+	border-bottom: none;
+	font-weight: var(--font-body-weight-bold);
+	order: 1;
+}
+
+.snize-ac-results.snize-ac-results-mobile div.snize-thumbnail {
+	margin-right: 0;
+	margin-left: 16px;
+	max-height: fit-content;
+}
+
+.snize-ac-results.snize-ac-results-mobile img.snize-item-image {
+	max-height: fit-content;
+}
+
+.snize-ac-results.snize-ac-results-mobile .snize-mobile-top-panel .snize-close-button {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.snize-ac-results.snize-ac-results-mobile .snize-mobile-top-panel form {
+	flex-direction: row-reverse;
+}
+
+.snize-ac-results-arrow {
+	transform: rotate(180deg);
+}
+
+.snize-category.snize-view-all-categories.snize-ac-odd, .snize-ac-results-arrow,
+.snize-category.snize-view-all-categories {
+	display: none !important;
+}
+
+.snize-ac-results.snize-ac-results-mobile .snize-ac-results-content ul.snize-ac-results-list {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	overflow-x: scroll;
+	position: relative;
+	width: 100%;
+	max-width: 100%;
+}
+
+.snize-ac-results.snize-ac-results-mobile .snize-ac-results-content ul.snize-ac-results-list .snize-label {
+	grid-row: 1 / -1;
+	position: absolute;
+}
+
+.snize-ac-results.snize-ac-results-mobile .snize-ac-results-content ul.snize-ac-results-list .snize-category {
+	grid-row: 2 / 3;
+	margin-top: 6rem;
+	border: 1px solid var(--gradient-base-accent-1);
+	border-radius: 20px;
+}
+
+.snize-ac-results.snize-ac-results-mobile .snize-ac-results-content ul.snize-ac-results-list .snize-category:not(:nth-child(7)) {
+	margin-left: 1em;
+}
+
+.snize-category a.snize-view-link, .snize-suggestion {
+	font-weight: var(--font-body-weight-bold);
+}
+
+.snize-category a.snize-view-link b, .snize-suggestion b {
+	font-weight: var(--font-body-weight);
+}
+
+.snize-ac-results-multicolumn-list .snize-title {
+	text-align: right;
+}
+
+div.snize-ac-results div.snize-price-list {
+	display: flex;
+	align-items: baseline;
+	gap: 1rem;
+}
+
+.snize-ac-results .snize-item-image, .snize-ac-results .snize-thumbnail {
+	max-height: none !important;
+	height: auto !important;
+}
+
+.snize-ac-results-multicolumn-list li.snize-product {
+	flex: 0 0 50%;
+	width: 100%;
+	max-width: max-content;
+	padding: 0;
+	order: 3;
+}
+
+.snize-view-all-link {
+	background: var(--gradient-background) !important;
+	display: block !important;
+	text-align: left !important;
+	padding: 0 !important;
+	order: 2;
+	margin-top: 0 !important;
+}
+
+.snize-view-all-link span {
+	color: var(--gradient-base-accent-1) !important;
+	text-decoration: underline;
+}
+
+.snize-separator {
+	display: none !important;
+}
+
+.snize-ac-results-multicolumn-list {
+	display: grid !important;
+	grid-template-columns: 1fr 1fr !important;
+	grid-gap: 1em;
+}
+
+@media (min-width: 750px) {
+
+	div.snize-ac-results-content {
+		width: 100%;
+		max-width: none;
+		padding: calc(var(--grid-desktop-horizontal-spacing) * 4) calc(var(--grid-desktop-horizontal-spacing) * 6);
+	}
+
+	.snize-ac-results-multicolumn-list {
+		display: flex !important;
+	}
+
+	.snize-ac-results-multicolumn-list li.snize-product {
+		padding: 0 !important;
+		margin: 0 0 9px 9px !important;
+		flex: 0 0 22% !important;
+	}
+
+	.snize-view-all-link {
+		text-align: right !important;
+		padding: 10px !important;
+	}
+
+	.snize-view-all-link:hover {
+		cursor: pointer !important;
+		background: var(--gradient-base-background-3) !important;
+	}
+
+}
+
+/* Searchandise app designs end */

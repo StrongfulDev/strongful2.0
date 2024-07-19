@@ -660,7 +660,13 @@
         "checkout_context": {
           "step_one": "{{ shop_name}} - סטרונגפול"
         },
-        "submit": "שליחה"
+        "submit": "שליחה",
+        "choose_delivery_strategy": "שיטת משלוח",
+        "errors": {
+          "buyer_identity": {
+            "missing_contact_method": "חסרה כתובת מייל עדכנית"
+          }
+        }
       },
       "contact": {
         "title": "מידע",
@@ -705,25 +711,31 @@
         "postal_code_label": "מיקוד",
         "postcode_label": "מיקוד",
         "pincode_label": "PIN קוד",
-        "optional_first_name_label": "שם פרטי"
+        "optional_first_name_label": "שם פרטי",
+        "different_shipping_address_label": "משלוח לכתובת אחרת",
+        "optional_postal_code_label": "מיקוד (לא חובה)",
+        "postal_code_placeholder": "מיקוד",
+        "civic_number_warning": "הוסיפי מספר בית"
       },
       "delivery_options": {
         "free_total_label": "חינם",
         "ship": "משלוח",
         "shipping_address": "כתובת למשלוח",
         "pick_up": "איסוף עצמי",
-        "pick_up_locations": "כתובת לאיסוף"
+        "pick_up_locations": "כתובת לאיסוף",
+        "ship_to_address": "כתובת למשלוח"
       },
       "customer_account": {
         "not_user_label": "לא {{ name}}?",
         "have_an_account_label": "חברת מועדון?",
-        "sign_in_link_label": "התחברי",
+        "sign_in_link_label": "התחברי למשתמש ותצברי נקודות",
         "sign_out_link_label": "ליציאה",
-        "save_my_information_label": "שמירת פרטים לפעם הבאה"
+        "save_my_information_label": "שמירת פרטים לפעם הבאה",
+        "rollup_label": "משתמש"
       },
       "stock": {
         "page_title": "בעיה במלאי",
-        "title": "נגמר המלאי",
+        "title": "המוצרים אזלו מהמלאי",
         "items_unavailable_notice": "חלק מהמוצרים אינם זמינים יותר. סל הקניות שלך התעדכן בהתאם.",
         "product_column_header": "מוצרים",
         "quantity_column_header": "כמות",
@@ -735,7 +747,17 @@
         "reduced_with_quantity_label": "רק {{ quantity_available}} נשאר",
         "remove_from_cart_button_label": "הסרה מעגלה",
         "continue_shopping_button_label": "להמשך",
-        "go_back_to_cart_button_label": "חזרה לאתר"
+        "go_back_to_cart_button_label": "חזרה לאתר",
+        "unpurchasable_product": {
+          "header": "הפריטים האלו הוסרו מסל הקניות שלך."
+        },
+        "unpurchasable_product_generic": {
+          "header": "הפריטים האלו הוסרו מסל הקניות שלך."
+        },
+        "out_of_stock": {
+          "items_unavailable": "הפריטים האלו אזלו מהמלאי והוסרו מסל הקניות שלך."
+        },
+        "continue_cta_label": "להמשך הרכישה"
       },
       "order_summary": {
         "title": "סיכום",
@@ -791,7 +813,11 @@
         "collapse_order_summary": "פחות פרטים",
         "gift_card_ending": "גיפט קארד שנגמר ב {{last_characters}}",
         "total_updated_label": "סך הכל מעודכן",
-        "order_total_updated_label": "סך הכל מעודכן"
+        "order_total_updated_label": "סך הכל מעודכן",
+        "calculating": "מחשב...",
+        "total_savings": "חסכת",
+        "collapse_order_summary_short": "פחות פרטים",
+        "expand_order_summary_short": "יותר פרטים"
       },
       "marketing": {
         "accept_marketing_checkbox_label": "השאר אותי מעודכנת לגבי מבצעים והצעות מיוחדות",
@@ -846,7 +872,8 @@
         "card_expiration_month_label": "חודש",
         "card_expiration_year_label": "שנה",
         "card_verification_value_explanation": "3 ספרות בגב הכרטיס",
-        "card_verification_value_explanation_other": "3 ספרות בגב הכרטיס"
+        "card_verification_value_explanation_other": "3 ספרות בגב הכרטיס",
+        "account_connected": "המשתמש חובר."
       },
       "shipping": {
         "title": "משלוחים",
@@ -870,7 +897,15 @@
           "other": "{{ count }} ימי עסקים."
         },
         "waiting_on_rate_notice": "טוען שיטות משלוח...",
-        "address2_add_label": "אם ברצונך להוסיף מספר דירה"
+        "address2_add_label": "אם ברצונך להוסיף מספר דירה",
+        "shipping_address_title": "כתובת למשלוח",
+        "add_address": "הוספת כתובת אחרת",
+        "delivery_title": "כתובת למשלוח",
+        "edit": "עריכה",
+        "address_edit": "עריכת כתובת",
+        "delete": "מחיקה",
+        "address_delete": "מחיקת כתובת",
+        "address_confirm": "האם למחוק כתובת זו?"
       },
       "payment_summary": {
         "gift_card_current_balance_notice": "יתרת הגיפט קארד {{ amount }} ",
@@ -1030,6 +1065,12 @@
       },
       "shipping_errors": {
         "shipping_method": "הסל שלך עודכן ושיטת המשלוח התעדכנה בהתאמה."
+      },
+      "billing": {
+        "add_address": "הוספת כתובת אחרת"
+      },
+      "order_errors": {
+        "inventory_reservation_failure": "הפריטים האלו אזלו מהמלאי."
       }
     },
     "errors": {
@@ -1051,6 +1092,11 @@
     },
     "checkpoint": {
       "submit_button_text": "שליחה"
+    },
+    "page_titles": {
+      "account": "משתמש",
+      "create_account": "הרשמה",
+      "reset_account": "איפוס משתמש"
     }
   },
   "customer_accounts": {

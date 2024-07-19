@@ -87,11 +87,9 @@
                                     {% endif %}">
                                 <div class="lock-and-text">
                                     {% render 'icon-white-lock' %}
-                            {% if card_product.tags contains 'outlet' %}
-                                    <p class="members-only">לחברות מועדון בלבד</p>
-                                {% else %}
-                                <p class="members-only">ההשקה הרשמית מחר ב 12:00</p>
-                                {% endif %}
+                                    {% if card_product.tags contains 'outlet' %}
+                                        <p class="members-only">לחברות מועדון בלבד</p>
+                                    {% endif %}
                                 </div>
                             </div>
                         {% endif %}

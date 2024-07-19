@@ -65,6 +65,11 @@ class CartRewards {
 
 			if (this.cartTotalValue < 10) {
 				this.removePackageProtection();
+			} else {
+				const packageProtectionAdded = this.cart.items.find(item => item.id === 41547480268940);
+				if (!packageProtectionAdded) {
+					this.addProduct(41547480268940);
+				}
 			}
 
 			if (this.cart.items.length === 0) {

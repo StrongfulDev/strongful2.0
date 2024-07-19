@@ -3385,6 +3385,8 @@ button.needsclick *, .needsclick {
 div#glassix-widget-launcher-container {
 	z-index: 3 !important;
 	display: flex !important;
+	right: 0 !important;
+	bottom: 10px !important;
 }
 
 div#glassix-widget-launcher-closed #customized-launcher {
@@ -3397,8 +3399,9 @@ div#glassix-widget-launcher-closed #customized-launcher {
 		line-height: 1.5rem !important;
 	}
 
-    #glassix-widget-launcher-container {
+    div#glassix-widget-launcher-container {
         right: 30px !important;
+	    bottom: 20px !important;
     }
 
 	#glassix-widget-launcher-closed div.glassix-widget-icon-wrapper img {
@@ -3570,6 +3573,15 @@ details[open] .square {
 
 body:not(.enable-toolbar-RTL) #enable-reader, body:not(.enable-toolbar-RTL) #enable-toolbar-buttons, body:not(.enable-toolbar-RTL) #enable-toolbar-buttons li button[disabled=disabled], body:not(.enable-toolbar-RTL) #enable-toolbar-content {
 	direction: rtl !important;
+}
+
+#enable-toolbar-trigger svg .a {
+	fill: #000 !important;
+}
+
+.icon.icon-pill-border #Icon,
+.icon.icon-pill #Icon {
+	fill: var(--gradient-background) !important;
 }
 
 .header-overlay {
@@ -3930,8 +3942,8 @@ div#enable-toolbar div#enable-toolbar-content, div#enable-toolbar {
 }
 
 body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcut, body.trigger-color-blue #enable-toolbar-trigger svg .enable-trigger-check, body.trigger-color-blue #enable-toolbar-trigger svg .enable-trigger-circle {
-	fill: var(--gradient-base-accent-1) !important;
 	color: var(--gradient-base-accent-1) !important;
+	fill: var(--gradient-base-accent-1) !important;
 }
 
 #enable-toolbar-trigger svg {
@@ -3953,8 +3965,8 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 
 #enable-toolbar-trigger .icon-pill-border {
 	z-index: 1;
-	stroke: var(--gradient-base-accent-1);
-	fill: var(--gradient-background);
+	fill: var(--gradient-base-accent-1);
+	stroke: var(--gradient-background);
 	height: 50px!important;
 	width: 40px!important;
 	top: -11px !important;
@@ -4374,14 +4386,17 @@ div.yotpo-smsbump-floating-button button.bVTgvf.bVTgvf {
 }
 
 .bVTgvf.bVTgvf {
-	min-height: 76px !important;
+	min-height: 70px !important;
+	min-width: 70px !important;
+	height: 70px !important;
+	width: 70px !important;
+}
+
+.bVTgvf.bVTgvf * {
+	font-size: 14px !important;
 }
 
 @media only screen and (max-width: 500px) {
-
-	.bVTgvf.bVTgvf {
-		min-height: 79px !important;
-	}
 
 	.yotpo-smsbump-modal__content {
 		width: 100%;
@@ -4462,3 +4477,16 @@ div.yotpo-smsbump-floating-button button.bVTgvf.bVTgvf {
 }
 
 /* SMS Bump css provided by Tal - End */
+
+body.trigger-position-left #enable-toolbar-trigger {
+	left: auto !important;
+	right: 5px !important;
+}
+
+span.snize-description, .cart-item__quantity--package-protection-1 {
+	display: none !important;
+}
+
+.snize-ac-results .snize-nothing-found {
+	direction: rtl !important;
+}
