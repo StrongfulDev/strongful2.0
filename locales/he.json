@@ -661,7 +661,12 @@
           "step_one": "{{ shop_name}} - סטרונגפול"
         },
         "submit": "שליחה",
-        "choose_delivery_strategy": "שיטת משלוח"
+        "choose_delivery_strategy": "שיטת משלוח",
+        "errors": {
+          "buyer_identity": {
+            "missing_contact_method": "חסרה כתובת מייל עדכנית"
+          }
+        }
       },
       "contact": {
         "title": "מידע",
