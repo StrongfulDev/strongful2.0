@@ -723,7 +723,7 @@
       "customer_account": {
         "not_user_label": "לא {{ name}}?",
         "have_an_account_label": "חברת מועדון?",
-        "sign_in_link_label": "התחברי",
+        "sign_in_link_label": "התחברי למשתמש ותצברי נקודות",
         "sign_out_link_label": "ליציאה",
         "save_my_information_label": "שמירת פרטים לפעם הבאה",
         "rollup_label": "משתמש"
