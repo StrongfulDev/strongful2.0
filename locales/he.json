@@ -848,7 +848,8 @@
         "card_expiration_month_label": "חודש",
         "card_expiration_year_label": "שנה",
         "card_verification_value_explanation": "3 ספרות בגב הכרטיס",
-        "card_verification_value_explanation_other": "3 ספרות בגב הכרטיס"
+        "card_verification_value_explanation_other": "3 ספרות בגב הכרטיס",
+        "account_connected": "המשתמש חובר."
       },
       "shipping": {
         "title": "משלוחים",
