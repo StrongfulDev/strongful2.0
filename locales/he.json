@@ -1057,6 +1057,9 @@
       },
       "billing": {
         "add_address": "הוספת כתובת אחרת"
+      },
+      "order_errors": {
+        "inventory_reservation_failure": "הפריטים האלו אזלו מהמלאי."
       }
     },
     "errors": {
