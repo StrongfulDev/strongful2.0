@@ -24,12 +24,12 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "JUMPSUIT SEASON",
-            "sub_text": "האוברולים שכל אחת חייבת בארון",
+            "main_text": "BACK IN STOCK",
+            "sub_text": "קולקציית SHELL 2.0",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "rtl",
-            "link": "shopify:\/\/collections\/אוברולים",
+            "link": "shopify:\/\/collections\/shell-2-0",
             "color_scheme": "accent-1"
           }
         },
@@ -80,7 +80,7 @@
             "show_on_mobile": true,
             "order": "",
             "small_font": false,
-            "menu": "trending-without-10",
+            "menu": "trending",
             "menu_second": "",
             "menu_third": "",
             "title": "קני לפי",
