@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9": {
@@ -276,7 +285,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/copy_f10e5b6a-6442-411a-8517-168b271ccdaa.jpg",
             "alt": "",
-            "link": "RESTOCK",
+            "link": "BACK IN STOCK",
             "url": "shopify:\/\/collections\/shell-2-0"
           }
         },
