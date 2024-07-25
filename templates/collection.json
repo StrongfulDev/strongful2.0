@@ -52,8 +52,7 @@
       "settings": {
         "tops_menu": "dropdown-tops",
         "bottoms_menu": "bottoms-filter-links",
-        "ad_image": "shopify:\/\/shop_images\/526046b1a118ac2bb2386dbe295834a9.gif",
-        "ad_link": "shopify:\/\/collections\/אוברולים",
+        "ad_link": "",
         "products_per_page": 20,
         "columns_desktop": 4,
         "image_ratio": "adapt",
