@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "name": "t:sections.header.name",
   "type": "header",
@@ -109,8 +118,8 @@
             "title": "מוצרים",
             "item_class": "",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/cf9a796193234b11e66646c08299f827_3b1a2819-fc70-4d51-8a9c-a07730e20e8e.gif",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/best-seller-internal-use",
+            "desktop_links_image_1": "shopify:\/\/shop_images\/1_a5c2bcae-b963-42a0-a6bf-60befb15b9c1.jpg",
+            "desktop_links_image_1_link": "shopify:\/\/collections\/3-פריטים-ב-300",
             "desktop_links_image_2": "shopify:\/\/shop_images\/7ff08d51abffc0cfdf69f878b50b58d6_4959b7ba-d54e-4138-8ed6-db54f620cb7c.jpg",
             "desktop_links_image_2_link": "shopify:\/\/collections\/shell-2-0",
             "mobile_cover_image": "shopify:\/\/shop_images\/20e5c3f719da92dc7bfd0c70c57f7186.jpg",
