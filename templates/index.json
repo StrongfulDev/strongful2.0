@@ -1,12 +1,3 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9": {
@@ -108,11 +99,11 @@
         "slide_YnXTNV": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1_fd963e2f-78c1-4699-aec7-91e9ead250a0.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_7eea0691-78d3-496a-b68b-f73e7e18eab8.jpg",
+            "image": "shopify:\/\/shop_images\/copy_4.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_6a5a6a14-bfb8-4090-89a4-0c8891c3fbf9.jpg",
             "show_lock": false,
             "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/אוברולים",
+            "link": "shopify:\/\/collections\/shell-2-0",
             "show_text_box": true,
             "color_scheme": "inverse",
             "whole_slide_link": "",
@@ -145,43 +136,6 @@
       "block_order": [
         "slide_YnXTNV",
         "slide_Mry78U"
-      ],
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "adapt_image",
-        "slider_visual": "sides",
-        "auto_rotate": true,
-        "change_slides_speed": 5,
-        "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand",
-        "padding_top": 0,
-        "padding_bottom": 36
-      }
-    },
-    "slideshow_hLncmq": {
-      "type": "slideshow",
-      "blocks": {
-        "slide_cCyYVf": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/copy_00897577-ad80-4720-919d-3a49aadbee51.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/1_41b338cc-1f05-4b22-be6b-7a85b4805ebd.jpg",
-            "show_lock": false,
-            "button_label": "",
-            "link": "",
-            "show_text_box": false,
-            "color_scheme": "inverse",
-            "whole_slide_link": "shopify:\/\/collections\/3-פריטים-ב-300",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "text_alignment_mobile": "center"
-          }
-        }
-      },
-      "block_order": [
-        "slide_cCyYVf"
       ],
       "settings": {
         "layout": "full_bleed",
@@ -320,10 +274,10 @@
         "image_JnihJ6": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/copy_f0e0f869-6925-4bbf-b437-860f5dc09543.jpg",
+            "image": "shopify:\/\/shop_images\/copy_f10e5b6a-6442-411a-8517-168b271ccdaa.jpg",
             "alt": "",
-            "link": "MUST HAVE",
-            "url": "shopify:\/\/collections\/אוברולים"
+            "link": "RESTOCK",
+            "url": "shopify:\/\/collections\/shell-2-0"
           }
         },
         "image_a4f9L6": {
@@ -621,7 +575,6 @@
   "order": [
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9",
     "slideshow_gwXDrF",
-    "slideshow_hLncmq",
     "featured_collection_WfxYLm",
     "customer_slideshow_wFcfK7",
     "featured_product_v2_FjnCqj",
