@@ -126,8 +126,8 @@
         "slide_Mry78U": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1_0baa99ba-ec7e-4951-9836-ddb4cdb05956.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/1_7cb8c21c-a368-4136-ba0a-2714e536ac9c.jpg",
+            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_b9d6973a-1296-47bc-b19a-6107d386537d.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_0bece057-4050-4b73-9964-caf97fa51593.jpg",
             "show_lock": false,
             "button_label": "SHOP NOW",
             "link": "shopify:\/\/collections\/3-פריטים-ב-300",
@@ -150,7 +150,7 @@
         "layout": "full_bleed",
         "slide_height": "adapt_image",
         "slider_visual": "sides",
-        "auto_rotate": false,
+        "auto_rotate": true,
         "change_slides_speed": 5,
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand",
