@@ -5,6 +5,7 @@
 
 .collection_slider_image {
 	width: 100%;
+	min-height: 9rem;
 	object-fit: cover;
 }
 
