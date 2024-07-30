@@ -1,12 +1,3 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9": {
@@ -108,29 +99,11 @@
         "slide_YnXTNV": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/copy_4.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_6a5a6a14-bfb8-4090-89a4-0c8891c3fbf9.jpg",
+            "image": "shopify:\/\/shop_images\/1_918cd1c9-f44d-4587-b8d3-8238d2b73901.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/copy_9.jpg",
             "show_lock": false,
             "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/shell-2-0",
-            "show_text_box": true,
-            "color_scheme": "inverse",
-            "whole_slide_link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_Mry78U": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_b9d6973a-1296-47bc-b19a-6107d386537d.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_0bece057-4050-4b73-9964-caf97fa51593.jpg",
-            "show_lock": false,
-            "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/3-פריטים-ב-300",
+            "link": "shopify:\/\/collections\/sets",
             "show_text_box": true,
             "color_scheme": "inverse",
             "whole_slide_link": "",
@@ -143,14 +116,13 @@
         }
       },
       "block_order": [
-        "slide_YnXTNV",
-        "slide_Mry78U"
+        "slide_YnXTNV"
       ],
       "settings": {
         "layout": "full_bleed",
         "slide_height": "adapt_image",
         "slider_visual": "sides",
-        "auto_rotate": true,
+        "auto_rotate": false,
         "change_slides_speed": 5,
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand",
@@ -162,13 +134,13 @@
       "type": "featured-collection",
       "settings": {
         "steps": 4,
-        "title": "BACK IN STOCK",
+        "title": "FLASH SALE",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "shell-2-0",
+        "collection": "sets",
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,
@@ -283,10 +255,10 @@
         "image_JnihJ6": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/copy_f10e5b6a-6442-411a-8517-168b271ccdaa.jpg",
+            "image": "shopify:\/\/shop_images\/copy_9bbf32e5-d7a5-46b7-9f6d-c82ad01dc4bc.jpg",
             "alt": "",
-            "link": "BACK IN STOCK",
-            "url": "shopify:\/\/collections\/shell-2-0"
+            "link": "FLASH SALE",
+            "url": "shopify:\/\/collections\/sets"
           }
         },
         "image_a4f9L6": {
