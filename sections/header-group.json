@@ -33,8 +33,8 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "לחברות מועדון ומצטרפות חדשות",
-            "sub_text": "BUY 500 PAY 350",
+            "main_text": "BUY ₪500 PAY ₪350",
+            "sub_text": "לחברות מועדון ומצטרפות חדשות",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "rtl",
