@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -5,7 +14,7 @@
       "settings": {
         "tile_image_one": "shopify:\/\/shop_images\/1_bb79b20f-fcac-499e-9c1c-b9a4fcf2d37e.jpg",
         "tile_image_one_link": "shopify:\/\/collections\/outlet",
-        "tile_image_two": "shopify:\/\/shop_images\/1_7666c49d-4500-4f9c-9749-7c3ec294177a.jpg",
+        "tile_image_two": "shopify:\/\/shop_images\/7ff08d51abffc0cfdf69f878b50b58d6_1ac1e73c-29a4-4406-a9d3-8c17937d31cb.jpg",
         "tile_image_two_link": "shopify:\/\/collections\/sets",
         "layout": "grid",
         "show_image": true,
