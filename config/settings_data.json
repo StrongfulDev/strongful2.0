@@ -148,7 +148,7 @@
     "custom_collection_announcement": "Buy 500 Pay 350",
     "members_only_announcement": "",
     "show_card_collection_announcement": true,
-    "second_announcement_tag": "3 פריטים ב 300",
+    "second_announcement_tag": "",
     "custom_collection_second_announcement": "",
     "restock_badge_tag": "",
     "announcement_customizer_override": true,
