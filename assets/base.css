@@ -4490,3 +4490,10 @@ span.snize-description, .cart-item__quantity--package-protection-1 {
 .snize-ac-results .snize-nothing-found {
 	direction: rtl !important;
 }
+
+.sale-banner-cart-drawer {
+	background: var(--gradient-base-background-3);
+	padding: 1rem;
+	margin-bottom: 1rem;
+	text-align: center;
+}
