@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9": {
@@ -99,8 +108,8 @@
         "slide_YnXTNV": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1_918cd1c9-f44d-4587-b8d3-8238d2b73901.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/copy_9.jpg",
+            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_21c3b091-a215-4c31-b0fc-0f7a4803996c.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/copy_9_1ea7ee19-1712-4375-81ac-9ea84d686262.jpg",
             "show_lock": false,
             "button_label": "SHOP NOW",
             "link": "shopify:\/\/collections\/sets",
