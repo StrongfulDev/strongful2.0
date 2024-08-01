@@ -1,0 +1,63 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "5fa3ce9f-60f6-4aee-a0c4-c987fa5f3522": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.custom.comes_with_matching_clothing.value }}",
+            "is_vendor": false,
+            "text_style": "body"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "5fa3ce9f-60f6-4aee-a0c4-c987fa5f3522",
+        "price"
+      ],
+      "custom_css": [
+        ".yotpo-bottomline.pull-left.star-clickable {align-items: baseline;}"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "media_size": "large",
+        "constrain_to_viewport": false,
+        "media_fit": "contain",
+        "gallery_layout": "columns",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": true,
+        "details_section_direction": "right",
+        "members_only_tag": "",
+        "padding_top": 24,
+        "padding_bottom": 80
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
