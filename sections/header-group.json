@@ -1,12 +1,3 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "name": "t:sections.header.name",
   "type": "header",
@@ -284,11 +275,26 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "countdown_iQqew7": {
+      "type": "countdown",
+      "settings": {
+        "show_days": true,
+        "countdown_date": "Sun Aug 11 2024 12:00:00 GMT+0300 (שעון ישראל (קיץ))",
+        "countdown_url": "shopify:\/\/collections\/sets",
+        "left_text": true,
+        "left_copy": "<p>FLASH SALE ENDS IN<\/p>",
+        "right_text_direction": "ltr",
+        "left_text_direction": "ltr",
+        "right_text": false,
+        "right_copy": ""
+      }
     }
   },
   "order": [
     "announcement-bar",
     "header",
-    "7503b704-2110-400e-bc52-a2190d224c23"
+    "7503b704-2110-400e-bc52-a2190d224c23",
+    "countdown_iQqew7"
   ]
 }
