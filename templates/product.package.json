@@ -71,48 +71,6 @@
         "heading_size": "h1"
       }
     },
-    "dddb59c7-1c96-4897-8735-d714c0d34c5d": {
-      "type": "featured-collection",
-      "custom_css": [
-        "div.collection__title_heading .title {margin: 0 !important;}"
-      ],
-      "settings": {
-        "steps": 1,
-        "title": "SHOP THE LOOK",
-        "heading_size": "h1",
-        "heading_type": "heading_type_default",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "{{ product.metafields.global.new_shop_the_look.value }}",
-        "products_to_show": 15,
-        "columns_desktop": 4,
-        "full_width": true,
-        "show_view_all": false,
-        "view_all_text": "",
-        "view_all_style": "link",
-        "view_all_location": "top",
-        "enable_desktop_slider": true,
-        "show_peak": true,
-        "pagination_type": "sides",
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": true,
-        "show_rating": false,
-        "show_sale_badge": false,
-        "enable_quick_add": true,
-        "quick_add_type": "hover",
-        "quick_add_type_mobile": "modal",
-        "quick_add_text": "בחירת מידה",
-        "pick_size_text": "בחירת מידה",
-        "quick_add_accessories_text": "Pick accessories",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 60,
-        "padding_bottom": 0
-      }
-    },
     "6a92001a-1714-49ba-a6c2-ab5ee898262d": {
       "type": "custom-liquid",
       "disabled": true,
@@ -122,33 +80,11 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
-    },
-    "169020667538efe804": {
-      "type": "apps",
-      "blocks": {
-        "408ca3e0-76ac-430f-a568-98a94142ff8b": {
-          "type": "shopify:\/\/apps\/yotpo-product-reviews-ugc\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-          "settings": {
-            "product": "{{product}}"
-          }
-        }
-      },
-      "block_order": [
-        "408ca3e0-76ac-430f-a568-98a94142ff8b"
-      ],
-      "custom_css": [
-
-      ],
-      "settings": {
-        "include_margins": true
-      }
     }
   },
   "order": [
     "main",
     "complete-look-products",
-    "dddb59c7-1c96-4897-8735-d714c0d34c5d",
-    "6a92001a-1714-49ba-a6c2-ab5ee898262d",
-    "169020667538efe804"
+    "6a92001a-1714-49ba-a6c2-ab5ee898262d"
   ]
 }
