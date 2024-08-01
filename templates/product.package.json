@@ -17,12 +17,6 @@
           "settings": {
           }
         },
-        "7c99b889-3ad8-4802-a5c7-9802ab40f12c": {
-          "type": "breadcrumb",
-          "settings": {
-            "show_mobile": true
-          }
-        },
         "title": {
           "type": "title",
           "settings": {
@@ -44,7 +38,6 @@
       },
       "block_order": [
         "ea6d7033-4e56-497e-a4dd-623c0f24954e",
-        "7c99b889-3ad8-4802-a5c7-9802ab40f12c",
         "title",
         "5fa3ce9f-60f6-4aee-a0c4-c987fa5f3522",
         "price"
