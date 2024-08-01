@@ -55,30 +55,9 @@
         "padding_top": 24,
         "padding_bottom": 80
       }
-    },
-    "complete-look-products": {
-      "type": "complete-look-products",
-      "disabled": true,
-      "settings": {
-        "heading": "SHOP THE LOOK",
-        "member_tag": "",
-        "heading_size": "h1"
-      }
-    },
-    "6a92001a-1714-49ba-a6c2-ab5ee898262d": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "settings": {
-        "custom_liquid": "<div\nclass=\"yotpo yotpo-pictures-widget fix-direction page-width\"\ndata-gallery-id=\"6485d44f5a9ff33c2b713f14\"\ndata-product-id=\"{{ product.id }}\">\n<\/div>",
-        "color_scheme": "background-1",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
-    "main",
-    "complete-look-products",
-    "6a92001a-1714-49ba-a6c2-ab5ee898262d"
+    "main"
   ]
 }
