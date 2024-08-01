@@ -4496,4 +4496,5 @@ span.snize-description, .cart-item__quantity--package-protection-1 {
 	padding: 1rem;
 	margin-bottom: 1rem;
 	text-align: center;
+	font-size: calc(var(--font-body-size-small) * 1.4);
 }
