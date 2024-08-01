@@ -12,11 +12,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "ea6d7033-4e56-497e-a4dd-623c0f24954e": {
-          "type": "product_media",
-          "settings": {
-          }
-        },
         "title": {
           "type": "title",
           "settings": {
@@ -37,7 +32,6 @@
         }
       },
       "block_order": [
-        "ea6d7033-4e56-497e-a4dd-623c0f24954e",
         "title",
         "5fa3ce9f-60f6-4aee-a0c4-c987fa5f3522",
         "price"
