@@ -113,48 +113,6 @@
         "padding_bottom": 0
       }
     },
-    "daadfb7d-6377-46b9-9592-68ff753bf341": {
-      "type": "related-products-slider",
-      "custom_css": [
-
-      ],
-      "settings": {
-        "steps": 4,
-        "title": "אולי תאהבי גם",
-        "heading_size": "h1",
-        "heading_type": "heading_type_default",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "",
-        "products_to_show": 15,
-        "columns_desktop": 4,
-        "full_width": true,
-        "show_view_all": false,
-        "view_all_text": "",
-        "view_all_style": "solid",
-        "view_all_location": "bottom",
-        "enable_desktop_slider": true,
-        "show_peak": true,
-        "pagination_type": "sides",
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": true,
-        "show_rating": false,
-        "show_sale_badge": false,
-        "enable_quick_add": true,
-        "quick_add_type": "hover",
-        "quick_add_type_mobile": "modal",
-        "quick_add_text": "הוספה מהירה",
-        "pick_size_text": "בחירת מידה",
-        "quick_add_accessories_text": "הוספה מהירה",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 24,
-        "padding_bottom": 24
-      }
-    },
     "6a92001a-1714-49ba-a6c2-ab5ee898262d": {
       "type": "custom-liquid",
       "disabled": true,
@@ -163,16 +121,6 @@
         "color_scheme": "background-1",
         "padding_top": 40,
         "padding_bottom": 52
-      }
-    },
-    "8bb31773-3add-4a1a-b42f-368102c7844b": {
-      "type": "main-product-quick-add",
-      "settings": {
-        "quick_add_type_mobile": "modal",
-        "quick_add_text": "הוספה מהירה",
-        "pick_size_text": "בחירת מידה",
-        "quick_add_accessories_text": "הוספה מהירה",
-        "announcement_tag": ""
       }
     },
     "169020667538efe804": {
@@ -200,9 +148,7 @@
     "main",
     "complete-look-products",
     "dddb59c7-1c96-4897-8735-d714c0d34c5d",
-    "daadfb7d-6377-46b9-9592-68ff753bf341",
     "6a92001a-1714-49ba-a6c2-ab5ee898262d",
-    "8bb31773-3add-4a1a-b42f-368102c7844b",
     "169020667538efe804"
   ]
 }
