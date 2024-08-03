@@ -307,17 +307,6 @@
                             <span class="card_banner_text color-background-2">{{ card_banner_text }}</span>
                         {% endif %}
                     {% endif %}
-
-                    {% elsif card_product.tags contains 'fake-out' %}
-                    <span class="card_banner_text color-background-2">{{ custom_collection_second_announcement }}</span>
-
-                    {% else %}
-                    {% if card_banner_text != blank %}
-                        <span class="card_banner_text color-background-2">
-                            {{ custom_collection_second_announcement }}
-                        </span>
-                        {% endif %}
-
                 {% endif %}
                 {% if card_product.compare_at_price > card_product.price %}
                     <div class="discount-price-container">
