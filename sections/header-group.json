@@ -242,7 +242,7 @@
         "show_third_image": true,
         "mobile_top_image_2": "shopify:\/\/shop_images\/0737a51b2679a55d45d0d8f464335044_aaf35436-ecf4-4f4d-ae8b-96fd73b6defa.jpg",
         "mobile_top_image_2_link": "shopify:\/\/collections\/buy-500-pay-350",
-        "mobile_top_image_2_title": "FLASH SALE",
+        "mobile_top_image_2_title": "RESTOCK",
         "show_fourth_image": true,
         "mobile_top_image_3": "shopify:\/\/shop_images\/8553a92a08d732ae191edec0b79fec65_d934bceb-8847-456f-a0c7-ba10abb897fc.jpg",
         "mobile_top_image_3_link": "shopify:\/\/pages\/loyalty",
@@ -275,26 +275,11 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
-    },
-    "countdown_iQqew7": {
-      "type": "countdown",
-      "settings": {
-        "show_days": true,
-        "countdown_date": "Sun Aug 11 2024 12:00:00 GMT+0300 (שעון ישראל (קיץ))",
-        "countdown_url": "shopify:\/\/collections\/sets",
-        "left_text": true,
-        "left_copy": "<p>FLASH SALE ENDS IN<\/p>",
-        "right_text_direction": "ltr",
-        "left_text_direction": "ltr",
-        "right_text": false,
-        "right_copy": ""
-      }
     }
   },
   "order": [
     "announcement-bar",
     "header",
-    "7503b704-2110-400e-bc52-a2190d224c23",
-    "countdown_iQqew7"
+    "7503b704-2110-400e-bc52-a2190d224c23"
   ]
 }
