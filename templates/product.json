@@ -1,12 +1,3 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
     "main": {
@@ -26,8 +17,8 @@
         "5ec0a264-e4fc-4a8d-92bc-f2f9223694f5": {
           "type": "sale",
           "settings": {
-            "logged_in_text": "<p>לחברות מועדון ומצטרפות חדשות<\/p><p><strong>קני ב500₪ ושלמי רק 350₪<\/strong><\/p><p><strong>בשימוש הקוד: FLASH150<\/strong><\/p>",
-            "logged_out_text": "<p>לחברות מועדון ומצטרפות חדשות<\/p><p><strong>קני ב500₪ ושלמי רק 350₪<\/strong><\/p><p><strong>בשימוש הקוד: FLASH150<\/strong><\/p>",
+            "logged_in_text": "<p>BLACK ONYX IS RE:STOCKED<\/p><p>קולקציית ONYX חזרה למלאי!<\/p>",
+            "logged_out_text": "<p>BLACK ONYX IS RE:STOCKED<\/p><p>קולקציית ONYX חזרה למלאי!<\/p>",
             "logged_in_text_second": "",
             "log_in": "",
             "small_text": "",
