@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "name": "t:sections.header.name",
   "type": "header",
@@ -69,7 +78,7 @@
             "link_text_direction": "Left To Right",
             "show_on_mobile": true,
             "small_font": false,
-            "title": "RESTOCK",
+            "title": "BACK IN STOCK",
             "title_link": "shopify:\/\/collections\/onyx"
           }
         },
