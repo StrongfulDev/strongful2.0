@@ -68,7 +68,7 @@ class CartRewards {
 			} else {
 				const packageProtectionAdded = this.cart.items.find(item => item.id === 41547480268940);
 				if (!packageProtectionAdded) {
-					this.addProduct(41547480268940);
+					// this.addProduct(41547480268940);
 				}
 			}
 
