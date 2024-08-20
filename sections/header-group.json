@@ -24,12 +24,12 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "SPREAD THE LOVE",
-            "sub_text": "20% הנחה על כל האתר",
+            "main_text": "BACK IN STOCK",
+            "sub_text": "דגמים נבחרים חזרו למלאי",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "rtl",
-            "link": "shopify:\/\/collections\/sale",
+            "link": "shopify:\/\/collections\/back-in-stock",
             "color_scheme": "accent-1"
           }
         },
@@ -69,8 +69,8 @@
             "link_text_direction": "Left To Right",
             "show_on_mobile": true,
             "small_font": false,
-            "title": "20% OFF",
-            "title_link": "shopify:\/\/collections\/sale"
+            "title": "BACK IN STOCK",
+            "title_link": "shopify:\/\/collections\/back-in-stock"
           }
         },
         "ba94928e-5cd1-47f5-9c0a-28ea47285f01": {
