@@ -99,11 +99,11 @@
         "slide_AL3x4y": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1_99990fec-cde7-468c-bbee-9cc9248ad325.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/copy_2cd75a12-7c90-4792-b5e3-30b1c8bf11ff.jpg",
+            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_064133da-cdca-4bac-89d7-f57ab2911f3f.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_678d5b90-3470-4234-9b88-a64998c8efbf.jpg",
             "show_lock": false,
             "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/sale",
+            "link": "shopify:\/\/collections\/back-in-stock",
             "show_text_box": true,
             "color_scheme": "inverse",
             "whole_slide_link": "",
@@ -134,13 +134,13 @@
       "type": "featured-collection",
       "settings": {
         "steps": 4,
-        "title": "SALE",
+        "title": "BACK IN STOCK",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "sale",
+        "collection": "back-in-stock",
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,
@@ -255,10 +255,10 @@
         "image_JnihJ6": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/copy_31a4c83a-c66f-475e-a2d6-111b82880eca.jpg",
+            "image": "shopify:\/\/shop_images\/copy_0d9f79ce-010e-4fea-87c5-32a44e0c2291.jpg",
             "alt": "",
-            "link": "SALE",
-            "url": "shopify:\/\/collections\/sale"
+            "link": "RESTOCK",
+            "url": "shopify:\/\/collections\/back-in-stock"
           }
         },
         "image_a4f9L6": {
