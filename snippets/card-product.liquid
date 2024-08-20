@@ -276,10 +276,6 @@
                         <span class="new-product-span">
                                 YOGA
                             </span>
-                    {% elsif card_product.tags contains 'badge__restock' %}
-                        <span class="new-product-span">
-                                RESTOCK
-                            </span>
                     {% endif %}
                     {%- if show_quick_add and quick_add_type_mobile == "modal" -%}
                         {% unless card_product.title == 'שירות החלפות מורחב' %}
