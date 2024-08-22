@@ -551,12 +551,12 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                                 </a>
                                             {% endif %}
 
-                                            {% if section.settings.show_third_image == true %}
-                                                <a href="{{ section.settings.mobile_top_image_2_link }}" class="dropdown-image-container">
-                                                    <img src="{{ section.settings.mobile_top_image_2 | image_url: width: 1000 }}" alt="{{ section.settings.mobile_top_image_2.alt | escape }}" class="motion-reduce">
-                                                    <div class="desktop_links_image_1_title">
+                                            {% if section.settings.show_second_image == true %}
+                                                <a href="{{ section.settings.mobile_top_image_temp_link }}" class="dropdown-image-container">
+                                                    <img src="{{ section.settings.mobile_top_image_temp | image_url: width: 1000 }}" alt="{{ section.settings.mobile_top_image_temp.alt | escape }}" class="motion-reduce">
+                                                    <div class="desktop_links_image_1_title what">
                                                             <span>
-                                                                {{ section.settings.mobile_top_image_2_title }}
+                                                                {{ section.settings.mobile_top_image_temp_title }}
                                                             </span>
                                                         <div class="icon-container">
                                                             {% render 'icon-caret' %}
@@ -565,12 +565,12 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                                 </a>
                                             {% endif %}
 
-                                            {% if section.settings.show_second_image == true %}
-                                                <a href="{{ section.settings.mobile_top_image_temp_link }}" class="dropdown-image-container">
-                                                    <img src="{{ section.settings.mobile_top_image_temp | image_url: width: 1000 }}" alt="{{ section.settings.mobile_top_image_temp.alt | escape }}" class="motion-reduce">
-                                                    <div class="desktop_links_image_1_title what">
+                                            {% if section.settings.show_third_image == true %}
+                                                <a href="{{ section.settings.mobile_top_image_2_link }}" class="dropdown-image-container">
+                                                    <img src="{{ section.settings.mobile_top_image_2 | image_url: width: 1000 }}" alt="{{ section.settings.mobile_top_image_2.alt | escape }}" class="motion-reduce">
+                                                    <div class="desktop_links_image_1_title">
                                                             <span>
-                                                                {{ section.settings.mobile_top_image_temp_title }}
+                                                                {{ section.settings.mobile_top_image_2_title }}
                                                             </span>
                                                         <div class="icon-container">
                                                             {% render 'icon-caret' %}
