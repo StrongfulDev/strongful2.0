@@ -112,7 +112,7 @@
             "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_f92658e1-2601-4362-98fb-6b3920c8242e.jpg",
             "show_lock": false,
             "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/סט-שני-ב50",
+            "link": "shopify:\/\/collections\/15-off",
             "show_text_box": true,
             "color_scheme": "inverse",
             "whole_slide_link": "",
@@ -168,7 +168,7 @@
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "סט-שני-ב50",
+        "collection": "15-off",
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,
@@ -325,7 +325,7 @@
             "image": "shopify:\/\/shop_images\/copy_2f7ab675-112e-4582-b1df-238d6a5e787f.jpg",
             "alt": "",
             "link": "SALE",
-            "url": "shopify:\/\/collections\/סט-שני-ב50"
+            "url": "shopify:\/\/collections\/15-off"
           }
         },
         "image_a4f9L6": {
