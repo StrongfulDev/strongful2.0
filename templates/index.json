@@ -105,24 +105,6 @@
     "slideshow_gwXDrF": {
       "type": "slideshow",
       "blocks": {
-        "slide_hqR4z4": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_064133da-cdca-4bac-89d7-f57ab2911f3f.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_678d5b90-3470-4234-9b88-a64998c8efbf.jpg",
-            "show_lock": false,
-            "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/back-in-stock",
-            "show_text_box": true,
-            "color_scheme": "inverse",
-            "whole_slide_link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "text_alignment_mobile": "center"
-          }
-        },
         "slide_AL3x4y": {
           "type": "slide",
           "settings": {
@@ -140,11 +122,29 @@
             "image_overlay_opacity": 0,
             "text_alignment_mobile": "center"
           }
+        },
+        "slide_hqR4z4": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_064133da-cdca-4bac-89d7-f57ab2911f3f.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_678d5b90-3470-4234-9b88-a64998c8efbf.jpg",
+            "show_lock": false,
+            "button_label": "SHOP NOW",
+            "link": "shopify:\/\/collections\/back-in-stock",
+            "show_text_box": true,
+            "color_scheme": "inverse",
+            "whole_slide_link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center"
+          }
         }
       },
       "block_order": [
-        "slide_hqR4z4",
-        "slide_AL3x4y"
+        "slide_AL3x4y",
+        "slide_hqR4z4"
       ],
       "settings": {
         "layout": "full_bleed",
