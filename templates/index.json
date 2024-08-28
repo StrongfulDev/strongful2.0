@@ -1,12 +1,3 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9": {
@@ -126,11 +117,11 @@
         "slide_hqR4z4": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_064133da-cdca-4bac-89d7-f57ab2911f3f.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_678d5b90-3470-4234-9b88-a64998c8efbf.jpg",
+            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_4ea68db8-8f13-4032-9a37-e5e16bad7da3.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_1b2e968a-b97a-49e5-85e5-999f90a0105d.jpg",
             "show_lock": false,
             "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/back-in-stock",
+            "link": "shopify:\/\/collections\/horizon",
             "show_text_box": true,
             "color_scheme": "inverse",
             "whole_slide_link": "",
@@ -322,10 +313,10 @@
         "image_JnihJ6": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/copy_bed60edf-e138-4baa-ad35-439681ffed6e.jpg",
+            "image": "shopify:\/\/shop_images\/copy_484b1330-7c2b-4c43-b92d-b793bf789667.jpg",
             "alt": "",
-            "link": "RESTOCK",
-            "url": "shopify:\/\/collections\/back-in-stock"
+            "link": "SALE",
+            "url": "shopify:\/\/collections\/15-off"
           }
         },
         "image_a4f9L6": {
