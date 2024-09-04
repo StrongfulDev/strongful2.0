@@ -1,12 +1,3 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
     "main": {
@@ -26,15 +17,15 @@
         "5ec0a264-e4fc-4a8d-92bc-f2f9223694f5": {
           "type": "sale",
           "settings": {
-            "logged_in_text": "<p><strong>15% OFF<\/strong><\/p><p>על דגמים נבחרים בלבד<\/p>",
-            "logged_out_text": "<p><strong>15% OFF<\/strong><\/p><p>על דגמים נבחרים בלבד<\/p>",
+            "logged_in_text": "<p>NEW IN: ASTRA COLLECTION<\/p><p>קולקציית הטניס החדשה נחתה באתר!<\/p>",
+            "logged_out_text": "<p>NEW IN: ASTRA COLLECTION<\/p><p>קולקציית הטניס החדשה נחתה באתר!<\/p>",
             "logged_in_text_second": "",
             "log_in": "",
             "small_text": "",
             "small_logged_in_text": "",
             "second_announcement_regular_text": "",
             "second_small_text": "",
-            "paragraph_direction": "Left To Right"
+            "paragraph_direction": "Right To Left"
           }
         },
         "title": {

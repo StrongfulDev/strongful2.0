@@ -24,12 +24,12 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "15% OFF",
-            "sub_text": "על דגמים נבחרים",
+            "main_text": "ASTRA COLLECTION",
+            "sub_text": "קולקציית הטניס החדשה",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "rtl",
-            "link": "shopify:\/\/collections\/15-off",
+            "link": "shopify:\/\/collections\/astra",
             "color_scheme": "accent-1"
           }
         },
