@@ -99,29 +99,11 @@
         "slide_AL3x4y": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_b32e9d5f-29a5-4f78-b04d-4292342a049c.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_dafa8e87-d9b9-4154-a5d2-826202c21ce9.jpg",
+            "image": "shopify:\/\/shop_images\/copy_2_cfb26724-487f-457c-b08a-97a1930da978.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/copy_804b84fb-93be-4db2-b318-22de856d55e3.jpg",
             "show_lock": false,
             "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/15-off",
-            "show_text_box": true,
-            "color_scheme": "inverse",
-            "whole_slide_link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_hqR4z4": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_4ea68db8-8f13-4032-9a37-e5e16bad7da3.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/copy_ee584b52-45dc-407c-b32f-a0c2d9250b3c.jpg",
-            "show_lock": false,
-            "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/horizon",
+            "link": "shopify:\/\/collections\/astra",
             "show_text_box": true,
             "color_scheme": "inverse",
             "whole_slide_link": "",
@@ -134,14 +116,13 @@
         }
       },
       "block_order": [
-        "slide_AL3x4y",
-        "slide_hqR4z4"
+        "slide_AL3x4y"
       ],
       "settings": {
         "layout": "full_bleed",
         "slide_height": "adapt_image",
         "slider_visual": "sides",
-        "auto_rotate": true,
+        "auto_rotate": false,
         "change_slides_speed": 5,
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand",
@@ -274,10 +255,10 @@
         "image_JnihJ6": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/copy_484b1330-7c2b-4c43-b92d-b793bf789667.jpg",
+            "image": "shopify:\/\/shop_images\/copy_0268d6e4-69f8-4953-b90e-0aa801fec074.jpg",
             "alt": "",
-            "link": "SALE",
-            "url": "shopify:\/\/collections\/15-off"
+            "link": "NEW IN",
+            "url": "shopify:\/\/collections\/astra"
           }
         },
         "image_a4f9L6": {
