@@ -238,7 +238,9 @@ button.slideshow__autoplay {
 }
 
 .slideshow__slide--0 .slideshow__text.banner__box {
-	bottom: 13%;
+	/*bottom: 13%;*/
+	bottom: 30%;
+	left: 78%;
 }
 
 .slideshow__slide--0 .slideshow__text.logged-out-banner__box {
@@ -302,7 +304,8 @@ button.slideshow__autoplay {
 	}
 
 	.slideshow__slide--0 .slideshow__text.banner__box {
-		bottom: 20%;
+		bottom: 40%;
+		left: 50%;
 	}
 
 	.slideshow__slide--0 .slideshow__text.banner__box.logged-in-banner__box {
