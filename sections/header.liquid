@@ -538,7 +538,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                         <div class="menu_images">
 
                                             {% if section.settings.show_first_image == true %}
-                                                <a href="{{ section.settings.mobile_top_image_1_link }}" class="dropdown-image-container">
+                                                <a href="{{ section.settings.mobile_top_image_1_link }}" class="dropdown-image-container" style="order: {{ section.settings.image_order_first }}">
                                                     <img src="{{ section.settings.mobile_top_image_1 | image_url: width: 1000 }}" alt="{{ section.settings.mobile_top_image_1.alt | escape }}" class="motion-reduce">
                                                     <div class="desktop_links_image_1_title">
                                                             <span>
@@ -552,7 +552,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                             {% endif %}
 
                                             {% if section.settings.show_second_image == true %}
-                                                <a href="{{ section.settings.mobile_top_image_temp_link }}" class="dropdown-image-container">
+                                                <a href="{{ section.settings.mobile_top_image_temp_link }}" class="dropdown-image-container" style="order: {{ section.settings.image_order_second }}">
                                                     <img src="{{ section.settings.mobile_top_image_temp | image_url: width: 1000 }}" alt="{{ section.settings.mobile_top_image_temp.alt | escape }}" class="motion-reduce">
                                                     <div class="desktop_links_image_1_title what">
                                                             <span>
@@ -566,7 +566,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                             {% endif %}
 
                                             {% if section.settings.show_fourth_image == true %}
-                                                <a href="{{ section.settings.mobile_top_image_3_link }}" class="dropdown-image-container">
+                                                <a href="{{ section.settings.mobile_top_image_3_link }}" class="dropdown-image-container" style="order: {{ section.settings.image_order_third }}">
                                                     <img src="{{ section.settings.mobile_top_image_3 | image_url: width: 700 }}" alt="{{ section.settings.mobile_top_image_3.alt | escape }}" class="motion-reduce">
                                                     <div class="desktop_links_image_1_title">
                                                             <span>
@@ -580,7 +580,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                             {% endif %}
 
                                             {% if section.settings.show_third_image == true %}
-                                                <a href="{{ section.settings.mobile_top_image_2_link }}" class="dropdown-image-container">
+                                                <a href="{{ section.settings.mobile_top_image_2_link }}" class="dropdown-image-container" style="order: {{ section.settings.image_order_fourth }}">
                                                     <img src="{{ section.settings.mobile_top_image_2 | image_url: width: 1000 }}" alt="{{ section.settings.mobile_top_image_2.alt | escape }}" class="motion-reduce">
                                                     <div class="desktop_links_image_1_title">
                                                             <span>
@@ -594,7 +594,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                             {% endif %}
 
                                             {% if section.settings.show_fifth_image == true %}
-                                                <a href="{{ section.settings.mobile_top_image_4_link }}" class="dropdown-image-container">
+                                                <a href="{{ section.settings.mobile_top_image_4_link }}" class="dropdown-image-container" style="order: {{ section.settings.image_order_fifth }}">
                                                     <img src="{{ section.settings.mobile_top_image_4 | image_url: width: 700 }}" alt="{{ section.settings.mobile_top_image_4.alt | escape }}" class="motion-reduce">
                                                     <div class="desktop_links_image_1_title">
                                                             <span>
@@ -1418,6 +1418,11 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                 "label": "Show first image"
             },
             {
+              "type": "text",
+                "id": "image_order_first",
+                "label": "Image Order"
+            },
+            {
                 "type":"image_picker",
                 "id":"mobile_top_image_1",
                 "label":"Mobile Image 1"
@@ -1437,6 +1442,11 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                 "id": "show_second_image",
                 "default": true,
                 "label": "Show second image"
+            },
+            {
+                "type": "text",
+                "id": "image_order_second",
+                "label": "Image Order"
             },
             {
                 "type":"image_picker",
@@ -1460,6 +1470,11 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                 "label": "Show third image"
             },
             {
+                "type": "text",
+                "id": "image_order_third",
+                "label": "Image Order"
+            },
+            {
                 "type":"image_picker",
                 "id":"mobile_top_image_2",
                 "label":"Mobile Image 3"
@@ -1481,6 +1496,11 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                 "label": "Show fourth image"
             },
             {
+                "type": "text",
+                "id": "image_order_fourth",
+                "label": "Image Order"
+            },
+            {
                 "type":"image_picker",
                 "id":"mobile_top_image_3",
                 "label":"Mobile Image 4"
@@ -1500,6 +1520,11 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                 "id": "show_fifth_image",
                 "default": true,
                 "label": "Show fifth image"
+            },
+            {
+                "type": "text",
+                "id": "image_order_fifth",
+                "label": "Image Order"
             },
             {
                 "type":"image_picker",
