@@ -538,7 +538,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                         <div class="menu_images">
 
                                             {% if section.settings.show_first_image == true %}
-                                                <a href="{{ section.settings.mobile_top_image_1_link }}" class="dropdown-image-container" style="order: {{ section.settings.image_order_first }}">
+                                                <a href="{{ section.settings.mobile_top_image_1_link }}" class="dropdown-image-container {{ forloop.index0 }}" style="order: {{ section.settings.image_order_first }}">
                                                     <img src="{{ section.settings.mobile_top_image_1 | image_url: width: 1000 }}" alt="{{ section.settings.mobile_top_image_1.alt | escape }}" class="motion-reduce">
                                                     <div class="desktop_links_image_1_title">
                                                             <span>
@@ -565,9 +565,9 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                                 </a>
                                             {% endif %}
 
-                                            {% if section.settings.show_fourth_image == true %}
+                                            {% if section.settings.show_third_image == true %}
                                                 <a href="{{ section.settings.mobile_top_image_3_link }}" class="dropdown-image-container" style="order: {{ section.settings.image_order_third }}">
-                                                    <img src="{{ section.settings.mobile_top_image_3 | image_url: width: 700 }}" alt="{{ section.settings.mobile_top_image_3.alt | escape }}" class="motion-reduce">
+                                                    <img src="{{ section.settings.mobile_top_image_3 | image_url: width: 1000 }}" alt="{{ section.settings.mobile_top_image_3.alt | escape }}" class="motion-reduce">
                                                     <div class="desktop_links_image_1_title">
                                                             <span>
                                                                 {{ section.settings.mobile_top_image_3_title }}
@@ -579,12 +579,12 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                                 </a>
                                             {% endif %}
 
-                                            {% if section.settings.show_third_image == true %}
-                                                <a href="{{ section.settings.mobile_top_image_2_link }}" class="dropdown-image-container" style="order: {{ section.settings.image_order_fourth }}">
-                                                    <img src="{{ section.settings.mobile_top_image_2 | image_url: width: 1000 }}" alt="{{ section.settings.mobile_top_image_2.alt | escape }}" class="motion-reduce">
+                                            {% if section.settings.show_fourth_image == true %}
+                                                <a href="{{ section.settings.mobile_top_image_4_link }}" class="dropdown-image-container" style="order: {{ section.settings.image_order_fourth }}">
+                                                    <img src="{{ section.settings.mobile_top_image_4 | image_url: width: 700 }}" alt="{{ section.settings.mobile_top_image_4.alt | escape }}" class="motion-reduce">
                                                     <div class="desktop_links_image_1_title">
                                                             <span>
-                                                                {{ section.settings.mobile_top_image_2_title }}
+                                                                {{ section.settings.mobile_top_image_4_title }}
                                                             </span>
                                                         <div class="icon-container">
                                                             {% render 'icon-caret' %}
@@ -594,11 +594,11 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                             {% endif %}
 
                                             {% if section.settings.show_fifth_image == true %}
-                                                <a href="{{ section.settings.mobile_top_image_4_link }}" class="dropdown-image-container" style="order: {{ section.settings.image_order_fifth }}">
-                                                    <img src="{{ section.settings.mobile_top_image_4 | image_url: width: 700 }}" alt="{{ section.settings.mobile_top_image_4.alt | escape }}" class="motion-reduce">
+                                                <a href="{{ section.settings.mobile_top_image_5_link }}" class="dropdown-image-container" style="order: {{ section.settings.image_order_fifth }}">
+                                                    <img src="{{ section.settings.mobile_top_image_5 | image_url: width: 700 }}" alt="{{ section.settings.mobile_top_image_5.alt | escape }}" class="motion-reduce">
                                                     <div class="desktop_links_image_1_title">
                                                             <span>
-                                                                {{ section.settings.mobile_top_image_4_title }}
+                                                                {{ section.settings.mobile_top_image_5_title }}
                                                             </span>
                                                         <div class="icon-container">
                                                             {% render 'icon-caret' %}
