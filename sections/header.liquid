@@ -552,11 +552,11 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                             {% endif %}
 
                                             {% if section.settings.show_second_image == true %}
-                                                <a href="{{ section.settings.mobile_top_image_temp_link }}" class="dropdown-image-container" style="order: {{ section.settings.image_order_second }}">
-                                                    <img src="{{ section.settings.mobile_top_image_temp | image_url: width: 1000 }}" alt="{{ section.settings.mobile_top_image_temp.alt | escape }}" class="motion-reduce">
+                                                <a href="{{ section.settings.mobile_top_image_2_link }}" class="dropdown-image-container" style="order: {{ section.settings.image_order_second }}">
+                                                    <img src="{{ section.settings.mobile_top_image_2 | image_url: width: 1000 }}" alt="{{ section.settings.mobile_top_image_2.alt | escape }}" class="motion-reduce">
                                                     <div class="desktop_links_image_1_title">
                                                             <span>
-                                                                {{ section.settings.mobile_top_image_temp_title }}
+                                                                {{ section.settings.mobile_top_image_2_title }}
                                                             </span>
                                                         <div class="icon-container">
                                                             {% render 'icon-caret' %}
@@ -585,20 +585,6 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                                     <div class="desktop_links_image_1_title">
                                                             <span>
                                                                 {{ section.settings.mobile_top_image_4_title }}
-                                                            </span>
-                                                        <div class="icon-container">
-                                                            {% render 'icon-caret' %}
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            {% endif %}
-
-                                            {% if section.settings.show_fifth_image == true %}
-                                                <a href="{{ section.settings.mobile_top_image_5_link }}" class="dropdown-image-container" style="order: {{ section.settings.image_order_fifth }}">
-                                                    <img src="{{ section.settings.mobile_top_image_5 | image_url: width: 700 }}" alt="{{ section.settings.mobile_top_image_5.alt | escape }}" class="motion-reduce">
-                                                    <div class="desktop_links_image_1_title">
-                                                            <span>
-                                                                {{ section.settings.mobile_top_image_5_title }}
                                                             </span>
                                                         <div class="icon-container">
                                                             {% render 'icon-caret' %}
@@ -1450,17 +1436,17 @@ You can learn more about this (and learn how to cleanly revert these changes) at
             },
             {
                 "type":"image_picker",
-                "id":"mobile_top_image_temp",
+                "id":"mobile_top_image_2",
                 "label":"Mobile Image 2"
             },
             {
                 "type":"url",
-                "id":"mobile_top_image_temp_link",
+                "id":"mobile_top_image_2_link",
                 "label":"Mobile Image 2 URL"
             },
             {
                 "type": "text",
-                "id": "mobile_top_image_temp_title",
+                "id": "mobile_top_image_2_title",
                 "label": "Mobile Image 2 Title"
             },
             {
@@ -1476,17 +1462,17 @@ You can learn more about this (and learn how to cleanly revert these changes) at
             },
             {
                 "type":"image_picker",
-                "id":"mobile_top_image_2",
+                "id":"mobile_top_image_3",
                 "label":"Mobile Image 3"
             },
             {
                 "type":"url",
-                "id":"mobile_top_image_2_link",
+                "id":"mobile_top_image_3_link",
                 "label":"Mobile Image 3 URL"
             },
             {
                 "type": "text",
-                "id": "mobile_top_image_2_title",
+                "id": "mobile_top_image_3_title",
                 "label": "Mobile Image 3 Title"
             },
             {
@@ -1502,44 +1488,18 @@ You can learn more about this (and learn how to cleanly revert these changes) at
             },
             {
                 "type":"image_picker",
-                "id":"mobile_top_image_3",
+                "id":"mobile_top_image_4",
                 "label":"Mobile Image 4"
             },
             {
                 "type":"url",
-                "id":"mobile_top_image_3_link",
+                "id":"mobile_top_image_4_link",
                 "label":"Mobile Image 4 URL"
             },
             {
                 "type": "text",
-                "id": "mobile_top_image_3_title",
-                "label": "Mobile Image 4 Title"
-            },
-            {
-                "type": "checkbox",
-                "id": "show_fifth_image",
-                "default": true,
-                "label": "Show fifth image"
-            },
-            {
-                "type": "text",
-                "id": "image_order_fifth",
-                "label": "Image Order"
-            },
-            {
-                "type":"image_picker",
-                "id":"mobile_top_image_4",
-                "label":"Mobile Image 5"
-            },
-            {
-                "type":"url",
-                "id":"mobile_top_image_4_link",
-                "label":"Mobile Image 5 URL"
-            },
-            {
-                "type": "text",
                 "id": "mobile_top_image_4_title",
-                "label": "Mobile Image 5 Title"
+                "label": "Mobile Image 4 Title"
             },
             {
                 "type": "checkbox",
