@@ -156,6 +156,18 @@
                     opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }};
                 }
 
+                .slideshow__slide--{{ forloop.index0 }} .slideshow__text.banner__box.banner__box--{{ forloop.index0 }} {
+                    left: {{ block.settings.left_position }}%;
+                    bottom: {{ block.settings.bottom_position }}%;
+                }
+
+                @media screen and (min-width: 949px) {
+                    .slideshow__slide--{{ forloop.index0 }} .slideshow__text.banner__box.banner__box--{{ forloop.index0 }} {
+                        left: {{ block.settings.desktop_left_position }}%;
+                        bottom: {{ block.settings.desktop_bottom_position }}%;
+                    }
+                }
+
             </style>
             {% if block.settings.whole_slide_link != blank %}
                 <a href="{{ block.settings.whole_slide_link }}" class="whole-slide-link">
@@ -194,7 +206,7 @@
                 </div>
                 <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
                     <div class="slideshow__text banner__box content-container content-container--full-width-mobile
-                                banner__box--{{ forloop.index }}
+                                banner__box--{{ forloop.index0 }}
                                 color-{{ block.settings.color_scheme }}
                                 gradient slideshow__text--{{ block.settings.text_alignment }}
                                 slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}"
@@ -389,6 +401,46 @@
           "label": "t:sections.slideshow.blocks.slide.settings.mobile_image.label"
         },
         {
+          "type": "range",
+          "id": "left_position",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "%",
+            "label": "Left button position",
+            "default": 50
+        },
+        {
+            "type": "range",
+            "id": "bottom_position",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "%",
+            "label": "Bottom button position",
+            "default": 50
+        },
+        {
+          "type": "range",
+          "id": "desktop_left_position",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Desktop left button position",
+          "default": 50
+        },
+        {
+          "type": "range",
+          "id": "desktop_bottom_position",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Desktop bottom button position",
+          "default": 50
+        },
+        {
             "type": "checkbox",
             "id": "show_lock",
             "label": "Check if want to show lock icon"
@@ -562,9 +614,6 @@
     {
       "name": "t:sections.slideshow.presets.name",
       "blocks": [
-        {
-          "type": "slide"
-        },
         {
           "type": "slide"
         }
