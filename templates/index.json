@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9": {
@@ -102,7 +111,7 @@
             "image": "shopify:\/\/shop_images\/2_74ecbc29-0331-4f02-a2d7-0b66a1feedb9.jpg",
             "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_af1c22b6-49f6-483c-8736-cca459d854ca.jpg",
             "left_position": 50,
-            "bottom_position": 50,
+            "bottom_position": 56,
             "desktop_left_position": 76,
             "desktop_bottom_position": 29,
             "show_lock": false,
