@@ -126,10 +126,33 @@
             "image_overlay_opacity": 0,
             "text_alignment_mobile": "center"
           }
+        },
+        "slide_hnKjAY": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_ca4f1c74-852d-4e16-8971-b36becbeeeba.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_8ddba9ce-de47-44d2-8f33-402df21ffcf7.jpg",
+            "left_position": 50,
+            "bottom_position": 56,
+            "desktop_left_position": 76,
+            "desktop_bottom_position": 29,
+            "show_lock": false,
+            "button_label": "SHOP NOW",
+            "link": "shopify:\/\/collections\/astra",
+            "show_text_box": true,
+            "color_scheme": "inverse",
+            "whole_slide_link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center"
+          }
         }
       },
       "block_order": [
-        "slide_AL3x4y"
+        "slide_AL3x4y",
+        "slide_hnKjAY"
       ],
       "settings": {
         "layout": "full_bleed",
