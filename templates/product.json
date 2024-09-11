@@ -26,8 +26,8 @@
         "5ec0a264-e4fc-4a8d-92bc-f2f9223694f5": {
           "type": "sale",
           "settings": {
-            "logged_in_text": "<p><strong>מהדורה מוגבלת לצבע של הקיץ!<\/strong><\/p><p>THE NEW MINT GREEN<\/p>",
-            "logged_out_text": "<p><strong>מהדורה מוגבלת לצבע של הקיץ!<\/strong><\/p><p>THE NEW MINT GREEN<\/p>",
+            "logged_in_text": "<p><strong>30% הנחה לחברות מועדון<\/strong><\/p><p>בקניית 3 פריטים ומעלה<\/p><p>בשימוש הקוד: CLUB30<\/p>",
+            "logged_out_text": "<p><strong>30% הנחה לחברות מועדון<\/strong><\/p><p>בקניית 3 פריטים ומעלה<\/p><p>בשימוש הקוד: CLUB30<\/p>",
             "logged_in_text_second": "",
             "log_in": "",
             "small_text": "",
