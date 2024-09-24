@@ -24,7 +24,7 @@
             "text_alignment": "center",
             "main_text_direction": "rtl",
             "sub_text_direction": "rtl",
-            "link": "shopify:\/\/blogs\/policies\/החזרות-והחלפות",
+            "link": "shopify://blogs/policies/החזרות-והחלפות",
             "color_scheme": "accent-1"
           }
         },
@@ -38,7 +38,7 @@
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "rtl",
-            "link": "shopify:\/\/collections\/astra",
+            "link": "shopify://collections/astra",
             "color_scheme": "accent-1"
           }
         },
@@ -52,7 +52,7 @@
             "text_alignment": "center",
             "main_text_direction": "rtl",
             "sub_text_direction": "rtl",
-            "link": "shopify:\/\/blogs\/policies\/מדיניות-המשלוחים-שלנו",
+            "link": "shopify://blogs/policies/מדיניות-המשלוחים-שלנו",
             "color_scheme": "accent-1"
           }
         }
@@ -79,13 +79,13 @@
             "show_on_mobile": true,
             "small_font": false,
             "title": "NEW IN",
-            "title_link": "shopify:\/\/collections\/astra"
+            "title_link": "shopify://collections/astra"
           }
         },
         "ba94928e-5cd1-47f5-9c0a-28ea47285f01": {
           "type": "menu_item",
           "settings": {
-            "above_shop_all_link": "shopify:\/\/collections\/sets",
+            "above_shop_all_link": "shopify://collections/sets",
             "show_on_mobile": true,
             "order": "",
             "small_font": false,
@@ -95,8 +95,8 @@
             "title": "קני לפי",
             "item_class": "",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/bd9a4cbcb5a8c5865a0499b4fa42b489_2718c3cb-31c0-42db-8a5d-cc06ead9434d.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/astra",
+            "desktop_links_image_1": "shopify://shop_images/bd9a4cbcb5a8c5865a0499b4fa42b489_2718c3cb-31c0-42db-8a5d-cc06ead9434d.jpg",
+            "desktop_links_image_1_link": "shopify://collections/astra",
             "desktop_links_image_2_link": "",
             "mobile_title": "קני לפי",
             "main_link": "",
@@ -108,7 +108,7 @@
         "8878d4cf-d83f-42a2-90b9-ddebceb7501c": {
           "type": "menu_item",
           "settings": {
-            "above_shop_all_link": "shopify:\/\/collections\/sets",
+            "above_shop_all_link": "shopify://collections/sets",
             "show_on_mobile": true,
             "order": "",
             "small_font": false,
@@ -118,11 +118,11 @@
             "title": "מוצרים",
             "item_class": "",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/7ff08d51abffc0cfdf69f878b50b58d6_e8c65019-91f5-42ef-8eb2-e9a2808ad54c.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/astra",
-            "desktop_links_image_2": "shopify:\/\/shop_images\/7ff08d51abffc0cfdf69f878b50b58d6_14171b5a-6a09-48d7-ba79-9f2e6f045505.jpg",
-            "desktop_links_image_2_link": "shopify:\/\/collections\/weekend-sale",
-            "mobile_cover_image": "shopify:\/\/shop_images\/20e5c3f719da92dc7bfd0c70c57f7186.jpg",
+            "desktop_links_image_1": "shopify://shop_images/7ff08d51abffc0cfdf69f878b50b58d6_e8c65019-91f5-42ef-8eb2-e9a2808ad54c.jpg",
+            "desktop_links_image_1_link": "shopify://collections/astra",
+            "desktop_links_image_2": "shopify://shop_images/7ff08d51abffc0cfdf69f878b50b58d6_14171b5a-6a09-48d7-ba79-9f2e6f045505.jpg",
+            "desktop_links_image_2_link": "shopify://collections/weekend-sale",
+            "mobile_cover_image": "shopify://shop_images/20e5c3f719da92dc7bfd0c70c57f7186.jpg",
             "mobile_title": "מוצרים",
             "main_link": "",
             "main_title": "",
@@ -133,7 +133,7 @@
         "fc929aa6-aab6-4c25-be13-8267425330c3": {
           "type": "menu_item",
           "settings": {
-            "above_shop_all_link": "shopify:\/\/collections\/sets",
+            "above_shop_all_link": "shopify://collections/sets",
             "show_on_mobile": true,
             "order": "",
             "small_font": false,
@@ -143,20 +143,20 @@
             "title": "קולקציות",
             "item_class": "",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/bd9a4cbcb5a8c5865a0499b4fa42b489_2718c3cb-31c0-42db-8a5d-cc06ead9434d.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/astra",
+            "desktop_links_image_1": "shopify://shop_images/bd9a4cbcb5a8c5865a0499b4fa42b489_2718c3cb-31c0-42db-8a5d-cc06ead9434d.jpg",
+            "desktop_links_image_1_link": "shopify://collections/astra",
             "desktop_links_image_2_link": "",
             "mobile_title": "קולקציות",
-            "main_link": "shopify:\/\/collections\/sets",
+            "main_link": "shopify://collections/sets",
             "main_title": "",
-            "shop_all_link": "shopify:\/\/collections\/sets",
+            "shop_all_link": "shopify://collections/sets",
             "shop_all_title": "Shop all sets"
           }
         },
         "4d0d7344-0f17-4600-86d8-3481f2a1c4a1": {
           "type": "menu_item",
           "settings": {
-            "above_shop_all_link": "shopify:\/\/collections\/accessories",
+            "above_shop_all_link": "shopify://collections/accessories",
             "show_on_mobile": true,
             "order": "",
             "small_font": false,
@@ -166,20 +166,20 @@
             "title": "אקססוריז",
             "item_class": "",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/bd9a4cbcb5a8c5865a0499b4fa42b489_2718c3cb-31c0-42db-8a5d-cc06ead9434d.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/astra",
+            "desktop_links_image_1": "shopify://shop_images/bd9a4cbcb5a8c5865a0499b4fa42b489_2718c3cb-31c0-42db-8a5d-cc06ead9434d.jpg",
+            "desktop_links_image_1_link": "shopify://collections/astra",
             "desktop_links_image_2_link": "",
             "mobile_title": "אקססוריז",
             "main_link": "",
             "main_title": "",
-            "shop_all_link": "shopify:\/\/collections\/accessories",
+            "shop_all_link": "shopify://collections/accessories",
             "shop_all_title": ""
           }
         },
         "70af0289-2846-42bd-93c5-5598239a8ddc": {
           "type": "menu_item",
           "settings": {
-            "above_shop_all_link": "shopify:\/\/collections\/outlet",
+            "above_shop_all_link": "shopify://collections/outlet",
             "show_on_mobile": true,
             "order": "",
             "small_font": true,
@@ -189,13 +189,13 @@
             "title": "אאוטלט",
             "item_class": "",
             "title_link": "",
-            "desktop_links_image_1": "shopify:\/\/shop_images\/bd9a4cbcb5a8c5865a0499b4fa42b489_2718c3cb-31c0-42db-8a5d-cc06ead9434d.jpg",
-            "desktop_links_image_1_link": "shopify:\/\/collections\/astra",
+            "desktop_links_image_1": "shopify://shop_images/bd9a4cbcb5a8c5865a0499b4fa42b489_2718c3cb-31c0-42db-8a5d-cc06ead9434d.jpg",
+            "desktop_links_image_1_link": "shopify://collections/astra",
             "desktop_links_image_2_link": "",
             "mobile_title": "אאוטלט",
             "main_link": "",
             "main_title": "",
-            "shop_all_link": "shopify:\/\/collections\/outlet",
+            "shop_all_link": "shopify://collections/outlet",
             "shop_all_title": "אאוטלט"
           }
         },
@@ -206,7 +206,7 @@
             "show_on_mobile": true,
             "small_font": true,
             "title": "גיפט קארד",
-            "title_link": "shopify:\/\/products\/strongful-giftcard"
+            "title_link": "shopify://products/strongful-giftcard"
           }
         },
         "69313e8a-8818-485d-9c44-529f1b10ccdd": {
@@ -216,7 +216,7 @@
             "show_on_mobile": false,
             "small_font": false,
             "title": "מועדון לקוחות",
-            "title_link": "shopify:\/\/pages\/loyalty"
+            "title_link": "shopify://pages/loyalty"
           }
         }
       },
@@ -232,7 +232,7 @@
       ],
       "settings": {
         "account": "new-loyalty-header-menu",
-        "desktop_loyalty_link": "shopify:\/\/pages\/loyalty",
+        "desktop_loyalty_link": "shopify://pages/loyalty",
         "color_scheme": "background-1",
         "logo_position": "middle-left",
         "menu": "elara-sets-first",
@@ -243,33 +243,33 @@
         "mobile_logo_position": "center",
         "show_first_image": true,
         "image_order_first": "1",
-        "mobile_top_image_1": "shopify:\/\/shop_images\/1_9c2bc206-514f-4975-97df-d39cbef16353.jpg",
-        "mobile_top_image_1_link": "shopify:\/\/collections\/astra",
+        "mobile_top_image_1": "shopify://shop_images/1_9c2bc206-514f-4975-97df-d39cbef16353.jpg",
+        "mobile_top_image_1_link": "shopify://collections/astra",
         "mobile_top_image_1_title": "SPECIAL SETS",
         "show_second_image": true,
         "image_order_second": "2",
-        "mobile_top_image_2": "shopify:\/\/shop_images\/0737a51b2679a55d45d0d8f464335044_372b3e44-4fc2-4512-9c9a-38abd875ccbb.jpg",
-        "mobile_top_image_2_link": "shopify:\/\/collections\/weekend-sale",
+        "mobile_top_image_2": "shopify://shop_images/0737a51b2679a55d45d0d8f464335044_372b3e44-4fc2-4512-9c9a-38abd875ccbb.jpg",
+        "mobile_top_image_2_link": "shopify://collections/weekend-sale",
         "mobile_top_image_2_title": "SALE",
         "show_third_image": true,
         "image_order_third": "3",
-        "mobile_top_image_3": "shopify:\/\/shop_images\/3_9915e9dc-57bf-4680-8d1a-6a67101160b9.jpg",
-        "mobile_top_image_3_link": "shopify:\/\/pages\/loyalty",
+        "mobile_top_image_3": "shopify://shop_images/3_9915e9dc-57bf-4680-8d1a-6a67101160b9.jpg",
+        "mobile_top_image_3_link": "shopify://pages/loyalty",
         "mobile_top_image_3_title": "STRONGFUL CLUB",
         "show_fourth_image": true,
         "image_order_fourth": "4",
-        "mobile_top_image_4": "shopify:\/\/shop_images\/OUTLET_1fe429bc-ff70-41d0-bfdc-83d9d6f79436.jpg",
-        "mobile_top_image_4_link": "shopify:\/\/collections\/outlet",
+        "mobile_top_image_4": "shopify://shop_images/OUTLET_1fe429bc-ff70-41d0-bfdc-83d9d6f79436.jpg",
+        "mobile_top_image_4_link": "shopify://collections/outlet",
         "mobile_top_image_4_title": "OUTLET",
         "toggle_socials": false,
         "margin_bottom": 0,
         "mobile_logo_width": 20,
         "padding_top": 16,
         "padding_bottom": 16,
-        "mobile_logo": "shopify:\/\/shop_images\/9ed861fba4dae099b0b04754bbc299cc.png",
-        "mobile_logo_secondary": "shopify:\/\/shop_images\/STRONGFUL_LOGO.webp",
+        "mobile_logo": "shopify://shop_images/9ed861fba4dae099b0b04754bbc299cc.png",
+        "mobile_logo_secondary": "shopify://shop_images/STRONGFUL_LOGO.webp",
         "mobile_logo_secondary_width": 60,
-        "mobile_logo_link": "\/",
+        "mobile_logo_link": "/",
         "shop_all_link": "",
         "shop_all_title": ""
       }
@@ -285,26 +285,11 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
-    },
-    "countdown_mm7rMQ": {
-      "type": "countdown",
-      "settings": {
-        "show_days": true,
-        "countdown_date": "Sun Sep 15 2024 20:00:00 GMT+0300 (שעון ישראל (קיץ))",
-        "countdown_url": "shopify:\/\/collections\/weekend-sale",
-        "left_text": true,
-        "left_copy": "<p>WEEKEND SALE ENDS IN<\/p>",
-        "right_text_direction": "ltr",
-        "left_text_direction": "ltr",
-        "right_text": false,
-        "right_copy": ""
-      }
     }
   },
   "order": [
     "announcement-bar",
     "header",
-    "7503b704-2110-400e-bc52-a2190d224c23",
-    "countdown_mm7rMQ"
+    "7503b704-2110-400e-bc52-a2190d224c23"
   ]
 }

@@ -43,8 +43,8 @@
       ],
       "settings": {
         "override_image_from_metafield": true,
-        "image": "shopify:\/\/shop_images\/a69c6a81427c80862b80cf76175bd315_d025edad-87a1-401c-b9ab-4f7a2d26d644.jpg",
-        "mobile_image": "shopify:\/\/shop_images\/91e3d41e83d2cacce11e5279cf256f0c_6e95f975-4893-4233-9de3-748e99c34e59.jpg",
+        "image": "shopify://shop_images/a69c6a81427c80862b80cf76175bd315_d5d1e0f4-7b60-450b-a11c-d542c5f25e94.jpg",
+        "mobile_image": "shopify://shop_images/91e3d41e83d2cacce11e5279cf256f0c_8a1d5cbf-239e-4bbd-bb72-0f1cce65dbf7.jpg",
         "image_overlay_opacity": 0,
         "image_height": "auto",
         "desktop_content_position": "middle-center",
