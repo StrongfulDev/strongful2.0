@@ -15,64 +15,64 @@
         "8a5171fb-ca06-4e0e-861a-7305af42f301": {
           "type": "collection",
           "settings": {
-            "image": "shopify:\/\/shop_images\/9bac0a0c05e1562830645b51b93aa90b_6e911905-e88f-446f-897c-2af5e09ed85a.jpg",
-            "url": "shopify:\/\/collections\/טייצים",
+            "image": "shopify://shop_images/9bac0a0c05e1562830645b51b93aa90b_6e911905-e88f-446f-897c-2af5e09ed85a.jpg",
+            "url": "shopify://collections/טייצים",
             "collection_title": "טייצים"
           }
         },
         "1b2bf1cd-119b-42a3-bfe0-daa060f63526": {
           "type": "collection",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1e370b1b932764c53374d6f38aff0bc7_65f2019c-d9b2-4253-a1f0-4df53bc28971.jpg",
-            "url": "shopify:\/\/collections\/jumpsuits",
+            "image": "shopify://shop_images/1e370b1b932764c53374d6f38aff0bc7_65f2019c-d9b2-4253-a1f0-4df53bc28971.jpg",
+            "url": "shopify://collections/jumpsuits",
             "collection_title": "אוברולים"
           }
         },
         "e3fb16ae-904a-453a-82b3-78589fe48600": {
           "type": "collection",
           "settings": {
-            "image": "shopify:\/\/shop_images\/c4a3354daaa22aa0213dd88835401790.jpg",
-            "url": "shopify:\/\/collections\/yoga-and-pilates",
+            "image": "shopify://shop_images/c4a3354daaa22aa0213dd88835401790.jpg",
+            "url": "shopify://collections/yoga-and-pilates",
             "collection_title": "יוגה ופילאטיס"
           }
         },
         "808cdebc-72af-4f6a-85d1-a8a5130f665b": {
           "type": "collection",
           "settings": {
-            "image": "shopify:\/\/shop_images\/48de9f9e82aa7a8bebb8830d993635e8_451e6e0b-0685-4822-8503-76946fe11955.jpg",
-            "url": "shopify:\/\/collections\/new-in",
+            "image": "shopify://shop_images/48de9f9e82aa7a8bebb8830d993635e8_451e6e0b-0685-4822-8503-76946fe11955.jpg",
+            "url": "shopify://collections/new-in",
             "collection_title": "חדש"
           }
         },
         "5a2781d9-24e2-4b76-b56b-278a3d010146": {
           "type": "collection",
           "settings": {
-            "image": "shopify:\/\/shop_images\/d43d19eceda57c9b135caf654a2c873b_337679b8-230e-4648-a924-32bf2adb9d98.jpg",
-            "url": "shopify:\/\/collections\/טופים",
+            "image": "shopify://shop_images/d43d19eceda57c9b135caf654a2c873b_337679b8-230e-4648-a924-32bf2adb9d98.jpg",
+            "url": "shopify://collections/טופים",
             "collection_title": "טופים"
           }
         },
         "d96cbf09-66fd-412d-b29f-6a0f9ff0afb8": {
           "type": "collection",
           "settings": {
-            "image": "shopify:\/\/shop_images\/2x_c9f962a1-535c-4144-8f6d-03b7d68a2b07.jpg",
-            "url": "shopify:\/\/collections\/best-seller-internal-use",
+            "image": "shopify://shop_images/2x_c9f962a1-535c-4144-8f6d-03b7d68a2b07.jpg",
+            "url": "shopify://collections/best-seller-internal-use",
             "collection_title": "הכי נמכרים"
           }
         },
         "ccf69b36-ff3a-4d31-a10c-d0b9ba072029": {
           "type": "collection",
           "settings": {
-            "image": "shopify:\/\/shop_images\/2x_201a589d-d511-4d9f-a1a4-d0ba9338e704.jpg",
-            "url": "shopify:\/\/collections\/outlet",
+            "image": "shopify://shop_images/2x_201a589d-d511-4d9f-a1a4-d0ba9338e704.jpg",
+            "url": "shopify://collections/outlet",
             "collection_title": "אאוטלט"
           }
         },
         "2731fb5f-d7bf-4146-82de-23679dd66b31": {
           "type": "collection",
           "settings": {
-            "image": "shopify:\/\/shop_images\/644ef561e3795df56c37ad1ff7d1fa46_54c2709c-d09a-4f32-bb3f-57ded314dec9.jpg",
-            "url": "shopify:\/\/collections\/accessories",
+            "image": "shopify://shop_images/644ef561e3795df56c37ad1ff7d1fa46_54c2709c-d09a-4f32-bb3f-57ded314dec9.jpg",
+            "url": "shopify://collections/accessories",
             "collection_title": "אקססוריז"
           }
         }
@@ -108,37 +108,15 @@
         "slide_AL3x4y": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/2_74ecbc29-0331-4f02-a2d7-0b66a1feedb9.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_af1c22b6-49f6-483c-8736-cca459d854ca.jpg",
-            "left_position": 50,
-            "bottom_position": 56,
-            "desktop_left_position": 76,
+            "image": "shopify://shop_images/9de4d0d0a874d0061be878842cb2c4bd_329cf1ae-caca-4aca-97b1-55256f6d8bff.jpg",
+            "mobile_image": "shopify://shop_images/copy_6_682f809f-184b-4ee6-a9cc-91e559125b79.jpg",
+            "left_position": 70,
+            "bottom_position": 50,
+            "desktop_left_position": 85,
             "desktop_bottom_position": 29,
             "show_lock": false,
             "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/astra",
-            "show_text_box": true,
-            "color_scheme": "inverse",
-            "whole_slide_link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_hnKjAY": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/9de4d0d0a874d0061be878842cb2c4bd_ca4f1c74-852d-4e16-8971-b36becbeeeba.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/dccef2babfffeab0c3edd02859402684_8ddba9ce-de47-44d2-8f33-402df21ffcf7.jpg",
-            "left_position": 50,
-            "bottom_position": 20,
-            "desktop_left_position": 50,
-            "desktop_bottom_position": 20,
-            "show_lock": false,
-            "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/weekend-sale",
+            "link": "shopify://collections/holiday-sale",
             "show_text_box": true,
             "color_scheme": "inverse",
             "whole_slide_link": "",
@@ -151,8 +129,7 @@
         }
       },
       "block_order": [
-        "slide_AL3x4y",
-        "slide_hnKjAY"
+        "slide_AL3x4y"
       ],
       "settings": {
         "layout": "full_bleed",
@@ -250,10 +227,10 @@
         "slide_KdxH44": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/ffa30f6d495ac44a37c40c1ac3101c84.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/b916a25152ac2b27dc530853d5eb6c77_b40103b9-e60a-48f5-af51-0b22917005aa.jpg",
-            "login_desktop_image": "shopify:\/\/shop_images\/fccf2d9258f52f19baf79181902e158a_e22d6bca-8310-4ad8-8e65-d7392e6af88e.jpg",
-            "login_mobile_image": "shopify:\/\/shop_images\/b916a25152ac2b27dc530853d5eb6c77_635ec1be-f6a2-48e3-b279-eeb2ccd3ed00.jpg",
+            "image": "shopify://shop_images/ffa30f6d495ac44a37c40c1ac3101c84.jpg",
+            "mobile_image": "shopify://shop_images/b916a25152ac2b27dc530853d5eb6c77_b40103b9-e60a-48f5-af51-0b22917005aa.jpg",
+            "login_desktop_image": "shopify://shop_images/fccf2d9258f52f19baf79181902e158a_e22d6bca-8310-4ad8-8e65-d7392e6af88e.jpg",
+            "login_mobile_image": "shopify://shop_images/b916a25152ac2b27dc530853d5eb6c77_635ec1be-f6a2-48e3-b279-eeb2ccd3ed00.jpg",
             "button_label": "",
             "login_button_label": "",
             "link": "",
@@ -261,7 +238,7 @@
             "show_text_box": true,
             "color_scheme": "background-1",
             "logged_in_color_scheme": "background-1",
-            "whole_slide_link": "shopify:\/\/pages\/loyalty",
+            "whole_slide_link": "shopify://pages/loyalty",
             "button_style_secondary": false,
             "box_align": "middle-center",
             "text_alignment": "center",
@@ -330,37 +307,37 @@
         "image_JnihJ6": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/copy_3761cb3a-a2a6-48bd-829f-03b27f0e3cc6.jpg",
+            "image": "shopify://shop_images/copy_3761cb3a-a2a6-48bd-829f-03b27f0e3cc6.jpg",
             "alt": "",
             "link": "NEW IN",
-            "url": "shopify:\/\/collections\/astra"
+            "url": "shopify://collections/astra"
           }
         },
         "image_a4f9L6": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/STRO4962-min_23be84d1-4c86-45e5-b60f-3a8c6e9f2ac0.jpg",
+            "image": "shopify://shop_images/STRO4962-min_23be84d1-4c86-45e5-b60f-3a8c6e9f2ac0.jpg",
             "alt": "",
             "link": "BEST SELLERS",
-            "url": "shopify:\/\/collections\/best-seller-internal-use"
+            "url": "shopify://collections/best-seller-internal-use"
           }
         },
         "image_3PJtne": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/UP_TO_50.jpg",
+            "image": "shopify://shop_images/UP_TO_50.jpg",
             "alt": "",
             "link": "UP TO 70%",
-            "url": "shopify:\/\/collections\/outlet"
+            "url": "shopify://collections/outlet"
           }
         },
         "image_ydbCwA": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/YOGA_PILATES.jpg",
+            "image": "shopify://shop_images/YOGA_PILATES.jpg",
             "alt": "",
             "link": "YOGA & PILATES",
-            "url": "shopify:\/\/collections\/yoga-and-pilates"
+            "url": "shopify://collections/yoga-and-pilates"
           }
         }
       },
@@ -390,7 +367,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "allbottoms",
-            "collection_image": "shopify:\/\/shop_images\/a136772298ec22f7807bac8aaf885df7.jpg",
+            "collection_image": "shopify://shop_images/a136772298ec22f7807bac8aaf885df7.jpg",
             "show_collection_title": false
           }
         },
@@ -398,7 +375,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "טייצים-ארוכים",
-            "collection_image": "shopify:\/\/shop_images\/b7db6d57aa17b4f0d67f91271d380c4b.jpg",
+            "collection_image": "shopify://shop_images/b7db6d57aa17b4f0d67f91271d380c4b.jpg",
             "show_collection_title": false
           }
         },
@@ -406,7 +383,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "שורטים",
-            "collection_image": "shopify:\/\/shop_images\/27270f897d7aeb43e9528eda6f9de78e.jpg",
+            "collection_image": "shopify://shop_images/27270f897d7aeb43e9528eda6f9de78e.jpg",
             "show_collection_title": false
           }
         },
@@ -414,7 +391,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "בייקרים",
-            "collection_image": "shopify:\/\/shop_images\/898694b0ab677159752c43c6922132e6.jpg",
+            "collection_image": "shopify://shop_images/898694b0ab677159752c43c6922132e6.jpg",
             "show_collection_title": false
           }
         },
@@ -422,7 +399,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "טייץ-7-8",
-            "collection_image": "shopify:\/\/shop_images\/7_8_1.jpg",
+            "collection_image": "shopify://shop_images/7_8_1.jpg",
             "show_collection_title": false
           }
         }
@@ -462,18 +439,18 @@
         "slide_kjjiJz": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0_3f6540d6-3ade-4374-9eb5-bec5add85d2e.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/0_fc4e4087-9c89-47aa-9eda-a2920c3fccd0.jpg",
+            "image": "shopify://shop_images/0_3f6540d6-3ade-4374-9eb5-bec5add85d2e.jpg",
+            "mobile_image": "shopify://shop_images/0_fc4e4087-9c89-47aa-9eda-a2920c3fccd0.jpg",
             "left_position": 50,
             "bottom_position": 50,
             "desktop_left_position": 50,
             "desktop_bottom_position": 50,
             "show_lock": false,
             "button_label": "",
-            "link": "shopify:\/\/pages\/lets-move",
+            "link": "shopify://pages/lets-move",
             "show_text_box": false,
             "color_scheme": "inverse",
-            "whole_slide_link": "shopify:\/\/pages\/lets-move",
+            "whole_slide_link": "shopify://pages/lets-move",
             "button_style_secondary": false,
             "box_align": "middle-center",
             "text_alignment": "center",
@@ -505,7 +482,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "all-tops",
-            "collection_image": "shopify:\/\/shop_images\/34a9cfe415fad4e35e8677bc45f824c6.jpg",
+            "collection_image": "shopify://shop_images/34a9cfe415fad4e35e8677bc45f824c6.jpg",
             "show_collection_title": false
           }
         },
@@ -513,7 +490,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "אוברולים",
-            "collection_image": "shopify:\/\/shop_images\/1_d8b54626-2c55-43b6-84cb-6f48b09c926f.jpg",
+            "collection_image": "shopify://shop_images/1_d8b54626-2c55-43b6-84cb-6f48b09c926f.jpg",
             "show_collection_title": false
           }
         },
@@ -521,7 +498,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "גופיית-ספורט",
-            "collection_image": "shopify:\/\/shop_images\/1_e842b228-9c60-494f-8e16-0354ea2a3c6f.jpg",
+            "collection_image": "shopify://shop_images/1_e842b228-9c60-494f-8e16-0354ea2a3c6f.jpg",
             "show_collection_title": false
           }
         },
@@ -529,7 +506,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "טופים",
-            "collection_image": "shopify:\/\/shop_images\/1_290ff1ac-da27-4acf-b7ac-78a97efd8a2f.jpg",
+            "collection_image": "shopify://shop_images/1_290ff1ac-da27-4acf-b7ac-78a97efd8a2f.jpg",
             "show_collection_title": false
           }
         },
@@ -537,7 +514,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "בגד-גוף",
-            "collection_image": "shopify:\/\/shop_images\/1_cab68ad6-fe28-4f09-bd96-505703d38150.jpg",
+            "collection_image": "shopify://shop_images/1_cab68ad6-fe28-4f09-bd96-505703d38150.jpg",
             "show_collection_title": false
           }
         },
@@ -545,7 +522,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "חולצות",
-            "collection_image": "shopify:\/\/shop_images\/1_87ca5c71-5a98-445d-9587-558935011140.jpg",
+            "collection_image": "shopify://shop_images/1_87ca5c71-5a98-445d-9587-558935011140.jpg",
             "show_collection_title": false
           }
         },
@@ -553,7 +530,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "ג-קטים",
-            "collection_image": "shopify:\/\/shop_images\/2_e2d9ac19-5962-452d-bf69-1628432ffe29.jpg",
+            "collection_image": "shopify://shop_images/2_e2d9ac19-5962-452d-bf69-1628432ffe29.jpg",
             "show_collection_title": false
           }
         },
@@ -561,7 +538,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "קרופ-טופים",
-            "collection_image": "shopify:\/\/shop_images\/1_adba1759-0ddd-4923-b028-08322ebc3bef.jpg",
+            "collection_image": "shopify://shop_images/1_adba1759-0ddd-4923-b028-08322ebc3bef.jpg",
             "show_collection_title": false
           }
         }
@@ -604,14 +581,14 @@
         "36985345-de63-48ea-9a11-c35e2034d466": {
           "type": "heading",
           "settings": {
-            "heading": "<h3><strong>STRONGFUL - בגדי אקטיב לנשים<\/strong><\/h3>",
+            "heading": "<h3><strong>STRONGFUL - בגדי אקטיב לנשים</strong></h3>",
             "heading_size": "h1"
           }
         },
         "template--16060343976076__4371b550-969b-4828-986d-71697fc53ef0-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>כשכל חליפות הספורט לנשים מחכות לך באתר אחד, החיים שלך הולכים להיות קלים.<br\/>אנו סטרונגפול, מותג בגדי ספורט לנשים אונליין המספק לך את בגדי האימון לנשים הכי איכותיים שיש.<br\/>כל בחורה צריכה סט ספורטיבי בארון, וכשהוא מסטרונגפול את יודעת שתוכלי לבחור את הגזרות, המידות והצבעים המדוייקים בשבילך שיגרמו לך להרגיש בשיא שלך.<\/p>"
+            "text": "<p>כשכל חליפות הספורט לנשים מחכות לך באתר אחד, החיים שלך הולכים להיות קלים.<br/>אנו סטרונגפול, מותג בגדי ספורט לנשים אונליין המספק לך את בגדי האימון לנשים הכי איכותיים שיש.<br/>כל בחורה צריכה סט ספורטיבי בארון, וכשהוא מסטרונגפול את יודעת שתוכלי לבחור את הגזרות, המידות והצבעים המדוייקים בשבילך שיגרמו לך להרגיש בשיא שלך.</p>"
           }
         }
       },
