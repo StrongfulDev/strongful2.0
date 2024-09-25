@@ -246,7 +246,7 @@
         "mobile_top_image_1": "shopify://shop_images/0737a51b2679a55d45d0d8f464335044_63827e7a-13b0-4de6-8935-cebc9390b3d7.jpg",
         "mobile_top_image_1_link": "shopify://collections/holiday-sale",
         "mobile_top_image_1_title": "HOLIDAY SALE",
-        "show_second_image": true,
+        "show_second_image": false,
         "image_order_second": "2",
         "mobile_top_image_2": "shopify://shop_images/0737a51b2679a55d45d0d8f464335044_372b3e44-4fc2-4512-9c9a-38abd875ccbb.jpg",
         "mobile_top_image_2_link": "shopify://collections/weekend-sale",
