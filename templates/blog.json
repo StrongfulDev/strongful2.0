@@ -14,8 +14,8 @@
       "settings": {
         "tile_image_one": "shopify://shop_images/7ff08d51abffc0cfdf69f878b50b58d6_0a695d7d-c641-463c-a65f-09807d95de40.jpg",
         "tile_image_one_link": "shopify://collections/holiday-sale",
-        "tile_image_two": "shopify://shop_images/7ff08d51abffc0cfdf69f878b50b58d6_7bca363c-d2a4-43b6-a2f5-3bf838749455.jpg",
-        "tile_image_two_link": "shopify://collections/best-seller-internal-use",
+        "tile_image_two": "shopify://shop_images/7ff08d51abffc0cfdf69f878b50b58d6_50d4e0cb-7b98-4a26-90ff-7a1cceb3b432.jpg",
+        "tile_image_two_link": "shopify://collections/חודש-המודעות",
         "layout": "grid",
         "show_image": true,
         "image_height": "adapt",
