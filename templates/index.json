@@ -75,6 +75,13 @@
             "url": "shopify://collections/accessories",
             "collection_title": "אקססוריז"
           }
+        },
+        "collection_XzWpEP": {
+          "type": "collection",
+          "settings": {
+            "url": "",
+            "collection_title": ""
+          }
         }
       },
       "block_order": [
@@ -85,7 +92,8 @@
         "5a2781d9-24e2-4b76-b56b-278a3d010146",
         "d96cbf09-66fd-412d-b29f-6a0f9ff0afb8",
         "ccf69b36-ff3a-4d31-a10c-d0b9ba072029",
-        "2731fb5f-d7bf-4146-82de-23679dd66b31"
+        "2731fb5f-d7bf-4146-82de-23679dd66b31",
+        "collection_XzWpEP"
       ],
       "settings": {
         "steps": 1,
@@ -126,16 +134,39 @@
             "image_overlay_opacity": 0,
             "text_alignment_mobile": "center"
           }
+        },
+        "slide_BGGmaM": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/9de4d0d0a874d0061be878842cb2c4bd_329cf1ae-caca-4aca-97b1-55256f6d8bff.jpg",
+            "mobile_image": "shopify://shop_images/copy_6_682f809f-184b-4ee6-a9cc-91e559125b79.jpg",
+            "left_position": 70,
+            "bottom_position": 50,
+            "desktop_left_position": 23,
+            "desktop_bottom_position": 35,
+            "show_lock": false,
+            "button_label": "SHOP NOW",
+            "link": "shopify://collections/holiday-sale",
+            "show_text_box": true,
+            "color_scheme": "inverse",
+            "whole_slide_link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center"
+          }
         }
       },
       "block_order": [
-        "slide_AL3x4y"
+        "slide_AL3x4y",
+        "slide_BGGmaM"
       ],
       "settings": {
         "layout": "full_bleed",
         "slide_height": "adapt_image",
         "slider_visual": "sides",
-        "auto_rotate": false,
+        "auto_rotate": true,
         "change_slides_speed": 5,
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand",
