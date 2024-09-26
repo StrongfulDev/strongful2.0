@@ -174,17 +174,17 @@
         "padding_bottom": 36
       }
     },
-    "featured_collection_WfxYLm": {
+    "featured_collection_zx87dF": {
       "type": "featured-collection",
       "settings": {
         "steps": 4,
-        "title": "HOLIDAY SALE",
+        "title": "PINK COLLECTION",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "holiday-sale",
+        "collection": "חודש-המודעות",
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,
@@ -213,17 +213,17 @@
         "padding_bottom": 16
       }
     },
-    "featured_collection_zx87dF": {
+    "featured_collection_WfxYLm": {
       "type": "featured-collection",
       "settings": {
         "steps": 4,
-        "title": "SELLING FAST",
+        "title": "HOLIDAY SALE",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "best-seller-internal-use",
+        "collection": "holiday-sale",
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,
@@ -643,8 +643,8 @@
   "order": [
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9",
     "slideshow_gwXDrF",
-    "featured_collection_WfxYLm",
     "featured_collection_zx87dF",
+    "featured_collection_WfxYLm",
     "customer_slideshow_wFcfK7",
     "featured_product_v2_FjnCqj",
     "our_collection_list_v2_mK6kUx",
