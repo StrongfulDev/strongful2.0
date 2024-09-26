@@ -28,7 +28,7 @@
           "settings": {
             "logged_in_text": "<p>HOLIDAY SALE</p><p>25% הנחה על כל האתר!</p>",
             "logged_out_text": "<p>HOLIDAY SALE</p><p>25% הנחה על כל האתר!</p>",
-            "logged_in_text_second": "",
+            "logged_in_text_second": "<p>חודש המודעות לסרטן השד</p><p>100% מהרווחים נתרמים לעמותת ׳אחת מתשע׳</p>",
             "log_in": "",
             "small_text": "",
             "small_logged_in_text": "",
