@@ -454,7 +454,8 @@
 
 	#MegaMenu-Content-2 li:first-child a {
 		/*direction: ltr;*/
-		color: firebrick;
+		/* color: firebrick; */
+        color : #dc6b9f; /* pink month*/
 		font-weight: var(--font-body-weight-bold);
 	}
 

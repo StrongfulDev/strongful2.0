@@ -16,6 +16,8 @@
     if announcement_tag != blank
         assign members_only = true
     endif
+
+    assign second_announcement_tag=settings.second_announcement_tag
 %}
 
 {% if customer %}
@@ -41,5 +43,18 @@
                 <small class="account-toggler-site-wide link fix-direction">{{ block.settings.log_in }}</small>
             {% endif %}
         </div>
+        {%elsif product.tags contains second_announcement_tag%}
+             <div class="sale-banner-product-page">
+            <div class="{% if block.settings.paragraph_direction == 'Right To Left' %}fix-direction{% endif %}">
+                {{ block.settings.logged_in_text_second | newline_to_br }}
+            </div>
+          
+        </div>
+
+        
     {% endif %}
 {% endif %}
+
+
+ 
+ 
