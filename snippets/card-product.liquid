@@ -320,12 +320,6 @@
                             </p>
                         {% endif %}
                     </div>
-                {% elsif card_product.tags contains settings.second_announcement_tag %}
-                    <div class="discount-price-container">
-                        <p class="rect-discount-tag fix-direction">
-                            3 ב ₪300
-                        </p>
-                    </div>
                 {% else %}
                     {% if card_product.tags contains 'OUTLET' or card_product.tags contains 'outlet' %}
                         <p class="outlet-collection-tag upper h4">
