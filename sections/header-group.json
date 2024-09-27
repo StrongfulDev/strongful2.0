@@ -33,12 +33,12 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "25% OFF EVERYTHING",
-            "sub_text": "HOLIDAY SALE",
+            "main_text": "THE PINK COLLECTION",
+            "sub_text": "100% מהרווחים נתרמים לעמותת ׳אחת מתשע׳",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "rtl",
-            "link": "shopify://collections/holiday-sale",
+            "link": "shopify://collections/חודש-המודעות",
             "color_scheme": "accent-1"
           }
         },
