@@ -169,11 +169,6 @@
 
                                                 <td class="cart-item__details" role="cell"
                                                     headers="CartDrawer-ColumnProduct">
-                                                    {% if item.product.tags contains "awareness-month-2024" %}
-                                                    <div>
-                                                        קודי קופון אינם פעילים על פריטים אלו
-                                                        </div>
-                                                    {% endif %}
 
                                                     {% if item.url contains '/package' %}
                                                         <p class="cart-item__name h4 break">
@@ -243,9 +238,9 @@
 
                                                     {%- if item.original_price != item.final_price -%}
                                                         <div class="cart-item__discounted-prices">
-                              <span class="visually-hidden">
-                                {{ 'products.product.price.regular_price' | t }}
-                              </span>
+                                                          <span class="visually-hidden">
+                                                            {{ 'products.product.price.regular_price' | t }}
+                                                          </span>
                                                             <s class="cart-item__old-price product-option">
                                                                 {% assign customOriginalPrice = item.product.compare_at_price | times: item.quantity %}
                                                                 {% if item.original_line_price > customOriginalPrice %}
@@ -255,8 +250,8 @@
                                                                 {% endif %}
                                                             </s>
                                                             <span class="visually-hidden">
-                                {{ 'products.product.price.sale_price' | t }}
-                              </span>
+                                                                {{ 'products.product.price.sale_price' | t }}
+                                                              </span>
                                                             <strong class="cart-item__final-price product-option">
                                                                 {{ item.final_line_price | money }}
                                                             </strong>
@@ -287,6 +282,12 @@
                                                             </li>
                                                         {% endif %}
                                                     </ul>
+
+                                                    {% if item.product.tags contains "awareness-month-2024" %}
+                                                        <div>
+                                                            קודי קופון אינם פעילים על פריטים אלו
+                                                        </div>
+                                                    {% endif %}
                                                 </td>
 
                                                 <td class="cart-item__totals right" role="cell"
