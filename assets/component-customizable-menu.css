@@ -257,7 +257,9 @@
 }
 
 .dropdown .submenu-open li:nth-child(2) ul.menu-drawer__menu li:first-child a {
-	color: firebrick;
+	/* color: firebrick; */
+    color : #dc6b9f; /* pink month*/
+
 	font-weight: var(--font-body-weight-bold);
 	direction: rtl;
 }
@@ -456,6 +458,7 @@
 		/*direction: ltr;*/
 		/* color: firebrick; */
         color : #dc6b9f; /* pink month*/
+        
 		font-weight: var(--font-body-weight-bold);
 	}
 
@@ -536,7 +539,8 @@
 	}
 
 	.header-block-list-element:first-child .mega-menu__content.fix-direction ul:nth-child(2) li:first-child a {
-		color: firebrick;
+		/* color: firebrick; */
+        color : #dc6b9f; /* pink month*/
 		direction: ltr;
 		text-decoration: none;
 		font-weight: var(--font-body-weight-bold);

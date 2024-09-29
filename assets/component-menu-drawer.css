@@ -256,6 +256,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 
 .js .dropdown .menu-drawer__menu>li:first-child {
 	color: firebrick;
+	
 }
 
 .js .dropdown .menu-drawer__menu>li:last-child, .js .dropdown .menu-drawer__menu.has-submenu>li:nth-last-child(2) {
@@ -295,7 +296,8 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .dropdown .menu-drawer__menu.has-submenu>li:first-child .menu-drawer__menu-list-item:first-child>a {
-	color: firebrick;
+	/* color: firebrick; */
+	color: #dc6b9f;
 }
 
 .dropdown .menu-drawer summary.menu-drawer__menu-item {
