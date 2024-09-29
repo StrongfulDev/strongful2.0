@@ -38,43 +38,90 @@
     {% assign isLiveTheme = 'true' %}
 {% endif %}
 
+{% assign picked_color = product.vendor %} <!-- Assign picked_color to product.vendor -->
+
+<!-- Debugging: Log the value of picked_color -->
+<script>
+    console.log("Picked color: {{ picked_color }}");
+</script>
 
 {% unless product.tags contains 'noSimilar' %}
-<ul class="similar" id="scrollNoSize">
-    {% for collection in collections %}
-        {% if collection.title == similarParent or collection.title == similarParent.value %}
-            {% for product in collection.products %}
-                {% if isLiveTheme == 'true' %}
-                    {% unless product.tags contains 'hidden' %}
+    <ul class="similar" id="scrollNoSize">
+        {% for collection in collections %}
+            {% if collection.title == similarParent or collection.title == similarParent.value %}
+                {% for product in collection.products %}
+                    {% assign color_name = product.vendor %}
+                    {% if color_name == 'אדום' %}
+                        {% assign color = '#FF0000' %}
+                    {% elsif color_name == 'כחול' %}
+                        {% assign color = '#798dab' %}
+                    {% elsif color_name == 'ירוק' %}
+                        {% assign color = '#b7c9ac' %}
+                    {% elsif color_name == 'ירוק כהה' %}
+                        {% assign color = '#79694f' %}
+                    {% elsif color_name == 'צהוב' %}
+                        {% assign color = '#FFFF00' %}
+                    {% elsif color_name == 'שחור' %}
+                        {% assign color = '#28272c' %}
+                    {% elsif color_name == 'לבן' %}
+                        {% assign color = '#eaedfa' %}
+                    {% elsif color_name == 'ורוד' %}
+                        {% assign color = '#FFC0CB' %}
+                    {% elsif color_name == 'סגול' %}
+                        {% assign color = '#800080' %}
+                    {% elsif color_name == 'כתום' %}
+                        {% assign color = '#FFA500' %}
+                    {% elsif color_name == 'חום' %}
+                        {% assign color = '#644146' %}
+                    {% elsif color_name == 'חום כהה' %}
+                        {% assign color =  '#724546' %}
+                    {% elsif color_name == 'מוקה' %}
+                        {% assign color = '#b88669' %}
+                    {% elsif color_name == 'ניוד' %}
+                        {% assign color = '#c5b4a1' %}
+                    {% elsif color_name == 'אפור' %}
+                        {% assign color = '#808080' %}
+                    {% elsif color_name == 'אפור כהה' %}
+                        {% assign color = '#443f45' %}
+                    {% elsif color_name == 'תכלת' %}
+                        {% assign color = '#ADD8E6' %}
+                    {% elsif color_name == 'ירוק בהיר' %}
+                        {% assign color = '#c2f0d0' %}
+                    {% elsif color_name == 'כחול כהה' %}
+                        {% assign color = '#55586d' %}
+                    {% elsif color_name == 'אדום כהה' %}
+                        {% assign color = '#8B0000' %}
+                    {% else %}
+                        {% assign color = '#000000' %}
+                    {% endif %}
+
+                    {% if product.order == 1 %}
+                        {% assign is_picked_color = true %}
+                    {% else %}
+                        {% assign is_picked_color = false %}
+                    {% endif %}
+
+                    {% if isLiveTheme == 'true' %}
+                        {% unless product.tags contains 'hidden' %}
+                            <li class="relative-discount similar-child {{ forloop.index0 }}">
+                                <a href="{{ product.url }}" class="similar-a">
+                                    <span class="color-circles {% if is_picked_color %}picked-color{% endif %}" style="background-color: {{ color }}; width: 50px; height: 50px; border-radius: 50%; display: inline-block;"></span>
+                                </a>
+                                <p class="productVendor">{{ product.vendor }}</p>
+                            </li>
+                        {% endunless %}
+                    {% else %}
                         <li class="relative-discount similar-child {{ forloop.index0 }}">
                             <a href="{{ product.url }}" class="similar-a">
-                                <img src="{{ product.featured_image | product_img_url: 'master' }}"
-                                     srcset="{{ product.featured_image | product_img_url: '200x' }} 200w,
-                        {{ product.featured_image | product_img_url: '300x' }} 300w,
-                        {{ product.featured_image | product_img_url: '400x' }} 400w,
-                        {{ product.featured_image | product_img_url: '600x' }} 600w"
-                                     alt="{{ product.title | escape }}" class="similar-child-img" loading="lazy"/>
+                                <span class="color-circles {% if is_picked_color %}picked-color{% endif %}" style="background-color: {{ color }}; width: 50px; height: 50px; border-radius: 50%; display: inline-block;"></span>
                             </a>
                             <p class="productVendor">{{ product.vendor }}</p>
                         </li>
-                    {% endunless %}
-                {% else %}
-                    <li class="relative-discount similar-child {{ forloop.index0 }}">
-                        <a href="{{ product.url }}" class="similar-a">
-                            <img src="{{ product.featured_image | product_img_url: 'master' }}"
-                                 srcset="{{ product.featured_image | product_img_url: '200x' }} 200w,
-                    {{ product.featured_image | product_img_url: '300x' }} 300w,
-                    {{ product.featured_image | product_img_url: '400x' }} 400w,
-                    {{ product.featured_image | product_img_url: '600x' }} 600w"
-                                 alt="{{ product.title | escape }}" class="similar-child-img" loading="lazy"/>
-                        </a>
-                        <p class="productVendor">{{ product.vendor }}</p>
-                    </li>
-                {% endif %}
-            {% endfor %}
-        {% endif %}
-    {% endfor %}
-</ul>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+    </ul>
 {% endunless %}
 
 {%- unless product.has_only_default_variant -%}
