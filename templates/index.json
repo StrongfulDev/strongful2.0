@@ -118,10 +118,10 @@
           "settings": {
             "image": "shopify://shop_images/9de4d0d0a874d0061be878842cb2c4bd_cfc276f9-0dc0-4dcf-b1e5-46a5e59be7c4.jpg",
             "mobile_image": "shopify://shop_images/dccef2babfffeab0c3edd02859402684_cc11940f-3210-48a6-b56b-cf4a559dbf7a.jpg",
-            "left_position": 66,
-            "bottom_position": 50,
+            "left_position": 50,
+            "bottom_position": 7,
             "desktop_left_position": 23,
-            "desktop_bottom_position": 23,
+            "desktop_bottom_position": 30,
             "show_lock": false,
             "button_label": "SHOP NOW",
             "link": "shopify://collections/חודש-המודעות",
