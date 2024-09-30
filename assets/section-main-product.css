@@ -1736,16 +1736,18 @@ details[open] .accordion__title:after {
 }
 
 .similar {
-	display: grid;
-	justify-content: flex-start;
-	direction: rtl;
-	grid-gap: 1%;
-	padding: 10px 5px;
-	border-top: 1px var(--gradient-base-background-3) solid;
-	position: relative;
-	grid-template-columns: repeat(6,1fr);
-	margin: 1.2em 0 auto;
-	list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-start;
+    direction: rtl;
+    grid-gap: 1%;
+    padding: 10px 5px;
+    border-top: 1px var(--gradient-base-background-3) solid;
+    position: relative;
+    grid-template-columns: repeat(6, 1fr);
+    margin: 1.2em 0 auto;
+    list-style: none;
 }
 
 .quick-add-modal__content-info .similar,
@@ -1774,6 +1776,9 @@ details[open] .accordion__title:after {
 .productVendor {
 	font-size: calc(var(--font-body-size-medium) * 0.85);
 	margin: .5rem 0;
+    text-align: center ;
+}
+
 }
 
 .first-similar-item {

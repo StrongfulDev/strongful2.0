@@ -39,12 +39,18 @@
 {% endif %}
 
 {% assign picked_color = product.vendor %} <!-- Assign picked_color to product.vendor -->
-
-<!-- Debugging: Log the value of picked_color -->
-<script>
-    console.log("Picked color: {{ picked_color }}");
-</script>
-
+<script>document.addEventListener('DOMContentLoaded', function() {
+    const similarList = document.querySelector('.similar');
+    if (similarList) {
+        const pickedColorItem = similarList.querySelector('.picked-color');
+        if (pickedColorItem) {
+            const parentListItem = pickedColorItem.closest('li');
+            if (parentListItem) {
+                similarList.insertBefore(parentListItem, similarList.firstChild);
+            }
+        }
+    }
+});</script>
 {% unless product.tags contains 'noSimilar' %}
     <ul class="similar" id="scrollNoSize">
         {% for collection in collections %}
@@ -55,6 +61,12 @@
                         {% assign color = '#FF0000' %}
                     {% elsif color_name == 'כחול' %}
                         {% assign color = '#798dab' %}
+                    {% elsif color_name == 'כחול עמוק' %}
+                        {% assign color = '#2c8be8' %}
+                    {% elsif color_name == "טורקיז" %}
+                        {% assign color = '#0d7069' %}
+                    {% elsif color_name == "אפרסק" %}
+                        {% assign color = '#ee9f81' %}    
                     {% elsif color_name == 'ירוק' %}
                         {% assign color = '#b7c9ac' %}
                     {% elsif color_name == 'ירוק כהה' %}
@@ -66,9 +78,9 @@
                     {% elsif color_name == 'לבן' %}
                         {% assign color = '#eaedfa' %}
                     {% elsif color_name == 'ורוד' %}
-                        {% assign color = '#FFC0CB' %}
+                        {% assign color = '#e06998' %}
                     {% elsif color_name == 'סגול' %}
-                        {% assign color = '#bb6d8e' %}
+                        {% assign color = '#800080' %}
                     {% elsif color_name == 'כתום' %}
                         {% assign color = '#FFA500' %}
                     {% elsif color_name == 'חום' %}
@@ -95,7 +107,7 @@
                         {% assign color = '#000000' %}
                     {% endif %}
 
-                    {% if product.order == 1 %}
+                    {% if product.vendor == picked_color %}
                         {% assign is_picked_color = true %}
                     {% else %}
                         {% assign is_picked_color = false %}
@@ -106,8 +118,8 @@
                             <li class="relative-discount similar-child {{ forloop.index0 }}">
                                 <a href="{{ product.url }}" class="similar-a">
                                     <span class="color-circles {% if is_picked_color %}picked-color{% endif %}" style="background-color: {{ color }}; width: 50px; height: 50px; border-radius: 50%; display: inline-block;"></span>
+                                    <p class="productVendor">{{ product.vendor }}</p>
                                 </a>
-                                <p class="productVendor">{{ product.vendor }}</p>
                             </li>
                         {% endunless %}
                     {% else %}
@@ -177,9 +189,10 @@
       {%- endfor -%}
         <div class="size-table-stock-container">
             {% unless product.tags contains 'noSizeTable' %}
-                <p class="size-table-toggler pointer">{{ 'products.product.size_table' | t }}</p>
+
+              <p class="size-table-toggler pointer">{{ 'products.product.size_table' | t }}</p>
             {% endunless %}
-        </div>
+          </div>
       <script type="application/json">
         {{ product.variants | json }}
       </script>
