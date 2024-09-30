@@ -58,13 +58,27 @@
                 {% for product in collection.products %}
                     {% assign color_name = product.vendor %}
                     {% if color_name == 'אדום' %}
-                        {% assign color = '#FF0000' %}
+                        {% assign color = '#fd484c' %}
+                    {% elsif color_name == 'אפור-שחור' %}
+                        {% assign color = '#453841' %}
+                    {% elsif color_name == 'בורדו' %}
+                        {% assign color = '#753940' %}
                     {% elsif color_name == 'כחול' %}
                         {% assign color = '#798dab' %}
                     {% elsif color_name == 'כחול עמוק' %}
                         {% assign color = '#2c8be8' %}
                     {% elsif color_name == "טורקיז" %}
                         {% assign color = '#0d7069' %}
+                    {% elsif color_name == "ירוק אפור" %}
+                        {% assign color = '#4e494b' %}
+                    {% elsif color_name == 'ירוק זית' %}
+                        {% assign color = '#715d3d' %}
+                    {% elsif color_name == 'צהוב בהיר' %}
+                        {% assign color = '#f5e2b9' %}
+                    {% elsif color_name == 'צהוב ירוק' %}
+                        {% assign color = '#ebeb89' %}
+                    {% elsif color_name == 'צהוב חרדל' %}
+                        {% assign color = '#c58230' %}
                     {% elsif color_name == "אפרסק" %}
                         {% assign color = '#ee9f81' %}    
                     {% elsif color_name == 'ירוק' %}
@@ -72,7 +86,9 @@
                     {% elsif color_name == 'ירוק כהה' %}
                         {% assign color = '#79694f' %}
                     {% elsif color_name == 'צהוב' %}
-                        {% assign color = '#FFFF00' %}
+                        {% assign color = '#faf1bb' %}
+                    {% elsif color_name == 'כחול אפור' %}
+                        {% assign color = '#648694' %}
                     {% elsif color_name == 'שחור' %}
                         {% assign color = '#28272c' %}
                     {% elsif color_name == 'לבן' %}
@@ -80,9 +96,11 @@
                     {% elsif color_name == 'ורוד' %}
                         {% assign color = '#e06998' %}
                     {% elsif color_name == 'סגול' %}
-                        {% assign color = '#800080' %}
+                        {% assign color = '#998ca5' %}
                     {% elsif color_name == 'כתום' %}
                         {% assign color = '#FFA500' %}
+                    {% elsif color_name == 'כתום בהיר' %}
+                        {% assign color = '#d6c5bd' %}
                     {% elsif color_name == 'חום' %}
                         {% assign color = '#644146' %}
                     {% elsif color_name == 'חום כהה' %}
