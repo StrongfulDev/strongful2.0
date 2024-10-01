@@ -7,15 +7,6 @@
 * made to this file may be overwritten.
 * ------------------------------------------------------------
 */
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9": {
@@ -48,7 +39,7 @@
         "808cdebc-72af-4f6a-85d1-a8a5130f665b": {
           "type": "collection",
           "settings": {
-            "image": "shopify://shop_images/48de9f9e82aa7a8bebb8830d993635e8_451e6e0b-0685-4822-8503-76946fe11955.jpg",
+            "image": "shopify://shop_images/48de9f9e82aa7a8bebb8830d993635e8_6fbd23a7-fb2f-4524-9100-9a8fbe50a50f.jpg",
             "url": "shopify://collections/new-in",
             "collection_title": "חדש"
           }
