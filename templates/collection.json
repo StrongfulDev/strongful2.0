@@ -7,15 +7,6 @@
 * made to this file may be overwritten.
 * ------------------------------------------------------------
 */
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
     "745dda66-63ce-4705-8d8d-eff54d17367f": {
@@ -52,8 +43,8 @@
       ],
       "settings": {
         "override_image_from_metafield": true,
-        "image": "shopify://shop_images/a69c6a81427c80862b80cf76175bd315_a21e5a83-0a3c-46bc-8a35-7269deb4c24e.jpg",
-        "mobile_image": "shopify://shop_images/91e3d41e83d2cacce11e5279cf256f0c_ce47a28f-b921-42b8-a30b-36b3888f2bd3.jpg",
+        "image": "shopify://shop_images/1_9b281cf0-d975-4bc7-8524-373106b1f1be.jpg",
+        "mobile_image": "shopify://shop_images/1_b4d6e86f-5fcb-46c8-9f89-e064be4ea478.jpg",
         "image_overlay_opacity": 0,
         "image_height": "auto",
         "desktop_content_position": "middle-center",
