@@ -7,15 +7,6 @@
 * made to this file may be overwritten.
 * ------------------------------------------------------------
 */
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "name": "t:sections.header.name",
   "type": "header",
@@ -104,7 +95,7 @@
             "title": "קני לפי",
             "item_class": "",
             "title_link": "",
-            "desktop_links_image_1": "shopify://shop_images/bd9a4cbcb5a8c5865a0499b4fa42b489_cf7f67a6-0318-4604-a6c2-0ef90ecb918a.jpg",
+            "desktop_links_image_1": "shopify://shop_images/1_b03263f5-390d-46fc-8604-a64e24ff603d.jpg",
             "desktop_links_image_1_link": "shopify://collections/חודש-המודעות",
             "desktop_links_image_2_link": "",
             "mobile_title": "קני לפי",
