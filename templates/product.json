@@ -7,15 +7,6 @@
 * made to this file may be overwritten.
 * ------------------------------------------------------------
 */
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
     "main": {
@@ -112,7 +103,7 @@
           "settings": {
             "swiper_preset": "shipping_returns",
             "show_payment_icons": true,
-            "delivery_days_text": "משלוח אקספרס עם שליח עד הבית תוך 1-5 ימי עסקים. ייתכנו עיכובים נוספים עקב המצב הביטחוני."
+            "delivery_days_text": "עקב המצב הזמנות יסופקו בין 1-10 ימי עסקים."
           }
         },
         "679aaa7e-cf01-48c6-85e3-b35a4a905d19": {
