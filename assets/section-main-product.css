@@ -2256,7 +2256,13 @@ button.needsclick {
 
 .picked-color {
     position: relative;
-    border: 3px solid #979797; /* Outer gray border */
+    border: 2px solid #979797; /* Outer gray border */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
 }
 
 .picked-color::before {
@@ -2281,6 +2287,19 @@ button.needsclick {
     height: calc(100% - 12px);
     border-radius: 50%;
     background-color: var(--picked-color); /* Picked color circle */
+}
+
+.picked-color:hover {
+    border-color: #000; /* Change border color on hover */
+}
+.color-circles {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: rgb(var(--color-background));
+    transition: border-color 0.3s ease;
+
 }
 /* Example of changing the border color when the class is applied */
 
