@@ -1738,17 +1738,16 @@ details[open] .accordion__title:after {
 .similar {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
     justify-content: flex-start;
     direction: rtl;
-    grid-gap: 1%;
-    padding: 10px 5px;
+    padding: 0;
+    grid-gap: 0;
     border-top: 1px var(--gradient-base-background-3) solid;
     position: relative;
-    grid-template-columns: repeat(6, 1fr);
-    margin: 1.2em 0 auto;
+    margin: 0.2em 0 auto;
     list-style: none;
 }
+
 
 .quick-add-modal__content-info .similar,
 .quick-add-modal__content-info nav.breadcrumbs,
@@ -1777,12 +1776,17 @@ details[open] .accordion__title:after {
 	font-size: calc(var(--font-body-size-medium) * 0.85);
 	margin: .5rem 0;
     text-align: center ;
-}
+    
+
+    display: block;
+    margin-top: 10px; /* Adjust as needed to push the text down */
+    text-align: center; /* Center the text */
 
 }
+
+
 
 .first-similar-item {
-	order: 1;
 	grid-column: 1/2;
 	grid-row: 1/2;
     
@@ -1792,7 +1796,6 @@ details[open] .accordion__title:after {
 .first-similar-item a:after {
 	position: absolute;
 	bottom: 0;
-	height: 3px;
 	
 	width: 100%;
 	display: block;
@@ -2252,55 +2255,69 @@ product-recommendations .collection__title_heading {
 button.needsclick {
 	z-index: 0 !important;
 }
+.aloyoga-color-circle {
+  position: relative;
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+  border-radius: 50%;
+  border: 2px solid white; /* Outer gray border */
+  margin: 5px; /* Adjust spacing as needed */
+  display: inline-block;
+  
+}
+.aloyoga-color-circle.picked-color {
+  position: relative;
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+  border-radius: 50%;
+  border: 0.5px solid gray; /* Outer gray border */
+  margin: 5px; /* Adjust spacing as needed */
+  display: inline-block;
+  overflow: hidden;
+}
+
+.aloyoga-color-circle::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 6px); /* Adjust size to create white space */
+  height: calc(100% - 6px); /* Adjust size to create white space */
+  border-radius: 50%;
+  background-color: white; /* White divider circle */
+}
+
+.aloyoga-color-circle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 12px); /* Adjust size to create inner color circle */
+  height: calc(100% - 12px); /* Adjust size to create inner color circle */
+  border-radius: 50%;
+  background-color:var(--color);
+   /* Inner circle color */
+}
 
 
 .picked-color {
-    position: relative;
-    border: 2px solid #979797; /* Outer gray border */
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: inline-block;
-    overflow: hidden;
-    transition: border-color 0.3s ease;
+  position: relative;
+  border: 2px solid gray; /* Outer gray border */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+  z-index: 1; /* Ensure it is above other elements */
 }
 
-.picked-color::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: calc(100% - 6px);
-    height: calc(100% - 6px);
-    border-radius: 50%;
-    background-color: white; /* White divider circle */
-}
 
-.picked-color::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: calc(100% - 12px);
-    height: calc(100% - 12px);
-    border-radius: 50%;
-    background-color: var(--picked-color); /* Picked color circle */
-}
 
-.picked-color:hover {
-    border-color: #000; /* Change border color on hover */
-}
-.color-circles {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: inline-block;
-    background-color: rgb(var(--color-background));
-    transition: border-color 0.3s ease;
 
-}
+
 /* Example of changing the border color when the class is applied */
 
   

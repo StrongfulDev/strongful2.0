@@ -57,11 +57,9 @@
     <ul class="similar" id="scrollNoSize">
         {% for collection in collections %}
             {% if collection.title == similarParent or collection.title == similarParent.value %}
-                {% for product in collection.products %}
-                    {% assign color_name = product.vendor %}
-                    {% capture color %} {% comment %}
-                      very long code containing color mapping, not sure of a way to make it shorter
-                    {% endcomment %}
+              {% for product in collection.products %}
+              {% assign color_name = product.vendor %}
+                    {% capture color %}
                         {% if color_name == 'אדום' %}
                             #fd484c
                         {% elsif color_name == 'חאקי' %}
@@ -118,8 +116,8 @@
                             #b88669
                         {% elsif color_name == 'ניוד' %}
                             #c5b4a1
-                            {% elsif color_name == 'קרם' %}
-                              #e3e4df
+                        {% elsif color_name == 'קרם' %}
+                            #e3e4df
                         {% elsif color_name == 'אפור' %}
                             #808080
                         {% elsif color_name == 'אפור כהה' %}
@@ -147,7 +145,7 @@
                         {% unless product.tags contains 'hidden' %}
                             <li class="relative-discount similar-child {{ forloop.index0 }}">
                                 <a href="{{ product.url }}" class="similar-a">
-                                    <span class="color-circles {% if is_picked_color %}picked-color{% endif %}" style="background-color: {{ color | strip }}; width: 50px; height: 50px; border-radius: 50%; display: inline-block;"></span>
+                                    <span class="aloyoga-color-circle {% if is_picked_color %}picked-color{% endif %} " style="--color:{{color|strip}} display:inline-block"></span>
                                     <p class="productVendor">{{ product.vendor }}</p>
                                 </a>
                             </li>
@@ -155,7 +153,7 @@
                     {% else %}
                         <li class="relative-discount similar-child {{ forloop.index0 }}">
                             <a href="{{ product.url }}" class="similar-a">
-                                <span class="color-circles {% if is_picked_color %}picked-color{% endif %}" style="background-color: {{ color | strip }}; width: 50px; height: 50px; border-radius: 50%; display: inline-block;"></span>
+                                <span class="aloyoga-color-circle {% if is_picked_color %}picked-color{% endif %}" style="--color:{{color|strip}} "></span>
                             </a>
                             <p class="productVendor">{{ product.vendor }}</p>
                         </li>
