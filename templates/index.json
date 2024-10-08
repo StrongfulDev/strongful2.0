@@ -108,12 +108,12 @@
         "slide_AL3x4y": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/1_b43a0df4-be1f-4a03-bca1-52a138536e05.jpg",
-            "mobile_image": "shopify://shop_images/1_d2cb0f5c-8e40-4d80-9267-9f210042d3e6.jpg",
+            "image": "shopify://shop_images/2_67dea786-89f2-4a17-b97e-440766805e79.jpg",
+            "mobile_image": "shopify://shop_images/2_9742ee0f-8990-4974-971f-83ef807dda6d.jpg",
             "left_position": 50,
             "bottom_position": 7,
-            "desktop_left_position": 23,
-            "desktop_bottom_position": 30,
+            "desktop_left_position": 75,
+            "desktop_bottom_position": 27,
             "show_lock": false,
             "button_label": "SHOP NOW",
             "link": "shopify://collections/חודש-המודעות",
