@@ -176,7 +176,7 @@
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "חודש-המודעות",
+        "collection": "venture-kind-restock",
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,
