@@ -7,15 +7,6 @@
 * made to this file may be overwritten.
 * ------------------------------------------------------------
 */
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
     "main": {
@@ -46,8 +37,8 @@
         "content"
       ],
       "settings": {
-        "tile_image_one": "shopify://shop_images/7ff08d51abffc0cfdf69f878b50b58d6_0a695d7d-c641-463c-a65f-09807d95de40.jpg",
-        "tile_image_one_link": "shopify://collections/holiday-sale",
+        "tile_image_one": "shopify://shop_images/1_3c3f3398-8d17-4363-a92f-ba056acfabfd.jpg",
+        "tile_image_one_link": "shopify://collections/new-in",
         "tile_image_two": "shopify://shop_images/7ff08d51abffc0cfdf69f878b50b58d6_9f23b614-e7e0-491b-8015-08108091f6cb.jpg",
         "tile_image_two_link": "shopify://collections/חודש-המודעות"
       }
