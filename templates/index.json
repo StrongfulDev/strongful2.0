@@ -75,13 +75,6 @@
             "url": "shopify://collections/accessories",
             "collection_title": "אקססוריז"
           }
-        },
-        "collection_XzWpEP": {
-          "type": "collection",
-          "settings": {
-            "url": "",
-            "collection_title": ""
-          }
         }
       },
       "block_order": [
@@ -92,8 +85,7 @@
         "5a2781d9-24e2-4b76-b56b-278a3d010146",
         "d96cbf09-66fd-412d-b29f-6a0f9ff0afb8",
         "ccf69b36-ff3a-4d31-a10c-d0b9ba072029",
-        "2731fb5f-d7bf-4146-82de-23679dd66b31",
-        "collection_XzWpEP"
+        "2731fb5f-d7bf-4146-82de-23679dd66b31"
       ],
       "settings": {
         "steps": 1,
@@ -178,7 +170,7 @@
       "type": "featured-collection",
       "settings": {
         "steps": 4,
-        "title": "PINK COLLECTION",
+        "title": "NEW IN",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
