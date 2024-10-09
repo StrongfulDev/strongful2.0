@@ -28,14 +28,6 @@
             "collection_title": "אוברולים"
           }
         },
-        "e3fb16ae-904a-453a-82b3-78589fe48600": {
-          "type": "collection",
-          "settings": {
-            "image": "shopify://shop_images/c4a3354daaa22aa0213dd88835401790.jpg",
-            "url": "shopify://collections/yoga-and-pilates",
-            "collection_title": "יוגה ופילאטיס"
-          }
-        },
         "808cdebc-72af-4f6a-85d1-a8a5130f665b": {
           "type": "collection",
           "settings": {
@@ -50,6 +42,14 @@
             "image": "shopify://shop_images/d43d19eceda57c9b135caf654a2c873b_337679b8-230e-4648-a924-32bf2adb9d98.jpg",
             "url": "shopify://collections/טופים",
             "collection_title": "טופים"
+          }
+        },
+        "e3fb16ae-904a-453a-82b3-78589fe48600": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify://shop_images/c4a3354daaa22aa0213dd88835401790.jpg",
+            "url": "shopify://collections/yoga-and-pilates",
+            "collection_title": "יוגה ופילאטיס"
           }
         },
         "d96cbf09-66fd-412d-b29f-6a0f9ff0afb8": {
@@ -80,9 +80,9 @@
       "block_order": [
         "8a5171fb-ca06-4e0e-861a-7305af42f301",
         "1b2bf1cd-119b-42a3-bfe0-daa060f63526",
-        "e3fb16ae-904a-453a-82b3-78589fe48600",
         "808cdebc-72af-4f6a-85d1-a8a5130f665b",
         "5a2781d9-24e2-4b76-b56b-278a3d010146",
+        "e3fb16ae-904a-453a-82b3-78589fe48600",
         "d96cbf09-66fd-412d-b29f-6a0f9ff0afb8",
         "ccf69b36-ff3a-4d31-a10c-d0b9ba072029",
         "2731fb5f-d7bf-4146-82de-23679dd66b31"
