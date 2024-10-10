@@ -89,6 +89,11 @@
             "members_only_sale_over_text": "זמין לרכישה ב 15.8"
           }
         },
+        "yotpo_loyalty_rewards_product_points_module_app_block_krF3Wc": {
+          "type": "shopify://apps/yotpo-loyalty-rewards/blocks/product-points-module-app-block/2f9660df-5018-4e02-9868-ee1fb88d6ccd",
+          "settings": {
+          }
+        },
         "5ae0b953-0e37-48c5-b5cc-e50d6004b25c": {
           "type": "loyalty",
           "settings": {
@@ -149,6 +154,7 @@
         "e290d1ee-22d0-4ae8-9219-8d77d6585fae",
         "quantity_selector",
         "buy_buttons",
+        "yotpo_loyalty_rewards_product_points_module_app_block_krF3Wc",
         "5ae0b953-0e37-48c5-b5cc-e50d6004b25c",
         "1b30499f-a9b2-4f41-bbad-151626bae3d0",
         "679aaa7e-cf01-48c6-85e3-b35a4a905d19",
