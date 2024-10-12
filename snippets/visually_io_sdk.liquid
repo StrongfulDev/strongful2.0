@@ -3,6 +3,7 @@
 <link rel="preconnect"  href="https://live.visually-io.com/" crossorigin>
 <link rel="dns-prefetch" href="https://live.visually-io.com/">
 <script>
+(()=> {
     const env = 2;
     var store = "{{ shop.permanent_domain }}";
     var alias = store.replace(".myshopify.com", "").replaceAll("-", "_").toUpperCase();
@@ -28,6 +29,7 @@
 	window.loomi_ctx.productId={{product.id}};
 	window.loomi_ctx.variantId={{ product.selected_or_first_available_variant.id }};
 	{% endif %}
+})()
 </script>
 <link href="https://live.visually-io.com/widgets/vsly-preact.min.js?k=js.34079867020&e=2&s=STRONGFULCLOTHING" rel="preload" as="script">
 <script type="text/javascript" src="https://live.visually-io.com/widgets/vsly-preact.min.js?k=js.34079867020&e=2&s=STRONGFULCLOTHING"></script>
