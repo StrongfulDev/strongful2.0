@@ -20,14 +20,6 @@
             "collection_title": "טייצים"
           }
         },
-        "1b2bf1cd-119b-42a3-bfe0-daa060f63526": {
-          "type": "collection",
-          "settings": {
-            "image": "shopify://shop_images/1e370b1b932764c53374d6f38aff0bc7_65f2019c-d9b2-4253-a1f0-4df53bc28971.jpg",
-            "url": "shopify://collections/jumpsuits",
-            "collection_title": "אוברולים"
-          }
-        },
         "collection_JwwPx7": {
           "type": "collection",
           "settings": {
@@ -42,6 +34,14 @@
             "image": "shopify://shop_images/3_0f18925a-62e9-4b21-8821-534f5e6d1fe3.jpg",
             "url": "shopify://collections/new-in",
             "collection_title": "חדש"
+          }
+        },
+        "1b2bf1cd-119b-42a3-bfe0-daa060f63526": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify://shop_images/1e370b1b932764c53374d6f38aff0bc7_65f2019c-d9b2-4253-a1f0-4df53bc28971.jpg",
+            "url": "shopify://collections/jumpsuits",
+            "collection_title": "אוברולים"
           }
         },
         "5a2781d9-24e2-4b76-b56b-278a3d010146": {
@@ -87,9 +87,9 @@
       },
       "block_order": [
         "8a5171fb-ca06-4e0e-861a-7305af42f301",
-        "1b2bf1cd-119b-42a3-bfe0-daa060f63526",
         "collection_JwwPx7",
         "808cdebc-72af-4f6a-85d1-a8a5130f665b",
+        "1b2bf1cd-119b-42a3-bfe0-daa060f63526",
         "5a2781d9-24e2-4b76-b56b-278a3d010146",
         "e3fb16ae-904a-453a-82b3-78589fe48600",
         "d96cbf09-66fd-412d-b29f-6a0f9ff0afb8",
