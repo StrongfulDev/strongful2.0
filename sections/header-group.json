@@ -33,12 +33,12 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "THE SEAMLESS COLLECTION",
-            "sub_text": "VENTURE / KIND",
+            "main_text": "FINAL SALE",
+            "sub_text": "UP TO 50% OFF",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "rtl",
-            "link": "shopify://collections/new-in",
+            "link": "shopify://collections/final-sale",
             "color_scheme": "accent-1"
           }
         },
