@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.header.name",
   "type": "header",
@@ -243,9 +243,9 @@
         "mobile_logo_position": "center",
         "show_first_image": true,
         "image_order_first": "1",
-        "mobile_top_image_1": "shopify://shop_images/1_262f722b-c3df-4a95-b44b-7253461fc15c.jpg",
-        "mobile_top_image_1_link": "shopify://collections/new-in",
-        "mobile_top_image_1_title": "JUST LANDED",
+        "mobile_top_image_1": "shopify://shop_images/2_aa2e7433-6c46-4e6a-9a57-a6a8cfb78793.jpg",
+        "mobile_top_image_1_link": "shopify://collections/final-sale",
+        "mobile_top_image_1_title": "FINAL SALE",
         "show_second_image": true,
         "image_order_second": "2",
         "mobile_top_image_2": "shopify://shop_images/0737a51b2679a55d45d0d8f464335044_7116ae17-8dd0-4d12-a753-65e7541fdd08.jpg",
