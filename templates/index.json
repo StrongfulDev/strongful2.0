@@ -157,34 +157,11 @@
             "image_overlay_opacity": 0,
             "text_alignment_mobile": "center"
           }
-        },
-        "slide_BGGmaM": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/1_548979bf-fde9-4409-8ecb-ac5be2ea290d.jpg",
-            "mobile_image": "shopify://shop_images/1_efbe21ca-c78a-4e03-8add-e67b66f90c74.jpg",
-            "left_position": 50,
-            "bottom_position": 7,
-            "desktop_left_position": 23,
-            "desktop_bottom_position": 23,
-            "show_lock": false,
-            "button_label": "SHOP NOW",
-            "link": "shopify://collections/חודש-המודעות",
-            "show_text_box": true,
-            "color_scheme": "inverse",
-            "whole_slide_link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "text_alignment_mobile": "center"
-          }
         }
       },
       "block_order": [
         "slide_CknqHD",
-        "slide_AL3x4y",
-        "slide_BGGmaM"
+        "slide_AL3x4y"
       ],
       "settings": {
         "layout": "full_bleed",
@@ -198,43 +175,43 @@
         "padding_bottom": 36
       }
     },
-    "featured_collection_RxdiwH": {
+    "featured_collection_XDhFHB": {
       "type": "featured-collection",
       "settings": {
         "steps": 4,
-        "title": "FINAL SALE",
+        "title": "FINAL SALE - UP TO 50%",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
         "show_description": false,
         "description_style": "body",
         "collection": "final-sale",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "full_width": false,
+        "products_to_show": 15,
+        "columns_desktop": 5,
+        "full_width": true,
         "show_view_all": true,
         "view_all_text": "SHOP ALL",
-        "view_all_style": "solid",
-        "view_all_location": "bottom",
-        "enable_desktop_slider": false,
-        "show_peak": false,
+        "view_all_style": "link",
+        "view_all_location": "top",
+        "enable_desktop_slider": true,
+        "show_peak": true,
         "pagination_type": "sides",
         "color_scheme": "background-1",
         "image_ratio": "adapt",
-        "show_secondary_image": false,
-        "show_vendor": false,
+        "show_secondary_image": true,
+        "show_vendor": true,
         "show_rating": false,
         "show_sale_badge": false,
-        "enable_quick_add": false,
+        "enable_quick_add": true,
         "quick_add_type": "hover",
         "quick_add_type_mobile": "modal",
-        "quick_add_text": "בחירת מידה",
+        "quick_add_text": "הוספה מהירה",
         "pick_size_text": "בחירת מידה",
-        "quick_add_accessories_text": "Pick accessories",
+        "quick_add_accessories_text": "הוספה מהירה",
         "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "swipe_on_mobile": true,
+        "padding_top": 40,
+        "padding_bottom": 16
       }
     },
     "featured_collection_zx87dF": {
@@ -667,7 +644,7 @@
   "order": [
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9",
     "slideshow_gwXDrF",
-    "featured_collection_RxdiwH",
+    "featured_collection_XDhFHB",
     "featured_collection_zx87dF",
     "customer_slideshow_wFcfK7",
     "featured_product_v2_FjnCqj",
