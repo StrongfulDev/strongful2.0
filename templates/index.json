@@ -28,6 +28,14 @@
             "collection_title": "אוברולים"
           }
         },
+        "collection_JwwPx7": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify://shop_images/2_fc7241e7-1f53-4555-b839-a7dee3255486.jpg",
+            "url": "shopify://collections/final-sale",
+            "collection_title": "FINAL SALE"
+          }
+        },
         "808cdebc-72af-4f6a-85d1-a8a5130f665b": {
           "type": "collection",
           "settings": {
@@ -80,6 +88,7 @@
       "block_order": [
         "8a5171fb-ca06-4e0e-861a-7305af42f301",
         "1b2bf1cd-119b-42a3-bfe0-daa060f63526",
+        "collection_JwwPx7",
         "808cdebc-72af-4f6a-85d1-a8a5130f665b",
         "5a2781d9-24e2-4b76-b56b-278a3d010146",
         "e3fb16ae-904a-453a-82b3-78589fe48600",
