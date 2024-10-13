@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9": {
@@ -105,6 +105,28 @@
     "slideshow_gwXDrF": {
       "type": "slideshow",
       "blocks": {
+        "slide_CknqHD": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/copy_2_54af551e-3da5-48f7-a749-c30ab34454f6.jpg",
+            "mobile_image": "shopify://shop_images/3_fbba5f53-2508-44f2-8539-f3578b72ca7b.jpg",
+            "left_position": 65,
+            "bottom_position": 10,
+            "desktop_left_position": 27,
+            "desktop_bottom_position": 25,
+            "show_lock": false,
+            "button_label": "SHOP NOW",
+            "link": "shopify://collections/final-sale",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "whole_slide_link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center"
+          }
+        },
         "slide_AL3x4y": {
           "type": "slide",
           "settings": {
@@ -151,6 +173,7 @@
         }
       },
       "block_order": [
+        "slide_CknqHD",
         "slide_AL3x4y",
         "slide_BGGmaM"
       ],
