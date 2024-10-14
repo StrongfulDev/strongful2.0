@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -14,8 +14,8 @@
       "settings": {
         "tile_image_one": "shopify://shop_images/1_3c3f3398-8d17-4363-a92f-ba056acfabfd.jpg",
         "tile_image_one_link": "shopify://collections/new-in",
-        "tile_image_two": "shopify://shop_images/7ff08d51abffc0cfdf69f878b50b58d6_50d4e0cb-7b98-4a26-90ff-7a1cceb3b432.jpg",
-        "tile_image_two_link": "shopify://collections/חודש-המודעות",
+        "tile_image_two": "shopify://shop_images/2_6bdb7f5c-992f-4c73-9793-535888390517.jpg",
+        "tile_image_two_link": "shopify://collections/final-sale",
         "layout": "grid",
         "show_image": true,
         "image_height": "adapt",
