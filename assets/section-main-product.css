@@ -2045,6 +2045,7 @@ product-recommendations .collection__title_heading {
     background: var(--gradient-base-background-3);
     padding: 1rem 1rem;
     text-align: center;
+    color: #b22222;
 }
 
 .sale-banner-product-page p {
