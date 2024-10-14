@@ -114,20 +114,20 @@
     "slideshow_gwXDrF": {
       "type": "slideshow",
       "blocks": {
-        "slide_CknqHD": {
+        "slide_gaUfH4": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/copy_2_54af551e-3da5-48f7-a749-c30ab34454f6.jpg",
-            "mobile_image": "shopify://shop_images/3_fbba5f53-2508-44f2-8539-f3578b72ca7b.jpg",
-            "left_position": 65,
+            "image": "shopify://shop_images/copy_2_e1b341ae-4d6b-4deb-8e79-0db5c029c958.jpg",
+            "mobile_image": "shopify://shop_images/3_ebbce6e9-5eac-4be5-ae01-0872f5d12aff.jpg",
+            "left_position": 50,
             "bottom_position": 10,
             "desktop_left_position": 27,
             "desktop_bottom_position": 25,
             "show_lock": false,
             "button_label": "SHOP NOW",
-            "link": "shopify://collections/final-sale",
+            "link": "shopify://collections/new-in",
             "show_text_box": true,
-            "color_scheme": "background-1",
+            "color_scheme": "inverse",
             "whole_slide_link": "",
             "button_style_secondary": false,
             "box_align": "middle-center",
@@ -160,7 +160,7 @@
         }
       },
       "block_order": [
-        "slide_CknqHD",
+        "slide_gaUfH4",
         "slide_AL3x4y"
       ],
       "settings": {
