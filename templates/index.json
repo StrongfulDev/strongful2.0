@@ -139,12 +139,12 @@
         "slide_AL3x4y": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/2_67dea786-89f2-4a17-b97e-440766805e79.jpg",
-            "mobile_image": "shopify://shop_images/2_9742ee0f-8990-4974-971f-83ef807dda6d.jpg",
-            "left_position": 35,
-            "bottom_position": 45,
-            "desktop_left_position": 75,
-            "desktop_bottom_position": 27,
+            "image": "shopify://shop_images/3_f0022d3c-3717-4057-9a5b-310d61e1a929.jpg",
+            "mobile_image": "shopify://shop_images/copy_2_8aebb047-9f19-4b3a-971b-d5140e831fac.jpg",
+            "left_position": 50,
+            "bottom_position": 8,
+            "desktop_left_position": 50,
+            "desktop_bottom_position": 40,
             "show_lock": false,
             "button_label": "SHOP NOW",
             "link": "shopify://collections/new-in",
