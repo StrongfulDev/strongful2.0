@@ -144,7 +144,7 @@
     "image_ratio": "adapt",
     "show_secondary_image": true,
     "seo_alt_text": "מבצע לחברות מועדון בלבד",
-    "announcement_tag": "new-in",
+    "announcement_tag": "members_only",
     "custom_collection_announcement": "NEW IN",
     "members_only_announcement": "התחברי כעת כדי לצפות במוצרים",
     "show_card_collection_announcement": false,
