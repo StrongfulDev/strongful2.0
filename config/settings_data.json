@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "logo": "shopify://shop_images/9ed861fba4dae099b0b04754bbc299cc.png",
@@ -146,7 +146,7 @@
     "seo_alt_text": "מבצע לחברות מועדון בלבד",
     "announcement_tag": "new-in",
     "custom_collection_announcement": "NEW IN",
-    "members_only_announcement": "",
+    "members_only_announcement": "התחברי כעת כדי לצפות במוצרים",
     "show_card_collection_announcement": false,
     "second_announcement_tag": "awareness-month-2024",
     "custom_collection_second_announcement": "",
@@ -156,8 +156,8 @@
     "enable_quick_add": true,
     "quick_add_text": "בחירת מידה",
     "quick_add_accessories_text": "הוספה לסל",
-    "members_only_sale": false,
-    "members_only_sale_active": false,
+    "members_only_sale": true,
+    "members_only_sale_active": true,
     "currency_code_enabled": true,
     "show_upsell_card": false,
     "empty_cart_collection_link": "shopify://collections/sets",
