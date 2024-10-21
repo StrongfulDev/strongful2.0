@@ -26,6 +26,10 @@
         <div class="accordion__content rte"
              id="ProductAccordion-{{ block.id }}-{{ section.id }}">
             {% case block.settings.product_content %}
+                {% if product.title == 'גיפט קארד' %}
+                    {{ product.content }}
+                                 
+                {% endif %}
                 {% when "description" %}
                     {{ product.content }}
                 {% when "sizing_table" %}
