@@ -136,8 +136,31 @@
             "text_alignment_mobile": "center"
           }
         },
+        "slide_NrEkXr": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/9de4d0d0a874d0061be878842cb2c4bd_e5775b5d-d4f4-4019-857c-beab49a842ba.jpg",
+            "mobile_image": "shopify://shop_images/copy_2_5d1276e9-42c3-42d2-9568-6f0e4b1e325f.jpg",
+            "left_position": 50,
+            "bottom_position": 10,
+            "desktop_left_position": 50,
+            "desktop_bottom_position": 40,
+            "show_lock": false,
+            "button_label": "SHOP NOW",
+            "link": "shopify://collections/final-sale",
+            "show_text_box": true,
+            "color_scheme": "inverse",
+            "whole_slide_link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center"
+          }
+        },
         "slide_AL3x4y": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/3_f0022d3c-3717-4057-9a5b-310d61e1a929.jpg",
             "mobile_image": "shopify://shop_images/copy_2_8aebb047-9f19-4b3a-971b-d5140e831fac.jpg",
@@ -161,6 +184,7 @@
       },
       "block_order": [
         "slide_gaUfH4",
+        "slide_NrEkXr",
         "slide_AL3x4y"
       ],
       "settings": {
