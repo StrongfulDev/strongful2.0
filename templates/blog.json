@@ -12,8 +12,8 @@
     "main": {
       "type": "main-blog",
       "settings": {
-        "tile_image_one": "shopify://shop_images/1_3c3f3398-8d17-4363-a92f-ba056acfabfd.jpg",
-        "tile_image_one_link": "shopify://collections/new-in",
+        "tile_image_one": "shopify://shop_images/1_5ed9b6df-a5fa-4ddc-b6f4-bcb9ce162a73.jpg",
+        "tile_image_one_link": "shopify://collections/horizon-restock",
         "tile_image_two": "shopify://shop_images/2_6bdb7f5c-992f-4c73-9793-535888390517.jpg",
         "tile_image_two_link": "shopify://collections/final-sale",
         "layout": "grid",
