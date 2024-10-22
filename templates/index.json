@@ -22,6 +22,7 @@
         },
         "collection_JwwPx7": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/2_fc7241e7-1f53-4555-b839-a7dee3255486.jpg",
             "url": "shopify://collections/final-sale",
@@ -31,7 +32,7 @@
         "808cdebc-72af-4f6a-85d1-a8a5130f665b": {
           "type": "collection",
           "settings": {
-            "image": "shopify://shop_images/3_0f18925a-62e9-4b21-8821-534f5e6d1fe3.jpg",
+            "image": "shopify://shop_images/48de9f9e82aa7a8bebb8830d993635e8_42ad496b-aeee-4051-9965-a0edce9f289f.jpg",
             "url": "shopify://collections/new-in",
             "collection_title": "חדש"
           }
