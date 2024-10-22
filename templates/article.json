@@ -37,8 +37,8 @@
         "content"
       ],
       "settings": {
-        "tile_image_one": "shopify://shop_images/1_3c3f3398-8d17-4363-a92f-ba056acfabfd.jpg",
-        "tile_image_one_link": "shopify://collections/new-in",
+        "tile_image_one": "shopify://shop_images/1_5ed9b6df-a5fa-4ddc-b6f4-bcb9ce162a73.jpg",
+        "tile_image_one_link": "shopify://collections/horizon-restock",
         "tile_image_two": "shopify://shop_images/2_9441e6cc-f309-453f-9797-a38e686de83c.jpg",
         "tile_image_two_link": "shopify://collections/final-sale"
       }
