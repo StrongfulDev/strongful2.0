@@ -125,7 +125,7 @@
             "desktop_bottom_position": 25,
             "show_lock": false,
             "button_label": "SHOP NOW",
-            "link": "shopify://collections/final-sale",
+            "link": "shopify://collections/horizon-restock",
             "show_text_box": true,
             "color_scheme": "inverse",
             "whole_slide_link": "",
