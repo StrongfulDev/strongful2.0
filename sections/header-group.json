@@ -72,7 +72,7 @@
     "countdown_A3hHXC": {
       "type": "countdown",
       "settings": {
-        "show_days": false,
+        "show_days": true,
         "countdown_date": "Sat Oct 26 2024 20:00:00 GMT+0300 (שעון ישראל (קיץ))",
         "countdown_url": "shopify://collections/final-sale",
         "left_text": false,
