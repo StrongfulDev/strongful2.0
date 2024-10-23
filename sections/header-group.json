@@ -69,6 +69,20 @@
         "animation-duration": 5
       }
     },
+    "countdown_A3hHXC": {
+      "type": "countdown",
+      "settings": {
+        "show_days": false,
+        "countdown_date": "Sat Oct 26 2024 20:00:00 GMT+0300 (שעון ישראל (קיץ))",
+        "countdown_url": "shopify://collections/final-sale",
+        "left_text": false,
+        "left_copy": "<p>SALE ENDS IN </p>",
+        "right_text_direction": "ltr",
+        "left_text_direction": "ltr",
+        "right_text": false,
+        "right_copy": ""
+      }
+    },
     "header": {
       "type": "header",
       "blocks": {
@@ -285,11 +299,28 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "countdown_CP889M": {
+      "type": "countdown",
+      "disabled": true,
+      "settings": {
+        "show_days": false,
+        "countdown_date": "Sat Oct 26 2024 20:00:00 GMT+0300 (שעון ישראל (קיץ))",
+        "countdown_url": "/",
+        "left_text": false,
+        "left_copy": "",
+        "right_text_direction": "ltr",
+        "left_text_direction": "ltr",
+        "right_text": false,
+        "right_copy": ""
+      }
     }
   },
   "order": [
     "announcement-bar",
+    "countdown_A3hHXC",
     "header",
-    "7503b704-2110-400e-bc52-a2190d224c23"
+    "7503b704-2110-400e-bc52-a2190d224c23",
+    "countdown_CP889M"
   ]
 }
