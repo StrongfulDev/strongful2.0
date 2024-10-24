@@ -76,7 +76,7 @@
         "countdown_date": "Sat Oct 26 2024 20:00:00 GMT+0300 (שעון ישראל (קיץ))",
         "countdown_url": "shopify://collections/final-sale",
         "left_text": true,
-        "left_copy": "",
+        "left_copy": "<p>Final sale ends in :</p>",
         "right_text_direction": "ltr",
         "left_text_direction": "ltr",
         "right_text": false,
