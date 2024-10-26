@@ -14,8 +14,8 @@
       "settings": {
         "tile_image_one": "shopify://shop_images/1_5ed9b6df-a5fa-4ddc-b6f4-bcb9ce162a73.jpg",
         "tile_image_one_link": "shopify://collections/horizon",
-        "tile_image_two": "shopify://shop_images/2_6bdb7f5c-992f-4c73-9793-535888390517.jpg",
-        "tile_image_two_link": "shopify://collections/final-sale",
+        "tile_image_two": "shopify://shop_images/3_defe51c7-d164-4a88-b015-46887e30c7a6.jpg",
+        "tile_image_two_link": "shopify://collections/חודש-המודעות",
         "layout": "grid",
         "show_image": true,
         "image_height": "adapt",
