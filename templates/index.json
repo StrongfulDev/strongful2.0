@@ -186,7 +186,7 @@
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "horizon-restock",
+        "collection": "horizon",
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,
@@ -217,6 +217,7 @@
     },
     "featured_collection_zx87dF": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "steps": 4,
         "title": "PINK COLLECTION",
