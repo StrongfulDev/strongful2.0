@@ -1,7 +1,6 @@
 
-@import url("https://fonts.googleapis.com/css2?family=Figtree !important:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 .wegifts-main {
-  font-family: "Figtree", sans-serif !important;
 }
 .wegifts-main fieldset {
   border: unset !important;
@@ -15,7 +14,6 @@
 .wd-card-description {
   display: flex;
   padding: 170px 80px 0;
-  font-family: "Figtree", sans-serif !important;
 }
 .label-card {
   color: #111952;
@@ -71,7 +69,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Figtree", sans-serif !important;
 }
 .flex-buttons button {
   color: #fff !important;
@@ -83,7 +80,6 @@
   /* box-shadow: 0px 4px 12px rgba(55, 81, 255, 0.24); */
   border-radius: 8px;
   /* margin-left: 8px; */
-  font-family: "Figtree", sans-serif !important;
 }
 .gift-button {
   width: 217px;
@@ -97,7 +93,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Figtree", sans-serif !important;
 }
 .gift-button span {
   color: #3751ff;
@@ -315,7 +310,6 @@
   font-weight: 600;
   font-size: 17px;
   line-height: 21px;
-  font-family: "Figtree", sans-serif !important;
 }
 .abs-btn {
   background-color: #3751ff;
@@ -330,7 +324,6 @@
   align-items: center;
   margin-top: 24px;
   cursor: pointer;
-  font-family: "Figtree", sans-serif !important;
 }
 .line-item-style {
   display: flex;
@@ -584,7 +577,6 @@
   min-width: 480px;
   flex-direction: column;
   align-items: flex-start;
-  font-family: "Figtree", sans-serif !important;
   background-color: var(--main-white);
   direction: rtl; /*ltr*/
   text-align: right; /*ltr*/
@@ -620,7 +612,6 @@
   margin-bottom: 10px;
   display: block;
   direction: ltr;
-  font-family: "Figtree", sans-serif !important;
 }
 .wd-card-data-description {
   color: var(--text-dark-blue);
@@ -631,7 +622,6 @@
   letter-spacing: 0.2px;
   display: block;
   direction: rtl;
-  font-family: "Figtree", sans-serif !important;
 }
 .custom-amount-wrapper {
   width: 100%;
@@ -649,7 +639,6 @@
   line-height: normal;
   letter-spacing: 0.2px;
   margin-bottom: 16px;
-  font-family: "Figtree", sans-serif !important;
 }
 .i-image {
   width: 204px;
@@ -682,7 +671,6 @@
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.2px;
-  font-family: "Figtree", sans-serif !important;
 }
 .values-description {
   text-align: right; /*ltr*/
@@ -692,7 +680,6 @@
   font-weight: 300;
   line-height: normal;
   letter-spacing: 0.2px;
-  font-family: "Figtree", sans-serif !important;
 }
 .line-item-property__field {
   margin-bottom: 0px !important;
@@ -740,7 +727,6 @@
   letter-spacing: 0.2px !important;
   text-transform: unset !important;
   cursor: pointer;
-  font-family: "Figtree", sans-serif !important;
 }
 #select-blessing-input span {
   top: 30px !important;
@@ -792,7 +778,6 @@ textarea:focus {
   font-weight: 700;
   line-height: 20px;
   letter-spacing: 0.2px;
-  font-family: "Figtree", sans-serif !important;
 }
 .target-price-desc {
   color: var(--text-dark-blue);
@@ -801,7 +786,6 @@ textarea:focus {
   font-weight: 300;
   line-height: 20px;
   letter-spacing: 0.2px;
-  font-family: "Figtree", sans-serif !important;
 }
 .sticky-cta {
   position: fixed;
@@ -817,12 +801,10 @@ textarea:focus {
   background: #fff;
   box-shadow: 0px -4px 8px 0px rgba(164, 164, 164, 0.05);
   direction: rtl;
-  font-family: "Figtree", sans-serif !important;
 }
 .price-text,
 .price-value,
 button span {
-  font-family: "Figtree", sans-serif !important;
 }
 .price-wrapper {
   /*ltr*/
@@ -834,7 +816,6 @@ button span {
   font-weight: 700;
   line-height: normal;
   width: 100%;
-  font-family: "Figtree", sans-serif !important;
 }
 .wd-cart-button {
   display: flex;
@@ -853,7 +834,6 @@ button span {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  font-family: "Figtree", sans-serif !important;
 }
 .p-by-container {
   color: #4b506d;
@@ -862,7 +842,6 @@ button span {
   font-weight: 300;
   line-height: 20px; /* 166.667% */
   letter-spacing: 0.2px;
-  font-family: "Figtree", sans-serif !important;
 }
 .p-by-container a {
   margin-right: 2px;
@@ -877,7 +856,6 @@ button span {
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.2px;
-  font-family: "Figtree", sans-serif !important;
 }
 .send-way-toggle {
   margin-top: 16px;
@@ -897,7 +875,6 @@ button span {
   font-weight: 300;
   line-height: 20px; /* 142.857% */
   letter-spacing: 0.2px;
-  font-family: "Figtree", sans-serif !important;
 }
 .wd-radio-circle {
   border-radius: 50%;
@@ -1018,7 +995,6 @@ fieldset {
   font-weight: 300;
   line-height: normal;
   letter-spacing: 0.2px;
-  font-family: "Figtree", sans-serif !important;
 }
 .country-active,
 .bless-active {
@@ -1088,7 +1064,6 @@ fieldset {
   line-height: normal;
   letter-spacing: 0.2px;
   width: 100%;
-  font-family: "Figtree", sans-serif !important;
 }
 .wd-card-image .wd-image-container .wd-card-price {
   position: absolute;
@@ -1101,7 +1076,6 @@ fieldset {
   font-weight: 500;
   line-height: normal;
   letter-spacing: 0.2px;
-  font-family: "Figtree", sans-serif !important;
 }
 .wd-card-image .wd-image-container .image {
   max-width: 519.2px;
@@ -1127,7 +1101,6 @@ fieldset {
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.2px !important;
-  font-family: "Figtree", sans-serif !important;
 }
 #go-to-details-btn {
   display: none;
@@ -1158,7 +1131,6 @@ fieldset {
 .your-input,
 .custom-amount-input {
   height: 51px;
-  font-family: "Figtree", sans-serif !important;
 }
 .date-input {
   padding: 16px 16px 0 10px;
@@ -1203,7 +1175,6 @@ fieldset {
     height: 164px !important;
     min-width: 262px !important;
     width: 262px !important;
-    opacity: 1 !important;
   }
   .hide-mobile {
     display: none;
@@ -1232,7 +1203,7 @@ fieldset {
   }
   .edit-button span {
     color: #4949ff;
-    font-family: "Figtree", sans-serif !important;
+
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
@@ -1341,7 +1312,7 @@ fieldset {
     justify-content: center;
     align-items: center;
     color: var(--text-dark-blue);
-    font-family: "Figtree", sans-serif !important;
+
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
@@ -1435,6 +1406,7 @@ fieldset {
   .one-image .main-image-con #main-image {
     width: 100% !important;
     height: 222px !important;
+    opacity: 1 !important;
   }
   .review-texts {
     padding: 0 !important;
@@ -1448,7 +1420,6 @@ fieldset {
   flex-direction: column;
   gap: 32px;
   overflow-y: scroll;
-  font-family: "Figtree", sans-serif !important;
 }
 .page-wrapper {
   background-color: #fff;
@@ -1458,7 +1429,6 @@ fieldset {
   flex-direction: column;
   padding: 42px 421px;
   gap: 32px;
-  font-family: "Figtree", sans-serif !important;
 }
 .gift-card-wrapper {
   display: flex;
@@ -1468,7 +1438,6 @@ fieldset {
   gap: 32px;
   width: 590px;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15);
-  font-family: "Figtree", sans-serif !important;
 }
 .shop-logo {
   width: 91px;
@@ -1482,7 +1451,6 @@ fieldset {
   gap: 24px;
   width: 590px;
   direction: rtl;
-  font-family: "Figtree", sans-serif !important;
 }
 .balance-wrapper {
   display: flex;
@@ -1496,7 +1464,6 @@ fieldset {
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.2px;
-  font-family: "Figtree", sans-serif !important;
 }
 .balance-value {
   color: #111952;
@@ -1505,7 +1472,6 @@ fieldset {
   font-weight: 800;
   line-height: normal;
   letter-spacing: 0.2px;
-  font-family: "Figtree", sans-serif !important;
 }
 .wd-card-image {
   width: 590px;
@@ -1518,7 +1484,6 @@ fieldset {
   flex-direction: column;
   gap: 8px;
   direction: rtl;
-  font-family: "Figtree", sans-serif !important;
 }
 .recipient-name {
   color: #111952;
@@ -1527,7 +1492,6 @@ fieldset {
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.2px;
-  font-family: "Figtree", sans-serif !important;
 }
 .blessing {
   color: #4b506d;
@@ -1536,7 +1500,6 @@ fieldset {
   font-weight: 300;
   line-height: normal;
   letter-spacing: 0.2px;
-  font-family: "Figtree", sans-serif !important;
   direction: rtl;
 }
 .voucher {
@@ -1544,7 +1507,6 @@ fieldset {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  font-family: "Figtree", sans-serif !important;
 }
 .gif {
   height: 45px;
@@ -1557,7 +1519,6 @@ fieldset {
   font-weight: 700;
   line-height: normal;
   padding-top: 8px;
-  font-family: "Figtree", sans-serif !important;
 }
 .buyer-name {
   color: #111952;
@@ -1567,7 +1528,6 @@ fieldset {
   line-height: normal;
   letter-spacing: 0.2px;
   padding-bottom: 16px;
-  font-family: "Figtree", sans-serif !important;
 }
 .initial-value-main {
   width: 100%;
@@ -1590,7 +1550,6 @@ fieldset {
   border-bottom: 2px solid #f5f5f5;
   direction: ltr;
   width: 295px !important;
-  font-family: "Figtree", sans-serif !important;
 }
 .button-wrapper {
   display: flex;
@@ -1604,14 +1563,12 @@ fieldset {
   border-radius: 24px;
   width: 100%;
   cursor: pointer;
-  font-family: "Figtree", sans-serif !important;
 }
 .p-by-container {
   direction: ltr;
   display: flex;
   align-items: center;
   margin-top: 6px;
-  font-family: "Figtree", sans-serif !important;
 }
 .p-by-container a {
   cursor: pointer;
@@ -1621,7 +1578,6 @@ fieldset {
   font-weight: 300;
   line-height: 20px; /* 166.667% */
   letter-spacing: 0.2px;
-  font-family: "Figtree", sans-serif !important;
 }
 .p-by-container a:hover {
   text-decoration: underline;
@@ -1641,7 +1597,6 @@ fieldset {
   text-align: center;
   padding: 22px 22px 0 22px;
   direction: rtl;
-  font-family: "Figtree", sans-serif !important;
 }
 .first-text-desc {
   color: #111952;
@@ -1651,7 +1606,6 @@ fieldset {
   line-height: normal;
   letter-spacing: 0.2px;
   margin-top: 8px;
-  font-family: "Figtree", sans-serif !important;
 }
 #shop-link {
   color: #007bff !important;
