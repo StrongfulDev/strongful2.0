@@ -118,12 +118,12 @@
         "slide_gaUfH4": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/1_1a403b10-0add-4be0-bf52-dccae22f412f.jpg",
-            "mobile_image": "shopify://shop_images/copy_7.jpg",
+            "image": "shopify://shop_images/3_9a072296-aa84-41bb-bb0a-3857c5c219bf.jpg",
+            "mobile_image": "shopify://shop_images/1_3a9c21b6-229d-4933-9579-896fa2751b0d.jpg",
             "left_position": 50,
-            "bottom_position": 10,
-            "desktop_left_position": 27,
-            "desktop_bottom_position": 25,
+            "bottom_position": 12,
+            "desktop_left_position": 50,
+            "desktop_bottom_position": 7,
             "show_lock": false,
             "button_label": "SHOP NOW",
             "link": "shopify://collections/horizon",
@@ -139,6 +139,7 @@
         },
         "slide_AL3x4y": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/2_2170ddf1-afa3-41ad-a75f-d92676cd05a4.jpg",
             "mobile_image": "shopify://shop_images/dccef2babfffeab0c3edd02859402684_fb86f508-f06f-410b-b013-4e6cb9de1adc.jpg",
