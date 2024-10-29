@@ -69,6 +69,21 @@
         "animation-duration": 5
       }
     },
+    "countdown_k4x98G": {
+      "type": "countdown",
+      "disabled": true,
+      "settings": {
+        "show_days": false,
+        "countdown_date": "Thu Oct 31 2024 00:00:00 GMT+0200 (שעון ישראל ())",
+        "countdown_url": "/",
+        "left_text": false,
+        "left_copy": "",
+        "right_text_direction": "ltr",
+        "left_text_direction": "ltr",
+        "right_text": false,
+        "right_copy": ""
+      }
+    },
     "header": {
       "type": "header",
       "blocks": {
@@ -289,6 +304,7 @@
   },
   "order": [
     "announcement-bar",
+    "countdown_k4x98G",
     "header",
     "7503b704-2110-400e-bc52-a2190d224c23"
   ]
