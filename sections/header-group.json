@@ -261,7 +261,7 @@
         "mobile_top_image_1": "shopify://shop_images/6_e8efb032-855d-4ba2-a088-a1912fa4553c.jpg",
         "mobile_top_image_1_link": "shopify://collections/flash-sale-up-to-35",
         "mobile_top_image_1_title": "November Craze",
-        "show_second_image": true,
+        "show_second_image": false,
         "image_order_second": "2",
         "mobile_top_image_2": "shopify://shop_images/2_5575ece8-ebea-4f3e-86ea-c1f4f4267879.jpg",
         "mobile_top_image_2_link": "shopify://collections/חודש-המודעות",
