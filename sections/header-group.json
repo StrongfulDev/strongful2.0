@@ -71,6 +71,7 @@
     },
     "countdown_k4x98G": {
       "type": "countdown",
+      "disabled": true,
       "settings": {
         "show_days": false,
         "countdown_date": "Thu Oct 31 2024 00:00:00 GMT+0200 (שעון ישראל (חורף))",

@@ -123,7 +123,7 @@
             "left_position": 50,
             "bottom_position": 12,
             "desktop_left_position": 50,
-            "desktop_bottom_position": 7,
+            "desktop_bottom_position": 25,
             "show_lock": false,
             "button_label": "SHOP NOW",
             "link": "shopify://collections/flash-sale-up-to-35",
