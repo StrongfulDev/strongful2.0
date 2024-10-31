@@ -12,8 +12,8 @@
     "main": {
       "type": "main-blog",
       "settings": {
-        "tile_image_one": "shopify://shop_images/3_06c3caa7-ae3e-41f5-b3db-b9241924d637.jpg",
-        "tile_image_one_link": "shopify://collections/flash-sale-up-to-35",
+        "tile_image_one": "shopify://shop_images/5_96811705-2184-459d-bd38-4fde744764ef.jpg",
+        "tile_image_one_link": "shopify://collections/sets",
         "tile_image_two": "shopify://shop_images/a560bf1fe14f8252810966fd4ef8b9b8_b653c4b7-c0be-46a4-bfd8-90c57735d46c.jpg",
         "tile_image_two_link": "shopify://collections/best-seller-internal-use",
         "layout": "grid",
