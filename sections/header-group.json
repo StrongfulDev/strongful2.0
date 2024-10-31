@@ -76,7 +76,7 @@
         "countdown_date": "Mon Nov 11 2024 12:00:00 GMT+0200 (שעון ישראל (חורף))",
         "countdown_url": "shopify://collections/shopping-il-3-300",
         "left_text": true,
-        "left_copy": "<p>SALE ENDS IN</p>",
+        "left_copy": "<p><strong>SALE ENDS IN</strong></p>",
         "right_text_direction": "ltr",
         "left_text_direction": "ltr",
         "right_text": false,
