@@ -118,15 +118,15 @@
         "slide_gaUfH4": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/6_e4214a46-e70f-4053-954b-7346be3f262e.jpg",
-            "mobile_image": "shopify://shop_images/2_4df60bfc-0db4-42bb-9d95-a72dd79c019d.jpg",
+            "image": "shopify://shop_images/8_2caa8ae6-c98a-431f-a7d5-008b2cbaa3bc.jpg",
+            "mobile_image": "shopify://shop_images/3_c0cb6e7b-c613-4780-849f-087f192f7a2b.jpg",
             "left_position": 50,
-            "bottom_position": 63,
+            "bottom_position": 12,
             "desktop_left_position": 50,
-            "desktop_bottom_position": 25,
+            "desktop_bottom_position": 15,
             "show_lock": false,
             "button_label": "SHOP NOW",
-            "link": "shopify://collections/flash-sale-up-to-35",
+            "link": "shopify://collections/sets",
             "show_text_box": true,
             "color_scheme": "inverse",
             "whole_slide_link": "",
@@ -181,13 +181,13 @@
       "type": "featured-collection",
       "settings": {
         "steps": 4,
-        "title": "Up to 35% off",
+        "title": "BEST SELLERS",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "flash-sale-up-to-35",
+        "collection": "sets",
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,
@@ -342,10 +342,10 @@
         "image_JnihJ6": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/copy_2_b7428301-5ca6-4d99-aba8-bfc4c077c68a.jpg",
+            "image": "shopify://shop_images/copy_4_91a29d61-7244-4552-87d0-06543d894634.jpg",
             "alt": "Flash sale up to 35 % off photo",
-            "link": "UP TO 35% OFF",
-            "url": "shopify://collections/flash-sale-up-to-35"
+            "link": "BEST SELLERS",
+            "url": "shopify://collections/sets"
           }
         },
         "image_a4f9L6": {
