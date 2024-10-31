@@ -147,7 +147,7 @@
     "announcement_tag": "IsNotShoppingIL",
     "custom_collection_announcement": "פריט זה אינו משתתף במבצע",
     "members_only_announcement": "",
-    "show_card_collection_announcement": false,
+    "show_card_collection_announcement": true,
     "second_announcement_tag": "",
     "custom_collection_second_announcement": "",
     "restock_badge_tag": "badge__restock",
