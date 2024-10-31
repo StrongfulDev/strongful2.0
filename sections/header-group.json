@@ -33,12 +33,12 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "November craze",
-            "sub_text": "Up to 35% off",
+            "main_text": "CHECK OUR",
+            "sub_text": "BEST SELLERS",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "rtl",
-            "link": "shopify://collections/flash-sale-up-to-35",
+            "link": "shopify://collections/sets",
             "color_scheme": "accent-1"
           }
         },
