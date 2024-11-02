@@ -27,7 +27,9 @@
 	align-items: center;
 	width: 100%;
 	margin: auto;
+	margin-top: 1px;
 	font-size: large;
+	
 }
 
 .countdown-sale-description-ctn {
