@@ -11,6 +11,7 @@
 	border: 1px firebrick solid;
 	padding: 2pt 7px;
 	width: fit-content;
+  direction : ltr;
 }
 
 .discounts__discount + .discounts__discount {
