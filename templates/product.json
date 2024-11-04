@@ -166,7 +166,7 @@
       ],
       "settings": {
         "enable_sticky_info": true,
-        "media_size": "medium",
+        "media_size": "small",
         "constrain_to_viewport": false,
         "media_fit": "contain",
         "gallery_layout": "columns",
@@ -176,8 +176,8 @@
         "hide_variants": true,
         "enable_video_looping": true,
         "details_section_direction": "right",
-        "members_only_tag": "",
-        "padding_top": 24,
+        "members_only_tag": "0",
+        "padding_top": 20,
         "padding_bottom": 80
       }
     },
