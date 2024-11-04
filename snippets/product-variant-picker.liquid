@@ -29,53 +29,143 @@
     endif
  -%}
 
-{% assign isLiveTheme = 'false' %}
-{% if content_for_header contains "previewBarInjector.init();" %}
-    {% assign isLiveTheme = 'false' %}
-{% elsif content_for_header contains "Shopify.designMode" %}
-    {% assign isLiveTheme = 'false' %}
-{% else %}
-    {% assign isLiveTheme = 'true' %}
-{% endif %}
-
-
-{% unless product.tags contains 'noSimilar' %}
-<ul class="similar" id="scrollNoSize">
-    {% for collection in collections %}
-        {% if collection.title == similarParent or collection.title == similarParent.value %}
-            {% for product in collection.products %}
-                {% if isLiveTheme == 'true' %}
-                    {% unless product.tags contains 'hidden' %}
-                        <li class="relative-discount similar-child {{ forloop.index0 }}">
-                            <a href="{{ product.url }}" class="similar-a">
-                                <img src="{{ product.featured_image | product_img_url: 'master' }}"
-                                     srcset="{{ product.featured_image | product_img_url: '200x' }} 200w,
-                        {{ product.featured_image | product_img_url: '300x' }} 300w,
-                        {{ product.featured_image | product_img_url: '400x' }} 400w,
-                        {{ product.featured_image | product_img_url: '600x' }} 600w"
-                                     alt="{{ product.title | escape }}" class="similar-child-img" loading="lazy"/>
-                            </a>
-                            <p class="productVendor">{{ product.vendor }}</p>
-                        </li>
-                    {% endunless %}
-                {% else %}
-                    <li class="relative-discount similar-child {{ forloop.index0 }}">
-                        <a href="{{ product.url }}" class="similar-a">
-                            <img src="{{ product.featured_image | product_img_url: 'master' }}"
-                                 srcset="{{ product.featured_image | product_img_url: '200x' }} 200w,
-                    {{ product.featured_image | product_img_url: '300x' }} 300w,
-                    {{ product.featured_image | product_img_url: '400x' }} 400w,
-                    {{ product.featured_image | product_img_url: '600x' }} 600w"
-                                 alt="{{ product.title | escape }}" class="similar-child-img" loading="lazy"/>
-                        </a>
-                        <p class="productVendor">{{ product.vendor }}</p>
-                    </li>
-                {% endif %}
-            {% endfor %}
-        {% endif %}
-    {% endfor %}
-</ul>
-{% endunless %}
+ {% assign isLiveTheme = 'false' %}
+ {% if content_for_header contains "previewBarInjector.init();" %}
+     {% assign isLiveTheme = 'false' %}
+ {% elsif content_for_header contains "Shopify.designMode" %}
+     {% assign isLiveTheme = 'false' %}
+ {% else %}
+     {% assign isLiveTheme = 'true' %}
+ {% endif %}
+ 
+ {% assign picked_color = product.vendor %} <!-- Assign picked_color to product.vendor -->
+ 
+ <script>document.addEventListener('DOMContentLoaded', function() {
+     const similarList = document.querySelector('.similar');
+     if (similarList) {
+         const pickedColorItem = similarList.querySelector('.picked-color');
+         if (pickedColorItem) {
+             const parentListItem = pickedColorItem.closest('li');
+             if (parentListItem) {
+                 similarList.insertBefore(parentListItem, similarList.firstChild);
+             }
+         }
+     }
+ });</script>
+ 
+ {% unless product.tags contains 'noSimilar' %}
+     <ul class="similar" id="scrollNoSize">
+         {% for collection in collections %}
+             {% if collection.title == similarParent or collection.title == similarParent.value %}
+               {% for product in collection.products %}
+               {% assign color_name = product.vendor %}
+                     {% capture color %}
+                         {% if color_name == 'אדום' %}
+                             #fd484c
+                         {% elsif color_name == 'חאקי' %}
+                             #6c7c59
+                         {% elsif color_name == 'מנטה' %}
+                             #d2ceb9
+                         {% elsif color_name == 'אפור-שחור' %}
+                             #453841
+                         {% elsif color_name == 'בורדו' %}
+                             #753940
+                         {% elsif color_name == 'כחול' %}
+                             #798dab
+                         {% elsif color_name == 'כחול עמוק' %}
+                             #2c8be8
+                         {% elsif color_name == "טורקיז" %}
+                             #0d7069
+                         {% elsif color_name == "ירוק אפור" %}
+                             #4e494b
+                         {% elsif color_name == 'ירוק זית' %}
+                             #715d3d
+                         {% elsif color_name == 'צהוב בהיר' %}
+                             #f5e2b9
+                         {% elsif color_name == 'צהוב ירוק' %}
+                             #ebeb89
+                         {% elsif color_name == 'צהוב חרדל' %}
+                             #c58230
+                         {% elsif color_name == "אפרסק" %}
+                             #ee9f81
+                         {% elsif color_name == 'ירוק' %}
+                             #b7c9ac
+                         {% elsif color_name == 'ירוק כהה' %}
+                             #79694f
+                         {% elsif color_name == 'צהוב' %}
+                             #faf1bb
+                         {% elsif color_name == 'כחול אפור' %}
+                             #648694
+                         {% elsif color_name == 'שחור' %}
+                             #28272c
+                         {% elsif color_name == 'לבן' %}
+                             #eaedfa
+                         {% elsif color_name == 'ורוד' %}
+                             #e06998
+                         {% elsif color_name == 'סגול' %}
+                             #998ca5
+                         {% elsif color_name == 'כתום' %}
+                             #FFA500
+                         {% elsif color_name == 'כתום בהיר' %}
+                             #d6c5bd
+                         {% elsif color_name == 'חום' %}
+                             #644146
+                          
+                         {% elsif color_name == 'חום כהה' %}
+                             #654321
+                         {% elsif color_name == 'מוקה' %}
+                             #b88669
+                         {% elsif color_name == 'ניוד' %}
+                             #c5b4a1
+                         {% elsif color_name == 'קרם' %}
+                             #e3e4df
+                         {% elsif color_name == 'אפור' %}
+                             #808080
+                         {% elsif color_name == 'אפור כהה' %}
+                             #443f45
+                         {% elsif color_name == 'תכלת' %}
+                             #ADD8E6
+                         {% elsif color_name == 'ירוק בהיר' %}
+                             #c2f0d0
+                         {% elsif color_name == 'כחול כהה' %}
+                             #55586d
+                         {% elsif color_name == 'אדום כהה' %}
+                             #8B0000
+                         {% elsif color_name == 'ניוד-אפור' %}
+                             #9c878a
+                         {% else %}
+                             #000000
+                         {% endif %}
+                     {% endcapture %}
+ 
+                     {% if product.vendor == picked_color %}
+                         {% assign is_picked_color = true %}
+                     {% else %}
+                         {% assign is_picked_color = false %}
+                     {% endif %}
+ 
+                     {% if isLiveTheme == 'true' %}
+                         {% unless product.tags contains 'hidden' %}
+                             <li class="relative-discount similar-child {{ forloop.index0 }}">
+                                 <a href="{{ product.url }}" class="similar-a">
+                                     <span class="aloyoga-color-circle {% if is_picked_color %}picked-color{% endif %} " style="--color:{{color|strip}} display:inline-block"></span>
+                                     <p class="productVendor">{{ product.vendor }}</p>
+                                 </a>
+                             </li>
+                         {% endunless %}
+                     {% else %}
+                         <li class="relative-discount similar-child {{ forloop.index0 }}">
+                             <a href="{{ product.url }}" class="similar-a">
+                                 <span class="aloyoga-color-circle {% if is_picked_color %}picked-color{% endif %}" style="--color:{{color|strip}} "></span>
+                             </a>
+                             <p class="productVendor">{{ product.vendor }}</p>
+                         </li>
+                     {% endif %}
+                 {% endfor %}
+             {% endif %}
+         {% endfor %}
+     </ul>
+ {% endunless %}
 
 {%- unless product.has_only_default_variant -%}
   {%- if block.settings.picker_type == 'button' -%}
