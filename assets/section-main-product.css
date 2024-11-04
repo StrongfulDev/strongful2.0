@@ -168,8 +168,8 @@ flex-wrap: wrap;
 .size-border{
    
     border: 1px solid #ebebeb;
-    min-height: 69px;
-    min-width: 102%;
+    min-height: 70px;
+    min-width: 100%;
     position: absolute;
     bottom: 17px;
 }
@@ -1755,16 +1755,16 @@ details[open] .accordion__title:after {
 }
 
 .similar {
-	display: grid;
-	justify-content: flex-start;
-	direction: rtl;
-	grid-gap: 1%;
-	padding: 10px 5px;
-	border-top: 1px var(--gradient-base-background-3) solid;
-	position: relative;
-	grid-template-columns: repeat(6,1fr);
-	margin: 1.2em 0 auto;
-	list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 0;
+    grid-gap: 0;
+    border-top: 1px var(--gradient-base-background-3) solid;
+    position: relative;
+    margin: 0.2em 0 auto;
+    justify-content: flex-end;
+    list-style: none;
 }
 
 .quick-add-modal__content-info .similar,
@@ -1793,6 +1793,7 @@ details[open] .accordion__title:after {
 .productVendor {
 	font-size: calc(var(--font-body-size-medium) * 0.85);
 	margin: .5rem 0;
+    text-align: center  ;
 }
 
 .first-similar-item {
@@ -1805,7 +1806,7 @@ details[open] .accordion__title:after {
 	position: absolute;
 	bottom: 0;
 	height: 3px;
-	background: #000;
+	background: transparent;
 	width: 100%;
 	display: block;
 	content: "";
@@ -2282,6 +2283,64 @@ button.needsclick {
 	z-index: 0 !important;
 }
 
+.aloyoga-color-circle {
+    position: relative;
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    border-radius: 50%;
+    border: 2px solid white; /* Outer gray border */
+    margin: 5px; /* Adjust spacing as needed */
+    display: inline-block;
+  
+  }
+  .aloyoga-color-circle.picked-color {
+    position: relative;
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    border-radius: 50%;
+    border: 0.5px solid gray; /* Outer gray border */
+    margin: 5px; /* Adjust spacing as needed */
+    display: inline-block;
+    overflow: hidden;
+  }
+  
+  .aloyoga-color-circle::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 6px); /* Adjust size to create white space */
+    height: calc(100% - 6px); /* Adjust size to create white space */
+    border-radius: 50%;
+    background-color: white; /* White divider circle */
+  }
+  
+  .aloyoga-color-circle::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 12px); /* Adjust size to create inner color circle */
+    height: calc(100% - 12px); /* Adjust size to create inner color circle */
+    border-radius: 50%;
+    background-color:var(--color);
+     /* Inner circle color */
+  }
+  
+  
+  .picked-color {
+    position: relative;
+    border: 2px solid gray; /* Outer gray border */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+    z-index: 1; /* Ensure it is above other elements */
+  }
 /*@media screen and (max-width: 990px) {*/
 
 /*    .product__title h1 {*/
