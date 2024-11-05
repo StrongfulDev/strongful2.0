@@ -260,6 +260,10 @@
                         </div>
                         {% endunless %}
                     {%- endif -%}
+                    {% elsif card_product.tags contains 'ShoppingIL' %}
+                        <span class="new-product-span">
+                             3 ב-300 ₪
+                            </span>  
                     {% if card_product.tags contains 'badge__new' %}
                         <span class="new-product-span">
                                 {{ 'products.product.new' | t }}
@@ -280,10 +284,7 @@
                         <span class="new-product-span">
                                 TRENDY
                             </span>
-                        {% elsif card_product.tags contains 'ShoppingIL' %}
-                            <span class="new-product-span">
-                                 3 ב-300 ₪
-                                </span>    
+                          
                     {% endif %}
                     {%- if show_quick_add and quick_add_type_mobile == "modal" -%}
                         {% unless card_product.title == 'שירות החלפות מורחב' %}
