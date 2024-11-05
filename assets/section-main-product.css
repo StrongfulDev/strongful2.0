@@ -1835,6 +1835,7 @@ variant-radios {
 	display: flex;
 	justify-content: space-between;
 	flex-direction: row-reverse;
+    width: 100px;
 }
 
 .size-table-toggler {
@@ -1843,7 +1844,6 @@ variant-radios {
 	text-decoration: underline;
 	margin: 0;
 	text-align: left;
-    margin-right: 27rem;
 }
 
 .gift-card-product-form__input {
@@ -1904,6 +1904,8 @@ variant-radios {
 	flex: 1 1 100%;
 	margin-bottom: 1rem;
 	display: flex;
+    width: 100%;
+    justify-content: space-between;
 	align-items: center;
 }
 
@@ -1926,6 +1928,7 @@ fieldset.js.product-form__input {
     border-radius: 5px;
     margin-top: 10px; /* Position below the label */
     width: 100%;
+    justify-content: space-between;
   }
   legend.form__label ::after{
     border: 2px solid gray;
