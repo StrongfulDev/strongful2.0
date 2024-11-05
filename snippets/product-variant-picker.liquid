@@ -62,38 +62,63 @@
                      {% capture color %}
                          {% if color_name == 'אדום' %}
                              #fd484c
-                         {% elsif color_name == 'חאקי' %}
-                             #6c7c59
-                         {% elsif color_name == 'מנטה' %}
-                             #d2ceb9
-                         {% elsif color_name == 'אפור-שחור' %}
-                             #453841
                          {% elsif color_name == 'בורדו' %}
                              #753940
+                             {% elsif color_name == 'בורגונדי' %}
+                               #601616
+                         {% elsif color_name == 'ברייט רד' %}
+                             #f41331   
+                         {% elsif color_name == 'חאקי' %}
+                             #6c7c59
+                         {% elsif color_name == 'אופוייט' %}
+                             #ebeae6
+                             {% elsif color_name == 'אלמונד' %}
+                               #e9d8cd
+                         {% elsif color_name == 'מנטה' %}
+                             #b1e3c6
+                         {% elsif color_name == 'אפור-שחור' %}
+                             #453841
                          {% elsif color_name == 'כחול' %}
                              #798dab
                          {% elsif color_name == 'כחול עמוק' %}
                              #2c8be8
+                             {%elsif color_name=='בלו מינט'%}
+                              #6d828b
                          {% elsif color_name == "טורקיז" %}
                              #0d7069
-                         {% elsif color_name == "ירוק אפור" %}
-                             #4e494b
-                         {% elsif color_name == 'ירוק זית' %}
-                             #715d3d
-                         {% elsif color_name == 'צהוב בהיר' %}
-                             #f5e2b9
-                         {% elsif color_name == 'צהוב ירוק' %}
-                             #ebeb89
-                         {% elsif color_name == 'צהוב חרדל' %}
-                             #c58230
-                         {% elsif color_name == "אפרסק" %}
-                             #ee9f81
-                         {% elsif color_name == 'ירוק' %}
-                             #b7c9ac
-                         {% elsif color_name == 'ירוק כהה' %}
-                             #79694f
+                             {% elsif color_name == 'קפוצינו' %}
+                              #675549  
+                              {% elsif color_name == 'צהוב בהיר' %}
+                                #f5e2b9
+                                {% elsif color_name == 'צהוב ירוק' %}
+                                  #ebeb89
+                                  {% elsif color_name == 'צהוב חרדל' %}
+                                    #c58230
+                                    {% elsif color_name == "אפרסק" %}
+                                      #ee9f81
+                                      {% elsif color_name == 'ירוק' %}
+                                          #b7c9ac
+                                      {% elsif color_name == 'ירוק כהה' %}
+                                          #79694f
+                                      {% elsif color_name == "ירוק אפור" %}
+                                          #4e494b
+                                      {% elsif color_name == 'ירוק זית' %}
+                                          #715d3d
+                                          {% elsif color_name == 'ירוק פיסטוק' %}
+                                            #d6d5c1
+                                          {% elsif color_name == 'תה ירוק' %}
+                                            #908f7b
+                                            {%elsif color_name=='אוליב'%}
+                                              #6d6b5c
+                                              {%elsif color_name=='ירוק מנטה'%}
+                                                #8aa393
+                                                {%elsif color_name=='ירוק יער'%}
+                                                  #037575
+                                              
                          {% elsif color_name == 'צהוב' %}
                              #faf1bb
+                             {% elsif color_name == 'ניוד סאנד' %}
+                               #b7a896
                          {% elsif color_name == 'כחול אפור' %}
                              #648694
                          {% elsif color_name == 'שחור' %}
@@ -102,8 +127,18 @@
                              #eaedfa
                          {% elsif color_name == 'ורוד' %}
                              #e06998
+                          {% elsif color_name == 'בייבי פינק' %}
+                               #cca1a9
+                          {% elsif color_name == 'דאסט פינק' %}
+                            #b38987
+                          {% elsif color_name == 'הוט פינק' %}
+                             #d85584
                          {% elsif color_name == 'סגול' %}
                              #998ca5
+                            {% elsif color_name == 'וינטאג פרפל' or color_name == 'סגול וינטאג' %}
+                              #aa6082
+                          {% elsif color_name == 'דאסט פרפל' %}
+                            #685b70
                          {% elsif color_name == 'כתום' %}
                              #FFA500
                          {% elsif color_name == 'כתום בהיר' %}
@@ -111,8 +146,9 @@
                          {% elsif color_name == 'חום' %}
                              #644146
                           
-                         {% elsif color_name == 'חום כהה' %}
+                         {% elsif color_name == 'חום כהה' or color_name=='חום שוקולד'%}
                              #654321
+                          
                          {% elsif color_name == 'מוקה' %}
                              #b88669
                          {% elsif color_name == 'ניוד' %}
@@ -123,16 +159,44 @@
                              #808080
                          {% elsif color_name == 'אפור כהה' %}
                              #443f45
+                             {% elsif color_name =="אפור פחם" %}
+                               #222222
+                               {% elsif color_name == 'אפור אלמונד' %}
+                                 #b79e9b
                          {% elsif color_name == 'תכלת' %}
                              #ADD8E6
                          {% elsif color_name == 'ירוק בהיר' %}
                              #c2f0d0
                          {% elsif color_name == 'כחול כהה' %}
                              #55586d
+                             {% elsif color_name == 'סקיי בלו' %}
+                               #7fcbe9
+                          {% elsif color_name == 'מידנייט בלו' %} 
+                            #123456 
+                            {% elsif color_name == 'דאסט בלו' %}
+                              #6f81aa
+                          {% elsif color_name == 'סטיל בלו' %}
+                            #4d4e65
+                          {% elsif color_name == 'בייבי בלו' %}
+                            #a1bce6
+                            {%elsif color_name == 'כחול רויאל'%}
+                              #047be2
+                              {%elsif color_name=='רטרו בלו'%}
+                                #2b6d8e
                          {% elsif color_name == 'אדום כהה' %}
                              #8B0000
                          {% elsif color_name == 'ניוד-אפור' %}
                              #9c878a
+                        {% elsif color_name == 'דאסט גריי' %}
+                               #afb0b2
+                          {% elsif color_name == 'סילבר' %}
+                            #80787f
+                               {% elsif color_name == 'ברייט וייט' %}
+                                 #e5e7f4
+                                {% elsif color_name == 'באטר יילו' or color_name == 'צהוב חמאה' %}
+                                  #ede0b8
+                              
+
                          {% else %}
                              #000000
                          {% endif %}
