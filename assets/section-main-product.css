@@ -302,7 +302,7 @@ fieldset.js.product-form__input .select ::after {
     margin-bottom: 1rem;
 	font-size: calc(var(--font-body-size-medium) * 1.2);
 	padding: 1.5rem;
-	border-radius: 4px;
+	border-radius: 33px;
 	transition: .1s;
 }
 
@@ -518,9 +518,9 @@ a.product__text {
     margin: 0 auto 1.2rem auto;
 }
 
-/*.product-form__buttons {*/
-/*    max-width: 44rem;*/
-/*}*/
+.product-form__buttons {
+  border-radius: 33px;
+}
 
 .product--no-media .product__info-container > modal-opener {
     display: block;
