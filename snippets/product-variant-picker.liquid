@@ -245,7 +245,10 @@
     >
       {%- for option in product.options_with_values -%}
         <p class="form__label2">{{ option.name }}</p>
-        <div class="size-border"> </div>
+        {% unless product.title=='גיפט קארד' %}
+          
+          <div class="size-border"> </div>
+        {% endunless %}
         <fieldset class="js product-form__input {% if product.title == 'גיפט קארד' %}gift-card-product-form__input{% elsif product.title == 'Iconic סווטשירט' %}os-sweat fix-direction{% endif %}">
             {% for modelName in product.metafields.model.names.value %}
                 {% assign model = shop.metaobjects.model[modelName] %}
