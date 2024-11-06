@@ -1,214 +1,99 @@
 .countdown-section {
-    position: sticky;
-    top: 61px;
-    z-index: 4;
+	position: sticky;
+	top: 61px;
+	z-index: 4;
 }
 
 .announce-countdown {
-    column-gap: var(--grid-mobile-vertical-spacing);
-    /*border: 1px solid var(--gradient-background);*/
+	column-gap: var(--grid-mobile-vertical-spacing);
+	/*border: 1px solid var(--gradient-background);*/
 }
 
 .countdown {
-    display: block;
-    width: 100%;
-    padding: 0.6em 0;
-    background: var(--gradient-base-accent-1);
-    color: rgb(var(--color-base-text));
-    margin-top: 1px;
+	display: block;
+	width: 100%;
+	padding: 0.6em 0;
+	background: var(--gradient-base-accent-1);
+	color: rgb(var(--color-base-text));
+	margin-top: 1px;
+
 }
 
 .headerLink-countdown {
-    padding: 10px 10px 0;
+	padding: 10px 10px 0;
 }
 
 .countdown-ctn {
-    justify-content: center;
-    column-gap: 1rem;
-    align-items: center;
-    width: 100%;
-    margin: auto;
-    font-size: large;
-		background-color: #0768F0;
+	justify-content: center;
+	column-gap: 1rem;
+	align-items: center;
+	width: 100%;
+	margin: auto;
+	font-size: large;
+	
 }
 
 .countdown-sale-description-ctn {
-    width: max-content;
+	width: max-content;
 }
 
 .countdown-sale-description-ctn p {
-    color: rgb(var(--color-base-background-1));
-    font-weight: 600;
-    margin: 0;
-    font-size: .9em;
-    text-align: center;
-    line-height: 1.5rem;
+	color: rgb(var(--color-base-background-1));
+	font-weight: 600;
+	margin: 0;
+	font-size: .9em;
+	text-align: center;
+	line-height: 1.5rem;
 }
 
 .countdown-sale-description-ctn p:nth-child(2) {
-    font-size: .6em;
-    font-weight: var(--font-body-weight);
+	font-size: .6em;
+	font-weight: var(--font-body-weight);
 }
 
 .countdown-sale-description:first-child {
-    direction: ltr;
+	direction: ltr;
 }
 
 .countdown #tiles {
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    height: 100%;
-    font-size: .9em;
-    padding: var(--grid-mobile-vertical-spacing);
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	height: 100%;
+	font-size: .9em;
+	padding: var(--grid-mobile-vertical-spacing);
 }
 
 .countdown #tiles>span, .tiles-time {
-    text-align: center;
-    color: var(--gradient-base-background-1);
-    position: relative;
-    font-size: calc(var(--font-body-size-large) * .8);
-    margin: 0;
-    font-weight: 600;
-    /*box-shadow: 0px 0px 6px 0px rgb(255 255 255 / 30%);*/
-    padding: .15em;
+	text-align: center;
+	color: var(--gradient-base-background-1);
+	position: relative;
+	font-size: calc(var(--font-body-size-large) * .8);
+	margin: 0;
+	font-weight: 600;
+	/*box-shadow: 0px 0px 6px 0px rgb(255 255 255 / 30%);*/
+	padding: .15em;
 }
 
 .countdown .labels-li {
-    font-size: .9em;
-    margin: .6em auto 0;
-    text-align: center;
-    color: rgb(var(--color-base-background-1));
+	font-size: .9em;
+	margin: .6em auto 0;
+	text-align: center;
+	color: rgb(var(--color-base-background-1));
 }
 
 @media screen and (min-width: 990px) {
-    .countdown-ctn {
-        justify-content: center;
-        column-gap: 1.5em;
-    }
+	.countdown-ctn {
+		justify-content: center;
+		column-gap: 1.5em;
+	}
 
-    .countdown-sale-description {
-        font-size: 1.1em;
-    }
+	.countdown-sale-description {
+		font-size: 1.1em;
+	}
 
-    .countdown-section {
-        top: 66px;
-    }
-}
-
-/* Additional styles from Figma design */
-.Frame208 {
-    width: 1440px;
-    height: 80px;
-    position: relative;
-    background: #0768F0;
-}
-
-.Ellipse47 {
-    width: 35.87px;
-    height: 28px;
-    left: 420.21px;
-    top: 28px;
-    position: absolute;
-    border-radius: 9999px;
-}
-
-.Frame212 {
-    left: 362.62px;
-    top: 11.23px;
-    position: absolute;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 50px;
-    display: inline-flex;
-}
-
-.ShoppingIlEndsIn {
-    text-align: right;
-}
-
-.ShoppingIlEndsIn span {
-    color: white;
-    font-size: 24px;
-    font-family: Arimo;
-    font-weight: 700;
-    word-wrap: break-word;
-}
-
-.Frame209 {
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    display: flex;
-}
-
-.Frame207, .Frame204, .Frame205, .Frame206 {
-    width: 53.19px;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    display: inline-flex;
-}
-
-.Frame208 {
-    align-self: stretch;
-    height: 56.55px;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 3.55px;
-    display: flex;
-}
-
-.Frame203 {
-    align-self: stretch;
-    height: 40px;
-    padding: 8.87px;
-    border-radius: 4.43px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 8.87px;
-    display: flex;
-}
-
-.Frame203 div {
-    text-align: right;
-    color: white;
-    font-size: 20px;
-    font-family: Helvetica Neue;
-    font-weight: 700;
-    word-wrap: break-word;
-}
-
-.Days, .Hours, .Minutes, .Seconds {
-    align-self: stretch;
-    text-align: center;
-    color: white;
-    font-size: 10.64px;
-    font-family: Helvetica Neue;
-    font-weight: 400;
-    word-wrap: break-word;
-}
-
-.Frame211 {
-    width: 120px;
-    height: 36px;
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px white solid;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    display: flex;
-}
-
-.ShopNow {
-    text-align: right;
-    color: white;
-    font-size: 14px;
-    font-family: Arimo;
-    font-weight: 700;
-    word-wrap: break-word;
+	.countdown-section {
+		top: 66px;
+	}
 }
