@@ -105,7 +105,7 @@
     "countdown_RmQggP": {
       "type": "countdown",
       "settings": {
-        "show_days": false,
+        "show_days": true,
         "countdown_date": "Mon Nov 11 2024 12:00:00 GMT+0200 (שעון ישראל (חורף))",
         "countdown_url": "/",
         "left_text": false,
