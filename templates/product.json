@@ -140,12 +140,6 @@
             "page": "",
             "icon": "none"
           }
-        },
-        "84469cf3-8214-4b9e-9186-419feb9b0366": {
-          "type": "shopify://apps/yotpo-product-reviews-ugc/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-          "settings": {
-            "product": "{{product}}"
-          }
         }
       },
       "block_order": [
@@ -156,7 +150,6 @@
         "5fa3ce9f-60f6-4aee-a0c4-c987fa5f3522",
         "656bd184-5523-4c74-aee3-c2664a058063",
         "price",
-        "84469cf3-8214-4b9e-9186-419feb9b0366",
         "variant_picker",
         "e290d1ee-22d0-4ae8-9219-8d77d6585fae",
         "quantity_selector",
