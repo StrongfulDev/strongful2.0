@@ -87,6 +87,22 @@
         "include_margins": true
       }
     },
+    "173089247718eeb177": {
+      "type": "apps",
+      "blocks": {
+        "hextom_timer_bar_ctb_custom_placement_cprAHy": {
+          "type": "shopify://apps/hextom-timer-bar/blocks/ctb-custom-placement/f7b88b6e-2e87-46bc-87a9-3e3638a24fa9",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "hextom_timer_bar_ctb_custom_placement_cprAHy"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "countdown_k4x98G": {
       "type": "countdown",
       "disabled": true,
@@ -340,6 +356,7 @@
   "order": [
     "announcement-bar",
     "173088717332a5e8b1",
+    "173089247718eeb177",
     "countdown_k4x98G",
     "header",
     "7503b704-2110-400e-bc52-a2190d224c23",
