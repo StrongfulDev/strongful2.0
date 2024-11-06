@@ -56,6 +56,12 @@
             "paragraph_direction": "Right To Left"
           }
         },
+        "essential_countdown_app_block_BNDRF9": {
+          "type": "shopify://apps/essential-countdown/blocks/app-block/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
+          "settings": {
+            "id": "cm35pego73537719zr18tmhbpu"
+          }
+        },
         "ea6d7033-4e56-497e-a4dd-623c0f24954e": {
           "type": "product_media",
           "settings": {
@@ -149,6 +155,7 @@
         "price",
         "656bd184-5523-4c74-aee3-c2664a058063",
         "5ec0a264-e4fc-4a8d-92bc-f2f9223694f5",
+        "essential_countdown_app_block_BNDRF9",
         "ea6d7033-4e56-497e-a4dd-623c0f24954e",
         "variant_picker",
         "e290d1ee-22d0-4ae8-9219-8d77d6585fae",
