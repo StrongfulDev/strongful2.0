@@ -14,223 +14,237 @@
 {% endcomment %}
 
 {%- liquid
-    assign similarParent = product.metafields.global.collectionTitle
-    if product.tags contains 'plusSizeProduct'
-        assign plusProduct = true
-    else
-        assign plusProduct = false
-    endif
+  assign similarParent = product.metafields.global.collectionTitle
+  if product.tags contains 'plusSizeProduct'
+    assign plusProduct = true
+  else
+    assign plusProduct = false
+  endif
 
-    if product.tags contains 'loyalty-only'
-        assign loggedIn = false
-        if customer
-            assign loggedIn = true
-        endif
+  if product.tags contains 'loyalty-only'
+    assign loggedIn = false
+    if customer
+      assign loggedIn = true
     endif
- -%}
+  endif
+-%}
 
- {% assign isLiveTheme = 'false' %}
- {% if content_for_header contains "previewBarInjector.init();" %}
-     {% assign isLiveTheme = 'false' %}
- {% elsif content_for_header contains "Shopify.designMode" %}
-     {% assign isLiveTheme = 'false' %}
- {% else %}
-     {% assign isLiveTheme = 'true' %}
- {% endif %}
- 
- {% assign picked_color = product.vendor %} <!-- Assign picked_color to product.vendor -->
- 
- <script>document.addEventListener('DOMContentLoaded', function() {
-     const similarList = document.querySelector('.similar');
-     if (similarList) {
-         const pickedColorItem = similarList.querySelector('.picked-color');
-         if (pickedColorItem) {
-             const parentListItem = pickedColorItem.closest('li');
-             if (parentListItem) {
-                 similarList.insertBefore(parentListItem, similarList.firstChild);
-             }
-         }
-     }
- });</script>
- 
- {% unless product.tags contains 'noSimilar' %}
+{% assign isLiveTheme = 'false' %}
+{% if content_for_header contains 'previewBarInjector.init();' %}
+  {% assign isLiveTheme = 'false' %}
+{% elsif content_for_header contains 'Shopify.designMode' %}
+  {% assign isLiveTheme = 'false' %}
+{% else %}
+  {% assign isLiveTheme = 'true' %}
+{% endif %}
+
+{% assign picked_color = product.vendor %}
+<!-- Assign picked_color to product.vendor -->
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const similarList = document.querySelector('.similar');
+    if (similarList) {
+      const pickedColorItem = similarList.querySelector('.picked-color');
+      if (pickedColorItem) {
+        const parentListItem = pickedColorItem.closest('li');
+        if (parentListItem) {
+          similarList.insertBefore(parentListItem, similarList.firstChild);
+        }
+      }
+    }
+  });
+</script>
+
+{% unless product.tags contains 'noSimilar' %}
   <div style="colorHeading">:צבע</div>
   <ul class="similar" id="scrollNoSize">
-         {% for collection in collections %}
-             {% if collection.title == similarParent or collection.title == similarParent.value %}
-               {% for product in collection.products %}
-               {% assign color_name = product.vendor %}
-                     {% capture color %}
-                         {% if color_name == 'אדום' %}
-                             #fd484c
-                         {% elsif color_name == 'בורדו' %}
-                             #753940
-                             {% elsif color_name == 'בורגונדי' %}
-                               #601616
-                         {% elsif color_name == 'ברייט רד' %}
-                             #f41331   
-                         {% elsif color_name == 'חאקי' %}
-                             #6c7c59
-                         {% elsif color_name == 'אופוייט' %}
-                             #ebeae6
-                             {% elsif color_name == 'אלמונד' %}
-                               #e9d8cd
-                         {% elsif color_name == 'מנטה' %}
-                             #b1e3c6
-                         {% elsif color_name == 'אפור-שחור' %}
-                             #453841
-                         {% elsif color_name == 'כחול' %}
-                             #798dab
-                         {% elsif color_name == 'כחול עמוק' %}
-                             #2c8be8
-                             {%elsif color_name=='בלו מינט'%}
-                              #6d828b
-                         {% elsif color_name == "טורקיז" %}
-                             #0d7069
-                             {% elsif color_name == 'קפוצינו' %}
-                              #675549  
-                              {% elsif color_name == 'צהוב בהיר' %}
-                                #f5e2b9
-                                {% elsif color_name == 'צהוב ירוק' %}
-                                  #ebeb89
-                                  {% elsif color_name == 'צהוב חרדל' %}
-                                    #c58230
-                                    {% elsif color_name == "אפרסק" %}
-                                      #ee9f81
-                                      {% elsif color_name == 'ירוק' %}
-                                          #b7c9ac
-                                      {% elsif color_name == 'ירוק כהה' %}
-                                          #79694f
-                                      {% elsif color_name == "ירוק אפור" %}
-                                          #4e494b
-                                      {% elsif color_name == 'ירוק זית' %}
-                                          #715d3d
-                                          {% elsif color_name == 'ירוק פיסטוק' %}
-                                            #d6d5c1
-                                          {% elsif color_name == 'תה ירוק' %}
-                                            #908f7b
-                                            {%elsif color_name=='אוליב'%}
-                                              #6d6b5c
-                                              {%elsif color_name=='ירוק מנטה'%}
-                                                #8aa393
-                                                {%elsif color_name=='ירוק יער'%}
-                                                  #037575
-                                              
-                         {% elsif color_name == 'צהוב' %}
-                             #faf1bb
-                             {% elsif color_name == 'ניוד סאנד' %}
-                               #b7a896
-                         {% elsif color_name == 'כחול אפור' %}
-                             #648694
-                         {% elsif color_name == 'שחור' %}
-                             #28272c
-                         {% elsif color_name == 'לבן' %}
-                             #eaedfa
-                         {% elsif color_name == 'ורוד' %}
-                             #e06998
-                          {% elsif color_name == 'בייבי פינק' %}
-                               #cca1a9
-                          {% elsif color_name == 'דאסט פינק' %}
-                            #b38987
-                          {% elsif color_name == 'הוט פינק' %}
-                             #d85584
-                         {% elsif color_name == 'סגול' %}
-                             #998ca5
-                            {% elsif color_name == 'וינטאג פרפל' or color_name == 'סגול וינטאג' %}
-                              #aa6082
-                          {% elsif color_name == 'דאסט פרפל' %}
-                            #685b70
-                         {% elsif color_name == 'כתום' %}
-                             #FFA500
-                         {% elsif color_name == 'כתום בהיר' %}
-                             #d6c5bd
-                         {% elsif color_name == 'חום' %}
-                             #644146
-                          
-                         {% elsif color_name == 'חום כהה' or color_name=='חום שוקולד'%}
-                             #654321
-                          
-                         {% elsif color_name == 'מוקה' %}
-                             #b88669
-                         {% elsif color_name == 'ניוד' %}
-                             #c5b4a1
-                         {% elsif color_name == 'קרם' %}
-                             #e3e4df
-                         {% elsif color_name == 'אפור' %}
-                             #808080
-                         {% elsif color_name == 'אפור כהה' %}
-                             #443f45
-                             {% elsif color_name =="אפור פחם" %}
-                               #222222
-                               {% elsif color_name == 'אפור אלמונד' %}
-                                 #b79e9b
-                         {% elsif color_name == 'תכלת' %}
-                             #ADD8E6
-                         {% elsif color_name == 'ירוק בהיר' %}
-                             #c2f0d0
-                         {% elsif color_name == 'כחול כהה' %}
-                             #55586d
-                             {% elsif color_name == 'סקיי בלו' %}
-                               #7fcbe9
-                          {% elsif color_name == 'מידנייט בלו' %} 
-                            #123456 
-                            {% elsif color_name == 'דאסט בלו' %}
-                              #6f81aa
-                          {% elsif color_name == 'סטיל בלו' %}
-                            #4d4e65
-                          {% elsif color_name == 'בייבי בלו' %}
-                            #a1bce6
-                            {%elsif color_name == 'כחול רויאל'%}
-                              #047be2
-                              {%elsif color_name=='רטרו בלו'%}
-                                #2b6d8e
-                         {% elsif color_name == 'אדום כהה' %}
-                             #8B0000
-                         {% elsif color_name == 'ניוד-אפור' %}
-                             #9c878a
-                        {% elsif color_name == 'דאסט גריי' %}
-                               #afb0b2
-                          {% elsif color_name == 'סילבר' %}
-                            #80787f
-                               {% elsif color_name == 'ברייט וייט' %}
-                                 #e5e7f4
-                                {% elsif color_name == 'באטר יילו' or color_name == 'צהוב חמאה' %}
-                                  #ede0b8
-                              
+    {% for collection in collections %}
+      {% if collection.title == similarParent or collection.title == similarParent.value %}
+        {% for product in collection.products %}
+          {% assign color_name = product.vendor %}
 
-                         {% else %}
-                             #000000
-                         {% endif %}
-                     {% endcapture %}
- 
-                     {% if product.vendor == picked_color %}
-                         {% assign is_picked_color = true %}
-                     {% else %}
-                         {% assign is_picked_color = false %}
-                     {% endif %}
- 
-                     {% if isLiveTheme == 'true' %}
-                         {% unless product.tags contains 'hidden' %}
-                             <li class="relative-discount similar-child {{ forloop.index0 }}">
-                                 <a href="{{ product.url }}" class="similar-a">
-                                     <span class="aloyoga-color-circle {% if is_picked_color %}picked-color{% endif %} " style="--color:{{color|strip}} display:inline-block"></span>
-                                     <p class="productVendor">{{ product.vendor }}</p>
-                                 </a>
-                             </li>
-                         {% endunless %}
-                     {% else %}
-                         <li class="relative-discount similar-child {{ forloop.index0 }}">
-                             <a href="{{ product.url }}" class="similar-a">
-                                 <span class="aloyoga-color-circle {% if is_picked_color %}picked-color{% endif %}" style="--color:{{color|strip}} "></span>
-                             </a>
-                             <p class="productVendor">{{ product.vendor }}</p>
-                         </li>
-                     {% endif %}
-                 {% endfor %}
-             {% endif %}
-         {% endfor %}
-     </ul>
- {% endunless %}
+          <script>
+            console.log({{ product | json }});
+          </script>
+
+          {% capture color %}
+            {% if color_name == 'אדום' %}
+                #fd484c
+            {% elsif color_name == 'בורדו' %}
+                #753940
+                {% elsif color_name == 'בורגונדי' %}
+                  #601616
+          {% elsif color_name == 'ברייט רד' %}
+                #f41331   
+            {% elsif color_name == 'חאקי' %}
+                #6c7c59
+            {% elsif color_name == 'אופוייט' %}
+                #ebeae6
+                {% elsif color_name == 'אלמונד' %}
+                  #e9d8cd
+            {% elsif color_name == 'מנטה' %}
+                #b1e3c6
+            {% elsif color_name == 'אפור-שחור' %}
+                #453841
+            {% elsif color_name == 'כחול' %}
+                #798dab
+            {% elsif color_name == 'כחול עמוק' %}
+                #2c8be8
+                {%elsif color_name=='בלו מינט'%}
+                #6d828b
+            {% elsif color_name == "טורקיז" %}
+                #0d7069
+                {% elsif color_name == 'קפוצינו' %}
+                #675549  
+                {% elsif color_name == 'צהוב בהיר' %}
+                  #f5e2b9
+                  {% elsif color_name == 'צהוב ירוק' %}
+                    #ebeb89
+                    {% elsif color_name == 'צהוב חרדל' %}
+                      #c58230
+                      {% elsif color_name == "אפרסק" %}
+                        #ee9f81
+                        {% elsif color_name == 'ירוק' %}
+                            #b7c9ac
+                        {% elsif color_name == 'ירוק כהה' %}
+                            #79694f
+                        {% elsif color_name == "ירוק אפור" %}
+                            #4e494b
+                        {% elsif color_name == 'ירוק זית' %}
+                            #715d3d
+                            {% elsif color_name == 'ירוק פיסטוק' %}
+                              #d6d5c1
+                            {% elsif color_name == 'תה ירוק' %}
+                              #908f7b
+                              {%elsif color_name=='אוליב'%}
+                                #6d6b5c
+                                {%elsif color_name=='ירוק מנטה'%}
+                                  #8aa393
+                                  {%elsif color_name=='ירוק יער'%}
+                                    #037575
+                                
+            {% elsif color_name == 'צהוב' %}
+                #faf1bb
+                {% elsif color_name == 'ניוד סאנד' %}
+                  #b7a896
+            {% elsif color_name == 'כחול אפור' %}
+                #648694
+            {% elsif color_name == 'שחור' %}
+                #28272c
+            {% elsif color_name == 'לבן' %}
+                #eaedfa
+            {% elsif color_name == 'ורוד' %}
+                #e06998
+            {% elsif color_name == 'בייבי פינק' %}
+                  #cca1a9
+            {% elsif color_name == 'דאסט פינק' %}
+              #b38987
+            {% elsif color_name == 'הוט פינק' %}
+                #d85584
+            {% elsif color_name == 'סגול' %}
+                #998ca5
+              {% elsif color_name == 'וינטאג פרפל' or color_name == 'סגול וינטאג' %}
+                #aa6082
+            {% elsif color_name == 'דאסט פרפל' %}
+              #685b70
+            {% elsif color_name == 'כתום' %}
+                #FFA500
+            {% elsif color_name == 'כתום בהיר' %}
+                #d6c5bd
+            {% elsif color_name == 'חום' %}
+                #644146
+            
+            {% elsif color_name == 'חום כהה' or color_name=='חום שוקולד'%}
+                #654321
+            
+            {% elsif color_name == 'מוקה' %}
+                #b88669
+            {% elsif color_name == 'ניוד' %}
+                #c5b4a1
+            {% elsif color_name == 'קרם' %}
+                #e3e4df
+            {% elsif color_name == 'אפור' %}
+                #808080
+            {% elsif color_name == 'אפור כהה' %}
+                #443f45
+                {% elsif color_name =="אפור פחם" %}
+                  #222222
+                  {% elsif color_name == 'אפור אלמונד' %}
+                    #b79e9b
+            {% elsif color_name == 'תכלת' %}
+                #ADD8E6
+            {% elsif color_name == 'ירוק בהיר' %}
+                #c2f0d0
+            {% elsif color_name == 'כחול כהה' %}
+                #55586d
+                {% elsif color_name == 'סקיי בלו' %}
+                  #7fcbe9
+            {% elsif color_name == 'מידנייט בלו' %} 
+              #123456 
+              {% elsif color_name == 'דאסט בלו' %}
+                #6f81aa
+            {% elsif color_name == 'סטיל בלו' %}
+              #4d4e65
+            {% elsif color_name == 'בייבי בלו' %}
+              #a1bce6
+              {%elsif color_name == 'כחול רויאל'%}
+                #047be2
+                {%elsif color_name=='רטרו בלו'%}
+                  #2b6d8e
+            {% elsif color_name == 'אדום כהה' %}
+                #8B0000
+            {% elsif color_name == 'ניוד-אפור' %}
+                #9c878a
+          {% elsif color_name == 'דאסט גריי' %}
+                  #afb0b2
+            {% elsif color_name == 'סילבר' %}
+              #80787f
+                  {% elsif color_name == 'ברייט וייט' %}
+                    #e5e7f4
+                  {% elsif color_name == 'באטר יילו' or color_name == 'צהוב חמאה' %}
+                    #ede0b8
+                
+
+            {% else %}
+                #000000
+            {% endif %}
+        {% endcapture %}
+
+          {% if product.vendor == picked_color %}
+            {% assign is_picked_color = true %}
+          {% else %}
+            {% assign is_picked_color = false %}
+          {% endif %}
+
+          {% if isLiveTheme == 'true' %}
+            {% unless product.tags contains 'hidden' %}
+              <li class="relative-discount similar-child {{ forloop.index0 }}">
+                <a href="{{ product.url }}" class="similar-a">
+                  <span
+                    class="aloyoga-color-circle {% if is_picked_color %}picked-color{% endif %} "
+                    style="--color:{{color|strip}} display:inline-block"
+                  ></span>
+                  <p class="productVendor">{{ product.vendor }}</p>
+                </a>
+              </li>
+            {% endunless %}
+          {% else %}
+            <li class="relative-discount similar-child {{ forloop.index0 }}">
+              <a href="{{ product.url }}" class="similar-a">
+                <span
+                  class="aloyoga-color-circle {% if is_picked_color %}picked-color{% endif %}"
+                  style="--color:{{color|strip}} "
+                ></span>
+              </a>
+              <p class="productVendor">{{ product.vendor }}</p>
+            </li>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endunless %}
 
 {%- unless product.has_only_default_variant -%}
   {%- if block.settings.picker_type == 'button' -%}
@@ -247,51 +261,51 @@
       {%- for option in product.options_with_values -%}
         <p class="form__label2">{{ option.name }}</p>
         <fieldset class="js product-form__input {% if product.title == 'גיפט קארד' %}gift-card-product-form__input{% elsif product.title == 'Iconic סווטשירט' %}os-sweat fix-direction{% endif %}">
-            {% for modelName in product.metafields.model.names.value %}
-                {% assign model = shop.metaobjects.model[modelName] %}
-            <legend class="model-wears-size fix-direction"
-                    data-model="{{ model.size_letter.value }}"
-                {% if plusProduct and model.size_letter.value == 'XS' %}
-                    style="display: none"
-                {% elsif plusProduct == false and model.size_letter.value == 'L' %}
-                    style="display: none"
-                    {% endif %}>
-               <span>
-
-                 {{ 'products.product.model_switch.model_wears_only_female' | t }}
-                 {% if product.title == 'Iconic סווטשירט' %}
+          {% for modelName in product.metafields.model.names.value %}
+            {% assign model = shop.metaobjects.model[modelName] %}
+            <legend
+              class="model-wears-size fix-direction"
+              data-model="{{ model.size_letter.value }}"
+              {% if plusProduct and model.size_letter.value == 'XS' %}
+                style="display: none"
+              {% elsif plusProduct == false and model.size_letter.value == 'L' %}
+                style="display: none"
+              {% endif %}
+            >
+              <span>
+                {{ 'products.product.model_switch.model_wears_only_female' | t }}
+                {% if product.title == 'Iconic סווטשירט' %}
                   <span class="bold">{{ option.name }}: OS</span>
-                  {% else %}
+                {% else %}
                   <span class="bold">{{ option.name }}: {{ model.size_letter.value }}</span>
                 {% endif %}
                 {% if product.tags contains 'up-size-recommendation' %}
                   <span class="small">{{ 'products.product.up_size_recommendation' | t }}</span>
                 {% elsif product.tags contains 'down-size-recommendation' %}
                   <span class="small">{{ 'products.product.down_size_recommendation' | t }}</span>
-                  {% elsif product.tags contains 'no_cups_bra' %}
-                    <span class="small">במוצר זה אין ריפודיות נשלפות</span>
-                  {% endif %}
-                  </span>
-                <div class="size-table-stock-container">
-                    {% unless product.tags contains 'noSizeTable' %}
-                        <p class="size-table-toggler pointer">{{ 'products.product.size_table' | t }}</p>
-                    {% endunless %}
-                </div>
+                {% elsif product.tags contains 'no_cups_bra' %}
+                  <span class="small">במוצר זה אין ריפודיות נשלפות</span>
+                {% endif %}
+              </span>
+              <div class="size-table-stock-container">
+                {% unless product.tags contains 'noSizeTable' %}
+                  <p class="size-table-toggler pointer">{{ 'products.product.size_table' | t }}</p>
+                {% endunless %}
+              </div>
             </legend>
-            {% endfor %}
-        {% unless product.title=='גיפט קארד' %}
-          
-          <div class="size-border"> </div>
-        {% endunless %}
+          {% endfor %}
+          {% unless product.title == 'גיפט קארד' %}
+            <div class="size-border"></div>
+          {% endunless %}
           {% render 'product-variant-options',
-                  product: product,
-                  option: option,
-                  block: block,
-                  myBlock: myBlock,
-                  announcement_tag: settings.announcement_tag,
-                  members_only_sale: settings.members_only_sale,
-                  members_only_sale_active: settings.members_only_sale_active,
-                  loggedIn: loggedIn
+            product: product,
+            option: option,
+            block: block,
+            myBlock: myBlock,
+            announcement_tag: settings.announcement_tag,
+            members_only_sale: settings.members_only_sale,
+            members_only_sale_active: settings.members_only_sale_active,
+            loggedIn: loggedIn
           %}
         </fieldset>
       {%- endfor -%}

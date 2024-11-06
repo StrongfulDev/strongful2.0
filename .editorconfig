@@ -43,7 +43,9 @@ ij_css_value_alignment = do_not_align
 
 [*.liquid]
 ij_smart_tabs = true
-ij_liquid_keep_indents_on_empty_lines = false
+ij_liquid_keep_indents_on_empty_lines = true
+ij_liquid_keep_line_breaks = false
+
 
 [{*.cjs,*.js}]
 indent_size = 2
