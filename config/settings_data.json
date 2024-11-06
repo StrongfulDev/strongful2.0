@@ -339,12 +339,6 @@
         "disabled": false,
         "settings": {
         }
-      },
-      "3692814938571911332": {
-        "type": "shopify://apps/powr-countdown/blocks/app-embed/00b744f9-6fcc-4186-ac8e-e071c324aa34",
-        "disabled": true,
-        "settings": {
-        }
       }
     }
   },
