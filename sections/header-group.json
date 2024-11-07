@@ -141,7 +141,7 @@
         "essential_countdown_app_block_Y6y8cp"
       ],
       "settings": {
-        "include_margins": true
+        "include_margins": false
       }
     },
     "header": {
