@@ -12,15 +12,15 @@
 {% endcomment %}
 
 {% style %}
-    .slider-icon {
+  .slider-icon {
     padding-left: 1em;
-    }
-    .slider-icon svg {
+  }
+  .slider-icon svg {
     height: 28px;
     width: 24px;
     font-size: 10px;
     color: rgb(var(--color-foreground));
-    }
+  }
   /*  .swiper-slide:not(.active) {
     display: none;
     }
@@ -36,38 +36,38 @@
 {% endstyle %}
 
 <div class="brand-badges fix-direction">
-    {% case preset %}
-        {% when "shipping_returns" %}
-            <div class="swiper-container">
-                <div class="swiper-slide">
-                    <div class="swiper-slide-body">
-                        <div class="slider-icon">
-                            {% render 'icon-truck' %}
-                        </div>
-                        <p class="product-badge__text">
-                            {{ deliveryText }}
-                        </p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="swiper-slide-body">
-                        <div class="slider-icon">
-                            {% render 'icon-delivery-guy' %}
-                        </div>
-                        <p class="product-badge__text">החלפות חינם עם שליח עד הבית - בכל הזמנה.</p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="swiper-slide-body">
-                        <div class="slider-icon">
-                            {% render 'icon-return' %}
-                        </div>
-                        <p class="product-badge__text">החזרות קלות - עד 30 יום.</p>
-                    </div>
-                </div>
+  {% case preset %}
+    {% when 'shipping_returns' %}
+      <div class="swiper-container">
+        <div class="swiper-slide">
+          <div class="swiper-slide-body">
+            <div class="slider-icon">
+              {% render 'icon-truck' %}
             </div>
-    {% endcase %}
-    {% if show_payment_icons == true %}
-        {% render 'payment-icons' %}
-    {% endif %}
+            <p class="product-badge__text">
+              {{ deliveryText }}
+            </p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="swiper-slide-body">
+            <div class="slider-icon">
+              {% render 'icon-delivery-guy' %}
+            </div>
+            <p class="product-badge__text">החלפה ראשונה חינם עם שליח עד הבית - בכל הזמנה.</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="swiper-slide-body">
+            <div class="slider-icon">
+              {% render 'icon-return' %}
+            </div>
+            <p class="product-badge__text">החזרות קלות - עד 30 יום.</p>
+          </div>
+        </div>
+      </div>
+  {% endcase %}
+  {% if show_payment_icons == true %}
+    {% render 'payment-icons' %}
+  {% endif %}
 </div>
