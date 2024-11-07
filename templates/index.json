@@ -9,24 +9,6 @@
  */
 {
   "sections": {
-    "1730891491f7dfb6f2": {
-      "type": "apps",
-      "blocks": {
-        "essential_countdown_app_block_MxQn4A": {
-          "type": "shopify://apps/essential-countdown/blocks/app-block/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
-          "settings": {
-            "id": "cm35pego73537719zr18tmhbpu"
-          }
-        }
-      },
-      "block_order": [
-        "essential_countdown_app_block_MxQn4A"
-      ],
-      "disabled": true,
-      "settings": {
-        "include_margins": true
-      }
-    },
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9": {
       "type": "featured-collections",
       "blocks": {
@@ -663,7 +645,6 @@
     }
   },
   "order": [
-    "1730891491f7dfb6f2",
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9",
     "slideshow_gwXDrF",
     "featured_collection_XDhFHB",

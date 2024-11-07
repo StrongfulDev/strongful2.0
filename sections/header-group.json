@@ -104,6 +104,7 @@
     },
     "countdown_RmQggP": {
       "type": "countdown",
+      "disabled": true,
       "settings": {
         "show_days": true,
         "countdown_date": "Mon Nov 11 2024 12:00:00 GMT+0200 (שעון ישראל (חורף))",
@@ -118,11 +119,29 @@
     },
     "custom_liquid_Fg8ypf": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "custom_liquid": "<web-component-embed id=\"lXD6k0\" app_slug=\"countdown-timer\"></web-component-embed><script src=\"https://app.powr.io/assets/webcomponent.js\"></script>",
         "color_scheme": "background-1",
         "padding_top": 40,
         "padding_bottom": 52
+      }
+    },
+    "173096521621832124": {
+      "type": "apps",
+      "blocks": {
+        "essential_countdown_app_block_Y6y8cp": {
+          "type": "shopify://apps/essential-countdown/blocks/app-block/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
+          "settings": {
+            "id": "cm35pego73537719zr18tmhbpu"
+          }
+        }
+      },
+      "block_order": [
+        "essential_countdown_app_block_Y6y8cp"
+      ],
+      "settings": {
+        "include_margins": true
       }
     },
     "header": {
@@ -361,6 +380,7 @@
     "countdown_k4x98G",
     "countdown_RmQggP",
     "custom_liquid_Fg8ypf",
+    "173096521621832124",
     "header",
     "7503b704-2110-400e-bc52-a2190d224c23",
     "173089247718eeb177",
