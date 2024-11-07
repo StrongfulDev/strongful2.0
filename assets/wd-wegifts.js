@@ -248,6 +248,7 @@ if (!isCustomAmountInput) {
   document.querySelector(".initial-val").classList.add("active-variant");
   const valueText = document.querySelector(".label-value").innerHTML.trim();
   document.querySelector(".price-value").innerHTML = valueText;
+  debugger;
   const arr = Array.prototype.slice.call(document.querySelectorAll(".wd-card-price"));
   for (let i = 0; i < arr.length; i++) {
     arr[i].innerHTML = valueText;
@@ -328,6 +329,7 @@ const setInitialValue = (value, targetPrice, currency) => {
   initialValue = value;
   giftCardValueWd = currentValueInt;
   document.querySelector(".price-value").innerHTML = value;
+  debugger;
   const cardPriceCodeElements = Array.prototype.slice.call(document.querySelectorAll(".wd-card-price"));
   for (const element of cardPriceCodeElements) {
     element.innerHTML = `${currency}${currentValueInt}`;
