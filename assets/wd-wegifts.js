@@ -317,7 +317,7 @@ const selcetStyle = (id) => {
 
 const setInitialValue = (value, targetPrice, currency) => {
   const targetPriceInt = +targetPrice;
-  const currentValueInt = +value.slice(1);
+  const currentValueInt = isNaN(+value.slice(1)) ? value : +value.slice(1);
   targetPriceDiv.classList.remove("d-none");
   const selected = document.getElementById(value);
   const variantArray = Array.prototype.slice.call(document.querySelectorAll(".initial-val"));
