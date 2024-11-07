@@ -69,6 +69,23 @@
         "animation-duration": 5
       }
     },
+    "173096521621832124": {
+      "type": "apps",
+      "blocks": {
+        "essential_countdown_app_block_Y6y8cp": {
+          "type": "shopify://apps/essential-countdown/blocks/app-block/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
+          "settings": {
+            "id": "cm35pego73537719zr18tmhbpu"
+          }
+        }
+      },
+      "block_order": [
+        "essential_countdown_app_block_Y6y8cp"
+      ],
+      "settings": {
+        "include_margins": false
+      }
+    },
     "173088717332a5e8b1": {
       "type": "apps",
       "blocks": {
@@ -125,23 +142,6 @@
         "color_scheme": "background-1",
         "padding_top": 40,
         "padding_bottom": 52
-      }
-    },
-    "173096521621832124": {
-      "type": "apps",
-      "blocks": {
-        "essential_countdown_app_block_Y6y8cp": {
-          "type": "shopify://apps/essential-countdown/blocks/app-block/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
-          "settings": {
-            "id": "cm35pego73537719zr18tmhbpu"
-          }
-        }
-      },
-      "block_order": [
-        "essential_countdown_app_block_Y6y8cp"
-      ],
-      "settings": {
-        "include_margins": false
       }
     },
     "header": {
@@ -376,11 +376,11 @@
   },
   "order": [
     "announcement-bar",
+    "173096521621832124",
     "173088717332a5e8b1",
     "countdown_k4x98G",
     "countdown_RmQggP",
     "custom_liquid_Fg8ypf",
-    "173096521621832124",
     "header",
     "7503b704-2110-400e-bc52-a2190d224c23",
     "173089247718eeb177",
