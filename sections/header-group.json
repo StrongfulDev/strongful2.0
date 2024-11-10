@@ -150,8 +150,8 @@
             "title": "מוצרים",
             "item_class": "",
             "title_link": "",
-            "desktop_links_image_1": "shopify://shop_images/4_3e19de7d-6c0c-4ac2-851f-0bc56fb0e3b1.jpg",
-            "desktop_links_image_1_link": "shopify://collections/shopping-il-3-300",
+            "desktop_links_image_1": "shopify://shop_images/7ff08d51abffc0cfdf69f878b50b58d6_4bf964df-451b-43ae-a10e-ff7515e4e4ed.jpg",
+            "desktop_links_image_1_link": "shopify://collections/sets",
             "desktop_links_image_2": "shopify://shop_images/a560bf1fe14f8252810966fd4ef8b9b8.jpg",
             "desktop_links_image_2_link": "shopify://collections/best-seller-internal-use",
             "mobile_cover_image": "shopify://shop_images/20e5c3f719da92dc7bfd0c70c57f7186.jpg",
@@ -308,9 +308,7 @@
     },
     "7503b704-2110-400e-bc52-a2190d224c23": {
       "type": "custom-liquid",
-      "custom_css": [
-
-      ],
+      "custom_css": [],
       "settings": {
         "custom_liquid": "<div class=\"header-overlay hidden\"><div>",
         "color_scheme": "background-1",
