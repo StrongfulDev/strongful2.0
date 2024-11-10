@@ -1,21 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "customer_slideshow_jteert": {
@@ -24,11 +15,11 @@
         "slide_XebKXz": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/21f7ff3988a6d0c803fb8fc676395719.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/74aa96ff8350ced1e8354467e0517aac_1ad4d287-69e8-40cc-a451-d62f222eadb9.jpg",
-            "login_desktop_image": "shopify:\/\/shop_images\/f0ce0ca64a235238c2b25399ed953d33.jpg",
-            "login_mobile_image": "shopify:\/\/shop_images\/f9a3dba4cbdb2db745e2c743ac3d25c7.jpg",
-            "button_label": "הרשמה \/ כניסה",
+            "image": "shopify://shop_images/21f7ff3988a6d0c803fb8fc676395719.jpg",
+            "mobile_image": "shopify://shop_images/74aa96ff8350ced1e8354467e0517aac_1ad4d287-69e8-40cc-a451-d62f222eadb9.jpg",
+            "login_desktop_image": "shopify://shop_images/f0ce0ca64a235238c2b25399ed953d33.jpg",
+            "login_mobile_image": "shopify://shop_images/f9a3dba4cbdb2db745e2c743ac3d25c7.jpg",
+            "button_label": "הרשמה / כניסה",
             "login_button_label": "",
             "link": "",
             "login_link": "",
@@ -62,7 +53,7 @@
     "custom_liquid_3c8bRT": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "{{ 'earn-points.css' | asset_url | stylesheet_tag }}\n<div class=\"yotpo-widget-instance\" data-yotpo-instance-id=\"746026\"><\/div>",
+        "custom_liquid": "{{ 'earn-points.css' | asset_url | stylesheet_tag }}\n<div class=\"yotpo-widget-instance\" data-yotpo-instance-id=\"894133\"></div>",
         "color_scheme": "background-1",
         "padding_top": 0,
         "padding_bottom": 0
@@ -121,8 +112,8 @@
       "type": "custom-loyalty-form-section",
       "settings": {
         "sign_up_title": "הרשמה למועדון הלקוחות",
-        "desktop_image": "shopify:\/\/shop_images\/Custom_loyalty_login_desktop.png",
-        "mobile_image": "shopify:\/\/shop_images\/Custom_loyalty_login_mobile.png",
+        "desktop_image": "shopify://shop_images/Custom_loyalty_login_desktop.png",
+        "mobile_image": "shopify://shop_images/Custom_loyalty_login_mobile.png",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -135,7 +126,7 @@
           "settings": {
             "heading": "איך אני מצטרפת ל STRONGFUL CLUB?",
             "icon": "none",
-            "row_content": "<p>בהרשמה לאתר את מצטרפת אוטומטית ל STRONGFUL CLUB.<\/p><p>את יכולה להירשם למועדון בראש העמוד או בלינק <a href=\"https:\/\/strongful.co.il\/account\/login\">כאן<\/a>.<\/p>",
+            "row_content": "<p>בהרשמה לאתר את מצטרפת אוטומטית ל STRONGFUL CLUB.</p><p>את יכולה להירשם למועדון בראש העמוד או בלינק <a href=\"https://strongful.co.il/account/login\">כאן</a>.</p>",
             "page": ""
           }
         },
@@ -144,7 +135,7 @@
           "settings": {
             "heading": "איך אני צוברת נקודות?",
             "icon": "none",
-            "row_content": "<p>אצלנו את יכולה לצבור נקודות על כל שקל שרכשת באתר, מלבד הרכישות באתר אפשר לצבור עוד נקודות על ידי הוספת תגובה באתר.<\/p>",
+            "row_content": "<p>אצלנו את יכולה לצבור נקודות על כל שקל שרכשת באתר, מלבד הרכישות באתר אפשר לצבור עוד נקודות על ידי הוספת תגובה באתר.</p>",
             "page": ""
           }
         },
@@ -153,7 +144,7 @@
           "settings": {
             "heading": "איך אני משתמשת בנקודות שצברתי?",
             "icon": "none",
-            "row_content": "<p>כבר בשלב הצ׳ק אאוט, תופיע לך האפשרות לראות את כמות הנקודות שצברת עד כה ותוכלי לבחור כמה נקודות תרצי לממש.<\/p><p>מימוש הנקודות נסכם יחד עם קוד קופון וגיפט קארד, ואינו מתנגש או מבטל קוד קופון ו\/או גיפט קארד.<\/p><p>ניתן לממש עד 1,000 נקודות בכל הזמנה.<\/p>",
+            "row_content": "<p>כבר בשלב הצ׳ק אאוט, תופיע לך האפשרות לראות את כמות הנקודות שצברת עד כה ותוכלי לבחור כמה נקודות תרצי לממש.</p><p>מימוש הנקודות נסכם יחד עם קוד קופון וגיפט קארד, ואינו מתנגש או מבטל קוד קופון ו/או גיפט קארד.</p><p>ניתן לממש עד 1,000 נקודות בכל הזמנה.</p>",
             "page": ""
           }
         },
@@ -162,7 +153,7 @@
           "settings": {
             "heading": "הנקודות שלי נשמרות אם אני מחזירה מוצרים?",
             "icon": "none",
-            "row_content": "<p>כאשר מתבצע זיכוי כספי על מוצרים שהזמנת באתר, הנקודות אותן צברת על המוצרים ימחקו מהחשבון שלך.<\/p><p>לדוגמא - במידה וקיבלת זיכוי כספי בשווי 150 שקלים, יימחקו מחשבונך 150 נקודות.<\/p>",
+            "row_content": "<p>כאשר מתבצע זיכוי כספי על מוצרים שהזמנת באתר, הנקודות אותן צברת על המוצרים ימחקו מהחשבון שלך.</p><p>לדוגמא - במידה וקיבלת זיכוי כספי בשווי 150 שקלים, יימחקו מחשבונך 150 נקודות.</p>",
             "page": ""
           }
         },
@@ -171,7 +162,7 @@
           "settings": {
             "heading": "ביצעתי הזמנה ולא קיבלתי את הנקודות שלי",
             "icon": "none",
-            "row_content": "<p>בכל הזמנה באתר מתקבלת נקודה על כל שקל שרכשת, נקודות נצברות רק על כסף ששולם, סכום ששולם באמצעות גיפט קארד לא צובר נקודות.<\/p>",
+            "row_content": "<p>בכל הזמנה באתר מתקבלת נקודה על כל שקל שרכשת, נקודות נצברות רק על כסף ששולם, סכום ששולם באמצעות גיפט קארד לא צובר נקודות.</p>",
             "page": ""
           }
         },
@@ -180,7 +171,7 @@
           "settings": {
             "heading": "ביצעתי הזמנה ולא עליתי מדרגה",
             "icon": "none",
-            "row_content": "<p>כל 12 חודשים מרגע הצטרפות למועדון הלקוחות שלנו - דרגת המועדון שלך מתאפסת.<\/p><p>כלומר, במידה ועלית למדרגת PLUS בתאריך ה01.01.2024 ולא עלית למדרגה הבאה עד לתאריך ה01.01.2025 - דרגת המועדון תשוב דרגה אחת אחורה.<\/p>",
+            "row_content": "<p>כל 12 חודשים מרגע הצטרפות למועדון הלקוחות שלנו - דרגת המועדון שלך מתאפסת.</p><p>כלומר, במידה ועלית למדרגת PLUS בתאריך ה01.01.2024 ולא עלית למדרגה הבאה עד לתאריך ה01.01.2025 - דרגת המועדון תשוב דרגה אחת אחורה.</p>",
             "page": ""
           }
         }
