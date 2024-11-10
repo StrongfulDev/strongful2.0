@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "7e4a1385-2573-43fd-92c6-f80e5a94db9c": {
@@ -102,9 +102,7 @@
         "fe444ca8-e3cb-4330-976d-7be531b22d3a",
         "89f0d758-d1d3-4026-9768-790087b10b6b"
       ],
-      "custom_css": [
-
-      ],
+      "custom_css": [],
       "settings": {
         "columns_desktop": "4",
         "columns_mobile": "2",
@@ -156,7 +154,7 @@
           "settings": {
             "heading": "האם אתם עושים משלוחים לכל הארץ?",
             "icon": "none",
-            "row_content": "<p>ניתן לבצע משלוחים לכל חלקי הארץ עד 3 ימי עסקים מלבד איזורים מרוחקים עד 5 ימי עסקים.</p><p>עקב המצב הבטחוני הזמנות יסופקו בין 1-10 ימי עסקים.</p>",
+            "row_content": "<p>ניתן לבצע משלוחים לכל חלקי הארץ עד 3 ימי עסקים מלבד איזורים מרוחקים עד 4 ימי עסקים.</p><p></p>",
             "page": ""
           }
         },
