@@ -14,8 +14,7 @@
       "blocks": {
         "ea6d7033-4e56-497e-a4dd-623c0f24954e": {
           "type": "product_media",
-          "settings": {
-          }
+          "settings": {}
         },
         "7c99b889-3ad8-4802-a5c7-9802ab40f12c": {
           "type": "breadcrumb",
@@ -26,9 +25,9 @@
         "5ec0a264-e4fc-4a8d-92bc-f2f9223694f5": {
           "type": "sale",
           "settings": {
-            "logged_in_text": "<p>SHOPPING IL </p><p>3 פריטים 300₪</p>",
-            "logged_out_text": "<p>SHOPPING IL</p><p>3 פריטים 300₪</p>",
-            "logged_in_text_second": "<p>פריט זה אינו משתתף במבצע</p>",
+            "logged_in_text": "<p>20% הנחה + 15% הנחה נוספים</p><p>בשימוש הקוד: NOV15</p><p><br/></p>",
+            "logged_out_text": "<p>20% הנחה + 15% הנחה נוספים</p><p>בשימוש הקוד: NOV15</p><p><br/></p>",
+            "logged_in_text_second": "",
             "log_in": "",
             "small_text": "",
             "small_logged_in_text": "",
@@ -39,8 +38,7 @@
         },
         "title": {
           "type": "title",
-          "settings": {
-          }
+          "settings": {}
         },
         "5fa3ce9f-60f6-4aee-a0c4-c987fa5f3522": {
           "type": "text",
@@ -58,8 +56,7 @@
         },
         "price": {
           "type": "price",
-          "settings": {
-          }
+          "settings": {}
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -79,8 +76,7 @@
         "quantity_selector": {
           "type": "quantity_selector",
           "disabled": true,
-          "settings": {
-          }
+          "settings": {}
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -91,8 +87,7 @@
         },
         "yotpo_loyalty_rewards_product_points_module_app_block_krF3Wc": {
           "type": "shopify://apps/yotpo-loyalty-rewards/blocks/product-points-module-app-block/2f9660df-5018-4e02-9868-ee1fb88d6ccd",
-          "settings": {
-          }
+          "settings": {}
         },
         "5ae0b953-0e37-48c5-b5cc-e50d6004b25c": {
           "type": "loyalty",
@@ -234,9 +229,7 @@
     },
     "daadfb7d-6377-46b9-9592-68ff753bf341": {
       "type": "related-products-slider",
-      "custom_css": [
-
-      ],
+      "custom_css": [],
       "settings": {
         "steps": 4,
         "title": "אולי תאהבי גם",
@@ -307,9 +300,7 @@
       "block_order": [
         "408ca3e0-76ac-430f-a568-98a94142ff8b"
       ],
-      "custom_css": [
-
-      ],
+      "custom_css": [],
       "settings": {
         "include_margins": true
       }
