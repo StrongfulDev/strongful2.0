@@ -27,8 +27,7 @@
         },
         "content": {
           "type": "content",
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "block_order": [
@@ -37,8 +36,8 @@
         "content"
       ],
       "settings": {
-        "tile_image_one": "shopify://shop_images/4_325a340a-80a5-4297-8576-0d8cb696fc08.jpg",
-        "tile_image_one_link": "shopify://collections/shopping-il-3-300",
+        "tile_image_one": "shopify://shop_images/7ff08d51abffc0cfdf69f878b50b58d6_4bf964df-451b-43ae-a10e-ff7515e4e4ed.jpg",
+        "tile_image_one_link": "shopify://collections/sets",
         "tile_image_two": "shopify://shop_images/a560bf1fe14f8252810966fd4ef8b9b8_b653c4b7-c0be-46a4-bfd8-90c57735d46c.jpg",
         "tile_image_two_link": "shopify://collections/best-seller-internal-use"
       }
