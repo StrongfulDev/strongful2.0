@@ -14,8 +14,7 @@
       "blocks": {
         "52591e14-5935-4a09-9297-23ce27e90b67": {
           "type": "breadcrumbs",
-          "settings": {
-          }
+          "settings": {}
         },
         "b12ab2ae-119f-4c68-9a4f-1e499db126b3": {
           "type": "heading",
@@ -42,9 +41,9 @@
         ".media > *:not(.zoom):not(.deferred-media__poster-button),.media model-viewer {position: static; object-fit: cover;}"
       ],
       "settings": {
-        "override_image_from_metafield": true,
-        "image": "shopify://shop_images/4_2c1fb38e-a11a-47bb-b45c-20f988ed5eec.jpg",
-        "mobile_image": "shopify://shop_images/6_cb4dbbbb-d1a4-4623-a873-a407c7a990e5.jpg",
+        "override_image_from_metafield": false,
+        "image": "shopify://shop_images/a69c6a81427c80862b80cf76175bd315_33811eb9-3a14-4002-a116-6f2a7b9fe3e4.jpg",
+        "mobile_image": "shopify://shop_images/91e3d41e83d2cacce11e5279cf256f0c_23890bde-b6c7-42e5-8218-f9ae5ca840cc.jpg",
         "image_overlay_opacity": 0,
         "image_height": "auto",
         "desktop_content_position": "middle-center",
