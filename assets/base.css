@@ -3711,7 +3711,9 @@ body:not(.enable-toolbar-RTL) #enable-reader, body:not(.enable-toolbar-RTL) #ena
 .ReturnGO_ReturnItemProposition-module_shippingContent svg {
 	display: none !important;
 }
-
+#returnGoAssistant .ReturnGO_Text-module_text.ReturnGO_Text-module_lg, #returnGoCartWidget .ReturnGO_Text-module_text.ReturnGO_Text-module_lg, #returnGoAccountWidget .ReturnGO_Text-module_text.ReturnGO_Text-module_lg{
+    display: none !important;
+}
 .ReturnGO_ReturnItemProposition-module_shippingContent {
 	justify-content: flex-start !important;
 	direction: rtl !important;
