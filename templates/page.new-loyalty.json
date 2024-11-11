@@ -76,6 +76,7 @@
     },
     "loyalty_outlet_collection_ryXgaG": {
       "type": "loyalty-outlet-collection",
+      "disabled": true,
       "settings": {
         "steps": 4,
         "title": "רק לחברות מועדון",
