@@ -3708,9 +3708,9 @@ body:not(.enable-toolbar-RTL) #enable-reader, body:not(.enable-toolbar-RTL) #ena
 /* #returnGoAssistant .ReturnGO_Stack-module_stack.ReturnGO_Stack-module_alignCenter, #returnGoCartWidget .ReturnGO_Stack-module_stack.ReturnGO_Stack-module_alignCenter, #returnGoAccountWidget .ReturnGO_Stack-module_stack.ReturnGO_Stack-module_alignCenter{
     display: none !important;
 } */
-.ReturnGO_ReturnItemProposition-module_shippingContent svg {
+/* .ReturnGO_ReturnItemProposition-module_shippingContent svg {
 	display: none !important;
-}
+} */
 
 .ReturnGO_ReturnItemProposition-module_shippingContent {
 	justify-content: flex-start !important;
