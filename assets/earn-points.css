@@ -15,6 +15,7 @@
 
 .yotpo-widget-hero-section .yotpo-text-on-background {
 	min-height: auto;
+	display: : none;
 }
 
 .yotpo-widget-hero-section .yotpo-text-on-background.yotpo-is-mobile .yotpo-background-text-mobile,
@@ -281,6 +282,7 @@
 	.yotpo-widget-hero-section .yotpo-text-on-background {
 		min-height: 37vw;
 		position: relative;
+		display: none;
 	}
 
 	.yotpo-email-view .yotpo-header-text {
