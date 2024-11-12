@@ -27,7 +27,9 @@
 	product.price = {{ product.price }} ;
 	window.loomi_ctx.current_product=product;
 	window.loomi_ctx.productId={{product.id}};
-	window.loomi_ctx.variantId={{ product.selected_or_first_available_variant.id }};
+	{%- if product.selected_or_first_available_variant %}
+	window.loomi_ctx.variantId = {{ product.selected_or_first_available_variant.id  }};
+	{%- endif %}
 	{% endif %}
 })()
 </script>
