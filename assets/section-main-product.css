@@ -2311,7 +2311,7 @@ button.needsclick {
 	z-index: 0 !important;
 }
 
-.aloyoga-color-circle {
+.color-circle {
     position: relative;
     width: 50px; /* Adjust size as needed */
     height: 50px; /* Adjust size as needed */
@@ -2321,7 +2321,7 @@ button.needsclick {
     display: inline-block;
   
   }
-  .aloyoga-color-circle.picked-color {
+  .color-circle.picked-color {
     position: relative;
     width: 50px; /* Adjust size as needed */
     height: 50px; /* Adjust size as needed */
@@ -2332,7 +2332,7 @@ button.needsclick {
     overflow: hidden;
   }
   
-  .aloyoga-color-circle::before {
+  .color-circle::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -2344,7 +2344,7 @@ button.needsclick {
     background-color: white; /* White divider circle */
   }
   
-  .aloyoga-color-circle::after {
+  .color-circle::after {
     content: '';
     position: absolute;
     top: 50%;

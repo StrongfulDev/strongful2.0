@@ -80,7 +80,7 @@
               <li class="relative-discount similar-child {{ forloop.index0 }}">
                 <a href="{{ product.url }}" class="similar-a">
                   <span
-                    class="aloyoga-color-circle {% if is_picked_color %}picked-color{% endif %} "
+                    class="color-circle {% if is_picked_color %}picked-color{% endif %} "
                     style="--color:{{ color | strip }}; display:inline-block"
                   ></span>
                   <p class="productVendor">{{ product.vendor }}</p>
@@ -91,7 +91,7 @@
             <li class="relative-discount similar-child {{ forloop.index0 }}">
               <a href="{{ product.url }}" class="similar-a">
                 <span
-                  class="aloyoga-color-circle {% if is_picked_color %}picked-color{% endif %}"
+                  class="color-circle {% if is_picked_color %}picked-color{% endif %}"
                   style="--color:{{color|strip}} "
                 ></span>
               </a>
