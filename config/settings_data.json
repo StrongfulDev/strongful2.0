@@ -148,7 +148,7 @@
     "custom_collection_announcement": "EXTRA 15% OFF: NOV15",
     "members_only_announcement": "",
     "show_card_collection_announcement": true,
-    "second_announcement_tag": "",
+    "second_announcement_tag": "outlet",
     "custom_collection_second_announcement": "",
     "restock_badge_tag": "badge__restock",
     "announcement_customizer_override": true,
