@@ -61,7 +61,7 @@
         {% if horizontal_class %} card--horizontal{% endif %}
         {% if members_only_sale %}
             {% if card_product.tags contains announcement_tag %}
-                {% if customer and members_only_sale_active %}
+                {% if customer and members_only_sale_active %} 
                     active-card
                 {% endif %}
             {% else %}

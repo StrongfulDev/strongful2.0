@@ -169,7 +169,7 @@ flex-wrap: wrap;
 } 
 .size-border{
    
-    border: 1px solid #ebebeb;
+    border: 1px solid #0909091c;
     min-height: 67px;
     min-width: 100%;
     position: absolute;
@@ -2330,6 +2330,16 @@ button.needsclick {
     margin: 5px; /* Adjust spacing as needed */
     display: inline-block;
     overflow: hidden;
+  }
+  .color-circle.white {
+          position: relative;
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    border-radius: 50%;
+    border: 0.1px solid rgb(0, 0, 0); /* Outer gray border */
+    margin: 5px; /* Adjust spacing as needed */
+    display: inline-block;
+ 
   }
   
   .color-circle::before {
