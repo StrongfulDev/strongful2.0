@@ -258,8 +258,8 @@
             "show_on_mobile": true,
             "order": "",
             "small_font": true,
-            "menu": "outlet-menu-main",
-            "menu_second": "",
+            "menu": "dawn-outlet-menu",
+            "menu_second": "outlet-menu-sub",
             "menu_third": "",
             "title": "אאוטלט",
             "item_class": "",
@@ -351,9 +351,7 @@
     },
     "7503b704-2110-400e-bc52-a2190d224c23": {
       "type": "custom-liquid",
-      "custom_css": [
-
-      ],
+      "custom_css": [],
       "settings": {
         "custom_liquid": "<div class=\"header-overlay hidden\"><div>",
         "color_scheme": "background-1",
