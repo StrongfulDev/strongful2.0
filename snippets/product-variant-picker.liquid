@@ -57,7 +57,9 @@
 </script>
 
 {% unless product.tags contains 'noSimilar' %}
+  {%unless product.,metafields.variant.color.value == nil%}
   <div style="colorHeading">:צבע</div>
+  {%endunless%}
   <ul class="similar" id="scrollNoSize">
     {% for collection in collections %}
       {% if collection.title == similarParent or collection.title == similarParent.value %}
