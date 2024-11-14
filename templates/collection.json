@@ -14,8 +14,7 @@
       "blocks": {
         "52591e14-5935-4a09-9297-23ce27e90b67": {
           "type": "breadcrumbs",
-          "settings": {
-          }
+          "settings": {}
         },
         "b12ab2ae-119f-4c68-9a4f-1e499db126b3": {
           "type": "heading",
@@ -56,6 +55,15 @@
         "show_text_below": true
       }
     },
+    "custom_liquid_fhh4BT": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"countdown-timer-block\" countdown-timer-id=\"cm3h8yuoh1208019yupgduhe4o\"></div>",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
@@ -85,6 +93,12 @@
         "padding_bottom": 44
       }
     },
+    "17315852617540d892": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
       "settings": {
@@ -96,7 +110,9 @@
   },
   "order": [
     "745dda66-63ce-4705-8d8d-eff54d17367f",
+    "custom_liquid_fhh4BT",
     "product-grid",
+    "17315852617540d892",
     "banner"
   ]
 }
