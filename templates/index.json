@@ -115,7 +115,7 @@
     "custom_liquid_cEGaMC": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<button id=\"open-login-modal\" class=\"btn\">Login</button>",
+        "custom_liquid": "<button id=\"account-toggler-site-wide\" class=\"btn\"></button>",
         "color_scheme": "background-1",
         "padding_top": 40,
         "padding_bottom": 52
