@@ -122,7 +122,7 @@
             "mobile_image": "shopify://shop_images/copy_8_1_7bb58dec-8c55-4467-a747-c67d4a72ed0c.jpg",
             "button_label": "הרשמה / התחברות",
             "login_button_label": "SHOP NOW",
-            "link": "",
+            "link": "shopify://collections/sets",
             "login_link": "",
             "show_text_box": true,
             "color_scheme": "background-1",
