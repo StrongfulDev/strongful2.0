@@ -112,6 +112,63 @@
         "padding_bottom": 16
       }
     },
+    "customer_slideshow_4HiHHh": {
+      "type": "customer-slideshow",
+      "blocks": {
+        "slide_yJAGUx": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/copy_1_aaa77dae-1a79-409d-836e-f30593978231.jpg",
+            "button_label": "הרשמה / התחברות",
+            "login_button_label": "SHOP NOW",
+            "link": "",
+            "login_link": "",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "logged_in_color_scheme": "background-1",
+            "whole_slide_link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_NApMXW": {
+          "type": "slide",
+          "settings": {
+            "button_label": "Button label",
+            "login_button_label": "SHOP NOW",
+            "link": "",
+            "login_link": "",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "logged_in_color_scheme": "background-1",
+            "whole_slide_link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_yJAGUx",
+        "slide_NApMXW"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
     "slideshow_gwXDrF": {
       "type": "slideshow",
       "blocks": {
@@ -646,6 +703,7 @@
   },
   "order": [
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9",
+    "customer_slideshow_4HiHHh",
     "slideshow_gwXDrF",
     "featured_collection_XDhFHB",
     "featured_collection_zx87dF",
