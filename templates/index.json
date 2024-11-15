@@ -222,6 +222,7 @@
         "slide_gaUfH4",
         "slide_AL3x4y"
       ],
+      "disabled": true,
       "settings": {
         "layout": "full_bleed",
         "slide_height": "adapt_image",
