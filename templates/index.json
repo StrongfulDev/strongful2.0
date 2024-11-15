@@ -115,6 +115,28 @@
     "slideshow_gwXDrF": {
       "type": "slideshow",
       "blocks": {
+        "slide_AL3x4y": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/copy_2_d5474bc2-d9c6-4d03-95ec-a8c870e00199.jpg",
+            "mobile_image": "shopify://shop_images/copy_a31a0f6f-ffe3-4223-912d-664a5abaab78.jpg",
+            "left_position": 50,
+            "bottom_position": 15,
+            "desktop_left_position": 50,
+            "desktop_bottom_position": 10,
+            "show_lock": false,
+            "button_label": "SHOP NOW",
+            "link": "shopify://collections/חודש-המודעות",
+            "show_text_box": true,
+            "color_scheme": "inverse",
+            "whole_slide_link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center"
+          }
+        },
         "slide_gaUfH4": {
           "type": "slide",
           "settings": {
@@ -136,34 +158,11 @@
             "image_overlay_opacity": 0,
             "text_alignment_mobile": "center"
           }
-        },
-        "slide_AL3x4y": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/copy_2_d5474bc2-d9c6-4d03-95ec-a8c870e00199.jpg",
-            "mobile_image": "shopify://shop_images/copy_a31a0f6f-ffe3-4223-912d-664a5abaab78.jpg",
-            "left_position": 50,
-            "bottom_position": 15,
-            "desktop_left_position": 50,
-            "desktop_bottom_position": 10,
-            "show_lock": false,
-            "button_label": "SHOP NOW",
-            "link": "shopify://collections/חודש-המודעות",
-            "show_text_box": true,
-            "color_scheme": "inverse",
-            "whole_slide_link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "text_alignment_mobile": "center"
-          }
         }
       },
       "block_order": [
-        "slide_gaUfH4",
-        "slide_AL3x4y"
+        "slide_AL3x4y",
+        "slide_gaUfH4"
       ],
       "settings": {
         "layout": "full_bleed",
