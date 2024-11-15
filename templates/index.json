@@ -118,12 +118,12 @@
         "slide_gaUfH4": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/copy_1_444a60f9-8b4f-4b40-a9e8-f54b2f3d2cad.jpg",
-            "mobile_image": "shopify://shop_images/copy_8_1.jpg",
+            "image": "shopify://shop_images/copy_2_bc6738c8-4679-458e-bdb0-3e8f6c611e15.jpg",
+            "mobile_image": "shopify://shop_images/copy_5ce957a2-20d5-4bf7-a67c-e6a24a77c10f.jpg",
             "left_position": 50,
-            "bottom_position": 15,
+            "bottom_position": 10,
             "desktop_left_position": 50,
-            "desktop_bottom_position": 18,
+            "desktop_bottom_position": 10,
             "show_lock": false,
             "button_label": "SHOP NOW",
             "link": "shopify://collections/sets",
