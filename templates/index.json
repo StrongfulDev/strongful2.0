@@ -119,6 +119,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/copy_1_aaa77dae-1a79-409d-836e-f30593978231.jpg",
+            "mobile_image": "shopify://shop_images/copy_8_1_7bb58dec-8c55-4467-a747-c67d4a72ed0c.jpg",
             "button_label": "הרשמה / התחברות",
             "login_button_label": "SHOP NOW",
             "link": "",
@@ -162,7 +163,7 @@
         "slide_height": "medium",
         "slider_visual": "counter",
         "auto_rotate": false,
-        "change_slides_speed": 5,
+        "change_slides_speed": 9,
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand",
         "padding_top": 0,
