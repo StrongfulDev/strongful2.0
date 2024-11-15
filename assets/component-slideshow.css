@@ -140,6 +140,7 @@ slideshow-component .slideshow.banner {
 slideshow-component:not(.page-width) .slider-buttons {
     border-right: 0;
     border-left: 0;
+    display: none;
 }
 
 .slideshow__control-wrapper {
