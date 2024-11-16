@@ -37,7 +37,8 @@
 }
 
 .yotpo-widget-hero-section .yotpo-text-on-background.yotpo-is-mobile .yotpo-text-container {
-top:auto;}
+	display: none;
+}
 
 .yotpo-widget-hero-section .yotpo-customer-logged-out-buttons .yotpo-action-button-text {
 	font-size: var(--font-body-size-medium);
