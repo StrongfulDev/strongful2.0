@@ -89,7 +89,7 @@
     "countdown_k4x98G": {
       "type": "countdown",
       "settings": {
-        "show_days": true,
+        "show_days": false,
         "countdown_date": "Mon Nov 18 2024 00:00:00 GMT+0200 (שעון ישראל (חורף))",
         "countdown_url": "shopify://pages/loyalty",
         "left_text": true,
