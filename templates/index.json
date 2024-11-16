@@ -125,7 +125,7 @@
             "desktop_left_position": 50,
             "desktop_bottom_position": 10,
             "show_lock": false,
-            "button_label": "הרשמה / התחברות",
+            "button_label": "הרשמי / התחברי",
             "link": "shopify://pages/loyalty",
             "show_text_box": true,
             "color_scheme": "inverse",
