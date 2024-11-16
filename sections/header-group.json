@@ -69,21 +69,6 @@
         "animation-duration": 5
       }
     },
-    "countdown_k4x98G": {
-      "type": "countdown",
-      "disabled": true,
-      "settings": {
-        "show_days": true,
-        "countdown_date": "Mon Nov 18 2024 00:00:00 GMT+0200 (שעון ישראל (חורף))",
-        "countdown_url": "shopify://collections/shopping-il-3-300",
-        "left_text": true,
-        "left_copy": "<p><strong>SHOPPING IL ENDS IN </strong></p>",
-        "right_text_direction": "ltr",
-        "left_text_direction": "ltr",
-        "right_text": false,
-        "right_copy": ""
-      }
-    },
     "173096970019d79378": {
       "type": "apps",
       "blocks": {
@@ -99,6 +84,20 @@
       ],
       "settings": {
         "include_margins": false
+      }
+    },
+    "countdown_k4x98G": {
+      "type": "countdown",
+      "settings": {
+        "show_days": true,
+        "countdown_date": "Mon Nov 18 2024 00:00:00 GMT+0200 (שעון ישראל (חורף))",
+        "countdown_url": "shopify://pages/loyalty",
+        "left_text": true,
+        "left_copy": "<p><strong>THE BIG SALE STARTS IN :</strong></p>",
+        "right_text_direction": "ltr",
+        "left_text_direction": "ltr",
+        "right_text": false,
+        "right_copy": ""
       }
     },
     "header": {
@@ -319,8 +318,8 @@
   },
   "order": [
     "announcement-bar",
-    "countdown_k4x98G",
     "173096970019d79378",
+    "countdown_k4x98G",
     "header",
     "7503b704-2110-400e-bc52-a2190d224c23"
   ]
