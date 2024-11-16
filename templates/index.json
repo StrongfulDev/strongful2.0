@@ -123,7 +123,7 @@
             "left_position": 50,
             "bottom_position": 15,
             "desktop_left_position": 50,
-            "desktop_bottom_position": 10,
+            "desktop_bottom_position": 15,
             "show_lock": false,
             "button_label": "הרשמי / התחברי",
             "link": "shopify://pages/loyalty",
