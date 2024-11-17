@@ -262,6 +262,7 @@
         "93921bbc-631f-46c2-a66b-9df086c3f7a0",
         "69313e8a-8818-485d-9c44-529f1b10ccdd"
       ],
+      "custom_css": [],
       "settings": {
         "account": "new-loyalty-header-menu",
         "desktop_loyalty_link": "shopify://pages/loyalty",
@@ -306,6 +307,23 @@
         "shop_all_title": ""
       }
     },
+    "17318460878357645f": {
+      "type": "apps",
+      "blocks": {
+        "essential_countdown_app_block_hiPGej": {
+          "type": "shopify://apps/essential-countdown/blocks/app-block/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
+          "settings": {
+            "id": "cm3lkdbh712097191hp39lpz15"
+          }
+        }
+      },
+      "block_order": [
+        "essential_countdown_app_block_hiPGej"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "7503b704-2110-400e-bc52-a2190d224c23": {
       "type": "custom-liquid",
       "custom_css": [],
@@ -322,6 +340,7 @@
     "countdown_k4x98G",
     "173096970019d79378",
     "header",
+    "17318460878357645f",
     "7503b704-2110-400e-bc52-a2190d224c23"
   ]
 }
