@@ -144,7 +144,7 @@
     "image_ratio": "adapt",
     "show_secondary_image": true,
     "seo_alt_text": "מבצע לחברות מועדון בלבד",
-    "announcement_tag": "members_only",
+    "announcement_tag": "members_only_tag",
     "custom_collection_announcement": "בשימוש הקוד: LOYAL40",
     "members_only_announcement": "40% הנחה לחברות מועדון",
     "show_card_collection_announcement": true,
