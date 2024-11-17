@@ -4,12 +4,13 @@ let customForm =
 
 if (customForm !== null) {
 	customForm.addEventListener("submit", (e) => {
-		e.preventDefault();
-
+		// Push the dataLayer event first, no preventDefault for normal behavior
 		window.dataLayer = window.dataLayer || [];
 		window.dataLayer.push({
 			event: "new_club_member",
 		});
-		customForm.submit();
+
+		// Optional - Delay the execution slightly for GTM sync
+		// Allow form to process naturally after dataLayer push
 	});
 }
