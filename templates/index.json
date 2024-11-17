@@ -118,15 +118,15 @@
         "slide_gaUfH4": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/9de4d0d0a874d0061be878842cb2c4bd_376b9e39-2880-4c92-9281-110a76bf53a1.jpg",
-            "mobile_image": "shopify://shop_images/dccef2babfffeab0c3edd02859402684_f750592f-14f3-4964-9193-816dcd98dc27.jpg",
+            "image": "shopify://shop_images/1_3f7b705f-063e-494f-91b6-9048661df3eb.jpg",
+            "mobile_image": "shopify://shop_images/1_87dd5ecc-5934-41c4-b849-0f1eea6f5f85.jpg",
             "left_position": 50,
             "bottom_position": 10,
             "desktop_left_position": 50,
             "desktop_bottom_position": 10,
             "show_lock": false,
-            "button_label": "SHOP NOW",
-            "link": "shopify://collections/sets",
+            "button_label": "הרשמי / התחברי",
+            "link": "shopify://pages/loyalty",
             "show_text_box": true,
             "color_scheme": "inverse",
             "whole_slide_link": "",
@@ -165,7 +165,6 @@
         "slide_gaUfH4",
         "slide_AL3x4y"
       ],
-      "disabled": true,
       "settings": {
         "layout": "full_bleed",
         "slide_height": "adapt_image",
@@ -224,6 +223,7 @@
         "slide_yJAGUx",
         "slide_NApMXW"
       ],
+      "disabled": true,
       "settings": {
         "layout": "full_bleed",
         "slide_height": "adapt_image",
