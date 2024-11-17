@@ -165,6 +165,7 @@
         "slide_gaUfH4",
         "slide_AL3x4y"
       ],
+      "disabled": true,
       "settings": {
         "layout": "full_bleed",
         "slide_height": "adapt_image",
@@ -183,8 +184,8 @@
         "slide_yJAGUx": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/9de4d0d0a874d0061be878842cb2c4bd_2c953ab3-edfe-436f-a4d3-85bf46af79ef.jpg",
-            "mobile_image": "shopify://shop_images/dccef2babfffeab0c3edd02859402684_b5ee2c64-5e2e-4972-8abf-b15c0c1ea4de.jpg",
+            "image": "shopify://shop_images/1_208f6548-8a34-4a1c-b738-2f5dcf44c0f9.jpg",
+            "mobile_image": "shopify://shop_images/1_c530dd65-4f22-4276-87e9-e5c3a9c4e59d.jpg",
             "button_label": "הרשמה / התחברות",
             "login_button_label": "SHOP NOW",
             "link": "",
@@ -223,7 +224,6 @@
         "slide_yJAGUx",
         "slide_NApMXW"
       ],
-      "disabled": true,
       "settings": {
         "layout": "full_bleed",
         "slide_height": "adapt_image",
@@ -401,7 +401,7 @@
         "image_JnihJ6": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/copy_1_0fe1f1b6-a01e-478a-b366-e8a4539ddb1f.jpg",
+            "image": "shopify://shop_images/copy_2_8b866316-e06f-42e6-a1a0-6209ab9e846d.jpg",
             "alt": "Flash sale up to 35 % off photo",
             "link": "40% OFF",
             "url": "shopify://collections/sets"
