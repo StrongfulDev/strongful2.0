@@ -156,7 +156,7 @@
     "enable_quick_add": false,
     "quick_add_text": "בחירת מידה",
     "quick_add_accessories_text": "הוספה לסל",
-    "members_only_sale": true,
+    "members_only_sale": false,
     "members_only_sale_active": true,
     "currency_code_enabled": true,
     "show_upsell_card": false,
