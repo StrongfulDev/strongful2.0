@@ -144,7 +144,7 @@
     "image_ratio": "adapt",
     "show_secondary_image": true,
     "seo_alt_text": "מבצע לחברות מועדון בלבד",
-    "announcement_tag": "WasYesDiscount",
+    "announcement_tag": "members_only_sale_active",
     "custom_collection_announcement": "EXTRA 15% OFF: NOV15",
     "members_only_announcement": "",
     "show_card_collection_announcement": true,
