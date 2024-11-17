@@ -96,7 +96,7 @@ a.no-decoration {
 
 .loyalty-form-container .customer .field input {
 	background: transparent;
-	padding: 0;
+	padding: 5px;
 	color: var(--gradient-background);
 	border-bottom: 1px solid var(--gradient-background);
 	border-radius: 0;
