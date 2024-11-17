@@ -26,7 +26,7 @@
           "type": "sale",
           "settings": {
             "logged_in_text": "<p>40% הנחה על כל האתר</p><p>בשימוש הקוד: LOYAL40</p>",
-            "logged_out_text": "<p>40% הנחה על כל האתר</p><p>לחברות מועדון בלבד</p><p>למשך 24 שעות בלבד</p>",
+            "logged_out_text": "<p>40% הנחה על כל האתר</p><p>למשך 24 שעות</p><p>לחברות מועדון בלבד</p>",
             "logged_in_text_second": "",
             "log_in": "",
             "small_text": "",
