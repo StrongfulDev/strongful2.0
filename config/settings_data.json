@@ -151,7 +151,7 @@
     "second_announcement_tag": "",
     "custom_collection_second_announcement": "",
     "restock_badge_tag": "badge__restock",
-    "announcement_customizer_override": true,
+    "announcement_customizer_override": false,
     "preorder_over_text": "",
     "enable_quick_add": false,
     "quick_add_text": "בחירת מידה",
