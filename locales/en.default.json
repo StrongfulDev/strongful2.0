@@ -916,7 +916,7 @@
         "gift_card_buying_gift_card": "לא ניתן לרכוש גיפט קארד בעזרת גיפט קארד"
       },
       "payment_errors": {
-        "order_total_changed": "סוכם ההזמנה השתנה. אנא טעני מחדש את עגלת הקניות שלך.",
+        "order_total_changed": "סכום ההזמנה השתנה. אנא טעני מחדש את עגלת הקניות שלך.",
         "paypal_zero_amount": "אי אפשר לשלם עם Paypal עבור {{ amount }} בדקי שההזמנה שלך תקינה ובצעי תשלום ללא Paypal.",
         "paypal_invalid_token": "התשלום דרך Paypal לא זמין כעת. אנא נסי מאוחר יותר או בצעי את התשלום בדרך אחרת."
       },
