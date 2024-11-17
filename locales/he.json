@@ -136,7 +136,7 @@
       "selling_fast": "SELLING FAST",
       "add_to_cart": "הוספה לסל",
       "launch_date": "זמין לרכישה ב 15.8",
-      "members_only": "מכירה מוקדמת לחברות מועדון בלבד",
+      "members_only": " 40% הנחה לחברות מועדון בלבד",
       "outlet_members_only": "מוצר אאוטלט רק לחברות מועדון",
       "choose_options": "הוספה מהירה",
       "up_size_recommendation": "במוצר זה מומלץ לקחת מידה יותר",
@@ -178,14 +178,14 @@
         "minimum_of": "Minimum of {{ quantity }}",
         "maximum_of": "Maximum of {{ quantity }}",
         "multiples_of": "Increments of {{ quantity }}",
-        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}<\/span> in cart"
+        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> in cart"
       },
       "pickup_availability": {
         "view_store_info": "View store information",
         "check_other_stores": "Check availability at other stores",
         "pick_up_available": "Pickup available",
-        "pick_up_available_at_html": "Pickup available at <span class=\"color-foreground\">{{ location_name }}<\/span>",
-        "pick_up_unavailable_at_html": "Pickup currently unavailable at <span class=\"color-foreground\">{{ location_name }}<\/span>",
+        "pick_up_available_at_html": "Pickup available at <span class=\"color-foreground\">{{ location_name }}</span>",
+        "pick_up_unavailable_at_html": "Pickup currently unavailable at <span class=\"color-foreground\">{{ location_name }}</span>",
         "unavailable": "Couldn't load pickup availability",
         "refresh": "Refresh"
       },
@@ -206,7 +206,7 @@
       "xr_button": "View in your space",
       "xr_button_label": "View in your space, loads item in augmented reality window",
       "include_taxes": "Tax included.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping<\/a> calculated at checkout.",
+      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping</a> calculated at checkout.",
       "shipping_sizes": "*כל המידות בס״מ",
       "size_table": "טבלת מידות",
       "variant": {
