@@ -112,6 +112,71 @@
         "padding_bottom": 16
       }
     },
+    "slideshow_gwXDrF": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_gaUfH4": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/9de4d0d0a874d0061be878842cb2c4bd_376b9e39-2880-4c92-9281-110a76bf53a1.jpg",
+            "mobile_image": "shopify://shop_images/dccef2babfffeab0c3edd02859402684_f750592f-14f3-4964-9193-816dcd98dc27.jpg",
+            "left_position": 50,
+            "bottom_position": 15,
+            "desktop_left_position": 50,
+            "desktop_bottom_position": 18,
+            "show_lock": false,
+            "button_label": "SHOP NOW",
+            "link": "shopify://collections/sets",
+            "show_text_box": true,
+            "color_scheme": "inverse",
+            "whole_slide_link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_AL3x4y": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/2_2170ddf1-afa3-41ad-a75f-d92676cd05a4.jpg",
+            "mobile_image": "shopify://shop_images/dccef2babfffeab0c3edd02859402684_fb86f508-f06f-410b-b013-4e6cb9de1adc.jpg",
+            "left_position": 50,
+            "bottom_position": 8,
+            "desktop_left_position": 23,
+            "desktop_bottom_position": 25,
+            "show_lock": false,
+            "button_label": "SHOP NOW",
+            "link": "shopify://collections/חודש-המודעות",
+            "show_text_box": true,
+            "color_scheme": "inverse",
+            "whole_slide_link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_gaUfH4",
+        "slide_AL3x4y"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "sides",
+        "auto_rotate": true,
+        "change_slides_speed": 9,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
     "customer_slideshow_4HiHHh": {
       "type": "customer-slideshow",
       "blocks": {
@@ -158,77 +223,12 @@
         "slide_yJAGUx",
         "slide_NApMXW"
       ],
+      "disabled": true,
       "settings": {
         "layout": "full_bleed",
         "slide_height": "adapt_image",
         "slider_visual": "counter",
         "auto_rotate": false,
-        "change_slides_speed": 9,
-        "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand",
-        "padding_top": 0,
-        "padding_bottom": 36
-      }
-    },
-    "slideshow_gwXDrF": {
-      "type": "slideshow",
-      "blocks": {
-        "slide_gaUfH4": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/copy_1_444a60f9-8b4f-4b40-a9e8-f54b2f3d2cad.jpg",
-            "mobile_image": "shopify://shop_images/copy_8_1.jpg",
-            "left_position": 50,
-            "bottom_position": 15,
-            "desktop_left_position": 50,
-            "desktop_bottom_position": 18,
-            "show_lock": false,
-            "button_label": "SHOP NOW",
-            "link": "shopify://collections/sets",
-            "show_text_box": true,
-            "color_scheme": "inverse",
-            "whole_slide_link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_AL3x4y": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/2_2170ddf1-afa3-41ad-a75f-d92676cd05a4.jpg",
-            "mobile_image": "shopify://shop_images/dccef2babfffeab0c3edd02859402684_fb86f508-f06f-410b-b013-4e6cb9de1adc.jpg",
-            "left_position": 50,
-            "bottom_position": 8,
-            "desktop_left_position": 23,
-            "desktop_bottom_position": 25,
-            "show_lock": false,
-            "button_label": "SHOP NOW",
-            "link": "shopify://collections/חודש-המודעות",
-            "show_text_box": true,
-            "color_scheme": "inverse",
-            "whole_slide_link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "text_alignment_mobile": "center"
-          }
-        }
-      },
-      "block_order": [
-        "slide_gaUfH4",
-        "slide_AL3x4y"
-      ],
-      "disabled": true,
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "adapt_image",
-        "slider_visual": "sides",
-        "auto_rotate": true,
         "change_slides_speed": 9,
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand",
@@ -705,8 +705,8 @@
   },
   "order": [
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9",
-    "customer_slideshow_4HiHHh",
     "slideshow_gwXDrF",
+    "customer_slideshow_4HiHHh",
     "featured_collection_XDhFHB",
     "featured_collection_zx87dF",
     "customer_slideshow_wFcfK7",
