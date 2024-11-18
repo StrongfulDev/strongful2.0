@@ -78,6 +78,14 @@
           "disabled": true,
           "settings": {}
         },
+        "text_rgUBtC": {
+          "type": "text",
+          "settings": {
+            "text": "40% הנחה לחברות מועדון בלבד",
+            "is_vendor": false,
+            "text_style": "title"
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -148,6 +156,7 @@
         "variant_picker",
         "e290d1ee-22d0-4ae8-9219-8d77d6585fae",
         "quantity_selector",
+        "text_rgUBtC",
         "buy_buttons",
         "yotpo_loyalty_rewards_product_points_module_app_block_krF3Wc",
         "5ae0b953-0e37-48c5-b5cc-e50d6004b25c",
