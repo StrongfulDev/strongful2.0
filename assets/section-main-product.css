@@ -350,6 +350,8 @@ button.product-form__submit.fake-disabled {
     font-size: calc(var(--font-body-size-medium) * 1);
     text-align: center;
     direction: rtl;
+    color:firebrick
+
 
 }
 
