@@ -112,7 +112,7 @@
     "custom_loyalty_form_section_TtpmFX": {
       "type": "custom-loyalty-form-section",
       "settings": {
-        "sign_up_title": "הרשמה למועדון הלקוחות",
+        "sign_up_title": "הרשמי למועדון הלקוחות",
         "desktop_image": "shopify://shop_images/Custom_loyalty_login_desktop.png",
         "mobile_image": "shopify://shop_images/Custom_loyalty_login_mobile.png",
         "padding_top": 36,
