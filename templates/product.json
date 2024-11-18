@@ -26,7 +26,7 @@
           "type": "sale",
           "settings": {
             "logged_in_text": "<p>2ND SET FOR 60% OFF</p><p>סט שני ב60% הנחה!</p>",
-            "logged_out_text": "",
+            "logged_out_text": "<p>2ND SET FOR 60% OFF</p><p>סט שני ב60% הנחה!</p>",
             "logged_in_text_second": "",
             "log_in": "",
             "small_text": "",
