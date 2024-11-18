@@ -241,7 +241,7 @@
       "settings": {
         "steps": 4,
         "title": "2ND SET FOR 60% OFF",
-        "heading_size": "h2",
+        "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
         "show_description": false,
