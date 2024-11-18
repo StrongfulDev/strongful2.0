@@ -118,12 +118,12 @@
         "slide_gaUfH4": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/9de4d0d0a874d0061be878842cb2c4bd_376b9e39-2880-4c92-9281-110a76bf53a1.jpg",
-            "mobile_image": "shopify://shop_images/dccef2babfffeab0c3edd02859402684_f750592f-14f3-4964-9193-816dcd98dc27.jpg",
+            "image": "shopify://shop_images/2_60d787c5-d020-48c3-877f-cde16d10787f.jpg",
+            "mobile_image": "shopify://shop_images/copy_2_e2fb0a3f-34ef-4549-bccf-1425baaa29f8.jpg",
             "left_position": 50,
             "bottom_position": 10,
-            "desktop_left_position": 50,
-            "desktop_bottom_position": 10,
+            "desktop_left_position": 25,
+            "desktop_bottom_position": 25,
             "show_lock": false,
             "button_label": "SHOP NOW",
             "link": "shopify://collections/sets",
@@ -401,9 +401,9 @@
         "image_JnihJ6": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/copy_1_0fe1f1b6-a01e-478a-b366-e8a4539ddb1f.jpg",
+            "image": "shopify://shop_images/copy_3_bbdd738b-a3df-4d69-9bbb-d72ea1fcc28e.jpg",
             "alt": "Flash sale up to 35 % off photo",
-            "link": "40% OFF",
+            "link": "SALE",
             "url": "shopify://collections/sets"
           }
         },
