@@ -8,7 +8,7 @@ if (customForm !== null) {
 
 		window.dataLayer = window.dataLayer || [];
 		window.dataLayer.push({
-			event: "new_club_member",
+			'event': "new_club_member",
 		});
 
 		// Delay form submission to allow GTM to process the event
