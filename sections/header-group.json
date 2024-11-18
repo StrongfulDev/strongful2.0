@@ -33,11 +33,11 @@
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "40% OFF EVERYTHING",
-            "sub_text": "FOR CLUB MEMBERS ONLY",
+            "main_text": "2ND SET FOR",
+            "sub_text": "60% OFF",
             "text_alignment": "center",
             "main_text_direction": "ltr",
-            "sub_text_direction": "rtl",
+            "sub_text_direction": "ltr",
             "link": "shopify://collections/sets",
             "color_scheme": "accent-1"
           }
