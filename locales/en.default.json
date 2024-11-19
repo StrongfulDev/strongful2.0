@@ -637,7 +637,7 @@
         "skip_to_content": "דלגי לתוכן",
         "continue_button_label": "לשלב הבא",
         "complete_purchase_button_label": "להשלמת הזמנה",
-        "pay_now_button_label": "להשלמת הזמנה",
+        "pay_now_button_label": "המשך",
         "authenticate_purchase_button_label": "לאימות תשלום",
         "edit_link_label": "לעריכת לינק",
         "all_rights_reserved": "כל הזכויות שמורות ל {{ shop_name}}",
