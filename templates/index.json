@@ -118,15 +118,15 @@
         "slide_gaUfH4": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/3_9d8cd16c-8fef-48f5-945a-9f846ee6afb8.jpg",
-            "mobile_image": "shopify://shop_images/2_0ba48823-d630-4791-8d09-5f20a49e08b5.jpg",
+            "image": "shopify://shop_images/4_2691b224-984b-4e6c-890a-4d33893b56d2.jpg",
+            "mobile_image": "shopify://shop_images/copy_5.jpg",
             "left_position": 50,
             "bottom_position": 10,
             "desktop_left_position": 25,
             "desktop_bottom_position": 25,
             "show_lock": false,
             "button_label": "SHOP NOW",
-            "link": "shopify://collections/סט-שני-ב-60-הנחה",
+            "link": "shopify://collections/oasis",
             "show_text_box": true,
             "color_scheme": "inverse",
             "whole_slide_link": "",
