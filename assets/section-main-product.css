@@ -72,6 +72,8 @@
     .product--small:not(.product--no-media) .product__info-wrapper {
         max-width: 55%;
         width: calc(55% - var(--grid-desktop-horizontal-spacing) / 2);
+        padding-left: 150px; 
+ /*added this to add spacing to product page*/
     }
 
     .product--medium:not(.product--no-media) .product__info-wrapper,
@@ -164,6 +166,15 @@
     min-width: fit-content;
     border: none;
 flex-wrap: wrap;
+} 
+.size-border{
+   
+    border: 1px solid #0909091c;
+    min-height: 67px;
+    min-width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: -1px;
 }
 
 variant-radios,
@@ -194,7 +205,7 @@ fieldset.product-form__input .form__label {
 }
 
 .product-form__input input[type='radio'] + label {
-    border: var(--variant-pills-border-width) solid rgba(var(--color-foreground), var(--variant-pills-border-opacity));
+    /* border: var(--variant-pills-border-width) solid rgba(var(--color-foreground), var(--variant-pills-border-opacity)); */
     background-color: rgb(var(--color-background));
     color: rgba(var(--color-foreground));
     border-radius: var(--variant-pills-radius);
@@ -270,17 +281,28 @@ fieldset.product-form__input .form__label {
 /* No outline when focus-visible is available in the browser */
 .no-js .product-form__input input[type='radio']:focus:not(:focus-visible) + label {
     box-shadow: none;
+
 }
 
 .product-form__input .select {
     max-width: 25rem;
 }
 
+fieldset.js.product-form__input .select ::after {
+    max-width: 25rem;
+    border : gray 3 px;
+    min-height :49px;
+    padding: 0 1.5rem;
+    min-width:102% ;
+    position:absolute;
+    bottom:17px;
+}
+
 .product-form__submit {
     margin-bottom: 1rem;
 	font-size: calc(var(--font-body-size-medium) * 1.2);
 	padding: 1.5rem;
-	border-radius: 4px;
+	border-radius: 33px;
 	transition: .1s;
 }
 
@@ -331,7 +353,7 @@ button.product-form__submit.fake-disabled {
 /* Product info */
 
 .product__info-container > * + * {
-    margin: 1.5rem 0;
+    margin: 1.5rem 6px;
 }
 
 .product__info-container iframe {
@@ -346,13 +368,8 @@ button.product-form__submit.fake-disabled {
 
 .product__text {
     margin-bottom: 0;
-    margin-top: 3rem;
-    font-size: calc(var(--font-body-size-medium) * 1);
-    text-align: center;
-    direction: rtl;
-    color:firebrick
-
-
+    margin-top: -1rem;
+    font-size: calc(var(--font-body-size-medium) * 0.9);
 }
 
 a.product__text {
@@ -501,9 +518,9 @@ a.product__text {
     margin: 0 auto 1.2rem auto;
 }
 
-/*.product-form__buttons {*/
-/*    max-width: 44rem;*/
-/*}*/
+.product-form__buttons {
+  border-radius: 33px;
+}
 
 .product--no-media .product__info-container > modal-opener {
     display: block;
@@ -1628,7 +1645,7 @@ variant-radios fieldset {
 .product-form__input {
     display: flex;
     justify-content: space-between;
-    column-gap: .8rem;
+    column-gap: 0rem;
 }
 
 .product .price .badge {
@@ -1639,13 +1656,21 @@ variant-radios fieldset {
     width: 100%;
     display: block;
     padding: 1.3rem .8rem;
-	font-weight: var(--font-body-weight-bold);
+	font-weight: var(--font-body-weight-light);
 }
+    .product-form__input.gift-card {
+        font-weight: var(--font-body-weight-bold);
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    ;
 
 .variant-button {
     width: 100%;
 	flex: 1;
 	position: relative;
+
 }
 
 .variant-button.OS {
@@ -1741,16 +1766,15 @@ details[open] .accordion__title:after {
 }
 
 .similar {
-	display: grid;
-	justify-content: flex-start;
-	direction: rtl;
-	grid-gap: 1%;
-	padding: 10px 5px;
-	border-top: 1px var(--gradient-base-background-3) solid;
-	position: relative;
-	grid-template-columns: repeat(6,1fr);
-	margin: 1.2em 0 auto;
-	list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 0;
+    grid-gap: 0;
+    position: relative;
+    margin: 0.2em 0 auto;
+    justify-content: flex-end;
+    list-style: none;
 }
 
 .quick-add-modal__content-info .similar,
@@ -1779,6 +1803,7 @@ details[open] .accordion__title:after {
 .productVendor {
 	font-size: calc(var(--font-body-size-medium) * 0.85);
 	margin: .5rem 0;
+    text-align: center  ;
 }
 
 .first-similar-item {
@@ -1791,7 +1816,7 @@ details[open] .accordion__title:after {
 	position: absolute;
 	bottom: 0;
 	height: 3px;
-	background: #000;
+	background: transparent;
 	width: 100%;
 	display: block;
 	content: "";
@@ -1810,6 +1835,7 @@ variant-radios {
 	display: flex;
 	justify-content: space-between;
 	flex-direction: row-reverse;
+    width: 100px;
 }
 
 .size-table-toggler {
@@ -1878,6 +1904,8 @@ variant-radios {
 	flex: 1 1 100%;
 	margin-bottom: 1rem;
 	display: flex;
+    width: 100%;
+    justify-content: space-between;
 	align-items: center;
 }
 
@@ -1890,6 +1918,25 @@ variant-radios {
 	display: block;
 }
 
+fieldset.js.product-form__input {
+    content: "";
+    display: flex;
+    flex-direction: row;
+   
+    padding: 15px 10px;
+    ; /* Adjust padding to fit around variant options */
+    border-radius: 5px;
+    margin-top: 10px; /* Position below the label */
+    width: 100%;
+    justify-content: space-between;
+  }
+  legend.form__label ::after{
+    border: 2px solid gray;
+  }
+
+  .form__label2{
+    padding: 5px;
+  }
 #product .footer {
 	padding-bottom: 5em;
 }
@@ -1928,10 +1975,14 @@ product-info > .product__inventory {
 		margin-top: 0;
 	}
 
+  
+
 	section[id^="MainProduct"], .complete_look__slider, .related-products, .page-width, #product .collection {
 		max-width: calc(var(--page-width) * 0.8);
 		margin-left: auto;
 		margin-right: auto;
+        padding-right: 0;
+        padding-left: 5rem;
 	}
 
 	#product .collection {
@@ -1955,9 +2006,17 @@ product-info > .product__inventory {
 	.product-sale-announcement {
 		margin: 0;
 	}
+    .colorHeading{
+        font-family: var(--font-body-family);
+        direction: rtl;
+        text-align: right;
+        border-top: 1px var(--gradient-base-background-3) solid;
+    
+    }
 
 	.productVendor {
-		opacity: 0;
+		opacity: 1;
+        margin:0;
 	}
 
 	.similar-child:hover .productVendor, .similar-child:focus .productVendor, .similar-child:active .productVendor {
@@ -2252,7 +2311,6 @@ button.needsclick {
 	z-index: 0 !important;
 }
 
-
 .color-circle {
     position: relative;
     width: 50px; /* Adjust size as needed */
@@ -2321,7 +2379,6 @@ button.needsclick {
     transition: border-color 0.3s ease;
     z-index: 1; /* Ensure it is above other elements */
   }
-
 /*@media screen and (max-width: 990px) {*/
 
 /*    .product__title h1 {*/
