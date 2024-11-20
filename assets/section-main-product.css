@@ -2252,6 +2252,76 @@ button.needsclick {
 	z-index: 0 !important;
 }
 
+
+.color-circle {
+    position: relative;
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    border-radius: 50%;
+    border: 2px solid white; /* Outer gray border */
+    margin: 5px; /* Adjust spacing as needed */
+    display: inline-block;
+  
+  }
+  .color-circle.picked-color {
+    position: relative;
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    border-radius: 50%;
+    border: 0.5px solid gray; /* Outer gray border */
+    margin: 5px; /* Adjust spacing as needed */
+    display: inline-block;
+    overflow: hidden;
+  }
+  .color-circle.white {
+          position: relative;
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    border-radius: 50%;
+    border: 0.1px solid rgb(0, 0, 0); /* Outer gray border */
+    margin: 5px; /* Adjust spacing as needed */
+    display: inline-block;
+ 
+  }
+  
+  .color-circle::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 6px); /* Adjust size to create white space */
+    height: calc(100% - 6px); /* Adjust size to create white space */
+    border-radius: 50%;
+    background-color: white; /* White divider circle */
+  }
+  
+  .color-circle::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 12px); /* Adjust size to create inner color circle */
+    height: calc(100% - 12px); /* Adjust size to create inner color circle */
+    border-radius: 50%;
+    background-color:var(--color);
+     /* Inner circle color */
+  }
+  
+  
+  .picked-color {
+    position: relative;
+    border: 2px solid gray; /* Outer gray border */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+    z-index: 1; /* Ensure it is above other elements */
+  }
+
 /*@media screen and (max-width: 990px) {*/
 
 /*    .product__title h1 {*/
