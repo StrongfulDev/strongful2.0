@@ -33,12 +33,12 @@
           "settings": {
             "toggle_main_font": true,
             "toggle_sub_font": false,
-            "main_text": "OASIS NEW",
+            "main_text": "NEW OASIS",
             "sub_text": "השקה רשמית ב23.11",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "ltr",
-            "link": "shopify://collections/oasis",
+            "link": "shopify://collections/oasis-new-november",
             "color_scheme": "accent-1"
           }
         },
