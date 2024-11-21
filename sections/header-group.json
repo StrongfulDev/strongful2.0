@@ -31,7 +31,7 @@
         "7c37c998-83a9-46d6-91fd-3ceaaab10008": {
           "type": "announcement",
           "settings": {
-            "toggle_main_font": false,
+            "toggle_main_font": true,
             "toggle_sub_font": false,
             "main_text": "NEW OASIS",
             "sub_text": "השקה רשמית ב23.11",
