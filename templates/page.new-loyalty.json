@@ -23,7 +23,7 @@
             "login_button_label": "",
             "link": "",
             "login_link": "",
-            "show_text_box": true,
+            "show_text_box": false,
             "color_scheme": "inverse",
             "logged_in_color_scheme": "background-1",
             "whole_slide_link": "",
