@@ -247,7 +247,7 @@
         "mobile_top_image_1": "shopify://shop_images/5_a816cc49-f80c-4a81-b1b4-584ec958ef9c.jpg",
         "mobile_top_image_1_link": "shopify://collections/oasis",
         "mobile_top_image_1_title": "NEW OASIS  - SOON",
-        "show_second_image": false,
+        "show_second_image": true,
         "image_order_second": "2",
         "mobile_top_image_2": "shopify://shop_images/6_57351aa7-304b-4c66-87f6-c54e8427c977.jpg",
         "mobile_top_image_2_link": "shopify://collections/sets",
