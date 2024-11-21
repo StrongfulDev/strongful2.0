@@ -164,7 +164,7 @@
                                                                     {% if settings.members_only_sale == true and settings.members_only_sale_active == true %}
                                                                         {% unless product.tags contains announcement_tag %}
                                                                             <a href="#" class="BIS_trigger" data-product-data="{{ product | json | escape }}">
-                                                                                עדכנו אותי שהמידה חוזרת
+                                                                                הרשמי לקבלת התראה
                                                                             </a>
                                                                             {% else %}
                                                                             <a href="#" class="BIS_trigger account-toggler-site-wide">
@@ -173,7 +173,7 @@
                                                                         {% endunless %}
                                                                         {% else %}
                                                                         <a href="#" class="BIS_trigger" data-product-data="{{ product | json | escape }}">
-                                                                            עדכנו אותי שהמידה חוזרת
+                                                                            הרשמי לקבלת התראה
                                                                         </a>
                                                                     {% endif %}
                                                                 {% else %}
