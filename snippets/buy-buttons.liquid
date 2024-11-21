@@ -84,6 +84,11 @@
                     {% else %}
                         {{ block.settings.members_only_sale_over_text }}
                     {% endif %}
+                {% elsif product.tags contains "OasisMarkUp" %}
+                    הירשמי להתראות בלחיצה על מידה
+
+
+
               {%- elsif product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
                   {{ 'products.product.sold_out' | t }}
                 {%- else -%}
