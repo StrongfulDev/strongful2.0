@@ -78,8 +78,8 @@
             "link_text_direction": "Left To Right",
             "show_on_mobile": true,
             "small_font": false,
-            "title": "SALE",
-            "title_link": "shopify://collections/סט-שני-ב-60-הנחה"
+            "title": "10% OFF",
+            "title_link": "shopify://collections/venture-kind-10-off"
           }
         },
         "ba94928e-5cd1-47f5-9c0a-28ea47285f01": {
@@ -89,7 +89,7 @@
             "show_on_mobile": true,
             "order": "",
             "small_font": false,
-            "menu": "trending",
+            "menu": "trending-without-10",
             "menu_second": "",
             "menu_third": "",
             "title": "קני לפי",
