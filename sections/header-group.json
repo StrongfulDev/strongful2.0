@@ -120,7 +120,7 @@
             "title_link": "",
             "desktop_links_image_1": "shopify://shop_images/10_df1132f8-7662-442a-b464-589eaf06be1c.jpg",
             "desktop_links_image_1_link": "shopify://collections/oasis-new-november",
-            "desktop_links_image_2": "shopify://shop_images/11_1a6e5011-1cf6-4d73-b591-4d0105c5372a.jpg",
+            "desktop_links_image_2": "shopify://shop_images/12.jpg",
             "desktop_links_image_2_link": "shopify://collections/sets",
             "mobile_cover_image": "shopify://shop_images/20e5c3f719da92dc7bfd0c70c57f7186.jpg",
             "mobile_title": "מוצרים",
@@ -288,6 +288,7 @@
       "block_order": [
         "essential_countdown_app_block_hiPGej"
       ],
+      "disabled": true,
       "custom_css": [
         ".countdown_annoucement_bar_subheading_cm3r9jl0q19737519vizl4ow057 {direction: rtl; text-align: center;}"
       ],
