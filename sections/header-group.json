@@ -288,6 +288,7 @@
       "block_order": [
         "essential_countdown_app_block_hiPGej"
       ],
+      "disabled": true,
       "custom_css": [
         ".countdown_annoucement_bar_subheading_cm3r9jl0q19737519vizl4ow057 {direction: rtl; text-align: center;}"
       ],
