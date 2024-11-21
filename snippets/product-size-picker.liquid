@@ -89,6 +89,8 @@
                                             <span>40 % הנחה לחברות מועדון בלבד</span>
                                             <span class="account-toggler-site-wide link">התחברי / הרשמי</span>
                                         </div>
+                                    {% elsif product.tags contains "NewOasis" %}
+                                        <span class="product_size_picker__heading fix-direction"> השקה רשמית ב23.11 20:00</span>
                                     {% else %}
                                         <span class="product_size_picker__heading fix-direction">{{ pick_size_text }}</span>
                                     {% endunless %}
