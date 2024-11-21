@@ -10,7 +10,7 @@
 {% endcomment %}
 
 {%- if product.available == false -%}
-    {% unless card.product.tags contains "OasisMarkUp" %}
+    {% unless product.tags contains "OasisMarkUp" %}
     <span
             id="Badge-{{ section.id }}-{{ product.id }}"
             class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}"
