@@ -126,7 +126,7 @@
             "desktop_bottom_position": 25,
             "show_lock": false,
             "button_label": "SHOP NOW",
-            "link": "shopify://collections/סט-שני-ב-60-הנחה",
+            "link": "shopify://collections/november-sale",
             "show_text_box": true,
             "color_scheme": "inverse",
             "whole_slide_link": "",
@@ -246,7 +246,7 @@
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "סט-שני-ב-60-הנחה",
+        "collection": "november-sale",
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,
@@ -404,7 +404,7 @@
             "image": "shopify://shop_images/copy_3_bbdd738b-a3df-4d69-9bbb-d72ea1fcc28e.jpg",
             "alt": "Flash sale up to 35 % off photo",
             "link": "SALE",
-            "url": "shopify://collections/סט-שני-ב-60-הנחה"
+            "url": "shopify://collections/november-sale"
           }
         },
         "image_a4f9L6": {
