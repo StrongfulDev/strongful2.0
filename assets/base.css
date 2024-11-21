@@ -4506,4 +4506,8 @@ span.snize-description, .cart-item__quantity--package-protection-1 {
 .essential_countdown_annoucement_bar_wrapper > div {
   direction:rtl!important;
 }
+
+.essential-countdown-top-bar > div > div:nth-child(1) > p:nth-child(2) {
+  text-align:center!important;
+}
 /* Code Added by Essential Apps on 6th of November*/
