@@ -79,7 +79,7 @@
             "show_on_mobile": true,
             "small_font": false,
             "title": "10% OFF",
-            "title_link": "shopify://collections/venture-kind-10-off"
+            "title_link": "shopify://collections/10-off"
           }
         },
         "ba94928e-5cd1-47f5-9c0a-28ea47285f01": {
@@ -121,7 +121,7 @@
             "desktop_links_image_1": "shopify://shop_images/5_abb9e4aa-56f9-47b0-baf0-810149ad88cd.jpg",
             "desktop_links_image_1_link": "shopify://collections/oasis",
             "desktop_links_image_2": "shopify://shop_images/6_701da451-1862-4f25-9c6d-ae2072914269.jpg",
-            "desktop_links_image_2_link": "shopify://collections/venture-kind-10-off",
+            "desktop_links_image_2_link": "shopify://collections/10-off",
             "mobile_cover_image": "shopify://shop_images/20e5c3f719da92dc7bfd0c70c57f7186.jpg",
             "mobile_title": "מוצרים",
             "main_link": "",

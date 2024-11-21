@@ -148,7 +148,7 @@
             "desktop_bottom_position": 35,
             "show_lock": false,
             "button_label": "SHOP NOW",
-            "link": "shopify://collections/venture-kind-10-off",
+            "link": "shopify://collections/10-off",
             "show_text_box": true,
             "color_scheme": "inverse",
             "whole_slide_link": "",
