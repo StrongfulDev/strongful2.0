@@ -125,7 +125,7 @@
             "desktop_left_position": 23,
             "desktop_bottom_position": 25,
             "show_lock": false,
-            "button_label": "SHOP NOW",
+            "button_label": "LOOK NOW",
             "link": "shopify://collections/oasis",
             "show_text_box": true,
             "color_scheme": "inverse",
