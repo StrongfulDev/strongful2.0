@@ -121,7 +121,7 @@
             "image": "shopify://shop_images/9_e397aeb2-e6c8-4aff-bea0-c5ee905c8c9e.jpg",
             "mobile_image": "shopify://shop_images/copy_5_2.jpg",
             "left_position": 50,
-            "bottom_position": 10,
+            "bottom_position": 15,
             "desktop_left_position": 23,
             "desktop_bottom_position": 25,
             "show_lock": false,
