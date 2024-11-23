@@ -139,6 +139,7 @@
         },
         "slide_AL3x4y": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/8_2f90b3fa-9e50-4133-9d59-59de6f784db4.jpg",
             "mobile_image": "shopify://shop_images/copy_2_3.jpg",
