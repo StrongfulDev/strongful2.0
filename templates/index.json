@@ -379,6 +379,7 @@
       "blocks": {
         "tolstoy_shoppable_video_ugc_video_page_block_gqxpip": {
           "type": "shopify://apps/tolstoy-shoppable-video-ugc/blocks/video-page-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "disabled": true,
           "settings": {
             "publishId": "ftlzktbd3asee"
           }
