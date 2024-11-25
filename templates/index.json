@@ -139,7 +139,7 @@
             "image": "shopify://shop_images/10_35b6e04f-4325-4a16-a62e-b3e64a3c4c6b.jpg",
             "mobile_image": "shopify://shop_images/copy_16.jpg",
             "left_position": 50,
-            "bottom_position": 7,
+            "bottom_position": 20,
             "desktop_left_position": 27,
             "desktop_bottom_position": 25,
             "show_lock": false,
