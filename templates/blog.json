@@ -12,10 +12,10 @@
     "main": {
       "type": "main-blog",
       "settings": {
-        "tile_image_one": "shopify://shop_images/12_f8f6219d-8e80-461a-a20b-f920cbb27038.jpg",
-        "tile_image_one_link": "shopify://collections/sets",
-        "tile_image_two": "shopify://shop_images/13_37e01389-524b-4d75-952f-e29f9f97a6d6.jpg",
-        "tile_image_two_link": "shopify://collections/oasis-new-november",
+        "tile_image_one": "shopify://shop_images/15_3247b387-73fe-4bd6-85f6-468005cd67d1.jpg",
+        "tile_image_one_link": "shopify://collections/black-friday-sets",
+        "tile_image_two": "shopify://shop_images/14_756ac2cd-23ef-48c7-a137-43c91ff014aa.jpg",
+        "tile_image_two_link": "shopify://collections/outlet",
         "layout": "grid",
         "show_image": true,
         "image_height": "adapt",
