@@ -275,26 +275,6 @@
         "shop_all_title": ""
       }
     },
-    "17318460878357645f": {
-      "type": "apps",
-      "blocks": {
-        "essential_countdown_app_block_hiPGej": {
-          "type": "shopify://apps/essential-countdown/blocks/app-block/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
-          "settings": {
-            "id": "cm3wra7kh8460019tavqb40s0o"
-          }
-        }
-      },
-      "block_order": [
-        "essential_countdown_app_block_hiPGej"
-      ],
-      "custom_css": [
-        ".countdown_annoucement_bar_subheading_cm3r9jl0q19737519vizl4ow057 {direction: rtl; text-align: center;}"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
     "countdown_k4x98G": {
       "type": "countdown",
       "disabled": true,
@@ -324,7 +304,6 @@
   "order": [
     "announcement-bar",
     "header",
-    "17318460878357645f",
     "countdown_k4x98G",
     "7503b704-2110-400e-bc52-a2190d224c23"
   ]
