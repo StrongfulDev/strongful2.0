@@ -65,7 +65,7 @@
                             {% endif %}
                             <p class="product_details-titles product-color">{{ product.vendor }}</p>
                             {% render "price", product: product %}
-                          {% if product.compare_at_price > product.price and card_product.tags contains 'onepiece'%}
+                          {% if product.compare_at_price > product.price and card_product.tags contains 'onePiece'%}
                                 <div class="discount-price-container">
                                     <p class="rect-discount-tag">
                                         {{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | ceil }}% OFF
