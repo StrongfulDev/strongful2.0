@@ -293,8 +293,27 @@
         "padding_bottom": 16
       }
     },
+    "173251753398892554": {
+      "type": "apps",
+      "blocks": {
+        "tolstoy_shoppable_video_ugc_carousel_block_mVHTj8": {
+          "type": "shopify://apps/tolstoy-shoppable-video-ugc/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "settings": {
+            "publishId": "cwmff5g9ra069"
+          }
+        }
+      },
+      "block_order": [
+        "tolstoy_shoppable_video_ugc_carousel_block_mVHTj8"
+      ],
+      "custom_css": [],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "featured_collection_zx87dF": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "steps": 4,
         "title": "UP TO 89₪",
@@ -371,23 +390,6 @@
         "accessibility_info": "Slideshow about our brand",
         "padding_top": 16,
         "padding_bottom": 16
-      }
-    },
-    "173251753398892554": {
-      "type": "apps",
-      "blocks": {
-        "tolstoy_shoppable_video_ugc_carousel_block_mVHTj8": {
-          "type": "shopify://apps/tolstoy-shoppable-video-ugc/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
-          "settings": {
-            "publishId": "cwmff5g9ra069"
-          }
-        }
-      },
-      "block_order": [
-        "tolstoy_shoppable_video_ugc_carousel_block_mVHTj8"
-      ],
-      "settings": {
-        "include_margins": true
       }
     },
     "173246164424ec44fa": {
@@ -761,9 +763,9 @@
     "slideshow_gwXDrF",
     "customer_slideshow_4HiHHh",
     "featured_collection_XDhFHB",
+    "173251753398892554",
     "featured_collection_zx87dF",
     "customer_slideshow_wFcfK7",
-    "173251753398892554",
     "173246164424ec44fa",
     "featured_product_v2_FjnCqj",
     "our_collection_list_v2_mK6kUx",
