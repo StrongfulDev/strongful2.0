@@ -306,9 +306,11 @@
       "block_order": [
         "tolstoy_shoppable_video_ugc_carousel_block_mVHTj8"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".tolstoy-carousel {width: 100%;}"
+      ],
       "settings": {
-        "include_margins": true
+        "include_margins": false
       }
     },
     "featured_collection_zx87dF": {
