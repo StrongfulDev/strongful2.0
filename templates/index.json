@@ -131,6 +131,7 @@
       "block_order": [
         "tolstoy_shoppable_video_ugc_carousel_block_nYGTkC"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": true
       }
