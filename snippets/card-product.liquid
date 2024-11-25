@@ -262,7 +262,6 @@
                         </div>
                         {% endunless %}
                     {%- endif -%}
-                    {% unless card_product.tags contains "OasisMarkUp" %}
                         
                         {% if card_product.tags contains 'badge__new' %}
                             <span class="new-product-span">
@@ -289,7 +288,6 @@
                                 BEST SELLERS                                  
                                  </span>     
                                 {% endif %}
-                            {% endunless %}
                     {%- if show_quick_add and quick_add_type_mobile == "modal" -%}
                         {% unless card_product.title == 'שירות החלפות מורחב' %}
                             {% assign quick_add_modal_id = "quick_add_modal-" | append: section.id | append: "-" | append: card_product.id %}
