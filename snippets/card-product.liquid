@@ -317,12 +317,12 @@
                 {% endif %}
 
                     
-        {% assign is_one_piece = false %}
-        {% if card_product.tags contains 'onePiece' %}
-            {% assign is_one_piece = true %}
+        {% assign is_percent_on = false %}
+        {% if card_product.tags contains 'PercentOn' %}
+            {% assign is_percent_on = true %}
         {% endif %}
 
-        {% if is_one_piece %}
+        {% if is_percent_on %}
             {% if card_product.compare_at_price > card_product.price %}
                 <div class="discount-price-container">
                     <p class="rect-discount-tag">
