@@ -22,6 +22,12 @@
             "show_mobile": true
           }
         },
+        "tolstoy_shoppable_video_ugc_stories_block_V9Hfhx": {
+          "type": "shopify://apps/tolstoy-shoppable-video-ugc/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "settings": {
+            "publishId": "scw21f7d5aicq"
+          }
+        },
         "5ec0a264-e4fc-4a8d-92bc-f2f9223694f5": {
           "type": "sale",
           "settings": {
@@ -87,17 +93,17 @@
             "text_style": "title"
           }
         },
+        "essential_countdown_app_block_XT4iXp": {
+          "type": "shopify://apps/essential-countdown/blocks/app-block/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
+          "settings": {
+            "id": "cm3y4taxs6187619w7zgft8c9q"
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": false,
             "members_only_sale_over_text": "זמין לרכישה ב 15.8"
-          }
-        },
-        "essential_countdown_app_block_XT4iXp": {
-          "type": "shopify://apps/essential-countdown/blocks/app-block/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
-          "settings": {
-            "id": "cm3y4taxs6187619w7zgft8c9q"
           }
         },
         "yotpo_loyalty_rewards_product_points_module_app_block_krF3Wc": {
@@ -155,6 +161,7 @@
       "block_order": [
         "ea6d7033-4e56-497e-a4dd-623c0f24954e",
         "7c99b889-3ad8-4802-a5c7-9802ab40f12c",
+        "tolstoy_shoppable_video_ugc_stories_block_V9Hfhx",
         "5ec0a264-e4fc-4a8d-92bc-f2f9223694f5",
         "title",
         "5fa3ce9f-60f6-4aee-a0c4-c987fa5f3522",
@@ -164,8 +171,8 @@
         "e290d1ee-22d0-4ae8-9219-8d77d6585fae",
         "quantity_selector",
         "text_rgUBtC",
-        "buy_buttons",
         "essential_countdown_app_block_XT4iXp",
+        "buy_buttons",
         "yotpo_loyalty_rewards_product_points_module_app_block_krF3Wc",
         "5ae0b953-0e37-48c5-b5cc-e50d6004b25c",
         "1b30499f-a9b2-4f41-bbad-151626bae3d0",
