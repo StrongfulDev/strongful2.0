@@ -34,7 +34,7 @@
           "settings": {
             "logged_in_text": "<p><strong>BLACK FRIDAY</strong></p><p><strong>פריטים נבחרים עד 99₪!</strong></p>",
             "logged_out_text": "<p><strong>BLACK FRIDAY</strong></p><p><strong>פריטים נבחרים עד 99₪!</strong></p>",
-            "logged_in_text_second": "<p>פריט זה הינו בהזמנה מוקדמת </p><p>משלוח אקספרס בין 1-10 ימי עסקים.</p>",
+            "logged_in_text_second": "<p>פריט זה הינו בהזמנה מוקדמת </p><h6>משלוח בין 1-10 ימי עסקים.</h6>",
             "log_in": "",
             "small_text": "",
             "small_logged_in_text": "",
