@@ -315,18 +315,27 @@
                         {% endif %}
                     {% endif %}
                 {% endif %}
-               {% if product.compare_at_price > product.price %}
-                    <div class="discount-price-container">
-                        <p class="rect-discount-tag">
-                            {{ card_product.compare_at_price | minus: card_product.price | times: 100.0 | divided_by: card_product.compare_at_price | ceil }}% OFF
+
+                    
+        {% assign is_one_piece = false %}
+        {% if card_product.tags contains 'onePiece' %}
+            {% assign is_one_piece = true %}
+        {% endif %}
+
+        {% if is_one_piece %}
+            {% if card_product.compare_at_price > card_product.price %}
+                <div class="discount-price-container">
+                    <p class="rect-discount-tag">
+                        {{ card_product.compare_at_price | minus: card_product.price | times: 100.0 | divided_by: card_product.compare_at_price | ceil }}% OFF
+                    </p>
+                    {% if card_product.tags contains 'OUTLET' or card_product.tags contains 'outlet' %}
+                        <p class="outlet-collection-tag upper h4">
+                            <span>{{- 'products.product.outlet' | t -}}</span>
+                            <i>{% render 'icon-discount-tag' %}</i>
                         </p>
-                        {% if card_product.tags contains 'OUTLET' or card_product.tags contains 'outlet' %}
-                            <p class="outlet-collection-tag upper h4">
-                                <span>{{- 'products.product.outlet' | t -}}</span>
-                                <i>{% render 'icon-discount-tag' %}</i>
-                            </p>
-                        {% endif %}
-                    </div>
+                    {% endif %}
+                </div>
+            {% endif %}
                 {% else %}
                     {% if card_product.tags contains 'OUTLET' or card_product.tags contains 'outlet' %}
                         <p class="outlet-collection-tag upper h4">
