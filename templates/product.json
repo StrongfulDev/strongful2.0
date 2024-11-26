@@ -38,8 +38,8 @@
             "log_in": "",
             "small_text": "",
             "small_logged_in_text": "",
-            "second_announcement_regular_text": "הזמנה מוקדמת - משלוח אקספרס בין 1-10 ימי עסקים.",
-            "second_small_text": "הזמנה מוקדמת - משלוח אקספרס בין 1-10 ימי עסקים.",
+            "second_announcement_regular_text": "",
+            "second_small_text": "",
             "paragraph_direction": "Right To Left"
           }
         },
