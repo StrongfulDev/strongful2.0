@@ -226,7 +226,7 @@
 
                     {% endif %}
                         
-                     {% if product.compare_at_price > product.price%}
+                     {% if product.compare_at_price > product.price %}
                         <div class="discount-price-container">
                             <p class="rect-discount-tag">
                                 {{ card_product.compare_at_price | minus: card_product.price | times: 100.0 | divided_by: card_product.compare_at_price | ceil }}% OFF
