@@ -14,8 +14,8 @@
       "settings": {
         "tile_image_one": "shopify://shop_images/15_3247b387-73fe-4bd6-85f6-468005cd67d1.jpg",
         "tile_image_one_link": "shopify://collections/black-friday-sets",
-        "tile_image_two": "shopify://shop_images/14_756ac2cd-23ef-48c7-a137-43c91ff014aa.jpg",
-        "tile_image_two_link": "shopify://collections/outlet",
+        "tile_image_two": "shopify://shop_images/6_a2e790ac-d06f-4d23-a3d2-eea40652f6dc.jpg",
+        "tile_image_two_link": "shopify://collections/shell-the-new-collection",
         "layout": "grid",
         "show_image": true,
         "image_height": "adapt",
