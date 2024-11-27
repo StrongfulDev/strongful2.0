@@ -247,6 +247,25 @@
     align-items: center;
 }
 
+.variant_modal__toggle_button.mobile {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(var(--color-badge-background));
+    color: rgb(var(--color-foreground));
+    border: none;
+    border-radius: var(--badge-corner-radius);
+    font-size: 16px;
+    line-height: 56px;
+    padding: 0;
+    bottom: 10px;
+    right: 5px;
+    position: absolute;
+    box-shadow: #00000026 0 0.2rem 0.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .variant_modal__toggle_button:after {
     content: "";
     position: absolute;

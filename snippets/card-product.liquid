@@ -263,14 +263,14 @@
                         {% endunless %}
                     {%- endif -%}
                         
-                        {% if card_product.tags contains 'OasisMarkUp'%}
+                    {%if card_product.tags contains 'OasisMarkUp'%}
                         <span class="new-product-span">
-                              PRE-ORDER
-                        {% elsif card_product.tags contains 'badge__new' %}
+                            Pre-Order
+                        </span>
+                    {% elsif card_product.tags contains 'badge__new' %}
                             <span class="new-product-span">
                                 {{ 'products.product.new' | t }}
                             </span>
-                        </span>
                         {% elsif card_product.tags contains settings.restock_badge_tag %}
                             <span class="new-product-span">
                                 RESTOCK
