@@ -65,6 +65,12 @@
                             {% endif %}
                             <p class="product_details-titles product-color">{{ product.vendor }}</p>
                             {% render "price", product: product %}
+                                  {% assign is_percent_on = false %}
+        {% if card_product.tags contains 'PercentOn' %}
+            {% assign is_percent_on = true %}
+        {% endif %}
+
+        {% if is_percent_on %}
                          {% if product.compare_at_price > product.price %}
                                 <div class="discount-price-container">
                                     <p class="rect-discount-tag">
@@ -77,6 +83,7 @@
                                         </p>
                                     {% endif %}
                                 </div>
+                            {% endif %}
                             {% endif %}
                         </div>
                     </div>

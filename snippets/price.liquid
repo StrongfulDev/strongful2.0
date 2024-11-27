@@ -42,6 +42,12 @@
     {%- if show_badges %} price--show-badge{% endif -%}
   ">
     {% if show_discount %}
+            {% assign is_percent_on = false %}
+        {% if card_product.tags contains 'PercentOn' %}
+            {% assign is_percent_on = true %}
+        {% endif %}
+
+        {% if is_percent_on %}
       {% if product.compare_at_price > product.price %}
             <div class="discount-price-container">
                 <p class="rect-discount-tag">
@@ -50,6 +56,7 @@
             </div>
         {% endif %}
     {% endif %}
+     {% endif %}
     <div class="price__container fix-direction">
         {%- comment -%}
           Explanation of description list:
