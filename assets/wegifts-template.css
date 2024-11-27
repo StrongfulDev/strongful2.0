@@ -1057,7 +1057,7 @@ fieldset {
 .wd-card-image .wd-image-container .wd-card-code {
   position: absolute;
   bottom: 42px;
-  color: var(--text-dark-blue);
+  color: #ffffff;
   text-align: center;
   font-size: 16px;
   font-style: normal;
@@ -1070,7 +1070,7 @@ fieldset {
   position: absolute;
   top: 19px;
   right: 44px;
-  color: var(--text-dark-blue);
+  color: white
   text-align: center;
   font-size: 16px;
   font-style: normal;
