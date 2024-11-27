@@ -892,6 +892,7 @@ button span {
   height: 12px;
   background-color: var(--text-dark-blue);
   opacity: 0;
+  display: block !important;
 }
 .show-inner {
   opacity: 1;
@@ -1056,7 +1057,7 @@ fieldset {
 .wd-card-image .wd-image-container .wd-card-code {
   position: absolute;
   bottom: 42px;
-	color: var(--main-white);
+  color: var(--text-dark-blue);
   text-align: center;
   font-size: 16px;
   font-style: normal;
@@ -1069,7 +1070,7 @@ fieldset {
   position: absolute;
   top: 19px;
   right: 44px;
-  color: var(--main-white);
+  color: var(--text-dark-blue);
   text-align: center;
   font-size: 16px;
   font-style: normal;
@@ -1370,15 +1371,12 @@ fieldset {
     direction: ltr !important;
   }
   .wd-card-code {
-		color: var(--text-bright-white);
     position: absolute;
     bottom: 28px !important;
     width: 100%;
     text-align: center;
   }
   .wd-card-price {
-		color:white;
-
     position: absolute;
     top: 16px !important;
     width: 100%;
