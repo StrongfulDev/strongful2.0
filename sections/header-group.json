@@ -280,7 +280,6 @@
       "blocks": {
         "essential_countdown_app_block_6YiGEn": {
           "type": "shopify://apps/essential-countdown/blocks/app-block/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
-          "disabled": true,
           "settings": {
             "id": "cm3wra7kh8460019tavqb40s0o"
           }
