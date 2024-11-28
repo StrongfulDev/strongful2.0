@@ -216,7 +216,7 @@
                         </p>
                     </div>
                     {% if show_sale_badge %}
-                        {% unless card_product.tags contains "OasisMarkUp"%}
+                        {% unless card_product.tags contains "preOrderMarkUp"%}
                             <div class="card__badge {{ settings.badge_position }}">
                                 {%- if card_product.available == false -%}
                                     <span

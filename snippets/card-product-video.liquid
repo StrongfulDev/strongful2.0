@@ -137,7 +137,7 @@
                     {% if show_sale_badge %}
                         <div class="card__badge {{ settings.badge_position }}">
                             {%- if card_product.available == false -%}
-                                {% unless card_product.tags contains "OasisMarkUp"%}
+                                {% unless card_product.tags contains "preOrderMarkUp"%}
                                     <span
                                         id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
                                         class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}"
@@ -183,7 +183,7 @@
                     <span class="new-product-span">
                         {{ 'products.product.new' | t }}
                     </span>
-                {% elsif card_product.tags contains 'OasisMarkUp'%}
+                {% elsif card_product.tags contains 'preOrderMarkUp'%}
                     <span class="new-product-span">
                        PRE-ORDER
                     </span>
