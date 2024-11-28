@@ -93,17 +93,17 @@
             "text_style": "title"
           }
         },
-        "essential_countdown_app_block_XT4iXp": {
-          "type": "shopify://apps/essential-countdown/blocks/app-block/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
-          "settings": {
-            "id": "cm3y4taxs6187619w7zgft8c9q"
-          }
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": false,
             "members_only_sale_over_text": "זמין לרכישה ב 15.8"
+          }
+        },
+        "essential_countdown_app_block_XT4iXp": {
+          "type": "shopify://apps/essential-countdown/blocks/app-block/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
+          "settings": {
+            "id": "cm3y4taxs6187619w7zgft8c9q"
           }
         },
         "yotpo_loyalty_rewards_product_points_module_app_block_krF3Wc": {
@@ -171,8 +171,8 @@
         "e290d1ee-22d0-4ae8-9219-8d77d6585fae",
         "quantity_selector",
         "text_rgUBtC",
-        "essential_countdown_app_block_XT4iXp",
         "buy_buttons",
+        "essential_countdown_app_block_XT4iXp",
         "yotpo_loyalty_rewards_product_points_module_app_block_krF3Wc",
         "5ae0b953-0e37-48c5-b5cc-e50d6004b25c",
         "1b30499f-a9b2-4f41-bbad-151626bae3d0",
