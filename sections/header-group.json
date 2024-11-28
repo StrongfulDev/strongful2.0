@@ -292,21 +292,6 @@
         "include_margins": true
       }
     },
-    "countdown_k4x98G": {
-      "type": "countdown",
-      "disabled": true,
-      "settings": {
-        "show_days": true,
-        "countdown_date": "Thu Nov 08 2024 00:00:00 GMT+0200 (שעון ישראל (חורף))",
-        "countdown_url": "shopify://collections/shopping-il-3-300",
-        "left_text": true,
-        "left_copy": "<p><strong>SHOPPING IL ENDS IN </strong></p>",
-        "right_text_direction": "ltr",
-        "left_text_direction": "ltr",
-        "right_text": false,
-        "right_copy": ""
-      }
-    },
     "7503b704-2110-400e-bc52-a2190d224c23": {
       "type": "custom-liquid",
       "custom_css": [],
@@ -322,7 +307,6 @@
     "announcement-bar",
     "header",
     "17326032637872c61a",
-    "countdown_k4x98G",
     "7503b704-2110-400e-bc52-a2190d224c23"
   ]
 }
