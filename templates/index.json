@@ -124,11 +124,11 @@
         "slide_gaUfH4": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/10_35b6e04f-4325-4a16-a62e-b3e64a3c4c6b.jpg",
-            "mobile_image": "shopify://shop_images/copy_16.jpg",
+            "image": "shopify://shop_images/11_4cf461c4-93b8-44c2-8d40-55f748c6a590.jpg",
+            "mobile_image": "shopify://shop_images/3_e3489f59-4fb3-494c-9d54-c2f788a4238c.jpg",
             "left_position": 50,
             "bottom_position": 20,
-            "desktop_left_position": 27,
+            "desktop_left_position": 25,
             "desktop_bottom_position": 25,
             "show_lock": false,
             "button_label": "SHOP NOW",
