@@ -12,10 +12,10 @@
     "main": {
       "type": "main-blog",
       "settings": {
-        "tile_image_one": "shopify://shop_images/15_3247b387-73fe-4bd6-85f6-468005cd67d1.jpg",
+        "tile_image_one": "shopify://shop_images/16_23153025-0eef-40e8-89c0-c793a87abbbe.jpg",
         "tile_image_one_link": "shopify://collections/black-friday-sets",
-        "tile_image_two": "shopify://shop_images/6_a2e790ac-d06f-4d23-a3d2-eea40652f6dc.jpg",
-        "tile_image_two_link": "shopify://collections/shell-the-new-collection",
+        "tile_image_two": "shopify://shop_images/17_a16322c0-f6bc-4f5d-bb70-e3c986b82610.jpg",
+        "tile_image_two_link": "shopify://collections/outlet",
         "layout": "grid",
         "show_image": true,
         "image_height": "adapt",
