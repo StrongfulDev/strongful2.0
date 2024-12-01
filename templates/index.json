@@ -357,6 +357,7 @@
     },
     "featured_collection_3Dk734": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "steps": 4,
         "title": "UP TO 99₪",
