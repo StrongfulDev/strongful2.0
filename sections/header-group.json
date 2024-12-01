@@ -37,7 +37,7 @@
             "sub_text": "בשימוש קוד קופון: EXTRA10",
             "text_alignment": "center",
             "main_text_direction": "rtl",
-            "sub_text_direction": "ltr",
+            "sub_text_direction": "rtl",
             "link": "shopify://collections/black-friday-sets",
             "color_scheme": "accent-1"
           }
