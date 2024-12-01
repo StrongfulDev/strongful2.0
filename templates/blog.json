@@ -12,10 +12,10 @@
     "main": {
       "type": "main-blog",
       "settings": {
-        "tile_image_one": "shopify://shop_images/16_23153025-0eef-40e8-89c0-c793a87abbbe.jpg",
-        "tile_image_one_link": "shopify://collections/black-friday-sets",
-        "tile_image_two": "shopify://shop_images/17_a16322c0-f6bc-4f5d-bb70-e3c986b82610.jpg",
-        "tile_image_two_link": "shopify://collections/outlet",
+        "tile_image_one": "shopify://shop_images/1_a57b1b8f-be35-4cbc-b847-18bee5546220.jpg",
+        "tile_image_one_link": "shopify://collections/cyber-monday-up-to-50-off",
+        "tile_image_two": "shopify://shop_images/2_66d29351-a815-4cb6-b5b7-80b3152cbcb9.gif",
+        "tile_image_two_link": "shopify://collections/cyber-monday-up-to-50-off",
         "layout": "grid",
         "show_image": true,
         "image_height": "adapt",
