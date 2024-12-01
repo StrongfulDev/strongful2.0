@@ -33,10 +33,10 @@
           "settings": {
             "toggle_main_font": true,
             "toggle_sub_font": false,
-            "main_text": "BLACK FRIDAY",
-            "sub_text": "UP TO 99₪",
+            "main_text": "אקסטרה 10% הנחה!",
+            "sub_text": "בשימוש קוד קופון: EXTRA10",
             "text_alignment": "center",
-            "main_text_direction": "ltr",
+            "main_text_direction": "rtl",
             "sub_text_direction": "ltr",
             "link": "shopify://collections/black-friday-sets",
             "color_scheme": "accent-1"
