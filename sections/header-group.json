@@ -74,12 +74,35 @@
       "blocks": {
         "bd053c52-574f-435e-be3a-a4a74c72b169": {
           "type": "url",
+          "disabled": true,
           "settings": {
             "link_text_direction": "Left To Right",
             "show_on_mobile": true,
             "small_font": false,
             "title": "SALE",
             "title_link": "shopify://collections/black-friday-sets"
+          }
+        },
+        "menu_item_WN8KQL": {
+          "type": "menu_item",
+          "settings": {
+            "above_shop_all_link": "",
+            "show_on_mobile": false,
+            "order": "",
+            "small_font": false,
+            "menu": "main-menu",
+            "menu_second": "",
+            "menu_third": "",
+            "title": "SALE",
+            "item_class": "",
+            "title_link": "",
+            "desktop_links_image_1_link": "",
+            "desktop_links_image_2_link": "",
+            "mobile_title": "",
+            "main_link": "",
+            "main_title": "",
+            "shop_all_link": "",
+            "shop_all_title": ""
           }
         },
         "ba94928e-5cd1-47f5-9c0a-28ea47285f01": {
@@ -222,6 +245,7 @@
       },
       "block_order": [
         "bd053c52-574f-435e-be3a-a4a74c72b169",
+        "menu_item_WN8KQL",
         "ba94928e-5cd1-47f5-9c0a-28ea47285f01",
         "8878d4cf-d83f-42a2-90b9-ddebceb7501c",
         "fc929aa6-aab6-4c25-be13-8267425330c3",
