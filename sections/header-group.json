@@ -86,7 +86,7 @@
         "menu_item_WN8KQL": {
           "type": "menu_item",
           "settings": {
-            "above_shop_all_link": "",
+            "above_shop_all_link": "https://strongful.co.il/collections/cyber-monday-up-to-50-off",
             "show_on_mobile": true,
             "order": "",
             "small_font": false,
