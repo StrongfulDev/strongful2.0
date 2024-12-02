@@ -254,7 +254,7 @@
         "pagination_type": "dots",
         "swipe_on_mobile": true,
         "padding_top": 0,
-        "padding_bottom": 4
+        "padding_bottom": 0
       }
     },
     "customer_slideshow_4HiHHh": {
