@@ -465,12 +465,12 @@
 	}
 
 	#MegaMenu-Content-2 li:first-child + li a {
-		font-weight: var(--font-body-weight-bold);
+		/* font-weight: var(--font-body-weight-bold); */
 	}
 
 	#MegaMenu-Content-2 li:nth-child(2) a,
 #MegaMenu-Content-2 li:nth-child(3) a {
-    font-weight: var(--font-body-weight-bold);
+    /* font-weight: var(--font-body-weight-bold); */
 }
 
 	#MegaMenu-Content-3 {
