@@ -4201,15 +4201,17 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 }
 
 #BIS_trigger {
-	font-size: calc(var(--font-body-size-medium) * 1.1);
-	background: none;
-	border: none;
-	text-decoration: underline;
-	padding: 0;
-	margin: 0;
-	line-height: 0 !important;
-	color: var(--gradient-base-accent-1);
-	display: block !important;
+    position: absolute;
+    top: 10px;
+    font-size: calc(var(--font-body-size-medium)* 1.1);
+    background: none;
+    border: none;
+    text-decoration: underline;
+    padding: 0;
+    margin: 0;
+    line-height: 0 !important;
+    color: var(--gradient-base-accent-1);
+    display: block !important;
 }
 
 #BIS_trigger:hover {
