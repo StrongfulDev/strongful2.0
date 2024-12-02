@@ -516,6 +516,7 @@
     },
     "featured_product_v2_FjnCqj": {
       "type": "featured-product-v2",
+      "disabled": true,
       "settings": {
         "steps": 1,
         "title": "",
