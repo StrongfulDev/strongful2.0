@@ -235,6 +235,9 @@
         "featured_collection_9c9fAw",
         "featured_collection_CyY976"
       ],
+      "custom_css": [
+        ".collection-list grid contains-card contains-card--collection contains-card--standard grid--4-col-desktop grid---col-tablet-down slider slider--desktop slider--tablet grid--peek collection-list--4-items {left:2px;}"
+      ],
       "settings": {
         "images_or_colors": "images",
         "title": "",
