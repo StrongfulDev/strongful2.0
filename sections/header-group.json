@@ -255,7 +255,9 @@
         "93921bbc-631f-46c2-a66b-9df086c3f7a0",
         "69313e8a-8818-485d-9c44-529f1b10ccdd"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".sale{color:red}"
+      ],
       "settings": {
         "account": "new-loyalty-header-menu",
         "desktop_loyalty_link": "shopify://pages/loyalty",
