@@ -295,9 +295,12 @@ details[open].menu-opening > .menu-drawer__submenu {
 	margin-left: 2rem;
 }
 
-.dropdown .menu-drawer__menu.has-submenu>li:first-child .menu-drawer__menu-list-item:first-child>a {
-	/* color: firebrick; */
-	color: #dc6b9f;
+.dropdown .menu-drawer__menu.has-submenu > li:first-child .menu-drawer__menu-list-item .menu-drawer__menu-list-item:nth-child(-n+4) > a {
+    color: firebrick;
+}
+
+.dropdown .menu-drawer__menu.has-submenu > li > .menu-drawer__menu-list-item > li:nth-child(-n+4) > a {
+    color: firebrick;
 }
 
 .dropdown .menu-drawer summary.menu-drawer__menu-item {
