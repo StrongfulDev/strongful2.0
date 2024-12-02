@@ -2313,8 +2313,11 @@ button.needsclick {
 
 .color-circle {
     position: relative;
-    width: 50px; /* Adjust size as needed */
-    height: 50px; /* Adjust size as needed */
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    width: 45px; /* Adjust size as needed */
+    height: 45px; /* Adjust size as needed */
     border-radius: 50%;
     border: 2px solid white; /* Outer gray border */
     margin: 5px; /* Adjust spacing as needed */
@@ -2324,7 +2327,7 @@ button.needsclick {
   .color-circle.picked-color {
     position: relative;
     width: 50px; /* Adjust size as needed */
-    height: 50px; /* Adjust size as needed */
+    width: 50px; /* Adjust size as needed */
     border-radius: 50%;
     border: 0.5px solid gray; /* Outer gray border */
     margin: 5px; /* Adjust spacing as needed */
@@ -2332,12 +2335,12 @@ button.needsclick {
     overflow: hidden;
   }
   .color-circle.white {
-          position: relative;
-    width: 50px; /* Adjust size as needed */
-    height: 50px; /* Adjust size as needed */
+    position: relative;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    border: 0.1px solid rgb(0, 0, 0); /* Outer gray border */
-    margin: 5px; /* Adjust spacing as needed */
+    border: 0.1px solid rgb(0, 0, 0);
+    margin: 10px;
     display: inline-block;
  
   }
