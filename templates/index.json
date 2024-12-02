@@ -236,7 +236,7 @@
         "featured_collection_CyY976"
       ],
       "custom_css": [
-        ".collection-list grid contains-card contains-card--collection contains-card--standard grid--4-col-desktop grid---col-tablet-down slider slider--desktop slider--tablet grid--peek collection-list--4-items {left:2px;}"
+        ".collection-list grid contains-card contains-card--collection contains-card--standard grid--4-col-desktop grid---col-tablet-down slider slider--desktop slider--tablet grid--peek collection-list--4-items {left: 200px;}"
       ],
       "settings": {
         "images_or_colors": "images",
@@ -252,7 +252,7 @@
         "view_all_text": "",
         "view_all_style": "link",
         "view_all_location": "bottom",
-        "enable_desktop_slider": true,
+        "enable_desktop_slider": false,
         "show_peak": true,
         "pagination_type": "dots",
         "swipe_on_mobile": true,
