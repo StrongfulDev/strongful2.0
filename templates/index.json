@@ -238,7 +238,7 @@
       "settings": {
         "images_or_colors": "images",
         "title": "CYBER MONDAY",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "image_ratio": "adapt",
         "columns_desktop": 4,
         "color_scheme": "background-1",
