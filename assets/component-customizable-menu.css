@@ -537,15 +537,17 @@
 	}
 
 	.mega-menu__content.fix-direction li:first-child {
-		/*text-decoration: none;*/
+		/* text-decoration: none; */
+		
 	}
 
 	.mega-menu__content.fix-direction ul:nth-child(2) li:first-child a {
-		/*font-weight: var(--font-body-weight-bold);*/
-		/*text-decoration: none;*/
+		
+		/*font-weight: var(--font-body-weight-bold);
+		 text-decoration : none;*/
 	}
 
-	.header-block-list-element:first-child .mega-menu__content.fix-direction ul:nth-child(2) li:first-child a {
+	.header-block-list-element:first-child .mega-menu__content.fix-direction ul:nth-child(2)  {
 		color: firebrick;
 		/* color: #dc6b9f; pink month */
 		direction: ltr;
@@ -555,6 +557,10 @@
 
 	.header-block-list-element:first-child .mega-menu__content.fix-direction ul:nth-child(2) li a {
 		direction: ltr;
+				font-weight: var(--font-body-weight-bold);
+						/* color: firebrick; */
+
+
 	}
 
 	.desktop_links_images {
