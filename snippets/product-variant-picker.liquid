@@ -40,17 +40,13 @@
 
 {% assign picked_color = product.vendor %}
 <!-- Assign picked_color to product.vendor -->
-
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const similarList = document.querySelector('.similar');
     if (similarList) {
-      const pickedColorItem = similarList.querySelector('.picked-color');
+      const pickedColorItem = similarList.querySelector('.picked-color').closest('li');
       if (pickedColorItem) {
-        const parentListItem = pickedColorItem.closest('li');
-        if (parentListItem) {
-          similarList.insertBefore(parentListItem, similarList.firstChild);
-        }
+        similarList.insertBefore(pickedColorItem, similarList.firstChild);
       }
     }
   });
