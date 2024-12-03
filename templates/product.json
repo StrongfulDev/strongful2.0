@@ -26,7 +26,7 @@
           "type": "sale",
           "settings": {
             "logged_in_text": "<p>אקסטרה 10% הנחה! </p><p>בשימוש קוד קופון: EXTRA10</p>",
-            "logged_out_text": "<p>אקסטרה 10% הנחה! </p><p>בשימוש קוד קופון: EXTRA10</p>",
+            "logged_out_text": "<p>אקסטרה <strong>10% הנחה!</strong> </p><p>בשימוש קוד קופון: EXTRA10</p>",
             "logged_in_text_second": "<p>פריט זה הינו בהזמנה מוקדמת </p><p>(משלוח 1-10 ימי עסקים)</p>",
             "log_in": "",
             "small_text": "",
