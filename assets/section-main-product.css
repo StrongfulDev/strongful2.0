@@ -1768,12 +1768,12 @@ details[open] .accordion__title:after {
 .similar {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    padding: 0;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 0;
     grid-gap: 0;
     position: relative;
     margin: 0.2em 0 auto;
-    justify-content: flex-end;
     list-style: none;
 }
 
@@ -2311,182 +2311,71 @@ button.needsclick {
 	z-index: 0 !important;
 }
 
-.color-circle {
-    position: relative;
+.color-circles-container {
+    display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: row-reverse;
-    width: 45px; /* Adjust size as needed */
-    height: 45px; /* Adjust size as needed */
-    border-radius: 50%;
-    border: 2px solid white; /* Outer gray border */
-    margin: 5px; /* Adjust spacing as needed */
-    display: inline-block;
-  
-  }
-  .color-circle.picked-color {
-    position: relative;
-    width: 50px; /* Adjust size as needed */
-    width: 50px; /* Adjust size as needed */
-    border-radius: 50%;
-    border: 0.5px solid gray; /* Outer gray border */
-    margin: 5px; /* Adjust spacing as needed */
-    display: inline-block;
-    overflow: hidden;
-  }
-  .color-circle.white {
-    position: relative;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 0.1px solid rgb(0, 0, 0);
-    margin: 10px;
-    display: inline-block;
- 
-  }
-  
-  .color-circle::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: calc(100% - 6px); /* Adjust size to create white space */
-    height: calc(100% - 6px); /* Adjust size to create white space */
-    border-radius: 50%;
-    background-color: white; /* White divider circle */
-  }
-  
-  .color-circle::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: calc(100% - 12px); /* Adjust size to create inner color circle */
-    height: calc(100% - 12px); /* Adjust size to create inner color circle */
-    border-radius: 50%;
-    background-color:var(--color);
-     /* Inner circle color */
-  }
-  
-  
-  .picked-color {
-    position: relative;
-    border: 2px solid gray; /* Outer gray border */
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: inline-block;
-    overflow: hidden;
-    transition: border-color 0.3s ease;
-    z-index: 1; /* Ensure it is above other elements */
-  }
-/*@media screen and (max-width: 990px) {*/
-
-/*    .product__title h1 {*/
-/*        font-size: calc(var(--font-body-size-large) * 0.9);*/
-/*    }*/
-
-/*	product-info {*/
-/*		display: flex;*/
-/*		flex-direction: column;*/
-/*	}*/
-
-/*	product-info .product__title {*/
-/*		order: 1;*/
-/*		margin-bottom: 0;*/
-/*	}*/
-
-/*	product-info .product__title+.product__text {*/
-/*		order: 2;*/
-/*	}*/
-
-/*	product-info div[id^="price-"] {*/
-/*		order: 3;*/
-/*      margin: 1rem 0;*/
-/*	}*/
-
-/*  product-info .price {*/
-/*      display: flex;*/
-/*      align-items: baseline;*/
-/*      justify-content: end;*/
-/*      gap: var(--grid-desktop-vertical-spacing);*/
-/*  }*/
-
-/*  product-info .discount-price-container {*/
-/*      position: relative;*/
-/*      bottom: 2px;*/
-/*  }*/
-
-/*  .product product-info div.discount-price-container, .product product-info div.price__container {*/
-/*      margin: 0;*/
-/*  }*/
-
-/*	product-info .shopify-app-block {*/
-/*		order: 4;*/
-/*		margin-top: 0;*/
-/*		margin-bottom: 1rem;*/
-/*	}*/
-
-/*	product-info .grid__item.product__media-wrapper.medium-hide {*/
-/*		order: 5;*/
-/*	}*/
-
-/*	product-info .breadcrumbs {*/
-/*		order: 6;*/
-/*	}*/
-
-/*	product-info .sale-banner-product-page {*/
-/*		order: 7;*/
-/*	}*/
-
-/*	product-info .product__tax {*/
-/*		order: 8;*/
-/*	}*/
-
-/*	product-info .products-product-size-picker {*/
-/*		order: 9;*/
-/*	}*/
-
-/*	product-info ul.similar {*/
-/*		order: 10;*/
-/*	}*/
-
-/*	product-info variant-radios {*/
-/*		order: 11;*/
-/*	}*/
-
-/*	product-info .product-buy-buttons {*/
-/*		order: 12;*/
-/*	}*/
-
-/*	product-info .brand-badges {*/
-/*		order: 13;*/
-/*	}*/
-
-/*	product-info .description {*/
-/*		order: 14;*/
-/*	}*/
-
-/*	product-info .sizing_table {*/
-/*		order: 15;*/
-/*	}*/
-
-/*	product-info .shipping_information {*/
-/*		order: 16;*/
-/*	}*/
-/*}*/
-
-.outlet-collection-tag {
-	font-size: calc(var(--font-body-size-medium) * 0.9);
+    gap: 10px; /* Space between circles */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
-.outlet-collection-tag .discount-tag {
-	width: 10px;
-	height: 10px;
+.color-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px; /* Smaller size for the circles */
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--color); /* Dynamic color */
+    position: relative; /* For pseudo-elements */
+    cursor: pointer; /* Indicates interactivity */
+    transition: border 0.3s ease, transform 0.2s ease; /* Smooth transitions */
 }
 
-.sale-banner-product-page .money {
-    font-weight: var(--font-body-weight-bold);
+/* Differentiation for the picked color circle */
+.color-circle.picked-color {
+    border: 2px solid white; /* White gap */
+    box-shadow: 0 0 0 1px gray; /* Gray border */
+    transform: scale(1.1); /* Slightly larger to stand out */
+}
+
+/* Specific styles for the white color circle */
+.color-circle.white {
+    background-color: #ffffff; /* Explicitly set to white */
+}
+
+.productVendor {
+    margin-top: 5px; /* Space between circle and text */
+    text-align: center;
+    font-size: 0.9rem; /* Font size */
+    color: var(--text-color); /* Text color variable */
+}
+
+.similar-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.similar-a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none; /* Removes underline from links */
+    color: inherit; /* Inherits text color */
+}
+
+ul.similar {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+li.relative-discount {
+    margin: 5px; /* Adjust as needed */
 }

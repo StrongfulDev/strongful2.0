@@ -4097,14 +4097,20 @@ body.trigger-color-blue #enable-toolbar #enable-toolbar-trigger .keyboard-shorcu
 }
 
 .variant_modal .product_size_picker__heading .small, .model-wears-size .small {
-	background-color: var(--gradient-base-background-3);
-	border-radius: 1em;
-	padding: 0.5rem 1rem;
-	margin-right: 0.5rem;
+	    background-color: var(--gradient-base-background-3);
+    border-radius: 1em;
+    padding: .5rem 1rem;
+    margin-right: .5rem;
+    position: absolute;
+    bottom: -1.5rem;
 }
 
 .model-wears-size .small {
-	margin-bottom: 3px;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+padding: 2% 0;
 }
 
 .button-loader-activator {

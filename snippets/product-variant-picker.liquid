@@ -58,21 +58,17 @@
 
 {% unless product.tags contains 'noSimilar' %}
   {%unless product.metafields.variant.color.value == nil%}
-  <div style="colorHeading">:צבע</div>
+  <div style="colorHeading">צבע</div>
   {%endunless%}
   <ul class="similar" id="scrollNoSize">
     {% for collection in collections %}
       {% if collection.title == similarParent or collection.title == similarParent.value %}
         {% for product in collection.products %}
-          <script>
-            console.log({{  product.metafields.custom | json }});
-          </script>
-
           {% assign color = product.metafields.variant.color.value %}
-          
+          {% assign color_name = product.vendor %}
           
         
-          {% if product.vendor == picked_color %}
+          {% if color_name == picked_color %}
             {% assign is_picked_color = true %}
           {% else %}
             {% assign is_picked_color = false %}
@@ -86,7 +82,7 @@
                     class="color-circle {% if is_picked_color %}picked-color{% endif %} "
                     style="--color:{{ color | strip }}; display:inline-block"
                   ></span>
-                  <p class="productVendor">{{ product.vendor }}</p>
+                  <p class="productVendor">{{ color_name }}</p>
                 </a>
               </li>
             {% endunless %}
@@ -95,7 +91,7 @@
               <a href="{{ product.url }}" class="similar-a">
               <span class="color-circle {% if color=="#ffffff"%}white{% endif %} {% if is_picked_color %}picked-color{% endif %}" style="--color:{{ color | strip }};"></span>
               </a>
-              <p class="productVendor">{{ product.vendor }}</p>
+              <p class="productVendor">{{ color_name }}</p>
             </li>
           {% endif %}
         {% endfor %}
