@@ -2378,13 +2378,14 @@ button.needsclick {
 }
 
 ul.similar {
-    direction: rtl;
+     direction: ltr;
     list-style: none;
     padding: 0 1rem;
     margin: 0;
-    display: flex;
+    display: flex
+;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: flex-end;
 }
 
 li.relative-discount {
