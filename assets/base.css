@@ -3320,6 +3320,7 @@ fieldset {
 
 .header__icons {
     column-gap: var(--grid-mobile-vertical-spacing);
+        padding: 0 2rem;
 }
 
 .header__icon, .header__icon--cart .icon {
