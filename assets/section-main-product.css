@@ -2335,7 +2335,7 @@ button.needsclick {
 /* Differentiation for the picked color circle */
 .color-circle.picked-color {
     border: 2px solid white; /* White gap */
-    box-shadow: 0 0 0 1px gray; /* Gray border */
+    box-shadow: 0 0 0 2px gray; /* Gray border */
     transform: scale(1.1); /* Slightly larger to stand out */
     }
 
