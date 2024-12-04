@@ -330,7 +330,7 @@
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "15-off-selected-products",
+        "collection": "shell-the-new-collection",
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,
