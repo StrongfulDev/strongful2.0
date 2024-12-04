@@ -74,17 +74,17 @@
       "blocks": {
         "bd053c52-574f-435e-be3a-a4a74c72b169": {
           "type": "url",
-          "disabled": true,
           "settings": {
             "link_text_direction": "Left To Right",
             "show_on_mobile": true,
             "small_font": false,
             "title": "SALE",
-            "title_link": "shopify://collections/black-friday-sets"
+            "title_link": "shopify://collections/15-off-selected-products"
           }
         },
         "menu_item_WN8KQL": {
           "type": "menu_item",
+          "disabled": true,
           "settings": {
             "above_shop_all_link": "",
             "show_on_mobile": true,
