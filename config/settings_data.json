@@ -148,7 +148,7 @@
     "custom_collection_announcement": "קוד קופון: EXTRA10",
     "members_only_announcement": "",
     "show_card_collection_announcement": false,
-    "second_announcement_tag": "preOrderMarkUp",
+    "second_announcement_tag": "preOrderSalesBanner",
     "custom_collection_second_announcement": "",
     "restock_badge_tag": "badge__restock",
     "announcement_customizer_override": true,
