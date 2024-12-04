@@ -11,7 +11,7 @@
 	padding: 0.5rem .9rem;
 	border-radius: var(--inputs-radius);
 	font-weight: var(--font-body-weight-bold);
-	font-size: calc(var(--font-body-size-small) * 1.2);
+	font-size: calc(var(--font-body-size-small) * 1.1);
 }
 
 .product_details__info>.new-product-span {
@@ -285,7 +285,20 @@ div:not(.product-size-picker-container) .variant-button .size_variant_button:not
 }
 
 .variant-button {
-    position: relative; /* Ensure the inventory message is positioned relative to the variant button */
+	position: relative;
+    display: inline-block;
+    width: 42px; /* Set a smaller fixed width for all variant buttons */
+    text-align: center; /* Center the text within the button */
+    padding: 1px; /* Adjust padding as needed */
+    margin: 1px; /* Adjust margin as needed */
+    /* border: 1px solid #ccc; Optional: Add a border */
+    border-radius: 4px; /* Optional: Add rounded corners */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.variant-button label {
+    display: block; /* Ensure the label takes up the full width of the button */
+    width: 100%; /* Ensure the label takes up the full width of the button */
 }
 
 .product__inventory {

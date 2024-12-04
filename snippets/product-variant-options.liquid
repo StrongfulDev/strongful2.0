@@ -10,7 +10,6 @@
   - announcement_tag: {String} announcement tag.
   - members_only_sale: {Boolean} members only sale.
 
-
   Usage:
   {% render 'product-variant-options',
     product: product,
@@ -103,15 +102,15 @@
             {% endif %}
             {% if option_disabled or loggedIn == false or members_only == true and product.tags contains announcement_tag %}
                 <svg class="soldout-variant-line"><line x1="0" y1="100%" x2="100%" y2="0" class="Styles__StrikethroughLine-sc-1hxn211-12 eJiSh"></line></svg>
-                {% endif %}
+            {% endif %}
             {% for variant in product.variants %}
                 {% if option_value == variant.title and variant.inventory_quantity <= myBlock.settings.inventory_threshold and variant.inventory_quantity >= 0 %}
                     <p class="product__inventory no-js-hidden fix-direction {% if myBlock.settings.text_style == 'uppercase' %} caption-with-letter-spacing {% elsif myBlock.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"
                         {{ myBlock.shopify_attributes }}
                         id="Inventory-{{ section.id }}"
-                               data-variant-title="{{ variant.title }}"
-                               role="status"
-                            >
+                        data-variant-title="{{ variant.title }}"
+                        role="status"
+                    >
                     {%- if variant.inventory_management == 'shopify' -%}
                         {%- if variant.inventory_quantity < myBlock.settings.minimum_inventory_to_show -%}
                             {%- if variant.inventory_quantity <= myBlock.settings.inventory_threshold -%}
