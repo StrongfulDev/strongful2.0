@@ -77,7 +77,7 @@
               <a href="{{ product.url }}" class="similar-a">
               <span class="color-circle {% if color=="#ffffff"%}white{% endif %} {% if is_picked_color %}picked-color{% endif %}" style="--color:{{ color | strip }};"></span>
               </a>
-              {% comment %} <p class="productVendor">{{ color_name }}</p> {% endcomment %}
+              <p class="productVendor">{{ color_name }}</p>
             </li>
                 </a>
               </li>
@@ -87,7 +87,7 @@
               <a href="{{ product.url }}" class="similar-a">
               <span class="color-circle {% if color=="#ffffff"%}white{% endif %} {% if is_picked_color %}picked-color{% endif %}" style="--color:{{ color | strip }};"></span>
               </a>
-              {% comment %} <p class="productVendor">{{ color_name }}</p> {% endcomment %}
+              <p class="productVendor">{{ color_name }}</p>
             </li>
           {% endif %}
         {% endfor %}

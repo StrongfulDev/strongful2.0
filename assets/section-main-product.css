@@ -2016,16 +2016,47 @@ product-info > .product__inventory {
     
     }
 
-	.productVendor {
-        color:gray
-		opacity: 1;
-        margin:0;
-	}
+.productVendor {
+    color: gray;
+    margin: 0;
+    visibility: hidden; /* Initially hidden */
+    position: absolute; /* Position absolutely within the parent */
+    bottom: -23px; /* Adjust as needed to position below the circle */
+    left: 50%;
+    transform: translateX(-50%);
+    transition: visibility 0s, opacity 0.3s ease; /* Smooth transition for opacity */
+    opacity: 0; /* Initially hidden */
+    font-size: large;
+        margin-top: 5px; /* Space between circle and text */
+    text-align: center;
+    font-size: 1.1rem; /* Font size */
+    /* color: var(--text-color); /*Text color variable */
+}
 
-	.similar-child:hover .productVendor, .similar-child:focus .productVendor, .similar-child:active .productVendor {
-		opacity: 1;
-	}
+.similar-child {
+    position: relative; /* Ensure the child elements are positioned relative to this container */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
 
+/* Show .productVendor on hover for larger screens */
+@media screen and (min-width: 768px) {
+    .similar-child:hover .productVendor,
+    .similar-child:focus .productVendor,
+    .similar-child:active .productVendor {
+        visibility: visible; /* Make visible on hover, focus, or active */
+        opacity: 1; /* Fully visible on hover, focus, or active */
+    }
+}
+
+/* Hide .productVendor completely on mobile devices */
+@media screen and (max-width: 766px) {
+    .productVendor {
+        display: none; /* Hide on mobile devices */
+    }
+}
 	.breadcrumbs {
 		margin: 1.2em auto calc(var(--grid-desktop-vertical-spacing));
 		width: 100%;
@@ -2356,12 +2387,7 @@ button.needsclick {
     border: 1px solid gray; /* Gray border */
 }
 
-.productVendor {
-    margin-top: 5px; /* Space between circle and text */
-    text-align: center;
-    font-size: 0.9rem; /* Font size */
-    color: var(--text-color); /* Text color variable */
-}
+
 
 .similar-child {
     display: flex;
@@ -2388,7 +2414,8 @@ ul.similar {
     display: flex
 ;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
 }
 
 li.relative-discount {
