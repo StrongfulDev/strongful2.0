@@ -12,10 +12,10 @@
     "main": {
       "type": "main-blog",
       "settings": {
-        "tile_image_one": "shopify://shop_images/1_a57b1b8f-be35-4cbc-b847-18bee5546220.jpg",
+        "tile_image_one": "shopify://shop_images/76db6a85295d2e1764a54863c16e2efa_9f411277-484d-4905-9ce0-8dc709953f17.jpg",
         "tile_image_one_link": "shopify://collections/cyber-monday-up-to-50-off",
-        "tile_image_two": "shopify://shop_images/2_66d29351-a815-4cb6-b5b7-80b3152cbcb9.gif",
-        "tile_image_two_link": "shopify://collections/cyber-monday-up-to-50-off",
+        "tile_image_two": "shopify://shop_images/copy_f7f0ad48-a465-4b33-9fe0-5d389720b946.jpg",
+        "tile_image_two_link": "shopify://collections/shell-the-new-collection",
         "layout": "grid",
         "show_image": true,
         "image_height": "adapt",
