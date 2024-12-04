@@ -132,7 +132,7 @@
             "desktop_bottom_position": 14,
             "show_lock": false,
             "button_label": "SHOP NOW",
-            "link": "shopify://collections/cyber-monday-up-to-50-off",
+            "link": "shopify://collections/15-off-selected-products",
             "show_text_box": true,
             "color_scheme": "inverse",
             "whole_slide_link": "",
@@ -235,6 +235,7 @@
         "featured_collection_9c9fAw",
         "featured_collection_CyY976"
       ],
+      "disabled": true,
       "custom_css": [
         ".collection-list grid contains-card contains-card--collection contains-card--standard grid--4-col-desktop grid---col-tablet-down slider slider--desktop slider--tablet grid--peek collection-list--4-items {left: 200px;}"
       ],
