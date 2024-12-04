@@ -12,6 +12,12 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "essential_countdown_app_block_Na8eTE": {
+          "type": "shopify://apps/essential-countdown/blocks/app-block/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
+          "settings": {
+            "id": ""
+          }
+        },
         "ea6d7033-4e56-497e-a4dd-623c0f24954e": {
           "type": "product_media",
           "settings": {}
@@ -159,6 +165,7 @@
         }
       },
       "block_order": [
+        "essential_countdown_app_block_Na8eTE",
         "ea6d7033-4e56-497e-a4dd-623c0f24954e",
         "7c99b889-3ad8-4802-a5c7-9802ab40f12c",
         "5ec0a264-e4fc-4a8d-92bc-f2f9223694f5",
