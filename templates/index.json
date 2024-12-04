@@ -124,8 +124,8 @@
         "slide_gaUfH4": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/13_396d5149-d17b-43d4-a7e1-bdc31559fb45.jpg",
-            "mobile_image": "shopify://shop_images/copy_5_3.jpg",
+            "image": "shopify://shop_images/copy_4_79fedde4-92de-463a-9faa-f7eb3b78d9d4.jpg",
+            "mobile_image": "shopify://shop_images/copy_4_e4016b33-10d8-4d01-b1e1-3f03301b0c81.jpg",
             "left_position": 50,
             "bottom_position": 10,
             "desktop_left_position": 50,
@@ -134,7 +134,7 @@
             "button_label": "SHOP NOW",
             "link": "shopify://collections/15-off-selected-products",
             "show_text_box": true,
-            "color_scheme": "inverse",
+            "color_scheme": "background-1",
             "whole_slide_link": "",
             "button_style_secondary": false,
             "box_align": "middle-center",
