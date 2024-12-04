@@ -147,7 +147,7 @@
     "announcement_tag": "CMDiscount",
     "custom_collection_announcement": "קוד קופון: EXTRA10",
     "members_only_announcement": "",
-    "show_card_collection_announcement": true,
+    "show_card_collection_announcement": false,
     "second_announcement_tag": "preOrderMarkUp",
     "custom_collection_second_announcement": "",
     "restock_badge_tag": "badge__restock",
