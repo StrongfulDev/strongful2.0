@@ -308,10 +308,10 @@ div:not(.product-size-picker-container) .variant-button .size_variant_button:not
     transform: translateX(-50%);
     text-align: center;
     width: max-content; /* Ensure it spans the width of the content */
-    color: firebrick; /* Adjust color as needed */
+    color: 	white !important; /* Background color to make it stand out */
     font-size: 0.9rem; /* Adjust font size as needed */
     z-index: 1; /* Ensure it appears above other elements */
-    background: white; /* Background color to make it stand out */
+    background:	firebrick !important; /* Adjust color as needed */
     padding: 2px 5px; /* Padding for better readability */
     border-radius: 3px; /* Rounded corners */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */

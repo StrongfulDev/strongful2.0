@@ -1357,7 +1357,8 @@ a.product__text {
     gap: 0.5rem;
 	position: absolute;
 	bottom: 85%;
-	background: firebrick;
+	color: firebrick !important;
+    background: white !important;
 	border: 1px solid firebrick;
 	border-radius: .5rem;
 	text-align: center;
@@ -1365,7 +1366,7 @@ a.product__text {
 	width: inherit;
 	left: 50%;
 	transform: translateX(-50%);
-	color: var(--gradient-background);
+    
 }
 
 .product__inventory:after {
