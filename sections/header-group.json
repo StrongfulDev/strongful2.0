@@ -32,13 +32,13 @@
           "type": "announcement",
           "settings": {
             "toggle_main_font": true,
-            "toggle_sub_font": true,
-            "main_text": "BACK IN STOCK",
-            "sub_text": "ASTRA COLLECTION",
+            "toggle_sub_font": false,
+            "main_text": "15% OFF",
+            "sub_text": "עכשיו על פריטים נבחרים",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "ltr",
-            "link": "shopify://collections/astra",
+            "link": "shopify://collections/15-off-selected-products",
             "color_scheme": "accent-1"
           }
         },
@@ -78,8 +78,8 @@
             "link_text_direction": "Left To Right",
             "show_on_mobile": true,
             "small_font": false,
-            "title": "RESTOCKED",
-            "title_link": "shopify://collections/astra"
+            "title": "NEW IN",
+            "title_link": "shopify://collections/shell-the-new-collection"
           }
         },
         "menu_item_WN8KQL": {
@@ -113,7 +113,7 @@
             "show_on_mobile": true,
             "order": "",
             "small_font": false,
-            "menu": "trending-without-10",
+            "menu": "trending",
             "menu_second": "",
             "menu_third": "",
             "title": "קני לפי",
@@ -270,8 +270,8 @@
         "show_first_image": true,
         "image_order_first": "1",
         "mobile_top_image_1": "shopify://shop_images/14_5d53ed4c-4c69-4ff5-ac8a-c0acff470c10.jpg",
-        "mobile_top_image_1_link": "shopify://collections/shell-the-new-collection",
-        "mobile_top_image_1_title": "WINTER DROP",
+        "mobile_top_image_1_link": "shopify://collections/astra",
+        "mobile_top_image_1_title": "BACK IN STOCK",
         "show_second_image": true,
         "image_order_second": "2",
         "mobile_top_image_2": "shopify://shop_images/copy_2_2138d64b-d1d3-4a10-be2c-5e21d2b8bdc6.jpg",
