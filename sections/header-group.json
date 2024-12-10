@@ -32,9 +32,9 @@
           "type": "announcement",
           "settings": {
             "toggle_main_font": true,
-            "toggle_sub_font": false,
-            "main_text": "15% OFF",
-            "sub_text": "עכשיו על פריטים נבחרים",
+            "toggle_sub_font": true,
+            "main_text": "BACK IN STOCK",
+            "sub_text": "ASTRA COLLECTION",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "ltr",
