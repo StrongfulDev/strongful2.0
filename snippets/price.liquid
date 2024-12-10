@@ -42,21 +42,16 @@
     {%- if show_badges %} price--show-badge{% endif -%}
   ">
     {% if show_discount %}
-            {% assign is_percent_on = false %}
-        {% if card_product.tags contains 'PercentOn' %}
-            {% assign is_percent_on = true %}
-        {% endif %}
-
-        {% if is_percent_on %}
-      {% if product.compare_at_price > product.price %}
-            <div class="discount-price-container">
-                <p class="rect-discount-tag">
-                    {{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | ceil }}% OFF
-                </p>
-            </div>
+        {% if product.tags contains 'PercentOn' %}
+            {% if product.compare_at_price > product.price %}
+                <div class="discount-price-container">
+                    <p class="rect-discount-tag">
+                        {{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | ceil }}% OFF
+                    </p>
+                </div>
+            {% endif %}
         {% endif %}
     {% endif %}
-     {% endif %}
     <div class="price__container fix-direction">
         {%- comment -%}
           Explanation of description list:
