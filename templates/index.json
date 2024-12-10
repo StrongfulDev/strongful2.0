@@ -124,12 +124,12 @@
         "slide_gaUfH4": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/copy_4_79fedde4-92de-463a-9faa-f7eb3b78d9d4.jpg",
-            "mobile_image": "shopify://shop_images/copy_4_e4016b33-10d8-4d01-b1e1-3f03301b0c81.jpg",
+            "image": "shopify://shop_images/14_928f27d7-89c2-40d6-8f32-faade80111b4.jpg",
+            "mobile_image": "shopify://shop_images/copy_3_f26b87d2-68fc-4f8c-9f27-1ed4fa734228.jpg",
             "left_position": 30,
             "bottom_position": 25,
             "desktop_left_position": 25,
-            "desktop_bottom_position": 25,
+            "desktop_bottom_position": 40,
             "show_lock": false,
             "button_label": "SHOP NOW",
             "link": "shopify://collections/astra",
