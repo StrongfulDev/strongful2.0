@@ -591,10 +591,10 @@
         "image_ydbCwA": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/YOGA_PILATES.jpg",
+            "image": "shopify://shop_images/15_off_2.jpg",
             "alt": "",
-            "link": "YOGA & PILATES",
-            "url": "shopify://collections/yoga-and-pilates"
+            "link": "15% OFF",
+            "url": "shopify://collections/15-off-selected-products"
           }
         }
       },
