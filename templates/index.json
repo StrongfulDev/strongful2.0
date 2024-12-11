@@ -320,6 +320,65 @@
         "padding_bottom": 36
       }
     },
+    "our_collection_list_v2_mK6kUx": {
+      "type": "our-collection-list-v2",
+      "blocks": {
+        "image_JnihJ6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/restock_2.jpg",
+            "alt": "Flash sale up to 35 % off photo",
+            "link": "RESTOCKED",
+            "url": "shopify://collections/astra"
+          }
+        },
+        "image_a4f9L6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/best_sellers_1.jpg",
+            "alt": "",
+            "link": "BEST SELLERS",
+            "url": "shopify://collections/best-seller-internal-use"
+          }
+        },
+        "image_3PJtne": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/505e753b83f9f241322a313721e3eb79.jpg",
+            "alt": "",
+            "link": "UP TO 70%",
+            "url": "shopify://collections/outlet"
+          }
+        },
+        "image_ydbCwA": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/15_off_2.jpg",
+            "alt": "",
+            "link": "15% OFF",
+            "url": "shopify://collections/15-off-selected-products"
+          }
+        }
+      },
+      "block_order": [
+        "image_JnihJ6",
+        "image_a4f9L6",
+        "image_3PJtne",
+        "image_ydbCwA"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "heading_type": "heading_type_default",
+        "image_ratio": "adapt",
+        "columns_mobile": 2,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "is_full_width": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "featured_collection_XDhFHB": {
       "type": "featured-collection",
       "settings": {
@@ -554,65 +613,6 @@
         "quick_add_accessories_text": "הוספה מהירה",
         "columns_mobile": "2",
         "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "our_collection_list_v2_mK6kUx": {
-      "type": "our-collection-list-v2",
-      "blocks": {
-        "image_JnihJ6": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/restock_2.jpg",
-            "alt": "Flash sale up to 35 % off photo",
-            "link": "RESTOCKED",
-            "url": "shopify://collections/astra"
-          }
-        },
-        "image_a4f9L6": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/best_sellers_1.jpg",
-            "alt": "",
-            "link": "BEST SELLERS",
-            "url": "shopify://collections/best-seller-internal-use"
-          }
-        },
-        "image_3PJtne": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/505e753b83f9f241322a313721e3eb79.jpg",
-            "alt": "",
-            "link": "UP TO 70%",
-            "url": "shopify://collections/outlet"
-          }
-        },
-        "image_ydbCwA": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/15_off_2.jpg",
-            "alt": "",
-            "link": "15% OFF",
-            "url": "shopify://collections/15-off-selected-products"
-          }
-        }
-      },
-      "block_order": [
-        "image_JnihJ6",
-        "image_a4f9L6",
-        "image_3PJtne",
-        "image_ydbCwA"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "heading_type": "heading_type_default",
-        "image_ratio": "adapt",
-        "columns_mobile": 2,
-        "columns_desktop": 4,
-        "color_scheme": "background-1",
-        "is_full_width": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -874,12 +874,12 @@
     "customer_slideshow_4HiHHh",
     "featured_collection_XDhFHB",
     "featured_collection_3Dk734",
+    "our_collection_list_v2_mK6kUx",
     "173251753398892554",
     "featured_collection_zx87dF",
     "customer_slideshow_wFcfK7",
     "173246164424ec44fa",
     "featured_product_v2_FjnCqj",
-    "our_collection_list_v2_mK6kUx",
     "collection_list_UWHXHY",
     "slideshow_dtfFDm",
     "collection_list_QrC4z9",
