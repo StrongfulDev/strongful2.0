@@ -209,7 +209,7 @@
             "small_font": true,
             "menu": "dawn-outlet-copy",
             "menu_second": "outlet-menu-sub",
-            "menu_third": "",
+            "menu_third": "outlet-menu-third",
             "title": "עד 70%",
             "item_class": "",
             "title_link": "",
