@@ -54,7 +54,7 @@
             </svg>
         </div>
     </div>
-
+{% comment %} 
     <div class="new-filter-menu-mobile">
         {% if results.title == 'טופים' or results.title == 'כל הטופים' or results.title == 'חזיות ספורט' or results.title == 'גופיית ספורט' or results.title == 'בגד גוף' or results.title == 'חולצות ספורט' or results.title == 'קרופ טופ' or results.title == 'ג׳קטים' or results.title == 'אוברולים' or results.title == 'סווטשירט' %}
             <ul class="filter-links">
@@ -73,7 +73,7 @@
                 {% endfor %}
             </ul>
         {% endif %}
-    </div>
+    </div> {% endcomment %}
 
   {%- if filter_type == 'vertical' or filter_type == 'horizontal' -%}
 

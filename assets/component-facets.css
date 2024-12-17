@@ -1625,7 +1625,7 @@ summary .icon-caret {
 	}
 
 	.new-filter-menu-desktop {
-		display: block;
+		display: none;
 	}
 
   .facets-vertical .facets-wrapper {

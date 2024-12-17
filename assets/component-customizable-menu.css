@@ -558,7 +558,7 @@
 	.header-block-list-element:first-child .mega-menu__content.fix-direction ul:nth-child(2) li a {
 		direction: ltr;
 				font-weight: var(--font-body-weight-bold);
-						color: firebrick;
+
 
 
 	}
