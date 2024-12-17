@@ -213,7 +213,7 @@ fieldset.product-form__input .form__label {
     display: inline-block;
     margin: 0;
     padding: 1rem 2rem;
-    font-size: 1.4rem;
+    font-size: var(--font-body-size-medium);
     letter-spacing: 0.1rem;
     line-height: 1;
     text-align: center;
@@ -1766,6 +1766,7 @@ details[open] .accordion__title:after {
 	font-size: var(--font-body-size-small);
 }
 
+
 .similar {
     display: flex;
     flex-wrap: wrap;
@@ -2421,4 +2422,40 @@ ul.similar {
 
 li.relative-discount {
     margin: 5px; /* Adjust as needed */
+}
+/* Styles for mobile devices */
+@media (max-width: 768px) {
+  .similar-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    direction: rtl; /* Set direction to right-to-left */
+  }
+
+  .similar {
+    display: flex;
+    flex-direction: row; /* Ensure items are laid out in a row */
+    gap: 10px; /* Adjust spacing between items */
+  }
+
+  .similar-child {
+    flex: 0 0 auto; /* Prevent items from shrinking or growing */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .similar-child .productVendor {
+    margin-top: 5px; /* Adjust spacing between color circle and vendor name */
+  }
+
+  /* Optional: Hide scrollbar for a cleaner look */
+  .similar-container {
+    scrollbar-width: none; /* For Firefox */
+  }
+
+  .similar-container::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+  }
 }

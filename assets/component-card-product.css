@@ -289,6 +289,8 @@ div:not(.product-size-picker-container) .variant-button .size_variant_button:not
     display: inline-block;
     width: 42px; /* Set a smaller fixed width for all variant buttons */
     text-align: center; /* Center the text within the button */
+	font-weight: 200;
+	font-size: xx-small;
     padding: 1px; /* Adjust padding as needed */
     margin: 1px; /* Adjust margin as needed */
     /* border: 1px solid #ccc; Optional: Add a border */
