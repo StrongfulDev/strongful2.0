@@ -60,7 +60,6 @@
       "settings": {
         "tops_menu": "dropdown-tops",
         "bottoms_menu": "bottoms-filter-links",
-        "ad_image": "shopify://shop_images/76db6a85295d2e1764a54863c16e2efa.jpg",
         "ad_link": "shopify://collections/15-off-selected-products",
         "products_per_page": 20,
         "columns_desktop": 4,
