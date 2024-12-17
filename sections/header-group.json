@@ -33,12 +33,12 @@
           "settings": {
             "toggle_main_font": true,
             "toggle_sub_font": true,
-            "main_text": "BACK IN STOCK",
-            "sub_text": "ASTRA COLLECTION",
+            "main_text": "OUR 4TH BIRTHDAY",
+            "sub_text": "BUY 400 PAY 300",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "ltr",
-            "link": "shopify://collections/astra",
+            "link": "shopify://collections/birthday-week",
             "color_scheme": "accent-1"
           }
         },
