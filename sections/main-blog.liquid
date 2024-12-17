@@ -27,7 +27,7 @@
       <div class="blog-container-for-desktop fix-direction">
           <div class="blog-articles fix-direction {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
               {%- for article in blog.articles -%}
-                  <div class="blog-articles__article article {% if forloop.first %}first-blog-articles__article{% endif %}">
+                  <div class="blog-articles__article article first-blog-articles__article">
                       {%- render 'article-card',
                               article: article,
                               media_height: section.settings.image_height,
