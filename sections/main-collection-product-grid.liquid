@@ -116,7 +116,7 @@
         </facet-filters-form>
     {%- endif -%}
 
-    <div class="new-filter-menu-desktop">
+    <div class="new-filter-menu-desktop" style="width: 100%; display: flex; justify-content: center;">
         {% if collection.title == 'טופים' or collection.title == 'כל הטופים' or collection.title == 'חזיות ספורט' or collection.title == 'גופיית ספורט' or collection.title == 'בגד גוף' or collection.title == 'חולצות ספורט' or collection.title == 'קרופ טופ' or collection.title == 'ג׳קטים' or collection.title == 'אוברולים' or collection.title == 'סווטשירט' %}
             <ul class="filter-links">
                 {% for link in section.settings.tops_menu.links %}

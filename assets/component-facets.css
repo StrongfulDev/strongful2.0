@@ -553,6 +553,7 @@ a.active-facets__button.focused .active-facets__button-inner,
   align-items: center;
   display: flex;
   justify-content: center;
+  padding-top: 1.5rem;
 }
 
 .mobile-facets {
@@ -1566,43 +1567,51 @@ summary .icon-caret {
 
 .filter-links {
 	list-style: none;
+	overflow-x: auto;
 	padding: 1rem 0;
 	display: flex;
 	width: 100%;
-	overflow-x: scroll;
-	gap: var(--grid-desktop-horizontal-spacing);
+	flex-wrap: wrap; /* Allow wrapping */
+	gap: 0.4rem; /* Space between items */
+	justify-content: center; /* Center filters */
 }
 
 .filter-link {
-	padding-left: var(--grid-desktop-horizontal-spacing);
-	border-left: solid 2px var(--gradient-base-accent-1);
-	width: max-content;
-	min-width: max-content;
+	border: 1px solid rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+	border-radius: 4%; /* Rounded corners */
+	background-color: white; /* Light gray background */
+	padding: 0.75rem 1.5rem; /* Larger padding for bigger boxes */
+	font-size: 12px; /* Slightly larger text */
+	text-align: center;
+	white-space: nowrap; /* Prevent line breaks */
+	transition: background-color 0.2s, border-color 0.2s;
 }
 
-.filter-link:last-child {
-	border-left: 0;
-	padding-left: 0;
-}
-
-.tops-menu-link {
-	width: 100%;
-	display: block;
+.filter-link a {
 	text-decoration: none;
-	color: var(--gradient-base-accent-1);
+	color: black; /* Dark text color */
+	font-weight: 400; /* Make text bolder */
 }
 
-.tops-menu-link:hover {
-	text-decoration: underline;
+.filter-link.current-link {
+	background-color: #a9a5a5; /* Highlight color */
+	border-color: white;
+	color: white;
 }
 
-.tops-menu-link.list-menu__item--active {
-	font-weight: var(--font-body-weight-bold);
+.filter-link.current-link a {
+	color: white; /* Ensure link text is white */
 }
 
-.new-filter-menu-desktop {
-	display: none;
+.filter-link:hover {
+	/* Remove hover effects */
 }
+
+.filter-link a:hover {
+	/* Remove hover effects */
+}
+
+/* countdown adjustments */
 
 @media screen and (min-width: 990px) {
 
