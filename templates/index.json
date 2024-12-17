@@ -125,12 +125,12 @@
         "slide_gaUfH4": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/14_928f27d7-89c2-40d6-8f32-faade80111b4.jpg",
-            "mobile_image": "shopify://shop_images/copy_3_f26b87d2-68fc-4f8c-9f27-1ed4fa734228.jpg",
+            "image": "shopify://shop_images/2_7569414c-42f7-4d4e-936f-8c00a321f043.jpg",
+            "mobile_image": "shopify://shop_images/copy_5_1_fadacfa3-f1fe-4c07-b9a1-53d8223f205d.jpg",
             "left_position": 50,
             "bottom_position": 20,
-            "desktop_left_position": 25,
-            "desktop_bottom_position": 40,
+            "desktop_left_position": 50,
+            "desktop_bottom_position": 20,
             "show_lock": false,
             "button_label": "SHOP NOW",
             "link": "shopify://collections/astra",
@@ -327,7 +327,7 @@
         "image_JnihJ6": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/restock_2.jpg",
+            "image": "shopify://shop_images/copy_1_5bb7e3cf-f752-4da3-91db-11b17fe87736.jpg",
             "alt": "Flash sale up to 35 % off photo",
             "link": "MATCHING SETS",
             "url": "shopify://collections/sets"
