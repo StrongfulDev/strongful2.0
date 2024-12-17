@@ -552,7 +552,7 @@
 		/* color: #dc6b9f; pink month */
 		direction: ltr;
 		text-decoration: none;
-		font-weight: var(--font-body-weight-bold);
+		/* font-weight: var(--font-body-weight-bold); */
 	}
 
 	.header-block-list-element:first-child .mega-menu__content.fix-direction ul:nth-child(2) li a {
