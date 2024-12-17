@@ -262,65 +262,6 @@
         "padding_bottom": 0
       }
     },
-    "customer_slideshow_4HiHHh": {
-      "type": "customer-slideshow",
-      "blocks": {
-        "slide_yJAGUx": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/9de4d0d0a874d0061be878842cb2c4bd_2c953ab3-edfe-436f-a4d3-85bf46af79ef.jpg",
-            "mobile_image": "shopify://shop_images/dccef2babfffeab0c3edd02859402684_b5ee2c64-5e2e-4972-8abf-b15c0c1ea4de.jpg",
-            "button_label": "הרשמה / התחברות",
-            "login_button_label": "SHOP NOW",
-            "link": "",
-            "login_link": "",
-            "show_text_box": true,
-            "color_scheme": "background-1",
-            "logged_in_color_scheme": "background-1",
-            "whole_slide_link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_NApMXW": {
-          "type": "slide",
-          "settings": {
-            "button_label": "Button label",
-            "login_button_label": "SHOP NOW",
-            "link": "",
-            "login_link": "",
-            "show_text_box": true,
-            "color_scheme": "background-1",
-            "logged_in_color_scheme": "background-1",
-            "whole_slide_link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "text_alignment_mobile": "center"
-          }
-        }
-      },
-      "block_order": [
-        "slide_yJAGUx",
-        "slide_NApMXW"
-      ],
-      "disabled": true,
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "adapt_image",
-        "slider_visual": "counter",
-        "auto_rotate": false,
-        "change_slides_speed": 9,
-        "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand",
-        "padding_top": 0,
-        "padding_bottom": 36
-      }
-    },
     "our_collection_list_v2_mK6kUx": {
       "type": "our-collection-list-v2",
       "blocks": {
@@ -372,7 +313,7 @@
         "heading_size": "h1",
         "heading_type": "heading_type_default",
         "image_ratio": "adapt",
-        "columns_mobile": 2,
+        "columns_mobile": 4,
         "columns_desktop": 4,
         "color_scheme": "background-1",
         "is_full_width": true,
@@ -884,6 +825,65 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "customer_slideshow_4HiHHh": {
+      "type": "customer-slideshow",
+      "blocks": {
+        "slide_yJAGUx": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/9de4d0d0a874d0061be878842cb2c4bd_2c953ab3-edfe-436f-a4d3-85bf46af79ef.jpg",
+            "mobile_image": "shopify://shop_images/dccef2babfffeab0c3edd02859402684_b5ee2c64-5e2e-4972-8abf-b15c0c1ea4de.jpg",
+            "button_label": "הרשמה / התחברות",
+            "login_button_label": "SHOP NOW",
+            "link": "",
+            "login_link": "",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "logged_in_color_scheme": "background-1",
+            "whole_slide_link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_NApMXW": {
+          "type": "slide",
+          "settings": {
+            "button_label": "Button label",
+            "login_button_label": "SHOP NOW",
+            "link": "",
+            "login_link": "",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "logged_in_color_scheme": "background-1",
+            "whole_slide_link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_yJAGUx",
+        "slide_NApMXW"
+      ],
+      "disabled": true,
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 9,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -891,7 +891,6 @@
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9",
     "slideshow_gwXDrF",
     "collection_list_w4D6TE",
-    "customer_slideshow_4HiHHh",
     "our_collection_list_v2_mK6kUx",
     "featured_collection_XDhFHB",
     "customer_slideshow_wFcfK7",
@@ -904,6 +903,7 @@
     "slideshow_dtfFDm",
     "collection_list_QrC4z9",
     "4371b550-969b-4828-986d-71697fc53ef0",
-    "featured_blog_3p3kGH"
+    "featured_blog_3p3kGH",
+    "customer_slideshow_4HiHHh"
   ]
 }
