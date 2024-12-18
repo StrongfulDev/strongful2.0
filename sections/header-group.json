@@ -153,6 +153,29 @@
             "shop_all_title": "Shop all sets"
           }
         },
+        "menu_item_6KwyXY": {
+          "type": "menu_item",
+          "settings": {
+            "above_shop_all_link": "shopify://collections/accessories",
+            "show_on_mobile": true,
+            "order": "",
+            "small_font": false,
+            "menu": "trending",
+            "menu_second": "",
+            "menu_third": "",
+            "title": "קני לפי",
+            "item_class": "",
+            "title_link": "",
+            "desktop_links_image_1": "shopify://shop_images/14_936f9c13-65c1-44f8-94ca-1f1eaec89341.jpg",
+            "desktop_links_image_1_link": "shopify://collections/birthday-week",
+            "desktop_links_image_2_link": "",
+            "mobile_title": "אקססוריז",
+            "main_link": "",
+            "main_title": "",
+            "shop_all_link": "shopify://collections/accessories",
+            "shop_all_title": ""
+          }
+        },
         "ba94928e-5cd1-47f5-9c0a-28ea47285f01": {
           "type": "menu_item",
           "settings": {
@@ -297,6 +320,7 @@
         "menu_item_WN8KQL",
         "menu_item_9A93XE",
         "fc929aa6-aab6-4c25-be13-8267425330c3",
+        "menu_item_6KwyXY",
         "ba94928e-5cd1-47f5-9c0a-28ea47285f01",
         "4d0d7344-0f17-4600-86d8-3481f2a1c4a1",
         "8878d4cf-d83f-42a2-90b9-ddebceb7501c",
