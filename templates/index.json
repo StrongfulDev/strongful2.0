@@ -236,7 +236,6 @@
         "featured_collection_9c9fAw",
         "featured_collection_CyY976"
       ],
-      "disabled": true,
       "custom_css": [
         ".collection-list grid contains-card contains-card--collection contains-card--standard grid--4-col-desktop grid---col-tablet-down slider slider--desktop slider--tablet grid--peek collection-list--4-items {left: 200px;}"
       ],
@@ -251,7 +250,7 @@
         "full_width": false,
         "collection": "cyber-monday-up-to-50-off",
         "show_view_all": true,
-        "view_all_text": "",
+        "view_all_text": "SHOP ALL",
         "view_all_style": "link",
         "view_all_location": "bottom",
         "enable_desktop_slider": false,
