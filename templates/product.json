@@ -25,8 +25,8 @@
         "5ec0a264-e4fc-4a8d-92bc-f2f9223694f5": {
           "type": "sale",
           "settings": {
-            "logged_in_text": "<p>OUR 4th BIRTHDAY</p><p>קני ב400₪ שלמי ב300₪</p>",
-            "logged_out_text": "<p>OUR 4th BIRTHDAY</p><p>קני ב400₪ שלמי ב300₪</p>",
+            "logged_in_text": "<p>OUR 4th BIRTHDAY</p><p>קני ב400₪ שלמי 300₪</p>",
+            "logged_out_text": "<p>OUR 4th BIRTHDAY</p><p>קני ב400₪ שלמי 300₪</p>",
             "logged_in_text_second": "<p>פריט זה הינו בהזמנה מוקדמת </p><p>(משלוח 1-10 ימי עסקים)</p>",
             "log_in": "",
             "small_text": "",
