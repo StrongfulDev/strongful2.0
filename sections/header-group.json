@@ -226,6 +226,7 @@
         },
         "70af0289-2846-42bd-93c5-5598239a8ddc": {
           "type": "menu_item",
+          "disabled": true,
           "settings": {
             "above_shop_all_link": "shopify://collections/outlet",
             "show_on_mobile": true,
