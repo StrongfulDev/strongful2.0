@@ -548,7 +548,7 @@
 	}
 
 	.header-block-list-element:first-child .mega-menu__content.fix-direction ul:nth-child(2)  {
-		color: firebrick;
+		/* color: firebrick; */
 		/* color: #dc6b9f; pink month */
 		direction: ltr;
 		text-decoration: none;
@@ -557,7 +557,7 @@
 
 	.header-block-list-element:first-child .mega-menu__content.fix-direction ul:nth-child(2) li a {
 		direction: ltr;
-				font-weight: var(--font-body-weight-bold);
+				/* font-weight: var(--font-body-weight-bold); */
 
 
 
