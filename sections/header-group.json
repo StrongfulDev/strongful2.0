@@ -130,29 +130,6 @@
             "shop_all_title": ""
           }
         },
-        "menu_item_9A93XE": {
-          "type": "menu_item",
-          "settings": {
-            "above_shop_all_link": "shopify://collections/sets",
-            "show_on_mobile": true,
-            "order": "",
-            "small_font": false,
-            "menu": "temp-new-sale-header-menu",
-            "menu_second": "",
-            "menu_third": "",
-            "title": "SALE",
-            "item_class": "",
-            "title_link": "",
-            "desktop_links_image_1": "shopify://shop_images/17_3d91bb8c-2caa-4d90-9272-23669155f8eb.jpg",
-            "desktop_links_image_1_link": "shopify://collections/balance-2-0",
-            "desktop_links_image_2_link": "",
-            "mobile_title": "SALE",
-            "main_link": "",
-            "main_title": "",
-            "shop_all_link": "",
-            "shop_all_title": ""
-          }
-        },
         "fc929aa6-aab6-4c25-be13-8267425330c3": {
           "type": "menu_item",
           "settings": {
@@ -248,6 +225,29 @@
             "shop_all_title": "אאוטלט"
           }
         },
+        "menu_item_9A93XE": {
+          "type": "menu_item",
+          "settings": {
+            "above_shop_all_link": "shopify://collections/sets",
+            "show_on_mobile": true,
+            "order": "",
+            "small_font": false,
+            "menu": "temp-new-sale-header-menu",
+            "menu_second": "",
+            "menu_third": "",
+            "title": "SALE",
+            "item_class": "",
+            "title_link": "",
+            "desktop_links_image_1": "shopify://shop_images/17_3d91bb8c-2caa-4d90-9272-23669155f8eb.jpg",
+            "desktop_links_image_1_link": "shopify://collections/balance-2-0",
+            "desktop_links_image_2_link": "",
+            "mobile_title": "SALE",
+            "main_link": "",
+            "main_title": "",
+            "shop_all_link": "",
+            "shop_all_title": ""
+          }
+        },
         "menu_item_UMakwC": {
           "type": "menu_item",
           "settings": {
@@ -320,11 +320,11 @@
         "bd053c52-574f-435e-be3a-a4a74c72b169",
         "menu_item_WN8KQL",
         "4d0d7344-0f17-4600-86d8-3481f2a1c4a1",
-        "menu_item_9A93XE",
         "fc929aa6-aab6-4c25-be13-8267425330c3",
         "ba94928e-5cd1-47f5-9c0a-28ea47285f01",
         "8878d4cf-d83f-42a2-90b9-ddebceb7501c",
         "70af0289-2846-42bd-93c5-5598239a8ddc",
+        "menu_item_9A93XE",
         "menu_item_UMakwC",
         "93921bbc-631f-46c2-a66b-9df086c3f7a0",
         "69313e8a-8818-485d-9c44-529f1b10ccdd",
