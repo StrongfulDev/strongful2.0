@@ -12,8 +12,8 @@
     "main": {
       "type": "main-blog",
       "settings": {
-        "tile_image_one": "shopify://shop_images/5_270ac1b0-6cd9-4095-a48b-e58b4d07ac1e.jpg",
-        "tile_image_one_link": "shopify://collections/birthday-week",
+        "tile_image_one": "shopify://shop_images/7_6c7e7f4e-f8b7-468d-90c9-66ee72a426dc.jpg",
+        "tile_image_one_link": "shopify://collections/balance-2-0",
         "tile_image_two": "shopify://shop_images/18.jpg",
         "tile_image_two_link": "shopify://collections/astra",
         "layout": "grid",

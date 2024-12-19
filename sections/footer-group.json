@@ -1,21 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.footer.name",
   "type": "footer",
@@ -26,7 +17,7 @@
         "0e803c81-2108-4d07-87a5-d8e569e452f6": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/9ed861fba4dae099b0b04754bbc299cc.png",
+            "image": "shopify://shop_images/9ed861fba4dae099b0b04754bbc299cc.png",
             "image_width": 40,
             "alignment": "center"
           }
@@ -74,11 +65,11 @@
           "type": "blog_and_newsletter",
           "settings": {
             "blog_and_newsletter_subtitle": "",
-            "alist_image": "shopify:\/\/shop_images\/dd7103cf71ef5f8420d4b4ce90fca1ef.jpg",
-            "blog_image": "shopify:\/\/shop_images\/StrongBlog.jpg",
-            "alist_url": "shopify:\/\/pages\/loyalty",
+            "alist_image": "shopify://shop_images/Frame_252.jpg",
+            "blog_image": "shopify://shop_images/Frame_253.jpg",
+            "alist_url": "shopify://pages/loyalty",
             "newsletter_url": "",
-            "blog_url": "shopify:\/\/blogs\/blog",
+            "blog_url": "shopify://blogs/blog",
             "alist_text": "מועדון לקוחות",
             "blog_text": "בלוג",
             "newsletter_text": "",
