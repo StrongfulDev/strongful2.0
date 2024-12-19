@@ -27,7 +27,7 @@
           "settings": {
             "logged_in_text": "<p>OUR 4th BIRTHDAY</p><p>קני ב400₪ שלמי 300₪</p>",
             "logged_out_text": "<p>OUR 4th BIRTHDAY</p><p>קני ב400₪ שלמי 300₪</p>",
-            "logged_in_text_second": "<p>פריט זה הינו בהזמנה מוקדמת </p><p>(משלוח 1-10 ימי עסקים)</p>",
+            "logged_in_text_second": "",
             "log_in": "",
             "small_text": "",
             "small_logged_in_text": "",
