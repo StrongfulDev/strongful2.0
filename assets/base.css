@@ -4209,16 +4209,21 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 
 #BIS_trigger {
     position: absolute;
-    top: 10px;
-    font-size: calc(var(--font-body-size-medium)* 1.1);
+    font-size: calc(var(--font-body-size-medium) * 1.1);
     background: none;
+    bottom: 12rem;
     border: none;
     text-decoration: underline;
-    padding: 0;
+    padding: 1rem;
     margin: 0;
-    line-height: 0 !important;
+    line-height: 1.5; /* Adjust line-height for better readability */
     color: var(--gradient-base-accent-1);
     display: block !important;
+    max-width: 100%; /* Ensure it doesn't exceed the container width */
+    width: auto; /* Allow the element to take up necessary width */
+    white-space: nowrap; /* Prevent wrapping */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
 }
 
 #BIS_trigger:hover {
