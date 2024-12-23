@@ -300,12 +300,17 @@
         "shop_all_title": ""
       }
     },
+    "17349593080d3cb7ee": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
     "17326032637872c61a": {
       "type": "apps",
       "blocks": {
         "essential_countdown_app_block_6YiGEn": {
           "type": "shopify://apps/essential-countdown/blocks/app-block/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
-          "disabled": true,
           "settings": {
             "id": "cm46qyio37425219x6qf5dcjyr"
           }
@@ -332,6 +337,7 @@
   "order": [
     "announcement-bar",
     "header",
+    "17349593080d3cb7ee",
     "17326032637872c61a",
     "7503b704-2110-400e-bc52-a2190d224c23"
   ]
