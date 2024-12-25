@@ -125,12 +125,12 @@
         "slide_gaUfH4": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/5_8f93b281-acd8-4077-b6ac-37464ec395f4.jpg",
+            "image": "shopify://shop_images/6_fcf0b7f0-4c7d-43fb-96f3-53b7f803f35e.jpg",
             "mobile_image": "shopify://shop_images/6_df19b81c-10e1-4acc-a706-e434691d9343.jpg",
             "left_position": 26,
             "bottom_position": 47,
-            "desktop_left_position": 76,
-            "desktop_bottom_position": 35,
+            "desktop_left_position": 77,
+            "desktop_bottom_position": 36,
             "show_lock": false,
             "button_label": "SHOP NOW",
             "link": "shopify://collections/the-new-oasis",
