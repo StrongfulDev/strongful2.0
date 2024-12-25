@@ -14,20 +14,6 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
-        "announcement_nc7YCY": {
-          "type": "announcement",
-          "settings": {
-            "toggle_main_font": false,
-            "toggle_sub_font": false,
-            "main_text": "Welcome to our store",
-            "sub_text": "Welcome to our store",
-            "text_alignment": "center",
-            "main_text_direction": "rtl",
-            "sub_text_direction": "rtl",
-            "link": "",
-            "color_scheme": "accent-1"
-          }
-        },
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
@@ -72,7 +58,6 @@
         }
       },
       "block_order": [
-        "announcement_nc7YCY",
         "announcement-bar-0",
         "7c37c998-83a9-46d6-91fd-3ceaaab10008",
         "8a66318a-92fb-4fe3-8af2-41e36854cfdb"
