@@ -125,10 +125,10 @@
         "slide_gaUfH4": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/15_88072190-6b35-49fe-a138-845af83533d2.jpg",
+            "image": "shopify://shop_images/5_8f93b281-acd8-4077-b6ac-37464ec395f4.jpg",
             "mobile_image": "shopify://shop_images/6_df19b81c-10e1-4acc-a706-e434691d9343.jpg",
-            "left_position": 50,
-            "bottom_position": 15,
+            "left_position": 26,
+            "bottom_position": 47,
             "desktop_left_position": 76,
             "desktop_bottom_position": 35,
             "show_lock": false,
