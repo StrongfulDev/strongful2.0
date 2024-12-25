@@ -33,12 +33,12 @@
           "settings": {
             "toggle_main_font": true,
             "toggle_sub_font": true,
-            "main_text": "OASIS",
-            "sub_text": "TOMORROW AT 18:00",
+            "main_text": "END OF 2024",
+            "sub_text": "24% OFF EVERYTHING",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "ltr",
-            "link": "shopify://collections/new-in",
+            "link": "shopify://collections/24-off",
             "color_scheme": "accent-1"
           }
         },
