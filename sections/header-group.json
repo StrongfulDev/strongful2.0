@@ -38,7 +38,7 @@
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "ltr",
-            "link": "shopify://collections/the-new-oasis",
+            "link": "shopify://collections/new-in",
             "color_scheme": "accent-1"
           }
         },
@@ -114,7 +114,7 @@
             "show_on_mobile": true,
             "order": "",
             "small_font": false,
-            "menu": "collection-menu-header-2",
+            "menu": "collection-menu-header",
             "menu_second": "",
             "menu_third": "",
             "title": "קולקציות",
@@ -238,7 +238,7 @@
             "title": "SALE",
             "item_class": "",
             "title_link": "",
-            "desktop_links_image_1": "shopify://shop_images/18_96e2dc20-3296-43c6-af04-2ce0d27fea24.jpg",
+            "desktop_links_image_1": "shopify://shop_images/19_eb202e05-d9b0-434d-8985-32f7e87a1c28.jpg",
             "desktop_links_image_1_link": "shopify://collections/the-new-oasis",
             "desktop_links_image_2_link": "",
             "mobile_title": "SALE",
