@@ -2884,7 +2884,7 @@ transform: translateX(-300%);
 }
 
 .header-block-list-element:first-child .header__menu-item span {
-		/* color: firebrick; */
+		color: firebrick;
 }
 
 .header__menu-item span {
