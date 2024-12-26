@@ -767,7 +767,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                                  class="mega-menu">
                                             <summary
                                                     class="header__menu-item list-menu__item link focus-inset">
-                                                    <script> console.log("shop all link :","{{ block.settings.shop_all_link}}") </script>
+                                                    {% comment %} <script> console.log("shop all link :","{{ block.settings.shop_all_link}}") </script> {% endcomment %}
                                                 {% if block.settings.shop_all_link != blank %}
                                                     <a href="{{ block.settings.shop_all_link }}" class="{{ section.settings.menu_type_desktop }}-header__menu-item">
                                                         {{ block.settings.title | escape }}
