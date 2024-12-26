@@ -62,54 +62,55 @@
                             endif
                         endif
                     -%}
-                    {% comment %}
-                      Add a special condition for "oasisThreeBuildUp" + no stock to show a BIS trigger
-                    {% endcomment %}
-                    {% if product.tags contains 'oasisThreeBuildUp' and product.selected_or_first_available_variant.available == false %}
-                      <!-- Trigger BIS pop-up -->
-                      <a
-                        href="#"
-                        class="product-form__submit button button--full-width BIS_trigger"
-                        data-product-data="{{ product | json | escape }}"
-                      >
-                        הרשמי לקבלת התראה
-                      </a>
-                    {% else %}
-                      <!-- Existing add-to-cart logic -->
-                      <button
-                        id="ProductSubmitButton-{{ section_id }}"
-                        type="submit"
-                        name="add"
-                        class="product-form__submit button button--full-width
-                          {% if block.settings.show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}
-                          {% if product.tags contains member_tag and members_only == true %} fake-disabled{% endif %}"
-                        {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
-                          disabled
-                        {% endif %}
-                        {% if product.tags contains member_tag and members_only == true %}
-                          disabled
-                        {% endif %}
-                        {% if loggedIn == false %}
-                          disabled
-                        {% endif %}
-                      >
-                        <span class="{% if product.tags contains member_tag and members_only == true and members_only_sale_active == true %}account-toggler-site-wide{% endif %} fix-direction">
-                          {%- if product.tags contains member_tag and members_only == true -%}
-                            {% if members_only_sale_active == true %}
-                              {{ 'products.product.members_only' | t }} <span class="link account-toggler-site-wide">התחברי / הרשמי</span>
-                            {% else %}
-                              {{ block.settings.members_only_sale_over_text }}
+                    <button
+                            id="ProductSubmitButton-{{ section_id }}"
+                            type="submit"
+                            name="add"
+                            class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}{% if product.tags contains member_tag and members_only == true %} fake-disabled{% endif %}"
+                            {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
+                                disabled
                             {% endif %}
-                          {% else %}
-                            {%- if product.selected_or_first_available_variant.available == false %}
-                              {{ 'products.product.sold_out' | t }}
-                            {%- else %}
-                              {{ 'products.product.add_to_cart' | t }}
-                            {%- endif -%}
-                          {% endif %}
-                        </span>
-                      </button>
+                            {% if product.tags contains member_tag and members_only == true %}
+                                disabled
+                            {% endif %}
+                            {% if loggedIn == false %}
+                                disabled
+                            {% endif %}
+                    >
+            <span class="{% if product.tags contains member_tag and members_only == true and members_only_sale_active == true %}account-toggler-site-wide{% endif %} fix-direction">
+              {%- if product.tags contains member_tag and members_only == true -%}
+                  {% if members_only_sale_active == true %}
+                        {{ 'products.product.members_only' | t }} <span class="link account-toggler-site-wide">התחברי / הרשמי</span>
+                    {% else %}
+                        {{ block.settings.members_only_sale_over_text }}
                     {% endif %}
+          
+
+
+
+              {%- elsif product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
+                  {{ 'products.product.sold_out' | t }}
+                {%- else -%}
+                  {% if loggedIn == false %}
+                        {{ 'products.product.outlet_members_only' | t }} <span class="link account-toggler-site-wide">התחברי / הרשמי</span>
+                    {% else %}
+                        {{ 'products.product.add_to_cart' | t }}
+                    {% endif %}
+              {%- endif -%}
+            </span>
+                        <div class="loading-overlay__spinner hidden">
+                            <svg
+                                    aria-hidden="true"
+                                    focusable="false"
+                                    class="spinner"
+                                    viewBox="0 0 66 66"
+                                    xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <circle class="path" fill="none" stroke-width="6" cx="33" cy="33"
+                                        r="30"></circle>
+                            </svg>
+                        </div>
+                    </button>
                     {%- if block.settings.show_dynamic_checkout -%}
                         {{ form | payment_button }}
                     {%- endif -%}
