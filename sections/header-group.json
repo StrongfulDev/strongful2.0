@@ -33,8 +33,8 @@
           "settings": {
             "toggle_main_font": true,
             "toggle_sub_font": true,
-            "main_text": "END OF 2024",
-            "sub_text": "24% OFF EVERYTHING",
+            "main_text": "24% OFF",
+            "sub_text": "ON SELECTED ITEMS",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "ltr",
