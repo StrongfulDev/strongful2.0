@@ -127,8 +127,8 @@
           "settings": {
             "image": "shopify://shop_images/8_a6db7c92-1e97-4c43-987e-658783f4596f.jpg",
             "mobile_image": "shopify://shop_images/8_9b596bbe-19e2-433e-9016-47d237132308.jpg",
-            "left_position": 50,
-            "bottom_position": 25,
+            "left_position": 25,
+            "bottom_position": 55,
             "desktop_left_position": 76,
             "desktop_bottom_position": 44,
             "show_lock": false,
