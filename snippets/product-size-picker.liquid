@@ -52,10 +52,10 @@
                             }}
                         </a>
                         <div class="product_details__info">
-                            {% if product.tags contains 'badge__new' %}
-                                <span class="new-product-span">
-                                {{ 'products.product.new' | t }}
-                            </span>
+                          {% if card_product.tags contains 'badge__new' %}
+                    <span class="new-product-span" style="{% if card_product.tags contains 'oasisThreeBuildUp'%}background-color: gray; color: white;{% endif %}">
+                        {{ 'products.product.new' | t }}
+                    </span>
                             {% endif %}
                             <p class="product_details-titles product-title">{{ product.title }}</p>
                             {% if comes_with_matching_outfit != blank %}
