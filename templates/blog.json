@@ -12,10 +12,10 @@
     "main": {
       "type": "main-blog",
       "settings": {
-        "tile_image_one": "shopify://shop_images/23.jpg",
-        "tile_image_one_link": "shopify://collections/sets",
-        "tile_image_two": "shopify://shop_images/a40ea1b4acde1744ca52d0ccdf0dc1bf.jpg",
-        "tile_image_two_link": "shopify://collections/best-seller-internal-use",
+        "tile_image_one": "shopify://shop_images/11_4d3a9ce9-acb8-4670-b329-a6320881fb0f.jpg",
+        "tile_image_one_link": "shopify://collections/the-new-oasis",
+        "tile_image_two": "shopify://shop_images/12_8f3bc028-450a-43f5-9879-831ce88cd3ca.jpg",
+        "tile_image_two_link": "shopify://collections/sets",
         "layout": "grid",
         "show_image": true,
         "image_height": "adapt",
