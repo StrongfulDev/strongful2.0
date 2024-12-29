@@ -156,7 +156,7 @@
             "show_lock": false,
             "button_label": "SHOP NOW",
             "link": "shopify://collections/sets",
-            "show_text_box": true,
+            "show_text_box": false,
             "color_scheme": "inverse",
             "whole_slide_link": "",
             "button_style_secondary": false,
