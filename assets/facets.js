@@ -457,3 +457,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+	let endlessCollection = new AjaxinateMin({
+		container: "#product-grid",
+		pagination: ".infinite_next",
+		offset: 1000,
+		callback: removeDeadProduct,
+	});
+});

@@ -160,8 +160,7 @@
         <div class="product-grid-container" id="ProductGridContainer">
             {%- paginate collection.products by section.settings.products_per_page -%}
                 {%- if collection.products.size == 0 -%}
-                    <div class="collection collection--empty page-width" id="product-grid"
-                         data-id="{{ section.id }}">
+                    <div class="collection collection--empty page-width" id="product-grid" data-id="{{ section.id }}">
                         <div class="loading-overlay gradient"></div>
                         <div class="title-wrapper center">
                             <h2 class="title title--primary">
@@ -189,29 +188,23 @@
                             {%- for product in collection.products -%}
                                 {%- liquid
                                     assign lazy_load = false
-                                    if forloop.index > 2
-                                        assign lazy_load = true
-                                    endif
-
-                                    if product.tags contains 'loyalty-only'
-                                        assign loggedIn = false
-                                        if customer
-                                            assign loggedIn = true
-                                        endif
-                                    else
-                                        assign loggedIn = true
-                                    endif
-
-                                    assign card_announcement = ""
-                                    if settings.show_card_collection_announcement
-                                        if settings.custom_collection_announcement != blank
-                                            assign card_announcement = settings.custom_collection_announcement
-                                        endif
-
-                                        if settings.members_only_announcement != blank
-                                            assign members_announcement = settings.members_only_announcement
-                                        endif
-                                    endif
+                                    assign show_quick_add = section.settings.enable_quick_add
+                                    assign quick_add_type = section.settings.quick_add_type
+                                    assign quick_add_type_mobile = section.settings.quick_add_type_mobile
+                                    assign section_id = section.id
+                                    assign image_count = section.settings.image_count
+                                    assign card_banner_text = card_announcement
+                                    assign members_banner_text = members_announcement
+                                    assign card_header_size = section.settings.card_header_size
+                                    assign announcement_tag = settings.announcement_tag
+                                    assign second_announcement_tag = settings.second_announcement_tag
+                                    assign custom_collection_second_announcement = settings.custom_collection_second_announcement
+                                    assign pick_size_text = section.settings.pick_size_text
+                                    assign quick_add_text = section.settings.quick_add_text
+                                    assign quick_add_accessories_text = section.settings.quick_add_accessories_text
+                                    assign members_only_sale = settings.members_only_sale
+                                    assign members_only_sale_active = settings.members_only_sale_active
+                                    assign comes_with_matching_outfit = settings.comes_with_matching_outfit
                                 -%}
 
                                 {% if forloop.index0 == 8 or forloop.index0 == 20 or forloop.index0 == 34 or forloop.index0 == 60 %}
@@ -307,6 +300,12 @@
                         {%- if paginate.pages > 1 -%}
                             {% render 'pagination', paginate: paginate, anchor: '' %}
                         {%- endif -%}
+
+                        {% if paginate.next %}
+                            <div class="infinite_next" style="display: none;">
+                                <a href="{{ paginate.next.url }}" rel="next">Next</a>
+                            </div>
+                        {% endif %}
                     </div>
                 {%- endif -%}
             {%- endpaginate -%}
