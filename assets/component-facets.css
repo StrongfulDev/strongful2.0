@@ -1641,7 +1641,7 @@ summary .icon-caret {
 	}
 
   .facets__disclosure-vertical[data-index='1'] {
-    display: none;
+    /* display: none; */
   }
 
   .facets-vertical .facets__summary {
