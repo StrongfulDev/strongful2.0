@@ -1414,7 +1414,7 @@ details.mobile-facets__details, div.mobile-facets__details {
 
 .mobile-facets__details:nth-child(2) {
   /*border-top: 1px solid var(--border-global-color);*/
-	display: none;
+	/* display: none; */
 }
 
 .mobile-facets__summary {
