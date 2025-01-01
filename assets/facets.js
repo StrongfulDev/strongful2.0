@@ -79,39 +79,31 @@ class FacetFiltersForm extends HTMLElement {
   }
 
   static renderProductCount(html) {
-    const count = new DOMParser().parseFromString(html, 'text/html').getElementById('ProductCount').innerHTML
-    const container = document.getElementById('ProductCount');
-    const containerDesktop = document.getElementById('ProductCountDesktop');
-    container.innerHTML = count;
-    container.classList.remove('loading');
-    if (containerDesktop) {
-      containerDesktop.innerHTML = count;
-      containerDesktop.classList.remove('loading');
-    }
+		const count = new DOMParser().parseFromString(html, "text/html").getElementById("ProductCount").innerHTML;
+		const container = document.getElementById("ProductCount");
+		const containerDesktop = document.getElementById("ProductCountDesktop");
+		container.innerHTML = count;
+		container.classList.remove("loading");
+		if (containerDesktop) {
+			containerDesktop.innerHTML = count;
+			containerDesktop.classList.remove("loading");
+		}
 
-	  let endlessCollection = new AjaxinateMin({
-		  container: '#product-grid',
-		  pagination: '.infinite_next',
-	  });
+		let endlessCollection = new AjaxinateMin({
+			container: "#product-grid",
+			pagination: ".infinite_next",
+		});
 
 		let countNumber = parseInt($(".mobile-facets__open .custom-active-facets").text());
-	  if (countNumber > 0) {
+		if (countNumber > 0) {
 			$(".no-js-hidden.button.button--primary").removeClass("button--disabled").html("אישור");
-	  } else {
+		} else {
 			$(".no-js-hidden.button.button--primary").addClass("button--disabled").html("נא לבחור סינון");
-	  }
+		}
 
-	  // remove ".select-items" identical siblings
-	  $(".select-items").each(function() {
-			let $this = $(this);
-		  $this
-			  .siblings(".select-items")
-			  .filter(function() {
-				  return $(this).html() === $this.html();
-			  })
-			  .remove();
-	  });
-  }
+		// Hide the loading overlay/spinner
+		$(".loading-overlay__spinner, .loading-overlay__gradient").addClass("hidden");
+	}
 
   static renderFilters(html, event) {
     const parsedHTML = new DOMParser().parseFromString(html, 'text/html');
@@ -406,24 +398,49 @@ function onlyShowIfInStock() {
 }
 
 function checkSortingInputs() {
-	let currentUrl = window.location.href;
+  let currentUrl = window.location.href;
 	if (currentUrl.includes("?")) {
 		let urlSplitOnce = currentUrl.split("?");
-		if (urlSplitOnce[1].includes("sort_by")) {
+		if (urlSplitOnce[1] && urlSplitOnce[1].includes("sort_by")) {
 			let urlSplitTwice = urlSplitOnce[1].split("&");
 			urlSplitTwice.forEach(function (item) {
 				if (item.includes("sort_by")) {
-					let sortValue = item.split("=");
-					document.querySelector(".facet-checkbox__input[value='" + sortValue[1] + "']").setAttribute("checked", "checked");
-					document.querySelector(".mobile-facets__checkbox[value='" + sortValue[1] + "']").setAttribute("checked", "checked");
-					$(".sort_by_desktop_input:checked").parents("details").find(".desktop-facets__arrow-sorting").text("(" + $(".sort_by_desktop_input:checked").siblings(".visually-hidden").text() + ")");
-					$(".sort_by_mobile_input:checked").parents("details").find(".mobile-facets__arrow-sorting").text("(" + $(".sort_by_mobile_input:checked").siblings(".visibility-hidden").text() + ")");
+					let sortValue = item.split("=")[1];
+					// Safely query for desktop and mobile inputs
+					const desktopInput = document.querySelector(".facet-checkbox__input[value='" + sortValue + "']");
+					const mobileInput = document.querySelector(".mobile-facets__checkbox[value='" + sortValue + "']");
+
+					// Only set checked if the element exists
+					if (desktopInput) {
+						desktopInput.setAttribute("checked", "checked");
+					}
+					if (mobileInput) {
+						mobileInput.setAttribute("checked", "checked");
+					}
+
+					// Same idea for the jQuery part
+					if ($(".sort_by_desktop_input:checked").length) {
+						$(".sort_by_desktop_input:checked")
+							.parents("details")
+							.find(".desktop-facets__arrow-sorting")
+							.text("(" + $(".sort_by_desktop_input:checked").siblings(".visually-hidden").text() + ")");
+					}
+					if ($(".sort_by_mobile_input:checked").length) {
+						$(".sort_by_mobile_input:checked")
+							.parents("details")
+							.find(".mobile-facets__arrow-sorting")
+							.text("(" + $(".sort_by_mobile_input:checked").siblings(".visibility-hidden").text() + ")");
+					}
 				}
 			});
 		}
 	}
 
-	document.getElementById("Filter-filter.v.availability-mobile-1").checked = true;
+	// Also wrap this in a null check
+	const availabilityItem = document.getElementById("Filter-filter.v.availability-mobile-1");
+	if (availabilityItem) {
+		availabilityItem.checked = true;
+	}
 }
 
 document.addEventListener("DOMContentLoaded", function() {
