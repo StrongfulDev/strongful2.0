@@ -14,8 +14,8 @@
       "settings": {
         "tile_image_one": "shopify://shop_images/11_4d3a9ce9-acb8-4670-b329-a6320881fb0f.jpg",
         "tile_image_one_link": "shopify://collections/the-new-oasis",
-        "tile_image_two": "shopify://shop_images/12_8f3bc028-450a-43f5-9879-831ce88cd3ca.jpg",
-        "tile_image_two_link": "shopify://collections/sets",
+        "tile_image_two": "shopify://shop_images/84eab1d76b0cb26c490fed392adc371f_2f2506f9-ad24-41f5-bafc-f3fa02b44bfb.png",
+        "tile_image_two_link": "shopify://collections/20-off-selected-items",
         "layout": "grid",
         "show_image": true,
         "image_height": "adapt",
