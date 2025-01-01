@@ -33,12 +33,12 @@
           "settings": {
             "toggle_main_font": true,
             "toggle_sub_font": true,
-            "main_text": "24% OFF",
+            "main_text": "20% OFF",
             "sub_text": "ON SELECTED ITEMS",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "ltr",
-            "link": "shopify://collections/sets",
+            "link": "shopify://collections/20-off-selected-items",
             "color_scheme": "accent-1"
           }
         },
