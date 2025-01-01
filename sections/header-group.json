@@ -74,13 +74,12 @@
       "blocks": {
         "bd053c52-574f-435e-be3a-a4a74c72b169": {
           "type": "url",
-          "disabled": true,
           "settings": {
             "link_text_direction": "Left To Right",
             "show_on_mobile": true,
             "small_font": false,
-            "title": "NEW IN",
-            "title_link": "shopify://collections/astra"
+            "title": "20% OFF",
+            "title_link": "shopify://collections/20-off-selected-items"
           }
         },
         "menu_item_WN8KQL": {
