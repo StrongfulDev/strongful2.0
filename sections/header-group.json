@@ -74,37 +74,12 @@
       "blocks": {
         "bd053c52-574f-435e-be3a-a4a74c72b169": {
           "type": "url",
-          "disabled": true,
           "settings": {
             "link_text_direction": "Left To Right",
             "show_on_mobile": true,
             "small_font": false,
             "title": "20% OFF",
             "title_link": "shopify://collections/20-off-selected-items"
-          }
-        },
-        "menu_item_xtnfBg": {
-          "type": "menu_item",
-          "settings": {
-            "above_shop_all_link": "",
-            "show_on_mobile": true,
-            "order": "",
-            "small_font": false,
-            "menu": "dropdown-bottoms",
-            "menu_second": "",
-            "menu_third": "",
-            "title": "20% OFF",
-            "item_class": "",
-            "title_link": "",
-            "desktop_links_image_1_link": "shopify://collections/the-new-oasis",
-            "desktop_links_image_2": "shopify://shop_images/84eab1d76b0cb26c490fed392adc371f_60214bbf-90cc-4160-861c-a31d04a3baa8.png",
-            "desktop_links_image_2_link": "shopify://collections/20-off-selected-items",
-            "mobile_cover_image": "shopify://shop_images/20e5c3f719da92dc7bfd0c70c57f7186.jpg",
-            "mobile_title": "כל המוצרים",
-            "main_link": "",
-            "main_title": "",
-            "shop_all_link": "",
-            "shop_all_title": ""
           }
         },
         "menu_item_WN8KQL": {
@@ -342,7 +317,6 @@
       },
       "block_order": [
         "bd053c52-574f-435e-be3a-a4a74c72b169",
-        "menu_item_xtnfBg",
         "menu_item_WN8KQL",
         "4d0d7344-0f17-4600-86d8-3481f2a1c4a1",
         "fc929aa6-aab6-4c25-be13-8267425330c3",
