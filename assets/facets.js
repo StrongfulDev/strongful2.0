@@ -472,12 +472,12 @@ document.addEventListener("DOMContentLoaded", function () {
 		$(".details.menu-opening").removeClass("menu-opening");
 	});
 
-	let endlessCollection = new AjaxinateMin({
-		container: "#product-grid",
-		pagination: ".infinite_next",
-		offset: 1000,
-		callback: removeDeadProduct,
-	});
+	// let endlessCollection = new AjaxinateMin({
+	// 	container: "#product-grid",
+	// 	pagination: ".infinite_next",
+	// 	offset: 1000,
+	// 	callback: removeDeadProduct,
+	// });
 });
 
 document.addEventListener("DOMContentLoaded", () => {
