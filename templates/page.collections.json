@@ -211,7 +211,7 @@
         "08e2705a-ec07-4219-8048-db2a3e6a6b80"
       ],
       "custom_css": [
-        ".collection-list-wrapper{display: grid; grid-template-columns: repeat(2, 1fr); /* Default: 2 columns */ gap: 2px;}"
+        ".collection-list-wrapper {display: grid; grid-template-columns: repeat(2, 1fr); /* Default: 2 columns */ gap: 2px; justify-items:center; justify-self:center;}"
       ],
       "settings": {
         "images_or_colors": "colors",
