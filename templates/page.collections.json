@@ -210,7 +210,9 @@
         "f6a715a3-e4b2-46a2-821c-7c1cda8322a6",
         "08e2705a-ec07-4219-8048-db2a3e6a6b80"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".collection-list {display: grid; grid-template-columns: repeat(2, 1fr); /* Default: 2 columns */ gap: 2px;}"
+      ],
       "settings": {
         "images_or_colors": "colors",
         "title": "ALL COLORS",
