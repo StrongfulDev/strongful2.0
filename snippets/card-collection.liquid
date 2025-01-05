@@ -229,9 +229,19 @@
                 </div>
             {% endif %}
         {% elsif imageChecker == 'colors' %}
-        <div class="collection-color-wrapper">
-            <span class="shop-by-color-circle" style="background: {{ value }}"></span>
-        </div>
+            
+            <div class="collection-color-wrapper">
+                <a href="{{ card_collection.url }}" class="shop-by-color-link">
+                    <span class="shop-by-color-circle" style="background: {{ value }}{% if value == '#ffffff' %}; box-shadow: 0 0 5px rgba(0, 0, 0, 0.92){% endif %}"></span>
+                    <span class="shop-by-color-label">
+                        {%- if card_collection.title != blank -%}
+                            {{- card_collection.title | escape -}}
+                        {%- else -%}
+                            {{ 'onboarding.collection_title' | t }}
+                        {%- endif -%}
+                    </span>
+                </a>
+            </div>
         {% endif %}
         {% if card_style == 'card' %}
             {% if show_collection_title == true %}
@@ -243,19 +253,20 @@
                                     role="link" aria-disabled="true"
                                 {% else %}
                                     href="{{ card_collection.url }}"
+                                    class="full-unstyled-link pointer"
                                 {% endif %}
-                                class="full-unstyled-link pointer"
                         >
                             {%- if card_collection.title != blank -%}
                                 {{- card_collection.title | escape -}}
                             {%- else -%}
                                 {{ 'onboarding.collection_title' | t }}
+                                <script>console.log("collection title :",onboarding.collection.title);</script>
                             {%- endif -%}
                         </a>
                     </h3>
                 </div>
             </div>
-            {% endif %}
         {% endif %}
-    </div>
+    {% endif %}
+</div>
 </div>
