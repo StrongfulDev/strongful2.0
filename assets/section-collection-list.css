@@ -1,4 +1,4 @@
- #index .collection-list {
+#index .collection-list {
   margin-top: 0;
   margin-bottom: 0;
 	 width: 100%;
@@ -147,7 +147,7 @@
 	width: 3rem;
 	height: 3rem;
 	border-radius: 50%;
-	margin: 0;
+	margin-right: 10px; /* Add space between the circle and the label */
 	display: block;
 }
 .shop-by-color-label {
@@ -156,10 +156,10 @@
 	padding: 6px;
 }
 .collection-color-wrapper {
-    display: grid;
-	grid-template-columns: repeat(2, 1fr);
+    display: flex; /* Change from grid to flexbox */
     align-items: center;
     margin: 10px;
+	width: 70%;
 }
 
 .shop-by-color-link {
