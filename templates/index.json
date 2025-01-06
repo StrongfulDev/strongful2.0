@@ -125,17 +125,17 @@
         "slide_gaUfH4": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/8_a6db7c92-1e97-4c43-987e-658783f4596f.jpg",
-            "mobile_image": "shopify://shop_images/8_9b596bbe-19e2-433e-9016-47d237132308.jpg",
-            "left_position": 25,
-            "bottom_position": 52,
+            "image": "shopify://shop_images/copy_1_98d0bb63-5e8b-4275-a1ec-70b27b4b3b55.jpg",
+            "mobile_image": "shopify://shop_images/10_677860d1-a2b8-4568-a88f-7adff5d4b02f.jpg",
+            "left_position": 50,
+            "bottom_position": 25,
             "desktop_left_position": 76,
             "desktop_bottom_position": 46,
             "show_lock": false,
             "button_label": "SHOP NOW",
-            "link": "shopify://collections/the-new-oasis",
+            "link": "shopify://collections/yoga-and-pilates",
             "show_text_box": false,
-            "color_scheme": "background-1",
+            "color_scheme": "inverse",
             "whole_slide_link": "",
             "button_style_secondary": false,
             "box_align": "middle-center",
@@ -146,6 +146,7 @@
         },
         "slide_AL3x4y": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/9de4d0d0a874d0061be878842cb2c4bd_c3d0661f-06e2-48d1-8723-c29d09d355b1.jpg",
             "mobile_image": "shopify://shop_images/Artboard_1_98cc34ee-9d22-460e-a039-c5231d90b46d.jpg",
