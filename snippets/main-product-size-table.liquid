@@ -1,5 +1,5 @@
 {{ 'size-table.css' | asset_url | stylesheet_tag }}
-<script src="{{ 'size-table.js' | asset_url }}" defer="defer"></script>
+{{ 'size-table.js' | asset_url | script_tag }}
 
 {% assign allSizesAreCm = '*כל המידות בטבלה הן בס"מ' %}
 

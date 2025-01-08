@@ -96,6 +96,9 @@
   </ul>
 {% endunless %}
 
+{% unless product.tags contains 'noSizeTable' %}
+  <p class="size-table-toggler pointer">{{ 'products.product.size_table' | t }}</p>
+{% endunless %}
 {%- unless product.has_only_default_variant -%}
   {%- if block.settings.picker_type == 'button' -%}
     <variant-radios
@@ -138,9 +141,6 @@
                 {% endif %}
               </span>
               <div class="size-table-stock-container">
-                {% unless product.tags contains 'noSizeTable' %}
-                  <p class="size-table-toggler pointer">{{ 'products.product.size_table' | t }}</p>
-                {% endunless %}
               </div>
             </legend>
           {% endfor %}

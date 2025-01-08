@@ -38,7 +38,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
     {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
     {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
     {{ 'component-model-switcher.css' | asset_url | stylesheet_tag }}
-    <script src="{{ 'component-swiper.js' | asset_url }}" defer="defer" async="async"></script>
+   {{ 'component-swiper.js' | asset_url  | script_tag }}
     {{ 'component-model-switcher.js' | asset_url | script_tag }}
 
     {% unless product.tags contains 'noSimilar' %}

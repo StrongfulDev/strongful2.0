@@ -1841,11 +1841,17 @@ variant-radios {
 }
 
 .size-table-toggler {
-	font-size: var(--font-body-size-medium);
-	color: var(--gradient-base-accent-3);
-	text-decoration: underline;
-	margin: 0;
-	text-align: left;
+    display: block;
+    font-size: var(--font-body-size-medium);
+    color: var(--gradient-base-accent-3);
+    text-decoration: underline;
+    margin: 0;
+    text-align: left;
+    width: 30%;
+    position: relative;
+    top: 70px;
+    left: 2rem;
+    z-index: 10000;
 }
 
 .gift-card-product-form__input {
