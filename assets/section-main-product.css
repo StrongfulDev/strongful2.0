@@ -2440,7 +2440,7 @@ li.relative-discount {
 
   .similar {
     display: flex;
-    flex-direction: row; /* Ensure items are laid out in a row */
+    flex-wrap: wrap;
     gap: 10px; /* Adjust spacing between items */
   }
 
@@ -2454,14 +2454,48 @@ li.relative-discount {
 
   .similar-child .productVendor {
     margin-top: 5px; /* Adjust spacing between color circle and vendor name */
+    white-space: normal;
   }
 
-  /* Optional: Hide scrollbar for a cleaner look */
   .similar-container {
     scrollbar-width: none; /* For Firefox */
   }
 
   .similar-container::-webkit-scrollbar {
     display: none; /* For Chrome, Safari, and Opera */
+  }
+}
+/* Base .similar styles for Desktop (same as before) */
+.similar {
+  display: flex;
+  flex-wrap: wrap; /* Ensure multiple items can wrap */
+  gap: 10px;
+  align-items: flex-start; /* Align all items at the top */
+}
+
+/* Each color item in a vertical stack: circle on top, text below */
+.similar-child {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center;
+}
+
+/* Vendor text below the circle */
+.similar-child .productVendor {
+  margin-top: 5px;
+  white-space: normal; /* Let text wrap if it's too long */
+}
+
+/* Mobile-specific styles */
+@media (max-width: 767px) {
+  .similar-child {
+    width: 30px; /* Ensure all children have the same width */
+  }
+
+  .similar-child .productVendor {
+    max-width: 100%; /* Allow text to wrap within the container */
+    word-wrap: break-word; /* Break long words to prevent overflow */
   }
 }

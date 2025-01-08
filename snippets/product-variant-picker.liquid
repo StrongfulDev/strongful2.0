@@ -9,6 +9,7 @@
   - myBlock: {Object} passing the block information.
   - announcement_tag: {String} tag to be used for announcement (optional).
   - members_only_sale: {Boolean} whether or not the sale is members only (optional).
+
   Usage:
   {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
 {% endcomment %}
@@ -40,65 +41,132 @@
 
 {% assign picked_color = product.vendor %}
 <!-- Assign picked_color to product.vendor -->
+
 <script defer>
   document.addEventListener('DOMContentLoaded', function () {
     const similarList = document.querySelector('.similar');
     if (similarList) {
-      const pickedColorItem = similarList.querySelector('.picked-color').closest('li');
+      const pickedColorItem = similarList.querySelector('.picked-color')?.closest('li');
       if (pickedColorItem) {
         similarList.insertBefore(pickedColorItem, similarList.firstChild);
+        similarList.style.display = 'flex';
+        similarList.style.flexWrap = 'wrap';
       }
     }
   });
 </script>
 
-{% unless product.tags contains 'noSimilar' %}
-  {%unless product.metafields.variant.color.value == nil%}
-  <span class="colorHeading"> צבע: </span>
-  <span style="color:gray; margin:0;"> {{ picked_color }}</span>
-  {%endunless%}
-  <ul class="similar" id="scrollNoSize">
-    {% for collection in collections %}
-      {% if collection.title == similarParent or collection.title == similarParent.value %}
-        {% for product in collection.products %}
-          {% assign color = product.metafields.variant.color.value %}
-          {% assign color_name = product.vendor %}
-          
-        
-          {% if color_name == picked_color %}
-            {% assign is_picked_color = true %}
-          {% else %}
-            {% assign is_picked_color = false %}
-          {% endif %}
+{% comment %}
+  Define an array of base colors: שחור, אפור, לבן, חום
+{% endcomment %}
+{% assign base_colors = "שחור,אפור,לבן,חום" | split: "," %}
 
-          {% if isLiveTheme == 'true' %}
-            {% unless product.tags contains 'hidden' %}
-            <li class="relative-discount similar-child {{ forloop.index0 }}">
-              <a href="{{ product.url }}" class="similar-a">
-              <span class="color-circle {% if color=="#ffffff"%}white{% endif %} {% if is_picked_color %}picked-color{% endif %}" style="--color:{{ color | strip }};"></span>
+{%- assign base_colors_found = false -%}
+{%- assign limited_colors_found = false -%}
+
+{%- comment -%}
+  We will store the generated list items in separate variables, so we can control 
+  whether to show the headings based on whether these strings are empty.
+{%- endcomment -%}
+{% capture base_colors_html %}{% endcapture %}
+{% capture limited_colors_html %}{% endcapture %}
+
+{%- comment -%}
+  First, we loop through collections/products and build up the markup for base 
+  and limited colors in separate variables.
+{%- endcomment -%}
+{% for collection in collections %}
+  {% if collection.title == similarParent or collection.title == similarParent.value %}
+    {% for this_product in collection.products %}
+      {% assign color = this_product.metafields.variant.color.value %}
+      {% assign color_name = this_product.vendor %}
+
+      {% assign is_picked_color = false %}
+      {% if color_name == picked_color %}
+        {% assign is_picked_color = true %}
+      {% endif %}
+
+      {% comment %}
+        Build base colors markup
+      {% endcomment %}
+      {% if base_colors contains color_name %}
+        {% assign base_colors_found = true %}
+        {% capture base_colors_html %}
+          {{ base_colors_html }}
+          {% unless isLiveTheme == 'true' and this_product.tags contains 'hidden' %}
+            <li class="relative-discount similar-child">
+              <a href="{{ this_product.url }}" class="similar-a">
+                <span
+                  class="color-circle
+                    {% if color == '#ffffff' %}white{% endif %}
+                    {% if is_picked_color %} picked-color{% endif %}"
+                  style="--color: {{ color | strip }};"
+                ></span>
               </a>
               <p class="productVendor">{{ color_name }}</p>
             </li>
-              
-              
-            {% endunless %}
-          {% else %}
-            <li class="relative-discount similar-child {{ forloop.index0 }}">
-              <a href="{{ product.url }}" class="similar-a">
-              <span class="color-circle {% if color=="#ffffff"%}white{% endif %} {% if is_picked_color %}picked-color{% endif %}" style="--color:{{ color | strip }};"></span>
+          {% endunless %}
+        {% endcapture %}
+      {% else %}
+        {%- comment -%}
+          Build limited colors markup
+        {%- endcomment -%}
+        {% assign limited_colors_found = true %}
+        {% capture limited_colors_html %}
+          {{ limited_colors_html }}
+          {% unless isLiveTheme == 'true' and this_product.tags contains 'hidden' %}
+            <li class="relative-discount similar-child">
+              <a href="{{ this_product.url }}" class="similar-a">
+                <span
+                  class="color-circle
+                    {% if color == '#ffffff' %}white{% endif %}
+                    {% if is_picked_color %} picked-color{% endif %}"
+                  style="--color: {{ color | strip }};"
+                ></span>
               </a>
               <p class="productVendor">{{ color_name }}</p>
             </li>
-          {% endif %}
-        {% endfor %}
+          {% endunless %}
+        {% endcapture %}
       {% endif %}
     {% endfor %}
+  {% endif %}
+{% endfor %}
+
+{%- comment -%}
+  Now we decide what to show based on whether we found anything.
+{%- endcomment -%}
+{% if base_colors_found or limited_colors_found %}
+  {% if base_colors_found %}
+    <h3 style="direction:rtl">צבעים בסיסיים {% if base_colors contains picked_color %} :{{ picked_color }}{% endif %}</h3>
+    <ul class="similar" id="base-colors">
+      {{ base_colors_html }}
+    </ul>
+  {% endif %}
+
+  {% if limited_colors_found %}
+    <h3>צבעים מוגבלים  {% if limited_colors_html contains picked_color %}: {{ picked_color }}{% endif %}</h3>
+    <ul class="similar" id="limited-colors">
+      {{ limited_colors_html }}
+    </ul>
+  {% endif %}
+{% else %}
+  <!-- If neither base nor limited were found, show only the current color -->
+  <h3>צבע: {{ picked_color }}</h3>
+  <ul class="similar">
+    <li class="relative-discount similar-child">
+      <span
+        class="color-circle{% if product.metafields.variant.color.value == '#ffffff' %} white{% endif %}"
+        style="--color: {{ product.metafields.variant.color.value | strip }};"
+      ></span>
+    </li>
   </ul>
-{% endunless %}
+{% endif %}
 
 {% unless product.tags contains 'noSizeTable' %}
   <p class="size-table-toggler pointer">{{ 'products.product.size_table' | t }}</p>
 {% endunless %}
+
 {%- unless product.has_only_default_variant -%}
   {%- if block.settings.picker_type == 'button' -%}
     <variant-radios
@@ -140,8 +208,7 @@
                   <span class="small">במוצר זה אין ריפודיות נשלפות</span>
                 {% endif %}
               </span>
-              <div class="size-table-stock-container">
-              </div>
+              <div class="size-table-stock-container"></div>
             </legend>
           {% endfor %}
           {% unless product.title == 'גיפט קארד' %}
