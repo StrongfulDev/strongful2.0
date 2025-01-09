@@ -71,6 +71,16 @@ class SliderComponent extends HTMLElement {
 			this.pageTotalElement.textContent = this.totalPages;
 		}
 
+		// Update active dot
+		const dots = this.querySelectorAll(".slider-dot");
+		dots.forEach((dot, index) => {
+			if (index === this.currentPage - 1) {
+				dot.classList.add("active");
+			} else {
+				dot.classList.remove("active");
+			}
+		});
+
 		if (this.currentPage != previousPage) {
 			this.dispatchEvent(
 				new CustomEvent("slideChanged", {
