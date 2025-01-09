@@ -136,10 +136,10 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                                     </h2>
                                 </a>
                                 {% if product.tags contains 'outlet' or product.tags contains 'OUTLET' %}
-                                    <div class="outlet-collection-tag upper h4">
+                                    {% comment %} <div class="outlet-collection-tag upper h4">
                                         <span>{{- 'products.product.outlet' | t -}}</span>
                                         <i>{% render 'icon-discount-tag' %}</i>
-                                    </div>
+                                    </div> {% endcomment %}
                                 {% endif %}
                             </div>
                         {%- when 'price' -%}

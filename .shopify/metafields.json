@@ -1,0 +1,842 @@
+{
+  "article": [
+    {
+      "key": "article_desktop_image",
+      "namespace": "my_fields",
+      "name": "article_desktop_image",
+      "description": "The slider image for the desktop",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "hidemenu",
+      "namespace": "custom",
+      "name": "hidemenu",
+      "description": "hide article menu",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "collection_for_article",
+      "namespace": "custom",
+      "name": "collection for article",
+      "description": "הוספת קולקציה למאמר",
+      "type": {
+        "name": "collection_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "lookbook_article",
+      "namespace": "nitro_lookbook",
+      "name": "Nitro lookbook id",
+      "description": "Enter lookbook ID from Nitro Lookbook app to show on this article",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    }
+  ],
+  "blog": [
+    {
+      "key": "lookbook_blog",
+      "namespace": "nitro_lookbook",
+      "name": "Nitro lookbook id",
+      "description": "Enter lookbook ID from Nitro Lookbook app to show on this blog",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    }
+  ],
+  "brand": [],
+  "collection": [
+    {
+      "key": "frontWinterImage",
+      "namespace": "global",
+      "name": "תמונה ל OUR COLLECTIONS",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "text",
+      "namespace": "announcement",
+      "name": "Announcement Text",
+      "description": "Text to show under each item in the collection as an announcement",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "filter",
+      "namespace": "global",
+      "name": "filter",
+      "description": "collection filter accessories",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "color_match",
+      "namespace": "global",
+      "name": "color_match",
+      "description": "color matcher for shop by color page",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "collection_color",
+      "namespace": "global",
+      "name": "collection color",
+      "description": "The color of the collection",
+      "type": {
+        "name": "color",
+        "category": "COLOR"
+      }
+    },
+    {
+      "key": "collection_page_banner_image",
+      "namespace": "custom",
+      "name": "Collection page banner image for mobile",
+      "description": "Custom collection page banner image for mobile",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "collection_page_banner_image_for_big_screens",
+      "namespace": "custom",
+      "name": "Collection page banner image for big screens",
+      "description": "Custom collection page banner image for big screens",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "second_description",
+      "namespace": "custom",
+      "name": "second description",
+      "description": "Another collection description",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "text_for_discounted_collections",
+      "namespace": "custom",
+      "name": "Text for discounted collections",
+      "description": "The class to hide texts from non discounted collections",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "show_on_site_map",
+      "namespace": "custom",
+      "name": "Show on site map",
+      "description": "Whether to show the collection on the site map page or not.",
+      "type": {
+        "name": "boolean",
+        "category": "TRUE_FALSE"
+      }
+    },
+    {
+      "key": "lookbook_collection",
+      "namespace": "nitro_lookbook",
+      "name": "Nitro lookbook id",
+      "description": "Enter lookbook ID from Nitro Lookbook app to show on this collection",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    }
+  ],
+  "company": [],
+  "company_location": [],
+  "location": [
+    {
+      "key": "presale_counter",
+      "namespace": "custom",
+      "name": "presale counter",
+      "description": "",
+      "type": {
+        "name": "number_integer",
+        "category": "NUMBER"
+      }
+    }
+  ],
+  "market": [],
+  "order": [],
+  "page": [
+    {
+      "key": "slider_image",
+      "namespace": "global",
+      "name": "slider_image",
+      "description": "",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "slider_image_src",
+      "namespace": "custom",
+      "name": "slider_image_src",
+      "description": "",
+      "type": {
+        "name": "url",
+        "category": "URL"
+      }
+    },
+    {
+      "key": "show_on_site_map",
+      "namespace": "custom",
+      "name": "Show on site map",
+      "description": "Whether to show page on site map or not",
+      "type": {
+        "name": "boolean",
+        "category": "TRUE_FALSE"
+      }
+    },
+    {
+      "key": "lookbook_page",
+      "namespace": "nitro_lookbook",
+      "name": "Nitro lookbook id",
+      "description": "Enter lookbook ID from Nitro Lookbook app to show on this page",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    }
+  ],
+  "product": [
+    {
+      "key": "collectionTitle",
+      "namespace": "global",
+      "name": "תמונות צבעים קטנות",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "laundry",
+      "namespace": "global",
+      "name": "הוראות כביסה",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "material",
+      "namespace": "global",
+      "name": "הרכב בדים",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "filter_color",
+      "namespace": "my_fields",
+      "name": "צבע",
+      "description": "צבע לפילטר בדף קולקציה",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "top_support",
+      "namespace": "custom",
+      "name": "תמיכה",
+      "description": "מידת תמיכה של הטופ בפילטר של דף הקולקציה",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "leggings_cut",
+      "namespace": "custom",
+      "name": "גזרה",
+      "description": "גזרת הטייץ \\ מכנס",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "related_products",
+      "namespace": "shopify--discovery--product_recommendation",
+      "name": "Related products",
+      "description": "List of related products",
+      "type": {
+        "name": "list.product_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "related_products_display",
+      "namespace": "shopify--discovery--product_recommendation",
+      "name": "Related products settings",
+      "description": "Determines how related products are displayed along with algorithmic product recommendations",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "complementary_products",
+      "namespace": "shopify--discovery--product_recommendation",
+      "name": "Complementary products",
+      "description": "List of complementary products",
+      "type": {
+        "name": "list.product_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "queries",
+      "namespace": "shopify--discovery--product_search_boost",
+      "name": "Search product boosts",
+      "description": "List of search queries for which a product gets higher rank in search results",
+      "type": {
+        "name": "list.single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "collectioncolor",
+      "namespace": "custom",
+      "name": "collectionColor",
+      "description": "Collection Color For CRO",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "descBottomType",
+      "namespace": "global",
+      "name": "חלק תחתון בהחלפת דוגמנית",
+      "description": "סוג מוצר של חלק תחתון בהחלפת דוגמנית",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "topType",
+      "namespace": "global",
+      "name": "topType",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "color",
+      "namespace": "variant",
+      "name": "color",
+      "description": "",
+      "type": {
+        "name": "color",
+        "category": "COLOR"
+      }
+    },
+    {
+      "key": "discount",
+      "namespace": "global",
+      "name": "discount",
+      "description": "אחוז הנחה לסינון באתר",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "degem",
+      "namespace": "global",
+      "name": "דגם",
+      "description": "מאחד דגמים בשביל דף קולקציה",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "names",
+      "namespace": "model",
+      "name": "names",
+      "description": "Relevant model names for each product",
+      "type": {
+        "name": "list.single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "new_shop_the_look",
+      "namespace": "global",
+      "name": "new shop the look",
+      "description": "New shop the look",
+      "type": {
+        "name": "collection_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "bundle_discount",
+      "namespace": "custom",
+      "name": "bundle discount",
+      "description": "פילטור בקולקציה לפי באנדל",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "ticket_material",
+      "namespace": "custom",
+      "name": "ticket_material",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "filter_discount",
+      "namespace": "custom",
+      "name": "filter discount",
+      "description": "אחוז הנחה לפילטר בדף הקולקציה באתר",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "comes_with_matching_clothing",
+      "namespace": "custom",
+      "name": "comes_with_matching_clothing",
+      "description": "Add text that says that the product comes with another product",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "awareness_month_product_image",
+      "namespace": "custom",
+      "name": "תמונה לחודש המודעות",
+      "description": "תמונה לחודש המודעות או לכל מקרה שצריך להציג תמונה custom",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "awareness_month_name",
+      "namespace": "custom",
+      "name": "שם האישה מחודש המודעות",
+      "description": "השם של האישה שמופיעה בתמונה של חודש המודעות",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "awareness_month_age",
+      "namespace": "custom",
+      "name": "גיל האישה מחודש המודעות",
+      "description": "הגיל של האישה בתמונה של חודש המודעות",
+      "type": {
+        "name": "number_integer",
+        "category": "NUMBER"
+      }
+    },
+    {
+      "key": "is_over_cancer",
+      "namespace": "custom",
+      "name": "מתמודדת או מחלימה מסרטן השד",
+      "description": "טקסט שמתאר אם האישה מתמודדת או החלימה כבר",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "custom_product",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Custom Product",
+      "description": "Use to indicate whether or not the unique product identifiers (UPIs) GTIN, MPN, and brand are available for your product.",
+      "type": {
+        "name": "boolean",
+        "category": "TRUE_FALSE"
+      }
+    },
+    {
+      "key": "homepage_video",
+      "namespace": "custom",
+      "name": "homepage video",
+      "description": "Video for homepage section made on june 2024",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "rating",
+      "namespace": "reviews",
+      "name": "Product rating",
+      "description": "Average rating from customers",
+      "type": {
+        "name": "rating",
+        "category": "RATING"
+      }
+    },
+    {
+      "key": "rating_count",
+      "namespace": "reviews",
+      "name": "Product rating count",
+      "description": "Total number of ratings from customers",
+      "type": {
+        "name": "number_integer",
+        "category": "NUMBER"
+      }
+    },
+    {
+      "key": "color-pattern",
+      "namespace": "shopify",
+      "name": "Color",
+      "description": "Defines the primary color or pattern, such as blue or striped",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "size_chart",
+      "namespace": "custom",
+      "name": "Size chart",
+      "description": "",
+      "type": {
+        "name": "page_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "discount_precentage",
+      "namespace": "custom",
+      "name": "Discount precentage",
+      "description": "placeholder for Discount precentage",
+      "type": {
+        "name": "number_integer",
+        "category": "NUMBER"
+      }
+    },
+    {
+      "key": "badges",
+      "namespace": "custom",
+      "name": "Badges",
+      "description": "list of badges for the Focal theme badge system ",
+      "type": {
+        "name": "list.single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "lookbook_product",
+      "namespace": "nitro_lookbook",
+      "name": "Nitro lookbook id",
+      "description": "Enter lookbook ID from Nitro Lookbook app to show on this product",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    }
+  ],
+  "variant": [
+    {
+      "key": "leggings_length",
+      "namespace": "custom",
+      "name": "leggings_length",
+      "description": "אורך הטייץ - מלא או 7\\8",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "size_modal_bust",
+      "namespace": "my_fields",
+      "name": "היקף בית חזה",
+      "description": "היקף בית חזה לטבלת מידות באתר",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "bra_size",
+      "namespace": "my_fields",
+      "name": "מידת חזייה",
+      "description": "מידת חזייה לטבלת מידות באתר",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "pants_size",
+      "namespace": "my_fields",
+      "name": "מידת מכנסיים",
+      "description": "מידת מכנסיים לטבלת מידות (מספר)",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "waist",
+      "namespace": "my_fields",
+      "name": "היקף מתניים",
+      "description": "היקף מתניים לטבלת מידות (טווח מספרים)",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "hips",
+      "namespace": "my_fields",
+      "name": "היקף ירכיים",
+      "description": "היקף ירכיים לטבלת מידות (טווח מספרים)",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "bottom_length",
+      "namespace": "my_fields",
+      "name": "אורך",
+      "description": "אורך הטייץ לטבלת מידות (מספר)",
+      "type": {
+        "name": "number_decimal",
+        "category": "NUMBER"
+      }
+    },
+    {
+      "key": "bra_size_universal",
+      "namespace": "my_fields",
+      "name": "מידה",
+      "description": "מידת חזייה עולמית (טווח מספרים)",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "location_pick",
+      "namespace": "custom",
+      "name": "location-pick",
+      "description": "location of picking",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "shoulder_width",
+      "namespace": "my_fields",
+      "name": "רוחב כתפיים",
+      "description": "רוחב כתפיים לטופים",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "bust",
+      "namespace": "my_fields",
+      "name": "חזה לטופים",
+      "description": "חזה לטופים (בעיקר חורפיים)",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "sleeve_length",
+      "namespace": "my_fields",
+      "name": "אורך שרוול",
+      "description": "אורך שרוול (חורפי בעיקר)",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "shirt_length",
+      "namespace": "my_fields",
+      "name": "אורך חולצה",
+      "description": "אורך שרוול בעיקר לחורף",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "preorder_quantity",
+      "namespace": "custom",
+      "name": "preorder quantity",
+      "description": "",
+      "type": {
+        "name": "number_integer",
+        "category": "NUMBER"
+      }
+    },
+    {
+      "key": "custom_label_4",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Custom Label 4",
+      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "custom_label_3",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Custom Label 3",
+      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "custom_label_2",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Custom Label 2",
+      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "custom_label_1",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Custom Label 1",
+      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "custom_label_0",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Custom Label 0",
+      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "size_system",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Size System",
+      "description": "The country of the size system used by your product.",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "size_type",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Size Type",
+      "description": "Your apparel product’s cut.",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "mpn",
+      "namespace": "mm-google-shopping",
+      "name": "Google: MPN",
+      "description": "Your product’s Manufacturer Part Number (MPN).",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "gender",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Gender",
+      "description": "The gender for which your product is intended.",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "condition",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Condition",
+      "description": "The condition of your product at time of sale.",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "age_group",
+      "namespace": "mm-google-shopping",
+      "name": "Google: Age Group",
+      "description": "The demographic for which your product is intended.",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "color",
+      "namespace": "custom",
+      "name": "Color",
+      "description": "variantColor",
+      "type": {
+        "name": "list.color",
+        "category": "COLOR"
+      }
+    }
+  ],
+  "shop": []
+}
