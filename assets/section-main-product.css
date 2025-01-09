@@ -2112,13 +2112,32 @@ product-info > .product__inventory {
 }
 
 .slider-component-progress-bar-container {
-	width: 101%;
-	height: 4px;
-	background: var(--gradient-base-background-4);
-	bottom: 0.5rem;
-	position: absolute;
-	left: -0.5rem;
-	border-radius: 10px;
+  background-color: #eee;
+  border-radius: 9999px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 8px;
+}
+
+.slider-dots {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+.slider-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.slider-dot.active {
+  background-color: #444;
 }
 
 .slider-component-progress-bar {
