@@ -198,7 +198,7 @@
                     </div>
                 {%- endif -%}
                 <div class="card__content">
-                    <div class="card__information">1
+                    <div class="card__information">
                         <p
                                 class="card__heading"
                                 
@@ -305,8 +305,8 @@
                 </div>
             </div>
 
-            <div class="card__content">
-            <div class="card__information">2
+            <div class="card__content">1
+            <div class="card__information">2 
                 {% if card_product.tags contains announcement_tag %}
                     {% if members_only_sale == true and members_only_sale_active == true %}
                         {% unless customer %}
@@ -597,7 +597,7 @@
                     style="--ratio-percent: 100%;"
             >
                 <div class="card__content">
-                    <div class="card__information">3
+                    <div class="card__information">
                         <p class="card__heading">
                             <a role="link" aria-disabled="true" class="full-unstyled-link pointer fix-direction">
                                 {{ 'onboarding.product_title' | t }}
@@ -607,7 +607,7 @@
                 </div>
             </div>
             <div class="card__content">
-                <div class="card__information">4
+                <div class="card__information">
 
                     
                     <p class="card__heading{% if settings.card_style == 'standard' %} h5{% endif %} ">
