@@ -201,6 +201,7 @@
                     <div class="card__information">
                         <p
                                 class="card__heading"
+                                
                                 {% if card_product.featured_media == null and settings.card_style == 'standard' %}
                                     id="title-{{ section_id }}-{{ card_product.id }}"
                                 {% endif %}
@@ -264,7 +265,7 @@
                     {%- endif -%}
                         
                      {% if card_product.tags contains 'badge__new' %}
-                    <span class="new-product-span" style="{% if card_product.tags contains 'oasisThreeBuildUp'%}background-color: gray; color: white;{% endif %}">
+                    <span class="new-product-span" style="">
                         {{ 'products.product.new' | t }}
                     </span>
                         {% comment %} {%elsif card_product.tags contains 'OasisMarkUp'%}
@@ -607,12 +608,15 @@
             </div>
             <div class="card__content">
                 <div class="card__information">
+
+                    
                     <p class="card__heading{% if settings.card_style == 'standard' %} h5{% endif %} ">
                         <a role="link" aria-disabled="true" class="full-unstyled-link pointer fix-direction">
                             {{ 'onboarding.product_title' | t }}
                         </a>
                     </p>
                     <div class="card-information">
+                        
                         {%- if show_vendor -%}
                             <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
                             <div class="caption-with-letter-spacing light">{{ 'products.product.vendor' | t }}</div>

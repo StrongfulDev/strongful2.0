@@ -302,7 +302,7 @@ fieldset.js.product-form__input .select ::after {
     margin-bottom: 1rem;
 	font-size: calc(var(--font-body-size-medium) * 1.2);
 	padding: 1.5rem;
-	border-radius: 33px;
+	border-radius: 5px;
 	transition: .1s;
 }
 
