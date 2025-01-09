@@ -306,7 +306,11 @@
             </div>
 
             <div class="card__content">
-            <div class="card__information">2 
+            <div class="card__information">
+
+            <!-- Yotpo Star Rating -->
+              <div class="yotpo-widget-instance" data-yotpo-instance-id="424007" data-yotpo-product-id="{{product.id}}" data-yotpo-cart-product-id="{{item.product.id}}" data-yotpo-section-id="{{template.name}}"></div>
+              
                 {% if card_product.tags contains announcement_tag %}
                     {% if members_only_sale == true and members_only_sale_active == true %}
                         {% unless customer %}
