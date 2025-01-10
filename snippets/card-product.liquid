@@ -330,13 +330,13 @@
                         {% endif %}
                     {% endif %}
                 {% endif %}
-2
+
                     
         {% assign is_percent_on = false %}
         {% if card_product.tags contains 'PercentOn' %}
             {% assign is_percent_on = true %}
         {% endif %}
-1
+
         {% if is_percent_on %}
             {% if card_product.compare_at_price > card_product.price %}
                 <div class="discount-price-container">
