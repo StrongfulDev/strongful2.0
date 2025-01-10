@@ -359,6 +359,11 @@
                         </p>
                     {% endif %}
                 {% endif %}
+              
+                   <!-- Yotpo Star Rating -->
+              <script src="https://cdn-widgetsrepository.yotpo.com/v1/loader/QI0VdT7ROUF5r1ybHPM5YgLRsUiPFRMOXKeGNWSJ" async></script>
+              <div class="yotpo-widget-instance" data-yotpo-instance-id="424007" data-yotpo-product-id="{{card_product.id}}" data-yotpo-cart-product-id="{{item.product.id}}" data-yotpo-section-id="collection"></div>
+              
                 <p
                         class="card__heading {{ card_header_size }}"
                         {% if card_product.featured_media or settings.card_style == 'card' %}
@@ -366,10 +371,6 @@
                         {% endif %}
                 >
 
-                   <!-- Yotpo Star Rating -->
-              <script src="https://cdn-widgetsrepository.yotpo.com/v1/loader/QI0VdT7ROUF5r1ybHPM5YgLRsUiPFRMOXKeGNWSJ" async></script>
-              <div class="yotpo-widget-instance" data-yotpo-instance-id="424007" data-yotpo-product-id="{{card_product.id}}" data-yotpo-cart-product-id="{{item.product.id}}" data-yotpo-section-id="collection"></div>
-              
                     {% if template.name == 'collection' %}
                         <a
                                 href="/collections/{{ collection.handle }}{{ card_product.url }}"
