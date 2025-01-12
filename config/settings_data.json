@@ -339,7 +339,7 @@
       },
       "7147999719060634790": {
         "type": "shopify://apps/gsc-countdown-timer/blocks/countdown-bar/58dc5b1b-43d2-4209-b1f3-52aff31643ed",
-        "disabled": false,
+        "disabled": true,
         "settings": {}
       }
     }
