@@ -291,6 +291,10 @@
                                 <span class="new-product-span">
                                 BEST SELLERS                                  
                                  </span>     
+                                     {% elsif card_product.tags contains "badge__sale" %}
+                                    <span class="new-product-span">
+                                        SALE
+                                    </span>
                                 {% endif %}
                     {%- if show_quick_add and quick_add_type_mobile == "modal" -%}
                         {% unless card_product.title == 'שירות החלפות מורחב' %}
