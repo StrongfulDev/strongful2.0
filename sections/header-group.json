@@ -44,11 +44,12 @@
         },
         "announcement_zkigjY": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "toggle_main_font": false,
             "toggle_sub_font": false,
-            "main_text": "<strong>Welcome to our store</strong>",
-            "sub_text": "<p>Welcome to our store</p>",
+            "main_text": "Welcome to our store",
+            "sub_text": "Welcome to our store",
             "text_alignment": "center",
             "main_text_direction": "rtl",
             "sub_text_direction": "rtl",
