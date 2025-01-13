@@ -135,7 +135,7 @@
             "button_label": "SHOP NOW",
             "link": "shopify://collections/flashsale-25",
             "show_text_box": false,
-            "color_scheme": "inverse",
+            "color_scheme": "background-1",
             "whole_slide_link": "",
             "button_style_secondary": false,
             "box_align": "middle-center",
