@@ -272,7 +272,7 @@
         "view_all_style": "solid",
         "view_all_location": "bottom",
         "enable_desktop_slider": true,
-        "show_peak": true,
+        "show_peak": false,
         "pagination_type": "sides",
         "color_scheme": "background-1",
         "image_ratio": "adapt",
