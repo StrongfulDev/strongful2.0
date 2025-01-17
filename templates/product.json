@@ -267,7 +267,7 @@
         "products_to_show": 15,
         "columns_desktop": 4,
         "full_width": true,
-        "show_view_all": true,
+        "show_view_all": false,
         "view_all_text": "",
         "view_all_style": "solid",
         "view_all_location": "bottom",
