@@ -5,7 +5,7 @@
 .new-product-span {
 	direction: rtl;
 	position: absolute;
-	bottom: 1rem;
+	top: 1rem;
 	left: 1rem;
 	background: rgba(var(--color-background),.95);
 	padding: 0.5rem .9rem;
