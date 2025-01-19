@@ -1683,7 +1683,7 @@ summary .icon-caret {
   }
 
   .card--standard:not(.card--horizontal) > .card__content .card__badge {
-    left: 0;
+    right: 0;
   }
 
   .facet-filters__label, #FacetSortForm .facet-filters.sorting {
