@@ -49,7 +49,7 @@
 
     -%}
 
-    <div class="card-wrapper product-card-wrapper underline-links-hover">
+    <div class="card-wrapper product-card-wrapper underline-links">
         <div
                 class="
         card
@@ -291,7 +291,11 @@
                              {% elsif card_product.tags contains 'bestSellers' %}
                                 <span class="new-product-span">
                                 BEST SELLERS                                  
-                                 </span>     
+                                 </span>   
+                                {% elsif card_product.tags contains'outlet' %}
+                                <span class="new-product-span">
+                                OUTLET                                  
+                                 </span>  
                                 {% endif %}
                     {%- if show_quick_add and quick_add_type_mobile == "modal" -%}
                         {% unless card_product.title == 'שירות החלפות מורחב' %}
