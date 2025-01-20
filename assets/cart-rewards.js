@@ -240,6 +240,7 @@ class CartRewards {
 
 	trackProgress() {
 		const progressPercentage = (this.cartTotalValue / this.allRewardsAmount) * 100;
+        console.log(this.allRewardsAmount);
 		$('.progress-value').animate({
 			width: `${progressPercentage}%`
 		})
