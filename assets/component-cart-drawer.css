@@ -518,7 +518,7 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 
 .track-progress .progress-value {
 	height: 100%;
-	background: #a1a1a1;
+	background: var(--cart-rewards-background);
 	border-radius: 25px;
 }
 
