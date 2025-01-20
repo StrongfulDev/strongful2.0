@@ -240,7 +240,6 @@ class CartRewards {
 
 	trackProgress() {
 		const progressPercentage = (this.cartTotalValue / this.allRewardsAmount) * 100;
-        console.log(this.allRewardsAmount);
 		$('.progress-value').animate({
 			width: `${progressPercentage}%`
 		})
@@ -256,6 +255,7 @@ class CartRewards {
 		// Apply condition message.
 		if (isLatestDeactivatedRule && missingAmount > 0) {
 			const rewardMessage = $(`<span class="${rule.element_class}-message" data-index="${ruleIndex}">${rule.condition.message}</span>`);
+            console.log(rewardMessage)
 			rewardMessage.find('.rewards__missing_amount').text("₪" + missingAmount);
 			rewardText.html(rewardMessage);
 			if (this.featuredCollection) {
