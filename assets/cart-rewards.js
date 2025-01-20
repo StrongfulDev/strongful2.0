@@ -255,7 +255,7 @@ class CartRewards {
 		// Apply condition message.
 		if (isLatestDeactivatedRule && missingAmount > 0) {
 			const rewardMessage = $(`<span class="${rule.element_class}-message" data-index="${ruleIndex}">${rule.condition.message}</span>`);
-            console.log(rewardMessage)
+            console.log("rewrad meesage !!!!!!!!!!!!!!!!!!!!",rewardMessage)
 			rewardMessage.find('.rewards__missing_amount').text("₪" + missingAmount);
 			rewardText.html(rewardMessage);
 			if (this.featuredCollection) {
