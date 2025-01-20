@@ -256,7 +256,7 @@ class CartRewards {
 		if (isLatestDeactivatedRule && missingAmount > 0) {
 			const rewardMessage = $(`<span class="${rule.element_class}-message" data-index="${ruleIndex}">${rule.condition.message}</span>`);
             console.log("!!!!!!!!!!!!!!!!!!!",missingAmount);
-			rewardMessage.find('.rewards__missing_amount').text("₪" + missingAmount);
+			rewardMessage.find('.rewards__missing_amount').text("₪" + missingAmount); // check for ? with gpt 
 			rewardText.html(rewardMessage);
 			if (this.featuredCollection) {
 				this.featuredCollection.addClass("disabled");
