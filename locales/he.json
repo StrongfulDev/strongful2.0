@@ -28,7 +28,7 @@
       "login_form_password_placeholder": "הכנס סיסמה",
       "login_form_error": "הסיסמה שהזנת אינה נכונה",
       "login_form_submit": "כניסה",
-      "admin_link_html": "בעל החנות? <a href=\"\/admin\" id=\"return_to_login\">כניסת מנהלים<\/a>",
+      "admin_link_html": "בעל החנות? <a href=\"/admin\" id=\"return_to_login\">כניסת מנהלים</a>",
       "powered_by_shopify_html": "האתר יושב על פלטפורמת {{ shopify }}"
     },
     "social": {
@@ -99,7 +99,7 @@
     "loading": "טוען...",
     "total_reviews": "{{ count }} ביקורות",
     "star_reviews_info": "{{ rating_value }} מתוך {{ rating_max }} כוכבים",
-    "collapsible_content_title": "פתח\/סגור תוכן",
+    "collapsible_content_title": "פתח/סגור תוכן",
     "complementary_products": "מוצרים נלווים"
   },
   "blogs": {
@@ -330,7 +330,7 @@
         "other": "{{ count }} items"
       },
       "dropdown": {
-        "login_or_register": "הרשמה \/ כניסה",
+        "login_or_register": "הרשמה / כניסה",
         "you_have": "יש לך",
         "points": "נקודות"
       }
@@ -349,9 +349,9 @@
       "empty_paragraph": "לחצי כאן לראות מה חדש",
       "cart_error": "אירעה שגיאה בעת טעינת הסל",
       "cart_quantity_error_html": "ניתן להוסיף רק {{ quantity }} מפריט זה לסל הקניות.",
-      "taxes_and_shipping_policy_at_checkout_html": "<a href=\"{{ link }}\">משלוח<\/a> יחושב בשלבים הבאים.",
+      "taxes_and_shipping_policy_at_checkout_html": "<a href=\"{{ link }}\">משלוח</a> יחושב בשלבים הבאים.",
       "taxes_included_but_shipping_at_checkout": "מסים כלולים. משלוח יחושב בקופה",
-      "taxes_included_and_shipping_policy_html": "<a href=\"{{ link }}\">משלוח<\/a> יחושב בשלבים הבאים.",
+      "taxes_included_and_shipping_policy_html": "<a href=\"{{ link }}\">משלוח</a> יחושב בשלבים הבאים.",
       "taxes_and_shipping_at_checkout": "מסים ומשלוח יחושבו בקופה",
       "headings": {
         "product": "מוצר",
@@ -363,13 +363,14 @@
       "update": "Update",
       "login": {
         "title": "חברת מועדון?",
-        "paragraph_html": "<a class=\"link underlined-link account-toggler-site-wide\">התחברי<\/a> להזמנה קלה ומהירה.",
+        "paragraph_html": "<a class=\"link underlined-link account-toggler-site-wide\">התחברי</a> להזמנה קלה ומהירה.",
         "paragraph_secondary": "צבירת נקודות בכל הזמנה!"
       },
       "rewards": {
         "title": "Earn rewards",
         "free_shipping": "משלוח חינם",
-        "upsell_text": "בקבוק מתנה"
+        "upsell_text": "בקבוק מתנה",
+        "missing_amount": "הוסיפי עוד {{ amount }} לסל כדי לקבל משלוח חינם"
       },
       "out_of_stock": "הרשמי לקבלת התראה"
     },
@@ -392,7 +393,7 @@
     "collection_template": {
       "empty": "לא נמצאו מוצרים בקטגוריה זו",
       "title": "קטגוריה: {{ title }}",
-      "use_fewer_filters_html": "נסי להפחית את הסינונים, או <a href=\"{{ link }}\" class=\"link\">נסי חיפוש אחר<\/a>."
+      "use_fewer_filters_html": "נסי להפחית את הסינונים, או <a href=\"{{ link }}\" class=\"link\">נסי חיפוש אחר</a>."
     },
     "video": {
       "load_video": "Load video: {{ description }}"
@@ -411,10 +412,10 @@
     }
   },
   "localization": {
-    "country_label": "Country\/region",
+    "country_label": "Country/region",
     "language_label": "Language",
     "update_language": "Update language",
-    "update_country": "Update country\/region"
+    "update_country": "Update country/region"
   },
   "loyalty": {
     "points_reset": "הנקודות יתאפסו במידה ולא תתבצע רכישה \nבמשך 6 חודשים רציפים"
@@ -429,7 +430,7 @@
       "details": "פרטי משתמש",
       "my_details": "הפרטים שלי",
       "view_addresses": "הכתובות שלי",
-      "exchange_portal": "פורטל החלפות \/ החזרות",
+      "exchange_portal": "פורטל החלפות / החזרות",
       "personal_area": "איזור אישי",
       "return": "חזרה",
       "not_customer": "לא {{ name }}?",
@@ -473,7 +474,7 @@
       "address1": "רחוב ומספר בית",
       "address2": "מספר דירה",
       "city": "עיר",
-      "country": "Country\/region",
+      "country": "Country/region",
       "province": "Province",
       "zip": "מיקוד",
       "phone": "טלפון",
@@ -487,7 +488,7 @@
       "email": "מייל"
     },
     "log_in": "כניסה",
-    "log_out": "התנתק\/י",
+    "log_out": "התנתק/י",
     "login_page": {
       "cancel": "ביטול",
       "create_account": "הרשמה",
@@ -570,7 +571,7 @@
     },
     "orders": {
       "title": "ההזמנות שלי",
-      "description": "כאן תוכלי לראות את כל המידע על ההזמנות \/ ההחלפות שלך.",
+      "description": "כאן תוכלי לראות את כל המידע על ההזמנות / ההחלפות שלך.",
       "order_number": "הזמנה",
       "order_number_link": "הזמנה מספר {{ number }}",
       "date": "תאריך",
@@ -594,6 +595,7 @@
       "first_name": "שם פרטי",
       "last_name": "שם משפחה",
       "email": "אימייל",
+      "phone": "טלפון",
       "password": "סיסמה",
       "birthday": "תאריך לידה",
       "submit": "הרשמה",
@@ -792,7 +794,7 @@
         "gift_card_has_been_removed": "גיפט קארד הוסר",
         "discount_already_applied": "להזמנה זאת יש הנחה האחת תקפה, לא ניתן להוסיף עוד אחת.",
         "cart_does_not_meet_discount_requirements_notice": "קוד הקופון {{ code }} אינו תקף על הפריטים שבחרת.",
-        "discount_requires_customer_notice": "יופעל <strong>{{ code }}<\/strong> הזיני כתובת למשלוח כדי שקוד הקופון ",
+        "discount_requires_customer_notice": "יופעל <strong>{{ code }}</strong> הזיני כתובת למשלוח כדי שקוד הקופון ",
         "customer_does_not_meet_discount_requirements_notice": "קוד הקופון {{ code }} אינו תקף על הפריטים שבחרת.",
         "customer_already_used_once_per_customer_discount_notice": "השתמשת בקוד הקופון {{ code }} בעבר",
         "subtotal_label": "סיכום ביניים",
@@ -859,8 +861,8 @@
         "card_information_notice": "כל העסקאות מאובטחות. מידע אודות הכרטיס אשראי שלך לא נשמר אצלנו.",
         "name_on_card_label": "שם על גבי הכרטיס",
         "name_on_card_placeholder": "שם על גבי הכרטיס",
-        "card_expiry_label": "תוקף הכרטיס (שנה \/ חודש)",
-        "card_expiry_placeholder": "תוקף הכרטיס (שנה \/ חודש)",
+        "card_expiry_label": "תוקף הכרטיס (שנה / חודש)",
+        "card_expiry_placeholder": "תוקף הכרטיס (שנה / חודש)",
         "card_verification_value_label": "3 ספרות בגב הכרטיס",
         "order_covered_by_gift_cards_notice": {
           "one": "ההזמנה שלך שולמה במלואה ע״י הגיפט קארד",
@@ -873,7 +875,7 @@
         "billing_address_description": "בחרי כתובת לחיוב שזהה לכתובת של הכרטיס שלך",
         "ends_with_label": "נגמר ב {{ last_digits }}",
         "pay_with_payment_method": "שולם עם {{ payment_method }}",
-        "offsite_gateway_redirect_hint": "תשלום בכרטיס אשראי \/ Apple Pay \/ Google Pay",
+        "offsite_gateway_redirect_hint": "תשלום בכרטיס אשראי / Apple Pay / Google Pay",
         "no_method_error": "יש בעיה בביצוע התשלום אנא צרי איתנו קשר כדי להשלים את ההזמנה",
         "not_configured_error": "יש בעיה בביצוע התשלום אנא צרי איתנו קשר כדי להשלים את ההזמנה",
         "card_verification_value_placeholder": "3 ספרות בגב הכרטיס",
@@ -918,7 +920,7 @@
       },
       "payment_summary": {
         "gift_card_current_balance_notice": "יתרת הגיפט קארד {{ amount }} ",
-        "credit_card_expires_on_notice": "בתוקף {{ mouth}}\/{{year}}",
+        "credit_card_expires_on_notice": "בתוקף {{ mouth}}/{{year}}",
         "billing_address_title": "כתובת לחיוב",
         "free_label": "חינם"
       },
@@ -931,7 +933,7 @@
         "address_first_name_blank": "שם פרטי",
         "address_last_name_blank": "לא נרשם שם משפחה",
         "address_address1_blank": "רחוב",
-        "address_address2_blank": "מספר בית \/ דירה",
+        "address_address2_blank": "מספר בית / דירה",
         "address_city_blank": "הזיני עיר מגורים",
         "address_country_blank": "ארץ",
         "address_phone_blank": "יש להזין מספר פלאפון תקין",
@@ -1012,7 +1014,7 @@
         "resend_gift_cards": "שליחה מחדש של גיפט קארד",
         "order_status_updates_with_email": "אימייל מעודכן לגבי פרטי המשלוח יישלח אלייך למייל",
         "confirmed_title": "ההזמנה שלך הועברה לאישור",
-        "contact_us_html": "צריכה עזרה? <a href=\"\/pages\/contact-us\" target=\"_blank\">צרי איתנו קשר<\/a>",
+        "contact_us_html": "צריכה עזרה? <a href=\"/pages/contact-us\" target=\"_blank\">צרי איתנו קשר</a>",
         "gift_card_sent_confirmation": "אימייל נשלח מחדש",
         "order_updates_subscribe_to_phone_notifications": "לקבלת עדכון בסמס",
         "order_updates_subscribe_to_email_or_phone_notifications": "לקבלת עדכון באי-מייל או סמס",
@@ -1084,7 +1086,7 @@
     },
     "errors": {
       "blank": "לא יכול להיות ריק",
-      "reset_password_html": "כבר קיים משתמש עם האימייל הזה. אם שכחת את הסיסמה, את יכולה <a href=\"\/account\/login#recover\" class=\"error-recover\">לאפס את הסיסמה שלך כאן<\/a>",
+      "reset_password_html": "כבר קיים משתמש עם האימייל הזה. אם שכחת את הסיסמה, את יכולה <a href=\"/account/login#recover\" class=\"error-recover\">לאפס את הסיסמה שלך כאן</a>",
       "verify_email": "ברגעים אלה נשלח מייל הפעלת משתמש אל {{ customer_email }} - עקבי אחרי השלבים במייל כדי להפעיל את המשתמש שלך."
     },
     "notices": {

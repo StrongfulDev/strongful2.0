@@ -22,24 +22,26 @@ window.addEventListener('DOMContentLoaded', (event) => {
 		let email = $('#RegisterForm-email').val();
 		let firstname = $('#RegisterForm-FirstName').val();
 		let lastname = $('#RegisterForm-LastName').val();
+		let phone = $("#RegisterForm-phone").val(); // Add phone field
 		let settings = {
-			"async": true,
-			"crossDomain": true,
-			"url": "https://manage.kmail-lists.com/ajax/subscriptions/subscribe",
-			"method": "POST",
-			"headers": {
+			async: true,
+			crossDomain: true,
+			url: "https://manage.kmail-lists.com/ajax/subscriptions/subscribe",
+			method: "POST",
+			headers: {
 				"content-type": "application/x-www-form-urlencoded",
-				"cache-control": "no-cache"
+				"cache-control": "no-cache",
 			},
-			"data": {
-				"g": "RX3ZpG",
-				"email": email,
+			data: {
+				g: "RX3ZpG",
+				email: email,
 				// pass in additional fields
-				"$fields": "$source, $first_name, $last_name",
-				"$source": "Account Creation",
-				"$first_name": firstname,
-				"$last_name": lastname
-			}
+				$fields: "$source, $first_name, $last_name, $phone",
+				$source: "Account Creation",
+				$first_name: firstname,
+				$last_name: lastname,
+				$phone: phone, // Include phone in the data
+			},
 		};
 		$.ajax(settings).done(function(response) {
 			$("#create_customer").submit();

@@ -89,7 +89,7 @@
         name="customer[email]"
         id="RegisterForm-email"
         {% if form.email %}
-          value="{{ form.email }}"
+          value="{{ form.email }}
         {% endif %}
         spellcheck="false"
         autocapitalize="off"
@@ -137,6 +137,22 @@
         {{ 'customer.register.form_errors.password' | t }}
       </span>
     {%- endif -%}
+    <div class="field">
+      <input
+        type="text"
+        name="customer[phone]"
+        id="RegisterForm-phone"
+        required
+        {% if form.phone %}
+          value="{{ form.phone }}"
+        {% endif %}
+        autocomplete="tel"
+        placeholder="{{ 'customer.register.phone' | t }}"
+      >
+      <label for="RegisterForm-phone">
+        {{ 'customer.register.phone' | t }} <span aria-hidden="true">*</span>
+      </label>
+    </div>
       <div class="field" id="birthday-wrapper">
           <input
                   type="date"

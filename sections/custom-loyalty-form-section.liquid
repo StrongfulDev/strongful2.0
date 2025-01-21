@@ -146,6 +146,22 @@
                                 {{ 'customer.register.birthday' | t }}
                             </label>
                         </div>
+                        <div class="field">
+                            <input
+                                type="tel"
+                                id="RegisterForm-Phone"
+                                required
+                                class="field__input"
+                                autocomplete="tel"
+                                name="contact[{{ 'templates.contact.form.phone' | t }}]"
+                                pattern="[0-9\-]*"
+                                value="{% if form.phone %}{{ form.phone }}{% endif %}"
+                                placeholder="{{ 'templates.contact.form.phone' | t }}"
+                            >
+                            <label class="field__label" for="RegisterForm-Phone">
+                                {{ 'templates.contact.form.phone' | t }} <span aria-hidden="true">*</span>
+                            </label>
+                        </div>
                         <button class="button-loader-activator">
                             <span class="button-loader-text">{{ 'customer.register.submit' | t }}</span>
                             {% render 'loading-spinner' %}
