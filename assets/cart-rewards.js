@@ -1,96 +1,185 @@
 class CartRewards {
 	constructor(parentContainer) {
+		// parentContainer is the <cart-drawer> element as a jQuery object
 		this.container = $(parentContainer);
-		this.cartElement = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
-		this.featuredCollection = this.container.find('.featured-collection');
+		this.cartElement = document.querySelector("cart-notification") || document.querySelector("cart-drawer");
+		this.featuredCollection = this.container.find(".featured-collection");
 	}
 
 	cart;
 	error;
-	rules = window.rewardsRules
+	rules = window.rewardsRules; // typically loaded from a global or script tag
 	allRewardsAmount = 0;
-	activeRewards = 0;
 	cartTotalValue = 0;
 	lastCartTotalValue = 0;
+	activeRewards = 0;
 
 	async init() {
+		// 1. Compute the max threshold from your rules
+		this.allRewardsAmount = Math.max.apply(
+			Math,
+			this.rules.map((o) => o.condition.value)
+		);
 
-		this.allRewardsAmount = Math.max.apply(Math, this.rules.map(function (o) {
-			return o.condition.value;
-		}));
-
+		// 2. Subscribe to cart updates (skip if from 'cart-rewards')
 		subscribe(PUB_SUB_EVENTS.cartUpdate, (event) => {
-			if (event.source === 'cart-rewards') return;
-
+			if (event.source === "cart-rewards") return;
 			this.checkRules();
 		});
 
+		// 3. Check rules right away
 		await this.checkRules();
 	}
 
 	async checkRules() {
-
 		this.loading(true);
 
+		// (A) Get cart
 		this.lastCartTotalValue = this.cartTotalValue;
 		this.cart = await this.getCart();
+
+		// (B) Subtract any non-shipping items from total
 		this.cart.items.forEach((item) => {
 			if (item.requires_shipping === false) {
 				this.cart.total_price -= item.price * item.quantity;
 			}
 		});
-
 		this.cartTotalValue = this.cart.total_price / 100;
-		this.activeRewards = 0;
 
+		// (C) Determine which rules are currently satisfied
+		const satisfiedRules = [];
 		this.rules.forEach((rule, index) => {
-
-			const isConditionMet = this.checkCondition(rule);
-			const isRewardInCart = this.cartHasReward(rule);
-			const rewardItem = this.getRewardItemByRule(rule);
-
-			// If the state changed
-			if (isRewardInCart !== isConditionMet) {
-				this.toggleReward(isConditionMet, rule);
-			}
-
-			this.trackProgress();
-			this.toggleMessage(isConditionMet, rule, index);
-
-			if (isConditionMet) {
-				rewardItem.addClass("active-reward");
-			} else {
-				rewardItem.removeClass("active-reward");
-			}
-
-			if (this.cartTotalValue < 10) {
-				this.removePackageProtection();
-			} else {
-				const packageProtectionAdded = this.cart.items.find(item => item.id === 41547480268940);
-				if (!packageProtectionAdded) {
-					// this.addProduct(41547480268940);
-				}
-			}
-
-			if (this.cart.items.length === 0) {
-				this.clearCart();
+			if (this.checkCondition(rule)) {
+				satisfiedRules.push({ rule, index });
 			}
 		});
 
-		// Here we remove all free products that are not included in the current rules
+		// (D) Toggle freebies (gift products) if the condition changed
+		for (let i = 0; i < this.rules.length; i++) {
+			const rule = this.rules[i];
+			const isConditionMet = satisfiedRules.some((r) => r.rule === rule);
+			const isRewardInCart = this.cartHasReward(rule);
+
+			if (isRewardInCart !== isConditionMet) {
+				await this.toggleReward(isConditionMet, rule);
+			}
+		}
+
+		// (E) Remove any freebies that are no longer valid
 		await this.removeNonGiftFreeProducts();
+
+		// (F) Additional package protection logic, etc.
+		if (this.cartTotalValue < 10) {
+			this.removePackageProtection();
+		} else {
+			const packageProtectionAdded = this.cart.items.find((item) => item.id === 41547480268940);
+			if (!packageProtectionAdded) {
+				// this.addProduct(41547480268940);
+			}
+		}
+
+		if (this.cart.items.length === 0) {
+			this.clearCart();
+		}
+
+		// (G) Update the count of active rules, show the message
+		this.activeRewards = satisfiedRules.length;
+		this.trackProgress();
+		this.showRewardsMessage(satisfiedRules);
 
 		this.loading(false);
 	}
 
-	// This function will remove free products if they are not one of the gifts from the current rules
+	// ──────────────────────────────────────────────────────────────────────────
+	// FOCUS ON THIS METHOD for the `.rewards__missing_amount` logic
+	// ──────────────────────────────────────────────────────────────────────────
+	showRewardsMessage(satisfiedRules) {
+		const rewardText = $(".reward-text");
+
+		// Highlight active rules
+		this.rules.forEach((rule) => {
+			const rewardItem = this.getRewardItemByRule(rule);
+			const isMet = satisfiedRules.some((r) => r.rule === rule);
+			if (isMet) {
+				rewardItem.addClass("active-reward");
+			} else {
+				rewardItem.removeClass("active-reward");
+			}
+		});
+
+		// CASE 1: No rule is satisfied => show how much is missing for the FIRST rule
+		if (satisfiedRules.length === 0) {
+			const firstRule = this.rules[0];
+			if (firstRule) {
+				const missing = (firstRule.condition.value - this.cartTotalValue).toFixed(0);
+
+				// This line REPLACES the ".rewards__missing_amount" text in your rule message
+				let msg = firstRule.condition.message.replace(".rewards__missing_amount");
+
+				// If you want a currency sign, do:
+				// let msg = firstRule.condition.message.replace(
+				//   ".rewards__missing_amount",
+				//   `₪${missing}`
+				// );
+				// ...existing code...
+				let cleanMessage = firstRule.condition.message.replace(/\r?\n|\r/g, " ").replace(/\s\s+/g, " ");
+
+				let newMessage = cleanMessage.replace(
+					'<span class="rewards__missing_amount"></span>',
+					`<span class="rewards__missing_amount">${missing}₪</span>`
+				);
+
+				rewardText.html(newMessage);
+				console.log(newMessage);
+				console.log("Missing amount:", missing);
+				console.log("Rule message:", msg);
+			}
+
+			if (this.featuredCollection) {
+				this.featuredCollection.addClass("disabled");
+			}
+			return;
+		}
+
+		// CASE 2: Some rules satisfied => find the highest threshold
+		const highestRuleInfo = satisfiedRules.reduce((prev, current) => {
+			if (current.rule.condition.value > prev.rule.condition.value) {
+				return current;
+			}
+			return prev;
+		});
+		const { rule } = highestRuleInfo;
+
+		// Check if there's a higher rule
+		const nextRule = this.rules.find((r) => r.condition.value > rule.condition.value);
+		if (nextRule) {
+			const missing = (nextRule.condition.value - this.cartTotalValue).toFixed(0);
+			if (missing > 0) {
+				rewardText.html(`<span style="display:inline-block">Spend ₪${missing} more to unlock the next reward!</span>`);
+				if (this.featuredCollection) {
+					this.featuredCollection.addClass("disabled");
+				}
+				return;
+			}
+		}
+
+		// CASE 3: If we are at/above the highest threshold => show that reward's success msg
+		rewardText.html(rule.reward.message);
+
+		if (this.featuredCollection) {
+			this.featuredCollection.addClass("disabled");
+			$(".cart-drawer .variant_selector.active").removeClass("active");
+			$(".cart-drawer .variant_modal_overlay").hide();
+		}
+	}
+	// ──────────────────────────────────────────────────────────────────────────
+
 	async removeNonGiftFreeProducts() {
 		const giftProductIds = this.rules
-			.filter(rule => rule.reward.action === 'gift_product')
-			.flatMap(rule => this.getProductIdsFromRule(rule));
+			.filter((rule) => rule.reward.action === "gift_product")
+			.flatMap((rule) => this.getProductIdsFromRule(rule));
 
 		for (const item of this.cart.items) {
-			// Here we assume that a product with price 0 is a free product.
 			if (item.price === 0 && !giftProductIds.includes(item.id.toString())) {
 				await this.removeProduct(item.id);
 			}
@@ -98,33 +187,31 @@ class CartRewards {
 	}
 
 	async clearCart() {
-		jQuery.post('/cart/change.js', { quantity: 0, id: '41547480268940' }, null, 'json');
-
+		jQuery.post("/cart/change.js", { quantity: 0, id: "41547480268940" }, null, "json");
 		$.ajax({
-			type: 'POST',
-			url: '/cart/clear.js',
-			dataType: 'json',
-			success: function() {
+			type: "POST",
+			url: "/cart/clear.js",
+			dataType: "json",
+			success: function () {
 				console.log("cart cleared");
 			},
-			error: function(xhr, status, error) {
-				console.log('An error occurred while clearing the cart:', error);
-			}
+			error: function (xhr, status, error) {
+				console.log("Error clearing cart:", error);
+			},
 		});
 	}
 
 	checkCondition(rule) {
-		let isConditionMet = false;
-
 		const isRightQuantity = this.checkProductQuantity(rule);
-		const isAmountGreaterThan = rule.condition.operator === "Greater than or equal" && this.cartTotalValue >= rule.condition.value;
-		const isAmountLessThan = rule.condition.operator === "Less than or equal" && this.cartTotalValue <= rule.condition.value;
+		const isAmountGreaterThan =
+			rule.condition.operator === "Greater than or equal" && this.cartTotalValue >= rule.condition.value;
+		const isAmountLessThan =
+			rule.condition.operator === "Less than or equal" && this.cartTotalValue <= rule.condition.value;
 
 		if (rule.condition.type === "CartAmount") {
-			isConditionMet = (isRightQuantity || isRightQuantity === null) && (isAmountGreaterThan || isAmountLessThan);
+			return (isRightQuantity || isRightQuantity === null) && (isAmountGreaterThan || isAmountLessThan);
 		}
-
-		return isConditionMet;
+		return false;
 	}
 
 	async toggleReward(isConditionMet, rule) {
@@ -133,18 +220,11 @@ class CartRewards {
 				await this.handleGiftReward(rule, isConditionMet);
 				break;
 		}
-
-		if (isConditionMet) {
-			this.activeRewards += 1;
-		} else {
-			this.activeRewards -= 1;
-		}
 	}
 
 	async handleGiftReward(rule, isConditionMet) {
-		const oldCardTotalValue = this.lastCartTotalValue;
-		console.log("oldCardTotalValue", oldCardTotalValue)
-		const productIds = this.getProductIdsFromRule(rule)
+		const oldCartTotalValue = this.lastCartTotalValue;
+		const productIds = this.getProductIdsFromRule(rule);
 		const isJustOne = rule.reward.product_method === "Just one that's available";
 
 		for (const productId of productIds) {
@@ -152,12 +232,17 @@ class CartRewards {
 			const isRightQuantity = this.checkProductQuantity(rule, productId);
 
 			if (productInCart && (!isConditionMet || !isRightQuantity)) {
-				await this.removeProduct(productId)
+				await this.removeProduct(productId);
 				continue;
 			}
 
-			if (!productInCart && isConditionMet && rule.reward.giftMethod === 'automatic' && this.cartTotalValue > oldCardTotalValue) {
-				const res = await this.addProduct(productId)
+			if (
+				!productInCart &&
+				isConditionMet &&
+				rule.reward.giftMethod === "automatic" &&
+				this.cartTotalValue > oldCartTotalValue
+			) {
+				const res = await this.addProduct(productId);
 				if (isJustOne && res?.items?.length > 0) {
 					return;
 				}
@@ -166,35 +251,32 @@ class CartRewards {
 	}
 
 	async removeProduct(productId) {
-		const drawerItems = document.querySelector('cart-drawer-items');
+		const drawerItems = document.querySelector("cart-drawer-items");
+		const cartItem = this.cart.items.find((item) => item.id === parseInt(productId));
+		if (!cartItem) return;
 
-		const cartItem = this.cart.items.find(item => item.id === parseInt(productId));
-		const cartItemIndex = $(`.cart-item[data-id="${productId}"]`).data('index');
-
-		if (cartItem)
+		const cartItemIndex = $(`.cart-item[data-id="${productId}"]`).data("index");
+		if (typeof cartItemIndex !== "undefined") {
 			drawerItems.updateQuantity(cartItemIndex, 0);
+		}
 	}
 
 	async removePackageProtection() {
-		let drawerItems = document.querySelector('cart-drawer-items');
+		const drawerItems = document.querySelector("cart-drawer-items");
+		const packageProtection = this.cart.items.find((item) => item.id === 41547480268940);
+		if (!packageProtection) return;
 
-		const packageProtection = this.cart.items.find(item => item.id === 41547480268940);
-		const packageProtectionIndex = $(`.cart-item[data-id="41547480268940"]`).data('index');
-
-		if (packageProtection) {
+		const packageProtectionIndex = $(`.cart-item[data-id="41547480268940"]`).data("index");
+		if (typeof packageProtectionIndex !== "undefined") {
 			drawerItems.updateQuantity(packageProtectionIndex, 0);
 		}
 	}
 
 	async addProduct(productId) {
-		const config = fetchConfig('javascript');
-
+		const config = fetchConfig("javascript");
 		let data = {
-			items: [{
-				quantity: 1,
-				id: productId
-			}]
-		}
+			items: [{ quantity: 1, id: productId }],
+		};
 
 		if (this.cartElement) {
 			data.sections = this.cartElement.getSectionsToRender().map((section) => section.id);
@@ -208,76 +290,29 @@ class CartRewards {
 			const res = await fetch(`${routes.cart_add_url}`, config);
 			const response = await res.json();
 
-			if (false && response.status) {
-				console.log("Error adding product to cart", response);
-
-				publish(PUB_SUB_EVENTS.cartError, {
-					source: 'cart-rewards',
-					productVariantId: productId,
-					errors: response.description,
-					message: response.message
-				});
-
-				this.handleErrorMessage(response.description);
-
-				return;
-			}
-
 			publish(PUB_SUB_EVENTS.cartUpdate, {
-				source: 'cart-rewards',
-				productVariantId: productId
+				source: "cart-rewards",
+				productVariantId: productId,
 			});
 
 			this.cartElement.renderContents(response);
-
-			return response
+			return response;
 		} catch (e) {
 			console.error(e);
 		} finally {
-			if (this.cartElement && this.cartElement.classList.contains('is-empty')) this.cartElement.classList.remove('is-empty');
+			if (this.cartElement && this.cartElement.classList.contains("is-empty")) {
+				this.cartElement.classList.remove("is-empty");
+			}
 		}
 	}
 
 	trackProgress() {
 		const progressPercentage = (this.cartTotalValue / this.allRewardsAmount) * 100;
-		$('.progress-value').animate({
-			width: `${progressPercentage}%`
-		})
-	}
-
-	toggleMessage(isConditionMet, rule, ruleIndex) {
-
-		const rewardText = $(".reward-text");
-		const isLatestActiveRule = ruleIndex >= this.activeRewards && isConditionMet;
-		const isLatestDeactivatedRule = ruleIndex === this.activeRewards && !isConditionMet;
-		const missingAmount = (rule.condition.value - this.cartTotalValue).toFixed(0);
-
-		// Apply condition message.
-		if (isLatestDeactivatedRule && missingAmount > 0) {
-			const rewardMessage = $(`<span class="${rule.element_class}-message" data-index="${ruleIndex}">${rule.condition.message}</span>`);
-            console.log("!!!!!!!!!!!!!!!!!!!",missingAmount);
-			rewardMessage.find('.rewards__missing_amount').text("₪" + missingAmount); // check for ? with gpt 
-			rewardText.html(rewardMessage);
-			if (this.featuredCollection) {
-				this.featuredCollection.addClass("disabled");
-			}
-		} else if (missingAmount <= 0 && isLatestDeactivatedRule && rule.reward.giftMethod === 'manual') {
-			rewardText.html(rule.reward.eligibleMessage);
-			if (this.featuredCollection) {
-				this.featuredCollection.removeClass("disabled");
-			}
-		} else if (isLatestActiveRule) {
-			rewardText.html(rule.reward.message);
-			if (this.featuredCollection) {
-				this.featuredCollection.addClass("disabled");
-				$(".cart-drawer .variant_selector.active").removeClass("active");
-				$(".cart-drawer .variant_modal_overlay").hide();
-			}
-		}
+		$(".progress-value").animate({ width: `${progressPercentage}%` });
 	}
 
 	getCart() {
-		return new Promise((resolve, reject) => {
+		return new Promise((resolve) => {
 			jQuery.getJSON("/cart.js", function (cart) {
 				resolve(cart);
 			});
@@ -285,93 +320,82 @@ class CartRewards {
 	}
 
 	getRewardItemByRule(rule) {
-		return $(`.reward-item.${rule.element_class}`)
+		return $(`.reward-item.${rule.element_class}`);
 	}
 
-	cartHasReward(rule, ruleIndex) {
+	cartHasReward(rule) {
 		if (rule.reward.action === "gift_product") {
-			const productIds = rule.reward.products.map(productGid => productGid.split("/").pop()).filter((id) => !!id);
-			let productsExist = this.productsExistInCart(productIds);
+			const productIds = this.getProductIdsFromRule(rule);
+			const productsExist = this.productsExistInCart(productIds);
 
 			if (rule.reward.product_method === "Add all products to cart") {
-				// UNTESTED
-				return productsExist === rule.reward.products.length;
+				return productsExist && productsExist.length === productIds.length;
 			} else {
-				return productsExist?.length >= 1;
+				return productsExist && productsExist.length >= 1;
 			}
 		}
-
-		return ruleIndex <= this.activeRewards
+		return false;
 	}
 
 	checkProductQuantity(rule) {
 		if (rule.reward.action !== "gift_product") return true;
-
 		const acceptableQuantity = 1;
-		const productIds = this.getProductIdsFromRule(rule)
+		const productIds = this.getProductIdsFromRule(rule);
 		const productIdsInCart = this.productsExistInCart(productIds);
 
-		if (!productIdsInCart && rule.reward.giftMethod === 'automatic') return null;
+		if (!productIdsInCart && rule.reward.giftMethod === "automatic") {
+			return null;
+		}
 
 		if (rule.reward.product_method === "Add all products to cart") {
-			for (const productId of productIdsInCart) {
-				const product = this.cart.items.find(item => item.id === parseInt(productId));
-				if (product.quantity !== acceptableQuantity)
-					return false
+			for (const pid of productIdsInCart) {
+				const product = this.cart.items.find((item) => item.id === parseInt(pid));
+				if (product && product.quantity !== acceptableQuantity) {
+					return false;
+				}
 			}
-
 			return true;
 		}
 
-		const product = this.cart.items.find(item => item.id === parseInt(productIdsInCart[0]));
-		if (product) {
-			return product.quantity === acceptableQuantity;
+		// "Just one"
+		if (productIdsInCart && productIdsInCart[0]) {
+			const product = this.cart.items.find((item) => item.id === parseInt(productIdsInCart[0]));
+			return product?.quantity === acceptableQuantity;
 		}
 	}
 
 	productsExistInCart(productIds) {
-		let productsExist = [];
+		const existing = productIds.filter((pid) => this.cart.items.some((item) => item.id === parseInt(pid)));
+		return existing.length > 0 ? existing : false;
+	}
 
-		for (const productId of productIds) {
-			const isProductExists = this.cart.items.some(item => item.id === parseInt(productId));
-
-			if (isProductExists) {
-				productsExist.push(productId);
-			}
-		}
-
-		return productsExist.length > 0 ? productsExist : false;
+	getProductIdsFromRule(rule) {
+		return rule.reward.products.map((gid) => gid.split("/").pop()).filter((id) => !!id);
 	}
 
 	loading(isLoading) {
 		// if (isLoading) {
-		//     this.container.addClass("loading").find('.rewards-section').animate({
-		//         opacity: 0
-		//     }, 500);
+		//   this.container.addClass("loading")
+		//       .find('.rewards-section').animate({ opacity: 0 }, 500);
 		// } else {
-		//     this.container.removeClass("loading").find('.rewards-section').animate({
-		//         opacity: 1
-		//     }, 300);
+		//   this.container.removeClass("loading")
+		//       .find('.rewards-section').animate({ opacity: 1 }, 300);
 		// }
-	}
-
-	getProductIdsFromRule(rule) {
-		return rule.reward.products.map(productGid => productGid.split("/").pop()).filter((id) => !!id);
 	}
 
 	handleErrorMessage(errorMessage = false) {
 		if (this.hideErrors) return;
 
-		this.errorMessageWrapper = this.errorMessageWrapper || this.querySelector('.cart-rewards__error-message-wrapper');
+		this.errorMessageWrapper = this.errorMessageWrapper || this.querySelector(".cart-rewards__error-message-wrapper");
 		if (!this.errorMessageWrapper) return;
-		this.errorMessage = this.errorMessage || this.errorMessageWrapper.querySelector('.cart-rewards__error-message');
 
-		this.errorMessageWrapper.toggleAttribute('hidden', !errorMessage);
+		this.errorMessage = this.errorMessage || this.errorMessageWrapper.querySelector(".cart-rewards__error-message");
 
+		this.errorMessageWrapper.toggleAttribute("hidden", !errorMessage);
 		if (errorMessage) {
 			this.errorMessage.textContent = errorMessage;
 		}
 	}
 }
-
+// If you want to define a custom element, you could do:
 // customElements.define("cart-rewards", CartRewards);
