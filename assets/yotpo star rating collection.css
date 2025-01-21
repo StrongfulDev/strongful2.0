@@ -1,0 +1,82 @@
+.collection .yotpo-reviews-star-ratings-widget.yotpo-star-ratings-widget-override-css a.yotpo-sr-bottom-line-summary>div {
+    height: 10px !important;
+    justify-content: center;
+}
+
+.collection .yotpo-reviews-star-ratings-widget.yotpo-star-ratings-widget-override-css .yotpo-sr-bottom-line-left-panel.yotpo-sr-bottom-line-score {
+    padding-top: 0 !important;
+    margin-right: 0!important;
+}
+
+
+.collection .yotpo-reviews-star-ratings-widget.yotpo-star-ratings-widget-override-css .yotpo-sr-bottom-line-text.yotpo-sr-bottom-line-text--right-panel {
+    padding-top: 0 !important;
+    margin-top: -1px;
+}
+
+
+
+.collection .yotpo-reviews-star-ratings-widget a.yotpo-sr-bottom-line-summary {
+    pointer-events: none;
+    z-index: 1;
+    cursor: none!important;
+}
+
+ .collection .yotpo-reviews-star-ratings-widget a.yotpo-sr-bottom-line-summary .star-container:not(:first-child) {
+    display: none!important;
+    text-decoration: none;
+}
+
+.collection .yotpo-reviews-star-ratings-widget .yotpo-sr-bottom-line-left-panel {
+    pointer-events: none;
+}
+
+.collection .yotpo-reviews-star-ratings-widget .yotpo-sr-bottom-line-left-panel:hover {
+    text-decoration: none;
+}
+.collection .yotpo-reviews-star-ratings-widget a.yotpo-sr-bottom-line-summary:hover {
+    text-decoration: none;
+}
+.collection .yotpo-reviews-star-ratings-widget {
+    margin-top: 40px;
+    margin-bottom: -43px!important;
+}
+.collection .yotpo-reviews-star-ratings-widget a.yotpo-sr-bottom-line-summary:hover {
+    pointer-events: none;
+    cursor: none!important;
+  }
+
+a.yotpo-sr-bottom-line-summary {}
+
+
+
+
+.collection .yotpo-reviews-star-ratings-widget.yotpo-star-ratings-widget-override-css a.yotpo-sr-bottom-line-summary .star-container {
+    margin-top: -4px;
+}
+
+@media screen and (min-width: 990px) {
+.underline-links-hover:hover a{
+    text-decoration:none!important;
+    z-index:0!important;
+    position:relative;
+  
+        
+    
+}}
+
+.card {}
+
+.card .card__content {}
+
+.card .card__content .card__heading.h2 {
+    width: 100px;
+}
+
+.card .card__content .card__heading.h2 .full-unstyled-link:hover {
+    text-decoration: underline!important;
+    text-underline-offset: 0.3rem!important;
+   
+}
+
+/*.card .card__content .card__heading.h2 .full-unstyled-link {width: 100px;}*/
