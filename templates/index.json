@@ -362,6 +362,7 @@
     },
     "featured_collection_KkwYPC": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "steps": 4,
         "title": "SALE",
@@ -401,6 +402,7 @@
     },
     "featured_collection_qJrxrJ": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "steps": 4,
         "title": "YOGA & PILATES",
