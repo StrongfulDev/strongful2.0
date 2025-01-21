@@ -247,7 +247,7 @@
             "show_on_mobile": true,
             "order": "",
             "small_font": false,
-            "menu": "outlet-menu-main",
+            "menu": "dawn-outlet-menu",
             "menu_second": "outlet-menu-sub",
             "menu_third": "outlet-menu-third",
             "title": "OUTLET",
