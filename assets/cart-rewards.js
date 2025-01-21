@@ -114,7 +114,7 @@ class CartRewards {
 				const missing = (firstRule.condition.value - this.cartTotalValue).toFixed(0);
 
 				// This line REPLACES the ".rewards__missing_amount" text in your rule message
-				let msg = firstRule.condition.message.replace(".rewards__missing_amount");
+				let msg = firstRule.condition.message;
 
 				// If you want a currency sign, do:
 				// let msg = firstRule.condition.message.replace(
@@ -122,15 +122,18 @@ class CartRewards {
 				//   `₪${missing}`
 				// );
 				// ...existing code...
+				// ...existing code...
 				let cleanMessage = firstRule.condition.message.replace(/\r?\n|\r/g, " ").replace(/\s\s+/g, " ");
 
+				// Insert a space before and after the replaced amount
 				let newMessage = cleanMessage.replace(
 					'<span class="rewards__missing_amount"></span>',
-					`<span class="rewards__missing_amount">${missing}₪</span>`
+					` <span class="rewards__missing_amount">${missing}₪</span> `
 				);
 
 				rewardText.html(newMessage);
 				console.log(newMessage);
+				console.log("msg", msg);
 				console.log("Missing amount:", missing);
 				console.log("Rule message:", msg);
 			}

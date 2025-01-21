@@ -512,7 +512,6 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 }
 
 .rewards-section .reward-text {
-	display: flex;
 	flex-direction: column;
 }
 
