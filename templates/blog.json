@@ -12,8 +12,8 @@
     "main": {
       "type": "main-blog",
       "settings": {
-        "tile_image_one": "shopify://shop_images/16_41ec56a7-9e7b-41e5-9de4-a148f8a70179.jpg",
-        "tile_image_one_link": "shopify://collections/sets",
+        "tile_image_one": "shopify://shop_images/24_6098fde2-cd4f-46af-b5bf-bb4a688cf73e.jpg",
+        "tile_image_one_link": "shopify://collections/קולקציית-חורף",
         "tile_image_two": "shopify://shop_images/a40ea1b4acde1744ca52d0ccdf0dc1bf.jpg",
         "tile_image_two_link": "shopify://collections/best-seller-internal-use",
         "layout": "grid",
