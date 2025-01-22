@@ -143,9 +143,7 @@
         name="customer[phone]"
         id="RegisterForm-phone"
         required
-        {% if form.phone %}
-          value="{{ form.phone }}"
-        {% endif %}
+        value="{{ form.phone | escape }}"
         autocomplete="tel"
         placeholder="{{ 'customer.register.phone' | t }}"
       >

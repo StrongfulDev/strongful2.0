@@ -86,7 +86,7 @@
                                     name="customer[email]"
                                     id="RegisterForm-email"
                                     {% if form.email %}
-                                        value="{{ form.email }}"
+                                        value="{{ form.email }}
                                     {% endif %}
                                     spellcheck="false"
                                     autocapitalize="off"
@@ -120,7 +120,7 @@
                                         aria-invalid="true"
                                         aria-describedby="RegisterForm-password-error"
                                     {% endif %}
-                                    placeholder="{{ 'customer.register.password' | t }}"
+                                    placeholder="{{ 'customer.register.password' | t }}
                             >
                             <label for="RegisterForm-password">
                                 {{ 'customer.register.password' | t }}
@@ -148,18 +148,16 @@
                         </div>
                         <div class="field">
                             <input
-                                type="tel"
-                                id="RegisterForm-Phone"
+                                type="text"
+                                name="customer[phone]"
+                                id="RegisterForm-phone"
                                 required
-                                class="field__input"
+                                value="{{ form.phone | escape }}"
                                 autocomplete="tel"
-                                name="contact[{{ 'templates.contact.form.phone' | t }}]"
-                                pattern="[0-9\-]*"
-                                value="{% if form.phone %}{{ form.phone }}{% endif %}"
-                                placeholder="{{ 'templates.contact.form.phone' | t }}"
+                                placeholder="{{ 'customer.register.phone' | t }}"
                             >
-                            <label class="field__label" for="RegisterForm-Phone">
-                                {{ 'templates.contact.form.phone' | t }} <span aria-hidden="true">*</span>
+                            <label for="RegisterForm-phone">
+                                {{ 'customer.register.phone' | t }} <span aria-hidden="true">*</span>
                             </label>
                         </div>
                         <button class="button-loader-activator">
@@ -212,7 +210,7 @@
                                         aria-describedby="RecoverEmail-email-error"
                                         autofocus
                                     {% endif %}
-                                    placeholder="{{ 'customer.login_page.email' | t }}"
+                                    placeholder="{{ 'customer.login_page.email' | t }}
                             >
                             <label for="RecoverEmail">
                                 {{ 'customer.login_page.email' | t }}
@@ -284,7 +282,7 @@
                                     {% if form.errors contains 'form' %}
                                         aria-invalid="true"
                                     {% endif %}
-                                    placeholder="{{ 'customer.login_page.email' | t }}"
+                                    placeholder="{{ 'customer.login_page.email' | t }}
                             >
                             <label for="CustomerEmail">
                                 {{ 'customer.login_page.email' | t }}
@@ -302,7 +300,7 @@
                                         {% if form.errors contains 'form' %}
                                             aria-invalid="true"
                                         {% endif %}
-                                        placeholder="{{ 'customer.login_page.password' | t }}"
+                                        placeholder="{{ 'customer.login_page.password' | t }}
                                 >
                                 <label for="CustomerPassword">
                                     {{ 'customer.login_page.password' | t }}
@@ -324,7 +322,8 @@
                 {%- if shop.checkout.guest_login -%}
                     <div>
                         <hr>
-                        <h2>{{ 'customer.login_page.guest_title' | t }}</h2>
+                        <h2>{{ 'customer.login_page.guest_title' | t }}
+                        </h2>
 
                         {%- form 'guest_login' -%}
                             <button>
