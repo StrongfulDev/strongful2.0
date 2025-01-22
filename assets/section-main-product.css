@@ -725,7 +725,7 @@ a.product__text {
 
 .product__media-item .new-product-span {
 	position: absolute;
-	bottom: 2.5rem;
+	top: 2.5rem;
 	left: 3rem;
 	background: rgba(var(--color-background),.95);
 	padding: 0.5rem .9rem;
