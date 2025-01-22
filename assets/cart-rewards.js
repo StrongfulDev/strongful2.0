@@ -155,7 +155,13 @@ class CartRewards {
 		if (nextRule) {
 			const missing = (nextRule.condition.value - this.cartTotalValue).toFixed(0);
 			if (missing > 0) {
-				rewardText.html(`<span style="display:inline-block">Spend ₪${missing} more to unlock the next reward!</span>`);
+				rewardText.html(nextRule.condition.message.replace(".rewards__missing_amount", `₪${missing}`));
+				let cleanMessage = nextRule.condition.message.replace(/\r?\n|\r/g, " ").replace(/\s\s+/g, " ");
+				let newMessage = cleanMessage.replace(
+					'<span class="rewards__missing_amount"></span>',
+					`<span class="rewards__missing_amount">${missing}₪</span>`
+				);
+				rewardText.html(newMessage);
 				if (this.featuredCollection) {
 					this.featuredCollection.addClass("disabled");
 				}
