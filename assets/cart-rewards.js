@@ -130,9 +130,9 @@ class CartRewards {
 				);
 
 				rewardText.html(newMessage);
-				console.log(newMessage);
-				console.log("Missing amount:", missing);
-				console.log("Rule message:", msg);
+				// console.log(newMessage);
+				// console.log("Missing amount:", missing);
+				// console.log("Rule message:", msg);
 			}
 
 			if (this.featuredCollection) {
