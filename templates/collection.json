@@ -58,7 +58,7 @@
       "settings": {
         "tops_menu": "dropdown-tops",
         "bottoms_menu": "bottoms-filter-links",
-        "ad_link": "shopify://collections/15-off-selected-products",
+        "ad_link": "",
         "products_per_page": 20,
         "columns_desktop": 4,
         "image_ratio": "adapt",
