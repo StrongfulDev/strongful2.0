@@ -594,6 +594,16 @@
         "name": "list.metaobject_reference",
         "category": "REFERENCE"
       }
+    },
+    {
+      "key": "best-uses",
+      "namespace": "shopify",
+      "name": "Best uses",
+      "description": "Highlights optimal activities for product use, like traveling, hiking, or diving",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
     }
   ],
   "variant": [
