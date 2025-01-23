@@ -250,7 +250,7 @@
             "small_font": false,
             "menu": "dawn-outlet-menu",
             "menu_second": "outlet-menu-sub",
-            "menu_third": "outlet-menu-third",
+            "menu_third": "",
             "title": "OUTLET",
             "item_class": "",
             "title_link": "",
