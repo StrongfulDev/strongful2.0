@@ -856,6 +856,15 @@
         "padding_bottom": 36
       }
     },
+    "custom_liquid_MGWxNP": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div\n\tclass=\"yotpo yotpo-pictures-widget\"\n\tdata-gallery-id=\"6788d50587c6da001875b7ad\">\n</div>",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "featured_blog_3p3kGH": {
       "type": "featured-blog",
       "settings": {
@@ -984,6 +993,7 @@
     "collection_list_UWHXHY",
     "slideshow_dtfFDm",
     "collection_list_QrC4z9",
+    "custom_liquid_MGWxNP",
     "featured_blog_3p3kGH",
     "4371b550-969b-4828-986d-71697fc53ef0",
     "customer_slideshow_4HiHHh"
