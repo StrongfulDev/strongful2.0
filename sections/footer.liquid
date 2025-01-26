@@ -1,3 +1,4 @@
+{%- if request.page_type == 'index' -%}<div class="yotpo yotpo-pictures-widget" data-gallery-id=""></div>{%- endif -%}
 {% comment %}theme-check-disable UndefinedObject{% endcomment %}
 {{ 'section-footer.css' | asset_url | stylesheet_tag }}
 {{ 'section-footer.js' | asset_url | script_tag }}
