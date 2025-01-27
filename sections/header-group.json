@@ -33,27 +33,12 @@
           "settings": {
             "toggle_main_font": true,
             "toggle_sub_font": true,
-            "main_text": "TRENDY AND TIMELESS",
-            "sub_text": "CAN'T BE MISSED",
+            "main_text": "FLASH SALE",
+            "sub_text": "מגוון פריטים עד 40% הנחה",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "ltr",
             "link": "shopify://collections/קולקציית-חורף",
-            "color_scheme": "accent-1"
-          }
-        },
-        "announcement_zkigjY": {
-          "type": "announcement",
-          "disabled": true,
-          "settings": {
-            "toggle_main_font": false,
-            "toggle_sub_font": false,
-            "main_text": "Welcome to our store",
-            "sub_text": "Welcome to our store",
-            "text_alignment": "center",
-            "main_text_direction": "rtl",
-            "sub_text_direction": "rtl",
-            "link": "",
             "color_scheme": "accent-1"
           }
         },
@@ -75,7 +60,6 @@
       "block_order": [
         "announcement-bar-0",
         "7c37c998-83a9-46d6-91fd-3ceaaab10008",
-        "announcement_zkigjY",
         "8a66318a-92fb-4fe3-8af2-41e36854cfdb"
       ],
       "settings": {
