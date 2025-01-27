@@ -125,15 +125,15 @@
         "slide_gaUfH4": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/copy_3_7ec25359-27e9-405e-8bce-abfc24508769.jpg",
-            "mobile_image": "shopify://shop_images/copy_1_1bb4da6e-16a3-4ba9-bea0-11953b37ed7a.jpg",
+            "image": "shopify://shop_images/18_6eda2eb9-737b-45a7-abf7-4ceadfcce9ca.jpg",
+            "mobile_image": "shopify://shop_images/6_7e856de4-7eba-40d0-8c6d-2ba5f8b60ec7.jpg",
             "left_position": 50,
             "bottom_position": 5,
             "desktop_left_position": 73,
             "desktop_bottom_position": 5,
             "show_lock": false,
             "button_label": "SHOP NOW",
-            "link": "shopify://collections/קולקציית-חורף",
+            "link": "shopify://collections/flash-sale-up-to-40",
             "show_text_box": false,
             "color_scheme": "inverse",
             "whole_slide_link": "",
