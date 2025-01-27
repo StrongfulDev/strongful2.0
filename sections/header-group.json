@@ -90,13 +90,12 @@
       "blocks": {
         "bd053c52-574f-435e-be3a-a4a74c72b169": {
           "type": "url",
-          "disabled": true,
           "settings": {
             "link_text_direction": "Left To Right",
             "show_on_mobile": true,
             "small_font": false,
-            "title": "25% OFF",
-            "title_link": "shopify://collections/sets"
+            "title": "UP TO 40%",
+            "title_link": "shopify://collections/flash-sale-up-to-40"
           }
         },
         "menu_item_WN8KQL": {
