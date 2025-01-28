@@ -64,7 +64,7 @@
       ],
       "settings": {
         "blocks_type": "columns",
-        "color_scheme": "background-1",
+        "color_scheme": "inverse",
         "animation-delay": 6,
         "animation-duration": 5
       }
