@@ -583,6 +583,7 @@
     },
     "custom_liquid_DL9jGF": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "custom_liquid": "<div\n\tclass=\"yotpo yotpo-pictures-widget\"\n\tdata-gallery-id=\"6788d50587c6da001875b7ad\">\n</div>",
         "color_scheme": "background-1",
