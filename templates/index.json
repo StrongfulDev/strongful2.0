@@ -581,6 +581,15 @@
         "padding_bottom": 16
       }
     },
+    "custom_liquid_DL9jGF": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div\n\tclass=\"yotpo yotpo-pictures-widget\"\n\tdata-gallery-id=\"6788d50587c6da001875b7ad\">\n</div>",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "173246164424ec44fa": {
       "type": "apps",
       "blocks": {
@@ -979,6 +988,7 @@
     "featured_collection_3Dk734",
     "173251753398892554",
     "featured_collection_zx87dF",
+    "custom_liquid_DL9jGF",
     "173246164424ec44fa",
     "featured_product_v2_FjnCqj",
     "collection_list_UWHXHY",
