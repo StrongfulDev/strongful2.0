@@ -186,8 +186,31 @@
               "
               
                         >
-                           {%- for product in collection.products -%}
-                              {% if forloop.index == 9 %}
+                          
+                            {%- for product in collection.products -%}
+                                {%- liquid
+                                    assign lazy_load = false
+                                    assign show_quick_add = section.settings.enable_quick_add
+                                    assign quick_add_type = section.settings.quick_add_type
+                                    assign quick_add_type_mobile = section.settings.quick_add_type_mobile
+                                    assign section_id = section.id
+                                    assign image_count = section.settings.image_count
+                                    assign card_banner_text = card_announcement
+                                    assign members_banner_text = members_announcement
+                                    assign card_header_size = section.settings.card_header_size
+                                    assign announcement_tag = settings.announcement_tag
+                                    assign second_announcement_tag = settings.second_announcement_tag
+                                    assign custom_collection_second_announcement = settings.custom_collection_second_announcement
+                                    assign pick_size_text = section.settings.pick_size_text
+                                    assign quick_add_text = section.settings.quick_add_text
+                                    assign quick_add_accessories_text = section.settings.quick_add_accessories_text
+                                    assign members_only_sale = settings.members_only_sale
+                                    assign members_only_sale_active = settings.members_only_sale_active
+                                    assign comes_with_matching_outfit = settings.comes_with_matching_outfit
+                                -%}
+
+                                {% if forloop.index0 == 8 or forloop.index0 == 20 or forloop.index0 == 34 or forloop.index0 == 60 %}
+                                    {% if forloop.index == 9 %}
                                 
                                   <li class="" style="width:100%; grid-column: span 2;">
                                     {% if collection.handle == "flash-sale-up-to-40" %}
@@ -213,28 +236,6 @@
                                   </li>
                                   
                                 {% endif %}
-                                {%- liquid
-                                    assign lazy_load = false
-                                    assign show_quick_add = section.settings.enable_quick_add
-                                    assign quick_add_type = section.settings.quick_add_type
-                                    assign quick_add_type_mobile = section.settings.quick_add_type_mobile
-                                    assign section_id = section.id
-                                    assign image_count = section.settings.image_count
-                                    assign card_banner_text = card_announcement
-                                    assign members_banner_text = members_announcement
-                                    assign card_header_size = section.settings.card_header_size
-                                    assign announcement_tag = settings.announcement_tag
-                                    assign second_announcement_tag = settings.second_announcement_tag
-                                    assign custom_collection_second_announcement = settings.custom_collection_second_announcement
-                                    assign pick_size_text = section.settings.pick_size_text
-                                    assign quick_add_text = section.settings.quick_add_text
-                                    assign quick_add_accessories_text = section.settings.quick_add_accessories_text
-                                    assign members_only_sale = settings.members_only_sale
-                                    assign members_only_sale_active = settings.members_only_sale_active
-                                    assign comes_with_matching_outfit = settings.comes_with_matching_outfit
-                                -%}
-
-                                {% if forloop.index0 == 8 or forloop.index0 == 20 or forloop.index0 == 34 or forloop.index0 == 60 %}
                                     {% if section.settings.ad_image != blank %}
                                         <li class="grid__item">
                                             <a href="{{ section.settings.ad_link }}" class="ad-image-link">
