@@ -20,8 +20,8 @@ class FacetFiltersForm extends HTMLElement {
 			if (searchParams === FacetFiltersForm.searchParamsPrev) return;
 			FacetFiltersForm.renderPage(searchParams, null, false);
 		};
-		FacetFiltersForm.activeFilterCount();
 		window.addEventListener("popstate", onHistoryChange);
+		FacetFiltersForm.activeFilterCount();
 	}
 
 	static toggleActiveFacets(disable = true) {
@@ -481,7 +481,21 @@ document.addEventListener("DOMContentLoaded", function () {
 	// 	callback: removeDeadProduct,
 	// });
 });
-
+function updateActiveState() {
+	const currentUrl = new URL(window.location.href);
+	const existingFilters = currentUrl.searchParams.getAll("filter.p.product_type");
+	typeFilterLinks.forEach((link) => {
+		const productType = link.textContent.trim();
+		if (existingFilters.includes(productType)) {
+			{
+				link.html.add("active");
+				console.log("Adding active class to:", link.classList);
+			}
+		} else {
+			link.classList.remove("active");
+		}
+	});
+}
 document.addEventListener("DOMContentLoaded", () => {
 	let endlessCollection = new AjaxinateMin({
 		container: "#product-grid",
