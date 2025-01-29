@@ -1791,3 +1791,25 @@ summary .icon-caret {
 		margin-right: var(--grid-desktop-vertical-spacing);
 	}
 }
+
+.product-type-filter {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(var(--color-foreground), 0.08);
+}
+
+.product-type-filter .filter-links {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 990px) {
+    .product-type-filter {
+        margin-bottom: 3rem;
+    }
+}

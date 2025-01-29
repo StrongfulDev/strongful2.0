@@ -25,6 +25,9 @@
 -%}
 
 <div class="facets-container fix-direction{% if filter_type == 'drawer' %} facets-container-drawer{% endif %}">
+    {% comment %} Product Type Filter Bar {% endcomment %}
+   
+
     <div
             class="product-count light{% if filter_type == 'vertical' or filter_type == 'horizontal' %} medium-hide large-up-hide{% endif %}"
             role="status">
@@ -54,6 +57,7 @@
             </svg>
         </div>
     </div>
+    
 {% comment %} 
     <div class="new-filter-menu-mobile">
         {% if results.title == 'טופים' or results.title == 'כל הטופים' or results.title == 'חזיות ספורט' or results.title == 'גופיית ספורט' or results.title == 'בגד גוף' or results.title == 'חולצות ספורט' or results.title == 'קרופ טופ' or results.title == 'ג׳קטים' or results.title == 'אוברולים' or results.title == 'סווטשירט' %}

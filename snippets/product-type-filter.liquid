@@ -1,0 +1,21 @@
+  {% comment %}
+  Snippet: product-type-filter.liquid
+  Purpose: Displays product-type filters as a list of links
+{% endcomment %}
+
+  <div class="product-type-filter">
+        <ul class="filter-links">
+            {%- for filter in results.filters -%}
+                {%- assign filter_label = filter.label | escape | strip | downcase -%}
+                {%- if filter_label == "product type" or filter_label == "סוג מוצר" -%}
+                    {%- for value in filter.values -%}
+                        <li class="filter-link {% if value.active %}current-link{% endif %}">
+                            <a href="{{ value.url }}" class="tops-menu-link {% if value.active %}list-menu__item--active{% endif %}">
+                                {{ value.label }}
+                            </a>
+                        </li>
+                    {%- endfor -%}
+                {%- endif -%}
+            {%- endfor -%}
+        </ul>
+    </div>
