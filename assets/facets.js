@@ -108,6 +108,7 @@ class FacetFiltersForm extends HTMLElement {
 	}
 
 	static renderFilters(html, event) {
+		console.log("htmlllllllllll:", html);
 		const parsedHTML = new DOMParser().parseFromString(html, "text/html");
 
 		const facetDetailsElements = parsedHTML.querySelectorAll(
@@ -115,6 +116,7 @@ class FacetFiltersForm extends HTMLElement {
 		);
 		const matchesIndex = (element) => {
 			const jsFilter = event ? event.target.closest(".js-filter") : undefined;
+			console.log(jsFilter);
 			return jsFilter ? element.dataset.index === jsFilter.dataset.index : false;
 		};
 		const facetsToRender = Array.from(facetDetailsElements).filter((element) => !matchesIndex(element));

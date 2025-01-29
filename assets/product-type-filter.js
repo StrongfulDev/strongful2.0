@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			currentUrl.searchParams.set("sort_by", "manual");
 
 			const searchParamsString = currentUrl.searchParams.toString();
-			FacetFiltersForm.renderPage(searchParamsString, event, true);
+			// FacetFiltersForm.renderFilters(searchParamsString, event, true);
 		});
 	});
 });
