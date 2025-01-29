@@ -19,7 +19,7 @@
     endif
 %}
 
-<link
+\<link
         rel="preload"
         href="{{ 'component-rte.css' | asset_url }}"
         as="style"
@@ -184,8 +184,35 @@
                 grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down
                 grid--{{ section.settings.columns_desktop }}-col-desktop
               "
+              
                         >
-                            {%- for product in collection.products -%}
+                           {%- for product in collection.products -%}
+                              {% if forloop.index == 9 %}
+                                
+                                  <li class="" style="width:100%; grid-column: span 2;">
+                                    {% if collection.handle == "flash-sale-up-to-40" %}
+                                      <tolstoy-stories
+                                        data-tags="{% for tag in product.tags -%}{{ tag }},{%- endfor %}"
+                                        class="tolstoy-stories"
+                                        data-publish-id="2lr67rdkklc6j" 
+                                        data-product-id="{{ product.id }}">
+                                      </tolstoy-stories>
+                                    {% else collection.handle == "sets"%}
+                                      <tolstoy-stories
+
+                                        data-tags="{% for tag in product.tags -%}{{ tag }},{%- endfor %}"
+                                      
+                                        class="tolstoy-stories"
+                                      
+                                        data-publish-id="f6e4uhy1h5j1y" 
+                                      
+                                        data-product-id="{{ product.id }}">
+                                      
+                                      </tolstoy-stories>
+                                    {% endif %}
+                                  </li>
+                                  
+                                {% endif %}
                                 {%- liquid
                                     assign lazy_load = false
                                     assign show_quick_add = section.settings.enable_quick_add
