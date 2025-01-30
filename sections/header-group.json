@@ -33,12 +33,12 @@
           "settings": {
             "toggle_main_font": true,
             "toggle_sub_font": true,
-            "main_text": "FLASH SALE",
-            "sub_text": "מגוון פריטים עד 40% הנחה",
+            "main_text": "FINALLY BACK",
+            "sub_text": "ASTRA COLLECTION",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "ltr",
-            "link": "shopify://collections/flash-sale-up-to-40",
+            "link": "shopify://collections/astra",
             "color_scheme": "background-1"
           }
         },
