@@ -1793,19 +1793,26 @@ summary .icon-caret {
 }
 
 .product-type-filter {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2rem;
-    padding: 1rem 0;
-    border-bottom: 1px solid rgba(var(--color-foreground), 0.08);
+  position: sticky;
+  top: 60px; /* Adjust this value to match the height of your header */
+  z-index: 10;
+  background-color: #fff;
+  width: 100vw; /* Full viewport width */
+  left: 0; /* Align to the left edge of the viewport */
+  right: 0; /* Align to the right edge of the viewport */
+  margin-left: -50vw; /* Center the element */
+  margin-right: -50vw; /* Center the element */
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(var(--color-foreground), 0.08);
+  box-sizing: border-box; /* Include padding and border in the width */
 }
 
 .product-type-filter .filter-links {
-    max-width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 0.5rem;
+  padding-top: 1rem;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 0.5rem;
 }
 
 @media screen and (min-width: 990px) {
