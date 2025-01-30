@@ -125,15 +125,15 @@
         "slide_gaUfH4": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/18_6eda2eb9-737b-45a7-abf7-4ceadfcce9ca.jpg",
-            "mobile_image": "shopify://shop_images/6_7e856de4-7eba-40d0-8c6d-2ba5f8b60ec7.jpg",
+            "image": "shopify://shop_images/copy_5_7992c5d5-7373-425b-9cef-c18a2d2cd02c.jpg",
+            "mobile_image": "shopify://shop_images/copy_3_1.jpg",
             "left_position": 50,
             "bottom_position": 20,
             "desktop_left_position": 50,
             "desktop_bottom_position": 25,
             "show_lock": false,
             "button_label": "SHOP NOW",
-            "link": "shopify://collections/flash-sale-up-to-40",
+            "link": "shopify://collections/astra",
             "show_text_box": false,
             "color_scheme": "inverse",
             "whole_slide_link": "",
