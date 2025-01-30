@@ -440,10 +440,10 @@
         "slide_KdxH44": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/copy_4_2753a758-7da1-4b32-b526-b194d8c51d2d.jpg",
-            "mobile_image": "shopify://shop_images/5_d42b42e7-d4e0-4d12-b26d-ec2486686c2c.jpg",
-            "login_desktop_image": "shopify://shop_images/copy_4_2753a758-7da1-4b32-b526-b194d8c51d2d.jpg",
-            "login_mobile_image": "shopify://shop_images/5_d42b42e7-d4e0-4d12-b26d-ec2486686c2c.jpg",
+            "image": "shopify://shop_images/1_816dfa23-e79c-4a85-ae4f-a954c5b2feed.jpg",
+            "mobile_image": "shopify://shop_images/1_49afa2d5-1784-4187-8f30-8b57977bd33a.jpg",
+            "login_desktop_image": "shopify://shop_images/1_816dfa23-e79c-4a85-ae4f-a954c5b2feed.jpg",
+            "login_mobile_image": "shopify://shop_images/1_49afa2d5-1784-4187-8f30-8b57977bd33a.jpg",
             "button_label": "",
             "login_button_label": "",
             "link": "shopify://collections/flash-sale-up-to-40",
@@ -451,7 +451,7 @@
             "show_text_box": true,
             "color_scheme": "background-1",
             "logged_in_color_scheme": "background-1",
-            "whole_slide_link": "shopify://collections/flash-sale-up-to-40",
+            "whole_slide_link": "shopify://pages/loyalty",
             "button_style_secondary": false,
             "box_align": "middle-center",
             "text_alignment": "center",
