@@ -1750,7 +1750,8 @@ summary .icon-caret {
 	.facets-container {
 		position: -webkit-sticky;
 		position: sticky;
-		top: 10rem;
+		top: 30px;
+    z-index: 4;
 		max-width: 240px;
 		min-width: 200px;
 		max-height: 80vh;
@@ -1794,8 +1795,8 @@ summary .icon-caret {
 
 .product-type-filter {
   position: sticky;
-  top: 60px; /* Adjust this value to match the height of your header */
-  z-index: 10;
+  top: 50px; /* Adjust this value to match the height of your header */
+  z-index: 3;
   background-color: #fff;
   width: 100vw; /* Full viewport width */
   left: 0; /* Align to the left edge of the viewport */
