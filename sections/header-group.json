@@ -114,7 +114,7 @@
             "show_on_mobile": true,
             "order": "",
             "small_font": false,
-            "menu": "collection-menu-header",
+            "menu": "collection-menu-header-trending",
             "menu_second": "",
             "menu_third": "",
             "title": "קולקציות",
