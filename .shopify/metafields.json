@@ -876,6 +876,16 @@
         "name": "list.color",
         "category": "COLOR"
       }
+    },
+    {
+      "key": "variant_color",
+      "namespace": "custom",
+      "name": "variant color",
+      "description": "color for variants .",
+      "type": {
+        "name": "color",
+        "category": "COLOR"
+      }
     }
   ],
   "shop": []
