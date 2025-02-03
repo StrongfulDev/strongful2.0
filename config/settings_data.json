@@ -339,7 +339,7 @@
       },
       "11791027836456060766": {
         "type": "shopify://apps/kesem/blocks/kesem-bot/f7671bb7-7cd7-4c3d-ab62-318d6faec87f",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "vertical_position": "up",
           "horizontal_position": "right"
