@@ -233,34 +233,83 @@
 
                                 {% if isLiveTheme == 'true' %}
                                     {% unless product.tags contains 'giftHide' or product.tags contains 'hidden' or product.tags contains 'free-slippers' %}
-                                        <li class="grid__item {{ isLiveTheme }} loyalty__slide loyalty__slide--{{ loggedIn }} {% if product.available == false and product.tags contains 'outlet' %}hidden{% endif %}">
-                                            {% render 'card-product',
-                                                    card_product: product,
-                                                    loggedIn: loggedIn,
-                                                    media_aspect_ratio: section.settings.image_ratio,
-                                                    show_secondary_image: section.settings.show_secondary_image,
-                                                    show_vendor: section.settings.show_vendor,
-                                                    show_rating: section.settings.show_rating,
-                                                    lazy_load: lazy_load,
-                                                    show_quick_add: section.settings.enable_quick_add,
-                                                    quick_add_type: section.settings.quick_add_type,
-                                                    quick_add_type_mobile: section.settings.quick_add_type_mobile,
-                                                    section_id: section.id,
-                                                    image_count: section.settings.image_count,
-                                                    card_banner_text: card_announcement,
-                                                    card_header_size: section.settings.card_header_size,
-                                                    announcement_tag: settings.announcement_tag,
-                                                    second_announcement_tag: settings.second_announcement_tag,
-                                                    custom_collection_second_announcement: settings.custom_collection_second_announcement,
-                                                    pick_size_text: section.settings.pick_size_text,
-                                                    quick_add_text: section.settings.quick_add_text,
-                                                    quick_add_accessories_text: section.settings.quick_add_accessories_text,
-                                                    members_only_sale: settings.members_only_sale,
-                                                    members_only_sale_active: settings.members_only_sale_active,
-                                                    members_banner_text: members_announcement,
-                                                    comes_with_matching_outfit: settings.comes_with_matching_outfit
-                                            %}
-                                        </li>
+                                     {%- liquid
+    assign option_chosen = "Color" 
+    assign option_index = ''
+    for option in product.options
+        if option_chosen == option
+            assign option_index = forloop.index0 
+            break
+        endif
+    endfor
+-%}
+{% comment %}
+Code is tested by WebSensePro team with Dawn 12.0.0 Theme 
+
+Code is subject to be updated with every theme updates, for more info contact via https://websensepro.com/contact-us
+
+{% endcomment %}
+
+{%- if option_index == '' -%}
+  <li
+  class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+  {% if settings.animations_reveal_on_scroll %}
+      data-cascade
+      style="--animation-order: {{ forloop.index }};"
+  {% endif %}
+  >
+  {% render 'card-product',
+      card_product: product,
+      media_aspect_ratio: section.settings.image_ratio,
+      image_shape: section.settings.image_shape,
+      show_secondary_image: section.settings.show_secondary_image,
+      show_vendor: section.settings.show_vendor,
+      show_rating: section.settings.show_rating,
+      lazy_load: lazy_load,
+      show_quick_add: section.settings.enable_quick_add,
+      section_id: section.id
+  %}
+  </li>
+{%- else -%}
+  {% assign displayed_values = "" %}
+  {% for variant in product.variants %}
+  {%- liquid
+    assign variant_option = variant.options[option_index]
+    assign valueIsDisplayed = false
+    for value in displayed_values
+      if value == variant_option
+        assign valueIsDisplayed = true
+        break
+      endif
+    endfor
+  -%}
+  {% unless valueIsDisplayed %}
+      {%- assign variant_option_arr = variant_option | append: ';'  | split: ';' -%}
+      {% assign displayed_values = displayed_values | concat: variant_option_arr %}
+      <li
+      class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+      {% if settings.animations_reveal_on_scroll %}
+          data-cascade
+          style="--animation-order: {{ forloop.index }};"
+      {% endif %}
+      >
+      {% render 'card-variant',
+          card_variant: variant,
+          card_product: product,
+          variant_option: variant_option,
+          media_aspect_ratio: section.settings.image_ratio,
+          image_shape: section.settings.image_shape,
+          show_secondary_image: section.settings.show_secondary_image,
+          show_vendor: section.settings.show_vendor,
+          show_rating: section.settings.show_rating,
+          lazy_load: lazy_load,
+          show_quick_add: section.settings.enable_quick_add,
+          section_id: section.id
+      %}
+      </li>
+    {% endunless %}
+  {% endfor %}
+{%- endif -%}
                                     {% endunless %}
                                 {% else %}
                                     {% unless product.tags contains 'giftHide' %}
