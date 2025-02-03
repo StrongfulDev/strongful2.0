@@ -240,7 +240,7 @@
                                             {% else %}
                                                 {% assign rendered_colors = rendered_colors | append: variant.option1 | append: ',' %}
                                                 <li class="grid__item {{ isLiveTheme }} loyalty__slide loyalty__slide--{{ loggedIn }}">
-                                                    {% render 'card-product',
+                                                    {% render 'card-variant',
                                                             card_product: product,
                                                             variant: variant,
                                                             loggedIn: loggedIn,
