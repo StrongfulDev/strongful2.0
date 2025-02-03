@@ -1,4 +1,3 @@
-
 {{ 'main-product-quick-add.css' | asset_url | stylesheet_tag }}
 {{ 'main-product-quick-add.js' | asset_url | script_tag }}
 
@@ -82,14 +81,48 @@
                 is_modal: true,
                 quick_add_text: section.settings.quick_add_text,
                 pick_size_text: section.settings.pick_size_text,
-                quick_add_accessories_text: section.settings.quick_add_accessories_text,
-                announcement_tag: section.settings.announcement_tag,
-                members_only_sale: settings.members_only_sale,
-                members_only_sale_active: settings.members_only_sale_active,
-                preorder_over_text: settings.preorder_over_text,
-                comes_with_matching_outfit: settings.comes_with_matching_outfit
-        %}
+                selected_color: selected_color %}
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const quickAddTriggers = document.querySelectorAll('[data-quick-add-color]');
+            quickAddTriggers.forEach(trigger => {
+                trigger.addEventListener('click', function() {
+                    const selectedColor = this.getAttribute('data-quick-add-color');
+                    const sizePicker = document.querySelector('.product-size-picker');
+                    sizePicker.setAttribute('data-selected-color', selectedColor);
+
+                    const sizeVariantButtons = sizePicker.querySelectorAll('.size_variant_button');
+                    sizeVariantButtons.forEach(button => {
+                        const buttonColor = button.getAttribute('data-color');
+                        if (buttonColor === selectedColor) {
+                            button.style.display = 'block';
+                        } else {
+                            button.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Initialize the size options based on the first color
+            if (quickAddTriggers.length > 0) {
+                const initialColor = quickAddTriggers[0].getAttribute('data-quick-add-color');
+                const sizePicker = document.querySelector('.product-size-picker');
+                sizePicker.setAttribute('data-selected-color', initialColor);
+
+                const sizeVariantButtons = sizePicker.querySelectorAll('.size_variant_button');
+                sizeVariantButtons.forEach(button => {
+                    const buttonColor = button.getAttribute('data-color');
+                    if (buttonColor === initialColor) {
+                        button.style.display = 'block';
+                    } else {
+                        button.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
 </div>
 
 <div class="sticky-cart-cta-overlay"></div>
