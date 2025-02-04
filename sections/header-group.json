@@ -25,7 +25,7 @@
             "main_text_direction": "rtl",
             "sub_text_direction": "rtl",
             "link": "shopify://blogs/policies/החזרות-והחלפות",
-            "color_scheme": "inverse"
+            "color_scheme": "background-1"
           }
         },
         "7c37c998-83a9-46d6-91fd-3ceaaab10008": {
@@ -39,7 +39,7 @@
             "main_text_direction": "ltr",
             "sub_text_direction": "ltr",
             "link": "shopify://collections/v-day",
-            "color_scheme": "inverse"
+            "color_scheme": "background-2"
           }
         },
         "8a66318a-92fb-4fe3-8af2-41e36854cfdb": {
@@ -53,7 +53,7 @@
             "main_text_direction": "rtl",
             "sub_text_direction": "rtl",
             "link": "shopify://blogs/policies/מדיניות-המשלוחים-שלנו",
-            "color_scheme": "inverse"
+            "color_scheme": "background-2"
           }
         }
       },
