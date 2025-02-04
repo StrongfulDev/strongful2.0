@@ -877,6 +877,47 @@
         "padding_bottom": 20
       }
     },
+    "customer_slideshow_jXTBRG": {
+      "type": "customer-slideshow",
+      "blocks": {
+        "slide_TxMXy9": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/1_0530155f-40c8-475e-98c1-820c7f06d4d8.jpg",
+            "mobile_image": "shopify://shop_images/1_105d437f-637a-4c81-bdfd-772d240b8f8f.jpg",
+            "login_desktop_image": "shopify://shop_images/1_5a9b4abf-1572-484d-b812-3bad9170c26c.jpg",
+            "login_mobile_image": "shopify://shop_images/1_75751ccc-90f4-4222-b3b8-ef6b7b2602a6.jpg",
+            "button_label": "",
+            "login_button_label": "",
+            "link": "shopify://pages/loyalty",
+            "login_link": "",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "logged_in_color_scheme": "background-1",
+            "whole_slide_link": "shopify://pages/loyalty",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_TxMXy9"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "sides",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand",
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
     "4371b550-969b-4828-986d-71697fc53ef0": {
       "type": "rich-text",
       "blocks": {
@@ -989,6 +1030,7 @@
     "slideshow_dtfFDm",
     "collection_list_QrC4z9",
     "featured_blog_3p3kGH",
+    "customer_slideshow_jXTBRG",
     "4371b550-969b-4828-986d-71697fc53ef0",
     "customer_slideshow_4HiHHh"
   ]
