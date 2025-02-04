@@ -33,12 +33,12 @@
           "settings": {
             "toggle_main_font": true,
             "toggle_sub_font": true,
-            "main_text": "FINALLY BACK",
-            "sub_text": "ASTRA COLLECTION",
+            "main_text": "NEW COLLECTION",
+            "sub_text": "V-DAY EDITION",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "ltr",
-            "link": "shopify://collections/astra",
+            "link": "shopify://collections/v-day",
             "color_scheme": "inverse"
           }
         },
