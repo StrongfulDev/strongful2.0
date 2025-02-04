@@ -119,7 +119,7 @@
         "slide_gaUfH4": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/7bf4ae59daefb16ffc1168e12e735c2e.jpg",
+            "image": "shopify://shop_images/copy_2_f6fafae4-5e5b-4f08-a4a9-53948e718eb0.jpg",
             "mobile_image": "shopify://shop_images/76735f8801bc52cc4261922db7b10423.jpg",
             "left_position": 50,
             "bottom_position": 5,
@@ -140,6 +140,7 @@
         },
         "slide_AL3x4y": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/3b721c879f0ef3ac3a85d8569c2362ab.jpg",
             "mobile_image": "shopify://shop_images/951b90955e2f5b06f2cbc003abd4f437.jpg",
@@ -439,13 +440,13 @@
         "slide_KdxH44": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/1_816dfa23-e79c-4a85-ae4f-a954c5b2feed.jpg",
-            "mobile_image": "shopify://shop_images/1_49afa2d5-1784-4187-8f30-8b57977bd33a.jpg",
-            "login_desktop_image": "shopify://shop_images/1_816dfa23-e79c-4a85-ae4f-a954c5b2feed.jpg",
-            "login_mobile_image": "shopify://shop_images/1_49afa2d5-1784-4187-8f30-8b57977bd33a.jpg",
+            "image": "shopify://shop_images/7fdf35b5fe79004218f20cd1895ea0f6.jpg",
+            "mobile_image": "shopify://shop_images/11cd29d239c0f7af81e55931c9b080c6.jpg",
+            "login_desktop_image": "shopify://shop_images/7fdf35b5fe79004218f20cd1895ea0f6.jpg",
+            "login_mobile_image": "shopify://shop_images/11cd29d239c0f7af81e55931c9b080c6.jpg",
             "button_label": "",
             "login_button_label": "",
-            "link": "shopify://collections/flash-sale-up-to-40",
+            "link": "shopify://collections/v-day",
             "login_link": "",
             "show_text_box": true,
             "color_scheme": "background-1",
@@ -977,7 +978,6 @@
     "featured_collection_XDhFHB",
     "featured_collection_KkwYPC",
     "featured_collection_qJrxrJ",
-    "customer_slideshow_wFcfK7",
     "featured_collection_3Dk734",
     "173251753398892554",
     "featured_collection_zx87dF",
@@ -988,6 +988,7 @@
     "slideshow_dtfFDm",
     "collection_list_QrC4z9",
     "featured_blog_3p3kGH",
+    "customer_slideshow_wFcfK7",
     "4371b550-969b-4828-986d-71697fc53ef0",
     "customer_slideshow_4HiHHh"
   ]
