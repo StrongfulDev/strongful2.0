@@ -8,6 +8,10 @@ window.addEventListener('DOMContentLoaded', function(event) {
 
 	$('.product_size_picker__button.default_input').parents('.variant_selector').find('.add_to_cart').removeAttr("disabled");
 
+	$('.variant_selector input[type="radio"]').each(function (index, element) {
+		$(element).attr("id", $(element).attr("id") + "-" + index);
+	});
+
 	$('.variant_selector input[type="radio"]').on("change", function (e) {
 		// $(this).parents('.variant_selector').find('.add_to_cart').removeAttr("disabled");
 	})
