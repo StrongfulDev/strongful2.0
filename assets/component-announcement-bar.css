@@ -1,6 +1,9 @@
 .announcement-bar {
-    color: rgb(var(--color-foreground));
-	background-color: rgb(var(--color-background));
+	/* color: rgb(var(--color-foreground));
+	background-color: rgb(var(--color-background)); */
+    color: #000000;
+	background-color: #E3D1B9;
+
 	padding: 1.5rem 0;
 	width: 100%;
 	height: 100%;
