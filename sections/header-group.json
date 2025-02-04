@@ -74,6 +74,7 @@
       "blocks": {
         "bd053c52-574f-435e-be3a-a4a74c72b169": {
           "type": "url",
+          "disabled": true,
           "settings": {
             "link_text_direction": "Right To Left",
             "show_on_mobile": true,
@@ -113,7 +114,7 @@
             "show_on_mobile": true,
             "order": "",
             "small_font": false,
-            "menu": "collection-menu-header-trending",
+            "menu": "collection-menu-header",
             "menu_second": "",
             "menu_third": "",
             "title": "קולקציות",
