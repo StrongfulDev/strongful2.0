@@ -165,7 +165,7 @@
                                 {% endunless %}
                                 <div class="product-size-picker">
                                     {% render 'product-size-picker',
-                                            product: card_product,
+                                            product: product,
                                             wrapper_class: "hover",
                                             submit_on_click: true,
                                             pick_size_text: pick_size_text,
@@ -468,7 +468,7 @@
 
     {%- if show_quick_add and quick_add_type_mobile == "modal" -%}
         {% render 'product-size-picker',
-                product: card_product,
+                product: product,
                 submit_on_click: true,
                 is_modal: true,
                 id: quick_add_modal_id,

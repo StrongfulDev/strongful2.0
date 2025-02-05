@@ -211,7 +211,7 @@
                                     class="full-unstyled-link pointer {% unless card_product.tags contains 'outlet' %}allow-click{% endunless %}"
                                     aria-labelledby="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }} NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
                             >
-                                {{ card_product.title | escape }}
+                                {{ product.title | escape }}
                             </a>
                         </p>
                     </div>
@@ -247,7 +247,7 @@
                                 {% endunless %}
                                 <div class="product-size-picker">
                                     {% render 'product-size-picker',
-                                            product: card_product,
+                                            product: product,
                                             wrapper_class: "hover",
                                             submit_on_click: true,
                                             pick_size_text: pick_size_text,
@@ -369,7 +369,7 @@
                                 class="full-unstyled-link pointer fix-direction {% unless card_product.tags contains 'outlet' %}allow-click{% endunless %}"
                                 aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}"
                         >
-                            {{ card_product.title | escape }}
+                            {{ product.title | escape }}
                         </a>
                     {% else %}
                         <a
@@ -378,7 +378,7 @@
                                 class="full-unstyled-link pointer fix-direction"
                                 aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}"
                         >
-                            {{ card_product.title | escape }}
+                            {{ product.title | escape }}
                         </a>
                     {% endif %}
                 </p>
@@ -432,16 +432,6 @@
                             members_only_sale: members_only_sale,
                             announcement_tag: announcement_tag
                     %}
-                </div>
-                {%- comment -%} Display all sizes for card_product’s color {%- endcomment -%}
-                <div class="variant-sizes">
-                  {%- for size_variant in product.variants -%}
-                    {%- if size_variant.title | split: ' / ' | first == card_product.title | split: ' / ' | first -%}
-                      <div class="size-option">
-                        {{ size_variant.title | split: ' / ' | last }}
-                      </div>
-                    {%- endif -%}
-                  {%- endfor -%}
                 </div>
             </div>
             {%- if show_quick_add and quick_add_type == "button" -%}
@@ -575,7 +565,7 @@
 
     {%- if show_quick_add and quick_add_type_mobile == "modal" -%}
         {% render 'product-size-picker',
-                product: card_product,
+                product: product,
                 submit_on_click: true,
                 is_modal: true,
                 id: quick_add_modal_id,
