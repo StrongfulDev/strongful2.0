@@ -433,6 +433,16 @@
                             announcement_tag: announcement_tag
                     %}
                 </div>
+                {%- comment -%} Display all sizes for card_product’s color {%- endcomment -%}
+                <div class="variant-sizes">
+                  {%- for size_variant in product.variants -%}
+                    {%- if size_variant.title | split: ' / ' | first == card_product.title | split: ' / ' | first -%}
+                      <div class="size-option">
+                        {{ size_variant.title | split: ' / ' | last }}
+                      </div>
+                    {%- endif -%}
+                  {%- endfor -%}
+                </div>
             </div>
             {%- if show_quick_add and quick_add_type == "button" -%}
                 {% unless card_product.title == 'שירות החלפות מורחב' %}

@@ -205,44 +205,44 @@
                                     assign members_only_sale = settings.members_only_sale
                                     assign members_only_sale_active = settings.members_only_sale_active
                                     assign comes_with_matching_outfit = settings.comes_with_matching_outfit
+                                    assign processed_colors = ""
                                 -%}
 
-                                {% if forloop.index0 == 8 or forloop.index0 == 20 or forloop.index0 == 34 or forloop.index0 == 60 %}
-                                    {% if section.settings.ad_image != blank %}
-                                        <li class="grid__item">
-                                            <a href="{{ section.settings.ad_link }}" class="ad-image-link">
-                                                <img
-                                                        srcset="
-                                                          {%- if section.settings.ad_image.width >= 165 -%}{{ section.settings.ad_image | image_url: width: 165 }} 165w,{%- endif -%}
-                                                          {%- if section.settings.ad_image.width >= 360 -%}{{ section.settings.ad_image | image_url: width: 360 }} 360w,{%- endif -%}
-                                                          {%- if section.settings.ad_image.width >= 533 -%}{{ section.settings.ad_image | image_url: width: 533 }} 533w,{%- endif -%}
-                                                          {{ section.settings.ad_image | image_url }} {{ section.settings.ad_image.width }}w
-                                                        "
-                                                        src="{{ section.settings.ad_image | image_url: width: 533 }}"
-                                                        sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-                                                        alt="פרסומת"
-                                                        class="motion-reduce collection-ad-image"
-                                                        {% unless lazy_load == false %}
-                                                            loading="lazy"
-                                                        {% endunless %}
-                                                >
-                                            </a>
-                                        </li>
-                                    {% endif %}
-                                {% endif %}
+                                {%- for variant in product.variants -%}
+                                    {%- liquid
+                                        assign variant_color = variant.title | split: ' / ' | first
+                                    -%}
+                                    {% unless processed_colors contains variant_color %}
+                                        {% if forloop.index0 == 8 or forloop.index0 == 20 or forloop.index0 == 34 or forloop.index0 == 60 %}
+                                            {% if section.settings.ad_image != blank %}
+                                                <li class="grid__item">
+                                                    <a href="{{ section.settings.ad_link }}" class="ad-image-link">
+                                                        <img
+                                                                srcset="
+                                                                  {%- if section.settings.ad_image.width >= 165 -%}{{ section.settings.ad_image | image_url: width: 165 }} 165w,{%- endif -%}
+                                                                  {%- if section.settings.ad_image.width >= 360 -%}{{ section.settings.ad_image | image_url: width: 360 }} 360w,{%- endif -%}
+                                                                  {%- if section.settings.ad_image.width >= 533 -%}{{ section.settings.ad_image | image_url: width: 533 }} 533w,{%- endif -%}
+                                                                  {{ section.settings.ad_image | image_url }} {{ section.settings.ad_image.width }}w
+                                                                "
+                                                                src="{{ section.settings.ad_image | image_url: width: 533 }}"
+                                                                sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                                                                alt="פרסומת"
+                                                                class="motion-reduce collection-ad-image"
+                                                                {% unless lazy_load == false %}
+                                                                    loading="lazy"
+                                                                {% endunless %}
+                                                        >
+                                                    </a>
+                                                </li>
+                                            {% endif %}
+                                        {% endif %}
 
-                                {% if isLiveTheme == 'true' %}
-                                    {% unless product.tags contains 'giftHide' or product.tags contains 'hidden' or product.tags contains 'free-slippers' %}
-                                        {% assign rendered_colors = '' %}
-                                        {% for variant in product.variants %}
-                                            {% if rendered_colors contains variant.option1 %}
-                                                {% continue %}
-                                            {% else %}
-                                                {% assign rendered_colors = rendered_colors | append: variant.option1 | append: ',' %}
-                                                <li class="grid__item {{ isLiveTheme }} loyalty__slide loyalty__slide--{{ loggedIn }}">
-                                                    {% render 'card-variant',
-                                                            card_product: product,
-                                                            variant: variant,
+                                        {% if isLiveTheme == 'true' %}
+                                            {% unless product.tags contains 'giftHide' or product.tags contains 'hidden' or product.tags contains 'free-slippers' %}
+                                                <li class="grid__item {{ isLiveTheme }} loyalty__slide loyalty__slide--{{ loggedIn }} {% if product.available == false and product.tags contains 'outlet' %}hidden{% endif %}">
+                                                    {% render 'card-product',
+                                                            card_product: variant,
+                                                            product: product,
                                                             loggedIn: loggedIn,
                                                             media_aspect_ratio: section.settings.image_ratio,
                                                             show_secondary_image: section.settings.show_secondary_image,
@@ -268,21 +268,13 @@
                                                             comes_with_matching_outfit: settings.comes_with_matching_outfit
                                                     %}
                                                 </li>
-                                            {% endif %}
-                                        {% endfor %}
-                                    {% endunless %}
-                                {% else %}
-                                    {% unless product.tags contains 'giftHide' %}
-                                        {% assign rendered_colors = '' %}
-                                        {% for variant in product.variants %}
-                                            {% if rendered_colors contains variant.option1 %}
-                                                {% continue %}
-                                            {% else %}
-                                                {% assign rendered_colors = rendered_colors | append: variant.option1 | append: ',' %}
+                                            {% endunless %}
+                                        {% else %}
+                                            {% unless product.tags contains 'giftHide' %}
                                                 <li class="grid__item {{ isLiveTheme }} loyalty__slide loyalty__slide--{{ loggedIn }}">
                                                     {% render 'card-product',
-                                                            card_product: product,
-                                                            variant: variant,
+                                                            card_product: variant,
+                                                            product: product,
                                                             loggedIn: loggedIn,
                                                             media_aspect_ratio: section.settings.image_ratio,
                                                             show_secondary_image: section.settings.show_secondary_image,
@@ -308,10 +300,12 @@
                                                             comes_with_matching_outfit: settings.comes_with_matching_outfit
                                                     %}
                                                 </li>
-                                            {% endif %}
-                                        {% endfor %}
+                                            {% endunless %}
+                                        {% endif %}
+
+                                        {%- assign processed_colors = processed_colors | append: variant_color | append: ',' -%}
                                     {% endunless %}
-                                {% endif %}
+                                {%- endfor -%}
                             {%- endfor -%}
                         </ul>
 
