@@ -663,8 +663,8 @@ cart-drawer-items.is-empty {
 	}
 
 	.cart-drawer .cart-items, .cart-drawer tbody {
-		height: 64vh;
-		height: calc(var(--vh, 1vh) * 64);
+		/* height: 64vh;
+		height: calc(var(--vh, 1vh) * 64); */
 	}
 }
 
