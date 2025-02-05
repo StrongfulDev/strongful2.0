@@ -177,84 +177,6 @@
         "padding_bottom": 12
       }
     },
-    "collection_list_w4D6TE": {
-      "type": "collection-list",
-      "blocks": {
-        "featured_collection_DRHGAB": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "טייצים-עד-40-הנחה",
-            "collection_image": "shopify://shop_images/ADDI1363_b1d4b4df-c5d9-4121-ad9c-708cd66b5e7a.jpg",
-            "show_collection_title": false
-          }
-        },
-        "featured_collection_rpBKdE": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "טופים-עד-50-הנחה-1",
-            "collection_image": "shopify://shop_images/SANA6751_1_fdb06f26-1011-480c-9334-22570d4a8d23.jpg",
-            "show_collection_title": false
-          }
-        },
-        "featured_collection_n3Aag6": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "אקססוריז-עד-30-הנחה",
-            "collection_image": "shopify://shop_images/505e753b83f9f241322a313721e3eb79_d0b6359a-3fae-4e93-8311-baac965afafe.jpg",
-            "show_collection_title": false
-          }
-        },
-        "featured_collection_9c9fAw": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "אוברולים-ושמלות-עד-30-הנחה",
-            "collection_image": "shopify://shop_images/STRO0158_5_55c8a319-a8e8-43e8-a5d3-4587177f76b0.jpg",
-            "show_collection_title": false
-          }
-        },
-        "featured_collection_CyY976": {
-          "type": "featured_collection",
-          "disabled": true,
-          "settings": {
-            "collection": "טייץ-7-8",
-            "collection_image": "shopify://shop_images/7_8_1.jpg",
-            "show_collection_title": false
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_DRHGAB",
-        "featured_collection_rpBKdE",
-        "featured_collection_n3Aag6",
-        "featured_collection_9c9fAw",
-        "featured_collection_CyY976"
-      ],
-      "disabled": true,
-      "custom_css": [
-        ".collection-list grid contains-card contains-card--collection contains-card--standard grid--4-col-desktop grid---col-tablet-down slider slider--desktop slider--tablet grid--peek collection-list--4-items {left: 200px;}"
-      ],
-      "settings": {
-        "images_or_colors": "images",
-        "title": "",
-        "heading_size": "h2",
-        "image_ratio": "portrait",
-        "columns_desktop": 4,
-        "color_scheme": "background-1",
-        "products_to_show": 3,
-        "full_width": false,
-        "collection": "cyber-monday-up-to-50-off",
-        "show_view_all": false,
-        "view_all_text": "SHOP ALL",
-        "view_all_style": "link",
-        "view_all_location": "bottom",
-        "enable_desktop_slider": false,
-        "show_peak": true,
-        "pagination_type": "sides",
-        "swipe_on_mobile": true,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "our_collection_list_v2_mK6kUx": {
       "type": "our-collection-list-v2",
       "blocks": {
@@ -876,6 +798,84 @@
         "padding_bottom": 20
       }
     },
+    "collection_list_w4D6TE": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_DRHGAB": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "טייצים-עד-40-הנחה",
+            "collection_image": "shopify://shop_images/ADDI1363_b1d4b4df-c5d9-4121-ad9c-708cd66b5e7a.jpg",
+            "show_collection_title": false
+          }
+        },
+        "featured_collection_rpBKdE": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "טופים-עד-50-הנחה-1",
+            "collection_image": "shopify://shop_images/SANA6751_1_fdb06f26-1011-480c-9334-22570d4a8d23.jpg",
+            "show_collection_title": false
+          }
+        },
+        "featured_collection_n3Aag6": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "אקססוריז-עד-30-הנחה",
+            "collection_image": "shopify://shop_images/505e753b83f9f241322a313721e3eb79_d0b6359a-3fae-4e93-8311-baac965afafe.jpg",
+            "show_collection_title": false
+          }
+        },
+        "featured_collection_9c9fAw": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "אוברולים-ושמלות-עד-30-הנחה",
+            "collection_image": "shopify://shop_images/STRO0158_5_55c8a319-a8e8-43e8-a5d3-4587177f76b0.jpg",
+            "show_collection_title": false
+          }
+        },
+        "featured_collection_CyY976": {
+          "type": "featured_collection",
+          "disabled": true,
+          "settings": {
+            "collection": "טייץ-7-8",
+            "collection_image": "shopify://shop_images/7_8_1.jpg",
+            "show_collection_title": false
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_DRHGAB",
+        "featured_collection_rpBKdE",
+        "featured_collection_n3Aag6",
+        "featured_collection_9c9fAw",
+        "featured_collection_CyY976"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".collection-list grid contains-card contains-card--collection contains-card--standard grid--4-col-desktop grid---col-tablet-down slider slider--desktop slider--tablet grid--peek collection-list--4-items {left: 200px;}"
+      ],
+      "settings": {
+        "images_or_colors": "images",
+        "title": "",
+        "heading_size": "h2",
+        "image_ratio": "portrait",
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "products_to_show": 3,
+        "full_width": false,
+        "collection": "cyber-monday-up-to-50-off",
+        "show_view_all": false,
+        "view_all_text": "SHOP ALL",
+        "view_all_style": "link",
+        "view_all_location": "bottom",
+        "enable_desktop_slider": false,
+        "show_peak": true,
+        "pagination_type": "sides",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "customer_slideshow_jXTBRG": {
       "type": "customer-slideshow",
       "blocks": {
@@ -1013,14 +1013,12 @@
   "order": [
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9",
     "slideshow_gwXDrF",
-    "collection_list_w4D6TE",
-    "our_collection_list_v2_mK6kUx",
     "featured_collection_XDhFHB",
     "featured_collection_KkwYPC",
     "featured_collection_qJrxrJ",
+    "173251753398892554",
     "customer_slideshow_wFcfK7",
     "featured_collection_3Dk734",
-    "173251753398892554",
     "featured_collection_zx87dF",
     "custom_liquid_DL9jGF",
     "173246164424ec44fa",
@@ -1029,7 +1027,9 @@
     "slideshow_dtfFDm",
     "collection_list_QrC4z9",
     "featured_blog_3p3kGH",
+    "collection_list_w4D6TE",
     "customer_slideshow_jXTBRG",
+    "our_collection_list_v2_mK6kUx",
     "4371b550-969b-4828-986d-71697fc53ef0",
     "customer_slideshow_4HiHHh"
   ]
