@@ -177,65 +177,6 @@
         "padding_bottom": 12
       }
     },
-    "our_collection_list_v2_mK6kUx": {
-      "type": "our-collection-list-v2",
-      "blocks": {
-        "image_JnihJ6": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/ADDI1363_bbb66c03-69e5-42c1-98fd-8ba6d5b18c98.jpg",
-            "alt": "Flash sale up to 35 % off photo",
-            "link": "MATCHING SETS",
-            "url": "shopify://collections/sets"
-          }
-        },
-        "image_a4f9L6": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/SANA6751_1.jpg",
-            "alt": "",
-            "link": "BEST SELLERS",
-            "url": "shopify://collections/best-seller-internal-use"
-          }
-        },
-        "image_3PJtne": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/ADDI3353-1_3.jpg",
-            "alt": "",
-            "link": "OUTLET",
-            "url": "shopify://collections/outlet"
-          }
-        },
-        "image_ydbCwA": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/STRO7182_2.jpg",
-            "alt": "אוברולים",
-            "link": "JUMPSUITS",
-            "url": "shopify://collections/אוברולים"
-          }
-        }
-      },
-      "block_order": [
-        "image_JnihJ6",
-        "image_a4f9L6",
-        "image_3PJtne",
-        "image_ydbCwA"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "heading_type": "heading_type_default",
-        "image_ratio": "adapt",
-        "columns_mobile": 4,
-        "columns_desktop": 4,
-        "color_scheme": "background-1",
-        "is_full_width": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "featured_collection_XDhFHB": {
       "type": "featured-collection",
       "settings": {
@@ -355,6 +296,26 @@
         "padding_bottom": 16
       }
     },
+    "173251753398892554": {
+      "type": "apps",
+      "blocks": {
+        "tolstoy_shoppable_video_ugc_carousel_block_mVHTj8": {
+          "type": "shopify://apps/tolstoy-shoppable-video-ugc/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "settings": {
+            "publishId": "ufk05gnngm5qi"
+          }
+        }
+      },
+      "block_order": [
+        "tolstoy_shoppable_video_ugc_carousel_block_mVHTj8"
+      ],
+      "custom_css": [
+        ".tolstoy-carousel {width: 100%;}"
+      ],
+      "settings": {
+        "include_margins": false
+      }
+    },
     "customer_slideshow_wFcfK7": {
       "type": "customer-slideshow",
       "blocks": {
@@ -434,26 +395,6 @@
         "swipe_on_mobile": true,
         "padding_top": 40,
         "padding_bottom": 16
-      }
-    },
-    "173251753398892554": {
-      "type": "apps",
-      "blocks": {
-        "tolstoy_shoppable_video_ugc_carousel_block_mVHTj8": {
-          "type": "shopify://apps/tolstoy-shoppable-video-ugc/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
-          "settings": {
-            "publishId": "wxqiktrgv86na"
-          }
-        }
-      },
-      "block_order": [
-        "tolstoy_shoppable_video_ugc_carousel_block_mVHTj8"
-      ],
-      "custom_css": [
-        ".tolstoy-carousel {width: 100%;}"
-      ],
-      "settings": {
-        "include_margins": false
       }
     },
     "featured_collection_zx87dF": {
@@ -915,6 +856,65 @@
         "accessibility_info": "Slideshow about our brand",
         "padding_top": 16,
         "padding_bottom": 16
+      }
+    },
+    "our_collection_list_v2_mK6kUx": {
+      "type": "our-collection-list-v2",
+      "blocks": {
+        "image_JnihJ6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ADDI1363_bbb66c03-69e5-42c1-98fd-8ba6d5b18c98.jpg",
+            "alt": "Flash sale up to 35 % off photo",
+            "link": "MATCHING SETS",
+            "url": "shopify://collections/sets"
+          }
+        },
+        "image_a4f9L6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/SANA6751_1.jpg",
+            "alt": "",
+            "link": "BEST SELLERS",
+            "url": "shopify://collections/best-seller-internal-use"
+          }
+        },
+        "image_3PJtne": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ADDI3353-1_3.jpg",
+            "alt": "",
+            "link": "OUTLET",
+            "url": "shopify://collections/outlet"
+          }
+        },
+        "image_ydbCwA": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/STRO7182_2.jpg",
+            "alt": "אוברולים",
+            "link": "JUMPSUITS",
+            "url": "shopify://collections/אוברולים"
+          }
+        }
+      },
+      "block_order": [
+        "image_JnihJ6",
+        "image_a4f9L6",
+        "image_3PJtne",
+        "image_ydbCwA"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "heading_type": "heading_type_default",
+        "image_ratio": "adapt",
+        "columns_mobile": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "is_full_width": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "4371b550-969b-4828-986d-71697fc53ef0": {
