@@ -180,6 +180,32 @@
         </table>
         <h6 class="cent-exp text-right rtl">{{ allSizesAreCm }}</h6>
     </div>
-{% endif %}
 
+{% elsif product.type == "חוטיני" %}
+    <div class="size-guide-modal size-pop-tops hidden fix-direction">
+        <p class="StrongfulX">{% render 'icon-close' %}</p>
+        <table class="size-table">
+            <thead>
+            <tr class="size-table-main-row three-grid">
+                <th>מידה</th>
+                <th>היקף מותן</th>
+                <th>היקף יריכיים</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for variant in product.variants %}
+                <tr class="size-table-rows three-grid">
+                    <td>{{ variant.title }}</td>
+                    <td>{{ variant.metafields.my_fields.waist }}</td>
+                    <td>{{ variant.metafields.my_fields.hips }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <h6 class="cent-exp text-right rtl">{{ allSizesAreCm }}</h6>
+    </div>
+
+
+
+{% endif %}
 <div class="size-table-overlay hidden"></div>
