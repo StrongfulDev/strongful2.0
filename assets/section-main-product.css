@@ -1936,7 +1936,7 @@ fieldset.js.product-form__input {
     border-radius: 5px;
     margin-top: 10px; /* Position below the label */
     width: 100%;
-    justify-content: space-evenly;
+    justify-content: center;
   }
   legend.form__label ::after{
     border: 2px solid gray;
