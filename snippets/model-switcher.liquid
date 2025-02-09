@@ -19,6 +19,7 @@
             {% render 'icon-caret' %}
         </div>
         <div class="model-switcher__list hidden">
+            {% assign first_iteration = true %}
             {% for modelName in product.metafields.model.names.value %}
                 {% assign model = shop.metaobjects.model[modelName] %}
                 <div class="model-switcher__item" data-model-size="{{ model.size_letter.value }}">
@@ -41,7 +42,7 @@
                                     </span>
                                 </div>
                             </div>
-                            {% elsif model_product.title == 'Iconic סווטשירט' %}
+                        {% elsif model_product.title == 'Iconic סווטשירט' %}
                             <div class="model-wears-content">
                                 <p class="model-wears-text">{{ 'products.product.model_switch.model_wears_female' | t }}</p>
                                 <p class="model-wears-text">
@@ -51,6 +52,30 @@
                                 <p class="model-wears-text">
                                     {{ 'products.product.model_switch.female_bottom_part' | t }}
                                     <span class="model-size-bold">{{ model.size_letter.value }}</span>
+                                </p>
+                            </div>
+                        {% elsif model_product.title == 'מכנס טרנינג אוברסייז' or model_product.title == 'אוברסייז סווטשירט' or model_product.title == 'קפוצ׳ון אוברסייז' %}
+                            <div class="model-wears-content">
+                                <p class="model-wears-text">{{ 'products.product.model_switch.model_wears_female' | t }}</p>
+                                <p class="model-wears-text">
+                                    {{ 'products.product.model_switch.female_top_part' | t }}
+                                    <span class="model-size-bold">
+                                        {% if first_iteration %}
+                                            S
+                                        {% else %}
+                                            {{ model.size_letter.value }}
+                                        {% endif %}
+                                    </span>
+                                </p>
+                                <p class="model-wears-text">
+                                    {{ 'products.product.model_switch.female_bottom_part' | t }}
+                                    <span class="model-size-bold">
+                                        {% if first_iteration %}
+                                            S
+                                        {% else %}
+                                            {{ model.size_letter.value }}
+                                        {% endif %}
+                                    </span>
                                 </p>
                             </div>
                         {% else %}
@@ -68,6 +93,7 @@
                         {% endif %}
                     </label>
                 </div>
+                {% assign first_iteration = false %}
             {% endfor %}
         </div>
     </div>

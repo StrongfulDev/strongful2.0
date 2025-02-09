@@ -114,6 +114,7 @@
       {%- for option in product.options_with_values -%}
         <p class="form__label2">{{ option.name }}</p>
         <fieldset class="js product-form__input {% if product.title == 'גיפט קארד' %}gift-card-product-form__input{% elsif product.title == 'Iconic סווטשירט' %}os-sweat fix-direction{% endif %}">
+          {% assign first_iteration = true %}
           {% for modelName in product.metafields.model.names.value %}
             {% assign model = shop.metaobjects.model[modelName] %}
             <legend
@@ -129,6 +130,8 @@
                 {{ 'products.product.model_switch.model_wears_only_female' | t }}
                 {% if product.title == 'Iconic סווטשירט' %}
                   <span class="bold">{{ option.name }}: OS</span>
+                {% elsif product.title == 'מכנס טרנינג אוברסייז' or product.title == 'אוברסייז סווטשירט' or product.title == 'קפוצ׳ון אוברסייז' %}
+                  <span class="bold">{{ option.name }}: {% if first_iteration %}S{% else %}{{ model.size_letter.value }}{% endif %}</span>
                 {% else %}
                   <span class="bold">{{ option.name }}: {{ model.size_letter.value }}</span>
                 {% endif %}
@@ -143,6 +146,7 @@
               <div class="size-table-stock-container">
               </div>
             </legend>
+            {% assign first_iteration = false %}
           {% endfor %}
           {% unless product.title == 'גיפט קארד' %}
             <div class="size-border"></div>
