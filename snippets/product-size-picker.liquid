@@ -146,7 +146,7 @@
                                 {% if product.has_only_default_variant %}
                                   {{ 'products.product.variant.default_title' | t }}
                                 {% else %}
-                                  {{ variant.title | split:" / " | first | escape }} /
+                                  {{ variant.title | split:" / " | last | escape }} 
                                   <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
                                 {% endif %}
                               </span>
