@@ -112,6 +112,8 @@
               <div class="product_variants {% if product.has_only_default_variant %}default_product_variants{% endif %}">
                 <fieldset name="line_items" class="js">
                   <ul {% if product.has_only_default_variant %}class="default_variant_list"{% endif %}>
+                    
+                    {% assign colorName = variant_card.title | split: " / " | first | strip %}
                     {% for variant in product.variants %}
                       {%- liquid
                         assign product_disabled = false
@@ -130,9 +132,8 @@
                           endif
                         endif
                       -%}
-                      {% assign variant_color = variant.title | split: " / " | first %}
-                      {% assign card_product_color = card_product.title | split: " / " | first %}
-                      {% if variant_color contains card_product_color %}
+                      {% assign variant_color = variant.title | split: " / " | first | strip %}
+                      {% if variant_color == colorName %}
                         <li class="size_variant_button fix-direction
                           {% if product.has_only_default_variant %} default_size_variant_button{% endif %}
                           {% if product_disabled %}
@@ -208,6 +209,7 @@
         <div class="product_variants {% if product.has_only_default_variant %}default_product_variants{% endif %}">
           <fieldset name="line_items" class="js">
             <ul {% if product.has_only_default_variant %}class="default_variant_list"{% endif %}>
+              {% assign colorName = variant_card.title | split: " / " | first | strip %}
               {% for variant in product.variants %}
                 {%- liquid
                   assign product_disabled = false
@@ -215,20 +217,23 @@
                     assign product_disabled = true
                   endif
                 -%}
-                <li class="size_variant_button{% if product.has_only_default_variant %} default_size_variant_button{% endif %}{% if product_disabled %} disabled-variant-button{% endif %}">
-                  <div class="size_variant_button_container">
-                    <input type="radio" data-variant-id="{{ variant.id }}" name="id" value="{{ variant.id }}" id="radio_{{ variant.id }}" {% if product_disabled %} disabled{% endif %} {% if product.has_only_default_variant %}class="product_size_picker__button default_input" checked{% else %}class="product_size_picker__button new_input shoppable"{% endif %}>
-                    <label for="radio_{{ variant.id }}" class="product_size_picker__button__label desktop-label">
-                      {% if product.has_only_default_variant %}
-                        {{ 'products.product.variant.default_title' | t }}
-                      {% else %}
-                        {{ variant.title | escape }}
-                        <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
-                      {% endif %}
-                      {% render "loading-spinner" %}
-                    </label>
-                  </div>
-                </li>
+                {% assign variant_color = variant.title | split: " / " | first | strip %}
+                {% if variant_color == colorName %}
+                  <li class="size_variant_button{% if product.has_only_default_variant %} default_size_variant_button{% endif %}{% if product_disabled %} disabled-variant-button{% endif %}">
+                    <div class="size_variant_button_container">
+                      <input type="radio" data-variant-id="{{ variant.id }}" name="id" value="{{ variant.id }}" id="radio_{{ variant.id }}" {% if product_disabled %} disabled{% endif %} {% if product.has_only_default_variant %}class="product_size_picker__button default_input" checked{% else %}class="product_size_picker__button new_input shoppable"{% endif %}>
+                      <label for="radio_{{ variant.id }}" class="product_size_picker__button__label desktop-label">
+                        {% if product.has_only_default_variant %}
+                          {{ 'products.product.variant.default_title' | t }}
+                        {% else %}
+                          {{ variant.title | escape }}
+                          <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
+                        {% endif %}
+                        {% render "loading-spinner" %}
+                      </label>
+                    </div>
+                  </li>
+                {% endif %}
               {% endfor %}
             </ul>
           </fieldset>
