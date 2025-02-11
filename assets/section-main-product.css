@@ -1644,8 +1644,6 @@ variant-radios fieldset {
 /* Custom styles */
 
 .product-form__input {
-    display: flex;
-    justify-content: space-between;
     column-gap: 0rem;
 }
 
@@ -1668,6 +1666,7 @@ variant-radios fieldset {
     ;
 
 .variant-button {
+    position: inherit;
     width: 100%;
 	flex: 1;
 	position: relative;
@@ -1928,15 +1927,10 @@ variant-radios {
 
 fieldset.js.product-form__input {
     content: "";
-    display: flex;
-    flex-direction: row;
-   
     padding: 15px 10px;
-    ; /* Adjust padding to fit around variant options */
     border-radius: 5px;
     margin-top: 10px; /* Position below the label */
     width: 100%;
-    justify-content: space-between;
   }
   legend.form__label ::after{
     border: 2px solid gray;
@@ -2464,4 +2458,100 @@ li.relative-discount {
   .similar-container::-webkit-scrollbar {
     display: none; /* For Chrome, Safari, and Opera */
   }
+}
+
+/* Styles for the color variant wrapper */
+.color-variant-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center;
+    gap: 10px; /* Space between color circles */
+    margin-bottom: 1rem; /* Space below the color options */
+}
+
+/* Styles for the size variant wrapper */
+.size-variant-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Space between size options */
+    align-items: center;
+    gap: 10px; /* Space between size options */
+    margin-bottom: 1rem; /* Space below the size options */
+}
+
+/* Additional styles for color circles */
+.color-variant-tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--color);
+    margin: 0; /* Ensure no extra margin is added */
+    padding: 0; /* Ensure no extra padding is added */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Ensure the input and label are aligned properly */
+.product-form__input input[type='radio'] + label.color-variant-tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--color);
+    margin: 0; /* Ensure no extra margin is added */
+    padding: 0; /* Ensure no extra padding is added */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Ensure the span inside the label is aligned properly */
+.color-variant-tile span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+/* Ensure the size variant tiles are aligned properly */
+.size-variant-tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background-color: var(--color-background);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 0; /* Ensure no extra margin is added */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Ensure the span inside the size variant tile is aligned properly */
+.size-variant-tile span {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+/* Override potential interfering rules by using a more specific selector */
+div.color-variant-wrapper {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: flex-end !important; /* Force right alignment */
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+div.size-variant-wrapper {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-between !important; /* Force space between */
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
 }
