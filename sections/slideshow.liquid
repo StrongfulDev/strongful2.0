@@ -36,7 +36,7 @@
 {%- endif -%}
 
 <slideshow-component
-  class="slider-mobile-gutter section-{{ section.id }}-padding{% if section.settings.slider_visual == "sides" %} sides_navigation{% endif %}{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %}"
+  class="slider-mobile-gutter section-{{ section.id }}-padding{% if section.settings.slider_visual == 'sides' %} sides_navigation{% endif %}{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %}"
   role="region" aria-roledescription="{{ 'sections.slideshow.carousel' | t }}"
   aria-label="{{ section.settings.accessibility_info | escape }}">
 
@@ -145,6 +145,7 @@
       </div>
     </noscript>
   {%- endif -%}
+
   <div class="slideshow banner banner--{{ section.settings.slide_height }} grid grid--1-col slider slider--everywhere{% if section.settings.show_text_below %} banner--mobile-bottom{% endif %}{% if section.blocks.first.settings.image == blank %} slideshow--placeholder{% endif %}"
        id="Slider-{{ section.id }}"
        aria-live="polite"
@@ -157,28 +158,31 @@
         #Slide-{{ section.id }}-{{ forloop.index }} .banner__media::after {
           opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }};
         }
-        /* Default (non‑member) slide positioning */
-        .slideshow__slide--{{ forloop.index0 }} .slideshow__text.banner__box.banner__box--{{ forloop.index0 }} {
-          left: {{ block.settings.left_position }}%;
-          bottom: {{ block.settings.bottom_position }}%;
-        }
-        @media screen and (min-width: 949px) {
-          .slideshow__slide--{{ forloop.index0 }} .slideshow__text.banner__box.banner__box--{{ forloop.index0 }} {
-            left: {{ block.settings.desktop_left_position }}%;
-            bottom: {{ block.settings.desktop_bottom_position }}%;
-          }
-        }
-        /* Member slide positioning */
-        .slideshow__slide--{{ forloop.index0 }} .slideshow__text.banner__box.banner__box--member--{{ forloop.index0 }} {
-          left: {{ block.settings.member_mobile_left_position }}%;
-          bottom: {{ block.settings.member_mobile_bottom_position }}%;
-        }
-        @media screen and (min-width: 949px) {
+        {% if customer and (block.settings.member_image or block.settings.member_mobile_image) %}
+          /* Member slide positioning */
           .slideshow__slide--{{ forloop.index0 }} .slideshow__text.banner__box.banner__box--member--{{ forloop.index0 }} {
-            left: {{ block.settings.member_desktop_left_position }}%;
-            bottom: {{ block.settings.member_desktop_bottom_position }}%;
+            left: {{ block.settings.member_mobile_left_position }}%;
+            bottom: {{ block.settings.member_mobile_bottom_position }}%;
           }
-        }
+          @media screen and (min-width: 949px) {
+            .slideshow__slide--{{ forloop.index0 }} .slideshow__text.banner__box.banner__box--member--{{ forloop.index0 }} {
+              left: {{ block.settings.member_desktop_left_position }}%;
+              bottom: {{ block.settings.member_desktop_bottom_position }}%;
+            }
+          }
+        {% else %}
+          /* Default (non‑member) slide positioning */
+          .slideshow__slide--{{ forloop.index0 }} .slideshow__text.banner__box.banner__box--{{ forloop.index0 }} {
+            left: {{ block.settings.left_position }}%;
+            bottom: {{ block.settings.bottom_position }}%;
+          }
+          @media screen and (min-width: 949px) {
+            .slideshow__slide--{{ forloop.index0 }} .slideshow__text.banner__box.banner__box--{{ forloop.index0 }} {
+              left: {{ block.settings.desktop_left_position }}%;
+              bottom: {{ block.settings.desktop_bottom_position }}%;
+            }
+          }
+        {% endif %}
       </style>
       {% if block.settings.whole_slide_link != blank %}
         <a href="{{ block.settings.whole_slide_link }}" class="whole-slide-link">
@@ -235,11 +239,11 @@
               {% endif %}
             {%- else -%}
               {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
-            {%- endif -%}
+            {%- endif %}
           </div>
           <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
             <div class="slideshow__text banner__box content-container content-container--full-width-mobile
-              {% if block.settings.member_image or block.settings.member_mobile_image %}
+              {% if customer and (block.settings.member_image or block.settings.member_mobile_image) %}
                 banner__box--member--{{ forloop.index0 }}
               {% else %}
                 banner__box--{{ forloop.index0 }}
