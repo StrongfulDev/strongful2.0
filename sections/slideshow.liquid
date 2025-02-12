@@ -35,24 +35,6 @@
   {%- endstyle -%}
 {%- endif -%}
 
-<!--
-  Note: In your external CSS (or in a global style block) you’ll need to add rules like:
-
-  .slideshow__text.banner__box {
-    position: absolute;  /* if needed */
-    left: var(--left-pos);
-    bottom: var(--bottom-pos);
-  }
-  @media screen and (min-width: 949px) {
-    .slideshow__text.banner__box {
-      left: var(--desktop-left-pos);
-      bottom: var(--desktop-bottom-pos);
-    }
-  }
-
-  This lets the element pick up the values that we set in the inline style below.
--->
-
 <slideshow-component
   class="slider-mobile-gutter section-{{ section.id }}-padding{% if section.settings.slider_visual == 'sides' %} sides_navigation{% endif %}{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %}"
   role="region" aria-roledescription="{{ 'sections.slideshow.carousel' | t }}"
@@ -171,10 +153,6 @@
        data-autoplay="{{ section.settings.auto_rotate }}"
        data-speed="{{ section.settings.change_slides_speed }}">
     {%- for block in section.blocks -%}
-      {%- comment -%}
-        We no longer output an inline <style> block for each slide’s positioning.
-        Instead, we “inject” our positioning percentages as custom properties via the style attribute.
-      {%- endcomment -%}
       {% if block.settings.whole_slide_link != blank %}
         <a href="{{ block.settings.whole_slide_link }}" class="whole-slide-link">
       {% endif %}
@@ -187,7 +165,6 @@
              tabindex="-1">
           <div class="slideshow__media banner__media media{% if block.settings.image == blank %} placeholder{% endif %}">
             {%- if block.settings.image or block.settings.member_image -%}
-              {%- comment -%} Render Desktop/Big Screen Image {%- endcomment -%}
               {% if customer and block.settings.member_image != blank %}
                 {%- assign height = block.settings.member_image.width | divided_by: block.settings.member_image.aspect_ratio | round -%}
                 {{ block.settings.member_image | image_url: width: 3840 | image_tag: 
@@ -208,7 +185,6 @@
                 }}
               {% endif %}
               
-              {%- comment -%} Render Mobile Image {%- endcomment -%}
               {% if customer and block.settings.member_mobile_image != blank %}
                 {%- assign mobile_height = block.settings.member_mobile_image.width | divided_by: block.settings.member_mobile_image.aspect_ratio | round -%}
                 {{ block.settings.member_mobile_image | image_url: width: 1000 | image_tag: 
@@ -233,28 +209,24 @@
             {%- endif %}
           </div>
           <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
-            <!--
-              Use inline style with CSS custom properties to pass the positioning values.
-              We choose member values only if the visitor is logged in and the block has a member image.
-            -->
             <div class="slideshow__text banner__box content-container content-container--full-width-mobile"
               style="
-                --left-pos: {% if customer and (block.settings.member_image or block.settings.member_mobile_image) %}
+                --left-pos: {% if customer and (block.settings.member_image != blank or block.settings.member_mobile_image != blank) %}
                               {{ block.settings.member_mobile_left_position }}%
                             {% else %}
                               {{ block.settings.left_position }}%
                             {% endif %};
-                --bottom-pos: {% if customer and (block.settings.member_image or block.settings.member_mobile_image) %}
+                --bottom-pos: {% if customer and (block.settings.member_image != blank or block.settings.member_mobile_image != blank) %}
                                 {{ block.settings.member_mobile_bottom_position }}%
                               {% else %}
                                 {{ block.settings.bottom_position }}%
                               {% endif %};
-                --desktop-left-pos: {% if customer and (block.settings.member_image or block.settings.member_mobile_image) %}
+                --desktop-left-pos: {% if customer and (block.settings.member_image != blank or block.settings.member_mobile_image != blank) %}
                                       {{ block.settings.member_desktop_left_position }}%
                                     {% else %}
                                       {{ block.settings.desktop_left_position }}%
                                     {% endif %};
-                --desktop-bottom-pos: {% if customer and (block.settings.member_image or block.settings.member_mobile_image) %}
+                --desktop-bottom-pos: {% if customer and (block.settings.member_image != blank or block.settings.member_mobile_image != blank) %}
                                         {{ block.settings.member_desktop_bottom_position }}%
                                       {% else %}
                                         {{ block.settings.desktop_bottom_position }}%
