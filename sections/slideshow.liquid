@@ -181,25 +181,48 @@
                  tabindex="-1"
             >
                 <div class="slideshow__media banner__media media{% if block.settings.image == blank %} placeholder{% endif %}">
-                    {%- if block.settings.image -%}
-                        {%- assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round -%}
-                        {%- assign mobile_height = block.settings.mobile_image.width | divided_by: block.settings.mobile_image.aspect_ratio | round -%}
-                        {{ block.settings.image | image_url: width: 3840 | image_tag:
-                        loading: 'lazy',
-                        height: height,
-                        sizes: "100vw",
-                        widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
-                        alt: settings.seo_alt_text
-                        }}
-                        {% if block.settings.mobile_image != blank %}
-                            {{ block.settings.mobile_image | image_url: width: 1000 | image_tag:
-                            loading: 'lazy',
-                            height: mobile_height,
-                            sizes: "100vw",
-                            class: "mobile_version",
-                            widths: '375, 550, 750, 1000'
+                    {%- if block.settings.image or block.settings.member_image -%}
+                        {%- comment -%} Render Desktop/Big Screen Image {%- endcomment -%}
+                        {% if customer and block.settings.member_image != blank %}
+                            {%- assign height = block.settings.member_image.width | divided_by: block.settings.member_image.aspect_ratio | round -%}
+                            {{ block.settings.member_image | image_url: width: 3840 | image_tag: 
+                              loading: 'lazy',
+                              height: height,
+                              sizes: "100vw",
+                              widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                              alt: settings.seo_alt_text 
                             }}
-                        {%- endif -%}
+                        {% elsif block.settings.image != blank %}
+                            {%- assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round -%}
+                            {{ block.settings.image | image_url: width: 3840 | image_tag: 
+                              loading: 'lazy',
+                              height: height,
+                              sizes: "100vw",
+                              widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                              alt: settings.seo_alt_text 
+                            }}
+                        {% endif %}
+                        
+                        {% comment %} Render Mobile Image {% endcomment %}
+                        {% if customer and block.settings.member_mobile_image != blank %}
+                            {%- assign mobile_height = block.settings.member_mobile_image.width | divided_by: block.settings.member_mobile_image.aspect_ratio | round -%}
+                            {{ block.settings.member_mobile_image | image_url: width: 1000 | image_tag: 
+                              loading: 'lazy',
+                              height: mobile_height,
+                              sizes: "100vw",
+                              class: "mobile_version",
+                              widths: '375, 550, 750, 1000'
+                            }}
+                        {% elsif block.settings.mobile_image != blank %}
+                            {%- assign mobile_height = block.settings.mobile_image.width | divided_by: block.settings.mobile_image.aspect_ratio | round -%}
+                            {{ block.settings.mobile_image | image_url: width: 1000 | image_tag: 
+                              loading: 'lazy',
+                              height: mobile_height,
+                              sizes: "100vw",
+                              class: "mobile_version",
+                              widths: '375, 550, 750, 1000'
+                            }}
+                        {% endif %}
                     {%- else -%}
                         {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
                     {%- endif -%}
@@ -399,6 +422,16 @@
           "type": "image_picker",
           "id": "mobile_image",
           "label": "t:sections.slideshow.blocks.slide.settings.mobile_image.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "member_image",
+          "label": "Member Desktop / Big screen image"
+        },
+        {
+          "type": "image_picker",
+          "id": "member_mobile_image",
+          "label": "Member Mobile image"
         },
         {
           "type": "range",
