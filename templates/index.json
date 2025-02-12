@@ -127,7 +127,7 @@
             "bottom_position": 5,
             "desktop_left_position": 27,
             "desktop_bottom_position": 25,
-            "member_mobile_left_position": 27,
+            "member_mobile_left_position": 45,
             "member_mobile_bottom_position": 25,
             "member_desktop_left_position": 50,
             "member_desktop_bottom_position": 25,
@@ -146,6 +146,7 @@
         },
         "slide_AL3x4y": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/3b721c879f0ef3ac3a85d8569c2362ab.jpg",
             "mobile_image": "shopify://shop_images/951b90955e2f5b06f2cbc003abd4f437.jpg",
