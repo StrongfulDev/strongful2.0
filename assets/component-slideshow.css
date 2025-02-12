@@ -308,3 +308,16 @@ button.slideshow__autoplay {
 		width: 60vw;
 	}
 }
+
+
+  .slideshow__text.banner__box {
+    position: absolute;  /* if needed */
+    left: var(--left-pos);
+    bottom: var(--bottom-pos);
+  }
+  @media screen and (min-width: 949px) {
+    .slideshow__text.banner__box {
+      left: var(--desktop-left-pos);
+      bottom: var(--desktop-bottom-pos);
+    }
+  }

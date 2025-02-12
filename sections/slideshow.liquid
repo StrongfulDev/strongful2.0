@@ -35,6 +35,24 @@
   {%- endstyle -%}
 {%- endif -%}
 
+<!--
+  Note: In your external CSS (or in a global style block) you’ll need to add rules like:
+
+  .slideshow__text.banner__box {
+    position: absolute;  /* if needed */
+    left: var(--left-pos);
+    bottom: var(--bottom-pos);
+  }
+  @media screen and (min-width: 949px) {
+    .slideshow__text.banner__box {
+      left: var(--desktop-left-pos);
+      bottom: var(--desktop-bottom-pos);
+    }
+  }
+
+  This lets the element pick up the values that we set in the inline style below.
+-->
+
 <slideshow-component
   class="slider-mobile-gutter section-{{ section.id }}-padding{% if section.settings.slider_visual == 'sides' %} sides_navigation{% endif %}{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %}"
   role="region" aria-roledescription="{{ 'sections.slideshow.carousel' | t }}"
@@ -153,37 +171,10 @@
        data-autoplay="{{ section.settings.auto_rotate }}"
        data-speed="{{ section.settings.change_slides_speed }}">
     {%- for block in section.blocks -%}
-      <style>
-        /* Set overlay opacity on the media */
-        #Slide-{{ section.id }}-{{ forloop.index }} .banner__media::after {
-          opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }};
-        }
-        {% if customer and (block.settings.member_image or block.settings.member_mobile_image) %}
-          /* Member slide positioning */
-          .slideshow__slide--{{ forloop.index0 }} .slideshow__text.banner__box.banner__box--member--{{ forloop.index0 }} {
-            left: {{ block.settings.member_mobile_left_position }}%;
-            bottom: {{ block.settings.member_mobile_bottom_position }}%;
-          }
-          @media screen and (min-width: 949px) {
-            .slideshow__slide--{{ forloop.index0 }} .slideshow__text.banner__box.banner__box--member--{{ forloop.index0 }} {
-              left: {{ block.settings.member_desktop_left_position }}%;
-              bottom: {{ block.settings.member_desktop_bottom_position }}%;
-            }
-          }
-        {% else %}
-          /* Default (non‑member) slide positioning */
-          .slideshow__slide--{{ forloop.index0 }} .slideshow__text.banner__box.banner__box--{{ forloop.index0 }} {
-            left: {{ block.settings.left_position }}%;
-            bottom: {{ block.settings.bottom_position }}%;
-          }
-          @media screen and (min-width: 949px) {
-            .slideshow__slide--{{ forloop.index0 }} .slideshow__text.banner__box.banner__box--{{ forloop.index0 }} {
-              left: {{ block.settings.desktop_left_position }}%;
-              bottom: {{ block.settings.desktop_bottom_position }}%;
-            }
-          }
-        {% endif %}
-      </style>
+      {%- comment -%}
+        We no longer output an inline <style> block for each slide’s positioning.
+        Instead, we “inject” our positioning percentages as custom properties via the style attribute.
+      {%- endcomment -%}
       {% if block.settings.whole_slide_link != blank %}
         <a href="{{ block.settings.whole_slide_link }}" class="whole-slide-link">
       {% endif %}
@@ -242,15 +233,33 @@
             {%- endif %}
           </div>
           <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
-            <div class="slideshow__text banner__box content-container content-container--full-width-mobile
-              {% if customer and (block.settings.member_image or block.settings.member_mobile_image) %}
-                banner__box--member--{{ forloop.index0 }}
-              {% else %}
-                banner__box--{{ forloop.index0 }}
-              {% endif %}
-              color-{{ block.settings.color_scheme }}
-              gradient slideshow__text--{{ block.settings.text_alignment }}
-              slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}">
+            <!--
+              Use inline style with CSS custom properties to pass the positioning values.
+              We choose member values only if the visitor is logged in and the block has a member image.
+            -->
+            <div class="slideshow__text banner__box content-container content-container--full-width-mobile"
+              style="
+                --left-pos: {% if customer and (block.settings.member_image or block.settings.member_mobile_image) %}
+                              {{ block.settings.member_mobile_left_position }}%
+                            {% else %}
+                              {{ block.settings.left_position }}%
+                            {% endif %};
+                --bottom-pos: {% if customer and (block.settings.member_image or block.settings.member_mobile_image) %}
+                                {{ block.settings.member_mobile_bottom_position }}%
+                              {% else %}
+                                {{ block.settings.bottom_position }}%
+                              {% endif %};
+                --desktop-left-pos: {% if customer and (block.settings.member_image or block.settings.member_mobile_image) %}
+                                      {{ block.settings.member_desktop_left_position }}%
+                                    {% else %}
+                                      {{ block.settings.desktop_left_position }}%
+                                    {% endif %};
+                --desktop-bottom-pos: {% if customer and (block.settings.member_image or block.settings.member_mobile_image) %}
+                                        {{ block.settings.member_desktop_bottom_position }}%
+                                      {% else %}
+                                        {{ block.settings.desktop_bottom_position }}%
+                                      {% endif %};
+              ">
               {%- if block.settings.button_label != blank -%}
                 <div class="banner__buttons">
                   <a{% if block.settings.link %} href="{{ block.settings.link }}"{% else %} role="link" aria-disabled="true"{% endif %}
