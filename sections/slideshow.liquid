@@ -153,35 +153,32 @@
        data-speed="{{ section.settings.change_slides_speed }}">
     {%- for block in section.blocks -%}
       <style>
+        /* Set overlay opacity on the media */
         #Slide-{{ section.id }}-{{ forloop.index }} .banner__media::after {
           opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }};
         }
-
-        {%- if block.settings.member_image or block.settings.member_mobile_image -%}
-          .slideshow__slide--{{ forloop.index0 }} .slideshow__text.banner__box.banner__box--member--{{ forloop.index0 }} {
-            left: {{ block.settings.member_mobile_left_position }}%;
-            bottom: {{ block.settings.member_mobile_bottom_position }}%;
-          }
-
-          @media screen and (min-width: 949px) {
-            .slideshow__slide--{{ forloop.index0 }} .slideshow__text.banner__box.banner__box--member--{{ forloop.index0 }} {
-              left: {{ block.settings.member_desktop_left_position }}%;
-              bottom: {{ block.settings.member_desktop_bottom_position }}%;
-            }
-          }
-        {%- else -%}
+        /* Default (non‑member) slide positioning */
+        .slideshow__slide--{{ forloop.index0 }} .slideshow__text.banner__box.banner__box--{{ forloop.index0 }} {
+          left: {{ block.settings.left_position }}%;
+          bottom: {{ block.settings.bottom_position }}%;
+        }
+        @media screen and (min-width: 949px) {
           .slideshow__slide--{{ forloop.index0 }} .slideshow__text.banner__box.banner__box--{{ forloop.index0 }} {
-            left: {{ block.settings.left_position }}%;
-            bottom: {{ block.settings.bottom_position }}%;
+            left: {{ block.settings.desktop_left_position }}%;
+            bottom: {{ block.settings.desktop_bottom_position }}%;
           }
-
-          @media screen and (min-width: 949px) {
-            .slideshow__slide--{{ forloop.index0 }} .slideshow__text.banner__box.banner__box--{{ forloop.index0 }} {
-              left: {{ block.settings.desktop_left_position }}%;
-              bottom: {{ block.settings.desktop_bottom_position }}%;
-            }
+        }
+        /* Member slide positioning */
+        .slideshow__slide--{{ forloop.index0 }} .slideshow__text.banner__box.banner__box--member--{{ forloop.index0 }} {
+          left: {{ block.settings.member_mobile_left_position }}%;
+          bottom: {{ block.settings.member_mobile_bottom_position }}%;
+        }
+        @media screen and (min-width: 949px) {
+          .slideshow__slide--{{ forloop.index0 }} .slideshow__text.banner__box.banner__box--member--{{ forloop.index0 }} {
+            left: {{ block.settings.member_desktop_left_position }}%;
+            bottom: {{ block.settings.member_desktop_bottom_position }}%;
           }
-        {%- endif -%}
+        }
       </style>
       {% if block.settings.whole_slide_link != blank %}
         <a href="{{ block.settings.whole_slide_link }}" class="whole-slide-link">
