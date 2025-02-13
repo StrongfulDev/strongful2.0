@@ -113,6 +113,71 @@
         "padding_bottom": 16
       }
     },
+    "customer_slideshow_4HiHHh": {
+      "type": "customer-slideshow",
+      "blocks": {
+        "slide_yJAGUx": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/copy_2_37eec812-994c-4a71-b354-95b34b5fe1cc.jpg",
+            "mobile_image": "shopify://shop_images/76735f8801bc52cc4261922db7b10423_a48cdfa2-ebad-46da-b104-032702ff07b9.jpg",
+            "login_desktop_image": "shopify://shop_images/copy_2_1_9b2bf993-d319-4281-94aa-f770aaa21dbe.jpg",
+            "login_mobile_image": "shopify://shop_images/copy_3_3_80c5f868-ab22-4040-a8c6-dd968922ae8f.jpg",
+            "button_label": "SHOP NOW",
+            "login_button_label": "SHOP NOW",
+            "link": "shopify://collections/v-day",
+            "login_link": "",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "logged_in_color_scheme": "background-1",
+            "whole_slide_link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_NApMXW": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/3b721c879f0ef3ac3a85d8569c2362ab_e2c61d73-a06a-444b-9263-fb3983247d82.jpg",
+            "mobile_image": "shopify://shop_images/951b90955e2f5b06f2cbc003abd4f437_05626f3e-3e37-43d5-b12c-4e51f3e1cfe4.jpg",
+            "login_desktop_image": "shopify://shop_images/3b721c879f0ef3ac3a85d8569c2362ab_61da387a-270e-4044-8bbd-1c2b5265a9e5.jpg",
+            "login_mobile_image": "shopify://shop_images/3b721c879f0ef3ac3a85d8569c2362ab_c88502ac-78e1-49fa-8268-ae3eabbf2097.jpg",
+            "button_label": "Button label",
+            "login_button_label": "SHOP NOW",
+            "link": "",
+            "login_link": "",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "logged_in_color_scheme": "background-1",
+            "whole_slide_link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_yJAGUx",
+        "slide_NApMXW"
+      ],
+      "disabled": true,
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 9,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
     "slideshow_gwXDrF": {
       "type": "slideshow",
       "blocks": {
@@ -960,69 +1025,11 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
-    },
-    "customer_slideshow_4HiHHh": {
-      "type": "customer-slideshow",
-      "blocks": {
-        "slide_yJAGUx": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/9de4d0d0a874d0061be878842cb2c4bd_2c953ab3-edfe-436f-a4d3-85bf46af79ef.jpg",
-            "mobile_image": "shopify://shop_images/dccef2babfffeab0c3edd02859402684_b5ee2c64-5e2e-4972-8abf-b15c0c1ea4de.jpg",
-            "button_label": "הרשמה / התחברות",
-            "login_button_label": "SHOP NOW",
-            "link": "",
-            "login_link": "",
-            "show_text_box": true,
-            "color_scheme": "background-1",
-            "logged_in_color_scheme": "background-1",
-            "whole_slide_link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_NApMXW": {
-          "type": "slide",
-          "settings": {
-            "button_label": "Button label",
-            "login_button_label": "SHOP NOW",
-            "link": "",
-            "login_link": "",
-            "show_text_box": true,
-            "color_scheme": "background-1",
-            "logged_in_color_scheme": "background-1",
-            "whole_slide_link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "text_alignment_mobile": "center"
-          }
-        }
-      },
-      "block_order": [
-        "slide_yJAGUx",
-        "slide_NApMXW"
-      ],
-      "disabled": true,
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "adapt_image",
-        "slider_visual": "counter",
-        "auto_rotate": false,
-        "change_slides_speed": 9,
-        "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand",
-        "padding_top": 0,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9",
+    "customer_slideshow_4HiHHh",
     "slideshow_gwXDrF",
     "featured_collection_XDhFHB",
     "17388407748dd9c850",
@@ -1041,7 +1048,6 @@
     "collection_list_w4D6TE",
     "customer_slideshow_jXTBRG",
     "our_collection_list_v2_mK6kUx",
-    "4371b550-969b-4828-986d-71697fc53ef0",
-    "customer_slideshow_4HiHHh"
+    "4371b550-969b-4828-986d-71697fc53ef0"
   ]
 }
