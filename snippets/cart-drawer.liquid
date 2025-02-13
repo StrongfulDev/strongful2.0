@@ -438,20 +438,24 @@
                         <div id="CartDrawer-CartErrors" role="alert"></div>
                     </form>
                 </cart-drawer-items>
+                
+                
                 <div class="drawer__footer">
 
-                    {% comment %}
-                    <div class="sale-banner-cart-drawer">
-                        <div class="fix-direction flash-sale-footer">
-                            <div>
-                                ₪150 הנחה בקנייה מעל ₪500 בשימוש הקוד FLASH150
-                            </div>
-                            <div>
-                                לחברות מועדון ומצטרפות חדשות
+                  {% if customer %}
+                    
+                      <div class="sale-banner-cart-drawer">
+                          <div class="fix-direction flash-sale-footer">
+                              <div>
+                                  25% הנחה בקניית 3 פריטים ומעלה מקולקציית ולנטיין 
+                                </div>
+                                <div>
+                                    קוד קופון: LOVE25        
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    {% endcomment %}
+                    {% endif %}
+                  
 
                     {%- if settings.show_cart_note -%}
                         <details id="Details-CartDrawer">
