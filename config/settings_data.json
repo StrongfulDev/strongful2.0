@@ -147,7 +147,7 @@
     "announcement_tag": "filterV-tag",
     "custom_collection_announcement": "25% הנחה בקניית 3 פריטים",
     "members_only_announcement": "",
-    "show_card_collection_announcement": false,
+    "show_card_collection_announcement": true,
     "second_announcement_tag": "itemsNotInDiscount",
     "custom_collection_second_announcement": "לא משתתף במבצע",
     "restock_badge_tag": "badge__restock",
