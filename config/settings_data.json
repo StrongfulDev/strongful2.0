@@ -142,7 +142,7 @@
     "predictive_search_show_vendor": true,
     "predictive_search_show_price": true,
     "image_ratio": "adapt",
-    "show_secondary_image": false,
+    "show_secondary_image": true,
     "seo_alt_text": "בגדי ספורט מקולקציית אסטרה חזרו למלאי",
     "announcement_tag": "filterV-tag",
     "custom_collection_announcement": "25% הנחה בקניית 3 פריטים",
