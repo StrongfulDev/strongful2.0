@@ -26,7 +26,7 @@
           "type": "sale",
           "settings": {
             "logged_in_text": "<p>25% הנחה על הקולקציה החדשה!</p><p>בשימוש הקוד: LOVE25</p><p>בקניית 3 פריטים ומעלה</p>",
-            "logged_out_text": "<p>לחברות מועדון בלבד הטבה ייחודית על קולקצית Valentine</p>",
+            "logged_out_text": "<p> הטבה על קולקצית Valentine רק לחברות מועדון!</p>",
             "logged_in_text_second": "",
             "log_in": "התחברי עכשיו",
             "small_text": "",
