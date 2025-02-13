@@ -33,12 +33,12 @@
           "settings": {
             "toggle_main_font": true,
             "toggle_sub_font": true,
-            "main_text": "NEW COLLECTION",
-            "sub_text": "V-DAY EDITION",
+            "main_text": "END OF SEASON",
+            "sub_text": "30% OFF",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "ltr",
-            "link": "shopify://collections/v-day",
+            "link": "shopify://collections/end-of-year-sale",
             "color_scheme": "background-2"
           }
         },
