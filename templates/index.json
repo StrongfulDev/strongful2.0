@@ -119,37 +119,15 @@
         "slide_gaUfH4": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/copy_2_f6fafae4-5e5b-4f08-a4a9-53948e718eb0.jpg",
-            "mobile_image": "shopify://shop_images/76735f8801bc52cc4261922db7b10423.jpg",
-            "left_position": 50,
-            "bottom_position": 5,
-            "desktop_left_position": 27,
+            "image": "shopify://shop_images/copy_6_12c9fc07-fe4f-40eb-b437-be8547bf1446.jpg",
+            "mobile_image": "shopify://shop_images/copy_3_6.jpg",
+            "left_position": 30,
+            "bottom_position": 30,
+            "desktop_left_position": 31,
             "desktop_bottom_position": 25,
             "show_lock": false,
             "button_label": "SHOP NOW",
-            "link": "shopify://collections/v-day",
-            "show_text_box": false,
-            "color_scheme": "inverse",
-            "whole_slide_link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_AL3x4y": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/3b721c879f0ef3ac3a85d8569c2362ab.jpg",
-            "mobile_image": "shopify://shop_images/951b90955e2f5b06f2cbc003abd4f437.jpg",
-            "left_position": 50,
-            "bottom_position": 10,
-            "desktop_left_position": 25,
-            "desktop_bottom_position": 35,
-            "show_lock": false,
-            "button_label": "SHOP NOW",
-            "link": "shopify://collections/v-day",
+            "link": "shopify://collections/end-of-year-sale",
             "show_text_box": false,
             "color_scheme": "inverse",
             "whole_slide_link": "",
@@ -162,8 +140,7 @@
         }
       },
       "block_order": [
-        "slide_gaUfH4",
-        "slide_AL3x4y"
+        "slide_gaUfH4"
       ],
       "settings": {
         "layout": "full_bleed",
