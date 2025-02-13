@@ -76,11 +76,11 @@
           "type": "url",
           "disabled": true,
           "settings": {
-            "link_text_direction": "Right To Left",
+            "link_text_direction": "Left To Right",
             "show_on_mobile": true,
             "small_font": false,
-            "title": "חדש באתר",
-            "title_link": "shopify://collections/v-day"
+            "title": "30% OFF",
+            "title_link": "shopify://collections/end-of-year-sale"
           }
         },
         "menu_item_WN8KQL": {
