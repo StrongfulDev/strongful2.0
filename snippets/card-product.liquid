@@ -314,7 +314,6 @@
 
             <div class="card__content">
             <div class="card__information">
-                {% if card_product.tags contains announcement_tag %}
                     {% if customer %}
                         {% if members_banner_text != blank %}
                             <span class="card_banner_text color-background-2">{{ members_banner_text }}</span>
@@ -324,7 +323,6 @@
                             <span class="card_banner_text color-background-2">{{ card_banner_text }}</span>
                         {% endif %}
                     {% endif %}
-                {% endif %}
 
                     
         {% assign is_percent_on = false %}
