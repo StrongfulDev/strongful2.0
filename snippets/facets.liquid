@@ -1140,8 +1140,8 @@
                 <facet-remove {% if filter.label contains 'Availability' %}class="hidden"{% endif %}>
                     <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light {{ value.label }}">
             <span class="active-facets__button-inner button button--tertiary">
-                {%- if filter.label == "Product type" -%}
-                    {{ 'products.facets.product_type' | t }}: {{ value.label | escape }}
+                {%- if filter.label == "Product type" or filter.label=="סוג מוצר" -%}
+                {{ value.label | escape }}
                 {%- else -%}
                     {{ filter.label | escape }}: {{ value.label | escape }}
                 {%- endif -%}
