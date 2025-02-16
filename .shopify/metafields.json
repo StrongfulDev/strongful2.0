@@ -614,6 +614,16 @@
         "name": "boolean",
         "category": "TRUE_FALSE"
       }
+    },
+    {
+      "key": "color_name",
+      "namespace": "custom",
+      "name": "color_name",
+      "description": "name for color that used to be in vendor",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
     }
   ],
   "variant": [
@@ -874,6 +884,16 @@
       "description": "variantColor",
       "type": {
         "name": "list.color",
+        "category": "COLOR"
+      }
+    },
+    {
+      "key": "variant_color",
+      "namespace": "custom",
+      "name": "variant color",
+      "description": "color for variants .",
+      "type": {
+        "name": "color",
         "category": "COLOR"
       }
     }

@@ -1774,7 +1774,7 @@ summary .icon-caret {
 	.facets.facets-vertical-sort {
 		margin-bottom: calc(var(--grid-desktop-horizontal-spacing) * 4);
 	}
-
+  
 	.active-facets-vertical-filter ~ facet-remove {
 		display: none;
 	}
@@ -1796,7 +1796,7 @@ summary .icon-caret {
 .product-type-filter {
   position: sticky;
   top: 50px; /* Adjust this value to match the height of your header */
-  z-index: 3;
+  z-index: 4;
   background-color: #fff;
   width: 100vw; /* Full viewport width */
   left: 0; /* Align to the left edge of the viewport */
@@ -1804,7 +1804,7 @@ summary .icon-caret {
   margin-left: -50vw; /* Center the element */
   margin-right: -50vw; /* Center the element */
   padding: 1rem 0;
-  border-bottom: 1px solid rgba(var(--color-foreground), 0.08);
+  /* border-bottom: 1px solid rgba(var(--color-foreground), 0.08); */
   box-sizing: border-box; /* Include padding and border in the width */
 }
 
