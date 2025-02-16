@@ -445,7 +445,7 @@ span.active-facets__button-inner:after {
   .active-facets__button,
   .active-facets__button-remove {
     margin: 0;
-    padding: 1rem 1rem .5rem;
+    padding: 1rem 0.8rem .5rem;
   }
 
   span.active-facets__button-inner {
@@ -1501,7 +1501,7 @@ div.החדשיםביותר {
 		top: 116px;
 		z-index: 5;
 		background: white;
-		padding: 1em;
+		padding: 0.6rem;
 		width: 100vw;
 		margin-right: -1.5rem;
 	}
@@ -1568,7 +1568,7 @@ summary .icon-caret {
     list-style: none;
     overflow-x: auto; /* Enable horizontal scrolling */
     white-space: nowrap; /* Prevent wrapping */
-    padding: 1rem 0;
+    padding: 0.1rem 0;
     display: flex;
     width: 100%;
     gap: 0.4rem; /* Space between items */
@@ -1797,6 +1797,7 @@ summary .icon-caret {
   position: sticky;
   top: 50px; /* Adjust this value to match the height of your header */
   z-index: 4;
+  height: 70px;
   background-color: #fff;
   width: 100vw; /* Full viewport width */
   left: 0; /* Align to the left edge of the viewport */
