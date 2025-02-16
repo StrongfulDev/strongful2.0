@@ -1498,8 +1498,8 @@ div.החדשיםביותר {
 @media screen and (max-width: 989px) {
 	.facets-wrapper {
 		position: sticky;
-		top: 60px;
-		z-index: 3;
+		top: 116px;
+		z-index: 5;
 		background: white;
 		padding: 1em;
 		width: 100vw;

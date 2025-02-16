@@ -140,6 +140,7 @@
     <div class="{% if section.settings.filter_type == 'vertical' %} facets-vertical page-width fix-direction{% endif %}">
       {{ 'component-facets.css' | asset_url | stylesheet_tag }}
       <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
+      <script src="{{ 'product-type-filter.js'| asset_url }}" defer="defer" async="async"></script>
       {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
         <aside
           aria-labelledby="verticalTitle"
@@ -159,7 +160,6 @@
       {%- endif -%}
       
       <div class="product-grid-container" id="ProductGridContainer">
-          <script src="{{ 'product-type-filter.js'| asset_url }}" defer="defer" async="async"></script>
             {% render 'product-type-filter',
               results: collection,
                                 enable_filtering: section.settings.enable_filtering,
