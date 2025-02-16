@@ -614,6 +614,16 @@
         "name": "boolean",
         "category": "TRUE_FALSE"
       }
+    },
+    {
+      "key": "color_name",
+      "namespace": "custom",
+      "name": "color_name",
+      "description": "name for color that used to be in vendor",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
     }
   ],
   "variant": [
