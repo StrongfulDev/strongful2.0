@@ -514,6 +514,15 @@
         "padding_bottom": 16
       }
     },
+    "custom_liquid_EMhhkg": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"octane-ai-quiz \" data-quiz-id=\"pbZ9tXJZsXCU9iAN\" data-embed-type=\"fullpage\" data-mobile-height=\"match_browser\" data-desktop-height=\"match_browser\" >\n    \n</div>\n<script src=\"https://app.octaneai.com/xx36ec0j8782fkjg/quiz.js\" async defer></script>",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "173251753398892554": {
       "type": "apps",
       "blocks": {
@@ -979,6 +988,7 @@
     "featured_collection_qJrxrJ",
     "customer_slideshow_wFcfK7",
     "featured_collection_3Dk734",
+    "custom_liquid_EMhhkg",
     "173251753398892554",
     "featured_collection_zx87dF",
     "custom_liquid_DL9jGF",
