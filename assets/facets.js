@@ -539,33 +539,35 @@ function attachProductTypeFilterClickHandlers() {
 			// (Optional) Force any default sorts
 			// currentUrl.searchParams.set("sort_by", "manual");
 
-			FacetFiltersForm.renderPage(currentUrl.searchParams.toString(), event, true);
+			setTimeout(() => {
+				FacetFiltersForm.renderPage(currentUrl.searchParams.toString(), event, true);
+			}, 100);
 		});
 	});
 }
 
-// Delegated click handler for product-type-filter links.
-document.addEventListener("click", (event) => {
-	const link = event.target.closest(".product-type-filter .tops-menu-link");
-	if (!link) return; // Ignore clicks outside product-type links
-	event.preventDefault();
+// // Delegated click handler for product-type-filter links.
+// document.addEventListener("click", (event) => {
+// 	const link = event.target.closest(".product-type-filter .tops-menu-link");
+// 	if (!link) return; // Ignore clicks outside product-type links
+// 	event.preventDefault();
 
-	const productType = link.textContent.trim();
-	const currentUrl = new URL(window.location.href);
-	const existingFilters = currentUrl.searchParams.getAll("filter.p.product_type");
+// 	const productType = link.textContent.trim();
+// 	const currentUrl = new URL(window.location.href);
+// 	const existingFilters = currentUrl.searchParams.getAll("filter.p.product_type");
 
-	// Toggle the clicked type
-	let updated;
-	if (existingFilters.includes(productType)) {
-		updated = existingFilters.filter((f) => f !== productType);
-	} else {
-		updated = [...existingFilters, productType];
-	}
+// 	// Toggle the clicked type
+// 	let updated;
+// 	if (existingFilters.includes(productType)) {
+// 		updated = existingFilters.filter((f) => f !== productType);
+// 	} else {
+// 		updated = [...existingFilters, productType];
+// 	}
 
-	// Clear and re-append updated product-type filters
-	currentUrl.searchParams.delete("filter.p.product_type");
-	updated.forEach((f) => currentUrl.searchParams.append("filter.p.product_type", f));
+// 	// Clear and re-append updated product-type filters
+// 	currentUrl.searchParams.delete("filter.p.product_type");
+// 	updated.forEach((f) => currentUrl.searchParams.append("filter.p.product_type", f));
 
-	// Trigger the Shopify partial refresh
-	FacetFiltersForm.renderPage(currentUrl.searchParams.toString(), event, true);
-});
+// 	// Trigger the Shopify partial refresh
+// 	FacetFiltersForm.renderPage(currentUrl.searchParams.toString(), event, true);
+// });
