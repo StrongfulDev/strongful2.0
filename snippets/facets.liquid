@@ -1137,11 +1137,12 @@
     <div class="active-facets active-facets-mobile medium-hide large-up-hide">
         {%- for filter in results.filters -%}
             {%- for value in filter.active_values -%}
+              {% unless filter.label == 'סוג מוצר' %}
                 <facet-remove {% if filter.label contains 'Availability' %}class="hidden"{% endif %}>
                     <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light {{ value.label }}">
             <span class="active-facets__button-inner button button--tertiary">
                 {%- if filter.label == "Product type" or filter.label=="סוג מוצר" -%}
-                {{ value.label | escape }}
+                {% comment %} {{ value.label | escape }} {% endcomment %}
                 {%- else -%}
                     {{ filter.label | escape }}: {{ value.label | escape }}
                 {%- endif -%}
@@ -1150,6 +1151,7 @@
             </span>
                     </a>
                 </facet-remove>
+              {% endunless %}
             {%- endfor -%}
 
             {%- if filter.type == 'price_range' -%}
