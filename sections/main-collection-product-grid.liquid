@@ -5,6 +5,7 @@
 {{ 'component-variant-size-picker.css' | asset_url | stylesheet_tag }}
 {{ 'component-variant-size-picker.js' | asset_url | script_tag }}
 
+
 {% comment %}{{ 'component-slider.css' | asset_url | stylesheet_tag }}{% endcomment %}
 {% comment %}{{ 'component-slideshow.css' | asset_url | stylesheet_tag }}{% endcomment %}
 
@@ -117,47 +118,53 @@
     {%- endif -%}
 
     <div class="new-filter-menu-desktop" style="width: 100%; display: flex; justify-content: center;">
-        {% if collection.title == 'טופים' or collection.title == 'כל הטופים' or collection.title == 'חזיות ספורט' or collection.title == 'גופיית ספורט' or collection.title == 'בגד גוף' or collection.title == 'חולצות ספורט' or collection.title == 'קרופ טופ' or collection.title == 'ג׳קטים' or collection.title == 'אוברולים' or collection.title == 'סווטשירט' %}
-            <ul class="filter-links">
-                {% for link in section.settings.tops_menu.links %}
-                    <li class="filter-link {% if link.current %}current-link{% endif %}">
-                        <a href="{{ link.url | url_decode }}" class="tops-menu-link {% if link.current %}list-menu__item--active{% endif %}">{{ link.title }}</a>
-                    </li>
-                {% endfor %}
-            </ul>
-        {% elsif collection.title == 'כל המכנסיים' or collection.title == 'טייצים' or collection.title == 'טייצים ארוכים' or collection.title == 'שורט - טייץ קצר' or collection.title == 'טייץ בייקר' or collection.title == 'טייץ 7/8' %}
-            <ul class="filter-links">
-                {% for link in section.settings.bottoms_menu.links %}
-                    <li class="filter-link {% if link.current %}current-link{% endif %}">
-                        <a href="{{ link.url | url_decode }}" class="tops-menu-link {% if link.current %}list-menu__item--active{% endif %}">{{ link.title }}</a>
-                    </li>
-                {% endfor %}
-            </ul>
-        {% endif %}
+      {% if collection.title == 'טופים' or collection.title == 'כל הטופים' or collection.title == 'חזיות ספורט' or collection.title == 'גופיית ספורט' or collection.title == 'בגד גוף' or collection.title == 'חולצות ספורט' or collection.title == 'קרופ טופ' or collection.title == 'ג׳קטים' or collection.title == 'אוברולים' or collection.title == 'סווטשירט' %}
+        <ul class="filter-links">
+          {% for link in section.settings.tops_menu.links %}
+            <li class="filter-link {% if link.current %}current-link{% endif %}">
+              <a href="{{ link.url | url_decode }}" class="tops-menu-link {% if link.current %}list-menu__item--active{% endif %}">{{ link.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% elsif collection.title == 'כל המכנסיים' or collection.title == 'טייצים' or collection.title == 'טייצים ארוכים' or collection.title == 'שורט - טייץ קצר' or collection.title == 'טייץ בייקר' or collection.title == 'טייץ 7/8' %}
+        <ul class="filter-links">
+          {% for link in section.settings.bottoms_menu.links %}
+            <li class="filter-link {% if link.current %}current-link{% endif %}">
+              <a href="{{ link.url | url_decode }}" class="tops-menu-link {% if link.current %}list-menu__item--active{% endif %}">{{ link.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
     </div>
-
+    
     <div class="{% if section.settings.filter_type == 'vertical' %} facets-vertical page-width fix-direction{% endif %}">
-        {{ 'component-facets.css' | asset_url | stylesheet_tag }}
-        <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
-        {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
-            <aside
-                    aria-labelledby="verticalTitle"
-                    class="facets-wrapper {% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
-                    id="main-collection-filters"
-                    data-id="{{ section.id }}"
-            >
-                {% render 'facets',
-                        results: collection,
-                        enable_filtering: section.settings.enable_filtering,
-                        enable_sorting: section.settings.enable_sorting,
-                        filter_type: section.settings.filter_type,
-                        tops_menu: section.settings.tops_menu,
-                        bottoms_menu: section.settings.bottoms_menu
-                %}
-            </aside>
-        {%- endif -%}
-
-        <div class="product-grid-container" id="ProductGridContainer">
+      {{ 'component-facets.css' | asset_url | stylesheet_tag }}
+      <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
+      <script src="{{ 'product-type-filter.js'| asset_url }}" defer="defer" async="async"></script>
+      {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
+        <aside
+          aria-labelledby="verticalTitle"
+          class="facets-wrapper {% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
+          id="main-collection-filters"
+          data-id="{{ section.id }}"
+        >
+          {% render 'facets',
+            results: collection,
+            enable_filtering: section.settings.enable_filtering,
+            enable_sorting: section.settings.enable_sorting,
+            filter_type: section.settings.filter_type,
+            tops_menu: section.settings.tops_menu,
+            bottoms_menu: section.settings.bottoms_menu
+          %}
+        </aside>
+      {%- endif -%}
+      
+      <div class="product-grid-container" id="ProductGridContainer">
+            {% render 'product-type-filter',
+              results: collection,
+                                enable_filtering: section.settings.enable_filtering,
+                                enable_sorting: section.settings.enable_sorting,
+                                filter_type: section.settings.filter_type,  %}
             {%- paginate collection.products by section.settings.products_per_page -%}
                 {%- if collection.products.size == 0 -%}
                     <div class="collection collection--empty page-width" id="product-grid" data-id="{{ section.id }}">
