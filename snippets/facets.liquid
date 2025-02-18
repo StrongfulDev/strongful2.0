@@ -25,6 +25,9 @@
 -%}
 
 <div class="facets-container fix-direction{% if filter_type == 'drawer' %} facets-container-drawer{% endif %}">
+    {% comment %} Product Type Filter Bar {% endcomment %}
+   
+
     <div
             class="product-count light{% if filter_type == 'vertical' or filter_type == 'horizontal' %} medium-hide large-up-hide{% endif %}"
             role="status">
@@ -54,6 +57,7 @@
             </svg>
         </div>
     </div>
+    
 {% comment %} 
     <div class="new-filter-menu-mobile">
         {% if results.title == 'טופים' or results.title == 'כל הטופים' or results.title == 'חזיות ספורט' or results.title == 'גופיית ספורט' or results.title == 'בגד גוף' or results.title == 'חולצות ספורט' or results.title == 'קרופ טופ' or results.title == 'ג׳קטים' or results.title == 'אוברולים' or results.title == 'סווטשירט' %}
@@ -89,7 +93,7 @@
 
         {% if enable_filtering %}
           {% comment %} Heading is the first tabbable element on filter type horizontal {% endcomment %}
-          <div
+          <div style="top:50px"
               id="FacetsWrapperDesktop"
               {% if filter_type == 'horizontal' %}
                 class="facets__wrapper"
@@ -1136,8 +1140,8 @@
                 <facet-remove {% if filter.label contains 'Availability' %}class="hidden"{% endif %}>
                     <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light {{ value.label }}">
             <span class="active-facets__button-inner button button--tertiary">
-                {%- if filter.label == "Product type" -%}
-                    {{ 'products.facets.product_type' | t }}: {{ value.label | escape }}
+                {%- if filter.label == "Product type" or filter.label=="סוג מוצר" -%}
+                {{ value.label | escape }}
                 {%- else -%}
                     {{ filter.label | escape }}: {{ value.label | escape }}
                 {%- endif -%}

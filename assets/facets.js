@@ -53,6 +53,9 @@ class FacetFiltersForm extends HTMLElement {
 		});
 
 		if (updateURLHash) FacetFiltersForm.updateURLHash(searchParams);
+
+		// Update the active state of product type links
+		updateProductTypeLinksActiveState();
 	}
 
 	static renderSectionFromFetch(url, event) {
@@ -487,4 +490,84 @@ document.addEventListener("DOMContentLoaded", () => {
 		offset: 1000,
 		callback: removeDeadProduct,
 	});
+	attachProductTypeFilterClickHandlers();
+
+	// Listen for when Shopify's AJAX rendering is done
+	document.addEventListener("facet:updated", () => {
+		updateProductTypeLinksActiveState();
+		attachProductTypeFilterClickHandlers();
+	});
 });
+
+// Function to update the active state of the product type links
+function updateProductTypeLinksActiveState() {
+	const currentUrl = new URL(window.location.href);
+	const existingFilters = currentUrl.searchParams.getAll("filter.p.product_type");
+	const typeFilterLinks = document.querySelectorAll(".product-type-filter .tops-menu-link");
+
+	typeFilterLinks.forEach((link) => {
+		const productType = link.textContent.trim();
+		if (existingFilters.includes(productType)) {
+			link.classList.add("current-link");
+			link.classList.add("active");
+		} else {
+			link.classList.remove("current-link");
+			link.classList.remove;
+		}
+	});
+}
+
+// Attach click handlers to product type filter links
+function attachProductTypeFilterClickHandlers() {
+	const typeFilterLinks = document.querySelectorAll(".product-type-filter .tops-menu-link");
+	typeFilterLinks.forEach((link) => {
+		link.addEventListener("click", (event) => {
+			event.preventDefault();
+			const currentUrl = new URL(window.location.href);
+			const existing = currentUrl.searchParams.getAll("filter.p.product_type");
+			const productType = link.textContent.trim();
+
+			// Toggle the filter in memory
+			let updated = existing.includes(productType)
+				? existing.filter((f) => f !== productType)
+				: [...existing, productType];
+
+			// Remove all "filter.p.product_type" params, then re-append the updated list
+			currentUrl.searchParams.delete("filter.p.product_type");
+			updated.forEach((f) => currentUrl.searchParams.append("filter.p.product_type", f));
+
+			// (Optional) Force any default sorts
+			// currentUrl.searchParams.set("sort_by", "manual");
+
+			setTimeout(() => {
+				FacetFiltersForm.renderPage(currentUrl.searchParams.toString(), event, true);
+			}, 100);
+		});
+	});
+}
+
+// // Delegated click handler for product-type-filter links.
+// document.addEventListener("click", (event) => {
+// 	const link = event.target.closest(".product-type-filter .tops-menu-link");
+// 	if (!link) return; // Ignore clicks outside product-type links
+// 	event.preventDefault();
+
+// 	const productType = link.textContent.trim();
+// 	const currentUrl = new URL(window.location.href);
+// 	const existingFilters = currentUrl.searchParams.getAll("filter.p.product_type");
+
+// 	// Toggle the clicked type
+// 	let updated;
+// 	if (existingFilters.includes(productType)) {
+// 		updated = existingFilters.filter((f) => f !== productType);
+// 	} else {
+// 		updated = [...existingFilters, productType];
+// 	}
+
+// 	// Clear and re-append updated product-type filters
+// 	currentUrl.searchParams.delete("filter.p.product_type");
+// 	updated.forEach((f) => currentUrl.searchParams.append("filter.p.product_type", f));
+
+// 	// Trigger the Shopify partial refresh
+// 	FacetFiltersForm.renderPage(currentUrl.searchParams.toString(), event, true);
+// });
