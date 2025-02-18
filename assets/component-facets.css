@@ -445,7 +445,7 @@ span.active-facets__button-inner:after {
   .active-facets__button,
   .active-facets__button-remove {
     margin: 0;
-    padding: 1rem 1rem .5rem;
+    padding: 1rem 0.8rem .5rem;
   }
 
   span.active-facets__button-inner {
@@ -1498,10 +1498,10 @@ div.החדשיםביותר {
 @media screen and (max-width: 989px) {
 	.facets-wrapper {
 		position: sticky;
-		top: 60px;
-		z-index: 3;
+		top: 116px;
+		z-index: 5;
 		background: white;
-		padding: 1em;
+		padding: 0.6rem;
 		width: 100vw;
 		margin-right: -1.5rem;
 	}
@@ -1568,7 +1568,7 @@ summary .icon-caret {
     list-style: none;
     overflow-x: auto; /* Enable horizontal scrolling */
     white-space: nowrap; /* Prevent wrapping */
-    padding: 1rem 0;
+    padding: 0.1rem 0;
     display: flex;
     width: 100%;
     gap: 0.4rem; /* Space between items */
@@ -1750,7 +1750,8 @@ summary .icon-caret {
 	.facets-container {
 		position: -webkit-sticky;
 		position: sticky;
-		top: 10rem;
+		top: 30px;
+    z-index: 4;
 		max-width: 240px;
 		min-width: 200px;
 		max-height: 80vh;
@@ -1773,7 +1774,7 @@ summary .icon-caret {
 	.facets.facets-vertical-sort {
 		margin-bottom: calc(var(--grid-desktop-horizontal-spacing) * 4);
 	}
-
+  
 	.active-facets-vertical-filter ~ facet-remove {
 		display: none;
 	}
@@ -1790,4 +1791,34 @@ summary .icon-caret {
 		font-size: calc(var(--font-body-size-small) * 1.3);
 		margin-right: var(--grid-desktop-vertical-spacing);
 	}
+}
+
+.product-type-filter {
+  position: sticky;
+  top: 50px; /* Adjust this value to match the height of your header */
+  z-index: 4;
+  height: 70px;
+  background-color: #fff;
+  width: 100vw; /* Full viewport width */
+  left: 0; /* Align to the left edge of the viewport */
+  right: 0; /* Align to the right edge of the viewport */
+  margin-left: -50vw; /* Center the element */
+  margin-right: -50vw; /* Center the element */
+  padding: 1rem 0;
+  /* border-bottom: 1px solid rgba(var(--color-foreground), 0.08); */
+  box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.product-type-filter .filter-links {
+  padding-top: 1rem;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 990px) {
+    .product-type-filter {
+        margin-bottom: 3rem;
+    }
 }
