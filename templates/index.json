@@ -9,6 +9,53 @@
  */
 {
   "sections": {
+    "member_only_slideshow_Wfz3GK": {
+      "type": "member-only-slideshow",
+      "blocks": {
+        "slide_CpVtQf": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/22_6a9a27ec-1c7b-4131-9498-4f682b338b7e.jpg",
+            "mobile_image": "shopify://shop_images/20_48a36127-93e5-475f-8a07-82fad820f049.jpg",
+            "member_image": "shopify://shop_images/3b721c879f0ef3ac3a85d8569c2362ab_61da387a-270e-4044-8bbd-1c2b5265a9e5.jpg",
+            "member_mobile_image": "shopify://shop_images/copy_3_4.jpg",
+            "left_position": 20,
+            "bottom_position": 67,
+            "desktop_left_position": 53,
+            "desktop_bottom_position": 69,
+            "member_mobile_left_position": 50,
+            "member_mobile_bottom_position": 50,
+            "member_desktop_left_position": 50,
+            "member_desktop_bottom_position": 50,
+            "show_lock": false,
+            "button_label": "Button label",
+            "link": "",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "whole_slide_link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_CpVtQf"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9": {
       "type": "featured-collections",
       "blocks": {
@@ -142,6 +189,7 @@
       "block_order": [
         "slide_gaUfH4"
       ],
+      "disabled": true,
       "settings": {
         "layout": "full_bleed",
         "slide_height": "adapt_image",
@@ -985,6 +1033,7 @@
     }
   },
   "order": [
+    "member_only_slideshow_Wfz3GK",
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9",
     "slideshow_gwXDrF",
     "featured_collection_XDhFHB",
