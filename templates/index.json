@@ -116,28 +116,6 @@
     "slideshow_gwXDrF": {
       "type": "slideshow",
       "blocks": {
-        "slide_gaUfH4": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/copy_6_12c9fc07-fe4f-40eb-b437-be8547bf1446.jpg",
-            "mobile_image": "shopify://shop_images/copy_3_6.jpg",
-            "left_position": 30,
-            "bottom_position": 30,
-            "desktop_left_position": 31,
-            "desktop_bottom_position": 25,
-            "show_lock": false,
-            "button_label": "SHOP NOW",
-            "link": "shopify://collections/end-of-year-sale",
-            "show_text_box": false,
-            "color_scheme": "inverse",
-            "whole_slide_link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "text_alignment_mobile": "center"
-          }
-        },
         "slide_EQwW66": {
           "type": "slide",
           "settings": {
@@ -159,11 +137,33 @@
             "image_overlay_opacity": 0,
             "text_alignment_mobile": "center"
           }
+        },
+        "slide_gaUfH4": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/copy_6_12c9fc07-fe4f-40eb-b437-be8547bf1446.jpg",
+            "mobile_image": "shopify://shop_images/copy_3_6.jpg",
+            "left_position": 30,
+            "bottom_position": 30,
+            "desktop_left_position": 31,
+            "desktop_bottom_position": 25,
+            "show_lock": false,
+            "button_label": "SHOP NOW",
+            "link": "shopify://collections/end-of-year-sale",
+            "show_text_box": false,
+            "color_scheme": "inverse",
+            "whole_slide_link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center"
+          }
         }
       },
       "block_order": [
-        "slide_gaUfH4",
-        "slide_EQwW66"
+        "slide_EQwW66",
+        "slide_gaUfH4"
       ],
       "settings": {
         "layout": "full_bleed",
