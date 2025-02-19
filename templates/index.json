@@ -137,10 +137,33 @@
             "image_overlay_opacity": 0,
             "text_alignment_mobile": "center"
           }
+        },
+        "slide_EQwW66": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/19_e8b3132d-5874-4aa6-abfb-e5ca1908f506.jpg",
+            "mobile_image": "shopify://shop_images/7_14ddb60a-12c8-43f6-9cc1-b2cfe8c9ab71.jpg",
+            "left_position": 50,
+            "bottom_position": 10,
+            "desktop_left_position": 27,
+            "desktop_bottom_position": 25,
+            "show_lock": false,
+            "button_label": "SHOP NOW",
+            "link": "shopify://collections/v-day",
+            "show_text_box": false,
+            "color_scheme": "inverse",
+            "whole_slide_link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center"
+          }
         }
       },
       "block_order": [
-        "slide_gaUfH4"
+        "slide_gaUfH4",
+        "slide_EQwW66"
       ],
       "settings": {
         "layout": "full_bleed",
@@ -256,7 +279,7 @@
       "type": "apps",
       "blocks": {
         "tolstoy_shoppable_video_ugc_carousel_block_jtc3eF": {
-          "type": "shopify://apps/tolstoy-shoppable-video-ugc/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
           "settings": {
             "publishId": "5xh1nmtccw8gh"
           }
@@ -484,7 +507,7 @@
       "type": "apps",
       "blocks": {
         "tolstoy_shoppable_video_ugc_video_page_block_gqxpip": {
-          "type": "shopify://apps/tolstoy-shoppable-video-ugc/blocks/video-page-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/video-page-block/06fa8282-42ff-403e-b67c-1936776aed11",
           "disabled": true,
           "settings": {
             "publishId": "ftlzktbd3asee"
