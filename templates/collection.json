@@ -58,8 +58,8 @@
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
-        "tops_menu": "dropdown-tops",
-        "bottoms_menu": "bottoms-filter-links",
+        "tops_menu": "",
+        "bottoms_menu": "",
         "ad_link": "",
         "products_per_page": 20,
         "columns_desktop": 4,
