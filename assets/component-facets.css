@@ -1572,7 +1572,7 @@ summary .icon-caret {
     display: flex;
     width: 100%;
     gap: 0.4rem; /* Space between items */
-    justify-content: flex-start; /* Align filters to the start */
+    justify-content: center; /* Align filters to the start */
     direction: rtl; /* Start view from the right side */
     padding-right: 1rem; /* Ensure edges are reachable on mobile */
 }
