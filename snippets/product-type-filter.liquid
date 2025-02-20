@@ -13,7 +13,7 @@
 
 {% if product_type_count >= 2 %}
   <div class="product-type-filter">
-    <ul class="filter-links">
+    <ul class="filter-links" {% if product_type_count<=6 %} style="justify-content: center;"{% endif %}>
       {%- for filter in results.filters -%}
         {%- assign filter_label = filter.label | escape | strip | downcase -%}
         {%- if filter_label == "product type" or filter_label == "סוג מוצר" -%}
