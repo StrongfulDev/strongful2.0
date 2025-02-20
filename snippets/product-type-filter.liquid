@@ -3,19 +3,29 @@
   Purpose: Displays product-type filters as a list of links that can be clicked to filter products by product type.
 {% endcomment %}
 
+{% assign product_type_count = 0 %}
+{% for filter in results.filters %}
+  {% assign filter_label = filter.label | escape | strip | downcase %}
+  {% if filter_label == "product type" or filter_label == "סוג מוצר" %}
+    {% assign product_type_count = filter.values.size %}
+  {% endif %}
+{% endfor %}
+
+{% if product_type_count >= 2 %}
   <div class="product-type-filter">
-        <ul class="filter-links">
-            {%- for filter in results.filters -%}
-                {%- assign filter_label = filter.label | escape | strip | downcase -%}
-                {%- if filter_label == "product type" or filter_label == "סוג מוצר" -%}
-                    {%- for value in filter.values -%}
-                        <li class="filter-link {% if value.active %}current-link{% endif %}">
-                            <a href="#" class="tops-menu-link" data-filter-url="{{ value.url }}">
-                                {{ value.label }}
-                            </a>
-                        </li>
-                    {%- endfor -%}
-                {%- endif -%}
-            {%- endfor -%}
-        </ul>
-    </div>
+    <ul class="filter-links">
+      {%- for filter in results.filters -%}
+        {%- assign filter_label = filter.label | escape | strip | downcase -%}
+        {%- if filter_label == "product type" or filter_label == "סוג מוצר" -%}
+          {%- for value in filter.values -%}
+            <li class="filter-link {% if value.active %}current-link{% endif %}">
+              <a href="#" class="tops-menu-link" data-filter-url="{{ value.url }}">
+                {{ value.label }}
+              </a>
+            </li>
+          {%- endfor -%}
+        {%- endif -%}
+      {%- endfor -%}
+    </ul>
+  </div>
+{% endif %}
