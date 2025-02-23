@@ -624,6 +624,16 @@
         "name": "single_line_text_field",
         "category": "TEXT"
       }
+    },
+    {
+      "key": "just_dropped",
+      "namespace": "custom",
+      "name": "Just Dropped",
+      "description": "a string that supposed to feature how new the product is for filter",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
     }
   ],
   "variant": [
