@@ -10,14 +10,16 @@
 
 <!-- Modal overlay (hidden by default) -->
 <div class="size-guide-overlay hidden" id="sizeGuideOverlay"
-     style="position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:999;">
+     style="position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:100000;">
   
   <!-- The modal container (hidden by default) -->
   <div class="size-guide-modal hidden fix-direction" id="sizeGuideModal"
-       style="background:#fff; width:60vw; padding:1em; position: fixed; top:0; right:0; height:100%; overflow-y:auto; border-top-left-radius:8px; border-bottom-left-radius:8px;">
+       style="background:#fff; width:50vw; padding:1em; position: fixed; top:0; right:0; height:100%; overflow-y:auto; border-top-left-radius:8px; border-bottom-left-radius:8px;">
     
     <!-- Close icon/button -->
-    <button id="close-size-guide" style="position:absolute; top:1em; right:1em;">✕</button>
+    <p id="close-size-guide" class="StrongfulX" style="position:absolute; top:1em; right:1em; cursor:pointer; font-size: 24px;">
+      &#x2715;
+    </p>
 
     <div dir="rtl" style="text-align: right; font-family: sans-serif;">
       <!-- PILL NAV / TABLES EXACTLY AS BEFORE -->
@@ -45,9 +47,9 @@
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
-        .open-size-guide:hover {
+        {% comment %} .open-size-guide:hover {
             background-color: #0056b3;
-        }
+        } {% endcomment %}
         .size-switch {
           display: inline-block;
           padding: 0.5em 1em;
@@ -57,10 +59,6 @@
           cursor: pointer;
           background: #fff;
           transition: background-color 0.3s, color 0.3s;
-        }
-        .size-switch.active {
-          background-color: #000;
-          color: #fff;
         }
         .size-chart {
           display: none; /* hidden by default; toggled by JS */
@@ -93,17 +91,22 @@
           padding: 10px 20px;
           margin: 5px;
           font-size: 16px;
-          font-weight: bold;
-          color: #fff;
-          background-color: #007bff;
+          font-family:'Arimo',sans-serif;
+          color: #000;
+          background-color: #fff;
           border: none;
-          border-radius: 5px;
+          border-radius: 3px;
           cursor: pointer;
           transition: background-color 0.3s ease;
+
         }
         
         .product-size-switch-container .size-switch:hover {
-          background-color: #0056b3;
+          {% comment %} background-color:rgb(143, 148, 152); {% endcomment %}
+        }
+        .size-switch.active {
+          background-color: #000;
+          color: #fff;
         }
         /* Hover effect on table cells */
         .size-chart table th, .size-chart table td {
@@ -408,6 +411,10 @@
 <!-- JavaScript to open/close the modal -->
 <script>
 document.addEventListener('DOMContentLoaded', function(){
+  var overlay = document.getElementById('sizeGuideOverlay');
+  if (overlay) {
+    document.body.appendChild(overlay);
+  }
   var openBtn = document.getElementById('open-size-guide');
   var closeBtn = document.getElementById('close-size-guide');
   var overlay = document.getElementById('sizeGuideOverlay');
