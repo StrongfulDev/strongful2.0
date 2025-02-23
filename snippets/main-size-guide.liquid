@@ -1,0 +1,496 @@
+{% comment %}
+  A stand-alone size guide with pill navigation, displayed in a modal.
+  We add a "Show Size Guide" button and an "X" to close.
+{% endcomment %}
+
+<!-- Button to open the size guide modal -->
+<button id="open-size-guide" class="open-size-guide" style="margin-bottom: 1rem;">
+  הצגת טבלת מידות
+</button>
+
+<!-- Modal overlay (hidden by default) -->
+<div class="size-guide-overlay hidden" id="sizeGuideOverlay"
+     style="position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:999; display:flex; align-items:center; justify-content:center;">
+  
+  <!-- The modal container (hidden by default) -->
+  <div class="size-guide-modal hidden fix-direction" id="sizeGuideModal"
+       style="background:#fff; border-radius:8px; max-width:800px; width:90%; padding:1em; position: relative;">
+    
+    <!-- Close icon/button -->
+    <button id="close-size-guide" style="position:absolute; top:1em; right:1em;">✕</button>
+
+    <div dir="rtl" style="text-align: right; font-family: sans-serif;">
+      <!-- PILL NAV / TABLES EXACTLY AS BEFORE -->
+      <style>
+        .product-size-switch-container {
+          margin-bottom: 1rem;
+        }
+        .open-size-guide {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .open-size-guide:hover {
+            background-color: #0056b3;
+        }
+        .size-switch {
+          display: inline-block;
+          padding: 0.5em 1em;
+          margin: 0 0.5em 0.5em 0;
+          border: 1px solid #ccc;
+          border-radius: 30px; /* pill shape */
+          cursor: pointer;
+          background: #fff;
+          transition: background-color 0.3s, color 0.3s;
+        }
+        .size-switch.active {
+          background-color: #000;
+          color: #fff;
+        }
+        .size-chart {
+          display: none; /* hidden by default; toggled by JS */
+          border: 1px solid #ddd;
+          padding: 1em;
+          border-radius: 6px;
+          margin-bottom: 1em;
+        }
+        .size-chart table {
+          width: 100%;
+          border-collapse: collapse;
+          margin-bottom: 1em;
+        }
+        .size-chart th, .size-chart td {
+          border: 1px solid #ddd;
+          padding: 0.5em;
+          text-align: center;
+        }
+        .size-chart th {
+          background-color: #f9f9f9;
+        }
+        .note {
+          margin-top: 1em;
+          font-size: 0.9em;
+          color: #666;
+        }
+        /* Modern button design */
+        .product-size-switch-container .size-switch {
+          display: inline-block;
+          padding: 10px 20px;
+          margin: 5px;
+          font-size: 16px;
+          font-weight: bold;
+          color: #fff;
+          background-color: #007bff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        }
+        
+        .product-size-switch-container .size-switch:hover {
+          background-color: #0056b3;
+        }
+        /* Hover effect on table cells */
+        .size-chart table th, .size-chart table td {
+          transition: background-color 0.3s ease;
+        }
+        .size-chart table th:hover, .size-chart table td:hover {
+          background-color: rgba(0, 0, 0, 0.1);
+        }
+        .size-chart table th:hover ~ th, .size-chart table td:hover ~ td {
+          background-color: rgba(0, 0, 0, 0.1);
+        }
+        .size-chart table th:hover ~ th, .size-chart table td:hover ~ td {
+          background-color: rgba(0, 0, 0, 0.1);
+          direction: rtl;
+        }
+        .size-chart table th.hover, .size-chart table td.hover {
+          background-color: rgba(0, 0, 0, 0.1);
+        }
+      </style>
+
+      <div class="product-size-switch-container">
+        <span class="size-switch" data-target="onesie-chart">אוברול</span>
+        <span class="size-switch" data-target="shirt-chart">חולצה</span>
+        <span class="size-switch" data-target="pants-chart">מכנס</span>
+      </div>
+
+      <!-- The 3 size-chart blocks as before -->
+      <div id="onesie-chart" class="size-chart">
+        <h3>טבלת מידות – אוברול</h3>
+        <p>מותאם לאוברול מהסוג שהגדרת (למשל "Oasis אוברול קרוס").</p>
+        <!-- First table: חזה וחזייה -->
+        <table>
+          <thead>
+            <tr>
+              <th>מידה</th>
+              <th>היקף חזה</th>
+              <th>מידת חזייה</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>XXS</td>
+              <td>67–73</td>
+              <td>A-C 65 / D-E 60</td>
+            </tr>
+            <tr>
+              <td>XS</td>
+              <td>74–83</td>
+              <td>A-C 70 / D-E 65</td>
+            </tr>
+            <tr>
+              <td>S</td>
+              <td>84–92</td>
+              <td>A-C 75 / D-E 70</td>
+            </tr>
+            <tr>
+              <td>M</td>
+              <td>90–96</td>
+              <td>A-C 80 / D-E 75</td>
+            </tr>
+            <tr>
+              <td>L</td>
+              <td>95–102</td>
+              <td>A-C 85 / D-E 80</td>
+            </tr>
+            <tr>
+              <td>XL</td>
+              <td>100–107</td>
+              <td>A-C 90 / D-E 85</td>
+            </tr>
+            <tr>
+              <td>XXL</td>
+              <td>105–112</td>
+              <td>A-C 95 / D-E 90</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Second table: מכנסיים, מותן, ירכיים, אורך -->
+        <table>
+          <thead>
+            <tr>
+              <th>מידה</th>
+              <th>מידת מכנסיים</th>
+              <th>מותן</th>
+              <th>אגן</th>
+              <th>אורך תחתון</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>XXS</td>
+              <td>30–32</td>
+              <td>55–60</td>
+              <td>78–85</td>
+              <td>85</td>
+            </tr>
+            <tr>
+              <td>XS</td>
+              <td>32–34</td>
+              <td>60–65</td>
+              <td>84–91</td>
+              <td>86</td>
+            </tr>
+            <tr>
+              <td>S</td>
+              <td>36–38</td>
+              <td>66–70</td>
+              <td>87–94</td>
+              <td>87</td>
+            </tr>
+            <tr>
+              <td>M</td>
+              <td>38–40</td>
+              <td>76–82</td>
+              <td>96–102</td>
+              <td>88</td>
+            </tr>
+            <tr>
+              <td>L</td>
+              <td>42–44</td>
+              <td>82–87</td>
+              <td>102–109</td>
+              <td>89</td>
+            </tr>
+            <tr>
+              <td>XL</td>
+              <td>44–46</td>
+              <td>87–92</td>
+              <td>110–117</td>
+              <td>90</td>
+            </tr>
+            <tr>
+              <td>XXL</td>
+              <td>46–48</td>
+              <td>92–98</td>
+              <td>118–125</td>
+              <td>91</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="note">*אם את/ה בין מידות או בעל/ת חזה מלא, שקלו לעלות מידה אחת.</p>
+      </div>
+
+      <div id="shirt-chart" class="size-chart">
+        <h3>טבלת מידות – חולצה (דוגמה)</h3>
+        <p>כאן תוכל/י להוסיף נתונים עבור חולצות ב-7 מידות (XXS–XXL).</p>
+        <table>
+          <thead>
+            <tr>
+              <th>מידה</th>
+              <th>היקף חזה</th>
+              <th>מותן</th>
+              <th>אורך שרוול</th>
+              <th>אורך חולצה</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>XXS</td>
+              <td>76–82</td>
+              <td>60–65</td>
+              <td>57</td>
+              <td>60</td>
+            </tr>
+            <tr>
+              <td>XS</td>
+              <td>82–88</td>
+              <td>65–70</td>
+              <td>58</td>
+              <td>61</td>
+            </tr>
+            <tr>
+              <td>S</td>
+              <td>88–94</td>
+              <td>70–75</td>
+              <td>59</td>
+              <td>62</td>
+            </tr>
+            <tr>
+              <td>M</td>
+              <td>94–100</td>
+              <td>75–80</td>
+              <td>60</td>
+              <td>63</td>
+            </tr>
+            <tr>
+              <td>L</td>
+              <td>100–106</td>
+              <td>80–85</td>
+              <td>61</td>
+              <td>64</td>
+            </tr>
+            <tr>
+              <td>XL</td>
+              <td>106–112</td>
+              <td>85–90</td>
+              <td>62</td>
+              <td>65</td>
+            </tr>
+            <tr>
+              <td>XXL</td>
+              <td>112–118</td>
+              <td>90–95</td>
+              <td>63</td>
+              <td>66</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="note">*דוגמה בלבד. יש לעדכן את הטווחים בהתאם לייצור בפועל.</p>
+      </div>
+
+      <div id="pants-chart" class="size-chart">
+        <h3>טבלת מידות – מכנס (דוגמה)</h3>
+        <p>כאן תוכל/י להכניס נתוני מכנס ב-7 מידות (XXS–XXL).</p>
+        <table>
+          <thead>
+            <tr>
+              <th>מידה</th>
+              <th>מותן</th>
+              <th>אגן</th>
+              <th>אורך מכנס</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>XXS</td>
+              <td>56–61</td>
+              <td>82–88</td>
+              <td>88</td>
+            </tr>
+            <tr>
+              <td>XS</td>
+              <td>61–66</td>
+              <td>88–93</td>
+              <td>90</td>
+            </tr>
+            <tr>
+              <td>S</td>
+              <td>66–71</td>
+              <td>93–98</td>
+              <td>92</td>
+            </tr>
+            <tr>
+              <td>M</td>
+              <td>71–76</td>
+              <td>98–103</td>
+              <td>94</td>
+            </tr>
+            <tr>
+              <td>L</td>
+              <td>76–82</td>
+              <td>103–109</td>
+              <td>96</td>
+            </tr>
+            <tr>
+              <td>XL</td>
+              <td>82–88</td>
+              <td>109–115</td>
+              <td>98</td>
+            </tr>
+            <tr>
+              <td>XXL</td>
+              <td>88–94</td>
+              <td>115–122</td>
+              <td>100</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="note">*דוגמה בלבד. ניתן לשנות על פי המידות האמיתיות.</p>
+      </div>
+
+      <script>
+      document.addEventListener('DOMContentLoaded', function(){
+        // Pill logic as before
+        var pills = document.querySelectorAll('.size-switch');
+        var charts = document.querySelectorAll('.size-chart');
+
+        function hideAllCharts() {
+          charts.forEach(function(chart){ chart.style.display = 'none'; });
+          pills.forEach(function(pill){ pill.classList.remove('active'); });
+        }
+        hideAllCharts();
+        // Show the first chart by default
+        document.getElementById('onesie-chart').style.display = 'block';
+        pills[0].classList.add('active');
+
+        pills.forEach(function(pill){
+          pill.addEventListener('click', function(){
+            var targetID = this.getAttribute('data-target');
+            hideAllCharts();
+            document.getElementById(targetID).style.display = 'block';
+            this.classList.add('active');
+          });
+        });
+      });
+      </script>
+    </div> <!-- end RTL container -->
+  </div> <!-- end .size-guide-modal -->
+</div> <!-- end .size-guide-overlay -->
+
+<!-- JavaScript to open/close the modal -->
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var openBtn = document.getElementById('open-size-guide');
+  var closeBtn = document.getElementById('close-size-guide');
+  var overlay = document.getElementById('sizeGuideOverlay');
+  var modal = document.getElementById('sizeGuideModal');
+
+  // Show modal
+  openBtn.addEventListener('click', function(){
+    overlay.classList.remove('hidden');
+    modal.classList.remove('hidden');
+  });
+
+  // Close modal on 'X' click
+  closeBtn.addEventListener('click', function(){
+    overlay.classList.add('hidden');
+    modal.classList.add('hidden');
+  });
+
+  // Optional: Close modal if overlay background is clicked
+  overlay.addEventListener('click', function(e) {
+    if(e.target === overlay) {
+      overlay.classList.add('hidden');
+      modal.classList.add('hidden');
+    }
+  });
+
+  // Handle size switch click and long click for mobile
+  const sizeSwitches = document.querySelectorAll(".size-switch");
+  const sizeCharts = document.querySelectorAll(".size-chart");
+
+  sizeSwitches.forEach((switchElement) => {
+    switchElement.addEventListener("click", () => {
+      const target = switchElement.getAttribute("data-target");
+      sizeCharts.forEach((chart) => {
+        chart.style.display = chart.id === target ? "block" : "none";
+      });
+    });
+
+    // Long click for mobile
+    let timer;
+    switchElement.addEventListener("touchstart", () => {
+      timer = setTimeout(() => {
+        const target = switchElement.getAttribute("data-target");
+        sizeCharts.forEach((chart) => {
+          chart.style.display = chart.id === target ? "block" : "none";
+        });
+      }, 500); // Adjust the duration for long click
+    });
+
+    switchElement.addEventListener("touchend", () => {
+      clearTimeout(timer);
+    });
+  });
+
+  // Hover effect on table cells
+  const tableCells = document.querySelectorAll(".size-chart table th, .size-chart table td");
+  tableCells.forEach((cell) => {
+    cell.addEventListener("mouseover", () => {
+      const row = cell.parentElement;
+      const rowIndex = Array.from(row.parentElement.children).indexOf(row);
+      const cellIndex = Array.from(row.children).indexOf(cell);
+
+      // Highlight cells from right to the hovered cell with fade effect
+      for (let i = cellIndex; i < row.children.length; i++) {
+        row.children[i].classList.add("hover");
+        row.children[i].style.transitionDelay = `${(i - cellIndex) * 0.05}s`;
+      }
+
+      // Highlight cells from top to the hovered cell with fade effect
+      for (let i = 0; i <= rowIndex; i++) {
+        row.parentElement.children[i].children[cellIndex].classList.add("hover");
+        row.parentElement.children[i].children[cellIndex].style.transitionDelay = `${(rowIndex - i) * 0.05}s`;
+      }
+    });
+
+    cell.addEventListener("mouseout", () => {
+      const row = cell.parentElement;
+      const rowIndex = Array.from(row.parentElement.children).indexOf(row);
+      const cellIndex = Array.from(row.children).indexOf(cell);
+
+      // Remove highlight from cells
+      for (let i = cellIndex; i < row.children.length; i++) {
+        row.children[i].classList.remove("hover");
+        row.children[i].style.transitionDelay = "";
+      }
+
+      for (let i = 0; i <= rowIndex; i++) {
+        row.parentElement.children[i].children[cellIndex].classList.remove("hover");
+        row.parentElement.children[i].children[cellIndex].style.transitionDelay = "";
+      }
+    });
+  });
+});
+</script>
