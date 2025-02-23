@@ -84,9 +84,9 @@ You can learn more about this (and learn how to cleanly revert these changes) at
         >
     {%- endif -%}
 
-    {% unless product.tags contains 'noSizeTable' %}
-        {% render 'main-size-guide'%}
-    {% endunless %}
+    {% comment %} {% unless product.tags contains 'noSizeTable' %}
+        {% render 'main-product-size-table' , product: product %}
+    {% endunless %} {% endcomment %}
 
     {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
 

@@ -1851,7 +1851,9 @@ variant-radios {
     position: relative;
     top: 70px;
     left: 2rem;
-    z-index: 10000;
+    z-index: 3;
+    background-color: white;
+    border:nonel;
 }
 
 .gift-card-product-form__input {

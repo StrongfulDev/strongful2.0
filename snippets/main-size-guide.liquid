@@ -2,19 +2,19 @@
   A stand-alone size guide with pill navigation, displayed in a modal.
   We add a "Show Size Guide" button and an "X" to close.
 {% endcomment %}
-
+ {{ section-main-product |asset_url | stylesheet_tag }}
 <!-- Button to open the size guide modal -->
-<button id="open-size-guide" class="open-size-guide" style="margin-bottom: 1rem;">
-  הצגת טבלת מידות
+<button id="open-size-guide" class="size-table-toggler" style="margin-bottom: 1rem;">
+  {{ 'products.product.size_table' | t }}
 </button>
 
 <!-- Modal overlay (hidden by default) -->
 <div class="size-guide-overlay hidden" id="sizeGuideOverlay"
-     style="position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:999; display:flex; align-items:center; justify-content:center;">
+     style="position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:999;">
   
   <!-- The modal container (hidden by default) -->
   <div class="size-guide-modal hidden fix-direction" id="sizeGuideModal"
-       style="background:#fff; border-radius:8px; max-width:800px; width:90%; padding:1em; position: relative; height:90%; overflow-y:auto;">
+       style="background:#fff; width:60vw; padding:1em; position: fixed; top:0; right:0; height:100%; overflow-y:auto; border-top-left-radius:8px; border-bottom-left-radius:8px;">
     
     <!-- Close icon/button -->
     <button id="close-size-guide" style="position:absolute; top:1em; right:1em;">✕</button>
@@ -22,6 +22,14 @@
     <div dir="rtl" style="text-align: right; font-family: sans-serif;">
       <!-- PILL NAV / TABLES EXACTLY AS BEFORE -->
       <style>
+        /* Slide-in animation for the modal */
+        .size-guide-modal {
+          transform: translateX(100%);
+          transition: transform 0.1s ease-out;
+        }
+        .size-guide-modal.open {
+          transform: translateX(0);
+        }
         .product-size-switch-container {
           margin-bottom: 1rem;
         }
@@ -37,7 +45,6 @@
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
-
         .open-size-guide:hover {
             background-color: #0056b3;
         }
@@ -406,23 +413,32 @@ document.addEventListener('DOMContentLoaded', function(){
   var overlay = document.getElementById('sizeGuideOverlay');
   var modal = document.getElementById('sizeGuideModal');
 
-  // Show modal
+  // Show modal with slide-in animation
   openBtn.addEventListener('click', function(){
     overlay.classList.remove('hidden');
     modal.classList.remove('hidden');
+    // Ensure the browser applies the "hidden" removal before adding the open class.
+    setTimeout(function(){
+      modal.classList.add('open');
+    }, 0);
   });
 
-  // Close modal on 'X' click
-  closeBtn.addEventListener('click', function(){
-    overlay.classList.add('hidden');
-    modal.classList.add('hidden');
-  });
+  // Hide modal with slide-out animation
+  function closeModal() {
+    modal.classList.remove('open');
+    // Wait for the slide-out transition before hiding overlay/modal.
+    setTimeout(function(){
+      overlay.classList.add('hidden');
+      modal.classList.add('hidden');
+    }, 300); // 300ms matches the transition duration
+  }
+
+  closeBtn.addEventListener('click', closeModal);
 
   // Optional: Close modal if overlay background is clicked
   overlay.addEventListener('click', function(e) {
     if(e.target === overlay) {
-      overlay.classList.add('hidden');
-      modal.classList.add('hidden');
+      closeModal();
     }
   });
 
