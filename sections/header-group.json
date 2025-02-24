@@ -33,12 +33,12 @@
           "settings": {
             "toggle_main_font": true,
             "toggle_sub_font": true,
-            "main_text": "END OF SEASON",
-            "sub_text": "30% OFF",
+            "main_text": "NEW OASIS",
+            "sub_text": "OLD MONEY NEVER FADES",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "ltr",
-            "link": "shopify://collections/end-of-year-sale",
+            "link": "shopify://collections/oasis-old-money",
             "color_scheme": "inverse"
           }
         },
