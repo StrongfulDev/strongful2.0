@@ -218,6 +218,7 @@
     },
     "featured_collection_8kdmjV": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "steps": 4,
         "title": "30% OFF",
@@ -331,86 +332,6 @@
         "include_margins": true
       }
     },
-    "featured_collection_KkwYPC": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "steps": 4,
-        "title": "SALE",
-        "heading_size": "h1",
-        "heading_type": "heading_type_2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "sets",
-        "products_to_show": 15,
-        "columns_desktop": 5,
-        "full_width": true,
-        "show_view_all": true,
-        "view_all_text": "SHOP ALL",
-        "view_all_style": "link",
-        "view_all_location": "top",
-        "enable_desktop_slider": true,
-        "show_peak": true,
-        "pagination_type": "sides",
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": true,
-        "show_rating": false,
-        "show_sale_badge": false,
-        "enable_quick_add": true,
-        "quick_add_type": "hover",
-        "quick_add_type_mobile": "modal",
-        "quick_add_text": "הוספה מהירה",
-        "pick_size_text": "בחירת מידה",
-        "quick_add_accessories_text": "הוספה מהירה",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 40,
-        "padding_bottom": 16
-      }
-    },
-    "featured_collection_qJrxrJ": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "steps": 4,
-        "title": "YOGA & PILATES",
-        "heading_size": "h1",
-        "heading_type": "heading_type_2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "יוגה-ופילאטיס",
-        "products_to_show": 15,
-        "columns_desktop": 5,
-        "full_width": true,
-        "show_view_all": true,
-        "view_all_text": "SHOP ALL",
-        "view_all_style": "link",
-        "view_all_location": "top",
-        "enable_desktop_slider": true,
-        "show_peak": true,
-        "pagination_type": "sides",
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": true,
-        "show_rating": false,
-        "show_sale_badge": false,
-        "enable_quick_add": true,
-        "quick_add_type": "hover",
-        "quick_add_type_mobile": "modal",
-        "quick_add_text": "הוספה מהירה",
-        "pick_size_text": "בחירת מידה",
-        "quick_add_accessories_text": "הוספה מהירה",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 40,
-        "padding_bottom": 16
-      }
-    },
     "customer_slideshow_wFcfK7": {
       "type": "customer-slideshow",
       "blocks": {
@@ -452,226 +373,10 @@
         "padding_bottom": 16
       }
     },
-    "featured_collection_3Dk734": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "steps": 4,
-        "title": "UP TO 99₪",
-        "heading_size": "h1",
-        "heading_type": "heading_type_2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "black-friday-sets",
-        "products_to_show": 15,
-        "columns_desktop": 5,
-        "full_width": true,
-        "show_view_all": true,
-        "view_all_text": "SHOP ALL",
-        "view_all_style": "link",
-        "view_all_location": "top",
-        "enable_desktop_slider": true,
-        "show_peak": true,
-        "pagination_type": "sides",
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": true,
-        "show_rating": false,
-        "show_sale_badge": false,
-        "enable_quick_add": true,
-        "quick_add_type": "hover",
-        "quick_add_type_mobile": "modal",
-        "quick_add_text": "הוספה מהירה",
-        "pick_size_text": "בחירת מידה",
-        "quick_add_accessories_text": "הוספה מהירה",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 40,
-        "padding_bottom": 16
-      }
-    },
-    "featured_collection_zx87dF": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "steps": 4,
-        "title": "UP TO 89₪",
-        "heading_size": "h1",
-        "heading_type": "heading_type_2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "outlet",
-        "products_to_show": 15,
-        "columns_desktop": 5,
-        "full_width": true,
-        "show_view_all": true,
-        "view_all_text": "SHOP ALL",
-        "view_all_style": "link",
-        "view_all_location": "top",
-        "enable_desktop_slider": true,
-        "show_peak": true,
-        "pagination_type": "sides",
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": true,
-        "show_rating": false,
-        "show_sale_badge": false,
-        "enable_quick_add": true,
-        "quick_add_type": "hover",
-        "quick_add_type_mobile": "modal",
-        "quick_add_text": "הוספה מהירה",
-        "pick_size_text": "בחירת מידה",
-        "quick_add_accessories_text": "הוספה מהירה",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 40,
-        "padding_bottom": 16
-      }
-    },
-    "custom_liquid_DL9jGF": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "settings": {
-        "custom_liquid": "<div\n\tclass=\"yotpo yotpo-pictures-widget\"\n\tdata-gallery-id=\"6788d50587c6da001875b7ad\">\n</div>",
-        "color_scheme": "background-1",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "173246164424ec44fa": {
       "type": "apps",
-      "blocks": {
-        "tolstoy_shoppable_video_ugc_video_page_block_gqxpip": {
-          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/video-page-block/06fa8282-42ff-403e-b67c-1936776aed11",
-          "disabled": true,
-          "settings": {
-            "publishId": "ftlzktbd3asee"
-          }
-        }
-      },
-      "block_order": [
-        "tolstoy_shoppable_video_ugc_video_page_block_gqxpip"
-      ],
       "settings": {
         "include_margins": true
-      }
-    },
-    "featured_product_v2_FjnCqj": {
-      "type": "featured-product-v2",
-      "disabled": true,
-      "settings": {
-        "steps": 1,
-        "title": "",
-        "heading_size": "h1",
-        "heading_type": "heading_type_default",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "astra-v-leggings-collection",
-        "products_to_show": 2,
-        "columns_desktop": 2,
-        "full_width": true,
-        "show_view_all": false,
-        "view_all_text": "",
-        "view_all_style": "solid",
-        "view_all_location": "bottom",
-        "enable_desktop_slider": true,
-        "show_peak": true,
-        "pagination_type": "sides",
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": true,
-        "show_rating": false,
-        "show_sale_badge": false,
-        "enable_quick_add": true,
-        "quick_add_type": "hover",
-        "quick_add_type_mobile": "modal",
-        "quick_add_text": "הוספה מהירה",
-        "pick_size_text": "בחירת מידה",
-        "quick_add_accessories_text": "הוספה מהירה",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "collection_list_UWHXHY": {
-      "type": "collection-list",
-      "blocks": {
-        "featured_collection_Tdawah": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "allbottoms",
-            "collection_image": "shopify://shop_images/a136772298ec22f7807bac8aaf885df7.jpg",
-            "show_collection_title": false
-          }
-        },
-        "featured_collection_mXFgT9": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "טייצים-ארוכים",
-            "collection_image": "shopify://shop_images/b7db6d57aa17b4f0d67f91271d380c4b.jpg",
-            "show_collection_title": false
-          }
-        },
-        "featured_collection_qVnKhe": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "שורטים",
-            "collection_image": "shopify://shop_images/27270f897d7aeb43e9528eda6f9de78e.jpg",
-            "show_collection_title": false
-          }
-        },
-        "featured_collection_PzFBVn": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "בייקרים",
-            "collection_image": "shopify://shop_images/898694b0ab677159752c43c6922132e6.jpg",
-            "show_collection_title": false
-          }
-        },
-        "featured_collection_UfkpVr": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "טייץ-7-8",
-            "collection_image": "shopify://shop_images/7_8_1.jpg",
-            "show_collection_title": false
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_Tdawah",
-        "featured_collection_mXFgT9",
-        "featured_collection_qVnKhe",
-        "featured_collection_PzFBVn",
-        "featured_collection_UfkpVr"
-      ],
-      "disabled": true,
-      "settings": {
-        "images_or_colors": "images",
-        "title": "LEGGINGS",
-        "heading_size": "h1",
-        "image_ratio": "adapt",
-        "columns_desktop": 5,
-        "color_scheme": "background-2",
-        "products_to_show": 4,
-        "full_width": true,
-        "collection": "allbottoms",
-        "show_view_all": true,
-        "view_all_text": "SHOP ALL",
-        "view_all_style": "link",
-        "view_all_location": "top",
-        "enable_desktop_slider": false,
-        "show_peak": true,
-        "pagination_type": "dots",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "slideshow_dtfFDm": {
@@ -1053,15 +758,8 @@
     "featured_collection_8kdmjV",
     "our_collection_list_v2_mK6kUx",
     "17388407748dd9c850",
-    "featured_collection_KkwYPC",
-    "featured_collection_qJrxrJ",
     "customer_slideshow_wFcfK7",
-    "featured_collection_3Dk734",
-    "featured_collection_zx87dF",
-    "custom_liquid_DL9jGF",
     "173246164424ec44fa",
-    "featured_product_v2_FjnCqj",
-    "collection_list_UWHXHY",
     "slideshow_dtfFDm",
     "collection_list_QrC4z9",
     "featured_blog_3p3kGH",
