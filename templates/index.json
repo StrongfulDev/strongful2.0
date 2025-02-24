@@ -379,48 +379,6 @@
         "include_margins": true
       }
     },
-    "slideshow_dtfFDm": {
-      "type": "slideshow",
-      "blocks": {
-        "slide_kjjiJz": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/0_3f6540d6-3ade-4374-9eb5-bec5add85d2e.jpg",
-            "mobile_image": "shopify://shop_images/0_fc4e4087-9c89-47aa-9eda-a2920c3fccd0.jpg",
-            "left_position": 50,
-            "bottom_position": 50,
-            "desktop_left_position": 50,
-            "desktop_bottom_position": 50,
-            "show_lock": false,
-            "button_label": "",
-            "link": "shopify://pages/lets-move",
-            "show_text_box": false,
-            "color_scheme": "inverse",
-            "whole_slide_link": "shopify://pages/lets-move",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "text_alignment_mobile": "center"
-          }
-        }
-      },
-      "block_order": [
-        "slide_kjjiJz"
-      ],
-      "disabled": true,
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "adapt_image",
-        "slider_visual": "sides",
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "show_text_below": false,
-        "accessibility_info": "Slideshow about our brand",
-        "padding_top": 0,
-        "padding_bottom": 36
-      }
-    },
     "collection_list_QrC4z9": {
       "type": "collection-list",
       "blocks": {
@@ -760,7 +718,6 @@
     "17388407748dd9c850",
     "customer_slideshow_wFcfK7",
     "173246164424ec44fa",
-    "slideshow_dtfFDm",
     "collection_list_QrC4z9",
     "featured_blog_3p3kGH",
     "collection_list_w4D6TE",
