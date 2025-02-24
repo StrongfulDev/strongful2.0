@@ -119,37 +119,15 @@
         "slide_EQwW66": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/19_e8b3132d-5874-4aa6-abfb-e5ca1908f506.jpg",
-            "mobile_image": "shopify://shop_images/7_14ddb60a-12c8-43f6-9cc1-b2cfe8c9ab71.jpg",
+            "image": "shopify://shop_images/copy_7_2e675007-70b7-4f61-9cc2-1c801789fd6a.jpg",
+            "mobile_image": "shopify://shop_images/copy_3_7.jpg",
             "left_position": 50,
             "bottom_position": 10,
             "desktop_left_position": 27,
             "desktop_bottom_position": 25,
             "show_lock": false,
             "button_label": "SHOP NOW",
-            "link": "shopify://collections/cream-oasis",
-            "show_text_box": false,
-            "color_scheme": "inverse",
-            "whole_slide_link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_gaUfH4": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/copy_6_12c9fc07-fe4f-40eb-b437-be8547bf1446.jpg",
-            "mobile_image": "shopify://shop_images/copy_3_6.jpg",
-            "left_position": 30,
-            "bottom_position": 30,
-            "desktop_left_position": 31,
-            "desktop_bottom_position": 25,
-            "show_lock": false,
-            "button_label": "SHOP NOW",
-            "link": "shopify://collections/end-of-year-sale",
+            "link": "shopify://collections/oasis-old-money",
             "show_text_box": false,
             "color_scheme": "inverse",
             "whole_slide_link": "",
@@ -162,8 +140,7 @@
         }
       },
       "block_order": [
-        "slide_EQwW66",
-        "slide_gaUfH4"
+        "slide_EQwW66"
       ],
       "settings": {
         "layout": "full_bleed",
