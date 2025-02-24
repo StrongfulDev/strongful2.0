@@ -338,10 +338,10 @@
         "slide_KdxH44": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/7fdf35b5fe79004218f20cd1895ea0f6.jpg",
-            "mobile_image": "shopify://shop_images/11cd29d239c0f7af81e55931c9b080c6.jpg",
-            "login_desktop_image": "shopify://shop_images/7fdf35b5fe79004218f20cd1895ea0f6.jpg",
-            "login_mobile_image": "shopify://shop_images/11cd29d239c0f7af81e55931c9b080c6.jpg",
+            "image": "shopify://shop_images/edbef333808446df5536233bfa55f8dc.jpg",
+            "mobile_image": "shopify://shop_images/d82974621fb81b893b8eff8409b3d826.jpg",
+            "login_desktop_image": "shopify://shop_images/edbef333808446df5536233bfa55f8dc_cd5334d5-db5f-403f-ac02-662d136b31c7.jpg",
+            "login_mobile_image": "shopify://shop_images/d82974621fb81b893b8eff8409b3d826_acc0e426-062b-4d11-a844-ce6e5ca90152.jpg",
             "button_label": "",
             "login_button_label": "",
             "link": "shopify://collections/v-day",
