@@ -11,6 +11,8 @@
 
 {% liquid
     assign isLiveTheme = 'false'
+    assign card_announcement = settings.custom_collection_announcement
+    assign members_announcement = settings.custom_collection_members_announcement
     if content_for_header contains "previewBarInjector.init();"
         assign isLiveTheme = 'false'
     elsif content_for_header contains "Shopify.designMode"
