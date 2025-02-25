@@ -130,7 +130,7 @@
                 {{ 'products.product.model_switch.model_wears_only_female' | t }}
                 {% if product.title == 'Iconic סווטשירט' %}
                   <span class="bold">{{ option.name }}: OS</span>
-                {% elsif product.title == 'מכנס טרנינג אוברסייז' or product.title == 'אוברסייז סווטשירט' or product.title == 'קפוצ׳ון אוברסייז' %}
+                {% elsif product.title == 'מכנס טרנינג אוברסייז' or product.title == 'אוברסייז סווטשירט' or product.title == 'קפוצ׳ון אוברסייז' or product.title=='קפוצ׳ון קרופ' %}
                   <span class="bold">{{ option.name }}: {% if first_iteration %}S{% else %}{{ model.size_letter.value }}{% endif %}</span>
                 {% else %}
                   <span class="bold">{{ option.name }}: {{ model.size_letter.value }}</span>
