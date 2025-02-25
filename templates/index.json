@@ -214,7 +214,7 @@
         "enable_desktop_slider": false,
         "show_peak": true,
         "pagination_type": "sides",
-        "color_scheme": "background-2",
+        "color_scheme": "background-1",
         "image_ratio": "adapt",
         "show_secondary_image": true,
         "show_vendor": true,
