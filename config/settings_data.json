@@ -144,7 +144,7 @@
     "image_ratio": "adapt",
     "show_secondary_image": false,
     "seo_alt_text": "קולקציית בגדי ספורט עם גזרות ליום יום ואימונים",
-    "announcement_tag": "thongDiscount",
+    "announcement_tag": "AnTag",
     "custom_collection_announcement": "4 FOR 100₪",
     "members_only_announcement": "",
     "show_card_collection_announcement": true,
