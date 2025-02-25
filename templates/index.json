@@ -226,8 +226,8 @@
         "quick_add_text": "בחירת מידה",
         "pick_size_text": "בחירת מידה",
         "quick_add_accessories_text": "Pick accessories",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
