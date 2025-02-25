@@ -206,7 +206,7 @@
         "collection": "best-seller-internal-use",
         "products_to_show": 5,
         "columns_desktop": 5,
-        "full_width": false,
+        "full_width": true,
         "show_view_all": false,
         "view_all_text": "SHOP TOP RATED",
         "view_all_style": "solid",
