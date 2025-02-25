@@ -193,6 +193,45 @@
         "padding_bottom": 16
       }
     },
+    "featured_best_sellers_kn7mr9": {
+      "type": "featured-best-sellers",
+      "settings": {
+        "steps": 4,
+        "title": "TOP RATED PICKS",
+        "heading_size": "h1",
+        "heading_type": "heading_type_default",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "best-seller-internal-use",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_text": "View all",
+        "view_all_style": "solid",
+        "view_all_location": "bottom",
+        "enable_desktop_slider": false,
+        "show_peak": false,
+        "pagination_type": "sides",
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "show_sale_badge": false,
+        "enable_quick_add": false,
+        "quick_add_type": "hover",
+        "quick_add_type_mobile": "modal",
+        "quick_add_text": "בחירת מידה",
+        "pick_size_text": "בחירת מידה",
+        "quick_add_accessories_text": "Pick accessories",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "17388407748dd9c850": {
       "type": "apps",
       "blocks": {
@@ -591,6 +630,7 @@
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9",
     "slideshow_gwXDrF",
     "featured_collection_XDhFHB",
+    "featured_best_sellers_kn7mr9",
     "17388407748dd9c850",
     "customer_slideshow_wFcfK7",
     "173246164424ec44fa",
