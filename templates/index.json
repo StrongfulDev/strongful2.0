@@ -200,7 +200,7 @@
         "title": "TOP RATED PICKS",
         "heading_size": "h0",
         "heading_type": "heading_type_default",
-        "description": "",
+        "description": "<p>The reviews are in.</p>",
         "show_description": false,
         "description_style": "body",
         "collection": "best-seller-internal-use",
