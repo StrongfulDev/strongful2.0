@@ -2,7 +2,8 @@
   A stand-alone size guide with pill navigation, displayed in a modal.
   We add a "Show Size Guide" button and an "X" to close.
 {% endcomment %}
- {{ section-main-product |asset_url | stylesheet_tag }}
+{{ section-main-product | asset_url | stylesheet_tag }}
+
 <!-- Button to open the size guide modal -->
 <button id="open-size-guide" class="size-table-toggler" style="margin-bottom: 1rem;">
   {{ 'products.product.size_table' | t }}
@@ -47,9 +48,6 @@
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
-        {% comment %} .open-size-guide:hover {
-            background-color: #0056b3;
-        } {% endcomment %}
         .size-switch {
           display: inline-block;
           padding: 0.5em 1em;
@@ -98,11 +96,6 @@
           border-radius: 3px;
           cursor: pointer;
           transition: background-color 0.3s ease;
-
-        }
-        
-        .product-size-switch-container .size-switch:hover {
-          {% comment %} background-color:rgb(143, 148, 152); {% endcomment %}
         }
         .size-switch.active {
           background-color: #000;
@@ -114,13 +107,6 @@
         }
         .size-chart table th:hover, .size-chart table td:hover {
           background-color: rgba(0, 0, 0, 0.1);
-        }
-        .size-chart table th:hover ~ th, .size-chart table td:hover ~ td {
-          background-color: rgba(0, 0, 0, 0.1);
-        }
-        .size-chart table th:hover ~ th, .size-chart table td:hover ~ td {
-          background-color: rgba(0, 0, 0, 0.1);
-          direction: rtl;
         }
         .size-chart table th.hover, .size-chart table td.hover {
           background-color: rgba(0, 0, 0, 0.1);
@@ -485,16 +471,14 @@ document.addEventListener('DOMContentLoaded', function(){
       const rowIndex = Array.from(row.parentElement.children).indexOf(row);
       const cellIndex = Array.from(row.children).indexOf(cell);
 
-      // Highlight cells from right to the hovered cell with fade effect
-      for (let i = cellIndex; i < row.children.length; i++) {
+      // Highlight cells from the beginning of the row up to (and including) the hovered cell
+      for (let i = 0; i <= cellIndex; i++) {
         row.children[i].classList.add("hover");
-        row.children[i].style.transitionDelay = `${(i - cellIndex) * 0.05}s`;
       }
 
-      // Highlight cells from top to the hovered cell with fade effect
+      // Highlight cells from the top of the column down to (and including) the hovered cell
       for (let i = 0; i <= rowIndex; i++) {
         row.parentElement.children[i].children[cellIndex].classList.add("hover");
-        row.parentElement.children[i].children[cellIndex].style.transitionDelay = `${(rowIndex - i) * 0.05}s`;
       }
     });
 
@@ -503,12 +487,13 @@ document.addEventListener('DOMContentLoaded', function(){
       const rowIndex = Array.from(row.parentElement.children).indexOf(row);
       const cellIndex = Array.from(row.children).indexOf(cell);
 
-      // Remove highlight from cells
-      for (let i = cellIndex; i < row.children.length; i++) {
+      // Remove highlight from the row cells
+      for (let i = 0; i <= cellIndex; i++) {
         row.children[i].classList.remove("hover");
         row.children[i].style.transitionDelay = "";
       }
 
+      // Remove highlight from the column cells
       for (let i = 0; i <= rowIndex; i++) {
         row.parentElement.children[i].children[cellIndex].classList.remove("hover");
         row.parentElement.children[i].children[cellIndex].style.transitionDelay = "";
