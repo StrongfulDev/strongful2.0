@@ -3,7 +3,7 @@
   We add a "Show Size Guide" button and an "X" to close.
 {% endcomment %}
 {{ section-main-product | asset_url | stylesheet_tag }}
-
+{% assign measurement_text = "כיצד תמדדי את עצמך?<br><br>חזה: הנחי את סרט המדידה סביב החלק הרחב ביותר של החזה שלך בדיוק מתחת לזרועותיך.<br><br>מותניים: מדדי סביב קו המותניים שלך בגובה הטבור.<br><br>ירכיים: מדדי סביב החלק הרחב ביותר של הירך בחלקה העליון של הרגל." %}
 <!-- Button to open the size guide modal -->
 <button id="open-size-guide" class="size-table-toggler" style="margin-bottom: 1rem;">
   {{ 'products.product.size_table' | t }}
@@ -18,7 +18,7 @@
        style="background:#fff; width:50vw; padding:1em; position: fixed; top:0; right:0; height:100%; overflow-y:auto; border-top-left-radius:8px; border-bottom-left-radius:8px;">
     
     <!-- Close icon/button -->
-    <p id="close-size-guide" class="StrongfulX" style="position:absolute; top:1em; right:1em; cursor:pointer; font-size: 24px;">
+    <p id="close-size-guide" class="StrongfulX" style="position:absolute; top:0.1em; left:1em; cursor:pointer; font-size: 24px;">
       &#x2715;
     </p>
 
@@ -74,6 +74,7 @@
           border: 1px solid #ddd;
           padding: 0.5em;
           text-align: center;
+          font-size:initial;
         }
         .size-chart th {
           background-color: #f9f9f9;
@@ -108,10 +109,16 @@
         .size-chart table th:hover, .size-chart table td:hover {
           background-color: rgba(0, 0, 0, 0.1);
         }
-        .size-chart table th.hover, .size-chart table td.hover {
-          background-color: rgba(0, 0, 0, 0.1);
+        .size-chart table th.js-hover, .size-chart table td.js-hover {
+          background-color: rgba(0, 0, 0, 0.05);
+        }
+        .size-chart table th.hovered,
+        .size-chart table td.hovered {
+          background-color: rgba(0, 0, 0, 0.2); /* Adjust for a darker tone */
         }
       </style>
+
+    <h1>טבלת מידות</h1>
 
       <div class="product-size-switch-container">
         <span class="size-switch" data-target="onesie-chart">אוברול</span>
@@ -122,8 +129,6 @@
 
       <!-- The 3 size-chart blocks as before -->
       <div id="onesie-chart" class="size-chart">
-        <h3>טבלת מידות – אוברול</h3>
-        <p>מותאם לאוברול מהסוג שהגדרת (למשל "Oasis אוברול קרוס").</p>
         <!-- First table: חזה וחזייה -->
         <table>
           <thead>
@@ -171,6 +176,7 @@
             </tr>
           </tbody>
         </table>
+      
 
         <!-- Second table: מכנסיים, מותן, ירכיים, אורך -->
         <table>
@@ -180,7 +186,7 @@
               <th>מידת מכנסיים</th>
               <th>מותן</th>
               <th>אגן</th>
-              <th>אורך תחתון</th>
+              <th>אורך מכנס</th>
             </tr>
           </thead>
           <tbody>
@@ -235,12 +241,10 @@
             </tr>
           </tbody>
         </table>
-        <p class="note">*אם את/ה בין מידות או בעל/ת חזה מלא, שקלו לעלות מידה אחת.</p>
+     <p class="measurement-info">{{ measurement_text }}</p>
       </div>
 
       <div id="shirt-chart" class="size-chart">
-        <h3>טבלת מידות – טופ (דוגמה)</h3>
-        <p>כאן תוכל/י להוסיף נתונים עבור חולצות ב-7 מידות (XXS–XXL).</p>
         <table>
           <thead>
             <tr>
@@ -287,12 +291,10 @@
             </tr>
           </tbody>
         </table>
-        <p class="note">*דוגמה בלבד. יש לעדכן את הטווחים בהתאם לייצור בפועל.</p>
-      </div>
+        <p class="measurement-info">{{ measurement_text }}</p>   
+   </div>
 
       <div id="pants-chart" class="size-chart">
-        <h3>טבלת מידות – מכנס (דוגמה)</h3>
-        <p>כאן תוכל/י להכניס נתוני מכנס ב-7 מידות (XXS–XXL).</p>
         <table>
           <thead>
             <tr>
@@ -347,12 +349,10 @@
             </tr>
           </tbody>
         </table>
-        <p class="note">*דוגמה בלבד. ניתן לשנות על פי המידות האמיתיות.</p>
+        <p class="measurement-info">{{ measurement_text }}</p>
       </div>
 
       <div id="jacket-chart" class="size-chart">
-        <h3>טבלת מידות – ג׳קטים וחולצות</h3>
-        <p>כאן תוכל/י להוסיף נתונים עבור ג׳קטים וחולצות ב-7 מידות (XXS–XXL).</p>
         <table>
           <thead>
             <tr>
@@ -415,7 +415,7 @@
             </tr>
           </tbody>
         </table>
-        <p class="note">*דוגמה בלבד. יש לעדכן את הטווחים בהתאם לייצור בפועל.</p>
+        <p class="measurement-info">{{ measurement_text }}</p>
       </div>
 
       <script>
@@ -526,13 +526,16 @@ document.addEventListener('DOMContentLoaded', function(){
 
       // Highlight cells from the beginning of the row up to (and including) the hovered cell
       for (let i = 0; i <= cellIndex; i++) {
-        row.children[i].classList.add("hover");
+        row.children[i].classList.add("js-hover");
       }
 
       // Highlight cells from the top of the column down to (and including) the hovered cell
       for (let i = 0; i <= rowIndex; i++) {
-        row.parentElement.children[i].children[cellIndex].classList.add("hover");
+        row.parentElement.children[i].children[cellIndex].classList.add("js-hover");
       }
+      
+      // Add an extra class to the actual hovered cell for a darker effect
+      cell.classList.add("hovered");
     });
 
     cell.addEventListener("mouseout", () => {
@@ -540,17 +543,20 @@ document.addEventListener('DOMContentLoaded', function(){
       const rowIndex = Array.from(row.parentElement.children).indexOf(row);
       const cellIndex = Array.from(row.children).indexOf(cell);
 
-      // Remove highlight from the row cells
+      // Remove highlight for the row cells
       for (let i = 0; i <= cellIndex; i++) {
-        row.children[i].classList.remove("hover");
+        row.children[i].classList.remove("js-hover");
         row.children[i].style.transitionDelay = "";
       }
 
-      // Remove highlight from the column cells
+      // Remove highlight for the column cells
       for (let i = 0; i <= rowIndex; i++) {
-        row.parentElement.children[i].children[cellIndex].classList.remove("hover");
+        row.parentElement.children[i].children[cellIndex].classList.remove("js-hover");
         row.parentElement.children[i].children[cellIndex].style.transitionDelay = "";
       }
+      
+      // Remove the darker highlight from the hovered cell
+      cell.classList.remove("hovered");
     });
   });
 });
