@@ -634,6 +634,16 @@
         "name": "single_line_text_field",
         "category": "TEXT"
       }
+    },
+    {
+      "key": "inseam",
+      "namespace": "custom",
+      "name": "inseam",
+      "description": "inseam for unified size-table",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
     }
   ],
   "variant": [
