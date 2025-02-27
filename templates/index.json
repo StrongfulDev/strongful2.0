@@ -119,15 +119,15 @@
         "slide_EQwW66": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/20_86d65c2e-2e82-4b7a-9eae-5d46ad68cdaa.jpg",
-            "mobile_image": "shopify://shop_images/8_caaae6d6-92d5-4225-be37-e459f9edd5ad.jpg",
+            "image": "shopify://shop_images/jpg_5d12c79e-da19-4090-90b0-aae6dc95bbea.jpg",
+            "mobile_image": "shopify://shop_images/9_c690fb59-f192-4006-8b5d-d039412f49ec.jpg",
             "left_position": 50,
             "bottom_position": 10,
             "desktop_left_position": 50,
             "desktop_bottom_position": 30,
             "show_lock": false,
             "button_label": "SHOP NOW",
-            "link": "shopify://collections/weekend-sale-30-off",
+            "link": "shopify://collections/end-of-year-sale",
             "show_text_box": false,
             "color_scheme": "inverse",
             "whole_slide_link": "",
@@ -250,6 +250,47 @@
         "is_full_width": false,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "customer_slideshow_jXTBRG": {
+      "type": "customer-slideshow",
+      "blocks": {
+        "slide_TxMXy9": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/1_0530155f-40c8-475e-98c1-820c7f06d4d8.jpg",
+            "mobile_image": "shopify://shop_images/1_105d437f-637a-4c81-bdfd-772d240b8f8f.jpg",
+            "login_desktop_image": "shopify://shop_images/1_5a9b4abf-1572-484d-b812-3bad9170c26c.jpg",
+            "login_mobile_image": "shopify://shop_images/1_75751ccc-90f4-4222-b3b8-ef6b7b2602a6.jpg",
+            "button_label": "",
+            "login_button_label": "",
+            "link": "shopify://pages/loyalty",
+            "login_link": "",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "logged_in_color_scheme": "background-1",
+            "whole_slide_link": "shopify://pages/loyalty",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_TxMXy9"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "sides",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand",
+        "padding_top": 16,
+        "padding_bottom": 16
       }
     },
     "17388407748dd9c850": {
@@ -510,47 +551,6 @@
         "swipe_on_mobile": true,
         "padding_top": 0,
         "padding_bottom": 0
-      }
-    },
-    "customer_slideshow_jXTBRG": {
-      "type": "customer-slideshow",
-      "blocks": {
-        "slide_TxMXy9": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/1_0530155f-40c8-475e-98c1-820c7f06d4d8.jpg",
-            "mobile_image": "shopify://shop_images/1_105d437f-637a-4c81-bdfd-772d240b8f8f.jpg",
-            "login_desktop_image": "shopify://shop_images/1_5a9b4abf-1572-484d-b812-3bad9170c26c.jpg",
-            "login_mobile_image": "shopify://shop_images/1_75751ccc-90f4-4222-b3b8-ef6b7b2602a6.jpg",
-            "button_label": "",
-            "login_button_label": "",
-            "link": "shopify://pages/loyalty",
-            "login_link": "",
-            "show_text_box": true,
-            "color_scheme": "background-1",
-            "logged_in_color_scheme": "background-1",
-            "whole_slide_link": "shopify://pages/loyalty",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "text_alignment_mobile": "center"
-          }
-        }
-      },
-      "block_order": [
-        "slide_TxMXy9"
-      ],
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "adapt_image",
-        "slider_visual": "sides",
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand",
-        "padding_top": 16,
-        "padding_bottom": 16
       }
     },
     "4371b550-969b-4828-986d-71697fc53ef0": {
