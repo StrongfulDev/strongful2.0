@@ -3,7 +3,7 @@
   We add a "Show Size Guide" button and an "X" to close.
 {% endcomment %}
 {{ section-main-product | asset_url | stylesheet_tag }}
-{% assign measurement_text = "כיצד תמדדי את עצמך?<br><br>חזה: הנחי את סרט המדידה סביב החלק הרחב ביותר של החזה שלך בדיוק מתחת לזרועותיך.<br><br>מותניים: מדדי סביב קו המותניים שלך בגובה הטבור.<br><br>ירכיים: מדדי סביב החלק הרחב ביותר של הירך בחלקה העליון של הרגל." %}
+{% assign measurement_text = "<u>כיצד תמדדי את עצמך?</u><ol style='padding-left:20px; margin:0;'><br><li>חזה: הנחי את סרט המדידה סביב החלק הרחב ביותר של החזה שלך בדיוק מתחת לזרועותיך.</li><br><li>מותניים: מדדי סביב קו המותניים שלך בגובה הטבור.</li><br><li>ירכיים: מדדי סביב החלק הרחב ביותר של הירך בחלקה העליון של הרגל.</li><br></ol>" %}
 <!-- Button to open the size guide modal -->
 <button id="open-size-guide" class="size-table-toggler" style="margin-bottom: 1rem;">
   {{ 'products.product.size_table' | t }}
@@ -57,6 +57,7 @@
           cursor: pointer;
           background: #fff;
           transition: background-color 0.3s, color 0.3s;
+          border: 1px solid #ddd;
         }
         .size-chart {
           display: none; /* hidden by default; toggled by JS */
@@ -89,11 +90,11 @@
           display: inline-block;
           padding: 10px 20px;
           margin: 5px;
-          font-size: 16px;
+          font-size: 12px;
+          font-weight: bold;
           font-family:'Arimo',sans-serif;
           color: #000;
           background-color: #fff;
-          border: none;
           border-radius: 3px;
           cursor: pointer;
           transition: background-color 0.3s ease;
@@ -116,6 +117,9 @@
         .size-chart table td.hovered {
           background-color: rgba(0, 0, 0, 0.2); /* Adjust for a darker tone */
         }
+        .size-chart table td:first-child {
+          background-color: #f5f5f5;
+        }
         @media screen and (max-width: 749px) {
           #sizeGuideModal {
             width: 100vw !important;
@@ -134,6 +138,10 @@
           h1 {
             font-size: 20px; /* Adjust headline size */
           }
+        }
+        size-measurement-info {
+          line-height: 1.5;
+          color: #666;
         }
       </style>
 
@@ -263,7 +271,7 @@
          {% if product.title contains 'אוברול' %}
     <!-- Insertion into Onesie table -->
     <div class="inseam-info" style="margin-top: 1rem;">
-      <table style="width:100%; border-collapse:collapse;">
+      <table style="width:40%; border-collapse:collapse; align-self: center;">
         <tr>
           <th style="border:1px solid #ddd; padding:0.5em; text-align:right; max-width:20%">תכונה</th>
           <th style="border:1px solid #ddd; padding:0.5em; text-align:right; max-width:20%">מידה</th>
@@ -385,10 +393,10 @@
         </table>
         {% if product.metafields.custom.inseam %}
   {% assign inseam = product.metafields.custom.inseam %}
-  {% if product.title contains 'טייץ' %}
+  {% if product.title contains 'טייץ' or 'בייקר' %}
     <!-- Insertion into Pants table -->
     <div class="inseam-info" style="margin-top: 1rem;">
-      <table style="width:100%; border-collapse:collapse;">
+       <table style="width:40%; border-collapse:collapse; align-self: center;">
         <tr>
           <th style="border:1px solid #ddd; padding:0.5em; text-align:right;">תכונה</th>
           <th style="border:1px solid #ddd; padding:0.5em; text-align:right;">מידה</th>
