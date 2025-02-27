@@ -263,7 +263,7 @@
 	/* color: #dc6b9f; pink month */
 
 	font-weight: var(--font-body-weight-bold);
-	direction: rtl;
+	/* direction: rtl; */
 }
 
 .dropdown .submenu-open li:nth-child(2) ul.menu-drawer__menu li:nth-child(2) a {
