@@ -34,11 +34,11 @@
             "toggle_main_font": true,
             "toggle_sub_font": true,
             "main_text": "30% OFF",
-            "sub_text": "ALL SETS",
+            "sub_text": "ON SELECTED ITEMS",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "ltr",
-            "link": "shopify://collections/weekend-sale-30-off",
+            "link": "shopify://collections/end-of-year-sale",
             "color_scheme": "inverse"
           }
         },
