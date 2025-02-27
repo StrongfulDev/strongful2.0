@@ -317,21 +317,23 @@
             </tr>
           </tbody>
         </table>
-         {% if product.title contains 'אוברול' %}
-    <!-- Insertion into Onesie table -->
-    <div class="inseam-info" style="margin-top: 1rem;">
-      <table style="width:40%; border-collapse:collapse; align-self: center;">
-        <tr>
-          <th style="border:1px solid #ddd; padding:0.5em; text-align:right; max-width:20%">תכונה</th>
-          <th style="border:1px solid #ddd; padding:0.5em; text-align:right; max-width:20%">מידה</th>
-        </tr>
-        <tr>
-          <td style="border:1px solid #ddd; padding:0.5em; text-align:right; max-width:20%">אורך פנים</td>
-          <td style="border:1px solid #ddd; padding:0.5em; text-align:right; max-width:20%">{{ inseam }}</td>
-        </tr>
-      </table>
-    </div>
-  {% endif %}
+
+        {% if product.metafields.custom.inseam and product.title contains 'אוברול' %}
+  {% assign inseam = product.metafields.custom.inseam %}
+  <!-- Insertion into Onesie table -->
+  <div class="inseam-info" style="margin-top: 1rem;">
+    <table style="width:40%; border-collapse:collapse; align-self: center;">
+      <tr>
+        <th style="border:1px solid #ddd; padding:0.5em; text-align:right; max-width:20%">תכונה</th>
+        <th style="border:1px solid #ddd; padding:0.5em; text-align:right; max-width:20%">מידה</th>
+      </tr>
+      <tr>
+        <td style="border:1px solid #ddd; padding:0.5em; text-align:right; max-width:20%">אורך פנים</td>
+        <td style="border:1px solid #ddd; padding:0.5em; text-align:right; max-width:20%">{{ inseam }}</td>
+      </tr>
+    </table>
+  </div>
+{% endif %}
         <p class="measurement-info">{{ measurement_text }}</p>
       </div>
 
@@ -456,10 +458,10 @@
         </table>
         {% if product.metafields.custom.inseam %}
   {% assign inseam = product.metafields.custom.inseam %}
-  {% if product.title contains 'טייץ' or 'בייקר' %}
+  {% if product.title contains 'טייץ' or product.title contains 'בייקר' %}
     <!-- Insertion into Pants table -->
     <div class="inseam-info" style="margin-top: 1rem;">
-       <table style="width:40%; border-collapse:collapse; align-self: center;">
+      <table style="width:40%; border-collapse:collapse; align-self: center;">
         <tr>
           <th style="border:1px solid #ddd; padding:0.5em; text-align:right;">תכונה</th>
           <th style="border:1px solid #ddd; padding:0.5em; text-align:right;">מידה</th>
@@ -470,8 +472,8 @@
         </tr>
       </table>
     </div>
-    {%endif %}
-{%endif%}
+  {% endif %}
+{% endif %}
         <p class="measurement-info">{{ measurement_text }}</p>
       </div>
 
