@@ -77,7 +77,7 @@
           font-size:initial;
         }
         .size-chart th {
-          background-color: #f9f9f9;
+          background-color: #f5f5f5;
         }
         .note {
           margin-top: 1em;
@@ -137,7 +137,7 @@
         }
       </style>
 
-    <h1>טבלת מידות</h1>
+    <h2>טבלת מידות</h2>
 
       <div class="product-size-switch-container">
         <span class="size-switch" data-target="onesie-chart">אוברול</span>
@@ -260,6 +260,21 @@
             </tr>
           </tbody>
         </table>
+         {% if product.title contains 'אוברול' %}
+    <!-- Insertion into Onesie table -->
+    <div class="inseam-info" style="margin-top: 1rem;">
+      <table style="width:100%; border-collapse:collapse;">
+        <tr>
+          <th style="border:1px solid #ddd; padding:0.5em; text-align:right; max-width:20%">תכונה</th>
+          <th style="border:1px solid #ddd; padding:0.5em; text-align:right; max-width:20%">מידה</th>
+        </tr>
+        <tr>
+          <td style="border:1px solid #ddd; padding:0.5em; text-align:right; max-width:20%">אורך פנים</td>
+          <td style="border:1px solid #ddd; padding:0.5em; text-align:right; max-width:20%">{{ inseam }}</td>
+        </tr>
+      </table>
+    </div>
+  {% endif %}
      <p class="measurement-info">{{ measurement_text }}</p>
       </div>
 
@@ -368,6 +383,24 @@
             </tr>
           </tbody>
         </table>
+        {% if product.metafields.custom.inseam %}
+  {% assign inseam = product.metafields.custom.inseam %}
+  {% if product.title contains 'טייץ' %}
+    <!-- Insertion into Pants table -->
+    <div class="inseam-info" style="margin-top: 1rem;">
+      <table style="width:100%; border-collapse:collapse;">
+        <tr>
+          <th style="border:1px solid #ddd; padding:0.5em; text-align:right;">תכונה</th>
+          <th style="border:1px solid #ddd; padding:0.5em; text-align:right;">מידה</th>
+        </tr>
+        <tr>
+          <td style="border:1px solid #ddd; padding:0.5em; text-align:right;">אורך פנים</td>
+          <td style="border:1px solid #ddd; padding:0.5em; text-align:right;">{{ inseam }}</td>
+        </tr>
+      </table>
+    </div>
+    {%endif %}
+{%endif%}
         <p class="measurement-info">{{ measurement_text }}</p>
       </div>
 
