@@ -258,6 +258,7 @@
 }
 
 .dropdown .submenu-open li:nth-child(2) ul.menu-drawer__menu li:first-child a {
+	direction: ltr;
 	color: firebrick;
 	/* color: #dc6b9f; pink month */
 
