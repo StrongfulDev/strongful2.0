@@ -13,7 +13,7 @@
       "type": "main-blog",
       "settings": {
         "tile_image_one": "shopify://shop_images/30_28b32123-b019-4dad-a170-4b00d81c801c.jpg",
-        "tile_image_one_link": "shopify://collections/end-of-year-sale",
+        "tile_image_one_link": "shopify://collections/end-of-the-season-sale",
         "tile_image_two": "shopify://shop_images/a40ea1b4acde1744ca52d0ccdf0dc1bf_c51e4cfb-f27a-4861-83c7-c5e97962099d.jpg",
         "tile_image_two_link": "shopify://collections/best-seller-internal-use",
         "layout": "grid",
