@@ -1793,19 +1793,16 @@ summary .icon-caret {
 		margin-right: var(--grid-desktop-vertical-spacing);
 	}
 }
-
 .product-type-filter {
   position: sticky;
-  top: 50px; /* Adjust this value to match the height of your header */
+  top: 50px; /* Adjust per your header */
   z-index: 4;
   height: 70px;
   background-color: #fff;
-  width: 100%; /* Full viewport width */
-  left: 0; /* Align to the left edge of the viewport */
-  right: 0; /* Align to the right edge of the viewport */
+  max-width: 1200px; /* Or any desired max width */
+  margin: 0 auto; /* Centers within its container */
   padding: 1rem 0;
-  /* border-bottom: 1px solid rgba(var(--color-foreground), 0.08); */
-  box-sizing: border-box; /* Include padding and border in the width */
+  box-sizing: border-box;
 }
 
 .product-type-filter .filter-links {
@@ -1823,13 +1820,14 @@ summary .icon-caret {
   z-index: 4;
   height: 70px;
   background-color: #fff;
-  width: 102%; /* Full viewport width */
-  left: 0; /* Align to the left edge of the viewport */
-  right: 0; /* Align to the right edge of the viewport */
+  width: auto;
+  left: auto;
+  right: auto;
+  margin: 0 auto;
   padding: 1rem 0;
   /* border-bottom: 1px solid rgba(var(--color-foreground), 0.08); */
   box-sizing: border-box; /* Include padding and border in the width */
-  margin-right: -1.5rem;
+  justify-self: center;
 }
 
 .product-type-filter .filter-links {
