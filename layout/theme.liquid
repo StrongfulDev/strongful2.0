@@ -130,7 +130,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
         {% if settings.type_body_font_custom != blank and settings.type_body_font_custom != "none" %}
             {% assign body_font_family = settings.type_body_font_custom %}
             @font-face {
-            font-family: '{{ body_font_family | lowercase }}';
+            font-family: '{{ body_font_family}}';
             src: url('{{ body_font_family | append: ".ttf" | asset_url }}') format('truetype');
             font-weight: --font-body-weight;
             font-style: --font-body-style;
@@ -144,7 +144,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
         {% if settings.type_header_font_custom != blank and settings.type_header_font_custom != "none" %}
             {% assign header_font_family = settings.type_header_font_custom %}
             @font-face {
-            font-family: '{{ header_font_family | lowercase }}';
+            font-family: '{{ header_font_family }}';
             src: url('{{ header_font_family | append: ".ttf" | asset_url }}') format('truetype');
             font-weight: --font-body-weight;
             font-style: --font-body-style;
@@ -159,7 +159,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
         {{ body_font_bold_italic | font_face: font_display: 'swap' }}
 
         :root  {
-        --font-body-family: {{ body_font_family }}, {{ settings.type_body_font.fallback_families }};
+        --font-body-family: {{ body_font_family }};
         --font-body-style: {{ settings.type_body_font.style }};
         --font-body-weight-light: {{ settings.type_body_font.weight | minus: 300 | at_least: 100 }};
         --font-body-weight: {{ settings.type_body_font.weight }};
@@ -168,7 +168,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
         --font-body-size-medium: 1.5rem;
         --font-body-size-small: 1rem;
         --font-body-size-smallest: 0.9rem;
-        --font-heading-family: {{ header_font_family }}, {{ settings.type_header_font.fallback_families }};
+        --font-heading-family: {{ header_font_family }};
         --font-heading-style: {{ settings.type_header_font.style }};
         --font-heading-weight: {{ settings.type_header_font.weight }};
         --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
