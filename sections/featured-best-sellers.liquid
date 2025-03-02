@@ -1,4 +1,4 @@
-<div class="featured-two-box container">
+<div class="featured-two-box container style='padding: 2rem 0; padding-right:8rem;'">
   <div class="featured-two-box__info">
     {% if section.settings.title != blank %}
       <h4 class="featured-two-box__title">{{ section.settings.title }}</h4>
@@ -12,36 +12,61 @@
       </a>
     {% endif %}
   </div>
+
   <div class="featured-two-box__products">
     {% for product in section.settings.collection.products limit:5 %}
       <div class="product-card">
         <a href="{{ product.url }}">
           {% if product.featured_image %}
-            <img class="product-card__image" src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
+            <!-- Use a larger portrait frame -->
+            <img class="product-card__image"
+                 src="{{ product.featured_image | img_url: 'large' }}"
+                 alt="{{ product.title }}">
           {% endif %}
         </a>
+
         {%- if product.metafields.reviews.rating.value != blank -%}
-          {% liquid
-              assign rating_decimal = 0
-              assign decimal = product.metafields.reviews.rating.value.rating | modulo: 1
-              if decimal >= 0.3 and decimal <= 0.7
-                  assign rating_decimal = 0.5
-              elsif decimal > 0.7
-                  assign rating_decimal = 1
-              endif
-          %}
+          {% assign rating_value = product.metafields.reviews.rating.value.rating | plus: 0 %}
+          {% assign scale_max = product.metafields.reviews.rating.value.scale_max | plus: 0 %}
+          {% assign rating_percentage = rating_value | times: 100 | divided_by: scale_max | round %}
           <div class="rating"
                role="img"
-               aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: product.metafields.reviews.rating.value, rating_max: product.metafields.reviews.rating.value.scale_max }}">
-            <span aria-hidden="true"
-                  class="rating-star color-icon-{{ settings.accent_icons }}"
-                  style="--rating: {{ product.metafields.reviews.rating.value.rating | floor }};
-                         --rating-max: {{ product.metafields.reviews.rating.value.scale_max }};
-                         --rating-decimal: {{ rating_decimal }};">
-            </span>
+               aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: product.metafields.reviews.rating.value, rating_max: scale_max }}">
+            <div class="stars-container">
+              <div class="stars-outer">
+                <div class="stars-inner" style="width: {{ rating_percentage }}%; color: #ceb18f">
+                  ★★★★★
+                </div>
+              </div>
+            </div>
           </div>
         {%- endif -%}
+
         <h3 class="product-card__title">{{ product.title }}</h3>
+
+        <!-- Show the corresponding custom text (one box per product) -->
+        {% case forloop.index %}
+          {% when 1 %}
+            {% if section.settings.product_text1 != blank %}
+              <p class="product-card__review-text">{{ section.settings.product_text1 }}</p>
+            {% endif %}
+          {% when 2 %}
+            {% if section.settings.product_text2 != blank %}
+              <p class="product-card__review-text">{{ section.settings.product_text2 }}</p>
+            {% endif %}
+          {% when 3 %}
+            {% if section.settings.product_text3 != blank %}
+              <p class="product-card__review-text">{{ section.settings.product_text3 }}</p>
+            {% endif %}
+          {% when 4 %}
+            {% if section.settings.product_text4 != blank %}
+              <p class="product-card__review-text">{{ section.settings.product_text4 }}</p>
+            {% endif %}
+          {% when 5 %}
+            {% if section.settings.product_text5 != blank %}
+              <p class="product-card__review-text">{{ section.settings.product_text5 }}</p>
+            {% endif %}
+        {% endcase %}
       </div>
     {% endfor %}
   </div>
@@ -52,27 +77,26 @@
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
+    padding-right: 8rem;
   }
   .featured-two-box__info {
     flex: 0 0 30%;
-    padding-left: 10rem;
+    padding-left: 8rem;
     box-sizing: border-box;
   }
-  /* Increase heading and subheading sizes */
   .featured-two-box__title {
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 0.5rem;
   }
   .featured-two-box__subheading {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     margin-bottom: 0.75rem;
   }
-  /* CTA as black rectangle with text inside */
   .featured-two-box__cta {
     background-color: #000;
     color: #fff;
     text-decoration: none;
-    padding: 0.75rem 1.5rem;
+    padding: 1rem 1.5rem;
     display: inline-block;
     margin-top: 1rem;
   }
@@ -82,14 +106,21 @@
     gap: 1rem;
     padding: 1rem;
     box-sizing: border-box;
-    flex-wrap: nowrap; /* Prevent wrapping */
-    overflow-x: auto; /* Allow scroll if needed */
+    flex-wrap: nowrap;
+    overflow-x: auto;
   }
   .product-card {
-    flex: 0 0 calc((100% - 4rem) / 5); /* Divide space for exactly 5 cards; adjust gap if needed */
+    flex: 0 0 calc((100% - 4rem) / 5);
     box-sizing: border-box;
     padding: 0.5rem;
     text-align: center;
+    /* Convert to a vertical flex container */
+    display: flex;
+    flex-direction: column;
+    /* Keep content centered by default */
+    align-items: center;
+    /* Remove text-align center so the rating can align itself */
+    text-align: left;
   }
   .product-card__image {
     max-width: 100%;
@@ -111,6 +142,85 @@
     .product-card {
       flex: 1 1 100%;
     }
+  }
+  /* Debug style for rating-star, remove once confirmed */
+  .rating-star {
+    min-width: 50px; /* Adjust as needed */
+  }
+  /* Add this to your CSS (for testing or as a fallback) */
+  .rating-star {
+    display: inline-block;
+    font-size: 1.5rem; /* Adjust size as needed */
+    line-height: 1;
+    /* Remove the debug border if desired */
+  }
+  .rating-star:before {
+    content: '★';         /* Unicode star */
+    color: gold;          /* Star color */
+  }
+  /* Align rating and title to the right */
+  .product-card .rating,
+  .product-card__title {
+    text-align: right;
+  }
+  .product-card .rating .stars-outer {
+    width: 100%;
+    text-align: right;
+  }
+  /* Ensure the new container forces right alignment */
+  .stars-container {
+    text-align: right;
+  }
+  /* Override any inherited center alignment by the product card */
+  .stars-container {
+    display: block;
+    width: 100%;
+    text-align: right !important;
+  }
+  .stars-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+  /* Force the rating block to the right inside the product-card */
+  .product-card .rating {
+    align-self: flex-end;
+    /* Optionally, add a little top margin so it doesn’t stick to the image */
+    margin-top: 0.5rem;
+  }
+  /* Ensure stars container also uses flex-end if needed */
+  .stars-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    /* Keep the main elements centered by default (for the product image) */
+    align-items: center;
+    /* Remove any text-align constraints so we can freely position children */
+    text-align: left;
+  }
+
+  /* Force both rating and title to the right */
+  .product-card .rating {
+    align-self: flex-end; 
+    margin-top: 0.5rem;  /* optional spacing above the rating */
+  }
+
+  .product-card__title {
+    align-self: flex-end; 
+    width: 100%;
+    text-align: right;
+    margin-top: 0.5rem;  /* optional spacing if needed */
+  }
+
+  /* Optional styling for the newly added text */
+  .product-card__review-text {
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+    text-align: right; /* match your star/title alignment if desired */
   }
 </style>
 
@@ -146,6 +256,36 @@
       "type": "collection",
       "id": "collection",
       "label": "Collection"
+    },
+    {
+      "type": "text",
+      "id": "product_text1",
+      "default": "Review text #1",
+      "label": "Review Text for 1st product"
+    },
+    {
+      "type": "text",
+      "id": "product_text2",
+      "default": "Review text #2",
+      "label": "Review Text for 2nd product"
+    },
+    {
+      "type": "text",
+      "id": "product_text3",
+      "default": "Review text #3",
+      "label": "Review Text for 3rd product"
+    },
+    {
+      "type": "text",
+      "id": "product_text4",
+      "default": "Review text #4",
+      "label": "Review Text for 4th product"
+    },
+    {
+      "type": "text",
+      "id": "product_text5",
+      "default": "Review text #5",
+      "label": "Review Text for 5th product"
     }
   ],
   "presets": [
