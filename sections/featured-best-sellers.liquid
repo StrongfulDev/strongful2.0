@@ -1,10 +1,10 @@
 <div class="featured-two-box container">
   <div class="featured-two-box__info">
     {% if section.settings.title != blank %}
-      <h2 class="featured-two-box__title">{{ section.settings.title }}</h2>
+      <h4 class="featured-two-box__title">{{ section.settings.title }}</h4>
     {% endif %}
     {% if section.settings.subheading != blank %}
-      <p class="featured-two-box__subheading">{{ section.settings.subheading }}</p>
+      <h2 class="featured-two-box__subheading">{{ section.settings.subheading }}</h2>
     {% endif %}
     {% if section.settings.cta_text != blank and section.settings.cta_link != blank %}
       <a href="{{ section.settings.cta_link }}" class="featured-two-box__cta">
@@ -19,14 +19,29 @@
           {% if product.featured_image %}
             <img class="product-card__image" src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
           {% endif %}
-          <h3 class="product-card__title">{{ product.title }}</h3>
         </a>
-        <div class="product-card__rating" data-product-id="{{ product.id }}">
-          <!-- Yotpo integration: replace or augment this with your Yotpo snippet/JS as required -->
-          <div class="yotpo yotpo-custom-show" data-product-id="{{ product.id }}">
-            <!-- Yotpo stars will render here if Yotpo is properly integrated -->
+        {%- if product.metafields.reviews.rating.value != blank -%}
+          {% liquid
+              assign rating_decimal = 0
+              assign decimal = product.metafields.reviews.rating.value.rating | modulo: 1
+              if decimal >= 0.3 and decimal <= 0.7
+                  assign rating_decimal = 0.5
+              elsif decimal > 0.7
+                  assign rating_decimal = 1
+              endif
+          %}
+          <div class="rating"
+               role="img"
+               aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: product.metafields.reviews.rating.value, rating_max: product.metafields.reviews.rating.value.scale_max }}">
+            <span aria-hidden="true"
+                  class="rating-star color-icon-{{ settings.accent_icons }}"
+                  style="--rating: {{ product.metafields.reviews.rating.value.rating | floor }};
+                         --rating-max: {{ product.metafields.reviews.rating.value.scale_max }};
+                         --rating-decimal: {{ rating_decimal }};">
+            </span>
           </div>
-        </div>
+        {%- endif -%}
+        <h3 class="product-card__title">{{ product.title }}</h3>
       </div>
     {% endfor %}
   </div>
@@ -40,22 +55,40 @@
   }
   .featured-two-box__info {
     flex: 0 0 30%;
-    padding: 1rem;
+    padding-left: 10rem;
     box-sizing: border-box;
+  }
+  /* Increase heading and subheading sizes */
+  .featured-two-box__title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .featured-two-box__subheading {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+  }
+  /* CTA as black rectangle with text inside */
+  .featured-two-box__cta {
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    display: inline-block;
+    margin-top: 1rem;
   }
   .featured-two-box__products {
     flex: 0 0 70%;
     display: flex;
-    flex-wrap: wrap;
     gap: 1rem;
     padding: 1rem;
     box-sizing: border-box;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    overflow-x: auto; /* Allow scroll if needed */
   }
   .product-card {
-    flex: 1 1 calc(50% - 1rem);
+    flex: 0 0 calc((100% - 4rem) / 5); /* Divide space for exactly 5 cards; adjust gap if needed */
     box-sizing: border-box;
     padding: 0.5rem;
-    border: 1px solid #eaeaea;
     text-align: center;
   }
   .product-card__image {
@@ -70,6 +103,10 @@
     .featured-two-box__info,
     .featured-two-box__products {
       flex: 1 1 100%;
+    }
+    .featured-two-box__products {
+      flex-wrap: wrap;
+      overflow-x: visible;
     }
     .product-card {
       flex: 1 1 100%;
