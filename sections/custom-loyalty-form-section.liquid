@@ -256,7 +256,10 @@
                                 {%- endfor -%}
                             </ul>
                         {%- endif -%}
+                        {%unless template.name=='register' %}
 
+                        <div class='oxi-social-login'></div>
+                        {%endunless %}
                         <div class="field">
                             <input
                                     type="email"
