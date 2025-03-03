@@ -33,12 +33,12 @@
           "settings": {
             "toggle_main_font": true,
             "toggle_sub_font": true,
-            "main_text": "30% OFF",
-            "sub_text": "ON SELECTED ITEMS",
+            "main_text": "BACK IN STOCK",
+            "sub_text": "OASIS OLD MONEY",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "ltr",
-            "link": "shopify://collections/end-of-year-sale",
+            "link": "shopify://collections/oasis-old-money",
             "color_scheme": "inverse"
           }
         },
