@@ -58,6 +58,26 @@
           "type": "price",
           "settings": {}
         },
+        "tellos_shoppable_video_product_page_carousel_3VVL4q": {
+          "type": "shopify://apps/tellos-shoppable-video/blocks/product-page-carousel/a4490152-a6c6-410b-9721-736f5b95f2f2",
+          "disabled": true,
+          "settings": {
+            "card_type": "square",
+            "size": "small",
+            "show_border_card": false,
+            "border_card_color": "#000000",
+            "show_navigation_buttons": false,
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_horizontal": 0,
+            "add_header": false,
+            "header_text": "See it in action",
+            "header_type": "h2",
+            "alignment": "center",
+            "header_gap": 12,
+            "custom_css": ""
+          }
+        },
         "tolstoy_shoppable_video_ugc_stories_block_V9Hfhx": {
           "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
           "settings": {
@@ -167,6 +187,7 @@
         "5fa3ce9f-60f6-4aee-a0c4-c987fa5f3522",
         "656bd184-5523-4c74-aee3-c2664a058063",
         "price",
+        "tellos_shoppable_video_product_page_carousel_3VVL4q",
         "tolstoy_shoppable_video_ugc_stories_block_V9Hfhx",
         "variant_picker",
         "e290d1ee-22d0-4ae8-9219-8d77d6585fae",
