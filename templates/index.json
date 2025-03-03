@@ -119,15 +119,15 @@
         "slide_EQwW66": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/jpg_5d12c79e-da19-4090-90b0-aae6dc95bbea.jpg",
-            "mobile_image": "shopify://shop_images/9_c690fb59-f192-4006-8b5d-d039412f49ec.jpg",
+            "image": "shopify://shop_images/copy_8_ac275d04-4911-4ef5-b01c-4f50a27302c8.jpg",
+            "mobile_image": "shopify://shop_images/copy_3_8.jpg",
             "left_position": 50,
             "bottom_position": 10,
-            "desktop_left_position": 50,
+            "desktop_left_position": 20,
             "desktop_bottom_position": 30,
             "show_lock": false,
             "button_label": "SHOP NOW",
-            "link": "shopify://collections/end-of-year-sale",
+            "link": "shopify://collections/oasis-old-money",
             "show_text_box": false,
             "color_scheme": "inverse",
             "whole_slide_link": "",
@@ -302,7 +302,7 @@
           "settings": {
             "size": "medium",
             "explore-card-label": "Explore all videos",
-            "background": "rgba(0, 0, 0, 0)",
+            "background": "rgba(0,0,0,0)",
             "padding_top": 0,
             "padding_bottom": 0,
             "padding_horizontal": 0,
