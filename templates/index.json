@@ -197,7 +197,7 @@
       "type": "featured-best-sellers",
       "settings": {
         "title": "TOP RATED PICKS",
-        "subheading": "The review are IN",
+        "subheading": "The review are in",
         "cta_text": "SHOP TOP RATED",
         "cta_link": "shopify://collections/all",
         "collection": "best-seller-internal-use",
