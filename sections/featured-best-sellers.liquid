@@ -1,15 +1,18 @@
-<div class="featured-two-box container style='padding: 2rem 0; padding-right:8rem;'">
+<div class="featured-two-box container" style="padding: 2rem 0;">
   <div class="featured-two-box__info">
     {% if section.settings.title != blank %}
       <h4 class="featured-two-box__title">{{ section.settings.title }}</h4>
     {% endif %}
+
     {% if section.settings.subheading != blank %}
-      <h2 class="featured-two-box__subheading">{{ section.settings.subheading }}</h2>
-    {% endif %}
-    {% if section.settings.cta_text != blank and section.settings.cta_link != blank %}
-      <a href="{{ section.settings.cta_link }}" class="featured-two-box__cta">
-        {{ section.settings.cta_text }}
-      </a>
+      <div class="featured-two-box__subheading-wrap">
+        <h2 class="featured-two-box__subheading">{{ section.settings.subheading }}</h2>
+        {% if section.settings.cta_text != blank and section.settings.cta_link != blank %}
+          <a href="{{ section.settings.cta_link }}" class="featured-two-box__cta">
+            {{ section.settings.cta_text }}
+          </a>
+        {% endif %}
+      </div>
     {% endif %}
   </div>
 
@@ -18,7 +21,6 @@
       <div class="product-card">
         <a href="{{ product.url }}">
           {% if product.featured_image %}
-            <!-- Use a larger portrait frame -->
             <img class="product-card__image"
                  src="{{ product.featured_image | img_url: 'large' }}"
                  alt="{{ product.title }}">
@@ -44,7 +46,6 @@
 
         <h3 class="product-card__title">{{ product.title }}</h3>
 
-        <!-- Show the corresponding custom text (one box per product) -->
         {% case forloop.index %}
           {% when 1 %}
             {% if section.settings.product_text1 != blank %}
@@ -73,12 +74,14 @@
 </div>
 
 <style>
+@media (min-width: 750px) {
   .featured-two-box.container {
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
     padding-right: 8rem;
   }
+}
   .featured-two-box__info {
     flex: 0 0 30%;
     padding-left: 8rem;
@@ -114,51 +117,69 @@
     box-sizing: border-box;
     padding: 0.5rem;
     text-align: center;
-    /* Convert to a vertical flex container */
     display: flex;
     flex-direction: column;
-    /* Keep content centered by default */
     align-items: center;
-    /* Remove text-align center so the rating can align itself */
     text-align: left;
   }
   .product-card__image {
     max-width: 100%;
     height: auto;
   }
-  /* Responsive adjustments */
   @media (max-width: 750px) {
     .featured-two-box.container {
       flex-direction: column;
+      margin-right:0;
     }
-    .featured-two-box__info,
-    .featured-two-box__products {
-      flex: 1 1 100%;
+    .featured-two-box__info {
+      width: 100%;
+      padding-left: 2.5rem;
+      margin-bottom: 1rem;
     }
     .featured-two-box__products {
-      flex-wrap: wrap;
-      overflow-x: visible;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      width: 100%;
     }
     .product-card {
-      flex: 1 1 100%;
+      flex: 0 0 auto;
+      margin-right: 1rem;
+    }
+    .featured-two-box__subheading-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction:column;
+    }
+    .featured-two-box__cta {
+      background: none;
+      color: gray;
+      text-decoration: underline;
+      padding: 0;
+      margin-top: 0;
+    }
+    .featured-two-box__products {
+      gap: 0.5rem;
+    }
+    .product-card {
+      flex: 0 0 60%;
     }
   }
-  /* Debug style for rating-star, remove once confirmed */
   .rating-star {
-    min-width: 50px; /* Adjust as needed */
+    min-width: 50px;
   }
-  /* Add this to your CSS (for testing or as a fallback) */
   .rating-star {
     display: inline-block;
-    font-size: 1.5rem; /* Adjust size as needed */
+    font-size: 1.5rem;
     line-height: 1;
-    /* Remove the debug border if desired */
   }
   .rating-star:before {
-    content: '★';         /* Unicode star */
-    color: gold;          /* Star color */
+    content: '★';
+    color: gold;
   }
-  /* Align rating and title to the right */
   .product-card .rating,
   .product-card__title {
     text-align: right;
@@ -167,11 +188,9 @@
     width: 100%;
     text-align: right;
   }
-  /* Ensure the new container forces right alignment */
   .stars-container {
     text-align: right;
   }
-  /* Override any inherited center alignment by the product card */
   .stars-container {
     display: block;
     width: 100%;
@@ -182,13 +201,10 @@
     justify-content: flex-end;
     width: 100%;
   }
-  /* Force the rating block to the right inside the product-card */
   .product-card .rating {
     align-self: flex-end;
-    /* Optionally, add a little top margin so it doesn’t stick to the image */
     margin-top: 0.5rem;
   }
-  /* Ensure stars container also uses flex-end if needed */
   .stars-container {
     display: flex;
     justify-content: flex-end;
@@ -197,30 +213,49 @@
   .product-card {
     display: flex;
     flex-direction: column;
-    /* Keep the main elements centered by default (for the product image) */
     align-items: center;
-    /* Remove any text-align constraints so we can freely position children */
     text-align: left;
   }
-
-  /* Force both rating and title to the right */
   .product-card .rating {
     align-self: flex-end; 
-    margin-top: 0.5rem;  /* optional spacing above the rating */
+    margin-top: 0.5rem;
   }
-
   .product-card__title {
     align-self: flex-end; 
     width: 100%;
     text-align: right;
-    margin-top: 0.5rem;  /* optional spacing if needed */
+    margin-top: 0.5rem;
   }
-
-  /* Optional styling for the newly added text */
   .product-card__review-text {
     font-size: 0.9rem;
     margin-top: 0.25rem;
-    text-align: right; /* match your star/title alignment if desired */
+    text-align: right;
+  }
+  .featured-two-box__subheading-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+  }
+  .featured-two-box__title {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  .featured-two-box__subheading-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    flex-direction: column;
+  }
+  @media (max-width: 750px) {
+    .featured-two-box__cta {
+      background: none;
+      color: gray;
+      text-decoration: underline;
+      padding: 0;
+      margin-top: 0;
+    }
   }
 </style>
 
