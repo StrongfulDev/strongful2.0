@@ -28,6 +28,8 @@
                 </svg>
                 <h2>{{ section.settings.sign_up_title }}</h2>
                 {%- form 'create_customer', novalidate: 'novalidate', id: 'create_customer_custom_loyalty_form' -%}
+      <div class='oxi-social-login'></div>
+
                     <div>
                         {%- if form.errors -%}
                             <h2 class="form__message" tabindex="-1" autofocus>
@@ -166,6 +168,7 @@
         </div>
         <div class="loyalty-form loyalty-form-login hidden">
             <div class="customer login section-{{ section.id }}-padding fix-direction">
+
                 {% if template.name == 'register' or template.name == 'login' %}
                     <h1 id="recover" tabindex="-1">
                         {{ 'customer.recover_password.title' | t }}
@@ -241,6 +244,8 @@
                         </h3>
                     {%- endif -%}
                     {%- form 'customer_login', novalidate: 'novalidate' -%}
+                                    <div class='oxi-social-login'></div>
+
                         {%- if form.errors -%}
                             <ul class="form-errors-list">
                                 {%- for field in form.errors -%}
