@@ -2474,3 +2474,12 @@ li.relative-discount {
     display: none; /* For Chrome, Safari, and Opera */
   }
 }
+.js.product-form__input {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Default for three or fewer */
+}
+
+.js.product-form__input.four-or-more {
+  justify-content: space-between;
+}
