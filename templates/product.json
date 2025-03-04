@@ -71,7 +71,7 @@
             "padding_bottom": 0,
             "padding_horizontal": 0,
             "add_header": false,
-            "header_text": "See it in action",
+            "header_text": "",
             "header_type": "h2",
             "alignment": "center",
             "header_gap": 12,
