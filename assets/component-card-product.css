@@ -1,5 +1,5 @@
 .quick-add.hover {
-    display: none;
+	display: none;
 }
 
 .new-product-span {
@@ -7,47 +7,47 @@
 	position: absolute;
 	bottom: 1rem;
 	left: 1rem;
-	background: rgba(var(--color-background),.95);
-	padding: 0.5rem .9rem;
+	background: rgba(var(--color-background), 0.95);
+	padding: 0.5rem 0.9rem;
 	border-radius: var(--inputs-radius);
 	font-weight: var(--font-body-weight-bold);
 	font-size: calc(var(--font-body-size-small) * 1.1);
 }
 
-.product_details__info>.new-product-span {
+.product_details__info > .new-product-span {
 	position: static;
 	width: fit-content;
 	padding: 0;
 }
 
 .active-card:hover .quick-add.hover {
-    display: block;
+	display: block;
 }
 
 @media screen and (max-width: 749px) {
-    .active-card:hover .quick-add.hover {
-        display: none;
-    }
+	.active-card:hover .quick-add.hover {
+		display: none;
+	}
 }
 
 .quick-add.hover {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
 }
 
 .product-size-picker-container {
-    background-color: rgba(var(--color-background), 0.95);
-    padding: 20px 10px;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+	background-color: rgba(var(--color-background), 0.95);
+	padding: 20px 10px;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 }
 
 .product_size_picker__heading {
-    font-weight: 700;
+	font-weight: 700;
 }
 
 .cart-drawer .product_size_picker__heading {
@@ -55,12 +55,12 @@
 }
 
 .product-size-picker {
-    width: 100%;
+	width: 100%;
 }
 
 .variant_selector {
-    width: 100%;
-	transition: .3s ease-in-out;
+	width: 100%;
+	transition: 0.3s ease-in-out;
 	transform: translateY(100%);
 	border-top: 1px solid var(--gradient-base-background-3);
 	border-top-right-radius: 10px;
@@ -68,54 +68,54 @@
 }
 
 .variant_selector.active {
-	transition: .3s ease-in-out;
+	transition: 0.3s ease-in-out;
 	transform: translateY(0);
 }
 
 .size-variant-product-form {
-    width: 100%;
+	width: 100%;
 }
 
 .size-variant-product-form .button.add_to_cart {
-    height: 30px;
-    min-height: unset;
-    margin-top: 2px;
-    margin-bottom: 0;
+	height: 30px;
+	min-height: unset;
+	margin-top: 2px;
+	margin-bottom: 0;
 	border-radius: var(--inputs-radius);
 	font-size: calc(var(--font-body-size-medium) * 0.9);
 }
 
 .product_variants ul {
-    width: 100%;
-    column-gap: .5rem;
-    direction: ltr;
+	width: 100%;
+	column-gap: 0.5rem;
+	direction: ltr;
 }
 
 .card__heading a:after {
-    z-index: 0;
+	z-index: 0;
 }
 
 .card--standard:not(.card--horizontal) > .card__content .card__badge {
-    display: block;
-    position: absolute;
-    top: 0;
+	display: block;
+	position: absolute;
+	top: 0;
 }
 
 .card--standard:not(.card--horizontal) > .card__content .card__badge:has(> .badge.color-custom-red) {
-    margin: 0;
-    left: 0;
+	margin: 0;
+	left: 0;
 }
 
 .badge.color-custom-red {
-    color: firebrick;
-    padding: 0.6em;
-    text-align: center;
-    font-size: 1.1em;
-    font-weight: 600;
-    background: rgba(255, 255, 255, 0.8);
-    margin: 10px 0 0 0;
-    border: 0;
-    border-radius: 0 1em 1em 0;
+	color: firebrick;
+	padding: 0.6em;
+	text-align: center;
+	font-size: 1.1em;
+	font-weight: 600;
+	background: rgba(255, 255, 255, 0.8);
+	margin: 10px 0 0 0;
+	border: 0;
+	border-radius: 0 1em 1em 0;
 }
 
 .card_banner_text {
@@ -131,7 +131,6 @@
 }
 
 @media screen and (min-width: 990px) {
-
 	.cart-drawer .product_size_picker__heading {
 		margin-bottom: 0;
 	}
@@ -149,7 +148,7 @@
 	}
 
 	.product_variants ul {
-		gap: 1rem .5rem;
+		gap: 1rem 0.5rem;
 	}
 
 	.cart-drawer .product_variants ul {
@@ -163,25 +162,33 @@
 }
 
 .outlet-collection-tag {
-    font-weight: var(--font-body-weight-bold);
-    display: block;
-    margin: 0;
+	font-weight: var(--font-body-weight-bold);
+	display: block;
+	margin: 0;
 }
 
 .product-size-picker {
-    width: 100%;
+	width: 100%;
 }
 
-div:not(.product-size-picker-container) .variant-button .size_variant_button:not(.disabled-variant-button) .size_variant_button_container label:hover,
-div:not(.product-size-picker-container) .variant-button .size_variant_button:not(.disabled-variant-button-new) .size_variant_button_container label:hover {
-    background: #000;
-    color: #fff;
+div:not(.product-size-picker-container)
+	.variant-button
+	.size_variant_button:not(.disabled-variant-button)
+	.size_variant_button_container
+	label:hover,
+div:not(.product-size-picker-container)
+	.variant-button
+	.size_variant_button:not(.disabled-variant-button-new)
+	.size_variant_button_container
+	label:hover {
+	background: #000;
+	color: #fff;
 }
 
 .active-card:hover .quick-add.hover {
-    width: 95%;
-    right: 50%;
-    transform: translateX(50%);
+	width: 95%;
+	right: 50%;
+	transform: translateX(50%);
 }
 
 .discount-price-container {
@@ -249,8 +256,14 @@ div:not(.product-size-picker-container) .variant-button .size_variant_button:not
 		padding: 1rem 0 0;
 	}
 
-	.product_variants div:not(.product-size-picker-container) .size_variant_button:not(.disabled-variant-button) label:hover,
-	.product_variants div:not(.product-size-picker-container) .size_variant_button:not(.disabled-variant-button-new) label:hover {
+	.product_variants
+		div:not(.product-size-picker-container)
+		.size_variant_button:not(.disabled-variant-button)
+		label:hover,
+	.product_variants
+		div:not(.product-size-picker-container)
+		.size_variant_button:not(.disabled-variant-button-new)
+		label:hover {
 		background: var(--color-icon);
 		color: var(--gradient-base-background-1);
 	}
@@ -286,35 +299,35 @@ div:not(.product-size-picker-container) .variant-button .size_variant_button:not
 
 .variant-button {
 	position: relative;
-    display: inline-block;
-    width: 42px; /* Set a smaller fixed width for all variant buttons */
-    text-align: center; /* Center the text within the button */
+	display: inline-block;
+	width: 42px; /* Set a smaller fixed width for all variant buttons */
+	text-align: center; /* Center the text within the button */
 	font-weight: 200;
 	font-size: xx-small;
-    padding: 1px; /* Adjust padding as needed */
-    margin: 1px; /* Adjust margin as needed */
-    /* border: 1px solid #ccc; Optional: Add a border */
-    border-radius: 4px; /* Optional: Add rounded corners */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+	padding: 1px; /* Adjust padding as needed */
+	margin: 1px; /* Adjust margin as needed */
+	/* border: 1px solid #ccc; Optional: Add a border */
+	border-radius: 4px; /* Optional: Add rounded corners */
+	box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 .variant-button label {
-    display: block; /* Ensure the label takes up the full width of the button */
-    width: 100%; /* Ensure the label takes up the full width of the button */
+	display: block; /* Ensure the label takes up the full width of the button */
+	width: 100%; /* Ensure the label takes up the full width of the button */
 }
 
 .product__inventory {
-    position: absolute;
-    top: -25px; /* Adjust as needed to position above the size option */
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    width: max-content; /* Ensure it spans the width of the content */
-    color: 	white !important; /* Background color to make it stand out */
-    font-size: 0.9rem; /* Adjust font size as needed */
-    z-index: 1; /* Ensure it appears above other elements */
-    background:	firebrick !important; /* Adjust color as needed */
-    padding: 2px 5px; /* Padding for better readability */
-    border-radius: 3px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+	position: absolute;
+	top: -25px; /* Adjust as needed to position above the size option */
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+	width: max-content; /* Ensure it spans the width of the content */
+	color: white !important; /* Background color to make it stand out */
+	font-size: 0.9rem; /* Adjust font size as needed */
+	z-index: 1; /* Ensure it appears above other elements */
+	background: firebrick !important; /* Adjust color as needed */
+	padding: 2px 5px; /* Padding for better readability */
+	border-radius: 3px; /* Rounded corners */
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
 }
