@@ -241,7 +241,16 @@ fieldset.product-form__input .form__label {
 .product-form__input input[type='radio'] + label:hover + .product__inventory {
 	display: block;
 }
-
+.product__inventory:empty {
+  display: none;
+}
+.product__inventory:empty,
+.product__inventory:empty::before,
+.product__inventory:empty::after {
+  display: none !important;
+  content: none !important;
+  box-shadow: none !important;
+}
 .product-form__input input[type='radio']:checked + label {
     background-color: rgb(var(--color-foreground));
     color: rgb(var(--color-background));
