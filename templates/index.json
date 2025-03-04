@@ -212,18 +212,10 @@
             "header_gap": 30,
             "custom_css": ""
           }
-        },
-        "tolstoy_shoppable_video_ugc_carousel_block_jtc3eF": {
-          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
-          "disabled": true,
-          "settings": {
-            "publishId": "7fqos7ohb6pgc"
-          }
         }
       },
       "block_order": [
-        "tellos_shoppable_video_home_page_carousel_CKyiHh",
-        "tolstoy_shoppable_video_ugc_carousel_block_jtc3eF"
+        "tellos_shoppable_video_home_page_carousel_CKyiHh"
       ],
       "settings": {
         "include_margins": true
