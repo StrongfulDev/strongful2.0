@@ -113,7 +113,15 @@
     >
       {%- for option in product.options_with_values -%}
         <p class="form__label2">{{ option.name }}</p>
-        <fieldset class="js product-form__input {% if product.title == 'גיפט קארד' %}gift-card-product-form__input{% elsif product.title == 'Iconic סווטשירט' %}os-sweat fix-direction{% endif %}">
+        {% assign value_count = option.values | size %}
+        <fieldset
+          class="js product-form__input
+            {% if value_count >= 4 %}
+              four-or-more
+            {% else %}
+              three-or-less
+            {% endif %}"
+        >
           {% assign first_iteration = true %}
           {% for modelName in product.metafields.model.names.value %}
             {% assign model = shop.metaobjects.model[modelName] %}
