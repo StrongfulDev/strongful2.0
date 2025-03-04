@@ -298,7 +298,6 @@
       "blocks": {
         "tellos_shoppable_video_home_page_carousel_CKyiHh": {
           "type": "shopify://apps/tellos-shoppable-video/blocks/home-page-carousel/a4490152-a6c6-410b-9721-736f5b95f2f2",
-          "disabled": true,
           "settings": {
             "size": "large",
             "explore-card-label": "Explore all videos",
@@ -316,6 +315,7 @@
         },
         "tolstoy_shoppable_video_ugc_carousel_block_jtc3eF": {
           "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "disabled": true,
           "settings": {
             "publishId": "5xh1nmtccw8gh"
           }
@@ -610,9 +610,9 @@
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9",
     "slideshow_gwXDrF",
     "featured_collection_XDhFHB",
+    "17388407748dd9c850",
     "our_collection_list_v2_mK6kUx",
     "customer_slideshow_jXTBRG",
-    "17388407748dd9c850",
     "customer_slideshow_wFcfK7",
     "173246164424ec44fa",
     "collection_list_QrC4z9",
