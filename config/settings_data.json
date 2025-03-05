@@ -328,11 +328,6 @@
           "horizontal_position": "right"
         }
       },
-      "yoast-seo-metatags": {
-        "type": "shopify://apps/yoast-seo-seo-for-everyone/blocks/metatags/7c777011-bc88-4743-a24e-64336e1e5b46",
-        "disabled": false,
-        "settings": {}
-      },
       "7653140674679638191": {
         "type": "shopify://apps/tellos-shoppable-video/blocks/tellos_script/a4490152-a6c6-410b-9721-736f5b95f2f2",
         "disabled": false,
@@ -351,6 +346,11 @@
         "settings": {
           "enabled_on_page": "all"
         }
+      },
+      "yoast-seo-metatags": {
+        "type": "shopify://apps/yoast-seo-seo-for-everyone/blocks/metatags/7c777011-bc88-4743-a24e-64336e1e5b46",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
