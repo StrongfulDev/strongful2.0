@@ -203,16 +203,6 @@
       "multicolumn": {
         "type": "multicolumn",
         "blocks": {
-          "0c98e703-5f3e-421f-85a1-f7a1cf32c727": {
-            "type": "column",
-            "settings": {
-              "data_account": "login",
-              "title": "כניסה",
-              "text": "",
-              "link_label": "",
-              "link": ""
-            }
-          },
           "27ea88e1-0a25-4370-bba9-fe4273a990c0": {
             "type": "column",
             "settings": {
@@ -222,11 +212,21 @@
               "link_label": "",
               "link": ""
             }
+          },
+          "0c98e703-5f3e-421f-85a1-f7a1cf32c727": {
+            "type": "column",
+            "settings": {
+              "data_account": "login",
+              "title": "כניסה",
+              "text": "",
+              "link_label": "",
+              "link": ""
+            }
           }
         },
         "block_order": [
-          "0c98e703-5f3e-421f-85a1-f7a1cf32c727",
-          "27ea88e1-0a25-4370-bba9-fe4273a990c0"
+          "27ea88e1-0a25-4370-bba9-fe4273a990c0",
+          "0c98e703-5f3e-421f-85a1-f7a1cf32c727"
         ],
         "settings": {
           "title": "",
