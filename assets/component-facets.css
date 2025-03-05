@@ -1799,7 +1799,6 @@ summary .icon-caret {
   z-index: 4;
   height: 70px;
   background-color: #fff;
-  max-width: 1200px; /* Or any desired max width */
   margin: 0 auto; /* Centers within its container */
   padding: 1rem 0;
   box-sizing: border-box;
