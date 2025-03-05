@@ -3,6 +3,7 @@
     --text-alignment: right;
     --heading-type-2-margin: 1rem;
     --blue-friday-accent-1: #214D8E;
+    -webkit-font-smoothing: antialiased;
 }
 
 * {
@@ -4215,7 +4216,6 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
     background: none;
     border: none;
     text-decoration: underline;
-    padding: 1rem;
     margin: 0;
     line-height: 1.5; /* Adjust line-height for better readability */
     color: var(--gradient-base-accent-1);
@@ -4225,6 +4225,7 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
     white-space: nowrap; /* Prevent wrapping */
     overflow: hidden; /* Hide overflow */
     text-overflow: ellipsis; /* Add ellipsis for overflow text */
+    top:20rem;
 }
 
 #BIS_trigger:hover {

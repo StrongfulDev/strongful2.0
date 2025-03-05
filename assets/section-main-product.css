@@ -1942,7 +1942,7 @@ fieldset.js.product-form__input {
 	display: flex;
 	flex-direction: row;
 
-	padding: 15px 10px; /* Adjust padding to fit around variant options */
+	padding: 15px 0px; /* Adjust padding to fit around variant options */
 	border-radius: 5px;
 	margin-top: 10px; /* Position below the label */
 	width: 100%;
