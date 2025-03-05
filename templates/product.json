@@ -60,7 +60,6 @@
         },
         "tellos_shoppable_video_product_page_carousel_3VVL4q": {
           "type": "shopify://apps/tellos-shoppable-video/blocks/product-page-carousel/a4490152-a6c6-410b-9721-736f5b95f2f2",
-          "disabled": true,
           "settings": {
             "card_type": "square",
             "size": "small",
