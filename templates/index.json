@@ -210,7 +210,7 @@
             "header_type": "h2",
             "alignment": "center",
             "header_gap": 30,
-            "custom_css": ".carousel-header { font-size: 20px; font-weight: 500; }"
+            "custom_css": ".carousel-header { font-size: 20px; font-weight: 200; }"
           }
         }
       },
