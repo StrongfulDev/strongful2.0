@@ -310,13 +310,6 @@
         "disabled": false,
         "settings": {}
       },
-      "8776485610325655785": {
-        "type": "shopify://apps/hiko-social-login/blocks/hiko-auth/3832d7e1-5bcd-4b72-91da-236b57feef8f",
-        "disabled": false,
-        "settings": {
-          "social_font": "enable"
-        }
-      },
       "16881471024131275657": {
         "type": "shopify://apps/searchanise-search-filter/blocks/app-embed/d8f24ada-02b1-458a-bbeb-5bf16d5c921e",
         "disabled": true,
@@ -349,6 +342,20 @@
         "type": "shopify://apps/tellos-shoppable-video/blocks/tellos_script/a4490152-a6c6-410b-9721-736f5b95f2f2",
         "disabled": false,
         "settings": {}
+      },
+      "8776485610325655785": {
+        "type": "shopify://apps/hiko-social-login/blocks/hiko-auth/3832d7e1-5bcd-4b72-91da-236b57feef8f",
+        "disabled": true,
+        "settings": {
+          "social_font": "enable"
+        }
+      },
+      "16548475241908962911": {
+        "type": "shopify://apps/oxi-social-login/blocks/social-login-embed/24ad60bc-8f09-42fa-807e-e5eda0fdae17",
+        "disabled": false,
+        "settings": {
+          "enabled_on_page": "all"
+        }
       }
     }
   },
