@@ -320,11 +320,6 @@
         "disabled": false,
         "settings": {}
       },
-      "4705145147225299685": {
-        "type": "shopify://apps/tolstoy-shoppable-video-ugc/blocks/widget-block/06fa8282-42ff-403e-b67c-1936776aed11",
-        "disabled": false,
-        "settings": {}
-      },
       "11791027836456060766": {
         "type": "shopify://apps/kesem/blocks/kesem-bot/f7671bb7-7cd7-4c3d-ab62-318d6faec87f",
         "disabled": true,
