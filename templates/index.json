@@ -199,7 +199,7 @@
         "tellos_shoppable_video_home_page_carousel_CKyiHh": {
           "type": "shopify://apps/tellos-shoppable-video/blocks/home-page-carousel/a4490152-a6c6-410b-9721-736f5b95f2f2",
           "settings": {
-            "size": "large",
+            "size": "small",
             "explore-card-label": "Explore all videos",
             "background": "rgba(0,0,0,0)",
             "padding_top": 0,
