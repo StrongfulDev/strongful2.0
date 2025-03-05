@@ -1850,16 +1850,18 @@ variant-radios {
 
 .size-table-toggler {
 	display: block;
-	font-size: var(--font-body-size-medium);
+	font-size: smaller;
 	color: var(--gradient-base-accent-3);
 	text-decoration: underline;
 	margin: 0;
 	text-align: left;
 	width: 30%;
 	position: relative;
-	top: 70px;
+	top: 45px;
 	left: 2rem;
 	z-index: 10000;
+    padding-bottom:0;
+    padding-top: 0%;
 }
 
 .gift-card-product-form__input {
@@ -1921,7 +1923,7 @@ variant-radios {
 
 .model-wears-size {
 	flex: 1 1 100%;
-	margin-bottom: 1rem;
+	/* margin-bottom: 1rem; */
 	display: flex;
 	width: 100%;
 	justify-content: space-between;
@@ -1942,9 +1944,9 @@ fieldset.js.product-form__input {
 	display: flex;
 	flex-direction: row;
 
-	padding: 15px 0px; /* Adjust padding to fit around variant options */
+	padding: 15px 5px; /* Adjust padding to fit around variant options */
 	border-radius: 5px;
-	margin-top: 10px; /* Position below the label */
+	margin-top: 5px; /* Position below the label */
 	width: 100%;
 	justify-content: center;
 }
@@ -1954,6 +1956,7 @@ legend.form__label ::after {
 
 .form__label2 {
 	padding: 5px;
+    margin:0;
 }
 #product .footer {
 	padding-bottom: 5em;
@@ -2039,7 +2042,7 @@ product-info > .product__inventory {
 		margin: 0;
 		visibility: hidden; /* Initially hidden */
 		position: absolute; /* Position absolutely within the parent */
-		bottom: -23px; /* Adjust as needed to position below the circle */
+		top: 25px; /* Adjust as needed to position below the circle */
 		left: 50%;
 		transform: translateX(-50%);
 		transition: visibility 0s, opacity 0.3s ease; /* Smooth transition for opacity */
@@ -2459,6 +2462,7 @@ ul.similar {
 	margin: 0;
 	display: flex;
 	flex-wrap: wrap;
+    row-gap: 2rem;
 	justify-content: flex-end;
 	flex-direction: row-reverse;
 }

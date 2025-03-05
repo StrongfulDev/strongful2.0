@@ -4419,7 +4419,8 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 	white-space: nowrap; /* Prevent wrapping */
 	overflow: hidden; /* Hide overflow */
 	text-overflow: ellipsis; /* Add ellipsis for overflow text */
-	top: 20rem;
+	top: 16rem;
+    font-size:smaller;
 }
 
 #BIS_trigger:hover {

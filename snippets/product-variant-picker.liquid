@@ -101,7 +101,7 @@
 {% endunless %}
 {%- unless product.has_only_default_variant -%}
   {%- if block.settings.picker_type == 'button' -%}
-    <variant-radios
+    <variant-radios style="margin:0;"
       id="variant-radios-{{ section.id }}"
       class="no-js-hidden"
       data-section="{{ section.id }}"
@@ -112,7 +112,7 @@
       {{ block.shopify_attributes }}
     >
       {%- for option in product.options_with_values -%}
-        <p class="form__label2">{{ option.name }}</p>
+        <p class="form__label2">{{'בחירת ' | append: option.name }}</p>
         {% assign value_count = option.values | size %}
         <fieldset
           class="js product-form__input
@@ -134,14 +134,14 @@
                 style="display: none"
               {% endif %}
             >
-              <span>
+              <span style="font-size:smaller;">
                 {{ 'products.product.model_switch.model_wears_only_female' | t }}
                 {% if product.title == 'Iconic סווטשירט' %}
                   <span class="bold">{{ option.name }}: OS</span>
                 {% elsif product.title == 'מכנס טרנינג אוברסייז' or product.title == 'אוברסייז סווטשירט' or product.title == 'קפוצ׳ון אוברסייז' or product.title=='קפוצ׳ון קרופ' %}
-                  <span class="bold">{{ option.name }}: {% if first_iteration %}S{% else %}{{ model.size_letter.value }}{% endif %}</span>
+                  <span>{{ option.name }}: {% if first_iteration %}S{% else %}{{ model.size_letter.value }}{% endif %}</span>
                 {% else %}
-                  <span class="bold">{{ option.name }}: {{ model.size_letter.value }}</span>
+                  <span>{{ option.name }}: {{ model.size_letter.value }}</span>
                 {% endif %}
                 {% if product.tags contains 'up-size-recommendation' %}
                   <span class="small">{{ 'products.product.up_size_recommendation' | t }}</span>
