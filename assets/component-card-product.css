@@ -304,7 +304,6 @@ div:not(.product-size-picker-container)
 	text-align: center; /* Center the text within the button */
 	font-weight: 200;
 	font-size: xx-small;
-	padding: 1px; /* Adjust padding as needed */
 	margin: 1px; /* Adjust margin as needed */
 	border: #ccc 0.1px solid;
 	border-radius: 4px; /* Optional: Add rounded corners */
