@@ -2587,7 +2587,7 @@ li.relative-discount {
 		display: block !important;
 		width: 100vw !important;
 		position: relative !important;
-		left: 66% !important;
+		left: 55% !important;
 		transform: translateX(-50%) !important;
 		margin-left: calc(-1 * ((100vw - 100%) / 2)) !important;
 		margin-right: calc(-1 * ((100vw - 100%) / 2)) !important;
