@@ -320,11 +320,6 @@
         "disabled": false,
         "settings": {}
       },
-      "4705145147225299685": {
-        "type": "shopify://apps/tolstoy-shoppable-video-ugc/blocks/widget-block/06fa8282-42ff-403e-b67c-1936776aed11",
-        "disabled": false,
-        "settings": {}
-      },
       "11791027836456060766": {
         "type": "shopify://apps/kesem/blocks/kesem-bot/f7671bb7-7cd7-4c3d-ab62-318d6faec87f",
         "disabled": true,
@@ -342,13 +337,6 @@
         "type": "shopify://apps/tellos-shoppable-video/blocks/tellos_script/a4490152-a6c6-410b-9721-736f5b95f2f2",
         "disabled": false,
         "settings": {}
-      },
-      "8776485610325655785": {
-        "type": "shopify://apps/hiko-social-login/blocks/hiko-auth/3832d7e1-5bcd-4b72-91da-236b57feef8f",
-        "disabled": true,
-        "settings": {
-          "social_font": "enable"
-        }
       },
       "16548475241908962911": {
         "type": "shopify://apps/oxi-social-login/blocks/social-login-embed/24ad60bc-8f09-42fa-807e-e5eda0fdae17",
@@ -502,5 +490,10 @@
         }
       }
     }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      "@media only screen and (max-width: 750px) {.product__media img, .product__media-container img {width: 100% !important; height: auto !important; aspect-ratio: 4 / 5 !important; object-fit: cover; object-position:top center !important }}"
+    ]
   }
 }
