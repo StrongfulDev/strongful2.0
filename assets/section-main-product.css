@@ -1860,8 +1860,8 @@ variant-radios {
 	top: 45px;
 	left: 2rem;
 	z-index: 10000;
-    padding-bottom:0;
-    padding-top: 0%;
+	padding-bottom: 0;
+	padding-top: 0%;
 }
 
 .gift-card-product-form__input {
@@ -1956,7 +1956,7 @@ legend.form__label ::after {
 
 .form__label2 {
 	padding: 5px;
-    margin:0;
+	margin: 0;
 }
 #product .footer {
 	padding-bottom: 5em;
@@ -2462,7 +2462,7 @@ ul.similar {
 	margin: 0;
 	display: flex;
 	flex-wrap: wrap;
-    row-gap: 2rem;
+	row-gap: 2rem;
 	justify-content: flex-end;
 	flex-direction: row-reverse;
 }
@@ -2514,4 +2514,121 @@ li.relative-discount {
 
 .js.product-form__input.four-or-more {
 	justify-content: space-between;
+}
+@media only screen and (max-width: 750px) {
+	.product__media img,
+	.product__media-container img {
+		object-fit: cover !important;
+		object-position: top center !important;
+	}
+}
+@media screen and (max-width: 749px) {
+	.product-media-container {
+		/* Force a 4:5 ratio */
+		--aspect-ratio: 0.8 !important;
+		/* Optionally, cap the height so the gallery doesn’t dominate the view */
+		max-height: calc(100vh - 150px) !important;
+		border-width: 0.1px;
+		/* Remove the left/right padding inherited from .page-width */
+		width: 100%;
+	}
+	.product-media-container .media {
+		/* Recalculate the padding-top based on the new aspect ratio */
+		padding-top: calc(1 / var(--aspect-ratio) * 100%) !important;
+	}
+
+	/* If you're using the .constrain-height class, you might want to adjust its variables as well */
+	.product-media-container.constrain-height {
+		--viewport-offset: 150px !important;
+		--constrained-min-height: 200px !important;
+	}
+}
+@media screen and (max-width: 749px) {
+	.product__media-list {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 1px;
+		overflow-x: auto;
+		padding: 0 10%;
+		scroll-snap-type: x mandatory;
+	}
+	.product__media-item {
+		flex: 0 0 85%;
+		scroll-snap-align: center;
+		margin: 0;
+	}
+}
+@media screen and (max-width: 749px) {
+	.full-width-slider {
+		/* Optional: adjust vertical padding/margin if needed */
+	}
+}
+@media screen and (max-width: 749px) {
+	.full-width-slider {
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	.product__media-list {
+		/* Remove any scroll padding that might be causing extra space */
+		padding: 0 !important;
+	}
+	.page-width .full-width-slider {
+		position: relative;
+		width: 100vw !important;
+		left: 50% !important;
+		transform: translateX(-50%) !important;
+		margin-left: calc(-1 * ((100vw - 100%) / 2)) !important;
+		margin-right: calc(-1 * ((100vw - 100%) / 2)) !important;
+		padding: 0 !important;
+	}
+	.page-width .full-width-slider {
+		display: block !important;
+		width: 100vw !important;
+		position: relative !important;
+		left: 66% !important;
+		transform: translateX(-50%) !important;
+		margin-left: calc(-1 * ((100vw - 100%) / 2)) !important;
+		margin-right: calc(-1 * ((100vw - 100%) / 2)) !important;
+		padding: 0 !important;
+		box-sizing: border-box !important;
+	}
+	/* Attempt to break out of .page-width via absolute positioning */
+	.full-width-slider {
+		position: absolute !important;
+		left: 50% !important;
+		transform: translateX(-50%) !important;
+		width: 100vw !important;
+		top: 0; /* Adjust as needed */
+		padding: 0 !important;
+		margin: 0 !important;
+	}
+}
+@media screen and (max-width: 749px) {
+	/* Make the container full-width but keep it in the document flow */
+	.full-width-slider {
+		left: 50%;
+		transform: translateX(-50%);
+		margin: 0;
+		padding: 0;
+		overflow-x: hidden; /* Prevent horizontal scrollbar */
+	}
+
+	/* Configure the media list for proper centering */
+	.product__media-list {
+		display: flex;
+		gap: 0.5rem;
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+		padding: 0 10%; /* Equal padding on both sides */
+		-webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+	}
+
+	/* Size the items to allow for peek effect */
+	.product__media-item {
+		flex: 0 0 80%; /* Each slide takes 80% width, leaving 10% on each side */
+		scroll-snap-align: center; /* Snap to center, not start */
+		margin: 0;
+	}
 }
