@@ -78,8 +78,8 @@
             "link_text_direction": "Left To Right",
             "show_on_mobile": true,
             "small_font": false,
-            "title": "BACK IN STOCK",
-            "title_link": "shopify://collections/oasis-old-money"
+            "title": "WOMEN'S DAY",
+            "title_link": "shopify://collections/buy-450-pay-350"
           }
         },
         "4d0d7344-0f17-4600-86d8-3481f2a1c4a1": {
@@ -89,7 +89,7 @@
             "show_on_mobile": true,
             "order": "",
             "small_font": false,
-            "menu": "collection-menu-header-trending",
+            "menu": "collection-menu-header",
             "menu_second": "",
             "menu_third": "",
             "title": "קולקציות",
