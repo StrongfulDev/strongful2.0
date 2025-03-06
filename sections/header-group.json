@@ -33,12 +33,12 @@
           "settings": {
             "toggle_main_font": true,
             "toggle_sub_font": true,
-            "main_text": "BACK IN STOCK",
-            "sub_text": "OASIS OLD MONEY",
+            "main_text": "WOMEN'S DAY",
+            "sub_text": "BUY 450 PAY 350",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "ltr",
-            "link": "shopify://collections/oasis-old-money",
+            "link": "shopify://collections/buy-450-pay-350",
             "color_scheme": "inverse"
           }
         },
