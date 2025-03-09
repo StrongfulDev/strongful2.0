@@ -3,7 +3,7 @@
   We add a "Show Size Guide" button and an "X" to close.
 {% endcomment %}
 {{ section-main-product | asset_url | stylesheet_tag }}
-{% assign measurement_text = "<u>כיצד תמדדי את עצמך?</u><ol style='padding-left:20px; margin:0;'><br><li><u><strong>חזה</strong></u>: הנחי את סרט המדידה סביב החלק הרחב ביותר של חזה שלך בדיוק מתחת לזרועותיך.</li><br><li><u><strong>מותניים</strong></u>: מדדי סביב קו מותניים שלך בגובה הטבור.</li><br><li><u><strong>ירכיים</strong></u>: מדדי סביב החלק הרחב ביותר של הירכיים בחלקה העליון של הרגל.</li><br></ol>" %}
+{% assign measurement_text = "<u>כיצד תמדדי את עצמך?</u><ol style='padding-left:20px; margin:0;'><br><li><u><strong>חזה</strong></u>: הנחי את סרט המדידה סביב החלק הרחב ביותר של חזה שלך בדיוק מתחת לזרועותיך.</li><br><li><u><strong>מותניים</strong></u>: מדדי סביב קו מותניים שלך בגובה הטבור.</li><br><li><u><strong>ירכיים</strong></u>: מדדי סביב החלק הרחב ביותר של הירכיים בחלקה העליון של הרגל.</li><br><li><u><strong>אורך פנימי</strong></u>: מדדי את הרגל מצידה הפנימי מאיזור המשפעה ועד מטה.</li><br></ol>" %}
 <!-- Button to open the size guide modal -->
 <button id="open-size-guide" class="size-table-toggler" style="margin-bottom: 1rem;">
   {{ 'products.product.size_table' | t }}
@@ -503,6 +503,29 @@
             this.classList.add('active');
           });
         });
+
+        // Auto-select the tab based on product title
+        var productTitle = "{{ product.title }}";
+        var target = "";
+        if(productTitle.indexOf("אוברול") !== -1) {
+            target = "onesie-chart";
+        } else if(productTitle.indexOf("חזיית ספורט") !== -1 || productTitle.indexOf("טופ") !== -1) {
+            target = "shirt-chart";
+        } else if(productTitle.indexOf("טייץ") !== -1 || productTitle.indexOf("מכנס") !== -1 ||productTitle.indexOf("בייקר") !== -1) {
+            target = "pants-chart";
+        } else if(productTitle.indexOf("חולצה") !== -1 || productTitle.indexOf("ג׳קט") !== -1) {
+            target = "jacket-chart";
+        }
+
+        if(target){
+            hideAllCharts();
+            document.getElementById(target).style.display = 'block';
+            pills.forEach(function(pill){
+                if(pill.getAttribute("data-target") === target) {
+                    pill.classList.add("active");
+                }
+            });
+        }
       });
       </script>
     </div> <!-- end RTL container -->
