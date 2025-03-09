@@ -144,8 +144,8 @@
     "image_ratio": "adapt",
     "show_secondary_image": false,
     "seo_alt_text": "קולקציית בגדי ספורט עם גזרות ליום יום ואימונים",
-    "announcement_tag": "WholeStoreTag",
-    "custom_collection_announcement": "",
+    "announcement_tag": "buy450get350",
+    "custom_collection_announcement": "BUY 450 PAY 350",
     "members_only_announcement": "",
     "show_card_collection_announcement": false,
     "second_announcement_tag": "",
@@ -332,13 +332,6 @@
         "type": "shopify://apps/tellos-shoppable-video/blocks/tellos_script/a4490152-a6c6-410b-9721-736f5b95f2f2",
         "disabled": false,
         "settings": {}
-      },
-      "8776485610325655785": {
-        "type": "shopify://apps/hiko-social-login/blocks/hiko-auth/3832d7e1-5bcd-4b72-91da-236b57feef8f",
-        "disabled": true,
-        "settings": {
-          "social_font": "enable"
-        }
       },
       "16548475241908962911": {
         "type": "shopify://apps/oxi-social-login/blocks/social-login-embed/24ad60bc-8f09-42fa-807e-e5eda0fdae17",
