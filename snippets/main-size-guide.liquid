@@ -504,16 +504,16 @@
           });
         });
 
-        // Auto-select the tab based on product title
-        var productTitle = "{{ product.title }}";
+        // Auto-select the tab based on product type
+        var productType = "{{ product.type }}";
         var target = "";
-        if(productTitle.indexOf("אוברול") !== -1) {
+        if(productType.indexOf("אוברול") !== -1) {
             target = "onesie-chart";
-        } else if(productTitle.indexOf("חזיית ספורט") !== -1 || productTitle.indexOf("טופ") !== -1) {
+        } else if(productType.indexOf("חזיית ספורט") !== -1 || productType.indexOf("טופ") !== -1 || productType.indexOf("קרופ") !== -1) {
             target = "shirt-chart";
-        } else if(productTitle.indexOf("טייץ") !== -1 || productTitle.indexOf("מכנס") !== -1 ||productTitle.indexOf("בייקר") !== -1) {
+        } else if(productType.indexOf("טייץ") !== -1 || productType.indexOf("מכנס") !== -1 || productType.indexOf("בייקר") !== -1) {
             target = "pants-chart";
-        } else if(productTitle.indexOf("חולצה") !== -1 || productTitle.indexOf("ג׳קט") !== -1) {
+        } else if(productType.indexOf("חולצה") !== -1 || productType.indexOf("ג׳קט") !== -1) {
             target = "jacket-chart";
         }
 
