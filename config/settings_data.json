@@ -287,7 +287,7 @@
       "email-list": {
         "type": "email-list",
         "custom_css": [
-          ".input{font-size:14px !important;}"
+          ".form-group input {font-size: 14px !important;}"
         ],
         "settings": {
           "header_text": "30₪ מתנה עלינו",
