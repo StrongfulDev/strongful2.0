@@ -79,11 +79,19 @@
   .photo-desktop {
     display: none;
   }
-  /* Reorder mobile photo before form */
+  /* Reorder mobile photo before form and center the image */
   .photo-mobile {
     order: -1;
     display: block;
+    text-align: center;
     margin-bottom: 20px;
+  }
+  .photo-mobile img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
   }
 }
 
@@ -99,6 +107,7 @@
   margin-bottom: 1.5rem;
   font-size: 1rem;
   line-height: 1.4;
+  text-align: center;
 }
 
 .subscribe-form {
