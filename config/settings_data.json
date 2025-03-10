@@ -283,6 +283,14 @@
           "padding_top": 0,
           "padding_bottom": 0
         }
+      },
+      "email-list": {
+        "type": "email-list",
+        "settings": {
+          "photo": "shopify://shop_images/STRO3192_1.png",
+          "alt_text": "הרשמה למועדון הלקוחות",
+          "description": "מה שמים פה"
+        }
       }
     },
     "content_for_index": [],
