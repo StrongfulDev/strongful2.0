@@ -40,6 +40,11 @@
 </div>
 
 <style>
+/* Global box-sizing for predictable scaling */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 /* 1) Container & general layout */
 .container {
   width: 100%;
@@ -50,9 +55,11 @@
 
 @media (min-width: 769px) {
   .container {
+    /* Keep the desktop proportions fixed by preventing the container from shrinking */
     display: flex;
     gap: 20px;
-    flex-wrap: nowrap; /* Prevent wrapping so photo remains to the left */
+    flex-wrap: nowrap;
+    min-width: 1440px; /* Forces horizontal scroll if viewport is less than 1440px */
   }
   .photo-desktop {
     flex: 0 0 64.4%;
