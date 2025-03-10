@@ -39,6 +39,17 @@
   </div>
 </div>
 
+<style>
+/* Display the desktop photo only on larger screens */
+.photo-desktop { display: block; }
+.photo-mobile { display: none; }
+
+@media (max-width: 768px) {
+  .photo-desktop { display: none; }
+  .photo-mobile { display: block; }
+}
+</style>
+
 {% schema %}
 {
   "name": "Subscribe Section",
