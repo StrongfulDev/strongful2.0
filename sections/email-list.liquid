@@ -6,13 +6,6 @@
       <img src="{{ 'placeholder.jpg' | asset_url }}" alt="Placeholder">
     {% endif %}
   </div>
-  <div class="photo-mobile">
-    {% if section.settings.mobile_photo != blank %}
-      <img src="{{ section.settings.mobile_photo | img_url: 'original' }}" alt="{{ section.settings.alt_text }}">
-    {% else %}
-      <img src="{{ 'placeholder_mobile.jpg' | asset_url }}" alt="Placeholder Mobile">
-    {% endif %}
-  </div>
   <div class="form-section">
     {% if section.settings.description != blank %}
       <p>{{ section.settings.description }}</p>
@@ -37,14 +30,49 @@
       <button type="submit">Submit</button>
     </form>
   </div>
+  <div class="photo-mobile">
+    {% if section.settings.mobile_photo != blank %}
+      <img src="{{ section.settings.mobile_photo | img_url: 'original' }}" alt="{{ section.settings.alt_text }}">
+    {% else %}
+      <img src="{{ 'placeholder_mobile.jpg' | asset_url }}" alt="Placeholder Mobile">
+    {% endif %}
+  </div>
 </div>
 
 <style>
-/* Display the desktop photo only on larger screens */
-.photo-desktop { display: block; }
-.photo-mobile { display: none; }
+/* Set max container width on desktop */
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
 
+/* Desktop styling */
+@media (min-width: 769px) {
+  .container {
+    display: flex;
+    gap: 20px;
+  }
+  /* Desktop image takes 64.4% of 1440px */
+  .photo-desktop {
+    flex: 0 0 64.4%;
+  }
+  /* Form takes the rest (35.6%) */
+  .form-section {
+    flex: 0 0 35.6%;
+  }
+  /* Hide mobile image */
+  .photo-mobile {
+    display: none;
+  }
+}
+
+/* Mobile styling */
 @media (max-width: 768px) {
+  .container {
+    display: block;
+    padding: 20px;
+  }
+  /* On mobile, hide desktop image and show mobile image */
   .photo-desktop { display: none; }
   .photo-mobile { display: block; }
 }
