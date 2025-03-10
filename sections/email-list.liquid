@@ -1,9 +1,16 @@
 <div class="container">
-  <div class="photo">
+  <div class="photo-desktop">
     {% if section.settings.photo != blank %}
       <img src="{{ section.settings.photo | img_url: 'original' }}" alt="{{ section.settings.alt_text }}">
     {% else %}
       <img src="{{ 'placeholder.jpg' | asset_url }}" alt="Placeholder">
+    {% endif %}
+  </div>
+  <div class="photo-mobile">
+    {% if section.settings.mobile_photo != blank %}
+      <img src="{{ section.settings.mobile_photo | img_url: 'original' }}" alt="{{ section.settings.alt_text }}">
+    {% else %}
+      <img src="{{ 'placeholder_mobile.jpg' | asset_url }}" alt="Placeholder Mobile">
     {% endif %}
   </div>
   <div class="form-section">
@@ -39,7 +46,14 @@
     {
       "type": "image_picker",
       "id": "photo",
-      "label": "Photo"
+      "label": "Desktop Photo",
+      "info": "Uploads: Desktop image at 928×731."
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_photo",
+      "label": "Mobile Photo",
+      "info": "Uploads: Mobile image to be shown exclusively on mobile (392×392)."
     },
     {
       "type": "text",
