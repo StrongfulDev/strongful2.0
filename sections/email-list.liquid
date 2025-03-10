@@ -26,6 +26,9 @@
       <div class="form-group">
         <input type="date" id="birthday" name="birthday" placeholder="תאריך לידה*" required>
       </div>
+      <p class="form-agreement" style="text-align: center; font-size: 0.9rem; margin-bottom: 1rem;">
+        על ידי מילוי ושליחת הטופס אני מסכימ/ה לקבלת דיוור.
+      </p>
       <button type="submit" class="btn-submit">{{ section.settings.primary_button_text }}</button>
       <button type="submit" class="btn-submit secondary">{{ section.settings.secondary_button_text }}</button>
     </form>
@@ -65,12 +68,13 @@
     flex: 0 0 64.4%;
   }
   .form-section {
+
     direction: rtl;
     flex: 0 0 35.6%;
     display: flex;
     flex-direction: column;
     justify-content: center; /* Align form vertically */
-    padding: 40px 20px;
+    padding: 40px 40px;
   }
   .photo-mobile {
     display: none;
@@ -155,7 +159,9 @@ font-size: 14px !important;
 }
 
 .btn-submit.secondary {
-  background-color: #555;
+  background-color: #fff;
+  color: #000;
+  border: 0.1px solid rgb(122, 122, 122);
 }
 
 .btn-submit.secondary:hover {
