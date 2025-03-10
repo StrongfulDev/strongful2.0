@@ -15,13 +15,31 @@
     {% endif %}
     <form action="#" method="post" class="subscribe-form">
       <div class="form-group">
-        <input type="email" id="email" name="email" placeholder="דואר אלקטרוני*" required>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          placeholder="דואר אלקטרוני*" 
+          required 
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+          title="Enter a valid email address"
+          oninvalid="this.setCustomValidity('נא להכניס כתובת אימייל תקינה.')"
+          oninput="this.setCustomValidity('')">
       </div>
       <div class="form-group">
         <input type="text" id="fullname" name="fullname" placeholder="שם מלא*" required>
       </div>
       <div class="form-group">
-        <input type="tel" id="cell" name="cell" placeholder="טלפון נייד*" required>
+        <input 
+          type="tel" 
+          id="cell" 
+          name="cell" 
+          placeholder="טלפון נייד*" 
+          required 
+          pattern="^\+?[0-9\s\-]+$" 
+          title="Enter a valid phone number"
+          oninvalid="this.setCustomValidity('נא להכניס מספר טלפון תקין.')"
+          oninput="this.setCustomValidity('')">
       </div>
       <div class="form-group">
         <input type="date" id="birthday" name="birthday" placeholder="תאריך לידה*" required>
@@ -58,23 +76,29 @@
 
 @media (min-width: 769px) {
   .container {
-    /* Keep the desktop proportions fixed by preventing the container from shrinking */
     display: flex;
     gap: 20px;
-    flex-wrap: nowrap;
-    min-width: 1440px; /* Forces horizontal scroll if viewport is less than 1440px */
+    /* Removed flex-wrap to keep columns in one row */
   }
   .photo-desktop {
     flex: 0 0 64.4%;
+    max-width: 64.4%;
+    min-width: 300px; /* Ensure it doesn't collapse too small */
   }
   .form-section {
-
     direction: rtl;
     flex: 0 0 35.6%;
+    max-width: 35.6%;
+    min-width: 300px; /* Prevent the form from being squashed */
     display: flex;
     flex-direction: column;
     justify-content: center; /* Align form vertically */
-    padding: 40px 40px;
+    padding: 8vh;
+  }
+  .photo-desktop img {
+    display: block;
+    width: 100%; /* Let the image scale down with the container */
+    height: auto;
   }
   .photo-mobile {
     display: none;
