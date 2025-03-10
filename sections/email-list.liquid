@@ -7,6 +7,9 @@
     {% endif %}
   </div>
   <div class="form-section">
+    {% if section.settings.header_text != blank %}
+      <h4 class="form-header">{{ section.settings.header_text }}</h4>
+    {% endif %}
     {% if section.settings.description != blank %}
       <p class="form-description">{{ section.settings.description }}</p>
     {% endif %}
@@ -77,6 +80,13 @@
 }
 
 /* 2) Form & input styling */
+.form-header {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
 .form-description {
   margin-bottom: 1.5rem;
   font-size: 1rem; /* Adjust if you want a bigger or smaller text */
@@ -128,6 +138,12 @@
 {
   "name": "Subscribe Section",
   "settings": [
+    {
+      "type": "text",
+      "id": "header_text",
+      "label": "Header Text",
+      "default": "Subscribe Now"
+    },
     {
       "type": "image_picker",
       "id": "photo",
