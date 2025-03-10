@@ -286,6 +286,9 @@
       },
       "email-list": {
         "type": "email-list",
+        "custom_css": [
+          ".input{font-size:14px !important;}"
+        ],
         "settings": {
           "header_text": "30₪ מתנה עלינו",
           "description": "הצטרפי עכשיו לעדכוני הדיוור שלנו וקבלי ₪30 מתנה להזמנה הבאה שלך",
