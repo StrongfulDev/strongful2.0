@@ -288,10 +288,12 @@
         "type": "email-list",
         "settings": {
           "header_text": "30₪ מתנה עלינו",
+          "description": "הצטרפי עכשיו לעדכוני הדיוור שלנו וקבלי ₪30 מתנה להזמנה הבאה שלך",
           "photo": "shopify://shop_images/STRO3192_1.png",
           "mobile_photo": "shopify://shop_images/STRO3192_1_1.png",
           "alt_text": "30₪ מתנה עלינו",
-          "description": "הצטרפי עכשיו לעדכוני הדיוור שלנו וקבלי ₪30 מתנה להזמנה הבאה שלך"
+          "primary_button_text": "הצטרפי עכשיו וקבלי ₪30 מתנה",
+          "secondary_button_text": "לא תודה, אשלם מחיר מלא"
         }
       }
     },
