@@ -52,7 +52,7 @@
   .container {
     display: flex;
     gap: 20px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* Prevent wrapping so photo remains to the left */
   }
   .photo-desktop {
     flex: 0 0 64.4%;
@@ -114,7 +114,9 @@
   display: flex;
   flex-direction: column;
 }
-
+.input{
+font-size: 14px !important;
+}
 .form-group {
   margin-bottom: 1.2rem;
 }
