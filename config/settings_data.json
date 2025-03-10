@@ -288,6 +288,7 @@
         "type": "email-list",
         "settings": {
           "photo": "shopify://shop_images/STRO3192_1.png",
+          "mobile_photo": "shopify://shop_images/STRO3192_1_1.png",
           "alt_text": "הרשמה למועדון הלקוחות",
           "description": "מה שמים פה"
         }
