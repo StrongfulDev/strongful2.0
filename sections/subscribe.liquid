@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="photo">
+    {% if section.settings.photo != blank %}
+      <img src="{{ section.settings.photo | img_url: 'original' }}" alt="{{ section.settings.alt_text }}">
+    {% else %}
+      <img src="{{ 'placeholder.jpg' | asset_url }}" alt="Placeholder">
+    {% endif %}
+  </div>
+  <div class="form-section">
+    {% if section.settings.description != blank %}
+      <p>{{ section.settings.description }}</p>
+    {% endif %}
+    <form action="#" method="post">
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required>
+      </div>
+      <div class="form-group">
+        <label for="cell">Cell Number:</label>
+        <input type="tel" id="cell" name="cell" required>
+      </div>
+      <div class="form-group">
+        <label for="birthday">Birthday:</label>
+        <input type="date" id="birthday" name="birthday" required>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Subscribe Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "photo",
+      "label": "Photo"
+    },
+    {
+      "type": "text",
+      "id": "alt_text",
+      "label": "Photo Alt Text",
+      "default": "Placeholder Image"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description Text",
+      "default": "Some descriptive text goes here alongside the form."
+    }
+  ]
+}
+{% endschema %}
