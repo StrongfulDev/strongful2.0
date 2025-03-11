@@ -3,7 +3,7 @@
   We add a "Show Size Guide" button and an "X" to close.
 {% endcomment %}
 {{ section-main-product | asset_url | stylesheet_tag }}
-{% assign measurement_text = "<u>כיצד תמדדי את עצמך?</u><ol style='padding-left:20px; margin:0;'><br><li><u><strong>חזה</strong></u>: הנחי את סרט המדידה סביב החלק הרחב ביותר של חזה שלך בדיוק מתחת לזרועותיך.</li><br><li><u><strong>מותניים</strong></u>: מדדי סביב קו מותניים שלך בגובה הטבור.</li><br><li><u><strong>ירכיים</strong></u>: מדדי סביב החלק הרחב ביותר של הירכיים בחלקה העליון של הרגל.</li><br><li><u><strong>אורך פנימי</strong></u>: מדדי את הרגל מצידה הפנימי מאיזור המשפעה ועד מטה.</li><br></ol>" %}
+{% assign measurement_text = "<u>כיצד תמדדי את עצמך?</u><ol style='padding-left:20px; margin:0;'><br><li><strong>חזה</strong>: הנחי את סרט המדידה סביב החלק הרחב ביותר של חזה שלך בדיוק מתחת לזרועותיך.</li><br><li><strong>מותניים</strong>: מדדי סביב קו מותניים שלך בגובה הטבור.</li><br><li><strong>ירכיים</strong>: מדדי סביב החלק הרחב ביותר של הירכיים בחלקה העליון של הרגל.</li><br><li><strong>אורך פנימי</strong>: מדדי את הרגל מצידה הפנימי מאיזור המשפעה ועד מטה.</li><br></ol>" %}
 <!-- Button to open the size guide modal -->
 <button id="open-size-guide" class="size-table-toggler" style="margin-bottom: 1rem;">
   {{ 'products.product.size_table' | t }}
@@ -91,7 +91,6 @@
           padding: 10px 20px;
           margin: 5px;
           font-size: 12px;
-          font-weight: bold;
           font-family:'Arimo',sans-serif;
           color: #000;
           background-color: #fff;
@@ -130,22 +129,25 @@
             width: 100vw !important;
             overflow-y: auto;
             padding: 2em 0.5em 0.5em;  /* Increased top padding */
-            font-size: 14px; /* Base font size for modal content */
+            font-size: 16px; /* Increased base font size */
           }
           .size-switch {
-            font-size: 16px; /* Adjust pill font size */
-            padding: 0.4em 0.8em;
+            font-size: 18px; /* Bigger pill text */
+            padding: 0.5em 1em;
           }
           .size-chart table th,
           .size-chart table td {
-            font-size: 14px; /* Smaller table font */
-            padding: 0.3em;  /* Reduced table padding */
+            font-size: 16px; /* Increase table cell font size */
+            padding: 0.5em;  /* Adjust padding as needed */
           }
           h1 {
-            font-size: 20px; /* Adjust headline size */
+            font-size: 24px; /* Bigger headline */
           }
           .size-chart table {
             margin-top: 1em; /* Adjust as needed */
+          }
+          .measurement-info {
+            font-size: 0.85em; /* Smaller measurement text on mobile */
           }
         }
         size-measurement-info {
@@ -192,6 +194,87 @@
         .custom-switch input[type="checkbox"]:checked::before {
           transform: translateX(20px);
         }
+        /* Make table headers non-bold */
+        .size-chart table th {
+          font-weight: normal;
+        }
+        /* Prevent line breaks in every table cell */
+        .size-chart table th,
+        .size-chart table td {
+          white-space: nowrap;
+        }
+      
+        /* Allow the table to grow beyond its container */
+        .table-responsive table {
+          width: auto;
+          min-width: 100%;
+        }
+        /* Freeze the first column so it stays in view when scrolling horizontally */
+        .size-chart table th:first-child,
+        .size-chart table td:first-child {
+          position: sticky;
+          left: 0;
+          background: #fff; /* Ensure a solid background */
+          z-index: 2;
+        }
+
+        /* Optionally, if your header row should also be visible, make the header cells sticky */
+        .size-chart table thead th {
+          position: sticky;
+          top: 0;
+          background: #f5f5f5;
+          z-index: 3;
+        }
+        /* Ensure the scroll container is positioned */
+        .table-responsive {
+          position: relative;
+          width: 100%;
+          overflow-x: auto;
+        }
+        /* Force the table to be wider than the container to allow horizontal scroll */
+        .table-responsive table {
+          min-width: 800px; /* adjust as needed */
+          border-collapse: collapse;
+        }
+        /* Freeze the first column in header rows */
+        .size-chart table thead th:first-child {
+          position: sticky;
+          left: 0;
+          background: #f5f5f5;
+          z-index: 4; /* higher than other cells */
+        }
+        /* Freeze the first column in body rows */
+        .size-chart table tbody th:first-child,
+        .size-chart table tbody td:first-child {
+          position: sticky;
+          left: 0;
+          background: #fff;
+          z-index: 3;
+          /* Optionally, add a right border to visually separate the frozen column */
+          border-right: 1px solid #ddd;
+        }
+  
+        
+     
+        
+        /* Freeze the first column in header rows */
+        .size-chart table thead th:first-child {
+          position: sticky;
+          left: 0;
+          background: #f5f5f5;
+          z-index: 10; /* higher to appear above data cells */
+          border-right: 1px solid #ddd;
+        }
+        
+        /* Freeze the first column in body rows */
+        .size-chart table tbody th:first-child,
+        .size-chart table tbody td:first-child {
+          position: sticky;
+          left: 0;
+          background: #fff;
+          z-index: 5;
+          border-right: 1px solid #ddd;
+        }
       </style>
 
     <h2>טבלת מידות</h2>
@@ -216,72 +299,75 @@
   </div>
 
   <!-- Merged Size Table with toggle data -->
-  <table>
-    <thead>
-      <tr>
-        <th></th>
-        <th class="size-cell" data-us="XXS">XXS</th>
-        <th class="size-cell" data-us="XS">XS</th>
-        <th class="size-cell" data-us="S">S</th>
-        <th class="size-cell" data-us="M">M</th>
-        <th class="size-cell" data-us="L">L</th>
-        <th class="size-cell" data-us="XL">XL</th>
-        <th class="size-cell" data-us="XXL">XXL</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>היקף חזה</th>
-        <td>70-77</td>
-        <td>78-85</td>
-        <td>86-92</td>
-        <td>93-99</td>
-        <td>100-106</td>
-        <td>107-113</td>
-        <td>114-120</td>
-      </tr>
-      <tr>
-        <th>היקף חזה</th>
-        <td>A-C 65 D-E 60</td>
-        <td>A-C 70 D-E 65</td>
-        <td>A-C 75 D-E 70</td>
-        <td>A-C 80 D-E 75</td>
-        <td>A-C 85 D-E 80</td>
-        <td>A-C 90 D-E 85</td>
-        <td>A-C 95 D-E 90</td>
-      </tr>
-      <tr>
-        <th>מידת מכנסיים</th>
-        <td>30-32</td>
-        <td>32-34</td>
-        <td>36-38</td>
-        <td>38-40</td>
-        <td>42-44</td>
-        <td>44-46</td>
-        <td>46-48</td>
-      </tr>
-      <tr>
-        <th>היקף מותן</th>
-        <td>58-62</td>
-        <td>63-67</td>
-        <td>68-72</td>
-        <td>73-77</td>
-        <td>78-82</td>
-        <td>83-87</td>
-        <td>88-92</td>
-      </tr>
-      <tr>
-        <th>היקף יריכיים</th>
-        <td>78-85</td>
-        <td>84-91</td>
-        <td>87-94</td>
-        <td>96-102</td>
-        <td>102-109</td>
-        <td>110-117</td>
-        <td>118-125</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="table-responsive">
+
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th class="size-cell" data-us="XXS">XXS</th>
+          <th class="size-cell" data-us="XS">XS</th>
+          <th class="size-cell" data-us="S">S</th>
+          <th class="size-cell" data-us="M">M</th>
+          <th class="size-cell" data-us="L">L</th>
+          <th class="size-cell" data-us="XL">XL</th>
+          <th class="size-cell" data-us="XXL">XXL</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>היקף חזה</th>
+          <td>70-77</td>
+          <td>78-85</td>
+          <td>86-92</td>
+          <td>93-99</td>
+          <td>100-106</td>
+          <td>107-113</td>
+          <td>114-120</td>
+        </tr>
+        <tr>
+          <th>מידת חזייה</th>
+          <td>A-C 65<br>D-E 60</td>
+          <td>A-C 70<br>D-E 65</td>
+          <td>A-C 75<br>D-E 70</td>
+          <td>A-C 80<br>D-E 75</td>
+          <td>A-C 85<br>D-E 80</td>
+          <td>A-C 90<br>D-E 85</td>
+          <td>A-C 95<br>D-E 90</td>
+        </tr>
+        <tr>
+          <th>מידת מכנסיים</th>
+          <td>30-32</td>
+          <td>32-34</td>
+          <td>36-38</td>
+          <td>38-40</td>
+          <td>42-44</td>
+          <td>44-46</td>
+          <td>46-48</td>
+        </tr>
+        <tr>
+          <th>היקף מותן</th>
+          <td>58-62</td>
+          <td>63-67</td>
+          <td>68-72</td>
+          <td>73-77</td>
+          <td>78-82</td>
+          <td>83-87</td>
+          <td>88-92</td>
+        </tr>
+        <tr>
+          <th>היקף יריכיים</th>
+          <td>78-85</td>
+          <td>84-91</td>
+          <td>87-94</td>
+          <td>96-102</td>
+          <td>102-109</td>
+          <td>110-117</td>
+          <td>118-125</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
   {% if product.metafields.custom.inseam and product.title contains 'אוברול' %}
     {% assign inseam = product.metafields.custom.inseam %}
@@ -313,45 +399,48 @@
   </div>
   
   <!-- Merged Shirt Table with toggle data -->
-  <table>
-    <thead>
-      <tr>
-        <th></th>
-        <th class="size-cell" data-us="XXS">XXS</th>
-        <th class="size-cell" data-us="XS">XS</th>
-        <th class="size-cell" data-us="S">S</th>
-        <th class="size-cell" data-us="M">M</th>
-        <th class="size-cell" data-us="L">L</th>
-        <th class="size-cell" data-us="XL">XL</th>
-        <th class="size-cell" data-us="XXL">XXL</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>היקף חזה</th>
-        <td>67–73</td>
-        <td>74–83</td>
-        <td>84–92</td>
-        <td>90–96</td>
-        <td>95–102</td>
-        <td>100–107</td>
-        <td>105–112</td>
-      </tr>
-      <tr>
-        <th>מידת חזייה</th>
-        <td>A-C 65 / D-E 60</td>
-        <td>A-C 70 / D-E 65</td>
-        <td>A-C 75 / D-E 70</td>
-        <td>A-C 80 / D-E 75</td>
-        <td>A-C 85 / D-E 80</td>
-        <td>A-C 90 / D-E 85</td>
-        <td>A-C 95 / D-E 90</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="table-responsive">
 
-  <p class="measurement-info">{{ measurement_text }}</p>
-</div>
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th class="size-cell" data-us="XXS">XXS</th>
+          <th class="size-cell" data-us="XS">XS</th>
+          <th class="size-cell" data-us="S">S</th>
+          <th class="size-cell" data-us="M">M</th>
+          <th class="size-cell" data-us="L">L</th>
+          <th class="size-cell" data-us="XL">XL</th>
+          <th class="size-cell" data-us="XXL">XXL</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>היקף חזה</th>
+          <td>67–73</td>
+          <td>74–83</td>
+          <td>84–92</td>
+          <td>90–96</td>
+          <td>95–102</td>
+          <td>100–107</td>
+          <td>105–112</td>
+        </tr>
+        <tr>
+          <th>מידת חזייה</th>
+          <td>A-C 65<br>D-E 60</td>
+          <td>A-C 70<br>D-E 65</td>
+          <td>A-C 75<br>D-E 70</td>
+          <td>A-C 80<br>D-E 75</td>
+          <td>A-C 85<br>D-E 80</td>
+          <td>A-C 90<br>D-E 85</td>
+          <td>A-C 95<br>D-E 90</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+    
+    <p class="measurement-info">{{ measurement_text }}</p>
+  </div>
 <div id="pants-chart" class="size-chart">
   <div class="size-toggle-container">
     <!-- Custom Switch -->
@@ -362,53 +451,56 @@
   </div>
   
   <!-- Updated Pants Table with toggle data -->
-  <table>
-    <thead>
-      <tr>
-        <th></th>
-        <th class="size-cell" data-us="XXS">XXS</th>
-        <th class="size-cell" data-us="XS">XS</th>
-        <th class="size-cell" data-us="S">S</th>
-        <th class="size-cell" data-us="M">M</th>
-        <th class="size-cell" data-us="L">L</th>
-        <th class="size-cell" data-us="XL">XL</th>
-        <th class="size-cell" data-us="XXL">XXL</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>מידת מכנסיים</th>
-        <td>30-32</td>
-        <td>32-34</td>
-        <td>36-38</td>
-        <td>38-40</td>
-        <td>42-44</td>
-        <td>44-46</td>
-        <td>46-48</td>
-      </tr>
-      <tr>
-        <th>היקף מותן</th>
-        <td>58-62</td>
-        <td>63-67</td>
-        <td>68-72</td>
-        <td>73-77</td>
-        <td>78-82</td>
-        <td>83-87</td>
-        <td>88-92</td>
-      </tr>
-      <tr>
-        <th>היקף יריכיים</th>
-        <td>78-85</td>
-        <td>84-91</td>
-        <td>87-94</td>
-        <td>96-102</td>
-        <td>102-109</td>
-        <td>110-117</td>
-        <td>118-125</td>
-      </tr>
-    </tbody>
-  </table>
-  
+  <div class="table-responsive">
+
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th class="size-cell" data-us="XXS">XXS</th>
+          <th class="size-cell" data-us="XS">XS</th>
+          <th class="size-cell" data-us="S">S</th>
+          <th class="size-cell" data-us="M">M</th>
+          <th class="size-cell" data-us="L">L</th>
+          <th class="size-cell" data-us="XL">XL</th>
+          <th class="size-cell" data-us="XXL">XXL</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>מידת מכנסיים</th>
+          <td>30-32</td>
+          <td>32-34</td>
+          <td>36-38</td>
+          <td>38-40</td>
+          <td>42-44</td>
+          <td>44-46</td>
+          <td>46-48</td>
+        </tr>
+        <tr>
+          <th>היקף מותן</th>
+          <td>58-62</td>
+          <td>63-67</td>
+          <td>68-72</td>
+          <td>73-77</td>
+          <td>78-82</td>
+          <td>83-87</td>
+          <td>88-92</td>
+        </tr>
+        <tr>
+          <th>היקף יריכיים</th>
+          <td>78-85</td>
+          <td>84-91</td>
+          <td>87-94</td>
+          <td>96-102</td>
+          <td>102-109</td>
+          <td>110-117</td>
+          <td>118-125</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+    
   {% if product.metafields.custom.inseam %}
     {% assign inseam = product.metafields.custom.inseam %}
     {% if product.title contains 'טייץ' or product.title contains 'בייקר' %}
@@ -441,45 +533,48 @@
   </div>
   
   <!-- Merged Jacket Table with toggle data -->
-  <table>
-    <thead>
-      <tr>
-        <th></th>
-        <th class="size-cell" data-us="XXS">XXS</th>
-        <th class="size-cell" data-us="XS">XS</th>
-        <th class="size-cell" data-us="S">S</th>
-        <th class="size-cell" data-us="M">M</th>
-        <th class="size-cell" data-us="L">L</th>
-        <th class="size-cell" data-us="XL">XL</th>
-        <th class="size-cell" data-us="XXL">XXL</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>היקף חזה</th>
-        <td>76–82</td>
-        <td>82–88</td>
-        <td>88–94</td>
-        <td>94–100</td>
-        <td>100–106</td>
-        <td>106–112</td>
-        <td>112–118</td>
-      </tr>
-      <tr>
-        <th>מותן</th>
-        <td>60–65</td>
-        <td>65–70</td>
-        <td>70–75</td>
-        <td>75–80</td>
-        <td>80–85</td>
-        <td>85–90</td>
-        <td>90–95</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="table-responsive">
 
-  <p class="measurement-info">{{ measurement_text }}</p>
-</div>
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th class="size-cell" data-us="XXS">XXS</th>
+          <th class="size-cell" data-us="XS">XS</th>
+          <th class="size-cell" data-us="S">S</th>
+          <th class="size-cell" data-us="M">M</th>
+          <th class="size-cell" data-us="L">L</th>
+          <th class="size-cell" data-us="XL">XL</th>
+          <th class="size-cell" data-us="XXL">XXL</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>היקף חזה</th>
+          <td>76–82</td>
+          <td>82–88</td>
+          <td>88–94</td>
+          <td>94–100</td>
+          <td>100–106</td>
+          <td>106–112</td>
+          <td>112–118</td>
+        </tr>
+        <tr>
+          <th>מותן</th>
+          <td>60–65</td>
+          <td>65–70</td>
+          <td>70–75</td>
+          <td>75–80</td>
+          <td>80–85</td>
+          <td>85–90</td>
+          <td>90–95</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+    
+    <p class="measurement-info">{{ measurement_text }}</p>
+  </div>
       <script>
       document.addEventListener('DOMContentLoaded', function(){
         // Pill logic as before
