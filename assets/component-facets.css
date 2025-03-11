@@ -15,7 +15,7 @@
 
 @media screen and (min-width: 750px) {
   .facets-container > * + * {
-    margin-top: 0;
+    margin-top: 60px;
   }
 
   .facets__form .product-count {
@@ -1820,8 +1820,8 @@ summary .icon-caret {
   height: 70px;
   background-color: #fff;
   width: 107%;
-  left: 0;
-  right: 0;
+  left: 50%;
+  /* right: 0; */
   margin: 0 auto;
   padding: 1rem 0;
   /* border-bottom: 1px solid rgba(var(--color-foreground), 0.08); */
