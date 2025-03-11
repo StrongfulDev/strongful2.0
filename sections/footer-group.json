@@ -102,6 +102,9 @@
         "d25d823f-febf-433c-8835-5fe8d374bd70",
         "9210bee3-7850-4663-87e4-563005517c1a"
       ],
+      "custom_css": [
+        ".footer {margin-top: -3rem;}"
+      ],
       "settings": {
         "color_scheme": "background-1",
         "newsletter_enable": false,
