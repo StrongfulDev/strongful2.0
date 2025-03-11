@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="photo">
+  <div class="photo-desktop">
     {% if section.settings.photo != blank %}
       <img src="{{ section.settings.photo | img_url: 'original' }}" alt="{{ section.settings.alt_text }}">
     {% else %}
@@ -7,39 +7,219 @@
     {% endif %}
   </div>
   <div class="form-section">
-    {% if section.settings.description != blank %}
-      <p>{{ section.settings.description }}</p>
+    {% if section.settings.header_text != blank %}
+      <h4 class="form-header">{{ section.settings.header_text }}</h4>
     {% endif %}
-    <form action="#" method="post">
+    {% if section.settings.description != blank %}
+      <p class="form-description">{{ section.settings.description }}</p>
+    {% endif %}
+    <form action="#" method="post" class="subscribe-form">
       <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          placeholder="דואר אלקטרוני*" 
+          required 
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+          title="Enter a valid email address"
+          oninvalid="this.setCustomValidity('נא להכניס כתובת אימייל תקינה.')"
+          oninput="this.setCustomValidity('')">
       </div>
       <div class="form-group">
-        <label for="fullname">Full Name:</label>
-        <input type="text" id="fullname" name="fullname" required>
+        <input type="text" id="fullname" name="fullname" placeholder="שם מלא*" required>
       </div>
       <div class="form-group">
-        <label for="cell">Cell Number:</label>
-        <input type="tel" id="cell" name="cell" required>
+        <input 
+          type="tel" 
+          id="cell" 
+          name="cell" 
+          placeholder="טלפון נייד*" 
+          required 
+          pattern="^\+?[0-9\s\-]+$" 
+          title="Enter a valid phone number"
+          oninvalid="this.setCustomValidity('נא להכניס מספר טלפון תקין.')"
+          oninput="this.setCustomValidity('')">
       </div>
       <div class="form-group">
-        <label for="birthday">Birthday:</label>
-        <input type="date" id="birthday" name="birthday" required>
+        <input type="date" id="birthday" name="birthday" placeholder="תאריך לידה*" required>
       </div>
-      <button type="submit">Submit</button>
+      <p class="form-agreement" style="text-align: center; font-size: 0.9rem; margin-bottom: 1rem;">
+        על ידי מילוי ושליחת הטופס אני מסכימ/ה לקבלת דיוור.
+      </p>
+      <button type="submit" class="btn-submit">{{ section.settings.primary_button_text }}</button>
+      <button type="submit" class="btn-submit secondary">{{ section.settings.secondary_button_text }}</button>
     </form>
   </div>
+  <div class="photo-mobile">
+    {% if section.settings.mobile_photo != blank %}
+      <img src="{{ section.settings.mobile_photo | img_url: 'original' }}" alt="{{ section.settings.alt_text }}">
+    {% else %}
+      <img src="{{ 'placeholder_mobile.jpg' | asset_url }}" alt="Placeholder Mobile">
+    {% endif %}
+  </div>
 </div>
+
+<style>
+/* Global box-sizing for predictable scaling */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 1) Container & general layout */
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+@media (min-width: 769px) {
+  .container {
+    display: flex;
+    gap: 20px;
+    /* Removed flex-wrap to keep columns in one row */
+  }
+  .photo-desktop {
+    flex: 0 0 64.4%;
+    max-width: 64.4%;
+    min-width: 300px; /* Ensure it doesn't collapse too small */
+  }
+  .form-section {
+    direction: rtl;
+    flex: 0 0 35.6%;
+    max-width: 35.6%;
+    min-width: 300px; /* Prevent the form from being squashed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Align form vertically */
+    padding: 8vh;
+  }
+  .photo-desktop img {
+    display: block;
+    width: 100%; /* Let the image scale down with the container */
+    height: auto;
+  }
+  .photo-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  .photo-desktop {
+    display: none;
+  }
+  /* Reorder mobile photo before form and center the image */
+  .photo-mobile {
+    order: -1;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .photo-mobile img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+/* 2) Form & input styling */
+.form-header {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.form-description {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+}
+.input{
+font-size: 14px !important;
+}
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  direction: rtl;
+}
+
+/* 3) Button styling */
+.btn-submit {
+  padding: 0.8rem 1.2rem;
+  background-color: #000; /* Use brand color if you have one */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease-in-out;
+  margin-top: 1rem;
+}
+
+.btn-submit:hover {
+  background-color: #333;
+}
+
+.btn-submit.secondary {
+  background-color: #fff;
+  color: #000;
+  border: 0.1px solid rgb(122, 122, 122);
+}
+
+.btn-submit.secondary:hover {
+  background-color: #777;
+}
+</style>
 
 {% schema %}
 {
   "name": "Subscribe Section",
   "settings": [
     {
+      "type": "text",
+      "id": "header_text",
+      "label": "Header Text",
+      "default": "Subscribe Now"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description Text",
+      "default": "Some descriptive text goes here alongside the form."
+    },
+    {
       "type": "image_picker",
       "id": "photo",
-      "label": "Photo"
+      "label": "Desktop Photo",
+      "info": "Uploads: Desktop image at 928×731."
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_photo",
+      "label": "Mobile Photo",
+      "info": "Uploads: Mobile image to be shown exclusively on mobile (392×392)."
     },
     {
       "type": "text",
@@ -48,10 +228,16 @@
       "default": "Placeholder Image"
     },
     {
-      "type": "textarea",
-      "id": "description",
-      "label": "Description Text",
-      "default": "Some descriptive text goes here alongside the form."
+      "type": "text",
+      "id": "primary_button_text",
+      "label": "Primary Button Text",
+      "default": "Submit"
+    },
+    {
+      "type": "text",
+      "id": "secondary_button_text",
+      "label": "Secondary Button Text",
+      "default": "Submit"
     }
   ]
 }
