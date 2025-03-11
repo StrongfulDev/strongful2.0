@@ -283,6 +283,21 @@
           "padding_top": 0,
           "padding_bottom": 0
         }
+      },
+      "email-list": {
+        "type": "email-list",
+        "custom_css": [
+          ".form-group input {font-size: 12px !important;}"
+        ],
+        "settings": {
+          "header_text": "30₪ מתנה עלינו",
+          "description": "הצטרפי עכשיו לעדכוני הדיוור שלנו וקבלי ₪30 מתנה להזמנה הבאה שלך",
+          "photo": "shopify://shop_images/STRO3192_1_2f2b7bd9-66e8-4255-8220-a50c8f4360a2.png",
+          "mobile_photo": "shopify://shop_images/STRO3192_1_1_ab4bcd03-96e8-4bbf-a74c-bc3999993ee9.png",
+          "alt_text": "30₪ מתנה עלינו",
+          "primary_button_text": "הצטרפי עכשיו וקבלי 30₪ מתנה",
+          "secondary_button_text": "לא תודה, אשלם מחיר מלא"
+        }
       }
     },
     "content_for_index": [],
