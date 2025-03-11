@@ -275,6 +275,30 @@
           z-index: 5;
           border-right: 1px solid #ddd;
         }
+
+        /* Mobile-only sticky headers and first column */
+        @media screen and (max-width: 749px) {
+          .size-chart table thead th {
+            position: sticky;
+            top: 0;
+            background: #f5f5f5;
+            z-index: 3;
+            /* Add an inset box-shadow to mask the right edge */
+            box-shadow: inset -8px 0 8px -8px #f5f5f5;
+          }
+
+          .size-chart table th:first-child,
+          .size-chart table td:first-child {
+            position: sticky;
+            right: 0;
+            background: #fff;
+            z-index: 2;
+            border-right: 1px solid #ddd;
+            
+            /* Optionally, also add a matching inset shadow */
+            box-shadow: inset -8px 0 8px -8px #fff;
+          }
+        }
       </style>
 
     <h2>טבלת מידות</h2>
