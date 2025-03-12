@@ -79,6 +79,7 @@
         }
         .size-chart th {
           background-color: #f5f5f5;
+
         }
         .note {
           margin-top: 1em;
@@ -205,10 +206,10 @@
         }
       
         /* Allow the table to grow beyond its container */
-        .table-responsive table {
+        {% comment %} .table-responsive table {
           width: auto;
           min-width: 100%;
-        }
+        } {% endcomment %}
         /* Freeze the first column so it stays in view when scrolling horizontally */
         .size-chart table th:first-child,
         .size-chart table td:first-child {
@@ -229,11 +230,11 @@
         .table-responsive {
           position: relative;
           width: 100%;
-          overflow-x: auto;
+          {% comment %} overflow-x: auto; {% endcomment %}
         }
         /* Force the table to be wider than the container to allow horizontal scroll */
         .table-responsive table {
-          min-width: 800px; /* adjust as needed */
+          {% comment %} min-width: 800px; /* adjust as needed */ {% endcomment %}
           border-collapse: collapse;
         }
         /* Freeze the first column in header rows */
@@ -253,8 +254,15 @@
           /* Optionally, add a right border to visually separate the frozen column */
           border-right: 1px solid #ddd;
         }
-  
-        
+        .size-chart table tbody th:first-child, .size-chart table tbody td:first-child{
+       padding:0;
+       padding-right:0;
+        }
+          .size-chart table th,
+        .size-chart table td {
+          white-space: nowrap;
+        }
+      
      
         
         /* Freeze the first column in header rows */
@@ -295,11 +303,124 @@
             z-index: 2;
             border-right: 1px solid #ddd;
             
+            
             /* Optionally, also add a matching inset shadow */
             box-shadow: inset -8px 0 8px -8px #fff;
           }
         }
+        .table-responsive {
+          position: relative;
+          width: 100%;
+          {% comment %} margin: 1em; /* added margins */ {% endcomment %}
+        }
+        @media screen and (max-width: 749px) {
+          .table-responsive {
+            overflow-x: auto; /* horizontal scroll only on mobile */
+          }
+        }
+
+        /* Ensure overall table text sizing is consistent */
+        .size-chart table th,
+        .size-chart table td {
+          font-size: 12px;
+        }
+        .size-cell {
+          font-size: 12px; /* make text for size labels a bit smaller */
+        }
+        @media screen and (max-width: 749px) {
+          .table-responsive {
+            overflow-x: auto; /* horizontal scroll on mobile */
+            direction: rtl;  /* ensure RTL scrolling */
+          }
+          /* Make header cells sticky on the right */
+          .size-chart table thead th {
+            position: sticky;
+            right: 0;        /* stick on the right */
+            top: 0;
+            background: #f5f5f5;
+            z-index: 10;     /* higher than content cells */
+            box-shadow: inset 8px 0 8px -8px #f5f5f5;
+          }
+          /* For the first column cells (if needed) – adjust to ensure they slide under the sticky header */
+          .size-chart table th:first-child,
+          .size-chart table td:first-child {
+            position: sticky;
+            right: 0;
+            background: #fff;
+            z-index: 5;
+            border-left: 1px solid #ddd; /* change border side for RTL */
+            /* optionally, remove box-shadow for these cells */
+          }
+          /* Ensure non-sticky cells have a lower z-index so they slide underneath */
+          .size-chart table td {
+            z-index: 1;
+          }
+        }
       </style>
+      <style>
+  @media screen and (max-width: 749px) {
+    /* Increase cell padding and font-size for better readability */
+    .size-chart table th,
+    .size-chart table td {
+      padding: 0.75em; /* increased padding */
+      font-size: 14px;  /* increased font size */
+    }
+
+    /* Optional: Adjust the header sizes if needed */
+    .size-chart table thead th {
+      font-size: 16px;
+    }
+  }
+</style>
+<style>
+  @media screen and (max-width: 749px) {
+    .table-responsive table {
+      min-width: 800px; /* adjust the width as needed */
+    }
+  }
+</style>
+<style>
+  @media screen and (max-width: 749px) {
+    /* Ensure the table shows left/right borders */
+    .table-responsive table {
+      min-width: 800px; /* adjust as needed */
+      border-left: 1px solid #ddd;
+      border-right: 1px solid #ddd;
+    }
+    
+    /* Sticky header cells on the right with a right border */
+    .size-chart table thead th {
+      position: sticky;
+      right: 0;
+      top: 0;
+      background: #f5f5f5;
+      z-index: 20;
+      box-shadow: inset 8px 0 8px -8px #f5f5f5;
+      border-right: 1px solid #ddd;
+    }
+    
+    /* For the first header cell, raise the z-index further */
+    .size-chart table thead th:first-child {
+      z-index: 21;
+    }
+    
+    /* Sticky first column cells in body rows with a left border */
+    .size-chart table th:first-child,
+    .size-chart table td:first-child {
+      position: sticky;
+      right: 0;
+      background: #fff;
+      z-index: 15;
+      border-left: 1px solid #ddd;
+    }
+    
+    /* Other table cells should slide underneath */
+    .size-chart table td {
+      position: relative; /* enable z-index */
+      z-index: 1;
+    }
+  }
+</style>
 
     <h2>טבלת מידות</h2>
 
@@ -380,7 +501,7 @@
           <td>88-92</td>
         </tr>
         <tr>
-          <th>היקף יריכיים</th>
+          <th>היקף ירכיים</th>
           <td>78-85</td>
           <td>84-91</td>
           <td>87-94</td>
@@ -512,7 +633,7 @@
           <td>88-92</td>
         </tr>
         <tr>
-          <th>היקף יריכיים</th>
+          <th>היקף ירכיים</th>
           <td>78-85</td>
           <td>84-91</td>
           <td>87-94</td>
