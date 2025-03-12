@@ -30,6 +30,7 @@
           transform: translateX(100%);
           transition: transform 0.1s ease-out;
         }
+        
         .size-guide-modal.open {
           transform: translateX(0);
         }
@@ -205,17 +206,18 @@
         }
       
         /* Allow the table to grow beyond its container */
-        {% comment %} .table-responsive table {
+ {% comment %} .table-responsive table {
           width: auto;
           min-width: 100%;
-        } {% endcomment %}
+        }  {% endcomment %}
         /* Freeze the first column so it stays in view when scrolling horizontally */
         .size-chart table th:first-child,
         .size-chart table td:first-child {
           position: sticky;
-          left: 0;
+          right: 0;
           background: #fff; /* Ensure a solid background */
-          z-index: 2;
+          z-index: 10;
+          border-left:1px solid #ddd
         }
 
         /* Optionally, if your header row should also be visible, make the header cells sticky */
@@ -223,25 +225,26 @@
           position: sticky;
           top: 0;
           background: #f5f5f5;
-          z-index: 3;
+          z-index: 6;
         }
         /* Ensure the scroll container is positioned */
         .table-responsive {
           position: relative;
           width: 100%;
-          {% comment %} overflow-x: auto; {% endcomment %}
+          overflow-x: auto;
         }
         /* Force the table to be wider than the container to allow horizontal scroll */
         .table-responsive table {
-          {% comment %} min-width: 800px; /* adjust as needed */ {% endcomment %}
+          min-width: 800px; /* adjust as needed */
           border-collapse: collapse;
         }
         /* Freeze the first column in header rows */
         .size-chart table thead th:first-child {
           position: sticky;
-          left: 0;
+          right : 0;
           background: #f5f5f5;
-          z-index: 4; /* higher than other cells */
+          z-index: 999; /* higher than other cells */
+          border-left: 1px solid #ddd;
         }
         /* Freeze the first column in body rows */
         .size-chart table tbody th:first-child,
@@ -249,7 +252,7 @@
           position: sticky;
           left: 0;
           background: #fff;
-          z-index: 3;
+          z-index:998;
           /* Optionally, add a right border to visually separate the frozen column */
           border-right: 1px solid #ddd;
         }
@@ -420,6 +423,55 @@
     }
   }
 </style>
+<style>
+  /* Ensure the sticky header cell always shows its right border */
+  .size-chart table thead th:first-child {
+    position: sticky;
+    left: 0;
+    background: #f5f5f5;
+    z-index: 10; /* adjust as needed */
+    /* Remove any existing border if necessary */
+    border-right: none;
+  }
+  .size-chart table thead th:first-child::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    background: #ddd;
+    z-index: 100; /* higher to ensure visibility */
+  }
+</style>
+<style>
+  .size-chart table thead th:first-child {
+    position: sticky;
+    left: 0;
+    background: #f5f5f5;
+    z-index: 1000; /* bump up the z-index */
+    border: none; /* remove default border */
+    overflow: visible; /* ensure pseudo-element isn’t clipped */
+  }
+  .size-chart table thead th:first-child::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    background: #ddd;
+    pointer-events: none;
+    z-index: 1001; /* higher than the header cell */
+  }
+</style>
+<style>
+  /* Set the font for the modal and all nested elements */
+  .size-guide-modal,
+  .size-guide-modal * {
+    font-family: 'Arimo', sans-serif !important;
+  }
+</style>
 
     <h2>טבלת מידות</h2>
 
@@ -509,6 +561,7 @@
         </tr>
       </tbody>
     </table>
+  </div>
      {% if product.metafields.custom.inseam and product.title contains 'אוברול' %}
     {% assign inseam = product.metafields.custom.inseam %}
     <!-- Insertion for inseam information -->
@@ -527,7 +580,6 @@
   {% endif %}
 
   <p class="measurement-info">{{ measurement_text }}</p>
-  </div>
   
 </div>
 
