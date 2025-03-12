@@ -3,7 +3,7 @@
   We add a "Show Size Guide" button and an "X" to close.
 {% endcomment %}
 {{ section-main-product | asset_url | stylesheet_tag }}
-{% assign measurement_text = "<u>כיצד תמדדי את עצמך?</u><ol style='padding-left:20px; margin:0;'><br><li><strong>חזה</strong>: הנחי את סרט המדידה סביב החלק הרחב ביותר של חזה שלך בדיוק מתחת לזרועותיך.</li><br><li><strong>מותניים</strong>: מדדי סביב קו מותניים שלך בגובה הטבור.</li><br><li><strong>ירכיים</strong>: מדדי סביב החלק הרחב ביותר של הירכיים בחלקה העליון של הרגל.</li><br><li><strong>אורך פנימי</strong>: מדדי את הרגל מצידה הפנימי מאיזור המשפעה ועד מטה.</li><br></ol>" %}
+{% assign measurement_text = "<strong>כיצד תמדדי את עצמך?</strong><ol style='padding-left:20px; margin:0;'><br><li><strong>חזה</strong>: הנחי את סרט המדידה סביב החלק הרחב ביותר של חזה שלך בדיוק מתחת לזרועותיך.</li><br><li><strong>מותניים</strong>: מדדי סביב קו מותניים שלך בגובה הטבור.</li><br><li><strong>מכנסיים</strong>: ודאי שהסרט עוטף בצורה נאותה את האזור.</li><br><li><strong>היקף חזה</strong>: מדדי את ההיקף במרווח נוח.</li><br><li><strong>היקף ירכיים</strong>: מדדי את החלק הרחב ביותר בירכיים.</li><br></ol>" %}
 <!-- Button to open the size guide modal -->
 <button id="open-size-guide" class="size-table-toggler" style="margin-bottom: 1rem;">
   {{ 'products.product.size_table' | t }}
@@ -433,19 +433,17 @@
 
      
 
-      <!-- The 3 size-chart blocks as before -->
+  
+      <!-- Size-chart blocks -->
       <div id="onesie-chart" class="size-chart">
-  <div class="size-toggle-container">
-    <!-- Custom Switch -->
-    <div class="custom-switch">
-      <input type="checkbox" id="size-toggle-onesie" class="size-toggle">
-      <label for="size-toggle-onesie">EU/US</label>
-    </div>
-  </div>
-
-  <!-- Merged Size Table with toggle data -->
+        <div class="size-toggle-container">
+          <!-- Custom Switch (PRESERVED) -->
+          <div class="custom-switch">
+            <input type="checkbox" id="size-toggle-pants" class="size-toggle">
+            <label for="size-toggle-pants">EU/US</label>
+          </div>
+        </div>
   <div class="table-responsive">
-
     <table>
       <thead>
         <tr>
@@ -460,16 +458,6 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th>היקף חזה</th>
-          <td>70-77</td>
-          <td>78-85</td>
-          <td>86-92</td>
-          <td>93-99</td>
-          <td>100-106</td>
-          <td>107-113</td>
-          <td>114-120</td>
-        </tr>
         <tr>
           <th>מידת חזייה</th>
           <td>A-C 65<br>D-E 60</td>
@@ -489,6 +477,16 @@
           <td>42-44</td>
           <td>44-46</td>
           <td>46-48</td>
+        </tr>
+        <tr>
+          <th>היקף חזה</th>
+          <td>70-77</td>
+          <td>78-85</td>
+          <td>86-92</td>
+          <td>93-99</td>
+          <td>100-106</td>
+          <td>107-113</td>
+          <td>114-120</td>
         </tr>
         <tr>
           <th>היקף מותן</th>
@@ -512,9 +510,7 @@
         </tr>
       </tbody>
     </table>
-  </div>
-
-  {% if product.metafields.custom.inseam and product.title contains 'אוברול' %}
+     {% if product.metafields.custom.inseam and product.title contains 'אוברול' %}
     {% assign inseam = product.metafields.custom.inseam %}
     <!-- Insertion for inseam information -->
     <div class="inseam-info" style="margin-top: 1rem;">
@@ -532,7 +528,10 @@
   {% endif %}
 
   <p class="measurement-info">{{ measurement_text }}</p>
+  </div>
+  
 </div>
+
 
       <div id="shirt-chart" class="size-chart">
   <div class="size-toggle-container">
