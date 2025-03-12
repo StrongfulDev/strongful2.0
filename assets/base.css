@@ -4724,3 +4724,6 @@ span.snize-description,
 .snize-filter-variant-count{
 	display: none !important;
 }
+.snize-main-panel{
+	display: none !important;
+}
