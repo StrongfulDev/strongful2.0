@@ -1,4 +1,4 @@
-<div class="featured-two-box container" style="padding: 2rem 0; background-color: {{ section.settings.bg_color }};">
+<div class="featured-two-box container" style="padding: 2rem 0; background-color: {{ section.settings.bg_color }}; color: {{ section.settings.text_color }};">
   <div class="featured-two-box__info">
     {% if section.settings.title != blank %}
       <h4 class="featured-two-box__title">{{ section.settings.title }}</h4>
@@ -36,7 +36,7 @@
                aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: product.metafields.reviews.rating.value, rating_max: scale_max }}">
             <div class="stars-container">
               <div class="stars-outer">
-                <div class="stars-inner" style="width: {{ rating_percentage }}%; color: #ceb18f">
+                <div class="stars-inner" style="width: {{ rating_percentage }}%; color: {{ section.settings.star_color }};">
                   ★★★★★
                 </div>
               </div>
@@ -319,6 +319,18 @@
       "id": "bg_color",
       "label": "Background Color",
       "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "star_color",
+      "label": "Star Color",
+      "default": "#ceb18f"
     },
     {
       "type": "text",
