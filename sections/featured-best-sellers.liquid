@@ -205,23 +205,38 @@
       margin-bottom: 1rem;
       direction:rtl;
     }
+    {% if section.settings.mobile_display_mode == "vertical" %}
     .featured-two-box__products {
+      /* Use grid layout for vertical scrolling */
+      display: grid;
+      grid-template-columns: repeat({{ section.settings.mobile_columns }}, 1fr);
+      gap: 1rem;
+      overflow-x: visible;
+    }
+    .product-card {
+      margin-right: 0;
+    }
+    {% else %}
+    .featured-two-box__products {
+      /* Default: slide sideways */
       display: flex;
       flex-direction: row;
-      flex-wrap: nowrap;
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
+      gap: 0.5rem;
       width: 100%;
     }
     .product-card {
       flex: 0 0 auto;
       margin-right: 1rem;
     }
+    {% endif %}
+
     .featured-two-box__subheading-wrap {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-direction:column;
+      flex-direction: column;
     }
     .featured-two-box__cta {
       background: none;
@@ -229,12 +244,6 @@
       text-decoration: underline;
       padding: 0;
       margin-top: 0;
-    }
-    .featured-two-box__products {
-      gap: 0.5rem;
-    }
-    .product-card {
-      flex: 0 0 60%;
     }
   }
   .rating-star {
@@ -427,8 +436,31 @@
       "default": "Review text #5",
       "label": "Review Text for 5th product"
     },
-   
-  
+    {
+      "type": "select",
+      "id": "mobile_display_mode",
+      "label": "Mobile Display Mode",
+      "default": "horizontal",
+      "options": [
+        {
+          "value": "horizontal",
+          "label": "Horizontal Scroll"
+        },
+        {
+          "value": "vertical",
+          "label": "Vertical Grid"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "mobile_columns",
+      "label": "Mobile Columns",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "default": 2
+    }
   ],
   "presets": [
     {
