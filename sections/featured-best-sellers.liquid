@@ -43,9 +43,8 @@
             </div>
           </div>
         {%- endif -%}
-
-        <h3 class="product-card__title">{{ product.title }}</h3>
-
+          <script>console.log( product.vendor )</script>
+        <h3 class="product-card__title">{{ product.title }} - {{ product.vendor }}</h3>
         {% case forloop.index %}
           {% when 1 %}
             {% if section.settings.product_text1 != blank %}
@@ -254,6 +253,7 @@
   .product-card__title {
     text-align: right;
     font-size:16px;
+    direction:rtl;
   }
   .product-card .rating .stars-outer {
     width: 100%;
