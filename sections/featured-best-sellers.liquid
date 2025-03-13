@@ -75,16 +75,51 @@
 
 <style>
   .featured-two-box.container * {
-  font-family:'Arimo', sans-serif;
+    font-family:'Arimo', sans-serif;
   }
-@media (min-width: 750px) {
-  .featured-two-box.container {
-    display: flex;
-    flex-wrap: wrap;
+  
+  /* Desktop styles */
+  @media (min-width: 750px) {
+    .featured-two-box.container {
+      display: flex;
+      flex-wrap: nowrap; /* Prevent wrapping so both columns share the same fixed height */
+      align-items: stretch; /* Force children to fill the container’s height */
+      box-sizing: border-box;
+      padding-right: 8rem;
+    }
+  }
+  
+  /* Ensure both info and product areas fill the container height */
+  .featured-two-box__info,
+  .featured-two-box__products {
+    height: 100%;
+  }
+  
+  .featured-two-box__info {
+    flex: 0 0 30%;
+    padding-left: 8rem;
     box-sizing: border-box;
-    padding-right: 8rem;
   }
-}
+  
+  .featured-two-box__products {
+    flex: 0 0 70%;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    padding-right: 8rem;
+    box-sizing: border-box;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  
+  @media (min-width: 750px) {
+    .featured-two-box.container {
+      display: flex;
+      flex-wrap: wrap;
+      box-sizing: border-box;
+      padding-right: 8rem;
+    }
+  }
   .featured-two-box.wrap{
   align-items: flex-start;
   }
