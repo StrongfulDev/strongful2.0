@@ -75,7 +75,7 @@
 <style>
   /* Ensure global font */
   .featured-two-box.container * {
-    font-family:'Arimo', sans-serif;
+    font-family:'Arimo';
   }
   
   /* Desktop styles */
@@ -108,7 +108,6 @@
     display: flex;
     gap: 1rem;
     padding: 1rem;
-    padding-right: 8rem;
     box-sizing: border-box;
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -131,7 +130,6 @@
     display: flex;
     gap: 1rem;
     padding: 1rem;
-    padding-right: 8rem;
     box-sizing: border-box;
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -142,7 +140,9 @@
       display: flex;
       flex-wrap: wrap;
       box-sizing: border-box;
-      padding-right: 8rem;
+    }
+    .featured-two-box__products{
+    padding-right:8rem;
     }
   }
   .featured-two-box.wrap{
@@ -174,7 +174,6 @@
     display: flex;
     gap: 1rem;
     padding: 1rem;
-    padding-right:8rem;
     box-sizing: border-box;
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -205,6 +204,7 @@
       margin-bottom: 1rem;
       direction:rtl;
     }
+    /* Remove any right-padding for products on mobile */
     {% if section.settings.mobile_display_mode == "vertical" %}
     .featured-two-box__products {
       /* Use grid layout for vertical scrolling */
