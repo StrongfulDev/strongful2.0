@@ -1,7 +1,7 @@
 <div class="featured-two-box container" style="padding: 2rem 0;  background-color: {{ section.settings.bg_color }}; color: {{ section.settings.text_color }};">
   <div class="featured-two-box__info">
     {% if section.settings.title != blank %}
-      <h4 class="featured-two-box__title" style="text-align: {{ section.settings.title_alignment }}; direction: {{ section.settings.text_direction }};">
+      <h4 class="featured-two-box__title mobile-dir">
         {{ section.settings.title }}
       </h4>
     {% endif %}
@@ -344,6 +344,35 @@
       text-decoration: underline;
       padding: 0;
       margin-top: 0;
+    }
+  }
+
+  /* Mobile text direction override for title */
+  @media (max-width: 750px) {
+    .mobile-dir {
+      direction: {{ section.settings.text_direction }};
+    }
+  }
+  
+  @media (min-width: 750px) {
+    .mobile-dir {
+      direction: ltr;
+    }
+  }
+
+  /* Mobile: use selected title alignment and text direction */
+  @media (max-width: 750px) {
+    .featured-two-box__title {
+      text-align: {{ section.settings.title_alignment }};
+      direction: {{ section.settings.text_direction }};
+    }
+  }
+  
+  /* Desktop: force title to left alignment and LTR direction */
+  @media (min-width: 750px) {
+    .featured-two-box__title {
+      text-align: left !important;
+      direction: ltr !important;
     }
   }
 </style>
