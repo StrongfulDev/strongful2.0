@@ -197,7 +197,7 @@
       "type": "featured-best-sellers",
       "settings": {
         "title": "TOP RATED PICKS",
-        "subheading": "The review are in",
+        "subheading": "",
         "cta_text": "SHOP TOP RATED",
         "cta_link": "shopify://collections/best-seller-internal-use",
         "collection": "best-seller-internal-use",
@@ -210,17 +210,6 @@
     },
     "17388407748dd9c850": {
       "type": "apps",
-      "blocks": {
-        "tolstoy_shoppable_video_ugc_carousel_block_jtc3eF": {
-          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
-          "settings": {
-            "publishId": "ufk05gnngm5qi"
-          }
-        }
-      },
-      "block_order": [
-        "tolstoy_shoppable_video_ugc_carousel_block_jtc3eF"
-      ],
       "settings": {
         "include_margins": true
       }

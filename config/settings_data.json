@@ -320,11 +320,6 @@
         "disabled": false,
         "settings": {}
       },
-      "4705145147225299685": {
-        "type": "shopify://apps/tolstoy-shoppable-video-ugc/blocks/widget-block/06fa8282-42ff-403e-b67c-1936776aed11",
-        "disabled": false,
-        "settings": {}
-      },
       "11791027836456060766": {
         "type": "shopify://apps/kesem/blocks/kesem-bot/f7671bb7-7cd7-4c3d-ab62-318d6faec87f",
         "disabled": true,
@@ -343,13 +338,6 @@
         "disabled": false,
         "settings": {
           "enabled_on_page": "all"
-        }
-      },
-      "8776485610325655785": {
-        "type": "shopify://apps/hiko-social-login/blocks/hiko-auth/3832d7e1-5bcd-4b72-91da-236b57feef8f",
-        "disabled": true,
-        "settings": {
-          "social_font": "enable"
         }
       }
     }
