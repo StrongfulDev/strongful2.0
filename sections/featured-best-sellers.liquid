@@ -1,4 +1,4 @@
-<div class="featured-two-box container" style="padding: 2rem 0; height: {% if section.settings.auto_height %}auto{% else %}{{ section.settings.section_height }}px{% endif %}; background-color: {{ section.settings.bg_color }}; color: {{ section.settings.text_color }};">
+<div class="featured-two-box container" style="padding: 2rem 0;  background-color: {{ section.settings.bg_color }}; color: {{ section.settings.text_color }};">
   <div class="featured-two-box__info">
     {% if section.settings.title != blank %}
       <h4 class="featured-two-box__title">{{ section.settings.title }}</h4>
@@ -427,12 +427,8 @@
       "default": "Review text #5",
       "label": "Review Text for 5th product"
     },
-    {
-      "type": "text",
-      "id": "section_height",
-      "default": "auto",
-      "label": "Section Height"
-    }
+   
+  
   ],
   "presets": [
     {
