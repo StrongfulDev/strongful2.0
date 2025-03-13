@@ -205,6 +205,7 @@
         "bg_color": "#ffffff",
         "text_color": "#000000",
         "star_color": "#ceb18f",
+        "star_spacing": "5px",
         "title_alignment": "center",
         "text_direction": "ltr",
         "product_text1": "“אני פשוט אוהבת את החזייה הזו! היא מספקת תמיכה מושלמת ונוחה לשימוש יום-יומי.",
