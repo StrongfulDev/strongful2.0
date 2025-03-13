@@ -25,7 +25,10 @@
             "main_text_direction": "rtl",
             "sub_text_direction": "rtl",
             "link": "shopify://blogs/policies/החזרות-והחלפות",
-            "color_scheme": "inverse"
+            "color_scheme": "inverse",
+            "custom_background_color": "#8b3f4e",
+            "custom_text_color": "#ffffff",
+            "enable_custom_colors": true
           }
         },
         "7c37c998-83a9-46d6-91fd-3ceaaab10008": {
@@ -39,7 +42,10 @@
             "main_text_direction": "ltr",
             "sub_text_direction": "ltr",
             "link": "shopify://collections/shell-burgundy",
-            "color_scheme": "inverse"
+            "color_scheme": "inverse",
+            "custom_background_color": "#8b3f4e",
+            "custom_text_color": "#ffffff",
+            "enable_custom_colors": true
           }
         },
         "8a66318a-92fb-4fe3-8af2-41e36854cfdb": {
@@ -53,7 +59,10 @@
             "main_text_direction": "rtl",
             "sub_text_direction": "rtl",
             "link": "shopify://blogs/policies/מדיניות-המשלוחים-שלנו",
-            "color_scheme": "inverse"
+            "color_scheme": "inverse",
+            "custom_background_color": "#8b3f4e",
+            "custom_text_color": "#ffffff",
+            "enable_custom_colors": true
           }
         }
       },
@@ -65,6 +74,9 @@
       "settings": {
         "blocks_type": "columns",
         "color_scheme": "inverse",
+        "custom_background_color": "#ffffff",
+        "custom_text_color": "#000000",
+        "enable_custom_colors": false,
         "animation-delay": 6,
         "animation-duration": 5
       }
