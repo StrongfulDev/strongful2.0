@@ -1,4 +1,4 @@
-<div class="featured-two-box container" style="padding: 2rem 0;">
+<div class="featured-two-box container" style="padding: 2rem 0; background-color: {{ section.settings.bg_color }};">
   <div class="featured-two-box__info">
     {% if section.settings.title != blank %}
       <h4 class="featured-two-box__title">{{ section.settings.title }}</h4>
@@ -17,7 +17,7 @@
   </div>
 
   <div class="featured-two-box__products">
-    {% for product in section.settings.collection.products limit:5 %}
+    {% for product in section.settings.collection.products limit: section.settings.product_limit %}
       <div class="product-card">
         <a href="{{ product.url }}">
           {% if product.featured_image %}
@@ -117,7 +117,7 @@
     overflow-x: auto;
   }
   .product-card {
-    flex: 0 0 calc((100% - 4rem) / 5);
+    flex: 0 0 calc((100% - 4rem) / {{ section.settings.product_limit }});
     box-sizing: border-box;
     padding: 0.5rem;
     text-align: center;
@@ -304,6 +304,12 @@
       "type": "collection",
       "id": "collection",
       "label": "Collection"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#ffffff"
     },
     {
       "type": "text",
