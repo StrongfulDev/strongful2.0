@@ -38,7 +38,7 @@
                aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: product.metafields.reviews.rating.value, rating_max: scale_max }}">
             <div class="stars-container">
               <div class="stars-outer">
-                <div class="stars-inner" style="width: {{ rating_percentage }}%; color: {{ section.settings.star_color }};">
+                <div class="stars-inner" style="width: {{ rating_percentage }}%; color: {{ section.settings.star_color }}; letter-spacing: {{ section.settings.star_spacing }};">
                   ★★★★★
                 </div>
               </div>
@@ -437,6 +437,12 @@
       "id": "star_color",
       "label": "Star Color",
       "default": "#ceb18f"
+    },
+    {
+      "type": "text",
+      "id": "star_spacing",
+      "default": "2px",
+      "label": "Star Letter Spacing (CSS value, e.g., 2px)"
     },
     {
       "type": "select",
