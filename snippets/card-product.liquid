@@ -311,6 +311,7 @@
                     {% endif %}
                 </div>
             </div>
+            
 
             <div class="card__content">
             <div class="card__information">
@@ -562,6 +563,15 @@
         </div>
         </div>
     </div>
+
+    {% if card_product.tags contains 'peleYellow' %}
+      <div class="pele-ai-try-on"
+           data-garment-id="{{ card_product.id }}"
+           data-garment-image-url="{{ card_product.featured_image | img_url: '400x' }}"
+           data-garment-type="{% if card_product.type == 'Shirt' %}TOP{% elsif card_product.type == 'Pants' %}BOTTOM{% else %}FULL{% endif %}">
+        <button class="pele-ai-button">Try On</button>
+      </div>
+    {% endif %}
 
     {%- if show_quick_add and quick_add_type_mobile == "modal" -%}
         {% render 'product-size-picker',
