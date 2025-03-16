@@ -129,7 +129,7 @@
             "button_label": "SHOP NOW",
             "link": "shopify://collections/shell-burgundy",
             "show_text_box": false,
-            "color_scheme": "accent-1",
+            "color_scheme": "inverse",
             "whole_slide_link": "",
             "button_style_secondary": false,
             "box_align": "middle-center",
