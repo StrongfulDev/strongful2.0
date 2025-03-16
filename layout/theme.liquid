@@ -399,19 +399,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "opsug7lq1a");
 </script>
-<!-- Replace the ES module import with a script tag -->
-<script src="{{ 'peleAi.js' | asset_url }}" defer></script>
-
-<script>
-  // Your initialization data
-  const language = "he"; // can be "he" or "en"
-  const customerId = "customer-id"; // Replace with your actual customer ID
-
-  PeleAI.initialize({
-    customerId,
-    language,
-  });
-</script>
+ <script src="https://cdn.pele-ai.com/pele-ai.js"></script>
   </head>
 
   {% assign isLiveTheme = 'false' %}
@@ -613,6 +601,27 @@ You can learn more about this (and learn how to cleanly revert these changes) at
        // (function(n){var u=function(){GlassixWidgetClient&&typeof GlassixWidgetClient=="function"?(window.widgetClient=new GlassixWidgetClient(n),widgetClient.attach(),window.glassixWidgetScriptLoaded&&window.glassixWidgetScriptLoaded()):f()},f=function(){r.onload=u;r.src="https://cdn.glassix.net/clients/widget.1.2.min.js";i.parentNode.removeChild(t);i.parentNode.insertBefore(r,i)},i=document.getElementsByTagName("script")[0],t=document.createElement("script"),r;(t.async=!0,t.type="text/javascript",t.crossorigin="anonymous",t.id="glassix-widget-script",r=t.cloneNode(),t.onload=u,t.src="https://cdn.glassix.com/clients/widget.1.2.min.js",!document.getElementById(t.id)&&document.body)&&(i.parentNode.insertBefore(t,i),t.onerror=f)})(widgetOptions)
     </script>
 <script src="https://system.user-a.co.il//Customers/3748629/strongful_co_il/andifn1.js" id="andipath" defer></script> 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const language = 'he'; // Set to 'he' for Hebrew or 'en' for English
+    const customerId = 'your-real-customer-id'; // Replace with your actual customer ID provided by Pele-AI
 
+    PeleAI.initialize({ customerId, language });
+
+    // Select only product cards that include the "data-pele-ai" attribute
+    const peleEligibleProducts = document.querySelectorAll('.product-card[data-pele-ai]');
+
+    peleEligibleProducts.forEach(product => {
+      const garmentImageUrl = product.querySelector('img').src;
+
+      PeleAI.createPeleAIButton({
+        container: product,
+        garmentId: product.dataset.garmentId,
+        garmentImageUrl: garmentImageUrl,
+        garmentType: product.dataset.garmentType
+      });
+    });
+  });
+</script>
   </body>
 </html>

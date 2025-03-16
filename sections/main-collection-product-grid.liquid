@@ -269,32 +269,13 @@
                                                     members_banner_text: members_announcement,
                                                     comes_with_matching_outfit: settings.comes_with_matching_outfit
                                             %}
+                                           
                                             {% if product.tags contains 'peleYellow' %}
-                                                {% comment %} {% assign garment_type = 'TOP' %}
-                                                {% if product.tags contains 'bottomPart' %}
-                                                    {% assign garment_type = 'BOTTOM' %}
-                                                {% elsif product.tags contains 'topPart' %}
-                                                    {% assign garment_type = 'TOP' %}
-                                                {% endif %} {% endcomment %}
-                                                       <script>
-                                                  const buttons = Array.from(document.querySelectorAll(".card-product")).map((product) => {
-                                                    const garmentImageUrl = product.querySelector("img").src;
-
-                                                    return PeleAI.createPeleAIButton({
-                                                      container: product,
-                                                      garmentId: product.dataset.garmentId,
-                                                      garmentImageUrl: garmentImageUrl,
-                                                      garmentType: product.dataset.garmentType,
-                                                    });
-                                                  });</script>
                                                 <div class="pele-ai-try-on"
-                                                  data-garment-id="{{ product.id }}"
-                                                  data-garment-image-url="{{ product.featured_image | img_url: '800x' }}"
-                                                  {%- comment -%}
-                                                     data-garment-type="{{ garment_type }}"
-                                                  {%- endcomment -%}
-                                                  >
-                                                     <button class="pele-ai-button">Try On</button>
+                                                     data-garment-id="{{ product.id }}"
+                                                     data-garment-image-url="{{ product.featured_image | img_url: '800x' }}"
+                                                     data-garment-type="{% if product.tags contains 'bottomPart' %}BOTTOM{% else %}TOP{% endif %}">
+                                                  <button class="pele-ai-button">Try On</button>
                                                 </div>
                                             {% endif %}
                                         </li>
@@ -328,31 +309,13 @@
                                                     members_only_sale_active: settings.members_only_sale_active,
                                                     comes_with_matching_outfit: settings.comes_with_matching_outfit
                                             %}
+                                           
                                             {% if product.tags contains 'peleYellow' %}
-                                                {% comment %} {% assign garment_type = 'TOP' %}
-                                                {% if product.tags contains 'bottomPart' %}
-                                                    {% assign garment_type = 'BOTTOM' %}
-                                                {% elsif product.tags contains 'topPart' %}
-                                                    {% assign garment_type = 'TOP' %}
-                                                {% endif %} {% endcomment %}
-                                                 <script>
-                                                  const buttons = Array.from(document.querySelectorAll(".card-product")).map((product) => {
-                                                    const garmentImageUrl = product.querySelector("img").src;
-
-                                                    return PeleAI.createPeleAIButton({
-                                                      container: product,
-                                                      garmentId: product.dataset.garmentId,
-                                                      garmentImageUrl: garmentImageUrl,
-                                                      garmentType: product.dataset.garmentType,
-                                                    });
-                                                  });</script>
                                                 <div class="pele-ai-try-on"
-                                                  data-garment-id="{{ product.id }}"
-                                                  data-garment-image-url="{{ product.featured_image | img_url: '800x' }}"
-                                                  {%- comment -%}
-                                                  data-garment-type="{{ garment_type }}"
-                                                  {%- endcomment -%}>
-                                                    <button class="pele-ai-button">Try On</button>
+                                                     data-garment-id="{{ product.id }}"
+                                                     data-garment-image-url="{{ product.featured_image | img_url: '800x' }}"
+                                                     data-garment-type="{% if product.tags contains 'bottomPart' %}BOTTOM{% else %}TOP{% endif %}">
+                                                  <button class="pele-ai-button">Try On</button>
                                                 </div>
                                             {% endif %}
                                         </li>
@@ -377,6 +340,28 @@
         </div>
     </div>
 </div>
+
+<!-- Pele-AI Button Creation -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Query all Pele-AI containers in your product grid
+  const peleContainers = document.querySelectorAll('.pele-ai-try-on');
+  peleContainers.forEach(function(container) {
+    const garmentId = container.getAttribute('data-garment-id');
+    const garmentImageUrl = container.getAttribute('data-garment-image-url');
+    const garmentType = container.getAttribute('data-garment-type');
+    // Create the Pele-AI button on the specified container
+    if (window.PeleAI) {
+      PeleAI.createPeleAIButton({
+        container: container,
+        garmentId: garmentId,
+        garmentImageUrl: garmentImageUrl,
+        garmentType: garmentType
+      });
+    }
+  });
+});
+</script>
 
 {% schema %}
 {
