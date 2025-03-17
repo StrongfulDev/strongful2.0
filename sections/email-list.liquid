@@ -200,6 +200,13 @@ font-size: 14px !important;
 .btn-submit.secondary:hover {
   background-color: #777;
 }
+@media (max-width: 768px) {
+  .form-group input[type="date"] {
+    width: 100% !important;
+    box-sizing: border-box;
+    font-size: 16px; /* Important to avoid automatic zoom on iOS */
+  }
+}
 </style>
 
 {% schema %}
