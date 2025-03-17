@@ -48,7 +48,7 @@
           placeholder="{{ 'customer.login_page.email' | t }}"
         >
         <label for="RecoverEmail">
-          {{ 'customer.login_page.email' | t }}
+          {% comment %} {{ 'customer.login_page.email' | t }} {% endcomment %}
         </label>
       </div>
       {%- if form.errors -%}
