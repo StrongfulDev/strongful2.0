@@ -164,6 +164,16 @@
         "name": "single_line_text_field",
         "category": "TEXT"
       }
+    },
+    {
+      "key": "show_images_in_filters",
+      "namespace": "custom",
+      "name": "האם להציג תמונות בסננים",
+      "description": "",
+      "type": {
+        "name": "boolean",
+        "category": "TRUE_FALSE"
+      }
     }
   ],
   "company": [],
