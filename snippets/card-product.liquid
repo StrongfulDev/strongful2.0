@@ -569,7 +569,7 @@
            data-garment-id="{{ card_product.id }}"
            data-garment-image-url="{{ card_product.featured_image | img_url: '400x' }}"
            data-garment-type="{% if card_product.type == 'Shirt' %}TOP{% elsif card_product.type == 'Pants' %}BOTTOM{% else %}FULL{% endif %}">
-        <button class="pele-ai-button">Try On</button>
+        {% comment %} <button class="pele-ai-button">Try On</button> {% endcomment %}
       </div>
     {% endif %}
 
