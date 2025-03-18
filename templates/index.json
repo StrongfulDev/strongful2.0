@@ -327,10 +327,10 @@
         "slide_KdxH44": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/1_b1db07c3-9d5d-4ab0-a4dc-4b7bacc457d4.jpg",
-            "mobile_image": "shopify://shop_images/bfa29e249ba87d6a8182a787a2214d14.jpg",
-            "login_desktop_image": "shopify://shop_images/1_b1db07c3-9d5d-4ab0-a4dc-4b7bacc457d4.jpg",
-            "login_mobile_image": "shopify://shop_images/bfa29e249ba87d6a8182a787a2214d14.jpg",
+            "image": "shopify://shop_images/1_8e36b041-5175-4ba3-b5ea-020a04352a13.jpg",
+            "mobile_image": "shopify://shop_images/1_fbf073a8-5f9e-4cdd-bc32-74661e4310d6.jpg",
+            "login_desktop_image": "shopify://shop_images/1_58e927a6-b45b-482a-9974-985712c83398.jpg",
+            "login_mobile_image": "shopify://shop_images/1_d1ba1cc3-a6bf-406b-9724-f0189e2d92d3.jpg",
             "button_label": "",
             "login_button_label": "",
             "link": "shopify://collections/oasis-old-money",
@@ -338,7 +338,7 @@
             "show_text_box": true,
             "color_scheme": "background-1",
             "logged_in_color_scheme": "background-1",
-            "whole_slide_link": "shopify://collections/oasis-old-money",
+            "whole_slide_link": "shopify://collections/shell-burgundy",
             "button_style_secondary": false,
             "box_align": "middle-center",
             "text_alignment": "center",
@@ -350,7 +350,6 @@
       "block_order": [
         "slide_KdxH44"
       ],
-      "disabled": true,
       "settings": {
         "layout": "full_bleed",
         "slide_height": "adapt_image",
