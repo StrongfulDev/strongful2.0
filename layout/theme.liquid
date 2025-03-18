@@ -606,15 +606,16 @@ You can learn more about this (and learn how to cleanly revert these changes) at
     s.onload = function(){
       PeleAI.initialize("6f12bc7f-582b-4975-85fe-77ec20b5c5a1", "he");
       
-      var peleContainers = d.querySelectorAll('.pele-ai-try-on');
-     var buttons = Array.from(peleContainers).map(function(container) {
-   var img = container.querySelector('img');
-var garmentImageUrl = (img && img.currentSrc) ? img.currentSrc : container.getAttribute('data-garment-image-url');
+        var peleContainers = d.querySelectorAll('.pele-ai-try-on');
+        var buttons = Array.from(peleContainers).map(function(container) {
+        var img = container.querySelector('img');
+        var garmentImageUrl = (img && img.currentSrc) ? img.currentSrc : container.getAttribute('data-garment-image-url');
 console.log("Garment image URL:", garmentImageUrl);
     console.log("Original garmentImageUrl:", garmentImageUrl);
 
     if (garmentImageUrl && garmentImageUrl.indexOf('shopifypreview') > -1) {
         garmentImageUrl = garmentImageUrl.replace(/.*shopifypreview\.com/, '//strongful.co.il');
+        garmentImageUrl = garmentImageUrl.slice(2);
         console.log("After shopifypreview replacement:", garmentImageUrl);
         if (garmentImageUrl.indexOf('width=') === -1) {
             garmentImageUrl += (garmentImageUrl.indexOf('?') > -1 ? '&' : '?') + 'width=1946';
