@@ -1,0 +1,976 @@
+{% comment %}
+  A stand-alone size guide with pill navigation, displayed in a modal.
+  We add a "Show Size Guide" button and an "X" to close.
+{% endcomment %}
+{{ section-main-product | asset_url | stylesheet_tag }}
+{% assign measurement_text = "<strong>כיצד תמדדי את עצמך?</strong><ul style='list-style: none; padding-left: 20px;padding:0; margin: 0;'><li><strong>חזה</strong>: הנחי את סרט המדידה סביב החלק הרחב ביותר של חזה שלך בדיוק מתחת לזרועותיך.</li><br/><li><strong>מותניים</strong>: מדדי סביב קו מותניים שלך בגובה הטבור.</li><br/><li><strong>מכנסיים</strong>: ודאי שהסרט עוטף בצורה נאותה את האזור.</li><br/><li><strong>היקף חזה</strong>: מדדי את ההיקף במרווח נוח.</li><br/><li><strong>היקף ירכיים</strong>: מדדי את החלק הרחב ביותר בירכיים.</li></ul>" %}
+<!-- Button to open the size guide modal -->
+<button id="open-size-guide" class="size-table-toggler" style="margin-bottom: 1rem;">
+  {{ 'products.product.size_table' | t }}
+</button>
+
+<!-- Modal overlay (hidden by default) -->
+<div class="size-guide-overlay hidden" id="sizeGuideOverlay"
+     style="position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:100000;">
+  
+  <!-- The modal container (hidden by default) -->
+  <div class="size-guide-modal hidden fix-direction" id="sizeGuideModal"
+       style="background:#fff; width:50vw; padding:1em; position: fixed; top:0; right:0; height:100%; overflow-y:auto; border-top-left-radius:8px; border-bottom-left-radius:8px;">
+    
+    <!-- Close icon/button -->
+    <p id="close-size-guide" class="StrongfulX" style="position:absolute; top:0.1em; left:1em; cursor:pointer; font-size: 24px;">
+      &#x2715;
+    </p>
+
+    <div dir="rtl" style="text-align: right; font-family: sans-serif;">
+      <!-- PILL NAV / TABLES EXACTLY AS BEFORE -->
+      <style>
+        /* Slide-in animation for the modal */
+        .size-guide-modal {
+          transform: translateX(100%);
+          transition: transform 0.1s ease-out;
+        }
+        
+        .size-guide-modal.open {
+          transform: translateX(0);
+        }
+        .product-size-switch-container {
+          margin-bottom: 1rem;
+        }
+        .open-size-guide {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .size-switch {
+          display: inline-block;
+          padding: 0.5em 1em;
+          margin: 0 0.5em 0.5em 0;
+          border: 1px solid #ccc;
+          border-radius: 30px; /* pill shape */
+          cursor: pointer;
+          background: #fff;
+          transition: background-color 0.3s, color 0.3s;
+          border: 1px solid #ddd;
+        }
+        .size-chart {
+          display: none; /* hidden by default; toggled by JS */
+          padding: 1em;
+          border-radius: 6px;
+          margin-bottom: 1em;
+        }
+        .size-chart table {
+          width: 100%;
+          border-collapse: collapse;
+          margin-bottom: 1em;
+        }
+        .size-chart th, .size-chart td {
+          border: 1px solid #ddd;
+          padding: 0.5em;
+          text-align: center;
+          font-size:initial;
+        }
+        .size-chart th {
+          background-color: #f5f5f5;
+
+        }
+        .note {
+          margin-top: 1em;
+          font-size: 0.9em;
+          color: #666;
+        }
+        /* Modern button design */
+        .product-size-switch-container .size-switch {
+          display: inline-block;
+          padding: 10px 20px;
+          margin: 5px;
+          font-size: 12px;
+          font-family:'Arimo',sans-serif;
+          color: #000;
+          background-color: #fff;
+          border-radius: 3px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        }
+        .size-switch.active {
+          background-color: #000;
+          color: #fff;
+        }
+        /* Hover effect on table cells */
+        .size-chart table th, .size-chart table td {
+          transition: background-color 0.3s ease;
+        }
+        .size-chart table th:hover, .size-chart table td:hover {
+          background-color: rgba(0, 0, 0, 0.1);
+        }
+        .size-chart table th.js-hover, .size-chart table td.js-hover {
+          background-color: rgba(0, 0, 0, 0.05);
+        }
+        .size-chart table th.hovered,
+        .size-chart table td.hovered {
+          background-color: rgba(0, 0, 0, 0.2); /* Adjust for a darker tone */
+        }
+        .size-chart table td:first-child {
+          background-color: #f5f5f5;
+        }
+        .size-chart table thead {
+          display: table-header-group;
+          background-color: #f5f5f5;
+          z-index: 1;
+        }
+        @media screen and (max-width: 749px) {
+          #sizeGuideModal {
+            width: 100vw !important;
+            overflow-y: auto;
+            padding: 2em 0.5em 0.5em;  /* Increased top padding */
+            font-size: 16px; /* Increased base font size */
+          }
+          .size-switch {
+            font-size: 18px; /* Bigger pill text */
+            padding: 0.5em 1em;
+          }
+          .size-chart table th,
+          .size-chart table td {
+            font-size: 16px; /* Increase table cell font size */
+            padding: 0.5em;  /* Adjust padding as needed */
+          }
+          h1 {
+            font-size: 24px; /* Bigger headline */
+          }
+          .size-chart table {
+            margin-top: 1em; /* Adjust as needed */
+          }
+          .measurement-info {
+            font-size: 0.85em; /* Smaller measurement text on mobile */
+          }
+        }
+        size-measurement-info {
+          line-height: 1.5;
+          color: #666;
+        }
+        /* Style for custom switch */
+        .custom-switch {
+          display: inline-flex;
+          align-items: center;
+          margin-bottom: 0.5rem;
+          user-select: none;
+        }
+
+        .custom-switch input[type="checkbox"] {
+          appearance: none;
+          width: 40px;
+          height: 20px;
+          background: #ccc;
+          border-radius: 999px;
+          position: relative;
+          outline: none;
+          cursor: pointer;
+          transition: background 0.3s;
+          margin-right: 0.5rem;
+        }
+
+        .custom-switch input[type="checkbox"]::before {
+          content: "";
+          position: absolute;
+          top: 2px;
+          left: 2px;
+          width: 16px;
+          height: 16px;
+          background: #fff;
+          border-radius: 50%;
+          transition: transform 0.3s;
+        }
+
+        .custom-switch input[type="checkbox"]:checked {
+          background: #007bff;
+        }
+
+        .custom-switch input[type="checkbox"]:checked::before {
+          transform: translateX(20px);
+        }
+        /* Make table headers non-bold */
+        .size-chart table th {
+          font-weight: normal;
+        }
+        /* Prevent line breaks in every table cell */
+        .size-chart table th,
+        .size-chart table td {
+          white-space: nowrap;
+        }
+      
+        /* Allow the table to grow beyond its container */
+ {% comment %} .table-responsive table {
+          width: auto;
+          min-width: 100%;
+        }  {% endcomment %}
+        /* Freeze the first column so it stays in view when scrolling horizontally */
+        .size-chart table th:first-child,
+        .size-chart table td:first-child {
+          position: sticky;
+          right: 0;
+          background: #fff; /* Ensure a solid background */
+          z-index: 10;
+          border-left:1px solid #ddd
+        }
+
+        /* Optionally, if your header row should also be visible, make the header cells sticky */
+        .size-chart table thead th {
+          position: sticky;
+          top: 0;
+          background: #f5f5f5;
+          z-index: 6;
+        }
+        /* Ensure the scroll container is positioned */
+        .table-responsive {
+          position: relative;
+          width: 100%;
+          overflow-x: auto;
+        }
+        /* Force the table to be wider than the container to allow horizontal scroll */
+        .table-responsive table {
+          min-width: 800px; /* adjust as needed */
+          border-collapse: collapse;
+        }
+        /* Freeze the first column in header rows */
+        .size-chart table thead th:first-child {
+          position: sticky;
+          right : 0;
+          background: #f5f5f5;
+          z-index: 999; /* higher than other cells */
+          border-left: 1px solid #ddd;
+        }
+        /* Freeze the first column in body rows */
+        .size-chart table tbody th:first-child,
+        .size-chart table tbody td:first-child {
+          position: sticky;
+          left: 0;
+          background: #fff;
+          z-index:998;
+          /* Optionally, add a right border to visually separate the frozen column */
+          border-right: 1px solid #ddd;
+        }
+        .size-chart table tbody th:first-child, .size-chart table tbody td:first-child{
+       padding:0;
+       padding-right:0;
+        }
+          .size-chart table th,
+        .size-chart table td {
+          white-space: nowrap;
+        }
+      
+     
+        
+        /* Freeze the first column in header rows */
+        .size-chart table thead th:first-child {
+          position: sticky;
+          left: 0;
+          background: #f5f5f5;
+          z-index: 10; /* higher to appear above data cells */
+          border-right: 1px solid #ddd;
+        }
+        
+        /* Freeze the first column in body rows */
+        .size-chart table tbody th:first-child,
+        .size-chart table tbody td:first-child {
+          position: sticky;
+          left: 0;
+          background: #fff;
+          z-index: 5;
+          border-right: 1px solid #ddd;
+        }
+
+        /* Mobile-only sticky headers and first column */
+        @media screen and (max-width: 749px) {
+          .size-chart table thead th {
+            position: sticky;
+            top: 0;
+            background: #f5f5f5;
+            z-index: 3;
+            /* Add an inset box-shadow to mask the right edge */
+            box-shadow: inset -8px 0 8px -8px #f5f5f5;
+          }
+
+          .size-chart table th:first-child,
+          .size-chart table td:first-child {
+            position: sticky;
+            right: 0;
+            background: #fff;
+            z-index: 2;
+            border-right: 1px solid #ddd;
+            
+            
+            /* Optionally, also add a matching inset shadow */
+            box-shadow: inset -8px 0 8px -8px #fff;
+          }
+        }
+        .table-responsive {
+          position: relative;
+          width: 100%;
+          {% comment %} margin: 1em; /* added margins */ {% endcomment %}
+        }
+        @media screen and (max-width: 749px) {
+          .table-responsive {
+            overflow-x: auto; /* horizontal scroll only on mobile */
+          }
+        }
+
+        /* Ensure overall table text sizing is consistent */
+        .size-chart table th,
+        .size-chart table td {
+          font-size: 12px;
+        }
+        .size-cell {
+          font-size: 12px; /* make text for size labels a bit smaller */
+        }
+        @media screen and (max-width: 749px) {
+          .table-responsive {
+            overflow-x: auto; /* horizontal scroll on mobile */
+            direction: rtl;  /* ensure RTL scrolling */
+          }
+          /* Make header cells sticky on the right */
+          .size-chart table thead th {
+            position: sticky;
+            right: 0;        /* stick on the right */
+            top: 0;
+            background: #f5f5f5;
+            z-index: 10;     /* higher than content cells */
+            box-shadow: inset 8px 0 8px -8px #f5f5f5;
+          }
+          /* For the first column cells (if needed) – adjust to ensure they slide under the sticky header */
+          .size-chart table th:first-child,
+          .size-chart table td:first-child {
+            position: sticky;
+            right: 0;
+            background: #fff;
+            z-index: 5;
+            border-left: 1px solid #ddd; /* change border side for RTL */
+            /* optionally, remove box-shadow for these cells */
+          }
+          /* Ensure non-sticky cells have a lower z-index so they slide underneath */
+          .size-chart table td {
+            z-index: 1;
+          }
+        }
+      </style>
+      <style>
+  @media screen and (max-width: 749px) {
+    /* Increase cell padding and font-size for better readability */
+    .size-chart table th,
+    .size-chart table td {
+      padding: 0.75em; /* increased padding */
+      font-size: 14px;  /* increased font size */
+    }
+
+    /* Optional: Adjust the header sizes if needed */
+    .size-chart table thead th {
+      font-size: 16px;
+    }
+  }
+</style>
+<style>
+  @media screen and (max-width: 749px) {
+    .table-responsive table {
+      min-width: 800px; /* adjust the width as needed */
+    }
+  }
+</style>
+<style>
+  @media screen and (max-width: 749px) {
+    /* Ensure the table shows left/right borders */
+    .table-responsive table {
+      min-width: 800px; /* adjust as needed */
+      border-left: 1px solid #ddd;
+      border-right: 1px solid #ddd;
+    }
+    
+    /* Sticky header cells on the right with a right border */
+    .size-chart table thead th {
+      position: sticky;
+      right: 0;
+      top: 0;
+      background: #f5f5f5;
+      z-index: 20;
+      box-shadow: inset 8px 0 8px -8px #f5f5f5;
+      border-right: 1px solid #ddd;
+    }
+    
+    /* For the first header cell, raise the z-index further */
+    .size-chart table thead th:first-child {
+      z-index: 21;
+    }
+    
+    /* Sticky first column cells in body rows with a left border */
+    .size-chart table th:first-child,
+    .size-chart table td:first-child {
+      position: sticky;
+      right: 0;
+      background: #fff;
+      z-index: 15;
+      border-left: 1px solid #ddd;
+    }
+    
+    /* Other table cells should slide underneath */
+    .size-chart table td {
+      position: relative; /* enable z-index */
+      z-index: 1;
+    }
+  }
+</style>
+<style>
+  /* Ensure the sticky header cell always shows its right border */
+  .size-chart table thead th:first-child {
+    position: sticky;
+    left: 0;
+    background: #f5f5f5;
+    z-index: 10; /* adjust as needed */
+    /* Remove any existing border if necessary */
+    border-right: none;
+  }
+  .size-chart table thead th:first-child::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    background: #ddd;
+    z-index: 100; /* higher to ensure visibility */
+  }
+</style>
+<style>
+  .size-chart table thead th:first-child {
+    position: sticky;
+    left: 0;
+    background: #f5f5f5;
+    z-index: 1000; /* bump up the z-index */
+    border: none; /* remove default border */
+    overflow: visible; /* ensure pseudo-element isn’t clipped */
+  }
+  .size-chart table thead th:first-child::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    background: #ddd;
+    pointer-events: none;
+    z-index: 1001; /* higher than the header cell */
+  }
+</style>
+<style>
+  /* Set the font for the modal and all nested elements */
+  .size-guide-modal,
+  .size-guide-modal * {
+    font-family: 'Arimo', sans-serif !important;
+  }
+</style>
+
+    <h2>טבלת מידות</h2>
+
+      <div class="product-size-switch-container">
+        <span class="size-switch" data-target="onesie-chart">אוברול</span>
+        <span class="size-switch" data-target="shirt-chart">טופ</span>
+        <span class="size-switch" data-target="pants-chart">מכנס</span>
+        <span class="size-switch" data-target="jacket-chart">ג׳קטים וחולצות</span> <!-- New switch -->
+      </div>
+
+     
+
+  
+      <!-- Size-chart blocks -->
+      <div id="onesie-chart" class="size-chart">
+        <div class="size-toggle-container">
+          <!-- Custom Switch (PRESERVED) -->
+          <div class="custom-switch">
+            <input type="checkbox" id="size-toggle-pants" class="size-toggle">
+            <label for="size-toggle-pants">EU/US</label>
+          </div>
+        </div>
+  <div class="table-responsive">
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th class="size-cell" data-us="XXS">XXS</th>
+          <th class="size-cell" data-us="XS">XS</th>
+          <th class="size-cell" data-us="S">S</th>
+          <th class="size-cell" data-us="M">M</th>
+          <th class="size-cell" data-us="L">L</th>
+          <th class="size-cell" data-us="XL">XL</th>
+          <th class="size-cell" data-us="XXL">XXL</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>מידת חזייה</th>
+          <td>A-C 65<br>D-E 60</td>
+          <td>A-C 70<br>D-E 65</td>
+          <td>A-C 75<br>D-E 70</td>
+          <td>A-C 80<br>D-E 75</td>
+          <td>A-C 85<br>D-E 80</td>
+          <td>A-C 90<br>D-E 85</td>
+          <td>A-C 95<br>D-E 90</td>
+        </tr>
+        <tr>
+          <th>מידת מכנסיים</th>
+          <td>30-32</td>
+          <td>32-34</td>
+          <td>36-38</td>
+          <td>38-40</td>
+          <td>42-44</td>
+          <td>44-46</td>
+          <td>46-48</td>
+        </tr>
+        <tr>
+          <th>היקף חזה</th>
+          <td>70-77</td>
+          <td>78-85</td>
+          <td>86-92</td>
+          <td>93-99</td>
+          <td>100-106</td>
+          <td>107-113</td>
+          <td>114-120</td>
+        </tr>
+        <tr>
+          <th>היקף מותן</th>
+          <td>58-62</td>
+          <td>63-67</td>
+          <td>68-72</td>
+          <td>73-77</td>
+          <td>78-82</td>
+          <td>83-87</td>
+          <td>88-92</td>
+        </tr>
+        <tr>
+          <th>היקף ירכיים</th>
+          <td>78-85</td>
+          <td>84-91</td>
+          <td>87-94</td>
+          <td>96-102</td>
+          <td>102-109</td>
+          <td>110-117</td>
+          <td>118-125</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+     {% if product.metafields.custom.inseam and product.title contains 'אוברול' %}
+    {% assign inseam = product.metafields.custom.inseam %}
+    <!-- Insertion for inseam information -->
+    <div class="inseam-info" style="margin-top: 1rem;">
+      <table style="width:40%; border-collapse:collapse; align-self: center;">
+        <tr>
+          <th style="border:1px solid #ddd; padding:0.5em; text-align:right; max-width:20%">תכונה</th>
+          <th style="border:1px solid #ddd; padding:0.5em; text-align:right; max-width:20%">מידה</th>
+        </tr>
+        <tr>
+          <td style="border:1px solid #ddd; padding:0.5em; text-align:right; max-width:20%">אורך פנים</td>
+          <td style="border:1px solid #ddd; padding:0.5em; text-align:right; max-width:20%">{{ inseam }}</td>
+        </tr>
+      </table>
+    </div>
+  {% endif %}
+
+  <p class="measurement-info">{{ measurement_text }}</p>
+  
+</div>
+
+
+      <div id="shirt-chart" class="size-chart">
+  <div class="size-toggle-container">
+    <!-- Custom Switch -->
+    <div class="custom-switch">
+      <input type="checkbox" id="size-toggle-shirt" class="size-toggle">
+      <label for="size-toggle-shirt">EU/US</label>
+    </div>
+  </div>
+  
+  <!-- Merged Shirt Table with toggle data -->
+  <div class="table-responsive">
+
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th class="size-cell" data-us="XXS">XXS</th>
+          <th class="size-cell" data-us="XS">XS</th>
+          <th class="size-cell" data-us="S">S</th>
+          <th class="size-cell" data-us="M">M</th>
+          <th class="size-cell" data-us="L">L</th>
+          <th class="size-cell" data-us="XL">XL</th>
+          <th class="size-cell" data-us="XXL">XXL</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>היקף חזה</th>
+          <td>67–73</td>
+          <td>74–83</td>
+          <td>84–92</td>
+          <td>90–96</td>
+          <td>95–102</td>
+          <td>100–107</td>
+          <td>105–112</td>
+        </tr>
+        <tr>
+          <th>מידת חזייה</th>
+          <td>A-C 65<br>D-E 60</td>
+          <td>A-C 70<br>D-E 65</td>
+          <td>A-C 75<br>D-E 70</td>
+          <td>A-C 80<br>D-E 75</td>
+          <td>A-C 85<br>D-E 80</td>
+          <td>A-C 90<br>D-E 85</td>
+          <td>A-C 95<br>D-E 90</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+    
+    <p class="measurement-info">{{ measurement_text }}</p>
+  </div>
+<div id="pants-chart" class="size-chart">
+  <div class="size-toggle-container">
+    <!-- Custom Switch -->
+    <div class="custom-switch">
+      <input type="checkbox" id="size-toggle-pants" class="size-toggle">
+      <label for="size-toggle-pants">EU/US</label>
+    </div>
+  </div>
+  
+  <!-- Updated Pants Table with toggle data -->
+  <div class="table-responsive">
+
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th class="size-cell" data-us="XXS">XXS</th>
+          <th class="size-cell" data-us="XS">XS</th>
+          <th class="size-cell" data-us="S">S</th>
+          <th class="size-cell" data-us="M">M</th>
+          <th class="size-cell" data-us="L">L</th>
+          <th class="size-cell" data-us="XL">XL</th>
+          <th class="size-cell" data-us="XXL">XXL</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>מידת מכנסיים</th>
+          <td>30-32</td>
+          <td>32-34</td>
+          <td>36-38</td>
+          <td>38-40</td>
+          <td>42-44</td>
+          <td>44-46</td>
+          <td>46-48</td>
+        </tr>
+        <tr>
+          <th>היקף מותן</th>
+          <td>58-62</td>
+          <td>63-67</td>
+          <td>68-72</td>
+          <td>73-77</td>
+          <td>78-82</td>
+          <td>83-87</td>
+          <td>88-92</td>
+        </tr>
+        <tr>
+          <th>היקף ירכיים</th>
+          <td>78-85</td>
+          <td>84-91</td>
+          <td>87-94</td>
+          <td>96-102</td>
+          <td>102-109</td>
+          <td>110-117</td>
+          <td>118-125</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+    
+  {% if product.metafields.custom.inseam %}
+    {% assign inseam = product.metafields.custom.inseam %}
+    {% if product.title contains 'טייץ' or product.title contains 'בייקר' %}
+      <!-- Insertion for inseam information -->
+      <div class="inseam-info" style="margin-top: 1rem;">
+        <table style="width:40%; border-collapse:collapse; align-self: center;">
+          <tr>
+            <th style="border:1px solid #ddd; padding:0.5em; text-align:right;">תכונה</th>
+            <th style="border:1px solid #ddd; padding:0.5em; text-align:right;">מידה</th>
+          </tr>
+          <tr>
+            <td style="border:1px solid #ddd; padding:0.5em; text-align:right;">אורך פנים</td>
+            <td style="border:1px solid #ddd; padding:0.5em; text-align:right;">{{ inseam }}</td>
+          </tr>
+        </table>
+      </div>
+    {% endif %}
+  {% endif %}
+  
+  <p class="measurement-info">{{ measurement_text }}</p>
+</div>
+
+    <div id="jacket-chart" class="size-chart">
+  <div class="size-toggle-container">
+    <!-- Custom Switch -->
+    <div class="custom-switch">
+      <input type="checkbox" id="size-toggle-jacket" class="size-toggle">
+      <label for="size-toggle-jacket">EU/US</label>
+    </div>
+  </div>
+  
+  <!-- Merged Jacket Table with toggle data -->
+  <div class="table-responsive">
+
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th class="size-cell" data-us="XXS">XXS</th>
+          <th class="size-cell" data-us="XS">XS</th>
+          <th class="size-cell" data-us="S">S</th>
+          <th class="size-cell" data-us="M">M</th>
+          <th class="size-cell" data-us="L">L</th>
+          <th class="size-cell" data-us="XL">XL</th>
+          <th class="size-cell" data-us="XXL">XXL</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>היקף חזה</th>
+          <td>76–82</td>
+          <td>82–88</td>
+          <td>88–94</td>
+          <td>94–100</td>
+          <td>100–106</td>
+          <td>106–112</td>
+          <td>112–118</td>
+        </tr>
+        <tr>
+          <th>מותן</th>
+          <td>60–65</td>
+          <td>65–70</td>
+          <td>70–75</td>
+          <td>75–80</td>
+          <td>80–85</td>
+          <td>85–90</td>
+          <td>90–95</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+    
+    <p class="measurement-info">{{ measurement_text }}</p>
+  </div>
+      <script>
+      document.addEventListener('DOMContentLoaded', function(){
+        // Pill logic as before
+        var pills = document.querySelectorAll('.size-switch');
+        var charts = document.querySelectorAll('.size-chart');
+
+        function hideAllCharts() {
+          charts.forEach(function(chart){ chart.style.display = 'none'; });
+          pills.forEach(function(pill){ pill.classList.remove('active'); });
+        }
+        hideAllCharts();
+        // Show the first chart by default
+        document.getElementById('onesie-chart').style.display = 'block';
+        pills[0].classList.add('active');
+
+        pills.forEach(function(pill){
+          pill.addEventListener('click', function(){
+            var targetID = this.getAttribute('data-target');
+            hideAllCharts();
+            document.getElementById(targetID).style.display = 'block';
+            this.classList.add('active');
+          });
+        });
+
+        // Auto-select the tab based on product type
+        var productType = "{{ product.type }}";
+        var target = "";
+        if(productType.indexOf("אוברול") !== -1) {
+            target = "onesie-chart";
+        } else if(productType.indexOf("חזיית ספורט") !== -1 || productType.indexOf("טופ") !== -1 || productType.indexOf("קרופ") !== -1) {
+            target = "shirt-chart";
+        } else if(productType.indexOf("טייץ") !== -1 || productType.indexOf("מכנס") !== -1 || productType.indexOf("בייקר") !== -1) {
+            target = "pants-chart";
+        } else if(productType.indexOf("חולצה") !== -1 || productType.indexOf("ג׳קט") !== -1) {
+            target = "jacket-chart";
+        }
+
+        if(target){
+            hideAllCharts();
+            document.getElementById(target).style.display = 'block';
+            pills.forEach(function(pill){
+                if(pill.getAttribute("data-target") === target) {
+                    pill.classList.add("active");
+                }
+            });
+        }
+      });
+      </script>
+    </div> <!-- end RTL container -->
+  </div> <!-- end .size-guide-modal -->
+</div> <!-- end .size-guide-overlay -->
+
+<!-- JavaScript to open/close the modal -->
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var overlay = document.getElementById('sizeGuideOverlay');
+  if (overlay) {
+    document.body.appendChild(overlay);
+  }
+  var openBtn = document.getElementById('open-size-guide');
+  var closeBtn = document.getElementById('close-size-guide');
+  var overlay = document.getElementById('sizeGuideOverlay');
+  var modal = document.getElementById('sizeGuideModal');
+
+  // Show modal with slide-in animation
+  openBtn.addEventListener('click', function(){
+    overlay.classList.remove('hidden');
+    modal.classList.remove('hidden');
+    // Ensure the browser applies the "hidden" removal before adding the open class.
+    setTimeout(function(){
+      modal.classList.add('open');
+    }, 0);
+  });
+
+  // Hide modal with slide-out animation
+  function closeModal() {
+    modal.classList.remove('open');
+    // Wait for the slide-out transition before hiding overlay/modal.
+    setTimeout(function(){
+      overlay.classList.add('hidden');
+      modal.classList.add('hidden');
+    }, 300); // 300ms matches the transition duration
+  }
+
+  closeBtn.addEventListener('click', closeModal);
+
+  // Optional: Close modal if overlay background is clicked
+  overlay.addEventListener('click', function(e) {
+    if(e.target === overlay) {
+      closeModal();
+    }
+  });
+
+  // Handle size switch click and long click for mobile
+  const sizeSwitches = document.querySelectorAll(".size-switch");
+  const sizeCharts = document.querySelectorAll(".size-chart");
+
+  sizeSwitches.forEach((switchElement) => {
+    switchElement.addEventListener("click", () => {
+      const target = switchElement.getAttribute("data-target");
+      sizeCharts.forEach((chart) => {
+        chart.style.display = chart.id === target ? "block" : "none";
+      });
+    });
+
+    // Long click for mobile
+    let timer;
+    switchElement.addEventListener("touchstart", () => {
+      timer = setTimeout(() => {
+        const target = switchElement.getAttribute("data-target");
+        sizeCharts.forEach((chart) => {
+          chart.style.display = chart.id === target ? "block" : "none";
+        });
+      }, 500); // Adjust the duration for long click
+    });
+
+    switchElement.addEventListener("touchend", () => {
+      clearTimeout(timer);
+    });
+  });
+
+  // Hover effect on table cells
+  const tableCells = document.querySelectorAll(".size-chart table th, .size-chart table td");
+  tableCells.forEach((cell) => {
+    cell.addEventListener("mouseover", () => {
+      const row = cell.parentElement;
+      const rowIndex = Array.from(row.parentElement.children).indexOf(row);
+      const cellIndex = Array.from(row.children).indexOf(cell);
+
+      // Highlight cells from the beginning of the row up to (and including) the hovered cell
+      for (let i = 0; i <= cellIndex; i++) {
+        row.children[i].classList.add("js-hover");
+      }
+
+      // Highlight cells from the top of the column down to (and including) the hovered cell
+      for (let i = 0; i <= rowIndex; i++) {
+        row.parentElement.children[i].children[cellIndex].classList.add("js-hover");
+      }
+      
+      // Add an extra class to the actual hovered cell for a darker effect
+      cell.classList.add("hovered");
+    });
+
+    cell.addEventListener("mouseout", () => {
+      const row = cell.parentElement;
+      const rowIndex = Array.from(row.parentElement.children).indexOf(row);
+      const cellIndex = Array.from(row.children).indexOf(cell);
+
+      // Remove highlight for the row cells
+      for (let i = 0; i <= cellIndex; i++) {
+        row.children[i].classList.remove("js-hover");
+        row.children[i].style.transitionDelay = "";
+      }
+
+      // Remove highlight for the column cells
+      for (let i = 0; i <= rowIndex; i++) {
+        row.parentElement.children[i].children[cellIndex].classList.remove("js-hover");
+        row.parentElement.children[i].children[cellIndex].style.transitionDelay = "";
+      }
+      
+      // Remove the darker highlight from the hovered cell
+      cell.classList.remove("hovered");
+    });
+  });
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const sizeMapping = {
+    'XXS': '32-34',
+    'XS': '34-36',
+    'S': '36-38',
+    'M': '38-40',
+    'L': '40-42',
+    'XL': '42-44',
+    'XXL': '44-46'
+  };
+
+  // Global state for EU/US toggle
+  let globalEuropeanSizesEnabled = false;
+
+  // Update all size cells in all tables
+  function updateAllCells(state) {
+    document.querySelectorAll('table .size-cell').forEach(function(cell) {
+      const usSize = cell.getAttribute('data-us');
+      cell.textContent = state ? sizeMapping[usSize] : usSize;
+    });
+  }
+
+  // Grab all toggle switches
+  const toggles = document.querySelectorAll('.custom-switch .size-toggle');
+  toggles.forEach(function(toggle) {
+    toggle.addEventListener('change', function(){
+      globalEuropeanSizesEnabled = toggle.checked;
+      updateAllCells(globalEuropeanSizesEnabled);
+      // Synchronize all toggles to reflect the global status
+      toggles.forEach(function(otherToggle){
+        otherToggle.checked = globalEuropeanSizesEnabled;
+      });
+    });
+  });
+});
+</script>
