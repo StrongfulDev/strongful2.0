@@ -4710,7 +4710,9 @@ span.snize-description,
 
 .sale-banner-cart-drawer {
 	background: var(--gradient-base-background-3);
+	/* background: white; */
 	padding: 1rem;
+	color:#722128;
 	margin-bottom: 1rem;
 	text-align: center;
 	font-size: calc(var(--font-body-size-small) * 1.4);
