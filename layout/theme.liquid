@@ -598,33 +598,12 @@ You can learn more about this (and learn how to cleanly revert these changes) at
        // (function(n){var u=function(){GlassixWidgetClient&&typeof GlassixWidgetClient=="function"?(window.widgetClient=new GlassixWidgetClient(n),widgetClient.attach(),window.glassixWidgetScriptLoaded&&window.glassixWidgetScriptLoaded()):f()},f=function(){r.onload=u;r.src="https://cdn.glassix.net/clients/widget.1.2.min.js";i.parentNode.removeChild(t);i.parentNode.insertBefore(r,i)},i=document.getElementsByTagName("script")[0],t=document.createElement("script"),r;(t.async=!0,t.type="text/javascript",t.crossorigin="anonymous",t.id="glassix-widget-script",r=t.cloneNode(),t.onload=u,t.src="https://cdn.glassix.com/clients/widget.1.2.min.js",!document.getElementById(t.id)&&document.body)&&(i.parentNode.insertBefore(t,i),t.onerror=f)})(widgetOptions)
     </script>
 <script src="https://system.user-a.co.il//Customers/3748629/strongful_co_il/andifn1.js" id="andipath" defer></script> 
-{% comment %} <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const language = 'he'; // Set to 'he' for Hebrew or 'en' for English
-    const customerId = '6f12bc7f-582b-4975-85fe-77ec20b5c5a1'; // Replace with your actual customer ID provided by Pele-AI
 
-    PeleAI.initialize({ customerId, language });
-
-    // Select only product cards that include the "data-pele-ai" attribute
-    const peleEligibleProducts = document.querySelectorAll('.card-product-overlay[data-pele-ai]');
-
-    peleEligibleProducts.forEach(product => {
-      const garmentImageUrl = product.querySelector('img').src;
-
-      PeleAI.createPeleAIButton({
-        container: product,
-        garmentId: product.dataset.garmentId,
-        garmentImageUrl: garmentImageUrl,
-        garmentType: product.dataset.garmentType
-      });
-    });
-  });
-</script> {% endcomment %}
 <script>
   (function(d){
     var s = d.createElement('script');
     s.src = "https://cdn.pele-ai.com/pele-ai.js";
-   s.onload = function(){
+    s.onload = function(){
       // Replace with your actual customer ID and language
       PeleAI.initialize("6f12bc7f-582b-4975-85fe-77ec20b5c5a1", "he");
       
@@ -632,12 +611,24 @@ You can learn more about this (and learn how to cleanly revert these changes) at
       var peleContainers = d.querySelectorAll('.pele-ai-try-on');
       var buttons = Array.from(peleContainers).map(function(container){
         var img = container.querySelector('img');
+        var garmentId = container.getAttribute('data-garment-id');
+        var garmentType = container.getAttribute('data-garment-type');
+        var garmentImageUrl = img ? img.src : container.getAttribute('data-garment-image-url');
+        var garmentName = container.getAttribute('data-garment-name');
+        
+        console.log("PeleAI Button data", {
+          garmentId: garmentId,
+          garmentType: garmentType,
+          garmentImageUrl: garmentImageUrl,
+          garmentName: garmentName
+        });
+        
         return PeleAI.createPeleAIButton(
           container,
-          container.getAttribute('data-garment-id'),
-          container.getAttribute('data-garment-type'),
-          img ? img.src : container.getAttribute('data-garment-image-url'),
-          container.getAttribute('data-garment-name')
+          garmentId,
+          garmentType,
+          garmentImageUrl,
+          garmentName
         );
       });
       
