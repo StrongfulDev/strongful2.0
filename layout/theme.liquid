@@ -619,9 +619,9 @@ You can learn more about this (and learn how to cleanly revert these changes) at
           }
         }
         // Otherwise, if the URL starts with "//", remove those leading slashes
-        else if (garmentImageUrl && garmentImageUrl.indexOf('//') === 0) {
-          garmentImageUrl = garmentImageUrl.substring(2);
-        }
+       else if (garmentImageUrl && garmentImageUrl.startsWith('//')) {
+  garmentImageUrl = garmentImageUrl.slice(2);
+}
         
         return PeleAI.createPeleAIButton(
           container,
