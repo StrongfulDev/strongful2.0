@@ -604,17 +604,22 @@ You can learn more about this (and learn how to cleanly revert these changes) at
     var s = d.createElement('script');
     s.src = "https://cdn.pele-ai.com/pele-ai.js";
     s.onload = function(){
-      // Replace with your actual customer ID and language
       PeleAI.initialize("6f12bc7f-582b-4975-85fe-77ec20b5c5a1", "he");
       
-      // Query all product cards that include the Pele-AI container
       var peleContainers = d.querySelectorAll('.pele-ai-try-on');
       var buttons = Array.from(peleContainers).map(function(container){
         var img = container.querySelector('img');
+        var garmentImageUrl = img ? img.src : container.getAttribute('data-garment-image-url');
+        
+        // Remove the leading "//" if present
+        if(garmentImageUrl && garmentImageUrl.indexOf('//') === 0) {
+          garmentImageUrl = garmentImageUrl.substring(2);
+        }
+        
         return PeleAI.createPeleAIButton(
           container,
           container.getAttribute('data-garment-id'),
-          img ? img.src : container.getAttribute('data-garment-image-url'),
+          garmentImageUrl,
           container.getAttribute('data-garment-type'),
           container.getAttribute('data-garment-name')
         );
