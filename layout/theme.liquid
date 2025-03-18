@@ -611,24 +611,12 @@ You can learn more about this (and learn how to cleanly revert these changes) at
       var peleContainers = d.querySelectorAll('.pele-ai-try-on');
       var buttons = Array.from(peleContainers).map(function(container){
         var img = container.querySelector('img');
-        var garmentId = container.getAttribute('data-garment-id');
-        var garmentType = container.getAttribute('data-garment-type');
-        var garmentImageUrl = img ? img.src : container.getAttribute('data-garment-image-url');
-        var garmentName = container.getAttribute('data-garment-name');
-        
-        console.log("PeleAI Button data", {
-          garmentId: garmentId,
-          garmentType: garmentType,
-          garmentImageUrl: garmentImageUrl,
-          garmentName: garmentName
-        });
-        
         return PeleAI.createPeleAIButton(
           container,
-          garmentId,
-          garmentType,
-          garmentImageUrl,
-          garmentName
+          container.getAttribute('data-garment-id'),
+          img ? img.src : container.getAttribute('data-garment-image-url'),
+          container.getAttribute('data-garment-type'),
+          container.getAttribute('data-garment-name')
         );
       });
       
