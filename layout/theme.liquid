@@ -397,6 +397,58 @@ You can learn more about this (and learn how to cleanly revert these changes) at
     })(window, document, "clarity", "script", "opsug7lq1a");
 </script>
 <script src="https://cdn.pele-ai.com/pele-ai.js" async></script>
+<script>
+  (function(d){
+    var s = d.createElement('script');
+    s.src = "https://cdn.pele-ai.com/pele-ai.js";
+    s.onload = function(){
+      PeleAI.initialize("6f12bc7f-582b-4975-85fe-77ec20b5c5a1", "he");
+      
+      var peleContainers = d.querySelectorAll('.pele-ai-try-on');
+      var buttons = Array.from(peleContainers).map(function(container){
+        var img = container.querySelector('img');
+        var garmentImageUrl = img ? img.src : container.getAttribute('data-garment-image-url');
+        
+        // If the URL contains the preview domain, replace it with the production domain and add width param if needed
+        if (garmentImageUrl && garmentImageUrl.indexOf('shopifypreview') > -1) {
+          garmentImageUrl = garmentImageUrl.replace(/.*shopifypreview\.com/, '//strongful.co.il');
+          if (garmentImageUrl.indexOf('width=') === -1) {
+            garmentImageUrl += (garmentImageUrl.indexOf('?') > -1 ? '&' : '?') + 'width=1946';
+          }
+        }
+        // Otherwise, if the URL starts with "//", remove those leading slashes
+        else if (garmentImageUrl && garmentImageUrl.indexOf('//') === 0) {
+          garmentImageUrl = garmentImageUrl.substring(2);
+        }
+        
+        var garmentId = container.getAttribute('data-garment-id');
+        var garmentType = container.getAttribute('data-garment-type');
+        var garmentName = container.getAttribute('data-garment-name');
+        
+        console.log("PeleAI Data Attributes:", {
+          garmentId: garmentId,
+          garmentImageUrl: garmentImageUrl,
+          garmentType: garmentType,
+          garmentName: garmentName
+        });
+        
+        return PeleAI.createPeleAIButton(
+          container,
+          garmentId,
+          garmentImageUrl,
+          garmentType,
+          garmentName
+        );
+      });
+      
+      window.addEventListener('unload', function(){
+        buttons.forEach(function(b){ b.destroy(); });
+        PeleAI.destroyFittingRoom();
+      });
+    };
+    d.head.appendChild(s);
+  })(document);
+</script>
   </head>
 
   {% assign isLiveTheme = 'false' %}
@@ -623,12 +675,23 @@ You can learn more about this (and learn how to cleanly revert these changes) at
           garmentImageUrl = garmentImageUrl.substring(2);
         }
         
+        var garmentId = container.getAttribute('data-garment-id');
+        var garmentType = container.getAttribute('data-garment-type');
+        var garmentName = container.getAttribute('data-garment-name');
+        
+        console.log("PeleAI Data Attributes:", {
+          garmentId: garmentId,
+          garmentImageUrl: garmentImageUrl,
+          garmentType: garmentType,
+          garmentName: garmentName
+        });
+        
         return PeleAI.createPeleAIButton(
           container,
-          container.getAttribute('data-garment-id'),
+          garmentId,
           garmentImageUrl,
-          container.getAttribute('data-garment-type'),
-          container.getAttribute('data-garment-name')
+          garmentType,
+          garmentName
         );
       });
       
