@@ -608,8 +608,9 @@ You can learn more about this (and learn how to cleanly revert these changes) at
       
       var peleContainers = d.querySelectorAll('.pele-ai-try-on');
      var buttons = Array.from(peleContainers).map(function(container) {
-    var img = container.querySelector('img');
-    var garmentImageUrl = img ? img.src : container.getAttribute('data-garment-image-url');
+   var img = container.querySelector('img');
+var garmentImageUrl = (img && img.currentSrc) ? img.currentSrc : container.getAttribute('data-garment-image-url');
+console.log("Garment image URL:", garmentImageUrl);
     console.log("Original garmentImageUrl:", garmentImageUrl);
 
     if (garmentImageUrl && garmentImageUrl.indexOf('shopifypreview') > -1) {
