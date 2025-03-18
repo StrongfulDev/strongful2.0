@@ -607,30 +607,39 @@ You can learn more about this (and learn how to cleanly revert these changes) at
       PeleAI.initialize("6f12bc7f-582b-4975-85fe-77ec20b5c5a1", "he");
       
       var peleContainers = d.querySelectorAll('.pele-ai-try-on');
-      var buttons = Array.from(peleContainers).map(function(container){
-        var img = container.querySelector('img');
-        var garmentImageUrl = img ? img.src : container.getAttribute('data-garment-image-url');
-        
-        // If the URL contains the preview domain, replace it with the production domain and add width param if needed
-        if (garmentImageUrl && garmentImageUrl.indexOf('shopifypreview') > -1) {
-          garmentImageUrl = garmentImageUrl.replace(/.*shopifypreview\.com/, '//strongful.co.il');
-          if (garmentImageUrl.indexOf('width=') === -1) {
+     var buttons = Array.from(peleContainers).map(function(container) {
+    var img = container.querySelector('img');
+    var garmentImageUrl = img ? img.src : container.getAttribute('data-garment-image-url');
+    console.log("Original garmentImageUrl:", garmentImageUrl);
+
+    if (garmentImageUrl && garmentImageUrl.indexOf('shopifypreview') > -1) {
+        garmentImageUrl = garmentImageUrl.replace(/.*shopifypreview\.com/, '//strongful.co.il');
+        console.log("After shopifypreview replacement:", garmentImageUrl);
+        if (garmentImageUrl.indexOf('width=') === -1) {
             garmentImageUrl += (garmentImageUrl.indexOf('?') > -1 ? '&' : '?') + 'width=1946';
-          }
+            console.log("After adding width parameter:", garmentImageUrl);
         }
-        // Otherwise, if the URL starts with "//", remove those leading slashes
-       else if (garmentImageUrl && garmentImageUrl.startsWith('//')) {
-  garmentImageUrl = garmentImageUrl.slice(2);
-}
-        
-        return PeleAI.createPeleAIButton(
-          container,
-          container.getAttribute('data-garment-id'),
-          garmentImageUrl,
-          container.getAttribute('data-garment-type'),
-          container.getAttribute('data-garment-name')
-        );
-      });
+    }
+    // Otherwise, if the URL starts with "//", remove those leading slashes
+    else if (garmentImageUrl && garmentImageUrl.startsWith('//')) {
+        console.log("Before removing leading slashes:", garmentImageUrl);
+        garmentImageUrl = garmentImageUrl.slice(2);
+        console.log("After removing leading slashes:", garmentImageUrl);
+    }
+
+    console.log("Final garmentImageUrl:", garmentImageUrl);
+    console.log("Attributes - garment-id:", container.getAttribute('data-garment-id'),
+                "garment-type:", container.getAttribute('data-garment-type'),
+                "garment-name:", container.getAttribute('data-garment-name'));
+
+    return PeleAI.createPeleAIButton(
+        container,
+        container.getAttribute('data-garment-id'),
+        garmentImageUrl,
+        container.getAttribute('data-garment-type'),
+        container.getAttribute('data-garment-name')
+    );
+});
       
       window.addEventListener('unload', function(){
         buttons.forEach(function(b){ b.destroy(); });
