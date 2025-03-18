@@ -615,7 +615,7 @@ console.log("Garment image URL:", garmentImageUrl);
 
     if (garmentImageUrl && garmentImageUrl.indexOf('shopifypreview') > -1) {
         garmentImageUrl = garmentImageUrl.replace(/.*shopifypreview\.com/, '//strongful.co.il');
-        garmentImageUrl = garmentImageUrl.slice(2);
+        garmentImageUrl = 'https://' + garmentImageUrl.slice(2);
         console.log("After shopifypreview replacement:", garmentImageUrl);
         if (garmentImageUrl.indexOf('width=') === -1) {
             garmentImageUrl += (garmentImageUrl.indexOf('?') > -1 ? '&' : '?') + 'width=1946';
