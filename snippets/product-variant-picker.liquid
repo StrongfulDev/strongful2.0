@@ -96,8 +96,11 @@
   </ul>
 {% endunless %}
 
-{% unless product.tags contains 'noSizeTable' %}
+{% comment %} {% unless product.tags contains 'noSizeTable' %}
   <p class="size-table-toggler pointer">{{ 'products.product.size_table' | t }}</p>
+{% endunless %} {% endcomment %}
+ {% unless product.tags contains 'noSizeTable' %}
+  {% render 'main-size-guide' ,product:product%}
 {% endunless %}
 {%- unless product.has_only_default_variant -%}
   {%- if block.settings.picker_type == 'button' -%}
