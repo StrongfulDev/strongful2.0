@@ -1862,7 +1862,7 @@ variant-radios {
 	z-index: 3;
     padding-bottom:0;
     padding-top: 0%;
-	background-color: none;
+	background-color: white;
 	border:none;
 }
 
