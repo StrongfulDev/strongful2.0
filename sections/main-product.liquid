@@ -92,6 +92,17 @@ You can learn more about this (and learn how to cleanly revert these changes) at
 
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
         <div class="grid__item product__media-wrapper small-hide">
+           {% if card_product.tags contains 'peleYellow' %}
+      <div class="pele-ai-try-on"
+           data-garment-id="{{ card_product.id }}"
+           data-garment-image-url="{{ card_product.featured_image | img_url: '400x' }}"
+           data-garment-type="{% if card_product.tags contains 'topPart' %}TOP{% elsif card_product.tags contains 'bottomPart' %}BOTTOM{% else %}FULL{% endif %}"
+            data-garment-name="{{ card_product.handle }}"
+        >
+           
+        {% comment %} <button class="pele-ai-button">Try On</button> {% endcomment %}
+      </div>
+    {% endif %}
             {% render 'product-media-gallery', product: product, is_duplicate: true %}
         </div>
         <div class="product__info-wrapper {{ section.settings.details_section_direction }} grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}">

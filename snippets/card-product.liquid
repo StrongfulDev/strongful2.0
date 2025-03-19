@@ -568,7 +568,7 @@
       <div class="pele-ai-try-on"
            data-garment-id="{{ card_product.id }}"
            data-garment-image-url="{{ card_product.featured_image | img_url: '400x' }}"
-           data-garment-type="{% if card_product.type == 'Shirt' %}TOP{% elsif card_product.type == 'Pants' %}BOTTOM{% else %}FULL{% endif %}"
+           data-garment-type="{% if card_product.tags contains 'topPart' %}TOP{% elsif card_product.tags contains 'bottomPart' %}BOTTOM{% else %}FULL{% endif %}"
             data-garment-name="{{ card_product.handle }}"
         >
            
