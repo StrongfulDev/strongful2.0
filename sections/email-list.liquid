@@ -1,16 +1,3 @@
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    flatpickr("#birthday", {
-      locale: 'he',
-      altInput: true,
-      altFormat: "F j, Y",
-      dateFormat: "Y-m-d",
-      onReady: function(selectedDates, dateStr, instance) {
-        instance.altInput.setAttribute("placeholder", "תאריך לידה*");
-      }
-    });
-  });
-</script>
 <div class="container">
   <div class="photo-desktop">
     {% if section.settings.photo != blank %}
@@ -56,7 +43,7 @@
       </div>
       <div class="form-group">
         <input
-          type="text"
+          type="date"
           id="birthday"
           name="birthday"
           placeholder="תאריך לידה*"
