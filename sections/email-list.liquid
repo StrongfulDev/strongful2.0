@@ -139,28 +139,40 @@
   input[type="date"] {
   -webkit-appearance: none;
   appearance: none;
-  background-color: #fff;
-  padding: 0.6rem 0.8rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 0.95rem;
+  background-color: #fff; /* Same as other input backgrounds */
+  padding: 0.6rem 0.8rem; /* Match padding of other fields */
+  border: 1px solid #ccc; /* Match border style */
+  border-radius: 4px; /* Match border-radius */
+  font-size: 0.95rem; /* Match font size */
   direction: rtl;
-  width: 100%;
-  min-height: 2.5rem;
-  color: #000;
+  width: 100%; /* Full width of container */
+  min-height: 2.5rem; /* Ensures height matches other inputs */
+  color: #000; /* Explicit text color */
 }
 
+/* Remove default browser calendar icon (optional for full customization) */
 input[type="date"]::-webkit-calendar-picker-indicator {
   opacity: 0;
+  cursor: pointer; /* Keep clickable behavior */
   position: absolute;
   left: 0;
   width: 100%;
   height: 100%;
-  cursor: pointer;
 }
 
+/* Position relative on parent to correctly place the icon (if adding custom icon) */
 .form-group {
   position: relative;
+}
+
+/* Optional: Adding custom calendar icon */
+input[type="date"]::after {
+  content: 'dd/mm/yyyy'; /* Custom icon content */
+  position: absolute;
+  left: 10px; /* adjust positioning as needed */
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
 }
 }
 
