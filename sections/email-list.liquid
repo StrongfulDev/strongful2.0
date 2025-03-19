@@ -1,7 +1,7 @@
 <div class="container">
   <div class="photo-desktop">
     {% if section.settings.photo != blank %}
-      <img src="{{ section.settings.photo | img_url: 'original' }}" alt="{{ section.settings.alt_text }}">
+      <img src="{{ section.settings.photo | image_url: 'original' }}" alt="{{ section.settings.alt_text }}" width="928" height="731">
     {% else %}
       <img src="{{ 'placeholder.jpg' | asset_url }}" alt="Placeholder">
     {% endif %}
@@ -183,7 +183,7 @@ font-size: 14px !important;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.5rem;
   transition: background-color 0.2s ease-in-out;
   margin-top: 1rem;
 }
