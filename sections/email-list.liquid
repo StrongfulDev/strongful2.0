@@ -1,7 +1,7 @@
 <div class="container">
   <div class="photo-desktop">
     {% if section.settings.photo != blank %}
-      <img src="{{ section.settings.photo | image_url: 'original' }}" alt="{{ section.settings.alt_text }}" width="928" height="731">
+      <img src="{{ section.settings.photo | image_url: 'original' }}" alt="{{ section.settings.alt_text }}">
     {% else %}
       <img src="{{ 'placeholder.jpg' | asset_url }}" alt="Placeholder">
     {% endif %}
