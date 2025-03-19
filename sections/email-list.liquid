@@ -48,7 +48,7 @@
           name="birthday"
           placeholder="תאריך לידה*"
           required
-          onclick="if (this.type === 'text') { this.type = 'date'; this.click(); }"
+          onfocus="if (this.type==='text'){this.type='date';setTimeout(()=>this.click(),0)}"
         >
       </div>
       <p class="form-agreement" style="text-align: center; font-size: 1.1rem; margin-bottom: 1rem;">
