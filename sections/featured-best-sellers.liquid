@@ -55,6 +55,14 @@
             - {{ product.vendor }}
           {% endif %}
         </h3>
+        {% if section.settings.show_price %}
+          <div class="product-price">
+            <span class="price">{{ product.price | money }}</span>
+            {% if section.settings.show_compare_at_price and product.compare_at_price > product.price %}
+              <span class="compare-at-price">{{ product.compare_at_price | money }}</span>
+            {% endif %}
+          </div>
+        {% endif %}
         {% case forloop.index %}
           {% when 1 %}
             {% if section.settings.product_text1 != blank %}
@@ -664,6 +672,18 @@
       "type": "checkbox",
       "id": "show_vendor",
       "label": "Show Vendor Info",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_price",
+      "label": "Show Product Price",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_compare_at_price",
+      "label": "Show Compare at Price",
       "default": true
     }
   ],
