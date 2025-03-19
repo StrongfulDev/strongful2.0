@@ -136,6 +136,32 @@
     display: block;
     margin: 0 auto;
   }
+  input[type="date"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  direction: rtl;
+  width: 100%;
+  min-height: 2.5rem;
+  color: #000;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.form-group {
+  position: relative;
+}
 }
 
 /* 2) Form & input styling */
@@ -201,9 +227,7 @@ font-size: 14px !important;
 .btn-submit.secondary:hover {
   background-color: #777;
 }
-.input[type="date"] {
-  webkit-appearance: none;
-}
+
 </style>
 
 {% schema %}
