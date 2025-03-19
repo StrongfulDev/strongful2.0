@@ -1,3 +1,14 @@
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    flatpickr("#birthday", {
+      locale: 'he',
+      altInput: true,
+      altFormat: "F j, Y",
+      dateFormat: "Y-m-d"
+      // Additional options here
+    });
+  });
+</script>
 <div class="container">
   <div class="photo-desktop">
     {% if section.settings.photo != blank %}
@@ -48,7 +59,6 @@
           name="birthday"
           placeholder="תאריך לידה*"
           required
-          onfocus="if (this.type==='text'){this.type='date';setTimeout(()=>this.click(),0)}"
         >
       </div>
       <p class="form-agreement" style="text-align: center; font-size: 1.1rem; margin-bottom: 1rem;">
@@ -223,6 +233,21 @@ input[type="date"] {
   direction: rtl;
   width: 100%;
   min-height: 2.5rem;
+  color: #000;
+}
+
+/* Customize Flatpickr day cells */
+.flatpickr-day {
+  background-color: #f0f0f0;
+  color: #000;
+}
+.flatpickr-day.selected {
+  background-color: #000;
+  color: #fff;
+}
+/* Customize header styling */
+.flatpickr-current-month {
+  font-size: 1.2rem;
   color: #000;
 }
 </style>
