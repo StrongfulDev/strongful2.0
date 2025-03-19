@@ -10,7 +10,7 @@
   Usage:
   {% render 'product-media-gallery', is_duplicate: true %}
 {% endcomment %}
-
+<script src="/assets/full-bleed.js"></script>
 {%- liquid
         if product.tags contains 'plusSizeProduct'
             assign plusTag = 'plusSizeProduct'
@@ -60,10 +60,9 @@
             data-desktop-layout="{{ section.settings.gallery_layout }}"
     >
         <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
-        <slider-component id="GalleryViewer-{{ section.id }}{{ id_append }}" class="slider-mobile-gutter {% if product.media.size < 2 %}single-image-media-list{% endif %}">
+        <slider-component id="GalleryViewer-{{ section.id }}{{ id_append }}" class="slider-mobile-gutter full-width-slider {% if product.media.size < 2 %}single-image-media-list{% endif %}">
             {%- unless is_duplicate -%}
-                <a class="skip-to-content-link button visually-hidden quick-add-hidden"
-                   href="#ProductInfo-{{ section.id }}">
+                <a class="skip-to-content-link button visually-hidden quick-add-hidden" href="#ProductInfo-{{ section.id }}">
                     {{ 'accessibility.skip_to_product_info' | t }}
                 </a>
             {%- endunless -%}

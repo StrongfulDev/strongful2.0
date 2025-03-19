@@ -45,7 +45,6 @@ slider-component.slider-component-full-width {
 		overflow-x: auto;
 		scroll-snap-type: x mandatory;
 		scroll-behavior: smooth;
-		scroll-padding-left: 1.5rem;
 		/*-webkit-overflow-scrolling: touch;*/
 	}
 
@@ -72,6 +71,64 @@ slider-component.slider-component-full-width {
 
 	.slider.slider--mobile.contains-content-container .slider__slide {
 		--focus-outline-padding: 0rem;
+	}
+
+	/* Mobile slider centering override */
+	.product__media-list {
+		/* Remove any unwanted scroll padding and center the slider */
+		scroll-padding-left: 50vw;
+		scroll-padding-right: 50vw;
+	}
+	.product__media-list .slider__slide {
+		/* Center the snapping of each slide */
+		scroll-snap-align: center;
+	}
+
+	/* Full bleed slider override for mobile */
+	.full-width-slider {
+		margin-left: calc(50% - 50vw);
+		margin-right: calc(50% - 50vw);
+		width: 100vw;
+	}
+
+	/* Full bleed slider override for mobile */
+	/* Force the slider to span full viewport width */
+	.full-width-slider {
+		position: absolute !important;
+		left: 50% !important;
+		transform: translateX(-50%) !important;
+		width: 100vw !important;
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+
+	/* Remove any padding from parent elements that might constrain the slider */
+	slider-component.page-width,
+	.product-media-gallery-container {
+		padding: 0 !important;
+		margin: 0 !important;
+	}
+
+	/* Remove scroll padding on the media list if needed */
+	.product__media-list {
+		scroll-padding: 0 !important;
+	}
+
+	/* Remove constraints from the parent container */
+	slider-component.page-width,
+	.product-media-gallery-container {
+		padding: 0 !important;
+		margin: 0 !important;
+	}
+	
+	/* Force the full bleed on the slider element */
+	slider-component .full-width-slider {
+		position: absolute !important;
+		left: 50% !important;
+		transform: translateX(-50%) !important;
+		width: 100vw !important;
+		margin: 0 !important;
+		padding: 0 !important;
 	}
 }
 
@@ -668,5 +725,10 @@ slider-component .discount-price-container * {
 
 	.collection__title_heading {
 		flex-direction: row;
+	}
+}
+@media screen and (max-width: 749px) {
+	.slider.slider--mobile {
+		scroll-padding:0;
 	}
 }
