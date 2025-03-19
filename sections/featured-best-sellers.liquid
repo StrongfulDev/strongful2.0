@@ -391,24 +391,36 @@
       bottom: {{ section.settings.subheading_bottom }}%;
       left: {{ section.settings.subheading_left }}%;
     }
-    /* Optionally remove any forced text-align if not needed */
+    .desktop-cta-adjust {
+      position: absolute;
+      bottom: {{ section.settings.cta_bottom }}%;
+      left: {{ section.settings.cta_left }}%;
+    }
+    /* Optionally remove forced text-align */
     .featured-two-box__title {
-      /* Remove forced text-align so desktop slider values control the position */
       text-align: initial !important;
     }
   }
 
-  /* Mobile: revert to previous alignment */
+  /* Mobile: revert to static positioning and style CTA as underlined with no background */
   @media (max-width: 749px) {
     .featured-two-box__title {
       position: static;
       text-align: {{ section.settings.title_alignment }};
       direction: {{ section.settings.text_direction }};
     }
-    .desktop-subheading-adjust {
+    .desktop-subheading-adjust,
+    .desktop-cta-adjust {
       position: static;
     }
+    .mobile-cta-adjust {
+      text-decoration: underline;
+      background: none;
+      padding: 0;
+    }
   }
+  
+  /* Remaining styles … */
 </style>
 
 {% schema %}
@@ -603,6 +615,24 @@
       "step": 1,
       "default": 5,
       "label": "Subheading Left Position (%)"
+    },
+    {
+      "type": "range",
+      "id": "cta_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 10,
+      "label": "CTA Bottom Position (%)"
+    },
+    {
+      "type": "range",
+      "id": "cta_left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 10,
+      "label": "CTA Left Position (%)"
     }
   ],
   "presets": [
