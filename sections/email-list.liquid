@@ -4,8 +4,10 @@
       locale: 'he',
       altInput: true,
       altFormat: "F j, Y",
-      dateFormat: "Y-m-d"
-      // Additional options here
+      dateFormat: "Y-m-d",
+      onReady: function(selectedDates, dateStr, instance) {
+        instance.altInput.setAttribute("placeholder", "תאריך לידה*");
+      }
     });
   });
 </script>
