@@ -1,14 +1,16 @@
 <div class="featured-two-box container" style="padding: 2rem 0;  background-color: {{ section.settings.bg_color }}; color: {{ section.settings.text_color }};">
   <div class="featured-two-box__info">
     {% if section.settings.title != blank %}
-      <h4 class="featured-two-box__title mobile-dir">
+      <h4 class="featured-two-box__title mobile-dir" style="position: absolute; bottom: {{ section.settings.title_bottom }}; left: {{ section.settings.title_left }};">
         {{ section.settings.title }}
       </h4>
     {% endif %}
 
     {% if section.settings.subheading != blank %}
       <div class="featured-two-box__subheading-wrap">
-        <h2 class="featured-two-box__subheading">{{ section.settings.subheading }}</h2>
+        <h2 class="featured-two-box__subheading" style="position: absolute; bottom: {{ section.settings.subheading_bottom }}; left: {{ section.settings.subheading_left }};">
+          {{ section.settings.subheading }}
+        </h2>
         {% if section.settings.cta_text != blank and section.settings.cta_link != blank %}
           <a href="{{ section.settings.cta_link }}" class="featured-two-box__cta">
             {{ section.settings.cta_text }}
@@ -534,6 +536,30 @@
       "max": 3,
       "step": 1,
       "default": 2
+    },
+    {
+      "type": "text",
+      "id": "title_bottom",
+      "default": "10px",
+      "label": "Main Heading Bottom Position (e.g., 10px)"
+    },
+    {
+      "type": "text",
+      "id": "title_left",
+      "default": "10px",
+      "label": "Main Heading Left Position (e.g., 10px)"
+    },
+    {
+      "type": "text",
+      "id": "subheading_bottom",
+      "default": "5px",
+      "label": "Subheading Bottom Position (e.g., 5px)"
+    },
+    {
+      "type": "text",
+      "id": "subheading_left",
+      "default": "5px",
+      "label": "Subheading Left Position (e.g., 5px)"
     }
   ],
   "presets": [
