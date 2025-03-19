@@ -28,7 +28,7 @@
             "color_scheme": "inverse",
             "custom_background_color": "#722128",
             "custom_text_color": "#ffffff",
-            "enable_custom_colors": true
+            "enable_custom_colors": false
           }
         },
         "7c37c998-83a9-46d6-91fd-3ceaaab10008": {
@@ -45,7 +45,7 @@
             "color_scheme": "inverse",
             "custom_background_color": "#722128",
             "custom_text_color": "#ffffff",
-            "enable_custom_colors": true
+            "enable_custom_colors": false
           }
         },
         "8a66318a-92fb-4fe3-8af2-41e36854cfdb": {
@@ -62,7 +62,7 @@
             "color_scheme": "inverse",
             "custom_background_color": "#722128",
             "custom_text_color": "#ffffff",
-            "enable_custom_colors": true
+            "enable_custom_colors": false
           }
         }
       },
