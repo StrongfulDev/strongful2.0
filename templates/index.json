@@ -220,7 +220,8 @@
         "subheading_bottom": 67,
         "subheading_left": 17,
         "cta_bottom": 27,
-        "cta_left": 12
+        "cta_left": 12,
+        "show_vendor": false
       }
     },
     "17388407748dd9c850": {
