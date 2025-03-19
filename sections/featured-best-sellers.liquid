@@ -11,12 +11,13 @@
         <h2 class="featured-two-box__subheading desktop-subheading-adjust">
           {{ section.settings.subheading }}
         </h2>
-        {% if section.settings.cta_text != blank and section.settings.cta_link != blank %}
-          <a href="{{ section.settings.cta_link }}" class="featured-two-box__cta">
-            {{ section.settings.cta_text }}
-          </a>
-        {% endif %}
       </div>
+    {% endif %}
+
+    {% if section.settings.cta_text != blank and section.settings.cta_link != blank %}
+      <a href="{{ section.settings.cta_link }}" class="featured-two-box__cta desktop-cta-adjust mobile-cta-adjust">
+        {{ section.settings.cta_text }}
+      </a>
     {% endif %}
   </div>
 
@@ -417,6 +418,26 @@
       text-decoration: underline;
       background: none;
       padding: 0;
+    }
+  }
+
+  /* Desktop: use slider values for absolute CTA positioning */
+  @media (min-width: 750px) {
+    .desktop-cta-adjust {
+      position: absolute;
+      bottom: {{ section.settings.cta_bottom }}%;
+      left: {{ section.settings.cta_left }}%;
+    }
+  }
+
+  /* Mobile: CTA is styled as underlined text with no background */
+  @media (max-width: 749px) {
+    .mobile-cta-adjust {
+      background: none;
+      color: gray;
+      text-decoration: underline;
+      padding: 0;
+      margin-top: 0;
     }
   }
   
