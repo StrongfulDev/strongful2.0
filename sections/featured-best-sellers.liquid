@@ -49,7 +49,12 @@
           </div>
         {%- endif -%}
           <script>console.log( product.vendor )</script>
-        <h3 class="product-card__title">{{ product.title }} - {{ product.vendor }}</h3>
+        <h3 class="product-card__title">
+          {{ product.title }}
+          {% if section.settings.show_vendor %}
+            - {{ product.vendor }}
+          {% endif %}
+        </h3>
         {% case forloop.index %}
           {% when 1 %}
             {% if section.settings.product_text1 != blank %}
@@ -654,6 +659,12 @@
       "step": 1,
       "default": 10,
       "label": "CTA Left Position (%)"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "label": "Show Vendor Info",
+      "default": true
     }
   ],
   "presets": [
