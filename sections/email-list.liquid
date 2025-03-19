@@ -1,7 +1,11 @@
 <div class="container">
   <div class="photo-desktop">
     {% if section.settings.photo != blank %}
-      <img src="{{ section.settings. photo | img_url: 'original' }}" alt="{{ section.settings.alt_text }}" height="928" width="731">
+      <img 
+        src="{{ section.settings.photo | img_url: '1856x1462' }}" 
+        srcset="{{ section.settings.photo | img_url: '1856x1462' }} 1x, {{ section.settings.photo | img_url: '3712x2924' }} 2x" 
+        sizes="(max-width: 731px) 100vw, 928px"
+        alt="{{ section.settings.alt_text }}">
     {% else %}
       <img src="{{ 'placeholder.jpg' | asset_url }}" alt="Placeholder">
     {% endif %}
@@ -81,7 +85,7 @@
 }
 @media (min-width:1441px) {
   .container {
-    padding: 0 20px;
+    padding: 0;
       margin: 0 auto;
   overflow-x: hidden;
   max-width:2160px;
