@@ -1,14 +1,14 @@
-<div class="featured-two-box container" style="padding: 2rem 0;  background-color: {{ section.settings.bg_color }}; color: {{ section.settings.text_color }};">
+<div class="featured-two-box container" style="position: relative; overflow: hidden; padding: 2rem 0; background-color: {{ section.settings.bg_color }}; color: {{ section.settings.text_color }};">
   <div class="featured-two-box__info">
     {% if section.settings.title != blank %}
-      <h4 class="featured-two-box__title mobile-dir" style="position: absolute; bottom: {{ section.settings.title_bottom }}px; left: {{ section.settings.title_left }}px;">
+      <h4 class="featured-two-box__title desktop-title-adjust mobile-dir">
         {{ section.settings.title }}
       </h4>
     {% endif %}
 
     {% if section.settings.subheading != blank %}
       <div class="featured-two-box__subheading-wrap">
-        <h2 class="featured-two-box__subheading" style="position: absolute; bottom: {{ section.settings.subheading_bottom }}px; left: {{ section.settings.subheading_left }}px;">
+        <h2 class="featured-two-box__subheading desktop-subheading-adjust">
           {{ section.settings.subheading }}
         </h2>
         {% if section.settings.cta_text != blank and section.settings.cta_link != blank %}
@@ -376,6 +376,37 @@
     .featured-two-box__title {
       text-align: left !important;
       direction: ltr !important;
+    }
+  }
+
+  /* Desktop: use slider values for absolute positioning */
+  @media (min-width: 750px) {
+    .desktop-title-adjust {
+      position: absolute;
+      bottom: {{ section.settings.title_bottom }}px;
+      left: {{ section.settings.title_left }}px;
+    }
+    .desktop-subheading-adjust {
+      position: absolute;
+      bottom: {{ section.settings.subheading_bottom }}px;
+      left: {{ section.settings.subheading_left }}px;
+    }
+    /* Optionally remove any forced text-align if not needed */
+    .featured-two-box__title {
+      /* Remove forced text-align so desktop slider values control the position */
+      text-align: initial !important;
+    }
+  }
+
+  /* Mobile: revert to previous alignment */
+  @media (max-width: 749px) {
+    .featured-two-box__title {
+      position: static;
+      text-align: {{ section.settings.title_alignment }};
+      direction: {{ section.settings.text_direction }};
+    }
+    .desktop-subheading-adjust {
+      position: static;
     }
   }
 </style>
