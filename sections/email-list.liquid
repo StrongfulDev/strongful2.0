@@ -42,7 +42,15 @@
           oninput="this.setCustomValidity('')">
       </div>
       <div class="form-group">
-        <input type="date" id="birthday" name="birthday" placeholder="תאריך לידה*" required>
+              <input
+          type="text"
+          id="birthday"
+          name="birthday"
+          placeholder="תאריך לידה*"
+          onfocus="(this.type='date')"
+          onblur="if(!this.value)this.type='text'"
+          required
+        >
       </div>
       <p class="form-agreement" style="text-align: center; font-size: 1.1rem; margin-bottom: 1rem;">
         על ידי מילוי ושליחת הטופס אני מסכימ/ה לקבלת דיוור.
@@ -136,44 +144,7 @@
     display: block;
     margin: 0 auto;
   }
-  input[type="date"] {
-  -webkit-appearance: none;
-  appearance: none;
-  background-color: #fff; /* Same as other input backgrounds */
-  padding: 0.6rem 0.8rem; /* Match padding of other fields */
-  border: 1px solid #ccc; /* Match border style */
-  border-radius: 4px; /* Match border-radius */
-  font-size: 0.95rem; /* Match font size */
-  direction: rtl;
-  width: 100%; /* Full width of container */
-  min-height: 2.5rem; /* Ensures height matches other inputs */
-  color: #000; /* Explicit text color */
-}
-
-/* Remove default browser calendar icon (optional for full customization) */
-input[type="date"]::-webkit-calendar-picker-indicator {
-  opacity: 0;
-  cursor: pointer; /* Keep clickable behavior */
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* Position relative on parent to correctly place the icon (if adding custom icon) */
-.form-group {
-  position: relative;
-}
-
-/* Optional: Adding custom calendar icon */
-input[type="date"]::after {
-  content: '📅';
-  position: absolute;
-  left: 10px; /* adjust positioning as needed */
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-}
+  
 }
 
 /* 2) Form & input styling */
@@ -239,7 +210,22 @@ font-size: 14px !important;
 .btn-submit.secondary:hover {
   background-color: #777;
 }
-
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  direction: rtl;
+  width: 100%;
+  min-height: 2.5rem;
+  color: #000;
+}
 </style>
 
 {% schema %}
