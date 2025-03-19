@@ -214,7 +214,11 @@
         "product_text4": "“חזייה איכותית מאוד עם עיצוב מודרני ונעים לעין. היא מתאימה גם ליומיום וגם לאירועים מיוחדים.",
         "product_text5": "",
         "mobile_display_mode": "vertical",
-        "mobile_columns": 2
+        "mobile_columns": 2,
+        "title_bottom": 81,
+        "title_left": 5,
+        "subheading_bottom": 67,
+        "subheading_left": 17
       }
     },
     "17388407748dd9c850": {
