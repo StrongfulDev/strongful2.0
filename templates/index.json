@@ -206,7 +206,7 @@
         "text_color": "#000000",
         "star_color": "#ceb18f",
         "star_spacing": "4px",
-        "title_alignment": "center",
+        "title_alignment": "left",
         "text_direction": "ltr",
         "product_text1": "“אני פשוט אוהבת את החזייה הזו! היא מספקת תמיכה מושלמת ונוחה לשימוש יום-יומי.",
         "product_text2": "“המוצר הזה הוא שילוב מנצח של נוחות וסטייל. החזייה מחזיקה בצורה מעולה!",
@@ -218,7 +218,9 @@
         "title_bottom": 81,
         "title_left": 5,
         "subheading_bottom": 67,
-        "subheading_left": 17
+        "subheading_left": 17,
+        "cta_bottom": 27,
+        "cta_left": 12
       }
     },
     "17388407748dd9c850": {
