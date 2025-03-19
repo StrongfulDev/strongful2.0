@@ -383,13 +383,13 @@
   @media (min-width: 750px) {
     .desktop-title-adjust {
       position: absolute;
-      bottom: {{ section.settings.title_bottom }}px;
-      left: {{ section.settings.title_left }}px;
+      bottom: {{ section.settings.title_bottom }}%;
+      left: {{ section.settings.title_left }}%;
     }
     .desktop-subheading-adjust {
       position: absolute;
-      bottom: {{ section.settings.subheading_bottom }}px;
-      left: {{ section.settings.subheading_left }}px;
+      bottom: {{ section.settings.subheading_bottom }}%;
+      left: {{ section.settings.subheading_left }}%;
     }
     /* Optionally remove any forced text-align if not needed */
     .featured-two-box__title {
@@ -575,7 +575,7 @@
       "max": 100,
       "step": 1,
       "default": 10,
-      "label": "Main Heading Bottom Position (px)"
+      "label": "Main Heading Bottom Position (%)"
     },
     {
       "type": "range",
@@ -584,7 +584,7 @@
       "max": 100,
       "step": 1,
       "default": 10,
-      "label": "Main Heading Left Position (px)"
+      "label": "Main Heading Left Position (%)"
     },
     {
       "type": "range",
@@ -593,7 +593,7 @@
       "max": 100,
       "step": 1,
       "default": 5,
-      "label": "Subheading Bottom Position (px)"
+      "label": "Subheading Bottom Position (%)"
     },
     {
       "type": "range",
@@ -602,7 +602,7 @@
       "max": 100,
       "step": 1,
       "default": 5,
-      "label": "Subheading Left Position (px)"
+      "label": "Subheading Left Position (%)"
     }
   ],
   "presets": [
