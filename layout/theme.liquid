@@ -5,6 +5,9 @@ You can learn more about this (and learn how to cleanly revert these changes) at
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>{% render 'yoast-seo' %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 {% render 'visually_io_sdk' %}
       <script>
           (function() {
@@ -118,12 +121,14 @@ You can learn more about this (and learn how to cleanly revert these changes) at
         font-style: --font-body-style;
         }
 
-        @font-face {
-        font-family: 'Open Sans', sans-serif;
-        src: url('{{ 'OpenSans-VariableFont_wdth,wght.ttf' | file_url }}') format('truetype');
-        font-weight: --font-body-weight;
-        font-style: --font-body-style;
-        }
+            {%- comment -%}
+            @font-face {
+                font-family: 'Arimo', sans-serif;
+                src: url('{{ 'Arimo.ttf' | asset_url }}') format('truetype');
+                font-weight: --font-body-weight;
+                font-style: --font-body-style;
+            }
+            {%- endcomment -%}
 
         {% comment %} Include a custom font from the theme customizer {% endcomment %}
         {% if settings.type_body_font_custom != blank and settings.type_body_font_custom != "none" %}
