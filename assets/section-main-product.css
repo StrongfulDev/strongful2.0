@@ -2515,3 +2515,10 @@ li.relative-discount {
 .js.product-form__input.four-or-more {
 	justify-content: space-between;
 }
+@media screen and (min-width: 750px) {
+	.fab-container{
+		top:1%;
+		left:52%;
+	}
+	
+}

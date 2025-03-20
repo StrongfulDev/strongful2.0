@@ -65,6 +65,17 @@
       class="slider-mobile-gutter {% if product.media.size < 2 %}single-image-media-list{% endif %}"
       
     >
+        {% comment %} {% if product.tags contains 'peleYellow' %}
+            <div class="pele-ai-try-on"
+                data-garment-id="{{ product.id }}"
+                data-garment-image-url="{{ product.featured_image | img_url: '400x' }}"
+                data-garment-type="{% if product.tags contains 'topPart' %}TOP{% elsif product.tags contains 'bottomPart' %}BOTTOM{% else %}FULL{% endif %}"
+                data-garment-name="{{ product.handle }}"
+            >
+                {% comment %} <button class="pele-ai-button">Try On</button> {% endcomment %}
+            </div>
+        {% endif %} {% endcomment %}
+    {% comment %} {% endif %} {% endcomment %}
         {% if product.tags contains 'peleYellow' %}
       <div class="pele-ai-try-on"
            data-garment-id="{{ product.id }}"
@@ -75,7 +86,8 @@
            
         {% comment %} <button class="pele-ai-button">Try On</button> {% endcomment %}
       </div>
-    {% endif %} {%- unless is_duplicate -%}
+    {% endif %} 
+    {%- unless is_duplicate -%}
         <a
           class="skip-to-content-link button visually-hidden quick-add-hidden"
           href="#ProductInfo-{{ section.id }}"
