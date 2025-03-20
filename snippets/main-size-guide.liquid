@@ -69,7 +69,6 @@
         .size-chart table {
           width: 100%;
           border-collapse: collapse;
-          margin-bottom: 1em;
         }
         .size-chart th, .size-chart td {
           border: 1px solid #ddd;
@@ -231,7 +230,7 @@
         .table-responsive {
           position: relative;
           width: 100%;
-          overflow-x: auto;
+          overflow-x: scroll;
           border:1px solid #ddd;
         }
         /* Force the table to be wider than the container to allow horizontal scroll */
@@ -318,7 +317,7 @@
         }
         @media screen and (max-width: 749px) {
           .table-responsive {
-            overflow-x: auto; /* horizontal scroll only on mobile */
+            overflow-x: scroll; /* horizontal scroll only on mobile */
           }
         }
 
@@ -332,7 +331,7 @@
         }
         @media screen and (max-width: 749px) {
           .table-responsive {
-            overflow-x: auto; /* horizontal scroll on mobile */
+            overflow-x: scroll; /* horizontal scroll on mobile */
             direction: rtl;  /* ensure RTL scrolling */
           }
           /* Make header cells sticky on the right */
@@ -488,7 +487,7 @@
   /* Adjust the table container to ensure proper stacking */
   .table-responsive {
     position: relative;
-    overflow-x: auto;
+    overflow-x: scroll;
   }
 
   /* Ensure header cells appear above the table body */
@@ -532,7 +531,7 @@
 /* Mobile adjustment to ensure proper RTL scrolling behavior */
 @media screen and (max-width: 749px) {
   .table-responsive {
-    overflow-x: auto;
+    overflow-x: scroll;
     direction: rtl; /* RTL scroll support */
   }
 
