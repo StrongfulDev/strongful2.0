@@ -121,14 +121,12 @@ You can learn more about this (and learn how to cleanly revert these changes) at
         font-style: --font-body-style;
         }
 
-            {%- comment -%}
-            @font-face {
-                font-family: 'Arimo', sans-serif;
-                src: url('{{ 'Arimo.ttf' | asset_url }}') format('truetype');
-                font-weight: --font-body-weight;
-                font-style: --font-body-style;
+                @font-face {
+            font-family: 'Arimo', sans-serif;
+            src: url('{{ 'Arimo.ttf' | asset_url }}') format('truetype');
+            font-weight: --font-body-weight;
+            font-style: --font-body-style;
             }
-            {%- endcomment -%}
 
         {% comment %} Include a custom font from the theme customizer {% endcomment %}
         {% if settings.type_body_font_custom != blank and settings.type_body_font_custom != "none" %}
