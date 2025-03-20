@@ -2585,9 +2585,10 @@ li.relative-discount {
 	}
 	.page-width .full-width-slider {
 		display: block !important;
-		width: 100vw !important;
+		width: 106vw !important;
 		position: relative !important;
-		left: 55% !important;
+		left: 50% !important;
+		right: 50% !important;
 		transform: translateX(-50%) !important;
 		margin-left: calc(-1 * ((100vw - 100%) / 2)) !important;
 		margin-right: calc(-1 * ((100vw - 100%) / 2)) !important;
@@ -2630,5 +2631,17 @@ li.relative-discount {
 		flex: 0 0 80%; /* Each slide takes 80% width, leaving 10% on each side */
 		scroll-snap-align: center; /* Snap to center, not start */
 		margin: 0;
+	}
+}
+@media screen and (max-width: 750px) {
+    .full-width-slider {
+        /* Use full viewport width and center using margin formulas */
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+	.product__column-sticky .slider-buttons button.slider-button {
+	display: none;
 	}
 }

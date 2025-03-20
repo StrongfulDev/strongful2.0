@@ -10,7 +10,7 @@
   Usage:
   {% render 'product-media-gallery', is_duplicate: true %}
 {% endcomment %}
-<script src="/assets/full-bleed.js"></script>
+<script src="/assets/full-bleed.js" defer></script>
 {%- liquid
         if product.tags contains 'plusSizeProduct'
             assign plusTag = 'plusSizeProduct'
