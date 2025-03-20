@@ -10,7 +10,17 @@
   Usage:
   {% render 'product-media-gallery', is_duplicate: true %}
 {% endcomment %}
-
+         {% if product.tags contains 'peleYellow' %}
+      <div class="pele-ai-try-on"
+           data-garment-id="{{ product.id }}"
+           data-garment-image-url="{{ product.featured_image | img_url: '400x' }}"
+           data-garment-type="{% if product.tags contains 'topPart' %}TOP{% elsif product.tags contains 'bottomPart' %}BOTTOM{% else %}FULL{% endif %}"
+            data-garment-name="{{ product.handle }}"
+        >
+           
+        {% comment %} <button class="pele-ai-button">Try On</button> {% endcomment %}
+      </div>
+    {% endif %}
 {%- liquid
         if product.tags contains 'plusSizeProduct'
             assign plusTag = 'plusSizeProduct'
