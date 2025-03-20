@@ -25,7 +25,13 @@
       modal_id: section.id
     %}
 {% endcomment %}
-
+   {% if product.tags contains 'peleYellow' %}
+      <div class="pele-ai-try-on"
+           data-garment-id="{{ product.id }}"
+           data-garment-image-url="{{ product.featured_image | img_url: '400x' }}"
+           data-garment-type="{% if product.tags contains 'topPart' %}TOP{% elsif product.tags contains 'bottomPart' %}BOTTOM{% else %}FULL{% endif %}"
+            data-garment-name="{{ product.handle }}"
+        >
 {%- liquid
     unless lazy_load == false
         assign lazy = 'lazy'
