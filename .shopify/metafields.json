@@ -174,6 +174,16 @@
         "name": "boolean",
         "category": "TRUE_FALSE"
       }
+    },
+    {
+      "key": "collection_description",
+      "namespace": "custom",
+      "name": "תיאור קולקציה",
+      "description": "",
+      "type": {
+        "name": "rich_text_field",
+        "category": "TEXT"
+      }
     }
   ],
   "company": [],
