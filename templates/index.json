@@ -265,6 +265,7 @@
       "blocks": {
         "slide_KdxH44": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/1_8e36b041-5175-4ba3-b5ea-020a04352a13.jpg",
             "mobile_image": "shopify://shop_images/1_fbf073a8-5f9e-4cdd-bc32-74661e4310d6.jpg",
