@@ -3,7 +3,7 @@
   We add a "Show Size Guide" button and an "X" to close.
 {% endcomment %}
 {{ section-main-product | asset_url | stylesheet_tag }}
-{% assign measurement_text = "<strong>כיצד תמדדי את עצמך?</strong><ul style='list-style: none; padding-left: 20px;padding:0; margin: 0;'><li><strong>חזה</strong>: הנחי את סרט המדידה סביב החלק הרחב ביותר של חזה שלך בדיוק מתחת לזרועותיך.</li><br/><li><strong>מותניים</strong>: מדדי סביב קו מותניים שלך בגובה הטבור.</li><br/><li><strong>ירכיים</strong>:מדדי סביב החלק הרחב ביותר של הירך בחלקה העליון של הרגל.</li><br/><li><strong>אורך פנימי</strong>:מדדי את הרגל מצידה הפנימי מאיזור המפשעה ועד מטה..</li></ul>" %}
+{% assign measurement_text = "<strong>כיצד תמדדי את עצמך?</strong><ul style='list-style: none; padding-left: 20px;padding:0; margin: 0;'><li><strong>חזה</strong>: הניחי את סרט המדידה סביב החלק הרחב ביותר של החזה ומדדי בדיוק מתחת לזרועותייך כולל החזה.</li><br/><li><strong>מותניים</strong>: מדדי סביב קו מותניים שלך בגובה הטבור.</li><br/><li><strong>ירכיים</strong>:מדדי סביב החלק הרחב ביותר של הירך בחלקה העליון של הרגל.</li><br/><li><strong>אורך פנימי</strong>:מדדי את הרגל מצידה הפנימי מאיזור המפשעה ועד מטה..</li></ul>" %}
 <!-- Button to open the size guide modal -->
 <button id="open-size-guide" class="size-table-toggler">
   {{ 'products.product.size_table' | t }}
@@ -544,9 +544,9 @@
     <h2>טבלת מידות</h2>
 
       <div class="product-size-switch-container">
-        <span class="size-switch" data-target="onesie-chart">אוברול</span>
         <span class="size-switch" data-target="shirt-chart">טופ</span>
-        <span class="size-switch" data-target="pants-chart">מכנס</span>
+        <span class="size-switch" data-target="pants-chart">טייץ/מכנס</span>
+        <span class="size-switch" data-target="onesie-chart">אוברול</span>
         <span class="size-switch" data-target="jacket-chart">ג׳קטים וחולצות</span> <!-- New switch -->
       </div>
 

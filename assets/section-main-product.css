@@ -2035,7 +2035,7 @@ product-info > .product__inventory {
 		color: rgb(0, 0, 0);
 		direction: rtl;
 		text-align: right;
-		border-top: 1px var(--gradient-base-background-3) solid;
+		/* border-top: 1px var(--gradient-base-background-3) solid; */
 		margin: 0%;
 	}
 
