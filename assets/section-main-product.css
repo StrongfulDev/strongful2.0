@@ -1851,7 +1851,7 @@ variant-radios {
 .size-table-toggler {
 	display: block;
 	font-size: smaller;
-	color: var(--gradient-base-accent-3);
+	color: black;
 	text-decoration: underline;
 	margin: 0;
 	text-align: left;
@@ -1862,6 +1862,8 @@ variant-radios {
 	z-index: 10000;
     padding-bottom:0;
     padding-top: 0%;
+	    background-color: #ffffff;
+    border: none;
 }
 
 .gift-card-product-form__input {
