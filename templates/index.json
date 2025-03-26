@@ -195,6 +195,7 @@
     },
     "featured_collection_AaFqPp": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "steps": 4,
         "title": "NEW IN",
