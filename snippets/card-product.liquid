@@ -275,6 +275,10 @@
                        <span class="new-product-span">
                            SALE
                        </span>
+                    {% elsif card_product.tags contains "tallNewProductSpan" %}
+                          <span class="new-product-span" style="background-color:#888888; color:white;">
+                       TALL
+                            </span>
                         {% elsif card_product.tags contains settings.restock_badge_tag %}
                             <span class="new-product-span" style="background-color:#888888; color:white;">
                                 RESTOCK
