@@ -279,7 +279,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                               {{ block.shopify_attributes }}>
                               <div class="values-title">{{translations.chooseAmountText}}</div>
                               {%- for option in product.options_with_values -%}
-                                <fieldset class="js product-form__input">
+                                <fieldset  class="js product-form__input" style="justify-content: space-between;">
                                   {%- for value in option.values -%}
                                     <input
                                       type="radio"
