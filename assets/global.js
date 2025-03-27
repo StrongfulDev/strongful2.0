@@ -1288,11 +1288,30 @@ window.addEventListener('DOMContentLoaded', function(event) {
 	}
 
 	function openLoginModal() {
-		$(".custom-customer-account-container").addClass("active");
+	  $(".custom-customer-account-container").addClass("active");
 		customerOverlay.removeClass("hidden");
-		animations(registerListItem);
 
-		if (cartDrawer.hasClass("active")) {
+		// Force the register tab to be active.
+		let registerItem = $(".multicolumn-list__item[data-account='register']");
+		if (registerItem.length) {
+			// Add active state to register item and remove it from siblings.
+			registerItem.addClass("active").siblings().removeClass("active");
+
+			// If you have a border indicator, update its position.
+			if (borderPosition.length) {
+				let activeWidth = registerItem.innerWidth();
+				let position = registerItem.position();
+				borderPosition.css("width", activeWidth + "px").css("left", position.left + "px");
+			}
+
+			// Show the proper section if it exists.
+			let customerSection = $(`div[id$="register"]`);
+			if (customerSection.length) {
+				customerSection.removeClass("hidden").siblings('div[id^="shopify-section"]').addClass("hidden");
+			}
+		}
+
+	  if (cartDrawer.hasClass("active")) {
 			cartDrawer.removeClass("active");
 		}
 	}
@@ -1461,10 +1480,17 @@ if (window.performance && window.performance.navigation.type === window.performa
 let customerEmailForFlashy;
 
 document.addEventListener("hiko", (event) => {
-  if (event.detail.action === 'login' || event.detail.action === 'activate') {
-    customerEmailForFlashy = event.detail.email;
-    flashy.contacts.create({
-      "email": customerEmailForFlashy
-    }, 18665);
-  }
+	if (event.detail.action === "login" || event.detail.action === "activate") {
+		customerEmailForFlashy = event.detail.email;
+		flashy.contacts.create(
+			{
+				email: customerEmailForFlashy,
+			},
+			18665
+		);
+	}
+});
+$(document).on("click", ".multicolumn-list__item", function () {
+	// Remove active state from siblings and add to the clicked element
+	$(this).addClass("active").siblings().removeClass("active");
 });
