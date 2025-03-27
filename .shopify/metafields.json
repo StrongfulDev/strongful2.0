@@ -664,6 +664,16 @@
         "name": "single_line_text_field",
         "category": "TEXT"
       }
+    },
+    {
+      "key": "minicart_recommended_products",
+      "namespace": "custom",
+      "name": "מוצרים להמלצה במיניקארט",
+      "description": "",
+      "type": {
+        "name": "list.product_reference",
+        "category": "REFERENCE"
+      }
     }
   ],
   "variant": [
