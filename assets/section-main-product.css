@@ -543,6 +543,12 @@ a.product__text {
 }
 
 /* Product media */
+.product__media-list {
+	scroll-snap-type: x mandatory;
+	overflow-x: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+
 .product__media-list video {
 	border-radius: calc(var(--media-radius) - var(--media-border-width));
 }
@@ -2644,4 +2650,7 @@ li.relative-discount {
 	.product__column-sticky .slider-buttons button.slider-button {
 	display: none;
 	}
+}
+.slider__slide {
+	scroll-snap-align: center;
 }

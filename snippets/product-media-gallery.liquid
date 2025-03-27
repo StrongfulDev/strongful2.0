@@ -359,3 +359,30 @@
         {% render 'model-switcher', model_product: product %}
     {% endif %}
 </div>
+
+<style>
+
+@media only screen and (max-width: 768px) {
+    /* Hide zoom icons by default */
+    .product__media-list .product__media-item .zoom-btn,
+    .product__media-list .product__media-item .product__media-icon--lightbox {
+        display: none !important;
+    }
+    /* Show zoom icons only on the active slide */
+    .product__media-list .product__media-item.is-active .zoom-btn,
+    .product__media-list .product__media-item.is-active .product__media-icon--lightbox {
+        display: inline-block !important; /* Adjust if needed */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+  /* Hide zoom icon on slides that do NOT have the .is-active class */
+  .product__media-item:not(.is-active) .product__media-icon--lightbox {
+    display: none !important;
+  }
+  /* Ensure zoom icon shows on the active slide */
+  .product__media-item.is-active .product__media-icon--lightbox {
+    display: block !important;
+  }
+}
+</style>
