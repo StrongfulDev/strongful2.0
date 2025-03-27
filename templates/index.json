@@ -119,12 +119,12 @@
         "slide_EQwW66": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/copy_9_2e8a840f-8144-45e1-84e0-1bc12644be01.jpg",
-            "mobile_image": "shopify://shop_images/copy_3_10.jpg",
-            "left_position": 27,
-            "bottom_position": 36,
-            "desktop_left_position": 32,
-            "desktop_bottom_position": 25,
+            "image": "shopify://shop_images/copy_2_3940c7ec-a542-4253-a3ef-38b7790da5cb.jpg",
+            "mobile_image": "shopify://shop_images/copy_7_2ba84a79-1ad8-412a-89bd-a8a8c13998ab.jpg",
+            "left_position": 64,
+            "bottom_position": 26,
+            "desktop_left_position": 13,
+            "desktop_bottom_position": 14,
             "show_lock": false,
             "button_label": "SHOP NOW",
             "link": "shopify://collections/up-to-40",
