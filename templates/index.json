@@ -512,6 +512,9 @@
     },
     "featured_blog_3p3kGH": {
       "type": "featured-blog",
+      "custom_css": [
+        "@media screen and (max-width: 750px){.blog__title {padding-left: 12px;} }"
+      ],
       "settings": {
         "heading": "StrongBlog",
         "heading_size": "h0",
