@@ -12,8 +12,8 @@
     "main": {
       "type": "main-blog",
       "settings": {
-        "tile_image_one": "shopify://shop_images/41_21593eab-6f71-49e9-b2e0-a3842331b049.jpg",
-        "tile_image_one_link": "shopify://collections/up-to-40",
+        "tile_image_one": "shopify://shop_images/20_b3584613-2109-4499-8c92-d5be9bd1cdd2.jpg",
+        "tile_image_one_link": "shopify://collections/25-off",
         "tile_image_two": "shopify://shop_images/a40ea1b4acde1744ca52d0ccdf0dc1bf_c51e4cfb-f27a-4861-83c7-c5e97962099d.jpg",
         "tile_image_two_link": "shopify://collections/best-seller-internal-use",
         "layout": "grid",
