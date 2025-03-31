@@ -14,8 +14,8 @@
       "settings": {
         "tile_image_one": "shopify://shop_images/20_b3584613-2109-4499-8c92-d5be9bd1cdd2.jpg",
         "tile_image_one_link": "shopify://collections/25-off",
-        "tile_image_two": "shopify://shop_images/a40ea1b4acde1744ca52d0ccdf0dc1bf_c51e4cfb-f27a-4861-83c7-c5e97962099d.jpg",
-        "tile_image_two_link": "shopify://collections/best-seller-internal-use",
+        "tile_image_two": "shopify://shop_images/21_50a0f337-3585-403b-a11c-c71b717017d5.jpg",
+        "tile_image_two_link": "shopify://collections/shell-burgundy",
         "layout": "grid",
         "show_image": true,
         "image_height": "large",
