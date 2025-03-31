@@ -35,6 +35,7 @@
 
 .grid--peek .article-card {
   box-sizing: border-box;
+  direction:rtl;
 }
 
 .article-card__image-wrapper > a {
@@ -69,7 +70,7 @@
 .article-card .card__heading {
   margin-bottom: 0.6rem;
 	font-size: var(--font-body-size-large);
-	font-weight: var(--font-body-weight-bold);
+	font-weight: bold;
 }
 
 .blog-articles .article-card .card__information,
