@@ -90,6 +90,7 @@
       </h3>
     {%- endif -%}
     {%- form 'customer_login', novalidate: 'novalidate' -%}
+      <input type="hidden" name="return_to" id="return_to_login">
       {%- if form.errors -%}
           {% comment %}
         <h2 class="form__message" tabindex="-1" autofocus>

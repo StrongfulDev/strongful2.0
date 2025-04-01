@@ -32,6 +32,7 @@
       <h1>{{ 'customer.register.title' | t }}</h1>
     {% endif %}
   {%- form 'create_customer', novalidate: 'novalidate', id: 'create_customer_custom_form' -%}
+    <input type="hidden" name="return_to" id="return_to_register">
     {%- if form.errors -%}
       <h2 class="form__message" tabindex="-1" autofocus>
         <svg aria-hidden="true" focusable="false">

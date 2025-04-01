@@ -1494,3 +1494,8 @@ $(document).on("click", ".multicolumn-list__item", function () {
 	// Remove active state from siblings and add to the clicked element
 	$(this).addClass("active").siblings().removeClass("active");
 });
+
+$(document).on("click", ".account-toggler-site-wide", function () {
+	sessionStorage.setItem("redirectAfterLogin", window.location.pathname + window.location.search);
+	$("#return_to_login, #return_to_register").val(window.location.pathname + window.location.search);
+});
