@@ -1,1 +1,109 @@
-{"sections":{"slideshow_nTPDCf":{"type":"slideshow","blocks":{"slide_DfNBVx":{"type":"slide","settings":{"image":"shopify:\/\/shop_images\/0_1387b1f3-a968-4b89-b28c-13d09702a699.jpg","mobile_image":"shopify:\/\/shop_images\/0_1683e548-4d18-43a7-ad42-2206049d5fa2.jpg","button_label":"","link":"","show_text_box":false,"color_scheme":"background-1","whole_slide_link":"","button_style_secondary":false,"box_align":"middle-center","text_alignment":"center","image_overlay_opacity":0,"text_alignment_mobile":"center"}}},"block_order":["slide_DfNBVx"],"settings":{"layout":"full_bleed","slide_height":"adapt_image","slider_visual":"sides","auto_rotate":false,"change_slides_speed":5,"show_text_below":false,"accessibility_info":"Slideshow about our brand","padding_top":0,"padding_bottom":36}},"page_9z6jVU":{"type":"page","settings":{"page":"lets-move","section_direction":true,"heading_size":"h1","color_scheme":"background-1","padding_top":36,"padding_bottom":36}},"featured_collection_gFKkbX":{"type":"featured-collection","settings":{"steps":4,"title":"BEST SELLERS","heading_size":"h1","heading_type":"heading_type_2","description":"","show_description":false,"description_style":"body","collection":"best-seller-internal-use","products_to_show":17,"columns_desktop":5,"full_width":true,"show_view_all":true,"view_all_text":"SHOP ALL","view_all_style":"link","view_all_location":"top","enable_desktop_slider":true,"show_peak":true,"pagination_type":"sides","color_scheme":"background-1","image_ratio":"adapt","show_secondary_image":true,"show_vendor":true,"show_rating":false,"show_sale_badge":false,"enable_quick_add":true,"quick_add_type":"hover","quick_add_type_mobile":"modal","quick_add_text":"הוספה מהירה","pick_size_text":"בחירת מידה","quick_add_accessories_text":"הוספה מהירה","columns_mobile":"2","swipe_on_mobile":true,"padding_top":36,"padding_bottom":36}}},"order":["slideshow_nTPDCf","page_9z6jVU","featured_collection_gFKkbX"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_nTPDCf": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_DfNBVx": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/c72efba66fa220ece84ff17d1b073859_afa3af79-8913-4164-8d41-716c8d878cbb.jpg",
+            "mobile_image": "shopify://shop_images/b7ea9146826536ca2ead2c1c5256426f.jpg",
+            "left_position": 50,
+            "bottom_position": 50,
+            "desktop_left_position": 50,
+            "desktop_bottom_position": 50,
+            "show_lock": false,
+            "button_label": "",
+            "link": "",
+            "show_text_box": false,
+            "color_scheme": "background-1",
+            "whole_slide_link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_DfNBVx"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "sides",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": false,
+        "accessibility_info": "Slideshow about our brand",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "page_9z6jVU": {
+      "type": "page",
+      "settings": {
+        "page": "lets-move",
+        "section_direction": true,
+        "heading_size": "h1",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_gFKkbX": {
+      "type": "featured-collection",
+      "settings": {
+        "steps": 4,
+        "title": "BEST SELLERS",
+        "heading_size": "h1",
+        "heading_type": "heading_type_2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "best-seller-internal-use",
+        "products_to_show": 17,
+        "columns_desktop": 5,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_text": "SHOP ALL",
+        "view_all_style": "link",
+        "view_all_location": "top",
+        "enable_desktop_slider": true,
+        "show_peak": true,
+        "pagination_type": "sides",
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": false,
+        "show_sale_badge": false,
+        "enable_quick_add": true,
+        "quick_add_type": "hover",
+        "quick_add_type_mobile": "modal",
+        "quick_add_text": "הוספה מהירה",
+        "pick_size_text": "בחירת מידה",
+        "quick_add_accessories_text": "הוספה מהירה",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "slideshow_nTPDCf",
+    "page_9z6jVU",
+    "featured_collection_gFKkbX"
+  ]
+}
