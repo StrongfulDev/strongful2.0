@@ -233,34 +233,6 @@
         "padding_bottom": 16
       }
     },
-    "17388407748dd9c850": {
-      "type": "apps",
-      "blocks": {
-        "tellos_shoppable_video_home_page_carousel_CKyiHh": {
-          "type": "shopify://apps/tellos-shoppable-video/blocks/home-page-carousel/a4490152-a6c6-410b-9721-736f5b95f2f2",
-          "settings": {
-            "size": "large",
-            "explore-card-label": "Explore all videos",
-            "background": "rgba(0,0,0,0)",
-            "padding_top": 8,
-            "padding_bottom": 8,
-            "padding_horizontal": 0,
-            "add_header": true,
-            "header_text": "TRENDING NOW",
-            "header_type": "h2",
-            "alignment": "center",
-            "header_gap": 30,
-            "custom_css": ".carousel-header { font-size: 20px; font-weight: 200; }"
-          }
-        }
-      },
-      "block_order": [
-        "tellos_shoppable_video_home_page_carousel_CKyiHh"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
     "customer_slideshow_wFcfK7": {
       "type": "customer-slideshow",
       "blocks": {
@@ -300,6 +272,34 @@
         "accessibility_info": "Slideshow about our brand",
         "padding_top": 16,
         "padding_bottom": 16
+      }
+    },
+    "17388407748dd9c850": {
+      "type": "apps",
+      "blocks": {
+        "tellos_shoppable_video_home_page_carousel_CKyiHh": {
+          "type": "shopify://apps/tellos-shoppable-video/blocks/home-page-carousel/a4490152-a6c6-410b-9721-736f5b95f2f2",
+          "settings": {
+            "size": "large",
+            "explore-card-label": "Explore all videos",
+            "background": "rgba(0,0,0,0)",
+            "padding_top": 8,
+            "padding_bottom": 8,
+            "padding_horizontal": 0,
+            "add_header": true,
+            "header_text": "TRENDING NOW",
+            "header_type": "h2",
+            "alignment": "center",
+            "header_gap": 30,
+            "custom_css": ".carousel-header { font-size: 20px; font-weight: 200; }"
+          }
+        }
+      },
+      "block_order": [
+        "tellos_shoppable_video_home_page_carousel_CKyiHh"
+      ],
+      "settings": {
+        "include_margins": true
       }
     },
     "our_collection_list_v2_mK6kUx": {
@@ -400,47 +400,6 @@
         "accessibility_info": "Slideshow about our brand",
         "padding_top": 16,
         "padding_bottom": 16
-      }
-    },
-    "customer_slideshow_jXTBRG": {
-      "type": "customer-slideshow",
-      "blocks": {
-        "slide_TxMXy9": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/1_0530155f-40c8-475e-98c1-820c7f06d4d8.jpg",
-            "mobile_image": "shopify://shop_images/1_105d437f-637a-4c81-bdfd-772d240b8f8f.jpg",
-            "login_desktop_image": "shopify://shop_images/1_5a9b4abf-1572-484d-b812-3bad9170c26c.jpg",
-            "login_mobile_image": "shopify://shop_images/1_75751ccc-90f4-4222-b3b8-ef6b7b2602a6.jpg",
-            "button_label": "",
-            "login_button_label": "",
-            "link": "shopify://pages/loyalty",
-            "login_link": "",
-            "show_text_box": true,
-            "color_scheme": "background-1",
-            "logged_in_color_scheme": "background-1",
-            "whole_slide_link": "shopify://pages/loyalty",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "text_alignment_mobile": "center"
-          }
-        }
-      },
-      "block_order": [
-        "slide_TxMXy9"
-      ],
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "adapt_image",
-        "slider_visual": "sides",
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand",
-        "padding_top": 24,
-        "padding_bottom": 24
       }
     },
     "173246164424ec44fa": {
@@ -567,6 +526,47 @@
         "padding_bottom": 20
       }
     },
+    "customer_slideshow_jXTBRG": {
+      "type": "customer-slideshow",
+      "blocks": {
+        "slide_TxMXy9": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/1_0530155f-40c8-475e-98c1-820c7f06d4d8.jpg",
+            "mobile_image": "shopify://shop_images/1_105d437f-637a-4c81-bdfd-772d240b8f8f.jpg",
+            "login_desktop_image": "shopify://shop_images/1_5a9b4abf-1572-484d-b812-3bad9170c26c.jpg",
+            "login_mobile_image": "shopify://shop_images/1_75751ccc-90f4-4222-b3b8-ef6b7b2602a6.jpg",
+            "button_label": "",
+            "login_button_label": "",
+            "link": "shopify://pages/loyalty",
+            "login_link": "",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "logged_in_color_scheme": "background-1",
+            "whole_slide_link": "shopify://pages/loyalty",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_TxMXy9"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "sides",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
     "collection_list_w4D6TE": {
       "type": "collection-list",
       "blocks": {
@@ -684,8 +684,8 @@
     "slideshow_gwXDrF",
     "featured_collection_XDhFHB",
     "featured_collection_AaFqPp",
-    "17388407748dd9c850",
     "customer_slideshow_wFcfK7",
+    "17388407748dd9c850",
     "our_collection_list_v2_mK6kUx",
     "customer_slideshow_JN4JiR",
     "173246164424ec44fa",
