@@ -267,10 +267,10 @@
         "slide_KdxH44": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/fd755764aff711800b1b739ce46f1227.jpg",
-            "mobile_image": "shopify://shop_images/3c5d9d5369e00639567a1c08bbacfa2e.jpg",
-            "login_desktop_image": "shopify://shop_images/fd755764aff711800b1b739ce46f1227_7819f46e-07e8-412b-9549-11fa6a31aee1.jpg",
-            "login_mobile_image": "shopify://shop_images/3c5d9d5369e00639567a1c08bbacfa2e_1e374a3d-a090-487f-b930-03bafa227266.jpg",
+            "image": "shopify://shop_images/fd755764aff711800b1b739ce46f1227_18d1ee64-35b2-4877-9297-1edc6f6ad5aa.jpg",
+            "mobile_image": "shopify://shop_images/copy_d51bfc67-d15e-4334-b5be-3aebf8a1e5ae.jpg",
+            "login_desktop_image": "shopify://shop_images/fd755764aff711800b1b739ce46f1227_ddf6b17d-0fce-4409-a25a-e4361c35eb50.jpg",
+            "login_mobile_image": "shopify://shop_images/copy_866f263d-2eab-4bf5-964b-d4d9ffc49f1d.jpg",
             "button_label": "",
             "login_button_label": "",
             "link": "shopify://collections/oasis-old-money",
@@ -359,6 +359,47 @@
         "is_full_width": false,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "customer_slideshow_JN4JiR": {
+      "type": "customer-slideshow",
+      "blocks": {
+        "slide_LqAUbW": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/fd755764aff711800b1b739ce46f1227.jpg",
+            "mobile_image": "shopify://shop_images/3c5d9d5369e00639567a1c08bbacfa2e.jpg",
+            "login_desktop_image": "shopify://shop_images/fd755764aff711800b1b739ce46f1227_7819f46e-07e8-412b-9549-11fa6a31aee1.jpg",
+            "login_mobile_image": "shopify://shop_images/3c5d9d5369e00639567a1c08bbacfa2e_1e374a3d-a090-487f-b930-03bafa227266.jpg",
+            "button_label": "",
+            "login_button_label": "",
+            "link": "shopify://collections/oasis-old-money",
+            "login_link": "",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "logged_in_color_scheme": "background-1",
+            "whole_slide_link": "shopify://pages/lets-move",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_LqAUbW"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "sides",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand",
+        "padding_top": 16,
+        "padding_bottom": 16
       }
     },
     "customer_slideshow_jXTBRG": {
@@ -646,10 +687,11 @@
     "17388407748dd9c850",
     "customer_slideshow_wFcfK7",
     "our_collection_list_v2_mK6kUx",
-    "customer_slideshow_jXTBRG",
+    "customer_slideshow_JN4JiR",
     "173246164424ec44fa",
     "collection_list_QrC4z9",
     "featured_blog_3p3kGH",
+    "customer_slideshow_jXTBRG",
     "collection_list_w4D6TE",
     "4371b550-969b-4828-986d-71697fc53ef0"
   ]
