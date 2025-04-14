@@ -353,7 +353,7 @@
         "show_line_separator": true,
         "mobile_menu": "",
         "mobile_logo_position": "center",
-        "show_first_image": true,
+        "show_first_image": false,
         "image_order_first": "2",
         "mobile_top_image_1": "shopify://shop_images/copy_1_496112c7-be80-49ba-aa32-0bbce074b8f4.jpg",
         "mobile_top_image_1_link": "shopify://collections/shell-the-new-collection",
