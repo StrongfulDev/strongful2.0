@@ -94,8 +94,19 @@
             "title_link": "shopify://collections/comfort-ballet"
           }
         },
+        "url_A8pd7p": {
+          "type": "url",
+          "settings": {
+            "link_text_direction": "Left To Right",
+            "show_on_mobile": true,
+            "small_font": false,
+            "title": "SHOP ALL",
+            "title_link": "shopify://collections/sets"
+          }
+        },
         "4d0d7344-0f17-4600-86d8-3481f2a1c4a1": {
           "type": "menu_item",
+          "disabled": true,
           "settings": {
             "above_shop_all_link": "",
             "show_on_mobile": true,
@@ -147,7 +158,7 @@
             "show_on_mobile": true,
             "order": "",
             "small_font": false,
-            "menu": "trending",
+            "menu": "trending-without-10",
             "menu_second": "",
             "menu_third": "",
             "title": "קני לפי",
@@ -329,6 +340,7 @@
       },
       "block_order": [
         "bd053c52-574f-435e-be3a-a4a74c72b169",
+        "url_A8pd7p",
         "4d0d7344-0f17-4600-86d8-3481f2a1c4a1",
         "fc929aa6-aab6-4c25-be13-8267425330c3",
         "ba94928e-5cd1-47f5-9c0a-28ea47285f01",
