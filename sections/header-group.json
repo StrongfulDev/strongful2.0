@@ -94,8 +94,34 @@
             "title_link": "shopify://collections/comfort-ballet"
           }
         },
+        "8878d4cf-d83f-42a2-90b9-ddebceb7501c": {
+          "type": "menu_item",
+          "settings": {
+            "above_shop_all_link": "",
+            "show_on_mobile": true,
+            "order": "",
+            "small_font": false,
+            "menu": "dropdown-bottoms",
+            "menu_second": "",
+            "menu_third": "",
+            "title": "כל המוצרים",
+            "item_class": "",
+            "title_link": "",
+            "desktop_links_image_1": "shopify://shop_images/44.jpg",
+            "desktop_links_image_1_link": "shopify://collections/comfort-ballet",
+            "desktop_links_image_2": "shopify://shop_images/43.jpg",
+            "desktop_links_image_2_link": "shopify://pages/lets-move",
+            "mobile_cover_image": "shopify://shop_images/20e5c3f719da92dc7bfd0c70c57f7186.jpg",
+            "mobile_title": "כל המוצרים",
+            "main_link": "",
+            "main_title": "",
+            "shop_all_link": "",
+            "shop_all_title": ""
+          }
+        },
         "4d0d7344-0f17-4600-86d8-3481f2a1c4a1": {
           "type": "menu_item",
+          "disabled": true,
           "settings": {
             "above_shop_all_link": "",
             "show_on_mobile": true,
@@ -147,7 +173,7 @@
             "show_on_mobile": true,
             "order": "",
             "small_font": false,
-            "menu": "trending",
+            "menu": "trending-without-10",
             "menu_second": "",
             "menu_third": "",
             "title": "קני לפי",
@@ -157,31 +183,6 @@
             "desktop_links_image_1_link": "shopify://collections/comfort-ballet",
             "desktop_links_image_2_link": "",
             "mobile_title": "קני לפי",
-            "main_link": "",
-            "main_title": "",
-            "shop_all_link": "",
-            "shop_all_title": ""
-          }
-        },
-        "8878d4cf-d83f-42a2-90b9-ddebceb7501c": {
-          "type": "menu_item",
-          "settings": {
-            "above_shop_all_link": "",
-            "show_on_mobile": true,
-            "order": "",
-            "small_font": false,
-            "menu": "dropdown-bottoms",
-            "menu_second": "",
-            "menu_third": "",
-            "title": "כל המוצרים",
-            "item_class": "",
-            "title_link": "",
-            "desktop_links_image_1": "shopify://shop_images/44.jpg",
-            "desktop_links_image_1_link": "shopify://collections/comfort-ballet",
-            "desktop_links_image_2": "shopify://shop_images/43.jpg",
-            "desktop_links_image_2_link": "shopify://pages/lets-move",
-            "mobile_cover_image": "shopify://shop_images/20e5c3f719da92dc7bfd0c70c57f7186.jpg",
-            "mobile_title": "כל המוצרים",
             "main_link": "",
             "main_title": "",
             "shop_all_link": "",
@@ -329,10 +330,10 @@
       },
       "block_order": [
         "bd053c52-574f-435e-be3a-a4a74c72b169",
+        "8878d4cf-d83f-42a2-90b9-ddebceb7501c",
         "4d0d7344-0f17-4600-86d8-3481f2a1c4a1",
         "fc929aa6-aab6-4c25-be13-8267425330c3",
         "ba94928e-5cd1-47f5-9c0a-28ea47285f01",
-        "8878d4cf-d83f-42a2-90b9-ddebceb7501c",
         "menu_item_9A93XE",
         "menu_item_UMakwC",
         "93921bbc-631f-46c2-a66b-9df086c3f7a0",
