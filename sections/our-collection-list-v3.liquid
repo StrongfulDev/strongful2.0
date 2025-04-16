@@ -37,7 +37,7 @@
       >
         <h2
           id="SectionHeading-{{ section.id }}"
-          class="collection-list-title {{ section.settings.heading_size }} {{ section.settings.heading_type }}"
+          class="collection-list-title {{ section.settings.heading_size }} {{ section.settings.heading_type }} heading-align-{{ section.settings.heading_alignment }}"
         >
           {{ section.settings.title | escape }}
         </h2>
@@ -157,6 +157,17 @@
       ],
       "default": "heading_type_default",
       "label": "t:sections.all.heading_type.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "options": [
+         { "value": "left", "label": "Left" },
+         { "value": "center", "label": "Center" },
+         { "value": "right", "label": "Right" }
+      ],
+      "default": "left",
+      "label": "Heading Alignment"
     },
     {
       "type": "select",
