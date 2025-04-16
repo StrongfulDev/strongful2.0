@@ -26,8 +26,8 @@
             "sub_text_direction": "rtl",
             "link": "shopify://blogs/policies/החזרות-והחלפות",
             "color_scheme": "inverse",
-            "custom_background_color": "#fcedeb",
-            "custom_text_color": "#000000",
+            "custom_background_color": "#000000",
+            "custom_text_color": "#ffffff",
             "enable_custom_colors": true
           }
         },
@@ -43,8 +43,8 @@
             "sub_text_direction": "ltr",
             "link": "shopify://collections/comfort-ballet",
             "color_scheme": "inverse",
-            "custom_background_color": "#fcedeb",
-            "custom_text_color": "#000000",
+            "custom_background_color": "#000000",
+            "custom_text_color": "#ffffff",
             "enable_custom_colors": true
           }
         },
@@ -60,8 +60,8 @@
             "sub_text_direction": "rtl",
             "link": "shopify://blogs/policies/מדיניות-המשלוחים-שלנו",
             "color_scheme": "inverse",
-            "custom_background_color": "#fcedeb",
-            "custom_text_color": "#000000",
+            "custom_background_color": "#000000",
+            "custom_text_color": "#ffffff",
             "enable_custom_colors": true
           }
         }
