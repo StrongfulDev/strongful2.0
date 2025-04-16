@@ -195,10 +195,9 @@
     },
     "featured_collection_AaFqPp": {
       "type": "featured-collection",
-      "disabled": true,
       "settings": {
         "steps": 4,
-        "title": "NEW IN",
+        "title": "BEST SELLERS ON SALE",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
@@ -766,8 +765,8 @@
   "order": [
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9",
     "slideshow_gwXDrF",
-    "featured_collection_XDhFHB",
     "featured_collection_AaFqPp",
+    "featured_collection_XDhFHB",
     "our_collection_list_v3_mQh6DU",
     "customer_slideshow_wFcfK7",
     "17388407748dd9c850",
