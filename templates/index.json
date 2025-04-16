@@ -228,7 +228,7 @@
         "pick_size_text": "הוספה מהירה",
         "quick_add_accessories_text": "Pick accessories",
         "columns_mobile": "2",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 40,
         "padding_bottom": 16,
         "link_collection": ""
