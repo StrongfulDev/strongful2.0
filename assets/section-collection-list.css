@@ -1,4 +1,4 @@
- #index .collection-list {
+#index .collection-list {
   margin-top: 0;
   margin-bottom: 0;
 	 width: 100%;
@@ -297,4 +297,13 @@
 		width: 24%;
 		max-width: 25%;
 	}
+
+  /* New rule for 6 columns on desktop.
+     Ensure that when the grid is set to 6 columns the grid items are forced
+     into one row by using grid-template-columns explicitly. */
+  .grid--6-col-desktop {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr) !important;
+    gap: calc(var(--grid-desktop-horizontal-spacing) * 1);
+  }
 }
