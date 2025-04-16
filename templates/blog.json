@@ -12,8 +12,8 @@
     "main": {
       "type": "main-blog",
       "settings": {
-        "tile_image_one": "shopify://shop_images/44.jpg",
-        "tile_image_one_link": "shopify://collections/comfort-ballet",
+        "tile_image_one": "shopify://shop_images/25_1b335307-4b2f-4d52-b6a8-7a94796cf1a4.jpg",
+        "tile_image_one_link": "shopify://collections/40-off",
         "tile_image_two": "shopify://shop_images/43_b64b9230-53a7-446f-b15c-ee37d0df9493.jpg",
         "tile_image_two_link": "shopify://pages/lets-move",
         "layout": "grid",
