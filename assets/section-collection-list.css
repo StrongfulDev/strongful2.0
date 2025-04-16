@@ -1,4 +1,4 @@
- #index .collection-list {
+#index .collection-list {
   margin-top: 0;
   margin-bottom: 0;
 	 width: 100%;
@@ -230,6 +230,8 @@
 
  .collection-list-new {
 	 gap: var(--grid-desktop-horizontal-spacing) calc(var(--grid-desktop-horizontal-spacing) * 2);
+   margin-left: auto;
+   margin-right: auto;
  }
 
  .collection-list-new .grid__item {
