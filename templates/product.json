@@ -48,6 +48,10 @@
             "text_style": "body"
           }
         },
+        "aiod_all_in_1_discount_volume_offer_DirPJ6": {
+          "type": "shopify://apps/aiod-all-in-1-discount/blocks/volume-offer/9537caf0-36d5-4981-a648-8961a8e85652",
+          "settings": {}
+        },
         "656bd184-5523-4c74-aee3-c2664a058063": {
           "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
           "settings": {
@@ -105,10 +109,6 @@
             "is_vendor": false,
             "text_style": "title"
           }
-        },
-        "aiod_all_in_1_discount_volume_offer_DirPJ6": {
-          "type": "shopify://apps/aiod-all-in-1-discount/blocks/volume-offer/9537caf0-36d5-4981-a648-8961a8e85652",
-          "settings": {}
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -182,6 +182,7 @@
         "5ec0a264-e4fc-4a8d-92bc-f2f9223694f5",
         "title",
         "5fa3ce9f-60f6-4aee-a0c4-c987fa5f3522",
+        "aiod_all_in_1_discount_volume_offer_DirPJ6",
         "656bd184-5523-4c74-aee3-c2664a058063",
         "price",
         "tellos_shoppable_video_product_page_carousel_3VVL4q",
@@ -189,7 +190,6 @@
         "e290d1ee-22d0-4ae8-9219-8d77d6585fae",
         "quantity_selector",
         "text_rgUBtC",
-        "aiod_all_in_1_discount_volume_offer_DirPJ6",
         "buy_buttons",
         "essential_countdown_app_block_Na8eTE",
         "yotpo_loyalty_rewards_product_points_module_app_block_krF3Wc",
