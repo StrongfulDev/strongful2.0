@@ -34,7 +34,7 @@
     {%- unless section.settings.title == blank -%}
       <div
         class="title-wrapper-with-link{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% else %} title-wrapper--self-padded-mobile{% endif %} title-wrapper--no-top-margin"
-        style="width: 100%; text-align: {{ section.settings.heading_alignment }} !important;"
+        style="width: 100%; justify-content: {{ section.settings.heading_alignment }} !important;"
       >
         <h2
           id="SectionHeading-{{ section.id }}"
