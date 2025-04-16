@@ -307,6 +307,7 @@
         "title": "SHOP BY ACTIVITY",
         "heading_size": "h1",
         "heading_type": "heading_type_default",
+        "heading_alignment": "center",
         "image_ratio": "adapt",
         "columns_mobile": 4,
         "columns_desktop": 5,
@@ -473,7 +474,7 @@
         "image_ydbCwA"
       ],
       "custom_css": [
-        ".our-collection-list-div{margin-right:0;}"
+        ".our-collection-list-div {margin-right: 0;}"
       ],
       "settings": {
         "title": "",
