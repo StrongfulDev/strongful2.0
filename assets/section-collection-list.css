@@ -90,7 +90,9 @@
 }
 
 @media screen and (min-width: 750px) {
-
+.our-collection-list-div{
+	margin-right: 40px;
+}
 	#index .collection-list__item a:hover {
     box-shadow: none;
   }
