@@ -154,17 +154,17 @@
         "padding_bottom": 12
       }
     },
-    "featured_collection_XDhFHB": {
+    "featured_collection_AaFqPp": {
       "type": "featured-collection",
       "settings": {
         "steps": 4,
-        "title": "NEW IN",
+        "title": "BEST SELLERS ON SALE",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "comfort-ballet",
+        "collection": "shell-burgundy",
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,
@@ -193,17 +193,17 @@
         "padding_bottom": 16
       }
     },
-    "featured_collection_AaFqPp": {
+    "featured_collection_XDhFHB": {
       "type": "featured-collection",
       "settings": {
         "steps": 4,
-        "title": "BEST SELLERS ON SALE",
+        "title": "NEW IN",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "shell-burgundy",
+        "collection": "comfort-ballet",
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,
@@ -471,6 +471,9 @@
         "image_a4f9L6",
         "image_3PJtne",
         "image_ydbCwA"
+      ],
+      "custom_css": [
+        ".our-collection-list-div{margin-right:0;}"
       ],
       "settings": {
         "title": "",
