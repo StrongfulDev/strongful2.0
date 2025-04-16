@@ -198,7 +198,7 @@
       "name": "Featured Custom",
       "settings": {
         "steps": 4,
-        "title": "BEST SELLERS",
+        "title": "LAST CHANCE ON SALE",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
@@ -231,7 +231,7 @@
         "swipe_on_mobile": true,
         "padding_top": 40,
         "padding_bottom": 16,
-        "link_collection": "40-off"
+        "link_collection": "sets"
       }
     },
     "featured_collection_XDhFHB": {
