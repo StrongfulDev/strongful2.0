@@ -58,8 +58,8 @@
       >
         {%- liquid
           assign columns = section.blocks.size
-          if columns > 3
-            assign columns = 3
+          if columns > 4
+            assign columns = 4
           endif
         -%}
 
@@ -103,7 +103,7 @@
   "name": "Our Collection List V3", // changed from V2
   "tag": "section",
   "class": "section section-collection-list index-section",
-  "max_blocks": 4,
+  "max_blocks": 8, // changed from 4 to 8 to allow up to 8 collections
   "disabled_on": {
     "groups": ["header", "footer"]
   },
