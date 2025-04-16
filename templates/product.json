@@ -106,6 +106,10 @@
             "text_style": "title"
           }
         },
+        "aiod_all_in_1_discount_volume_offer_DirPJ6": {
+          "type": "shopify://apps/aiod-all-in-1-discount/blocks/volume-offer/9537caf0-36d5-4981-a648-8961a8e85652",
+          "settings": {}
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -185,6 +189,7 @@
         "e290d1ee-22d0-4ae8-9219-8d77d6585fae",
         "quantity_selector",
         "text_rgUBtC",
+        "aiod_all_in_1_discount_volume_offer_DirPJ6",
         "buy_buttons",
         "essential_countdown_app_block_Na8eTE",
         "yotpo_loyalty_rewards_product_points_module_app_block_krF3Wc",
