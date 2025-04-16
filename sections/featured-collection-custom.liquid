@@ -90,25 +90,28 @@
               </h2>
             {%- endif -%}
 
-            {%- if section.settings.show_view_all
-              and more_in_collection
-              and section.settings.view_all_location == 'top'
-              or section.settings.view_all_location == 'desktop_top_tablet_bottom'
-            -%}
-              {%- liquid
-                assign view_all_wrapper = 'top'
-                if section.settings.view_all_location == 'desktop_top_tablet_bottom'
-                  assign view_all_wrapper = 'top show-desktop'
-                endif
-              %}
-              {%
-                render 'collection-view-all',
-                collection_url: section.settings.link_collection != blank ? section.settings.link_collection.url : section.settings.collection.url,
-                collection_title: section.settings.collection.title,
-                style: section.settings.view_all_style,
-                class_wrapper: view_all_wrapper,
-                view_all_text: section.settings.view_all_text
-              %}
+            {%- if section.settings.show_view_all and more_in_collection -%}
+              {%- if section.settings.view_all_location == 'top' or section.settings.view_all_location == 'desktop_top_tablet_bottom' -%}
+                {%- liquid
+                  if section.settings.link_collection != blank
+                    assign shop_all_url = '/collections/' | append: section.settings.link_collection.handle
+                  else
+                    assign shop_all_url = '/collections/' | append: section.settings.collection.handle
+                  endif
+                  assign view_all_wrapper = 'top'
+                  if section.settings.view_all_location == 'desktop_top_tablet_bottom'
+                    assign view_all_wrapper = 'top show-desktop'
+                  endif
+                -%}
+                {%
+                  render 'collection-view-all',
+                  collection_url: shop_all_url,
+                  collection_title: section.settings.collection.title,
+                  style: section.settings.view_all_style,
+                  class_wrapper: view_all_wrapper,
+                  view_all_text: section.settings.view_all_text
+                %}
+              {%- endif -%}
             {%- endif -%}
           </div>
           {%- if section.settings.description != blank
@@ -284,30 +287,31 @@
           {%- endif -%}
         </slider-component>
 
-        {%- if section.settings.show_view_all
-          and more_in_collection
-          and section.settings.view_all_location == 'bottom'
-          or section.settings.view_all_location == 'desktop_top_tablet_bottom'
-        -%}
-          {%- liquid
-            assign style = section.settings.view_all_style
-            if section.settings.view_all_location == 'desktop_top_tablet_bottom'
-              assign style = 'outline'
-            endif
-
-            assign view_all_wrapper = 'bottom'
-            if section.settings.view_all_location == 'desktop_top_tablet_bottom'
-              assign view_all_wrapper = 'bottom show-mobile'
-            endif
-          %}
-          {%
-            render 'collection-view-all',
-            collection_url: section.settings.link_collection != blank ? section.settings.link_collection.url : section.settings.collection.url,
-            collection_title: section.settings.collection.title,
-            style: style,
-            class_wrapper: view_all_wrapper,
-            view_all_text: section.settings.view_all_text
-          %}
+        {%- if section.settings.show_view_all and more_in_collection -%}
+          {%- if section.settings.view_all_location == 'bottom' or section.settings.view_all_location == 'desktop_top_tablet_bottom' -%}
+            {%- liquid
+              if section.settings.link_collection != blank
+                assign shop_all_url = '/collections/' | append: section.settings.link_collection.handle
+              else
+                assign shop_all_url = '/collections/' | append: section.settings.collection.handle
+              endif
+              if section.settings.view_all_location == 'desktop_top_tablet_bottom'
+                assign style = 'outline'
+                assign view_all_wrapper = 'bottom show-mobile'
+              else
+                assign style = section.settings.view_all_style
+                assign view_all_wrapper = 'bottom'
+              endif
+            -%}
+            {%
+              render 'collection-view-all',
+              collection_url: shop_all_url,
+              collection_title: section.settings.collection.title,
+              style: style,
+              class_wrapper: view_all_wrapper,
+              view_all_text: section.settings.view_all_text
+            %}
+          {%- endif -%}
         {%- endif -%}
       </div>
     </div>
