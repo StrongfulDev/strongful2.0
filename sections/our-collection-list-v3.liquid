@@ -58,8 +58,8 @@
       >
         {%- liquid
           assign columns = section.blocks.size
-          if columns > 4
-            assign columns = 4
+          if columns > 7
+            assign columns = 8
           endif
         -%}
 
@@ -183,7 +183,7 @@
       "type": "range",
       "id": "columns_mobile",
       "min": 1,
-      "max": 5,
+      "max": 8,
       "step": 1,
       "default": 3,
       "label": "t:sections.our-collection-list.settings.columns_mobile.label"
@@ -192,7 +192,7 @@
       "type": "range",
       "id": "columns_desktop",
       "min": 1,
-      "max": 5,
+      "max": 8,
       "step": 1,
       "default": 3,
       "label": "t:sections.our-collection-list.settings.columns_desktop.label"
