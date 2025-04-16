@@ -103,7 +103,7 @@
               %}
               {%
                 render 'collection-view-all',
-                collection_url: section.settings.link_collection != blank ? '/collections/' | append: section.settings.link_collection.handle : section.settings.collection.url,
+                collection_url: section.settings.link_collection != blank ? section.settings.link_collection.url : section.settings.collection.url,
                 collection_title: section.settings.collection.title,
                 style: section.settings.view_all_style,
                 class_wrapper: view_all_wrapper,
@@ -302,7 +302,7 @@
           %}
           {%
             render 'collection-view-all',
-            collection_url: section.settings.link_collection != blank ? '/collections/' | append: section.settings.link_collection.handle : section.settings.collection.url,
+            collection_url: section.settings.link_collection != blank ? section.settings.link_collection.url : section.settings.collection.url,
             collection_title: section.settings.collection.title,
             style: style,
             class_wrapper: view_all_wrapper,
