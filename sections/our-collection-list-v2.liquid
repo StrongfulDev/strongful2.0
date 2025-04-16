@@ -33,7 +33,7 @@
             <div
                     class="title-wrapper-with-link{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% else %} title-wrapper--self-padded-mobile{% endif %} title-wrapper--no-top-margin">
                 <h2 id="SectionHeading-{{ section.id }}"
-                    class="collection-list-title {{ section.settings.heading_size }} {{ section.settings.heading_type }}">
+                    class="collection-list-title {{ section.settings.heading_size }} {{ section.settings.heading_type }}"{%  if section.settings.heading_alignment %} text-align-{{ section.settings.heading_alignment }}{% endif %}>
                     {{ section.settings.title | escape }}
                 </h2>
             </div>
@@ -249,6 +249,17 @@
             "unit": "px",
             "label": "t:sections.all.padding.padding_bottom",
             "default": 36
+        },
+        {
+          "type": "select",
+          "id": "heading_alignment",
+          "options": [
+            { "value": "left", "label": "Left" },
+            { "value": "center", "label": "Center" },
+            { "value": "right", "label": "Right" }
+          ],
+          "default": "center",
+          "label": "Heading Alignment"
         }
     ],
     "blocks": [
