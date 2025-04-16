@@ -305,7 +305,7 @@
         "heading_size": "h1",
         "heading_type": "heading_type_default",
         "image_ratio": "adapt",
-        "columns_mobile": 3,
+        "columns_mobile": 4,
         "columns_desktop": 6,
         "color_scheme": "background-1",
         "is_full_width": false,
