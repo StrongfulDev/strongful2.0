@@ -346,7 +346,7 @@
       "name": "Our Collection List New - V3",
       "settings": {
         "title": "SHOP BY ACTIVITY",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "heading_type": "heading_type_default",
         "heading_alignment": "center",
         "image_ratio": "adapt",
