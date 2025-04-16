@@ -25,7 +25,7 @@
 
 {%- liquid
   assign show_mobile_slider = false
-  assign extra_collections = section.blocks.size | minus: section.settings.columns_mobile
+  assign extra_collections = section.blocks.size | minus: 2
   if extra_collections > 0
     assign show_mobile_slider = true
   endif
@@ -54,16 +54,16 @@
         class="
           collection-list-new contains-card contains-card--collection
           {% if settings.card_style == 'standard' %} contains-card--standard{% endif %}
-           grid grid--{{ section.settings.columns_mobile }}-col-tablet-down
+           grid grid--2-col-tablet-down
            grid--{{ section.settings.columns_desktop }}-col-desktop
            collection-list--{{ section.blocks.size }}-items
         "
-        id="Slider-{{ section.id }}"
+        id="Grid-{{ section.id }}"
         role="list"
       >
-        {%- for block in section.blocks limit: section.settings.columns_mobile -%}
+        {%- for block in section.blocks limit: 2 -%}
           <li
-            id="Slide-{{ section.id }}-{{ forloop.index }}"
+            id="Grid-Item-{{ section.id }}-{{ forloop.index }}"
             class="
               collection-list__item grid__item
               {% if block.settings.collection.featured_image == nil %}
@@ -95,62 +95,59 @@
     </div>
 
     {%- if show_mobile_slider -%}
-      <div class="slider-container">
-        <slider-component
-          class="slider-mobile-gutter slider-component-full-width pagination--sides"
-          data-slider
+      <slider-component
+        class="slider-mobile-gutter slider-component-full-width pagination--sides"
+      >
+        <button
+          type="button"
+          class="slider-button slider-button--prev"
+          name="previous"
+          aria-label="{{ 'general.slider.previous_slide' | t }}"
+          aria-controls="Slider-Extra-{{ section.id }}"
         >
-          <button
-            type="button"
-            class="slider-button slider-button--prev"
-            name="previous"
-            aria-label="{{ 'general.slider.previous_slide' | t }}"
-            aria-controls="Slider-Extra-{{ section.id }}"
-          >
-            {% render 'icon-caret' %}
-          </button>
-          <ul
-            id="Slider-Extra-{{ section.id }}"
-            class="slider slider--tablet"
-            role="list"
-          >
-            {%- for block in section.blocks offset: section.settings.columns_mobile -%}
-              <li
-                id="Slide-Extra-{{ section.id }}-{{ forloop.index }}"
-                class="slider__slide"
-              >
-                <a href="{{ block.settings.url }}" class="our-collections-list-link">
-                  {%- if block.settings.image -%}
-                    {{
-                      block.settings.image
-                      | image_url: width: 1500
-                      | image_tag:
-                        sizes: '100vw',
-                        widths: '375, 550, 750, 1100, 1500',
-                        class: 'our-collections-list-image__img our-collections-list-image__img--new',
-                        alt: block.settings.link
-                    }}
-                  {%- else -%}
-                    {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
-                  {%- endif -%}
-                  <span class="our-collections-list-item-title">
-                    {{ block.settings.link }}
-                  </span>
-                </a>
-              </li>
-            {%- endfor -%}
-          </ul>
-          <button
-            type="button"
-            class="slider-button slider-button--next"
-            name="next"
-            aria-label="{{ 'general.slider.next_slide' | t }}"
-            aria-controls="Slider-Extra-{{ section.id }}"
-          >
-            {% render 'icon-caret' %}
-          </button>
-        </slider-component>
-      </div>
+          {% render 'icon-caret' %}
+        </button>
+        <ul
+          id="Slider-Extra-{{ section.id }}"
+          class="slider slider--tablet"
+          role="list"
+        >
+          {%- for block in section.blocks offset: 2 -%}
+            <li
+              id="Slide-Extra-{{ section.id }}-{{ forloop.index }}"
+              class="slider__slide"
+            >
+              <a href="{{ block.settings.url }}" class="our-collections-list-link">
+                {%- if block.settings.image -%}
+                  {{
+                    block.settings.image
+                    | image_url: width: 1500
+                    | image_tag:
+                      sizes: '100vw',
+                      widths: '375, 550, 750, 1100, 1500',
+                      class: 'our-collections-list-image__img our-collections-list-image__img--new',
+                      alt: block.settings.link
+                  }}
+                {%- else -%}
+                  {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+                {%- endif -%}
+                <span class="our-collections-list-item-title">
+                  {{ block.settings.link }}
+                </span>
+              </a>
+            </li>
+          {%- endfor -%}
+        </ul>
+        <button
+          type="button"
+          class="slider-button slider-button--next"
+          name="next"
+          aria-label="{{ 'general.slider.next_slide' | t }}"
+          aria-controls="Slider-Extra-{{ section.id }}"
+        >
+          {% render 'icon-caret' %}
+        </button>
+      </slider-component>
     {%- endif -%}
   </div>
 </div>
