@@ -240,6 +240,7 @@
 
 	.grid.collection-list-new {
 		gap: calc(var(--grid-desktop-horizontal-spacing) * 2) calc(var(--grid-desktop-horizontal-spacing) * 2);
+		flex-wrap: nowrap;
 	}
 
 	#index .section-collection-list .collection-list:not(.slider) {
