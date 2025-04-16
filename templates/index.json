@@ -239,7 +239,7 @@
         "image_ceEBKm": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Eirad2781-R1-19-9A.jpg",
+            "image": "shopify://shop_images/2G6A1089_b2fd0a9b-b870-4660-b552-f763af8111bf.jpg",
             "alt": "יוגה",
             "link": "YOGA",
             "url": "shopify://collections/shell-יוגה"
@@ -300,9 +300,12 @@
         "image_f6nhEV",
         "image_RpzBhD"
       ],
+      "custom_css": [
+        ".title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin {}"
+      ],
       "name": "Our Collection List New - V3",
       "settings": {
-        "title": "Collections",
+        "title": "SHOP BY ACTIVITY",
         "heading_size": "h1",
         "heading_type": "heading_type_default",
         "image_ratio": "adapt",
