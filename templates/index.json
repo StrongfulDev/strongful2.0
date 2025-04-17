@@ -289,36 +289,36 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/1_01b99752-fedb-4c66-91f3-1b8175ff66ae.jpg",
-            "alt": "",
-            "link": "",
-            "url": ""
+            "alt": "PILATES",
+            "link": "PILATES",
+            "url": "shopify://collections/shell-פילאטיס"
           }
         },
         "image_cQyiat": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/74044c65a2c9f050b9b287855cd9ec2a.jpg",
-            "alt": "",
-            "link": "",
-            "url": ""
+            "alt": "RUN",
+            "link": "RUN",
+            "url": "shopify://collections/shell-ריצה"
           }
         },
         "image_iMUani": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/2G6A1042_244eb5e4-3807-4761-a408-d45b92f38a8b.jpg",
-            "alt": "",
-            "link": "",
-            "url": ""
+            "alt": "TRAIN",
+            "link": "TRAIN",
+            "url": "shopify://collections/shell-כוח"
           }
         },
         "image_f6nhEV": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/2G6A1158_412c5f72-52d2-411a-84e1-c283e2d25cdc.jpg",
-            "alt": "",
-            "link": "",
-            "url": ""
+            "alt": "DAILY WEAR",
+            "link": "DAILY WEAR",
+            "url": "shopify://collections/shell-יומיומי"
           }
         },
         "image_RpzBhD": {
@@ -350,7 +350,7 @@
         "heading_type": "heading_type_default",
         "heading_alignment": "center",
         "image_ratio": "adapt",
-        "columns_mobile": 7,
+        "columns_mobile": 4,
         "columns_desktop": 5,
         "color_scheme": "background-1",
         "is_full_width": true,
