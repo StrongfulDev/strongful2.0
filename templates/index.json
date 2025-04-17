@@ -350,7 +350,7 @@
         "heading_type": "heading_type_default",
         "heading_alignment": "center",
         "image_ratio": "adapt",
-        "columns_mobile": 4,
+        "columns_mobile": 5,
         "columns_desktop": 5,
         "color_scheme": "background-1",
         "is_full_width": true,
