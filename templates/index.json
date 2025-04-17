@@ -341,7 +341,7 @@
         "image_RpzBhD"
       ],
       "custom_css": [
-        ".title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin {}"
+        "@media screen and (max-width: 749px) {.collection-list-new {flex-wrap: nowrap; overflow-x: scroll; scrollbar-width:none; } }"
       ],
       "name": "Our Collection List New - V3",
       "settings": {
