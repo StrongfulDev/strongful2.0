@@ -119,8 +119,8 @@
         "slide_Qm8Fef": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/copy_4_a3d4425e-0ea7-491c-a75a-b4619fb4eff4.jpg",
-            "mobile_image": "shopify://shop_images/copy_2_f69c2681-e617-4fd8-a7c9-a3fd92a02c06.jpg",
+            "image": "shopify://shop_images/copy_4_d8e24093-f549-47f1-b8be-a467693cbe02.jpg",
+            "mobile_image": "shopify://shop_images/copy_2_0ebd1712-54aa-4ead-ab55-ad2b73db52f1.jpg",
             "left_position": 50,
             "bottom_position": 50,
             "desktop_left_position": 50,
@@ -380,6 +380,7 @@
         "image_f6nhEV",
         "image_RpzBhD"
       ],
+      "disabled": true,
       "custom_css": [
         "@media screen and (max-width: 749px) {.collection-list-new {flex-wrap: nowrap; overflow-x: scroll; scrollbar-width: none; }}"
       ],
