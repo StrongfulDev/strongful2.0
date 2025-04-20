@@ -118,6 +118,7 @@
       "blocks": {
         "slide_Qm8Fef": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/copy_4_2461b1e0-cfaa-41a9-bcde-3c135c955f8a.jpg",
             "mobile_image": "shopify://shop_images/copy_2_023065c3-07b7-40e9-ae28-89b127da8497.jpg",
