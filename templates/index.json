@@ -113,6 +113,47 @@
         "padding_bottom": 16
       }
     },
+    "slideshow_tHw9fn": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_Qm8Fef": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/copy_49e43a4a-1070-4314-9a51-8cfc6b5230aa.jpg",
+            "mobile_image": "shopify://shop_images/copy_f619e084-d374-45c5-8c4e-1a63a077f114.jpg",
+            "left_position": 50,
+            "bottom_position": 50,
+            "desktop_left_position": 50,
+            "desktop_bottom_position": 50,
+            "show_lock": false,
+            "button_label": "",
+            "link": "",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "whole_slide_link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_Qm8Fef"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "slideshow_gwXDrF": {
       "type": "slideshow",
       "blocks": {
@@ -195,7 +236,6 @@
     },
     "featured_collection_custom_pWCzVg": {
       "type": "featured-collection-custom",
-      "name": "Featured Custom",
       "settings": {
         "steps": 4,
         "title": "LAST CHANCE ON SALE",
@@ -341,9 +381,8 @@
         "image_RpzBhD"
       ],
       "custom_css": [
-        "@media screen and (max-width: 749px) {.collection-list-new {flex-wrap: nowrap; overflow-x: scroll; scrollbar-width:none; } }"
+        "@media screen and (max-width: 749px) {.collection-list-new {flex-wrap: nowrap; overflow-x: scroll; scrollbar-width: none; }}"
       ],
-      "name": "Our Collection List New - V3",
       "settings": {
         "title": "SHOP BY ACTIVITY",
         "heading_size": "h2",
@@ -407,16 +446,20 @@
           "type": "shopify://apps/tellos-shoppable-video/blocks/home-page-carousel/a4490152-a6c6-410b-9721-736f5b95f2f2",
           "settings": {
             "size": "large",
-            "explore-card-label": "Explore all videos",
             "background": "rgba(0,0,0,0)",
-            "padding_top": 8,
-            "padding_bottom": 8,
-            "padding_horizontal": 0,
+            "cards-border-radius": 12,
+            "show_border_card": false,
+            "border_card_color": "#000000",
             "add_header": true,
             "header_text": "TRENDING NOW",
             "header_type": "h2",
             "alignment": "center",
             "header_gap": 30,
+            "explore-card-label": "Explore all videos",
+            "border_radius": 24,
+            "padding_top": 8,
+            "padding_bottom": 8,
+            "padding_horizontal": 0,
             "custom_css": ".carousel-header { font-size: 20px; font-weight: 200; }"
           }
         }
@@ -810,6 +853,7 @@
   },
   "order": [
     "d15d1520-a7b8-4f37-8a40-1c4c248719f9",
+    "slideshow_tHw9fn",
     "slideshow_gwXDrF",
     "featured_collection_AaFqPp",
     "featured_collection_custom_pWCzVg",
