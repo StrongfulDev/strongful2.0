@@ -264,14 +264,10 @@
                     {%- endif -%}
                         
                      {% if card_product.tags contains 'badge__new' %}
-                    <span class="new-product-span" style="background-color: #fdeded;color: #2f2b2a;
-">
-                        {{ 'products.product.new' | t }}
+                    <span class="new-product-span">
+                     {{ 'products.product.new' | t }}
                     </span>
-                        {% comment %} {%elsif card_product.tags contains 'OasisMarkUp'%}
-                            <span class="new-product-span">
-                                Pre-Order
-                            </span> {% endcomment %}
+                        
                         {% elsif card_product.tags contains "badge__sale" %}
                        <span class="new-product-span">
                            SALE
