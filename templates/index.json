@@ -261,7 +261,6 @@
     },
     "featured_collection_XDhFHB": {
       "type": "featured-collection",
-      "disabled": true,
       "settings": {
         "steps": 4,
         "title": "NEW IN",
@@ -297,46 +296,6 @@
         "swipe_on_mobile": true,
         "padding_top": 40,
         "padding_bottom": 16
-      }
-    },
-    "featured_collection_custom_cXrb4r": {
-      "type": "featured-collection-custom",
-      "settings": {
-        "steps": 4,
-        "title": "NEW IN",
-        "heading_size": "h1",
-        "heading_type": "heading_type_3",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "new-shell-drop",
-        "products_to_show": 15,
-        "columns_desktop": 5,
-        "full_width": true,
-        "show_view_all": true,
-        "view_all_text": "SHOP ALL",
-        "view_all_style": "link",
-        "view_all_location": "top",
-        "enable_desktop_slider": true,
-        "show_peak": false,
-        "pagination_type": "sides",
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": true,
-        "show_rating": false,
-        "show_sale_badge": false,
-        "enable_quick_add": true,
-        "quick_add_type": "hover",
-        "quick_add_type_mobile": "modal",
-        "quick_add_text": "בחירת מידה",
-        "pick_size_text": "בחירת מידה",
-        "quick_add_accessories_text": "Pick accessories",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "link_collection": ""
       }
     },
     "featured_collection_Vgg3kt": {
@@ -923,7 +882,6 @@
     "slideshow_gwXDrF",
     "featured_collection_AaFqPp",
     "featured_collection_XDhFHB",
-    "featured_collection_custom_cXrb4r",
     "featured_collection_Vgg3kt",
     "our_collection_list_v3_mQh6DU",
     "customer_slideshow_wFcfK7",
