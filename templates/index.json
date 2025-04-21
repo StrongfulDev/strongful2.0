@@ -689,10 +689,10 @@
         "slide_TxMXy9": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/1_0530155f-40c8-475e-98c1-820c7f06d4d8.jpg",
-            "mobile_image": "shopify://shop_images/1_105d437f-637a-4c81-bdfd-772d240b8f8f.jpg",
-            "login_desktop_image": "shopify://shop_images/1_5a9b4abf-1572-484d-b812-3bad9170c26c.jpg",
-            "login_mobile_image": "shopify://shop_images/1_75751ccc-90f4-4222-b3b8-ef6b7b2602a6.jpg",
+            "image": "shopify://shop_images/e20f842049096799aef03a81232f36b9.jpg",
+            "mobile_image": "shopify://shop_images/3c5d9d5369e00639567a1c08bbacfa2e_63160972-03d0-48a5-8391-48974581ed04.jpg",
+            "login_desktop_image": "shopify://shop_images/e20f842049096799aef03a81232f36b9_524a8180-f11a-43b8-983e-0f0bc26299aa.jpg",
+            "login_mobile_image": "shopify://shop_images/3c5d9d5369e00639567a1c08bbacfa2e_bec906ab-9679-439f-80bf-6cdd77a1c28d.jpg",
             "button_label": "",
             "login_button_label": "",
             "link": "shopify://pages/loyalty",
