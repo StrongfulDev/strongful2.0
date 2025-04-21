@@ -501,6 +501,7 @@
       "blocks": {
         "slide_LqAUbW": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/fd755764aff711800b1b739ce46f1227.jpg",
             "mobile_image": "shopify://shop_images/3c5d9d5369e00639567a1c08bbacfa2e.jpg",
@@ -887,10 +888,10 @@
     "customer_slideshow_wFcfK7",
     "17388407748dd9c850",
     "customer_slideshow_JN4JiR",
-    "our_collection_list_v2_mK6kUx",
     "173246164424ec44fa",
     "collection_list_QrC4z9",
     "customer_slideshow_jXTBRG",
+    "our_collection_list_v2_mK6kUx",
     "featured_blog_3p3kGH",
     "collection_list_w4D6TE",
     "4371b550-969b-4828-986d-71697fc53ef0"
