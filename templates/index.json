@@ -259,18 +259,17 @@
         "padding_bottom": 16
       }
     },
-    "featured_collection_custom_pWCzVg": {
-      "type": "featured-collection-custom",
-      "disabled": true,
+    "featured_collection_XDhFHB": {
+      "type": "featured-collection",
       "settings": {
         "steps": 4,
-        "title": "LAST CHANCE ON SALE",
+        "title": "SHELL ON SALE",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "lowinstock",
+        "collection": "shell-1",
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,
@@ -291,16 +290,15 @@
         "quick_add_type": "hover",
         "quick_add_type_mobile": "modal",
         "quick_add_text": "הוספה מהירה",
-        "pick_size_text": "הוספה מהירה",
-        "quick_add_accessories_text": "Pick accessories",
+        "pick_size_text": "בחירת מידה",
+        "quick_add_accessories_text": "הוספה מהירה",
         "columns_mobile": "2",
         "swipe_on_mobile": true,
         "padding_top": 40,
-        "padding_bottom": 16,
-        "link_collection": "40-off"
+        "padding_bottom": 16
       }
     },
-    "featured_collection_XDhFHB": {
+    "featured_collection_Vgg3kt": {
       "type": "featured-collection",
       "settings": {
         "steps": 4,
@@ -883,8 +881,8 @@
     "slideshow_tHw9fn",
     "slideshow_gwXDrF",
     "featured_collection_AaFqPp",
-    "featured_collection_custom_pWCzVg",
     "featured_collection_XDhFHB",
+    "featured_collection_Vgg3kt",
     "our_collection_list_v3_mQh6DU",
     "customer_slideshow_wFcfK7",
     "17388407748dd9c850",
