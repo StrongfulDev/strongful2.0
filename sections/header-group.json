@@ -359,7 +359,7 @@
         "mobile_top_image_1": "shopify://shop_images/copy_1_496112c7-be80-49ba-aa32-0bbce074b8f4.jpg",
         "mobile_top_image_1_link": "shopify://collections/shell-the-new-collection",
         "mobile_top_image_1_title": "SALE",
-        "show_second_image": true,
+        "show_second_image": false,
         "image_order_second": "3",
         "mobile_top_image_2": "shopify://shop_images/37_20e3529f-6ea9-439f-b27d-2e75ae2c1a31.jpg",
         "mobile_top_image_2_link": "shopify://pages/lets-move",
