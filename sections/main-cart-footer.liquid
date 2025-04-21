@@ -65,22 +65,20 @@
                     {{ 'sections.cart.update' | t }}
                   </button>
                 </noscript>
-
+<form action="/cart" method="post" novalidate class="cart">
                 <button
                   type="submit"
-                  id="checkout"
+                    name="checkout"
                   class="cart__checkout-button button"
                   name="checkout"
                   {% if cart == empty %}
                     disabled
                   {% endif %}
-                  form="cart"
-                  onclick="window.location.href = '/checkout';"
                 >
                   {{ 'sections.cart.checkout' | t }}
                 </button>
               </div>
-
+</form>
               {%- if additional_checkout_buttons -%}
                 <div class="cart__dynamic-checkout-buttons additional-checkout-buttons">
                   {{ content_for_additional_checkout_buttons }}
