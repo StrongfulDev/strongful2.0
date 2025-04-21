@@ -519,7 +519,7 @@
                                 {% if customCartOriginalTotalPrice > cart.total_price %}
                                     <p class="totals__original-subtotal-value price-item--regular" data-price="{{ cart.total_price }}" data-original-price="{{ customCartOriginalTotalPrice }}">{{ customCartOriginalTotalPrice | money_with_currency }}</p>
                                 {% endif %}
-                                <p class="totals__subtotal-value
+                                <p class="totals__subtotal-value csapps-cart-original-total 
                                    {% if customCartOriginalTotalPrice > cart.total_price %}
                                    price-item price-item--sale
                                    {% endif %}"
