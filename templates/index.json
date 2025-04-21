@@ -502,6 +502,7 @@
       "block_order": [
         "slide_LqAUbW"
       ],
+      "disabled": true,
       "settings": {
         "layout": "full_bleed",
         "slide_height": "adapt_image",
