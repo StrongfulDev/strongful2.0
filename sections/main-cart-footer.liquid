@@ -28,7 +28,7 @@
               <div class="js-contents" {{ block.shopify_attributes }}>
                 <div class="totals">
                   <p class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}</p>
-                  <p class="totals__subtotal-value">{{ cart.total_price | money_with_currency }}</p>
+                  <div class="totals__subtotal-value csapps-cart-original-total">{{ cart.total_price | money_with_currency }}</div>
                 </div>
 
                 <div>
