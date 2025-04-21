@@ -514,12 +514,12 @@
                                 </div>
                             {% endif %}
                                 <p class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}:</p>
-                            <div class="totals__value flex
+                            <div class="totals__value flex csapps-cart-original-total 
                                 {% if customCartOriginalTotalPrice > cart.total_price %}price__sale price--on-sale{% endif %}">
                                 {% if customCartOriginalTotalPrice > cart.total_price %}
                                     <p class="totals__original-subtotal-value price-item--regular" data-price="{{ cart.total_price }}" data-original-price="{{ customCartOriginalTotalPrice }}">{{ customCartOriginalTotalPrice | money_with_currency }}</p>
                                 {% endif %}
-                                <p class="totals__subtotal-value csapps-cart-original-total 
+                                <p class="totals__subtotal-value 
                                    {% if customCartOriginalTotalPrice > cart.total_price %}
                                    price-item price-item--sale
                                    {% endif %}"
