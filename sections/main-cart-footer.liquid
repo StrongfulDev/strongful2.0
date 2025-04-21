@@ -28,7 +28,7 @@
               <div class="js-contents" {{ block.shopify_attributes }}>
                 <div class="totals">
                   <p class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}</p>
-                  <div class="totals__subtotal-value csapps-cart-original-total">{{ cart.total_price | money_with_currency }}</div>
+                  <p class="totals__subtotal-value">{{ cart.total_price | money_with_currency }}</p>
                 </div>
 
                 <div>
@@ -65,20 +65,22 @@
                     {{ 'sections.cart.update' | t }}
                   </button>
                 </noscript>
-<form action="/cart" method="post" novalidate class="cart">
+
                 <button
                   type="submit"
-                    name="checkout"
+                  id="checkout"
                   class="cart__checkout-button button"
                   name="checkout"
                   {% if cart == empty %}
                     disabled
                   {% endif %}
+                  form="cart"
+                  onclick="window.location.href = '/checkout';"
                 >
                   {{ 'sections.cart.checkout' | t }}
                 </button>
               </div>
-</form>
+
               {%- if additional_checkout_buttons -%}
                 <div class="cart__dynamic-checkout-buttons additional-checkout-buttons">
                   {{ content_for_additional_checkout_buttons }}
