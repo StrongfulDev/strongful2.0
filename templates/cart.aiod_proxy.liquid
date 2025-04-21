@@ -1,0 +1,6 @@
+{% layout none %}
+{
+    "format":{{ shop.money_format | json }},
+    "collection":"{% for item in cart.items %}window.csapps.cart_collections['{{ item.variant_id }}'] = [],{% for c in item.product.collections %}window.csapps.cart_collections['{{ item.variant_id }}'].push({{ c.id }}){% if forloop.last %};{% else %},{% endif %}{% endfor %}{% endfor %}",
+    "cs_cart_count":"window.csapps.cart.items.length={{ cart.item_count }}"
+}
