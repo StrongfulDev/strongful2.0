@@ -265,7 +265,7 @@
         "steps": 4,
         "title": "NEW IN",
         "heading_size": "h1",
-        "heading_type": "heading_type_2",
+        "heading_type": "heading_type_default",
         "description": "",
         "show_description": false,
         "description_style": "body",
