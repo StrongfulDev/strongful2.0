@@ -200,7 +200,7 @@
       "type": "featured-collection",
       "settings": {
         "steps": 4,
-        "title": "BEST SELLERS ON SALE",
+        "title": "NEW IN",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
@@ -237,6 +237,7 @@
     },
     "featured_collection_custom_pWCzVg": {
       "type": "featured-collection-custom",
+      "disabled": true,
       "settings": {
         "steps": 4,
         "title": "LAST CHANCE ON SALE",
@@ -381,7 +382,6 @@
         "image_f6nhEV",
         "image_RpzBhD"
       ],
-      "disabled": true,
       "custom_css": [
         "@media screen and (max-width: 749px) {.collection-list-new {flex-wrap: nowrap; overflow-x: scroll; scrollbar-width: none; }}"
       ],
