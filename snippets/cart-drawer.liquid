@@ -112,7 +112,7 @@
                             action="{{ routes.cart_url }}"
                             id="CartDrawer-Form"
                             class="cart__contents cart-drawer__form"
-                            method="post"
+                            method="post" data-csapp_line_wrapper
                     >
                         <div id="CartDrawer-CartItems" class="drawer__contents js-contents">
                             {%- if cart != empty -%}
@@ -147,7 +147,7 @@
 
                                         <tbody role="rowgroup">
                                         {%- for item in cart.items -%}
-                                            <tr id="CartDrawer-Item-{{ item.index | plus: 1 }}" data-key="{{ item.key }}" data-index="{{ item.index | plus: 1 }}" data-product-id="{{ item.product.id }}" data-id="{{ item.id }}" class="cart-item"
+                                            <tr data-csapp_line_index id="CartDrawer-Item-{{ item.index | plus: 1 }}" data-key="{{ item.key }}" data-index="{{ item.index | plus: 1 }}" data-product-id="{{ item.product.id }}" data-id="{{ item.id }}" class="cart-item"
                                                 role="row" data-variant-price="{{ item.variant.price }}" data-compare-price="{{ item.product.compare_at_price }}" data-original-line-price="{{ item.original_line_price }}">
                                                 <td class="cart-item__media" role="cell"
                                                     headers="CartDrawer-ColumnProductImage">
@@ -237,7 +237,7 @@
                                                     </div>
 
                                                     {%- if item.original_price != item.final_price -%}
-                                                        <div class="cart-item__discounted-prices">
+                                                        <div class="cart-item__discounted-prices" data-csapp_price>
                                                           <span class="visually-hidden">
                                                             {{ 'products.product.price.regular_price' | t }}
                                                           </span>
@@ -257,7 +257,7 @@
                                                             </strong>
                                                         </div>
                                                     {%- else -%}
-                                                        <div class="product-option">
+                                                        <div class="product-option" data-csapp_price>
                                                             {% if item.product.compare_at_price > item.product.price %}
                                                                 {% render 'price', product: item.product %}
                                                                 {% else %}
@@ -308,7 +308,7 @@
                                                         </div>
                                                     </div>
 
-                                                    <div class="cart-item__price-wrapper">
+                                                    <div class="cart-item__price-wrapper" data-csapp_line_price>
                                                         {%- if item.original_line_price != item.final_line_price -%}
                                                             <div class="cart-item__discounted-prices">
                                 <span class="visually-hidden">
