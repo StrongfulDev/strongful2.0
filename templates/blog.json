@@ -14,8 +14,8 @@
       "settings": {
         "tile_image_one": "shopify://shop_images/7ff08d51abffc0cfdf69f878b50b58d6_edf1729e-32f5-434a-8171-3f69676dddff.jpg",
         "tile_image_one_link": "shopify://collections/shell-1",
-        "tile_image_two": "shopify://shop_images/43_b64b9230-53a7-446f-b15c-ee37d0df9493.jpg",
-        "tile_image_two_link": "shopify://pages/lets-move",
+        "tile_image_two": "shopify://shop_images/copy_7cd017b2-01ba-41d7-a4c1-0961226af994.jpg",
+        "tile_image_two_link": "shopify://collections/shell-the-new-collection",
         "layout": "grid",
         "show_image": true,
         "image_height": "large",
