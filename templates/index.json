@@ -260,6 +260,47 @@
         "padding_bottom": 16
       }
     },
+    "customer_slideshow_3cfMXw": {
+      "type": "customer-slideshow",
+      "blocks": {
+        "slide_rVi7Q8": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/1d32ac0590a64fc9101e963fd1b8d414_00eb58fa-5a8d-401a-9c45-8ca0c3d744c4.jpg",
+            "mobile_image": "shopify://shop_images/b3ac2ec4162bfc3be19c78dd7545e1df.jpg",
+            "login_desktop_image": "shopify://shop_images/1d32ac0590a64fc9101e963fd1b8d414_00eb58fa-5a8d-401a-9c45-8ca0c3d744c4.jpg",
+            "login_mobile_image": "shopify://shop_images/b3ac2ec4162bfc3be19c78dd7545e1df.jpg",
+            "button_label": "",
+            "login_button_label": "",
+            "link": "shopify://pages/loyalty",
+            "login_link": "",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "logged_in_color_scheme": "background-1",
+            "whole_slide_link": "shopify://pages/loyalty",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_rVi7Q8"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "sides",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "featured_collection_XDhFHB": {
       "type": "featured-collection",
       "settings": {
@@ -882,6 +923,7 @@
     "slideshow_tHw9fn",
     "slideshow_gwXDrF",
     "featured_collection_AaFqPp",
+    "customer_slideshow_3cfMXw",
     "featured_collection_XDhFHB",
     "featured_collection_Vgg3kt",
     "our_collection_list_v3_mQh6DU",
