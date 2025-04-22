@@ -6,13 +6,10 @@
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
 {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
 
+{%- comment -%} Detect published vs. preview using theme.role {% endcomment -%}
 {% assign isLiveTheme = 'false' %}
-{% if content_for_header contains "previewBarInjector.init();" %}
-    {% assign isLiveTheme = 'false' %}
-{% elsif content_for_header contains "Shopify.designMode" %}
-    {% assign isLiveTheme = 'false' %}
-{% else %}
-    {% assign isLiveTheme = 'true' %}
+{% if theme.role == 'main' %}
+  {% assign isLiveTheme = 'true' %}
 {% endif %}
 
 <link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print"
