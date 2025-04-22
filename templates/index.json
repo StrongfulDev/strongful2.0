@@ -182,6 +182,7 @@
         },
         "slide_PYYtVD": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/copy_1054fb93-a7e0-40ef-ac35-4c1a55eed1d8.jpg",
             "mobile_image": "shopify://shop_images/copy_2_54d8ff05-ac18-4aeb-be30-9b339e601ddd.jpg",
