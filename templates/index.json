@@ -409,7 +409,7 @@
         "@media screen and (max-width: 749px) {.collection-list-new {flex-wrap: nowrap; overflow-x: scroll; scrollbar-width: none; }}"
       ],
       "settings": {
-        "title": "SHOP BY ACTIVITY SHELL COLLECTION",
+        "title": "ACTIVITY BY SHELL",
         "heading_size": "h2",
         "heading_type": "heading_type_default",
         "heading_alignment": "center",
