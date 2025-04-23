@@ -111,6 +111,7 @@
     },
     "custom_loyalty_form_section_TtpmFX": {
       "type": "custom-loyalty-form-section",
+      "disabled": true,
       "settings": {
         "sign_up_title": "הרשמי למועדון הלקוחות",
         "desktop_image": "shopify://shop_images/Custom_loyalty_login_desktop.png",
