@@ -342,10 +342,26 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "1745402357d07a69fa": {
+      "type": "apps",
+      "blocks": {
+        "aiod_all_in_1_discount_app_bundle_offer_NnGXTq": {
+          "type": "shopify://apps/aiod-all-in-1-discount/blocks/app-bundle-offer/9537caf0-36d5-4981-a648-8961a8e85652",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "aiod_all_in_1_discount_app_bundle_offer_NnGXTq"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "main",
+    "1745402357d07a69fa",
     "complete-look-products",
     "dddb59c7-1c96-4897-8735-d714c0d34c5d",
     "daadfb7d-6377-46b9-9592-68ff753bf341",
