@@ -343,16 +343,15 @@
     },
     "featured_collection_Vgg3kt": {
       "type": "featured-collection",
-      "disabled": true,
       "settings": {
         "steps": 4,
-        "title": "SHELL ON SALE",
+        "title": "OUTLET",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "shell-the-new-collection",
+        "collection": "outlet",
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,
