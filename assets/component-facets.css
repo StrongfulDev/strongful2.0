@@ -1106,7 +1106,7 @@ input.mobile-facets__checkbox {
   .facets__form-vertical {
     display: flex;
     flex-direction: column;
-    width: 26rem;
+    /* width: 26rem; */
   }
 
   .facets__disclosure-vertical {
