@@ -1622,7 +1622,7 @@ summary .icon-caret {
 	}
 
 	.filter-links {
-		justify-content: center;
+		justify-content: flex-start;
 		direction: rtl;
 	}
 
