@@ -15,7 +15,7 @@
 
 @media screen and (min-width: 750px) {
   .facets-container > * + * {
-    margin-top: 60px;
+    margin-bottom: 60px;
   }
 
   .facets__form .product-count {
