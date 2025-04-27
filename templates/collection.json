@@ -36,6 +36,7 @@
         "b12ab2ae-119f-4c68-9a4f-1e499db126b3",
         "3e3cbf77-a5dd-407c-ac11-ddbb5bbe70d0"
       ],
+      "disabled": true,
       "custom_css": [
         "@media screen and (min-width: 990px) {.banner__media img {object-fit: contain; }}",
         ".media > *:not(.zoom):not(.deferred-media__poster-button),.media model-viewer {position: static; object-fit: cover;}"
