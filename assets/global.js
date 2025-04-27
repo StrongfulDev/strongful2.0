@@ -1515,8 +1515,11 @@ window.addEventListener("DOMContentLoaded", function (event) {
 	const pill = document.querySelector(".icon-pill");
 	const pillBorder = document.querySelector(".icon-pill-border");
 
-	enableToolbarButton.appendChild(pill);
-	enableToolbarButton.appendChild(pillBorder);
+    if ( enableToolbarButton ) {
+      enableToolbarButton.appendChild(pill);
+      enableToolbarButton.appendChild(pillBorder);
+    }
+	
 
 	// let cartItemsInstance = new CartItems();
 	// let historyTraversal = event.persisted || ( typeof window.performance != "undefined" && window.performance.navigation.type === 2 );
