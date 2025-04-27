@@ -36,15 +36,14 @@
         "b12ab2ae-119f-4c68-9a4f-1e499db126b3",
         "3e3cbf77-a5dd-407c-ac11-ddbb5bbe70d0"
       ],
-      "disabled": true,
       "custom_css": [
         "@media screen and (min-width: 990px) {.banner__media img {object-fit: contain; }}",
         ".media > *:not(.zoom):not(.deferred-media__poster-button),.media model-viewer {position: static; object-fit: cover;}"
       ],
       "settings": {
         "override_image_from_metafield": true,
-        "image": "shopify://shop_images/a69c6a81427c80862b80cf76175bd315_9ad13f0a-4be8-49ec-88ef-c5142c320c18.jpg",
-        "mobile_image": "shopify://shop_images/91e3d41e83d2cacce11e5279cf256f0c_54e47bac-d758-4782-ad90-634581be1a64.jpg",
+        "image": "shopify://shop_images/8_d728d73a-33ed-4977-94de-6a07d1c37911.jpg",
+        "mobile_image": "shopify://shop_images/7_d9ee4264-66d3-4b4b-8298-aed9f7c69fde.jpg",
         "image_overlay_opacity": 0,
         "image_height": "auto",
         "desktop_content_position": "middle-center",
