@@ -1838,3 +1838,9 @@ summary .icon-caret {
   padding-bottom: 0.5rem;
 }
 }
+@media all and (min-width: 749px) {
+  .facets-vertical {
+    display: grid;
+    grid-template-columns: 16% 84%;
+  }
+}
