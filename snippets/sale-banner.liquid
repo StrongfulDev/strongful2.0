@@ -17,11 +17,11 @@
         assign members_only = true
     endif
 
-    assign second_announcement_tag=settings.second_announcement_tag
+    assign second_announcement_tag = settings.second_announcement_tag
 %}
 
 {% if customer %}
-    {% if product.tags contains announcement_tag and block.settings.logged_in_text != blank %}
+    {% if product.tags contains announcement_tag %}
         <div class="sale-banner-product-page">
             <div class="{% if block.settings.paragraph_direction == 'Right To Left' %}fix-direction{% endif %}">
                 {{ block.settings.logged_in_text | newline_to_br }}
@@ -31,10 +31,8 @@
             {% endif %}
         </div>
     {% endif %}
-
-    {% else %}
-
-    {% if product.tags contains announcement_tag and block.settings.logged_out_text != blank %}
+{% else %}
+    {% if product.tags contains announcement_tag %}
         <div class="sale-banner-product-page">
             <div class="{% if block.settings.paragraph_direction == 'Right To Left' %}fix-direction{% endif %}">
                 {{ block.settings.logged_out_text | newline_to_br }}
@@ -43,18 +41,32 @@
                 <small class="account-toggler-site-wide link fix-direction">{{ block.settings.log_in }}</small>
             {% endif %}
         </div>
-        {%elsif product.tags contains second_announcement_tag%}
-             <div class="sale-banner-product-page">
+    {% elsif product.tags contains second_announcement_tag and block.settings.logged_in_text_second != blank %}
+        <div class="sale-banner-product-page">
             <div class="{% if block.settings.paragraph_direction == 'Right To Left' %}fix-direction{% endif %}">
                 {{ block.settings.logged_in_text_second | newline_to_br }}
             </div>
-          
         </div>
-
-        
+    {% elsif block.settings.third_announcement_text != blank %}
+        <div class="sale-banner-product-page">
+            <div class="{% if block.settings.paragraph_direction == 'Right To Left' %}fix-direction{% endif %}">
+                {{ block.settings.third_announcement_text | newline_to_br }}
+            </div>
+            {% if block.settings.small_logged_in_text_third != blank %}
+                <small class="fix-direction">{{ block.settings.small_logged_in_text_third }}</small>
+            {% endif %}
+        </div>
+    {% elsif block.settings.fourth_announcement_text != blank %}
+        <div class="sale-banner-product-page">
+            <div class="{% if block.settings.paragraph_direction == 'Right To Left' %}fix-direction{% endif %}">
+                {{ block.settings.fourth_announcement_text | newline_to_br }}
+            </div>
+            {% if block.settings.small_logged_in_text_fourth != blank %}
+                <small class="fix-direction">{{ block.settings.small_logged_in_text_fourth }}</small>
+            {% endif %}
+        </div>
     {% endif %}
 {% endif %}
 
 
- 
- 
+

@@ -150,6 +150,10 @@
     "show_card_collection_announcement": true,
     "second_announcement_tag": "",
     "custom_collection_second_announcement": "",
+    "third_announcement_tag": "il_New_Collection",
+    "custom_collection_third_announcement": "מוצר חדש בקולקציה",
+    "fourth_announcement_tag": "il_Limited_Edition",
+    "custom_collection_fourth_announcement": "מהדורה מוגבלת",
     "restock_badge_tag": "badge__restock",
     "announcement_customizer_override": false,
     "preorder_over_text": "",
@@ -185,9 +189,7 @@
       },
       "main-register": {
         "type": "main-register",
-        "custom_css": [
-          ".form-toggler {display: block;}"
-        ],
+        "custom_css": [".form-toggler {display: block;}"],
         "settings": {
           "padding_top": 8,
           "padding_bottom": 20
@@ -224,10 +226,7 @@
             }
           }
         },
-        "block_order": [
-          "0c98e703-5f3e-421f-85a1-f7a1cf32c727",
-          "27ea88e1-0a25-4370-bba9-fe4273a990c0"
-        ],
+        "block_order": ["0c98e703-5f3e-421f-85a1-f7a1cf32c727", "27ea88e1-0a25-4370-bba9-fe4273a990c0"],
         "settings": {
           "title": "",
           "heading_size": "h2",
@@ -286,9 +285,7 @@
       },
       "email-list": {
         "type": "email-list",
-        "custom_css": [
-          ".form-group input {font-size: 14px !important;}"
-        ],
+        "custom_css": [".form-group input {font-size: 14px !important;}"],
         "settings": {
           "header_text": "30₪ מתנה עלינו",
           "description": "הצטרפי עכשיו לעדכוני הדיוור שלנו וקבלי ₪30 מתנה להזמנה הבאה שלך",

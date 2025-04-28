@@ -1,0 +1,37 @@
+{% assign announcements = '' %}
+{% assign announcements = announcements
+  | append: settings.announcement_tag
+  | append: '||'
+  | append: settings.custom_collection_announcement
+%}
+{% assign announcements = announcements
+  | append: '||'
+  | append: settings.second_announcement_tag
+  | append: '||'
+  | append: settings.custom_collection_second_announcement
+%}
+{% assign announcements = announcements
+  | append: '||'
+  | append: settings.third_announcement_tag
+  | append: '||'
+  | append: settings.custom_collection_third_announcement
+%}
+{% assign announcements = announcements
+  | append: '||'
+  | append: settings.fourth_announcement_tag
+  | append: '||'
+  | append: settings.custom_collection_fourth_announcement
+%}
+
+{% assign announcements_array = announcements | split: '||' %}
+
+{% for i in (0..announcements_array.size) %}
+  {% assign tag = announcements_array[i] %}
+  {% assign next_index = i | plus: 1 %}
+  {% assign text = announcements_array[next_index] %}
+  {% if tag and text and card_product.tags contains tag and text != blank %}
+    <span class="card_banner_text color-background-2">{{ text }}</span>
+    {% break %}
+  {% endif %}
+  {% assign i = i | plus: 1 %}
+{% endfor %}
