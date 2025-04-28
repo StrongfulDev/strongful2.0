@@ -315,19 +315,26 @@
 
             <div class="card__content">
             <div class="card__information">
-                {% if card_product.tags contains announcement_tag %}
-                    {% if members_only_sale == true and members_only_sale_active == true %}
-                        {% unless customer %}
-                            {% if members_banner_text != blank %}
-                                <span class="card_banner_text color-background-2">{{ members_banner_text }}</span>
-                            {% endif %}
-                        {% endunless %}
-                    {% else %}
-                        {% if card_banner_text != blank %}
-                            <span class="card_banner_text color-background-2">{{ card_banner_text }}</span>
-                        {% endif %}
-                    {% endif %}
-                {% endif %}
+              {% if card_product.tags contains announcement_tag %}
+    {% if members_only_sale == true and members_only_sale_active == true %}
+        {% unless customer %}
+            {% if members_banner_text != blank %}
+                <span class="card_banner_text color-background-2">{{ members_banner_text }}</span>
+            {% endif %}
+        {% endunless %}
+    {% else %}
+        {% if card_banner_text != blank %}
+            <span class="card_banner_text color-background-2">{{ card_banner_text }}</span>
+        {% endif %}
+    {% endif %}
+{% endif %}
+
+{%- comment -%} Explicitly render the second announcement if present {%- endcomment -%}
+{% if custom_collection_second_announcement != blank and card_product.tags contains second_announcement_tag %}
+    <span class="card_banner_text second-announcement color-background-2">
+        {{ custom_collection_second_announcement }}
+    </span>
+{% endif %}
 
                     
         {% assign is_percent_on = false %}
