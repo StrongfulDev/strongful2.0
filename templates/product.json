@@ -25,8 +25,8 @@
         "5ec0a264-e4fc-4a8d-92bc-f2f9223694f5": {
           "type": "sale",
           "settings": {
-            "logged_in_text": "<p>20% הנחה בקניית 2 פריטים ומעלה</p>",
-            "logged_out_text": "<p>20% הנחה בקניית 2 פריטים ומעלה</p>",
+            "logged_in_text": "<p>2 סרטים ב60₪</p>",
+            "logged_out_text": "<p>2 סרטים ב60₪</p>",
             "logged_in_text_second": "",
             "log_in": "",
             "small_text": "",
@@ -214,6 +214,21 @@
         "padding_bottom": 80
       }
     },
+    "1745402357d07a69fa": {
+      "type": "apps",
+      "blocks": {
+        "aiod_all_in_1_discount_app_bundle_offer_NnGXTq": {
+          "type": "shopify://apps/aiod-all-in-1-discount/blocks/app-bundle-offer/9537caf0-36d5-4981-a648-8961a8e85652",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "aiod_all_in_1_discount_app_bundle_offer_NnGXTq"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "complete-look-products": {
       "type": "complete-look-products",
       "disabled": true,
@@ -339,21 +354,6 @@
         "408ca3e0-76ac-430f-a568-98a94142ff8b"
       ],
       "custom_css": [],
-      "settings": {
-        "include_margins": true
-      }
-    },
-    "1745402357d07a69fa": {
-      "type": "apps",
-      "blocks": {
-        "aiod_all_in_1_discount_app_bundle_offer_NnGXTq": {
-          "type": "shopify://apps/aiod-all-in-1-discount/blocks/app-bundle-offer/9537caf0-36d5-4981-a648-8961a8e85652",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "aiod_all_in_1_discount_app_bundle_offer_NnGXTq"
-      ],
       "settings": {
         "include_margins": true
       }
