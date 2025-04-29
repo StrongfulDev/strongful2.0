@@ -148,8 +148,8 @@
     "custom_collection_announcement": "מוצר ללא מע״מ",
     "members_only_announcement": "",
     "show_card_collection_announcement": true,
-    "second_announcement_tag": "",
-    "custom_collection_second_announcement": "",
+    "second_announcement_tag": "underwearsale",
+    "custom_collection_second_announcement": "3 ב₪70",
     "restock_badge_tag": "badge__restock",
     "announcement_customizer_override": false,
     "preorder_over_text": "",
@@ -158,8 +158,8 @@
     "quick_add_accessories_text": "הוספה לסל",
     "members_only_sale": false,
     "members_only_sale_active": false,
-    "third_announcement_tag": "",
-    "custom_collection_third_announcement": "מוצר חדש בקולקציה",
+    "third_announcement_tag": "hairbandsale",
+    "custom_collection_third_announcement": "2 סרטים ב60₪",
     "fourth_announcement_tag": "",
     "custom_collection_fourth_announcement": "מהדורה מוגבלת",
     "currency_code_enabled": true,
@@ -359,18 +359,18 @@
           "enabled_on_page": "all"
         }
       },
-      "yoast-seo-metatags": {
-        "type": "shopify://apps/yoast-seo-seo-for-everyone/blocks/metatags/7c777011-bc88-4743-a24e-64336e1e5b46",
-        "disabled": false,
-        "settings": {}
-      },
       "127709043890318779": {
         "type": "shopify://apps/aiod-all-in-1-discount/blocks/install-snippets/9537caf0-36d5-4981-a648-8961a8e85652",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "aiod_v2_call": "",
           "aiod_dev_api_call": ""
         }
+      },
+      "yoast-seo-metatags": {
+        "type": "shopify://apps/yoast-seo-seo-for-everyone/blocks/metatags/7c777011-bc88-4743-a24e-64336e1e5b46",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
