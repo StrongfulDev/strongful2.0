@@ -36,12 +36,12 @@
           "settings": {
             "toggle_main_font": true,
             "toggle_sub_font": true,
-            "main_text": "Save Big. Shop Smarter. 18% OFF",
-            "sub_text": "חגיגה ללא מע״מ - שלמי 18% פחות",
+            "main_text": "New player on the field",
+            "sub_text": "New Brown Oasis - נחת באתר",
             "text_alignment": "center",
             "main_text_direction": "ltr",
-            "sub_text_direction": "rtl",
-            "link": "shopify://collections/il-sale",
+            "sub_text_direction": "ltr",
+            "link": "shopify://collections/new-oasis",
             "color_scheme": "inverse",
             "custom_background_color": "#2f455b",
             "custom_text_color": "#ffffff",
@@ -391,7 +391,7 @@
       "type": "apps",
       "blocks": {
         "essential_countdown_app_block_6YiGEn": {
-          "type": "shopify://apps/essential-countdown/blocks/app-block/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
+          "type": "shopify://apps/essential-countdown-timer/blocks/app-block/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
           "disabled": true,
           "settings": {
             "id": "cm9jw5fen00krtoh83z308ozk"
