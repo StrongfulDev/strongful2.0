@@ -123,7 +123,8 @@
                             {%- form 'product', product, class: 'product_size_picker__form form', data-type: 'add-to-cart-form' -%}
                                 <div class="product_variants {% if product.has_only_default_variant %}default_product_variants{% endif %}">
                                     <fieldset name="line_items" class="js">
-                                        <ul {% if product.has_only_default_variant %}class="default_variant_list"{% endif %}>
+                                        <ul 
+  {% if product.has_only_default_variant %}class="default_variant_list{% if product.variants.size <= 3 %} justify-variants{% endif %}"{% elsif product.variants.size <= 3 %}class="justify-variants"{% endif %}>
                                             {% for variant in product.variants %}
                                                     {%- liquid
                                                         assign product_disabled = false
@@ -229,7 +230,8 @@
                 {%- form 'product', product, class: 'product_size_picker__form form', data-type: 'add-to-cart-form' -%}
                     <div class="product_variants {% if product.has_only_default_variant %}default_product_variants{% endif %}">
                         <fieldset name="line_items" class="js">
-                            <ul {% if product.has_only_default_variant %}class="default_variant_list"{% endif %}>
+                            <ul 
+  {% if product.has_only_default_variant %}class="default_variant_list{% if product.variants.size <= 3 %} justify-variants{% endif %}"{% elsif product.variants.size <= 3 %}class="justify-variants"{% endif %}>
                                 {% for variant in product.variants %}
                                         {%- liquid
                                             assign product_disabled = false
