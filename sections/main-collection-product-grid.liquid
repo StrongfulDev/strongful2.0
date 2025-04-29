@@ -251,29 +251,30 @@
                   assign members_only_sale_active = settings.members_only_sale_active
                   assign comes_with_matching_outfit = settings.comes_with_matching_outfit
                 -%}
+                {% assign page_offset = paginate.current_page | minus: 1 | times: paginate.page_size %}
+                {% assign global_index0 = page_offset | plus: forloop.index0 %}
+                {% assign mod24 = global_index0 | modulo: 24 %}
 
-                {% assign mod24 = forloop.index0 | modulo: 24 %}
-                {% if forloop.index0 <= 500 and forloop.index0 > 0 %}
-                  {% if mod24 == 0 %}
-                    {% if section.settings.ad_image_3 != blank %}
-                      <li class="grid__item">
-                        <a href="{{ section.settings.ad_link_3 }}" class="ad-image-link">
-                          <img
-                            srcset="
-                              {%- if section.settings.ad_image_3.width >= 165 -%}{{ section.settings.ad_image_3 | image_url: width: 165 }} 165w,{%- endif -%}
-                              {%- if section.settings.ad_image_3.width >= 360 -%}{{ section.settings.ad_image_3 | image_url: width: 360 }} 360w,{%- endif -%}
-                              {%- if section.settings.ad_image_3.width >= 533 -%}{{ section.settings.ad_image_3 | image_url: width: 533 }} 533w,{%- endif -%}
-                              {{ section.settings.ad_image_3 | image_url }} {{ section.settings.ad_image_3.width }}w
-                            "
-                            src="{{ section.settings.ad_image_3 | image_url: width: 533 }}"
-                            sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-                            alt="פרסומת"
-                            class="motion-reduce collection-ad-image"
-                            loading="lazy"
-                          >
-                        </a>
-                      </li>
-                    {% endif %}
+
+                {% if forloop.index0 <= 500 and forloop.index0 > 2 %}
+                  {% if mod24 == 0 and global_index0 != 0 and section.settings.ad_image_3 != blank %}
+                    <li class="grid__item">
+                      <a href="{{ section.settings.ad_link_3 }}" class="ad-image-link">
+                        <img
+                          srcset="
+                            {%- if section.settings.ad_image_3.width >= 165 -%}{{ section.settings.ad_image_3 | image_url: width: 165 }} 165w,{%- endif -%}
+                            {%- if section.settings.ad_image_3.width >= 360 -%}{{ section.settings.ad_image_3 | image_url: width: 360 }} 360w,{%- endif -%}
+                            {%- if section.settings.ad_image_3.width >= 533 -%}{{ section.settings.ad_image_3 | image_url: width: 533 }} 533w,{%- endif -%}
+                            {{ section.settings.ad_image_3 | image_url }} {{ section.settings.ad_image_3.width }}w
+                          "
+                          src="{{ section.settings.ad_image_3 | image_url: width: 533 }}"
+                          sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                          alt="פרסומת"
+                          class="motion-reduce collection-ad-image"
+                          loading="lazy"
+                        >
+                      </a>
+                    </li>
                   {% elsif mod24 == 16 %}
                     {% if section.settings.ad_image_2 != blank %}
                       <li class="grid__item">
