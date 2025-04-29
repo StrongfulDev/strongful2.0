@@ -115,7 +115,7 @@
             "mobile_title": "כל המוצרים",
             "main_link": "",
             "main_title": "",
-            "shop_all_link": "",
+            "shop_all_link": "shopify://collections/כל-המוצרים",
             "shop_all_title": ""
           }
         },
@@ -162,7 +162,7 @@
             "mobile_title": "סטים תואמים",
             "main_link": "shopify://collections/sets",
             "main_title": "",
-            "shop_all_link": "",
+            "shop_all_link": "shopify://collections/sets",
             "shop_all_title": ""
           }
         },
@@ -208,7 +208,7 @@
             "mobile_title": "OUTLET",
             "main_link": "",
             "main_title": "",
-            "shop_all_link": "",
+            "shop_all_link": "shopify://collections/outlet",
             "shop_all_title": ""
           }
         },
@@ -231,7 +231,7 @@
             "mobile_title": "אקססוריז",
             "main_link": "",
             "main_title": "",
-            "shop_all_link": "",
+            "shop_all_link": "shopify://collections/accessories",
             "shop_all_title": ""
           }
         },
