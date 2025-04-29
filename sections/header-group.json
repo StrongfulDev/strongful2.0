@@ -41,7 +41,7 @@
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "ltr",
-            "link": "shopify://collections/new-oasis",
+            "link": "shopify://collections/oasis",
             "color_scheme": "inverse",
             "custom_background_color": "#5e3e32",
             "custom_text_color": "#ffffff",
