@@ -33,6 +33,8 @@
             "small_logged_in_text": "",
             "second_announcement_regular_text": "",
             "second_small_text": "",
+            "third_announcement_text": "",
+            "fourth_announcement_text": "",
             "paragraph_direction": "Left To Right"
           }
         },
@@ -114,7 +116,7 @@
           }
         },
         "essential_countdown_app_block_Na8eTE": {
-          "type": "shopify://apps/essential-countdown/blocks/app-block/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
+          "type": "shopify://apps/essential-countdown-timer/blocks/app-block/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
           "disabled": true,
           "settings": {
             "id": "cm46qtxod6116419w949liwvx1"
