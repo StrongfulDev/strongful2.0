@@ -71,7 +71,7 @@
         "c1cb3b5d-fa01-4edf-8967-f1afa8ec37fc"
       ],
       "custom_css": [
-        ".collection-list-title {padding-left: 42px;}"
+        ".collection-list-title {padding-left: 140px;}"
       ],
       "settings": {
         "images_or_colors": "images",
@@ -230,7 +230,7 @@
         "featured_collection_7y9AYR"
       ],
       "custom_css": [
-        ".collection-list-title {padding-left: 42px;}"
+        ".collection-list-title {padding-left: 140px;}"
       ],
       "settings": {
         "images_or_colors": "colors",
