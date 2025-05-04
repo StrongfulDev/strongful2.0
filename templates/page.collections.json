@@ -195,6 +195,13 @@
             "collection": "אדום",
             "show_collection_title": true
           }
+        },
+        "featured_collection_a9AyhE": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "cream",
+            "show_collection_title": true
+          }
         }
       },
       "block_order": [
@@ -211,7 +218,8 @@
         "a4f54757-f737-453c-bacf-635ac278f7a2",
         "255a110c-361f-42b3-9086-b17f4d05a3ff",
         "f6a715a3-e4b2-46a2-821c-7c1cda8322a6",
-        "08e2705a-ec07-4219-8048-db2a3e6a6b80"
+        "08e2705a-ec07-4219-8048-db2a3e6a6b80",
+        "featured_collection_a9AyhE"
       ],
       "custom_css": [
         ".collection-list-title {padding-left: 42px;}"
