@@ -316,7 +316,7 @@
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,
-        "show_view_all": false,
+        "show_view_all": true,
         "view_all_text": "SHOP ALL",
         "view_all_style": "link",
         "view_all_location": "top",
