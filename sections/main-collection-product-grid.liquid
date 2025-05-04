@@ -318,7 +318,7 @@
                   {% endif %}
                 {% endif %}
 
-                {% if isLiveTheme == 'true' %}
+                {% if request.design_mode %}
                   {% unless product.tags contains 'giftHide'
                     or product.tags contains 'hidden'
                     or product.tags contains 'free-slippers'
