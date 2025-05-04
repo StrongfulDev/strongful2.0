@@ -202,6 +202,13 @@
             "collection": "cream",
             "show_collection_title": true
           }
+        },
+        "featured_collection_7y9AYR": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bordeaux",
+            "show_collection_title": true
+          }
         }
       },
       "block_order": [
@@ -219,7 +226,8 @@
         "255a110c-361f-42b3-9086-b17f4d05a3ff",
         "f6a715a3-e4b2-46a2-821c-7c1cda8322a6",
         "08e2705a-ec07-4219-8048-db2a3e6a6b80",
-        "featured_collection_a9AyhE"
+        "featured_collection_a9AyhE",
+        "featured_collection_7y9AYR"
       ],
       "custom_css": [
         ".collection-list-title {padding-left: 42px;}"
