@@ -513,13 +513,13 @@
         "slide_TxMXy9": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/copy_3_9e182d2a-95b0-468f-985c-d3facd04ce01.jpg",
-            "mobile_image": "shopify://shop_images/copy_6_3.jpg",
-            "login_desktop_image": "shopify://shop_images/copy_3_9e182d2a-95b0-468f-985c-d3facd04ce01.jpg",
-            "login_mobile_image": "shopify://shop_images/copy_6_3.jpg",
+            "image": "shopify://shop_images/copy_3_1_16ab6a00-8cf6-4c11-a4e0-f68b59a0bc65.jpg",
+            "mobile_image": "shopify://shop_images/copy_8_1_6607c16c-aaa6-49e8-bbd6-1f7d19d3ccf9.jpg",
+            "login_desktop_image": "shopify://shop_images/copy_3_1_2430ac1b-f13d-4288-9382-8730150cad72.jpg",
+            "login_mobile_image": "shopify://shop_images/copy_8_1_d0ddea07-36f3-4d88-91cd-49525ca0ca3d.jpg",
             "button_label": "",
             "login_button_label": "",
-            "link": "shopify://pages/loyalty",
+            "link": "shopify://collections/18-0ff",
             "login_link": "",
             "show_text_box": true,
             "color_scheme": "background-1",
@@ -578,6 +578,47 @@
       ],
       "settings": {
         "include_margins": true
+      }
+    },
+    "customer_slideshow_iniK4W": {
+      "type": "customer-slideshow",
+      "blocks": {
+        "slide_UJF9BD": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/copy_3_9e182d2a-95b0-468f-985c-d3facd04ce01.jpg",
+            "mobile_image": "shopify://shop_images/copy_6_3.jpg",
+            "login_desktop_image": "shopify://shop_images/copy_3_9e182d2a-95b0-468f-985c-d3facd04ce01.jpg",
+            "login_mobile_image": "shopify://shop_images/copy_6_3.jpg",
+            "button_label": "",
+            "login_button_label": "",
+            "link": "shopify://pages/loyalty",
+            "login_link": "",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "logged_in_color_scheme": "background-1",
+            "whole_slide_link": "shopify://pages/loyalty",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_UJF9BD"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "sides",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand",
+        "padding_top": 24,
+        "padding_bottom": 24
       }
     },
     "customer_slideshow_JN4JiR": {
@@ -931,6 +972,7 @@
     "customer_slideshow_wFcfK7",
     "customer_slideshow_jXTBRG",
     "17388407748dd9c850",
+    "customer_slideshow_iniK4W",
     "customer_slideshow_JN4JiR",
     "173246164424ec44fa",
     "collection_list_QrC4z9",
