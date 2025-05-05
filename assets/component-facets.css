@@ -1836,6 +1836,7 @@ summary .icon-caret {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   padding-bottom: 0.5rem;
+  justify-content: center;
 }
 }
 @media all and (min-width: 749px) {
