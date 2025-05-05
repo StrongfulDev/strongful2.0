@@ -68,9 +68,9 @@
               </tr>
             </thead>
 
-            <tbody>
+            <tbody data-csapp_line_wrapper>
               {%- for item in cart.items -%}
-                <tr class="cart-item" id="CartItem-{{ item.index | plus: 1 }}" data-key="{{ item.key }}" data-product-id="{{ item.product.id }}">
+                <tr class="cart-item" id="CartItem-{{ item.index | plus: 1 }}" data-key="{{ item.key }}" data-product-id="{{ item.product.id }}" data-csapp_line_index>
                   <td class="cart-item__media">
                     {% if item.image %}
                       {% comment %} Leave empty space due to a:empty CSS display: none rule {% endcomment %}
