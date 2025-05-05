@@ -26,7 +26,7 @@
             "sub_text_direction": "rtl",
             "link": "shopify://blogs/policies/החזרות-והחלפות",
             "color_scheme": "inverse",
-            "custom_background_color": "#5e3e32",
+            "custom_background_color": "#562f1f",
             "custom_text_color": "#ffffff",
             "enable_custom_colors": true
           }
@@ -43,7 +43,7 @@
             "sub_text_direction": "ltr",
             "link": "shopify://collections/oasis",
             "color_scheme": "inverse",
-            "custom_background_color": "#5e3e32",
+            "custom_background_color": "#562f1f",
             "custom_text_color": "#ffffff",
             "enable_custom_colors": true
           }
@@ -60,7 +60,7 @@
             "sub_text_direction": "rtl",
             "link": "shopify://blogs/policies/מדיניות-המשלוחים-שלנו",
             "color_scheme": "inverse",
-            "custom_background_color": "#5e3e32",
+            "custom_background_color": "#562f1f",
             "custom_text_color": "#ffffff",
             "enable_custom_colors": true
           }
