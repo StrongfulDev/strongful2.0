@@ -237,7 +237,7 @@
                                                     </div>
 
                                                     {%- if item.original_price != item.final_price -%}
-                                                        <div class="cart-item__discounted-prices" data-csapp_price data-csapp_discount_summery>
+                                                        <div class="cart-item__discounted-prices" data-csapp_price data-csapp_discount_summery {{ item.original_price }}>
                                                           <span class="visually-hidden">
                                                             {{ 'products.product.price.regular_price' | t }}
                                                           </span>
