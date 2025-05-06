@@ -4726,3 +4726,10 @@ span.snize-description,
 .total-benefits{display: none;}
 .benefits-announcement{display: none;}
 .dis-text{direction: rtl;}
+
+
+ @media (min-width: 769px) {
+    .our-promise-content {
+      padding-top: 5px; /* Add larger padding-top for big screens */
+    }
+  }
