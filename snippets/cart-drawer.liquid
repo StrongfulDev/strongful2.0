@@ -237,7 +237,7 @@
                                                     </div>
 
                                                     {%- if item.original_price != item.final_price -%}
-                                                        <div class="cart-item__discounted-prices" data-csapp_price data-csapp_discount_summery {{ item.original_price }}>
+                                                        <div class="cart-item__discounted-prices" data-csapp_price data-csapp_discount_summery>
                                                           <span class="visually-hidden">
                                                             {{ 'products.product.price.regular_price' | t }}
                                                           </span>
@@ -257,7 +257,7 @@
                                                             </strong>
                                                         </div>
                                                     {%- else -%}
-                                                        <div class="product-option" data-csapp_price data-csapp_discount_summery {{ item.original_price }}>
+                                                        <div class="product-option" data-csapp_price data-csapp_discount_summery>
                                                             {% if item.product.compare_at_price > item.product.price %}
                                                                 {% render 'price', product: item.product %}
                                                                 {% else %}
