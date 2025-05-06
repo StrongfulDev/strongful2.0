@@ -4728,7 +4728,7 @@ span.snize-description,
 .dis-text{direction: rtl;}
 
 
- @media (min-width: 769px) {
+ @media (min-width: 799px) {
     .our-promise-content {
       padding-top: 72px; /* Add larger padding-top for big screens */
     }
