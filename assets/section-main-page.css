@@ -510,6 +510,11 @@ div.about-us {
 	.our-promise-content {
 		padding: 4rem;
 	}
+	 @media (min-width: 769px) {
+    .our-promise-content {
+      padding-top: 72px; /* Add larger padding-top for big screens */
+    }
+  }
 
 	.our-promise-content p {
 		margin: 0;
