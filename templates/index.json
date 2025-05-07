@@ -65,7 +65,7 @@
           "type": "collection",
           "settings": {
             "image": "shopify://shop_images/2x_c9f962a1-535c-4144-8f6d-03b7d68a2b07.jpg",
-            "url": "shopify://collections/best-seller-internal-use",
+            "url": "shopify://collections/best-seller",
             "collection_title": "הכי נמכרים"
           }
         },
@@ -240,16 +240,16 @@
           "type": "shopify://apps/tellos-shoppable-video/blocks/home-page-carousel/a4490152-a6c6-410b-9721-736f5b95f2f2",
           "settings": {
             "size": "large",
-            "explore-card-label": "Explore all videos",
             "background": "rgba(0,0,0,0)",
-            "padding_top": 8,
-            "padding_bottom": 8,
-            "padding_horizontal": 0,
             "add_header": true,
             "header_text": "TRENDING NOW",
             "header_type": "h2",
             "alignment": "center",
             "header_gap": 30,
+            "explore-card-label": "Explore all videos",
+            "padding_top": 8,
+            "padding_bottom": 8,
+            "padding_horizontal": 0,
             "custom_css": ".carousel-header { font-size: 20px; font-weight: 200; }"
           }
         }
@@ -320,7 +320,7 @@
             "image": "shopify://shop_images/SANA6751_1.jpg",
             "alt": "",
             "link": "BEST SELLERS",
-            "url": "shopify://collections/best-seller-internal-use"
+            "url": "shopify://collections/best-seller"
           }
         },
         "image_3PJtne": {
