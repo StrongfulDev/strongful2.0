@@ -15,7 +15,7 @@
         "tile_image_one": "shopify://shop_images/37.jpg",
         "tile_image_one_link": "shopify://collections/buy-450-pay-350",
         "tile_image_two": "shopify://shop_images/a40ea1b4acde1744ca52d0ccdf0dc1bf_c51e4cfb-f27a-4861-83c7-c5e97962099d.jpg",
-        "tile_image_two_link": "shopify://collections/best-seller-internal-use",
+        "tile_image_two_link": "shopify://collections/best-seller",
         "layout": "grid",
         "show_image": true,
         "image_height": "large",
