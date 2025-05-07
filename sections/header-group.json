@@ -356,7 +356,7 @@
         "show_first_image": true,
         "image_order_first": "3",
         "mobile_top_image_1": "shopify://shop_images/copy_500bcfe5-a1a2-4f75-b47a-b5abe1c457cc.jpg",
-        "mobile_top_image_1_link": "shopify://collections/best-seller-internal-use",
+        "mobile_top_image_1_link": "shopify://collections/best-seller",
         "mobile_top_image_1_title": "BEST SELLERS",
         "show_second_image": false,
         "image_order_second": "2",
@@ -390,7 +390,7 @@
       "type": "apps",
       "blocks": {
         "essential_countdown_app_block_6YiGEn": {
-          "type": "shopify://apps/essential-countdown/blocks/app-block/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
+          "type": "shopify://apps/essential-countdown-timer/blocks/app-block/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
           "settings": {
             "id": "cm8pu5m2n000kuixoj9y7ifez"
           }
