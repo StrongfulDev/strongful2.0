@@ -65,7 +65,7 @@
           "type": "collection",
           "settings": {
             "image": "shopify://shop_images/2x_c9f962a1-535c-4144-8f6d-03b7d68a2b07.jpg",
-            "url": "shopify://collections/best-seller-internal-use",
+            "url": "shopify://collections/best-seller",
             "collection_title": "הכי נמכרים"
           }
         },
@@ -745,7 +745,7 @@
             "image": "shopify://shop_images/bdf30d0f45533032ac07e2803ee07063.jpg",
             "alt": "",
             "link": "BEST SELLERS",
-            "url": "shopify://collections/best-seller-internal-use"
+            "url": "shopify://collections/best-seller"
           }
         },
         "image_3PJtne": {
