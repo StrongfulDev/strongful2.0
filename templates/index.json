@@ -65,7 +65,7 @@
           "type": "collection",
           "settings": {
             "image": "shopify://shop_images/2x_c9f962a1-535c-4144-8f6d-03b7d68a2b07.jpg",
-            "url": "shopify://collections/best-seller-internal-use",
+            "url": "shopify://collections/best-seller",
             "collection_title": "הכי נמכרים"
           }
         },
@@ -211,7 +211,7 @@
             "image": "shopify://shop_images/SANA6751_1.jpg",
             "alt": "",
             "link": "BEST SELLERS",
-            "url": "shopify://collections/best-seller-internal-use"
+            "url": "shopify://collections/best-seller"
           }
         },
         "image_3PJtne": {
@@ -254,17 +254,6 @@
     },
     "17388407748dd9c850": {
       "type": "apps",
-      "blocks": {
-        "tolstoy_shoppable_video_ugc_carousel_block_jtc3eF": {
-          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
-          "settings": {
-            "publishId": "5xh1nmtccw8gh"
-          }
-        }
-      },
-      "block_order": [
-        "tolstoy_shoppable_video_ugc_carousel_block_jtc3eF"
-      ],
       "settings": {
         "include_margins": true
       }
