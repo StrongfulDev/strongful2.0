@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -54,7 +54,7 @@
         "template--16298423025804__b5934d86-8c22-47a5-aafc-a9bdd354734d-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>הכירי את STRONGFUL<\/p><p>כשכל חליפות הספורט לנשים מחכות לך באתר אחד, החיים שלך הולכים להיות קלים.<\/p><p>אנו סטרונגפול, מותג בגדי ספורט לנשים אונליין המספק לך את בגדי האימון לנשים הכי איכותיים שיש.<\/p><p>כל בחורה צריכה סט ספורטיבי בארון, וכשהוא מסטרונגפול את יודעת שתוכלי לבחור את הגזרות, המידות והצבעים המדוייקים בשבילך שיגרמו לך להרגיש בשיא שלך.<\/p>"
+            "text": "<p>הכירי את STRONGFUL</p><p>כשכל חליפות הספורט לנשים מחכות לך באתר אחד, החיים שלך הולכים להיות קלים.</p><p>אנו סטרונגפול, מותג בגדי ספורט לנשים אונליין המספק לך את בגדי האימון לנשים הכי איכותיים שיש.</p><p>כל בחורה צריכה סט ספורטיבי בארון, וכשהוא מסטרונגפול את יודעת שתוכלי לבחור את הגזרות, המידות והצבעים המדוייקים בשבילך שיגרמו לך להרגיש בשיא שלך.</p>"
           }
         }
       },
@@ -80,10 +80,10 @@
         "title": "המוצרים הכי מומלצים להתחיל מהם",
         "heading_size": "h1",
         "heading_type": "heading_type_default",
-        "description": "<p>איגדנו עבורך את המוצרים הכי נמכרים ומומלצים לקחת בפעם הראשונה<\/p>",
+        "description": "<p>איגדנו עבורך את המוצרים הכי נמכרים ומומלצים לקחת בפעם הראשונה</p>",
         "show_description": false,
         "description_style": "body",
-        "collection": "best-seller-internal-use",
+        "collection": "best-seller",
         "products_to_show": 8,
         "columns_desktop": 5,
         "full_width": true,
@@ -122,10 +122,10 @@
         "title": "מוצרים עם דירוג הכי גבוה",
         "heading_size": "h1",
         "heading_type": "heading_type_default",
-        "description": "<p>אלו המוצרים שהלקוחות שלנו דרגו כמוצרים האהובים ביותר<\/p>",
+        "description": "<p>אלו המוצרים שהלקוחות שלנו דרגו כמוצרים האהובים ביותר</p>",
         "show_description": false,
         "description_style": "body",
-        "collection": "best-seller-internal-use",
+        "collection": "best-seller",
         "products_to_show": 8,
         "columns_desktop": 5,
         "full_width": true,
