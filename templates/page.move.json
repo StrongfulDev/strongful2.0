@@ -71,7 +71,7 @@
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "best-seller-internal-use",
+        "collection": "best-seller",
         "products_to_show": 17,
         "columns_desktop": 5,
         "full_width": true,
