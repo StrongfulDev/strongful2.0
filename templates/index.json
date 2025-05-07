@@ -71,7 +71,7 @@
           "type": "collection",
           "settings": {
             "image": "shopify://shop_images/2x_c9f962a1-535c-4144-8f6d-03b7d68a2b07.jpg",
-            "url": "shopify://collections/best-seller-internal-use",
+            "url": "shopify://collections/best-seller",
             "collection_title": "הכי נמכרים"
           }
         },
@@ -401,17 +401,6 @@
     },
     "173251753398892554": {
       "type": "apps",
-      "blocks": {
-        "tolstoy_shoppable_video_ugc_carousel_block_mVHTj8": {
-          "type": "shopify://apps/tolstoy-shoppable-video-ugc/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
-          "settings": {
-            "publishId": "8vuszujzfab7z"
-          }
-        }
-      },
-      "block_order": [
-        "tolstoy_shoppable_video_ugc_carousel_block_mVHTj8"
-      ],
       "custom_css": [
         ".tolstoy-carousel {width: 100%;}"
       ],
@@ -502,18 +491,6 @@
     },
     "173246164424ec44fa": {
       "type": "apps",
-      "blocks": {
-        "tolstoy_shoppable_video_ugc_video_page_block_gqxpip": {
-          "type": "shopify://apps/tolstoy-shoppable-video-ugc/blocks/video-page-block/06fa8282-42ff-403e-b67c-1936776aed11",
-          "disabled": true,
-          "settings": {
-            "publishId": "ftlzktbd3asee"
-          }
-        }
-      },
-      "block_order": [
-        "tolstoy_shoppable_video_ugc_video_page_block_gqxpip"
-      ],
       "settings": {
         "include_margins": true
       }
@@ -576,7 +553,7 @@
             "image": "shopify://shop_images/STRO4962-min_23be84d1-4c86-45e5-b60f-3a8c6e9f2ac0.jpg",
             "alt": "",
             "link": "BEST SELLERS",
-            "url": "shopify://collections/best-seller-internal-use"
+            "url": "shopify://collections/best-seller"
           }
         },
         "image_3PJtne": {
