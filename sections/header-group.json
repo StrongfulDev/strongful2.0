@@ -208,7 +208,7 @@
             "desktop_links_image_1": "shopify://shop_images/24_6098fde2-cd4f-46af-b5bf-bb4a688cf73e.jpg",
             "desktop_links_image_1_link": "shopify://collections/קולקציית-חורף",
             "desktop_links_image_2": "shopify://shop_images/a40ea1b4acde1744ca52d0ccdf0dc1bf_c51e4cfb-f27a-4861-83c7-c5e97962099d.jpg",
-            "desktop_links_image_2_link": "shopify://collections/best-seller-internal-use",
+            "desktop_links_image_2_link": "shopify://collections/best-seller",
             "mobile_cover_image": "shopify://shop_images/20e5c3f719da92dc7bfd0c70c57f7186.jpg",
             "mobile_title": "כל המוצרים",
             "main_link": "",
@@ -361,7 +361,7 @@
         "show_first_image": true,
         "image_order_first": "2",
         "mobile_top_image_1": "shopify://shop_images/copy_500bcfe5-a1a2-4f75-b47a-b5abe1c457cc.jpg",
-        "mobile_top_image_1_link": "shopify://collections/best-seller-internal-use",
+        "mobile_top_image_1_link": "shopify://collections/best-seller",
         "mobile_top_image_1_title": "BEST SELLERS",
         "show_second_image": false,
         "image_order_second": "4",
@@ -394,7 +394,7 @@
       "type": "apps",
       "blocks": {
         "essential_countdown_app_block_6YiGEn": {
-          "type": "shopify://apps/essential-countdown/blocks/app-block/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
+          "type": "shopify://apps/essential-countdown-timer/blocks/app-block/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
           "disabled": true,
           "settings": {
             "id": "cm5tgjzlw00hk5xwcu50l5498"
