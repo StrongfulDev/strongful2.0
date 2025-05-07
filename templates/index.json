@@ -65,7 +65,7 @@
           "type": "collection",
           "settings": {
             "image": "shopify://shop_images/2x_c9f962a1-535c-4144-8f6d-03b7d68a2b07.jpg",
-            "url": "shopify://collections/best-seller-internal-use",
+            "url": "shopify://collections/best-seller",
             "collection_title": "הכי נמכרים"
           }
         },
@@ -199,8 +199,8 @@
         "title": "TOP RATED PICKS",
         "subheading": "",
         "cta_text": "SHOP TOP RATED",
-        "cta_link": "shopify://collections/best-seller-internal-use",
-        "collection": "best-seller-internal-use",
+        "cta_link": "shopify://collections/best-seller",
+        "collection": "best-seller",
         "product_limit": 4,
         "bg_color": "#ffffff",
         "text_color": "#000000",
@@ -396,7 +396,7 @@
             "image": "shopify://shop_images/SANA6751_1.jpg",
             "alt": "",
             "link": "BEST SELLERS",
-            "url": "shopify://collections/best-seller-internal-use"
+            "url": "shopify://collections/best-seller"
           }
         },
         "image_3PJtne": {
