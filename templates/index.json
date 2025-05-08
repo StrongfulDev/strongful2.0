@@ -306,7 +306,7 @@
       "type": "featured-collection",
       "settings": {
         "steps": 4,
-        "title": "NEW IN",
+        "title": "NIGHT SALE",
         "heading_size": "h1",
         "heading_type": "heading_type_default",
         "description": "",
@@ -343,9 +343,10 @@
     },
     "featured_collection_Vgg3kt": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "steps": 4,
-        "title": "18% OFF",
+        "title": "OUTLET",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
@@ -509,33 +510,6 @@
     },
     "customer_slideshow_jXTBRG": {
       "type": "customer-slideshow",
-      "blocks": {
-        "slide_TxMXy9": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/copy_3_4_a5112689-ad85-41b1-a7e1-4c05dbe9074e.jpg",
-            "mobile_image": "shopify://shop_images/copy_8_4.jpg",
-            "login_desktop_image": "shopify://shop_images/copy_3_4_79215691-04e4-497e-b2fc-99ff43326f5e.jpg",
-            "login_mobile_image": "shopify://shop_images/copy_8_4_9a657336-0741-4f7b-80ba-acbbff975ad7.jpg",
-            "button_label": "",
-            "login_button_label": "",
-            "link": "shopify://collections/18-0ff",
-            "login_link": "",
-            "show_text_box": true,
-            "color_scheme": "background-1",
-            "logged_in_color_scheme": "background-1",
-            "whole_slide_link": "shopify://collections/18-0ff",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "text_alignment_mobile": "center"
-          }
-        }
-      },
-      "block_order": [
-        "slide_TxMXy9"
-      ],
       "settings": {
         "layout": "full_bleed",
         "slide_height": "adapt_image",

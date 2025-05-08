@@ -26,7 +26,7 @@
             "sub_text_direction": "rtl",
             "link": "shopify://blogs/policies/החזרות-והחלפות",
             "color_scheme": "inverse",
-            "custom_background_color": "#562f1f",
+            "custom_background_color": "#000000",
             "custom_text_color": "#ffffff",
             "enable_custom_colors": true
           }
@@ -36,14 +36,14 @@
           "settings": {
             "toggle_main_font": true,
             "toggle_sub_font": true,
-            "main_text": "NEW PLAYER ON THE FIELD",
-            "sub_text": "NEW BROWN OASIS - נחת באתר",
+            "main_text": "UP TO ₪109",
+            "sub_text": "8 hours only",
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "ltr",
             "link": "shopify://collections/oasis",
             "color_scheme": "inverse",
-            "custom_background_color": "#562f1f",
+            "custom_background_color": "#000000",
             "custom_text_color": "#ffffff",
             "enable_custom_colors": true
           }
@@ -60,7 +60,7 @@
             "sub_text_direction": "rtl",
             "link": "shopify://blogs/policies/מדיניות-המשלוחים-שלנו",
             "color_scheme": "inverse",
-            "custom_background_color": "#562f1f",
+            "custom_background_color": "#000000",
             "custom_text_color": "#ffffff",
             "enable_custom_colors": true
           }
