@@ -945,6 +945,16 @@
         "name": "color",
         "category": "COLOR"
       }
+    },
+    {
+      "key": "discount_precentage",
+      "namespace": "custom",
+      "name": "Discount Precentage",
+      "description": "",
+      "type": {
+        "name": "number_integer",
+        "category": "NUMBER"
+      }
     }
   ],
   "shop": []

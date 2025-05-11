@@ -55,6 +55,7 @@
         "type": "header",
         "content": "t:settings_schema.colors.settings.header__1.content"
       },
+
       {
         "type": "color",
         "id": "colors_solid_button_labels",
@@ -151,6 +152,13 @@
         "id": "gradient_background_4",
         "type": "color_background",
         "label": "t:settings_schema.colors.settings.gradient_background_4.label"
+      },
+      {
+        "type": "color",
+        "id": "theme_color",
+        "default": "#ffffff",
+        "label": "Theme Color",
+        "info": "A Color for the theme , used in Safari browsers for the Header theme color meta tag"
       }
     ]
   },
