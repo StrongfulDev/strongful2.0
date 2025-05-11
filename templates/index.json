@@ -241,12 +241,16 @@
           "settings": {
             "size": "large",
             "background": "rgba(0,0,0,0)",
+            "cards-border-radius": 12,
+            "show_border_card": false,
+            "border_card_color": "#000000",
             "add_header": true,
             "header_text": "TRENDING NOW",
             "header_type": "h2",
             "alignment": "center",
             "header_gap": 30,
             "explore-card-label": "Explore all videos",
+            "border_radius": 24,
             "padding_top": 8,
             "padding_bottom": 8,
             "padding_horizontal": 0,
@@ -361,6 +365,23 @@
         "padding_bottom": 36
       }
     },
+    "17469662407dbcc0b4": {
+      "type": "apps",
+      "blocks": {
+        "yotpo_product_reviews_reviews_carousel_WgzYki": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews_carousel/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "astra-shirt-black"
+          }
+        }
+      },
+      "block_order": [
+        "yotpo_product_reviews_reviews_carousel_WgzYki"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "customer_slideshow_jXTBRG": {
       "type": "customer-slideshow",
       "blocks": {
@@ -400,6 +421,12 @@
         "accessibility_info": "Slideshow about our brand",
         "padding_top": 24,
         "padding_bottom": 24
+      }
+    },
+    "174696621036f83685": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
       }
     },
     "173246164424ec44fa": {
@@ -646,7 +673,9 @@
     "17388407748dd9c850",
     "customer_slideshow_wFcfK7",
     "our_collection_list_v2_mK6kUx",
+    "17469662407dbcc0b4",
     "customer_slideshow_jXTBRG",
+    "174696621036f83685",
     "173246164424ec44fa",
     "collection_list_QrC4z9",
     "featured_blog_3p3kGH",
