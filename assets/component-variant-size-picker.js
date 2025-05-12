@@ -53,6 +53,7 @@ window.addEventListener('DOMContentLoaded', function(event) {
   					closeModal(modal, modalOverlay);
                   let radios = document.querySelectorAll('product-form [type="radio"]');
                   radios.forEach(elem => {
+                    console.log(98, elem);
                     elem.checked = false;
                   });
   				}, 2000);
