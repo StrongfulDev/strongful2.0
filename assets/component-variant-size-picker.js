@@ -31,7 +31,7 @@ window.addEventListener('DOMContentLoaded', function(event) {
 				$(this).siblings().find(".loading-overlay").css("display", "none");
 				$(this).find(".loading-overlay__spinner").removeClass("hidden");
                 let curRadio = $(this).find('[type="radio"]');
-                curRadio.prop('checked', true);
+                curRadio?.prop('checked', true);
 				setTimeout(() => {
 					$(this).parents("form").find('[type="submit"]').click();
 				}, 500);
