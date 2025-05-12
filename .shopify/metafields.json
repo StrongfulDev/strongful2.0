@@ -673,6 +673,16 @@
         "name": "list.product_reference",
         "category": "REFERENCE"
       }
+    },
+    {
+      "key": "season",
+      "namespace": "custom",
+      "name": "season",
+      "description": "Season for product filteration",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
     }
   ],
   "variant": [

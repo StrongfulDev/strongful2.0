@@ -30,7 +30,40 @@
   {% assign next_index = i | plus: 1 %}
   {% assign text = announcements_array[next_index] %}
   {% if tag and text and card_product.tags contains tag and text != blank %}
-    <span class="card_banner_text color-background-2">{{ text }}</span>
+    {% assign countdown_token = '{{COUNTDOWN_TO_MAY_13_2025}}' %}
+    {% if text contains countdown_token %}
+      <span class="card_banner_text color-background-2">
+        {{ text | replace: countdown_token, '<span class="countdown-may-13-2025"></span>' }}
+      </span>
+      <script>
+        // Countdown to 13th May 2025, 8:00 AM (local time)
+        (function() {
+          function updateCountdown() {
+            var end = new Date(2025, 4, 13, 8, 0, 0); // Month is 0-indexed: 4 = May
+            var now = new Date();
+            var diff = end - now;
+            var text;
+            if (diff <= 0) {
+              text = 'Expired';
+            } else {
+              var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+              var hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+              var minutes = Math.floor((diff / (1000 * 60)) % 60);
+              var seconds = Math.floor((diff / 1000) % 60);
+              text = 'נשארו רק עוד '+ hours + 'h ' + minutes + 'm ' + seconds ;
+            }
+            var countdowns = document.querySelectorAll('.countdown-may-13-2025');
+            countdowns.forEach(function(el) {
+              el.textContent = text;
+            });
+          }
+          updateCountdown();
+          setInterval(updateCountdown, 1000);
+        })();
+      </script>
+    {% else %}
+      <span class="card_banner_text color-background-2">{{ text }}</span>
+    {% endif %}
     {% break %}
   {% endif %}
   {% assign i = i | plus: 1 %}
