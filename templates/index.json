@@ -524,9 +524,7 @@
     },
     "custom_liquid_xj7jzE": {
       "type": "custom-liquid",
-      "custom_css": [
-        ".yotpo-reviews-carousel-reviews-by-yotpo-container {display: none;}"
-      ],
+      "custom_css": [],
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "<div class=\"yotpo-widget-instance\" data-yotpo-instance-id=\"1037371\"></div>",
