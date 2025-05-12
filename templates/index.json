@@ -304,6 +304,7 @@
     },
     "featured_collection_XDhFHB": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "steps": 4,
         "title": "NIGHT SALE",
@@ -448,12 +449,11 @@
         "image_f6nhEV",
         "image_RpzBhD"
       ],
-      "disabled": true,
       "custom_css": [
         "@media screen and (max-width: 749px) {.collection-list-new {flex-wrap: nowrap; overflow-x: scroll; scrollbar-width: none; }}"
       ],
       "settings": {
-        "title": "ACTIVITY BY SHELL",
+        "title": "SHOP BY ACTIVITY",
         "heading_size": "h2",
         "heading_type": "heading_type_default",
         "heading_alignment": "center",
