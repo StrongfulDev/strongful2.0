@@ -529,7 +529,7 @@
       "settings": {
         "custom_liquid": "<div class=\"yotpo-widget-instance\" data-yotpo-instance-id=\"1037371\"></div>",
         "color_scheme": "background-1",
-        "padding_top": 40,
+        "padding_top": 0,
         "padding_bottom": 52
       }
     },
