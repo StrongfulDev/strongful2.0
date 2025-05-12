@@ -25,8 +25,8 @@
         "5ec0a264-e4fc-4a8d-92bc-f2f9223694f5": {
           "type": "sale",
           "settings": {
-            "logged_in_text": "<p>מבצע לילה ל8 שעות בלבד!</p><p><strong>פריטים עד ₪109</strong></p>",
-            "logged_out_text": "<p>מבצע לילה ל8 שעות בלבד!</p><p><strong>פריטים עד ₪109</strong></p>",
+            "logged_in_text": "<p>25% הנחה בקניית 3 פריטים</p>",
+            "logged_out_text": "<p>25% הנחה בקניית 3 פריטים</p>",
             "logged_in_text_second": "",
             "log_in": "",
             "small_text": "",
