@@ -51,6 +51,10 @@ window.addEventListener('DOMContentLoaded', function(event) {
   					$this.find(".icon-checkmark").hide();
   					$this.find(".size_variant_button_add").show();
   					closeModal(modal, modalOverlay);
+                  let radios = document.querySelectorAll('product-form [type="radio"]');
+                  radios.forEach(elem => {
+                    elem.checked = false;
+                  });
   				}, 2000);
         }
       })
