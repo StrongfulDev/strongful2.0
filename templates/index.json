@@ -525,7 +525,7 @@
     "custom_liquid_xj7jzE": {
       "type": "custom-liquid",
       "custom_css": [
-        ".reviews-carousel-reviews-by-yotpo-text{display:none;}"
+        ".yotpo-reviews-carousel-reviews-by-yotpo-container {display: none;}"
       ],
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
