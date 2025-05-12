@@ -21,66 +21,66 @@ window.addEventListener('DOMContentLoaded', function(event) {
 		elementOverlay.hide()
 	}
 
-	// $("body").on("change", function (e) {
- //        console.log(12312321);
- //        if (e.target.matches('.variant_selector.submit_on_click .size_variant_button:not(.disabled-variant-button) [type="radio"]')) {
- //          let $thisOrigin = $(e.target);
- //          let $this;
- //          if ( window.innerWidth < 1024 ) {
- //            $this =  $(e.target).closest('.grid__item').find(`.variant_modal .size_variant_button .product_size_picker__button[value="${e.target.getAttribute('value')}"]`);
- //          } else {
- //            $this = $(e.target);
- //          }
+	$("body").on("change", function (e) {
+        console.log(12312321);
+        if (e.target.matches('.variant_selector.submit_on_click .size_variant_button:not(.disabled-variant-button) [type="radio"]')) {
+          let $thisOrigin = $(e.target);
+          let $this;
+          if ( window.innerWidth < 1024 ) {
+            $this =  $(e.target).closest('.grid__item').find(`.variant_modal .size_variant_button .product_size_picker__button[value="${e.target.getAttribute('value')}"]`);
+          } else {
+            $this = $(e.target);
+          }
           
- //          $this = $this.closest(".size_variant_button");
- //  			let modal = $(".variant_modal") || $(".variant_selector");
- //  			let modalOverlay = $(".variant_modal_overlay");
- //  				$this.find(".size_variant_button_add").hide();
- //  				$this.find(".loading-overlay").css("display", "flex");
- //  				$this.siblings().find(".loading-overlay").css("display", "none");
- //  				$this.find(".loading-overlay__spinner").removeClass("hidden");
- //  				setTimeout(() => {
- //  					$thisOrigin.parents("form").find('[type="submit"]').click();
- //  				}, 500);
- //  				setTimeout(() => {
- //  					$this.find(".loading-overlay").css("display", "none");
- //  					$this.find(".loading-overlay__spinner").addClass("hidden");
- //  					$this.find(".icon-checkmark").show();
- //  				}, 1000);
- //  				setTimeout(() => {
- //  					$this.find(".icon-checkmark").hide();
- //  					$this.find(".size_variant_button_add").show();
- //  					closeModal(modal, modalOverlay);
- //  				}, 2000);
- //        }
- //      })
-	// $("body").on("click", ".variant_modal__toggle_button, .variant_modal__toggle_button svg", openModal);
-	// $("cart-drawer .card__inner").click(openModal);
-
-    $("body")
-		.on("click", '.variant_selector.submit_on_click .size_variant_button:not(.disabled-variant-button)', function (e) {
-			let modal = $(".variant_modal") || $(".variant_selector");
-			let modalOverlay = $(".variant_modal_overlay");
-				$(this).find(".size_variant_button_add").hide();
-				$(this).find(".loading-overlay").css("display", "flex");
-				$(this).siblings().find(".loading-overlay").css("display", "none");
-				$(this).find(".loading-overlay__spinner").removeClass("hidden");
-				setTimeout(() => {
-					$(this).parents("form").find('[type="submit"]').click();
-				}, 500);
-				setTimeout(() => {
-					$(this).find(".loading-overlay").css("display", "none");
-					$(this).find(".loading-overlay__spinner").addClass("hidden");
-					$(this).find(".icon-checkmark").show();
-				}, 1000);
-				setTimeout(() => {
-					$(this).find(".icon-checkmark").hide();
-					$(this).find(".size_variant_button_add").show();
-					closeModal(modal, modalOverlay);
-				}, 2000);
-		})
-		.on("click", ".variant_modal__toggle_button, .variant_modal__toggle_button svg", openModal)
+          $this = $this.closest(".size_variant_button");
+  			let modal = $(".variant_modal") || $(".variant_selector");
+  			let modalOverlay = $(".variant_modal_overlay");
+  				$this.find(".size_variant_button_add").hide();
+  				$this.find(".loading-overlay").css("display", "flex");
+  				$this.siblings().find(".loading-overlay").css("display", "none");
+  				$this.find(".loading-overlay__spinner").removeClass("hidden");
+  				setTimeout(() => {
+  					$thisOrigin.parents("form").find('[type="submit"]').click();
+  				}, 500);
+  				setTimeout(() => {
+  					$this.find(".loading-overlay").css("display", "none");
+  					$this.find(".loading-overlay__spinner").addClass("hidden");
+  					$this.find(".icon-checkmark").show();
+  				}, 1000);
+  				setTimeout(() => {
+  					$this.find(".icon-checkmark").hide();
+  					$this.find(".size_variant_button_add").show();
+  					closeModal(modal, modalOverlay);
+  				}, 2000);
+        }
+      })
+	$("body").on("click", ".variant_modal__toggle_button, .variant_modal__toggle_button svg", openModal);
 	$("cart-drawer .card__inner").click(openModal);
+
+ //    $("body")
+	// 	.on("click", '.variant_selector.submit_on_click .size_variant_button:not(.disabled-variant-button)', function (e) {
+	// 		let modal = $(".variant_modal") || $(".variant_selector");
+	// 		let modalOverlay = $(".variant_modal_overlay");
+	// 			$(this).find(".size_variant_button_add").hide();
+	// 			$(this).find(".loading-overlay").css("display", "flex");
+	// 			$(this).siblings().find(".loading-overlay").css("display", "none");
+	// 			$(this).find(".loading-overlay__spinner").removeClass("hidden");
+	// 			setTimeout(() => {
+	// 				$(this).parents("form").find('[type="submit"]').click();
+	// 			}, 500);
+	// 			setTimeout(() => {
+	// 				$(this).find(".loading-overlay").css("display", "none");
+	// 				$(this).find(".loading-overlay__spinner").addClass("hidden");
+	// 				$(this).find(".icon-checkmark").show();
+	// 			}, 1000);
+	// 			setTimeout(() => {
+	// 				$(this).find(".icon-checkmark").hide();
+	// 				$(this).find(".size_variant_button_add").show();
+	// 				closeModal(modal, modalOverlay);
+	// 			}, 2000);
+	// 	})
+	// 	.on("click", ".variant_modal__toggle_button, .variant_modal__toggle_button svg", openModal)
+	// $("cart-drawer .card__inner").click(openModal);
 
 	function openModal(e) {
 		let modalId = $(this).data("modal-id") || $(this).find(".variant_modal__toggle_button").data("modal-id");
