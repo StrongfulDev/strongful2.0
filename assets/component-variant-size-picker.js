@@ -22,7 +22,7 @@ window.addEventListener('DOMContentLoaded', function(event) {
 	}
 
 	$("body").on("change", function (e) {
-        
+        console.log(12312321);
         if (e.target.matches('.variant_selector.submit_on_click .size_variant_button:not(.disabled-variant-button) [type="radio"]')) {
           let $thisOrigin = $(e.target);
           let $this;
