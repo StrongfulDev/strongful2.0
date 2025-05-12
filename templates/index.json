@@ -382,6 +382,45 @@
         "padding_bottom": 16
       }
     },
+    "featured_collection_BGphpp": {
+      "type": "featured-collection",
+      "settings": {
+        "steps": 4,
+        "title": "BEST SELLERS",
+        "heading_size": "h1",
+        "heading_type": "heading_type_2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "sets",
+        "products_to_show": 15,
+        "columns_desktop": 5,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_text": "SHOP ALL",
+        "view_all_style": "link",
+        "view_all_location": "top",
+        "enable_desktop_slider": true,
+        "show_peak": true,
+        "pagination_type": "sides",
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": false,
+        "show_sale_badge": false,
+        "enable_quick_add": true,
+        "quick_add_type": "hover",
+        "quick_add_type_mobile": "modal",
+        "quick_add_text": "הוספה מהירה",
+        "pick_size_text": "בחירת מידה",
+        "quick_add_accessories_text": "הוספה מהירה",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 40,
+        "padding_bottom": 16
+      }
+    },
     "our_collection_list_v3_mQh6DU": {
       "type": "our-collection-list-v3",
       "blocks": {
@@ -522,6 +561,17 @@
         "padding_bottom": 24
       }
     },
+    "custom_liquid_xj7jzE": {
+      "type": "custom-liquid",
+      "custom_css": [],
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"yotpo-widget-instance\" data-yotpo-instance-id=\"1037371\"></div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "customer_slideshow_iniK4W": {
       "type": "customer-slideshow",
       "blocks": {
@@ -561,56 +611,6 @@
         "accessibility_info": "Slideshow about our brand",
         "padding_top": 24,
         "padding_bottom": 24
-      }
-    },
-    "custom_liquid_xj7jzE": {
-      "type": "custom-liquid",
-      "custom_css": [],
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<div class=\"yotpo-widget-instance\" data-yotpo-instance-id=\"1037371\"></div>",
-        "color_scheme": "background-1",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "featured_collection_BGphpp": {
-      "type": "featured-collection",
-      "settings": {
-        "steps": 4,
-        "title": "BEST SELLERS",
-        "heading_size": "h1",
-        "heading_type": "heading_type_2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "sets",
-        "products_to_show": 15,
-        "columns_desktop": 5,
-        "full_width": true,
-        "show_view_all": true,
-        "view_all_text": "SHOP ALL",
-        "view_all_style": "link",
-        "view_all_location": "top",
-        "enable_desktop_slider": true,
-        "show_peak": true,
-        "pagination_type": "sides",
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": true,
-        "show_rating": false,
-        "show_sale_badge": false,
-        "enable_quick_add": true,
-        "quick_add_type": "hover",
-        "quick_add_type_mobile": "modal",
-        "quick_add_text": "הוספה מהירה",
-        "pick_size_text": "בחירת מידה",
-        "quick_add_accessories_text": "הוספה מהירה",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 40,
-        "padding_bottom": 16
       }
     },
     "17388407748dd9c850": {
@@ -1051,11 +1051,11 @@
     "customer_slideshow_3cfMXw",
     "featured_collection_XDhFHB",
     "featured_collection_Vgg3kt",
+    "featured_collection_BGphpp",
     "our_collection_list_v3_mQh6DU",
     "customer_slideshow_wFcfK7",
     "customer_slideshow_jXTBRG",
     "custom_liquid_xj7jzE",
-    "featured_collection_BGphpp",
     "customer_slideshow_iniK4W",
     "17388407748dd9c850",
     "customer_slideshow_djMAQ6",
