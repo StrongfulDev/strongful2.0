@@ -70,6 +70,8 @@ window.addEventListener('DOMContentLoaded', function(event) {
 				$(this).find(".loading-overlay").css("display", "flex");
 				$(this).siblings().find(".loading-overlay").css("display", "none");
 				$(this).find(".loading-overlay__spinner").removeClass("hidden");
+                let curRadio = $(this).find('[type="radio"]');
+                curRadio.props('checked', true);
 				setTimeout(() => {
 					$(this).parents("form").find('[type="submit"]').click();
 				}, 500);
