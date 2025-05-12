@@ -522,6 +522,16 @@
         "padding_bottom": 24
       }
     },
+    "custom_liquid_xj7jzE": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"yotpo-widget-instance\" data-yotpo-instance-id=\"1037371\"></div>",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "featured_collection_BGphpp": {
       "type": "featured-collection",
       "settings": {
@@ -1002,6 +1012,7 @@
     "our_collection_list_v3_mQh6DU",
     "customer_slideshow_wFcfK7",
     "customer_slideshow_jXTBRG",
+    "custom_liquid_xj7jzE",
     "featured_collection_BGphpp",
     "17388407748dd9c850",
     "customer_slideshow_iniK4W",
