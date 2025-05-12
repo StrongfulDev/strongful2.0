@@ -803,6 +803,23 @@
         "padding_bottom": 36
       }
     },
+    "1746972921c12d717b": {
+      "type": "apps",
+      "blocks": {
+        "yotpo_product_reviews_reviews_carousel_eprfb4": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews_carousel/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "astra-tanktop-gray"
+          }
+        }
+      },
+      "block_order": [
+        "yotpo_product_reviews_reviews_carousel_eprfb4"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "customer_slideshow_JN4JiR": {
       "type": "customer-slideshow",
       "blocks": {
@@ -990,6 +1007,7 @@
     "173246164424ec44fa",
     "collection_list_QrC4z9",
     "our_collection_list_v2_mK6kUx",
+    "1746972921c12d717b",
     "customer_slideshow_JN4JiR",
     "featured_blog_3p3kGH",
     "collection_list_w4D6TE",
