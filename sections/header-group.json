@@ -40,7 +40,7 @@
             "sub_text": "25% הנחה בקניית 3 פריטים",
             "text_alignment": "center",
             "main_text_direction": "ltr",
-            "sub_text_direction": "ltr",
+            "sub_text_direction": "rtl",
             "link": "shopify://collections/sets",
             "color_scheme": "inverse",
             "custom_background_color": "#000000",
