@@ -427,7 +427,7 @@
         "image_ceEBKm": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/2G6A9824.jpg",
+            "image": "shopify://shop_images/YOGA.jpg",
             "alt": "יוגה",
             "link": "YOGA",
             "url": "shopify://collections/yoga"
@@ -436,7 +436,7 @@
         "image_hgYMgr": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/2G6A0623_da429f53-99bd-4f00-a659-c23bd8c1cfb0.jpg",
+            "image": "shopify://shop_images/PILATESS.jpg",
             "alt": "PILATES",
             "link": "PILATES",
             "url": "shopify://collections/pilates"
@@ -445,7 +445,7 @@
         "image_cQyiat": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/2G6A0403.jpg",
+            "image": "shopify://shop_images/runn.jpg",
             "alt": "RUN",
             "link": "RUN",
             "url": "shopify://collections/run"
@@ -454,7 +454,7 @@
         "image_iMUani": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/2G6A0327_copy_1.jpg",
+            "image": "shopify://shop_images/TRAIN.jpg",
             "alt": "TRAIN",
             "link": "TRAIN",
             "url": "shopify://collections/train"
@@ -463,7 +463,7 @@
         "image_f6nhEV": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/2G6A9991_1.jpg",
+            "image": "shopify://shop_images/DAYWEAR.jpg",
             "alt": "DAILY WEAR",
             "link": "DAILY WEAR",
             "url": "shopify://collections/daily-wear-1"
