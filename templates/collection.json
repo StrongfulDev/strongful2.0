@@ -42,8 +42,6 @@
       ],
       "settings": {
         "override_image_from_metafield": true,
-        "image": "shopify://shop_images/10_09d59ee6-fd46-4b23-95a5-8a73fde8ba9a.jpg",
-        "mobile_image": "shopify://shop_images/9_bc0e0717-e211-46e0-a825-74d6ccfdde1e.jpg",
         "image_overlay_opacity": 0,
         "image_height": "auto",
         "desktop_content_position": "middle-center",
