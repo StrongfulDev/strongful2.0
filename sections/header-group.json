@@ -86,7 +86,6 @@
       "blocks": {
         "bd053c52-574f-435e-be3a-a4a74c72b169": {
           "type": "url",
-          "disabled": true,
           "settings": {
             "link_text_direction": "Left To Right",
             "show_on_mobile": true,
@@ -95,57 +94,7 @@
             "title_link": "shopify://collections/sets"
           }
         },
-        "menu_item_bMaxhm": {
-          "type": "menu_item",
-          "settings": {
-            "above_shop_all_link": "shopify://collections/sets",
-            "show_on_mobile": true,
-            "order": "",
-            "small_font": false,
-            "menu": "activities-menu",
-            "menu_second": "",
-            "menu_third": "",
-            "title": "ACTIVITY",
-            "item_class": "",
-            "title_link": "",
-            "desktop_links_image_1": "shopify://shop_images/copy_3_88472785-38cb-4cb1-8995-fb7936e04220.jpg",
-            "desktop_links_image_1_link": "shopify://collections/sets",
-            "desktop_links_image_2": "shopify://shop_images/26_817a7f3f-2c9c-4958-97cf-88eb821e2669.jpg",
-            "desktop_links_image_2_link": "shopify://pages/lets-move",
-            "mobile_cover_image": "shopify://shop_images/20e5c3f719da92dc7bfd0c70c57f7186.jpg",
-            "mobile_title": "ACTIVITY",
-            "main_link": "",
-            "main_title": "",
-            "shop_all_link": "shopify://collections/sets",
-            "shop_all_title": ""
-          }
-        },
         "8878d4cf-d83f-42a2-90b9-ddebceb7501c": {
-          "type": "menu_item",
-          "settings": {
-            "above_shop_all_link": "shopify://collections/sets",
-            "show_on_mobile": true,
-            "order": "",
-            "small_font": false,
-            "menu": "bundles-header",
-            "menu_second": "",
-            "menu_third": "",
-            "title": "BUNDLES",
-            "item_class": "",
-            "title_link": "",
-            "desktop_links_image_1": "shopify://shop_images/copy_3_88472785-38cb-4cb1-8995-fb7936e04220.jpg",
-            "desktop_links_image_1_link": "shopify://collections/sets",
-            "desktop_links_image_2": "shopify://shop_images/26_817a7f3f-2c9c-4958-97cf-88eb821e2669.jpg",
-            "desktop_links_image_2_link": "shopify://pages/lets-move",
-            "mobile_cover_image": "shopify://shop_images/20e5c3f719da92dc7bfd0c70c57f7186.jpg",
-            "mobile_title": "BUNDLES",
-            "main_link": "",
-            "main_title": "",
-            "shop_all_link": "shopify://collections/sets",
-            "shop_all_title": ""
-          }
-        },
-        "menu_item_GNxXUm": {
           "type": "menu_item",
           "settings": {
             "above_shop_all_link": "shopify://collections/sets",
@@ -224,7 +173,7 @@
             "show_on_mobile": true,
             "order": "",
             "small_font": false,
-            "menu": "trending-without-10",
+            "menu": "trending",
             "menu_second": "",
             "menu_third": "",
             "title": "קני לפי",
@@ -381,9 +330,7 @@
       },
       "block_order": [
         "bd053c52-574f-435e-be3a-a4a74c72b169",
-        "menu_item_bMaxhm",
         "8878d4cf-d83f-42a2-90b9-ddebceb7501c",
-        "menu_item_GNxXUm",
         "4d0d7344-0f17-4600-86d8-3481f2a1c4a1",
         "fc929aa6-aab6-4c25-be13-8267425330c3",
         "ba94928e-5cd1-47f5-9c0a-28ea47285f01",
