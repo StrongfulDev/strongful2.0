@@ -507,6 +507,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 	font-size: var(--font-body-size-medium);
 	color: rgba(var(--color-foreground), 0.8);
 	padding-left: .5rem;
+	direction:rtl;
 }
 
 .js .dropdown .menu-drawer__menu .menu-drawer__menu-list-item a:focus,
