@@ -54,7 +54,7 @@
   }
 {%- endstyle -%}
 
-<div class="section-{{ section.id }}-padding">
+<div class="section-{{ section.id }}-padding" id="section-{{ section.id }}">
   {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
   {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' -%}
     <facet-filters-form class="facets facets-vertical-sort page-width small-hide no-js-hidden">
@@ -173,6 +173,16 @@
       </ul>
     {% endif %}
   </div>
+
+  {%- assign product_types = collection.products | map: 'type' | uniq -%}
+  {%- if product_types.size <= 1 -%}
+    <style>
+      #section-{{ section.id }} .facets-wrapper {
+        top: 60px !important;
+        /* background: yellow !important; */ /* Uncomment for debugging */
+      }
+    </style>
+  {%- endif -%}
 
   <div class="{% if section.settings.filter_type == 'vertical' %} facets-vertical page-width fix-direction{% endif %}">
     {{ 'component-facets.css' | asset_url | stylesheet_tag }}
