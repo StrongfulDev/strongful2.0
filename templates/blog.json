@@ -14,8 +14,8 @@
       "settings": {
         "tile_image_one": "shopify://shop_images/copy_3_a54725c9-305a-48c8-8586-31982422acdf.jpg",
         "tile_image_one_link": "shopify://collections/sets",
-        "tile_image_two": "shopify://shop_images/26_817a7f3f-2c9c-4958-97cf-88eb821e2669.jpg",
-        "tile_image_two_link": "shopify://pages/lets-move",
+        "tile_image_two": "shopify://shop_images/copy_2_08d3def8-66da-48c3-9c42-a400421362f5.jpg",
+        "tile_image_two_link": "shopify://collections/oasis",
         "layout": "grid",
         "show_image": true,
         "image_height": "large",
