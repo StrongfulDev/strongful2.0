@@ -420,6 +420,47 @@
         "padding_bottom": 16
       }
     },
+    "customer_slideshow_BhDKpG": {
+      "type": "customer-slideshow",
+      "blocks": {
+        "slide_dppDFX": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/copy_4_2dc02039-85bd-47a8-9108-b0981317694d.jpg",
+            "mobile_image": "shopify://shop_images/copy_5_c0a6ca24-a1e0-4cbe-91f5-bc3c0909a25e.jpg",
+            "login_desktop_image": "shopify://shop_images/copy_4_c4e91c9d-a39c-498c-a1c3-685566809abf.jpg",
+            "login_mobile_image": "shopify://shop_images/copy_5_d83ea1c1-be7a-4281-af4d-82c2e4cd5704.jpg",
+            "button_label": "",
+            "login_button_label": "",
+            "link": "shopify://collections/accessories",
+            "login_link": "",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "logged_in_color_scheme": "background-1",
+            "whole_slide_link": "shopify://collections/accessories",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_dppDFX"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "sides",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "our_collection_list_v3_mQh6DU": {
       "type": "our-collection-list-v3",
       "blocks": {
@@ -1052,6 +1093,7 @@
     "featured_collection_XDhFHB",
     "featured_collection_Vgg3kt",
     "featured_collection_BGphpp",
+    "customer_slideshow_BhDKpG",
     "our_collection_list_v3_mQh6DU",
     "customer_slideshow_wFcfK7",
     "customer_slideshow_jXTBRG",
