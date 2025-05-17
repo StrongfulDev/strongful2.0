@@ -34,17 +34,44 @@ class CartRewards {
 	async checkRules() {
 		this.loading(true);
 
+		// Add a 10 second delay before running reward logic
+		await new Promise((res) => setTimeout(res));
+
+		// Wait for cart total to stabilize
+		await this.pollForStableCartTotal();
+
+		// Now proceed with your reward logic as before
+		console.log("Stable cartObject", this.cart);
+		console.log("Stable cart.total_price", this.cart.total_price);
+		console.log("Stable cartTotalValue", this.cartTotalValue);
+		console.log(
+			"Reward threshold",
+			this.rules.map((r) => r.condition.value)
+		);
+
 		// (A) Get cart
 		this.lastCartTotalValue = this.cartTotalValue;
 		this.cart = await this.getCart();
 
-		// (B) Subtract any non-shipping items from total
-		this.cart.items.forEach((item) => {
-			if (item.requires_shipping === false) {
-				this.cart.total_price -= item.price * item.quantity;
-			}
-		});
-		this.cartTotalValue = this.cart.total_price / 100;
+		// (B) Use Aiod discounted total if available, otherwise fallback to Shopify logic
+		let aiodTotal = this.getAiodDiscountedTotal();
+		if (aiodTotal !== null) {
+			this.cartTotalValue = aiodTotal;
+			console.log("Using AIOD discounted total:", this.cartTotalValue);
+		} else {
+			let baseTotal = this.cart.items.reduce((sum, item) => sum + item.line_price, 0);
+			this.cartTotalValue = baseTotal / 100;
+			console.log("Using Shopify cart total:", this.cartTotalValue);
+		}
+
+		console.log("cartObject", this.cart);
+		console.log("cart.total_price", this.cart.total_price);
+		console.log("cart.total_discount", this.cart.total_discount);
+		console.log("cartTotalValue", this.cartTotalValue);
+		console.log(
+			"Reward threshold",
+			this.rules.map((r) => r.condition.value)
+		);
 
 		// (C) Determine which rules are currently satisfied
 		const satisfiedRules = [];
@@ -121,7 +148,6 @@ class CartRewards {
 				//   ".rewards__missing_amount",
 				//   `₪${missing}`
 				// );
-				// ...existing code...
 				let cleanMessage = firstRule.condition.message.replace(/\r?\n|\r/g, " ").replace(/\s\s+/g, " ");
 
 				let newMessage = cleanMessage.replace(
@@ -214,6 +240,18 @@ class CartRewards {
 		const isAmountLessThan =
 			rule.condition.operator === "Less than or equal" && this.cartTotalValue <= rule.condition.value;
 
+		console.log(
+			"Checking rule:",
+			rule.condition.operator,
+			rule.condition.value,
+			"cartTotalValue:",
+			this.cartTotalValue,
+			"isAmountGreaterThan:",
+			isAmountGreaterThan,
+			"isAmountLessThan:",
+			isAmountLessThan
+		);
+
 		if (rule.condition.type === "CartAmount") {
 			return (isRightQuantity || isRightQuantity === null) && (isAmountGreaterThan || isAmountLessThan);
 		}
@@ -242,15 +280,13 @@ class CartRewards {
 				continue;
 			}
 
-			if (
-				!productInCart &&
-				isConditionMet &&
-				rule.reward.giftMethod === "automatic" &&
-				this.cartTotalValue > oldCartTotalValue
-			) {
-				const res = await this.addProduct(productId);
-				if (isJustOne && res?.items?.length > 0) {
-					return;
+			if (!productInCart && isConditionMet && rule.reward.giftMethod === "automatic") {
+				// Only add if cartTotalValue >= threshold
+				if (this.cartTotalValue >= rule.condition.value) {
+					const res = await this.addProduct(productId);
+					if (isJustOne && res?.items?.length > 0) {
+						return;
+					}
 				}
 			}
 		}
@@ -401,6 +437,45 @@ class CartRewards {
 		if (errorMessage) {
 			this.errorMessage.textContent = errorMessage;
 		}
+	}
+
+	async pollForStableCartTotal(stableCountTarget = 2, maxAttempts = 10, interval = 500) {
+		let lastTotal = null;
+		let stableCount = 0;
+		let attempts = 0;
+
+		while (attempts < maxAttempts) {
+			const cart = await this.getCart();
+			const currentTotal = cart.total_price / 100;
+			if (currentTotal === lastTotal) {
+				stableCount++;
+			} else {
+				stableCount = 0;
+			}
+			if (stableCount >= stableCountTarget) {
+				this.cart = cart;
+				this.cartTotalValue = currentTotal;
+				return;
+			}
+			lastTotal = currentTotal;
+			attempts++;
+			await new Promise((res) => setTimeout(res, interval));
+		}
+		// Fallback: use last fetched cart
+		this.cart = await this.getCart();
+		this.cartTotalValue = this.cart.total_price / 100;
+	}
+
+	getAiodDiscountedTotal() {
+		// Try to find the discounted total in the DOM
+		const el = document.querySelector('.csapps-cart-total .money') ||
+				   document.querySelector('.aiod_subtotal_value .csapps-cart-total .money');
+		if (el) {
+			// Remove currency symbols and commas, parse as float
+			const value = parseFloat(el.textContent.replace(/[^\d.]/g, ''));
+			return isNaN(value) ? null : value;
+		}
+		return null;
 	}
 }
 // If you want to define a custom element, you could do:
