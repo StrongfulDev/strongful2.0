@@ -35,7 +35,7 @@ class CartRewards {
 		this.loading(true);
 
 		// Add a 10 second delay before running reward logic
-		await new Promise((res) => setTimeout(res));
+		await new Promise((res) => setTimeout(res, 1000));
 
 		// Wait for cart total to stabilize
 		await this.pollForStableCartTotal();
