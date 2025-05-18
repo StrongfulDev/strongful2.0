@@ -48,12 +48,9 @@ class CartRewards {
 		let aiodTotal = this.getAiodDiscountedTotal();
 		if (aiodTotal !== null && !isNaN(aiodTotal)) {
 			this.cartTotalValue = aiodTotal;
-			console.log("Using AIOD discounted total:", this.cartTotalValue);
 		} else {
-			console.warn("AIOD discounted total not found, using Shopify cart total.");
 			let baseTotal = this.cart.items.reduce((sum, item) => sum + item.line_price, 0);
 			this.cartTotalValue = baseTotal / 100;
-			console.log("Using Shopify cart total:", this.cartTotalValue);
 		}
 
 		// Defensive: If cartTotalValue is less than 0, set to 0
@@ -84,7 +81,6 @@ class CartRewards {
 
 			// FINAL CHECK: Only add reward if cartTotalValue is still >= threshold
 			if (isConditionMet && this.cartTotalValue < rule.condition.value) {
-				console.warn("Cart total dropped below threshold after discount, skipping reward for rule:", rule);
 				continue;
 			}
 
@@ -225,9 +221,7 @@ class CartRewards {
 			type: "POST",
 			url: "/cart/clear.js",
 			dataType: "json",
-			success: function () {
-				console.log("cart cleared");
-			},
+			success: function () {},
 			error: function (xhr, status, error) {
 				console.log("Error clearing cart:", error);
 			},
@@ -240,18 +234,6 @@ class CartRewards {
 			rule.condition.operator === "Greater than or equal" && this.cartTotalValue >= rule.condition.value;
 		const isAmountLessThan =
 			rule.condition.operator === "Less than or equal" && this.cartTotalValue <= rule.condition.value;
-
-		console.log(
-			"Checking rule:",
-			rule.condition.operator,
-			rule.condition.value,
-			"cartTotalValue:",
-			this.cartTotalValue,
-			"isAmountGreaterThan:",
-			isAmountGreaterThan,
-			"isAmountLessThan:",
-			isAmountLessThan
-		);
 
 		if (rule.condition.type === "CartAmount") {
 			return (isRightQuantity || isRightQuantity === null) && (isAmountGreaterThan || isAmountLessThan);
