@@ -34,35 +34,30 @@ class CartRewards {
 	async checkRules() {
 		this.loading(true);
 
-		// Add a 10 second delay before running reward logic
+		// Add a 1 second delay before running reward logic (should be enough for AIOD to update DOM)
 		await new Promise((res) => setTimeout(res, 1000));
 
 		// Wait for cart total to stabilize
 		await this.pollForStableCartTotal();
 
-		// Now proceed with your reward logic as before
-		console.log("Stable cartObject", this.cart);
-		console.log("Stable cart.total_price", this.cart.total_price);
-		console.log("Stable cartTotalValue", this.cartTotalValue);
-		console.log(
-			"Reward threshold",
-			this.rules.map((r) => r.condition.value)
-		);
-
 		// (A) Get cart
 		this.lastCartTotalValue = this.cartTotalValue;
 		this.cart = await this.getCart();
 
-		// (B) Use Aiod discounted total if available, otherwise fallback to Shopify logic
+		// (B) Use AIOD discounted total if available, otherwise fallback to Shopify logic
 		let aiodTotal = this.getAiodDiscountedTotal();
-		if (aiodTotal !== null) {
+		if (aiodTotal !== null && !isNaN(aiodTotal)) {
 			this.cartTotalValue = aiodTotal;
 			console.log("Using AIOD discounted total:", this.cartTotalValue);
 		} else {
+			console.warn("AIOD discounted total not found, using Shopify cart total.");
 			let baseTotal = this.cart.items.reduce((sum, item) => sum + item.line_price, 0);
 			this.cartTotalValue = baseTotal / 100;
 			console.log("Using Shopify cart total:", this.cartTotalValue);
 		}
+
+		// Defensive: If cartTotalValue is less than 0, set to 0
+		if (this.cartTotalValue < 0) this.cartTotalValue = 0;
 
 		console.log("cartObject", this.cart);
 		console.log("cart.total_price", this.cart.total_price);
@@ -86,6 +81,12 @@ class CartRewards {
 			const rule = this.rules[i];
 			const isConditionMet = satisfiedRules.some((r) => r.rule === rule);
 			const isRewardInCart = this.cartHasReward(rule);
+
+			// FINAL CHECK: Only add reward if cartTotalValue is still >= threshold
+			if (isConditionMet && this.cartTotalValue < rule.condition.value) {
+				console.warn("Cart total dropped below threshold after discount, skipping reward for rule:", rule);
+				continue;
+			}
 
 			if (isRewardInCart !== isConditionMet) {
 				await this.toggleReward(isConditionMet, rule);
