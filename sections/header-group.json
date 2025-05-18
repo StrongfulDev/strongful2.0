@@ -54,7 +54,7 @@
             "toggle_main_font": false,
             "toggle_sub_font": false,
             "main_text": "משלוח אקספרס עם שליח עד הבית",
-            "sub_text": "משלוח עד הבית בין 1-5 ימי עסקים",
+            "sub_text": "משלוח עד הבית בין 1-3 ימי עסקים",
             "text_alignment": "center",
             "main_text_direction": "rtl",
             "sub_text_direction": "rtl",
@@ -440,7 +440,7 @@
       "type": "apps",
       "blocks": {
         "essential_countdown_app_block_6YiGEn": {
-          "type": "shopify://apps/essential-countdown-timer/blocks/app-block/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
+          "type": "shopify://apps/countdown-timer-essential/blocks/app-block/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
           "settings": {
             "id": "cmafcc25s008s9xl9nmihzhjk"
           }
