@@ -644,6 +644,7 @@
     },
     "custom_liquid_xj7jzE": {
       "type": "custom-liquid",
+      "disabled": true,
       "custom_css": [],
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
@@ -1098,9 +1099,9 @@
     "customer_slideshow_wFcfK7",
     "customer_slideshow_jXTBRG",
     "customer_slideshow_iniK4W",
+    "17388407748dd9c850",
     "custom_liquid_xj7jzE",
     "customer_slideshow_djMAQ6",
-    "17388407748dd9c850",
     "173246164424ec44fa",
     "collection_list_QrC4z9",
     "our_collection_list_v2_mK6kUx",
