@@ -642,6 +642,38 @@
         "padding_bottom": 0
       }
     },
+    "17388407748dd9c850": {
+      "type": "apps",
+      "blocks": {
+        "tellos_shoppable_video_home_page_carousel_CKyiHh": {
+          "type": "shopify://apps/tellos-shoppable-video/blocks/home-page-carousel/a4490152-a6c6-410b-9721-736f5b95f2f2",
+          "settings": {
+            "size": "large",
+            "background": "rgba(0,0,0,0)",
+            "cards-border-radius": 12,
+            "show_border_card": false,
+            "border_card_color": "#000000",
+            "add_header": true,
+            "header_text": "TRENDING NOW",
+            "header_type": "h2",
+            "alignment": "center",
+            "header_gap": 30,
+            "explore-card-label": "Explore all videos",
+            "border_radius": 24,
+            "padding_top": 8,
+            "padding_bottom": 8,
+            "padding_horizontal": 0,
+            "custom_css": ".carousel-header { font-size: 20px; font-weight: 200; }"
+          }
+        }
+      },
+      "block_order": [
+        "tellos_shoppable_video_home_page_carousel_CKyiHh"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "custom_liquid_xj7jzE": {
       "type": "custom-liquid",
       "disabled": true,
@@ -693,38 +725,6 @@
         "accessibility_info": "Slideshow about our brand",
         "padding_top": 24,
         "padding_bottom": 24
-      }
-    },
-    "17388407748dd9c850": {
-      "type": "apps",
-      "blocks": {
-        "tellos_shoppable_video_home_page_carousel_CKyiHh": {
-          "type": "shopify://apps/tellos-shoppable-video/blocks/home-page-carousel/a4490152-a6c6-410b-9721-736f5b95f2f2",
-          "settings": {
-            "size": "large",
-            "background": "rgba(0,0,0,0)",
-            "cards-border-radius": 12,
-            "show_border_card": false,
-            "border_card_color": "#000000",
-            "add_header": true,
-            "header_text": "TRENDING NOW",
-            "header_type": "h2",
-            "alignment": "center",
-            "header_gap": 30,
-            "explore-card-label": "Explore all videos",
-            "border_radius": 24,
-            "padding_top": 8,
-            "padding_bottom": 8,
-            "padding_horizontal": 0,
-            "custom_css": ".carousel-header { font-size: 20px; font-weight: 200; }"
-          }
-        }
-      },
-      "block_order": [
-        "tellos_shoppable_video_home_page_carousel_CKyiHh"
-      ],
-      "settings": {
-        "include_margins": true
       }
     },
     "173246164424ec44fa": {
@@ -919,12 +919,11 @@
       "blocks": {
         "slide_LqAUbW": {
           "type": "slide",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/fd755764aff711800b1b739ce46f1227.jpg",
-            "mobile_image": "shopify://shop_images/3c5d9d5369e00639567a1c08bbacfa2e.jpg",
-            "login_desktop_image": "shopify://shop_images/fd755764aff711800b1b739ce46f1227_7819f46e-07e8-412b-9549-11fa6a31aee1.jpg",
-            "login_mobile_image": "shopify://shop_images/3c5d9d5369e00639567a1c08bbacfa2e_1e374a3d-a090-487f-b930-03bafa227266.jpg",
+            "image": "shopify://shop_images/19_018467a6-7626-4d2b-8c7a-519c895e6f59.jpg",
+            "mobile_image": "shopify://shop_images/19_263d737f-5ba0-4c46-9051-7ce9c9944215.jpg",
+            "login_desktop_image": "shopify://shop_images/19_c76cadab-f913-4117-a5cc-c409546bae80.jpg",
+            "login_mobile_image": "shopify://shop_images/19_70ec10e1-872b-4991-af7a-ac960cd9daef.jpg",
             "button_label": "",
             "login_button_label": "",
             "link": "shopify://collections/oasis-old-money",
