@@ -3787,7 +3787,7 @@ body:not(.enable-toolbar-RTL) #enable-toolbar-content {
 #returnGoAssistant .ReturnGO_Stack-module_stack.ReturnGO_Stack-module_alignCenter,
 #returnGoCartWidget .ReturnGO_Stack-module_stack.ReturnGO_Stack-module_alignCenter,
 #returnGoAccountWidget .ReturnGO_Stack-module_stack.ReturnGO_Stack-module_alignCenter {
-	display: none !important;
+	/* display: none !important; */
 }
 .ReturnGO_ReturnItemProposition-module_shippingContent svg {
 	display: none !important;
@@ -4474,7 +4474,7 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 }
 
 .ReturnGO_SubtotalBlockWrapper-module_SubtotalBlockWrapper {
-	display: none !important;
+	/* display: none !important; */
 }
 
 .ReturnGO_ReturnItemProposition-module_costs,
