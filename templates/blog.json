@@ -12,8 +12,8 @@
     "main": {
       "type": "main-blog",
       "settings": {
-        "tile_image_one": "shopify://shop_images/31_1cc8c72c-cab4-4924-912d-458b13a8b804.jpg",
-        "tile_image_one_link": "shopify://collections/sets",
+        "tile_image_one": "shopify://shop_images/32_ca0651cb-5126-4a60-bafd-611d5d90bda8.jpg",
+        "tile_image_one_link": "shopify://collections/happy-hour",
         "tile_image_two": "shopify://shop_images/30_975299fe-420e-432e-ae56-e1d5ca75ec38.jpg",
         "tile_image_two_link": "shopify://pages/lets-move",
         "layout": "grid",
