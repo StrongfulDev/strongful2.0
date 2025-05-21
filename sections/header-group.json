@@ -36,7 +36,7 @@
           "settings": {
             "toggle_main_font": true,
             "toggle_sub_font": true,
-            "main_text": "FIT YOUR ACTIVITY",
+            "main_text": "HOLIDAY SALE",
             "sub_text": "25% הנחה בקניית 3 פריטים",
             "text_alignment": "center",
             "main_text_direction": "ltr",
@@ -86,7 +86,6 @@
       "blocks": {
         "bd053c52-574f-435e-be3a-a4a74c72b169": {
           "type": "url",
-          "disabled": true,
           "settings": {
             "link_text_direction": "Left To Right",
             "show_on_mobile": true,
@@ -405,7 +404,7 @@
         "mobile_logo_position": "center",
         "show_first_image": true,
         "image_order_first": "1",
-        "mobile_top_image_1": "shopify://shop_images/23_e8f7e6b3-5e5b-4fff-befc-949864fb04a0.jpg",
+        "mobile_top_image_1": "shopify://shop_images/25_f2c6ba01-f9aa-4f6d-b6c5-b2dfeee5e6d6.jpg",
         "mobile_top_image_1_link": "shopify://collections/sets",
         "mobile_top_image_1_title": "SALE",
         "show_second_image": true,
