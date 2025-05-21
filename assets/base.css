@@ -4100,7 +4100,49 @@ div#returnGoCartWidget {
 	right: 70% !important;
 	left: auto !important;
 }
+.ReturnGO_SubtotalBlockWrapper-module_SubtotalBlockWrapper {
+	/* display: none !important; */
+}
 
+.ReturnGO_ReturnItemProposition-module_costs,
+.ReturnGO_TextContainer-module_textContainer:nth-child(6),
+.ReturnGO_TotalSummary-module_totalSummary,
+.ReturnGO_ItemContent-module_badge.ReturnGO_ItemContent-module_not-eligible {
+	display: none !important;
+}
+#returnGoAssistant .ReturnGO_Steps-module_stepCircle, #returnGoCartWidget .ReturnGO_Steps-module_stepCircle, #returnGoAccountWidget .ReturnGO_Steps-module_stepCircle {margin:0;}
+#returnGoAssistant .ReturnGO_Steps-module_stepCircle, #returnGoCartWidget .ReturnGO_Steps-module_stepCircle, #returnGoAccountWidget .ReturnGO_Steps-module_stepCircle {
+    display: -ms-flexbox;
+    display: flex
+;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: cente;
+    width: 60px;
+    height: 40px;
+    margin: 0 0px; }
+#returnGoAssistant .ReturnGO_Steps-module_line, #returnGoCartWidget .ReturnGO_Steps-module_line, #returnGoAccountWidget .ReturnGO_Steps-module_line {
+    position: absolute;
+    width: 40px;
+    bottom: 19px;
+    right: -8px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border-top: 1px solid #efeff1;
+    z-index: -1;
+}
+#returnGoAssistant .ReturnGO_Title-module_title, #returnGoCartWidget .ReturnGO_Title-module_title, #returnGoAccountWidget .ReturnGO_Title-module_title {
+    margin: 0 auto;
+    max-width: 600px;
+    color: var(--rtg-title-color);
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 25px;
+    font-family: var(--rtg-font);
+    text-transform: none !important;
+}
 /*   ReturnGO Styling end     */
 
 body.trigger-position-right #enable-toolbar-trigger {
@@ -4473,16 +4515,6 @@ body.trigger-size-small #enable-toolbar button#enable-toolbar-trigger .keyboard-
 	display: none !important;
 }
 
-.ReturnGO_SubtotalBlockWrapper-module_SubtotalBlockWrapper {
-	/* display: none !important; */
-}
-
-.ReturnGO_ReturnItemProposition-module_costs,
-.ReturnGO_TextContainer-module_textContainer:nth-child(6),
-.ReturnGO_TotalSummary-module_totalSummary,
-.ReturnGO_ItemContent-module_badge.ReturnGO_ItemContent-module_not-eligible {
-	display: none !important;
-}
 
 .yotpo-review-votes-wrapper.top-margin {
 	display: none !important;
