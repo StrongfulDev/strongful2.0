@@ -161,12 +161,12 @@
         "slide_EQwW66": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/copy_9_b3ea1bcc-0612-4a58-9822-9225a444edcc.jpg",
-            "mobile_image": "shopify://shop_images/copy_6_4.jpg",
-            "left_position": 74,
-            "bottom_position": 33,
-            "desktop_left_position": 73,
-            "desktop_bottom_position": 30,
+            "image": "shopify://shop_images/20_ed625e49-3c86-4c94-8200-800f92b02e36.jpg",
+            "mobile_image": "shopify://shop_images/20_abe4235e-2495-4e64-bf2f-1dd766788302.jpg",
+            "left_position": 50,
+            "bottom_position": 11,
+            "desktop_left_position": 75,
+            "desktop_bottom_position": 39,
             "show_lock": false,
             "button_label": "SHOP NOW",
             "link": "shopify://collections/sets",
@@ -386,6 +386,7 @@
       "blocks": {
         "slide_dppDFX": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/copy_1_192f5c63-91ff-4834-b4e1-ff37c4a30b9e.jpg",
             "mobile_image": "shopify://shop_images/copy_1_8373bb96-b287-4896-8cf7-8a8a6a7074e8.jpg",
