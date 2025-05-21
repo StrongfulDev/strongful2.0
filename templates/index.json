@@ -425,6 +425,7 @@
     },
     "featured_collection_AaFqPp": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "steps": 4,
         "title": "OUTLET",
@@ -607,6 +608,7 @@
       "blocks": {
         "slide_UJF9BD": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/12_c5164bea-e877-4205-a188-f02a027cd1de.jpg",
             "mobile_image": "shopify://shop_images/10_f37580c5-d9d8-4d12-8fa4-dd4322a5bb02.jpg",
