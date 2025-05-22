@@ -226,10 +226,10 @@
         "slide_rVi7Q8": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/1_87ba82fb-f2e5-498b-b847-358185da50d5.jpg",
-            "mobile_image": "shopify://shop_images/22_c21160e7-7df4-4daa-8d82-0d34322fe390.jpg",
-            "login_desktop_image": "shopify://shop_images/1_3f9f83f7-57a0-44da-9dcb-9c589daac211.jpg",
-            "login_mobile_image": "shopify://shop_images/21_e97db7bb-6c71-4116-a56c-8e1152e55103.jpg",
+            "image": "shopify://shop_images/15_80eef479-223d-42b1-a12d-8f075841c897.jpg",
+            "mobile_image": "shopify://shop_images/10e4addea72dbe04d8afedc433516098.jpg",
+            "login_desktop_image": "shopify://shop_images/15_a2c0db2b-0c31-4e9d-ab1e-ca4d83bb01cc.jpg",
+            "login_mobile_image": "shopify://shop_images/10e4addea72dbe04d8afedc433516098_d6980df2-8cbf-44eb-8db3-018d23391f2f.jpg",
             "button_label": "",
             "login_button_label": "",
             "link": "shopify://pages/loyalty",
@@ -351,7 +351,7 @@
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "happy-hour",
+        "collection": "sets",
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,
