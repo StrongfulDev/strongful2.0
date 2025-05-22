@@ -225,12 +225,11 @@
       "blocks": {
         "slide_rVi7Q8": {
           "type": "slide",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/1d32ac0590a64fc9101e963fd1b8d414_00eb58fa-5a8d-401a-9c45-8ca0c3d744c4.jpg",
-            "mobile_image": "shopify://shop_images/b3ac2ec4162bfc3be19c78dd7545e1df.jpg",
-            "login_desktop_image": "shopify://shop_images/1d32ac0590a64fc9101e963fd1b8d414_00eb58fa-5a8d-401a-9c45-8ca0c3d744c4.jpg",
-            "login_mobile_image": "shopify://shop_images/b3ac2ec4162bfc3be19c78dd7545e1df.jpg",
+            "image": "shopify://shop_images/1_87ba82fb-f2e5-498b-b847-358185da50d5.jpg",
+            "mobile_image": "shopify://shop_images/22_c21160e7-7df4-4daa-8d82-0d34322fe390.jpg",
+            "login_desktop_image": "shopify://shop_images/1_3f9f83f7-57a0-44da-9dcb-9c589daac211.jpg",
+            "login_mobile_image": "shopify://shop_images/21_e97db7bb-6c71-4116-a56c-8e1152e55103.jpg",
             "button_label": "",
             "login_button_label": "",
             "link": "shopify://pages/loyalty",
@@ -346,7 +345,7 @@
       "type": "featured-collection",
       "settings": {
         "steps": 4,
-        "title": "HAPPY HOUR",
+        "title": "BUY 500 PAY 350",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
