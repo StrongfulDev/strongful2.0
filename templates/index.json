@@ -161,12 +161,12 @@
         "slide_EQwW66": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/20_ed625e49-3c86-4c94-8200-800f92b02e36.jpg",
-            "mobile_image": "shopify://shop_images/20_abe4235e-2495-4e64-bf2f-1dd766788302.jpg",
+            "image": "shopify://shop_images/copy_10_2cb12a18-2bcb-410a-a991-ccfee177bd3a.jpg",
+            "mobile_image": "shopify://shop_images/copy_6_5.jpg",
             "left_position": 50,
             "bottom_position": 11,
             "desktop_left_position": 75,
-            "desktop_bottom_position": 39,
+            "desktop_bottom_position": 34,
             "show_lock": false,
             "button_label": "SHOP NOW",
             "link": "shopify://collections/happy-hour",
