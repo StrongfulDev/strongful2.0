@@ -86,13 +86,12 @@
       "blocks": {
         "bd053c52-574f-435e-be3a-a4a74c72b169": {
           "type": "url",
-          "disabled": true,
           "settings": {
             "link_text_direction": "Left To Right",
             "show_on_mobile": true,
             "small_font": false,
-            "title": "30% OFF",
-            "title_link": "shopify://collections/happy-hour"
+            "title": "24 HOURS ONLY",
+            "title_link": "shopify://collections/sets"
           }
         },
         "menu_item_E3xKXk": {
