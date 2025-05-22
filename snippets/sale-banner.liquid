@@ -22,7 +22,8 @@
 
 {% if customer %}
     {% if product.tags contains announcement_tag %}
-        <div class="sale-banner-product-page">
+        <div class="sale-banner-product-page"
+             style="background: {{ settings.card_banner_background_color }}; color: {{ settings.card_banner_text_color }};">
             <div class="{% if block.settings.paragraph_direction == 'Right To Left' %}fix-direction{% endif %}">
                 {{ block.settings.logged_in_text | newline_to_br }}
             </div>
@@ -33,7 +34,8 @@
     {% endif %}
 {% else %}
     {% if product.tags contains announcement_tag %}
-        <div class="sale-banner-product-page">
+        <div class="sale-banner-product-page"
+             style="background: {{ settings.card_banner_background_color }}; color: {{ settings.card_banner_text_color }};">
             <div class="{% if block.settings.paragraph_direction == 'Right To Left' %}fix-direction{% endif %}">
                 {{ block.settings.logged_out_text | newline_to_br }}
             </div>
@@ -42,13 +44,15 @@
             {% endif %}
         </div>
     {% elsif product.tags contains second_announcement_tag and block.settings.logged_in_text_second != blank %}
-        <div class="sale-banner-product-page">
+        <div class="sale-banner-product-page"
+             style="background: {{ settings.card_banner_background_color }}; color: {{ settings.card_banner_text_color }};">
             <div class="{% if block.settings.paragraph_direction == 'Right To Left' %}fix-direction{% endif %}">
                 {{ block.settings.logged_in_text_second | newline_to_br }}
             </div>
         </div>
     {% elsif block.settings.third_announcement_text != blank %}
-        <div class="sale-banner-product-page">
+        <div class="sale-banner-product-page"
+             style="background: {{ settings.card_banner_background_color }}; color: {{ settings.card_banner_text_color }};">
             <div class="{% if block.settings.paragraph_direction == 'Right To Left' %}fix-direction{% endif %}">
                 {{ block.settings.third_announcement_text | newline_to_br }}
             </div>
@@ -57,7 +61,8 @@
             {% endif %}
         </div>
     {% elsif block.settings.fourth_announcement_text != blank %}
-        <div class="sale-banner-product-page">
+        <div class="sale-banner-product-page"
+             style="background: {{ settings.card_banner_background_color }}; color: {{ settings.card_banner_text_color }};">
             <div class="{% if block.settings.paragraph_direction == 'Right To Left' %}fix-direction{% endif %}">
                 {{ block.settings.fourth_announcement_text | newline_to_br }}
             </div>
