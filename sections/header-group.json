@@ -448,6 +448,7 @@
       "block_order": [
         "essential_countdown_app_block_6YiGEn"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": true
       }
