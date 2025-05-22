@@ -234,7 +234,7 @@
 	width: 40px;
 	height: 44px;
 	margin: 20px auto 16px;
-	display: block;
+display: block;
 }
 
 .menu-drawer-container.customizable .menu-drawer__navigation {
@@ -509,7 +509,7 @@
 
 	.list-menu--inline {
 		/*direction: rtl;*/
-		column-gap: 3rem;
+		column-gap: 2rem;
 	}
 
 	summary.list-menu__item {
