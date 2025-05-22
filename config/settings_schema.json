@@ -159,6 +159,20 @@
         "default": "#ffffff",
         "label": "Theme Color",
         "info": "A Color for the theme , used in Safari browsers for the Header theme color meta tag"
+      },
+      {
+        "type": "color",
+        "id": "card_banner_text_color",
+        "default": "#b22222",
+        "label": "Card Banner Text Color",
+        "info": "Color for the text in card banner (class: card_banner_text)"
+      },
+      {
+        "type": "color",
+        "id": "card_banner_background_color",
+        "default": "#F3F3F3",
+        "label": "Card Banner Background Color",
+        "info": "Background color for the card banner (class: card_banner_text)"
       }
     ]
   },

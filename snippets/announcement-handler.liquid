@@ -30,7 +30,10 @@
   {% assign next_index = i | plus: 1 %}
   {% assign text = announcements_array[next_index] %}
   {% if tag and text and card_product.tags contains tag and text != blank %}
-    <span class="card_banner_text color-background-2">{{ text }}</span>
+    <span class="card_banner_text"
+          style="background: {{ settings.card_banner_background_color }}; color: {{ settings.card_banner_text_color }};">
+      {{ text }}
+    </span>
     {% break %}
   {% endif %}
   {% assign i = i | plus: 1 %}

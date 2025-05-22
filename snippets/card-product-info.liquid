@@ -161,7 +161,10 @@
                 <div class="card__content">
                     <div class="card__information">
                         {% if card_product.tags contains announcement_tag %}
-                            <span class="card_banner_text color-background-2">{{ card_banner_text }}</span>
+                            <span class="card_banner_text"
+                                  style="background: {{ settings.card_banner_background_color }}; color: {{ settings.card_banner_text_color }};">
+                              {{ card_banner_text }}
+                            </span>
                         {% endif %}
                         <div
                                 class="card__heading {{ card_header_size }}"
