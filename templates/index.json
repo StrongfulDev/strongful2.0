@@ -163,10 +163,10 @@
           "settings": {
             "image": "shopify://shop_images/copy_10_2cb12a18-2bcb-410a-a991-ccfee177bd3a.jpg",
             "mobile_image": "shopify://shop_images/copy_6_5.jpg",
-            "left_position": 50,
-            "bottom_position": 11,
+            "left_position": 70,
+            "bottom_position": 22,
             "desktop_left_position": 75,
-            "desktop_bottom_position": 34,
+            "desktop_bottom_position": 27,
             "show_lock": false,
             "button_label": "SHOP NOW",
             "link": "shopify://collections/happy-hour",
