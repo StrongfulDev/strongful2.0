@@ -180,29 +180,40 @@
                  aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
                  tabindex="-1"
             >
-                <div class="slideshow__media banner__media media{% if block.settings.image == blank %} placeholder{% endif %}">
-                    {%- if block.settings.image -%}
-                        {%- assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round -%}
-                        {%- assign mobile_height = block.settings.mobile_image.width | divided_by: block.settings.mobile_image.aspect_ratio | round -%}
-                        {{ block.settings.image | image_url: width: 3840 | image_tag:
-                        loading: 'lazy',
-                        height: height,
-                        sizes: "100vw",
-                        widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
-                        alt: settings.seo_alt_text
-                        }}
-                        {% if block.settings.mobile_image != blank %}
-                            {{ block.settings.mobile_image | image_url: width: 1000 | image_tag:
-                            loading: 'lazy',
-                            height: mobile_height,
-                            sizes: "100vw",
-                            class: "mobile_version",
-                            widths: '375, 550, 750, 1000'
-                            }}
-                        {%- endif -%}
-                    {%- else -%}
-                        {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+                <div class="slideshow__media banner__media media{% if block.settings.image == blank and block.settings.video == blank and block.settings.mobile_video == blank %} placeholder{% endif %}">
+                  {%- if block.settings.video or block.settings.mobile_video -%}
+                    {%- if block.settings.video -%}
+                      <div class="desktop-video">
+                        {{ block.settings.video | video_tag: autoplay: true, loop: true, muted: true, controls: false, playsinline: true, class: 'slideshow__video', style: 'object-fit: cover; width: 100%; height: 100%; display: block;' }}
+                      </div>
                     {%- endif -%}
+                    {%- if block.settings.mobile_video -%}
+                      <div class="mobile-video">
+                        {{ block.settings.mobile_video | video_tag: autoplay: true, loop: true, muted: true, controls: false, playsinline: true, class: 'slideshow__video mobile_version', style: 'object-fit: cover; width: 100%; height: 100%; display: block;' }}
+                      </div>
+                    {%- endif -%}
+                  {%- elsif block.settings.image -%}
+                    {%- assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round -%}
+                    {%- assign mobile_height = block.settings.mobile_image.width | divided_by: block.settings.mobile_image.aspect_ratio | round -%}
+                    {{ block.settings.image | image_url: width: 3840 | image_tag:
+                    loading: 'lazy',
+                    height: height,
+                    sizes: "100vw",
+                    widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                    alt: settings.seo_alt_text
+                    }}
+                    {% if block.settings.mobile_image != blank %}
+                        {{ block.settings.mobile_image | image_url: width: 1000 | image_tag:
+                        loading: 'lazy',
+                        height: mobile_height,
+                        sizes: "100vw",
+                        class: "mobile_version",
+                        widths: '375, 550, 750, 1000'
+                        }}
+                    {%- endif -%}
+                  {%- else -%}
+                    {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+                  {%- endif -%}
                 </div>
                 <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
                     <div class="slideshow__text banner__box content-container content-container--full-width-mobile
@@ -245,6 +256,44 @@
 {%- if request.design_mode -%}
     <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
+<script>
+(function() {
+  function updateSlideshowVideos() {
+    var isDesktop = window.innerWidth >= 750;
+    document.querySelectorAll('.slideshow__media').forEach(function(media) {
+      var desktop = media.querySelector('.desktop-video');
+      var mobile = media.querySelector('.mobile-video');
+      if (desktop) {
+        var desktopVid = desktop.querySelector('video');
+        if (isDesktop) {
+          desktop.style.display = '';
+          if (desktopVid) { desktopVid.play && desktopVid.play(); }
+        } else {
+          desktop.style.display = 'none';
+          if (desktopVid) { desktopVid.pause && desktopVid.pause(); desktopVid.currentTime = 0; }
+        }
+      }
+      if (mobile) {
+        var mobileVid = mobile.querySelector('video');
+        if (!isDesktop) {
+          mobile.style.display = '';
+          if (mobileVid) { mobileVid.play && mobileVid.play(); }
+        } else {
+          mobile.style.display = 'none';
+          if (mobileVid) { mobileVid.pause && mobileVid.pause(); mobileVid.currentTime = 0; }
+        }
+      }
+    });
+  }
+  window.addEventListener('resize', updateSlideshowVideos);
+  window.addEventListener('orientationchange', updateSlideshowVideos);
+  document.addEventListener('DOMContentLoaded', updateSlideshowVideos);
+  // Also run on theme editor reload
+  if (window.Shopify && Shopify.designMode) {
+    document.addEventListener('shopify:section:load', updateSlideshowVideos);
+  }
+})();
+</script>
 
 {% schema %}
 {
@@ -396,9 +445,19 @@
           "label": "Desktop / Big screen image"
         },
         {
+          "type": "video",
+          "id": "video",
+          "label": "Desktop / Big screen video"
+        },
+        {
           "type": "image_picker",
           "id": "mobile_image",
           "label": "t:sections.slideshow.blocks.slide.settings.mobile_image.label"
+        },
+        {
+          "type": "video",
+          "id": "mobile_video",
+          "label": "Mobile video"
         },
         {
           "type": "range",
