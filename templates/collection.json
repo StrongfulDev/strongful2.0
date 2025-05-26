@@ -41,7 +41,7 @@
         ".media > *:not(.zoom):not(.deferred-media__poster-button),.media model-viewer {position: static; object-fit: cover;}"
       ],
       "settings": {
-        "override_image_from_metafield": true,
+        "override_image_from_metafield": false,
         "image_overlay_opacity": 0,
         "image_height": "auto",
         "desktop_content_position": "middle-center",
