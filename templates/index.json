@@ -304,16 +304,15 @@
     },
     "featured_collection_Vgg3kt": {
       "type": "featured-collection",
-      "disabled": true,
       "settings": {
         "steps": 4,
-        "title": "OUTLET",
+        "title": "20% OFF",
         "heading_size": "h1",
         "heading_type": "heading_type_2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "18-0ff",
+        "collection": "20-off",
         "products_to_show": 15,
         "columns_desktop": 5,
         "full_width": true,
