@@ -1088,10 +1088,11 @@
       "blocks": {
         "ai_gen_block_1834474_NRFQwP": {
           "type": "ai_gen_block_1834474",
+          "disabled": true,
           "settings": {
             "product_tag": "popupDiscount",
             "min_items": 3,
-            "discount_code": "WELCOME30",
+            "discount_code": "",
             "title": "Special Offer Unlocked!",
             "description": "You've qualified for a special discount! Use the code below at checkout to get 30% off your order.",
             "button_text": "Continue Shopping",
