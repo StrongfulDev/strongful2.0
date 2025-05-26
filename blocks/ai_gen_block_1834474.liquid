@@ -8,7 +8,7 @@
 
 {% for item in cart.items %}
   {% if item.product.tags contains block.settings.product_tag %}
-    {% assign tagged_items_count = tagged_items_count | plus: 1 %}
+    {% assign tagged_items_count = tagged_items_count | plus: item.quantity %}
   {% endif %}
 {% endfor %}
 
