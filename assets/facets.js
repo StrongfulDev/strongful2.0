@@ -84,9 +84,12 @@ class FacetFiltersForm extends HTMLElement {
 	}
 
 	static renderProductCount(html) {
-		const count = new DOMParser().parseFromString(html, "text/html").getElementById("ProductCount").innerHTML;
+		const parsedHTML = new DOMParser().parseFromString(html, "text/html");
+		const count = parsedHTML.getElementById("ProductCount").innerHTML;
 		const container = document.getElementById("ProductCount");
 		const containerDesktop = document.getElementById("ProductCountDesktop");
+
+		// Update both mobile and desktop counts
 		container.innerHTML = count;
 		container.classList.remove("loading");
 		if (containerDesktop) {
@@ -94,11 +97,13 @@ class FacetFiltersForm extends HTMLElement {
 			containerDesktop.classList.remove("loading");
 		}
 
+		// Initialize endless collection
 		let endlessCollection = new AjaxinateMin({
 			container: "#product-grid",
 			pagination: ".infinite_next",
 		});
 
+		// Update filter button state
 		let countNumber = parseInt($(".mobile-facets__open .custom-active-facets").text());
 		if (countNumber > 0) {
 			$(".no-js-hidden.button.button--primary").removeClass("button--disabled").html("אישור");

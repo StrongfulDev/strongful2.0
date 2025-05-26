@@ -96,19 +96,13 @@
         <div class="product-count-vertical light" role="status">
           <h4 class="product-count__text text-body">
             <span id="ProductCountDesktop">
-              {%- if collection.results_count -%}
-                {{
-                  'templates.search.results_with_count'
-                  | t: terms: collection.terms, count: collection.results_count
-                }}
-              {%- elsif collection.products_count == collection.all_products_count -%}
-                {{ 'products.facets.product_count_simple' | t: count: collection.products_count }}
-              {%- else -%}
-                {{
-                  'products.facets.product_count'
-                  | t: product_count: collection.products_count, count: collection.all_products_count
-                }}
-              {%- endif -%}
+              {% assign visible_count = 0 %}
+              {% for product in collection.products %}
+                {% unless product.tags contains 'hidden' %}
+                  {% assign visible_count = visible_count | plus: 1 %}
+                {% endunless %}
+              {% endfor %}
+              {{ 'products.facets.product_count_simple' | t: count: visible_count }}
             </span>
           </h4>
           <div class="loading-overlay__spinner">
