@@ -262,12 +262,12 @@
 document.addEventListener("DOMContentLoaded", function() {
   const popupEl = document.querySelector("discount-popup-{{ ai_gen_id }}");
   if (!popupEl) return;
-  fetch("/cart.js")
-    .then(response => response.json())
-    .then(cart => {
+  (async function() {
+    try {
+      const response = await fetch("/cart.js");
+      const cart = await response.json();
       let count = 0;
       cart.items.forEach(item => {
-        // Count items with the specified tag using quantity
         if (item.tags && item.tags.indexOf("{{ block.settings.product_tag }}") >= 0) {
           count += item.quantity;
         }
@@ -276,7 +276,10 @@ document.addEventListener("DOMContentLoaded", function() {
       if (typeof popupEl.checkAndShowPopup === "function") {
         popupEl.checkAndShowPopup();
       }
-    });
+    } catch (error) {
+      console.error("Failed to fetch cart data:", error);
+    }
+  })();
 });
 </script>
 
