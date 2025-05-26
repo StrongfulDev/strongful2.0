@@ -834,6 +834,65 @@
         "padding_bottom": 36
       }
     },
+    "1746972921c12d717b": {
+      "type": "apps",
+      "blocks": {
+        "yotpo_product_reviews_reviews_carousel_eprfb4": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews_carousel/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "disabled": true,
+          "settings": {
+            "product": "astra-tanktop-gray"
+          }
+        }
+      },
+      "block_order": [
+        "yotpo_product_reviews_reviews_carousel_eprfb4"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "customer_slideshow_JN4JiR": {
+      "type": "customer-slideshow",
+      "blocks": {
+        "slide_LqAUbW": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/19_018467a6-7626-4d2b-8c7a-519c895e6f59.jpg",
+            "mobile_image": "shopify://shop_images/19_263d737f-5ba0-4c46-9051-7ce9c9944215.jpg",
+            "login_desktop_image": "shopify://shop_images/19_c76cadab-f913-4117-a5cc-c409546bae80.jpg",
+            "login_mobile_image": "shopify://shop_images/19_70ec10e1-872b-4991-af7a-ac960cd9daef.jpg",
+            "button_label": "",
+            "login_button_label": "",
+            "link": "shopify://collections/oasis-old-money",
+            "login_link": "",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "logged_in_color_scheme": "background-1",
+            "whole_slide_link": "shopify://pages/lets-move",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_LqAUbW"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "sides",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand",
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
     "our_collection_list_v2_mK6kUx": {
       "type": "our-collection-list-v2",
       "blocks": {
@@ -894,65 +953,6 @@
         "is_full_width": false,
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "1746972921c12d717b": {
-      "type": "apps",
-      "blocks": {
-        "yotpo_product_reviews_reviews_carousel_eprfb4": {
-          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews_carousel/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-          "disabled": true,
-          "settings": {
-            "product": "astra-tanktop-gray"
-          }
-        }
-      },
-      "block_order": [
-        "yotpo_product_reviews_reviews_carousel_eprfb4"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
-    "customer_slideshow_JN4JiR": {
-      "type": "customer-slideshow",
-      "blocks": {
-        "slide_LqAUbW": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/19_018467a6-7626-4d2b-8c7a-519c895e6f59.jpg",
-            "mobile_image": "shopify://shop_images/19_263d737f-5ba0-4c46-9051-7ce9c9944215.jpg",
-            "login_desktop_image": "shopify://shop_images/19_c76cadab-f913-4117-a5cc-c409546bae80.jpg",
-            "login_mobile_image": "shopify://shop_images/19_70ec10e1-872b-4991-af7a-ac960cd9daef.jpg",
-            "button_label": "",
-            "login_button_label": "",
-            "link": "shopify://collections/oasis-old-money",
-            "login_link": "",
-            "show_text_box": true,
-            "color_scheme": "background-1",
-            "logged_in_color_scheme": "background-1",
-            "whole_slide_link": "shopify://pages/lets-move",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "text_alignment_mobile": "center"
-          }
-        }
-      },
-      "block_order": [
-        "slide_LqAUbW"
-      ],
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "adapt_image",
-        "slider_visual": "sides",
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand",
-        "padding_top": 16,
-        "padding_bottom": 16
       }
     },
     "featured_blog_3p3kGH": {
@@ -1139,9 +1139,9 @@
     "17388407748dd9c850",
     "173246164424ec44fa",
     "collection_list_QrC4z9",
-    "our_collection_list_v2_mK6kUx",
     "1746972921c12d717b",
     "customer_slideshow_JN4JiR",
+    "our_collection_list_v2_mK6kUx",
     "featured_blog_3p3kGH",
     "collection_list_w4D6TE",
     "4371b550-969b-4828-986d-71697fc53ef0",
