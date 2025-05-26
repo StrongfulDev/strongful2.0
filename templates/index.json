@@ -1096,7 +1096,7 @@
             "description": "הרווחת הנחה שווה!\nהשתמשי בקוד למטה בקופה ותקבלי אקסטרה 10% הנחה על ההזמנה שלך",
             "button_text": "המשיכי ברכישה",
             "auto_show": true,
-            "delay": 2,
+            "delay": 0,
             "popup_width": 450,
             "overlay_opacity": 70,
             "background_color": "#ffffff",
