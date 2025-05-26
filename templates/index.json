@@ -642,38 +642,6 @@
         "padding_bottom": 0
       }
     },
-    "17388407748dd9c850": {
-      "type": "apps",
-      "blocks": {
-        "tellos_shoppable_video_home_page_carousel_CKyiHh": {
-          "type": "shopify://apps/tellos-shoppable-video/blocks/home-page-carousel/a4490152-a6c6-410b-9721-736f5b95f2f2",
-          "settings": {
-            "size": "large",
-            "background": "rgba(0,0,0,0)",
-            "cards-border-radius": 12,
-            "show_border_card": false,
-            "border_card_color": "#000000",
-            "add_header": true,
-            "header_text": "TRENDING NOW",
-            "header_type": "h2",
-            "alignment": "center",
-            "header_gap": 30,
-            "explore-card-label": "Explore all videos",
-            "border_radius": 24,
-            "padding_top": 8,
-            "padding_bottom": 8,
-            "padding_horizontal": 0,
-            "custom_css": ".carousel-header { font-size: 20px; font-weight: 200; }"
-          }
-        }
-      },
-      "block_order": [
-        "tellos_shoppable_video_home_page_carousel_CKyiHh"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
     "custom_liquid_xj7jzE": {
       "type": "custom-liquid",
       "disabled": true,
@@ -725,6 +693,38 @@
         "accessibility_info": "Slideshow about our brand",
         "padding_top": 24,
         "padding_bottom": 24
+      }
+    },
+    "17388407748dd9c850": {
+      "type": "apps",
+      "blocks": {
+        "tellos_shoppable_video_home_page_carousel_CKyiHh": {
+          "type": "shopify://apps/tellos-shoppable-video/blocks/home-page-carousel/a4490152-a6c6-410b-9721-736f5b95f2f2",
+          "settings": {
+            "size": "large",
+            "background": "rgba(0,0,0,0)",
+            "cards-border-radius": 12,
+            "show_border_card": false,
+            "border_card_color": "#000000",
+            "add_header": true,
+            "header_text": "TRENDING NOW",
+            "header_type": "h2",
+            "alignment": "center",
+            "header_gap": 30,
+            "explore-card-label": "Explore all videos",
+            "border_radius": 24,
+            "padding_top": 8,
+            "padding_bottom": 8,
+            "padding_horizontal": 0,
+            "custom_css": ".carousel-header { font-size: 20px; font-weight: 200; }"
+          }
+        }
+      },
+      "block_order": [
+        "tellos_shoppable_video_home_page_carousel_CKyiHh"
+      ],
+      "settings": {
+        "include_margins": true
       }
     },
     "173246164424ec44fa": {
@@ -1092,10 +1092,10 @@
             "product_tag": "popupDiscount",
             "min_items": 3,
             "discount_code": "HAPPYSHAVOUT",
-            "title": "Special Offer Unlocked!",
+            "title": "10% הנחה נוספים",
             "description": "You've qualified for a special discount! Use the code below at checkout to get 30% off your order.",
             "button_text": "Continue Shopping",
-            "auto_show": true,
+            "auto_show": false,
             "delay": 2,
             "popup_width": 450,
             "overlay_opacity": 70,
