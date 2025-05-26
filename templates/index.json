@@ -161,8 +161,8 @@
         "slide_EQwW66": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/copy_9_b3ea1bcc-0612-4a58-9822-9225a444edcc.jpg",
-            "mobile_image": "shopify://shop_images/copy_6_4.jpg",
+            "image": "shopify://shop_images/copy_10_34f94f5f-0444-48bc-a06b-2d85a2f05675.jpg",
+            "mobile_image": "shopify://shop_images/copy_9_1.jpg",
             "left_position": 74,
             "bottom_position": 33,
             "desktop_left_position": 73,
@@ -387,10 +387,10 @@
         "slide_dppDFX": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/copy_1_192f5c63-91ff-4834-b4e1-ff37c4a30b9e.jpg",
-            "mobile_image": "shopify://shop_images/copy_1_8373bb96-b287-4896-8cf7-8a8a6a7074e8.jpg",
-            "login_desktop_image": "shopify://shop_images/copy_1_0d23ca9f-06e6-463f-af16-c580b9affa4e.jpg",
-            "login_mobile_image": "shopify://shop_images/copy_1_57b89aac-ae93-430f-a735-9addd1a421e7.jpg",
+            "image": "shopify://shop_images/copy_2_994dfbc2-f354-4312-b9ba-7752c74a4cf8.jpg",
+            "mobile_image": "shopify://shop_images/copy_2_69e65e00-4242-415c-a4df-844f7d04f6fe.jpg",
+            "login_desktop_image": "shopify://shop_images/copy_2_ac6a4083-265e-4e3d-a475-6dac6de45c57.jpg",
+            "login_mobile_image": "shopify://shop_images/copy_4_47a4ae56-fc68-431e-8d86-95fec38660ae.jpg",
             "button_label": "",
             "login_button_label": "",
             "link": "shopify://collections/sets",
