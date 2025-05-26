@@ -1088,6 +1088,7 @@
       "blocks": {
         "ai_gen_block_1834474_NRFQwP": {
           "type": "ai_gen_block_1834474",
+          "disabled": true,
           "settings": {
             "product_tag": "popupDiscount",
             "min_items": 3,
