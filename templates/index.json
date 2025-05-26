@@ -1082,6 +1082,42 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "1748241989cd47d710": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_1834474_NRFQwP": {
+          "type": "ai_gen_block_1834474",
+          "settings": {
+            "product_tag": "popupDiscount",
+            "min_items": 3,
+            "discount_code": "WELCOME30",
+            "title": "Special Offer Unlocked!",
+            "description": "You've qualified for a special discount! Use the code below at checkout to get 30% off your order.",
+            "button_text": "Continue Shopping",
+            "auto_show": true,
+            "delay": 2,
+            "popup_width": 450,
+            "overlay_opacity": 70,
+            "background_color": "#ffffff",
+            "text_color": "#333333",
+            "code_background_color": "#f5f5f5",
+            "code_text_color": "#000000",
+            "button_color": "#000000",
+            "button_hover_color": "#333333",
+            "button_text_color": "#ffffff",
+            "border_radius": 8,
+            "title_size": 24,
+            "text_size": 16,
+            "code_size": 18
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_1834474_NRFQwP"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -1108,6 +1144,7 @@
     "customer_slideshow_JN4JiR",
     "featured_blog_3p3kGH",
     "collection_list_w4D6TE",
-    "4371b550-969b-4828-986d-71697fc53ef0"
+    "4371b550-969b-4828-986d-71697fc53ef0",
+    "1748241989cd47d710"
   ]
 }
