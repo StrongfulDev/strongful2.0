@@ -1,6 +1,381 @@
+{% doc %}
+  @prompt
+    Create a discount popup that appears when the total quantity of items in the cart reaches 3 or more. The popup should display a discount code and message.
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-discount-popup-{{ ai_gen_id }} {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: {{ block.settings.background_color }};
+    color: {{ block.settings.text_color }};
+    padding: 20px;
+    border-radius: {{ block.settings.border_radius }}px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    max-width: 350px;
+    width: calc(100% - 40px);
+    display: none;
+    transition: transform 0.3s ease;
+    transform: translateY(100px);
+  }
+
+  .ai-discount-popup-{{ ai_gen_id }}.is-visible {
+    display: block;
+    transform: translateY(0);
+  }
+
+  .ai-discount-popup__header-{{ ai_gen_id }} {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+
+  .ai-discount-popup__title-{{ ai_gen_id }} {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+  }
+
+  .ai-discount-popup__close-{{ ai_gen_id }} {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    color: {{ block.settings.text_color }};
+    opacity: 0.7;
+  }
+
+  .ai-discount-popup__close-{{ ai_gen_id }}:hover {
+    opacity: 1;
+  }
+
+  .ai-discount-popup__message-{{ ai_gen_id }} {
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+
+  .ai-discount-popup__code-container-{{ ai_gen_id }} {
+    display: flex;
+    margin-bottom: 15px;
+    background-color: {{ block.settings.code_background_color }};
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .ai-discount-popup__code-{{ ai_gen_id }} {
+    flex-grow: 1;
+    padding: 10px;
+    font-family: monospace;
+    font-size: 16px;
+    font-weight: bold;
+    color: {{ block.settings.code_text_color }};
+    border: none;
+    background: transparent;
+    text-align: center;
+  }
+
+  .ai-discount-popup__copy-{{ ai_gen_id }} {
+    background-color: {{ block.settings.button_color }};
+    color: {{ block.settings.button_text_color }};
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;}
+
+  .ai-discount-popup__copy-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_hover_color }};
+  }
+
+  .ai-discount-popup__button-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    background-color: {{ block.settings.button_color }};
+    color: {{ block.settings.button_text_color }};
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .ai-discount-popup__button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_hover_color }};
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-discount-popup-{{ ai_gen_id }} {
+      bottom: 10px;
+      right: 10px;
+      width: calc(100% - 20px);padding: 15px;
+    }
+  }
+{% endstyle %}
+
+<cart-discount-popup-{{ ai_gen_id }} 
+  class="ai-discount-popup-{{ ai_gen_id }}"
+  data-threshold="{{ block.settings.item_threshold }}"
+  data-discount-code="{{ block.settings.discount_code }}"
+  data-auto-apply="{{ block.settings.auto_apply }}"
+  data-auto-hide="{{ block.settings.auto_hide }}"data-auto-hide-delay="{{ block.settings.auto_hide_delay }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-discount-popup__header-{{ ai_gen_id }}">
+    <h3 class="ai-discount-popup__title-{{ ai_gen_id }}">{{ block.settings.title }}</h3>
+    <button class="ai-discount-popup__close-{{ ai_gen_id }}" aria-label="Close">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+  
+  <div class="ai-discount-popup__message-{{ ai_gen_id }}">{{ block.settings.message }}</div>
+  
+  <div class="ai-discount-popup__code-container-{{ ai_gen_id }}">
+    <input type="text" class="ai-discount-popup__code-{{ ai_gen_id }}" value="{{ block.settings.discount_code }}" readonly>
+    <button class="ai-discount-popup__copy-{{ ai_gen_id }}">{{ block.settings.copy_button_text }}</button>
+  </div><a href="{{ block.settings.button_link | default: '/checkout' }}" class="ai-discount-popup__button-{{ ai_gen_id }}">{{ block.settings.button_text }}</a>
+</cart-discount-popup-{{ ai_gen_id }}><script>
+  (function() {
+    class CartDiscountPopup{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.threshold = parseInt(this.dataset.threshold);
+        this.discountCode = this.dataset.discountCode;
+        this.autoApply = this.dataset.autoApply === 'true';
+        this.autoHide = this.dataset.autoHide === 'true';
+        this.autoHideDelay = parseInt(this.dataset.autoHideDelay) * 1000;
+        this.closeButton = this.querySelector('.ai-discount-popup__close-{{ ai_gen_id }}');
+        this.copyButton = this.querySelector('.ai-discount-popup__copy-{{ ai_gen_id }}');
+        this.codeInput = this.querySelector('.ai-discount-popup__code-{{ ai_gen_id }}');
+        this.popupShown = false;
+        this.setupEventListeners();this.checkCartAndShowPopup();
+      }
+      
+      setupEventListeners() {
+        this.closeButton.addEventListener('click', () => this.hidePopup());
+        
+        this.copyButton.addEventListener('click', () => {
+          this.codeInput.select();
+          document.execCommand('copy');
+          const originalText = this.copyButton.textContent;
+          this.copyButton.textContent = 'Copied!';
+          
+          setTimeout(() => {
+            this.copyButton.textContent = originalText;
+          }, 2000);
+        });
+        
+        document.addEventListener('cart:update', (event) => {
+          this.checkCartAndShowPopup();
+        });
+      }
+      
+      checkCartAndShowPopup() {
+        fetch('/cart.js')
+          .then(response => response.json())
+          .then(cart => {
+            const itemCount = cart.item_count;
+            
+            if (itemCount >= this.threshold && !this.popupShown) {
+              this.showPopup();
+              
+              if (this.autoApply && this.discountCode) {
+                // Auto apply discount code
+                const cartUrl = `/discount/${this.discountCode}?redirect=/cart`;
+                fetch(cartUrl)
+                  .then(response => {
+                    console.log('Discount applied automatically');
+                  })
+                  .catch(error => {
+                    console.error('Error applying discount:', error);
+                  });
+              }
+            } else if (itemCount < this.threshold && this.popupShown) {
+              this.hidePopup();
+            }
+          })
+          .catch(error => {
+            console.error('Error fetching cart:', error);
+          });
+      }
+      
+      showPopup() {
+        this.classList.add('is-visible');
+        this.popupShown = true;
+        
+        if (this.autoHide) {
+          setTimeout(() => {
+            this.hidePopup();
+          }, this.autoHideDelay);
+        }
+      }
+      
+      hidePopup() {
+        this.classList.remove('is-visible');
+      }
+    }
+    
+    customElements.define('cart-discount-popup-{{ ai_gen_id }}', CartDiscountPopup{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Discount Popup",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Discount Settings"
+    },
+    {
+      "type": "range",
+      "id": "item_threshold",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 3,
+      "label": "Show when cart has at least this many items"
+    },
+    {
+      "type": "text",
+      "id": "discount_code",
+      "label": "Discount code",
+      "default": "SAVE10"
+    },
+    {
+      "type": "checkbox",
+      "id": "auto_apply",
+      "label": "Auto-apply discount code",
+      "default": false,
+      "info": "Automatically applies the discount code when popup appears"
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Special Discount!"
+    },
+    {
+      "type": "textarea",
+      "id": "message",
+      "label": "Message",
+      "default": "You qualify for a special discount! Use this code at checkout to save on your order."
+    },
+    {
+      "type": "text",
+      "id": "copy_button_text",
+      "label": "Copy button text",
+      "default": "Copy"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Checkout Now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link",
+      "info": "Defaults to checkout if left empty"
+    },
+    {
+      "type": "header",
+      "content": "Display Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "auto_hide",
+      "label": "Auto-hide popup",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "auto_hide_delay",
+      "min": 5,
+      "max": 60,
+      "step": 5,
+      "unit": "s",
+      "label": "Auto-hide delay",
+      "default": 30,
+      "info": "Time in seconds before popup automatically hides"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "code_background_color",
+      "label": "Code background color",
+      "default": "#f4f4f4"
+    },
+    {
+      "type": "color",
+      "id": "code_text_color",
+      "label": "Code text color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button color",
+      "default": "#000f9f"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_color",
+      "label": "Button hover color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text color",
+      "default": "#ffffff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Discount Popup"
+    }
+  ]
+}
 {% endschema %}
