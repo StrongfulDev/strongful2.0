@@ -258,6 +258,28 @@
   })();
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const popupEl = document.querySelector("discount-popup-{{ ai_gen_id }}");
+  if (!popupEl) return;
+  fetch("/cart.js")
+    .then(response => response.json())
+    .then(cart => {
+      let count = 0;
+      cart.items.forEach(item => {
+        // Count items with the specified tag using quantity
+        if (item.tags && item.tags.indexOf("{{ block.settings.product_tag }}") >= 0) {
+          count += item.quantity;
+        }
+      });
+      popupEl.setAttribute("data-current-count", count);
+      if (typeof popupEl.checkAndShowPopup === "function") {
+        popupEl.checkAndShowPopup();
+      }
+    });
+});
+</script>
+
 {% schema %}
 {
   "name": "Discount Popup",
