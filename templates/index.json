@@ -161,11 +161,11 @@
         "slide_EQwW66": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/copy_2_3_3a0fb6c7-20f0-405e-bb08-fa3d20018891.jpg",
-            "mobile_image": "shopify://shop_images/23_a67a91a7-151d-41c8-9e26-da725a45ed57.jpg",
+            "image": "shopify://shop_images/copy_2_4_e05df094-414e-4ea5-9e61-6e53e313b645.jpg",
+            "mobile_image": "shopify://shop_images/24_ee25424f-dd0c-4e90-b73d-1e93e9f7d109.jpg",
             "left_position": 50,
             "bottom_position": 33,
-            "desktop_left_position": 31,
+            "desktop_left_position": 30,
             "desktop_bottom_position": 27,
             "show_lock": false,
             "button_label": "SHOP NOW",
