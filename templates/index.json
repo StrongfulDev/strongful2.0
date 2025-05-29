@@ -341,47 +341,6 @@
         "padding_bottom": 16
       }
     },
-    "customer_slideshow_BhDKpG": {
-      "type": "customer-slideshow",
-      "blocks": {
-        "slide_dppDFX": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/copy_2_994dfbc2-f354-4312-b9ba-7752c74a4cf8.jpg",
-            "mobile_image": "shopify://shop_images/copy_2_69e65e00-4242-415c-a4df-844f7d04f6fe.jpg",
-            "login_desktop_image": "shopify://shop_images/copy_2_ac6a4083-265e-4e3d-a475-6dac6de45c57.jpg",
-            "login_mobile_image": "shopify://shop_images/copy_4_47a4ae56-fc68-431e-8d86-95fec38660ae.jpg",
-            "button_label": "",
-            "login_button_label": "",
-            "link": "shopify://collections/20-off",
-            "login_link": "",
-            "show_text_box": true,
-            "color_scheme": "background-1",
-            "logged_in_color_scheme": "background-1",
-            "whole_slide_link": "shopify://collections/sets",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "text_alignment_mobile": "center"
-          }
-        }
-      },
-      "block_order": [
-        "slide_dppDFX"
-      ],
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "adapt_image",
-        "slider_visual": "sides",
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "featured_collection_BGphpp": {
       "type": "featured-collection",
       "settings": {
@@ -1127,7 +1086,6 @@
     "customer_slideshow_3cfMXw",
     "featured_collection_XDhFHB",
     "featured_collection_Vgg3kt",
-    "customer_slideshow_BhDKpG",
     "featured_collection_BGphpp",
     "featured_collection_AaFqPp",
     "our_collection_list_v3_mQh6DU",
