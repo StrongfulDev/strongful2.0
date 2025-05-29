@@ -41,7 +41,7 @@
             "text_alignment": "center",
             "main_text_direction": "ltr",
             "sub_text_direction": "rtl",
-            "link": "shopify://collections/sets",
+            "link": "shopify://collections/up-to-30-0ff",
             "color_scheme": "inverse",
             "custom_background_color": "#b1c0c0",
             "custom_text_color": "#ffffff",
@@ -91,7 +91,7 @@
             "show_on_mobile": true,
             "small_font": false,
             "title": "UP TO 30%",
-            "title_link": "shopify://collections/sets"
+            "title_link": "shopify://collections/up-to-30-0ff"
           }
         },
         "menu_item_E3xKXk": {
