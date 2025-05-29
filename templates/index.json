@@ -163,8 +163,8 @@
           "settings": {
             "image": "shopify://shop_images/copy_2_3_3a0fb6c7-20f0-405e-bb08-fa3d20018891.jpg",
             "mobile_image": "shopify://shop_images/23_a67a91a7-151d-41c8-9e26-da725a45ed57.jpg",
-            "left_position": 27,
-            "bottom_position": 16,
+            "left_position": 50,
+            "bottom_position": 33,
             "desktop_left_position": 31,
             "desktop_bottom_position": 27,
             "show_lock": false,
