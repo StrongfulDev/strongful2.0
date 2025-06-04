@@ -165,7 +165,7 @@
             "mobile_image": "shopify://shop_images/copy_8_5.jpg",
             "left_position": 50,
             "bottom_position": 33,
-            "desktop_left_position": 30,
+            "desktop_left_position": 50,
             "desktop_bottom_position": 27,
             "show_lock": false,
             "button_label": "SHOP NOW",
