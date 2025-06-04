@@ -12,8 +12,8 @@
     "main": {
       "type": "main-blog",
       "settings": {
-        "tile_image_one": "shopify://shop_images/35_48e44cd0-8854-4925-bf22-8bb3aefdc7f4.jpg",
-        "tile_image_one_link": "shopify://collections/up-to-30-0ff",
+        "tile_image_one": "shopify://shop_images/36_e4c95195-734b-4b78-9d33-ca7a743e18d5.jpg",
+        "tile_image_one_link": "shopify://collections/astra",
         "tile_image_two": "shopify://shop_images/30_975299fe-420e-432e-ae56-e1d5ca75ec38.jpg",
         "tile_image_two_link": "shopify://pages/lets-move",
         "layout": "grid",
