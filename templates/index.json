@@ -161,8 +161,8 @@
         "slide_EQwW66": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/copy_2_4_e05df094-414e-4ea5-9e61-6e53e313b645.jpg",
-            "mobile_image": "shopify://shop_images/24_ee25424f-dd0c-4e90-b73d-1e93e9f7d109.jpg",
+            "image": "shopify://shop_images/copy_2_5.jpg",
+            "mobile_image": "shopify://shop_images/copy_8_5.jpg",
             "left_position": 50,
             "bottom_position": 33,
             "desktop_left_position": 30,
@@ -225,12 +225,11 @@
       "blocks": {
         "slide_rVi7Q8": {
           "type": "slide",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/1d32ac0590a64fc9101e963fd1b8d414_00eb58fa-5a8d-401a-9c45-8ca0c3d744c4.jpg",
-            "mobile_image": "shopify://shop_images/b3ac2ec4162bfc3be19c78dd7545e1df.jpg",
-            "login_desktop_image": "shopify://shop_images/1d32ac0590a64fc9101e963fd1b8d414_00eb58fa-5a8d-401a-9c45-8ca0c3d744c4.jpg",
-            "login_mobile_image": "shopify://shop_images/b3ac2ec4162bfc3be19c78dd7545e1df.jpg",
+            "image": "shopify://shop_images/copy_3_04b0f1e4-c76b-4908-8cf1-8c31bd8e3f50.jpg",
+            "mobile_image": "shopify://shop_images/copy_3_202c6588-d516-4605-a42f-394226d8ae87.jpg",
+            "login_desktop_image": "shopify://shop_images/copy_3_ab7e6ac6-3b72-4a11-b18a-cad95c64337e.jpg",
+            "login_mobile_image": "shopify://shop_images/copy_3_83f737a1-bf30-4672-88ad-db28f5130e6a.jpg",
             "button_label": "",
             "login_button_label": "",
             "link": "shopify://pages/loyalty",
