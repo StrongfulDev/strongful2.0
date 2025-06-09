@@ -1,0 +1,191 @@
+{%- assign should_appear_automatically = false -%}
+
+{%- unless section.settings.show_only_on_index and request.page_type != 'index' -%}
+  {%- unless section.settings.show_only_for_visitors and customer -%}
+    {%- assign should_appear_automatically = true -%}
+  {%- endunless -%}
+{%- endunless -%}
+
+<div id="custom-popup-{{ section.id }}" class="modal" style="display: none;">
+  <div class="modal__overlay"></div>
+
+  <div class="modal__content">
+    <button
+      type="button"
+      class="modal__close-button"
+      onclick="closeModal('{{ section.id }}')"
+      title="Close"
+    >
+      {%- render 'icon-close' -%}
+    </button>
+
+    <div class="modal__body">
+      {{ section.settings.custom_html }}
+    </div>
+  </div>
+</div>
+
+<style>
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999;
+    display: none;
+  }
+
+  .modal__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .modal__content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    z-index: 10000000;
+    padding: 2rem;
+  }
+
+  .modal__close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.2s ease;
+    z-index: 10000001;
+  }
+
+  .modal__close-button:hover {
+    color: #000;
+  }
+
+  .modal__body {
+    width: 100%;
+  }
+</style>
+
+<script>
+  let modalShown = false;
+
+  function showModal(sectionId) {
+    if (modalShown) return;
+    
+    const modal = document.getElementById(`custom-popup-${sectionId}`);
+    if (modal) {
+      modal.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+      modalShown = true;
+      
+      // Prevent other modals from showing
+      document.querySelectorAll('.modal').forEach(otherModal => {
+        if (otherModal.id !== `custom-popup-${sectionId}`) {
+          otherModal.style.display = 'none';
+        }
+      });
+    }
+  }
+
+  function closeModal(sectionId) {
+    const modal = document.getElementById(`custom-popup-${sectionId}`);
+    if (modal) {
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+      modalShown = false;
+    }
+  }
+
+  // Show modal after delay
+  {% if should_appear_automatically %}
+    setTimeout(() => {
+      showModal('{{ section.id }}');
+    }, {{ section.settings.apparition_delay | times: 1000 }});
+  {% endif %}
+
+  // Close modal when clicking overlay
+  document.querySelector('.modal__overlay').addEventListener('click', (event) => {
+    event.stopPropagation();
+    closeModal('{{ section.id }}');
+  });
+
+  // Prevent modal from closing when clicking content
+  document.querySelector('.modal__content').addEventListener('click', (event) => {
+    event.stopPropagation();
+  });
+
+  // Prevent other modals from showing
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.modal').forEach(modal => {
+      if (modal.id !== `custom-popup-{{ section.id }}`) {
+        modal.style.display = 'none';
+      }
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Custom Popup",
+  "class": "shopify-section--popup",
+  "settings": [
+    {
+      "type": "range",
+      "id": "apparition_delay",
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "unit": "sec",
+      "label": "Delay until the popup appears",
+      "default": 5
+    },
+    {
+      "type": "checkbox",
+      "id": "show_only_on_index",
+      "label": "Show only on home page",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_only_for_visitors",
+      "label": "Disable for account holders",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_only_once",
+      "label": "Show once to visitors",
+      "default": true
+    },
+    {
+      "type": "html",
+      "id": "custom_html",
+      "label": "Custom HTML",
+      "info": "Add your custom HTML or Liquid code here"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Popup",
+      "category": "Popup"
+    }
+  ]
+}
+{% endschema %} 
