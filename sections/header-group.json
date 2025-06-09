@@ -442,6 +442,7 @@
     },
     "popup_modal_pU9hyH": {
       "type": "popup-modal",
+      "disabled": true,
       "name": "Custom Popup",
       "settings": {
         "apparition_delay": 5,
