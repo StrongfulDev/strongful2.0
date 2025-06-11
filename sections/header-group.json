@@ -442,14 +442,13 @@
     },
     "popup_modal_pU9hyH": {
       "type": "popup-modal",
-      "disabled": true,
       "name": "Custom Popup",
       "settings": {
         "apparition_delay": 5,
         "show_only_on_index": true,
         "show_only_for_visitors": false,
         "show_only_once": false,
-        "custom_html": "<div style=\"direction:ltr;\" class=\"countdown-timer-block\" countdown-timer-id=\"cmbp13uvb00cxlnmtbxtnuc8b\"></div>"
+        "custom_html": "<div class=\"countdown-timer-block\" countdown-timer-id=\"cmbp13uvb00cxlnmtbxtnuc8b\"></div>"
       }
     },
     "7503b704-2110-400e-bc52-a2190d224c23": {
