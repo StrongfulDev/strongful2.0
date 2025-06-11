@@ -189,7 +189,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                             aria-label="{{ 'sections.header.menu' | t }}">
                         <span>
                           {% render 'icon-hamburger' %}
-                            {% render 'icon-close' %}
+                            {% comment %}{% render 'icon-close' %}{% endcomment %}
                         </span>
                     </summary>
                     <div id="menu-drawer" class="gradient menu-drawer motion-reduce"
