@@ -442,6 +442,9 @@
     },
     "popup_modal_pU9hyH": {
       "type": "popup-modal",
+      "custom_css": [
+        ".modal__content {background-color: #000000;}"
+      ],
       "name": "Custom Popup",
       "settings": {
         "apparition_delay": 5,
