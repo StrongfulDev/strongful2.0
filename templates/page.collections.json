@@ -129,7 +129,7 @@
         "16697e64-ebf9-4969-8055-a988a110e06d": {
           "type": "featured_collection",
           "settings": {
-            "collection": "gray",
+            "collection": "darkgray",
             "show_collection_title": true
           }
         },
