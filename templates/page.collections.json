@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "acf939bd-5491-4a74-9af2-c68c2a2197f5": {
@@ -15,7 +15,7 @@
         "template--15997288448140__acf939bd-5491-4a74-9af2-c68c2a2197f5-168950793714e0dca3-0": {
           "type": "heading",
           "settings": {
-            "heading": "<h1><strong>SHOP BY COLOR DROP<\/strong><\/h1>",
+            "heading": "<h1><strong>SHOP BY COLOR DROP</strong></h1>",
             "heading_size": "h1"
           }
         }
@@ -109,7 +109,7 @@
         "16697e64-ebf9-4969-8055-a988a110e06d": {
           "type": "featured_collection",
           "settings": {
-            "collection": "gray"
+            "collection": "darkgray"
           }
         },
         "ff16029f-1212-4ca2-8aa4-efe3bfe636cb": {
@@ -183,9 +183,7 @@
         "f6a715a3-e4b2-46a2-821c-7c1cda8322a6",
         "08e2705a-ec07-4219-8048-db2a3e6a6b80"
       ],
-      "custom_css": [
-
-      ],
+      "custom_css": [],
       "settings": {
         "images_or_colors": "colors",
         "title": "ALL COLORS",
