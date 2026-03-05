@@ -289,7 +289,7 @@
             "show_on_mobile": true,
             "small_font": true,
             "title": "גיפט קארד",
-            "title_link": "shopify://products/גיפט-חדש"
+            "title_link": "shopify://products/gypt-khdsh"
           }
         },
         "69313e8a-8818-485d-9c44-529f1b10ccdd": {
@@ -440,7 +440,7 @@
       "type": "apps",
       "blocks": {
         "essential_countdown_app_block_6YiGEn": {
-          "type": "shopify://apps/countdown-timer-essential/blocks/app-block/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
+          "type": "shopify://apps/essential-countdown-timer/blocks/app-block/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
           "settings": {
             "id": "cmafcc25s008s9xl9nmihzhjk"
           }
